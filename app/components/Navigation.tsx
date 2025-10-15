@@ -6,11 +6,14 @@ const Navigation: React.FC = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
+            <Link to="/" className="flex-shrink-0 flex items-center space-x-2">
+              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">Z</span>
+              </div>
               <h1 className="text-2xl font-bold text-blue-600">Zion Tech Group</h1>
             </Link>
           </div>
@@ -39,7 +42,7 @@ const Navigation: React.FC = () => {
                 <div
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
-                  className="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg z-50"
+                  className="absolute left-0 mt-2 w-96 bg-white rounded-md shadow-lg z-50 max-h-96 overflow-y-auto"
                 >
                   <div className="py-1">
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100">AI & Machine Learning</div>
@@ -54,6 +57,38 @@ const Navigation: React.FC = () => {
                     </Link>
                     <Link to="/data-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Data Analytics
+                    </Link>
+                    
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">AI-Powered Tools</div>
+                    <Link to="/zion-ai-code-reviewer-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Code Reviewer Pro
+                    </Link>
+                    <Link to="/zion-ai-seo-optimizer-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI SEO Optimizer Pro
+                    </Link>
+                    <Link to="/zion-ai-social-media-manager-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Social Media Manager Pro
+                    </Link>
+                    <Link to="/zion-ai-customer-feedback-analyzer-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Customer Feedback Analyzer Pro
+                    </Link>
+                    <Link to="/zion-ai-inventory-optimizer-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Inventory Optimizer Pro
+                    </Link>
+                    <Link to="/zion-ai-hr-recruiter-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI HR Recruiter Pro
+                    </Link>
+                    <Link to="/zion-ai-project-manager-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Project Manager Pro
+                    </Link>
+                    <Link to="/zion-ai-cybersecurity-monitor-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Cybersecurity Monitor Pro
+                    </Link>
+                    <Link to="/zion-ai-data-visualization-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Data Visualization Pro
+                    </Link>
+                    <Link to="/zion-ai-api-integration-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI API Integration Pro
                     </Link>
                     
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">IT Services</div>
@@ -147,8 +182,8 @@ const Navigation: React.FC = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="md:hidden bg-white border-t border-gray-200">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 max-h-96 overflow-y-auto">
             <Link to="/" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
               Home
             </Link>
@@ -168,6 +203,38 @@ const Navigation: React.FC = () => {
               </Link>
               <Link to="/data-analytics" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Data Analytics
+              </Link>
+              
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">AI-Powered Tools</div>
+              <Link to="/zion-ai-code-reviewer-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Code Reviewer Pro
+              </Link>
+              <Link to="/zion-ai-seo-optimizer-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI SEO Optimizer Pro
+              </Link>
+              <Link to="/zion-ai-social-media-manager-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Social Media Manager Pro
+              </Link>
+              <Link to="/zion-ai-customer-feedback-analyzer-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Customer Feedback Analyzer Pro
+              </Link>
+              <Link to="/zion-ai-inventory-optimizer-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Inventory Optimizer Pro
+              </Link>
+              <Link to="/zion-ai-hr-recruiter-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI HR Recruiter Pro
+              </Link>
+              <Link to="/zion-ai-project-manager-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Project Manager Pro
+              </Link>
+              <Link to="/zion-ai-cybersecurity-monitor-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Cybersecurity Monitor Pro
+              </Link>
+              <Link to="/zion-ai-data-visualization-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Data Visualization Pro
+              </Link>
+              <Link to="/zion-ai-api-integration-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI API Integration Pro
               </Link>
               
               <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">IT Services</div>

@@ -38,7 +38,23 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">AI Tools</h4>
+            <h4 className="text-md font-semibold mb-4">AI-Powered Tools</h4>
+            <ul className="space-y-2">
+              <li><Link to="/zion-ai-code-reviewer-pro" className="text-gray-300 hover:text-white">AI Code Reviewer Pro</Link></li>
+              <li><Link to="/zion-ai-seo-optimizer-pro" className="text-gray-300 hover:text-white">AI SEO Optimizer Pro</Link></li>
+              <li><Link to="/zion-ai-social-media-manager-pro" className="text-gray-300 hover:text-white">AI Social Media Manager Pro</Link></li>
+              <li><Link to="/zion-ai-customer-feedback-analyzer-pro" className="text-gray-300 hover:text-white">AI Customer Feedback Analyzer Pro</Link></li>
+              <li><Link to="/zion-ai-inventory-optimizer-pro" className="text-gray-300 hover:text-white">AI Inventory Optimizer Pro</Link></li>
+              <li><Link to="/zion-ai-hr-recruiter-pro" className="text-gray-300 hover:text-white">AI HR Recruiter Pro</Link></li>
+              <li><Link to="/zion-ai-project-manager-pro" className="text-gray-300 hover:text-white">AI Project Manager Pro</Link></li>
+              <li><Link to="/zion-ai-cybersecurity-monitor-pro" className="text-gray-300 hover:text-white">AI Cybersecurity Monitor Pro</Link></li>
+              <li><Link to="/zion-ai-data-visualization-pro" className="text-gray-300 hover:text-white">AI Data Visualization Pro</Link></li>
+              <li><Link to="/zion-ai-api-integration-pro" className="text-gray-300 hover:text-white">AI API Integration Pro</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Legacy AI Tools</h4>
             <ul className="space-y-2">
               <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Content Moderator</Link></li>
               <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">Customer Support Pro</Link></li>
@@ -48,7 +64,6 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">Sales Predictor</Link></li>
               <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
               <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
-              <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
               <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
             </ul>
           </div>
@@ -86,9 +101,15 @@ const Footer: React.FC = memo(() => {
         
         <div className="mt-8 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-center md:text-left text-gray-300">
-              © 2025 Zion Tech Group. All rights reserved. | <a href="https://ziontechgroup.com" className="hover:text-white">ziontechgroup.com</a>
-            </p>
+            <div className="text-center md:text-left text-gray-300 mb-4 md:mb-0">
+              <p>© 2025 Zion Tech Group. All rights reserved.</p>
+              <p className="mt-2">
+                📧 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white">kleber@ziontechgroup.com</a> | 
+                📞 <a href="tel:+13024640950" className="hover:text-white">+1 302 464 0950</a> | 
+                🌐 <a href="https://ziontechgroup.com" className="hover:text-white">ziontechgroup.com</a>
+              </p>
+              <p className="mt-1 text-sm">📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-gray-300 hover:text-white text-sm">Privacy Policy</Link>
               <Link to="/terms" className="text-gray-300 hover:text-white text-sm">Terms of Service</Link>

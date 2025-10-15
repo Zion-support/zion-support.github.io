@@ -5,6 +5,96 @@ import { Link } from 'react-router-dom';
 const MicroSAASSolutionsPage: React.FC = () => {
   const microSaasServices = [
     {
+      id: 'ai-code-reviewer-pro',
+      title: 'AI Code Reviewer Pro',
+      description: 'Advanced AI-powered code review and quality assurance platform that automatically detects bugs, security vulnerabilities, and code quality issues',
+      features: ['Automated Code Review', 'Security Vulnerability Detection', 'Code Quality Analysis', 'Multi-language Support', 'Git Integration'],
+      pricing: '$49/month',
+      category: 'Development',
+      icon: '🔍'
+    },
+    {
+      id: 'ai-seo-optimizer-pro',
+      title: 'AI SEO Optimizer Pro',
+      description: 'Comprehensive SEO optimization platform with AI-powered content analysis, keyword research, and technical SEO recommendations',
+      features: ['AI Content Analysis', 'Keyword Research & Optimization', 'Technical SEO Audits', 'Competitor Analysis', 'Performance Tracking'],
+      pricing: '$79/month',
+      category: 'Marketing',
+      icon: '🚀'
+    },
+    {
+      id: 'ai-social-media-manager-pro',
+      title: 'AI Social Media Manager Pro',
+      description: 'Intelligent social media management platform with AI-powered content creation, scheduling, and analytics across all major platforms',
+      features: ['AI Content Generation', 'Multi-platform Scheduling', 'Hashtag Optimization', 'Engagement Analytics', 'Competitor Monitoring'],
+      pricing: '$99/month',
+      category: 'Marketing',
+      icon: '📱'
+    },
+    {
+      id: 'ai-customer-feedback-analyzer-pro',
+      title: 'AI Customer Feedback Analyzer Pro',
+      description: 'Advanced customer feedback analysis platform that processes reviews, surveys, and support tickets to extract actionable insights',
+      features: ['Multi-source Feedback Collection', 'Sentiment Analysis', 'Topic Modeling', 'Trend Identification', 'Actionable Insights'],
+      pricing: '$149/month',
+      category: 'Analytics',
+      icon: '💬'
+    },
+    {
+      id: 'ai-inventory-optimizer-pro',
+      title: 'AI Inventory Optimizer Pro',
+      description: 'Intelligent inventory management system with AI-powered demand forecasting, stock optimization, and automated reordering',
+      features: ['Demand Forecasting', 'Stock Level Optimization', 'Automated Reordering', 'Supplier Management', 'Cost Optimization'],
+      pricing: '$199/month',
+      category: 'Operations',
+      icon: '📦'
+    },
+    {
+      id: 'ai-hr-recruiter-pro',
+      title: 'AI HR Recruiter Pro',
+      description: 'Advanced HR and recruitment platform with AI-powered candidate screening, job matching, and interview scheduling',
+      features: ['AI Candidate Screening', 'Job Matching Algorithm', 'Resume Analysis', 'Interview Scheduling', 'Skills Assessment'],
+      pricing: '$299/month',
+      category: 'HR',
+      icon: '👥'
+    },
+    {
+      id: 'ai-project-manager-pro',
+      title: 'AI Project Manager Pro',
+      description: 'Intelligent project management platform with AI-powered task prioritization, resource allocation, and risk assessment',
+      features: ['AI Task Prioritization', 'Resource Allocation', 'Risk Assessment', 'Timeline Optimization', 'Team Collaboration'],
+      pricing: '$149/month',
+      category: 'Project Management',
+      icon: '📊'
+    },
+    {
+      id: 'ai-cybersecurity-monitor-pro',
+      title: 'AI Cybersecurity Monitor Pro',
+      description: 'Advanced cybersecurity monitoring platform with AI-powered threat detection, vulnerability assessment, and incident response',
+      features: ['Threat Detection', 'Vulnerability Scanning', 'Incident Response', 'Security Analytics', 'Compliance Monitoring'],
+      pricing: '$399/month',
+      category: 'Security',
+      icon: '🔒'
+    },
+    {
+      id: 'ai-data-visualization-pro',
+      title: 'AI Data Visualization Pro',
+      description: 'Intelligent data visualization platform with AI-powered chart generation, interactive dashboards, and automated insights',
+      features: ['AI Chart Generation', 'Interactive Dashboards', 'Automated Insights', 'Real-time Data Processing', 'Custom Visualizations'],
+      pricing: '$99/month',
+      category: 'Analytics',
+      icon: '📈'
+    },
+    {
+      id: 'ai-api-integration-pro',
+      title: 'AI API Integration Pro',
+      description: 'Intelligent API integration platform with AI-powered endpoint discovery, automated testing, and seamless connectivity',
+      features: ['AI Endpoint Discovery', 'Automated API Testing', 'Code Generation', 'Documentation Generation', 'Performance Monitoring'],
+      pricing: '$199/month',
+      category: 'Development',
+      icon: '🔌'
+    },
+    {
       id: 'ai-email-optimizer',
       title: 'AI Email Optimizer Pro',
       description: 'AI-powered email marketing optimization that increases open rates by 40% and click-through rates by 25%',

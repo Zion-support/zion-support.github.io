@@ -12,16 +12,16 @@ const HomePage: React.FC = memo(() => {
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "Innovation City",
-      "addressRegion": "IC",
-      "postalCode": "12345",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
       "addressCountry": "US"
     },
     "sameAs": [
@@ -92,28 +92,48 @@ const HomePage: React.FC = memo(() => {
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI-Powered Tools</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Content Moderator</h3>
-                <p className="text-gray-600 text-sm mb-3">Automated content moderation using AI</p>
-                <Link to="/zion-ai-content-moderator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Code Reviewer Pro</h3>
+                <p className="text-gray-600 text-sm mb-3">AI-powered code review and quality assurance</p>
+                <Link to="/zion-ai-code-reviewer-pro" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Sales Predictor</h3>
-                <p className="text-gray-600 text-sm mb-3">Predict sales trends with AI</p>
-                <Link to="/zion-ai-sales-predictor" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">SEO Optimizer Pro</h3>
+                <p className="text-gray-600 text-sm mb-3">AI-powered SEO optimization and analysis</p>
+                <Link to="/zion-ai-seo-optimizer-pro" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Workflow Automator</h3>
-                <p className="text-gray-600 text-sm mb-3">Automate business workflows</p>
-                <Link to="/zion-ai-workflow-automator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Social Media Manager Pro</h3>
+                <p className="text-gray-600 text-sm mb-3">AI-powered social media management</p>
+                <Link to="/zion-ai-social-media-manager-pro" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Financial Forecaster</h3>
-                <p className="text-gray-600 text-sm mb-3">AI-powered financial predictions</p>
-                <Link to="/zion-ai-financial-forecaster" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Customer Feedback Analyzer Pro</h3>
+                <p className="text-gray-600 text-sm mb-3">AI-powered feedback analysis and insights</p>
+                <Link to="/zion-ai-customer-feedback-analyzer-pro" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Inventory Optimizer Pro</h3>
+                <p className="text-gray-600 text-sm mb-3">AI-powered inventory management and forecasting</p>
+                <Link to="/zion-ai-inventory-optimizer-pro" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">HR Recruiter Pro</h3>
+                <p className="text-gray-600 text-sm mb-3">AI-powered recruitment and candidate management</p>
+                <Link to="/zion-ai-hr-recruiter-pro" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Project Manager Pro</h3>
+                <p className="text-gray-600 text-sm mb-3">AI-powered project management and optimization</p>
+                <Link to="/zion-ai-project-manager-pro" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Cybersecurity Monitor Pro</h3>
+                <p className="text-gray-600 text-sm mb-3">AI-powered cybersecurity monitoring and threat detection</p>
+                <Link to="/zion-ai-cybersecurity-monitor-pro" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
               </div>
             </div>
             <div className="text-center mt-8">
-              <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium">View All Services →</Link>
+              <Link to="/micro-saas-solutions" className="text-blue-600 hover:text-blue-800 font-medium">View All Micro SaaS Solutions →</Link>
             </div>
           </div>
         </div>
