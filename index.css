@@ -314,6 +314,192 @@ body {
   background: #7c3aed;
 }
 
+/* Futuristic Design Elements */
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: grid-move 20s linear infinite;
+}
+
+@keyframes grid-move {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(20px, 20px); }
+}
+
+.neon-pulse {
+  animation: neon-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neon-pulse {
+  from {
+    text-shadow: 
+      0 0 5px #06b6d4,
+      0 0 10px #06b6d4,
+      0 0 15px #06b6d4,
+      0 0 20px #06b6d4;
+  }
+  to {
+    text-shadow: 
+      0 0 2px #06b6d4,
+      0 0 5px #06b6d4,
+      0 0 8px #06b6d4,
+      0 0 12px #06b6d4;
+  }
+}
+
+.cyber-text {
+  background: linear-gradient(45deg, #06b6d4, #8b5cf6, #ec4899);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.cyber-button {
+  background: linear-gradient(45deg, #06b6d4, #8b5cf6);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.cyber-button:hover::before {
+  left: 100%;
+}
+
+.cyber-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3);
+}
+
+.cyber-button-secondary {
+  background: transparent;
+  border: 2px solid #06b6d4;
+  border-radius: 8px;
+  color: #06b6d4;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-button-secondary:hover {
+  background: #06b6d4;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3);
+}
+
+.cyber-card {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.cyber-card:hover {
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: 0 20px 40px rgba(6, 182, 212, 0.1);
+  transform: translateY(-5px);
+}
+
+.glow-effect {
+  box-shadow: 
+    0 0 20px rgba(6, 182, 212, 0.3),
+    0 0 40px rgba(6, 182, 212, 0.2),
+    0 0 60px rgba(6, 182, 212, 0.1);
+}
+
+.floating-animation {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.particle-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.particle-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #06b6d4, transparent),
+    radial-gradient(2px 2px at 40px 70px, #8b5cf6, transparent),
+    radial-gradient(1px 1px at 90px 40px, #ec4899, transparent),
+    radial-gradient(1px 1px at 130px 80px, #06b6d4, transparent),
+    radial-gradient(2px 2px at 160px 30px, #8b5cf6, transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: particle-float 20s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes particle-float {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-100px); }
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+  .cyber-text {
+    font-size: 2.5rem;
+  }
+  
+  .cyber-button, .cyber-button-secondary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .cyber-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .cyber-text {
+    font-size: 2rem;
+  }
+  
+  .neon-pulse {
+    animation-duration: 3s;
+  }
+}
+
 /* Print Styles */
 @media print {
   body {
@@ -323,5 +509,11 @@ body {
   
   .no-print {
     display: none;
+  }
+  
+  .cyber-button, .cyber-button-secondary {
+    background: #000 !important;
+    color: #fff !important;
+    border: 1px solid #000 !important;
   }
 }
