@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';";";";
-import { Link, useLocation }; from 'react-router-dom';";";";
-=======
 import React, { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 import {
   Bars3Icon,
   XMarkIcon,
@@ -32,25 +27,14 @@ import {
   CodeBracketIcon,
   DevicePhoneMobileIcon,
   UserPlusIcon,
-<<<<<<< HEAD
-  CheckCircleIcon,
-  RocketLaunchIcon,
-  ServerIcon;
-}; from '@heroicons/react/24/outline';";";";
-=======
   CheckCircleIcon
 } from '@heroicons/react/24/outline';
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }
 
-<<<<<<< HEAD
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-=======
 const Navigation: React.FC<NavigationProps> = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
