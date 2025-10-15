@@ -10,7 +10,9 @@ import {
   RocketLaunchIcon,
   CheckCircleIcon,
   ArrowRightIcon,
-  StarIcon
+  StarIcon,
+  GlobeAltIcon,
+  CogIcon
 } from '@heroicons/react/24/outline';
 
 const HomePage: React.FC = () => {
@@ -20,6 +22,12 @@ const HomePage: React.FC = () => {
       title: 'AI Solutions',
       description: 'Advanced artificial intelligence and machine learning solutions to transform your business.',
       href: '/ai-solutions'
+    },
+    {
+      icon: GlobeAltIcon,
+      title: 'Micro SaaS Solutions',
+      description: 'Powerful micro SAAS applications designed to solve specific business challenges.',
+      href: '/micro-saas-solutions'
     },
     {
       icon: ShieldCheckIcon,
@@ -32,6 +40,12 @@ const HomePage: React.FC = () => {
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions and infrastructure management for modern businesses.',
       href: '/cloud-solutions'
+    },
+    {
+      icon: CogIcon,
+      title: 'IT Solutions',
+      description: 'Complete IT services including development, infrastructure, and support.',
+      href: '/it-solutions'
     },
     {
       icon: RocketLaunchIcon,
@@ -51,8 +65,8 @@ const HomePage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
+    { number: '1000+', label: 'Projects Completed' },
+    { number: '200+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
   ];

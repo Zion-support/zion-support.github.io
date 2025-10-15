@@ -91,16 +91,22 @@ const ContactPage: React.FC = () => {
   ];
 
   const services = [
-    'AI Solutions',
-    'Micro SAAS Development',
+    'AI Email Marketing Automation',
+    'AI Social Media Manager',
+    'AI Customer Support Chatbot',
+    'AI Project Management Pro',
+    'AI Analytics Dashboard Pro',
+    'Micro SAAS Solutions',
     'IT Services',
     'Cloud Infrastructure',
-    'Cybersecurity',
-    'Mobile Development',
+    'Cybersecurity Solutions',
     'Web Development',
-    'Data Analytics',
-    'Custom Software',
-    'Consulting'
+    'Mobile App Development',
+    'Database Management',
+    'Network Infrastructure',
+    'Custom Software Development',
+    'Digital Transformation',
+    'Consulting Services'
   ];
 
   const budgetRanges = [
