@@ -40,7 +40,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   const observerRef = useRef<PerformanceObserver | null>(null);
   const reportIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const reportMetric = useCallback((name: string, value: number, category = 'Performance') => {
+  const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: any) => {
     // Report to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', name, {
