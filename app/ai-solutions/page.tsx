@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 export default function AISolutionsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -14,3 +15,7 @@ export default function AISolutionsPage() {
     </div>
   );
 }
+=======
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

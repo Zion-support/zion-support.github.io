@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -36,3 +37,7 @@ export default function handler(req, res) {
     res.status(500).json({ error: 'Internal server error' });
   }
 }
+=======
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

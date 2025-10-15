@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 export default function TermsPage() {
   return (
@@ -14,3 +15,12 @@ export default function TermsPage() {
     </div>
   );
 }
+=======
+        </div>
+      </div>
+    </>
+  ),
+
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

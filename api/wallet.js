@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -22,11 +23,16 @@ export default function handler(req, res) {
 
     // Read existing wallets
     let wallets = [];
+=======
+// API endpoint for wallet operations
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
       wallets = JSON.parse(data);
     }
 
+<<<<<<< HEAD
     const newWallet = {
       id: Date.now().toString(),
       address,
@@ -50,3 +56,9 @@ export default function handler(req, res) {
     res.status(500).json({ error: 'Failed to save wallet' });
   }
 }
+=======
+
+  }
+}
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 export default function ContactPage() {
   return (
@@ -10,7 +11,28 @@ export default function ContactPage() {
             Get in touch with our team for your AI and IT needs.
           </p>
         </div>
+=======
+    setFormData(prev => ({
+    ...prev,
+      [name]: value
+  
+  }));
+  };
+
+              </div>
+            </div>
+          </div>
+        </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};";
+";";
+export default ContactPage;";";";
+"
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

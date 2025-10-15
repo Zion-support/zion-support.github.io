@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect } from 'react';
 
 export default function AccessibilityEnhancer() {
@@ -23,3 +24,18 @@ export default function AccessibilityEnhancer() {
 
   return null;
 }
+=======
+
+interface AccessibilityEnhancerProps {
+  className?: string
+  children?: React.ReactNode
+}
+
+  children;
+  }) => {
+  return (
+    <div: className ={`accessibilityenhancer ${className}`}>;
+
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

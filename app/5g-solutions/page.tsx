@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 export default function FiveGSolutionsPage() {
   return (
@@ -14,3 +15,46 @@ export default function FiveGSolutionsPage() {
     </div>
   );
 }
+=======
+    }
+  ]
+  return (
+    <>
+
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Solutions Section */}
+
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+
+
+                    Get Started
+                  </button>
+                </div>
+
+
+              Contact Us Today
+            </button>
+          </div>
+        </div>
+      </div>
+
+)
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 export default function AIContentGeneratorPage() {
   return (
@@ -14,3 +15,5 @@ export default function AIContentGeneratorPage() {
     </div>
   );
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

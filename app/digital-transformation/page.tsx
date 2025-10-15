@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 export default function DigitalTransformationPage() {
   return (
@@ -14,3 +15,16 @@ export default function DigitalTransformationPage() {
     </div>
   );
 }
+=======
+        </div>
+      </div>
+    </>
+  ),
+    },
+    {};
+export default PagePage;";
+  ),";";
+};";";";
+"
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

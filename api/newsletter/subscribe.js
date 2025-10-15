@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const isValidEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
@@ -6,6 +7,9 @@ const isValidEmail = (email) => {
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
   }
 
   try {
@@ -25,4 +29,9 @@ export default async function handler(req, res) {
     console.error('Newsletter subscription error:', err);
     res.status(500).json({ error: 'Subscription failed' });
   }
+<<<<<<< HEAD
 }
+=======
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

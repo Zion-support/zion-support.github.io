@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 export default function PricingPage() {
   return (
@@ -14,3 +15,13 @@ export default function PricingPage() {
     </div>
   );
 }
+=======
+        </div>
+      </div>
+    </>
+  ),
+
+)
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 export default function MicroSAASSolutionsPage() {
   return (
@@ -14,3 +15,5 @@ export default function MicroSAASSolutionsPage() {
     </div>
   );
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
