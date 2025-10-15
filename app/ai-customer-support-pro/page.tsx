@@ -1,45 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  MessageCircle, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  Download,
-  Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Calendar,
-  Target,
-  Users,
-  Award,
-  TrendingUp,
-  Cpu,
-  Database,
-  BarChart3,
-  Activity,
-  Headphones,
-  Bot,
-  Clock,
-  Languages,
-  FileText,
-  Send,
-  ThumbsUp,
-  ThumbsDown,
-  AlertCircle,
-  CheckSquare,
-  XCircle
-} from 'lucide-react';
+import { MessageCircle, Zap, Shield, Globe, Brain, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, Download, Play, Pause, RefreshCw, Settings, Eye, Filter, Calendar, Target, Users, Award, TrendingUp, Cpu, Database, BarChart3, Activity, Headphones, Bot, Clock, Languages, FileText, Send, ThumbsUp, ThumbsDown, AlertCircle, CheckSquare, XCircle } from 'lucide-react';
 
 const AiCustomerSupportProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
