@@ -1,10 +1,14 @@
 // API endpoint for general subscription
+import fs from 'fs';
+import path from 'path';
+
+const file = path.join(process.cwd(), 'data', 'subscribers.json');
+
 export default function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ _error: "Method not allowed" });
   }
 
-<<<<<<< HEAD
   const { email, name } = req.body;
 
   if (!email) {
@@ -18,7 +22,6 @@ export default function handler(req, res) {
     const data = fs.readFileSync(file, 'utf8');
     subscribers = JSON.parse(data);
   } catch (error) {
-    console.error('Error:', error);
     console.error('Error reading existing subscribers:', error);
   }
 
@@ -48,10 +51,6 @@ export default function handler(req, res) {
   } catch (error) {
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
-res.end(JSON.stringify({ error: 'Failed to save subscription' }));
+    res.end(JSON.stringify({ error: 'Failed to save subscription' }));
   }
 }
-=======
-  res.status(200).json({ message: "Subscription successful" });
-}
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5

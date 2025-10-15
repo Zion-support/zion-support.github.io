@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-=======
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -11,10 +8,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState(16);
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
 
   useEffect(() => {
-<<<<<<< HEAD
     // Add ARIA roles to semantic elements
     const addAriaRoles = () => {
       const nav = document.querySelector('nav');
@@ -110,26 +105,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       });
     };
 
-    // Initialize accessibility enhancements
-    addAriaRoles();
-    addAltText();
-    addFocusManagement();
-    addKeyboardNavigation();
-
-    // Re-run on DOM changes
-    const observer = new MutationObserver(() => {
-      addAriaRoles();
-      addAltText();
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
-    return () => {
-      observer.disconnect();
-=======
     // Check for high contrast mode
     const checkHighContrast = () => {
       const mediaQuery = window.matchMedia('(prefers-contrast: high)');
@@ -158,6 +133,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       }
     };
 
+    // Initialize accessibility enhancements
+    addAriaRoles();
+    addAltText();
+    addFocusManagement();
+    addKeyboardNavigation();
     checkHighContrast();
     checkReducedMotion();
     checkFontSize();
@@ -186,6 +166,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     applyAccessibilitySettings();
 
+    // Re-run on DOM changes
+    const observer = new MutationObserver(() => {
+      addAriaRoles();
+      addAltText();
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
     // Keyboard navigation enhancement
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content
@@ -209,14 +200,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     document.addEventListener('keydown', handleKeyDown);
 
     return () => {
+      observer.disconnect();
       document.removeEventListener('keydown', handleKeyDown);
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
     };
   }, [isHighContrast, isReducedMotion, fontSize]);
 
-<<<<<<< HEAD
-  return null;
-=======
   // Font size controls
   const increaseFontSize = () => {
     const newSize = Math.min(fontSize + 2, 24);
@@ -317,7 +305,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       </div>
     </>
   );
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
 };
 
 export default AccessibilityEnhancer;

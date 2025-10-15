@@ -1,8 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Circle, Star, Right, Zap, Shield, Code } from 'lucide-react';
-import { Circle, Star, Right } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
@@ -81,8 +79,6 @@ const ServicesPage: React.FC = () => {
       ]
     }
   ];
-=======
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
 
 const Page: React.FC = () => {
   return (

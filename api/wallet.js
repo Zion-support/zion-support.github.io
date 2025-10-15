@@ -1,18 +1,22 @@
 // API endpoint for wallet operations
+import fs from 'fs';
+import path from 'path';
+
+const file = path.join(process.cwd(), 'data', 'wallets.json');
+
 export default function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ _error: "Method not allowed" });
   }
 
-<<<<<<< HEAD
-const { address, type, name, userId } = req.body;
+  const { address, type, name, userId } = req.body;
   if (!address || !type) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Address and type are required' }));
     return;
   }
 
-let wallets = [];
+  let wallets = [];
   try {
     const data = fs.readFileSync(file, 'utf8');
     wallets = JSON.parse(data);
@@ -48,10 +52,6 @@ let wallets = [];
   } catch (error) {
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
-res.end(JSON.stringify({ error: 'Failed to save wallet' }));
+    res.end(JSON.stringify({ error: 'Failed to save wallet' }));
   }
 }
-=======
-  res.status(200).json({ message: "Wallet operation successful" });
-}
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5

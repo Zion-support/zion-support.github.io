@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -71,10 +69,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       color: 'from-teal-500 to-cyan-500'
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
 
   const features = [
     'Scalable Architecture',
@@ -96,7 +90,6 @@ import { Helmet } from 'react-helmet-async';
     <>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Discover our comprehensive micro SaaS solutions designed to accelerate your business growth with cutting-edge technology." />
         <meta name="keywords" content="micro SaaS, SaaS solutions, business software, cloud applications, Zion Tech Group" />
       </Helmet>
@@ -245,15 +238,6 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
-=======
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">Micro SaaS Solutions</h1>
-          <p className="text-gray-300 text-center">Coming soon...</p>
-        </div>
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
       </div>
     </>
   );

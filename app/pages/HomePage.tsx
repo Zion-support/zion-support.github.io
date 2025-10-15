@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 import { 
@@ -34,9 +33,6 @@ const structuredData = {
       "query-input": "required name=search_term_string"
     }
   };
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
 
 const HomePage: React.FC = () => {
   return (

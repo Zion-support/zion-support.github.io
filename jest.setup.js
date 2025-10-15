@@ -1,6 +1,10 @@
 import '@testing-library/jest-dom';
 
-<<<<<<< HEAD
+// Mock TextEncoder and TextDecoder
+import { TextEncoder, TextDecoder } from 'util';
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
 // Mock react-router-dom
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
@@ -21,21 +25,6 @@ jest.mock('react-router-dom', () => {
     MemoryRouter: ({ children }) => mockReact.createElement('div', { 'data-testid': 'memory-router' }, children)
   };
 });
-
-// Suppress console warnings
-const originalError = console.error;
-beforeAll(() => {
-  console.error = (...args) => {
-    if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render is no longer supported')) {
-      return;
-    }
-    originalError.call(console, ...args);
-  };
-=======
-// Mock TextEncoder and TextDecoder
-import { TextEncoder, TextDecoder } from 'util';
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
@@ -72,7 +61,17 @@ Object.defineProperty(window, 'matchMedia', {
 Object.defineProperty(window, 'scrollTo', {
   writable: true,
   value: jest.fn(),
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
+});
+
+// Suppress console warnings
+const originalError = console.error;
+beforeAll(() => {
+  console.error = (...args) => {
+    if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render is no longer supported')) {
+      return;
+    }
+    originalError.call(console, ...args);
+  };
 });
 
 // Mock localStorage

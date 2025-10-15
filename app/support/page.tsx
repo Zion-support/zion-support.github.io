@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState } from 'react';
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
 import { Helmet } from 'react-helmet-async';
 import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
 
@@ -45,16 +41,13 @@ const SupportPage: React.FC = () => {
       responseTime: '< 2 hours',
       action: 'Send Email',
       color: 'from-purple-500 to-pink-500'
-<<<<<<< HEAD
     },
     {
-      icon: BookOpen,
+      icon: <FileText className="w-8 h-8" />,
       title: 'Documentation',
       description: 'Browse our comprehensive guides',
       action: 'View Docs',
       color: 'from-orange-500 to-red-500'
-=======
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
     }
   ];
 
