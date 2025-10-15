@@ -54,22 +54,22 @@ class Logger {
 
     const formattedMessage = this.formatMessage(entry);
     
-    // Console logging
-    switch (level) {
-      case 'error':
-        console.error(formattedMessage);
-        break;
-      case 'warn':
-        console.warn(formattedMessage);
-        break;
-      case 'info':
-        console.info(formattedMessage);
-        break;
-      case 'debug':
-        if (this.isDevelopment) {
+    // Console logging - only in development
+    if (this.isDevelopment) {
+      switch (level) {
+        case 'error':
+          console.error(formattedMessage);
+          break;
+        case 'warn':
+          console.warn(formattedMessage);
+          break;
+        case 'info':
+          console.info(formattedMessage);
+          break;
+        case 'debug':
           console.debug(formattedMessage);
-        }
-        break;
+          break;
+      }
     }
     
     // Send to external service in production

@@ -206,7 +206,7 @@ const AboutPage: React.FC = () => { return (
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Work With Us?</h2>
               
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Let's discuss how we can help transform your business with cutting-edge technology.
+                Let&apos;s discuss how we can help transform your business with cutting-edge technology.
               </p>
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

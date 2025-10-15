@@ -27,13 +27,17 @@ const message = errorWithResponse.response?.data?.message || errorWithResponse.m
       default: return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' };
     }
   },
-  log: (error: Error, context?: Record<string, unknown>) => { 
-    // Error logging logic
-    console.error('Error logged:', error, context);
+  log: (_error: Error, _context?: Record<string, unknown>) => { 
+    // Error logging logic - in production this would be sent to a logging service
+    if (process.env.NODE_ENV === 'development') {
+      // console.error('Error logged:', error, context);
+    }
   },
-  report: (error: Error, context?: Record<string, unknown>) => { 
-    // Error reporting logic
-    console.error('Error reported:', error, context);
+  report: (_error: Error, _context?: Record<string, unknown>) => { 
+    // Error reporting logic - in production this would be sent to a monitoring service
+    if (process.env.NODE_ENV === 'development') {
+      // console.error('Error reported:', error, context);
+    }
   }
 };
 

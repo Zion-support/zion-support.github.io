@@ -83,7 +83,7 @@ const PrivacyPolicyPage: React.FC = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
                 <h2 className="text-3xl font-bold text-white mb-6">Introduction</h2>
                 <p className="text-gray-300 mb-4 leading-relaxed">
-                  Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and personal data. 
+                  Zion Tech Group (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy and personal data. 
                   This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you 
                   visit our website or use our services.
                 </p>

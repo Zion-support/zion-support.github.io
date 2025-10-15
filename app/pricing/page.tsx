@@ -223,7 +223,7 @@ const PricingPage: React.FC = () => {
                   </div>
                   
                   <div className="mb-8">
-                    <h4 className="text-lg font-semibold text-white mb-4">What's included:</h4>
+                    <h4 className="text-lg font-semibold text-white mb-4">What&apos;s included:</h4>
                     <ul className="space-y-3">
                       {plan.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">

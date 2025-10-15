@@ -115,7 +115,7 @@ const ContactPage: React.FC = () => {
                 Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Touch</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Ready to transform your business with AI and IT solutions? Let's discuss your project and explore how we can help you succeed.
+                Ready to transform your business with AI and IT solutions? Let&apos;s discuss your project and explore how we can help you succeed.
               </p>
             </div>
           </div>
@@ -157,7 +157,7 @@ const ContactPage: React.FC = () => {
                   <div className="text-center py-12">
                     <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                    <p className="text-gray-300">Thank you for contacting us. We'll get back to you within 24 hours.</p>
+                    <p className="text-gray-300">Thank you for contacting us. We&apos;ll get back to you within 24 hours.</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">

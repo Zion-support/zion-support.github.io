@@ -73,7 +73,7 @@ const SitemapPage: React.FC = () => {
                 Sitemap
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Complete overview of all pages on our website. Find what you're looking for quickly and easily.
+                Complete overview of all pages on our website. Find what you&apos;re looking for quickly and easily.
               </p>
             </div>
           </div>
@@ -252,7 +252,7 @@ const SitemapPage: React.FC = () => {
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-xl p-12 text-center max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6">Need Help Finding Something?</h2>
               <p className="text-xl text-white/90 mb-8">
-                Can't find what you're looking for? Contact our support team for assistance.
+                Can&apos;t find what you&apos;re looking for? Contact our support team for assistance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 

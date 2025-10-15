@@ -1,12 +1,6 @@
 import { useEffect, useCallback } from 'react';
 
-interface PerformanceMetrics {
-  fcp?: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
-}
+// Performance metrics interface - currently unused but available for future use
 
 export const usePerformanceMonitoring = () => {
   const reportMetric = useCallback((name: string, value: number) => {
@@ -21,7 +15,7 @@ export const usePerformanceMonitoring = () => {
 
     // Log in development
     if (process.env.NODE_ENV === 'development') {
-      console.log(`Performance Metric - ${name}:`, value);
+      // console.log(`Performance Metric - ${name}:`, value);
     }
   }, []);
 
@@ -60,8 +54,8 @@ export const usePerformanceMonitoring = () => {
     // Observe different types of performance entries
     try {
       observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
-    } catch (error) {
-      console.warn('Performance Observer not supported:', error);
+    } catch (_error) {
+      // Performance Observer not supported in this environment
     }
 
     // Monitor page load time
@@ -91,20 +85,15 @@ export const useResourceTiming = () => {
         
         // Monitor slow resources
         if (resource.duration > 1000) {
-          console.warn('Slow resource detected:', {
-            name: resource.name,
-            duration: resource.duration,
-            size: resource.transferSize,
-            type: resource.initiatorType
-          });
+          // Slow resource detected - could be logged to monitoring service
         }
       }
     });
 
     try {
       observer.observe({ entryTypes: ['resource'] });
-    } catch (error) {
-      console.warn('Resource timing observer not supported:', error);
+    } catch (_error) {
+      // Resource timing observer not supported in this environment
     }
 
     return () => observer.disconnect();
@@ -118,17 +107,12 @@ export const useMemoryMonitoring = () => {
     const checkMemory = () => {
       const memory = (performance as any).memory;
       const usedMB = memory.usedJSHeapSize / 1048576;
-      const totalMB = memory.totalJSHeapSize / 1048576;
+      // const totalMB = memory.totalJSHeapSize / 1048576;
       const limitMB = memory.jsHeapSizeLimit / 1048576;
 
       // Alert if memory usage is high
       if (usedMB / limitMB > 0.8) {
-        console.warn('High memory usage detected:', {
-          used: `${usedMB.toFixed(2)}MB`,
-          total: `${totalMB.toFixed(2)}MB`,
-          limit: `${limitMB.toFixed(2)}MB`,
-          percentage: `${((usedMB / limitMB) * 100).toFixed(1)}%`
-        });
+        // High memory usage detected - could be logged to monitoring service
       }
     };
 

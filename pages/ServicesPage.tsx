@@ -8,20 +8,8 @@ import {
   Brain, 
   Server, 
   Zap,
-  Shield,
-  BarChart3,
-  Code,
-  Database,
-  Cloud,
-  Smartphone,
-  Globe,
-  Target,
-  Rocket,
-  Users,
   Settings,
-  Mail,
-  Phone,
-  MapPin
+  Rocket
 } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
@@ -460,7 +448,7 @@ const ServicesPage: React.FC = () => {
             Need a Custom Solution?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Don't see exactly what you need? Our team can create custom solutions tailored to your specific requirements. 
+            Don&apos;t see exactly what you need? Our team can create custom solutions tailored to your specific requirements. 
             Contact us for a free consultation and custom quote.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

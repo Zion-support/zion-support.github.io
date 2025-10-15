@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { MapPin, Clock, Users, ArrowRight, Filter, Search, ExternalLink, CheckCircle, Star } from 'lucide-react';
+import { MapPin, Clock, Users, ArrowRight, Search, ExternalLink, CheckCircle, Star } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -282,7 +282,7 @@ const CareersPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-white mb-6">Benefits & Perks</h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  We offer comprehensive benefits to support our team's well-being and success
+                  We offer comprehensive benefits to support our team&apos;s well-being and success
                 </p>
               </div>
               
@@ -434,9 +434,9 @@ const CareersPage: React.FC = () => {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-xl p-12 text-center max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-6">Don't See the Right Role?</h2>
+              <h2 className="text-3xl font-bold text-white mb-6">Don&apos;t See the Right Role?</h2>
               <p className="text-xl text-white/90 mb-8">
-                We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute.
+                We&apos;re always looking for talented individuals. Send us your resume and let us know how you&apos;d like to contribute.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">

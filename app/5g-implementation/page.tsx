@@ -301,7 +301,7 @@ const testimonials = [
               <h2 className="text-4xl font-bold text-white mb-6">Client Success Stories</h2>
               
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how 5G has transformed our clients' businesses
+                See how 5G has transformed our clients&apos; businesses
               </p>
             </div>
             
