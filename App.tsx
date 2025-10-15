@@ -32,6 +32,9 @@ const MobileDevelopmentPage = lazy(() => import('./app/mobile-development/page')
 const DatabaseManagementPage = lazy(() => import('./app/database-management/page'));
 const NetworkInfrastructurePage = lazy(() => import('./app/network-infrastructure/page'));
 const CookiesPage = lazy(() => import('./app/cookies/page'));
+const BlockchainDevelopmentPage = lazy(() => import('./app/blockchain-development/page'));
+const IoTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
+const ARVRDevelopmentPage = lazy(() => import('./app/ar-vr-development/page'));
 
 // Zion AI Product Pages
 const ZionAIContentModeratorPage = lazy(() => import('./app/zion-ai-content-moderator/page'));
@@ -53,12 +56,16 @@ const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-custom
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 
 // Import components
-import Navigation from './app/components/Navigation';
-import Sidebar from './app/components/Sidebar';
-import Footer from './app/components/Footer';
+import FuturisticNavigation from './app/components/FuturisticNavigation';
+import FuturisticSidebar from './app/components/FuturisticSidebar';
+import FuturisticFooter from './app/components/FuturisticFooter';
+import FuturisticBackground from './app/components/FuturisticBackground';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+
+// Import futuristic styles
+import './app/styles/futuristic.css';
 
 // Enhanced loading component
 const LoadingFallback = () => (
@@ -89,11 +96,12 @@ export default function App() {
     <GlobalErrorBoundary>
       <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-gray-50">
-            <Navigation />
-            <Sidebar />
+          <div className="min-h-screen relative">
+            <FuturisticBackground />
+            <FuturisticNavigation />
+            <FuturisticSidebar />
             
-            <main className="flex-1">
+            <main className="flex-1 relative z-10">
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               
@@ -119,6 +127,9 @@ export default function App() {
                   <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
                   <Route path="/database-management" element={<DatabaseManagementPage />} />
                   <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                  <Route path="/blockchain-development" element={<BlockchainDevelopmentPage />} />
+                  <Route path="/iot-solutions" element={<IoTSolutionsPage />} />
+                  <Route path="/ar-vr-development" element={<ARVRDevelopmentPage />} />
                   
                   {/* Company Pages */}
                   <Route path="/team" element={<TeamPage />} />
@@ -193,7 +204,7 @@ export default function App() {
               </Suspense>
             </main>
             
-            <Footer />
+            <FuturisticFooter />
           </div>
         </Router>
       </HelmetProvider>
