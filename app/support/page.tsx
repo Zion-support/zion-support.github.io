@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -41,6 +40,13 @@ const SupportPage: React.FC = () => {
       responseTime: '< 2 hours',
       action: 'Send Email',
       color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: BookOpen,
+      title: 'Documentation',
+      description: 'Browse our comprehensive guides',
+      action: 'View Docs',
+      color: 'from-orange-500 to-red-500'
     }
   ];
 

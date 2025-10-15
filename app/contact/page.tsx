@@ -54,8 +54,7 @@ const ContactPage: React.FC = () => {
       title: "Phone",
       details: ["+1 302 464 0950", "Mon-Fri 9AM-6PM EST"],
       action: "Call Now"
-    },
-    {
+    },    {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
       details: ["kleber@ziontechgroup.com", "Response within 24 hours"],
@@ -72,8 +71,7 @@ const ContactPage: React.FC = () => {
       title: "Business Hours",
       details: ["Mon-Fri: 9AM-6PM EST", "Sat: 10AM-4PM EST"],
       action: "Schedule Call"
-    }
-  ];
+    }  ];
 
   const services = [
     "AI Services",

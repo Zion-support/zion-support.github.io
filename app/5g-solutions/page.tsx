@@ -63,16 +63,14 @@ const FiveGSolutionsPage: React.FC = () => {
       popular: true,
       icon: <Shield className="w-8 h-8" />,
       benefits: "Achieve enterprise-grade security with private networks"
-    }
-  ];
+    }  ];
 
   const benefits = [
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Ultra-Low Latency",
       description: "Achieve sub-millisecond latency for real-time applications"
-    },
-    {
+    },    {
       icon: <Network className="w-6 h-6" />,
       title: "Massive Connectivity",
       description: "Support millions of devices per square kilometer"
@@ -86,8 +84,7 @@ const FiveGSolutionsPage: React.FC = () => {
       icon: <Shield className="w-6 h-6" />,
       title: "Enhanced Security",
       description: "Advanced encryption and network slicing for secure communications"
-    }
-  ];
+    }  ];
 
   const technologies = [
     "5G NR", "Network Slicing", "Edge Computing", "IoT Protocols", 
