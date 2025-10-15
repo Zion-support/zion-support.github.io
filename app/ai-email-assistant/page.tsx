@@ -1,14 +1,13 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-  return (<>
-      <Helmet>
-        <title>AI Email Assistant - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Transform your email management with AI-powered automation, smart classification, and intelligent responses."
-        />
-      </Helmet>
+const AiEmailAssistantPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead 
+        title="AI Email Assistant - Zion Tech Group"
+        description="Transform your email management with AI-powered automation, smart classification, and intelligent responses."
+      />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}

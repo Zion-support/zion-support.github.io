@@ -1,14 +1,13 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-  return (<>
-      <Helmet>
-        <title>AI Financial Analytics Pro - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Advanced AI-powered financial analytics platform for comprehensive business intelligence and predictive insights."
-        />
-      </Helmet>
+const AiFinancialAnalyticsProPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead 
+        title="AI Financial Analytics Pro - Zion Tech Group"
+        description="Advanced AI-powered financial analytics platform for comprehensive business intelligence and predictive insights."
+      />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}

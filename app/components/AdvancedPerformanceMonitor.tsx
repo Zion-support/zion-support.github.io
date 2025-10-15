@@ -1,165 +1,200 @@
-'use client'
-import React, { useState } from 'react';
-import { useEffect, useState } from 'react'
+'use client';
+import React, { useState, useEffect } from 'react';
 
-    }
-
-    // Report metrics to analytics
-    const reportMetric = () => {
-      // Analytics reporting would go here
-    }
-
-    measureWebVitals()
-    measureMemory()
-    measureLoadTime()
-
-    </div>
-  )
+interface PerformanceMetrics {
+  loadTime: number;
+  memoryUsage: number;
+  fps: number;
+  lcp: number;
+  fid: number;
+  cls: number;
 }
 
-    try {
-        onCLS((metric: unknown) => {
-          setMetrics(prev => ({ ...prev, cls: metric.value }))
-          reportMetric('CLS', metric.value)
-        })
+const AdvancedPerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    memoryUsage: 0,
+    fps: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0
+  });
 
-        onINP((metric: unknown) => {
-          setMetrics(prev => ({ ...prev, fid: metric.value }))
-          reportMetric('INP', metric.value)
-        })
+  const [isVisible, setIsVisible] = useState(false);
 
-        onFCP((metric: unknown) => {
-          setMetrics(prev => ({ ...prev, fcp: metric.value }))
-          reportMetric('FCP', metric.value)
-        })
-
-        onLCP((metric: unknown) => {
-          setMetrics(prev => ({ ...prev, lcp: metric.value }))
-          reportMetric('LCP', metric.value)
-        })
-
-        onTTFB((metric: unknown) => {
-          setMetrics(prev => ({ ...prev, ttfb: metric.value }))
-          reportMetric('TTFB', metric.value)
-        })
-      } catch (error) {
-        }
-
-      // Measure memory usage
-      const measureMemory = () => {
-        if ('memory' in performance) {
-          const memory = (performance as any).memory
-          setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize }))
-        }
-      }
-
-      // Measure load time
-      const measureLoadTime = () => {
-        if (performance.timing) {
-          const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
-          setMetrics(prev => ({ ...prev, loadTime }))
-        }
-      }
-
-      // Report metrics to analytics
-      const reportMetric = (name: string, value: number) => {
-
-      // Send to Google Analytics
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'web_vitals', {
-          metric_name: name,
-          metric_value: Math.round(value),
-          metric_delta: Math.round(value)
-        })
-      }
-
-      // Send to custom analytics
-      if (typeof window !== 'undefined' && (window as any).analytics) {
-        (window as any).analytics.track('Performance Metric', {
-          name,
-          value: Math.round(value),
-          timestamp: Date.now()
-        })
-      }
-
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        }
-
-      measureWebVitals()
-      measureMemory()
-      measureLoadTime()
-    }
-
-    // Set up performance observer for additional metrics
-    if ('PerformanceObserver' in window) {
+  useEffect(() => {
+    const measureWebVitals = () => {
+      // Measure Largest Contentful Paint (LCP)
       const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // Measure First Input Delay (FID)
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // Measure Cumulative Layout Shift (CLS)
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'measure') {
-            }
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+            setMetrics(prev => ({ ...prev, cls: clsValue }));
+          }
         }
-      })
-      observer.observe({ entryTypes: ['measure'] })
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+    };
+
+    const measureMemory = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        setMetrics(prev => ({ 
+          ...prev, 
+          memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+        }));
+      }
+    };
+
+    const measureLoadTime = () => {
+      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+      setMetrics(prev => ({ ...prev, loadTime }));
+    };
+
+    const measureFPS = () => {
+      let lastTime = performance.now();
+      let frameCount = 0;
+      
+      const countFrames = () => {
+        frameCount++;
+        const currentTime = performance.now();
+        
+        if (currentTime >= lastTime + 1000) {
+          setMetrics(prev => ({ ...prev, fps: Math.round((frameCount * 1000) / (currentTime - lastTime)) }));
+          frameCount = 0;
+          lastTime = currentTime;
+        }
+        
+        requestAnimationFrame(countFrames);
+      };
+      
+      requestAnimationFrame(countFrames);
+    };
+
+    // Initialize measurements
+    measureWebVitals();
+    measureMemory();
+    measureLoadTime();
+    measureFPS();
+
+    // Update memory usage periodically
+    const memoryInterval = setInterval(measureMemory, 5000);
+
+    return () => {
+      clearInterval(memoryInterval);
+    };
+  }, []);
+
+  const getPerformanceGrade = (metric: string, value: number): string => {
+    switch (metric) {
+      case 'lcp':
+        return value <= 2500 ? 'A' : value <= 4000 ? 'B' : 'C';
+      case 'fid':
+        return value <= 100 ? 'A' : value <= 300 ? 'B' : 'C';
+      case 'cls':
+        return value <= 0.1 ? 'A' : value <= 0.25 ? 'B' : 'C';
+      case 'fps':
+        return value >= 55 ? 'A' : value >= 30 ? 'B' : 'C';
+      default:
+        return 'N/A';
     }
-  }, [])
+  };
 
-  // Calculate performance score
-  const calculateScore = () => {
-    let score = 100
-    let factors = 0
-
-    if (metrics.fcp !== null) {
-      factors++
-      if (metrics.fcp > 1800) score -= 20
-      else if (metrics.fcp > 1000) score -= 10
+  const getGradeColor = (grade: string): string => {
+    switch (grade) {
+      case 'A': return 'text-green-500';
+      case 'B': return 'text-yellow-500';
+      case 'C': return 'text-red-500';
+      default: return 'text-gray-500';
     }
+  };
 
-    if (metrics.lcp !== null) {
-      factors++
-      if (metrics.lcp > 2500) score -= 20
-      else if (metrics.lcp > 1500) score -= 10
-    }
-
-    if (metrics.cls !== null) {
-      factors++
-      if (metrics.cls > 0.25) score -= 20
-      else if (metrics.cls > 0.1) score -= 10
-    }
-
-    if (metrics.fid !== null) {
-      factors++
-      if (metrics.fid > 300) score -= 20
-      else if (metrics.fid > 100) score -= 10
-    }
-
-    return factors > 0 ? Math.max(0, score) : null
-  }
-
-  const performanceScore = calculateScore()
-
-  // Render performance dashboard in development
-  if (process.env.NODE_ENV === 'development') {
+  if (!isVisible) {
     return (
-      <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50">
-        <div className="font-bold mb-2">Performance Metrics</div>
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
-        <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
-        <div>Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(1)}%` : 'N/A'}</div>
-        <div>Load: {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}</div>
-        {performanceScore && (
-          <div className="mt-2 pt-2 border-t border-gray-600">
-            <div>Score: {performanceScore}/100</div>
-          </div>
-        )}
-      </div>
-    )
+      <button
+        onClick={() => setIsVisible(true)}
+        className="fixed bottom-4 left-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
+        aria-label="Open performance monitor"
+      >
+        📊
+      </button>
+    );
   }
 
-  return null
-}
+  return (
+    <div className="fixed bottom-4 left-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-4 w-80 z-50">
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          Performance Monitor
+        </h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+          aria-label="Close performance monitor"
+        >
+          ×
+        </button>
+      </div>
+      
+      <div className="space-y-3">
+        <div className="flex justify-between items-center">
+          <span className="text-sm text-gray-600 dark:text-gray-400">Load Time</span>
+          <span className="text-sm font-mono">{metrics.loadTime}ms</span>
+        </div>
+        
+        <div className="flex justify-between items-center">
+          <span className="text-sm text-gray-600 dark:text-gray-400">Memory Usage</span>
+          <span className="text-sm font-mono">{metrics.memoryUsage.toFixed(1)}MB</span>
+        </div>
+        
+        <div className="flex justify-between items-center">
+          <span className="text-sm text-gray-600 dark:text-gray-400">FPS</span>
+          <span className={`text-sm font-mono ${getGradeColor(getPerformanceGrade('fps', metrics.fps))}`}>
+            {metrics.fps} ({getPerformanceGrade('fps', metrics.fps)})
+          </span>
+        </div>
+        
+        <div className="flex justify-between items-center">
+          <span className="text-sm text-gray-600 dark:text-gray-400">LCP</span>
+          <span className={`text-sm font-mono ${getGradeColor(getPerformanceGrade('lcp', metrics.lcp))}`}>
+            {metrics.lcp.toFixed(0)}ms ({getPerformanceGrade('lcp', metrics.lcp)})
+          </span>
+        </div>
+        
+        <div className="flex justify-between items-center">
+          <span className="text-sm text-gray-600 dark:text-gray-400">FID</span>
+          <span className={`text-sm font-mono ${getGradeColor(getPerformanceGrade('fid', metrics.fid))}`}>
+            {metrics.fid.toFixed(0)}ms ({getPerformanceGrade('fid', metrics.fid)})
+          </span>
+        </div>
+        
+        <div className="flex justify-between items-center">
+          <span className="text-sm text-gray-600 dark:text-gray-400">CLS</span>
+          <span className={`text-sm font-mono ${getGradeColor(getPerformanceGrade('cls', metrics.cls))}`}>
+            {metrics.cls.toFixed(3)} ({getPerformanceGrade('cls', metrics.cls)})
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default AdvancedPerformanceMonitor
-
+export default AdvancedPerformanceMonitor;

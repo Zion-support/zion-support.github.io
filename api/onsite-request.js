@@ -11,3 +11,50 @@ export default async function handler(req, res) {
     return;
   }
 
+  try {
+    const { name, email, company, phone, service, message, preferredDate } = req.body;
+
+    if (!name || !email || !service) {
+      return res.status(400).json({ error: 'Name, email, and service are required' });
+    }
+
+    // Ensure data directory exists
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+
+    // Load existing requests
+    let requests = [];
+    if (fs.existsSync(file)) {
+      const data = fs.readFileSync(file, 'utf8');
+      requests = JSON.parse(data);
+    }
+
+    // Add new request
+    const newRequest = {
+      id: Date.now().toString(),
+      name,
+      email,
+      company,
+      phone,
+      service,
+      message,
+      preferredDate,
+      timestamp: new Date().toISOString()
+    };
+
+    requests.push(newRequest);
+
+    // Save to file
+    fs.writeFileSync(file, JSON.stringify(requests, null, 2));
+
+    res.status(200).json({ 
+      message: 'Onsite request submitted successfully',
+      requestId: newRequest.id
+    });
+  } catch (error) {
+    console.error('Onsite request error:', error);
+    res.status(500).json({ error: 'Failed to submit onsite request' });
+  }
+}
+

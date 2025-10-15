@@ -42,3 +42,41 @@ const FiveGSolutionsPage: React.FC = () => {
       marketPrice: "$5,999-19,999",
       popular: false,
       icon: <Smartphone className="w-8 h-8" />,
+      benefits: "Deliver ultra-low latency mobile experiences"
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>5G Solutions - Zion Tech Group | Next-Gen Connectivity</title>
+        <meta name="description" content="Transform your business with cutting-edge 5G solutions. Expert implementation, infrastructure, and IoT connectivity from Zion Tech Group." />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">5G Solutions</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your business with cutting-edge 5G solutions. Expert implementation, infrastructure, and IoT connectivity.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {solutions.map((solution, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-3">{solution.name}</h3>
+                <p className="text-gray-300 mb-4">{solution.description}</p>
+                <div className="text-2xl font-bold text-cyan-400 mb-2">{solution.price}</div>
+                <div className="text-sm text-gray-400 line-through mb-4">{solution.marketPrice}</div>
+                <p className="text-sm text-green-400 mb-4">{solution.benefits}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default FiveGSolutionsPage;

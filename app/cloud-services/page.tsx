@@ -1,20 +1,60 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Cloud, Server, Shield, Zap, Database, Globe, Lock } from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {
+  const services = [
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: 'Cloud Migration',
+      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.',
+      features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']
+    },
+    {
+      icon: <Server className="w-8 h-8" />,
+      title: 'Infrastructure Management',
+      description: 'Comprehensive cloud infrastructure setup, monitoring, and optimization.',
+      features: ['Auto-scaling', 'Load Balancing', 'Monitoring & Alerting', 'Cost Optimization']
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Cloud Security',
+      description: 'Advanced security measures to protect your cloud infrastructure and data.',
+      features: ['Identity & Access Management', 'Data Encryption', 'Security Monitoring', 'Compliance']
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Scalability',
+      description: 'Scale your infrastructure up or down based on demand'
+    },
+    {
+      icon: <Database className="w-8 h-8" />,
+      title: 'Reliability',
+      description: '99.9% uptime with redundant systems and failover'
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: 'Global Reach',
+      description: 'Deploy applications worldwide with edge computing'
+    },
+    {
+      icon: <Lock className="w-8 h-8" />,
+      title: 'Security',
+      description: 'Enterprise-grade security with regular updates'
+    }
+  ];
+
   return (
     <>
-      <Helmet>
-        <title>Cloud Services - Zion Tech Group | Cloud Migration & Infrastructure</title>
-        <meta
-          name="description"
-          content="Transform your business with our comprehensive cloud services. Expert cloud migration, infrastructure management, and security solutions from Zion Tech Group."
-        />
-        <meta
-          name="keywords"
-          content="cloud services, cloud migration, cloud infrastructure, cloud security, AWS, Azure, Google Cloud, cloud consulting"
-        />
-      </Helmet>
+      <SEOHead 
+        title="Cloud Services - Zion Tech Group | Cloud Migration & Infrastructure"
+        description="Transform your business with our comprehensive cloud services. Expert cloud migration, infrastructure management, and security solutions from Zion Tech Group."
+        keywords="cloud services, cloud migration, cloud infrastructure, cloud security, AWS, Azure, Google Cloud, cloud consulting"
+      />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
@@ -98,4 +138,9 @@ const CloudServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
+      </div>
+    </>
+  );
+};
 
+export default CloudServicesPage;

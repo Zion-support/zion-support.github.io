@@ -1,14 +1,13 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-  return (<>
-      <Helmet>
-        <title>AI Expense Tracker - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Smart expense tracking with AI-powered categorization, receipt scanning, and financial insights."
-        />
-      </Helmet>
+const AiExpenseTrackerPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead 
+        title="AI Expense Tracker - Zion Tech Group"
+        description="Smart expense tracking with AI-powered categorization, receipt scanning, and financial insights."
+      />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}

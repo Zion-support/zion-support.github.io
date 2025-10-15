@@ -1,12 +1,18 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
+import { motion } from 'framer-motion';
+import { Heart, ArrowRight } from 'lucide-react';
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AI Customer Sentiment Tracker | Zion Tech Group</title>
-        <meta name="description" content="Monitor and analyze customer sentiment across all channels with AI-powered insights and real-time alerts." />
-        <meta name="keywords" content="customer sentiment, sentiment analysis, _customer satisfaction, _brand monitoring, AI analytics" />
-      </Helmet>
+const AiCustomerSentimentTrackerPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead 
+        title="AI Customer Sentiment Tracker | Zion Tech Group"
+        description="Monitor and analyze customer sentiment across all channels with AI-powered insights and real-time alerts."
+        keywords="customer sentiment, sentiment analysis, customer satisfaction, brand monitoring, AI analytics"
+      />
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
       {/* Hero Section */}
       <section className="relative py-20 px-4">
@@ -51,6 +57,7 @@ import SEOHead from '../components/SEOHead';
           </motion.div>
         </div>
       </section>
+      </div>
     </>
   );
 };

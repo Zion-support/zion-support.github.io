@@ -1,14 +1,13 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-  return (<>
-      <Helmet>
-        <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Transform your e-commerce business with advanced AI optimization solutions that boost sales, improve conversion rates, and maximize your online store performance."
-        />
-      </Helmet>
+const AiEcommerceOptimizerProPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead 
+        title="AI E-commerce Optimizer Pro - Zion Tech Group"
+        description="Transform your e-commerce business with advanced AI optimization solutions that boost sales, improve conversion rates, and maximize your online store performance."
+      />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}
