@@ -97,9 +97,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
         event_category: 'error',
+<<<<<<< HEAD
         event_label: errorReport.message,
         value: 1,
         non_interaction: true
+=======
+        event_label: errorReport.message
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-c0a0
       });
     }
 

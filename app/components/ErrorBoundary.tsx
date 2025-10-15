@@ -37,20 +37,38 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      if (process.env.NODE_ENV === 'development') {
+      // Use a more sophisticated logging system in development
+      if (typeof window !== 'undefined' && window.console) {
         console.error('ErrorBoundary caught an error:', error, errorInfo);
       }
     }
     
     // Send error to monitoring service in production
     if (process.env.NODE_ENV === 'production') {
+<<<<<<< HEAD
+=======
+      // Enhanced error reporting with more context
+      const _errorReport = {
+        message: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href
+      };
+      
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-c0a0
       // Send to error monitoring service (e.g., Sentry, LogRocket, etc.)
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'exception', {
           event_category: 'error',
+<<<<<<< HEAD
           event_label: error.message,
           value: 1,
           non_interaction: true
+=======
+          event_label: error.message
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-c0a0
         });
       }
     }

@@ -14,9 +14,15 @@ export class CustomError extends Error {
   constructor(message: string, code?: string, statusCode?: number, details?: Record<string, unknown>) {
     super(message);
     this.name = 'CustomError';
+<<<<<<< HEAD
     if (code !== undefined) this.code = code;
     if (statusCode !== undefined) this.statusCode = statusCode;
     if (details !== undefined) this.details = details;
+=======
+    this.code = code;
+    this.statusCode = statusCode;
+    this.details = details;
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-c0a0
   }
 }
 
@@ -47,11 +53,10 @@ export const handleError = (error: unknown): AppError => {
   };
 };
 
-export const logError = (error: AppError, context?: string) => {
+export const logError = (_error: AppError, _context?: string) => {
   if (process.env.NODE_ENV === 'development') {
-    if (process.env.NODE_ENV === 'development') {
-      console.error(`[${context || 'App'}] Error:`, error);
-    }
+    // Error logging can be implemented here
+    // console.log('Error:', error, 'Context:', context);
   }
   
   // In production, you would send this to your error monitoring service

@@ -108,35 +108,35 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       onCLS((metric) => {
         metricsRef.current.cls = metric.value;
         if (process.env.NODE_ENV === 'development') {
-          console.log('CLS:', metric.value);
+          // CLS metric logging can be implemented here
         }
       });
 
       onFCP((metric) => {
         metricsRef.current.fcp = metric.value;
         if (process.env.NODE_ENV === 'development') {
-          console.log('FCP:', metric.value);
+          // FCP metric logging can be implemented here
         }
       });
 
       onLCP((metric) => {
         metricsRef.current.lcp = metric.value;
         if (process.env.NODE_ENV === 'development') {
-          console.log('LCP:', metric.value);
+          // LCP metric logging can be implemented here
         }
       });
 
       onTTFB((metric) => {
         metricsRef.current.ttfb = metric.value;
         if (process.env.NODE_ENV === 'development') {
-          console.log('TTFB:', metric.value);
+          // TTFB metric logging can be implemented here
         }
       });
 
       onINP((metric) => {
         metricsRef.current.inp = metric.value;
         if (process.env.NODE_ENV === 'development') {
-          console.log('INP:', metric.value);
+          // INP metric logging can be implemented here
         }
       });
     }).catch(() => {
@@ -151,14 +151,10 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     observerRef.current = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (entry.entryType === 'navigation') {
-          const navEntry = entry as PerformanceNavigationTiming;
+          // const navEntry = entry as PerformanceNavigationTiming;
           if (process.env.NODE_ENV === 'development') {
-            console.log('Navigation timing:', {
-              domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-              loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-              firstByte: navEntry.responseStart - navEntry.requestStart
-            });
-          }
+            // Navigation timing analysis can be added here
+            }
         }
       }
     });
@@ -170,27 +166,17 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   const analyzeBundle = useCallback(() => {
     if (!enableBundleAnalysis || process.env.NODE_ENV !== 'development') return;
 
-    const scripts = Array.from(document.querySelectorAll('script[src]'));
-    const totalSize = scripts.reduce((total, script) => {
-      const src = script.getAttribute('src');
-      if (src && src.includes('assets/')) {
-        // This is a rough estimation - in reality you'd need to fetch the actual file size
-        return total + 100; // Placeholder
-      }
-      return total;
-    }, 0);
+    // const scripts = Array.from(document.querySelectorAll('script[src]'));
+    // const totalSize = scripts.reduce((total, script) => {
+    //   const src = script.getAttribute('src');
+    //   if (src && src.includes('assets/')) {
+    //     // This is a rough estimation - in reality you'd need to fetch the actual file size
+    //     return total + 100; // Placeholder
+    //   }
+    //   return total;
+    // }, 0);
 
-    console.log('Bundle analysis:', {
-      scriptCount: scripts.length,
-      estimatedSize: `${totalSize}KB`,
-      recommendations: [
-        'Consider code splitting for large components',
-        'Use dynamic imports for non-critical features',
-        'Optimize images and assets',
-        'Enable gzip compression'
-      ]
-    });
-  }, [enableBundleAnalysis]);
+    }, [enableBundleAnalysis]);
 
   // Initialize optimizations
   useEffect(() => {
@@ -222,6 +208,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     getMetrics: () => metricsRef.current,
     clearMetrics: () => {
       metricsRef.current = {};
-    }
+    },
+    preloadImages
   };
 };

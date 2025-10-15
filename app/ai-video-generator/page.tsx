@@ -7,10 +7,8 @@ import {
   ArrowRightIcon,
   CpuChipIcon,
   SparklesIcon,
-  ClockIcon,
   ShieldCheckIcon,
   DocumentTextIcon,
-  ChatBubbleLeftRightIcon,
   MicrophoneIcon,
   PhotoIcon
 } from '@heroicons/react/24/outline';

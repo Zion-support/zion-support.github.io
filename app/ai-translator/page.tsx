@@ -6,8 +6,6 @@ import {
   CheckCircleIcon, 
   ArrowRightIcon,
   CpuChipIcon,
-  SparklesIcon,
-  ClockIcon,
   ShieldCheckIcon,
   DocumentTextIcon,
   ChatBubbleLeftRightIcon,
