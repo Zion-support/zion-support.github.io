@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-function handler(req, res) {};
-  if (req.method !== 'POST') {};
-=======
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
@@ -25,4 +21,3 @@ export default function handler(req, res) {
     res.status(500).json({ error: 'Failed to report error' });
   }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-const isValidEmail = (email) => {};
-=======
 const isValidEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
@@ -29,4 +26,3 @@ export default function handler(req, res) {
     res.status(500).json({ error: 'Subscription failed' });
   }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9
