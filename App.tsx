@@ -53,11 +53,11 @@ const App: React.FC = () => {
   return (
     <ErrorBoundary fallback={<div>Something went wrong.</div>}>
       <HelmetProvider>
-        <AnalyticsProvider>
-          <PerformanceOptimizer>
-            <AccessibilityEnhancer>
-              <SEOOptimizer>
-                <Router>
+        <AnalyticsProvider />
+        <PerformanceOptimizer />
+        <AccessibilityEnhancer>
+          <SEOOptimizer>
+            <Router>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-x-hidden">
                     {/* Animated background elements */}
                     <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -122,11 +122,9 @@ const App: React.FC = () => {
                     
                     <Footer />
                   </div>
-                </Router>
-              </SEOOptimizer>
-            </AccessibilityEnhancer>
-          </PerformanceOptimizer>
-        </AnalyticsProvider>
+            </Router>
+          </SEOOptimizer>
+        </AccessibilityEnhancer>
       </HelmetProvider>
     </ErrorBoundary>
   );
