@@ -18,10 +18,10 @@ function fixPageFile(filePath) {
     });
     
     // Fix specific patterns where there are too many closing divs
-    content = content.replace(/<\/div>\n<\/div>\n<\/div>\n<\/div>\n    <\/>/g, '</div>\n          </div>\n        </div>\n      </div>\n    </>');
+    content = content.replace(/<\/div>\n<\/div>\n<\/div>\n<\/div>\n {4}<\/>/g, '</div>\n          </div>\n        </div>\n      </div>\n    </>');
     
     // Fix malformed JSX structure
-    content = content.replace(/<\/div>\n<\/div>\n<\/div>\n    <\/>/g, '</div>\n          </div>\n        </div>\n      </div>\n    </>');
+    content = content.replace(/<\/div>\n<\/div>\n<\/div>\n {4}<\/>/g, '</div>\n          </div>\n        </div>\n      </div>\n    </>');
     
     // Fix any remaining syntax issues
     content = content.replace(/Parsing error: Identifier expected/g, '');

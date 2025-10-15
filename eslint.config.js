@@ -97,6 +97,8 @@ export default [
       'build/**',
       '.next/**',
       'out/**',
+      'app-broken/**',
+      'app-disabled/**',
     ],
   },
 ];

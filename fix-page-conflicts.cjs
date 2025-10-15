@@ -28,7 +28,7 @@ function fixPageFile(filePath) {
     
     // Fix malformed JSX fragments
     if (content.includes('</div>\n      </>')) {
-      content = content.replace(/<\/div>\n      <\/>/g, '</div>\n      </div>\n    </>');
+      content = content.replace(/<\/div>\n {6}<\/>/g, '</div>\n      </div>\n    </>');
     }
     
     // Fix malformed paragraphs

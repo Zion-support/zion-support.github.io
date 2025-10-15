@@ -1,4 +1,4 @@
-export constappConfig= {
+export const appConfig = {
   name: 'Zion Tech Group',
   version: '1.0.0',
   description: 'Advanced AI and IT Solutions',
@@ -7,7 +7,7 @@ export constappConfig= {
   environment: process.env.NODE_ENV || 'development',
   social: {
     twitter: 'https://twitter.com/ziontechgroup',
-    linkedin: 'https://linkedin.com/compunknown/ziontechgroup',
+    linkedin: 'https://linkedin.com/company/ziontechgroup',
     github: 'https://github.com/ziontechgroup'
   }
-}
+};
