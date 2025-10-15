@@ -133,7 +133,6 @@ function App() {
                       <Route path="/team" element={<TeamPage />} />
                       <Route path="/docs" element={<DocumentationPage />} />
                       <Route path="/partnerships" element={<PartnershipsPage />} />
-<<<<<<< HEAD
                       <Route path="/api-docs" element={<APIDocsPage />} />
                       <Route path="/help" element={<HelpPage />} />
                       <Route path="/community" element={<CommunityPage />} />
@@ -141,10 +140,6 @@ function App() {
                       <Route path="/status" element={<StatusPage />} />
                       <Route path="/report" element={<ReportPage />} />
                       <Route path="/software-development" element={<SoftwareDevelopmentPage />} />
-=======
-                      <Route path="/chat" element={<ChatPage />} />
-                      <Route path="/report" element={<ReportPage />} />
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
                       
                       {/* Catch all route */}
                       <Route path="*" element={
