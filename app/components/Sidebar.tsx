@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { 
@@ -96,7 +97,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   if (!isOpen) return null
 
-  return (<>
+  return (
+    <>
       {/* Overlay */}
       <div 
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"

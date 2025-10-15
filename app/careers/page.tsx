@@ -1,7 +1,10 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import SEOHead from '../components/SEOHead';
 
-  return (<>
+const CareersPage: React.FC = () => {
+  return (
+    <>
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join our team of experts in AI, cloud, and cybersecurity. Explore career opportunities at Zion Tech Group." />

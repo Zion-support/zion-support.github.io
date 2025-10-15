@@ -1,7 +1,11 @@
+import { Helmet } from "react-helmet-async";
 import React from 'react';
+import { Helmet } from "react-helmet-async";
 import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code-4a9f
 
-  return (<>
+const Page: React.FC = () => {
+  return (
+    <>
       <Helmet>
         <title>AI Automation Platform - Intelligent Process Automation | Zion Tech Group</title>
         <meta name="description" content="Transform your business with our AI automation platform. Automate workflows, optimize processes, and achieve 70% efficiency gains with intelligent automation solutions." />

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import React, { useState } from 'react';
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
@@ -12,7 +13,9 @@ export default function NewsletterSignup() {
     // Handle newsletter signup
     };
 
-  return (<>
+const NewsletterSignup: React.FC = () => {
+  return (
+    <>
       <Helmet>
         <title>Newsletter Signup - Zion Tech Group</title>
       </Helmet>

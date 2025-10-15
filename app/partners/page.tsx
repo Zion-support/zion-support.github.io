@@ -1,4 +1,6 @@
+import { Helmet } from "react-helmet-async";
 import React from 'react';
+import { Helmet } from "react-helmet-async";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Users, Globe, Shield, Zap } from 'lucide-react';export default function Partners() {
@@ -91,7 +93,9 @@ import { CheckCircle, Users, Globe, Shield, Zap } from 'lucide-react';export def
     }
   ];
 
-  return (<>
+const Page: React.FC = () => {
+  return (
+    <>
       <Helmet>
         <title>Partners - Zion Tech Group | Strategic Partnerships</title>
         <meta name="description" content="Join our partner ecosystem and unlock new opportunities for growth. Strategic partnerships with leading technology companies." />

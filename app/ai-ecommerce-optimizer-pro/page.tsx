@@ -1,7 +1,11 @@
+import { Helmet } from "react-helmet-async";
 import React from 'react';
+import { Helmet } from "react-helmet-async";
 import SEOHead from '../components/SEOHead';
 
-  return (<>
+const Page: React.FC = () => {
+  return (
+    <>
       <Helmet>
         <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
         <meta

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import React, { useState } from 'react';
 import React, { useEffect, useState, useCallback } from 'react';
 
@@ -122,7 +123,9 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
     setSettings(defaultSettings);
   };
 
-  return (<>
+const AccessibilityManager: React.FC = () => {
+  return (
+    <>
       {children}
       {/* Accessibility Panel */}
       {isVisible && ()

@@ -1,7 +1,11 @@
+import { Helmet } from "react-helmet-async";
 import React from 'react';
+import { Helmet } from "react-helmet-async";
 import SEOHead from '../components/SEOHead';
 
-  return (<>
+const Page: React.FC = () => {
+  return (
+    <>
       <Helmet>
         <title>Press - Zion Tech Group | Media Center & News</title>
         <meta name="description" content="Latest press releases, media kit, and news from Zion Tech Group. Stay updated with our latest announcements and achievements." />
