@@ -53,35 +53,39 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 border-t border-slate-700/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-slate-900 border-t border-slate-700/50 relative overflow-hidden">
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/10 to-purple-900/10"></div>
+      <div className="absolute inset-0 cyber-grid opacity-20"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <CpuChipIcon className="w-5 h-5 text-white" />
+            <div className="flex items-center space-x-2 mb-4 group">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/25">
+                <CpuChipIcon className="w-5 h-5 text-white group-hover:animate-pulse" />
               </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+              <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors group-hover:neon-text">Zion Tech Group</span>
             </div>
-            <p className="text-gray-400 mb-6 max-w-sm text-sm">
+            <p className="text-gray-400 mb-6 max-w-sm text-sm leading-relaxed">
               Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, 
               and digital transformation services for businesses worldwide.
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3 text-gray-400">
-                <PhoneIcon className="w-4 h-4" />
-                <span>+1-302-464-0950</span>
+              <div className="flex items-center space-x-3 text-gray-400 group hover:text-cyan-400 transition-colors duration-300">
+                <PhoneIcon className="w-4 h-4 group-hover:animate-pulse" />
+                <span className="group-hover:neon-text">+1-302-464-0950</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-400">
-                <EnvelopeIcon className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
+              <div className="flex items-center space-x-3 text-gray-400 group hover:text-purple-400 transition-colors duration-300">
+                <EnvelopeIcon className="w-4 h-4 group-hover:animate-pulse" />
+                <span className="group-hover:neon-text">kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-400">
-                <MapPinIcon className="w-4 h-4" />
-                <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+              <div className="flex items-center space-x-3 text-gray-400 group hover:text-green-400 transition-colors duration-300">
+                <MapPinIcon className="w-4 h-4 group-hover:animate-pulse" />
+                <span className="group-hover:neon-text">364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>
 
@@ -93,10 +97,12 @@ const Footer: React.FC = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-all duration-300 group relative"
                   aria-label={social.name}
                 >
-                  <social.icon className="w-5 h-5" />
+                  <div className="p-2 rounded-lg group-hover:bg-cyan-500/10 group-hover:shadow-lg group-hover:shadow-cyan-500/25 transition-all duration-300">
+                    <social.icon className="w-5 h-5 group-hover:animate-pulse group-hover:text-cyan-400 transition-colors duration-300" />
+                  </div>
                 </a>
               ))}
             </div>
@@ -155,9 +161,9 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="mt-16 pt-8 border-t border-slate-700/50">
+        <div className="mt-16 pt-8 border-t border-slate-700/50 relative">
           <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-bold text-white mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Stay Updated</h3>
+            <h3 className="text-2xl font-bold text-white mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">Stay Updated</h3>
             <p className="text-gray-300 mb-6 text-lg">
               Get the latest insights on AI and IT trends delivered to your inbox.
             </p>
@@ -165,11 +171,12 @@ const Footer: React.FC = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent focus:bg-slate-800 transition-all duration-300 backdrop-blur-sm"
               />
-              <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center font-semibold">
-                Subscribe
-                <ArrowRightIcon className="w-4 h-4 ml-2" />
+              <button className="group relative px-8 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center font-semibold overflow-hidden">
+                <span className="relative z-10">Subscribe</span>
+                <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
             </div>
           </div>
