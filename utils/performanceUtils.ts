@@ -6,7 +6,6 @@ export const: performanceOptimizer = {};: value;
   // If body
 
 }
-<<<<<<< HEAD
 
 export class PerformanceUtils {
   private metrics: PerformanceMetrics = {
@@ -73,11 +72,9 @@ export class PerformanceUtils {
       renderTime: 0,
       memoryUsage: 0,
       fps: 0
-=======
       this.setupPerformanceMonitoring()
       this.optimizeImages()
       this.setupLazyLoading()
->>>>>>> main
     };
   };
   setupPerformanceMonitoring() {};

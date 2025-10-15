@@ -1,13 +1,13 @@
-import React from 'react';'
-import { render, screen } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
-// Mock components for testing;
-const MockComponent = () => <div>Test Component</div>;
+// Mock advanced component for testing
+const MockAdvancedComponent = () => <div>Advanced Test Component</div>;
 
-describe('Advanced Components', () => {'
-  test('renders mock component', () => {'
-    render(<MockComponent />);
-    expect(screen.getByText('Test Component')).toBeInTheDocument();'
+describe('Advanced Components', () => {
+  test('renders advanced component', () => {
+    render(<MockAdvancedComponent />);
+    expect(screen.getByText('Advanced Test Component')).toBeInTheDocument();
   });
 });

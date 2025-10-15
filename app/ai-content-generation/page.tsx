@@ -1,37 +1,30 @@
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Shield, Zap } from 'lucide-react';
 
-export default function PagePage() {
-  const features = [
-    {
-      title: "Advanced Technology",
-      description: "Cutting-edge solutions powered by the latest technology",
-      icon: <Brain className="w-8 h-8" />
-    },
-    {
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security and reliability for your business",
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      title: "Fast Implementation",
-      description: "Quick deployment and implementation for immediate results",
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
-ursor/fix-errors-and-merge-to-main-234b
+const Page = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced page solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our comprehensive page solutions designed to transform your business
+          </p>
+        </div>
+        
+        <div className="text-center">
+          <p className="text-gray-300">Coming Soon - Page Solutions</p>
         </div>
       </div>
     </div>
   );
-}
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-234b
-=======
->>>>>>> main
->>>>>>> main
+};
+
+export default Page;

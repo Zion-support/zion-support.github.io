@@ -1,4 +1,4 @@
-    <LazyWrapper>
-      <LazyComponent {...props} />
-  );
+<LazyWrapper>
+<LazyComponent {...props} />
+);
 

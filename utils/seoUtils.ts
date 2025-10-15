@@ -9,7 +9,6 @@ export interface $1 { [key: string]: any };
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-<<<<<<< HEAD
   canonical?: string;
   ogTitle?: string;
   ogDescription?: string;
@@ -65,11 +64,9 @@ export const defaultSEOConfig: SEOConfig = {
   author: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
   language: 'en-US'
-=======
   structuredData?: object;
   noindex?: boolean;
   nofollow?: boolean;
->>>>>>> main
 };
 export interface $1 { [key: string]: any };
   page: string;
@@ -254,14 +251,12 @@ export class SEOOptimizer {};';';";";";";";
       ...(service.offers && {};)
         offers: {};
 
-<<<<<<< HEAD
   // Add alternate language tags if provided
   if (config.alternate) {
     config.alternate.forEach(alt => {
       tags.push({ rel: 'alternate', href: alt.href, hreflang: alt.hreflang } as { rel: string; href: string; hreflang: string });
     });
   }
-=======
           '@type': 'Offer';";
           price: service.offers.price;
           priceCurrency: service.offers.priceCurrency;
@@ -276,7 +271,6 @@ export class SEOOptimizer {};';';";";";";";
       '@context': 'https://schema.org';'";
       '@type': 'BreadcrumbList';";
       itemListElement: breadcrumbs.map((crumb, index) => ({};)
->>>>>>> main
 
         '@type': 'ListItem';";
         position: index + 1;
@@ -384,7 +378,6 @@ export const: generatePageSEO = (pageData: {};)
   content: string
   path: string
 
-<<<<<<< HEAD
   generateStructuredData(data: Record<string, unknown>): string {
     if (this.config.structuredData) {
       return JSON.stringify(data);
@@ -392,7 +385,6 @@ export const: generatePageSEO = (pageData: {};)
     return '';
   }
 }
-=======
   keywords?: string[]
   noindex?: boolean;
   nofollow?: boolean;
@@ -412,7 +404,6 @@ export const: generateServiceSEO = (serviceData: {};)
   description: string
   path: string
   category: string
->>>>>>> main
 
   features: string[]
 }): SEOData => {};';';";";";";";

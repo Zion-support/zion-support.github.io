@@ -1,167 +1,163 @@
 ursor/fix-errors-and-merge-to-main-234b
-=======
 };
-const page = React.lazy(() => import('./page'));''
+const page = React.lazy(() => import('./page'));'
 export default page;
-=======
 
-        {/* Security Features List */};
-        <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
-                Complete Security Suite
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-                All the security tools you need in one comprehensive platform.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
-              {securityFeatures.map((feature, index) => ()}
-                <divkey={index},>
-      className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
-                ></div
+{/* Security Features List */};
+<section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+<div className="max-w-7xl mx-auto"></div>
+<div className="text-center mb-16"></div>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
+Complete Security Suite
+</h2>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+All the security tools you need in one comprehensive platform.
+</p>
+</div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+{securityFeatures.map((feature, index) => ()}
+<divkey={index},>
+className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
+></div
 >
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
-                </div>
-              ))};
-            </div>
-          </div>
-        </section>
+<CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+<span className="text-gray-300">{feature}</span>
+</div>
+))};
+</div>
+</div>
+</section>
 
-        {/* Pricing Section */};
-        <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
-                Flexible Security Plans
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-                Choose the security level that matches your business needs. All plans include 30-day free trial.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-              {pricingPlans.map((plan, index) => ()}
-                <divkey={index},>
-      className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${},
-      plan.popular
-                      ? 'border-red-400 bg-gradient-to-br from-red-500/10 to-orange-500/10'
-                      : 'border-white/20 hover:border-red-400'
-                  }`};
-                ></div
+{/* Pricing Section */};
+<section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+<div className="max-w-7xl mx-auto"></div>
+<div className="text-center mb-16"></div>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
+Flexible Security Plans
+</h2>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+Choose the security level that matches your business needs. All plans include 30-day free trial.
+</p>
+</div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+{pricingPlans.map((plan, index) => ()}
+<divkey={index},>
+className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${},
+plan.popular
+? 'border-red-400 bg-gradient-to-br from-red-500/10 to-orange-500/10'
+: 'border-white/20 hover:border-red-400'
+}`};
+></div
 >
-                  {plan.popular && ()}
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                      <span className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold"></span>
-                        Most Popular
-                      </span>
-                    </div>
-                  )};
-                  <div className="text-center mb-8"></div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center"></div>
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-300 ml-1">{plan.period}</span>
-                    </div>
-                  </div>
-                  <ul className="space-y-4 mb-8"></ul>
-                    {plan.features.map((feature, featureIndex) => ()}
-                      <li key={featureIndex} className="flex items-center"></li>
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
-                      </li>
-                    ))};
-                  </ul>
-                  <>
-                    to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${},
-      plan.popular
-                        ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700'
-                        : 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900'
-                    }`};
-                  ></>
-                    Start Free Trial
-                  </>
-                </div>
-              ))};
-            </div>
-          </div>
-        </section>
+{plan.popular && ()}
+<div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+<span className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold"></span>
+Most Popular
+</span>
+</div>
+)};
+<div className="text-center mb-8"></div>
+<h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+<p className="text-gray-300 mb-4">{plan.description}</p>
+<div className="flex items-baseline justify-center"></div>
+<span className="text-4xl font-bold text-white">{plan.price}</span>
+<span className="text-gray-300 ml-1">{plan.period}</span>
+</div>
+</div>
+<ul className="space-y-4 mb-8"></ul>
+{plan.features.map((feature, featureIndex) => ()}
+<li key={featureIndex} className="flex items-center"></li>
+<CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+<span className="text-gray-300">{feature}</span>
+</li>
+))};
+</ul>
+<>
+to="/contact"
+className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${},
+plan.popular
+? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700'
+: 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900'
+}`};
+></>
+Start Free Trial
+</>
+</div>
+))};
+</div>
+</div>
+</section>
 
-        {/* Testimonials Section */};
-        <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
-                Trusted by Security Leaders
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-                See what security professionals say about Zion Security </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-              {testimonials.map((testimonial, index) => ()}
-                <divkey={index},>
-      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
-                ></div
+{/* Testimonials Section */};
+<section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+<div className="max-w-7xl mx-auto"></div>
+<div className="text-center mb-16"></div>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
+Trusted by Security Leaders
+</h2>
+<p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+See what security professionals say about Zion Security </p>
+</div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+{testimonials.map((testimonial, index) => ()}
+<divkey={index},>
+className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+></div
 >
-                  <div className="flex items-center mb-4"></div>
-                    {[...Array(testimonial.rating)].map(( i) => ()}
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))};
-                  </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                  <div></div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                  </div>
-                </div>
-              ))};
-            </div>
-          </div>
-        </section>
+<div className="flex items-center mb-4"></div>
+{[...Array(testimonial.rating)].map(( i) => ()}
+<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+))};
+</div>
+<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+<div></div>
+<div className="font-semibold text-white">{testimonial.name}</div>
+<div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+</div>
+</div>
+))};
+</div>
+</div>
+</section>
 
-        {/* CTA Section */};
-        <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
-              Ready to Secure Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8"></p>
-              Join thousands of organizations protected by Zion Security .
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <>
-                to="/contact"
-                className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center"
-              ></>
-                Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </>
-              <>
-                to="/demo"
-                className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
+{/* CTA Section */};
+<section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+<div className="max-w-4xl mx-auto text-center"></div>
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
+Ready to Secure Your Business?
+</h2>
+<p className="text-xl text-gray-300 mb-8"></p>
+Join thousands of organizations protected by Zion Security .
+</p>
+<div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+<>
+to="/contact"
+className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center"
+></>
+Start Your Free Trial
+<ArrowRight className="w-5 h-5 ml-2" />
+</>
+<>
+to="/demo"
+className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
 
 ;
 const ZionSecurityShieldPage: React.FC = () => {
-  return (
-    <>;
-      <SEOHead;
-        title="Zion Security Shield - Zion Tech Group"";
-        description="Professional zion security shield solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Zion Security Shield</h1>";
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-        </div>;
-      </div>;
-    </>;
-  ),
+return (
+<>;
+<SEOHead;
+title="Zion Security Shield - Zion Tech Group";
+description="Professional zion security shield solutions for modern businesses";
+/>";
+<div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+<div className ="text-center">";
+<h1 className ="text-4xl font-bold mb-4">Zion Security Shield</h1>";
+<p className ="text-gray-300">Professional solutions coming soon...</p>;";
+</div>;
+</div>;
+</>;
+),
 };
 ;
 export default ZionSecurityShieldPage;'";'";
 
->>>>>>> main
->>>>>>> main

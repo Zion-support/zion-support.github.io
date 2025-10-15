@@ -1,15 +1,15 @@
 
 interface PerformanceEnhancerOptions {
-  });
+});
 
-  // Add your hooks logic here;
-  useEffect(() => {
-    // Add your effect logic here;
-  }, [
-  ]);
+// Add your hooks logic here;
+useEffect(() => {
+// Add your effect logic here;
+}, [
+]);
 
-  return {
-    // Return your hook values here;
-  };
+return {
+// Return your hook values here;
 };
-export default PerformanceEnhancer''"";"
+};
+export default PerformanceEnhancer'";"

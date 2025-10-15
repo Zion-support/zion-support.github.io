@@ -1,28 +1,28 @@
 
 export const Icon  = ({},)
 
-      name,;
-      className = ": value";"
+name,;
+className = ": value";"
 
 export const Icon  = ({}: value,;
-      name,;
-      className = ": value";"
+name,;
+className = ": value";"
 
-  ...props;
+...props;
 }: {},;
-      name: string,;
-      className?: string;
-  [key: string]: unknown;
+name: string,;
+className?: string;
+[key: string]: unknown;
 }) => {},
-      return ()
-    <span: className ={`icon ${className}`} {...props}></span>
-      {name};
-    </span>
-  )
+return ()
+<span: className ={`icon ${className}`} {...props}></span>
+{name};
+</span>
+)
 
 
-  [key: string]: unknown,
+[key: string]: unknown,
 }) => {}: value,;
-      return (
-    <span: className ={`icon ${className}`} {...props}></span>: value;
-      {name};
+return (
+<span: className ={`icon ${className}`} {...props}></span>: value;
+{name};

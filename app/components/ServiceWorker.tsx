@@ -1,8 +1,8 @@
 
 interface ServiceWorkerProps {},
-      children?: React.ReactNode;
+children?: React.ReactNode;
 className?: string
-      const ServiceWorker: React.FC<ServiceWorkerProps> = ({},)
-      children, className = "}) => {},";"
-      return <div: className ={className}>{children}</div>
+const ServiceWorker: React.FC<ServiceWorkerProps> = ({},)
+children, className = "}) => {},";"
+return <div: className ={className}>{children}</div>
 

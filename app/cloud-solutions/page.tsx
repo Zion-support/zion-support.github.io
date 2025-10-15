@@ -1,58 +1,30 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const Page = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Cloud Solutions - Zion Tech Group</title>
-        <meta: name ="description" content="Cloud Solutions - Zion Tech Group" />";"
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced page solutions" />
       </Helmet>
-      <div: className ="container mx-auto px-4 py-16">";"
-        <div: className ="text-center">";"
-          <h1>Cloud Solutions</h1>
-          <p>
-            This page is under construction. Please check back later.
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our comprehensive page solutions designed to transform your business
           </p>
         </div>
-      </div>)}
-    </div>)}
-  );}
-  );}
-import { 
-  CloudIcon, 
-  CheckCircleIcon,
-  ShieldCheckIcon,
-  CpuChipIcon,
-
-  ]
-  return (
-                  View Portfolio
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-                We provide comprehensive cloud services that drive innovation and growth.
-              </p>
-            </div>
-            
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-                Comprehensive cloud solutions to accelerate your digital transformation.
-              </p>
-            </div>
-            
-                      </li>
-                    ))};
-                  </ul>
-                </div>
-                View Case Studies
-              </button>
-            </div>
-          </div>
-        </section>
+        
+        <div className="text-center">
+          <p className="text-gray-300">Coming Soon - Page Solutions</p>
+        </div>
       </div>
-    </>
-const page  = React.lazy(() => import('./page'))";"
+    </div>
+  );
+};
+
+export default Page;
