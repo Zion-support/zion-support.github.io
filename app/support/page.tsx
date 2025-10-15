@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import React from 'react';'react-helmet-async;
 import { Link } from 'react-router-dom;
-import { Right, Circle } from 'lucide-react;
+import { Right, Circle } from 'lucide-react';
 const SupportPage: React.FC = () => {
   const supportOptions = [{
       icon: 'Chat',';
