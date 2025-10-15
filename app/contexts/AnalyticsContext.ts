@@ -1,64 +1,74 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
+import React, { createContext, useContext, useReducer, ReactNode } from 'react';
 
-export default function contextsPage() {
-  return (
-    <>
-      <Helmet>
-        <title>Contexts - Zion Tech Group</title>
-        <meta name="description" content="Contexts services and solutions from Zion Tech Group." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Contexts
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional Contexts services and solutions for your business needs.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-                Get Started
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+interface AnalyticsState {
+  pageViews: number;
+  events: Array<{ name: string; timestamp: number; data?: any }>;
+  userSessions: number;
+}
+
+interface AnalyticsContextType {
+  state: AnalyticsState;
+  trackEvent: (name: string, data?: any) => void;
+  trackPageView: (page: string) => void;
+}
+
+const initialState: AnalyticsState = {
+  pageViews: 0,
+  events: [],
+  userSessions: 1,
+};
+
+type AnalyticsAction =
+  | { type: 'TRACK_EVENT'; payload: { name: string; data?: any } }
+  | { type: 'TRACK_PAGE_VIEW'; payload: string }
+  | { type: 'INCREMENT_SESSION' };
+
+function analyticsReducer(state: AnalyticsState, action: AnalyticsAction): AnalyticsState {
+  switch (action.type) {
+    case 'TRACK_EVENT':
+      return {
+        ...state,
+        events: [...state.events, { name: action.payload.name, timestamp: Date.now(), data: action.payload.data }],
+      };
+    case 'TRACK_PAGE_VIEW':
+      return {
+        ...state,
+        pageViews: state.pageViews + 1,
+      };
+    case 'INCREMENT_SESSION':
+      return {
+        ...state,
+        userSessions: state.userSessions + 1,
+      };
+    default:
+      return state;
+  }
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+export function AnalyticsProvider({ children }: { children: ReactNode }) {
+  const [state, dispatch] = useReducer(analyticsReducer, initialState);
+
+  const trackEvent = (name: string, data?: any) => {
+    dispatch({ type: 'TRACK_EVENT', payload: { name, data } });
+  };
+
+  const trackPageView = (page: string) => {
+    dispatch({ type: 'TRACK_PAGE_VIEW', payload: page });
+  };
+
+  return React.createElement(
+    AnalyticsContext.Provider,
+    { value: { state, trackEvent, trackPageView } },
+    children
   );
 }
-=======
-import React, { createContext, useContext, ReactNode } from 'react';
 
-interface AnalyticsContextContextType {
-  // Context properties
-}
-
-const AnalyticsContextContext = createContext<AnalyticsContextContextType | undefined>(undefined);
-
-export const useAnalyticsContext = () => {
-  const context = useContext(AnalyticsContextContext);
-  if (!context) {
-    throw new Error('useAnalyticsContext must be used within a AnalyticsContextProvider');
+export function useAnalytics() {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   return context;
-};
-
-interface AnalyticsContextProviderProps {
-  children: ReactNode;
 }
-
-export const AnalyticsContextProvider = ({ children }: AnalyticsContextProviderProps) => {
-  const value = {};
-  return (
-    <AnalyticsContextContext.Provider value={value}>
-      {children}
-    </AnalyticsContextContext.Provider>
-  );
-};
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624

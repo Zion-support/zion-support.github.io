@@ -1,46 +1,98 @@
-<<<<<<< HEAD
-import { useState, useEffect  } from 'lucide-react'";"
-    if (typeof: window === 'undefined' || !('PerformanceObserver' in window)) {'"'""
+import { useState, useEffect } from 'react';
+
+interface PerformanceMetrics {
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  fcp: number;
+}
+
+interface PerformanceEntryExtended extends PerformanceEntry {
+  processingStart?: number;
+  responseStart?: number;
+  requestStart?: number;
+  hadRecentInput?: boolean;
+  value?: number;
+}
+
+export function usePerformanceMetrics() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0,
+    fcp: 0,
+  });
+  const [isSupported, setIsSupported] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
       return;
-    };
+    }
+
     setIsSupported(true);
-      const entries  = list.getEntries() as PerformanceEntryExtended[];
+
+    // LCP (Largest Contentful Paint)
+    new PerformanceObserver((list) => {
+      const entries = list.getEntries() as PerformanceEntryExtended[];
+      const lastEntry = entries[entries.length - 1];
+      setMetrics(prev => ({
+        ...prev,
+        lcp: lastEntry.startTime,
+      }));
+    }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // FID (First Input Delay)
+    new PerformanceObserver((list) => {
+      const entries = list.getEntries() as PerformanceEntryExtended[];
       entries.forEach(entry => {
         if (entry.processingStart !== undefined && entry.startTime !== undefined) {
           setMetrics(prev => ({
             ...prev,
-            fid: entry.processingStart! - entry.startTime;
-    /// Comment
-    let: clsValue = 0;
-    new PerformanceObserver(list => {)
-      entries.forEach(entry => {)}
-        if (!entry.hadRecentInput) {}
-          clsValue += entry.value || 0;}
+            fid: entry.processingStart - entry.startTime,
+          }));
+        }
+      });
+    }).observe({ entryTypes: ['first-input'] });
+
+    // CLS (Cumulative Layout Shift)
+    let clsValue = 0;
+    new PerformanceObserver((list) => {
+      const entries = list.getEntries() as PerformanceEntryExtended[];
+      entries.forEach(entry => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value || 0;
         }
       });
       setMetrics(prev => ({ ...prev, cls: clsValue }));
-    }).observe({ entryTypes: ['layout-shift'] })'"'""
-    /// Comment
-    new PerformanceObserver(list => {)
-      const entries  = list.getEntries() as PerformanceEntryExtended[];
+    }).observe({ entryTypes: ['layout-shift'] });
+
+    // TTFB (Time to First Byte)
+    new PerformanceObserver((list) => {
+      const entries = list.getEntries() as PerformanceEntryExtended[];
       entries.forEach(entry => {
         if (entry.responseStart !== undefined && entry.requestStart !== undefined) {
           setMetrics(prev => ({
             ...prev,
-            ttfb: entry.responseStart! - entry.requestStart!;
+            ttfb: entry.responseStart - entry.requestStart,
+          }));
         }
       });
-    }).observe({ entryTypes: ['navigation'] })'"'""
-=======
-import { useState, useEffect } from 'react';
+    }).observe({ entryTypes: ['navigation'] });
 
-export const UsePerformanceMetrics = () => {
-  const [state, setState] = useState(null);
+    // FCP (First Contentful Paint)
+    new PerformanceObserver((list) => {
+      const entries = list.getEntries() as PerformanceEntryExtended[];
+      entries.forEach(entry => {
+        setMetrics(prev => ({
+          ...prev,
+          fcp: entry.startTime,
+        }));
+      });
+    }).observe({ entryTypes: ['paint'] });
 
-  useEffect(() => {
-    // Hook implementation
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
   }, []);
 
-  return { state, setState };
-};
+  return { metrics, isSupported };
+}

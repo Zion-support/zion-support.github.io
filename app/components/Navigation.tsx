@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -135,10 +134,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const closeMobileMenu = () => {
     setIsOpen(false);
   };
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
 
 export default function ComponentsPage() {
   return (
@@ -158,10 +153,6 @@ export default function ComponentsPage() {
       </div>
     </>
   );
-<<<<<<< HEAD
 };
 
 export default Navigation;
-=======
-}
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624

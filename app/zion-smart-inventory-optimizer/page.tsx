@@ -1,18 +1,10 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function ZionsmartinventoryoptimizerPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function ZionSmartInventoryOptimizerPage() {
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
   return (
     <>
       <Helmet>
         <title>Zion Smart Inventory Optimizer - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Zion Smart Inventory Optimizer services and solutions from Zion Tech Group." />
       </Helmet>
       
@@ -34,23 +26,8 @@ export default function ZionSmartInventoryOptimizerPage() {
               </button>
             </div>
           </div>
-=======
-        <meta name="description" content="Professional zion smart inventory optimizer solutions for modern businesses." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Zion Smart Inventory Optimizer</h1>
-          <p className="text-lg text-gray-600">
-            Professional zion smart inventory optimizer solutions for modern businesses.
-          </p>
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624

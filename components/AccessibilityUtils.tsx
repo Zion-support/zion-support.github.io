@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 export default function componentsPage() {
   return (
     <>
@@ -32,15 +31,3 @@ export default function componentsPage() {
     </>
   );
 }
-=======
-export const AccessibilityUtils = () => {
-  return (
-    <div>
-      <h1>AccessibilityUtils</h1>
-      <p>Component implementation</p>
-    </div>
-  );
-};
-
-export default AccessibilityUtils;
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624

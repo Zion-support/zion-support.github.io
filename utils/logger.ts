@@ -1,62 +1,97 @@
-export const logger = {
-  info: (message: string, ...args: any[]): void => {
-    console.log(`[INFO] ${message}`, ...args);
-  },
+type LogLevel = 'info' | 'log' | 'error' | 'debug' | 'warn';
 
-<<<<<<< HEAD
-  log(message: string, ...args: any[]): void {
-    if (this.shouldLog()) {'""'""
-      console.log(this.formatMessage('log', message), ...args)""";"
-    }
-  }
-=======
-  warn: (message: string, ...args: any[]): void => {
-    console.warn(`[WARN] ${message}`, ...args);
-  },
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
+interface LoggerConfig {
+  enableConsole: boolean;
+  enableRemote: boolean;
+  remoteEndpoint?: string;
+  logLevel: LogLevel;
+}
 
-  error: (message: string, ...args: any[]): void => {
-    console.error(`[ERROR] ${message}`, ...args);
-  },
+class Logger {
+  private config: LoggerConfig = {
+    enableConsole: true,
+    enableRemote: false,
+    logLevel: 'info'
+  };
 
-  debug: (message: string, ...args: any[]): void => {
-    console.debug(`[DEBUG] ${message}`, ...args);
-  }
-<<<<<<< HEAD
-
-  error(message: string, ...args: any[]): void {
-    /// Comment
-    console.error(this.formatMessage('error', message), ...args)""";"
-    /// Comment
-    if (this.config.enableRemote) {'""'""
-      this.sendToRemote('error', message, args)""";"
+  constructor(config?: Partial<LoggerConfig>) {
+    if (config) {
+      this.config = { ...this.config, ...config };
     }
   }
 
-  debug(message: string, ...args: any[]): void {
-    if (this.shouldLog()) {'""'""
-      console.debug(this.formatMessage('debug', message), ...args)""";"
-    }
+  private shouldLog(): boolean {
+    return this.config.enableConsole;
+  }
+
+  private formatMessage(level: LogLevel, message: string): string {
+    const timestamp = new Date().toISOString();
+    return `[${timestamp}] [${level.toUpperCase()}] ${message}`;
   }
 
   private async sendToRemote(level: LogLevel, message: string, args: any[]): Promise<void> {
     try {
       if (this.config.remoteEndpoint) {
-          },;
+        await fetch(this.config.remoteEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
           body: JSON.stringify({
-            level,;
-            message,;
-            args,;
-            timestamp: new Date().toISOString(),;
-            url: window.location.href,;
-            userAgent: navigator.userAgent;
-  
-  })
+            level,
+            message,
+            args,
+            timestamp: new Date().toISOString(),
+            url: typeof window !== 'undefined' ? window.location.href : '',
+            userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''
+          })
         });
-      };
-    } catch {
-      /// Comment
-export default logger'"''
-=======
-};
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
+      }
+    } catch (error) {
+      console.error('Failed to send log to remote:', error);
+    }
+  }
+
+  info(message: string, ...args: any[]): void {
+    if (this.shouldLog()) {
+      console.log(this.formatMessage('info', message), ...args);
+    }
+    if (this.config.enableRemote) {
+      this.sendToRemote('info', message, args);
+    }
+  }
+
+  log(message: string, ...args: any[]): void {
+    if (this.shouldLog()) {
+      console.log(this.formatMessage('log', message), ...args);
+    }
+  }
+
+  error(message: string, ...args: any[]): void {
+    if (this.shouldLog()) {
+      console.error(this.formatMessage('error', message), ...args);
+    }
+    if (this.config.enableRemote) {
+      this.sendToRemote('error', message, args);
+    }
+  }
+
+  debug(message: string, ...args: any[]): void {
+    if (this.shouldLog()) {
+      console.debug(this.formatMessage('debug', message), ...args);
+    }
+  }
+
+  warn(message: string, ...args: any[]): void {
+    if (this.shouldLog()) {
+      console.warn(this.formatMessage('warn', message), ...args);
+    }
+    if (this.config.enableRemote) {
+      this.sendToRemote('warn', message, args);
+    }
+  }
+}
+
+export const logger = new Logger();
+
+export default logger;
