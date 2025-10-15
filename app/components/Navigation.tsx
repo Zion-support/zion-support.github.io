@@ -27,7 +27,7 @@ const Navigation: React.FC = memo(() => {
             </Link>
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <Link to="/" className="nav-link-futuristic">
               Home
             </Link>
@@ -51,16 +51,29 @@ const Navigation: React.FC = memo(() => {
                 <div
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
-                  className="absolute left-0 mt-2 w-64 glass-effect z-50"
+                  className="absolute left-0 mt-2 w-80 glass-effect z-50 rounded-lg"
                 >
-                  <div className="py-2">
-                    <Link to="/services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">All Services</Link>
-                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">AI Services</Link>
-                    <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">IT Services</Link>
-                    <Link to="/micro-saas-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Micro SAAS Solutions</Link>
-                    <Link to="/cloud-infrastructure" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Cloud Infrastructure</Link>
-                    <Link to="/5g-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">5G Solutions</Link>
-                    <Link to="/digital-transformation" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Digital Transformation</Link>
+                  <div className="py-4">
+                    <div className="px-4 py-2 border-b border-gray-600">
+                      <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">Main Services</h3>
+                    </div>
+                    <div className="py-2">
+                      <Link to="/services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">All Services</Link>
+                      <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">AI Services</Link>
+                      <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">IT Services</Link>
+                      <Link to="/micro-saas-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Micro SAAS Solutions</Link>
+                    </div>
+                    <div className="px-4 py-2 border-b border-gray-600">
+                      <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">Specialized Solutions</h3>
+                    </div>
+                    <div className="py-2">
+                      <Link to="/cloud-infrastructure" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Cloud Infrastructure</Link>
+                      <Link to="/5g-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">5G Solutions</Link>
+                      <Link to="/digital-transformation" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Digital Transformation</Link>
+                      <Link to="/data-analytics" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Data Analytics</Link>
+                      <Link to="/web-development" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Web Development</Link>
+                      <Link to="/mobile-development" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Mobile Development</Link>
+                    </div>
                   </div>
                 </div>
               )}
@@ -108,15 +121,21 @@ const Navigation: React.FC = memo(() => {
             
             {/* Mobile Services Menu */}
             <div className="px-3 py-2">
-              <div className="text-gray-300 text-base font-medium mb-2">Services</div>
+              <div className="text-gray-300 text-base font-medium mb-2">Main Services</div>
               <div className="ml-4 space-y-1">
                 <Link to="/services" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">All Services</Link>
                 <Link to="/ai-services" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">AI Services</Link>
                 <Link to="/it-services" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">IT Services</Link>
                 <Link to="/micro-saas-solutions" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">Micro SAAS Solutions</Link>
+              </div>
+              <div className="text-gray-300 text-base font-medium mb-2 mt-4">Specialized Solutions</div>
+              <div className="ml-4 space-y-1">
                 <Link to="/cloud-infrastructure" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">Cloud Infrastructure</Link>
                 <Link to="/5g-solutions" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">5G Solutions</Link>
                 <Link to="/digital-transformation" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">Digital Transformation</Link>
+                <Link to="/data-analytics" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">Data Analytics</Link>
+                <Link to="/web-development" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">Web Development</Link>
+                <Link to="/mobile-development" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">Mobile Development</Link>
               </div>
             </div>
             <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">

@@ -43,16 +43,25 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Services</h4>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Main Services</h4>
             <ul className="space-y-3">
               <li><Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">All Services</Link></li>
               <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Services</Link></li>
               <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">IT Services</Link></li>
               <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Micro SAAS Solutions</Link></li>
+              <li><Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Pricing</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Specialized Solutions</h4>
+            <ul className="space-y-3">
               <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Cloud Infrastructure</Link></li>
               <li><Link to="/5g-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">5G Solutions</Link></li>
               <li><Link to="/digital-transformation" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Digital Transformation</Link></li>
-              <li><Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Pricing</Link></li>
+              <li><Link to="/data-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Data Analytics</Link></li>
+              <li><Link to="/web-development" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Web Development</Link></li>
+              <li><Link to="/mobile-development" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Mobile Development</Link></li>
             </ul>
           </div>
           
@@ -103,7 +112,6 @@ const Footer: React.FC = memo(() => {
           </div>
         </div>
         
-<<<<<<< HEAD
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-center md:text-left text-gray-300 mb-4 md:mb-0">
