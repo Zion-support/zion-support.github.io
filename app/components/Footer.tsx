@@ -21,67 +21,47 @@ const Footer: React.FC = () => {
 
   const serviceCategories = [
     {
-      title: 'Micro SAAS Solutions',
+      title: 'AI Solutions',
       services: [
-        { name: 'AI Content Writer Pro', path: '/ai-content-generation-pro' },
-        { name: 'AI Project Manager', path: '/ai-project-manager' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing' },
-        { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro' },
-        { name: 'AI Accounting Assistant', path: '/ai-accounting-assistant' },
-        { name: 'AI Healthcare Assistant', path: '/ai-healthcare-assistant' },
         { name: 'AI Smart Contracts', path: '/ai-smart-contracts' },
         { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
         { name: 'AI Predictive Maintenance', path: '/ai-predictive-maintenance' },
-        { name: 'AI Personalized Learning', path: '/ai-personalized-learning' }
+        { name: 'AI Personalized Learning', path: '/ai-personalized-learning' },
+        { name: 'View All AI Services', path: '/ai-services' }
       ]
     },
     {
-      title: 'AI Services',
+      title: 'Micro SAAS',
       services: [
-        { name: 'AI Automation', path: '/ai-automation' },
-        { name: 'Machine Learning', path: '/ai-services' },
-        { name: 'Computer Vision', path: '/ai-computer-vision' },
-        { name: 'Natural Language Processing', path: '/ai-services' },
-        { name: 'Predictive Analytics', path: '/ai-analytics' },
-        { name: 'AI Security Solutions', path: '/ai-security-solutions' }
+        { name: 'AI Accounting Assistant', path: '/ai-accounting-assistant' },
+        { name: 'AI Content Moderation Pro', path: '/ai-content-moderation-pro' },
+        { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro' },
+        { name: 'AI Agricultural Intelligence Pro', path: '/ai-agricultural-intelligence-pro' },
+        { name: 'View All Micro SAAS', path: '/micro-saas' }
       ]
     },
     {
       title: 'IT Services',
       services: [
-        { name: 'Cloud Migration', path: '/cloud-migration-services' },
-        { name: 'Cybersecurity', path: '/cybersecurity-consulting' },
-<<<<<<< HEAD
-        { name: 'DevOps', path: '/devops-solutions' },
-        { name: 'Mobile Development', path: '/mobile-development' },
-        { name: 'Web Development', path: '/web-development' },
-<<<<<<< HEAD
-=======
-        { name: 'DevOps Solutions', path: '/devops-solutions' },
-        { name: 'Mobile Development', path: '/mobile-app-development' },
-        { name: 'Web Development', path: '/web-application-development' },
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-265e
-        { name: 'Database Solutions', path: '/database-solutions' }
-=======
-        { name: 'Database Solutions', path: '/database-solutions' },
         { name: 'Quantum Computing', path: '/quantum-computing-solutions' },
-        { name: 'Edge Computing', path: '/edge-computing-solutions' }
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-06e6
+        { name: 'Edge Computing', path: '/edge-computing-solutions' },
+        { name: 'Cloud Infrastructure', path: '/it-services' },
+        { name: 'Cybersecurity', path: '/it-services' },
+        { name: 'Web Development', path: '/it-services' },
+        { name: 'Mobile Development', path: '/it-services' },
+        { name: 'View All IT Services', path: '/it-services' }
       ]
     },
     {
       title: '5G Solutions',
       services: [
-        { name: '5G Implementation', path: '/5g-implementation' },
-        { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
-        { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
-        { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
-        { name: '5G Edge Computing', path: '/5g-edge-computing' },
-<<<<<<< HEAD
-        { name: '5G Private Networks', path: '/5g-private-networks' }
-=======
-        { name: '5G Security Solutions', path: '/5g-security' }
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-265e
+        { name: '5G Implementation', path: '/5g-solutions' },
+        { name: '5G Network Infrastructure', path: '/5g-solutions' },
+        { name: '5G IoT Solutions', path: '/5g-solutions' },
+        { name: '5G Smart City Solutions', path: '/5g-solutions' },
+        { name: '5G Edge Computing', path: '/5g-solutions' },
+        { name: '5G Private Networks', path: '/5g-solutions' },
+        { name: 'View All 5G Solutions', path: '/5g-solutions' }
       ]
     }
   ];
@@ -120,13 +100,8 @@ const Footer: React.FC = () => {
       </div>
       
       {/* Main Footer Content */}
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-=======
-      <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 lg:gap-8">
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-265e
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6 group">

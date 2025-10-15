@@ -1,76 +1,58 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mic, Headphones, MessageSquare, Zap, CheckCircle, ArrowRight, Star, Clock, Users, Globe } from 'lucide-react';
+import { Mic, Headphones, Zap, CheckCircle, ArrowRight, Star, Clock, Users, Award, MessageSquare, Globe } from 'lucide-react';
 
 const AiVoiceAssistantPage: React.FC = () => {
   const features = [
     {
       icon: <Mic className="w-6 h-6" />,
-      title: "Natural Voice Recognition",
-      description: "Advanced speech-to-text with 99.9% accuracy in 50+ languages and dialects"
+      title: "Natural Language Processing",
+      description: "Advanced NLP for understanding context, intent, and complex queries"
     },
     {
       icon: <Headphones className="w-6 h-6" />,
-      title: "Intelligent Voice Synthesis",
-      description: "Human-like voice generation with customizable tones, accents, and emotions"
-    },
-    {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "Contextual Understanding",
-      description: "Deep learning models that understand context, intent, and conversation flow"
+      title: "Multi-Language Support",
+      description: "Support for 50+ languages with accurate pronunciation and accent recognition"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Processing",
-      description: "Ultra-low latency voice processing for seamless, natural conversations"
+      title: "Real-Time Processing",
+      description: "Ultra-low latency voice processing for seamless conversations"
+    },
+    {
+      icon: <MessageSquare className="w-6 h-6" />,
+      title: "Context Awareness",
+      description: "Maintains conversation context and learns from user interactions"
     }
-  ];
-
-  const capabilities = [
-    "Customer Service Automation",
-    "Voice-Controlled Applications", 
-    "Multilingual Support",
-    "Sentiment Analysis",
-    "Voice Biometrics",
-    "Call Center Integration",
-    "Smart Home Control",
-    "Accessibility Solutions",
-    "Voice Commerce",
-    "Meeting Transcription",
-    "Voice Search Optimization",
-    "Personalized Responses"
   ];
 
   const pricingPlans = [
     {
-      name: "Basic",
+      name: "Personal",
       price: "$99",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for personal use and small projects",
       features: [
-        "Up to 1,000 voice interactions/month",
-        "5 voice profiles",
-        "Basic language support (10 languages)",
+        "Up to 1,000 voice interactions",
+        "5 supported languages",
+        "Basic NLP capabilities",
         "Email support",
-        "Standard voice quality",
-        "Basic analytics"
+        "Standard voice models"
       ],
       popular: false
     },
     {
-      name: "Professional",
+      name: "Business",
       price: "$299",
-      period: "/month", 
-      description: "Ideal for growing companies",
+      period: "/month",
+      description: "Ideal for businesses and customer service",
       features: [
-        "Up to 10,000 voice interactions/month",
-        "25 voice profiles",
-        "Advanced language support (25 languages)",
+        "Up to 10,000 voice interactions",
+        "25 supported languages",
+        "Advanced NLP & sentiment analysis",
         "Priority support",
-        "Premium voice quality",
-        "Advanced analytics & insights",
         "Custom voice training",
-        "API access"
+        "Analytics dashboard"
       ],
       popular: true
     },
@@ -78,37 +60,58 @@ const AiVoiceAssistantPage: React.FC = () => {
       name: "Enterprise",
       price: "$799",
       period: "/month",
-      description: "For large organizations",
+      description: "For large-scale voice applications",
       features: [
         "Unlimited voice interactions",
-        "Unlimited voice profiles",
-        "Full language support (50+ languages)",
+        "50+ supported languages",
+        "Premium NLP & AI capabilities",
         "24/7 dedicated support",
-        "Ultra-premium voice quality",
-        "Complete analytics suite",
-        "Custom voice development",
-        "White-label solutions",
-        "SLA guarantee",
-        "On-premise deployment"
+        "Custom voice synthesis",
+        "Advanced analytics",
+        "White-label solution"
       ],
       popular: false
     }
   ];
 
+  const useCases = [
+    {
+      title: "Customer Service",
+      description: "24/7 AI voice assistants for customer support and inquiries",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
+      title: "Smart Home",
+      description: "Voice control for IoT devices and home automation systems",
+      icon: <Zap className="w-8 h-8" />
+    },
+    {
+      title: "Healthcare",
+      description: "Voice-enabled patient monitoring and medical assistance",
+      icon: <Award className="w-8 h-8" />
+    },
+    {
+      title: "Education",
+      description: "Interactive voice learning and language tutoring systems",
+      icon: <Globe className="w-8 h-8" />
+    }
+  ];
+
   const integrations = [
-    "Slack", "Microsoft Teams", "Zoom", "Salesforce", "HubSpot", "Zendesk",
-    "Amazon Alexa", "Google Assistant", "Siri", "WhatsApp", "Telegram", "Discord"
+    "Amazon Alexa", "Google Assistant", "Microsoft Cortana", "Siri", "WhatsApp", "Telegram", 
+    "Slack", "Discord", "WebRTC", "Twilio", "Vonage", "Zoom"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Zion Tech Group | Intelligent Voice Solutions</title>
-        <meta name="description" content="Advanced AI voice assistant platform with natural language processing, multilingual support, and seamless integration for businesses of all sizes." />
-        <meta name="keywords" content="ai voice assistant, voice recognition, speech synthesis, nlp, voice ai, conversational ai, voice automation" />
+        <title>AI Voice Assistant - Zion Tech Group | Conversational AI Solutions</title>
+        <meta name="description" content="Advanced AI voice assistant with natural language processing, multi-language support, and real-time voice processing for customer service, smart homes, and enterprise applications." />
+        <meta name="keywords" content="ai voice assistant, conversational ai, voice recognition, nlp, customer service, smart home, voice automation" />
         <meta property="og:title" content="AI Voice Assistant - Zion Tech Group" />
-        <meta property="og:description" content="Intelligent voice solutions powered by advanced AI" />
+        <meta property="og:description" content="Intelligent voice assistant solutions powered by advanced AI" />
         <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -120,15 +123,15 @@ const AiVoiceAssistantPage: React.FC = () => {
                 AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Voice Assistant</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Transform your business with intelligent voice assistants that understand, respond, and learn from every conversation. 
-                Experience the future of voice-powered automation.
+                Intelligent conversational AI that understands, responds, and learns from every interaction. 
+                Deploy voice assistants across multiple platforms with natural language processing.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                  Start Free Trial
+                  Try Demo
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  Try Demo
+                  View API Docs
                 </button>
               </div>
             </div>
@@ -141,44 +144,44 @@ const AiVoiceAssistantPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Advanced Voice AI Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powered by cutting-edge AI technology for natural, intelligent voice interactions
+                Powered by cutting-edge speech recognition and natural language understanding technologies
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 group text-center">
-                  <div className="text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 text-center">
+                  <div className="text-cyan-400 mb-4 flex justify-center">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    {feature.description}
-                  </p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 text-sm">{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Capabilities Section */}
+        {/* Use Cases Section */}
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Comprehensive Capabilities</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Voice AI Applications</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From customer service to smart home control, our voice AI adapts to your needs
+                Transform your business with intelligent voice interactions across multiple industries
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {capabilities.map((capability, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300 group">
-                  <div className="text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors">
-                    {capability}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 group">
+                  <div className="text-cyan-400 mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                    {useCase.icon}
                   </div>
+                  <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-cyan-400 transition-colors">
+                    {useCase.title}
+                  </h3>
+                  <p className="text-gray-300 text-center">{useCase.description}</p>
                 </div>
               ))}
             </div>
@@ -189,9 +192,9 @@ const AiVoiceAssistantPage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Seamless Integrations</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Platform Integrations</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Connect with your favorite tools and platforms for a unified voice experience
+                Seamlessly integrate with popular voice platforms and communication tools
               </p>
             </div>
             
@@ -211,11 +214,11 @@ const AiVoiceAssistantPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Flexible Pricing Plans</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your voice AI needs. Scale up as you grow.
+                Choose the perfect plan for your voice AI needs. All plans include our advanced NLP technology.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-cyan-500 scale-105' : ''}`}>
                   {plan.popular && (
@@ -227,19 +230,19 @@ const AiVoiceAssistantPage: React.FC = () => {
                     </div>
                   )}
                   
-                  <div className="text-center mb-6">
+                  <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
+                    <p className="text-gray-300 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-white">{plan.price}</span>
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
                   </div>
                   
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -250,7 +253,7 @@ const AiVoiceAssistantPage: React.FC = () => {
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                   }`}>
-                    Get Started
+                    Start Free Trial
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
                 </div>
@@ -259,44 +262,21 @@ const AiVoiceAssistantPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-                <div className="text-gray-300 text-lg">Voice Accuracy</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
-                <div className="text-gray-300 text-lg">Languages Supported</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-lg">Always Available</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">2s</div>
-                <div className="text-gray-300 text-lg">Response Time</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-white/5">
-          <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Give Your Business a Voice?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Voice AI?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Experience the power of AI voice technology. Start your free trial today and transform how you interact with customers.
+                Join thousands of developers and businesses using our AI voice assistant platform. 
+                Start building conversational AI experiences today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
                   Start Free Trial
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
-                  Schedule Demo
+                  Contact Sales
                 </button>
               </div>
             </div>

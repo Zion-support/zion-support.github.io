@@ -139,7 +139,7 @@ const benefits = [
               
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
                 Protect your business with expert cybersecurity consulting. Reduce risks by 50%, 
-                ensure compliance, and maintain 99.9% security uptime with our comprehensive,
+                ensure compliance, and maintain 99.9% security uptime with our comprehensive
     security solutions.
               </p>
               

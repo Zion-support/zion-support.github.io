@@ -17,13 +17,13 @@ const Services: React.FC = () => {
       color: 'from-cyan-500 to-blue-600',
       description: 'Revolutionary AI solutions for modern businesses',
       services: [
+        { name: 'AI Smart Contracts', href: '/ai-smart-contracts', price: 'From $199/month', features: 'Blockchain automation, Security audit, Multi-chain support' },
+        { name: 'AI Voice Assistant', href: '/ai-voice-assistant', price: 'From $99/month', features: 'Natural language processing, Multi-language, Real-time processing' },
+        { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', price: 'From $299/month', features: 'Equipment monitoring, Failure prediction, Cost optimization' },
+        { name: 'AI Personalized Learning', href: '/ai-personalized-learning', price: 'From $29/month', features: 'Adaptive learning, Progress tracking, Multi-modal content' },
         { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', price: 'From $299/month', features: 'Real-time insights, Custom reports, Predictive analytics' },
         { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro', price: 'From $199/month', features: 'Multi-language support, SEO optimization, Brand voice' },
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', price: 'From $149/month', features: 'Auto-posting, Engagement tracking, Content scheduling' },
-        { name: 'AI Project Manager', href: '/ai-project-manager', price: 'From $99/month', features: 'Smart scheduling, Resource optimization, Progress tracking' },
         { name: 'AI Customer Support', href: '/ai-customer-support', price: 'From $149/month', features: '24/7 chatbot, Multi-language, Ticket routing' },
-        { name: 'AI Email Marketing', href: '/ai-email-marketing', price: 'From $99/month', features: 'Personalization, A/B testing, Analytics' },
-        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro', price: 'From $199/month', features: 'Code generation, Bug detection, Documentation' },
         { name: 'AI Business Intelligence', href: '/ai-business-intelligence-pro', price: 'From $399/month', features: 'Data visualization, Forecasting, KPI tracking' }
       ]
     },
@@ -33,16 +33,14 @@ const Services: React.FC = () => {
       color: 'from-purple-500 to-pink-600',
       description: 'Comprehensive IT solutions and cloud services',
       services: [
+        { name: 'Quantum Computing Solutions', href: '/quantum-computing-solutions', price: 'From $2,999/month', features: 'Quantum algorithms, Hardware integration, Security solutions' },
+        { name: 'Edge Computing Solutions', href: '/edge-computing-solutions', price: 'From $499/month', features: 'Ultra-low latency, Real-time processing, Distributed computing' },
         { name: 'Cloud Migration Services', href: '/cloud-migration-services', price: 'From $2,999', features: 'AWS/Azure/GCP migration, Zero downtime, Cost optimization' },
         { name: 'Cybersecurity Consulting', href: '/cybersecurity-consulting', price: 'From $2,999', features: 'Security audit, Penetration testing, Compliance' },
-        { name: 'Database Solutions', href: '/database-solutions', price: 'From $1,999', features: 'Performance tuning, Backup & recovery, Scaling' },
-        { name: 'DevOps Solutions', href: '/devops-solutions', price: 'From $1,499', features: 'CI/CD pipelines, Infrastructure as code, Monitoring' },
-        { name: 'API Management', href: '/ai-api-management', price: 'From $999', features: 'API gateway, Rate limiting, Documentation' },
-        { name: 'Performance Monitoring', href: '/performance-monitoring', price: 'From $799', features: 'Real-time alerts, Performance metrics, Uptime monitoring' },
         { name: 'Web Development', href: '/web-development', price: 'From $1,299', features: 'React/Next.js, Mobile-first, SEO optimized' },
         { name: 'Mobile App Development', href: '/mobile-development', price: 'From $1,999', features: 'iOS/Android, Cross-platform, App store ready' },
-        { name: 'Quantum Computing Solutions', href: '/quantum-computing-solutions', price: 'From $2,999', features: 'Quantum algorithms, Hardware integration, Security solutions' },
-        { name: 'Edge Computing Solutions', href: '/edge-computing-solutions', price: 'From $499', features: 'Ultra-low latency, Real-time processing, Distributed computing' }
+        { name: 'DevOps Solutions', href: '/devops-solutions', price: 'From $1,499', features: 'CI/CD pipelines, Infrastructure as code, Monitoring' },
+        { name: 'Database Solutions', href: '/database-solutions', price: 'From $1,999', features: 'Performance tuning, Backup & recovery, Scaling' }
       ]
     },
     {
@@ -67,18 +65,14 @@ const Services: React.FC = () => {
       color: 'from-orange-500 to-red-600',
       description: 'Ready-to-use software solutions for immediate deployment',
       services: [
+        { name: 'AI Smart Contracts', href: '/ai-smart-contracts', price: 'From $199/month', features: 'Blockchain automation, Security audit, Multi-chain support' },
+        { name: 'AI Voice Assistant', href: '/ai-voice-assistant', price: 'From $99/month', features: 'Natural language processing, Multi-language, Real-time processing' },
+        { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', price: 'From $299/month', features: 'Equipment monitoring, Failure prediction, Cost optimization' },
+        { name: 'AI Personalized Learning', href: '/ai-personalized-learning', price: 'From $29/month', features: 'Adaptive learning, Progress tracking, Multi-modal content' },
         { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant', price: 'From $49/month', features: 'Invoice processing, Expense tracking, Tax preparation' },
         { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro', price: 'From $79/month', features: 'Real-time filtering, Multi-language, Custom rules' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro', price: 'From $129/month', features: 'Carbon tracking, Sustainability reports, Green recommendations' },
-        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro', price: 'From $199/month', features: 'Crop monitoring, Weather prediction, Yield optimization' },
-        { name: 'AI 3D Generation', href: '/ai-3d-generation', price: 'From $149/month', features: '3D modeling, Animation, Rendering' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', price: 'From $299/month', features: 'Smart contracts, DeFi integration, NFT marketplace' },
-        { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant', price: 'From $179/month', features: 'Patient monitoring, Diagnosis support, Treatment recommendations' },
-        { name: 'AI Financial Advisor', href: '/ai-financial-advisor', price: 'From $99/month', features: 'Portfolio management, Risk assessment, Investment advice' },
-        { name: 'AI Smart Contracts', href: '/ai-smart-contracts', price: 'From $199/month', features: 'Blockchain automation, Security audit, Auto-execution' },
-        { name: 'AI Voice Assistant', href: '/ai-voice-assistant', price: 'From $99/month', features: 'Natural language processing, Voice synthesis, Multi-language' },
-        { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', price: 'From $299/month', features: 'Equipment monitoring, Failure prediction, Cost optimization' },
-        { name: 'AI Personalized Learning', href: '/ai-personalized-learning', price: 'From $29/month', features: 'Adaptive learning, Progress tracking, Multi-modal content' }
+        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro', price: 'From $199/month', features: 'Crop monitoring, Weather prediction, Yield optimization' }
       ]
     }
   ];

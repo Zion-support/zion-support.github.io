@@ -68,7 +68,7 @@ const ContentPromotionBanner: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 8000); // Change banner every 8 seconds,
+    }, 8000); // Change banner every 8 seconds
     return () => clearInterval(interval);
   }, [banners.length]);
 
