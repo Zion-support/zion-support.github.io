@@ -850,6 +850,34 @@ body {
   100% { background-position: 50px 50px, 50px 50px, 10px 10px, 10px 10px; }
 }
 
+/* Quantum Dots Animation */
+.quantum-dots {
+  position: relative;
+}
+
+.quantum-dots::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(6, 182, 212, 0.3) 1px, transparent 1px),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.3) 1px, transparent 1px),
+    radial-gradient(circle at 40% 60%, rgba(236, 72, 153, 0.2) 1px, transparent 1px);
+  background-size: 50px 50px, 60px 60px, 70px 70px;
+  animation: quantumFloat 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes quantumFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(1deg); }
+  50% { transform: translateY(-5px) rotate(-1deg); }
+  75% { transform: translateY(-15px) rotate(0.5deg); }
+}
+
 /* Holographic Text */
 .holographic-text {
   background: linear-gradient(
