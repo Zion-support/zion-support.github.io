@@ -1,7 +1,6 @@
-import { CheckCircle, RefreshCw, Target, TrendingUp, Users, Lightbulb } from 'lucide-react';
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from "lucide-react";
+import { RefreshCw, CheckCircle, Zap, Users, Shield, BarChart3, Target, TrendingUp } from 'lucide-react';
 
 const DigitalTransformationPage: React.FC = () => {
   const services = [
@@ -43,7 +42,7 @@ const DigitalTransformationPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+const benefits = [
     "Increased operational efficiency and productivity",
     "Improved customer experience and satisfaction",
     "Reduced operational costs and manual errors",
@@ -51,39 +50,46 @@ const DigitalTransformationPage: React.FC = () => {
     "Enhanced competitive advantage",
     "Future-ready business processes"
   ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+    
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       <Helmet>
         <title>Digital Transformation | Zion Tech Group</title>
         <meta name="description" content="Comprehensive digital transformation services to modernize your business processes and drive growth." />
         <meta name="keywords" content="digital transformation, process automation, change management, business modernization" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
+      
+        <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
+        
         <div className="text-center mb-16">
+          
           <h1 className="text-5xl font-bold text-white mb-6">
             Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">Transformation</span>
           </h1>
+          
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with comprehensive digital solutions that drive growth, 
             efficiency, and innovation across all operations.
           </p>
         </div>
-
         {/* Services Grid */}
+        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => {
             const Icon = service.icon;
-            return (
+  return (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg mr-4">
+                
+        <div className="flex items-center mb-4">
+                  
+        <div className="p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg mr-4">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                 </div>
-                <p className="text-gray-300 mb-4">{service.description}</p>
+                
+          <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
@@ -96,16 +102,18 @@ const DigitalTransformationPage: React.FC = () => {
             );
           })}
         </div>
-
         {/* Benefits Section */}
+        
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Why Choose Our Digital Transformation Services?
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
-                <div className="flex items-center">
+                
+        <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
                 </div>
@@ -113,15 +121,18 @@ const DigitalTransformationPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
+        
         <div className="text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
+          
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-gray-300 mb-6">
+            
+          <p className="text-gray-300 mb-6">
               Let's work together to modernize your operations and unlock your business's full potential.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
                 Start Your Transformation
               </button>
@@ -135,5 +146,4 @@ const DigitalTransformationPage: React.FC = () => {
     </div>
   );
 };
-
 export default DigitalTransformationPage;

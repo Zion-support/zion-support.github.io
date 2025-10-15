@@ -21,18 +21,19 @@ import {
   SignalIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline';
-
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }
-
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const location = useLocation();
 
-  const navigation = [
+const [isServicesOpen, setIsServicesOpen] = useState(false);
+
+const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+
+const location = useLocation();
+
+const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     { 
@@ -70,28 +71,29 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
   ];
 
-  const isActive = (href: string) => {
+const isActive = (href: string) => {
     return location.pathname === href;
   };
 
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
-    setIsSolutionsOpen(false);
-  };
+const toggleServices = () => {
+  return;
+};
 
-  const toggleSolutions = () => {
-    setIsSolutionsOpen(!isSolutionsOpen);
-    setIsServicesOpen(false);
-  };
-
+const toggleSolutions = () => {
+  return;
+};
   return (
     <nav className="bg-slate-900 border-b border-slate-700 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          
+        <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+              
+        <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
               <span className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
@@ -99,13 +101,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          
+        <div className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 {item.submenu ? (
-                  <div className="relative">
+                  
+        <div className="relative">
                     <button
                       onClick={item.name === 'Services' ? toggleServices : toggleSolutions}
                       className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -118,10 +121,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       <span>{item.name}</span>
                       <ChevronDownIcon className={`w-4 h-4 transition-transform ${(item.name === 'Services' && isServicesOpen) || (item.name === 'Solutions' && isSolutionsOpen) ? 'rotate-180' : ''}`} />
                     </button>
-                    
                     {/* Dropdown Menu */}
                     {(item.name === 'Services' && isServicesOpen) || (item.name === 'Solutions' && isSolutionsOpen) ? (
-                      <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-xl border border-slate-700 py-2 z-50">
+                      
+        <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-xl border border-slate-700 py-2 z-50">
                         {item.submenu.map((subItem) => (
                           <Link
                             key={subItem.name}
@@ -132,7 +135,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                               setIsSolutionsOpen(false);
                             }}
                           >
-                            <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                            
+        <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                             <span>{subItem.name}</span>
                           </Link>
                         ))}
@@ -155,9 +159,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </div>
             ))}
           </div>
-
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          
+        <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2 rounded-md hover:bg-slate-800 transition-colors"
@@ -170,11 +174,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             </button>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
+          
+        <div className="md:hidden">
+            
+        <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
               {navigation.map((item) => (
                 <div key={item.name}>
                   {item.submenu ? (
@@ -183,15 +188,16 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                         onClick={item.name === 'Services' ? toggleServices : toggleSolutions}
                         className="flex items-center justify-between w-full px-3 py-2 text-left text-sm font-medium text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition-colors"
                       >
-                        <div className="flex items-center space-x-2">
+                        
+        <div className="flex items-center space-x-2">
                           <item.icon className="w-4 h-4" />
                           <span>{item.name}</span>
                         </div>
                         <ChevronDownIcon className={`w-4 h-4 transition-transform ${(item.name === 'Services' && isServicesOpen) || (item.name === 'Solutions' && isSolutionsOpen) ? 'rotate-180' : ''}`} />
                       </button>
-                      
                       {(item.name === 'Services' && isServicesOpen) || (item.name === 'Solutions' && isSolutionsOpen) ? (
-                        <div className="ml-4 space-y-1">
+                        
+        <div className="ml-4 space-y-1">
                           {item.submenu.map((subItem) => (
                             <Link
                               key={subItem.name}
@@ -203,7 +209,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                                 setIsSolutionsOpen(false);
                               }}
                             >
-                              <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                              
+        <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                               <span>{subItem.name}</span>
                             </Link>
                           ))}
@@ -229,5 +236,4 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     </nav>
   );
 };
-
 export default Navigation;

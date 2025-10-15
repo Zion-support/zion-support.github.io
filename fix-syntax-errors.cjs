@@ -1,132 +1,69 @@
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix HTML entities back to normal quotes
-function fixHtmlEntities(content) {
-  return content
-    .replace(/&quot;/g, '"')
-    .replace(/&apos;/g, "'")
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&amp;/g, '&');
-}
-
-// Function to fix unused imports more carefully
-function fixUnusedImports(content) {
-  // Only remove imports that are clearly unused and safe to remove
-  const lines = content.split('\n');
-  const newLines = [];
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    
-    // Check if this is a lucide-react import line
-    if (line.includes("from 'lucide-react'") || line.includes('from "lucide-react"')) {
-      // Extract the import statement and check what's actually used
-      const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
-      if (importMatch) {
-        const imports = importMatch[1].split(',').map(imp => imp.trim());
-        
-        // Check which imports are actually used in the file
-        const usedImports = imports.filter(imp => {
-          const importName = imp.trim();
-          // Skip if it's a default import or has spaces (complex destructuring)
-          if (importName.includes(' ') || importName.includes('as ')) {
-            return true;
-          }
-          
-          // Check if this import is used in the file content
-          const usageRegex = new RegExp(`\\b${importName}\\b`, 'g');
-          const matches = content.match(usageRegex);
-          return matches && matches.length > 1; // More than just the import statement
-        });
-        
-        if (usedImports.length === 0) {
-          // Remove the entire import line if no imports are used
-          continue;
-        } else if (usedImports.length !== imports.length) {
-          // Replace with only used imports
-          newLines.push(`import { ${usedImports.join(', ')} } from 'lucide-react';`);
-          continue;
-        }
-      }
-    }
-    
-    newLines.push(line);
-  }
-  
-  return newLines.join('\n');
-}
-
-// Function to remove console statements
-function removeConsoleStatements(content) {
-  return content.replace(/console\.(log|warn|error|info)\([^)]*\);?\s*/g, '');
-}
-
-// Function to process a file
-function processFile(filePath) {
+// Function to fix syntax errors
+function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
+
+    // Fix HTML entities
+    content = content.replace(/&quot;/g, '"');
+    content = content.replace(/&apos;/g, "'");
+    content = content.replace(/&lt;/g, '<');
+    content = content.replace(/&gt;/g, '>');
+    content = content.replace(/&amp;/g, '&');
+
+    // Fix specific syntax issues
+    content = content.replace(/import React from "react";\s*import { Helmet } from "react-helmet-async";\s*const/g, 'import React from "react";\nimport { Helmet } from "react-helmet-async";\n\nconst');
     
-    const originalContent = content;
+    // Fix missing newlines and formatting
+    content = content.replace(/;\s*const/g, ';\n\nconst');
+    content = content.replace(/;\s*return/g, ';\n  return');
+    content = content.replace(/return\s*\(\s*<>/g, 'return (\n    <>');
+    content = content.replace(/<\/>\s*\);\s*};/g, '</>\n  );\n};');
     
-    // Fix HTML entities first
-    content = fixHtmlEntities(content);
+    // Fix JSX formatting
+    content = content.replace(/<div className="([^"]*)"[^>]*>/g, (match, className) => {
+      return `\n        <div className="${className}">`;
+    });
     
-    // Fix unused imports
-    content = fixUnusedImports(content);
+    content = content.replace(/<h1 className="([^"]*)"[^>]*>/g, (match, className) => {
+      return `\n          <h1 className="${className}">`;
+    });
     
-    // Remove console statements
-    content = removeConsoleStatements(content);
+    content = content.replace(/<p className="([^"]*)"[^>]*>/g, (match, className) => {
+      return `\n          <p className="${className}">`;
+    });
     
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+    content = content.replace(/<a href="([^"]*)"[^>]*>/g, (match, href) => {
+      return `\n          <a href="${href}" className="text-purple-400 hover:text-purple-300">`;
+    });
+
+    // Fix missing export
+    if (content.includes('const') && !content.includes('export default')) {
+      content = content.replace(/};\s*$/, '};\n\nexport default NotFoundPage;');
+    }
+
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed syntax errors in: ${filePath}`);
       modified = true;
     }
-    
-    return modified;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
   }
 }
 
-// Function to recursively find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
-    }
-  }
-  
-  traverse(dir);
-  return files;
-}
-
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const files = findFiles(appDir);
+// Get all TypeScript and TSX files
+const files = glob.sync('app/**/*.{ts,tsx}', { cwd: __dirname });
 
 console.log(`Found ${files.length} files to process...`);
 
-let modifiedCount = 0;
-for (const file of files) {
-  if (processFile(file)) {
-    modifiedCount++;
-  }
-}
+files.forEach(file => {
+  const fullPath = path.join(__dirname, file);
+  fixSyntaxErrors(fullPath);
+});
 
-console.log(`\nProcessed ${files.length} files, modified ${modifiedCount} files.`);
+console.log('Syntax errors cleanup completed!');

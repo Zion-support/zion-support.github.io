@@ -27,3 +27,5 @@ export const analyticsTracker = { trackPageView: (page: string, title?: string) 
     }
   }
 };
+
+export default NotFoundPage;

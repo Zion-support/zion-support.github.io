@@ -9,3 +9,5 @@ export const appConfig = { name: 'Zion Tech Group',
     linkedin: 'https://linkedin.com/company/ziontechgroup',
     github: 'https://github.com/ziontechgroup' }
 };
+
+export default NotFoundPage;

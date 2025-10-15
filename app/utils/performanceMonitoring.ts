@@ -4,8 +4,7 @@ export const performanceMonitoring = {
     return {
       end: () => {
         const duration = performance.now() - start
-        console.log(`${name}: ${duration}ms`)
-        // Send to analytics
+                // Send to analytics
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'performance_measurement', {
             name: name,

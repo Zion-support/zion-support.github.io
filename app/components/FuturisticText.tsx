@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface FuturisticTextProps {
   children: React.ReactNode;
   className?: string;
@@ -9,7 +8,6 @@ interface FuturisticTextProps {
   color?: string;
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
 }
-
 const FuturisticText: React.FC<FuturisticTextProps> = ({ 
   children, 
   className = '', 
@@ -27,7 +25,7 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
     gradient: 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400'
   };
 
-  const sizeClasses = {
+const sizeClasses = {
     xs: 'text-xs',
     sm: 'text-sm',
     base: 'text-base',
@@ -41,7 +39,7 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
     '7xl': 'text-7xl'
   };
 
-  const weightClasses = {
+const weightClasses = {
     light: 'font-light',
     normal: 'font-normal',
     medium: 'font-medium',
@@ -51,19 +49,17 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
     black: 'font-black'
   };
 
-  const textClasses = [
+const textClasses = [
     variant === 'gradient' ? variantClasses.gradient : variantClasses[variant],
     variant !== 'heading' && variant !== 'subheading' && variant !== 'gradient' ? sizeClasses[size] : '',
     variant !== 'heading' && variant !== 'subheading' && variant !== 'gradient' ? weightClasses[weight] : '',
     variant !== 'gradient' ? color : '',
     className
   ].filter(Boolean).join(' ');
-
   return (
     <Component className={textClasses}>
       {children}
     </Component>
   );
 };
-
 export default FuturisticText;

@@ -10,5 +10,7 @@ export const seoOptimizer = { optimize: (data: { title?: string; description?: s
     if (!data.description) errors.push('Description is required')
     if (data.title && data.title.length > 60) errors.push('Title too long')
     if (data.description && data.description.length > 160) errors.push('Description too long');
-    return errors; }
+  return errors; }
 };
+
+export default NotFoundPage;

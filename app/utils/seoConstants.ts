@@ -4,3 +4,5 @@ export const seoConstants = { defaultTitle: 'Zion Tech Group',
   siteUrl: 'https://ziontechgroup.com',
   twitterHandle: '@ziontechgroup',
   ogImage: '/og-image.jpg' };
+
+export default NotFoundPage;

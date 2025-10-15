@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-
 export const usePerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState<Record<string, number>>({});
+  return;
+});
 
-  const trackMetric = (name: string, value: number) => {
-    setMetrics((prev) => ({ ...prev, [name]: value }));
+const trackMetric = () => {
+  return;
+}));
   };
-
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -18,15 +18,14 @@ export const usePerformanceMonitor = () => {
           }));
         }
       });
-
       observer.observe({ entryTypes: ['measure', 'navigation'] });
-
-      return () => {
+  return () => {
         observer.disconnect();
       };
     }
     return undefined;
   }, []);
-
   return { metrics, trackMetric };
 };
+
+export default NotFoundPage;

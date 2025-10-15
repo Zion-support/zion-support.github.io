@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Award, BarChart3, Brain, CheckCircle, Clock, Globe, Settings, Shield, Star, Users, Zap } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [
@@ -142,7 +141,7 @@ const AIServicesPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+const benefits = [
     {
       title: 'Increased Efficiency',
       description: 'Automate repetitive tasks and focus on strategic initiatives.',
@@ -164,7 +163,6 @@ const AIServicesPage: React.FC = () => {
       icon: Globe,
     },
   ];
-
   return (
     <>
       <Helmet>
@@ -173,18 +171,22 @@ const AIServicesPage: React.FC = () => {
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI analytics, AI automation, business AI solutions" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          
+        <div className="max-w-7xl mx-auto text-center">
+            
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI <span className="text-cyan-400">Services</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with cutting-edge AI solutions designed to drive growth, efficiency, and innovation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors flex items-center justify-center space-x-2"
@@ -201,40 +203,44 @@ const AIServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto">
+          
+        <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
               Why Choose Our AI Services?
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => {
                 const IconComponent = benefit.icon;
-                return (
+  return (
                   <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    
+        <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                       <IconComponent className="w-8 h-8 text-cyan-400" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                    <p className="text-gray-300">{benefit.description}</p>
+                    
+          <p className="text-gray-300">{benefit.description}</p>
                   </div>
                 );
               })}
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto">
+          
+        <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
               Our AI Services
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiServices.map((service) => {
                 const IconComponent = service.icon;
-                return (
+  return (
                   <div
                     key={service.id}
                     className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${
@@ -244,7 +250,8 @@ const AIServicesPage: React.FC = () => {
                     }`}
                   >
                     {service.popular && (
-                      <div className="flex items-center justify-center mb-4">
+                      
+        <div className="flex items-center justify-center mb-4">
                         <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center space-x-1">
                           <Star className="w-4 h-4" />
                           <span>Most Popular</span>
@@ -252,22 +259,25 @@ const AIServicesPage: React.FC = () => {
                       </div>
                     )}
                     
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center">
+        <div className="flex items-center justify-between mb-4">
+                      
+        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center">
                         <IconComponent className="w-6 h-6 text-cyan-400" />
                       </div>
                       <span className="px-3 py-1 bg-slate-700 text-gray-300 text-sm rounded-full">
                         {service.category}
                       </span>
                     </div>
-                    
                     <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                     
+          <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                     {/* Rating and Users */}
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-2">
-                        <div className="flex items-center space-x-1">
+                    
+        <div className="flex items-center justify-between mb-4">
+                      
+        <div className="flex items-center space-x-2">
+                        
+        <div className="flex items-center space-x-1">
                           {[...Array(5)].map((_, i) => (
                             <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} />
                           ))}
@@ -276,7 +286,6 @@ const AIServicesPage: React.FC = () => {
                       </div>
                       <span className="text-sm text-gray-400">{service.users} users</span>
                     </div>
-                    
                     <ul className="space-y-2 mb-6">
                       {service.features.slice(0, 4).map((feature, index) => (
                         <li key={index} className="flex items-center space-x-2 text-gray-300">
@@ -291,9 +300,11 @@ const AIServicesPage: React.FC = () => {
                       )}
                     </ul>
                     
-                    <div className="mb-6">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="flex items-center space-x-2">
+        <div className="mb-6">
+                      
+        <div className="flex items-center justify-between mb-2">
+                        
+        <div className="flex items-center space-x-2">
                           <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                           <span className="text-sm text-gray-400 line-through">{service.marketPrice}</span>
                         </div>
@@ -301,13 +312,14 @@ const AIServicesPage: React.FC = () => {
                           Save {service.savings}
                         </span>
                       </div>
-                      <div className="flex items-center space-x-1 text-gray-400 text-sm">
+                      
+        <div className="flex items-center space-x-1 text-gray-400 text-sm">
                         <Clock className="w-4 h-4" />
                         <span>Setup in 24h</span>
                       </div>
                     </div>
                     
-                    <div className="space-y-2">
+        <div className="space-y-2">
                       <Link
                         to={`/${service.id}`}
                         className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105"
@@ -331,18 +343,21 @@ const AIServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="px-4 sm:px-6 lg:px-8 pb-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12">
+          
+        <div className="max-w-4xl mx-auto text-center">
+            
+        <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12">
               <h2 className="text-3xl font-bold text-white mb-4">
                 Ready to Transform Your Business with AI?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              
+          <p className="text-xl text-gray-300 mb-8">
                 Let our AI experts help you identify the best solutions for your specific needs.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors flex items-center justify-center space-x-2"
@@ -364,5 +379,4 @@ const AIServicesPage: React.FC = () => {
     </>
   );
 };
-
 export default AIServicesPage;

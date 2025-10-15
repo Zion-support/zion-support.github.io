@@ -16,7 +16,8 @@ export const seoEnhancer = { enhance: (data: { title?: string; description?: str
   },
   setMetaTags: (data: EnhancedSEOData) => { if (typeof document !== 'undefined') {
       document.title = data.title;
-      const metaDescription = document.querySelector('meta[name="description"]');
+
+const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
         metaDescription.setAttribute('content', data.description) }
       const metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -32,3 +33,5 @@ export const seoEnhancer = { enhance: (data: { title?: string; description?: str
     }
   }
 };
+
+export default NotFoundPage;

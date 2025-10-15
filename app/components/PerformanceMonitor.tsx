@@ -1,56 +1,68 @@
 import React, { useEffect, useState } from 'react';
 
+interface PerformanceMetrics {
+  loadTime: number;
+  memoryUsage: number;
+  networkRequests: number;
+}
+
 interface PerformanceMonitorProps {
   children: React.ReactNode;
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
-  const [metrics, setMetrics] = useState({
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
-    renderTime: 0,
     memoryUsage: 0,
     networkRequests: 0
   });
 
   useEffect(() => {
-    // Monitor performance metrics
-    const startTime = performance.now();
-    
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'navigation') {
-          setMetrics(prev => ({
-            ...prev,
-            loadTime: entry.duration
-          }));
-        }
-      });
-    });
-
-    observer.observe({ entryTypes: ['navigation', 'measure'] });
+    // Monitor page load time
+    const updateLoadTime = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        setMetrics(prev => ({
+          ...prev,
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart
+        }));
+      }
+    };
 
     // Monitor memory usage
     const updateMemoryUsage = () => {
       if ('memory' in performance) {
+        const memory = (performance as any).memory;
         setMetrics(prev => ({
           ...prev,
-          memoryUsage: (performance as any).memory.usedJSHeapSize / 1024 / 1024
+          memoryUsage: memory.usedJSHeapSize / 1024 / 1024
         }));
       }
     };
 
     // Monitor network requests
     const updateNetworkRequests = () => {
+      const resources = performance.getEntriesByType('resource');
       setMetrics(prev => ({
         ...prev,
-        networkRequests: prev.networkRequests + 1
+        networkRequests: resources.length
       }));
     };
 
+    // Set up performance observer
+    const observer = new PerformanceObserver((list) => {
+      updateLoadTime();
+      updateNetworkRequests();
+    });
+
+    observer.observe({ entryTypes: ['navigation', 'measure'] });
+
     // Set up monitoring
-    const interval = setInterval(updateMemoryUsage, 1000);
-    
+    const interval = setInterval(() => {
+      updateMemoryUsage();
+      updateNetworkRequests();
+    }, 1000);
+
     // Cleanup
     return () => {
       observer.disconnect();

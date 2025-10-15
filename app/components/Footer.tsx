@@ -7,11 +7,8 @@ import {
   ArrowRightIcon,
   HeartIcon
 } from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'IT Solutions', href: '/it-solutions' },
@@ -22,7 +19,7 @@ const Footer: React.FC = () => {
     { name: '5G Solutions', href: '/5g-solutions' },
   ];
 
-  const company = [
+const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
@@ -31,7 +28,7 @@ const Footer: React.FC = () => {
     { name: 'News', href: '/news' },
   ];
 
-  const support = [
+const support = [
     { name: 'Contact', href: '/contact' },
     { name: 'Support', href: '/support' },
     { name: 'Tutorials', href: '/tutorials' },
@@ -39,7 +36,7 @@ const Footer: React.FC = () => {
     { name: 'Documentation', href: '/docs' }
   ];
 
-  const legal = [
+const legal = [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
     { name: 'Cookie Policy', href: '/cookies' },
@@ -47,57 +44,67 @@ const Footer: React.FC = () => {
     { name: 'Security', href: '/security' },
     { name: 'Compliance', href: '/compliance' },
   ];
-
   return (
     <footer className="bg-slate-900 border-t border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          
+        <div className="lg:col-span-2">
             <Link to="/" className="flex items-center space-x-3 mb-6 group">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+              
+        <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </Link>
-            <p className="text-gray-400 mb-6 max-w-sm">
+            
+          <p className="text-gray-400 mb-6 max-w-sm">
               Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, 
               and digital transformation services for businesses worldwide.
             </p>
-            
             {/* Contact Info */}
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3 text-gray-300">
+            
+        <div className="space-y-3 mb-6">
+              
+        <div className="flex items-center space-x-3 text-gray-300">
                 <PhoneIcon className="w-5 h-5 text-purple-400" />
                 <span>+1-302-464-0950</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
+              
+        <div className="flex items-center space-x-3 text-gray-300">
                 <EnvelopeIcon className="w-5 h-5 text-purple-400" />
                 <span>kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
+              
+        <div className="flex items-center space-x-3 text-gray-300">
                 <MapPinIcon className="w-5 h-5 text-purple-400" />
                 <span>364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>
-
             {/* Social Links */}
-            <div className="flex space-x-4">
-              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+            
+        <div className="flex space-x-4">
+              
+          <a href="https://facebook.com/ziontechgroup" className="text-purple-400 hover:text-purple-300">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+              
+          <a href="https://twitter.com/ziontechgroup" className="text-purple-400 hover:text-purple-300">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+              
+          <a href="https://linkedin.com/company/ziontechgroup" className="text-purple-400 hover:text-purple-300">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+              
+          <a href="https://github.com/ziontechgroup" className="text-purple-400 hover:text-purple-300">
                 <Github className="w-5 h-5" />
               </a>
             </div>
           </div>
-
           {/* Services */}
           <div>
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</h3>
@@ -115,7 +122,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-
           {/* Company */}
           <div>
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Company</h3>
@@ -133,7 +139,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-
           {/* Support & Legal */}
           <div>
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Resources</h3>
@@ -163,15 +168,18 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Newsletter Signup */}
+        
         <div className="mt-16 pt-8 border-t border-slate-700/50">
-          <div className="max-w-2xl mx-auto text-center">
+          
+        <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl font-bold text-white mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Stay Updated</h3>
-            <p className="text-gray-300 mb-6 text-lg">
+            
+          <p className="text-gray-300 mb-6 text-lg">
               Get the latest insights on AI and IT trends delivered to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            
+        <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -184,15 +192,17 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Bar */}
+        
         <div className="mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center space-x-2 text-gray-400 mb-4 md:mb-0">
+          
+        <div className="flex items-center space-x-2 text-gray-400 mb-4 md:mb-0">
             <span>Made with</span>
             <HeartIcon className="w-4 h-4 text-red-400" />
             <span>by Zion Tech Group</span>
           </div>
-          <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
+          
+        <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
             {legal.map((link) => (
               <Link
                 key={link.name}
@@ -208,5 +218,4 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-
 export default Footer;

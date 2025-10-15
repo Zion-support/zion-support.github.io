@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface ResponsiveGridProps {
   children: React.ReactNode;
   className?: string;
@@ -11,7 +10,6 @@ interface ResponsiveGridProps {
     xl?: number;
   };
 }
-
 const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({ 
   children, 
   className = '', 
@@ -27,12 +25,10 @@ const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
     'gap-6',
     className
   ].filter(Boolean).join(' ');
-
   return (
     <div className={gridClasses}>
       {children}
     </div>
   );
 };
-
 export default ResponsiveGrid;

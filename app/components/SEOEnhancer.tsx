@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -9,7 +8,6 @@ interface SEOEnhancerProps {
   ogImage?: string;
   structuredData?: object;
 }
-
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI solutions, cybersecurity, and IT services for modern businesses',
@@ -25,14 +23,13 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       script.type = 'application/ld+json';
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
-
-      return () => {
+  return () => {
         document.head.removeChild(script);
       };
     }
   }, [structuredData]);
 
-  const defaultStructuredData = {
+const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -74,7 +71,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       ]
     }
   };
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -82,7 +78,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={canonicalUrl} />
-
       {/* Open Graph Tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -90,24 +85,20 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:site_name" content="Zion Tech Group" />
-
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-
       {/* Additional SEO Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}
@@ -115,5 +106,4 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     </Helmet>
   );
 };
-
 export default SEOEnhancer;

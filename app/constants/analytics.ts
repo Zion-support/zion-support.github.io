@@ -9,3 +9,5 @@ export const analyticsConfig = { googleAnalytics: {
     section: 'section',
     action: 'action' }
 };
+
+export default NotFoundPage;

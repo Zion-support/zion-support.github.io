@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { X, Menu, Home, Brain, Shield, Zap, Globe, BarChart3, Users, Settings } from 'lucide-react';
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
@@ -23,7 +20,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'FAQ', href: '/faq', icon: Settings },
     { name: 'Contact', href: '/contact', icon: Settings },
   ];
-
   return (
     <>
       {/* Overlay */}
@@ -33,11 +29,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           onClick={onClose}
         />
       )}
-
       {/* Sidebar */}
       <div className={`fixed top-0 left-0 h-full w-64 bg-slate-900/95 backdrop-blur-sm border-r border-white/10 z-50 transform transition-transform duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } lg:translate-x-0`}>
+        
         <div className="flex items-center justify-between p-4 border-b border-white/10">
           <h2 className="text-xl font-bold text-white">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -51,7 +47,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <X className="w-6 h-6" />
           </button>
         </div>
-
         <nav className="p-4 space-y-2">
           {navigationItems.map((item) => (
             <Link
@@ -65,7 +60,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             </Link>
           ))}
         </nav>
-
+        
         <div className="absolute bottom-4 left-4 right-4">
           <Link
             to="/contact"
@@ -78,5 +73,4 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     </>
   );
 };
-
 export default Sidebar;
