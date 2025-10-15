@@ -22,13 +22,13 @@ const InventoryManagementSystemPage = () => {
     {
       title: "Automated Reordering",
       description: "Set up automatic reorder points and purchase orders to prevent stockouts",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       benefits: ["Reorder automation", "Supplier integration", "Purchase orders", "Approval workflows"]
     },
     {
       title: "Multi-channel Management",
       description: "Manage inventory across online stores, physical locations, and marketplaces",
-      icon: <Globe className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       benefits: ["Channel sync", "Marketplace integration", "Unified view", "Cross-channel analytics"]
     },
     {
@@ -106,7 +106,7 @@ const InventoryManagementSystemPage = () => {
     {
       title: "Improve Efficiency",
       description: "Streamline operations and reduce manual work by 60%",
-      icon: <Zap className="w-6 h-6" />
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />
     },
     {
       title: "Better Decisions",
@@ -140,7 +140,7 @@ const InventoryManagementSystemPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -148,7 +148,7 @@ const InventoryManagementSystemPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-indigo-500 rounded" />}
             >
               Watch Demo
             </FuturisticButton>
@@ -280,7 +280,7 @@ const InventoryManagementSystemPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -288,7 +288,7 @@ const InventoryManagementSystemPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-indigo-500 rounded" />}
             >
               Watch Demo
             </FuturisticButton>

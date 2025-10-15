@@ -9,7 +9,7 @@ import { ArrowRight, MessageSquare, Code, BookOpen, Award } from 'lucide-react';
       description: 'Connect with other developers and share knowledge'
     },
     {
-      icon: <Code className="w-8 h-8 text-green-400" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       title: 'Code Sharing',
       description: 'Share code snippets and collaborate on projects'
     },
@@ -56,7 +56,7 @@ import { ArrowRight, MessageSquare, Code, BookOpen, Award } from 'lucide-react';
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center"
               >
                 Join Community
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
             </div>
           </div>

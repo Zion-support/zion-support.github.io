@@ -43,7 +43,7 @@ export default function Contact() {
 
   const contactInfo = [
     {
-      icon: <Phone className="w-6 h-6" />,
+      icon: <div className="w-6 h-6 bg-emerald-500 rounded" />,
       title: "Phone",
       details: ["+1 302 464 0950", "Mon-Fri 9AM-6PM EST"],
       action: "Call Now"
@@ -337,7 +337,7 @@ export default function Contact() {
                         </div>
                         <span className="text-white font-medium">Schedule Free Consultation</span>
                       </div>
-                      <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                      <div className="w-6 h-6 bg-blue-500 rounded" />
                     </Link>
                     <Link
                       to="/services"
@@ -345,11 +345,11 @@ export default function Contact() {
                     >
                       <div className="flex items-center space-x-3">
                         <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                          <Globe className="w-4 h-4 text-white" />
+                          <div className="w-6 h-6 bg-indigo-500 rounded" />
                         </div>
                         <span className="text-white font-medium">Explore Our Services</span>
                       </div>
-                      <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                      <div className="w-6 h-6 bg-blue-500 rounded" />
                     </Link>
                   </div>
                 </div>

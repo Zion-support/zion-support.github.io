@@ -1,34 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Share2, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  Target, 
-  TrendingUp,
-  Clock,
-  Shield,
-  Smartphone,
-  Globe,
-  MessageSquare,
-  FileText,
-  Settings,
-  Star,
-  Award,
-  Phone,
-  MapPin,
-  Envelope,
-  Instagram,
-  Twitter,
-  Facebook,
-  Linkedin,
-  Youtube,
-  Music
-} from 'lucide-react';
+import { CheckCircle, TrendingUp, Instagram, Twitter, Facebook, Linkedin, Youtube } from 'lucide-react';
 
 const AISocialMediaManagerPage: React.FC = () => {
   const features = [
@@ -54,12 +27,12 @@ const AISocialMediaManagerPage: React.FC = () => {
   ];
 
   const platforms = [
-    { name: 'Instagram', icon: <Instagram className="w-6 h-6 text-pink-400" />, users: '2B+' },
-    { name: 'Facebook', icon: <Facebook className="w-6 h-6 text-blue-400" />, users: '3B+' },
-    { name: 'Twitter', icon: <Twitter className="w-6 h-6 text-sky-400" />, users: '450M+' },
-    { name: 'LinkedIn', icon: <Linkedin className="w-6 h-6 text-blue-600" />, users: '900M+' },
-    { name: 'YouTube', icon: <Youtube className="w-6 h-6 text-red-400" />, users: '2.7B+' },
-    { name: 'TikTok', icon: <Music className="w-6 h-6 text-white" />, users: '1B+' }
+    { name: 'Instagram', icon: <div className="w-6 h-6 bg-pink-400 rounded" />, users: '2B+' },
+    { name: 'Facebook', icon: <div className="w-6 h-6 bg-blue-400 rounded" />, users: '3B+' },
+    { name: 'Twitter', icon: <div className="w-6 h-6 bg-sky-400 rounded" />, users: '450M+' },
+    { name: 'LinkedIn', icon: <div className="w-6 h-6 bg-blue-600 rounded" />, users: '900M+' },
+    { name: 'YouTube', icon: <div className="w-6 h-6 bg-red-400 rounded" />, users: '2.7B+' },
+    { name: 'TikTok', icon: <div className="w-6 h-6 bg-white rounded" />, users: '1B+' }
   ];
 
   const pricingPlans = [
@@ -118,25 +91,25 @@ const AISocialMediaManagerPage: React.FC = () => {
     {
       title: 'E-commerce',
       description: 'Drive sales with product showcases and customer testimonials',
-      icon: <ShoppingCart className="w-6 h-6 text-blue-400" />,
+      icon: <div className="w-6 h-6 bg-orange-500 rounded" />,
       results: 'Average 150% increase in social sales'
     },
     {
       title: 'SaaS',
       description: 'Build community and showcase product updates',
-      icon: <Cloud className="w-6 h-6 text-green-400" />,
+      icon: <div className="w-6 h-6 bg-cyan-500 rounded" />,
       results: '300% increase in user engagement'
     },
     {
       title: 'Agencies',
       description: 'Manage multiple client accounts efficiently',
-      icon: <Users className="w-6 h-6 text-purple-400" />,
+      icon: <div className="w-6 h-6 bg-sky-500 rounded" />,
       results: 'Manage 5x more clients with same team'
     },
     {
       title: 'Personal Brands',
       description: 'Build personal brand and thought leadership',
-      icon: <Star className="w-6 h-6 text-yellow-400" />,
+      icon: <div className="w-6 h-6 bg-yellow-400 rounded" />,
       results: '200% increase in follower growth'
     }
   ];
@@ -178,7 +151,7 @@ const AISocialMediaManagerPage: React.FC = () => {
                 className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/25 flex items-center group"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="#pricing"

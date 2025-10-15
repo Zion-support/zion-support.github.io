@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle, Database, Smartphone, Globe, Network } from 'l
     {
       title: 'Custom Web Applications',
       description: 'Build scalable web applications tailored to your business needs',
-      icon: <Globe className="w-8 h-8 text-blue-400" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       features: ['React/Next.js', 'Node.js Backend', 'Database Design', 'API Development']
     },
     {
@@ -61,7 +61,7 @@ import { ArrowRight, CheckCircle, Database, Smartphone, Globe, Network } from 'l
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center"
               >
                 Start Project
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
             </div>
           </div>

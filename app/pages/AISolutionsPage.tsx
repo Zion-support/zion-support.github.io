@@ -12,7 +12,7 @@ const AISolutionsPage: React.FC = () => {
       features: ['Process Automation', 'Workflow Optimization', 'RPA Integration', 'Custom AI Models', 'Real-time Monitoring', 'Scalable Architecture'],
       pricing: { monthly: 299, yearly: 2990, currency: 'USD' },
       category: 'Automation',
-      icon: <Zap className="w-8 h-8 text-cyan-400" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       popular: true
     },
     {
@@ -49,7 +49,7 @@ const AISolutionsPage: React.FC = () => {
       features: ['GPT-4 Integration', 'Multi-format Support', 'Brand Voice Training', 'SEO Optimization', 'Content Planning', 'Quality Assurance'],
       pricing: { monthly: 99, yearly: 990, currency: 'USD' },
       category: 'Content Creation',
-      icon: <Code className="w-8 h-8 text-blue-400" />
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />
     },
     {
       id: 'ai-business-intelligence',
@@ -67,7 +67,7 @@ const AISolutionsPage: React.FC = () => {
       features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Risk Assessment', 'Compliance Monitoring', '24/7 Monitoring'],
       pricing: { monthly: 399, yearly: 3990, currency: 'USD' },
       category: 'Cybersecurity',
-      icon: <Shield className="w-8 h-8 text-yellow-400" />
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />
     },
     {
       id: 'ai-mobile-apps',
@@ -90,13 +90,13 @@ const AISolutionsPage: React.FC = () => {
     {
       title: 'Financial Services',
       description: 'AI-driven fraud detection and risk assessment',
-      icon: <Shield className="w-6 h-6 text-green-400" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       benefits: ['Fraud Prevention', 'Risk Mitigation', 'Compliance Automation', 'Enhanced Security']
     },
     {
       title: 'E-commerce',
       description: 'Personalized shopping experiences and inventory optimization',
-      icon: <Globe className="w-6 h-6 text-purple-400" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       benefits: ['Increased Sales', 'Better Customer Experience', 'Inventory Optimization', 'Price Optimization']
     },
     {
@@ -136,7 +136,7 @@ const AISolutionsPage: React.FC = () => {
                 href="tel:+13024640950"
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <div className="w-6 h-6 bg-emerald-500 rounded" />
                 Call (302) 464-0950
               </a>
               <a
@@ -287,7 +287,7 @@ const AISolutionsPage: React.FC = () => {
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-white" />
+                  <div className="w-6 h-6 bg-purple-500 rounded" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>
                 <p className="text-gray-300">Bank-level security with data privacy compliance</p>
@@ -328,7 +328,7 @@ const AISolutionsPage: React.FC = () => {
                   href="tel:+13024640950"
                   className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <div className="w-6 h-6 bg-emerald-500 rounded" />
                   Call (302) 464-0950
                 </a>
                 <a

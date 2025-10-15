@@ -54,17 +54,17 @@ import { CheckCircle, Users, Globe, Shield, Zap } from 'lucide-react';export def
       description: "Collaborative marketing campaigns and co-branded content"
     },
     {
-      icon: <Globe className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       title: "Global Reach",
       description: "Access to our worldwide network of clients and opportunities"
     },
     {
-      icon: <Shield className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       title: "Technical Support",
       description: "Dedicated technical resources and training programs"
     },
     {
-      icon: <Zap className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       title: "Innovation Labs",
       description: "Joint innovation initiatives and R&D projects"
     }

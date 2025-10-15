@@ -88,9 +88,9 @@ const Footer: React.FC = () => {
                   aria-label={social.name}
                 >
                   <div className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors">
-                    {social.icon === 'facebook' && <Facebook className="w-4 h-4" />}
-                    {social.icon === 'twitter' && <Twitter className="w-4 h-4" />}
-                    {social.icon === 'linkedin' && <Linkedin className="w-4 h-4" />}
+                    {social.icon === 'facebook' && <div className="w-6 h-6 bg-blue-400 rounded" />}
+                    {social.icon === 'twitter' && <div className="w-6 h-6 bg-sky-400 rounded" />}
+                    {social.icon === 'linkedin' && <div className="w-6 h-6 bg-blue-600 rounded" />}
                     {social.icon === 'github' && <Github className="w-4 h-4" />}
                   </div>
                 </a>

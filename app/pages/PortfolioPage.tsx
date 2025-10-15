@@ -240,7 +240,7 @@ import { ArrowRight, CheckCircle, Star, Zap, Brain, Cpu, Cloud, Smartphone, Targ
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center"
               >
                 Start Your Project
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/solutions"
@@ -314,7 +314,7 @@ import { ArrowRight, CheckCircle, Star, Zap, Brain, Cpu, Cloud, Smartphone, Targ
                 <div className="relative h-64 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <Zap className="w-8 h-8 text-white" />
+                      <div className="w-6 h-6 bg-yellow-500 rounded" />
                     </div>
                     <h3 className="text-xl font-semibold text-white">{project.title}</h3>
                   </div>
@@ -345,7 +345,7 @@ import { ArrowRight, CheckCircle, Star, Zap, Brain, Cpu, Cloud, Smartphone, Targ
                       {categories.find(cat => cat.id === project.category)?.name}
                     </span>
                     <div className="flex items-center text-yellow-400">
-                      <Star className="w-4 h-4 fill-current" />
+                      <div className="w-6 h-6 bg-yellow-400 rounded" />
                       <span className="ml-1 text-sm font-medium">5.0</span>
                     </div>
                   </div>

@@ -160,7 +160,7 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar,
                     href={method.action}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
                   >
-                    <Zap className="w-4 h-4 mr-1" />
+                    <div className="w-6 h-6 bg-yellow-500 rounded" />
                     Contact Now
                   </a>
                 )}
@@ -360,7 +360,7 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar,
             </div>
 
             <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600/50 text-center">
-              <Headphones className="w-12 h-12 text-green-400 mx-auto mb-4" />
+              <div className="w-6 h-6 bg-purple-500 rounded" />
               <h3 className="text-xl font-semibold text-white mb-2">Support Center</h3>
               <p className="text-gray-300 mb-4">Get help with existing projects and technical issues.</p>
               <button className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">

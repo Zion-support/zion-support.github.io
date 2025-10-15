@@ -173,7 +173,7 @@ import { ArrowRight, Clock, Search, Filter, Play, BookOpen, Star, Target } from 
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center"
               >
                 Start Learning
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/solutions"
@@ -295,7 +295,7 @@ import { ArrowRight, Clock, Search, Filter, Play, BookOpen, Star, Target } from 
                   </div>
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
+                      <div className="w-6 h-6 bg-yellow-400 rounded" />
                       <span className="text-white font-medium">{featuredTutorial.rating}</span>
                       <span className="text-gray-400 ml-2">({featuredTutorial.students} students)</span>
                     </div>
@@ -312,7 +312,7 @@ import { ArrowRight, Clock, Search, Filter, Play, BookOpen, Star, Target } from 
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
                   >
                     Start Learning
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </Link>
                 </div>
               </div>
@@ -384,7 +384,7 @@ import { ArrowRight, Clock, Search, Filter, Play, BookOpen, Star, Target } from 
 
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
+                      <div className="w-6 h-6 bg-yellow-400 rounded" />
                       <span className="text-white font-medium text-sm">{tutorial.rating}</span>
                       <span className="text-gray-400 text-xs ml-1">({tutorial.students})</span>
                     </div>
@@ -403,7 +403,7 @@ import { ArrowRight, Clock, Search, Filter, Play, BookOpen, Star, Target } from 
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors text-sm"
                   >
                     Start Learning
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </Link>
                 </div>
               </article>

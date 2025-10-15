@@ -29,13 +29,13 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
   const getIcon = () => {
     switch (variant) {
       case "primary":
-        return <Zap className="w-6 h-6" />;
+        return <div className="w-6 h-6 bg-yellow-500 rounded" />;
       case "secondary":
-        return <Star className="w-6 h-6" />;
+        return <div className="w-6 h-6 bg-yellow-400 rounded" />;
       case "success":
-        return <Star className="w-6 h-6" />;
+        return <div className="w-6 h-6 bg-yellow-400 rounded" />;
       default:
-        return <Zap className="w-6 h-6" />;
+        return <div className="w-6 h-6 bg-yellow-500 rounded" />;
     }
   };
 
@@ -55,7 +55,7 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
             className="inline-flex items-center bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
           >
             {ctaText}
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <div className="w-6 h-6 bg-blue-500 rounded" />
           </Link>
         </div>
       </div>

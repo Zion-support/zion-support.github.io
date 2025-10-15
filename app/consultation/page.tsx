@@ -46,7 +46,7 @@ import { ArrowRight, Clock, Users, DollarSign, Shield } from 'lucide-react';expo
     {
       title: "Free Consultation",
       description: "No cost initial consultation to understand your needs",
-      icon: <DollarSign className="w-8 h-8" />
+      icon: <div className="w-6 h-6 bg-green-500 rounded" />
     },
     {
       title: "Expert Team",
@@ -61,7 +61,7 @@ import { ArrowRight, Clock, Users, DollarSign, Shield } from 'lucide-react';expo
     {
       title: "Secure & Confidential",
       description: "Your information is protected and confidential",
-      icon: <Shield className="w-8 h-8" />
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />
     }
   ];
 
@@ -266,7 +266,7 @@ import { ArrowRight, Clock, Users, DollarSign, Shield } from 'lucide-react';expo
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                   >
                     Schedule Consultation
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </button>
                 </div>
               </form>

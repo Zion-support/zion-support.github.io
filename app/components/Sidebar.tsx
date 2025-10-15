@@ -45,51 +45,51 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const aiServices = useMemo(() => [
     { name: 'AI Email Marketing', path: '/ai-email-marketing-automation', icon: <Mail className="w-4 h-4" />, featured: true },
-    { name: 'AI Social Media Manager', path: '/ai-social-media-manager', icon: <Zap className="w-4 h-4" />, featured: true },
-    { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'AI Social Media Manager', path: '/ai-social-media-manager', icon: <div className="w-6 h-6 bg-yellow-500 rounded" />, featured: true },
+    { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot', icon: <div className="w-6 h-6 bg-yellow-500 rounded" />, featured: true },
     { name: 'AI Project Management Pro', path: '/ai-project-management-pro', icon: <Settings className="w-4 h-4" />, featured: true },
     { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
-    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> }
+    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <div className="w-6 h-6 bg-purple-500 rounded" /> },
+    { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <div className="w-6 h-6 bg-purple-500 rounded" /> }
   ], [])
 
   const itServices = useMemo(() => [
-    { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
-    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
-    { name: 'Mobile Development', path: '/mobile-development', icon: <Code className="w-4 h-4" /> },
+    { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <div className="w-6 h-6 bg-cyan-500 rounded" /> },
+    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <div className="w-6 h-6 bg-purple-500 rounded" /> },
+    { name: 'Web Development', path: '/web-development', icon: <div className="w-6 h-6 bg-purple-500 rounded" /> },
+    { name: 'Mobile Development', path: '/mobile-development', icon: <div className="w-6 h-6 bg-purple-500 rounded" /> },
     { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> },
-    { name: 'Custom Software', path: '/custom-software', icon: <Code className="w-4 h-4" /> },
-    { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Custom Software', path: '/custom-software', icon: <div className="w-6 h-6 bg-purple-500 rounded" /> },
+    { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <div className="w-6 h-6 bg-cyan-500 rounded" /> },
     { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
   ], [])
 
   const microSaasServices = useMemo(() => [
     { name: 'Task Manager Pro', path: '/task-manager-pro', icon: <Settings className="w-4 h-4" />, featured: true },
     { name: 'Analytics Dashboard', path: '/analytics-dashboard', icon: <BarChart3 className="w-4 h-4" />, featured: true },
-    { name: 'Customer Support Hub', path: '/customer-support-hub', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'Customer Support Hub', path: '/customer-support-hub', icon: <div className="w-6 h-6 bg-yellow-500 rounded" />, featured: true },
     { name: 'Inventory Manager', path: '/inventory-manager', icon: <Database className="w-4 h-4" />, featured: true },
-    { name: 'Social Media Scheduler', path: '/social-media-scheduler', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Social Media Scheduler', path: '/social-media-scheduler', icon: <div className="w-6 h-6 bg-yellow-500 rounded" /> },
     { name: 'Expense Tracker Pro', path: '/expense-tracker-pro', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'AI Accounting Assistant', path: '/ai-accounting-assistant', icon: <Brain className="w-4 h-4" /> },
-    { name: 'AI Content Moderation', path: '/ai-content-moderation-pro', icon: <Shield className="w-4 h-4" /> }
+    { name: 'AI Content Moderation', path: '/ai-content-moderation-pro', icon: <div className="w-6 h-6 bg-purple-500 rounded" /> }
   ], [])
 
   const mainNavItems = useMemo(() => [
     { name: 'Home', path: '/', icon: <Home className="w-4 h-4" /> },
     { name: 'About', path: '/about', icon: <Users className="w-4 h-4" /> },
     { name: 'Services', path: '/services', icon: <Settings className="w-4 h-4" /> },
-    { name: 'Micro SAAS', path: '/micro-saas-services', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Micro SAAS', path: '/micro-saas-services', icon: <div className="w-6 h-6 bg-yellow-500 rounded" /> },
     { name: 'Pricing', path: '/pricing', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Case Studies', path: '/case-studies', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Blog', path: '/blog', icon: <Brain className="w-4 h-4" /> },
-    { name: 'Contact', path: '/contact', icon: <Phone className="w-4 h-4" /> }
+    { name: 'Contact', path: '/contact', icon: <div className="w-6 h-6 bg-emerald-500 rounded" /> }
   ], [])
 
   const contactInfo = useMemo(() => [
     { icon: <Mail className="w-4 h-4" />, text: 'kleber@ziontechgroup.com' },
-    { icon: <Phone className="w-4 h-4" />, text: '+1 302 464 0950' },
+    { icon: <div className="w-6 h-6 bg-emerald-500 rounded" />, text: '+1 302 464 0950' },
     { icon: <MapPin className="w-4 h-4" />, text: '364 E Main St STE 1008, Middletown DE 19709' }
   ], [])
 
@@ -225,7 +225,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium text-left"
             >
               <div className="flex items-center space-x-3">
-                <Zap className="w-4 h-4" />
+                <div className="w-6 h-6 bg-yellow-500 rounded" />
                 <span>Micro SAAS</span>
               </div>
               {expandedSections.has('micro-saas') ? (
@@ -251,7 +251,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     <div className="flex-1 flex items-center justify-between">
                       <span className="text-sm">{service.name}</span>
                       {service.featured && (
-                        <Star className="w-3 h-3 text-yellow-400 fill-current" />
+                        <div className="w-6 h-6 bg-yellow-400 rounded" />
                       )}
                     </div>
                   </Link>
@@ -281,7 +281,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={onClose}
             >
               <span>Get Started</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              <div className="w-6 h-6 bg-blue-500 rounded" />
             </Link>
           </div>
         </div>

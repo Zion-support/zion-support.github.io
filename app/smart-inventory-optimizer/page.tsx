@@ -19,12 +19,12 @@ import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle,
       description: "Comprehensive analytics and reporting with real-time insights into inventory performance, turnover rates, and cost optimization."
     },
     {
-      icon: <Shield className="w-8 h-8 text-red-400" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       title: "Multi-location Management",
       description: "Seamlessly manage inventory across multiple warehouses, stores, and distribution centers with centralized control."
     },
     {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       title: "Automated Alerts & Notifications",
       description: "Get instant alerts for low stock, overstock, expiring items, and unusual demand patterns to prevent costly mistakes."
     },
@@ -87,7 +87,7 @@ import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle,
 
   const benefits = [
     {
-      icon: <DollarSign className="w-12 h-12 text-green-400" />,
+      icon: <div className="w-6 h-6 bg-green-500 rounded" />,
       title: "Reduce Inventory Costs",
       description: "Save up to 30% on inventory costs through optimized stock levels and reduced carrying costs."
     },
@@ -152,7 +152,7 @@ import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle,
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -370,7 +370,7 @@ import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle,
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
               >
                 Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -397,7 +397,7 @@ import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle,
               <span>kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
-              <Globe className="w-5 h-5 mr-2 text-cyan-400" />
+              <div className="w-6 h-6 bg-indigo-500 rounded" />
               <span>https://ziontechgroup.com</span>
             </div>
           </div>

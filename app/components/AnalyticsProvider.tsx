@@ -2,12 +2,12 @@ import React, { createContext, useContext, useEffect, ReactNode } from "react";
 
 declare global {
   interface Window {
-    gtag: (_...args: unknown[]) => void;
+    gtag: (...args: unknown[]) => void;
   }
 }
 
 interface AnalyticsContextType {
-  trackEvent: (_eventName: string, parameters?: Record<string, _unknown>) => void;
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
   trackPageView: (_pageName: string) => void;
 }
 

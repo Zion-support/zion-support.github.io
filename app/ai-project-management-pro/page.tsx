@@ -1,32 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Kanban, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  Target, 
-  TrendingUp,
-  Clock,
-  Shield,
-  Smartphone,
-  Globe,
-  FileText,
-  Settings,
-  Star,
-  Award,
-  Phone,
-  MapPin,
-  Envelope,
-  Calendar,
-  CheckSquare,
-  MessageSquare,
-  PieChart,
-  RefreshCw
-} from 'lucide-react';
+import { CheckCircle, Kanban, TrendingUp, CheckSquare } from 'lucide-react';
 
 const AIProjectManagementProPage: React.FC = () => {
   const features = [
@@ -52,12 +27,12 @@ const AIProjectManagementProPage: React.FC = () => {
   ];
 
   const integrations = [
-    { name: 'Slack', icon: <MessageSquare className="w-6 h-6 text-purple-400" /> },
-    { name: 'Microsoft Teams', icon: <Users className="w-6 h-6 text-blue-400" /> },
-    { name: 'Google Workspace', icon: <Globe className="w-6 h-6 text-green-400" /> },
+    { name: 'Slack', icon: <div className="w-6 h-6 bg-rose-500 rounded" /> },
+    { name: 'Microsoft Teams', icon: <div className="w-6 h-6 bg-sky-500 rounded" /> },
+    { name: 'Google Workspace', icon: <div className="w-6 h-6 bg-indigo-500 rounded" /> },
     { name: 'Jira', icon: <CheckSquare className="w-6 h-6 text-blue-600" /> },
     { name: 'Trello', icon: <Kanban className="w-6 h-6 text-cyan-400" /> },
-    { name: 'Asana', icon: <Target className="w-6 h-6 text-orange-400" /> }
+    { name: 'Asana', icon: <div className="w-6 h-6 bg-green-500 rounded" /> }
   ];
 
   const pricingPlans = [
@@ -116,25 +91,25 @@ const AIProjectManagementProPage: React.FC = () => {
     {
       title: 'Software Development',
       description: 'Manage sprints, code reviews, and deployment pipelines',
-      icon: <Code className="w-6 h-6 text-blue-400" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       results: '50% faster delivery cycles'
     },
     {
       title: 'Marketing Agencies',
       description: 'Coordinate campaigns, track deliverables, and manage clients',
-      icon: <Target className="w-6 h-6 text-green-400" />,
+      icon: <div className="w-6 h-6 bg-green-500 rounded" />,
       results: '40% improvement in campaign efficiency'
     },
     {
       title: 'Construction',
       description: 'Track milestones, manage resources, and ensure compliance',
-      icon: <Building className="w-6 h-6 text-orange-400" />,
+      icon: <div className="w-6 h-6 bg-gray-500 rounded" />,
       results: '35% reduction in project delays'
     },
     {
       title: 'Consulting',
       description: 'Manage client projects, track billable hours, and deliver results',
-      icon: <Users className="w-6 h-6 text-purple-400" />,
+      icon: <div className="w-6 h-6 bg-sky-500 rounded" />,
       results: '60% increase in billable utilization'
     }
   ];
@@ -183,7 +158,7 @@ const AIProjectManagementProPage: React.FC = () => {
                 className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-indigo-500/25 flex items-center group"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="#pricing"

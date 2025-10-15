@@ -40,7 +40,7 @@ import { ArrowRight, Code, Copy, Search, BookOpen, Zap, Shield, Clock, Users, Da
       version: 'v2.5',
       status: 'Active',
       endpoints: 10,
-      icon: <Globe className="w-6 h-6 text-green-400" />
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />
     },
     {
       id: 'data-processing',
@@ -107,17 +107,17 @@ import { ArrowRight, Code, Copy, Search, BookOpen, Zap, Shield, Clock, Users, Da
 
   const features = [
     {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       title: 'Fast & Reliable',
       description: '99.9% uptime with sub-100ms response times'
     },
     {
-      icon: <Shield className="w-8 h-8 text-green-400" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       title: 'Secure',
       description: 'Enterprise-grade security with OAuth 2.0'
     },
     {
-      icon: <Code className="w-8 h-8 text-blue-400" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       title: 'Easy Integration',
       description: 'RESTful APIs with comprehensive documentation'
     },
@@ -169,7 +169,7 @@ import { ArrowRight, Code, Copy, Search, BookOpen, Zap, Shield, Clock, Users, Da
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 flex items-center"
               >
                 Get API Key
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/contact"

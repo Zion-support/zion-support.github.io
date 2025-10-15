@@ -19,7 +19,7 @@ export default function ItServices() {
     {
       title: "Network Security",
       description: "Advanced security solutions to protect your network from threats and vulnerabilities.",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       features: [
         "Firewall configuration",
         "Intrusion detection",
@@ -30,7 +30,7 @@ export default function ItServices() {
     {
       title: "System Administration",
       description: "Expert system administration services for Windows, Linux, and cloud environments.",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       features: [
         "Server configuration",
         "User management",
@@ -52,7 +52,7 @@ export default function ItServices() {
     {
       title: "Cloud Solutions",
       description: "Complete cloud migration and management services for modern businesses.",
-      icon: <Globe className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       features: [
         "Cloud migration",
         "Cost optimization",
@@ -128,7 +128,7 @@ export default function ItServices() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/consultation"
@@ -206,7 +206,7 @@ export default function ItServices() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your IT Journey
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/consultation"

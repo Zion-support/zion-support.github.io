@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Circle, Star, Right, Zap, Shield, Code } from 'lucide-react';
-import { Circle, Star, Right } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
@@ -122,7 +121,7 @@ const ServicesPage: React.FC = () => {
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/consultation"
@@ -215,7 +214,7 @@ const ServicesPage: React.FC = () => {
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-all duration-300"
                       >
                         Learn More
-                        <ArrowRight className="w-4 h-4 ml-1" />
+                        <div className="w-6 h-6 bg-blue-500 rounded" />
                       </Link>
                     </div>
                   </div>
@@ -255,7 +254,7 @@ const ServicesPage: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Globe className="w-6 h-6 text-white" />
+                    <div className="w-6 h-6 bg-indigo-500 rounded" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Address</h3>
                   <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -268,7 +267,7 @@ const ServicesPage: React.FC = () => {
                   className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
                 >
                   Start Your Journey
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <div className="w-6 h-6 bg-blue-500 rounded" />
                 </Link>
                 <Link
                   to="/consultation"
@@ -284,3 +283,5 @@ const ServicesPage: React.FC = () => {
     </>
   );
 }
+
+export default ServicesPage;

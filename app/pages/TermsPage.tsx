@@ -133,13 +133,13 @@ import { ArrowRight, FileText, Scale, Users, Shield, AlertTriangle, Mail, Phone,
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center"
               >
                 Contact Us
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/privacy"
                 className="border-2 border-white/20 hover:border-cyan-400 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:bg-white/5 flex items-center"
               >
-                <Shield className="w-5 h-5 mr-2" />
+                <div className="w-6 h-6 bg-purple-500 rounded" />
                 Privacy Policy
               </Link>
             </div>
@@ -235,7 +235,7 @@ import { ArrowRight, FileText, Scale, Users, Shield, AlertTriangle, Mail, Phone,
               </div>
 
               <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 text-center">
-                <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <div className="w-6 h-6 bg-emerald-500 rounded" />
                 <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
                 <p className="text-gray-300 mb-4">Speak with our legal team directly</p>
                 <a

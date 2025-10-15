@@ -60,13 +60,13 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 href="/contact"
               >
                 Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </a>
               <a
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
                 href="tel:+13024640950"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <div className="w-6 h-6 bg-emerald-500 rounded" />
                 Call (302) 464-0950
               </a>
             </div>
@@ -115,7 +115,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <Star className="w-6 h-6 text-yellow-400" />
+                    <div className="w-6 h-6 bg-yellow-400 rounded" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
@@ -178,7 +178,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 href="/contact"
               >
                 Get Free Consultation
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </a>
               <a
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"

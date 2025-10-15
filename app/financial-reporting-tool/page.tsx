@@ -16,7 +16,7 @@ const FinancialReportingToolPage = () => {
     {
       title: "Automated Report Generation",
       description: "Generate comprehensive financial reports automatically with customizable templates",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       benefits: ["Scheduled reports", "Custom templates", "PDF/Excel export", "Email delivery"]
     },
     {
@@ -40,7 +40,7 @@ const FinancialReportingToolPage = () => {
     {
       title: "Compliance & Audit Support",
       description: "Ensure compliance with accounting standards and support audit processes",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       benefits: ["GAAP compliance", "Audit trails", "Documentation", "Regulatory reporting"]
     }
   ];
@@ -96,12 +96,12 @@ const FinancialReportingToolPage = () => {
     {
       title: "Save Time",
       description: "Reduce report generation time by up to 80% with automation",
-      icon: <Zap className="w-6 h-6" />
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />
     },
     {
       title: "Improve Accuracy",
       description: "Eliminate manual errors with automated data processing",
-      icon: <Shield className="w-6 h-6" />
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />
     },
     {
       title: "Better Insights",
@@ -139,7 +139,7 @@ const FinancialReportingToolPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -147,7 +147,7 @@ const FinancialReportingToolPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-indigo-500 rounded" />}
             >
               Watch Demo
             </FuturisticButton>
@@ -279,7 +279,7 @@ const FinancialReportingToolPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -287,7 +287,7 @@ const FinancialReportingToolPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-indigo-500 rounded" />}
             >
               Watch Demo
             </FuturisticButton>

@@ -40,7 +40,7 @@ const AICustomerSentimentTrackerPage = () => {
       description: "Get instant notifications when sentiment drops or negative feedback requires immediate attention."
     },
     {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       title: "Automated Response Suggestions",
       description: "AI-powered suggestions for responding to negative feedback and improving customer satisfaction."
     },
@@ -118,7 +118,7 @@ const AICustomerSentimentTrackerPage = () => {
       description: "Identify at-risk customers early and take proactive steps to retain them, reducing churn by up to 40%."
     },
     {
-      icon: <Heart className="w-12 h-12 text-red-400" />,
+      icon: <div className="w-6 h-6 bg-red-500 rounded" />,
       title: "Increase Customer Loyalty",
       description: "Build stronger customer relationships through better understanding of their needs and emotions."
     }
@@ -148,7 +148,7 @@ const AICustomerSentimentTrackerPage = () => {
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6">
-              <Heart className="w-5 h-5 text-cyan-400 mr-2" />
+              <div className="w-6 h-6 bg-red-500 rounded" />
               <span className="text-cyan-300 font-medium">AI-Powered Customer Intelligence</span>
             </div>
             
@@ -168,7 +168,7 @@ const AICustomerSentimentTrackerPage = () => {
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -386,7 +386,7 @@ const AICustomerSentimentTrackerPage = () => {
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
               >
                 Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -409,11 +409,11 @@ const AICustomerSentimentTrackerPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-gray-300">
             <div className="flex items-center">
-              <Heart className="w-5 h-5 mr-2 text-cyan-400" />
+              <div className="w-6 h-6 bg-red-500 rounded" />
               <span>kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
-              <Globe className="w-5 h-5 mr-2 text-cyan-400" />
+              <div className="w-6 h-6 bg-indigo-500 rounded" />
               <span>https://ziontechgroup.com</span>
             </div>
           </div>

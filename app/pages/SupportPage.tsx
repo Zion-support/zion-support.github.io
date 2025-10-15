@@ -165,7 +165,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center"
               >
                 Contact Support
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/demo"
@@ -221,7 +221,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
                     {channel.availability}
                   </div>
                   <div className="flex items-center justify-center text-gray-400 text-sm">
-                    <Zap className="w-4 h-4 mr-2" />
+                    <div className="w-6 h-6 bg-yellow-500 rounded" />
                     {channel.responseTime}
                   </div>
                 </div>
@@ -349,7 +349,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
                 href="tel:+13024640950"
                 className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <div className="w-6 h-6 bg-emerald-500 rounded" />
                 Call Now
               </a>
             </div>

@@ -40,13 +40,13 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
         return <Brain className="w-8 h-8 text-cyan-400" />;
       case 'security':
       case 'cybersecurity':
-        return <Shield className="w-8 h-8 text-green-400" />;
+        return <div className="w-6 h-6 bg-purple-500 rounded" />;
       case 'micro saas':
       case 'saas':
-        return <Zap className="w-8 h-8 text-purple-400" />;
+        return <div className="w-6 h-6 bg-yellow-500 rounded" />;
       case '5g':
       case '5g solutions':
-        return <Globe className="w-8 h-8 text-orange-400" />;
+        return <div className="w-6 h-6 bg-indigo-500 rounded" />;
       default:
         return <Brain className="w-8 h-8 text-cyan-400" />;
     }
@@ -84,7 +84,7 @@ export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = 
       <div className="text-center max-w-md mx-auto px-4">
         <div className="mb-8">
           <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 flex items-center justify-center">
-            <Shield className="w-10 h-10 text-red-400" />
+            <div className="w-6 h-6 bg-purple-500 rounded" />
           </div>
         </div>
         <h2 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h2>

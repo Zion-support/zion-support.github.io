@@ -37,7 +37,7 @@ export default function AiFinancialAnalyticsProPage() {
       ],
     },
     {
-      icon: <Shield className="w-8 h-8 text-purple-400" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       title: "Risk Management",
       description:
         "Identify and mitigate financial risks with advanced risk assessment and monitoring tools",

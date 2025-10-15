@@ -36,7 +36,7 @@ export default function ZionAiProjectManagerPro() {
     {
       title: "Intelligent Risk Management",
       description: "Proactive risk identification and mitigation using AI algorithms that analyze project patterns, team performance, and external factors to prevent issues before they occur.",
-      icon: <Shield className="w-6 h-6" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       benefits: ["Risk prediction", "Mitigation strategies", "Early warning system", "Contingency planning"]
     }
   ];
@@ -175,7 +175,7 @@ export default function ZionAiProjectManagerPro() {
                     className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-emerald-500/25 hover:scale-105"
                   >
                     Start Free Trial
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </Link>
                   <Link
                     to="/demo"
@@ -341,7 +341,7 @@ export default function ZionAiProjectManagerPro() {
                     }`}
                   >
                     Get Started
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </Link>
                 </div>
               ))}
@@ -410,14 +410,14 @@ export default function ZionAiProjectManagerPro() {
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Phone className="w-6 h-6 text-white" />
+                    <div className="w-6 h-6 bg-emerald-500 rounded" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Phone</h3>
                   <p className="text-emerald-400">+1 302 464 0950</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Globe className="w-6 h-6 text-white" />
+                    <div className="w-6 h-6 bg-indigo-500 rounded" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Address</h3>
                   <p className="text-emerald-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -430,7 +430,7 @@ export default function ZionAiProjectManagerPro() {
                   className="group bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-emerald-500/25 hover:scale-105"
                 >
                   Start Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <div className="w-6 h-6 bg-blue-500 rounded" />
                 </Link>
                 <Link
                   to="/demo"

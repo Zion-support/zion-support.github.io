@@ -17,13 +17,13 @@ export default function AISmartScheduler() {
         "Seamlessly coordinate meetings across multiple time zones and schedules",
     },
     {
-      icon: <Zap className="w-6 h-6 text-yellow-400" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       title: "Auto-Optimization",
       description:
         "Automatically finds the best meeting times for maximum productivity",
     },
     {
-      icon: <Globe className="w-6 h-6 text-green-400" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       title: "Global Integration",
       description: "Works with all major calendar platforms and time zones",
     },

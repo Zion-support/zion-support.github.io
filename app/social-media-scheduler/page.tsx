@@ -10,7 +10,7 @@ const SocialMediaSchedulerPage = () => {
     {
       title: "Multi-Platform Scheduling",
       description: "Schedule posts across all major social media platforms from one dashboard",
-      icon: <Globe className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       benefits: ["Facebook", "Twitter", "Instagram", "LinkedIn", "TikTok", "YouTube"]
     },
     {
@@ -40,7 +40,7 @@ const SocialMediaSchedulerPage = () => {
     {
       title: "Automation & AI",
       description: "AI-powered features to automate content creation and optimization",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       benefits: ["Auto-posting", "Content suggestions", "Optimal timing", "Trend analysis"]
     }
   ];
@@ -96,7 +96,7 @@ const SocialMediaSchedulerPage = () => {
     {
       title: "Save Time",
       description: "Reduce social media management time by up to 70% with automation",
-      icon: <Zap className="w-6 h-6" />
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />
     },
     {
       title: "Increase Engagement",
@@ -140,7 +140,7 @@ const SocialMediaSchedulerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -148,7 +148,7 @@ const SocialMediaSchedulerPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-indigo-500 rounded" />}
             >
               Watch Demo
             </FuturisticButton>
@@ -280,7 +280,7 @@ const SocialMediaSchedulerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -288,7 +288,7 @@ const SocialMediaSchedulerPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-indigo-500 rounded" />}
             >
               Watch Demo
             </FuturisticButton>

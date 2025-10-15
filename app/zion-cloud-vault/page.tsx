@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function ZionCloudVault() {
   const features = [
     {
-      icon: <Cloud className="w-6 h-6" />,
+      icon: <div className="w-6 h-6 bg-cyan-500 rounded" />,
       title: "Secure Cloud Storage",
       description: "Enterprise-grade cloud storage with 99.999999999% durability and 99.9% availability"
     },
@@ -15,17 +15,17 @@ export default function ZionCloudVault() {
       description: "Military-grade AES-256 encryption for data at rest and in transit"
     },
     {
-      icon: <Shield className="w-6 h-6" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       title: "Advanced Security",
       description: "Multi-factor authentication, zero-knowledge architecture, and SOC 2 compliance"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       title: "Lightning Fast Sync",
       description: "Real-time file synchronization across all your devices with intelligent caching"
     },
     {
-      icon: <Globe className="w-6 h-6" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       title: "Global CDN",
       description: "Worldwide content delivery network for fast access from anywhere"
     },
@@ -143,7 +143,7 @@ export default function ZionCloudVault() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-              <Cloud className="w-4 h-4 text-blue-400 mr-2" />
+              <div className="w-6 h-6 bg-cyan-500 rounded" />
               <span className="text-blue-400 text-sm font-medium">Enterprise Cloud Storage</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -161,7 +161,7 @@ export default function ZionCloudVault() {
                 className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/demo"
@@ -354,7 +354,7 @@ export default function ZionCloudVault() {
                 className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/demo"

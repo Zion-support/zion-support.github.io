@@ -57,11 +57,11 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({
       case 'ai':
         return <Brain className="w-16 h-16 text-cyan-400" />;
       case 'it':
-        return <Shield className="w-16 h-16 text-green-400" />;
+        return <div className="w-6 h-6 bg-purple-500 rounded" />;
       case 'saas':
-        return <Zap className="w-16 h-16 text-purple-400" />;
+        return <div className="w-6 h-6 bg-yellow-500 rounded" />;
       case '5g':
-        return <Globe className="w-16 h-16 text-orange-400" />;
+        return <div className="w-6 h-6 bg-indigo-500 rounded" />;
       default:
         return <Loader2 className="w-16 h-16 text-white" />;
     }

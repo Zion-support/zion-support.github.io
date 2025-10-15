@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3, Star } from 'lucide-react';
+import { Wifi, CheckCircle, Network, Cpu } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
   const solutions = [
@@ -41,7 +41,7 @@ const FiveGSolutionsPage: React.FC = () => {
       price: "From $4,999",
       marketPrice: "$9,999-29,999",
       popular: false,
-      icon: <Smartphone className="w-8 h-8" />,
+      icon: <div className="w-8 h-8 bg-blue-500 rounded" />,
       benefits: "Deliver seamless mobile experiences with 5G optimization"
     }
   ];

@@ -7,7 +7,7 @@ export default function CustomDevelopment() {
     {
       title: "Custom Software Development",
       description: "Tailored software solutions built to meet your specific business requirements. From concept to deployment, we create applications that drive your business forward.",
-      icon: <Code className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       path: "/custom-software",
       color: "from-blue-500 to-cyan-500",
       price: "Starting at $5,000",
@@ -16,7 +16,7 @@ export default function CustomDevelopment() {
     {
       title: "Web Development",
       description: "Modern, responsive web applications built with cutting-edge technologies. From simple websites to complex web platforms, we deliver exceptional user experiences.",
-      icon: <Globe className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       path: "/web-development",
       color: "from-green-500 to-emerald-500",
       price: "Starting at $2,500",
@@ -34,7 +34,7 @@ export default function CustomDevelopment() {
     {
       title: "E-commerce Development",
       description: "Complete e-commerce solutions with payment integration, inventory management, and customer relationship management features.",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       path: "/e-commerce-development",
       color: "from-orange-500 to-red-500",
       price: "Starting at $4,000",
@@ -101,7 +101,7 @@ export default function CustomDevelopment() {
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
                 Start Your Project
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/consultation"
@@ -170,7 +170,7 @@ export default function CustomDevelopment() {
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-all duration-300"
                       >
                         Learn More
-                        <ArrowRight className="w-4 h-4 ml-1" />
+                        <div className="w-6 h-6 bg-blue-500 rounded" />
                       </Link>
                     </div>
                   </div>
@@ -210,7 +210,7 @@ export default function CustomDevelopment() {
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Globe className="w-6 h-6 text-white" />
+                    <div className="w-6 h-6 bg-indigo-500 rounded" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Address</h3>
                   <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -223,7 +223,7 @@ export default function CustomDevelopment() {
                   className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
                 >
                   Start Your Project
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <div className="w-6 h-6 bg-blue-500 rounded" />
                 </Link>
                 <Link
                   to="/consultation"

@@ -28,7 +28,7 @@ export default function AIExpenseTracker() {
         "Track your expenses in real-time with automatic categorization and smart notifications.",
     },
     {
-      icon: <Shield className="w-12 h-12 text-green-400" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       title: "Secure & Private",
       description:
         "Bank-level security ensures your financial data is protected and private.",
@@ -58,7 +58,7 @@ export default function AIExpenseTracker() {
       title: "Budget Management",
       description:
         "Set budgets for different categories and get alerts when you're approaching your limits.",
-      icon: <DollarSign className="w-8 h-8 text-yellow-400" />,
+      icon: <div className="w-6 h-6 bg-green-500 rounded" />,
     },
     {
       title: "Expense Insights",

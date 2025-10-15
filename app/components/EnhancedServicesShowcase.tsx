@@ -103,7 +103,7 @@ const EnhancedServicesShowcase: React.FC = () => {
               </div>
               <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Learn More
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </button>
             </div>
           ))}
@@ -115,7 +115,7 @@ const EnhancedServicesShowcase: React.FC = () => {
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
           >
             Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <div className="w-6 h-6 bg-blue-500 rounded" />
           </Link>
         </div>
       </div>

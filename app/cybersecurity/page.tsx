@@ -7,7 +7,7 @@ export default function Cybersecurity() {
     {
       title: "AI Cybersecurity Suite",
       description: "Advanced AI-powered threat detection and response system. Real-time monitoring, automated incident response, and compliance reporting.",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       path: "/ai-cybersecurity-suite-pro",
       color: "from-red-500 to-orange-500",
       price: "Starting at $399/month",
@@ -100,7 +100,7 @@ export default function Cybersecurity() {
                 className="group bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-red-500/25 hover:scale-105"
               >
                 Get Protected
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/consultation"
@@ -169,7 +169,7 @@ export default function Cybersecurity() {
                         className="inline-flex items-center text-red-400 hover:text-red-300 font-medium group-hover:translate-x-1 transition-all duration-300"
                       >
                         Learn More
-                        <ArrowRight className="w-4 h-4 ml-1" />
+                        <div className="w-6 h-6 bg-blue-500 rounded" />
                       </Link>
                     </div>
                   </div>
@@ -208,7 +208,7 @@ export default function Cybersecurity() {
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Globe className="w-6 h-6 text-white" />
+                    <div className="w-6 h-6 bg-indigo-500 rounded" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Address</h3>
                   <p className="text-red-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -218,7 +218,7 @@ export default function Cybersecurity() {
               <div className="grid md:grid-cols-2 gap-12">
                 <div className="space-y-8">
                   <div className="flex items-start space-x-4">
-                    <Shield className="w-8 h-8 text-cyan-400 flex-shrink-0 mt-1" />
+                    <div className="w-6 h-6 bg-purple-500 rounded" />
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2">Expert Security Team</h3>
                       <p className="text-gray-300">Certified security professionals with years of experience in threat detection and incident response.</p>
@@ -226,7 +226,7 @@ export default function Cybersecurity() {
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <Zap className="w-8 h-8 text-cyan-400 flex-shrink-0 mt-1" />
+                    <div className="w-6 h-6 bg-yellow-500 rounded" />
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2">Advanced Technology</h3>
                       <p className="text-gray-300">AI-powered threat detection and automated response systems for real-time protection.</p>
@@ -286,7 +286,7 @@ export default function Cybersecurity() {
                   className="group bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-red-500/25 hover:scale-105"
                 >
                   Get Security Assessment
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <div className="w-6 h-6 bg-blue-500 rounded" />
                 </Link>
                 <Link
                   to="/consultation"

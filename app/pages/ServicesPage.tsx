@@ -6,7 +6,7 @@ import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Datab
     {
       title: 'Micro SAAS Solutions',
       description: 'Powerful, affordable micro software-as-a-service solutions designed for modern businesses',
-      icon: <Zap className="w-12 h-12 text-purple-400" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       link: '/micro-saas-solutions',
       color: 'from-purple-500 to-cyan-500',
       services: [
@@ -51,7 +51,7 @@ import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Datab
     {
       title: '5G Solutions',
       description: 'Next-generation 5G implementation, IoT solutions, and smart city technologies',
-      icon: <Globe className="w-12 h-12 text-green-400" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       link: '/5g-solutions',
       color: 'from-green-500 to-blue-500',
       services: [
@@ -67,7 +67,7 @@ import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Datab
 
   const features = [
     {
-      icon: <Shield className="w-8 h-8 text-green-400" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       title: 'Enterprise Security',
       description: 'Bank-level security with 99.9% uptime guarantee and comprehensive data protection'
     },
@@ -194,7 +194,7 @@ import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Datab
                 className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/25 flex items-center group"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="#categories"
@@ -249,7 +249,7 @@ import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Datab
                 </ul>
                 <div className="flex items-center text-purple-400 group-hover:text-purple-300 transition-colors font-medium">
                   <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <div className="w-6 h-6 bg-blue-500 rounded" />
                 </div>
               </Link>
             ))}

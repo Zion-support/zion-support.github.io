@@ -57,7 +57,7 @@ import { ArrowRight, CheckCircle, TrendingUp, Users, DollarSign } from 'lucide-r
     { label: "Projects Completed", value: "150+", icon: <CheckCircle className="w-6 h-6" /> },
     { label: "Client Satisfaction", value: "98%", icon: <TrendingUp className="w-6 h-6" /> },
     { label: "Team Members", value: "50+", icon: <Users className="w-6 h-6" /> },
-    { label: "Cost Savings", value: "$2M+", icon: <DollarSign className="w-6 h-6" /> }
+    { label: "Cost Savings", value: "$2M+", icon: <div className="w-6 h-6 bg-green-500 rounded" /> }
   ];
 
   return (<>
@@ -155,7 +155,7 @@ import { ArrowRight, CheckCircle, TrendingUp, Users, DollarSign } from 'lucide-r
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm"
                       >
                         Read More
-                        <ArrowRight className="ml-1 w-4 h-4" />
+                        <div className="w-6 h-6 bg-blue-500 rounded" />
                       </Link>
                     </div>
                   </div>
@@ -180,7 +180,7 @@ import { ArrowRight, CheckCircle, TrendingUp, Users, DollarSign } from 'lucide-r
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Project
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/consultation"

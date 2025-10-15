@@ -22,7 +22,7 @@ const EmailMarketingPlatformPage = () => {
     {
       title: "Automation Workflows",
       description: "Create sophisticated email automation workflows to nurture leads",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       benefits: ["Welcome series", "Drip campaigns", "Abandoned cart", "Birthday emails"]
     },
     {
@@ -101,7 +101,7 @@ const EmailMarketingPlatformPage = () => {
     {
       title: "Save Time",
       description: "Automate your email marketing and save hours every week",
-      icon: <Zap className="w-6 h-6" />
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />
     },
     {
       title: "Better ROI",
@@ -111,7 +111,7 @@ const EmailMarketingPlatformPage = () => {
     {
       title: "Easy to Use",
       description: "Intuitive interface that makes email marketing accessible to everyone",
-      icon: <Shield className="w-6 h-6" />
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />
     }
   ];
 
@@ -140,7 +140,7 @@ const EmailMarketingPlatformPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -148,7 +148,7 @@ const EmailMarketingPlatformPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-indigo-500 rounded" />}
             >
               Watch Demo
             </FuturisticButton>
@@ -280,7 +280,7 @@ const EmailMarketingPlatformPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -288,7 +288,7 @@ const EmailMarketingPlatformPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-indigo-500 rounded" />}
             >
               Watch Demo
             </FuturisticButton>

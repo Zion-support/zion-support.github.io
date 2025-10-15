@@ -12,7 +12,7 @@ export default function AISupplyChainOptimizer() {
     {
       title: "Route Optimization",
       description: "Intelligent logistics planning with real-time traffic, weather, and cost optimization",
-      icon: <Globe className="w-6 h-6" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       benefits: ["30% Cost Reduction", "Faster Delivery Times", "Fuel Efficiency", "Carbon Footprint Reduction"]
     },
     {
@@ -24,7 +24,7 @@ export default function AISupplyChainOptimizer() {
     {
       title: "Inventory Intelligence",
       description: "Smart inventory management with automated reordering and waste reduction",
-      icon: <Zap className="w-6 h-6" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       benefits: ["25% Inventory Reduction", "Zero Stockouts", "Waste Elimination", "Cash Flow Optimization"]
     }
   ];
@@ -145,7 +145,7 @@ export default function AISupplyChainOptimizer() {
                 className="bg-gradient-to-r from-slate-500 to-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-slate-600 hover:to-gray-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-slate-500/25 hover:scale-105"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/demo"
@@ -305,7 +305,7 @@ export default function AISupplyChainOptimizer() {
                       }`}
                     >
                       Get Started
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      <div className="w-6 h-6 bg-blue-500 rounded" />
                     </Link>
                   </div>
                 </div>
@@ -343,7 +343,7 @@ export default function AISupplyChainOptimizer() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-slate-500 to-gray-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Globe className="w-6 h-6 text-white" />
+                  <div className="w-6 h-6 bg-indigo-500 rounded" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Address</h3>
                 <p className="text-slate-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -356,7 +356,7 @@ export default function AISupplyChainOptimizer() {
                 className="bg-gradient-to-r from-slate-500 to-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-slate-600 hover:to-gray-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-slate-500/25 hover:scale-105"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/demo"

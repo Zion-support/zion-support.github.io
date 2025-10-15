@@ -5,19 +5,19 @@ import Layout from "../layout";
 export default function BlockchainWeb3() {
   const features = [
     {
-      icon: <Shield className="w-6 h-6 text-cyan-400" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       title: "Decentralized Security",
       description:
         "Immutable blockchain technology ensures maximum security and transparency",
     },
     {
-      icon: <Zap className="w-6 h-6 text-purple-400" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       title: "Smart Contracts",
       description:
         "Automated, self-executing contracts that eliminate intermediaries",
     },
     {
-      icon: <Globe className="w-6 h-6 text-yellow-400" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       title: "Web3 Integration",
       description:
         "Seamless integration with decentralized applications and protocols",
@@ -109,7 +109,7 @@ export default function BlockchainWeb3() {
                         key={itemIndex}
                         className="text-gray-300 flex items-center justify-center"
                       >
-                        <ArrowRight className="w-4 h-4 text-purple-400 mr-2" />
+                        <div className="w-6 h-6 bg-blue-500 rounded" />
                         {item}
                       </li>
                     ))}

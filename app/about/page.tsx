@@ -15,7 +15,7 @@ import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucid
       description: "We constantly push the boundaries of technology to deliver cutting-edge solutions."
     },
     {
-      icon: <Shield className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       title: "Security",
       description: "Your data and systems are protected with enterprise-grade security measures."
     },
@@ -72,7 +72,7 @@ import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucid
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
                 Work With Us
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/services"
@@ -124,7 +124,7 @@ import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucid
                     className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                   >
                     Get Started
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </Link>
                 </div>
               </div>
@@ -227,7 +227,7 @@ import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucid
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <GlobeIcon className="w-6 h-6 text-white" />
+                    <div className="w-6 h-6 bg-white rounded" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Address</h3>
                   <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -240,7 +240,7 @@ import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucid
                   className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
                 >
                   Contact Us Today
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <div className="w-6 h-6 bg-blue-500 rounded" />
                 </Link>
                 <Link
                   to="/consultation"

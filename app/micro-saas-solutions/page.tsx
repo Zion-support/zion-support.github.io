@@ -135,7 +135,7 @@ import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Database, Globe, Target
         'Grow social following'
       ],
       category: 'Marketing',
-      icon: <Globe className="w-8 h-8 text-cyan-400" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       popular: false
     },
     {
@@ -247,7 +247,7 @@ import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Database, Globe, Target
                 className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/25 flex items-center group"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="#pricing"

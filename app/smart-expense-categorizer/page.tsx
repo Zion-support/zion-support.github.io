@@ -19,12 +19,12 @@ import { Receipt, TrendingUp, Shield, Zap, BarChart3, Users, CheckCircle, ArrowR
       description: "Comprehensive expense analytics with spending trends, budget tracking, and financial insights to optimize your finances."
     },
     {
-      icon: <Shield className="w-8 h-8 text-red-400" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       title: "Bank Integration",
       description: "Securely connect with your bank accounts and credit cards for automatic transaction import and categorization."
     },
     {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       title: "Automated Workflows",
       description: "Set up automated rules for expense approval, reimbursement, and reporting to streamline your financial processes."
     },
@@ -87,7 +87,7 @@ import { Receipt, TrendingUp, Shield, Zap, BarChart3, Users, CheckCircle, ArrowR
 
   const benefits = [
     {
-      icon: <DollarSign className="w-12 h-12 text-green-400" />,
+      icon: <div className="w-6 h-6 bg-green-500 rounded" />,
       title: "Save Time & Money",
       description: "Reduce expense processing time by 80% and eliminate manual data entry errors that cost businesses thousands."
     },
@@ -152,7 +152,7 @@ import { Receipt, TrendingUp, Shield, Zap, BarChart3, Users, CheckCircle, ArrowR
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -371,7 +371,7 @@ import { Receipt, TrendingUp, Shield, Zap, BarChart3, Users, CheckCircle, ArrowR
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
               >
                 Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -398,7 +398,7 @@ import { Receipt, TrendingUp, Shield, Zap, BarChart3, Users, CheckCircle, ArrowR
               <span>kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
-              <Globe className="w-5 h-5 mr-2 text-cyan-400" />
+              <div className="w-6 h-6 bg-indigo-500 rounded" />
               <span>https://ziontechgroup.com</span>
             </div>
           </div>

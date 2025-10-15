@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
+import { Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
 
 const AIAutomationPlatform: React.FC = () => {
   const features = [
@@ -25,7 +25,7 @@ const AIAutomationPlatform: React.FC = () => {
     {
       title: "Integration Hub",
       description: "Connect and automate across all your business systems",
-      icon: <Zap className="w-6 h-6" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -60,7 +60,7 @@ const AIAutomationPlatform: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   Start Automation Journey
-                  <Right className="ml-2 w-5 h-5" />
+                  <div className="w-6 h-6 bg-blue-500 rounded" />
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center">
                   <Play className="mr-2 w-5 h-5" />

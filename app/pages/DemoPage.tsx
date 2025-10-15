@@ -240,7 +240,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Smartphone, Target, R
                     className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center w-fit"
                   >
                     Schedule This Demo
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </Link>
                 </div>
                 <div>
@@ -340,7 +340,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Smartphone, Target, R
               href="tel:+13024640950"
               className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center"
             >
-              <Phone className="w-5 h-5 mr-2" />
+              <div className="w-6 h-6 bg-emerald-500 rounded" />
               Call Now
             </a>
           </div>

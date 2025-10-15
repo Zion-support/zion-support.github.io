@@ -1,28 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Mail, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  Target, 
-  TrendingUp,
-  Clock,
-  Shield,
-  Smartphone,
-  Globe,
-  MessageSquare,
-  FileText,
-  Settings,
-  Star,
-  Award,
-  Phone,
-  MapPin,
-  Envelope
-} from 'lucide-react';
+import { CheckCircle, TrendingUp } from 'lucide-react';
 
 const AIEmailMarketingAutomationPage: React.FC = () => {
   const features = [
@@ -103,25 +82,25 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
     {
       title: 'E-commerce',
       description: 'Drive sales with personalized product recommendations and abandoned cart recovery',
-      icon: <ShoppingCart className="w-6 h-6 text-blue-400" />,
+      icon: <div className="w-6 h-6 bg-orange-500 rounded" />,
       results: 'Average 35% increase in revenue'
     },
     {
       title: 'SaaS',
       description: 'Onboard users and reduce churn with targeted email sequences',
-      icon: <Cloud className="w-6 h-6 text-green-400" />,
+      icon: <div className="w-6 h-6 bg-cyan-500 rounded" />,
       results: '40% reduction in churn rate'
     },
     {
       title: 'Education',
       description: 'Engage students with course updates and learning reminders',
-      icon: <GraduationCap className="w-6 h-6 text-purple-400" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       results: '60% improvement in course completion'
     },
     {
       title: 'Healthcare',
       description: 'Send appointment reminders and health tips to patients',
-      icon: <Heart className="w-6 h-6 text-red-400" />,
+      icon: <div className="w-6 h-6 bg-red-500 rounded" />,
       results: '50% reduction in no-shows'
     }
   ];
@@ -163,7 +142,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
                 className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/25 flex items-center group"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="#pricing"

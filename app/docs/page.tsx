@@ -12,7 +12,7 @@ const DocsPage: React.FC = () => {
     {
       id: 'getting-started',
       title: 'Getting Started',
-      icon: <Zap className="w-6 h-6" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       articles: [
         { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min' },
         { title: 'Account Setup', description: 'Create and configure your account', readTime: '3 min' },
@@ -23,7 +23,7 @@ const DocsPage: React.FC = () => {
     {
       id: 'ai-services',
       title: 'AI Services',
-      icon: <Code className="w-6 h-6" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       description: 'Comprehensive guides for our AI services',
       articles: [
         { title: 'Machine Learning API', description: 'Complete ML API reference', readTime: '15 min' },
@@ -35,7 +35,7 @@ const DocsPage: React.FC = () => {
     {
       id: 'it-services',
       title: 'IT Services',
-      icon: <Shield className="w-6 h-6" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       description: 'Documentation for our IT solutions',
       articles: [
         { title: 'Cloud Infrastructure', description: 'Setting up cloud environments', readTime: '25 min' },
@@ -49,7 +49,6 @@ const DocsPage: React.FC = () => {
       title: 'API Reference',
       icon: <Book className="w-6 h-6" />,
       description: 'Complete API documentation and examples',
-      content: 'Detailed API reference with examples and best practices',
       content: 'Detailed API reference with examples and best practices',
       articles: [
         { title: 'Authentication', description: 'API authentication methods', readTime: '5 min' },
@@ -241,7 +240,7 @@ const DocsPage: React.FC = () => {
               
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-                  <Code className="w-12 h-12 text-cyan-400 mx-auto mb-6" />
+                  <div className="w-6 h-6 bg-purple-500 rounded" />
                   <h3 className="text-xl font-bold text-white mb-4">Code Examples</h3>
                   <p className="text-gray-300 mb-6">Real-world code examples and snippets for common use cases</p>
                   <button className="text-cyan-400 hover:text-cyan-300 font-semibold">
@@ -250,7 +249,7 @@ const DocsPage: React.FC = () => {
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-                  <Zap className="w-12 h-12 text-cyan-400 mx-auto mb-6" />
+                  <div className="w-6 h-6 bg-yellow-500 rounded" />
                   <h3 className="text-xl font-bold text-white mb-4">Tutorials</h3>
                   <p className="text-gray-300 mb-6">Step-by-step tutorials for building complete solutions</p>
                   <button className="text-cyan-400 hover:text-cyan-300 font-semibold">
@@ -259,7 +258,7 @@ const DocsPage: React.FC = () => {
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-                  <Shield className="w-12 h-12 text-cyan-400 mx-auto mb-6" />
+                  <div className="w-6 h-6 bg-purple-500 rounded" />
                   <h3 className="text-xl font-bold text-white mb-4">Best Practices</h3>
                   <p className="text-gray-300 mb-6">Security, performance, and architecture best practices</p>
                   <button className="text-cyan-400 hover:text-cyan-300 font-semibold">

@@ -10,21 +10,21 @@ const DevOpsServicesPage = () => {
     {
       title: "CI/CD Pipeline Setup",
       description: "Automated continuous integration and deployment pipelines for faster, more reliable software delivery",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       features: ["Automated testing", "Deployment automation", "Rollback capabilities", "Multi-environment support"],
       price: "From $2,500/month"
     },
     {
       title: "Infrastructure as Code",
       description: "Manage and provision infrastructure using code for consistency and scalability",
-      icon: <Code className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       features: ["Terraform/CloudFormation", "Version control", "Environment consistency", "Cost optimization"],
       price: "From $1,800/month"
     },
     {
       title: "Container Orchestration",
       description: "Kubernetes and Docker container management for scalable applications",
-      icon: <Cloud className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-cyan-500 rounded" />,
       features: ["Kubernetes setup", "Docker optimization", "Auto-scaling", "Service mesh"],
       price: "From $3,200/month"
     },
@@ -38,14 +38,14 @@ const DevOpsServicesPage = () => {
     {
       title: "Security Automation",
       description: "Automated security scanning and compliance checks in your CI/CD pipeline",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       features: ["Vulnerability scanning", "Compliance checks", "Security testing", "Policy enforcement"],
       price: "From $2,000/month"
     },
     {
       title: "Cloud Migration",
       description: "Seamless migration to cloud platforms with zero downtime",
-      icon: <Globe className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       features: ["AWS/Azure/GCP migration", "Data migration", "Application modernization", "Cost optimization"],
       price: "From $5,000/month"
     }
@@ -60,7 +60,7 @@ const DevOpsServicesPage = () => {
     {
       title: "Improved Reliability",
       description: "99.9% uptime with automated failover and recovery",
-      icon: <Shield className="w-6 h-6" />
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />
     },
     {
       title: "Cost Optimization",
@@ -127,7 +127,7 @@ const DevOpsServicesPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Get Started
             </FuturisticButton>
@@ -251,7 +251,7 @@ const DevOpsServicesPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Start Your DevOps Journey
             </FuturisticButton>

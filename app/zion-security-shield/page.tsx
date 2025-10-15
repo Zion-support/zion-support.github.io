@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function ZionSecurityShield() {
   const features = [
     {
-      icon: <Shield className="w-6 h-6" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       title: "Advanced Threat Detection",
       description: "AI-powered threat detection with 99.9% accuracy using machine learning algorithms"
     },
@@ -25,7 +25,7 @@ export default function ZionSecurityShield() {
       description: "Comprehensive security audits and vulnerability scanning for all your assets"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       title: "Automated Incident Response",
       description: "AI-driven incident response with automated containment and recovery procedures"
     },
@@ -144,7 +144,7 @@ export default function ZionSecurityShield() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-6">
-              <Shield className="w-4 h-4 text-red-400 mr-2" />
+              <div className="w-6 h-6 bg-purple-500 rounded" />
               <span className="text-red-400 text-sm font-medium">Enterprise-Grade Security</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -162,7 +162,7 @@ export default function ZionSecurityShield() {
                 className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/demo"
@@ -355,7 +355,7 @@ export default function ZionSecurityShield() {
                 className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/demo"

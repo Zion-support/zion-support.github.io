@@ -32,12 +32,12 @@ const AIPoweredEmailAnalyzerPage = () => {
       description: "Track open rates, response times, and engagement metrics with detailed analytics and actionable insights."
     },
     {
-      icon: <Shield className="w-8 h-8 text-red-400" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       title: "Security & Compliance",
       description: "Enterprise-grade security with GDPR compliance, data encryption, and secure cloud storage for all email data."
     },
     {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       title: "Real-time Processing",
       description: "Instant analysis and suggestions as you type, with lightning-fast processing powered by advanced AI models."
     },
@@ -142,7 +142,7 @@ const AIPoweredEmailAnalyzerPage = () => {
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -319,7 +319,7 @@ const AIPoweredEmailAnalyzerPage = () => {
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
               >
                 Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -346,7 +346,7 @@ const AIPoweredEmailAnalyzerPage = () => {
               <span>kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
-              <Globe className="w-5 h-5 mr-2 text-cyan-400" />
+              <div className="w-6 h-6 bg-indigo-500 rounded" />
               <span>https://ziontechgroup.com</span>
             </div>
           </div>

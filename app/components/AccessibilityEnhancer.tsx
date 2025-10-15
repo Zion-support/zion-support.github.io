@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
 import React, { useEffect, useState } from 'react';
+
+interface AccessibilitySettings {
+  enableKeyboard: boolean;
+  enableScreenReader: boolean;
+  enableHighContrast: boolean;
+  enableFocusManagement: boolean;
+  enableLargeText: boolean;
+  enableReducedMotion: boolean;
+}
+
 interface AccessibilityEnhancerProps {
+  children?: React.ReactNode;
   isHighContrast?: boolean;
   isReducedMotion?: boolean;
   fontSize?: number;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children, ...props }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     enableKeyboard: true,
     enableScreenReader: true,

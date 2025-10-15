@@ -55,7 +55,7 @@ export default function Press() {
   ];
 
   const stats = [
-    { number: "50+", label: "Press Mentions", icon: <Globe className="w-6 h-6" /> },
+    { number: "50+", label: "Press Mentions", icon: <div className="w-6 h-6 bg-indigo-500 rounded" /> },
     { number: "25+", label: "Awards Won", icon: <Award className="w-6 h-6" /> },
     { number: "100+", label: "Media Contacts", icon: <Users className="w-6 h-6" /> },
     { number: "99%", label: "Positive Coverage", icon: <TrendingUp className="w-6 h-6" /> }
@@ -87,7 +87,7 @@ export default function Press() {
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 Media Inquiry
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/about"
@@ -152,7 +152,7 @@ export default function Press() {
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium"
                   >
                     Read More
-                    <ArrowRight className="w-4 h-4 ml-1" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </Link>
                 </div>
               ))}
@@ -187,7 +187,7 @@ export default function Press() {
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium"
                   >
                     {item.download}
-                    <ArrowRight className="w-4 h-4 ml-1" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </Link>
                 </div>
               ))}

@@ -31,7 +31,7 @@ export default function AIEcommerceOptimizerPro() {
         "Get detailed insights into customer behavior, sales patterns, and performance metrics",
     },
     {
-      icon: <Zap className="w-6 h-6 text-yellow-400" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       title: "Automated A/B Testing",
       description:
         "Continuously test and optimize your store elements for maximum performance",

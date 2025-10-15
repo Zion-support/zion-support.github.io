@@ -29,7 +29,7 @@ import { CheckCircle, ArrowRight, Shield, Cloud, Code, Database, Smartphone, Set
         'Increase system reliability'
       ],
       category: 'Infrastructure',
-      icon: <Cloud className="w-8 h-8 text-blue-400" />,
+      icon: <div className="w-6 h-6 bg-cyan-500 rounded" />,
       popular: true
     },
     {
@@ -58,7 +58,7 @@ import { CheckCircle, ArrowRight, Shield, Cloud, Code, Database, Smartphone, Set
         'Maintain business continuity'
       ],
       category: 'Security',
-      icon: <Shield className="w-8 h-8 text-green-400" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       popular: true
     },
     {
@@ -87,7 +87,7 @@ import { CheckCircle, ArrowRight, Shield, Cloud, Code, Database, Smartphone, Set
         'Scalable and maintainable code'
       ],
       category: 'Development',
-      icon: <Code className="w-8 h-8 text-purple-400" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       popular: false
     },
     {
@@ -183,13 +183,13 @@ import { CheckCircle, ArrowRight, Shield, Cloud, Code, Database, Smartphone, Set
     {
       title: 'Cloud Migration',
       description: 'Seamlessly migrate your infrastructure to the cloud',
-      icon: <Cloud className="w-6 h-6 text-blue-400" />,
+      icon: <div className="w-6 h-6 bg-cyan-500 rounded" />,
       benefits: ['Cost Reduction', 'Scalability', 'Reliability', 'Security']
     },
     {
       title: 'Security Hardening',
       description: 'Strengthen your security posture with comprehensive solutions',
-      icon: <Shield className="w-6 h-6 text-green-400" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       benefits: ['Threat Protection', 'Compliance', 'Risk Mitigation', 'Monitoring']
     },
     {
@@ -286,7 +286,7 @@ import { CheckCircle, ArrowRight, Shield, Cloud, Code, Database, Smartphone, Set
                 className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/25 flex items-center group"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="#pricing"

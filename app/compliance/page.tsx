@@ -9,7 +9,7 @@ export default function Compliance() {
       name: "SOC 2 Type II",
       description: "Security, availability, and confidentiality controls for service organizations",
       status: "Certified",
-      icon: <Shield className="w-8 h-8" />
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />
     },
     {
       name: "ISO 27001",
@@ -21,7 +21,7 @@ export default function Compliance() {
       name: "GDPR",
       description: "General Data Protection Regulation compliance for EU data",
       status: "Compliant",
-      icon: <Globe className="w-8 h-8" />
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />
     },
     {
       name: "HIPAA",
@@ -67,7 +67,7 @@ export default function Compliance() {
   ];
 
   const benefits = [
-    { icon: <Shield className="w-6 h-6" />, title: 'Risk Mitigation', description: 'Reduce regulatory and security risks with comprehensive compliance programs' },
+    { icon: <div className="w-6 h-6 bg-purple-500 rounded" />, title: 'Risk Mitigation', description: 'Reduce regulatory and security risks with comprehensive compliance programs' },
     { icon: <CheckCircle className="w-6 h-6" />, title: 'Audit Readiness', description: 'Stay prepared for audits with ongoing monitoring and documentation' },
     { icon: <Users className="w-6 h-6" />, title: 'Trust & Credibility', description: 'Build customer trust with certified compliance and security measures' },
     { icon: <Clock className="w-6 h-6" />, title: 'Time Savings', description: 'Streamline compliance processes with expert guidance and automation' }
@@ -105,7 +105,7 @@ export default function Compliance() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/consultation"
@@ -210,7 +210,7 @@ export default function Compliance() {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Compliance Journey
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <div className="w-6 h-6 bg-blue-500 rounded" />
             </Link>
           </div>
         </section>

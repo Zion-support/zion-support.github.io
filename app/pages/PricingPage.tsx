@@ -297,7 +297,7 @@ import { CheckCircle, ArrowRight, Zap, Brain, Server, Code, Cloud, Layers } from
 
   const categories = [
     { id: 'all', name: 'All Services', icon: <Layers className="w-5 h-5" /> },
-    { id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5" /> },
+    { id: 'micro-saas', name: 'Micro SAAS', icon: <div className="w-6 h-6 bg-yellow-500 rounded" /> },
     { id: 'ai-services', name: 'AI Services', icon: <Brain className="w-5 h-5" /> },
     { id: 'it-services', name: 'IT Services', icon: <Server className="w-5 h-5" /> }
   ];
@@ -515,7 +515,7 @@ import { CheckCircle, ArrowRight, Zap, Brain, Server, Code, Cloud, Layers } from
               className="inline-flex items-center bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Contact Sales
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <div className="w-6 h-6 bg-blue-500 rounded" />
             </Link>
           </div>
         </div>

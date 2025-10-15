@@ -105,7 +105,7 @@ export default function MicroSaas() {
       price: "From $399/month",
       originalPrice: "$699/month",
       discount: "43% OFF",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       color: "from-red-500 to-pink-500",
       features: [
         "Machine learning algorithms",
@@ -353,7 +353,7 @@ export default function MicroSaas() {
       price: "From $499/month",
       originalPrice: "$899/month",
       discount: "44% OFF",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       color: "from-yellow-500 to-orange-500",
       features: [
         "Smart contract analysis",
@@ -384,7 +384,7 @@ export default function MicroSaas() {
       price: "From $299/month",
       originalPrice: "$499/month",
       discount: "40% OFF",
-      icon: <Globe className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       color: "from-green-500 to-teal-500",
       features: [
         "Carbon footprint tracking",
@@ -415,7 +415,7 @@ export default function MicroSaas() {
       price: "From $999/month",
       originalPrice: "$1,699/month",
       discount: "41% OFF",
-      icon: <Heart className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-red-500 rounded" />,
       color: "from-red-500 to-pink-500",
       features: [
         "Medical image analysis",
@@ -1004,7 +1004,7 @@ export default function MicroSaas() {
       price: "From $52/month",
       originalPrice: "$87/month",
       discount: "40% OFF",
-      icon: <Globe className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       color: "from-violet-500 to-purple-500",
       features: [
         "API gateway management",
@@ -1097,7 +1097,7 @@ export default function MicroSaas() {
       price: "From $49/month",
       originalPrice: "$79/month",
       discount: "38% OFF",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       color: "from-red-500 to-pink-500",
       features: [
         "Real-time threat detection",
@@ -1128,7 +1128,7 @@ export default function MicroSaas() {
       price: "From $9/month",
       originalPrice: "$15/month",
       discount: "40% OFF",
-      icon: <Cloud className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-cyan-500 rounded" />,
       color: "from-green-500 to-emerald-500",
       features: [
         "End-to-end encryption",
@@ -1252,7 +1252,7 @@ export default function MicroSaas() {
       price: "From $25/month",
       originalPrice: "$40/month",
       discount: "38% OFF",
-      icon: <Code className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       color: "from-teal-500 to-cyan-500",
       features: [
         "AI-powered project insights",
@@ -1468,10 +1468,10 @@ export default function MicroSaas() {
   ];
 
   const stats = [
-    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "50+", label: "Micro SAAS Solutions", icon: <div className="w-6 h-6 bg-yellow-500 rounded" /> },
     { number: "25,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
+    { number: "99.9%", label: "Uptime SLA", icon: <div className="w-6 h-6 bg-purple-500 rounded" /> },
+    { number: "24/7", label: "Support Available", icon: <div className="w-6 h-6 bg-purple-500 rounded" /> }
   ];
 
   const testimonials = [
@@ -1567,7 +1567,7 @@ export default function MicroSaas() {
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Start Free Trial
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <div className="w-6 h-6 bg-blue-500 rounded" />
                 </Link>
                 <Link
                   to="/demo"
@@ -1649,7 +1649,7 @@ export default function MicroSaas() {
                       <div className="text-white">{service.icon}</div>
                     </div>
                     <div className="flex items-center text-yellow-400">
-                      <Star className="w-4 h-4 fill-current" />
+                      <div className="w-6 h-6 bg-yellow-400 rounded" />
                       <span className="ml-1 text-sm font-medium">{service.rating}</span>
                       <span className="ml-1 text-xs text-gray-400">({service.reviews})</span>
                     </div>
@@ -1685,7 +1685,7 @@ export default function MicroSaas() {
                       className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105"
                     >
                       Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <div className="w-6 h-6 bg-blue-500 rounded" />
                     </Link>
                     <Link
                       to="/contact"
@@ -1731,7 +1731,7 @@ export default function MicroSaas() {
                       <div className="text-white">{service.icon}</div>
                     </div>
                     <div className="flex items-center text-yellow-400">
-                      <Star className="w-3 h-3 fill-current" />
+                      <div className="w-6 h-6 bg-yellow-400 rounded" />
                       <span className="ml-1 text-xs font-medium">{service.rating}</span>
                     </div>
                   </div>
@@ -1760,7 +1760,7 @@ export default function MicroSaas() {
                     className="w-full inline-flex items-center justify-center px-3 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300"
                   >
                     View Details
-                    <ArrowRight className="ml-1 h-3 w-3" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </Link>
                 </div>
               ))}
@@ -1827,13 +1827,13 @@ export default function MicroSaas() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/pricing"
                 className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
               >
-                <DollarSign className="mr-2 h-5 w-5" />
+                <div className="w-6 h-6 bg-green-500 rounded" />
                 View Pricing
               </Link>
             </div>
@@ -1872,7 +1872,7 @@ export default function MicroSaas() {
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/demo"
@@ -1974,7 +1974,7 @@ export default function MicroSaas() {
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-all duration-300"
                       >
                         Learn More
-                        <ArrowRight className="w-4 h-4 ml-1" />
+                        <div className="w-6 h-6 bg-blue-500 rounded" />
                       </Link>
                     </div>
                   </div>
@@ -2051,7 +2051,7 @@ export default function MicroSaas() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Globe className="w-6 h-6 text-white" />
+                  <div className="w-6 h-6 bg-indigo-500 rounded" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Address</h3>
                 <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -2064,7 +2064,7 @@ export default function MicroSaas() {
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/services"

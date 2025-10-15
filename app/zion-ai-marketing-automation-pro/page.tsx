@@ -36,7 +36,7 @@ export default function ZionAiMarketingAutomationPro() {
     {
       title: "Automated Lead Nurturing",
       description: "Intelligent lead nurturing workflows that automatically guide prospects through the sales funnel with personalized content and timing.",
-      icon: <Zap className="w-6 h-6" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       benefits: ["Behavioral triggers", "Personalized sequences", "Lead scoring integration", "Conversion optimization"]
     }
   ];
@@ -125,7 +125,7 @@ export default function ZionAiMarketingAutomationPro() {
     { number: "25,000+", label: "Active Marketers", icon: <Users className="w-6 h-6" /> },
     { number: "67%", label: "Average ROI Increase", icon: <TrendingUp className="w-6 h-6" /> },
     { number: "95%", label: "Campaign Success Rate", icon: <Target className="w-6 h-6" /> },
-    { number: "10x", label: "Content Generation Speed", icon: <Zap className="w-6 h-6" /> }
+    { number: "10x", label: "Content Generation Speed", icon: <div className="w-6 h-6 bg-yellow-500 rounded" /> }
   ];
 
   return (
@@ -175,7 +175,7 @@ export default function ZionAiMarketingAutomationPro() {
                     className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-pink-500/25 hover:scale-105"
                   >
                     Start Free Trial
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </Link>
                   <Link
                     to="/demo"
@@ -341,7 +341,7 @@ export default function ZionAiMarketingAutomationPro() {
                     }`}
                   >
                     Get Started
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </Link>
                 </div>
               ))}
@@ -410,14 +410,14 @@ export default function ZionAiMarketingAutomationPro() {
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Phone className="w-6 h-6 text-white" />
+                    <div className="w-6 h-6 bg-emerald-500 rounded" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Phone</h3>
                   <p className="text-pink-400">+1 302 464 0950</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Globe className="w-6 h-6 text-white" />
+                    <div className="w-6 h-6 bg-indigo-500 rounded" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Address</h3>
                   <p className="text-pink-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -430,7 +430,7 @@ export default function ZionAiMarketingAutomationPro() {
                   className="group bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-pink-500/25 hover:scale-105"
                 >
                   Start Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <div className="w-6 h-6 bg-blue-500 rounded" />
                 </Link>
                 <Link
                   to="/demo"

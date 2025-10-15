@@ -98,7 +98,7 @@ import { ArrowRight, CheckCircle, Star, Users, Target, MessageSquare, Cpu, Setti
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center"
               >
                 Become a Partner
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/contact"
@@ -170,7 +170,7 @@ import { ArrowRight, CheckCircle, Star, Users, Target, MessageSquare, Cpu, Setti
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start">
-                    <Star className="w-6 h-6 text-yellow-400 mr-3 flex-shrink-0 mt-1" />
+                    <div className="w-6 h-6 bg-yellow-400 rounded" />
                     <span className="text-gray-300">{benefit}</span>
                   </li>
                 ))}

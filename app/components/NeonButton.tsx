@@ -43,7 +43,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
     <>
       {icon && <span className="mr-2">{icon}</span>}
       {children}
-      {!icon && <ArrowRight className="w-5 h-5 ml-2" />}
+      {!icon && <div className="w-6 h-6 bg-blue-500 rounded" />}
     </>
   );
 

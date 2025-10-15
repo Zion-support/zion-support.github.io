@@ -1,15 +1,8 @@
-export const Icon = (_{
-  name, className = "", ...props
-}: {
-  name: string;
-  className?: string;
-  [key: string]: unknown;
-}) => {
-  return (
-    <span className={`icon ${className}`} {...props}>
-      {name}
-    </span>
-  );
+'use client'
+import React from 'react';
+
+const Icons: React.FC = () => {
+  return null; // Disabled for now
 };
 
-export default Icon;
+export default Icons;

@@ -146,7 +146,7 @@ import { ArrowRight, Calendar, Clock, User, Search, Filter, BookOpen } from 'luc
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center"
               >
                 Subscribe to Updates
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/solutions"
@@ -258,7 +258,7 @@ import { ArrowRight, Calendar, Clock, User, Search, Filter, BookOpen } from 'luc
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
                   >
                     Read Full Article
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </Link>
                 </div>
               </div>
@@ -335,7 +335,7 @@ import { ArrowRight, Calendar, Clock, User, Search, Filter, BookOpen } from 'luc
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors text-sm"
                   >
                     Read More
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </Link>
                 </div>
               </article>

@@ -10,7 +10,7 @@ const SoftwareDevelopmentPage = () => {
     {
       title: "Custom Web Applications",
       description: "Scalable web applications built with modern technologies and best practices",
-      icon: <Globe className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       features: ["React/Next.js", "Node.js/Express", "PostgreSQL/MongoDB", "AWS/Azure deployment"],
       price: "From $15,000"
     },
@@ -38,7 +38,7 @@ const SoftwareDevelopmentPage = () => {
     {
       title: "API Development",
       description: "RESTful and GraphQL APIs for seamless data integration",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       features: ["RESTful APIs", "GraphQL", "Authentication", "Rate limiting"],
       price: "From $8,000"
     },
@@ -91,7 +91,7 @@ const SoftwareDevelopmentPage = () => {
     {
       title: "Custom Solutions",
       description: "Tailored software that meets your specific business needs",
-      icon: <Code className="w-6 h-6" />
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />
     },
     {
       title: "Scalable Architecture",
@@ -101,12 +101,12 @@ const SoftwareDevelopmentPage = () => {
     {
       title: "Modern Technologies",
       description: "Latest tools and frameworks for optimal performance",
-      icon: <Zap className="w-6 h-6" />
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />
     },
     {
       title: "Ongoing Support",
       description: "24/7 support and maintenance for your applications",
-      icon: <Shield className="w-6 h-6" />
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />
     }
   ];
 
@@ -134,7 +134,7 @@ const SoftwareDevelopmentPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Start Your Project
             </FuturisticButton>
@@ -284,7 +284,7 @@ const SoftwareDevelopmentPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Start Your Project
             </FuturisticButton>

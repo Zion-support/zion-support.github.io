@@ -224,7 +224,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
                   {plan.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
+                        <div className="w-6 h-6 bg-yellow-400 rounded" />
                         Most Popular
                       </span>
                     </div>
@@ -254,7 +254,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                   }`}>
                     Start Learning
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </button>
                 </div>
               ))}

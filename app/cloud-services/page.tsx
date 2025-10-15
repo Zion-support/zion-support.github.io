@@ -1,14 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Cloud, Shield, Zap, Globe, Database, Server, CheckCircle, TrendingUp, Clock } from 'lucide-react';
+import { Database, Server, CheckCircle, TrendingUp } from 'lucide-react';
 
 export default function CloudServices() {
   const services = [
     {
       title: "Cloud Migration",
       description: "Seamlessly migrate your infrastructure to the cloud with minimal downtime and maximum efficiency.",
-      icon: <Cloud className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-cyan-500 rounded" />,
       features: [
         "Zero-downtime migration",
         "Data integrity assurance",
@@ -30,7 +30,7 @@ export default function CloudServices() {
     {
       title: "Cloud Security",
       description: "Advanced security solutions to protect your cloud environment from threats and vulnerabilities.",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       features: [
         "Multi-layered security",
         "Compliance management",
@@ -63,7 +63,7 @@ export default function CloudServices() {
     {
       title: "Cloud Performance Monitoring",
       description: "Real-time monitoring and optimization of your cloud applications and infrastructure.",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       features: [
         "Real-time monitoring",
         "Performance analytics",
@@ -77,7 +77,7 @@ export default function CloudServices() {
     {
       title: "Scalability",
       description: "Scale your infrastructure up or down based on demand",
-      icon: <Globe className="w-8 h-8" />
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />
     },
     {
       title: "Cost Efficiency",
@@ -87,7 +87,7 @@ export default function CloudServices() {
     {
       title: "Reliability",
       description: "99.9% uptime guarantee with redundant systems",
-      icon: <Shield className="w-8 h-8" />
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />
     },
     {
       title: "Security",
@@ -129,7 +129,7 @@ export default function CloudServices() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/consultation"

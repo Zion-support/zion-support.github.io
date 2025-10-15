@@ -74,12 +74,12 @@ export default function Careers() {
     {
       title: "Competitive Salary",
       description: "Above-market compensation packages",
-      icon: <DollarSign className="w-8 h-8" />
+      icon: <div className="w-6 h-6 bg-green-500 rounded" />
     },
     {
       title: "Health Insurance",
       description: "Comprehensive health coverage for you and your family",
-      icon: <Shield className="w-8 h-8" />
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />
     },
     {
       title: "Flexible Hours",
@@ -183,7 +183,7 @@ export default function Careers() {
                       className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 mt-4 md:mt-0"
                     >
                       Apply Now
-                      <ArrowRight className="w-4 h-4 ml-2" />
+                      <div className="w-6 h-6 bg-blue-500 rounded" />
                     </Link>
                   </div>
                   
@@ -234,7 +234,7 @@ export default function Careers() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Send Resume
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/consultation"

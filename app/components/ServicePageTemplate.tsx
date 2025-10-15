@@ -107,7 +107,7 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center p-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Star className="w-8 h-8 text-white" />
+                    <div className="w-6 h-6 bg-yellow-400 rounded" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Benefit {index + 1}</h3>
                   <p className="text-gray-300">{benefit}</p>

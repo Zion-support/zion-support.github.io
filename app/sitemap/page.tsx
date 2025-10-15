@@ -112,7 +112,7 @@ export default function Sitemap() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4 flex items-center justify-center">
-                <Globe className="w-8 h-8 mr-3 text-cyan-400" />
+                <div className="w-6 h-6 bg-indigo-500 rounded" />
                 Main Pages
               </h2>
             </div>
@@ -130,7 +130,7 @@ export default function Sitemap() {
                       </h3>
                       <p className="text-gray-300 text-sm mt-1">{page.description}</p>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </div>
                 </Link>
               ))}
@@ -159,7 +159,7 @@ export default function Sitemap() {
                     <span className="text-white text-sm group-hover:text-purple-300 transition-colors">
                       {service.name}
                     </span>
-                    <ArrowRight className="w-4 h-4 text-purple-400 group-hover:translate-x-1 transition-transform" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </div>
                 </Link>
               ))}
@@ -172,7 +172,7 @@ export default function Sitemap() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4 flex items-center justify-center">
-                <Zap className="w-8 h-8 mr-3 text-yellow-400" />
+                <div className="w-6 h-6 bg-yellow-500 rounded" />
                 Micro SAAS Solutions
               </h2>
               <p className="text-gray-300">Ready-to-use business software solutions</p>
@@ -188,7 +188,7 @@ export default function Sitemap() {
                     <span className="text-white text-sm group-hover:text-yellow-300 transition-colors">
                       {service.name}
                     </span>
-                    <ArrowRight className="w-4 h-4 text-yellow-400 group-hover:translate-x-1 transition-transform" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </div>
                 </Link>
               ))}
@@ -201,7 +201,7 @@ export default function Sitemap() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4 flex items-center justify-center">
-                <Shield className="w-8 h-8 mr-3 text-cyan-400" />
+                <div className="w-6 h-6 bg-purple-500 rounded" />
                 5G Solutions
               </h2>
               <p className="text-gray-300">Next-generation 5G technology solutions</p>
@@ -217,7 +217,7 @@ export default function Sitemap() {
                     <span className="text-white text-sm group-hover:text-cyan-300 transition-colors">
                       {service.name}
                     </span>
-                    <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </div>
                 </Link>
               ))}
@@ -245,7 +245,7 @@ export default function Sitemap() {
                     <span className="text-white text-lg font-semibold group-hover:text-gray-300 transition-colors">
                       {page.name}
                     </span>
-                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:translate-x-1 transition-transform" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </div>
                 </Link>
               ))}

@@ -51,7 +51,7 @@ export default function Community() {
       participants: "500+ participants"
     },
     {
-      icon: <Globe className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       title: "Open Source Projects",
       description: "Contribute to our open source initiatives and make a global impact.",
       participants: "100+ contributors"
@@ -61,8 +61,8 @@ export default function Community() {
   const stats = [
     { number: "5,000+", label: "Community Members", icon: <Users className="w-6 h-6" /> },
     { number: "50+", label: "Events Hosted", icon: <Calendar className="w-6 h-6" /> },
-    { number: "100+", label: "Open Source Projects", icon: <Globe className="w-6 h-6" /> },
-    { number: "95%", label: "Member Satisfaction", icon: <Star className="w-6 h-6" /> }
+    { number: "100+", label: "Open Source Projects", icon: <div className="w-6 h-6 bg-indigo-500 rounded" /> },
+    { number: "95%", label: "Member Satisfaction", icon: <div className="w-6 h-6 bg-yellow-400 rounded" /> }
   ];
 
   return (<>
@@ -96,7 +96,7 @@ export default function Community() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Join Now
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/events"
@@ -150,7 +150,7 @@ export default function Community() {
                       {event.time}
                     </div>
                     <div className="flex items-center">
-                      <Globe className="w-4 h-4 mr-2" />
+                      <div className="w-6 h-6 bg-indigo-500 rounded" />
                       {event.location}
                     </div>
                     <div className="flex items-center">
@@ -201,7 +201,7 @@ export default function Community() {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Join Our Community
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <div className="w-6 h-6 bg-blue-500 rounded" />
             </Link>
           </div>
         </section>

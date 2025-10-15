@@ -41,7 +41,7 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
     {
       label: 'IT Services',
       href: '/services',
-      icon: <Shield className="w-4 h-4" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       dropdown: [
         { label: 'AI-Powered Business Intelligence Pro', href: '/ai-business-intelligence' },
         { label: 'AI Customer Support Automation Suite', href: '/ai-customer-support' },
@@ -79,7 +79,7 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
     {
       label: 'Micro SAAS',
       href: '/micro-saas',
-      icon: <Zap className="w-4 h-4" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       dropdown: [
         { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
         { label: 'Zion Security Shield', href: '/zion-security-shield' },
@@ -110,7 +110,7 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
     {
       label: '5G Solutions',
       href: '/5g-solutions',
-      icon: <Globe className="w-4 h-4" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       dropdown: [
         { label: '5G Data Analytics', href: '/5g-data-analytics' },
         { label: '5G Edge Computing', href: '/5g-edge-computing' },
@@ -211,7 +211,7 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
               className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105 flex"
             >
               Contact Us
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <div className="w-6 h-6 bg-blue-500 rounded" />
             </Link>
           </div>
 

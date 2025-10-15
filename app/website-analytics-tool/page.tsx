@@ -28,7 +28,7 @@ const WebsiteAnalyticsToolPage = () => {
     {
       title: "Traffic Sources",
       description: "Analyze where your traffic comes from and optimize your marketing efforts",
-      icon: <Globe className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       benefits: ["Source analysis", "Campaign tracking", "Referral tracking", "UTM parameters"]
     },
     {
@@ -106,7 +106,7 @@ const WebsiteAnalyticsToolPage = () => {
     {
       title: "Save Time",
       description: "Automate reporting and get insights without manual analysis",
-      icon: <Zap className="w-6 h-6" />
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />
     },
     {
       title: "Data-Driven Decisions",
@@ -140,7 +140,7 @@ const WebsiteAnalyticsToolPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -148,7 +148,7 @@ const WebsiteAnalyticsToolPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-indigo-500 rounded" />}
             >
               Watch Demo
             </FuturisticButton>
@@ -280,7 +280,7 @@ const WebsiteAnalyticsToolPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -288,7 +288,7 @@ const WebsiteAnalyticsToolPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-indigo-500 rounded" />}
             >
               Watch Demo
             </FuturisticButton>

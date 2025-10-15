@@ -1,31 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  BarChart3, 
-  PieChart, 
-  TrendingUp, 
-  Target, 
-  Clock,
-  Shield,
-  Smartphone,
-  Globe,
-  FileText,
-  Settings,
-  Star,
-  Award,
-  Phone,
-  MapPin,
-  Envelope,
-  Database,
-  Zap,
-  Eye,
-  MessageSquare,
-  Users,
-  RefreshCw
-} from 'lucide-react';
+import { CheckCircle, TrendingUp, Database } from 'lucide-react';
 
 const AIAnalyticsDashboardProPage: React.FC = () => {
   const features = [
@@ -51,9 +27,9 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
   ];
 
   const integrations = [
-    { name: 'Google Analytics', icon: <BarChart3 className="w-6 h-6 text-orange-400" /> },
-    { name: 'Salesforce', icon: <Cloud className="w-6 h-6 text-blue-400" /> },
-    { name: 'HubSpot', icon: <Target className="w-6 h-6 text-orange-400" /> },
+    { name: 'Google Analytics', icon: <div className="w-6 h-6 bg-blue-500 rounded" /> },
+    { name: 'Salesforce', icon: <div className="w-6 h-6 bg-cyan-500 rounded" /> },
+    { name: 'HubSpot', icon: <div className="w-6 h-6 bg-green-500 rounded" /> },
     { name: 'MySQL', icon: <Database className="w-6 h-6 text-blue-600" /> },
     { name: 'PostgreSQL', icon: <Database className="w-6 h-6 text-indigo-400" /> },
     { name: 'MongoDB', icon: <Database className="w-6 h-6 text-green-400" /> }
@@ -115,25 +91,25 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
     {
       title: 'E-commerce',
       description: 'Track sales, customer behavior, and inventory analytics',
-      icon: <ShoppingCart className="w-6 h-6 text-blue-400" />,
+      icon: <div className="w-6 h-6 bg-orange-500 rounded" />,
       results: '40% increase in conversion rates'
     },
     {
       title: 'SaaS',
       description: 'Monitor user engagement, churn, and product usage',
-      icon: <Cloud className="w-6 h-6 text-green-400" />,
+      icon: <div className="w-6 h-6 bg-cyan-500 rounded" />,
       results: '50% reduction in churn rate'
     },
     {
       title: 'Marketing',
       description: 'Analyze campaign performance and ROI across channels',
-      icon: <Target className="w-6 h-6 text-purple-400" />,
+      icon: <div className="w-6 h-6 bg-green-500 rounded" />,
       results: '60% improvement in campaign ROI'
     },
     {
       title: 'Finance',
       description: 'Track financial metrics and cash flow analytics',
-      icon: <DollarSign className="w-6 h-6 text-green-600" />,
+      icon: <div className="w-6 h-6 bg-green-500 rounded" />,
       results: '35% better financial forecasting'
     }
   ];
@@ -182,7 +158,7 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
                 className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-emerald-500/25 flex items-center group"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="#pricing"

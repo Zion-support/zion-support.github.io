@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign, Globe, Lock, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { CheckCircle, Brain, Code, Database, DollarSign, TrendingUp, Cpu, Monitor, Heart, Mic, Video, Image, Calculator, Layers } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -11,7 +11,7 @@ export default function AIServices() {
       name: "AI Analytics Dashboard Pro",
       description: "Advanced AI-powered business intelligence platform with predictive analytics, real-time insights, and automated reporting",
       price: "From $2,500/month",
-      icon: <BarChart3 className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-blue-500 rounded" />,
       color: "from-blue-500 to-cyan-500",
       features: [
         "Real-time predictive analytics",
@@ -40,7 +40,7 @@ export default function AIServices() {
       name: "AI Cybersecurity Suite Pro",
       description: "Next-generation AI-powered security platform with threat detection, behavioral analysis, and automated response",
       price: "From $3,200/month",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       color: "from-red-500 to-pink-500",
       features: [
         "AI threat detection & prevention",
@@ -98,7 +98,7 @@ export default function AIServices() {
       name: "AI Customer Support Chatbot",
       description: "Intelligent conversational AI with natural language understanding, sentiment analysis, and seamless human handoff",
       price: "From $2,200/month",
-      icon: <MessageSquare className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-rose-500 rounded" />,
       color: "from-green-500 to-emerald-500",
       features: [
         "Natural language understanding",
@@ -127,7 +127,7 @@ export default function AIServices() {
       name: "AI Code Assistant Pro",
       description: "Advanced AI-powered development tool with code generation, debugging, optimization, and intelligent suggestions",
       price: "From $1,500/month",
-      icon: <Code className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       color: "from-orange-500 to-red-500",
       features: [
         "AI code generation & completion",
@@ -185,7 +185,7 @@ export default function AIServices() {
       name: "AI Automation Platform",
       description: "Intelligent process automation with machine learning, workflow optimization, and adaptive decision making",
       price: "From $2,000/month",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       color: "from-teal-500 to-cyan-500",
       features: [
         "Intelligent process automation",
@@ -243,7 +243,7 @@ export default function AIServices() {
       name: "AI Marketing Automation",
       description: "Intelligent marketing automation with AI-powered personalization, campaign optimization, and customer journey mapping",
       price: "From $1,900/month",
-      icon: <Target className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-green-500 rounded" />,
       color: "from-rose-500 to-pink-500",
       features: [
         "AI-powered personalization",
@@ -272,7 +272,7 @@ export default function AIServices() {
       name: "AI HR & Recruitment Pro",
       description: "Intelligent HR platform with AI-powered candidate screening, skill matching, and employee analytics",
       price: "From $2,100/month",
-      icon: <Users className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-sky-500 rounded" />,
       color: "from-amber-500 to-orange-500",
       features: [
         "AI candidate screening & matching",
@@ -330,7 +330,7 @@ export default function AIServices() {
       name: "AI Supply Chain Optimizer",
       description: "Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning",
       price: "From $2,400/month",
-      icon: <Globe className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       color: "from-sky-500 to-blue-500",
       features: [
         "Demand forecasting & planning",
@@ -417,7 +417,7 @@ export default function AIServices() {
       name: "AI Predictive Maintenance",
       description: "Intelligent equipment monitoring with failure prediction, maintenance scheduling, and cost optimization",
       price: "From $2,200/month",
-      icon: <Settings className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-slate-500 rounded" />,
       color: "from-amber-500 to-orange-500",
       features: [
         "Equipment failure prediction",
@@ -446,7 +446,7 @@ export default function AIServices() {
       name: "AI Sentiment Analysis Pro",
       description: "Advanced sentiment analysis with emotion detection, brand monitoring, and social media insights",
       price: "From $1,400/month",
-      icon: <Heart className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-red-500 rounded" />,
       color: "from-rose-500 to-pink-500",
       features: [
         "Multi-language sentiment analysis",
@@ -475,7 +475,7 @@ export default function AIServices() {
       name: "AI Recommendation Engine",
       description: "Intelligent recommendation system with personalization, collaborative filtering, and content-based suggestions",
       price: "From $1,800/month",
-      icon: <Target className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-green-500 rounded" />,
       color: "from-violet-500 to-purple-500",
       features: [
         "Collaborative filtering",
@@ -504,7 +504,7 @@ export default function AIServices() {
       name: "AI Fraud Detection Pro",
       description: "Advanced fraud detection with real-time monitoring, pattern recognition, and risk scoring",
       price: "From $2,500/month",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       color: "from-red-500 to-pink-500",
       features: [
         "Real-time fraud detection",
@@ -533,7 +533,7 @@ export default function AIServices() {
       name: "AI Language Translation",
       description: "Advanced neural machine translation with real-time processing, context awareness, and domain-specific models",
       price: "From $1,300/month",
-      icon: <Globe className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />,
       color: "from-blue-500 to-indigo-500",
       features: [
         "Neural machine translation",
@@ -562,7 +562,7 @@ export default function AIServices() {
       name: "AI Chatbot Enterprise",
       description: "Enterprise-grade conversational AI with advanced NLP, knowledge management, and multi-channel deployment",
       price: "From $2,800/month",
-      icon: <MessageSquare className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-rose-500 rounded" />,
       color: "from-teal-500 to-cyan-500",
       features: [
         "Advanced NLP capabilities",
@@ -648,7 +648,7 @@ export default function AIServices() {
       name: "AI Blockchain Solutions",
       description: "Intelligent blockchain applications with AI-powered smart contracts and analytics.",
       features: ["Smart contracts", "DeFi analytics", "NFT generation", "Blockchain monitoring", "Cryptocurrency analysis", "Risk assessment"],
-      icon: <Shield className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       applications: ["DeFi platforms", "NFT marketplaces", "Cryptocurrency trading", "Supply chain tracking"],
       price: "Starting at $3,999/month",
       benefits: ["Automated smart contracts", "Real-time blockchain analysis", "Fraud detection", "Optimized transactions"]
@@ -678,7 +678,7 @@ export default function AIServices() {
   const stats = [
     { number: "35+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
     { number: "20,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
-    { number: "99.9%", label: "Accuracy Rate", icon: <Award className="w-6 h-6" /> },
+    { number: "99.9%", label: "Accuracy Rate", icon: <div className="w-6 h-6 bg-amber-500 rounded" /> },
     { number: "24/7", label: "AI Monitoring", icon: <Monitor className="w-6 h-6" /> }
   ];
 
@@ -719,13 +719,13 @@ export default function AIServices() {
     {
       title: "Natural Language Processing",
       description: "Sophisticated NLP for content generation, sentiment analysis, and conversational AI",
-      icon: <MessageSquare className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-rose-500 rounded" />,
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Computer Vision",
       description: "Advanced image and video analysis for automation, quality control, and visual insights",
-      icon: <Eye className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-violet-500 rounded" />,
       color: "from-green-500 to-emerald-500"
     },
     {
@@ -737,7 +737,7 @@ export default function AIServices() {
     {
       title: "Automated Decision Making",
       description: "AI-powered decision engines for process optimization and intelligent automation",
-      icon: <Settings className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-slate-500 rounded" />,
       color: "from-indigo-500 to-blue-500"
     },
     {
@@ -813,7 +813,7 @@ export default function AIServices() {
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Get AI Consultation
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <div className="w-6 h-6 bg-blue-500 rounded" />
                 </Link>
                 <Link
                   to="/demo"
@@ -920,7 +920,7 @@ export default function AIServices() {
                       <div className="text-white">{service.icon}</div>
                     </div>
                     <div className="flex items-center text-yellow-400">
-                      <Star className="w-4 h-4 fill-current" />
+                      <div className="w-4 h-4 bg-yellow-400 rounded" />
                       <span className="ml-1 text-sm font-medium">{service.rating}</span>
                       <span className="ml-1 text-xs text-gray-400">({service.reviews})</span>
                     </div>
@@ -949,11 +949,11 @@ export default function AIServices() {
 
                   <div className="space-y-3">
                     <Link
-                      to={service.link}
+                      to={service.link || '#'}
                       className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105"
                     >
                       Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <div className="w-6 h-6 bg-blue-500 rounded" />
                     </Link>
                     <Link
                       to="/contact"
@@ -993,7 +993,7 @@ export default function AIServices() {
                       <div className="text-white">{service.icon}</div>
                     </div>
                     <div className="flex items-center text-yellow-400">
-                      <Star className="w-3 h-3 fill-current" />
+                      <div className="w-3 h-3 bg-yellow-400 rounded" />
                       <span className="ml-1 text-xs font-medium">{service.rating}</span>
                     </div>
                   </div>
@@ -1015,11 +1015,11 @@ export default function AIServices() {
                   </div>
 
                   <Link
-                    to={service.link}
+                    to={service.link || '#'}
                     className="w-full inline-flex items-center justify-center px-3 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300"
                   >
                     View Details
-                    <ArrowRight className="ml-1 h-3 w-3" />
+                    <div className="w-6 h-6 bg-blue-500 rounded" />
                   </Link>
                 </div>
               ))}
@@ -1059,7 +1059,7 @@ export default function AIServices() {
                   
                   <div className="flex items-center mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                      <div key={i} className="w-4 h-4 bg-yellow-400 rounded" />
                     ))}
                   </div>
                   
@@ -1086,13 +1086,13 @@ export default function AIServices() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Get AI Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/pricing"
                 className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
               >
-                <DollarSign className="mr-2 h-5 w-5" />
+                <div className="w-6 h-6 bg-green-500 rounded" />
                 View Pricing
               </Link>
             </div>

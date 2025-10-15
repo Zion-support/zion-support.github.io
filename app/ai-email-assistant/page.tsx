@@ -52,7 +52,7 @@ export default function AIEmailAssistant() {
       title: "Sales Outreach",
       description:
         "Generate personalized sales emails and follow-up sequences automatically.",
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
     },
     {
       title: "Email Marketing",
@@ -64,7 +64,7 @@ export default function AIEmailAssistant() {
       title: "Internal Communications",
       description:
         "Streamline internal email processes and improve team collaboration.",
-      icon: <Shield className="w-8 h-8 text-purple-400" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
     },
   ];
 
@@ -252,7 +252,7 @@ export default function AIEmailAssistant() {
                         key={featureIndex}
                         className="text-gray-300 flex items-center"
                       >
-                        <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
+                        <div className="w-6 h-6 bg-yellow-400 rounded" />
                         {feature}
                       </li>
                     ))}

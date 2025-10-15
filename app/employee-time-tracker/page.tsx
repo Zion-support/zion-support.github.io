@@ -40,7 +40,7 @@ const EmployeeTimeTrackerPage = () => {
     {
       title: "Integration Hub",
       description: "Connect with your favorite tools for seamless workflow integration",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       benefits: ["API access", "Webhook support", "Third-party apps", "Custom integrations"]
     }
   ];
@@ -96,7 +96,7 @@ const EmployeeTimeTrackerPage = () => {
     {
       title: "Increase Productivity",
       description: "Boost team productivity by up to 25% with better time management",
-      icon: <Zap className="w-6 h-6" />
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />
     },
     {
       title: "Accurate Billing",
@@ -111,7 +111,7 @@ const EmployeeTimeTrackerPage = () => {
     {
       title: "Easy to Use",
       description: "Simple interface that teams love to use every day",
-      icon: <Shield className="w-6 h-6" />
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />
     }
   ];
 
@@ -140,7 +140,7 @@ const EmployeeTimeTrackerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -148,7 +148,7 @@ const EmployeeTimeTrackerPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-indigo-500 rounded" />}
             >
               Watch Demo
             </FuturisticButton>
@@ -280,7 +280,7 @@ const EmployeeTimeTrackerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -288,7 +288,7 @@ const EmployeeTimeTrackerPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-indigo-500 rounded" />}
             >
               Watch Demo
             </FuturisticButton>

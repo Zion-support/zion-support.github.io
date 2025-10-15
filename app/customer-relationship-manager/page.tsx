@@ -22,13 +22,13 @@ const CustomerRelationshipManagerPage = () => {
     {
       title: "Lead Management",
       description: "Capture, qualify, and nurture leads with automated workflows",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       benefits: ["Lead scoring", "Automated follow-up", "Lead assignment", "Conversion tracking"]
     },
     {
       title: "Communication Hub",
       description: "Unified communication center for emails, calls, and meetings",
-      icon: <Phone className="w-8 h-8" />,
+      icon: <div className="w-6 h-6 bg-emerald-500 rounded" />,
       benefits: ["Email integration", "Call logging", "Meeting scheduler", "Activity timeline"]
     },
     {
@@ -111,7 +111,7 @@ const CustomerRelationshipManagerPage = () => {
     {
       title: "Team Collaboration",
       description: "Improve team coordination with shared customer information",
-      icon: <Globe className="w-6 h-6" />
+      icon: <div className="w-6 h-6 bg-indigo-500 rounded" />
     }
   ];
 
@@ -140,7 +140,7 @@ const CustomerRelationshipManagerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -148,7 +148,7 @@ const CustomerRelationshipManagerPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-indigo-500 rounded" />}
             >
               Watch Demo
             </FuturisticButton>
@@ -280,7 +280,7 @@ const CustomerRelationshipManagerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-blue-500 rounded" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -288,7 +288,7 @@ const CustomerRelationshipManagerPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Globe className="w-5 h-5" />}
+              icon={<div className="w-6 h-6 bg-indigo-500 rounded" />}
             >
               Watch Demo
             </FuturisticButton>

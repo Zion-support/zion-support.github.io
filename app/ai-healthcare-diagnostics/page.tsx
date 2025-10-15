@@ -19,7 +19,7 @@ export default function AIHealthcareDiagnostics() {
     {
       title: "Drug Interaction Checker",
       description: "Real-time medication interaction analysis and allergy detection for patient safety",
-      icon: <Shield className="w-6 h-6" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       benefits: ["Safety Alerts", "Allergy Detection", "Dosage Optimization", "Compliance Tracking"]
     },
     {
@@ -123,7 +123,7 @@ export default function AIHealthcareDiagnostics() {
                 className="bg-gradient-to-r from-rose-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-rose-500/25 hover:scale-105"
               >
                 Schedule Demo
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/consultation"
@@ -269,7 +269,7 @@ export default function AIHealthcareDiagnostics() {
                       }`}
                     >
                       Get Started
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      <div className="w-6 h-6 bg-blue-500 rounded" />
                     </Link>
                   </div>
                 </div>
@@ -307,7 +307,7 @@ export default function AIHealthcareDiagnostics() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-rose-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Globe className="w-6 h-6 text-white" />
+                  <div className="w-6 h-6 bg-indigo-500 rounded" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Address</h3>
                 <p className="text-rose-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -320,7 +320,7 @@ export default function AIHealthcareDiagnostics() {
                 className="bg-gradient-to-r from-rose-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-rose-500/25 hover:scale-105"
               >
                 Schedule Demo
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="/consultation"

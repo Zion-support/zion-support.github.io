@@ -1,31 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  MessageSquare, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  Target, 
-  TrendingUp,
-  Clock,
-  Shield,
-  Smartphone,
-  Globe,
-  FileText,
-  Settings,
-  Star,
-  Award,
-  Phone,
-  MapPin,
-  Envelope,
-  Bot,
-  Headphones,
-  ThumbsUp,
-  RefreshCw
-} from 'lucide-react';
+import { CheckCircle, TrendingUp } from 'lucide-react';
 
 const AICustomerSupportChatbotPage: React.FC = () => {
   const features = [
@@ -51,12 +27,12 @@ const AICustomerSupportChatbotPage: React.FC = () => {
   ];
 
   const integrations = [
-    { name: 'Salesforce', icon: <Cloud className="w-6 h-6 text-blue-400" /> },
-    { name: 'HubSpot', icon: <Target className="w-6 h-6 text-orange-400" /> },
-    { name: 'Zendesk', icon: <Headphones className="w-6 h-6 text-green-400" /> },
-    { name: 'Intercom', icon: <MessageSquare className="w-6 h-6 text-purple-400" /> },
-    { name: 'Slack', icon: <Users className="w-6 h-6 text-pink-400" /> },
-    { name: 'Microsoft Teams', icon: <Globe className="w-6 h-6 text-blue-600" /> }
+    { name: 'Salesforce', icon: <div className="w-6 h-6 bg-cyan-500 rounded" /> },
+    { name: 'HubSpot', icon: <div className="w-6 h-6 bg-green-500 rounded" /> },
+    { name: 'Zendesk', icon: <div className="w-6 h-6 bg-purple-500 rounded" /> },
+    { name: 'Intercom', icon: <div className="w-6 h-6 bg-rose-500 rounded" /> },
+    { name: 'Slack', icon: <div className="w-6 h-6 bg-sky-500 rounded" /> },
+    { name: 'Microsoft Teams', icon: <div className="w-6 h-6 bg-indigo-500 rounded" /> }
   ];
 
   const pricingPlans = [
@@ -115,25 +91,25 @@ const AICustomerSupportChatbotPage: React.FC = () => {
     {
       title: 'E-commerce',
       description: 'Handle product inquiries, order tracking, and returns',
-      icon: <ShoppingCart className="w-6 h-6 text-blue-400" />,
+      icon: <div className="w-6 h-6 bg-orange-500 rounded" />,
       results: '60% reduction in support tickets'
     },
     {
       title: 'SaaS',
       description: 'Provide technical support and onboarding assistance',
-      icon: <Cloud className="w-6 h-6 text-green-400" />,
+      icon: <div className="w-6 h-6 bg-cyan-500 rounded" />,
       results: '80% faster issue resolution'
     },
     {
       title: 'Healthcare',
       description: 'Answer patient questions and schedule appointments',
-      icon: <Heart className="w-6 h-6 text-red-400" />,
+      icon: <div className="w-6 h-6 bg-red-500 rounded" />,
       results: '50% reduction in call volume'
     },
     {
       title: 'Financial Services',
       description: 'Handle account inquiries and transaction support',
-      icon: <DollarSign className="w-6 h-6 text-green-600" />,
+      icon: <div className="w-6 h-6 bg-green-500 rounded" />,
       results: '70% improvement in response time'
     }
   ];
@@ -182,7 +158,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
                 className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-green-500/25 flex items-center group"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <div className="w-6 h-6 bg-blue-500 rounded" />
               </Link>
               <Link
                 to="#pricing"

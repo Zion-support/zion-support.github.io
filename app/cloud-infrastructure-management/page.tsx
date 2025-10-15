@@ -13,13 +13,13 @@ import Layout from "../layout";
 export default function CloudInfrastructureManagement() {
   const features = [
     {
-      icon: <Cloud className="w-6 h-6 text-cyan-400" />,
+      icon: <div className="w-6 h-6 bg-cyan-500 rounded" />,
       title: "Multi-Cloud Management",
       description:
         "Seamlessly manage infrastructure across AWS, Azure, Google Cloud, and private clouds",
     },
     {
-      icon: <Shield className="w-6 h-6 text-purple-400" />,
+      icon: <div className="w-6 h-6 bg-purple-500 rounded" />,
       title: "Security & Compliance",
       description:
         "Enterprise-grade security with automated compliance monitoring and threat detection",
@@ -37,7 +37,7 @@ export default function CloudInfrastructureManagement() {
         "Proactive monitoring with automated scaling, performance optimization, and incident response",
     },
     {
-      icon: <Zap className="w-6 h-6 text-orange-400" />,
+      icon: <div className="w-6 h-6 bg-yellow-500 rounded" />,
       title: "Auto-Scaling",
       description:
         "Automatically scale resources based on demand to ensure optimal performance and cost efficiency",
@@ -140,7 +140,7 @@ export default function CloudInfrastructureManagement() {
                         key={itemIndex}
                         className="text-gray-300 flex items-center justify-center"
                       >
-                        <ArrowRight className="w-4 h-4 text-blue-400 mr-2" />
+                        <div className="w-6 h-6 bg-blue-500 rounded" />
                         {item}
                       </li>
                     ))}
