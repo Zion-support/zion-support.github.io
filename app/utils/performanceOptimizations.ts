@@ -29,5 +29,3 @@ export const performanceOptimizations = {
     }) as T;
   }
 };
-
-export default performanceOptimizations;
