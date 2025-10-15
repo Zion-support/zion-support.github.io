@@ -12,6 +12,7 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info'],
       },
     },
     rollupOptions: {
@@ -20,11 +21,15 @@ export default defineConfig({
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
           ui: ['@heroicons/react', 'framer-motion', 'lucide-react'],
-          utils: ['clsx', 'tailwind-merge']
+          utils: ['clsx', 'tailwind-merge'],
+          helmet: ['react-helmet-async'],
+          webvitals: ['web-vitals']
         }
       }
     },
     chunkSizeWarningLimit: 1000,
+    target: 'es2020',
+    cssCodeSplit: true,
   },
   server: {
     port: 3000,

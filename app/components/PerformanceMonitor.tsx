@@ -22,6 +22,19 @@ const PerformanceMonitor: React.FC = () => {
         });
       }
       
+      // Store metrics in localStorage for debugging
+      try {
+        const storedMetrics = JSON.parse(localStorage.getItem('web-vitals') || '[]');
+        storedMetrics.push({
+          ...metric,
+          timestamp: Date.now(),
+          url: window.location.href
+        });
+        localStorage.setItem('web-vitals', JSON.stringify(storedMetrics.slice(-50))); // Keep last 50 entries
+      } catch (error) {
+        // Ignore localStorage errors
+      }
+      
       // Also log in development
       if (process.env.NODE_ENV === 'development') {
         console.log(`[Web Vitals] ${metric.name}:`, metric.value);
