@@ -1,13 +1,11 @@
 const fs = require("fs");
 const path = require("path");
 const glob = require("glob");
-
 // Function to fix a single file
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, "utf8");
     let fixed = false;
-
     // Fix corrupted files with duplicate content
     if (
       content.includes("'use client'\nimport React from 'react'") &&
@@ -18,15 +16,13 @@ function fixFile(filePath) {
       const pageName =
         fileName.charAt(0).toUpperCase() +
         fileName.slice(1).replace(/-/g, " ") +
-        "Page";
-
+        "Page
       content = `'use client';
 import React from 'react';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const ${pageName}: React.FC = () => {
   const features = [
     {
@@ -45,7 +41,6 @@ const ${pageName}: React.FC = () => {
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -53,9 +48,7 @@ const ${pageName}: React.FC = () => {
         <meta name="description" content="Professional ${fileName.replace(/-/g, " ")} services and solutions." />
         <meta name="keywords" content="${fileName.replace(/-/g, " ")}, services, solutions, technology" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -66,7 +59,6 @@ const ${pageName}: React.FC = () => {
               Professional ${fileName.replace(/-/g, " ")} services to help your business succeed and grow.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -83,7 +75,6 @@ const ${pageName}: React.FC = () => {
               </div>
             ))}
           </div>
-          
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
@@ -102,16 +93,13 @@ const ${pageName}: React.FC = () => {
           </div>
         </div>
       </main>
-      
       <Footer />
     </div>
   );
 };
-
 export default ${pageName};`;
       fixed = true;
     }
-
     // Fix files with duplicate imports and corrupted content
     if (
       content.includes("'use client'\nimport React from 'react'") &&
@@ -123,15 +111,12 @@ export default ${pageName};`;
       const cleanLines = [];
       let inCorruptedSection = false;
       let foundReturn = false;
-
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
-
         if (line.includes("'use client'") && i > 0) {
           inCorruptedSection = true;
           continue;
         }
-
         if (
           inCorruptedSection &&
           line.includes("const ") &&
@@ -141,24 +126,19 @@ export default ${pageName};`;
           cleanLines.push(line);
           continue;
         }
-
         if (inCorruptedSection) {
           continue;
         }
-
         if (line.includes("return (") && !foundReturn) {
           foundReturn = true;
           cleanLines.push(line);
           continue;
         }
-
         cleanLines.push(line);
       }
-
       content = cleanLines.join("\n");
       fixed = true;
     }
-
     // Remove unused ArrowRight imports
     if (content.includes("ArrowRight") && !content.includes("<ArrowRight")) {
       content = content.replace(
@@ -171,7 +151,6 @@ export default ${pageName};`;
       );
       fixed = true;
     }
-
     // Remove unused React imports
     if (
       content.includes("import React from 'react';") &&
@@ -181,7 +160,6 @@ export default ${pageName};`;
       content = content.replace(/import React from 'react';\n/g, "");
       fixed = true;
     }
-
     // Fix parsing errors with missing closing braces
     if (content.includes("export default") && !content.includes("};")) {
       content = content.replace(
@@ -190,7 +168,6 @@ export default ${pageName};`;
       );
       fixed = true;
     }
-
     if (fixed) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
@@ -199,12 +176,8 @@ export default ${pageName};`;
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
-
 // Get all page files
 const pageFiles = glob.sync("app/**/page.tsx");
-
 console.log(`Found ${pageFiles.length} page files to check...`);
-
 pageFiles.forEach(fixFile);
-
 console.log("Done fixing files!");

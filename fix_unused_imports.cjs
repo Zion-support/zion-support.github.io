@@ -1,10 +1,8 @@
 const fs = require("fs");
 const path = require("path");
-
 // Find all .tsx files in the app directory
-const appDir = "./app";
+const appDir = "./app
 const files = [];
-
 function findTsxFiles(dir) {
   const items = fs.readdirSync(dir);
   for (const item of items) {
@@ -17,13 +15,10 @@ function findTsxFiles(dir) {
     }
   }
 }
-
 findTsxFiles(appDir);
-
 function fixUnusedImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, "utf8");
-
     // Check if the file has the pattern with unused imports
     if (
       content.includes(
@@ -41,8 +36,6 @@ function fixUnusedImports(filePath) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
-
 // Fix all files
 files.forEach(fixUnusedImports);
-
 console.log("Unused imports fixing completed!");

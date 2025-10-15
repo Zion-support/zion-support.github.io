@@ -1,8 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
 console.log('Starting enhanced SEO optimization...');
-
 // Generate enhanced sitemap
 const generateEnhancedSitemap = () => {
   const baseUrl = 'https://ziontechgroup.com';
@@ -24,7 +22,6 @@ const generateEnhancedSitemap = () => {
     { url: '/cookies', priority: '0.5', changefreq: 'yearly' },
     { url: '/sitemap', priority: '0.3', changefreq: 'monthly' }
   ];
-
   // Add AI service pages
   const aiServices = [
     'ai-analytics', 'ai-automation', 'ai-chatbot-builder', 'ai-content-generation',
@@ -34,7 +31,6 @@ const generateEnhancedSitemap = () => {
     'ai-api-management', 'ai-cloud-infrastructure', 'ai-devops-automation',
     'ai-blockchain-solutions', 'ai-iot-solutions', 'ai-edge-computing'
   ];
-
   aiServices.forEach(service => {
     routes.push({
       url: `/${service}`,
@@ -42,13 +38,11 @@ const generateEnhancedSitemap = () => {
       changefreq: 'weekly'
     });
   });
-
   // Add Zion service pages
   const zionServices = [
     'zion-analytics-pro', 'zion-security-shield', 'zion-cloud-vault',
     'zion-ai-assistant', 'zion-automation-suite', 'zion-data-insights'
   ];
-
   zionServices.forEach(service => {
     routes.push({
       url: `/${service}`,
@@ -56,14 +50,12 @@ const generateEnhancedSitemap = () => {
       changefreq: 'weekly'
     });
   });
-
   // Add 5G service pages
   const g5Services = [
     '5g-network-infrastructure', '5g-iot-solutions', '5g-edge-computing',
     '5g-smart-city-solutions', '5g-mobile-applications', '5g-data-analytics',
     '5g-private-networks', '5g-implementation'
   ];
-
   g5Services.forEach(service => {
     routes.push({
       url: `/${service}`,
@@ -71,7 +63,6 @@ const generateEnhancedSitemap = () => {
       changefreq: 'weekly'
     });
   });
-
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
@@ -83,27 +74,21 @@ ${routes.map(route => `  <url>
     <priority>${route.priority}</priority>
   </url>`).join('\n')}
 </urlset>`;
-
   return sitemap;
 };
-
 // Generate robots.txt
 const generateRobotsTxt = () => {
   return `User-agent: *
 Allow: /
-
 # Sitemaps
 Sitemap: https://ziontechgroup.com/sitemap.xml
-
 # Crawl-delay
 Crawl-delay: 1
-
 # Disallow admin areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
-
 # Allow important pages
 Allow: /ai-services/
 Allow: /micro-saas/
@@ -112,7 +97,6 @@ Allow: /services/
 Allow: /about/
 Allow: /contact/`;
 };
-
 // Generate enhanced meta tags
 const generateMetaTags = () => {
   return {
@@ -126,7 +110,6 @@ const generateMetaTags = () => {
     twitterCreator: '@ziontechgroup'
   };
 };
-
 // Generate structured data
 const generateStructuredData = () => {
   return {
@@ -182,30 +165,24 @@ const generateStructuredData = () => {
     ]
   };
 };
-
 // Create dist directory if it doesn't exist
 const distDir = path.join(__dirname, '../dist');
 if (!fs.existsSync(distDir)) {
   fs.mkdirSync(distDir, { recursive: true });
 }
-
 // Generate files
 console.log('Generating enhanced sitemap...');
 const sitemap = generateEnhancedSitemap();
 fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
-
 console.log('Generating robots.txt...');
 const robotsTxt = generateRobotsTxt();
 fs.writeFileSync(path.join(distDir, 'robots.txt'), robotsTxt);
-
 console.log('Generating meta tags...');
 const metaTags = generateMetaTags();
 fs.writeFileSync(path.join(distDir, 'meta-tags.json'), JSON.stringify(metaTags, null, 2));
-
 console.log('Generating structured data...');
 const structuredData = generateStructuredData();
 fs.writeFileSync(path.join(distDir, 'structured-data.json'), JSON.stringify(structuredData, null, 2));
-
 // Generate SEO report
 const seoReport = {
   timestamp: new Date().toISOString(),
@@ -241,12 +218,10 @@ const seoReport = {
     metaTagsOptimized: true
   }
 };
-
 fs.writeFileSync(
   path.join(distDir, 'seo-report-enhanced.json'),
   JSON.stringify(seoReport, null, 2)
 );
-
 console.log('✓ Enhanced SEO optimization completed!');
 console.log('Generated files:');
 console.log('- sitemap.xml');

@@ -24,7 +24,6 @@ const conflictFiles = [;
   'fix-merge-conflicts.js',';
   'tsconfig.tsbuildinfo'';
 ];
-
 function resolveConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');';
@@ -37,8 +36,6 @@ function resolveConflicts(filePath) {
     global.console._error(`Error resolving ${filePath}:`, _error.message);
   }
 }
-
 // Resolve all conflicts;
 conflictFiles.forEach(resolveConflicts);
-
 global.console.log('All merge conflicts resolved!');';
