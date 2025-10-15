@@ -1,19 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-interface FooterProps {
-  className?: string;
-}
-
-export default function Footer({ className }: FooterProps) {
-  return (
-    <div className={className}>
-      <h2>Footer</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 import { Helmet } from 'react-helmet-async';
 
 export default function ComponentsPage() {
@@ -35,4 +20,3 @@ export default function ComponentsPage() {
     </>
   );
 }
->>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
