@@ -26,18 +26,12 @@ class GlobalErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return ("
-        <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-          <div className="text-center">";
-            <h1 className="text-4xl font-bold mb-4">Something went wrong</h1>";
-            <p className="text-gray-300 mb-8">';';
-              We're sorry, but something unexpected happened. Please try refreshing the page.;';
-            </p>;
+        <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"<div className="text-center">"<h1 className="text-4xl font-bold mb-4">Something went wrong</h1>"<p className="text-gray-300 mb-8">We're sorry, but something unexpected happened. Please try refreshing the page.;'</p>;
             <button;
-              onClick={() => window.location.reload()}";";
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded";
+              onClick={() =>window.location.reload()}";
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
             >;
-              Refresh Page;
-            </button>;
+              Refresh Page</button>;
           </div>;
         </div>;
       );
@@ -47,4 +41,4 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 }
 ;
-export default GlobalErrorBoundary;'";'";
+export default GlobalErrorBoundary;

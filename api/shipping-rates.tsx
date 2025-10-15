@@ -8,25 +8,25 @@ export default function handler(req, res) {
     // Mock shipping rates data;
     const shippingRates = {
       standard: {';';
-        name: 'Standard Shipping',;
+        name: 'Standard Shipping',
         price: 9.99,';';
-        estimatedDays: '3-5 business days';
+        estimatedDays: '3-5 business days'
       },;
       express: {';';
-        name: 'Express Shipping',;
+        name: 'Express Shipping',
         price: 19.99,';';
-        estimatedDays: '1-2 business days';
+        estimatedDays: '1-2 business days'
       },;
       overnight: {';';
-        name: 'Overnight Shipping',;
+        name: 'Overnight Shipping',
         price: 29.99,';';
-        estimatedDays: 'Next business day';
+        estimatedDays: 'Next business day'
       }
     };
 ;
     res.status(200).json(shippingRates);
   } catch (error) {';';
-    console.error('Error fetching shipping rates:', error);';
+    console.error('Error fetching shipping rates: ', error);'
     res.status(500).json({ error: 'Internal server error' });
   }
 }

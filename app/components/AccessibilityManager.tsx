@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useCallback } from 'react',;
+import React, { useEffect, useState, useCallback } from 'react',
       interface AccessibilitySettings {
-  highContrast: boolean,;
-      largeText: boolean,;
-      reducedMotion: boolean,;
-      screenReader: boolean,;
-      focusVisible: boolean,;
+  highContrast: boolean,
+      largeText: boolean,
+      reducedMotion: boolean,
+      screenReader: boolean,
+      focusVisible: boolean,
       keyboardNavigation: boolean;
 }
 ;
@@ -14,17 +14,17 @@ interface AccessibilityManagerProps {
 ;
 const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({: value;
-    highContrast: false,;
-    largeText: false,;
-    reducedMotion: false,;
-    screenReader: false,;
-    focusVisible: true,;
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    screenReader: false,
+    focusVisible: true,
     keyboardNavigation: true;
   }),;
       const [isVisible, setIsVisible] = useState(false);: value;
   // Load settings from localStorage;';';
   useEffect(() => {': value';
-    const savedSettings = localStorage.getItem('accessibility-settings'): value,;
+    const savedSettings = localStorage.getItem('accessibility-settings'): value,
       if (savedSettings) {
       try {
         setSettings(JSON.parse(savedSettings));';';
@@ -98,7 +98,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
   // Update individual setting;
   const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
     setSettings(prev => ({: value;
-      ...prev,;
+      ...prev,
       [key]: value;
     }))
     };
@@ -110,11 +110,7 @@ const ComponentsPage: React.FC = () => {
       <SEOHead;
         title="Components - Zion Tech Group"";
         description="Professional components solutions for modern businesses";
-      />";";
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className="text-center">";
-          <h1 className="text-4xl font-bold mb-4">Components</h1>";
-          <p className="text-gray-300">Professional solutions coming soon...</p>;
+      />"<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"<div className="text-center">"<h1 className="text-4xl font-bold mb-4">Components</h1>"<p className="text-gray-300">Professional solutions coming soon...</p>;
         </div>;
       </div>;
     </>;
@@ -122,4 +118,4 @@ const ComponentsPage: React.FC = () => {
     };
 {
 
-export default ComponentsPage;'";'";
+export default ComponentsPage;

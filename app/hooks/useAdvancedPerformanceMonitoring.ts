@@ -26,12 +26,12 @@ interface PerformanceConfig {
 ;
 export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {}) => {
   const {
-    enableMemoryMonitoring = true,;
-    enableResourceTiming = true,;
-    enableLongTaskMonitoring = true,;
-    enableLayoutShiftMonitoring = true,;
-    reportInterval = 30000,;
-    memoryThreshold = 0.8,;
+    enableMemoryMonitoring = true,
+    enableResourceTiming = true,
+    enableLongTaskMonitoring = true,
+    enableLayoutShiftMonitoring = true,
+    reportInterval = 30000,
+    memoryThreshold = 0.8,
     longTaskThreshold = 50;
   } = config;
 ;
@@ -43,23 +43,23 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     // Report to analytics';';
     if (typeof window !== 'undefined' && (window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {';
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', name, {
-        event_category: category,;
-        value: Math.round(value),;
+        event_category: category,
+        value: Math.round(value),
         non_interaction: true;
       });
     }
     // Report to custom analytics endpoint';';
     if (process.env.NODE_ENV === 'production') {';
       fetch('/api/analytics/performance', {';
-        method: 'POST',;
+        method: 'POST',
         headers: {';';
           'Content-Type': 'application/json';
         },;
         body: JSON.stringify({
-          metric: name,;
-          value,;
-          category,;
-          timestamp: Date.now(),;
+          metric: name,
+          value,
+          category,
+          timestamp: Date.now(),
           url: window.location.href;
         })
       }).catch(() => {
@@ -168,8 +168,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
           const limitMB = memory.jsHeapSizeLimit / 1048576;
 ;
           metricsRef.current.memory = {
-            used: usedMB,;
-            total: totalMB,;
+            used: usedMB,
+            total: totalMB,
             limit: limitMB;
           };
           // Alert if memory usage is high;
@@ -214,7 +214,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     // Report on page unload;
     const handleBeforeUnload = () => {
       reportMetrics();"
-    };';';
+    };
     window.addEventListener('beforeunload', handleBeforeUnload);
 ;
     return () => {
@@ -233,19 +233,19 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };
   }, [;
-    enableMemoryMonitoring,;
-    enableResourceTiming,;
-    enableLongTaskMonitoring,;
-    enableLayoutShiftMonitoring,;
-    reportInterval,;
-    memoryThreshold,;
-    longTaskThreshold,;
+    enableMemoryMonitoring,
+    enableResourceTiming,
+    enableLongTaskMonitoring,
+    enableLayoutShiftMonitoring,
+    reportInterval,
+    memoryThreshold,
+    longTaskThreshold,
     reportMetric;
   ]);
 ;
   return {
-    metrics: metricsRef.current,;
-    reportMetric,;
+    metrics: metricsRef.current,
+    reportMetric,
     reportMetrics;
   };
-};';';
+};

@@ -6,7 +6,7 @@ interface EnhancedAccessibilityEnhancerProps {
 }
 ;
 const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({ ';';
-  className = '',;
+  className = '',
   children;
 }) => {
   return (

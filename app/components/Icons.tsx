@@ -1,21 +1,20 @@
-import React from 'react';';
+import React from 'react';
 import SEOHead from './components/SEOHead';
 ;
-export const Icon = ({}: value,;
-      name,;
+export const Icon = ({}: value,
+      name,
       className = "";: value;
   ...props;
 }: {},;
-      name: string,;
+      name: string,
       className?: string;
   [key: string]: unknown;
-}) => {}: value,;
+}) => {}: value,
       return (
     <span className={`icon ${className}`} {...props}></span>: value;
-      {name};
-    </span>;
+      {name}</span>;
   );
     };
 {
 
-export default ComponentsPage;'";'";
+export default ComponentsPage;
