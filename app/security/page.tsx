@@ -11,7 +11,7 @@ const SecurityPage: React.FC = () => {
       details: [
         'TLS 1.3 for data in transit',
         'AES-256 for data at rest',
-        'Perfect Forward Secrecy']
+        'Perfect Forward Secrecy',
         'Encrypted backups']
     },
     {
@@ -21,7 +21,7 @@ const SecurityPage: React.FC = () => {
       details: [
         'Role-based access control (RBAC)',
         'Multi-factor authentication (MFA)',
-        'Single Sign-On (SSO) integration']
+        'Single Sign-On (SSO) integration',
         'Regular access reviews']
     },
     {
@@ -31,7 +31,7 @@ const SecurityPage: React.FC = () => {
       details: [
         'Real-time threat detection',
         'Automated incident response',
-        'Security event logging']
+        'Security event logging',
         'Anomaly detection']
     },
     {
@@ -41,7 +41,7 @@ const SecurityPage: React.FC = () => {
       details: [
         'SOC 2 Type II certified',
         'ISO 27001 compliant',
-        'GDPR compliant']
+        'GDPR compliant',
         'Regular security audits']
     }
   ];
@@ -93,7 +93,7 @@ const securityMeasures = [
         'Network segmentation and firewalls',
         'DDoS protection and mitigation',
         'Regular security updates and patches',
-        'Intrusion detection systems']
+        'Intrusion detection systems',
         'Vulnerability scanning and management']
     },
     {
@@ -103,7 +103,7 @@ const securityMeasures = [
         'Automated security testing in CI/CD',
         'Web Application Firewall (WAF)',
         'API security and rate limiting',
-        'Input validation and sanitization']
+        'Input validation and sanitization',
         'Regular penetration testing']
     },
     {
@@ -113,7 +113,7 @@ const securityMeasures = [
         'Encryption at rest and in transit',
         'Secure data backup and recovery',
         'Data loss prevention (DLP)',
-        'Secure data disposal']
+        'Secure data disposal',
         'Privacy by design principles']
     },
     {
@@ -123,7 +123,7 @@ const securityMeasures = [
         'Incident response procedures',
         'Regular security assessments',
         'Third-party security reviews',
-        'Security monitoring and alerting']
+        'Security monitoring and alerting',
         'Business continuity planning']
     }
   ];
