@@ -1,102 +1,128 @@
-"use client"
-import React, { createContext, useContext, useEffect } from "react"
-interface AnalyticsContextType {}
-  track: (event: string, properties?: Record<string, unknown>) => void
-  identify: (userId: string, traits?: Record<string, unknown>) => void
-  page: (name: string, properties?: Record<string, unknown>) => void
+import React, { useEffect, useState } from 'react';
+import { BarChart3, TrendingUp, Users, Eye } from 'lucide-react';
+
+interface EnhancedAnalyticsProps {
+  children: React.ReactNode;
 }
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>()
-  undefined,
-)
-export const useAnalytics = () => {}
-}const context = useContext(AnalyticsContext)
-  if (!context) {}
-    throw new Error("useAnalytics must be used within an AnalyticsProvider")
-  }
-  return context
-}
-interface AnalyticsProviderProps {}
-  children: React.ReactNode
-}
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({}
-  children}) => {}
-}useEffect(() => {}
-}// Initialize analytics
-    if (typeof window !== "undefined") {}
-      // Google Analytics
-      if (process.env.NODE_ENV === "production") {}
-        const script = document.createElement("script")
-        script.async = true
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`
-        document.head.appendChild(script)
-        (window as unknown as { dataLayer: unknown[] }).dataLayer =
-          (window as unknown as { dataLayer: unknown[] }).dataLayer || []
-        function gtag(...args: unknown[]) {}
-}(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
-        }
-        gtag("js", new Date())
-        gtag("config", process.env.REACT_APP_GA_ID)
-      }
+
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
+  const [isEnabled, setIsEnabled] = useState(false);
+  const [analytics, setAnalytics] = useState({
+    pageViews: 0,
+    uniqueVisitors: 0,
+    bounceRate: 0,
+    avgSessionDuration: 0
+  });
+
+  useEffect(() => {
+    // Check if analytics is enabled
+    const saved = localStorage.getItem('enhanced-analytics-enabled');
+    if (saved === 'true') {
+      setIsEnabled(true);
+      initializeAnalytics();
     }
-  }, [])
-  const track = (event: string, properties?: Record<string, unknown>) => {}
-}if (typeof window !== "undefined") {}
-      // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {}
-        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag()
-          "event",
-          event,
-          properties,
-        )
-      }
-      // Custom analytics
-      }
-  }
-  const identify = (userId: string, traits?: Record<string, unknown>) => {}
-}if (typeof window !== "undefined") {}
-      // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {}
-        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag()
-          "config",
-          process.env.REACT_APP_GA_ID,
-          {}
-            user_id: userId,
-            custom_map: traits},
-        )
-      }
-      // Custom analytics
-      }
-  }
-  const page = (name: string, properties?: Record<string, unknown>) => {}
-}if (typeof window !== "undefined") {}
-      // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {}
-        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag()
-          "event",
-          "page_view",
-          {}
-            page_title: name,
-            page_location: window.location.href,
-            ...properties},
-        )
-      }
-      // Custom analytics
-      }
-  }
-  const value: AnalyticsContextType = {}
-    track,
-    identify,
-    page}
-  return ()
-    <AnalyticsContext.Provider value={value}>
+  }, []);
+
+  const initializeAnalytics = () => {
+    // Initialize analytics tracking
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: document.title,
+        page_location: window.location.href
+      });
+    }
+
+    // Simulate analytics data (in real app, this would come from your analytics service)
+    setAnalytics({
+      pageViews: Math.floor(Math.random() * 1000) + 500,
+      uniqueVisitors: Math.floor(Math.random() * 500) + 200,
+      bounceRate: Math.random() * 50 + 20,
+      avgSessionDuration: Math.random() * 300 + 120
+    });
+  };
+
+  const toggleAnalytics = () => {
+    const newState = !isEnabled;
+    setIsEnabled(newState);
+    localStorage.setItem('enhanced-analytics-enabled', newState.toString());
+    
+    if (newState) {
+      initializeAnalytics();
+    }
+  };
+
+  return (
+    <>
       {children}
-    </AnalyticsContext.Provider>
-  )
-}
-// Extend Window interface for TypeScript
-declare global {}
-  interface Window {}
-    dataLayer: unknown[]
-    gtag: (...args: unknown[]) => void
-  }
-}
+      
+      {/* Analytics Toggle Button */}
+      <button
+        onClick={toggleAnalytics}
+        className="fixed top-4 left-4 z-50 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-colors"
+        aria-label="Toggle enhanced analytics"
+      >
+        <BarChart3 className="w-6 h-6" />
+      </button>
+
+      {/* Analytics Panel */}
+      {isEnabled && (
+        <div className="fixed top-20 left-4 z-50 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl max-w-sm">
+          <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
+            Enhanced Analytics
+          </h3>
+          
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <Eye className="w-4 h-4 text-gray-600" />
+                <span className="text-sm text-gray-700 dark:text-gray-300">Page Views</span>
+              </div>
+              <span className="text-sm font-semibold text-gray-900 dark:text-white">
+                {analytics.pageViews.toLocaleString()}
+              </span>
+            </div>
+            
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <Users className="w-4 h-4 text-gray-600" />
+                <span className="text-sm text-gray-700 dark:text-gray-300">Unique Visitors</span>
+              </div>
+              <span className="text-sm font-semibold text-gray-900 dark:text-white">
+                {analytics.uniqueVisitors.toLocaleString()}
+              </span>
+            </div>
+            
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <TrendingUp className="w-4 h-4 text-gray-600" />
+                <span className="text-sm text-gray-700 dark:text-gray-300">Bounce Rate</span>
+              </div>
+              <span className="text-sm font-semibold text-gray-900 dark:text-white">
+                {analytics.bounceRate.toFixed(1)}%
+              </span>
+            </div>
+            
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <BarChart3 className="w-4 h-4 text-gray-600" />
+                <span className="text-sm text-gray-700 dark:text-gray-300">Avg Session</span>
+              </div>
+              <span className="text-sm font-semibold text-gray-900 dark:text-white">
+                {Math.floor(analytics.avgSessionDuration / 60)}m {analytics.avgSessionDuration % 60}s
+              </span>
+            </div>
+          </div>
+          
+          <button
+            onClick={toggleAnalytics}
+            className="mt-4 w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+          >
+            Close
+          </button>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default EnhancedAnalytics;

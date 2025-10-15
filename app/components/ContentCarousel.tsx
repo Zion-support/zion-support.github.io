@@ -1,134 +1,120 @@
-import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-interface Slide {}
-  id: number
-  title: string
-  description: string
-  image: string
-  features: string[]
+import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+interface CarouselItem {
+  id: string;
+  title: string;
+  description: string;
+  image?: string;
+  link?: string;
 }
-interface ContentCarouselProps {}
-  slides?: Slide[]
-  autoPlay?: boolean
-  interval?: number
-  className?: string
+
+interface ContentCarouselProps {
+  items: CarouselItem[];
+  autoPlay?: boolean;
+  interval?: number;
+  className?: string;
 }
-const defaultSlides: Slide[] = []
-  {}
-    id: 1,
-    title: "AI-Powered Solutions",
-    description:
-      "Transform your business with cutting-edge artificial intelligence technologies.",
-    image: "/api/placeholder/600/400",
-    features: []
-      "Machine Learning",
-      "Natural Language Processing",
-      "Computer Vision"]},
-  {}
-    id: 2,
-    title: "Cloud Infrastructure",
-    description: "Scalable and secure cloud solutions for modern businesses.",
-    image: "/api/placeholder/600/400",
-    features: ["Scalable Architecture", "99.9% Uptime", "Global CDN"]},
-  {}
-    id: 3,
-    title: "Cybersecurity",
-    description:
-      "Protect your digital assets with enterprise-grade security solutions.",
-    image: "/api/placeholder/600/400",
-    features: ["Threat Detection", "Data Encryption", "Compliance"]}]
-export default function ContentCarousel({}
-  slides = defaultSlides,
+
+const ContentCarousel: React.FC<ContentCarouselProps> = ({
+  items,
   autoPlay = true,
   interval = 5000,
-  className = ""}: ContentCarouselProps) {}
-}const [currentSlide, setCurrentSlide] = useState(0)
-  useEffect(() => {}
-}if (!autoPlay) return
-    const timer = setInterval(() => {}
-}setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, interval)
-    return () => clearInterval(timer)
-  }, [autoPlay, interval, slides.length])
-  const goToSlide = (index: number) => {}
-}setCurrentSlide(index)
-  }
-  const goToPrevious = () => {}
-}setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  }
-  const goToNext = () => {}
-}setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }
-  return ()
-    <div className={`relative w-full ${className}`}>
-      {/* Carousel Container */}
-      <div className="relative overflow-hidden rounded-lg">
+  className = ''
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (!autoPlay) return;
+
+    const timer = setInterval(() => {
+      setCurrentIndex(prev => (prev + 1) % items.length);
+    }, interval);
+
+    return () => clearInterval(timer);
+  }, [autoPlay, interval, items.length]);
+
+  const goToPrevious = () => {
+    setCurrentIndex(prev => (prev - 1 + items.length) % items.length);
+  };
+
+  const goToNext = () => {
+    setCurrentIndex(prev => (prev + 1) % items.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  if (items.length === 0) return null;
+
+  return (
+    <div className={`relative ${className}`}>
+      <div className="overflow-hidden rounded-lg">
         <div
           className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          {slides.map((slide) => ()
-            <div key={slide.id} className="w-full flex-shrink-0">
-              <div className="bg-gray-800 p-8 rounded-lg border border-gray-700">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-4">
-                      {slide.title}
-                    </h3>
-                    <p className="text-gray-300 mb-6">{slide.description}</p>
-                    <ul className="space-y-2">
-                      {slide.features.map((feature, index) => ()
-                        <li
-                          key={index}
-                          className="flex items-center text-gray-300"
-                        >
-                          <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="flex justify-center">
-                    <img
-                      src={slide.image}
-                      alt={slide.title}
-                      className="w-full max-w-md h-64 object-cover rounded-lg"
-                    />
-                  </div>
-                </div>
+          {items.map((item) => (
+            <div key={item.id} className="w-full flex-shrink-0">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                {item.image && (
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                )}
+                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-gray-600 mb-4">{item.description}</p>
+                {item.link && (
+                  <a
+                    href={item.link}
+                    className="text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    Learn More →
+                  </a>
+                )}
               </div>
             </div>
           ))}
         </div>
       </div>
+
       {/* Navigation Arrows */}
       <button
         onClick={goToPrevious}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"
+        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg transition-all"
         aria-label="Previous slide"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
+      
       <button
         onClick={goToNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"
+        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg transition-all"
         aria-label="Next slide"
       >
         <ChevronRight className="w-6 h-6" />
       </button>
+
       {/* Dots Indicator */}
-      <div className="flex justify-center mt-6 space-x-2">
-        {slides.map((_, index) => ()
+      <div className="flex justify-center mt-4 space-x-2">
+        {items.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${}
-              index === currentSlide ? "bg-cyan-400" : "bg-gray-600"
+            className={`w-3 h-3 rounded-full transition-all ${
+              index === currentIndex
+                ? 'bg-blue-600'
+                : 'bg-gray-300 hover:bg-gray-400'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default ContentCarousel;

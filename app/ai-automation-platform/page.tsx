@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code-4a9f
+import SEOHead from '../components/SEOHead';
 
 const AiAutomationPlatformPage: React.FC = () => {
   return (

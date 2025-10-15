@@ -1,7 +1,7 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-const Ai-3dGenerationPage: React.FC = () => {
+const Ai3dGenerationPage: React.FC = () => {
   return (
     <>
       <SEOHead 
@@ -18,4 +18,4 @@ const Ai-3dGenerationPage: React.FC = () => {
   );
 };
 
-export default Ai-3dGenerationPage;
+export default Ai3dGenerationPage;

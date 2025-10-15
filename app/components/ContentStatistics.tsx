@@ -1,64 +1,46 @@
-import React from "react"
-import { TrendingUp, Users, Award, Zap } from "lucide-react"
-interface StatItem {}
-  value: string
-  label: string
-  icon: React.ReactNode
-  color: string
+import React from 'react';
+import { TrendingUp, Users, Award, Clock } from 'lucide-react';
+
+interface Statistic {
+  id: string;
+  label: string;
+  value: string;
+  icon: React.ReactNode;
+  trend?: string;
 }
-interface ContentStatisticsProps {}
-  stats?: StatItem[]
-  className?: string
+
+interface ContentStatisticsProps {
+  statistics: Statistic[];
+  className?: string;
 }
-const ContentStatistics: React.FC<ContentStatisticsProps> = ({}
-  stats = []
-    {}
-      value: "500+",
-      label: "Happy Clients",
-      icon: <Users className="w-8 h-8" />,
-      color: "text-blue-400"},
-    {}
-      value: "99.9%",
-      label: "Uptime",
-      icon: <Zap className="w-8 h-8" />,
-      color: "text-green-400"},
-    {}
-      value: "50+",
-      label: "Awards Won",
-      icon: <Award className="w-8 h-8" />,
-      color: "text-yellow-400"},
-    {}
-      value: "40%",
-      label: "Cost Savings",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "text-purple-400"}],
-  className = ""}) => {}
-}return ()
-    <div className={`py-16 ${className}`}>
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Trusted by Industry Leaders
-          </h2>
-          <p className="text-xl text-gray-300">
-            Our solutions deliver measurable results across all industries
-          </p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => ()
-            <div key={index} className="text-center">
-              <div className={`${stat.color} flex justify-center mb-4`}>
-                {stat.icon}
-              </div>
-              <div className="text-4xl font-bold text-white mb-2">
-                {stat.value}
-              </div>
-              <div className="text-gray-300 text-lg">{stat.label}</div>
+
+const ContentStatistics: React.FC<ContentStatisticsProps> = ({
+  statistics,
+  className = ''
+}) => {
+  return (
+    <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ${className}`}>
+      {statistics.map((stat) => (
+        <div key={stat.id} className="bg-white p-6 rounded-lg shadow-lg text-center">
+          <div className="text-blue-600 mb-4 flex justify-center">
+            {stat.icon}
+          </div>
+          <div className="text-3xl font-bold text-gray-900 mb-2">
+            {stat.value}
+          </div>
+          <div className="text-gray-600 mb-2">
+            {stat.label}
+          </div>
+          {stat.trend && (
+            <div className="text-green-600 text-sm flex items-center justify-center">
+              <TrendingUp className="w-4 h-4 mr-1" />
+              {stat.trend}
             </div>
-          ))}
+          )}
         </div>
-      </div>
+      ))}
     </div>
-  )
-}
-export default ContentStatistics
+  );
+};
+
+export default ContentStatistics;

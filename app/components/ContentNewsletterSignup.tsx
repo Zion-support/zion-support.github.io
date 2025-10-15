@@ -1,53 +1,66 @@
-import React, { useState } from "react"
-import { Mail, CheckCircle } from "lucide-react"
-interface ContentNewsletterSignupProps {}
-  className?: string
+import React, { useState } from 'react';
+import { Mail } from 'lucide-react';
+
+interface ContentNewsletterSignupProps {
+  className?: string;
+  onSubscribe?: (email: string) => void;
 }
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({}
-  className = ""}) => {}
-}const [email, setEmail] = useState("")
-  const [isSubscribed, setIsSubscribed] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-  const handleSubmit = async (e: React.FormEvent) => {}
-}e.preventDefault()
-    setIsLoading(true)
-    try {}
-} catch (error) {}
-  console.error(error)
-}// Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-      setIsSubscribed(true)
-      setEmail("")
-    } catch (error) {}
-      console.error('Failed to subscribe to newsletter:', error)
-    } finally {}
-      setIsLoading(false)
+
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
+  className = '',
+  onSubscribe
+}) => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      if (onSubscribe) {
+        onSubscribe(email);
+      }
+      setIsSubscribed(true);
+      setEmail('');
+    } catch (error) {
+      console.error('Error subscribing:', error);
+    } finally {
+      setIsSubmitting(false);
     }
-  }
-  if (isSubscribed) {}
-    return ()
-      <div
-        className={`bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg text-center ${className}`}
-      >
-        <CheckCircle className="w-8 h-8 mx-auto mb-2" />
-        <h3 className="text-lg font-semibold mb-2">
+  };
+
+  if (isSubscribed) {
+    return (
+      <div className={`bg-green-50 border border-green-200 rounded-lg p-6 text-center ${className}`}>
+        <div className="text-green-600 mb-2">
+          <Mail className="w-8 h-8 mx-auto" />
+        </div>
+        <h3 className="text-lg font-semibold text-green-800 mb-2">
           Thank you for subscribing!
         </h3>
-        <p>You'll receive our latest updates and exclusive content.</p>
-      </div>
-    )
-  }
-  return ()
-    <div
-      className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`}
-    >
-      <div className="text-center mb-6">
-        <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</h3>
-        <p className="text-gray-300">
-          Get the latest AI and tech insights delivered to your inbox.
+        <p className="text-green-700">
+          You'll receive our latest updates and news.
         </p>
       </div>
+    );
+  }
+
+  return (
+    <div className={`bg-gray-50 border border-gray-200 rounded-lg p-6 ${className}`}>
+      <div className="text-center mb-4">
+        <div className="text-gray-600 mb-2">
+          <Mail className="w-8 h-8 mx-auto" />
+        </div>
+        <h3 className="text-lg font-semibold text-gray-900 mb-2">
+          Stay Updated
+        </h3>
+        <p className="text-gray-600">
+          Subscribe to our newsletter for the latest updates and news.
+        </p>
+      </div>
+
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <input
@@ -56,21 +69,20 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
             required
-            className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
+        
         <button
           type="submit"
-          disabled={isLoading}
-          className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled={isSubmitting}
+          className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {isLoading ? "Subscribing..." : "Subscribe Now"}
+          {isSubmitting ? 'Subscribing...' : 'Subscribe'}
         </button>
       </form>
-      <p className="text-xs text-gray-400 text-center mt-4">
-        We respect your privacy. Unsubscribe at any time.
-      </p>
     </div>
-  )
-}
-export default ContentNewsletterSignup
+  );
+};
+
+export default ContentNewsletterSignup;

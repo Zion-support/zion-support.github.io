@@ -1,166 +1,82 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
-import { Link } from 'react-router-dom'
-interface Props {}
-  children: ReactNode
-  fallback?: ReactNode
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
 }
-interface State {}
-  hasError: boolean
-  error: Error | null
-  errorInfo: ErrorInfo | null
-  errorId: string
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
 }
-class EnhancedErrorBoundary extends Component<Props, State> {}
-  constructor(props: Props) {}
-    super(props)
-    this.state = {}
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
-    }
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error: Error): Partial<State> {}
-    return {}
-      hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
-    this.setState({}
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
       error,
       errorInfo
-    })
-    // Report error to monitoring service
-    this.reportError(error, errorInfo)
-    // Call custom error handler
-    this.props.onError?.(error, errorInfo)
-    // Log error to monitoring service
-    this.logErrorToService(error, errorInfo)
-  }
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {}
-}const errorData = {}
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      errorId: this.state.errorId,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-      userId: this.getUserId()
-    }
-      }
-    }
-    // Send to error monitoring service (Sentry, LogRocket, etc.)
-    console.error('Error caught by boundary:', errorData)
-    // You can integrate with services like Sentry here
-    // Sentry.captureException(error, { extra: errorData })
-  }
-  getUserId = () => {}
-}// Get user ID from your auth context or localStorage
-    return localStorage.getItem('userId') || 'anonymous'
-  }
-  handleRetry = () => {}
-}error: undefined,
-        errorInfo: undefined,
-        retryCount: prevState.retryCount + 1
-      }))
+    });
+    
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by enhanced boundary:', error, errorInfo);
     }
   }
-  handleReset = () => {}
-}this.setState({}
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
-    })
-  }
-  handleReload = () => {}
-}window.location.reload()
-  }
-  render() {}
-    if (this.state.hasError) {}
-      if (this.props.fallback) {}
-        return this.props.fallback
-      }
-      return ()
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center mb-4">
+              <div className="flex-shrink-0">
+                <AlertTriangle className="h-8 w-8 text-red-400" />
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-gray-900">
+                  Something went wrong
+                </h3>
+              </div>
             </div>
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            </p>
-            {process.env.NODE_ENV === 'development' && this.state.error && ()
-              <details className="mb-6 text-left">
-                <summary className="text-cyan-400 cursor-pointer mb-2">
-                  Error Details (Development)
-                </summary>
-                <div className="bg-gray-800/50 rounded p-4 text-sm text-gray-300 overflow-auto max-h-40">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  <div className="mb-2">
-                    <strong>Stack:</strong>
-                    <pre className="whitespace-pre-wrap text-xs mt-1">
-                      {this.state.error.stack}
-                    </pre>
-                  </div>
-                  {this.state.errorInfo && ()
-                    <div>
-                      <strong>Component Stack:</strong>
-                      <pre className="whitespace-pre-wrap text-xs mt-1">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
-                  )}
-                </div>
-              </details>
-            )}
-            <div className="space-y-3">
-              <button
-                onClick={this.handleRetry}
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                <RefreshCw className="w-5 h-5 mr-2" />
-                Try Again
-              </button>
-              <button
-                onClick={this.handleReload}
-                className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
-              >
-                <RefreshCw className="w-5 h-5 mr-2" />
-                Reload Page
-              </button>
-              <Link
-                to="/"
-                className="w-full border border-gray-400 text-gray-400 px-6 py-3 rounded-lg font-semibold hover:bg-gray-400 hover:text-white transition-all duration-300 flex items-center justify-center"
-              >
-                <Home className="w-5 h-5 mr-2" />
-                Go Home
-              </Link>
-            </div>
-            <div className="mt-6 pt-6 border-t border-white/20">
-              <p className="text-sm text-gray-400 mb-2">
-                Still having trouble? Contact our support team.
+            <div className="mt-2">
+              <p className="text-sm text-gray-500">
+                We're sorry, but something unexpected happened. Please try refreshing the page or contact support if the problem persists.
               </p>
-              <a
-                href="mailto:support@ziontechgroup.com"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm"
+            </div>
+            <div className="mt-4 flex space-x-3">
+              <button
+                onClick={() => window.location.reload()}
+                className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center"
               >
-                <Mail className="w-4 h-4 mr-1" />
-                support@ziontechgroup.com
-              </a>
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Refresh Page
+              </button>
+              <button
+                onClick={() => window.location.href = '/'}
+                className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 flex items-center"
+              >
+                <Home className="w-4 h-4 mr-2" />
+                Go Home
+              </button>
             </div>
           </div>
         </div>
-      )
+      );
     }
-    return this.props.children
+
+    return this.props.children;
   }
 }
-export default EnhancedErrorBoundary
+
+export default EnhancedErrorBoundary;

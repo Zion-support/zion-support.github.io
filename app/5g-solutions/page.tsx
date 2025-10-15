@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wifi, CheckCircle, ArrowRight, Network, Cpu, Smartphone, BarChart3 } from 'lucide-react';
+import { Wifi, CheckCircle, ArrowRight, Network, Cpu, Smartphone, BarChart3, Clock, Shield } from 'lucide-react';
 import UnifiedSEOHead from '../components/UnifiedSEOHead';
 
 const FiveGSolutionsPage: React.FC = () => {
@@ -69,68 +69,14 @@ const FiveGSolutionsPage: React.FC = () => {
     }
   ];
 
+  const technologies = [
+    "5G NR", "Massive MIMO", "Beamforming", "Network Slicing",
+    "Edge Computing", "IoT Connectivity", "Ultra-Reliable Low Latency",
+    "Enhanced Mobile Broadband", "Machine Type Communications"
+  ];
+
   return (
     <>
-<<<<<<< HEAD
-      <Helmet>
-        <title>5G Solutions - Zion Tech Group | Advanced 5G Network Services</title>
-        <meta
-          name="description"
-          content="Transform your business with our comprehensive 5G solutions. From network implementation to IoT connectivity, we deliver cutting-edge 5G technology."
-        />
-        <meta
-          name="keywords"
-          content="5G solutions, 5G network, 5G implementation, 5G IoT, smart city, 5G infrastructure, 5G consulting"
-        />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              5G Solutions
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your business with our comprehensive 5G solutions. From network implementation 
-              to IoT connectivity, we deliver cutting-edge 5G technology.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {solutions.map((solution, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                  {solution.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">{solution.name}</h3>
-                <p className="text-gray-300 mb-4">{solution.description}</p>
-                <p className="text-lg font-semibold text-green-400 mb-2">{solution.price}</p>
-                <p className="text-sm text-gray-400 mb-4">Market: {solution.marketPrice}</p>
-                <p className="text-sm text-cyan-300 mb-4">{solution.benefits}</p>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Features:</h4>
-                  <ul className="text-sm text-gray-400 space-y-1">
-                    {solution.features.map((feature, idx) => (
-                      <li key={idx}>• {feature}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-              Get Started with 5G Solutions
-            </button>
-          </div>
-        </div>
-=======
       <UnifiedSEOHead 
         title="5G Solutions - Zion Tech Group"
         description="Transform your business with cutting-edge 5G solutions including network implementation, IoT connectivity, smart city solutions, and edge computing."
@@ -217,7 +163,6 @@ const FiveGSolutionsPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-5a7b
       </div>
     </>
   );
