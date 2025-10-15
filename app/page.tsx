@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-'use client';";";";
-import React from 'react';;";";";
-import { Link }; from 'react-router-dom';";";";
-import SEOHead from './components/SEOHead';";";";
-=======
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from './components/SEOHead';
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
@@ -20,104 +13,99 @@ import {
   SparklesIcon,
   ChartBarIcon,
   GlobeAltIcon,
-<<<<<<< HEAD
-  CogIcon;
-}; from '@heroicons/react/24/outline';";";";
-=======
   CogIcon
 } from '@heroicons/react/24/outline';
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 
 const HomePage: React.FC = () => {
-  const: services = [
+  const services = [
     {
       icon: CpuChipIcon,
-      title: 'AI Solutions',";";";
-      description: 'Advanced artificial intelligence and machine learning solutions to transform your business.',";";";
-      href: '/ai-solutions',";";";
-      gradient: 'from-purple-500 to-pink-500',";";";
-      glow: 'shadow-purple-500/25'";";";
+      title: 'AI Solutions',
+      description: 'Advanced artificial intelligence and machine learning solutions to transform your business.',
+      href: '/ai-solutions',
+      gradient: 'from-purple-500 to-pink-500',
+      glow: 'shadow-purple-500/25'
     },
     {
       icon: ShieldCheckIcon,
-      title: 'Cybersecurity',";";";
-      description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',";";";
-      href: '/cybersecurity',";";";
-      gradient: 'from-green-500 to-emerald-500',";";";
-      glow: 'shadow-green-500/25'";";";
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
+      href: '/cybersecurity',
+      gradient: 'from-green-500 to-emerald-500',
+      glow: 'shadow-green-500/25'
     },
     {
       icon: CloudIcon,
-      title: 'Cloud Infrastructure',";";";
-      description: 'Scalable cloud solutions and infrastructure management for modern businesses.',";";";
-      href: '/cloud-solutions',";";";
-      gradient: 'from-blue-500 to-cyan-500',";";";
-      glow: 'shadow-blue-500/25'";";";
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions and infrastructure management for modern businesses.',
+      href: '/cloud-solutions',
+      gradient: 'from-blue-500 to-cyan-500',
+      glow: 'shadow-blue-500/25'
     },
     {
       icon: RocketLaunchIcon,
-      title: 'Digital Transformation',";";";
-      description: 'Complete digital transformation strategies to modernize your operations.',";";";
-      href: '/digital-transformation',";";";
-      gradient: 'from-orange-500 to-red-500',";";";
-      glow: 'shadow-orange-500/25'";";";
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation strategies to modernize your operations.',
+      href: '/digital-transformation',
+      gradient: 'from-orange-500 to-red-500',
+      glow: 'shadow-orange-500/25'
     },
     {
       icon: GlobeAltIcon,
-      title: 'Micro SaaS Solutions',";";";
-      description: 'Innovative micro software solutions designed to solve specific business challenges.',";";";
-      href: '/micro-saas-solutions',";";";
-      gradient: 'from-cyan-500 to-blue-500',";";";
-      glow: 'shadow-cyan-500/25'";";";
+      title: 'Micro SaaS Solutions',
+      description: 'Innovative micro software solutions designed to solve specific business challenges.',
+      href: '/micro-saas-solutions',
+      gradient: 'from-cyan-500 to-blue-500',
+      glow: 'shadow-cyan-500/25'
     },
     {
       icon: CogIcon,
-      title: 'IT Solutions',";";";
-      description: 'Comprehensive technology services including development, infrastructure, and support.',";";";
-      href: '/it-solutions',";";";
-      gradient: 'from-indigo-500 to-purple-500',";";";
-      glow: 'shadow-indigo-500/25'";";";
+      title: 'IT Solutions',
+      description: 'Comprehensive technology services including development, infrastructure, and support.',
+      href: '/it-solutions',
+      gradient: 'from-indigo-500 to-purple-500',
+      glow: 'shadow-indigo-500/25'
     },
     {
       icon: ChartBarIcon,
-      title: 'Data Analytics',";";";
-      description: 'Transform your data into actionable insights with advanced analytics and visualization.',";";";
-      href: '/data-analytics',";";";
-      gradient: 'from-yellow-500 to-orange-500',";";";
-      glow: 'shadow-yellow-500/25'";";";
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable insights with advanced analytics and visualization.',
+      href: '/data-analytics',
+      gradient: 'from-yellow-500 to-orange-500',
+      glow: 'shadow-yellow-500/25'
     },
     {
       icon: BoltIcon,
-      title: '5G Solutions',";";";
-      description: 'Next-generation 5G technology solutions for ultra-fast connectivity and IoT applications.',";";";
-      href: '/5g-solutions',";";";
-      gradient: 'from-pink-500 to-rose-500',";";";
-      glow: 'shadow-pink-500/25'";";";
+      title: '5G Solutions',
+      description: 'Next-generation 5G technology solutions for ultra-fast connectivity and IoT applications.',
+      href: '/5g-solutions',
+      gradient: 'from-pink-500 to-rose-500',
+      glow: 'shadow-pink-500/25'
     }
   ];
 
-  const: features = [
-    '24/7 Expert Support',";";";
-    'Cutting-edge Technology',";";";
-    'Scalable Solutions',";";";
-    'Industry Expertise',";";";
-    'Proven Results',";";";
-    'Custom Implementation',";";";
-    'AI-Powered Solutions',";";";
-    'Real-time Analytics',";";";
-    'Enterprise Security',";";";
-    'Cloud-Native Architecture',";";";
-    'Mobile-First Design',";";";
-    'API-First Approach'";";";
+  const features = [
+    '24/7 Expert Support',
+    'Cutting-edge Technology',
+    'Scalable Solutions',
+    'Industry Expertise',
+    'Proven Results',
+    'Custom Implementation',
+    'AI-Powered Solutions',
+    'Real-time Analytics',
+    'Enterprise Security',
+    'Cloud-Native Architecture',
+    'Mobile-First Design',
+    'API-First Approach'
   ];
 
-  const: stats = [
-    { number: '1000+', label: 'Projects Completed' },";";";
-    { number: '200+', label: 'Happy Clients' },";";";
-    { number: '99.9%', label: 'Uptime Guarantee' },";";";
-    { number: '24/7', label: 'Support Available' },";";";
-    { number: '50+', label: 'AI Models Deployed' },";";";
-    { number: '10M+', label: 'API Calls Processed' }";";";
+  const stats = [
+    { number: '1000+', label: 'Projects Completed' },
+    { number: '200+', label: 'Happy Clients' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' },
+    { number: '50+', label: 'AI Models Deployed' },
+    { number: '10M+', label: 'API Calls Processed' }
   ];
 
   return (
