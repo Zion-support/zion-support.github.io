@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, BookOpen, Brain, CheckCircle, Mail, Phone, Play, Star, Users } from 'lucide-react';
 
 const AIEducationSolutionsProPage = () => {
-  const [isVisible, setIsVisible] = useState(false);
 
   const features = [
     {
