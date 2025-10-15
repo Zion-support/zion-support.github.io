@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const HomePage: React.FC = () => {
   const structuredData = {
@@ -60,12 +61,12 @@ const HomePage: React.FC = () => {
               We provide cutting-edge AI and IT solutions to help your business thrive in the digital age.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              <Link to="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 Get Started
-              </a>
-              <a href="/about" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+              </Link>
+              <Link to="/about" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                 Learn More
-              </a>
+              </Link>
             </div>
             
             {/* Featured Services */}
@@ -75,21 +76,21 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-600 mb-4">
                   Advanced artificial intelligence solutions including machine learning, NLP, and computer vision.
                 </p>
-                <a href="/ai-services" className="text-blue-600 hover:text-blue-800">Explore AI Services →</a>
+                <Link to="/ai-services" className="text-blue-600 hover:text-blue-800">Explore AI Services →</Link>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Infrastructure</h3>
                 <p className="text-gray-600 mb-4">
                   Scalable cloud solutions that provide reliability, security, and performance for your business.
                 </p>
-                <a href="/cloud-infrastructure" className="text-blue-600 hover:text-blue-800">Explore Cloud Solutions →</a>
+                <Link to="/cloud-infrastructure" className="text-blue-600 hover:text-blue-800">Explore Cloud Solutions →</Link>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
                 <p className="text-gray-600 mb-4">
                   Complete digital transformation services to modernize your business processes and systems.
                 </p>
-                <a href="/digital-transformation" className="text-blue-600 hover:text-blue-800">Learn More →</a>
+                <Link to="/digital-transformation" className="text-blue-600 hover:text-blue-800">Learn More →</Link>
               </div>
             </div>
           </div>
