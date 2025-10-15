@@ -78,18 +78,18 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Micro SaaS Solutions</h4>
+            <h4 className="text-md font-semibold mb-4">Featured Micro SaaS</h4>
             <ul className="space-y-2">
               <li><Link to="/ai-project-manager-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Project Manager Pro</Link></li>
               <li><Link to="/smart-invoice-generator-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Smart Invoice Generator Pro</Link></li>
-              <li><Link to="/ai-customer-feedback-analyzer" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Customer Feedback Analyzer</Link></li>
-              <li><Link to="/smart-contract-manager-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Smart Contract Manager Pro</Link></li>
-              <li><Link to="/ai-hr-assistant-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI HR Assistant Pro</Link></li>
-              <li><Link to="/smart-inventory-optimizer-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Smart Inventory Optimizer Pro</Link></li>
-              <li><Link to="/ai-social-media-scheduler-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Social Media Scheduler Pro</Link></li>
-              <li><Link to="/smart-email-marketing-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Smart Email Marketing Pro</Link></li>
               <li><Link to="/ai-customer-support-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Customer Support Pro</Link></li>
               <li><Link to="/smart-analytics-dashboard-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Smart Analytics Dashboard Pro</Link></li>
+              <li><Link to="/ai-workflow-automator-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Workflow Automator Pro</Link></li>
+              <li><Link to="/smart-expense-tracker-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Smart Expense Tracker Pro</Link></li>
+              <li><Link to="/ai-task-scheduler-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Task Scheduler Pro</Link></li>
+              <li><Link to="/ai-hr-assistant-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI HR Assistant Pro</Link></li>
+              <li><Link to="/ai-security-scanner-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Security Scanner Pro</Link></li>
+              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">View All Solutions →</Link></li>
             </ul>
           </div>
           

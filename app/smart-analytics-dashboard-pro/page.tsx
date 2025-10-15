@@ -1,110 +1,109 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 import { 
-  DocumentTextIcon, 
+  ChartBarIcon, 
   CheckCircleIcon, 
-  CurrencyDollarIcon, 
+  EyeIcon, 
   ClockIcon,
   ShieldCheckIcon,
-  ChartBarIcon,
   CogIcon,
   ArrowRightIcon,
   StarIcon,
-  BanknotesIcon,
-  ReceiptPercentIcon,
-  CreditCardIcon
+  CurrencyDollarIcon,
+  UserGroupIcon,
+  GlobeAltIcon,
+  LightBulbIcon
 } from '@heroicons/react/24/outline';
 
-const SmartInvoiceGeneratorProPage: React.FC = () => {
+const SmartAnalyticsDashboardProPage: React.FC = () => {
   const features = [
     {
-      icon: DocumentTextIcon,
-      title: 'AI Invoice Generation',
-      description: 'Automatically generate professional invoices with AI-powered content and formatting',
-      benefits: ['90% time reduction', 'Professional appearance', 'Consistent branding']
-    },
-    {
-      icon: CurrencyDollarIcon,
-      title: 'Automated Billing',
-      description: 'Set up recurring billing cycles and automated payment reminders',
-      benefits: ['Zero missed payments', 'Reduced admin work', 'Improved cash flow']
-    },
-    {
       icon: ChartBarIcon,
-      title: 'Financial Analytics',
-      description: 'Comprehensive financial insights and revenue tracking',
-      benefits: ['Real-time insights', 'Revenue forecasting', 'Performance metrics']
+      title: 'Real-time Analytics',
+      description: 'Monitor your business performance with live data updates and instant insights',
+      benefits: ['Live data streaming', 'Instant updates', 'Real-time alerts']
     },
     {
-      icon: ShieldCheckIcon,
-      title: 'Payment Security',
-      description: 'Bank-level security with encrypted payment processing',
-      benefits: ['PCI compliance', 'Data encryption', 'Fraud protection']
+      icon: EyeIcon,
+      title: 'AI-Powered Insights',
+      description: 'Get intelligent recommendations and predictions based on your data patterns',
+      benefits: ['Predictive analytics', 'Smart recommendations', 'Pattern recognition']
     },
     {
       icon: ClockIcon,
-      title: 'Payment Tracking',
-      description: 'Real-time payment status tracking and automated follow-ups',
-      benefits: ['Instant notifications', 'Reduced late payments', 'Better cash flow']
+      title: 'Automated Reporting',
+      description: 'Generate comprehensive reports automatically with customizable schedules',
+      benefits: ['Scheduled reports', 'Custom templates', 'Email delivery']
+    },
+    {
+      icon: ShieldCheckIcon,
+      title: 'Data Security',
+      description: 'Enterprise-grade security with encryption and compliance standards',
+      benefits: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified']
     },
     {
       icon: CogIcon,
-      title: 'Custom Automation',
-      description: 'Create custom workflows and automated business processes',
-      benefits: ['Workflow optimization', 'Error elimination', 'Time savings']
+      title: 'Custom Dashboards',
+      description: 'Create personalized dashboards tailored to your specific business needs',
+      benefits: ['Drag-and-drop builder', 'Custom widgets', 'Role-based access']
+    },
+    {
+      icon: GlobeAltIcon,
+      title: 'Multi-source Integration',
+      description: 'Connect data from multiple sources for a unified view of your business',
+      benefits: ['API integrations', 'Database connections', 'File imports']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Solo',
-      price: 29,
-      originalPrice: 59,
+      name: 'Starter',
+      price: 79,
+      originalPrice: 159,
       period: 'month',
-      description: 'Perfect for freelancers and solo entrepreneurs',
+      description: 'Perfect for small businesses',
       features: [
-        'Up to 50 invoices/month',
-        'Basic AI generation',
-        'Payment tracking',
+        'Up to 5 data sources',
+        'Basic analytics',
         'Email support',
         'Standard templates',
-        'Basic reporting'
+        'Monthly reports',
+        'Basic integrations'
       ],
       popular: false
     },
     {
-      name: 'Business',
-      price: 59,
-      originalPrice: 119,
+      name: 'Professional',
+      price: 149,
+      originalPrice: 299,
       period: 'month',
-      description: 'Ideal for small to medium businesses',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 500 invoices/month',
-        'Advanced AI generation',
-        'Automated billing',
+        'Up to 25 data sources',
+        'Advanced analytics',
         'Priority support',
         'Custom templates',
-        'Advanced analytics',
+        'Real-time reporting',
+        'Advanced integrations',
         'API access',
-        'Multi-currency support'
+        'Custom dashboards'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: 129,
-      originalPrice: 259,
+      price: 299,
+      originalPrice: 599,
       period: 'month',
       description: 'For large organizations',
       features: [
-        'Unlimited invoices',
+        'Unlimited data sources',
         'Full AI suite',
-        'Custom automation',
         '24/7 dedicated support',
         'White-label solution',
         'Custom integrations',
         'Advanced API access',
-        'Custom reporting',
+        'Custom analytics',
         'SLA guarantee',
         'Dedicated account manager'
       ],
@@ -114,62 +113,62 @@ const SmartInvoiceGeneratorProPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Jennifer Martinez',
-      role: 'Freelance Designer',
-      company: 'Creative Solutions',
-      content: 'Smart Invoice Generator Pro has saved me hours every week. The AI generates perfect invoices automatically, and I never miss a payment.',
+      name: 'Alex Thompson',
+      role: 'Data Analyst',
+      company: 'DataCorp Solutions',
+      content: 'Smart Analytics Dashboard Pro has transformed how we analyze our business data. The AI insights are incredibly accurate and actionable.',
       rating: 5
     },
     {
-      name: 'David Thompson',
+      name: 'Sarah Williams',
+      role: 'Marketing Director',
+      company: 'Growth Marketing Co',
+      content: 'The real-time analytics help us make data-driven decisions instantly. Our campaign performance has improved by 60% since using this platform.',
+      rating: 5
+    },
+    {
+      name: 'David Chen',
       role: 'CEO',
       company: 'TechStart Inc',
-      content: 'The automated billing feature has improved our cash flow by 40%. Our clients love the professional invoices and easy payment process.',
-      rating: 5
-    },
-    {
-      name: 'Lisa Wang',
-      role: 'Finance Director',
-      company: 'Global Enterprises',
-      content: 'The financial analytics give us insights we never had before. We can now predict revenue and plan better for the future.',
+      content: 'The automated reporting saves us hours every week. We can now focus on strategy instead of manual data compilation.',
       rating: 5
     }
   ];
 
   const useCases = [
     {
-      title: 'Freelancers',
-      description: 'Streamline invoicing for independent professionals and consultants',
-      icon: '👨‍💼',
-      benefits: ['Time savings', 'Professional appearance', 'Payment tracking']
-    },
-    {
-      title: 'E-commerce',
-      description: 'Automate order invoicing and payment processing for online stores',
+      title: 'E-commerce Analytics',
+      description: 'Track sales, customer behavior, and inventory with comprehensive e-commerce insights',
       icon: '🛒',
-      benefits: ['Order automation', 'Payment integration', 'Inventory sync']
+      benefits: ['Sales tracking', 'Customer insights', 'Inventory management']
     },
     {
-      title: 'Service Providers',
-      description: 'Manage recurring billing for subscription and service-based businesses',
-      icon: '🔧',
-      benefits: ['Recurring billing', 'Client management', 'Revenue tracking']
+      title: 'Marketing Analytics',
+      description: 'Monitor campaign performance, ROI, and customer acquisition across all channels',
+      icon: '📈',
+      benefits: ['Campaign tracking', 'ROI analysis', 'Customer acquisition']
     },
     {
-      title: 'Agencies',
-      description: 'Handle complex billing for creative agencies and consulting firms',
-      icon: '🎨',
-      benefits: ['Project billing', 'Time tracking', 'Client reporting']
+      title: 'Financial Analytics',
+      description: 'Analyze revenue, expenses, and profitability with detailed financial reporting',
+      icon: '💰',
+      benefits: ['Revenue tracking', 'Expense analysis', 'Profitability insights']
+    },
+    {
+      title: 'Operations Analytics',
+      description: 'Monitor operational efficiency, productivity, and performance metrics',
+      icon: '⚙️',
+      benefits: ['Efficiency tracking', 'Productivity metrics', 'Performance monitoring']
     }
   ];
 
   const integrations = [
-    { name: 'Stripe', logo: '💳', description: 'Secure payment processing' },
-    { name: 'PayPal', logo: '💰', description: 'Global payment gateway' },
-    { name: 'QuickBooks', logo: '📊', description: 'Accounting integration' },
-    { name: 'Xero', logo: '📈', description: 'Cloud accounting' },
+    { name: 'Google Analytics', logo: '📊', description: 'Web analytics data' },
+    { name: 'Salesforce', logo: '☁️', description: 'CRM integration' },
+    { name: 'HubSpot', logo: '🎯', description: 'Marketing automation' },
+    { name: 'Stripe', logo: '💳', description: 'Payment processing' },
     { name: 'Shopify', logo: '🛍️', description: 'E-commerce platform' },
-    { name: 'WooCommerce', logo: '🛒', description: 'WordPress e-commerce' },
+    { name: 'MySQL', logo: '🗄️', description: 'Database connection' },
     { name: 'Slack', logo: '💬', description: 'Team notifications' },
     { name: 'Zapier', logo: '⚡', description: 'Workflow automation' }
   ];
@@ -177,63 +176,63 @@ const SmartInvoiceGeneratorProPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Smart Invoice Generator Pro - AI-Powered Invoicing | Zion Tech Group"
-        description="Revolutionary AI-powered invoice generation with automated billing, payment tracking, and financial analytics. Start your free trial today!"
-        keywords="invoice generator, AI invoicing, automated billing, payment tracking, financial analytics, invoice software, billing automation"
-        canonicalUrl="https://ziontechgroup.com/smart-invoice-generator-pro"
+        title="Smart Analytics Dashboard Pro - AI-Powered Business Intelligence | Zion Tech Group"
+        description="Revolutionary AI-powered analytics dashboard with real-time insights, automated reporting, and intelligent predictions. Transform your data into actionable insights!"
+        keywords="analytics dashboard, business intelligence, data visualization, real-time analytics, AI insights, automated reporting, business metrics"
+        canonicalUrl="https://ziontechgroup.com/smart-analytics-dashboard-pro"
       />
       
       <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-green-900/30 via-slate-900 to-blue-900/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/30 via-slate-900 to-blue-900/30"></div>
           <div className="absolute inset-0 opacity-20" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }}></div>
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <div className="inline-flex items-center bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-8">
-                <DocumentTextIcon className="w-5 h-5 text-green-400 mr-2" />
-                <span className="text-green-300 text-sm font-medium">AI-Powered Invoicing</span>
+              <div className="inline-flex items-center bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 mb-8">
+                <ChartBarIcon className="w-5 h-5 text-cyan-400 mr-2" />
+                <span className="text-cyan-300 text-sm font-medium">AI-Powered Analytics</span>
               </div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  Smart Invoice Generator Pro
+                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Smart Analytics Dashboard Pro
                 </span>
               </h1>
               
               <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform your invoicing process with AI-powered generation, automated billing, 
-                and comprehensive financial analytics that boost your cash flow.
+                Transform your data into actionable insights with AI-powered analytics, 
+                real-time monitoring, and intelligent predictions that drive business growth.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/25">
+                <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                   Start Free Trial
                 </button>
-                <button className="border-2 border-green-400 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300">
+                <button className="border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                   Watch Demo
                 </button>
               </div>
               
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">90%</div>
-                  <div className="text-gray-300 text-sm">Time Savings</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">Real-time</div>
+                  <div className="text-gray-300 text-sm">Data Updates</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">40%</div>
-                  <div className="text-gray-300 text-sm">Faster Payments</div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">AI-Powered</div>
+                  <div className="text-gray-300 text-sm">Insights</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
-                  <div className="text-gray-300 text-sm">Accuracy Rate</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">Automated</div>
+                  <div className="text-gray-300 text-sm">Reporting</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-                  <div className="text-gray-300 text-sm">Automation</div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">Multi-source</div>
+                  <div className="text-gray-300 text-sm">Integration</div>
                 </div>
               </div>
             </div>
@@ -245,21 +244,21 @@ const SmartInvoiceGeneratorProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                Powerful <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">AI Features</span>
+                Powerful <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">AI Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Harness the power of artificial intelligence to revolutionize your invoicing and billing process
+                Harness the power of artificial intelligence to unlock insights from your data
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="group bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div key={index} className="group bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-green-300 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors">
                     {feature.title}
                   </h3>
                   
@@ -286,10 +285,10 @@ const SmartInvoiceGeneratorProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                Simple <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Pricing</span>
+                Simple <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Pricing</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your business. All plans include our core AI features with no hidden fees.
+                Choose the perfect plan for your analytics needs. All plans include our core AI features with no hidden fees.
               </p>
             </div>
             
@@ -297,12 +296,12 @@ const SmartInvoiceGeneratorProPage: React.FC = () => {
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 hover:shadow-xl ${
                   plan.popular 
-                    ? 'border-green-500 shadow-green-500/20' 
-                    : 'border-slate-700 hover:border-green-500'
+                    ? 'border-cyan-500 shadow-cyan-500/20' 
+                    : 'border-slate-700 hover:border-cyan-500'
                 }`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -336,7 +335,7 @@ const SmartInvoiceGeneratorProPage: React.FC = () => {
                   
                   <button className={`w-full py-4 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white'
+                      ? 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white'
                       : 'bg-slate-700 hover:bg-slate-600 text-white'
                   }`}>
                     {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
@@ -352,18 +351,18 @@ const SmartInvoiceGeneratorProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                Seamless <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Integrations</span>
+                Seamless <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Integrations</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Connect with your favorite tools and platforms for a complete business solution
+                Connect with your favorite tools and platforms for unified data analytics
               </p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
               {integrations.map((integration, index) => (
-                <div key={index} className="group bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20 text-center">
+                <div key={index} className="group bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20 text-center">
                   <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{integration.logo}</div>
-                  <h3 className="text-sm font-semibold text-white mb-2 group-hover:text-green-300 transition-colors">
+                  <h3 className="text-sm font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                     {integration.name}
                   </h3>
                   <p className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
@@ -380,18 +379,18 @@ const SmartInvoiceGeneratorProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                Perfect for <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Every Business</span>
+                Perfect for <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Every Business</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI invoicing solution adapts to your business type and specific needs
+                Our analytics solution adapts to your industry and specific business needs
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => (
-                <div key={index} className="group bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20">
+                <div key={index} className="group bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{useCase.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-300 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                     {useCase.title}
                   </h3>
                   <p className="text-gray-400 mb-4 group-hover:text-gray-300 transition-colors">
@@ -416,16 +415,16 @@ const SmartInvoiceGeneratorProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                Trusted by <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Businesses Worldwide</span>
+                Trusted by <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Data Teams</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Smart Invoice Generator Pro
+                See what our customers say about Smart Analytics Dashboard Pro
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20">
+                <div key={index} className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <StarIcon key={i} className="w-5 h-5 text-yellow-400 fill-current" />
@@ -435,7 +434,7 @@ const SmartInvoiceGeneratorProPage: React.FC = () => {
                   <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
                   
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
                       {testimonial.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     <div>
@@ -450,16 +449,16 @@ const SmartInvoiceGeneratorProPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-green-900/40 via-slate-900 to-blue-900/40">
+        <section className="py-20 bg-gradient-to-r from-cyan-900/40 via-slate-900 to-blue-900/40">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
-              Ready to Transform Your Invoicing?
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              Ready to Transform Your Data Analytics?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using Smart Invoice Generator Pro to streamline their billing process.
+              Join thousands of businesses already using Smart Analytics Dashboard Pro to make data-driven decisions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/25">
+              <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Start Free Trial
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
@@ -477,4 +476,4 @@ const SmartInvoiceGeneratorProPage: React.FC = () => {
   );
 };
 
-export default SmartInvoiceGeneratorProPage;
+export default SmartAnalyticsDashboardProPage;
