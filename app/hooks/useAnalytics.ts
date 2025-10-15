@@ -136,11 +136,12 @@ export const useAnalytics = () => {
 
   useEffect(() => {
     // Track page views on route changes
-    analyticsService.trackPageView({
+    const pageView = {
       page_title: document.title,
       page_location: window.location.href,
       page_path: location.pathname,
-    });
+    };
+    analyticsService.trackPageView(pageView);
   }, [location]);
 
   const trackEvent = useCallback((event: AnalyticsEvent) => {

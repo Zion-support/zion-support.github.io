@@ -1,8 +1,27 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import SEOHead from '../components/SEOHead';
 import { useForm } from '../hooks/useForm';
 
 const ContactPage: React.FC = memo(() => {
+  const handleFormSubmit = useCallback(async (data: { name: string; email: string; message: string }) => {
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    // Here you would typically send the data to your backend
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Form submitted:', data);
+    }
+  }, []);
+
+  const validateForm = useCallback((data: { name: string; email: string; message: string }) => {
+    const errors: Record<string, string> = {};
+    if (!data.name.trim()) errors.name = 'Name is required';
+    if (!data.email.trim()) errors.email = 'Email is required';
+    else if (!/\S+@\S+\.\S+/.test(data.email)) errors.email = 'Email is invalid';
+    if (!data.message.trim()) errors.message = 'Message is required';
+    return errors;
+  }, []);
+
   const {
     data: formData,
     isSubmitting,
@@ -16,23 +35,8 @@ const ContactPage: React.FC = memo(() => {
       email: '',
       message: ''
     },
-    onSubmit: async (data) => {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Here you would typically send the data to your backend
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Form submitted:', data);
-      }
-    },
-    validate: (data) => {
-      const errors: Record<string, string> = {};
-      if (!data.name.trim()) errors.name = 'Name is required';
-      if (!data.email.trim()) errors.email = 'Email is required';
-      else if (!/\S+@\S+\.\S+/.test(data.email)) errors.email = 'Email is invalid';
-      if (!data.message.trim()) errors.message = 'Message is required';
-      return errors;
-    },
+    onSubmit: handleFormSubmit,
+    validate: validateForm,
   });
 
   return (

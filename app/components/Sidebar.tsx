@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 
-const Sidebar: React.FC = () => {
+const Sidebar: React.FC = memo(() => {
   return (
     <div className="hidden lg:block lg:w-64 lg:flex-shrink-0">
       <div className="h-full flex flex-col bg-gray-50 border-r border-gray-200">
@@ -113,6 +113,8 @@ const Sidebar: React.FC = () => {
       </div>
     </div>
   );
-};
+});
+
+Sidebar.displayName = 'Sidebar';
 
 export default Sidebar;

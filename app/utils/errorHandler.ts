@@ -52,6 +52,14 @@ export const logError = (error: AppError, context?: string) => {
   // Example: sendToErrorService(error, context);
 };
 
+export const createErrorHandler = (context: string) => {
+  return (error: unknown) => {
+    const appError = handleError(error);
+    logError(appError, context);
+    return appError;
+  };
+};
+
 export const createError = (message: string, code?: string, statusCode?: number, details?: any): CustomError => {
   return new CustomError(message, code, statusCode, details);
 };

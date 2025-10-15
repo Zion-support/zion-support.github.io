@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
@@ -13,7 +13,7 @@ interface SEOHeadProps {
   noIndex?: boolean;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({
+const SEOHead: React.FC<SEOHeadProps> = memo(({
   title,
   description,
   keywords,
@@ -68,6 +68,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       )}
     </Helmet>
   );
-};
+});
+
+SEOHead.displayName = 'SEOHead';
 
 export default SEOHead;

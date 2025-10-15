@@ -56,6 +56,10 @@ class GlobalErrorBoundary extends Component<Props, State> {
     }
   }
 
+  private handleRetry = () => {
+    this.setState({ hasError: false, error: undefined });
+  }
+
   render() {
     if (this.state.hasError) {
       return (
@@ -71,12 +75,20 @@ class GlobalErrorBoundary extends Component<Props, State> {
               <p className="mt-2 text-sm text-gray-500">
                 {this.state.error?.message || 'An unexpected error occurred'}
               </p>
-              <button
-                onClick={() => window.location.reload()}
-                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                Reload Page
-              </button>
+              <div className="flex gap-3 justify-center">
+                <button
+                  onClick={this.handleRetry}
+                  className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  Try Again
+                </button>
+                <button
+                  onClick={() => window.location.reload()}
+                  className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                >
+                  Reload Page
+                </button>
+              </div>
             </div>
           </div>
         </div>

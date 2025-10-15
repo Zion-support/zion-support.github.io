@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { memo, useMemo } from 'react';
 import SEOHead from '../components/SEOHead';
 import { servicesData } from '../data/servicesData';
 
-const ServicesPage: React.FC = () => {
-  const aiServices = servicesData.aiServices;
-  const itSolutions = servicesData.itSolutions;
-  const microSaas = servicesData.microSaas.slice(0, 6); // Show first 6 micro SaaS services
+const ServicesPage: React.FC = memo(() => {
+  const { aiServices, itSolutions, microSaas } = useMemo(() => ({
+    aiServices: servicesData.aiServices,
+    itSolutions: servicesData.itSolutions,
+    microSaas: servicesData.microSaas.slice(0, 6) // Show first 6 micro SaaS services
+  }), []);
 
   return (
     <>
@@ -237,6 +239,8 @@ const ServicesPage: React.FC = () => {
       </div>
     </>
   );
-};
+});
+
+ServicesPage.displayName = 'ServicesPage';
 
 export default ServicesPage;

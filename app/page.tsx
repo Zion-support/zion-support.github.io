@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from 'react';
+import React, { memo, useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from './components/SEOHead';
 

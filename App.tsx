@@ -1,4 +1,4 @@
-import { Suspense, useEffect, lazy } from 'react'
+import { Suspense, useEffect, lazy, memo } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization'
@@ -63,13 +63,15 @@ import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Loading component
-const LoadingFallback = () => (
+const LoadingFallback = memo(() => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <LoadingSpinner size="lg" text="Loading..." />
   </div>
-)
+))
 
-export default function App() {
+LoadingFallback.displayName = 'LoadingFallback'
+
+const App = memo(() => {
   const { preloadResource } = usePerformanceOptimization({
     enablePreloading: true,
     enableLazyLoading: true,
@@ -171,4 +173,8 @@ export default function App() {
       </HelmetProvider>
     </GlobalErrorBoundary>
   )
-}
+})
+
+App.displayName = 'App'
+
+export default App

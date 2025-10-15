@@ -117,6 +117,15 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     };
   }, [createIntersectionObserver, enablePreloading, preloadResource]);
 
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
   return {
     debounce,
     preloadResource,

@@ -42,7 +42,9 @@ class PerformanceMonitor {
    */
   init(): void {
     if (typeof window === 'undefined' || !window.performance) {
-      console.warn('Performance API not available');
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('Performance API not available');
+      }
       return;
     }
 
@@ -67,7 +69,9 @@ class PerformanceMonitor {
         onTTFB((metric) => this.recordMetric(metric));
         onINP((metric) => this.recordMetric(metric));
       }).catch((error) => {
-        console.warn('Failed to load web-vitals:', error);
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Failed to load web-vitals:', error);
+        }
       });
     }
   }
@@ -91,7 +95,9 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['resource'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Resource timing not supported:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('Resource timing not supported:', error);
+      }
     }
   }
 
@@ -114,7 +120,9 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['measure'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('User timing not supported:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('User timing not supported:', error);
+      }
     }
   }
 
@@ -137,7 +145,9 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['navigation'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Navigation timing not supported:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('Navigation timing not supported:', error);
+      }
     }
   }
 
