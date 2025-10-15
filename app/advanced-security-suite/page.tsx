@@ -1,3 +1,4 @@
+import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const AdvancedSecuritySuitePage: React.FC = () => {
@@ -5,12 +6,12 @@ const AdvancedSecuritySuitePage: React.FC = () => {
     <>
       <SEOHead 
         title="Advanced Security Suite - Zion Tech Group"
-        description="Comprehensive advanced security suite solutions. Enterprise-grade security tools and services to protect your digital assets and infrastructure."
+        description="Professional security solutions for modern businesses"
       />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Advanced Security Suite</h1>
-          <p className="text-gray-300">Coming soon...</p>
+          <p className="text-gray-300">Comprehensive security solutions coming soon...</p>
         </div>
       </div>
     </>
