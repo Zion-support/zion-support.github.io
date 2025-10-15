@@ -68,6 +68,30 @@ const AccessibilityPage = lazy(() => import('./app/accessibility/page'));
 const APIDocsPage = lazy(() => import('./app/api-docs/page'));
 const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
 
+// Additional AI Tools
+const AI3DModelGeneratorPage = lazy(() => import('./app/ai-3d-model-generator/page'));
+const AIAudioProcessorPage = lazy(() => import('./app/ai-audio-processor/page'));
+const AICodeAssistantPage = lazy(() => import('./app/ai-code-assistant/page'));
+const AIEducationTutorPage = lazy(() => import('./app/ai-education-tutor/page'));
+const AIInfrastructurePage = lazy(() => import('./app/ai-infrastructure/page'));
+const AILegalAssistantPage = lazy(() => import('./app/ai-legal-assistant/page'));
+const AIMedicalAssistantPage = lazy(() => import('./app/ai-medical-assistant/page'));
+const AIRealEstateAnalyzerPage = lazy(() => import('./app/ai-real-estate-analyzer/page'));
+const AISupplyChainOptimizerPage = lazy(() => import('./app/ai-supply-chain-optimizer/page'));
+const AITranslatorPage = lazy(() => import('./app/ai-translator/page'));
+const AIVideoGeneratorPage = lazy(() => import('./app/ai-video-generator/page'));
+
+// Advanced Technology Solutions
+const AugmentedRealitySolutionsPage = lazy(() => import('./app/augmented-reality-solutions/page'));
+const VirtualRealitySolutionsPage = lazy(() => import('./app/virtual-reality-solutions/page'));
+const ContainerOrchestrationPage = lazy(() => import('./app/container-orchestration/page'));
+const DataLakeSolutionsPage = lazy(() => import('./app/data-lake-solutions/page'));
+const EdgeComputingSolutionsPage = lazy(() => import('./app/edge-computing-solutions/page'));
+const LowCodePlatformPage = lazy(() => import('./app/low-code-platform/page'));
+const QuantumComputingSolutionsPage = lazy(() => import('./app/quantum-computing-solutions/page'));
+const RoboticProcessAutomationPage = lazy(() => import('./app/robotic-process-automation/page'));
+const ServerlessArchitecturePage = lazy(() => import('./app/serverless-architecture/page'));
+
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -205,6 +229,30 @@ function App() {
                     <Route path="/accessibility" element={<AccessibilityPage />} />
                     <Route path="/api-docs" element={<APIDocsPage />} />
                     <Route path="/partnerships" element={<PartnershipsPage />} />
+                    
+                    {/* Additional AI Tools */}
+                    <Route path="/ai-3d-model-generator" element={<AI3DModelGeneratorPage />} />
+                    <Route path="/ai-audio-processor" element={<AIAudioProcessorPage />} />
+                    <Route path="/ai-code-assistant" element={<AICodeAssistantPage />} />
+                    <Route path="/ai-education-tutor" element={<AIEducationTutorPage />} />
+                    <Route path="/ai-infrastructure" element={<AIInfrastructurePage />} />
+                    <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} />
+                    <Route path="/ai-medical-assistant" element={<AIMedicalAssistantPage />} />
+                    <Route path="/ai-real-estate-analyzer" element={<AIRealEstateAnalyzerPage />} />
+                    <Route path="/ai-supply-chain-optimizer" element={<AISupplyChainOptimizerPage />} />
+                    <Route path="/ai-translator" element={<AITranslatorPage />} />
+                    <Route path="/ai-video-generator" element={<AIVideoGeneratorPage />} />
+                    
+                    {/* Advanced Technology Solutions */}
+                    <Route path="/augmented-reality-solutions" element={<AugmentedRealitySolutionsPage />} />
+                    <Route path="/virtual-reality-solutions" element={<VirtualRealitySolutionsPage />} />
+                    <Route path="/container-orchestration" element={<ContainerOrchestrationPage />} />
+                    <Route path="/data-lake-solutions" element={<DataLakeSolutionsPage />} />
+                    <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
+                    <Route path="/low-code-platform" element={<LowCodePlatformPage />} />
+                    <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
+                    <Route path="/robotic-process-automation" element={<RoboticProcessAutomationPage />} />
+                    <Route path="/serverless-architecture" element={<ServerlessArchitecturePage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">

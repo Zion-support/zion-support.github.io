@@ -125,10 +125,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Blog', href: '/blog', icon: Code },
         { name: 'Case Studies', href: '/case-studies', icon: Star },
-        { name: 'Documentation', href: '/docs', icon: Code },
         { name: 'API Documentation', href: '/api-docs', icon: Code },
         { name: 'Help Center', href: '/help', icon: Settings },
-        { name: 'Tutorials', href: '/tutorials', icon: Code }
+        { name: 'Accessibility', href: '/accessibility', icon: Settings }
       ]
     },
     {
