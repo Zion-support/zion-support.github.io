@@ -111,6 +111,21 @@ const Navigation: React.FC = () => {
                     <Link to="/zion-ai-workflow-automator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Workflow Automator
                     </Link>
+                    <Link to="/zion-ai-code-assistant" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Code Assistant
+                    </Link>
+                    <Link to="/zion-ai-image-generator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Image Generator
+                    </Link>
+                    <Link to="/zion-ai-predictive-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Predictive Analytics
+                    </Link>
+                    <Link to="/zion-ai-fraud-detection" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Fraud Detection
+                    </Link>
+                    <Link to="/zion-ai-voice-assistant" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Voice Assistant
+                    </Link>
                   </div>
                 </div>
               )}
@@ -224,6 +239,21 @@ const Navigation: React.FC = () => {
               </Link>
               <Link to="/zion-ai-workflow-automator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Workflow Automator
+              </Link>
+              <Link to="/zion-ai-code-assistant" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Code Assistant
+              </Link>
+              <Link to="/zion-ai-image-generator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Image Generator
+              </Link>
+              <Link to="/zion-ai-predictive-analytics" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Predictive Analytics
+              </Link>
+              <Link to="/zion-ai-fraud-detection" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Fraud Detection
+              </Link>
+              <Link to="/zion-ai-voice-assistant" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Voice Assistant
               </Link>
             </div>
             <Link to="/pricing" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">

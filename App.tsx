@@ -53,6 +53,13 @@ const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow
 const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 
+// New AI Services
+const ZionAICodeAssistantPage = lazy(() => import('./app/zion-ai-code-assistant/page'));
+const ZionAIImageGeneratorPage = lazy(() => import('./app/zion-ai-image-generator/page'));
+const ZionAIPredictiveAnalyticsPage = lazy(() => import('./app/zion-ai-predictive-analytics/page'));
+const ZionAIFraudDetectionPage = lazy(() => import('./app/zion-ai-fraud-detection/page'));
+const ZionAIVoiceAssistantPage = lazy(() => import('./app/zion-ai-voice-assistant/page'));
+
 // New Micro SaaS Services
 const ZionAIChatbotBuilderPage = lazy(() => import('./app/zion-ai-chatbot-builder/page'));
 const ZionAIFormBuilderPage = lazy(() => import('./app/zion-ai-form-builder/page'));
@@ -163,6 +170,13 @@ export default function App() {
                   <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
                   <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
                   <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
+                  
+                  {/* New AI Services */}
+                  <Route path="/zion-ai-code-assistant" element={<ZionAICodeAssistantPage />} />
+                  <Route path="/zion-ai-image-generator" element={<ZionAIImageGeneratorPage />} />
+                  <Route path="/zion-ai-predictive-analytics" element={<ZionAIPredictiveAnalyticsPage />} />
+                  <Route path="/zion-ai-fraud-detection" element={<ZionAIFraudDetectionPage />} />
+                  <Route path="/zion-ai-voice-assistant" element={<ZionAIVoiceAssistantPage />} />
                   
                   {/* New Micro SaaS Services */}
                   <Route path="/zion-ai-chatbot-builder" element={<ZionAIChatbotBuilderPage />} />

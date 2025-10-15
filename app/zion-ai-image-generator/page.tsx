@@ -1,222 +1,388 @@
-import React, { memo } from 'react';
+import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-const ZionAIImageGeneratorPage: React.FC = memo(() => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Zion AI Image Generator Pro",
-    "description": "Advanced AI-powered image generation and editing platform for creating stunning visuals, artwork, and marketing materials",
-    "url": "https://ziontechgroup.com/zion-ai-image-generator",
-    "applicationCategory": "DesignApplication",
-    "operatingSystem": "Web-based",
-    "offers": {
-      "@type": "Offer",
-      "price": "39",
-      "priceCurrency": "USD",
-      "priceValidUntil": "2025-12-31"
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com"
-    }
-  };
-
+const ZionAIImageGeneratorPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Zion AI Image Generator Pro - Create Stunning Images with AI"
-        description="Generate professional images, artwork, and marketing materials with advanced AI technology. Text-to-image, style transfer, and custom training capabilities."
-        keywords="AI image generator, text to image, AI art, image creation, marketing visuals, AI design"
+        title="Zion AI Image Generator - Create Stunning Visuals with AI"
+        description="Generate high-quality images, artwork, and graphics using advanced AI. Perfect for marketing, design, social media, and creative projects. Multiple styles and formats supported."
+        keywords="AI image generator, AI art, image creation, graphic design, marketing visuals, social media images, AI artwork, creative AI, visual content"
         canonicalUrl="https://ziontechgroup.com/zion-ai-image-generator"
-        structuredData={structuredData}
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-          {/* Hero Section */}
-          <div className="text-center mb-20">
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Zion AI Image Generator Pro
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Create stunning images, artwork, and marketing materials with advanced AI technology. 
-              <span className="text-cyan-400 font-semibold"> From text to masterpiece in seconds.</span>
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Zion AI Image Generator</h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Create stunning, professional-quality images and artwork in seconds using advanced AI technology. Perfect for marketing, design, and creative projects.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="#demo" 
+                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Try Free Generator
+                </a>
+                <a 
+                  href="/contact?service=zion-ai-image-generator" 
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  Get Started
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Features Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Powerful AI Image Generation</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Transform your creative ideas into stunning visuals with our advanced AI image generation technology
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:scale-105 transform">
-                Start Creating
-              </button>
-              <button className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 hover:scale-105 transform">
-                View Gallery
-              </button>
-            </div>
           </div>
 
-          {/* Features Section */}
-          <div className="mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-              Powerful AI Features
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 hover:scale-105 transform group">
-                <div className="text-4xl mb-4 group-hover:animate-bounce">✨</div>
-                <h3 className="text-2xl font-bold text-cyan-400 mb-4">Text-to-Image</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Generate stunning images from simple text descriptions using advanced AI models.
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:scale-105 transform group">
-                <div className="text-4xl mb-4 group-hover:animate-bounce">🎨</div>
-                <h3 className="text-2xl font-bold text-purple-400 mb-4">Style Transfer</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Apply artistic styles to your images or create unique artwork in any style.
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-pink-500/20 hover:border-pink-500/40 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/20 hover:scale-105 transform group">
-                <div className="text-4xl mb-4 group-hover:animate-bounce">🖼️</div>
-                <h3 className="text-2xl font-bold text-pink-400 mb-4">Image Enhancement</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Upscale, enhance, and improve existing images with AI-powered algorithms.
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/20 hover:scale-105 transform group">
-                <div className="text-4xl mb-4 group-hover:animate-bounce">🎯</div>
-                <h3 className="text-2xl font-bold text-orange-400 mb-4">Custom Training</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Train AI models on your specific style or brand for personalized results.
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/20 hover:scale-105 transform group">
-                <div className="text-4xl mb-4 group-hover:animate-bounce">📱</div>
-                <h3 className="text-2xl font-bold text-green-400 mb-4">Social Media Formats</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Generate images optimized for Instagram, Facebook, Twitter, and other platforms.
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:scale-105 transform group">
-                <div className="text-4xl mb-4 group-hover:animate-bounce">🔧</div>
-                <h3 className="text-2xl font-bold text-blue-400 mb-4">API Integration</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Integrate image generation into your applications with our powerful API.
-                </p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">🎨</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Multiple Art Styles</h3>
+              <p className="text-gray-600 mb-4">
+                Generate images in various artistic styles including photorealistic, cartoon, watercolor, oil painting, digital art, and more.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Photorealistic images</li>
+                <li>• Artistic styles (oil, watercolor)</li>
+                <li>• Digital art and illustrations</li>
+                <li>• Cartoon and anime styles</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">📐</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Custom Dimensions</h3>
+              <p className="text-gray-600 mb-4">
+                Create images in any size you need - from social media posts to large format prints. Support for all standard aspect ratios.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Social media formats (1:1, 16:9)</li>
+                <li>• Print-ready resolutions</li>
+                <li>• Custom dimensions</li>
+                <li>• High-resolution output</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Smart Prompting</h3>
+              <p className="text-gray-600 mb-4">
+                Advanced natural language processing understands complex descriptions and generates exactly what you envision.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Natural language descriptions</li>
+                <li>• Style and mood specifications</li>
+                <li>• Color palette control</li>
+                <li>• Composition guidance</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">🔄</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Image Variations</h3>
+              <p className="text-gray-600 mb-4">
+                Generate multiple variations of the same concept. Perfect for A/B testing, exploring different creative directions, or finding the perfect image.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Multiple variations per prompt</li>
+                <li>• Style consistency options</li>
+                <li>• Batch generation</li>
+                <li>• Iterative refinement</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">🎭</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Character & Portrait</h3>
+              <p className="text-gray-600 mb-4">
+                Create realistic portraits, character designs, and human figures with consistent facial features and expressions.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Realistic human portraits</li>
+                <li>• Character design</li>
+                <li>• Facial expression control</li>
+                <li>• Age and gender specification</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">🏢</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Business Graphics</h3>
+              <p className="text-gray-600 mb-4">
+                Generate professional business graphics, infographics, presentations, and marketing materials with AI precision.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Infographics and charts</li>
+                <li>• Presentation graphics</li>
+                <li>• Marketing materials</li>
+                <li>• Logo concepts</li>
+              </ul>
             </div>
           </div>
+        </div>
 
-          {/* Use Cases Section */}
-          <div className="mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
-              Perfect For
-            </h2>
+        {/* Use Cases Section */}
+        <div className="bg-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For Every Creative Need</h2>
+              <p className="text-lg text-gray-600">From marketing to art, our AI image generator serves every creative purpose</p>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm p-6 rounded-xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 hover:scale-105 transform group">
-                <div className="text-3xl mb-3 group-hover:animate-pulse">📈</div>
-                <h3 className="text-lg font-bold text-cyan-400 mb-2">Marketing Materials</h3>
-                <p className="text-gray-300 text-sm">Create compelling visuals for campaigns and advertisements</p>
+              <div className="text-center p-6">
+                <div className="text-4xl mb-4">📱</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Social Media</h3>
+                <p className="text-gray-600 text-sm">Create engaging posts, stories, and ads for all social platforms</p>
               </div>
-              <div className="bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm p-6 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20 hover:scale-105 transform group">
-                <div className="text-3xl mb-3 group-hover:animate-pulse">🎨</div>
-                <h3 className="text-lg font-bold text-purple-400 mb-2">Art & Design</h3>
-                <p className="text-gray-300 text-sm">Generate unique artwork and creative designs</p>
+              <div className="text-center p-6">
+                <div className="text-4xl mb-4">🛍️</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">E-commerce</h3>
+                <p className="text-gray-600 text-sm">Generate product images, lifestyle shots, and marketing visuals</p>
               </div>
-              <div className="bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm p-6 rounded-xl border border-pink-500/20 hover:border-pink-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/20 hover:scale-105 transform group">
-                <div className="text-3xl mb-3 group-hover:animate-pulse">🛍️</div>
-                <h3 className="text-lg font-bold text-pink-400 mb-2">E-commerce</h3>
-                <p className="text-gray-300 text-sm">Create product mockups and lifestyle images</p>
+              <div className="text-center p-6">
+                <div className="text-4xl mb-4">📚</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Content Creation</h3>
+                <p className="text-gray-600 text-sm">Blog headers, article images, and educational graphics</p>
               </div>
-              <div className="bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm p-6 rounded-xl border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/20 hover:scale-105 transform group">
-                <div className="text-3xl mb-3 group-hover:animate-pulse">📱</div>
-                <h3 className="text-lg font-bold text-orange-400 mb-2">Social Media</h3>
-                <p className="text-gray-300 text-sm">Generate engaging content for all social platforms</p>
+              <div className="text-center p-6">
+                <div className="text-4xl mb-4">🎨</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Art & Design</h3>
+                <p className="text-gray-600 text-sm">Personal artwork, digital illustrations, and creative projects</p>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Pricing Section */}
-          <div className="mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Simple Pricing
-            </h2>
+        {/* Pricing Section */}
+        <div className="bg-gray-50 py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Simple, Affordable Pricing</h2>
+              <p className="text-lg text-gray-600">Choose the plan that fits your creative needs</p>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-600/20 hover:border-cyan-500/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 hover:scale-105 transform">
-                <h3 className="text-2xl font-bold text-cyan-400 mb-4">Basic</h3>
-                <div className="text-4xl font-bold text-white mb-6">$39<span className="text-lg text-gray-400">/month</span></div>
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Creator</h3>
+                <div className="text-4xl font-bold text-purple-600 mb-2">$19</div>
+                <div className="text-gray-600 mb-6">per month</div>
                 <ul className="space-y-3 mb-8">
-                  <li className="text-gray-300 flex items-center"><span className="text-green-400 mr-2">✓</span> 1,000 images/month</li>
-                  <li className="text-gray-300 flex items-center"><span className="text-green-400 mr-2">✓</span> HD resolution (1024x1024)</li>
-                  <li className="text-gray-300 flex items-center"><span className="text-green-400 mr-2">✓</span> Basic styles</li>
-                  <li className="text-gray-300 flex items-center"><span className="text-green-400 mr-2">✓</span> Email support</li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>100 images per month</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Standard resolution (1024x1024)</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>5 art styles</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Email support</span>
+                  </li>
                 </ul>
-                <button className="w-full bg-cyan-500 hover:bg-cyan-400 text-white py-3 rounded-lg font-semibold transition-colors duration-300">
-                  Get Started
-                </button>
+                <a 
+                  href="/contact?service=zion-ai-image-generator&plan=creator" 
+                  className="w-full bg-purple-600 text-white text-center py-3 px-4 rounded-lg hover:bg-purple-700 transition-colors block"
+                >
+                  Start Free Trial
+                </a>
               </div>
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-purple-500/40 hover:border-purple-500/60 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/30 hover:scale-110 transform relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                  Most Popular
+
+              <div className="bg-purple-600 text-white p-8 rounded-xl relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
                 </div>
-                <h3 className="text-2xl font-bold text-purple-400 mb-4">Pro</h3>
-                <div className="text-4xl font-bold text-white mb-6">$99<span className="text-lg text-gray-400">/month</span></div>
+                <h3 className="text-2xl font-bold mb-4">Professional</h3>
+                <div className="text-4xl font-bold mb-2">$49</div>
+                <div className="text-purple-100 mb-6">per month</div>
                 <ul className="space-y-3 mb-8">
-                  <li className="text-gray-300 flex items-center"><span className="text-green-400 mr-2">✓</span> 5,000 images/month</li>
-                  <li className="text-gray-300 flex items-center"><span className="text-green-400 mr-2">✓</span> 4K resolution (4096x4096)</li>
-                  <li className="text-gray-300 flex items-center"><span className="text-green-400 mr-2">✓</span> All styles & effects</li>
-                  <li className="text-gray-300 flex items-center"><span className="text-green-400 mr-2">✓</span> Custom training</li>
-                  <li className="text-gray-300 flex items-center"><span className="text-green-400 mr-2">✓</span> Priority support</li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>
+                    <span>500 images per month</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>
+                    <span>High resolution (2048x2048)</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>
+                    <span>All art styles</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>
+                    <span>Commercial license</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>
+                    <span>Priority support</span>
+                  </li>
                 </ul>
-                <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white py-3 rounded-lg font-semibold transition-all duration-300">
-                  Get Started
-                </button>
+                <a 
+                  href="/contact?service=zion-ai-image-generator&plan=professional" 
+                  className="w-full bg-white text-purple-600 text-center py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors block"
+                >
+                  Start Free Trial
+                </a>
               </div>
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-pink-500/20 hover:border-pink-500/40 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/20 hover:scale-105 transform">
-                <h3 className="text-2xl font-bold text-pink-400 mb-4">Enterprise</h3>
-                <div className="text-4xl font-bold text-white mb-6">$299<span className="text-lg text-gray-400">/month</span></div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
+                <div className="text-4xl font-bold text-purple-600 mb-2">$149</div>
+                <div className="text-gray-600 mb-6">per month</div>
                 <ul className="space-y-3 mb-8">
-                  <li className="text-gray-300 flex items-center"><span className="text-green-400 mr-2">✓</span> Unlimited images</li>
-                  <li className="text-gray-300 flex items-center"><span className="text-green-400 mr-2">✓</span> 8K resolution (8192x8192)</li>
-                  <li className="text-gray-300 flex items-center"><span className="text-green-400 mr-2">✓</span> API access</li>
-                  <li className="text-gray-300 flex items-center"><span className="text-green-400 mr-2">✓</span> White-label options</li>
-                  <li className="text-gray-300 flex items-center"><span className="text-green-400 mr-2">✓</span> 24/7 dedicated support</li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Unlimited images</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Ultra high resolution (4K)</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>Custom model training</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>API access</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-3">✓</span>
+                    <span>24/7 dedicated support</span>
+                  </li>
                 </ul>
-                <button className="w-full bg-pink-500 hover:bg-pink-400 text-white py-3 rounded-lg font-semibold transition-colors duration-300">
+                <a 
+                  href="/contact?service=zion-ai-image-generator&plan=enterprise" 
+                  className="w-full bg-purple-600 text-white text-center py-3 px-4 rounded-lg hover:bg-purple-700 transition-colors block"
+                >
                   Contact Sales
-                </button>
+                </a>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Contact Section */}
-          <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Ready to Create?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Start generating stunning images with AI today. Contact our team to learn more about our image generation capabilities.
+        {/* Demo Section */}
+        <div id="demo" className="bg-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Try Our AI Image Generator</h2>
+              <p className="text-lg text-gray-600">Experience the power of AI image generation with our interactive demo</p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Describe Your Image</h3>
+                  <p className="text-gray-600 mb-6">
+                    Enter a detailed description of the image you want to create. Be specific about style, colors, composition, and mood.
+                  </p>
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Image Description:</label>
+                      <textarea 
+                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        rows={4}
+                        placeholder="e.g., A futuristic cityscape at sunset with flying cars, neon lights, and a cyberpunk aesthetic, highly detailed, 4K resolution"
+                      ></textarea>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">Style:</label>
+                        <select className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500">
+                          <option>Photorealistic</option>
+                          <option>Digital Art</option>
+                          <option>Oil Painting</option>
+                          <option>Watercolor</option>
+                          <option>Anime</option>
+                          <option>Cartoon</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">Aspect Ratio:</label>
+                        <select className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500">
+                          <option>Square (1:1)</option>
+                          <option>Portrait (3:4)</option>
+                          <option>Landscape (16:9)</option>
+                          <option>Wide (21:9)</option>
+                        </select>
+                      </div>
+                    </div>
+                    <button className="w-full bg-purple-600 text-white py-3 px-4 rounded-lg hover:bg-purple-700 transition-colors">
+                      Generate Image
+                    </button>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Generated Image</h3>
+                  <div className="bg-gray-200 rounded-lg h-80 flex items-center justify-center border-2 border-dashed border-gray-300">
+                    <div className="text-center">
+                      <div className="text-4xl mb-2">🎨</div>
+                      <p className="text-gray-500">Your AI-generated image will appear here</p>
+                    </div>
+                  </div>
+                  <div className="mt-4 flex gap-2">
+                    <button className="flex-1 bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors">
+                      Download
+                    </button>
+                    <button className="flex-1 border border-gray-300 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors">
+                      Generate Variation
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-16">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold mb-4">Ready to Create Amazing Images?</h2>
+            <p className="text-xl mb-8">
+              Join thousands of creators, marketers, and designers who are already using AI to bring their visions to life.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:scale-105 transform">
-                Contact Us
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/contact?service=zion-ai-image-generator" 
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Start Creating Free
               </a>
-              <a href="tel:+13024640950" className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 px-10 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 hover:scale-105 transform">
+              <a 
+                href="tel:+13024640950" 
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              >
                 Call +1 302 464 0950
               </a>
             </div>
-            <p className="text-gray-400 mt-6">
-              364 E Main St STE 1008, Middletown DE 19709
-            </p>
+            <div className="mt-8 text-sm">
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+            </div>
           </div>
         </div>
       </div>
     </>
   );
-});
-
-ZionAIImageGeneratorPage.displayName = 'ZionAIImageGeneratorPage';
+};
 
 export default ZionAIImageGeneratorPage;

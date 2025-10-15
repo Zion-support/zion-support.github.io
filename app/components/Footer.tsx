@@ -40,15 +40,17 @@ const Footer: React.FC = memo(() => {
           <div>
             <h4 className="text-md font-semibold mb-4">AI Tools</h4>
             <ul className="space-y-2">
+              <li><Link to="/zion-ai-code-assistant" className="text-gray-300 hover:text-white">AI Code Assistant</Link></li>
+              <li><Link to="/zion-ai-image-generator" className="text-gray-300 hover:text-white">AI Image Generator</Link></li>
+              <li><Link to="/zion-ai-predictive-analytics" className="text-gray-300 hover:text-white">Predictive Analytics</Link></li>
+              <li><Link to="/zion-ai-fraud-detection" className="text-gray-300 hover:text-white">Fraud Detection</Link></li>
+              <li><Link to="/zion-ai-voice-assistant" className="text-gray-300 hover:text-white">Voice Assistant</Link></li>
               <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Content Moderator</Link></li>
               <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">Customer Support Pro</Link></li>
               <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">Workflow Automator Pro</Link></li>
               <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-white">Email Marketing Pro</Link></li>
               <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-white">Customer Churn Predictor</Link></li>
               <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">Sales Predictor</Link></li>
-              <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
-              <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
-              <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
               <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
             </ul>
           </div>
@@ -83,7 +85,9 @@ const Footer: React.FC = memo(() => {
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-center md:text-left text-gray-300">
-              © 2025 Zion Tech Group. All rights reserved. | <a href="https://ziontechgroup.com" className="hover:text-white">ziontechgroup.com</a>
+              © 2025 Zion Tech Group. All rights reserved. | <a href="https://ziontechgroup.com" className="hover:text-white">ziontechgroup.com</a><br/>
+              <span className="text-sm">Phone: +1 302 464 0950 | Email: kleber@ziontechgroup.com</span><br/>
+              <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-gray-300 hover:text-white text-sm">Privacy Policy</Link>
