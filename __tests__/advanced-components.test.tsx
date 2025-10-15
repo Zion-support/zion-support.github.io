@@ -1,12 +1,14 @@
-import { render, screen } from "@testing-library/react"
-const TestComponent = () => {}
-}return <div>Test content</div>
-}
-describe("Advanced Components", () => {}
-}// Test implementation
-  it("should render without errors", () => {}
-}expect(true).toBe(true)
-  })
+import { render, screen } from "@testing-library/react";
+
+const TestComponent = () => {
+  return <div>Test content</div>;
+};
+
+describe("Advanced Components", () => {
+  // Test implementation
+  it("should render without errors", () => {
+    expect(true).toBe(true);
+  });
   it("should render test content", () => {}
 }render(<TestComponent />)
     expect(screen.getByText("Test content")).toBeInTheDocument()

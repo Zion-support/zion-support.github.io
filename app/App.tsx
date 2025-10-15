@@ -27,23 +27,16 @@ const FiveGDataAnalyticsPage = lazy(() => import("./5g-data-analytics/page"))
 const FiveGEdgeComputingPage = lazy(() => import("./5g-edge-computing/page"))
 const FiveGImplementationPage = lazy(() => import("./5g-implementation/page"))
 const FiveGIoTSolutionsPage = lazy(() => import("./5g-iot-solutions/page"))
-const FiveGMobileApplicationsPage = lazy()
-  () => import("./5g-mobile-applications/page"),
-)
-const FiveGNetworkInfrastructurePage = lazy()
-  () => import("./5g-network-infrastructure/page"),
-)
-const FiveGPrivateNetworksPage = lazy()
-  () => import("./5g-private-networks/page"),
-)
-const FiveGSmartCitySolutionsPage = lazy()
-  () => import("./5g-smart-city-solutions/page"),
-)
-const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"))
+const FiveGMobileApplicationsPage = lazy(() => import("./5g-mobile-applications/page"));
+const FiveGNetworkInfrastructurePage = lazy(() => import("./5g-network-infrastructure/page"));
+const FiveGPrivateNetworksPage = lazy(() => import("./5g-private-networks/page"));
+const FiveGSmartCitySolutionsPage = lazy(() => import("./5g-smart-city-solutions/page"));
+const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
+
 // Main App Component
-function App() {}
-}return ()
-    <HelmetProvider></Helmet>
+function App() {
+  return (
+    <HelmetProvider>
       <BrowserRouter>
         <ErrorBoundary>
           <PerformanceMonitor />
@@ -52,7 +45,7 @@ function App() {}
             <CacheManager />
             <AdvancedPerformanceMonitor />
             <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
+              <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
@@ -104,7 +97,10 @@ function App() {}
           </AccessibilityEnhancer>
         </ErrorBoundary>
       </BrowserRouter>
+        </ErrorBoundary>
+      </BrowserRouter>
     </HelmetProvider>
-  )
+  );
 }
-export default App
+
+export default App;

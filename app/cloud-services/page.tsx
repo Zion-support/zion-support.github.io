@@ -4,7 +4,6 @@ import SEOHead from '../components/SEOHead';
 const CloudServicesPage: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>Cloud Services - Zion Tech Group | Cloud Migration & Infrastructure</title>
         <meta
@@ -126,17 +125,6 @@ const CloudServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
-      <SEOHead 
-        title="cloud-services - Zion Tech Group"
-        description="Zion Tech Group cloud-services service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">cloud-services</h1>
-          <p className="text-gray-300">Coming soon...</p>
-        </div>
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
       </div>
     </>
   );

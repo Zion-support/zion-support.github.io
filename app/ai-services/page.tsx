@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import React from "react";
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Code, Database, Users, DollarSign, Globe, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Eye, Heart, Award, Mic, Video, Image, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-export default function AIServices() {
+function AIServices() {
   const aiServices = [
     {
       id: "ai-analytics-dashboard-pro",
@@ -827,22 +826,51 @@ export default function AIServices() {
       color: "from-teal-500 to-cyan-500"
     }
   ];
-=======
-import React from 'react';
-import SEOHead from '../components/SEOHead';
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
 
-const AiServicesPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="ai-services - Zion Tech Group"
-        description="Zion Tech Group ai-services service page"
+        title="AI Services - Zion Tech Group"
+        description="Comprehensive AI services including analytics, automation, and intelligent solutions for modern businesses."
       />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">ai-services</h1>
-          <p className="text-gray-300">Coming soon...</p>
+      <div className="min-h-screen bg-slate-900 text-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+              AI Services
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your business with our comprehensive suite of AI-powered solutions designed to drive innovation and efficiency.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {aiServices.map((service) => (
+              <div key={service.id} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300 border border-slate-700 hover:border-blue-500">
+                <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{service.name}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="text-blue-400 font-semibold mb-4">{service.price}</div>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, index) => (
+                    <li key={index} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link 
+                  to="/contact" 
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group"
+                >
+                  Get Started
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

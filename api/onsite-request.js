@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -58,6 +57,3 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ error: 'Failed to save request' }));
   }
 }
-=======
-
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f

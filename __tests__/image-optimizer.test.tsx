@@ -3,16 +3,20 @@ import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import ImageOptimizer from '../app/components/ImageOptimizer'
 // Mock the image loading
-const mockImage = {}
+const mockImage = {
   addEventListener: jest.fn(),
   removeEventListener: jest.fn(),
   src: '',
   onload: null,
-  onerror: null}
-Object.defineProperty(global, 'Image', {}
-  value: jest.fn(() => mockImage)})
-describe('ImageOptimizer', () => {}
-}beforeEach(() => {}
+  onerror: null
+};
+
+Object.defineProperty(global, 'Image', {
+  value: jest.fn(() => mockImage)
+});
+
+describe('ImageOptimizer', () => {
+  beforeEach(() => {
 }jest.clearAllMocks()
   })
   it('renders with correct attributes', () => {}
