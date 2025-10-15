@@ -64,6 +64,16 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
         { name: 'AI Price Optimizer', href: '/ai-price-optimizer', icon: CurrencyDollarIcon },
         { name: 'AI Scheduling Assistant', href: '/ai-scheduling-assistant', icon: CogIcon },
         { name: 'AI Content Generator', href: '/ai-content-generator', icon: DocumentTextIcon },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro', icon: CodeBracketIcon },
+        { name: 'AI Video Analyzer Pro', href: '/ai-video-analyzer-pro', icon: EyeIcon },
+        { name: 'AI Translator Pro', href: '/ai-translator-pro', icon: GlobeAltIcon },
+        { name: 'AI Personalization Engine Pro', href: '/ai-personalization-engine-pro', icon: CpuChipIcon },
+        { name: 'AI Voice Synthesizer Pro', href: '/ai-voice-synthesizer-pro', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Data Scientist Pro', href: '/ai-data-scientist-pro', icon: ChartBarIcon },
+        { name: 'AI Quality Assurance Pro', href: '/ai-quality-assurance-pro', icon: ShieldCheckIcon },
+        { name: 'AI Knowledge Graph Pro', href: '/ai-knowledge-graph-pro', icon: CpuChipIcon },
+        { name: 'AI Recommendation Engine Pro', href: '/ai-recommendation-engine-pro', icon: CpuChipIcon },
+        { name: 'AI Anomaly Detector Pro', href: '/ai-anomaly-detector-pro', icon: ShieldCheckIcon },
         { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon }
       ]
     },
@@ -73,12 +83,25 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
       icon: GlobeAltIcon,
       submenu: [
         { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
-        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
-        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
-        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
-        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
-        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon }
+        { name: 'AI Project Manager Pro', href: '/ai-project-manager-pro', icon: CheckCircleIcon },
+        { name: 'Smart Invoice Generator Pro', href: '/smart-invoice-generator-pro', icon: DocumentTextIcon },
+        { name: 'AI Customer Feedback Analyzer', href: '/ai-customer-feedback-analyzer', icon: ChatBubbleLeftRightIcon },
+        { name: 'Smart Contract Manager Pro', href: '/smart-contract-manager-pro', icon: DocumentTextIcon },
+        { name: 'AI HR Assistant Pro', href: '/ai-hr-assistant-pro', icon: UserGroupIcon },
+        { name: 'Smart Inventory Optimizer Pro', href: '/smart-inventory-optimizer-pro', icon: CircleStackIcon },
+        { name: 'AI Social Media Scheduler Pro', href: '/ai-social-media-scheduler-pro', icon: ShareIcon },
+        { name: 'Smart Email Marketing Pro', href: '/smart-email-marketing-pro', icon: EnvelopeIcon },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro', icon: ChatBubbleLeftRightIcon },
+        { name: 'Smart Analytics Dashboard Pro', href: '/smart-analytics-dashboard-pro', icon: ChartBarIcon },
+        { name: 'AI Workflow Automator Pro', href: '/ai-workflow-automator-pro', icon: CogIcon },
+        { name: 'Smart Document Manager Pro', href: '/smart-document-manager-pro', icon: DocumentTextIcon },
+        { name: 'AI Expense Tracker Pro', href: '/ai-expense-tracker-pro', icon: CurrencyDollarIcon },
+        { name: 'Smart Appointment Scheduler Pro', href: '/smart-appointment-scheduler-pro', icon: CogIcon },
+        { name: 'AI Password Manager Pro', href: '/ai-password-manager-pro', icon: ShieldCheckIcon },
+        { name: 'Smart Backup Manager Pro', href: '/smart-backup-manager-pro', icon: CircleStackIcon },
+        { name: 'AI Monitoring Dashboard Pro', href: '/ai-monitoring-dashboard-pro', icon: ChartBarIcon },
+        { name: 'Smart API Manager Pro', href: '/smart-api-manager-pro', icon: CodeBracketIcon },
+        { name: 'AI Security Scanner Pro', href: '/ai-security-scanner-pro', icon: ShieldCheckIcon }
       ]
     },
     {
@@ -99,7 +122,16 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
         { name: 'DevOps Automation', href: '/devops-automation', icon: CogIcon },
         { name: 'Data Engineering', href: '/data-engineering', icon: CircleStackIcon },
         { name: 'API Development', href: '/api-development', icon: CodeBracketIcon },
-        { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon }
+        { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon },
+        { name: 'Edge Computing', href: '/edge-computing', icon: CogIcon },
+        { name: 'Quantum Computing', href: '/quantum-computing', icon: CpuChipIcon },
+        { name: 'Augmented Reality', href: '/augmented-reality', icon: EyeIcon },
+        { name: 'Virtual Reality', href: '/virtual-reality', icon: EyeIcon },
+        { name: 'Robotic Process Automation', href: '/robotic-process-automation', icon: CogIcon },
+        { name: 'AI Infrastructure & MLOps', href: '/artificial-intelligence-infrastructure', icon: CpuChipIcon },
+        { name: 'Cybersecurity Operations', href: '/cybersecurity-operations', icon: ShieldCheckIcon },
+        { name: 'Cloud Migration', href: '/cloud-migration', icon: CloudIcon },
+        { name: 'Managed IT Services', href: '/managed-it-services', icon: CogIcon }
       ]
     },
     {

@@ -13,7 +13,9 @@ import {
   SparklesIcon,
   ChartBarIcon,
   GlobeAltIcon,
-  CogIcon
+  CogIcon,
+  DocumentTextIcon,
+  ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline';
 
 const HomePage: React.FC = () => {
@@ -240,125 +242,164 @@ const HomePage: React.FC = () => {
                 Featured <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SAAS Solutions</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-                Discover our innovative micro SAAS applications designed to solve specific business challenges with real functionality.
+                Discover our innovative micro SAAS applications designed to solve specific business challenges with real functionality and AI-powered intelligence.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* AI Content Generator */}
+              {/* AI Project Manager Pro */}
               <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <SparklesIcon className="w-6 h-6 text-white" />
+                    <RocketLaunchIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-cyan-400 font-medium">AI Content</span>
+                  <span className="text-sm text-cyan-400 font-medium">AI Project Management</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
-                  AI Content Generator Pro
+                  AI Project Manager Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Generate high-quality content for blogs, social media, and marketing materials using advanced AI.
+                  Intelligent project management with AI-powered resource allocation, risk prediction, and automated scheduling.
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-cyan-400">$199/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$299/mo</span>
+                  <span className="text-2xl font-bold text-cyan-400">$49/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$99/mo</span>
                 </div>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Unlimited content generation</span>
+                    <span>AI Resource Allocation</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>SEO optimization</span>
+                    <span>Risk Prediction Models</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Multi-language support</span>
+                    <span>Automated Scheduling</span>
                   </div>
                 </div>
-                <Link to="/ai-content-generator"
+                <Link to="/ai-project-manager-pro"
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
                 </Link>
               </div>
 
-              {/* Analytics Dashboard */}
+              {/* Smart Invoice Generator Pro */}
               <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <ChartBarIcon className="w-6 h-6 text-white" />
+                    <DocumentTextIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-purple-400 font-medium">Analytics</span>
+                  <span className="text-sm text-purple-400 font-medium">AI Invoicing</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                  Business Analytics Pro
+                  Smart Invoice Generator Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Comprehensive business intelligence and analytics platform with real-time insights and reporting.
+                  AI-powered invoice generation with automated billing, payment tracking, and financial analytics.
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-purple-400">$349/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$499/mo</span>
+                  <span className="text-2xl font-bold text-purple-400">$39/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$79/mo</span>
                 </div>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Real-time dashboards</span>
+                    <span>AI Invoice Generation</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Predictive analytics</span>
+                    <span>Automated Billing Cycles</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Custom reports</span>
+                    <span>Payment Tracking</span>
                   </div>
                 </div>
-                <Link to="/analytics-dashboard"
+                <Link to="/smart-invoice-generator-pro"
                   className="block w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
                 </Link>
               </div>
 
-              {/* Task Manager */}
+              {/* AI Customer Support Pro */}
               <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <CheckCircleIcon className="w-6 h-6 text-white" />
+                    <ChatBubbleLeftRightIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-green-400 font-medium">Productivity</span>
+                  <span className="text-sm text-green-400 font-medium">AI Support</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
-                  Task Manager Pro
+                  AI Customer Support Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Advanced task management with AI-powered prioritization and team collaboration features.
+                  Comprehensive AI-powered customer support with chatbots, sentiment analysis, and automated ticket routing.
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-green-400">$29/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$49/mo</span>
+                  <span className="text-2xl font-bold text-green-400">$199/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$399/mo</span>
                 </div>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>AI task prioritization</span>
+                    <span>Intelligent Chatbots</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Team collaboration</span>
+                    <span>Sentiment Analysis</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Time tracking</span>
+                    <span>24/7 Availability</span>
                   </div>
                 </div>
-                <Link to="/task-manager"
+                <Link to="/ai-customer-support-pro"
                   className="block w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
+                </Link>
+              </div>
+            </div>
+
+            {/* Additional Services Preview */}
+            <div className="mt-12 text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">Explore More Solutions</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <Link to="/smart-analytics-dashboard-pro" className="group bg-slate-800/30 rounded-lg p-4 hover:bg-slate-700/30 transition-all duration-300 hover:scale-105">
+                  <div className="text-2xl mb-2">📊</div>
+                  <div className="text-sm text-gray-300 group-hover:text-white transition-colors">Smart Analytics</div>
+                </Link>
+                <Link to="/ai-workflow-automator-pro" className="group bg-slate-800/30 rounded-lg p-4 hover:bg-slate-700/30 transition-all duration-300 hover:scale-105">
+                  <div className="text-2xl mb-2">⚡</div>
+                  <div className="text-sm text-gray-300 group-hover:text-white transition-colors">Workflow Automation</div>
+                </Link>
+                <Link to="/smart-email-marketing-pro" className="group bg-slate-800/30 rounded-lg p-4 hover:bg-slate-700/30 transition-all duration-300 hover:scale-105">
+                  <div className="text-2xl mb-2">📧</div>
+                  <div className="text-sm text-gray-300 group-hover:text-white transition-colors">Email Marketing</div>
+                </Link>
+                <Link to="/ai-social-media-scheduler-pro" className="group bg-slate-800/30 rounded-lg p-4 hover:bg-slate-700/30 transition-all duration-300 hover:scale-105">
+                  <div className="text-2xl mb-2">📱</div>
+                  <div className="text-sm text-gray-300 group-hover:text-white transition-colors">Social Media</div>
+                </Link>
+                <Link to="/smart-inventory-optimizer-pro" className="group bg-slate-800/30 rounded-lg p-4 hover:bg-slate-700/30 transition-all duration-300 hover:scale-105">
+                  <div className="text-2xl mb-2">📦</div>
+                  <div className="text-sm text-gray-300 group-hover:text-white transition-colors">Inventory Management</div>
+                </Link>
+                <Link to="/ai-hr-assistant-pro" className="group bg-slate-800/30 rounded-lg p-4 hover:bg-slate-700/30 transition-all duration-300 hover:scale-105">
+                  <div className="text-2xl mb-2">👥</div>
+                  <div className="text-sm text-gray-300 group-hover:text-white transition-colors">HR Assistant</div>
+                </Link>
+              </div>
+              <div className="mt-8">
+                <Link to="/micro-saas-solutions" 
+                  className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  View All Micro SaaS Solutions
+                  <ArrowRightIcon className="w-4 h-4 ml-2" />
                 </Link>
               </div>
             </div>
