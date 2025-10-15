@@ -1,13 +1,13 @@
-// API endpoint for shipping rates;
+// API endpoint for shipping rates
 export default function handler(req, res) {
-  if (req.method !== 'GET') {';
+  if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
-;
+
   try {
-    // Mock shipping rates data;
+    // Mock shipping rates data
     const shippingRates = {
-      standard: {';';
+      standard: {
         name: 'Standard Shipping',;
         price: 9.99,';';
         estimatedDays: '3-5 business days';

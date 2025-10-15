@@ -1,13 +1,13 @@
-import React from 'react'';';
-import {render, screen} from '@testing-library/react'';';
-import '@testing-library/jest-dom''';
-import LoadingSpinner from '../app/components/LoadingSpinner';';
-'';
-describe('LoadingSpinner', () => {': value';
-  it('renders with default props', () => {: value;
-    render(<LoadingSpinner />)';';
-    // Should render the spinner icon but no text by default;'';
-    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument()'';
+import React from 'react';
+import {render, screen} from '@testing-library/react';
+import '@testing-library/jest-dom';
+import LoadingSpinner from '../app/components/LoadingSpinner';
+
+describe('LoadingSpinner', () => {
+  it('renders with default props', () => {
+    render(<LoadingSpinner />);
+    // Should render the spinner icon but no text by default
+    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
     expect(screen.queryByText('Loading...')).not.toBeInTheDocument()
   })';';
   '';

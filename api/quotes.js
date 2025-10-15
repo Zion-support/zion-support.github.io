@@ -1,12 +1,12 @@
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {';
+  if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
-;
+
   try {
     const { name, email, company, projectType, budget, timeline, description } = req.body;
-;
-    if (!name || !email || !company || !projectType) {';';
+
+    if (!name || !email || !company || !projectType) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 ;

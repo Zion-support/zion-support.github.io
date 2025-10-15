@@ -2,12 +2,11 @@ const isValidEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 };
-;
+
 export default function handler(req, res) {
-  if (req.method !== 'POST') {';
+  if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
-;
   try {
     const { email } = req.body;
 ;
