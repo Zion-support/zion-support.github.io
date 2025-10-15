@@ -54,9 +54,6 @@ const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-custom
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 
 // Import components
-import Navigation from './app/components/Navigation';
-import Sidebar from './app/components/Sidebar';
-import Footer from './app/components/Footer';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
@@ -64,8 +61,11 @@ import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Loading component
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <LoadingSpinner size="lg" text="Loading..." />
+  <div className="min-h-screen flex items-center justify-center bg-black">
+    <div className="text-center">
+      <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <p className="text-cyan-400 text-lg font-semibold">Loading...</p>
+    </div>
   </div>
 )
 
@@ -85,16 +85,12 @@ export default function App() {
     <GlobalErrorBoundary>
       <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-gray-50">
-            <Navigation />
-            <Sidebar />
+          <div className="min-h-screen bg-black">
+            <PerformanceMonitor />
+            <AccessibilityEnhancer />
             
-            <main className="flex-1">
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
-              
-              <Suspense fallback={<LoadingFallback />}>
-                <Routes>
+            <Suspense fallback={<LoadingFallback />}>
+              <Routes>
                   {/* Main Pages */}
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
@@ -156,18 +152,17 @@ export default function App() {
                   <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
                   
                   {/* Catch all route */}
-                  <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
+                  <Route path="*" element={<div className="min-h-screen flex items-center justify-center bg-black">
                     <div className="text-center">
-                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>
-                      <p className="text-gray-600 mb-8">Page not found</p>
-                      <a href="/" className="text-blue-600 hover:text-blue-800">Go back home</a>
+                      <h1 className="text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-4">404</h1>
+                      <p className="text-gray-300 text-xl mb-8">Page not found</p>
+                      <a href="/" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-full font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105">
+                        Go back home
+                      </a>
                     </div>
                   </div>} />
-                </Routes>
-              </Suspense>
-            </main>
-            
-            <Footer />
+              </Routes>
+            </Suspense>
           </div>
         </Router>
       </HelmetProvider>
