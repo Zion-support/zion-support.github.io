@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react'
-interface PerformanceMetrics {}
-  fcp: number
-  lcp: number
-  fid: number
-  cls: number
-  ttfb: number
-  loadTime: number
+import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  loadTime: number;
 }
 const PerformanceEnhancer: React.FC = () => {}
 }const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
@@ -81,8 +83,8 @@ const PerformanceEnhancer: React.FC = () => {}
   if (process.env.NODE_ENV !== 'development' || !metrics) {}
     return null
   }
-  return ()
-    <div className="fixed bottom-4 right-4 z-50">
+
+  return (<div className="fixed bottom-4 right-4 z-50">
       <button
         onClick={() => setIsVisible(!isVisible)}
         className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"

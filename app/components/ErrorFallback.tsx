@@ -4,10 +4,10 @@ interface ErrorFallbackProps {}
   error: Error
   resetErrorBoundary: () => void
 }
-const ErrorFallback: React.FC<ErrorFallbackProps> = ({}
-  error,
-  resetErrorBoundary}) => {}
-}return ()
+
+const ErrorFallback: React.FC<ErrorFallbackProps> = ({
+  error, resetErrorBoundary, _}) => {
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
       <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
         <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />

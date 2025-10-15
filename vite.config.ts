@@ -1,27 +1,14 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import { resolve } from "path";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react({
-      // Enable React Fast Refresh
-      fastRefresh: true,
-      // Enable JSX runtime
-      jsxRuntime: "automatic",
-    }),
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./app"),
+      "@": resolve(__dirname, "./"),
       "@/components": resolve(__dirname, "./app/components"),
-      "@/pages": resolve(__dirname, "./app"),
-      "@/utils": resolve(__dirname, "./utils"),
-      "@/types": resolve(__dirname, "./types"),
-      "@/hooks": resolve(__dirname, "./hooks"),
-      "@/config": resolve(__dirname, "./config"),
-      "@/data": resolve(__dirname, "./data"),
+      "@/pages": resolve(__dirname, "./app/pages"),
       "@/content": resolve(__dirname, "./content"),
     },
   },
@@ -32,21 +19,16 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Create chunks based on node_modules
           if (id.includes('node_modules')) {
-            // React and React DOM
             if (id.includes('react') || id.includes('react-dom')) {
               return 'react-vendor';
             }
-            // Lucide React icons
             if (id.includes('lucide-react')) {
               return 'icons-vendor';
             }
-            // Framer Motion
             if (id.includes('framer-motion')) {
               return 'animation-vendor';
             }
-            // Other vendor libraries
             return 'vendor';
           }
         },
@@ -67,7 +49,7 @@ export default defineConfig({
       'react-dom',
       'react-router-dom',
       'lucide-react',
-      'framer-motion',
+      'framer-motion'
     ],
   },
 });

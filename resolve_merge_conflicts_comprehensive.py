@@ -119,10 +119,7 @@ def resolve_file_conflicts(content):
     in_conflict = False
     
     for line in lines:
-        if line.startswith('<<<<<<< HEAD'):
-            in_conflict = True
-            continue
-        elif line.startswith('======='):
+        if line.startswith(''):
             continue
         elif line.startswith('>>>>>>>'):
             in_conflict = False

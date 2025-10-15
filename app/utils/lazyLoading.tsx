@@ -1,11 +1,11 @@
 import { ComponentType, lazy } from 'react'
 import LazyWrapper from '../components/LazyWrapper'
 // Lazy loading helper function
-export const createLazyComponent = ()
-  importFunc: () => Promise<{ default: ComponentType<Record<string, unknown>> }>
-) => {}
-}const LazyComponent = lazy(importFunc)
-  const WrappedComponent = (props: Record<string, unknown>) => ()
+export const createLazyComponent = (_importFunc: () => Promise<{ default: ComponentType<Record<string, unknown>> }>
+) => {
+  const LazyComponent = lazy(importFunc);
+  
+  const WrappedComponent = (_props: Record<string, unknown>) => (
     <LazyWrapper>
       <LazyComponent {...props} />
     </LazyWrapper>

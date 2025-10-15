@@ -4,7 +4,7 @@ import path from 'path';
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
@@ -17,39 +17,35 @@ export default function handler(req, res) {
     fs.mkdirSync(dir, { recursive: true });
   }
 
-  let existing = [];
+  let requests = [];
   try {
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
-      existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = [];
+      requests = JSON.parse(data);
     }
   } catch (error) {
     console.error('Error reading existing requests:', error);
-    existing = [];
   }
 
   const newRequest = {
     id: Date.now().toString(),
-    name,
-    email,
-    company,
-    phone,
-    message,
-    location,
+    name: name || '',
+    email: email || '',
+    company: company || '',
+    phone: phone || '',
+    message: message || '',
+    location: location || '',
     status: 'pending',
     createdAt: new Date().toISOString()
   };
 
-  existing.push(newRequest);
-
   try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    requests.push(newRequest);
+    fs.writeFileSync(file, JSON.stringify(requests, null, 2));
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
-      message: 'Onsite request submitted successfully',
-      id: newRequest.id
+      message: 'Onsite request submitted successfully' 
     }));
   } catch (error) {
     console.error('Error saving onsite request:', error);

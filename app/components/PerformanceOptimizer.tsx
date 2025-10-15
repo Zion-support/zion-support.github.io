@@ -56,29 +56,28 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     })
   }, [])
   // Add performance monitoring
-  const addPerformanceMonitoring = useCallback(() => {}
-}// Monitor Core Web Vitals
-    if ('web-vitals' in window) {}
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {}
-}getCLS(console.log)
-        getFID(console.log)
-        getFCP(console.log)
-        getLCP(console.log)
-        getTTFB(console.log)
-      })
+  const addPerformanceMonitoring = useCallback() => {
+    // Monitor Core Web Vitals
+    if ('web-vitals' in window) {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, _getLCP, _getTTFB }) => {
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
+      });
     }
     // Monitor resource loading
-    if ('PerformanceObserver' in window) {}
-      const observer = new PerformanceObserver((list) => {}
-}list.getEntries().forEach((entry) => {}
-}if (entry.entryType === 'navigation') {}
-            console.log('Navigation timing:', entry)
-          } else if (entry.entryType === 'resource') {}
-            console.log('Resource timing:', entry)
-          }
-        })
-      })
-      observer.observe({ entryTypes: ['navigation', 'resource'] })
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'navigation') {
+            } else if (entry.entryType === 'resource') {
+            }
+        });
+      });
+      
+      observer.observe({ entryTypes: ['navigation', 'resource'] });
     }
   }, [])
   // Optimize scroll performance

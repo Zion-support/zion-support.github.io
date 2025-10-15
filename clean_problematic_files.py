@@ -19,14 +19,13 @@ def clean_file(file_path):
     
     # Remove all merge conflict markers and everything between them
     # Pattern to match merge conflict blocks
-    conflict_pattern = r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]*'
+    conflict_pattern = r'.*?>>>>>>> [^\n]*'
     
     # Remove all merge conflicts
     cleaned_content = re.sub(conflict_pattern, '', content, flags=re.DOTALL)
     
     # Remove any remaining merge conflict markers
-    cleaned_content = re.sub(r'<<<<<<< HEAD.*', '', cleaned_content, flags=re.DOTALL)
-    cleaned_content = re.sub(r'=======.*', '', cleaned_content, flags=re.DOTALL)
+    cleaned_content = re.sub(r'.*', '', cleaned_content, flags=re.DOTALL)
     cleaned_content = re.sub(r'>>>>>>> [^\n]*', '', cleaned_content, flags=re.DOTALL)
     
     # Clean up multiple empty lines

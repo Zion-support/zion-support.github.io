@@ -7,12 +7,13 @@ interface WebVitalsData {}
   id: string
   navigationType: string
 }
-const WebVitalsTracker: React.FC = () => {}
-}useEffect(() => {}
-}const sendToAnalytics = (metric: WebVitalsData) => {}
-}// Send to Google Analytics or other analytics service
-      if (typeof window !== 'undefined' && 'gtag' in window) {}
-        (window as any).gtag('event', metric.name, {}
+
+const WebVitalsTracker: React.FC = () => {
+  useEffect(() => {
+    const sendToAnalytics = (_metric: WebVitalsData) => {
+      // Send to Google Analytics or other analytics service
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', metric.name, {
           event_category: 'Web Vitals',
           event_label: metric.id,
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
@@ -27,10 +28,10 @@ const WebVitalsTracker: React.FC = () => {}
           body: JSON.stringify(metric)}).catch(console.error)
       }
       // Log to console in development
-      if (process.env.NODE_ENV === 'development') {}
-        console.log('Web Vital:', metric)
-      }
-    }
+      if (process.env.NODE_ENV === 'development') {
+        }
+    };
+
     // Track Core Web Vitals
     onCLS(sendToAnalytics)
     onINP(sendToAnalytics); // INP replaces FID in newer versions

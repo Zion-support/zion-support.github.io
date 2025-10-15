@@ -52,11 +52,7 @@ def resolve_merge_conflicts_in_content(content):
     in_head_section = False
     
     for line in lines:
-        if line.startswith('<<<<<<< HEAD'):
-            in_conflict = True
-            in_head_section = True
-            continue
-        elif line.startswith('======='):
+        if line.startswith(''):
             in_head_section = False
             continue
         elif line.startswith('>>>>>>>'):
