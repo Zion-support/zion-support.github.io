@@ -41,7 +41,7 @@ const EnhancedNavigation = () => {
     },
     {}
       label: 'IT Services',
-      href: '/services',
+      href: '/it-services',
       icon: <Shield className="w-4 h-4" />,
       dropdown: []
         { label: 'AI-Powered Business Intelligence Pro', href: '/ai-business-intelligence' },
