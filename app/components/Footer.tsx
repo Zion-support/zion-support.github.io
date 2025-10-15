@@ -6,13 +6,29 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
-    services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/services' },
-      { name: 'Micro SAAS', href: '/micro-saas' },
-      { name: '5G Solutions', href: '/5g-solutions' },
+    aiServices: [
+      { name: 'AI Analytics', href: '/ai-analytics' },
+      { name: 'AI Content Generation', href: '/ai-content-generation' },
+      { name: 'AI Customer Support', href: '/ai-customer-support' },
+      { name: 'AI Cybersecurity', href: '/ai-cybersecurity' },
+      { name: 'AI Data Analytics', href: '/ai-data-analytics' },
+      { name: 'AI Marketing Automation', href: '/ai-marketing-automation' },
+    ],
+    microSaas: [
+      { name: 'AI Video Generator', href: '/zion-ai-video-generator' },
+      { name: 'AI Invoice Generator', href: '/zion-ai-invoice-generator' },
+      { name: 'AI CRM Pro', href: '/zion-ai-crm-pro' },
+      { name: 'AI Voice Assistant', href: '/zion-ai-voice-assistant-pro' },
+      { name: 'AI Code Reviewer', href: '/zion-ai-code-reviewer' },
+      { name: 'AI Contract Analyzer', href: '/zion-ai-contract-analyzer' },
+    ],
+    itServices: [
       { name: 'Cloud Migration', href: '/cloud-migration' },
-      { name: 'Cybersecurity', href: '/network-security' },
+      { name: 'DevOps Services', href: '/devops-services' },
+      { name: 'Web Development', href: '/web-development' },
+      { name: 'IT Consulting', href: '/it-consulting' },
+      { name: 'Network Security', href: '/network-security' },
+      { name: 'Data Analytics', href: '/data-analytics' },
     ],
     company: [
       { name: 'About Us', href: '/about' },
@@ -41,7 +57,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-16 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <h3 className="text-2xl font-bold text-white">
@@ -57,17 +73,41 @@ const Footer: React.FC = () => {
                 <span className="text-white text-sm font-bold">Z</span>
               </div>
               <div className="flex flex-col justify-center">
-                <span className="text-white text-sm font-semibold">Trusted by 10,000+</span>
+                <span className="text-white text-sm font-semibold">Trusted by 50,000+</span>
                 <span className="text-gray-400 text-xs">Businesses Worldwide</span>
               </div>
             </div>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Services</h4>
+            <h4 className="text-lg font-semibold text-white">AI Services</h4>
             <div className="space-y-3">
-              {footerLinks.services.map((link) => (
+              {footerLinks.aiServices.map((link) => (
+                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Micro SAAS */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white">Micro SAAS</h4>
+            <div className="space-y-3">
+              {footerLinks.microSaas.map((link) => (
+                <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* IT Services */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white">IT Services</h4>
+            <div className="space-y-3">
+              {footerLinks.itServices.map((link) => (
                 <Link key={link.href} to={link.href} className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                   {link.name}
                 </Link>

@@ -166,7 +166,7 @@ function App() {
                           <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
                           <Breadcrumb />
                           
-                          <main className="relative z-10" id="main-content" role="main">
+                          <main className="relative z-10 pt-20" id="main-content" role="main">
                             <Suspense fallback={<LoadingPage />}>
                               <Routes>
                                 {/* Main Pages */}
