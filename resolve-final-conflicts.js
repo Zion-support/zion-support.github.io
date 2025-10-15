@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-// Function to resolve merge conflicts by keeping the main branch version (HEAD)
+// Function to resolve merge conflicts by keeping our version (HEAD)
 function resolveConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -14,7 +14,7 @@ function resolveConflicts(filePath) {
       return false;
     }
     
-    // Replace merge conflict markers with HEAD version (main branch)
+    // Replace merge conflict markers with HEAD version (our changes)
     content = content.replace(
       /<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [a-f0-9]+\n?/gs,
       '$1'
@@ -43,7 +43,7 @@ function findConflictedFiles() {
   }
 }
 
-console.log('🔧 Resolving all merge conflicts...');
+console.log('🔧 Resolving final merge conflicts...');
 
 // Find all files with conflicts
 const conflictedFiles = findConflictedFiles();

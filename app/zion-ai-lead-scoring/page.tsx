@@ -33,5 +33,10 @@ const ZionAiLeadScoringPage: React.FC = () => {
   ),
 >>>>>>> main
 };
+<<<<<<< HEAD
 ;
 export default ZionAiLeadScoringPage;'";'";
+=======
+
+export default ZionAiLeadScoringPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

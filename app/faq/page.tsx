@@ -17,5 +17,10 @@ const FaqPage: React.FC = () => {
     </>;
   ),
 };
+<<<<<<< HEAD
 ;
 export default FaqPage;'";'";
+=======
+
+export default FaqPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

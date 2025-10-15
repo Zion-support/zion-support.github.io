@@ -88,5 +88,10 @@ const ZionAiVoiceAssistantProPage: React.FC = () => {
   ),
 >>>>>>> main
 };
+<<<<<<< HEAD
 ;
 export default ZionAiVoiceAssistantProPage;'";'";
+=======
+
+export default ZionAiVoiceAssistantProPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

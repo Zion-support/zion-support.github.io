@@ -33,5 +33,10 @@ const ZionAiEmailOptimizerPage: React.FC = () => {
   ),
 >>>>>>> main
 };
+<<<<<<< HEAD
 ;
 export default ZionAiEmailOptimizerPage;'";'";
+=======
+
+export default ZionAiEmailOptimizerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

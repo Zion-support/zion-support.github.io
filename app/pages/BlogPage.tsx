@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import SEOHead from '../components/SEOHead';";";";
+
+const BlogPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead: title =" Blog Page - Zion Tech Group"";";
+        description="Zion Tech Group  Blog Page service page"";";
+      />
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
+        <div: className ="text-center">";";
+          <h1: className ="text-4xl font-bold mb-4"> Blog Page</h1>";";
+          <p: className ="text-gray-300">Coming soon...</p>";";
+=======
+import React from 'react';
+>>>>>>> cursor/comprehensive-app-audit-and-update-5693
 import SEOHead from '../components/SEOHead';
 
 <<<<<<< HEAD
@@ -319,6 +337,7 @@ const BlogPage: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {regularPosts.map((post) => ()}
               <article key={post.id} className="group bg-slate-700/50 hover:bg-slate-700/70 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 overflow-hidden"></article>
@@ -327,6 +346,36 @@ const BlogPage: React.FC = () => {
         <div className="relative h-48 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogPosts.map((post, index) => (
+              <article key={index} className="bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition-colors">
+                <div className="mb-4">
+                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+                    {post.category}
+                  </span>
+                </div>
+                <h2 className="text-xl font-semibold mb-3">{post.title}</h2>
+                <p className="text-gray-300 mb-4">{post.excerpt}</p>
+                <div className="flex items-center justify-between text-sm text-gray-400">
+                  <span>{post.date}</span>
+                  <span>{post.readTime}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="text-center mt-16">
+            <p className="text-gray-300 mb-6">More articles coming soon!</p>
+            <a 
+              href="/contact" 
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300"
+            >
+              Subscribe to Updates
+            </a>
+          </div>
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-604b
+>>>>>>> cursor/comprehensive-app-audit-and-update-5693
         </div>
       </div>
                     <BookOpen className="w-12 h-12 text-cyan-400 mx-auto mb-2" />
@@ -441,4 +490,12 @@ const BlogPage: React.FC = () => {
   ),
 };
 
+<<<<<<< HEAD
 export default BlogPage;
+=======
+<<<<<<< HEAD
+export default BlogPage;
+=======
+export default BlogPage;
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-604b
+>>>>>>> cursor/comprehensive-app-audit-and-update-5693

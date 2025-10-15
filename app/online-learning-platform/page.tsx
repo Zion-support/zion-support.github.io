@@ -33,5 +33,10 @@ const OnlineLearningPlatformPage: React.FC = () => {
   ),
 >>>>>>> main
 };
+<<<<<<< HEAD
 ;
 export default OnlineLearningPlatformPage;'";'";
+=======
+
+export default OnlineLearningPlatformPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

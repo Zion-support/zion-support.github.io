@@ -73,5 +73,10 @@ const UtilsPage: React.FC = () => {
   ),
 >>>>>>> main
 };
+<<<<<<< HEAD
 ;
 export default UtilsPage;'";'";
+=======
+
+export default UtilsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

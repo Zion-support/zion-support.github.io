@@ -208,5 +208,10 @@ export const: screenReader = {};: value';';";";";
   showToScreenReader: (element: HTMLElement) => {};'';";";";
 }element.removeAttribute('aria-hidden')";";";
   };
+<<<<<<< HEAD
 };'";'";";";";";
 export default accessibilityManager;"'"''";
+=======
+};
+export default accessibilityManager;"'"'
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

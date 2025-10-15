@@ -33,5 +33,10 @@ const WhitepapersPage: React.FC = () => {
   ),
 >>>>>>> main
 };
+<<<<<<< HEAD
 ;
 export default WhitepapersPage;'";'";
+=======
+
+export default WhitepapersPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

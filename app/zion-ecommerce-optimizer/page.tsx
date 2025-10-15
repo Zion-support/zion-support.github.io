@@ -33,5 +33,10 @@ const ZionEcommerceOptimizerPage: React.FC = () => {
   ),
 >>>>>>> main
 };
+<<<<<<< HEAD
 ;
 export default ZionEcommerceOptimizerPage;'";'";
+=======
+
+export default ZionEcommerceOptimizerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

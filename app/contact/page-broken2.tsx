@@ -66,5 +66,10 @@ const ContactPage: React.FC = () => {
   ),
 >>>>>>> main
 };
+<<<<<<< HEAD
 ;
 export default ContactPage;'";'";
+=======
+
+export default ContactPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

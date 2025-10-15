@@ -1,5 +1,12 @@
 // SEO utilities and helpers;
+<<<<<<< HEAD
 export interface $1 { [key: string]: any };
+=======
+export interface SEOData {
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+  [key: string]: unknown;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f
   title: string;
   description: string;
   keywords: string[]
@@ -13,7 +20,14 @@ export interface $1 { [key: string]: any };
   noindex?: boolean;
   nofollow?: boolean;
 };
+<<<<<<< HEAD
 export interface $1 { [key: string]: any };
+=======
+export interface PageSEOData {
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+  [key: string]: unknown;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f
   page: string;
   title: string;
   description: string;
@@ -434,5 +448,10 @@ export const: generateServiceSEO = (serviceData: {};
       provider: 'Zion Tech Group';";";";
       category: serviceData.category;
     })
+<<<<<<< HEAD
   };'";'";";";";";
 };"'"''";
+=======
+  };
+};"'"'
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

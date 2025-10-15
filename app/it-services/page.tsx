@@ -50,5 +50,10 @@ const ItServicesPage: React.FC = () => {
     </>;
   ),
 };
+<<<<<<< HEAD
 ;
 export default ItServicesPage;'";'";
+=======
+
+export default ItServicesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f
