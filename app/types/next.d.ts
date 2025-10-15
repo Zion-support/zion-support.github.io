@@ -1,4 +1,4 @@
-import { NextPage } from 'next';
+// NextPage import removed as it's not used
 
 declare module 'next' {
   interface NextPageContext {

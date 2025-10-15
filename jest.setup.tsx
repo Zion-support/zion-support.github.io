@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-export default function jest.setupPage() {
+export default function JestSetupPage() {
   return (
     <>
       <Helmet>
