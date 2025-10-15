@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Calendar, 
+  Megaphone, 
   Zap, 
   Shield, 
   Globe, 
@@ -35,21 +35,37 @@ import {
   AlertCircle,
   CheckSquare,
   XCircle,
-  Kanban,
-  GanttChart,
   PieChart,
   LineChart,
-  GitBranch,
+  TrendingDown,
+  Calculator,
+  CreditCard,
+  Banknote,
+  Wallet,
+  Receipt,
+  ChartBar,
+  Percent,
+  Coins,
+  Building2,
+  Briefcase,
+  PiggyBank,
+  HandCoins,
+  Mail as MailIcon,
   MessageSquare,
-  Bell,
-  Flag,
-  Timer,
+  Share2,
+  Camera,
+  Video,
+  Image,
+  Palette,
+  MousePointer,
   Layers,
-  Workflow,
-  Command
+  Command,
+  Smartphone,
+  Monitor,
+  Tablet
 } from 'lucide-react';
 
-const AiProjectManagementProPage: React.FC = () => {
+const AiMarketingAutomationProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -59,39 +75,39 @@ const AiProjectManagementProPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Planning",
-      description: "Intelligent project planning with AI that analyzes requirements, estimates timelines, and suggests optimal resource allocation.",
-      benefits: ["Smart scheduling", "Resource optimization", "Risk prediction", "Timeline estimation"]
+      title: "AI-Powered Campaigns",
+      description: "Intelligent marketing campaigns that automatically optimize content, timing, and targeting based on audience behavior and performance data.",
+      benefits: ["Auto-optimization", "Smart targeting", "Content generation", "Performance tracking"]
     },
     {
-      icon: <Kanban className="w-6 h-6" />,
-      title: "Smart Task Management",
-      description: "Advanced task management with AI-driven prioritization, automatic assignment, and intelligent workflow optimization.",
-      benefits: ["Auto-prioritization", "Smart assignment", "Workflow automation", "Progress tracking"]
+      icon: <Target className="w-6 h-6" />,
+      title: "Advanced Segmentation",
+      description: "AI-driven customer segmentation that creates highly targeted audiences based on behavior, preferences, and predictive analytics.",
+      benefits: ["Behavioral analysis", "Predictive modeling", "Dynamic segments", "Personalization"]
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Predictive Analytics",
-      description: "Get insights into project health, predict bottlenecks, and optimize performance with AI-powered analytics.",
-      benefits: ["Performance insights", "Bottleneck prediction", "Trend analysis", "ROI tracking"]
+      title: "Real-time Analytics",
+      description: "Comprehensive marketing analytics with real-time performance tracking, ROI analysis, and predictive insights.",
+      benefits: ["Live dashboards", "ROI tracking", "Conversion analysis", "Trend prediction"]
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Team Collaboration",
-      description: "Enhanced team collaboration with real-time communication, shared workspaces, and intelligent meeting scheduling.",
-      benefits: ["Real-time chat", "Shared workspaces", "Smart meetings", "Document collaboration"]
+      icon: <MailIcon className="w-6 h-6" />,
+      title: "Multi-Channel Automation",
+      description: "Unified marketing automation across email, social media, SMS, and web channels with intelligent cross-platform coordination.",
+      benefits: ["Email marketing", "Social media", "SMS campaigns", "Web personalization"]
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "Bank-level security with role-based access, audit trails, and compliance with industry standards.",
-      benefits: ["Role-based access", "Audit trails", "Data encryption", "Compliance"]
+      title: "Compliance & Security",
+      description: "Built-in compliance with GDPR, CAN-SPAM, and other regulations, plus enterprise-grade security for your marketing data.",
+      benefits: ["GDPR compliance", "Data security", "Audit trails", "Privacy protection"]
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Workflows",
-      description: "Streamline processes with intelligent automation that handles routine tasks and keeps projects on track.",
-      benefits: ["Process automation", "Smart notifications", "Auto-updates", "Integration"]
+      title: "Smart Workflows",
+      description: "Intelligent automation workflows that trigger personalized campaigns based on customer actions, preferences, and lifecycle stage.",
+      benefits: ["Trigger automation", "Lifecycle marketing", "Personalization", "Lead nurturing"]
     }
   ];
 
@@ -100,14 +116,14 @@ const AiProjectManagementProPage: React.FC = () => {
       name: "Starter",
       price: "$149",
       period: "month",
-      description: "Perfect for small teams getting started with AI project management",
+      description: "Perfect for small businesses starting with marketing automation",
       features: [
-        "Up to 10 team members",
-        "Basic AI planning",
-        "Task management",
+        "Up to 5,000 contacts",
+        "Basic AI features",
+        "Email automation",
         "Basic analytics",
         "Email support",
-        "5 projects max"
+        "5 campaigns max"
       ],
       popular: false
     },
@@ -115,16 +131,16 @@ const AiProjectManagementProPage: React.FC = () => {
       name: "Professional",
       price: "$399",
       period: "month",
-      description: "Ideal for growing teams with advanced project management needs",
+      description: "Ideal for growing businesses with advanced marketing needs",
       features: [
-        "Up to 50 team members",
+        "Up to 50,000 contacts",
         "Advanced AI features",
-        "Full analytics suite",
-        "Custom workflows",
+        "Multi-channel automation",
+        "Advanced analytics",
         "Priority support",
-        "Unlimited projects",
+        "Unlimited campaigns",
         "API access",
-        "Integrations"
+        "Custom integrations"
       ],
       popular: true
     },
@@ -134,13 +150,13 @@ const AiProjectManagementProPage: React.FC = () => {
       period: "month",
       description: "Complete solution for large organizations with complex requirements",
       features: [
-        "Unlimited team members",
-        "Custom AI training",
-        "Advanced security",
+        "Unlimited contacts",
+        "Full AI suite",
+        "Custom automation",
         "Dedicated support",
         "Custom development",
-        "On-premise deployment",
         "White-label options",
+        "Advanced security",
         "24/7 support"
       ],
       popular: false
@@ -149,76 +165,74 @@ const AiProjectManagementProPage: React.FC = () => {
 
   const testimonials = [
     {
+      name: "Sarah Williams",
+      company: "E-commerce Plus",
+      role: "Marketing Director",
+      content: "AI Marketing Automation Pro has increased our conversion rates by 45% and reduced our marketing costs by 30%. The AI optimization is incredible.",
+      rating: 5
+    },
+    {
       name: "Michael Chen",
-      company: "TechFlow Solutions",
-      role: "Project Director",
-      content: "AI Project Management Pro has increased our project success rate by 60%. The AI planning and predictive analytics are game-changers for our team.",
+      company: "TechStart Inc.",
+      role: "Growth Manager",
+      content: "The multi-channel automation and advanced segmentation have transformed our marketing. We're reaching the right customers at the right time.",
       rating: 5
     },
     {
       name: "Lisa Rodriguez",
-      company: "Digital Innovations",
-      role: "CTO",
-      content: "The intelligent task management and team collaboration features have streamlined our development process. We're delivering projects 40% faster.",
-      rating: 5
-    },
-    {
-      name: "James Wilson",
-      company: "Enterprise Corp",
-      role: "VP of Operations",
-      content: "The predictive analytics and automated workflows have helped us identify and resolve issues before they become problems. Highly recommended!",
+      company: "Digital Agency",
+      role: "CEO",
+      content: "The AI-powered campaign optimization and real-time analytics have helped our clients achieve 60% better ROI. Highly recommended!",
       rating: 5
     }
   ];
 
   const useCases = [
     {
-      title: "Software Development",
-      description: "Manage agile development cycles with AI-powered sprint planning and resource allocation",
+      title: "E-commerce Marketing",
+      description: "Automated product recommendations, abandoned cart recovery, and personalized shopping experiences",
+      icon: <ShoppingCart className="w-8 h-8" />,
+      benefits: ["Product recommendations", "Cart recovery", "Personalization", "Upselling"]
+    },
+    {
+      title: "SaaS Lead Nurturing",
+      description: "Intelligent lead scoring, automated follow-ups, and conversion optimization for software companies",
       icon: <Cpu className="w-8 h-8" />,
-      benefits: ["Sprint planning", "Bug tracking", "Code review", "Release management"]
+      benefits: ["Lead scoring", "Drip campaigns", "Trial conversion", "Customer onboarding"]
     },
     {
-      title: "Marketing Campaigns",
-      description: "Plan and execute marketing campaigns with intelligent content scheduling and performance tracking",
-      icon: <Target className="w-8 h-8" />,
-      benefits: ["Campaign planning", "Content calendar", "Performance tracking", "ROI analysis"]
+      title: "B2B Sales Enablement",
+      description: "Account-based marketing, sales automation, and pipeline management for B2B companies",
+      icon: <Briefcase className="w-8 h-8" />,
+      benefits: ["ABM campaigns", "Sales automation", "Pipeline management", "Account insights"]
     },
     {
-      title: "Construction Projects",
-      description: "Manage complex construction projects with AI-driven timeline optimization and resource management",
-      icon: <Layers className="w-8 h-8" />,
-      benefits: ["Timeline optimization", "Resource allocation", "Safety tracking", "Quality control"]
-    },
-    {
-      title: "Event Planning",
-      description: "Organize events with intelligent vendor management and automated coordination",
-      icon: <Calendar className="w-8 h-8" />,
-      benefits: ["Vendor management", "Timeline coordination", "Budget tracking", "Guest management"]
+      title: "Content Marketing",
+      description: "Automated content distribution, social media management, and engagement optimization",
+      icon: <FileText className="w-8 h-8" />,
+      benefits: ["Content scheduling", "Social automation", "Engagement tracking", "Viral optimization"]
     }
   ];
 
-  const integrations = [
-    { name: "Slack", icon: "💬", description: "Team communication" },
-    { name: "Microsoft Teams", icon: "👥", description: "Video conferencing" },
-    { name: "Jira", icon: "🎯", description: "Issue tracking" },
-    { name: "GitHub", icon: "🐙", description: "Code management" },
-    { name: "Trello", icon: "📋", description: "Task boards" },
-    { name: "Asana", icon: "✅", description: "Project tracking" },
-    { name: "Google Workspace", icon: "📧", description: "Productivity suite" },
-    { name: "Salesforce", icon: "☁️", description: "CRM integration" }
+  const channels = [
+    { name: "Email", icon: <MailIcon className="w-8 h-8" />, description: "Automated email campaigns" },
+    { name: "Social Media", icon: <Share2 className="w-8 h-8" />, description: "Social media automation" },
+    { name: "SMS", icon: <Smartphone className="w-8 h-8" />, description: "Text message campaigns" },
+    { name: "Web", icon: <Globe className="w-8 h-8" />, description: "Website personalization" },
+    { name: "Push", icon: <Bell className="w-8 h-8" />, description: "Push notifications" },
+    { name: "Display", icon: <Monitor className="w-8 h-8" />, description: "Display advertising" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Project Management Pro - Intelligent Project Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your project management with AI-powered planning, intelligent task management, and predictive analytics. Increase project success rates by 60%." />
-        <meta name="keywords" content="AI project management, project planning, task management, team collaboration, predictive analytics, workflow automation" />
-        <meta property="og:title" content="AI Project Management Pro - Zion Tech Group" />
-        <meta property="og:description" content="Intelligent project management platform with AI-powered planning and analytics" />
+        <title>AI Marketing Automation Pro - Intelligent Marketing Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform your marketing with AI-powered automation, advanced segmentation, and multi-channel campaigns. Increase conversions by 45% and reduce costs by 30%." />
+        <meta name="keywords" content="AI marketing automation, email marketing, social media automation, lead nurturing, marketing analytics, conversion optimization" />
+        <meta property="og:title" content="AI Marketing Automation Pro - Zion Tech Group" />
+        <meta property="og:description" content="Intelligent marketing automation platform with AI-powered optimization and multi-channel capabilities" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-project-management-pro" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-marketing-automation-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -247,16 +261,16 @@ const AiProjectManagementProPage: React.FC = () => {
               <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                   <Star className="w-4 h-4 mr-2" />
-                  #1 AI Project Management Platform
+                  #1 AI Marketing Platform
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    AI Project Management Pro
+                    AI Marketing Automation Pro
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Revolutionize your project management with AI-powered planning, intelligent task management, 
-                  and predictive analytics. Increase project success rates by 60% and deliver on time, every time.
+                  Revolutionize your marketing with AI-powered automation, advanced segmentation, 
+                  and multi-channel campaigns. Increase conversions by 45% and reduce costs by 30%.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -284,11 +298,11 @@ const AiProjectManagementProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Intelligent Project Features
+                    Intelligent Marketing Features
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Everything you need to manage projects smarter with AI-powered automation and insights.
+                  Everything you need to create, manage, and optimize marketing campaigns with AI-powered automation.
                 </p>
               </div>
               
@@ -321,17 +335,48 @@ const AiProjectManagementProPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Use Cases Section */}
+          {/* Channels Section */}
           <section className="py-20 bg-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Perfect for Every Industry
+                    Multi-Channel Marketing
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Our AI project management solution adapts to your specific industry needs and workflows.
+                  Reach your customers across all channels with unified automation and intelligent coordination.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                {channels.map((channel, index) => (
+                  <div 
+                    key={index} 
+                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
+                  >
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <div className="text-white">{channel.icon}</div>
+                    </div>
+                    <div className="text-white font-semibold mb-2">{channel.name}</div>
+                    <div className="text-cyan-400 text-sm">{channel.description}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Use Cases Section */}
+          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    Industry Solutions
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Our AI marketing automation platform is designed for various industries and business models.
                 </p>
               </div>
               
@@ -360,35 +405,6 @@ const AiProjectManagementProPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Integrations Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Seamless Integrations
-                  </span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Connect with your favorite tools and platforms for a unified project management experience.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-                {integrations.map((integration, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
-                  >
-                    <div className="text-4xl mb-3">{integration.icon}</div>
-                    <div className="text-white font-semibold mb-1 text-sm">{integration.name}</div>
-                    <div className="text-cyan-400 text-xs">{integration.description}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
           {/* Pricing Section */}
           <section className="py-20 bg-slate-900">
             <div className="container mx-auto px-4">
@@ -399,7 +415,7 @@ const AiProjectManagementProPage: React.FC = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the plan that fits your team size and project management needs.
+                  Choose the plan that fits your marketing automation needs and budget.
                 </p>
               </div>
               
@@ -459,11 +475,11 @@ const AiProjectManagementProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Project Success Stories
+                    Marketing Success Stories
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  See how teams are achieving better project outcomes with AI Project Management Pro.
+                  See how companies are achieving better marketing results with AI Marketing Automation Pro.
                 </p>
               </div>
               
@@ -497,10 +513,10 @@ const AiProjectManagementProPage: React.FC = () => {
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready to Manage Projects Smarter?
+                  Ready to Transform Your Marketing?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Join thousands of teams that have transformed their project management with AI-powered automation and intelligent insights.
+                  Join thousands of companies that have revolutionized their marketing with AI-powered automation and intelligent optimization.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -527,4 +543,4 @@ const AiProjectManagementProPage: React.FC = () => {
   );
 };
 
-export default AiProjectManagementProPage;
+export default AiMarketingAutomationProPage;

@@ -30,13 +30,15 @@ const Footer: React.FC = () => {
       icon: <Brain className="w-5 h-5 text-cyan-400" />,
       services: [
         { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+        { name: 'AI Financial Analytics Pro', href: '/ai-financial-analytics-pro' },
+        { name: 'AI Marketing Automation Pro', href: '/ai-marketing-automation-pro' },
         { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
         { name: 'AI Automation Suite', href: '/ai-automation-suite' },
-        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
-        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
         { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
-        { name: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' },
-        { name: 'AI IoT Management Pro', href: '/ai-iot-management-pro' }
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' }
       ]
     },
     {
@@ -48,7 +50,9 @@ const Footer: React.FC = () => {
         { name: 'Database Solutions', href: '/ai-database-solutions' },
         { name: 'Advanced Security Suite', href: '/advanced-security-suite' },
         { name: 'Performance Monitoring', href: '/performance-monitoring' },
-        { name: 'DevOps Solutions', href: '/devops-solutions' }
+        { name: 'DevOps Solutions', href: '/devops-solutions' },
+        { name: 'Data Analytics', href: '/ai-analytics' },
+        { name: 'Mobile Development', href: '/mobile-development' }
       ]
     },
     {
@@ -60,17 +64,19 @@ const Footer: React.FC = () => {
         { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
         { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
         { name: '5G Edge Computing', href: '/5g-edge-computing' },
-        { name: '5G Private Networks', href: '/5g-private-networks' }
+        { name: '5G Private Networks', href: '/5g-private-networks' },
+        { name: '5G Data Analytics', href: '/5g-data-analytics' },
+        { name: '5G Security', href: '/5g-security' }
       ]
     },
     {
       title: 'Micro SAAS',
       icon: <Cloud className="w-5 h-5 text-orange-400" />,
       services: [
-        { name: 'AI Project Manager Pro', href: '/ai-project-manager-pro' },
-        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager-pro' },
         { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
         { name: 'AI Financial Analytics Pro', href: '/ai-financial-analytics-pro' },
+        { name: 'AI Marketing Automation Pro', href: '/ai-marketing-automation-pro' },
         { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant' },
         { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
@@ -133,22 +139,19 @@ const Footer: React.FC = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Phone className="w-4 h-4 text-cyan-400" />
-                  <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors font-medium">
+                  <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
                     +1 302 464 0950
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Mail className="w-4 h-4 text-cyan-400" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors font-medium">
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
                     kleber@ziontechgroup.com
                   </a>
                 </div>
-                <div className="flex items-start space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4 text-cyan-400 mt-1" />
-                  <div>
-                    <div className="font-medium">364 E Main St STE 1008</div>
-                    <div>Middletown DE 19709</div>
-                  </div>
+                <div className="flex items-center space-x-3 text-gray-300">
+                  <MapPin className="w-4 h-4 text-cyan-400" />
+                  <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
                 </div>
               </div>
 

@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   DollarSign, 
-  TrendingUp, 
-  BarChart3, 
-  PieChart, 
   Zap, 
   Shield, 
   Globe, 
@@ -22,34 +19,37 @@ import {
   Settings,
   Eye,
   Filter,
-  Clock,
-  LineChart,
-  Activity,
-  AlertTriangle,
-  CheckSquare,
-  FileText,
   Target,
-  Calendar,
-  Image,
-  Video,
-  Link,
-  Hashtag,
-  AtSign,
+  Users,
   Award,
+  TrendingUp,
+  Cpu,
+  Database,
+  BarChart3,
+  Activity,
+  Clock,
+  FileText,
+  Send,
   ThumbsUp,
-  MessageCircle,
-  HelpCircle,
-  Search,
-  BookOpen,
-  Lightbulb,
+  ThumbsDown,
+  AlertCircle,
+  CheckSquare,
+  XCircle,
+  PieChart,
+  LineChart,
+  TrendingDown,
   Calculator,
   CreditCard,
   Banknote,
   Wallet,
-  PiggyBank,
-  TrendingDown,
+  Receipt,
+  ChartBar,
   Percent,
-  Graph
+  Coins,
+  Building2,
+  Briefcase,
+  PiggyBank,
+  HandCoins
 } from 'lucide-react';
 
 const AiFinancialAnalyticsProPage: React.FC = () => {
@@ -63,105 +63,88 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
     {
       icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered Forecasting",
-      description: "Advanced machine learning algorithms predict financial trends, cash flow, and market movements with unprecedented accuracy.",
-      benefits: ["Cash flow prediction", "Market trend analysis", "Risk assessment", "Investment insights"]
+      description: "Advanced machine learning algorithms that predict financial trends, cash flow, and market movements with 95% accuracy.",
+      benefits: ["95% accuracy", "Real-time predictions", "Market analysis", "Risk assessment"]
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Real-time Financial Dashboards",
-      description: "Comprehensive financial dashboards with live data, customizable KPIs, and interactive visualizations for better decision making.",
-      benefits: ["Live data feeds", "Custom KPIs", "Interactive charts", "Mobile access"]
+      title: "Real-time Analytics",
+      description: "Comprehensive financial dashboards with real-time data visualization, KPI tracking, and performance monitoring.",
+      benefits: ["Live dashboards", "KPI tracking", "Performance metrics", "Custom reports"]
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Fraud Detection & Security",
-      description: "AI-powered fraud detection, anomaly identification, and security monitoring to protect your financial assets and transactions.",
-      benefits: ["Real-time fraud detection", "Anomaly alerts", "Security monitoring", "Compliance tracking"]
+      title: "Fraud Detection",
+      description: "Advanced AI algorithms that detect fraudulent transactions, unusual patterns, and potential security threats in real-time.",
+      benefits: ["Real-time detection", "Pattern analysis", "Risk scoring", "Alert system"]
     },
     {
       icon: <Calculator className="w-6 h-6" />,
-      title: "Automated Financial Reporting",
-      description: "Generate comprehensive financial reports, tax documents, and compliance reports automatically with AI-powered analysis.",
-      benefits: ["Automated reporting", "Tax preparation", "Compliance reports", "Custom formats"]
+      title: "Automated Accounting",
+      description: "Intelligent automation that handles bookkeeping, expense categorization, and financial reporting with minimal human intervention.",
+      benefits: ["Auto-categorization", "Expense tracking", "Tax preparation", "Compliance"]
     },
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Investment Optimization",
-      description: "AI-driven investment recommendations, portfolio optimization, and risk management strategies for maximum returns.",
-      benefits: ["Portfolio optimization", "Risk management", "Investment recommendations", "Performance tracking"]
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Investment Analysis",
+      description: "AI-driven investment recommendations, portfolio optimization, and market analysis to maximize returns and minimize risks.",
+      benefits: ["Portfolio optimization", "Risk analysis", "Market insights", "ROI tracking"]
     },
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Smart Automation",
-      description: "Automate financial processes, bill payments, budget tracking, and expense management with intelligent workflows.",
-      benefits: ["Process automation", "Bill automation", "Budget tracking", "Expense management"]
+      description: "Intelligent workflows that automate financial processes, reduce errors, and ensure compliance with regulations.",
+      benefits: ["Process automation", "Error reduction", "Compliance", "Efficiency"]
     }
-  ];
-
-  const financialMetrics = [
-    { name: "Revenue Growth", icon: <TrendingUp className="w-8 h-8" />, color: "text-green-500" },
-    { name: "Profit Margins", icon: <Percent className="w-8 h-8" />, color: "text-blue-500" },
-    { name: "Cash Flow", icon: <DollarSign className="w-8 h-8" />, color: "text-cyan-500" },
-    { name: "ROI Analysis", icon: <Graph className="w-8 h-8" />, color: "text-purple-500" },
-    { name: "Budget Tracking", icon: <PiggyBank className="w-8 h-8" />, color: "text-orange-500" },
-    { name: "Expense Analysis", icon: <CreditCard className="w-8 h-8" />, color: "text-red-500" },
-    { name: "Tax Planning", icon: <Calculator className="w-8 h-8" />, color: "text-indigo-500" },
-    { name: "Risk Assessment", icon: <Shield className="w-8 h-8" />, color: "text-yellow-500" }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$149",
+      name: "Startup",
+      price: "$199",
       period: "month",
-      description: "Perfect for small businesses and freelancers",
+      description: "Perfect for startups and small businesses",
       features: [
         "Basic financial analytics",
         "Up to 5 bank accounts",
-        "Standard reporting",
+        "Monthly reports",
         "Email support",
-        "5GB data storage",
-        "Mobile app access",
-        "Basic forecasting",
-        "Monthly reports"
+        "Standard security",
+        "1 user"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$499",
       period: "month",
-      description: "Ideal for growing companies and financial advisors",
+      description: "Ideal for growing businesses with complex needs",
       features: [
         "Advanced AI analytics",
-        "Unlimited accounts",
-        "Comprehensive reporting",
+        "Up to 25 bank accounts",
+        "Real-time reporting",
         "Priority support",
-        "50GB data storage",
+        "Enhanced security",
+        "Up to 10 users",
         "API access",
-        "Advanced forecasting",
-        "Real-time dashboards",
-        "Fraud detection",
-        "White-label options"
+        "Custom integrations"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$599",
+      price: "$999",
       period: "month",
       description: "Complete solution for large organizations",
       features: [
         "Full AI suite",
-        "Custom integrations",
-        "Custom development",
+        "Unlimited accounts",
+        "Custom analytics",
         "24/7 dedicated support",
-        "Unlimited storage",
-        "Advanced security",
-        "On-premise deployment",
-        "Custom AI training",
-        "Compliance management",
-        "Training & onboarding"
+        "Bank-level security",
+        "Unlimited users",
+        "Custom development",
+        "On-premise deployment"
       ],
       popular: false
     }
@@ -169,54 +152,70 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Michael Chen",
-      company: "Investment Firm",
+      name: "Robert Kim",
+      company: "FinTech Solutions",
       role: "CFO",
-      content: "AI Financial Analytics Pro has transformed our investment strategies. The AI predictions have increased our portfolio returns by 35% and reduced risk exposure by 40%. The fraud detection has saved us millions.",
+      content: "AI Financial Analytics Pro has revolutionized our financial planning. The forecasting accuracy is incredible, and we've reduced financial errors by 90%.",
       rating: 5
     },
     {
-      name: "Sarah Johnson",
-      company: "Tech Startup",
-      role: "Finance Director",
-      content: "The automated reporting and forecasting features have been game-changers. We can now make data-driven decisions in real-time and our financial planning accuracy has improved by 80%.",
+      name: "Maria Santos",
+      company: "Investment Group",
+      role: "Portfolio Manager",
+      content: "The investment analysis and portfolio optimization features have helped us achieve 25% better returns while reducing risk exposure significantly.",
       rating: 5
     },
     {
-      name: "David Rodriguez",
-      company: "E-commerce Platform",
-      role: "VP of Finance",
-      content: "The AI-powered cash flow predictions and budget optimization have helped us scale efficiently. We've reduced financial waste by 25% and improved our profit margins significantly.",
+      name: "David Johnson",
+      company: "Retail Chain",
+      role: "Financial Director",
+      content: "The fraud detection and automated accounting have saved us millions. The system caught fraudulent transactions that would have gone unnoticed.",
       rating: 5
     }
   ];
 
-  const metrics = [
-    { number: "35%", label: "Higher Returns", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "40%", label: "Risk Reduction", icon: <Shield className="w-6 h-6" /> },
-    { number: "80%", label: "Accuracy Improvement", icon: <Target className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Monitoring", icon: <Activity className="w-6 h-6" /> }
+  const useCases = [
+    {
+      title: "Banking & Finance",
+      description: "Comprehensive financial analysis for banks, credit unions, and financial institutions",
+      icon: <Building2 className="w-8 h-8" />,
+      benefits: ["Risk assessment", "Credit scoring", "Fraud detection", "Regulatory compliance"]
+    },
+    {
+      title: "Investment Management",
+      description: "Portfolio optimization and investment analysis for asset managers and advisors",
+      icon: <Briefcase className="w-8 h-8" />,
+      benefits: ["Portfolio optimization", "Market analysis", "Risk management", "Performance tracking"]
+    },
+    {
+      title: "E-commerce",
+      description: "Financial analytics for online retailers and marketplace businesses",
+      icon: <CreditCard className="w-8 h-8" />,
+      benefits: ["Revenue tracking", "Profit analysis", "Inventory management", "Payment processing"]
+    },
+    {
+      title: "SaaS Companies",
+      description: "Subscription analytics and revenue optimization for software companies",
+      icon: <Cpu className="w-8 h-8" />,
+      benefits: ["MRR tracking", "Churn analysis", "Lifetime value", "Growth metrics"]
+    }
   ];
 
-  const integrations = [
-    { name: "QuickBooks", description: "Accounting software" },
-    { name: "Xero", description: "Cloud accounting" },
-    { name: "Sage", description: "Business management" },
-    { name: "Stripe", description: "Payment processing" },
-    { name: "PayPal", description: "Online payments" },
-    { name: "Bank APIs", description: "Banking integration" },
-    { name: "Excel", description: "Spreadsheet sync" },
-    { name: "Google Sheets", description: "Collaboration" }
+  const metrics = [
+    { label: "95%", description: "Forecasting Accuracy" },
+    { label: "90%", description: "Error Reduction" },
+    { label: "60%", description: "Time Savings" },
+    { label: "25%", description: "Better Returns" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Financial Analytics Pro - Intelligent Financial Management | Zion Tech Group</title>
-        <meta name="description" content="Transform your financial management with AI-powered analytics, forecasting, and automation. Make smarter financial decisions with intelligent insights." />
-        <meta name="keywords" content="AI financial analytics, financial forecasting, investment optimization, fraud detection, financial reporting, budget management, cash flow analysis" />
+        <title>AI Financial Analytics Pro - Intelligent Finance Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform your financial management with AI-powered analytics, fraud detection, and automated accounting. Achieve 95% forecasting accuracy and reduce errors by 90%." />
+        <meta name="keywords" content="AI financial analytics, fraud detection, automated accounting, investment analysis, financial forecasting, fintech" />
         <meta property="og:title" content="AI Financial Analytics Pro - Zion Tech Group" />
-        <meta property="og:description" content="Intelligent financial analytics platform with AI-powered forecasting and automation" />
+        <meta property="og:description" content="Intelligent financial analytics platform with AI-powered forecasting and fraud detection" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-financial-analytics-pro" />
       </Helmet>
@@ -247,7 +246,7 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
               <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                   <Star className="w-4 h-4 mr-2" />
-                  #1 AI Financial Analytics Platform
+                  #1 AI Financial Platform
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -255,8 +254,8 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Revolutionize your financial management with AI-powered analytics, intelligent forecasting, 
-                  and automated financial processes. Make smarter decisions with data-driven insights.
+                  Revolutionize your financial management with AI-powered analytics, fraud detection, 
+                  and automated accounting. Achieve 95% forecasting accuracy and reduce errors by 90%.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -278,30 +277,30 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Financial Metrics Section */}
+          {/* Metrics Section */}
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Comprehensive Financial Metrics
+                    Proven Results
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Track and analyze all your financial KPIs with AI-powered insights and predictions.
+                  Our AI financial analytics platform delivers measurable results for businesses of all sizes.
                 </p>
               </div>
               
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-                {financialMetrics.map((metric, index) => (
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                {metrics.map((metric, index) => (
                   <div 
                     key={index} 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 group"
+                    className="text-center group"
                   >
-                    <div className={`${metric.color} mb-3 group-hover:scale-110 transition-transform duration-300 flex justify-center`}>
-                      {metric.icon}
+                    <div className="w-20 h-20 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <div className="text-3xl font-bold text-white">{metric.label}</div>
                     </div>
-                    <div className="text-white font-semibold text-sm">{metric.name}</div>
+                    <div className="text-gray-300 font-semibold">{metric.description}</div>
                   </div>
                 ))}
               </div>
@@ -314,11 +313,11 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    AI-Powered Features
+                    Advanced Financial Features
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Everything you need to manage your finances intelligently with AI-driven insights and automation.
+                  Everything you need to manage your finances intelligently with AI-powered automation and insights.
                 </p>
               </div>
               
@@ -326,7 +325,7 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
                 {features.map((feature, index) => (
                   <div 
                     key={index} 
-                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 neon-card"
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       <div className="text-white">{feature.icon}</div>
@@ -351,56 +350,39 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Metrics Section */}
+          {/* Use Cases Section */}
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Proven Results
+                    Industry Solutions
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Join thousands of businesses achieving remarkable financial improvements with our AI platform.
+                  Our AI financial analytics platform is designed for various industries and use cases.
                 </p>
               </div>
               
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                {metrics.map((metric, index) => (
-                  <div key={index} className="text-center group">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                      <div className="text-cyan-400">{metric.icon}</div>
-                    </div>
-                    <div className="text-3xl font-bold text-white mb-1">{metric.number}</div>
-                    <div className="text-gray-400 text-sm">{metric.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Integrations Section */}
-          <section className="py-20 bg-slate-900">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Seamless Integrations
-                  </span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Connect with your existing financial tools and platforms for a unified experience.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-                {integrations.map((integration, index) => (
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {useCases.map((useCase, index) => (
                   <div 
                     key={index} 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
+                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
                   >
-                    <div className="text-cyan-400 font-bold text-lg mb-2">{integration.name}</div>
-                    <div className="text-gray-300 text-sm">{integration.description}</div>
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                      <div className="text-white">{useCase.icon}</div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
+                    <p className="text-gray-300 mb-6">{useCase.description}</p>
+                    <div className="space-y-2">
+                      {useCase.benefits.map((benefit, benefitIndex) => (
+                        <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -408,7 +390,7 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
           </section>
 
           {/* Pricing Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+          <section className="py-20 bg-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -417,7 +399,7 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the plan that fits your financial needs and business size. All plans include our core AI features.
+                  Choose the plan that fits your financial analytics needs and budget.
                 </p>
               </div>
               
@@ -472,16 +454,16 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
           </section>
 
           {/* Testimonials Section */}
-          <section className="py-20 bg-slate-900">
+          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Success Stories
+                    Financial Success Stories
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  See how businesses are transforming their financial management with our AI platform.
+                  See how companies are achieving better financial outcomes with AI Financial Analytics Pro.
                 </p>
               </div>
               
@@ -515,11 +497,10 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready to Transform Your Financial Management?
+                  Ready to Transform Your Finances?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Start your free trial today and experience the power of AI-driven financial analytics. 
-                  No credit card required.
+                  Join thousands of companies that have revolutionized their financial management with AI-powered analytics and automation.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -534,7 +515,7 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                   >
                     <Mail className="w-5 h-5 mr-2" />
-                    Get Free Consultation
+                    Get Free Trial
                   </a>
                 </div>
               </div>

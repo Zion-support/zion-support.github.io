@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Calendar, 
+  GraduationCap, 
   Zap, 
   Shield, 
   Globe, 
@@ -35,21 +35,53 @@ import {
   AlertCircle,
   CheckSquare,
   XCircle,
-  Kanban,
-  GanttChart,
   PieChart,
   LineChart,
-  GitBranch,
+  TrendingDown,
+  Calculator,
+  CreditCard,
+  Banknote,
+  Wallet,
+  Receipt,
+  ChartBar,
+  Percent,
+  Coins,
+  Building2,
+  Briefcase,
+  PiggyBank,
+  HandCoins,
+  BookOpen,
+  PenTool,
+  Video,
+  Headphones,
+  Monitor,
+  Smartphone,
+  Tablet,
+  Laptop,
+  Wifi,
+  Lock,
+  User,
+  Users as UsersIcon,
+  Award as AwardIcon,
+  Trophy,
+  Target as TargetIcon,
+  Lightbulb,
+  Book,
+  Clipboard,
+  Calendar,
   MessageSquare,
-  Bell,
-  Flag,
-  Timer,
-  Layers,
-  Workflow,
-  Command
+  Share2,
+  Download as DownloadIcon,
+  Upload,
+  Edit,
+  Trash2,
+  Plus,
+  Minus,
+  Check,
+  X
 } from 'lucide-react';
 
-const AiProjectManagementProPage: React.FC = () => {
+const AiEducationSolutionsProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -59,88 +91,88 @@ const AiProjectManagementProPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Planning",
-      description: "Intelligent project planning with AI that analyzes requirements, estimates timelines, and suggests optimal resource allocation.",
-      benefits: ["Smart scheduling", "Resource optimization", "Risk prediction", "Timeline estimation"]
+      title: "AI-Powered Learning",
+      description: "Personalized learning experiences with AI that adapts to each student's pace, learning style, and knowledge gaps for optimal educational outcomes.",
+      benefits: ["Adaptive learning", "Personalized content", "Learning analytics", "Progress tracking"]
     },
     {
-      icon: <Kanban className="w-6 h-6" />,
-      title: "Smart Task Management",
-      description: "Advanced task management with AI-driven prioritization, automatic assignment, and intelligent workflow optimization.",
-      benefits: ["Auto-prioritization", "Smart assignment", "Workflow automation", "Progress tracking"]
+      icon: <GraduationCap className="w-6 h-6" />,
+      title: "Virtual Classrooms",
+      description: "Immersive virtual learning environments with AI-powered features like automated attendance, real-time translation, and intelligent Q&A.",
+      benefits: ["Virtual classrooms", "Real-time translation", "Auto-attendance", "Interactive tools"]
+    },
+    {
+      icon: <BookOpen className="w-6 h-6" />,
+      title: "Content Generation",
+      description: "AI-generated educational content including quizzes, assignments, study materials, and interactive lessons tailored to curriculum requirements.",
+      benefits: ["Auto-generated content", "Curriculum alignment", "Interactive materials", "Assessment tools"]
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Predictive Analytics",
-      description: "Get insights into project health, predict bottlenecks, and optimize performance with AI-powered analytics.",
-      benefits: ["Performance insights", "Bottleneck prediction", "Trend analysis", "ROI tracking"]
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Team Collaboration",
-      description: "Enhanced team collaboration with real-time communication, shared workspaces, and intelligent meeting scheduling.",
-      benefits: ["Real-time chat", "Shared workspaces", "Smart meetings", "Document collaboration"]
+      title: "Learning Analytics",
+      description: "Comprehensive analytics dashboard that tracks student performance, identifies learning patterns, and provides insights for educators.",
+      benefits: ["Performance tracking", "Learning insights", "Predictive analytics", "Intervention alerts"]
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "Bank-level security with role-based access, audit trails, and compliance with industry standards.",
-      benefits: ["Role-based access", "Audit trails", "Data encryption", "Compliance"]
+      title: "Student Privacy & Security",
+      description: "COPPA and FERPA compliant platform with advanced security measures to protect student data and ensure safe learning environments.",
+      benefits: ["COPPA compliance", "FERPA compliance", "Data encryption", "Privacy protection"]
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Workflows",
-      description: "Streamline processes with intelligent automation that handles routine tasks and keeps projects on track.",
-      benefits: ["Process automation", "Smart notifications", "Auto-updates", "Integration"]
+      title: "Automated Assessment",
+      description: "AI-powered grading and assessment system that provides instant feedback, reduces teacher workload, and ensures consistent evaluation.",
+      benefits: ["Auto-grading", "Instant feedback", "Consistent evaluation", "Bias detection"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$149",
+      name: "School",
+      price: "$199",
       period: "month",
-      description: "Perfect for small teams getting started with AI project management",
+      description: "Perfect for individual schools and small districts",
       features: [
-        "Up to 10 team members",
-        "Basic AI planning",
-        "Task management",
+        "Up to 500 students",
+        "Basic AI features",
+        "Virtual classrooms",
         "Basic analytics",
         "Email support",
-        "5 projects max"
+        "Standard security"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$399",
+      name: "District",
+      price: "$599",
       period: "month",
-      description: "Ideal for growing teams with advanced project management needs",
+      description: "Comprehensive solution for school districts",
       features: [
-        "Up to 50 team members",
+        "Up to 5,000 students",
         "Advanced AI features",
         "Full analytics suite",
-        "Custom workflows",
+        "Custom content",
         "Priority support",
-        "Unlimited projects",
+        "COPPA/FERPA compliance",
         "API access",
-        "Integrations"
+        "Multi-school management"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$1,199",
       period: "month",
-      description: "Complete solution for large organizations with complex requirements",
+      description: "Complete solution for large educational organizations",
       features: [
-        "Unlimited team members",
-        "Custom AI training",
-        "Advanced security",
-        "Dedicated support",
+        "Unlimited students",
+        "Full AI suite",
         "Custom development",
-        "On-premise deployment",
+        "Dedicated support",
         "White-label options",
+        "Advanced security",
+        "On-premise deployment",
         "24/7 support"
       ],
       popular: false
@@ -149,76 +181,76 @@ const AiProjectManagementProPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Michael Chen",
-      company: "TechFlow Solutions",
-      role: "Project Director",
-      content: "AI Project Management Pro has increased our project success rate by 60%. The AI planning and predictive analytics are game-changers for our team.",
+      name: "Dr. Sarah Williams",
+      company: "Metro School District",
+      role: "Superintendent",
+      content: "AI Education Solutions Pro has transformed our teaching methods. Student engagement has increased by 50% and test scores have improved by 35% across all grade levels.",
       rating: 5
     },
     {
-      name: "Lisa Rodriguez",
-      company: "Digital Innovations",
-      role: "CTO",
-      content: "The intelligent task management and team collaboration features have streamlined our development process. We're delivering projects 40% faster.",
+      name: "Michael Johnson",
+      company: "Tech University",
+      role: "Dean of Education",
+      content: "The personalized learning and automated assessment features have revolutionized our online programs. Students are learning more effectively and teachers can focus on mentoring.",
       rating: 5
     },
     {
-      name: "James Wilson",
-      company: "Enterprise Corp",
-      role: "VP of Operations",
-      content: "The predictive analytics and automated workflows have helped us identify and resolve issues before they become problems. Highly recommended!",
+      name: "Lisa Chen",
+      company: "Elementary School",
+      role: "Principal",
+      content: "The AI-powered content generation and learning analytics have helped us identify struggling students early and provide targeted interventions. Highly recommended!",
       rating: 5
     }
   ];
 
   const useCases = [
     {
-      title: "Software Development",
-      description: "Manage agile development cycles with AI-powered sprint planning and resource allocation",
-      icon: <Cpu className="w-8 h-8" />,
-      benefits: ["Sprint planning", "Bug tracking", "Code review", "Release management"]
+      title: "K-12 Education",
+      description: "Comprehensive AI solutions for primary and secondary education with age-appropriate content and safety features",
+      icon: <Book className="w-8 h-8" />,
+      benefits: ["Age-appropriate content", "Parental controls", "Progress reports", "Safety features"]
     },
     {
-      title: "Marketing Campaigns",
-      description: "Plan and execute marketing campaigns with intelligent content scheduling and performance tracking",
-      icon: <Target className="w-8 h-8" />,
-      benefits: ["Campaign planning", "Content calendar", "Performance tracking", "ROI analysis"]
+      title: "Higher Education",
+      description: "Advanced AI tools for universities and colleges with research capabilities and academic integrity features",
+      icon: <GraduationCap className="w-8 h-8" />,
+      benefits: ["Research tools", "Academic integrity", "Advanced analytics", "Collaboration features"]
     },
     {
-      title: "Construction Projects",
-      description: "Manage complex construction projects with AI-driven timeline optimization and resource management",
-      icon: <Layers className="w-8 h-8" />,
-      benefits: ["Timeline optimization", "Resource allocation", "Safety tracking", "Quality control"]
+      title: "Corporate Training",
+      description: "Professional development and corporate training solutions with skill assessment and certification tracking",
+      icon: <Briefcase className="w-8 h-8" />,
+      benefits: ["Skill assessment", "Certification tracking", "Compliance training", "Performance metrics"]
     },
     {
-      title: "Event Planning",
-      description: "Organize events with intelligent vendor management and automated coordination",
-      icon: <Calendar className="w-8 h-8" />,
-      benefits: ["Vendor management", "Timeline coordination", "Budget tracking", "Guest management"]
+      title: "Online Learning",
+      description: "Full-featured online learning platform with virtual classrooms and interactive content delivery",
+      icon: <Monitor className="w-8 h-8" />,
+      benefits: ["Virtual classrooms", "Interactive content", "Live streaming", "Mobile learning"]
     }
   ];
 
-  const integrations = [
-    { name: "Slack", icon: "💬", description: "Team communication" },
-    { name: "Microsoft Teams", icon: "👥", description: "Video conferencing" },
-    { name: "Jira", icon: "🎯", description: "Issue tracking" },
-    { name: "GitHub", icon: "🐙", description: "Code management" },
-    { name: "Trello", icon: "📋", description: "Task boards" },
-    { name: "Asana", icon: "✅", description: "Project tracking" },
-    { name: "Google Workspace", icon: "📧", description: "Productivity suite" },
-    { name: "Salesforce", icon: "☁️", description: "CRM integration" }
+  const subjects = [
+    { name: "Mathematics", icon: "🔢", description: "AI-powered math tutoring" },
+    { name: "Science", icon: "🔬", description: "Interactive science labs" },
+    { name: "Language Arts", icon: "📚", description: "Reading and writing support" },
+    { name: "History", icon: "🏛️", description: "Immersive historical content" },
+    { name: "Computer Science", icon: "💻", description: "Coding and programming" },
+    { name: "Art & Design", icon: "🎨", description: "Creative expression tools" },
+    { name: "Music", icon: "🎵", description: "Music theory and practice" },
+    { name: "Physical Education", icon: "🏃", description: "Health and fitness tracking" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Project Management Pro - Intelligent Project Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your project management with AI-powered planning, intelligent task management, and predictive analytics. Increase project success rates by 60%." />
-        <meta name="keywords" content="AI project management, project planning, task management, team collaboration, predictive analytics, workflow automation" />
-        <meta property="og:title" content="AI Project Management Pro - Zion Tech Group" />
-        <meta property="og:description" content="Intelligent project management platform with AI-powered planning and analytics" />
+        <title>AI Education Solutions Pro - Intelligent Learning Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform education with AI-powered learning, virtual classrooms, and personalized content. Increase student engagement by 50% and improve test scores by 35%." />
+        <meta name="keywords" content="AI education, e-learning, virtual classrooms, personalized learning, educational technology, student analytics, COPPA compliance" />
+        <meta property="og:title" content="AI Education Solutions Pro - Zion Tech Group" />
+        <meta property="og:description" content="Intelligent education platform with AI-powered learning and virtual classroom capabilities" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-project-management-pro" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-education-solutions-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -247,16 +279,16 @@ const AiProjectManagementProPage: React.FC = () => {
               <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                   <Star className="w-4 h-4 mr-2" />
-                  #1 AI Project Management Platform
+                  #1 AI Education Platform
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    AI Project Management Pro
+                    AI Education Solutions Pro
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Revolutionize your project management with AI-powered planning, intelligent task management, 
-                  and predictive analytics. Increase project success rates by 60% and deliver on time, every time.
+                  Revolutionize education with AI-powered learning, virtual classrooms, and personalized content. 
+                  Increase student engagement by 50% and improve test scores by 35%.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -284,11 +316,11 @@ const AiProjectManagementProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Intelligent Project Features
+                    Intelligent Education Features
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Everything you need to manage projects smarter with AI-powered automation and insights.
+                  Everything you need to create engaging, personalized learning experiences with AI-powered automation and insights.
                 </p>
               </div>
               
@@ -321,17 +353,46 @@ const AiProjectManagementProPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Use Cases Section */}
+          {/* Subjects Section */}
           <section className="py-20 bg-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Perfect for Every Industry
+                    All Subjects Covered
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Our AI project management solution adapts to your specific industry needs and workflows.
+                  Our AI education platform supports all major subjects with specialized content and interactive learning tools.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+                {subjects.map((subject, index) => (
+                  <div 
+                    key={index} 
+                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
+                  >
+                    <div className="text-4xl mb-3">{subject.icon}</div>
+                    <div className="text-white font-semibold mb-1 text-sm">{subject.name}</div>
+                    <div className="text-cyan-400 text-xs">{subject.description}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Use Cases Section */}
+          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    Educational Solutions
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Our AI education platform is designed for various educational settings and learning environments.
                 </p>
               </div>
               
@@ -360,35 +421,6 @@ const AiProjectManagementProPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Integrations Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Seamless Integrations
-                  </span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Connect with your favorite tools and platforms for a unified project management experience.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-                {integrations.map((integration, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
-                  >
-                    <div className="text-4xl mb-3">{integration.icon}</div>
-                    <div className="text-white font-semibold mb-1 text-sm">{integration.name}</div>
-                    <div className="text-cyan-400 text-xs">{integration.description}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
           {/* Pricing Section */}
           <section className="py-20 bg-slate-900">
             <div className="container mx-auto px-4">
@@ -399,7 +431,7 @@ const AiProjectManagementProPage: React.FC = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the plan that fits your team size and project management needs.
+                  Choose the plan that fits your educational institution's needs and budget.
                 </p>
               </div>
               
@@ -459,11 +491,11 @@ const AiProjectManagementProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Project Success Stories
+                    Education Success Stories
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  See how teams are achieving better project outcomes with AI Project Management Pro.
+                  See how educational institutions are improving learning outcomes with AI Education Solutions Pro.
                 </p>
               </div>
               
@@ -497,10 +529,10 @@ const AiProjectManagementProPage: React.FC = () => {
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready to Manage Projects Smarter?
+                  Ready to Transform Education?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Join thousands of teams that have transformed their project management with AI-powered automation and intelligent insights.
+                  Join leading educational institutions that are revolutionizing learning with AI-powered solutions and intelligent automation.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -527,4 +559,4 @@ const AiProjectManagementProPage: React.FC = () => {
   );
 };
 
-export default AiProjectManagementProPage;
+export default AiEducationSolutionsProPage;

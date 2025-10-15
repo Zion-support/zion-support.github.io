@@ -1,5 +1,5 @@
 import React, { memo, useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock, MessageSquare, DollarSign } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock, MessageCircle, Calendar, DollarSign, Megaphone } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 // Loading skeleton component
@@ -22,51 +22,51 @@ const HomePage: React.FC = () => {
   const services = [
     {
       icon: <Brain className="w-8 h-8" />,
-      title: "AI Project Manager Pro",
-      description: "Revolutionary project management with AI-powered task automation, predictive analytics, and intelligent resource allocation.",
-      price: "$99/month",
-      features: ["AI Task Management", "Predictive Analytics", "Team Collaboration", "Goal Tracking"],
-      link: "/ai-project-manager-pro"
+      title: "AI Analytics Dashboard Pro",
+      description: "Advanced AI-powered analytics with real-time insights, predictive modeling, and automated reporting.",
+      price: "$299/month",
+      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration"],
+      link: "/ai-analytics-dashboard-pro"
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "AI Social Media Manager Pro",
-      description: "Transform your social media strategy with AI-powered content generation, analytics, and automated management across all platforms.",
-      price: "$149/month",
-      features: ["AI Content Generation", "Multi-platform Management", "Advanced Analytics", "Audience Intelligence"],
-      link: "/ai-social-media-manager-pro"
-    },
-    {
-      icon: <MessageSquare className="w-8 h-8" />,
-      title: "AI Customer Support Pro",
-      description: "Revolutionize customer support with AI-powered chatbots, intelligent ticket routing, and automated workflows.",
+      icon: <Code className="w-8 h-8" />,
+      title: "AI Code Assistant Pro",
+      description: "Intelligent code generation, debugging, and optimization with support for 50+ programming languages.",
       price: "$199/month",
-      features: ["AI Chatbots", "Smart Routing", "Sentiment Analysis", "24/7 Support"],
+      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Multi-language Support"],
+      link: "/ai-code-assistant-pro"
+    },
+    {
+      icon: <MessageCircle className="w-8 h-8" />,
+      title: "AI Customer Support Pro",
+      description: "Revolutionary customer support with AI-powered chatbots, omnichannel capabilities, and intelligent automation.",
+      price: "$99/month",
+      features: ["AI Chatbots", "Omnichannel Support", "Real-time Analytics", "Fraud Detection"],
       link: "/ai-customer-support-pro"
+    },
+    {
+      icon: <Calendar className="w-8 h-8" />,
+      title: "AI Project Management Pro",
+      description: "Intelligent project management with AI-powered planning, task automation, and predictive analytics.",
+      price: "$149/month",
+      features: ["AI Planning", "Smart Task Management", "Predictive Analytics", "Team Collaboration"],
+      link: "/ai-project-management-pro"
     },
     {
       icon: <DollarSign className="w-8 h-8" />,
       title: "AI Financial Analytics Pro",
-      description: "Transform financial management with AI-powered forecasting, fraud detection, and automated financial reporting.",
-      price: "$299/month",
-      features: ["AI Forecasting", "Fraud Detection", "Investment Optimization", "Automated Reporting"],
+      description: "Transform financial management with AI-powered forecasting, fraud detection, and automated accounting.",
+      price: "$199/month",
+      features: ["95% Forecasting Accuracy", "Fraud Detection", "Automated Accounting", "Investment Analysis"],
       link: "/ai-financial-analytics-pro"
     },
     {
-      icon: <Wifi className="w-8 h-8" />,
-      title: "5G Implementation",
-      description: "Complete 5G network deployment with ultra-low latency and massive IoT connectivity.",
-      price: "$999/month",
-      features: ["5G Network Setup", "IoT Integration", "Edge Computing", "Performance Monitoring"],
-      link: "/5g-implementation"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Advanced Security Suite",
-      description: "Comprehensive cybersecurity with AI threat detection, automated response, and compliance management.",
-      price: "$399/month",
-      features: ["AI Threat Detection", "Automated Response", "Compliance Management", "24/7 Monitoring"],
-      link: "/advanced-security-suite"
+      icon: <Megaphone className="w-8 h-8" />,
+      title: "AI Marketing Automation Pro",
+      description: "Revolutionize marketing with AI-powered campaigns, advanced segmentation, and multi-channel automation.",
+      price: "$149/month",
+      features: ["AI Campaigns", "Advanced Segmentation", "Multi-channel", "Real-time Analytics"],
+      link: "/ai-marketing-automation-pro"
     }
   ];
 
