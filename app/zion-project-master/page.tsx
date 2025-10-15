@@ -1,6 +1,8 @@
-import { ArrowRight, CheckSquare, Users, Calendar, BarChart3, CheckCircle, Clock, DollarSign, Target, Zap, Globe, FileText, Settings } from "lucide-react";
+import {ArrowRight, CheckSquare, CheckCircle, Target} from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { BarChart3, Settings, Users } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 export default function ZionProjectMaster() {
   const features = [

@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, CheckCircle, Cloud, Database, Globe, Lock, Settings, Shield, Smartphone, Star, Users, Zap } from 'lucide-react';
+import {ArrowRight, Brain, CheckCircle, Database, Globe, Smartphone, Star} from 'lucide-react';
+import {Settings, Zap, Users, Lock} from 'lucide-react';
+import { Shield, Cloud } from 'lucide-react';
 
 // Service categories
 const serviceCategories = [

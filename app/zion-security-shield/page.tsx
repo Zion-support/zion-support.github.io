@@ -1,6 +1,9 @@
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Clock, DollarSign, Target, Zap, Globe, Users } from "lucide-react";
+import {ArrowRight, Eye, AlertTriangle, CheckCircle, Target, Globe} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import {Zap} from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Shield, Clock } from 'lucide-react';
 
 export default function ZionSecurityShield() {
   const features = [

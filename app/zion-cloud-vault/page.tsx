@@ -1,6 +1,9 @@
-import { ArrowRight, Cloud, Lock, Upload, Download, Share, Shield, CheckCircle, Clock, DollarSign, Target, Zap, Globe, Users, Folder } from "lucide-react";
+import {ArrowRight, Upload, Download, Share, CheckCircle, Target, Globe} from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import {Zap, Users} from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Shield, Cloud, Clock } from 'lucide-react';
 
 export default function ZionCloudVault() {
   const features = [

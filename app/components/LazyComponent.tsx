@@ -1,6 +1,5 @@
 import React, { Suspense, lazy, ComponentType } from "react";
 import { Loader2 } from "lucide-react";
-
 interface LazyComponentProps {
   fallback?: React.ReactNode;
   delay?: number;
@@ -65,8 +64,7 @@ export const LazyComponent: React.FC<LazyComponentProps & { children: React.Reac
 }) => {
   const [shouldRender, setShouldRender] = React.useState(false);
   const ref = React.useRef<HTMLDivElement>(null);
-  const isVisible = useLazyLoad(ref);
-  
+    
   React.useEffect(() => {
     if (isVisible) {
       if (delay > 0) {

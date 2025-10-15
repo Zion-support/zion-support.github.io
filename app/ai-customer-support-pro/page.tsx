@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { Activity, ArrowRight, BarChart3, Bot, Brain, CheckCircle, Cpu, Headphones, Mail, Phone, Play, Shield, ShoppingCart, Star, Zap } from 'lucide-react';
+import {Activity, ArrowRight, Bot, Brain, CheckCircle, Cpu, Headphones, Phone, Play, ShoppingCart, Star, BarChart3, Zap, Mail} from 'lucide-react';
+import { Shield } from 'lucide-react';
 
 const AiCustomerSupportProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

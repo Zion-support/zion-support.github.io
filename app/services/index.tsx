@@ -1,18 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRightIcon, 
-  CheckIcon, 
-  StarIcon,
-  CpuChipIcon,
-  ShieldCheckIcon,
-  CloudIcon,
-  ChartBarIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  UserGroupIcon
-} from '@heroicons/react/24/outline';
+import {CheckIcon, CpuChipIcon, ShieldCheckIcon, CloudIcon, ChartBarIcon, CurrencyDollarIcon, ClockIcon} from '@heroicons/react/24/outline';
+import { StarIcon } from '@heroicons/react/24/solid';
+import { Clock } from 'lucide-react';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 const Services: React.FC = () => {
   const microSaasServices = [

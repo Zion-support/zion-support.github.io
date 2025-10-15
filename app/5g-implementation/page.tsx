@@ -1,16 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, 
-  Shield, 
-  Globe, 
-  CheckCircle, 
-  Star, 
-  Settings, 
-  Smartphone, 
-  Cloud, 
-  Cpu, 
-  BarChart3, 
-  Activity } from 'lucide-react';
+import {Wifi, Globe, CheckCircle, Star, Smartphone, Cpu, Activity} from 'lucide-react';
+import {BarChart3, Settings} from 'lucide-react';
+import { Shield, Cloud } from 'lucide-react';
 const FiveGImplementationPage: React.FC = () => {
   const features = [
     { icon: <Wifi className="w-6 h-6" />,

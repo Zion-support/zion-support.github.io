@@ -1,6 +1,8 @@
-import { ArrowRight, Link, Zap, Target, BarChart3, CheckCircle, Clock, DollarSign, Users, Settings, Globe, Shield, Coins } from "lucide-react";
+import {ArrowRight, Link, Target, CheckCircle, Globe, Coins} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
+import {BarChart3, Zap} from 'lucide-react';
+import { Shield, Clock } from 'lucide-react';
 
 export default function AIBlockchainSolutions() {
   const features = [

@@ -1,24 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Calendar, 
-  Users, 
-  Target, 
-  BarChart3, 
-  Zap, 
-  CheckCircle, 
-  Star,
-  ArrowRight,
-  Clock,
-  TrendingUp,
-  AlertTriangle,
-  MessageSquare,
-  FileText,
-  PieChart,
-  Settings,
-  Shield
-} from 'lucide-react';
-
+import {Target, CheckCircle, Star, ArrowRight, TrendingUp, AlertTriangle, MessageSquare} from 'lucide-react';
+import {BarChart3, Zap, Users, FileText} from 'lucide-react';
+import { Shield, Clock } from 'lucide-react';
 const AiProjectManagerPage: React.FC = () => {
   const features = [
     "AI-powered project planning and scheduling",

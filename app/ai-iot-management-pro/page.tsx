@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, CheckCircle, Mail, Phone, Play, Shield, Star } from 'lucide-react';
-
+import {ArrowRight, Brain, CheckCircle, Phone, Play, Star} from 'lucide-react';
+import {Mail} from 'lucide-react';
+import { Shield } from 'lucide-react';
 const AIIoTManagementProPage = () => {
   const [isVisible, setIsVisible] = useState(false);
 

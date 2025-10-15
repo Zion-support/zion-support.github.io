@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Brain, ChevronDown, Cloud, Code, Globe, Mail, MapPin, Menu, Phone, Search, Users, Wifi, X, Zap } from 'lucide-react';
-
+import {Brain, ChevronDown, Code, Globe, MapPin, Menu, Phone, Search, Wifi, X} from 'lucide-react';
+import { Zap, Users, Mail } from 'lucide-react';
+import { Cloud } from 'lucide-react';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);

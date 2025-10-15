@@ -1,6 +1,8 @@
-import { ArrowRight, MessageCircle, Zap, Target, BarChart3, CheckCircle, Clock, DollarSign, Users, Settings, Globe, Shield, Bot } from "lucide-react";
+import {ArrowRight, MessageCircle, Target, CheckCircle, Globe, Bot} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
+import {BarChart3} from 'lucide-react';
+import { Shield, Clock } from 'lucide-react';
 
 export default function AIChatbotEnterprise() {
   const features = [

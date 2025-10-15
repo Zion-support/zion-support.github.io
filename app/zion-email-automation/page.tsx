@@ -1,6 +1,8 @@
-import { ArrowRight, Mail, Send, Target, BarChart3, CheckCircle, Clock, DollarSign, Users, Zap, Globe, FileText, Settings } from "lucide-react";
+import {ArrowRight, Send, Target, CheckCircle} from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { BarChart3, Settings, Zap, Users, FileText, Mail } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 export default function ZionEmailAutomation() {
   const features = [

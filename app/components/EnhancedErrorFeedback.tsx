@@ -1,5 +1,5 @@
 import React, { Component, ReactNode } from 'react';
-import { AlertTriangle, Home, Mail, RefreshCw } from 'lucide-react';
+import { AlertTriangle, Home, RefreshCw, Mail } from 'lucide-react';
 
 interface ErrorBoundaryState {
   hasError: boolean;

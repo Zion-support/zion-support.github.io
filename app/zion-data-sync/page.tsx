@@ -1,6 +1,8 @@
-import { ArrowRight, RefreshCw, Database, Zap, Shield, CheckCircle, Clock, DollarSign, Target, Globe, Users, BarChart3 } from "lucide-react";
+import {ArrowRight, RefreshCw, Database, CheckCircle, Target} from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import {BarChart3, Zap, Users} from 'lucide-react';
+import { Shield, Clock } from 'lucide-react';
 
 export default function ZionDataSync() {
   const features = [

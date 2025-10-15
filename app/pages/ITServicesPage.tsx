@@ -1,6 +1,7 @@
+import {Database} from 'lucide-react';
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Server, Cloud, Shield, Wrench, Monitor, Database } from "lucide-react";
+import {Server, Wrench, Monitor, Database} from "lucide-react";
 
 const ITServicesPage: React.FC = () => {
   const services = [

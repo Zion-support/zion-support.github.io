@@ -1,6 +1,9 @@
-import { ArrowRight, Package, BarChart3, Target, Zap, CheckCircle, Clock, DollarSign, Users, Settings, Globe, FileText, Shield } from "lucide-react";
+import {ArrowRight, Package, Target, CheckCircle, Globe} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { BarChart3, Settings, Zap } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 export default function ZionInventorySmart() {
   const features = [

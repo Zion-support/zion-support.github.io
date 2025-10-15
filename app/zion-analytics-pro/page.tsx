@@ -1,6 +1,8 @@
-import { ArrowRight, BarChart3, TrendingUp, Users, Zap, Shield, Globe, Star, CheckCircle, Clock, DollarSign, Target } from "lucide-react";
+import {ArrowRight, TrendingUp, Globe, Star, CheckCircle, Target} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import {BarChart3, Users} from 'lucide-react';
+import { Shield } from 'lucide-react';
 
 export default function ZionAnalyticsPro() {
   const features = [

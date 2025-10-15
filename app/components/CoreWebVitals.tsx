@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-
 interface CoreWebVitalsProps {
   children: React.ReactNode;
 }

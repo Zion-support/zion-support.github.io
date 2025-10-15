@@ -1,24 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
-  CheckCircle, 
-  Star,
-  ArrowRight,
-  Clock,
-  Users,
-  TrendingUp,
-  Database,
-  Server,
-  Globe,
-  BarChart3,
-  Settings,
-  Zap
-} from 'lucide-react';
-
+import {Eye, AlertTriangle, CheckCircle, Star, ArrowRight, TrendingUp, Database, Server} from 'lucide-react';
+import {BarChart3, Zap, Users, Lock} from 'lucide-react';
+import { Shield } from 'lucide-react';
 const CybersecurityConsultingPage: React.FC = () => {
   const features = [
     "Comprehensive security assessment and audit",

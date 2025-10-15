@@ -1,4 +1,5 @@
-import { Helmet } from "react-helmet-async"; const AiSupplyChainOptimizerPage = () => { return ( <> <Helmet> <title>Ai Supply Chain Optimizer</title> <meta name="description" content="Professional ai supply chain optimizer solutions and services" /> <meta name="keywords" content="ai, supply, chain, optimizer" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import { Helmet } from "react-helmet-async";
+const AiSupplyChainOptimizerPage = () => { return ( <> <Helmet> <title>Ai Supply Chain Optimizer</title> <meta name="description" content="Professional ai supply chain optimizer solutions and services" /> <meta name="keywords" content="ai, supply, chain, optimizer" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">

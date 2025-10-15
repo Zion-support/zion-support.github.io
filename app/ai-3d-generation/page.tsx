@@ -1,6 +1,8 @@
-import { ArrowRight, Box, Zap, Target, CheckCircle, Clock, Globe, FileText, Sparkles, Users, Star } from "lucide-react";
+import {ArrowRight, Box, Target, CheckCircle, Globe, Sparkles, Star} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { Zap, Users, FileText } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 export default function AI3DGeneration() {
   const features = [
