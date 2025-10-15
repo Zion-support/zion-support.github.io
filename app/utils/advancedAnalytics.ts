@@ -29,10 +29,7 @@ export const advancedAnalytics = {
       });
     }
   },
-<<<<<<< HEAD
-=======
   
->>>>>>> cursor/analyze-improve-and-merge-code-49c8
   setUserProperties: (properties: Record<string, unknown>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {

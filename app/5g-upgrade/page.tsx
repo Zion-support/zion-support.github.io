@@ -52,6 +52,6 @@ const FiveGUpgrade: React.FC = () => {
   );
 };
 
-export default FiveGUpgradePage;
+export default FiveGUpgrade;
 
 

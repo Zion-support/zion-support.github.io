@@ -439,7 +439,7 @@ const AiCybersecurityPlatformPage: React.FC = () => {
                       ))}
                     </div>
                     <p className="text-gray-300 mb-6 leading-relaxed">
-                      "{testimonial.content}"
+                      &ldquo;{testimonial.content}&rdquo;
                     </p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -460,7 +460,7 @@ const AiCybersecurityPlatformPage: React.FC = () => {
                   Secure Your Business Today
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Don't wait for a cyber attack. Protect your business with our advanced AI-powered cybersecurity platform.
+                  Don&apos;t wait for a cyber attack. Protect your business with our advanced AI-powered cybersecurity platform.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a

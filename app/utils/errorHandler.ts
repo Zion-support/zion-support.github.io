@@ -37,10 +37,7 @@ export const errorHandler = {
   },
   
   log: (error: Error, context?: Record<string, unknown>) => {
-<<<<<<< HEAD
-=======
     // Error logging logic
->>>>>>> cursor/analyze-improve-and-merge-code-49c8
     console.error('Error logged:', error, context);
   },
   
