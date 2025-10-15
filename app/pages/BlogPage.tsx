@@ -1,18 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Calendar,
-  Clock,
-  User,
-  Tag,
-  Search,
-  Filter,
-  TrendingUp,
-  BookOpen,
-  ExternalLink
-} from 'lucide-react';
+import { Search, BookOpen } from "lucide-react";
 
 const BlogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -261,7 +248,7 @@ const BlogPage: React.FC = () => {
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {featuredPost.tags.map((tag, index) => (
+                    {featuredPost.tags.map((tag) => (
                       <span key={index} className="bg-slate-600 text-gray-300 px-3 py-1 rounded-full text-xs">
                         {tag}
                       </span>
@@ -337,7 +324,7 @@ const BlogPage: React.FC = () => {
                   </div>
 
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {post.tags.slice(0, 3).map((tag, index) => (
+                    {post.tags.slice(0, 3).map((tag) => (
                       <span key={index} className="bg-slate-600 text-gray-300 px-2 py-1 rounded text-xs">
                         {tag}
                       </span>

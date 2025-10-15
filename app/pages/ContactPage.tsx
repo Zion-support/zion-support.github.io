@@ -1,18 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  Send,
-  CheckCircle,
-  MessageSquare,
-  Calendar,
-  Headphones,
-  Globe,
-  Zap
-} from 'lucide-react';
+import { Send, MessageSquare, Headphones } from "lucide-react";
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -155,7 +142,7 @@ const ContactPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactMethods.map((method, index) => (
+            {contactMethods.map((method) => (
               <div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <method.icon className="w-8 h-8 text-white" />
@@ -274,7 +261,7 @@ const ContactPage: React.FC = () => {
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
                       <option value="">Select a service</option>
-                      {services.map((service, index) => (
+                      {services.map((service) => (
                         <option key={index} value={service}>{service}</option>
                       ))}
                     </select>
@@ -291,7 +278,7 @@ const ContactPage: React.FC = () => {
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
                       <option value="">Select budget range</option>
-                      {budgetRanges.map((range, index) => (
+                      {budgetRanges.map((range) => (
                         <option key={index} value={range}>{range}</option>
                       ))}
                     </select>

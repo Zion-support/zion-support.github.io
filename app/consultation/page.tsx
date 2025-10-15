@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Clock, Users, DollarSign, Shield } from 'lucide-react';
+import { DollarSign } from "lucide-react";
 
 export default function Consultation() {
   const [formData, setFormData] = useState({
@@ -279,4 +279,6 @@ export default function Consultation() {
       </div>
     </>
   );
-}
+};
+
+export default ConsultationPage;

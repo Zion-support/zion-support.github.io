@@ -1,29 +1,27 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Play, Right, Star, BarChart3, Shield } from 'lucide-react';
-
-const DemoPage: React.FC = () => {
+import { Play, BarChart3, Shield } from 'lucide-react';const DemoPage: React.FC = () => {
   const features = [
     {
-icon: BarChart3,
+      icon: BarChart3,
       title: 'AI-Powered Analytics',
       description: 'See how our AI analyzes your data in real-time',
       demo: 'Live Demo'
     },
     {
-icon: Shield,
+      icon: Shield,
       title: 'Advanced Security',
       description: 'Experience our enterprise-grade security features',
       demo: 'Demo'
     },
     {
-icon: BarChart3,
+      icon: BarChart3,
       title: 'Business Intelligence',
       description: 'Explore our comprehensive BI dashboard',
       demo: 'BI Demo'
     },
     {
-icon: Play,
+      icon: Play,
       title: 'Team Collaboration',
       description: 'See how teams work together seamlessly',
       demo: 'Collaboration Demo'
@@ -49,15 +47,7 @@ icon: Play,
       rating: 5
     }
   ];
-<<<<<<< HEAD
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 
-export default function Demo() {
   return (
     <>
       <Helmet>
@@ -72,4 +62,23 @@ export default function Demo() {
       </div>
     </>
   );
-}
+};
+
+export default DemoPage;
+  return (
+    <>
+      <SEOHead 
+        title="demo - Zion Tech Group"
+        description="Zion Tech Group demo service page"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">demo</h1>
+          <p className="text-gray-300">Coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default DemoPage;

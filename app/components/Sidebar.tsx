@@ -22,8 +22,8 @@ import {
 } from 'lucide-react'
 
 interface SidebarProps {
-  isOpen: boolean
-  onClose: () => void
+  isOpen: boolean;
+  onClose: () => void;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
@@ -43,14 +43,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   }, [])
 
   const aiServices = useMemo(() => [
-    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Email Marketing', path: '/ai-email-marketing-automation', icon: <Mail className="w-4 h-4" />, featured: true },
+    { name: 'AI Social Media Manager', path: '/ai-social-media-manager', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'AI Project Management Pro', path: '/ai-project-management-pro', icon: <Settings className="w-4 h-4" />, featured: true },
+    { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
-    { name: 'AI Marketing Automation', path: '/ai-marketing', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+    { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> }
   ], [])
 
   const itServices = useMemo(() => [
@@ -65,14 +65,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   ], [])
 
   const microSaasServices = useMemo(() => [
-    { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
-    { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
-    { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
-    { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
-    { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
-    { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Task Manager Pro', path: '/task-manager-pro', icon: <Settings className="w-4 h-4" />, featured: true },
+    { name: 'Analytics Dashboard', path: '/analytics-dashboard', icon: <BarChart3 className="w-4 h-4" />, featured: true },
+    { name: 'Customer Support Hub', path: '/customer-support-hub', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'Inventory Manager', path: '/inventory-manager', icon: <Database className="w-4 h-4" />, featured: true },
+    { name: 'Social Media Scheduler', path: '/social-media-scheduler', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Expense Tracker Pro', path: '/expense-tracker-pro', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Accounting Assistant', path: '/ai-accounting-assistant', icon: <Brain className="w-4 h-4" /> },
+    { name: 'AI Content Moderation', path: '/ai-content-moderation-pro', icon: <Shield className="w-4 h-4" /> }
   ], [])
 
   const mainNavItems = useMemo(() => [
@@ -92,12 +92,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { icon: <MapPin className="w-4 h-4" />, text: '364 E Main St STE 1008, Middletown DE 19709' }
   ], [])
 
-  const isActive = (path: string) => location.pathname === path
+  const isActive = (_path: string) => location.pathname === path
 
   if (!isOpen) return null
 
-  return (
-    <>
+  return (<>
       {/* Overlay */}
       <div 
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
@@ -161,8 +160,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               )}
             </button>
             
-            {expandedSections.has('ai-services') && (
-              <div className="ml-6 mt-2 space-y-1">
+            {expandedSections.has('ai-services') && (<div className="ml-6 mt-2 space-y-1">
                 {aiServices.map((service) => (
                   <Link
                     key={service.name}
@@ -199,8 +197,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               )}
             </button>
             
-            {expandedSections.has('it-services') && (
-              <div className="ml-6 mt-2 space-y-1">
+            {expandedSections.has('it-services') && (<div className="ml-6 mt-2 space-y-1">
                 {itServices.map((service) => (
                   <Link
                     key={service.name}
@@ -237,8 +234,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               )}
             </button>
             
-            {expandedSections.has('micro-saas') && (
-              <div className="ml-6 mt-2 space-y-1">
+            {expandedSections.has('micro-saas') && (<div className="ml-6 mt-2 space-y-1">
                 {microSaasServices.map((service) => (
                   <Link
                     key={service.name}
@@ -288,9 +284,38 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             </Link>
           </div>
         </div>
+        <nav className="p-4">
+          <Link
+            to="/"
+            className="block py-2 text-gray-300 hover:text-white"
+            onClick={onClose}
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className="block py-2 text-gray-300 hover:text-white"
+            onClick={onClose}
+          >
+            About
+          </Link>
+          <Link
+            to="/services"
+            className="block py-2 text-gray-300 hover:text-white"
+            onClick={onClose}
+          >
+            Services
+          </Link>
+          <Link
+            to="/contact"
+            className="block py-2 text-gray-300 hover:text-white"
+            onClick={onClose}
+          >
+            Contact
+          </Link>
+        </nav>
       </div>
-    </>
-  )
-}
+  </>);
+};
 
-export default Sidebar
+export default Sidebar;

@@ -1,103 +1,7 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import {
-  Cloud,
-  Shield,
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Star,
-} from "lucide-react";
+import React from 'react';
+import SEOHead from '../components/SEOHead';
 
-const CloudMigrationProPage = () => {
-  const features = [
-    {
-      icon: Cloud,
-      title: "Seamless Migration",
-      description:
-        "Zero-downtime migration to cloud infrastructure with minimal disruption",
-    },
-    {
-      icon: Zap,
-      title: "Performance Optimization",
-      description:
-        "Optimize your cloud resources for maximum performance and cost efficiency",
-    },
-    {
-      icon: Shield,
-      title: "Security First",
-      description: "Enterprise-grade security throughout the migration process",
-    },
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$2,999",
-      period: "/project",
-      description: "Perfect for small to medium businesses",
-      features: [
-        "Up to 10 servers",
-        "Basic migration planning",
-        "Email support",
-        "Standard documentation",
-      ],
-      popular: false,
-    },
-    {
-      name: "Professional",
-      price: "$7,999",
-      period: "/project",
-      description: "Ideal for growing enterprises",
-      features: [
-        "Up to 50 servers",
-        "Advanced migration planning",
-        "Priority support",
-        "Custom integrations",
-        "Performance optimization",
-        "Security assessment",
-      ],
-      popular: true,
-    },
-    {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "Tailored for large organizations",
-      features: [
-        "Unlimited servers",
-        "Custom migration strategy",
-        "Dedicated support team",
-        "White-label options",
-        "API access",
-        "Custom reporting",
-        "24/7 monitoring",
-      ],
-      popular: false,
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CTO",
-      company: "TechCorp Inc.",
-      content:
-        "The cloud migration was seamless. Our performance improved by 40% and costs reduced by 30%.",
-      rating: 5,
-    },
-    {
-      name: "Michael Chen",
-      role: "IT Director",
-      company: "Global Solutions Ltd.",
-      content:
-        "Outstanding expertise and support throughout the entire migration process.",
-      rating: 5,
-    },
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Migration Pro | Zion Tech Group</title>
         <meta
@@ -118,7 +22,7 @@ const CloudMigrationProPage = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Seamlessly migrate your infrastructure to the cloud with our expert
-            team. Zero downtime, maximum security, and optimized performance
+            team. Zero downtime, _maximum security, and optimized performance
             guaranteed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -147,7 +51,7 @@ const CloudMigrationProPage = () => {
               Why Choose Our Cloud Migration Pro?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our cloud migration experts deliver seamless, secure, and
+              Our cloud migration experts deliver seamless, _secure, and
               optimized solutions.
             </p>
           </div>
@@ -250,7 +154,7 @@ const CloudMigrationProPage = () => {
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
               >
                 <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map(( i) => (
                     <Star
                       key={i}
                       className="w-5 h-5 text-yellow-400 fill-current"

@@ -232,4 +232,6 @@ export default function Press() {
       </div>
     </>
   );
-}
+};
+
+export default PressPage;

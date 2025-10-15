@@ -7,7 +7,7 @@ const withErrorLogging = (handler) => {
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Internal server error' }));
     }
-  };
+  }
 };
 
 export default withErrorLogging(async (req, res) => {
@@ -17,7 +17,7 @@ export default withErrorLogging(async (req, res) => {
     return;
   }
 
-const { amount, currency = 'usd' } = req.body;
+  const { amount, currency = 'usd' } = req.body;
   if (!amount) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Amount is required' }));
@@ -25,13 +25,12 @@ const { amount, currency = 'usd' } = req.body;
   }
 
   try {
-const paymentIntent = {
+    const paymentIntent = {
       id: 'pi_' + Math.random().toString(36).substr(2, 9),
       status: 'requires_payment_method',
       amount: amount,
       currency: currency
     };
-
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(paymentIntent));
   } catch (error) {

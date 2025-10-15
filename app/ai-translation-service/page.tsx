@@ -1,100 +1,7 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import {
-  CheckCircle,
-  Globe,
-  Zap,
-  Shield,
-  Star,
-  ArrowRight,
-} from "lucide-react";
+import React from 'react';
+import SEOHead from '../components/SEOHead';
 
-const AITranslationServicePage = () => {
-  const features = [
-    {
-      icon: Globe,
-      title: "100+ Languages",
-      description: "Support for over 100 languages with native-level accuracy",
-    },
-    {
-      icon: Zap,
-      title: "Real-time Translation",
-      description: "Instant translation with context-aware AI technology",
-    },
-    {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-level security for all your translation needs",
-    },
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$99",
-      period: "/month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 10,000 words",
-        "50+ languages",
-        "Basic support",
-        "Standard quality",
-      ],
-      popular: false,
-    },
-    {
-      name: "Professional",
-      price: "$299",
-      period: "/month",
-      description: "Ideal for growing companies",
-      features: [
-        "Up to 100,000 words",
-        "100+ languages",
-        "Priority support",
-        "Advanced quality checks",
-        "Custom integrations",
-      ],
-      popular: true,
-    },
-    {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "Tailored for large organizations",
-      features: [
-        "Unlimited words",
-        "All languages",
-        "Custom AI models",
-        "Dedicated support",
-        "White-label options",
-        "Advanced security",
-        "Custom integrations",
-      ],
-      popular: false,
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Marketing Director",
-      company: "Global Corp",
-      content:
-        "The AI translation service has revolutionized our international marketing efforts.",
-      rating: 5,
-    },
-    {
-      name: "Michael Chen",
-      role: "Content Manager",
-      company: "Tech Solutions Inc.",
-      content:
-        "Amazing accuracy and speed. Our content is now available in 20+ languages.",
-      rating: 5,
-    },
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Translation Service | Zion Tech Group</title>
         <meta
@@ -143,8 +50,7 @@ const AITranslationServicePage = () => {
               Why Choose Our AI Translation Service?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered translation solutions deliver unmatched accuracy,
-              speed, and security.
+              Our AI-powered translation solutions deliver unmatched accuracy, _speed, and security.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -246,7 +152,7 @@ const AITranslationServicePage = () => {
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
               >
                 <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map(( i) => (
                     <Star
                       key={i}
                       className="w-5 h-5 text-yellow-400 fill-current"
@@ -296,4 +202,4 @@ const AITranslationServicePage = () => {
   );
 };
 
-export default AITranslationServicePage;
+export default AiTranslationServicePage;

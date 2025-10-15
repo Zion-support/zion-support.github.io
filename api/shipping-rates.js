@@ -16,12 +16,13 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Destination and weight are required' });
   }
 
-let rates = [];
+  let rates = [];
   try {
-    const data = fs.readFileSync(file, 'utf8');
-    rates = JSON.parse(data);
+    if (fs.existsSync(file)) {
+      const data = fs.readFileSync(file, 'utf8');
+      rates = JSON.parse(data);
+    }
   } catch (error) {
-    console.error('Error:', error);
     console.error('Error reading existing rates:', error);
   }
 
@@ -37,19 +38,19 @@ let rates = [];
       rate,
       createdAt: new Date().toISOString()
     };
-
+    
     rates.push(newRate);
     fs.writeFileSync(file, JSON.stringify(rates, null, 2));
-
+    
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
+    res.end(JSON.stringify({
       success: true,
       rate: rate,
-      message: 'Shipping rate calculated successfully' 
+      message: 'Shipping rate calculated successfully'
     }));
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Error saving rate:', error);
     res.setHeader('Content-Type', 'application/json');
-res.end(JSON.stringify({ error: 'Failed to save rate' }));
+    res.end(JSON.stringify({ error: 'Failed to save rate' }));
   }
 }

@@ -1,28 +1,37 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import React from 'react';
+import SEOHead from '../components/SEOHead';
 
-export default function Ai3DGenerationZionTechGroup() {
+const Ai3DGenerationPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Ai3DGeneration - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Ai3DGeneration</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional ai3dgeneration services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+      <SEOHead 
+        title="AI 3D Generation - Zion Tech Group"
+        description="Revolutionary AI-powered 3D generation technology. Create stunning 3D models, animations, and visualizations with our advanced AI platform."
+        keywords="AI 3D generation, 3D modeling, 3D animation, AI visualization, 3D technology"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 text-white">
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="text-center max-w-4xl mx-auto px-4">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              AI 3D Generation
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Revolutionary AI-powered 3D generation technology. Create stunning 3D models, 
+              animations, and visualizations with our advanced AI platform.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Coming Soon
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </>
   );
-}
+};
+
+export default Ai3DGenerationPage;

@@ -1,30 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Zap,
-  Brain,
-  Cpu,
-  Cloud,
-  Shield,
-  Smartphone,
-  BarChart3,
-  Target,
-  Rocket,
-  Users,
-  Award,
-  Clock,
-  Globe,
-  Lock,
-  Play,
-  Calendar,
-  Phone,
-  Mail,
-  ExternalLink
-} from 'lucide-react';
+import { Star, Brain, Cloud, Target, Play } from "lucide-react";
 
 const DemoPage: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState('ai-solutions');
@@ -273,7 +248,7 @@ const DemoPage: React.FC = () => {
                 <div>
                   <h4 className="text-xl font-semibold text-white mb-4">What You'll See:</h4>
                   <ul className="space-y-3">
-                    {selectedDemoData.features.map((feature, index) => (
+                    {selectedDemoData.features.map((feature) => (
                       <li key={index} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -298,7 +273,7 @@ const DemoPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-            {demoSteps.map((step, index) => (
+            {demoSteps.map((step) => (
               <div key={index} className="relative">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -330,7 +305,7 @@ const DemoPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial) => (
               <div key={index} className="bg-slate-700/50 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (

@@ -1,31 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Zap,
-  Brain,
-  Cpu,
-  Cloud,
-  Shield,
-  Smartphone,
-  BarChart3,
-  Target,
-  Rocket,
-  Users,
-  Award,
-  Clock,
-  Globe,
-  Lock,
-  TrendingUp,
-  Database,
-  Network,
-  Code
-} from 'lucide-react';
-
-const SolutionsPage: React.FC = () => {
+import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Target, Rocket, Users, Globe, TrendingUp } from 'lucide-react';const SolutionsPage: React.FC = () => {
   const industrySolutions = [
     {
       title: 'Healthcare',
@@ -234,12 +210,11 @@ const SolutionsPage: React.FC = () => {
     }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Solutions - Zion Tech Group | Industry-Specific AI & IT Solutions</title>
-        <meta name="description" content="Discover our comprehensive solutions for healthcare, finance, e-commerce, manufacturing, education, and real estate industries. AI-powered technology solutions." />
-        <meta name="keywords" content="industry solutions, healthcare AI, fintech, e-commerce solutions, manufacturing AI, education technology, real estate tech" />
+        <meta name="description" content="Discover our comprehensive solutions for healthcare, finance, _e-commerce, _manufacturing, _education, and real estate industries. AI-powered technology solutions." />
+        <meta name="keywords" content="industry solutions, _healthcare AI, _fintech, _e-commerce solutions, _manufacturing AI, _education technology, real estate tech" />
         <link rel="canonical" href="https://ziontechgroup.com/solutions" />
       </Helmet>
 
@@ -293,8 +268,7 @@ const SolutionsPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industrySolutions.map((solution, index) => (
-              <div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+            {industrySolutions.map((solution, index) => (<div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                 <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
@@ -334,8 +308,7 @@ const SolutionsPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {technologySolutions.map((solution, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300">
+            {technologySolutions.map((solution, index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
                     <solution.icon className="w-6 h-6 text-white" />
@@ -371,8 +344,7 @@ const SolutionsPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {microSaaSSolutions.map((solution, index) => (
-              <Link
+            {microSaaSSolutions.map((solution, index) => (<Link
                 key={index}
                 to={solution.path}
                 className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -412,8 +384,7 @@ const SolutionsPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300">
+            {caseStudies.map((study, index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <span className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium">
                     {study.industry}

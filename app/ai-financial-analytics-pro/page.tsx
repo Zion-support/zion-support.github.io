@@ -1,189 +1,7 @@
-"use client";
-import {
-  Brain,
-  Shield,
-  CheckCircle,
-  Star,
-  Target,
-  BarChart3,
-} from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import React from 'react';
+import SEOHead from '../components/SEOHead';
 
-export default function AiFinancialAnalyticsProPage() {
-  const features = [
-    {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Insights",
-      description:
-        "Advanced machine learning algorithms analyze your financial data to provide actionable insights",
-      benefits: [
-        "Predictive analytics",
-        "Risk assessment",
-        "Trend identification",
-        "Anomaly detection",
-      ],
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      title: "Real-time Analytics",
-      description:
-        "Monitor your financial performance in real-time with comprehensive dashboards and reports",
-      benefits: [
-        "Live data updates",
-        "Custom dashboards",
-        "Interactive charts",
-        "Export capabilities",
-      ],
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-purple-400" />,
-      title: "Risk Management",
-      description:
-        "Identify and mitigate financial risks with advanced risk assessment and monitoring tools",
-      benefits: [
-        "Risk scoring",
-        "Early warning systems",
-        "Compliance monitoring",
-        "Audit trails",
-      ],
-    },
-    {
-      icon: <Target className="w-8 h-8 text-yellow-400" />,
-      title: "Goal Tracking",
-      description:
-        "Set and track financial goals with intelligent recommendations and progress monitoring",
-      benefits: [
-        "Goal setting",
-        "Progress tracking",
-        "Smart recommendations",
-        "Achievement rewards",
-      ],
-    },
-  ];
-
-  const analyticsFeatures = [
-    {
-      category: "Financial Analysis",
-      items: [
-        "Revenue Analysis",
-        "Cost Analysis",
-        "Profitability Analysis",
-        "Cash Flow Analysis",
-        "Budget Variance",
-        "Financial Ratios",
-      ],
-    },
-    {
-      category: "Predictive Analytics",
-      items: [
-        "Revenue Forecasting",
-        "Expense Prediction",
-        "Market Analysis",
-        "Customer Behavior",
-        "Risk Assessment",
-        "Trend Analysis",
-      ],
-    },
-    {
-      category: "Reporting & Visualization",
-      items: [
-        "Custom Reports",
-        "Interactive Dashboards",
-        "Data Visualization",
-        "Export Options",
-        "Scheduled Reports",
-        "Real-time Updates",
-      ],
-    },
-    {
-      category: "Integration & Security",
-      items: [
-        "API Integration",
-        "Data Security",
-        "Compliance Tools",
-        "Audit Logs",
-        "User Management",
-        "Backup & Recovery",
-      ],
-    },
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Professional",
-      price: "$199",
-      period: "/month",
-      description: "Perfect for growing businesses",
-      features: [
-        "Up to 10 data sources",
-        "Advanced analytics",
-        "Custom dashboards",
-        "Email support",
-        "Basic reporting",
-        "API access",
-      ],
-      popular: false,
-    },
-    {
-      name: "Enterprise",
-      price: "$499",
-      period: "/month",
-      description: "Ideal for large organizations",
-      features: [
-        "Unlimited data sources",
-        "AI-powered insights",
-        "Custom development",
-        "Priority support",
-        "Advanced security",
-        "White-label solution",
-        "Dedicated account manager",
-      ],
-      popular: true,
-    },
-    {
-      name: "Custom",
-      price: "Contact Us",
-      period: "",
-      description: "Tailored solutions",
-      features: [
-        "Custom features",
-        "On-premise deployment",
-        "24/7 support",
-        "Training & consulting",
-        "Custom integrations",
-        "SLA guarantee",
-      ],
-      popular: false,
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "David Chen",
-      company: "CFO, TechCorp",
-      content:
-        "AI Financial Analytics Pro has revolutionized our financial planning. The predictive insights have helped us make better decisions and increase profitability by 25%.",
-      rating: 5,
-    },
-    {
-      name: "Sarah Martinez",
-      company: "Finance Director, Global Inc",
-      content:
-        "The real-time analytics and risk management features are exceptional. We can now identify potential issues before they become problems.",
-      rating: 5,
-    },
-    {
-      name: "Michael Johnson",
-      company: "CEO, StartupXYZ",
-      content:
-        "This platform has given us the financial intelligence we needed to scale our business. The AI insights are incredibly accurate and actionable.",
-      rating: 5,
-    },
-  ];
-
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>AI Financial Analytics Pro - Zion Tech Group</title>
         <meta
@@ -222,8 +40,7 @@ export default function AiFinancialAnalyticsProPage() {
 
           {/* Features Section */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <div
+            {features.map((feature, index) => (<div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
               >
@@ -253,8 +70,7 @@ export default function AiFinancialAnalyticsProPage() {
               Analytics Features
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {analyticsFeatures.map((category, index) => (
-                <div
+              {analyticsFeatures.map((category, index) => (<div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
@@ -345,7 +161,7 @@ export default function AiFinancialAnalyticsProPage() {
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(( i) => (
                       <Star
                         className="w-5 h-5 text-yellow-400 fill-current"
                         key={i}
@@ -397,4 +213,6 @@ export default function AiFinancialAnalyticsProPage() {
       </div>
     </>
   );
-}
+};
+
+export default AiFinancialAnalyticsProPage;

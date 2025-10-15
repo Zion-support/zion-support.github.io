@@ -282,4 +282,6 @@ export default function Sitemap() {
       </div>
     </>
   );
-}
+};
+
+export default SitemapPage;

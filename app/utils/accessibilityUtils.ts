@@ -4,12 +4,9 @@ export const Accessibilityutils = {
   init: () => {
     },
 
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Accessibilityutils;
+  cleanup: () => {}
+} }}
+export default Accessibilityutils

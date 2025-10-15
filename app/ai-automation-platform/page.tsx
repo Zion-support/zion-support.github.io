@@ -39,6 +39,7 @@ const AIAutomationPlatform: React.FC = () => {
     "Cost reduction"
   ];
 
+const AiAutomationPlatformPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -133,4 +134,4 @@ const AIAutomationPlatform: React.FC = () => {
   );
 };
 
-export default AIAutomationPlatform;
+export default AiAutomationPlatformPage;

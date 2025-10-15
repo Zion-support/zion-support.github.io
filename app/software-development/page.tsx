@@ -1,20 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Code, 
-  Smartphone, 
-  Globe, 
-  Database, 
-  ArrowRight, 
-  CheckCircle, 
-  Users, 
-  BarChart3,
-  Clock,
-  Shield,
-  Zap,
-  Cpu
-} from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
+import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarChart3, Shield, Zap, Cpu } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -124,12 +110,11 @@ const SoftwareDevelopmentPage = () => {
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Software Development Services - Zion Tech Group | Custom Web & Mobile Apps"
-        description="Professional software development services including custom web applications, mobile apps, enterprise software, and API development. Modern technologies and agile methodology."
-        keywords="software development, custom web applications, mobile app development, enterprise software, API development, React, Node.js"
+        description="Professional software development services including custom web applications, mobile apps, _enterprise software, and API development. Modern technologies and agile methodology."
+        keywords="software development, _custom web applications, _mobile app development, _enterprise software, _API development, _React, Node.js"
         canonical="https://ziontechgroup.com/software-development"
       />
 
@@ -142,8 +127,7 @@ const SoftwareDevelopmentPage = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Transform your ideas into powerful software solutions. From web applications to mobile apps, 
-            we build custom software that drives business growth.
+            Transform your ideas into powerful software solutions. From web applications to mobile apps, we build custom software that drives business growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
@@ -178,8 +162,7 @@ const SoftwareDevelopmentPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <FuturisticCard key={index} className="h-full">
+            {services.map((service, index) => (<FuturisticCard key={index} className="h-full">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     {service.icon}
@@ -222,8 +205,7 @@ const SoftwareDevelopmentPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-            {technologies.map((tech, index) => (
-              <div key={index} className="text-center">
+            {technologies.map((tech, index) => (<div key={index} className="text-center">
                 <h3 className="text-lg font-semibold text-cyan-400 mb-4">{tech.name}</h3>
                 <ul className="space-y-2">
                   {tech.items.map((item, itemIndex) => (

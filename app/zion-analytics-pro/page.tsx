@@ -1,6 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, BarChart3, TrendingUp, Users, Award, Shield, Clock, DollarSign, Globe, Smartphone, Lock, Settings, Target, Database, Mail, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { ArrowRight, CheckCircle, Star, BarChart3, DollarSign, Star as StarIcon } from 'lucide-react';import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
 
@@ -83,23 +82,12 @@ export default function ZionAnalyticsPro() {
     }
   ];
 
+const ZionAnalyticsProPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Zion Analytics Pro - AI-Powered Business Intelligence | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Transform your business with Zion Analytics Pro - AI-powered business intelligence platform with real-time analytics, predictive insights, and automated reporting. Start your free trial today!"
-        />
-        <meta
-          name="keywords"
-          content="business intelligence, analytics, data visualization, predictive analytics, AI insights, dashboard, reporting, Zion Analytics Pro"
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-analytics-pro" />
-      </Helmet>
-      <SEOOptimizer
-        title="Zion Analytics Pro - AI-Powered Business Intelligence | Zion Tech Group"
-        description="Transform your business with Zion Analytics Pro - AI-powered business intelligence platform with real-time analytics, predictive insights, and automated reporting. Start your free trial today!"
+      <SEOHead 
+        title="zion-analytics-pro - Zion Tech Group"
+        description="Zion Tech Group zion-analytics-pro service page"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -291,7 +279,7 @@ export default function ZionAnalyticsPro() {
                   </div>
                   
                   <div className="flex items-center mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(( i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -340,4 +328,6 @@ export default function ZionAnalyticsPro() {
       </div>
     </>
   );
-}
+};
+
+export default ZionAnalyticsProPage;

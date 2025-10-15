@@ -1,14 +1,12 @@
-import '@testing-library/jest-dom';
-
+import '@testing-library/jest-dom'
 // Mock TextEncoder and TextDecoder
-import { TextEncoder, TextDecoder } from 'util';
-(global as { TextEncoder?: typeof TextEncoder; TextDecoder?: typeof TextDecoder }).TextEncoder = TextEncoder;
-(global as { TextEncoder?: typeof TextEncoder; TextDecoder?: typeof TextDecoder }).TextDecoder = TextDecoder;
-
+import { TextEncoder, TextDecoder } from 'util'
+(global as { TextEncoder?: typeof TextEncoder; TextDecoder?: typeof TextDecoder }).TextEncoder = TextEncoder
+(global as { TextEncoder?: typeof TextEncoder; TextDecoder?: typeof TextDecoder }).TextDecoder = TextDecoder
 // Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(window, 'matchMedia', {}
   writable: true,
-  value: jest.fn().mockImplementation(query => ({
+  value: jest.fn().mockImplementation(query => ({}
     matches: false,
     media: query,
     onchange: null,
@@ -16,27 +14,22 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
-
+    dispatchEvent: jest.fn()}))})
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  root = null;
-  rootMargin = '';
-  thresholds = [];
-  
+global.IntersectionObserver = class IntersectionObserver {}
+  root = null
+  rootMargin = ''
+  thresholds = []
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
   takeRecords() { return []; }
-} as unknown as typeof IntersectionObserver;
-
+} as unknown as typeof IntersectionObserver
 // Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
+global.ResizeObserver = class ResizeObserver {}
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+}

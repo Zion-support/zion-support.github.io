@@ -4,12 +4,9 @@ export const Monitoring = {
   init: () => {
     },
 
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Monitoring;
+  cleanup: () => {}
+} }}
+export default Monitoring

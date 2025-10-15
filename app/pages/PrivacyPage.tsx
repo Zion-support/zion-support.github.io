@@ -1,21 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Shield,
-  Lock,
-  Eye,
-  Database,
-  Users,
-  Mail,
-  Phone,
-  Calendar,
-  CheckCircle,
-  AlertTriangle
-} from 'lucide-react';
-
-const PrivacyPage: React.FC = () => {
+import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckCircle, AlertTriangle } from 'lucide-react';const PrivacyPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024';
 
   const sections = [
@@ -94,12 +80,11 @@ const PrivacyPage: React.FC = () => {
     'Lodge a complaint with a supervisory authority'
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group | Data Protection & Privacy</title>
         <meta name="description" content="Learn how Zion Tech Group protects your privacy and handles your personal data. Our comprehensive privacy policy explains our data practices." />
-        <meta name="keywords" content="privacy policy, data protection, GDPR, personal information, privacy rights" />
+        <meta name="keywords" content="privacy policy, data protection, _GDPR, _personal information, privacy rights" />
         <link rel="canonical" href="https://ziontechgroup.com/privacy" />
       </Helmet>
 
@@ -119,8 +104,7 @@ const PrivacyPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Your privacy is important to us. This policy explains how we collect, use, 
-              and protect your personal information when you use our services.
+              Your privacy is important to us. This policy explains how we collect, _use, and protect your personal information when you use our services.
             </p>
             <div className="flex items-center justify-center text-gray-400 mb-8">
               <Calendar className="w-5 h-5 mr-2" />

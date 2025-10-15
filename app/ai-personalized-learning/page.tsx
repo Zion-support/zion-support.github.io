@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { BookOpen, Brain, Users, CheckCircle, ArrowRight, Star, Award, Target } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const AiPersonalizedLearningPage: React.FC = () => {
   const features = [
@@ -103,12 +102,11 @@ const AiPersonalizedLearningPage: React.FC = () => {
     "Languages", "Soft Skills", "Certification Prep", "Technical Skills"
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>AI Personalized Learning - Zion Tech Group | Adaptive Education Platform</title>
         <meta name="description" content="Revolutionary AI-powered personalized learning platform with adaptive curriculum, multi-modal content, and intelligent progress tracking for individuals and organizations." />
-        <meta name="keywords" content="ai personalized learning, adaptive education, online learning, corporate training, skill development, educational technology" />
+        <meta name="keywords" content="ai personalized learning, _adaptive education, _online learning, _corporate training, _skill development, educational technology" />
         <meta property="og:title" content="AI Personalized Learning - Zion Tech Group" />
         <meta property="og:description" content="AI-powered personalized learning for individuals and organizations" />
         <meta property="og:type" content="website" />
@@ -125,7 +123,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 Transform education with AI-powered personalized learning experiences. 
-                Adaptive curriculum, intelligent content delivery, and real-time progress tracking.
+                Adaptive curriculum, _intelligent content delivery, and real-time progress tracking.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">

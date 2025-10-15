@@ -1,42 +1,33 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { 
-  CheckCircle, 
-  Star, 
-  ArrowRight, 
-  Brain, 
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
+import {}
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Brain,
   Server,
   Rocket,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   // Users,
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
   Settings
-} from 'lucide-react';
-
-const ServicesPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const categories = [
+} from 'lucide-react'
+const ServicesPage: React.FC = () => {}
+}const [selectedCategory, setSelectedCategory] = useState('all')
+  const categories = []
     { id: 'all', name: 'All Services', icon: Settings },
     { id: 'ai', name: 'AI Services', icon: Brain },
     { id: 'it', name: 'IT Services', icon: Server },
     { id: 'saas', name: 'Micro SAAS', icon: Zap }
-  ];
-
-  const services = [
+  ]
+  const services = []
     // AI Services
-    {
+    {}
       id: 'ai-analytics-dashboard',
       name: 'AI Analytics Dashboard Pro',
       category: 'ai',
       description: 'Advanced business intelligence platform with AI-powered insights and real-time analytics',
       price: '$299/month',
-      features: [
+      features: []
         'Real-time Data Visualization',
         'AI-Powered Predictions',
         'Custom Dashboard Builder',
@@ -44,7 +35,7 @@ const ServicesPage: React.FC = () => {
         'Mobile App Access',
         '24/7 Support'
       ],
-      benefits: [
+      benefits: []
         'Increase decision speed by 40%',
         'Reduce manual reporting by 80%',
         'Improve forecast accuracy by 60%'
@@ -53,13 +44,13 @@ const ServicesPage: React.FC = () => {
       rating: 4.9,
       clients: 150
     },
-    {
+    {}
       id: 'ai-content-generator',
       name: 'AI Content Generator Studio',
       category: 'ai',
       description: 'Automated content creation platform with multi-language support and brand voice customization',
       price: '$199/month',
-      features: [
+      features: []
         'Multi-language Support',
         'SEO Optimization',
         'Brand Voice Training',
@@ -67,7 +58,7 @@ const ServicesPage: React.FC = () => {
         'Plagiarism Detection',
         'Content Calendar Integration'
       ],
-      benefits: [
+      benefits: []
         'Save 70% content creation time',
         'Increase SEO rankings by 50%',
         'Maintain consistent brand voice'
@@ -76,13 +67,13 @@ const ServicesPage: React.FC = () => {
       rating: 4.8,
       clients: 120
     },
-    {
+    {}
       id: 'ai-customer-support',
       name: 'AI Customer Support Suite',
       category: 'ai',
       description: 'Intelligent customer service automation with natural language processing and sentiment analysis',
       price: '$399/month',
-      features: [
+      features: []
         'Natural Language Processing',
         'Sentiment Analysis',
         'Multi-channel Support',
@@ -90,7 +81,7 @@ const ServicesPage: React.FC = () => {
         'Escalation Management',
         'Performance Analytics'
       ],
-      benefits: [
+      benefits: []
         'Reduce response time by 90%',
         'Increase customer satisfaction by 35%',
         'Handle 80% queries automatically'
@@ -99,13 +90,13 @@ const ServicesPage: React.FC = () => {
       rating: 4.9,
       clients: 200
     },
-    {
+    {}
       id: 'ai-code-assistant',
       name: 'AI Code Assistant Pro',
       category: 'ai',
       description: 'Advanced code generation and review platform with intelligent debugging and optimization suggestions',
       price: '$249/month',
-      features: [
+      features: []
         'Code Generation',
         'Bug Detection & Fixes',
         'Code Review Automation',
@@ -113,7 +104,7 @@ const ServicesPage: React.FC = () => {
         'Security Scanning',
         'Documentation Generation'
       ],
-      benefits: [
+      benefits: []
         'Increase development speed by 50%',
         'Reduce bugs by 70%',
         'Improve code quality significantly'
@@ -122,15 +113,14 @@ const ServicesPage: React.FC = () => {
       rating: 4.7,
       clients: 80
     },
-
     // IT Services
-    {
+    {}
       id: 'cloud-infrastructure',
       name: 'Cloud Infrastructure Management',
       category: 'it',
       description: 'Comprehensive cloud solutions with auto-scaling, monitoring, and security compliance',
       price: '$199/month',
-      features: [
+      features: []
         'Auto-scaling Infrastructure',
         '99.9% Uptime Guarantee',
         '24/7 Monitoring',
@@ -138,7 +128,7 @@ const ServicesPage: React.FC = () => {
         'Backup & Recovery',
         'Cost Optimization'
       ],
-      benefits: [
+      benefits: []
         'Reduce infrastructure costs by 30%',
         'Improve system reliability',
         'Scale automatically with demand'
@@ -147,13 +137,13 @@ const ServicesPage: React.FC = () => {
       rating: 4.8,
       clients: 180
     },
-    {
+    {}
       id: 'cybersecurity-suite',
       name: 'Advanced Cybersecurity Suite',
       category: 'it',
       description: 'Enterprise-grade security monitoring and protection with real-time threat detection',
       price: '$499/month',
-      features: [
+      features: []
         'Threat Detection & Response',
         'Real-time Security Monitoring',
         'Compliance Reporting',
@@ -161,7 +151,7 @@ const ServicesPage: React.FC = () => {
         'Security Training',
         'Penetration Testing'
       ],
-      benefits: [
+      benefits: []
         'Prevent 99.9% of cyber attacks',
         'Meet compliance requirements',
         'Reduce security incidents by 95%'
@@ -170,13 +160,13 @@ const ServicesPage: React.FC = () => {
       rating: 4.9,
       clients: 100
     },
-    {
+    {}
       id: 'devops-automation',
       name: 'DevOps Automation Platform',
       category: 'it',
       description: 'Complete CI/CD pipeline automation with monitoring, testing, and deployment management',
       price: '$349/month',
-      features: [
+      features: []
         'CI/CD Pipeline Automation',
         'Automated Testing',
         'Deployment Management',
@@ -184,7 +174,7 @@ const ServicesPage: React.FC = () => {
         'Rollback Capabilities',
         'Team Collaboration Tools'
       ],
-      benefits: [
+      benefits: []
         'Deploy 10x faster',
         'Reduce deployment errors by 90%',
         'Improve team productivity by 60%'
@@ -193,13 +183,13 @@ const ServicesPage: React.FC = () => {
       rating: 4.7,
       clients: 90
     },
-    {
+    {}
       id: 'database-solutions',
       name: 'Database Management Solutions',
       category: 'it',
       description: 'Advanced database administration with optimization, backup, and performance monitoring',
       price: '$279/month',
-      features: [
+      features: []
         'Database Optimization',
         'Automated Backups',
         'Performance Monitoring',
@@ -207,7 +197,7 @@ const ServicesPage: React.FC = () => {
         'Security Hardening',
         'Disaster Recovery'
       ],
-      benefits: [
+      benefits: []
         'Improve query performance by 80%',
         'Ensure data integrity',
         'Reduce downtime by 95%'
@@ -216,15 +206,14 @@ const ServicesPage: React.FC = () => {
       rating: 4.6,
       clients: 70
     },
-
     // Micro SAAS Services
-    {
+    {}
       id: 'project-management-pro',
       name: 'Project Management Pro',
       category: 'saas',
       description: 'Comprehensive project management platform with AI-powered insights and team collaboration',
       price: '$149/month',
-      features: [
+      features: []
         'Task Management',
         'Team Collaboration',
         'AI Progress Insights',
@@ -232,7 +221,7 @@ const ServicesPage: React.FC = () => {
         'Time Tracking',
         'Reporting & Analytics'
       ],
-      benefits: [
+      benefits: []
         'Increase project success rate by 40%',
         'Improve team productivity by 50%',
         'Reduce project delays by 60%'
@@ -241,13 +230,13 @@ const ServicesPage: React.FC = () => {
       rating: 4.8,
       clients: 250
     },
-    {
+    {}
       id: 'api-management',
       name: 'API Management Platform',
       category: 'saas',
       description: 'Complete API lifecycle management with monitoring, security, and developer portal',
       price: '$179/month',
-      features: [
+      features: []
         'API Gateway',
         'Rate Limiting',
         'Authentication & Authorization',
@@ -255,7 +244,7 @@ const ServicesPage: React.FC = () => {
         'Developer Portal',
         'Analytics & Monitoring'
       ],
-      benefits: [
+      benefits: []
         'Secure API access',
         'Improve API performance',
         'Simplify API management'
@@ -264,13 +253,13 @@ const ServicesPage: React.FC = () => {
       rating: 4.7,
       clients: 60
     },
-    {
+    {}
       id: 'monitoring-suite',
       name: 'Application Monitoring Suite',
       category: 'saas',
       description: 'Real-time application performance monitoring with alerting and root cause analysis',
       price: '$129/month',
-      features: [
+      features: []
         'Real-time Monitoring',
         'Performance Metrics',
         'Error Tracking',
@@ -278,7 +267,7 @@ const ServicesPage: React.FC = () => {
         'Root Cause Analysis',
         'Custom Dashboards'
       ],
-      benefits: [
+      benefits: []
         'Prevent 90% of outages',
         'Improve application performance',
         'Reduce mean time to resolution'
@@ -287,13 +276,13 @@ const ServicesPage: React.FC = () => {
       rating: 4.6,
       clients: 110
     },
-    {
+    {}
       id: 'automation-tools',
       name: 'Business Automation Tools',
       category: 'saas',
       description: 'Workflow automation platform with drag-and-drop builder and integration capabilities',
       price: '$99/month',
-      features: [
+      features: []
         'Workflow Builder',
         'Integration Hub',
         'Trigger Management',
@@ -301,7 +290,7 @@ const ServicesPage: React.FC = () => {
         'Notification System',
         'Analytics Dashboard'
       ],
-      benefits: [
+      benefits: []
         'Automate 80% of repetitive tasks',
         'Reduce manual errors by 95%',
         'Save 20+ hours per week'
@@ -310,20 +299,17 @@ const ServicesPage: React.FC = () => {
       rating: 4.8,
       clients: 180
     }
-  ];
-
-  const filteredServices = selectedCategory === 'all' 
-    ? services 
-    : services.filter(service => service.category === selectedCategory);
-
-  return (
-    <>
+  ]
+  const filteredServices = selectedCategory === 'all'
+    ? services
+    : services.filter(service => service.category === selectedCategory)
+  return ()
+    <div>
       <Helmet>
         <title>Our Services - Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive range of AI, IT, and Micro SAAS services. From AI analytics to cloud infrastructure, we have solutions for every business need." />
         <meta name="keywords" content="AI services, IT services, micro SAAS, cloud computing, cybersecurity, project management, API management" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
         {/* Futuristic background elements */}
@@ -332,7 +318,6 @@ const ServicesPage: React.FC = () => {
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-r from-blue-500/5 to-cyan-500/5 rounded-full blur-2xl animate-pulse delay-500"></div>
         </div>
-        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
@@ -342,7 +327,7 @@ const ServicesPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed">
-              Comprehensive AI, IT, and Micro SAAS solutions designed to accelerate your business growth. 
+              Comprehensive AI, IT, and Micro SAAS solutions designed to accelerate your business growth.
               Choose from our range of services tailored to meet your specific needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
@@ -362,16 +347,15 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className="py-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
+            {categories.map((category) => ()
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${}
                   selectedCategory === category.id
                     ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white'
                     : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50'
@@ -384,7 +368,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 relative">
         {/* Background elements */}
@@ -392,23 +375,21 @@ const ServicesPage: React.FC = () => {
           <div className="absolute top-1/3 right-1/4 w-48 h-48 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl animate-pulse delay-300"></div>
           <div className="absolute bottom-1/3 left-1/4 w-56 h-56 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-3xl animate-pulse delay-700"></div>
         </div>
-        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
-            {filteredServices.map((service) => (
-              <div key={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 lg:p-8 border transition-all duration-300 hover:transform hover:scale-105 ${
-                service.popular 
-                  ? 'border-purple-500/60 ring-2 ring-purple-500/20' 
+            {filteredServices.map((service) => ()
+              <div key={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 lg:p-8 border transition-all duration-300 hover:transform hover:scale-105 ${}
+                service.popular
+                  ? 'border-purple-500/60 ring-2 ring-purple-500/20'
                   : 'border-purple-500/20 hover:border-purple-500/40'
               }`}>
-                {service.popular && (
+                {service.popular && ()
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
-
                 <div className="mb-4 sm:mb-6">
                   <div className="flex items-center justify-between mb-3 sm:mb-4">
                     <h3 className="text-lg sm:text-xl font-semibold text-white leading-tight">{service.name}</h3>
@@ -418,17 +399,15 @@ const ServicesPage: React.FC = () => {
                     </div>
                   </div>
                   <p className="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4 leading-relaxed">{service.description}</p>
-                  
                   <div className="flex items-center justify-between mb-3 sm:mb-4">
                     <div className="text-xl sm:text-2xl font-bold text-white">{service.price}</div>
                     <div className="text-xs sm:text-sm text-gray-400">{service.clients} clients</div>
                   </div>
                 </div>
-
                 <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                   <h4 className="text-white font-semibold text-sm sm:text-base">Key Features:</h4>
                   <ul className="space-y-1.5 sm:space-y-2">
-                    {service.features.slice(0, 4).map((feature, index) => (
+                    {service.features.slice(0, 4).map((feature, index) => ()
                       <li key={index} className="flex items-center text-gray-300 text-xs sm:text-sm">
                         <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -436,22 +415,20 @@ const ServicesPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                   <h4 className="text-white font-semibold text-sm sm:text-base">Benefits:</h4>
                   <ul className="space-y-1.5 sm:space-y-2">
-                    {service.benefits.map((benefit, index) => (
+                    {service.benefits.map((benefit, index) => ()
                       <li key={index} className="text-gray-300 text-xs sm:text-sm">
                         • {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
-
                 <div className="space-y-2 sm:space-y-3">
                   <Link
                     to={`/service/${service.id}`}
-                    className={`w-full inline-flex items-center justify-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${
+                    className={`w-full inline-flex items-center justify-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${}
                       service.popular
                         ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600'
                         : 'border border-purple-500 text-purple-300 hover:bg-purple-500/10'
@@ -460,7 +437,6 @@ const ServicesPage: React.FC = () => {
                     Learn More
                     <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
                   </Link>
-                  
                   <a
                     href="/contact"
                     className="w-full inline-flex items-center justify-center px-4 sm:px-6 py-2.5 sm:py-3 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-700/50 transition-all duration-300 text-sm sm:text-base"
@@ -473,7 +449,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-500/20 to-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -481,7 +456,7 @@ const ServicesPage: React.FC = () => {
             Need a Custom Solution?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Don&apos;t see exactly what you need? Our team can create custom solutions tailored to your specific requirements. 
+            Don&apos;t see exactly what you need? Our team can create custom solutions tailored to your specific requirements.
             Contact us for a free consultation and custom quote.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -501,8 +476,7 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
-  );
-};
-
-export default ServicesPage;
+</div>
+  )
+}
+export default ServicesPage

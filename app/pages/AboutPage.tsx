@@ -1,19 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  CheckCircleIcon,
-  UserGroupIcon,
-  LightBulbIcon,
-  ShieldCheckIcon,
-  RocketLaunchIcon,
-  HeartIcon,
-  ArrowRightIcon,
-  StarIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon
-} from '@heroicons/react/24/outline';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '../components/SEOHead';
 
 const AboutPage: React.FC = () => {
   const values = [
@@ -46,12 +32,11 @@ const AboutPage: React.FC = () => {
     { number: '24/7', label: 'Support Available' }
   ];
 
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering innovative technology solutions." />
-        <meta name="keywords" content="about us, Zion Tech Group, company, mission, values, team, technology solutions" />
+        <meta name="keywords" content="about us, _Zion Tech Group, _company, _mission, _values, _team, technology solutions" />
       </Helmet>
       
       <div className="min-h-screen bg-slate-900 text-white">
@@ -64,7 +49,7 @@ const AboutPage: React.FC = () => {
                 About Zion Tech Group
               </h1>
               <p className="text-xl lg:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                We are a leading technology company specializing in AI solutions, cybersecurity, and digital transformation. 
+                We are a leading technology company specializing in AI solutions, _cybersecurity, and digital transformation. 
                 Our mission is to empower businesses with cutting-edge technology that drives innovation and growth.
               </p>
             </div>

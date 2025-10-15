@@ -1,36 +1,23 @@
 import React from 'react';
-import { Loader2 } from 'lucide-react';
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  size?: 'sm' | 'md' | 'lg';
   text?: string;
-  className?: string;
-  fullScreen?: boolean;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  text = 'Loading...',
-  className = '',
-  fullScreen = false
+  size = 'md', text = 'Loading...', className = '', fullScreen = false
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'
+    sm: 'h-4 w-4',
+    md: 'h-8 w-8',
+    lg: 'h-12 w-12'
   };
 
-  const containerClasses = fullScreen 
-    ? `min-h-screen flex flex-col items-center justify-center space-y-2 ${className}`
-    : `flex flex-col items-center justify-center space-y-2 ${className}`;
-
   return (
-    <div className={containerClasses}>
-      <Loader2 data-testid="loading-spinner" className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
-      {text && (
-        <p className="text-gray-300 text-sm animate-pulse">{text}</p>
-      )}
+    <div className="flex flex-col items-center justify-center p-8">
+      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-purple-600 ${sizeClasses[size]}`}></div>
+      {text && <p className="mt-2 text-gray-600">{text}</p>}
     </div>
   );
 };

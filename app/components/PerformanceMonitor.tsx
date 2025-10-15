@@ -48,7 +48,6 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
-            const navEntry = entry as PerformanceNavigationTiming;
             // Navigation timing metrics collected
           }
         }
@@ -59,7 +58,6 @@ const PerformanceMonitor: React.FC = () => {
 
     // Memory usage monitoring
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
       // Memory usage metrics collected
     }
 

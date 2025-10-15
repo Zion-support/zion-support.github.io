@@ -4,12 +4,9 @@ export const Accessibilitychecker = {
   init: () => {
     },
 
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Accessibilitychecker;
+  cleanup: () => {}
+} }}
+export default Accessibilitychecker

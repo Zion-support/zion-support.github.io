@@ -1,81 +1,16 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe, Star } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
-export default function Community() {
-  const events = [
-    {
-      title: "AI Innovation Summit 2024",
-      date: "March 15, 2024",
-      time: "9:00 AM - 5:00 PM",
-      location: "Virtual Event",
-      description: "Join industry leaders as we explore the latest trends in artificial intelligence and machine learning.",
-      attendees: 500
-    },
-    {
-      title: "Tech Talk: Cloud Security Best Practices",
-      date: "March 22, 2024",
-      time: "2:00 PM - 3:00 PM",
-      location: "Online Webinar",
-      description: "Learn about the latest cloud security strategies and how to protect your digital assets.",
-      attendees: 150
-    },
-    {
-      title: "Developer Workshop: React & TypeScript",
-      date: "March 29, 2024",
-      time: "10:00 AM - 4:00 PM",
-      location: "Zion Tech Office",
-      description: "Hands-on workshop covering advanced React patterns and TypeScript best practices.",
-      attendees: 25
-    }
-  ];
-
-  const initiatives = [
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Tech Mentorship Program",
-      description: "Connect with experienced professionals and get guidance on your career journey.",
-      participants: "200+ mentees"
-    },
-    {
-      icon: <MessageCircle className="w-8 h-8" />,
-      title: "Developer Forums",
-      description: "Join our active community forums to discuss technology trends and share knowledge.",
-      participants: "1,500+ members"
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      title: "Innovation Challenges",
-      description: "Participate in hackathons and coding challenges to showcase your skills.",
-      participants: "500+ participants"
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Open Source Projects",
-      description: "Contribute to our open source initiatives and make a global impact.",
-      participants: "100+ contributors"
-    }
-  ];
-
-  const stats = [
-    { number: "5,000+", label: "Community Members", icon: <Users className="w-6 h-6" /> },
-    { number: "50+", label: "Events Hosted", icon: <Calendar className="w-6 h-6" /> },
-    { number: "100+", label: "Open Source Projects", icon: <Globe className="w-6 h-6" /> },
-    { number: "95%", label: "Member Satisfaction", icon: <Star className="w-6 h-6" /> }
-  ];
-
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Community - Zion Tech Group | Tech Community & Events</title>
         <meta
           name="description"
-          content="Join our vibrant tech community. Connect with like-minded professionals, attend events, participate in workshops, and grow your career with Zion Tech Group."
+          content="Join our vibrant tech community. Connect with like-minded professionals, attend events, _participate in workshops, and grow your career with Zion Tech Group."
         />
         <meta
           name="keywords"
-          content="tech community, developer community, tech events, workshops, mentorship, open source, networking, professional development"
+          content="tech community, _developer community, _tech events, _workshops, _mentorship, _open source, _networking, professional development"
         />
       </Helmet>
 
@@ -89,8 +24,7 @@ export default function Community() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Connect with thousands of tech professionals, attend exclusive events, 
-              and be part of a community that's shaping the future of technology.
+              Connect with thousands of tech professionals, _attend exclusive events, and be part of a community that's shaping the future of technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -210,5 +144,6 @@ export default function Community() {
       </div>
     </>
   );
-}
+};
 
+export default CommunityPage;

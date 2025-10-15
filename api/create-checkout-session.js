@@ -30,7 +30,7 @@ export default withErrorLogging(async (req, res) => {
       status: 'pending',
       productId: productId
     };
-
+    
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(session));
   } catch (error) {

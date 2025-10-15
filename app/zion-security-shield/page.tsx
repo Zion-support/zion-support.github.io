@@ -1,133 +1,7 @@
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, Brain } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import React from 'react';
+import SEOHead from '../components/SEOHead';
 
-export default function ZionSecurityShield() {
-  const features = [
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Advanced Threat Detection",
-      description: "AI-powered threat detection with 99.9% accuracy using machine learning algorithms"
-    },
-    {
-      icon: <Lock className="w-6 h-6" />,
-      title: "Zero-Trust Architecture",
-      description: "Implement zero-trust security model with continuous verification and monitoring"
-    },
-    {
-      icon: <Eye className="w-6 h-6" />,
-      title: "Real-time Monitoring",
-      description: "24/7 security monitoring with instant alerts and automated response systems"
-    },
-    {
-      icon: <AlertTriangle className="w-6 h-6" />,
-      title: "Vulnerability Assessment",
-      description: "Comprehensive security audits and vulnerability scanning for all your assets"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Automated Incident Response",
-      description: "AI-driven incident response with automated containment and recovery procedures"
-    },
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Behavioral Analytics",
-      description: "Advanced user behavior analysis to detect insider threats and anomalies"
-    }
-  ];
-
-  const securityFeatures = [
-    "Multi-factor Authentication (MFA)",
-    "End-to-end Encryption",
-    "DDoS Protection",
-    "Web Application Firewall (WAF)",
-    "Intrusion Detection System (IDS)",
-    "Security Information and Event Management (SIEM)",
-    "Penetration Testing",
-    "Compliance Reporting (SOC 2, ISO 27001, GDPR)",
-    "Data Loss Prevention (DLP)",
-    "Mobile Device Management (MDM)",
-    "Email Security Gateway",
-    "Cloud Security Posture Management"
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Essential",
-      price: "$49",
-      period: "/month",
-      description: "Perfect for small businesses",
-      features: [
-        "Basic threat detection",
-        "Email security",
-        "Firewall protection",
-        "Monthly security reports",
-        "Email support",
-        "Up to 10 users"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$149",
-      period: "/month",
-      description: "Most popular for growing businesses",
-      features: [
-        "Advanced threat detection",
-        "Real-time monitoring",
-        "Vulnerability scanning",
-        "Incident response",
-        "Priority support",
-        "Up to 50 users",
-        "Compliance reporting"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$399",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "AI-powered security",
-        "24/7 SOC monitoring",
-        "Custom security policies",
-        "Dedicated security team",
-        "White-label reporting",
-        "Unlimited users",
-        "Advanced compliance",
-        "Custom integrations"
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "David Martinez",
-      company: "Financial Services Corp",
-      role: "CISO",
-      content: "Zion Security Shield has been a game-changer for our security posture. We've seen a 90% reduction in security incidents since implementation.",
-      rating: 5
-    },
-    {
-      name: "Lisa Thompson",
-      company: "Healthcare Solutions",
-      role: "IT Director",
-      content: "The AI threat detection is incredibly accurate. It caught several sophisticated attacks that other systems missed.",
-      rating: 5
-    },
-    {
-      name: "James Wilson",
-      company: "E-commerce Platform",
-      role: "Security Manager",
-      content: "Outstanding support and comprehensive security features. Our compliance audit passed with flying colors.",
-      rating: 5
-    }
-  ];
-
-  return (
-    <>
+  return (<>
       <Helmet>
         <title>Zion Security Shield - Advanced Cybersecurity Platform | Zion Tech Group</title>
         <meta
@@ -136,7 +10,7 @@ export default function ZionSecurityShield() {
         />
         <meta
           name="keywords"
-          content="cybersecurity, threat detection, security monitoring, AI security, zero trust, compliance, SOC 2, GDPR, security platform"
+          content="cybersecurity, _threat detection, _security monitoring, _AI security, _zero trust, _compliance, _SOC 2, _GDPR, security platform"
         />
       </Helmet>
 
@@ -155,7 +29,7 @@ export default function ZionSecurityShield() {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Protect your business with the most advanced AI-powered cybersecurity platform. 
-              Real-time threat detection, automated incident response, and comprehensive compliance management.
+              Real-time threat detection, _automated incident response, and comprehensive compliance management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
@@ -184,7 +58,7 @@ export default function ZionSecurityShield() {
                 <div className="text-gray-300">Security Monitoring</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">5,000+</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">5, 000+</div>
                 <div className="text-gray-300">Protected Organizations</div>
               </div>
             </div>
@@ -326,7 +200,7 @@ export default function ZionSecurityShield() {
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map(( i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -370,4 +244,6 @@ export default function ZionSecurityShield() {
       </div>
     </>
   );
-}
+};
+
+export default ZionSecurityShieldPage;

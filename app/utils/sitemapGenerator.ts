@@ -4,12 +4,9 @@ export const Sitemapgenerator = {
   init: () => {
     },
 
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Sitemapgenerator;
+  cleanup: () => {}
+} }}
+export default Sitemapgenerator
