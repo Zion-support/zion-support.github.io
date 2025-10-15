@@ -89,6 +89,35 @@ const Navigation: React.FC = () => {
                       Micro SaaS Solutions
                     </Link>
                     
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Micro SaaS Tools</div>
+                    <Link to="/zion-ai-chatbot-builder" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Chatbot Builder
+                    </Link>
+                    <Link to="/zion-ai-form-builder" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Form Builder
+                    </Link>
+                    <Link to="/zion-ai-document-processor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Document Processor
+                    </Link>
+                    <Link to="/zion-ai-scheduling-assistant" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Scheduling Assistant
+                    </Link>
+                    <Link to="/zion-ai-social-media-manager" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Social Media Manager
+                    </Link>
+                    <Link to="/zion-ai-crm-optimizer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI CRM Optimizer
+                    </Link>
+                    <Link to="/zion-ai-email-optimizer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Email Optimizer
+                    </Link>
+                    <Link to="/zion-ai-website-analyzer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Website Analyzer
+                    </Link>
+                    <Link to="/zion-ai-data-visualizer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Data Visualizer
+                    </Link>
+                    
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">AI Tools</div>
                     <Link to="/zion-ai-content-moderator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       AI Content Moderator
@@ -204,6 +233,35 @@ const Navigation: React.FC = () => {
                 </Link>
                 <Link to="/micro-saas-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                   Micro SaaS Solutions
+                </Link>
+                
+                <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Micro SaaS Tools</div>
+                <Link to="/zion-ai-chatbot-builder" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  AI Chatbot Builder
+                </Link>
+                <Link to="/zion-ai-form-builder" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  AI Form Builder
+                </Link>
+                <Link to="/zion-ai-document-processor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  AI Document Processor
+                </Link>
+                <Link to="/zion-ai-scheduling-assistant" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  AI Scheduling Assistant
+                </Link>
+                <Link to="/zion-ai-social-media-manager" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  AI Social Media Manager
+                </Link>
+                <Link to="/zion-ai-crm-optimizer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  AI CRM Optimizer
+                </Link>
+                <Link to="/zion-ai-email-optimizer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  AI Email Optimizer
+                </Link>
+                <Link to="/zion-ai-website-analyzer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  AI Website Analyzer
+                </Link>
+                <Link to="/zion-ai-data-visualizer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  AI Data Visualizer
                 </Link>
                 
                 <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">AI Tools</div>

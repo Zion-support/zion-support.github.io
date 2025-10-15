@@ -12,8 +12,10 @@ const Footer: React.FC = () => {
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
             <div className="text-sm text-gray-400 mb-4">
-              <p>Email: contact@ziontechgroup.com</p>
-              <p>Phone: +1 (555) 123-4567</p>
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Phone: +1 302 464 0950</p>
+              <p>Address: 364 E Main St STE 1008</p>
+              <p>Middletown DE 19709</p>
             </div>
             <div className="flex space-x-4">
               <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
@@ -65,6 +67,18 @@ const Footer: React.FC = () => {
               <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-white">AI Email Marketing Pro</Link></li>
               <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-white">Customer Churn Predictor</Link></li>
               <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">Sales Predictor</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Micro SaaS Tools</h4>
+            <ul className="space-y-2">
+              <li><Link to="/zion-ai-chatbot-builder" className="text-gray-300 hover:text-white">AI Chatbot Builder</Link></li>
+              <li><Link to="/zion-ai-form-builder" className="text-gray-300 hover:text-white">AI Form Builder</Link></li>
+              <li><Link to="/zion-ai-document-processor" className="text-gray-300 hover:text-white">AI Document Processor</Link></li>
+              <li><Link to="/zion-ai-scheduling-assistant" className="text-gray-300 hover:text-white">AI Scheduling Assistant</Link></li>
+              <li><Link to="/zion-ai-social-media-manager" className="text-gray-300 hover:text-white">AI Social Media Manager</Link></li>
+              <li><Link to="/zion-ai-crm-optimizer" className="text-gray-300 hover:text-white">AI CRM Optimizer</Link></li>
               <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
             </ul>
           </div>
