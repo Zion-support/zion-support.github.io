@@ -426,6 +426,113 @@ body {
   }
 }
 
+/* Additional Utility Classes */
+.cyber-button {
+  position: relative;
+  padding: 12px 24px;
+  background: transparent;
+  border: 2px solid var(--neon-cyan);
+  border-radius: 8px;
+  color: var(--neon-cyan);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cyber-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--neon-cyan);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.cyber-button:hover::before {
+  left: 0;
+}
+
+.cyber-button:hover {
+  color: var(--bg-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-neon-cyan);
+}
+
+.card-cyber {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card-cyber::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-neon);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.card-cyber:hover::before {
+  transform: scaleX(1);
+}
+
+.card-cyber:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+  border-color: var(--neon-cyan);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.glass-dark:hover {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: var(--neon-cyan);
+  box-shadow: var(--shadow-neon-cyan);
+}
+
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.particles {
+  background: radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(191, 0, 255, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 40% 80%, rgba(255, 0, 128, 0.1) 0%, transparent 50%);
+}
+
+.holographic {
+  background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s ease infinite;
+}
+
 /* Print Styles */
 @media print {
   .no-print {
