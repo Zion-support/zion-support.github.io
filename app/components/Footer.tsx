@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 
-const Footer: React.FC = () => {
+const Footer: React.FC = memo(() => {
   return (
     <footer className="bg-gradient-to-t from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
       {/* Animated background elements */}
@@ -57,6 +57,19 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400">AI Tools</h4>
+            <ul className="space-y-3">
+              <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Content Moderator</Link></li>
+              <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Churn Predictor</Link></li>
+              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Sales Predictor</Link></li>
+              <li><Link to="/zion-ai-workflow-automator" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Workflow Automator</Link></li>
+              <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Financial Forecaster</Link></li>
+              <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Document Analyzer</Link></li>
+              <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Task Scheduler</Link></li>
+            </ul>
+          </div>
+          
+          <div>
             <h4 className="text-lg font-semibold mb-4 text-cyan-400">Company</h4>
             <ul className="space-y-3">
               <li><Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">About Us</Link></li>
@@ -90,6 +103,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
+<<<<<<< HEAD
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-center md:text-left text-gray-300 mb-4 md:mb-0">
@@ -104,6 +118,8 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
+});
+
+Footer.displayName = 'Footer';
 
 export default Footer;

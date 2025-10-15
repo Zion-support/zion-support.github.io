@@ -13,8 +13,8 @@ const PerformanceMonitor: React.FC = () => {
     // Monitor Core Web Vitals with proper analytics
     const sendToAnalytics = (metric: WebVitalMetric) => {
       // Send to analytics service (replace with your analytics provider)
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', metric.name, {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', metric.name, {
           event_category: 'Web Vitals',
           event_label: metric.id,
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
@@ -37,7 +37,9 @@ const PerformanceMonitor: React.FC = () => {
         onTTFB(sendToAnalytics);
         onINP(sendToAnalytics);
       }).catch((error) => {
-        console.warn('Failed to load web-vitals:', error);
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Failed to load web-vitals:', error);
+        }
       });
     }
 
