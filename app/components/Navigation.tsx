@@ -23,7 +23,12 @@ const Navigation: React.FC = memo(() => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-blue-600">Zion Tech Group</h1>
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">Z</span>
+                </div>
+                <h1 className="text-2xl font-bold text-blue-600">Zion Tech Group</h1>
+              </div>
             </Link>
           </div>
           
@@ -67,6 +72,15 @@ const Navigation: React.FC = memo(() => {
                     <Link to="/data-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Data Analytics
                     </Link>
+                    <Link to="/zion-ai-predictive-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Predictive Analytics
+                    </Link>
+                    <Link to="/zion-ai-image-recognition" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Image Recognition
+                    </Link>
+                    <Link to="/zion-ai-voice-assistant" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Voice Assistant
+                    </Link>
                     
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">IT Services</div>
                     <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
@@ -84,6 +98,18 @@ const Navigation: React.FC = memo(() => {
                     <Link to="/network-infrastructure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Network Infrastructure
                     </Link>
+                    <Link to="/cybersecurity" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Cybersecurity
+                    </Link>
+                    <Link to="/cloud-migration" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Cloud Migration
+                    </Link>
+                    <Link to="/api-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      API Development
+                    </Link>
+                    <Link to="/devops-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      DevOps & Automation
+                    </Link>
                     
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Infrastructure</div>
                     <Link to="/cloud-infrastructure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
@@ -99,6 +125,18 @@ const Navigation: React.FC = memo(() => {
                     </Link>
                     <Link to="/micro-saas-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Micro SaaS Solutions
+                    </Link>
+                    <Link to="/crm-suite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      CRM Suite
+                    </Link>
+                    <Link to="/hr-management" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      HR Management
+                    </Link>
+                    <Link to="/invoicing-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Invoicing Pro
+                    </Link>
+                    <Link to="/analytics-dashboard" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Analytics Dashboard
                     </Link>
                     
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">AI Tools</div>
@@ -159,8 +197,8 @@ const Navigation: React.FC = memo(() => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="md:hidden bg-white border-t border-gray-200">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 max-h-96 overflow-y-auto">
             <Link to="/" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
               Home
             </Link>
@@ -171,7 +209,7 @@ const Navigation: React.FC = memo(() => {
             {/* Mobile Services Menu */}
             <div className="px-3 py-2">
               <div className="space-y-1">
-                <div className="text-gray-700 px-3 py-2 text-base font-medium">AI & Machine Learning</div>
+                <div className="text-gray-700 px-3 py-2 text-base font-medium border-b border-gray-200">AI & Machine Learning</div>
                 <Link to="/ai-services" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                   AI Services
                 </Link>
@@ -184,8 +222,17 @@ const Navigation: React.FC = memo(() => {
                 <Link to="/data-analytics" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                   Data Analytics
                 </Link>
+                <Link to="/zion-ai-predictive-analytics" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  Predictive Analytics
+                </Link>
+                <Link to="/zion-ai-image-recognition" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  Image Recognition
+                </Link>
+                <Link to="/zion-ai-voice-assistant" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  Voice Assistant
+                </Link>
                 
-                <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">IT Services</div>
+                <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4 border-b border-gray-200">IT Services</div>
                 <Link to="/it-services" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                   IT Services
                 </Link>
@@ -201,8 +248,20 @@ const Navigation: React.FC = memo(() => {
                 <Link to="/network-infrastructure" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                   Network Infrastructure
                 </Link>
+                <Link to="/cybersecurity" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  Cybersecurity
+                </Link>
+                <Link to="/cloud-migration" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  Cloud Migration
+                </Link>
+                <Link to="/api-development" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  API Development
+                </Link>
+                <Link to="/devops-automation" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  DevOps & Automation
+                </Link>
                 
-                <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Infrastructure</div>
+                <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4 border-b border-gray-200">Infrastructure</div>
                 <Link to="/cloud-infrastructure" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                   Cloud Infrastructure
                 </Link>
@@ -210,15 +269,27 @@ const Navigation: React.FC = memo(() => {
                   5G Solutions
                 </Link>
                 
-                <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Business Solutions</div>
+                <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4 border-b border-gray-200">Business Solutions</div>
                 <Link to="/digital-transformation" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                   Digital Transformation
                 </Link>
                 <Link to="/micro-saas-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                   Micro SaaS Solutions
                 </Link>
+                <Link to="/crm-suite" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  CRM Suite
+                </Link>
+                <Link to="/hr-management" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  HR Management
+                </Link>
+                <Link to="/invoicing-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  Invoicing Pro
+                </Link>
+                <Link to="/analytics-dashboard" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  Analytics Dashboard
+                </Link>
                 
-                <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">AI Tools</div>
+                <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4 border-b border-gray-200">AI Tools</div>
                 <Link to="/zion-ai-content-moderator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                   AI Content Moderator
                 </Link>
@@ -239,6 +310,9 @@ const Navigation: React.FC = memo(() => {
                 </Link>
                 <Link to="/zion-ai-workflow-automator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                   Workflow Automator
+                </Link>
+                <Link to="/zion-ai-recommendation-engine" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  Recommendation Engine
                 </Link>
               </div>
             </div>
