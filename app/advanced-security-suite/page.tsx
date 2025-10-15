@@ -1,7 +1,6 @@
 import React from 'react';;
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
 const AdvancedSecuritySuitePage: React.FC = () => {}
   return ()
     <>{}</>
@@ -21,7 +20,6 @@ const AdvancedSecuritySuitePage: React.FC = () => {}
     {}
 export default PagePage;
 
-=======
 const AdvancedSecuritySuitePage: React.FC = () => {
   return (
     <>
@@ -39,4 +37,4 @@ const AdvancedSecuritySuitePage: React.FC = () => {
 };
 
 export default AdvancedSecuritySuitePage;
->>>>>>> main
+

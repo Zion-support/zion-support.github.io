@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async""use client';
 export default function ZionAIPerformanceOptimizer() {}
@@ -67,7 +67,7 @@ export default function ZionAIPerformanceOptimizer() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -86,12 +86,7 @@ const ZionAiPerformanceOptimizerPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
-<<<<<<< HEAD
 ;
 export default ZionAiPerformanceOptimizerPage;'";'";
-=======
-
-export default ZionAiPerformanceOptimizerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

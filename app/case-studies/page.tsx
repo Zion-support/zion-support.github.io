@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { Helmet } from 'react-helmet-async';
 import { TrendingUp, DollarSign, CheckCircle, Users, ArrowRight } from "lucide-react";
 
@@ -179,7 +179,7 @@ const CaseStudiesPage: React.FC = () => {}
       </div>
     </>
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -198,12 +198,7 @@ const CaseStudiesPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
-<<<<<<< HEAD
 ;
 export default CaseStudiesPage;'";'";
-=======
-
-export default CaseStudiesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

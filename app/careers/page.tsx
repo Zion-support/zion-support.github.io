@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-=======
+
+
 import React from 'react';;
 import SEOHead from '../components/SEOHead';
 import { Briefcase, MapPin, Clock, Users, CheckCircle, Heart, DollarSign, Home, GraduationCap, Zap, Shield } from 'lucide-react';
@@ -37,12 +37,11 @@ const CareersPage: React.FC = () => {
       description: 'Flexible hours, unlimited PTO, and family-friendly policies.'";
     }
   ];
->>>>>>> main
 
 import { Helmet } from 'react-helmet-async';
 const CareersPage: React.FC = () => {}
   const openPositions = [
-<<<<<<< HEAD
+
     {}
       title: "Senior AI Engineer",
       department: "Engineering",
@@ -169,7 +168,6 @@ const CareersPage: React.FC = () => {}
                   Apply Now
                   <ArrowRight className="w-5 h-5 ml-2" />
 
-=======
     {
       id: 'senior-ai-engineer',";
       title: 'Senior AI Engineer',";
@@ -244,7 +242,7 @@ const CareersPage: React.FC = () => {}
                 </button>
                 <button className ="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">",
                   Learn About Our Culture
->>>>>>> main
+
                 </button>
               </div>
             </div>

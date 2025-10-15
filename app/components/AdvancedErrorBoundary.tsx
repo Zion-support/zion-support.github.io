@@ -36,13 +36,11 @@ class AdvancedErrorBoundary extends Component<Props, State> {},
     if ($1) {}
   // If body
 
-<<<<<<< HEAD
-=======
 interface Props {
   children: ReactNode;
   fallback?: ReactNode,
   onError?: (error: Error, errorInfo: ErrorInfo) => void,
->>>>>>> main
+
 }
 
 interface State {
@@ -122,8 +120,6 @@ Error Details:
             <div className="flex justify-center mb-4"></div>
               <AlertTriangle className="w-16 h-16 text-red-500" />
 
-<<<<<<< HEAD
-=======
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
@@ -144,7 +140,7 @@ Error Details:
                   Something went wrong
                 </h3>
               </div>
->>>>>>> main
+
             </div>
             
             <div className ="mt-4">";
@@ -171,8 +167,7 @@ Error Details:
                 </details>
               )}
             </div>
-            
-<<<<<<< HEAD
+
             <p className="text-gray-600 dark:text-gray-300 mb-6"></p>
               We're sorry, but something unexpected happened. Our team has been notified.'
             </p>
@@ -199,7 +194,7 @@ Error Details:
               ></button
 >
                 <RefreshCw className="w-4 h-4 mr-2" />
-=======
+
             <div className ="mt-6 flex space-x-3">";
               <button onClick ={() => window.location.reload()}
                 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"",
@@ -209,7 +204,7 @@ Error Details:
               <button onClick ={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
                 className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"";
               >
->>>>>>> main
+
                 Try Again
               </button>
               

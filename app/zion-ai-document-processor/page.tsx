@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react""use client';
 export default function ZionAiDocumentProcessorPage() {}
   return ()
@@ -12,7 +12,7 @@ export default function ZionAiDocumentProcessorPage() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -31,12 +31,7 @@ const ZionAiDocumentProcessorPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
-<<<<<<< HEAD
 ;
 export default ZionAiDocumentProcessorPage;'";'";
-=======
-
-export default ZionAiDocumentProcessorPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

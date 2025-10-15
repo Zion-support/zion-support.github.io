@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 interface AnimatedCardProps {}
   children: React.ReactNode;
@@ -54,7 +53,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({)}
       </div>
     </>
   );
-=======
+
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -71,12 +70,7 @@ const ComponentsPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
-<<<<<<< HEAD
 ;
 export default ComponentsPage;'";'";
-=======
-
-export default ComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

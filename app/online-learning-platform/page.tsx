@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 export default function OnlineLearningPlatformPage() {}
   return ()
@@ -12,7 +12,7 @@ export default function OnlineLearningPlatformPage() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -31,12 +31,7 @@ const OnlineLearningPlatformPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
-<<<<<<< HEAD
 ;
 export default OnlineLearningPlatformPage;'";'";
-=======
-
-export default OnlineLearningPlatformPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

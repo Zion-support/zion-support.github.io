@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async""use client';
 export default function ZionAIEmailAnalyzer() {}
@@ -67,7 +67,7 @@ export default function ZionAIEmailAnalyzer() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -86,12 +86,7 @@ const ZionAiEmailAnalyzerPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
-<<<<<<< HEAD
 ;
 export default ZionAiEmailAnalyzerPage;'";'";
-=======
-
-export default ZionAiEmailAnalyzerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

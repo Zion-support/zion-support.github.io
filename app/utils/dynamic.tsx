@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 'use client';
 export default function UtilsPage() {}
@@ -13,7 +13,7 @@ export default function UtilsPage() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -32,12 +32,7 @@ const UtilsPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
-<<<<<<< HEAD
 ;
 export default UtilsPage;'";'";
-=======
-
-export default UtilsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

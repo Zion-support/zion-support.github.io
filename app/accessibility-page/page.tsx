@@ -1,7 +1,6 @@
 import React from 'react';;
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
 const AccessibilityPagePage: React.FC = () => {}
   return ()
     <>{}</>
@@ -21,7 +20,6 @@ const AccessibilityPagePage: React.FC = () => {}
     {}
 export default PagePage;
 
-=======
 const AccessibilityPagePage: React.FC = () => {
   return (
     <>
@@ -39,4 +37,4 @@ const AccessibilityPagePage: React.FC = () => {
 };
 
 export default AccessibilityPagePage;
->>>>>>> main
+

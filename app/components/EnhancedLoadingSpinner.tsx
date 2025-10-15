@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 'use client';
 export default function ComponentsPage() {}
@@ -13,7 +13,7 @@ export default function ComponentsPage() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -32,12 +32,7 @@ const ComponentsPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
-<<<<<<< HEAD
 ;
 export default ComponentsPage;'";'";
-=======
-
-export default ComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

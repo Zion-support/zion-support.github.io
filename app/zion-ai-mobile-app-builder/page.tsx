@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react""use client';
 export default function ZionAiMobileAppBuilderPage() {}
   return ()
@@ -12,7 +12,7 @@ export default function ZionAiMobileAppBuilderPage() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -31,12 +31,7 @@ const ZionAiMobileAppBuilderPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
-<<<<<<< HEAD
 ;
 export default ZionAiMobileAppBuilderPage;'";'";
-=======
-
-export default ZionAiMobileAppBuilderPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

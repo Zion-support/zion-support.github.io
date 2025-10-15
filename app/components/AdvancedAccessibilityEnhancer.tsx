@@ -25,11 +25,9 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {},
     if ($1) {}
   // If body
 
-<<<<<<< HEAD
-=======
 interface AccessibilityEnhancerProps {
   children: React.ReactNode,
->>>>>>> main
+
 }
 
 const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
@@ -109,8 +107,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
           aria-label="Close accessibility settings"
 
-<<<<<<< HEAD
-=======
     const root = document.documentElement;
     
     // Apply CSS classes based on settings
@@ -181,7 +177,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
         <button onClick ={() => setIsEnabled(!isEnabled)}
           className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover: bg-blue-700 transition-colors"";
           aria-label="Toggle accessibility enhancements"",
->>>>>>> main
+
         >
           {isEnabled ? 'Disable' : 'Enable'} Accessibility";
         </button>

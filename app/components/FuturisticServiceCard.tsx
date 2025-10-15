@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import { Helmet } from "react-helmet-async";
 interface FuturisticServiceCardProps {},
@@ -185,7 +184,7 @@ interface FuturisticServiceCardProps {},
       </div>
     </>
   );
-=======
+
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -202,12 +201,7 @@ const ComponentsPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
-<<<<<<< HEAD
 ;
 export default ComponentsPage;'";'";
-=======
-
-export default ComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

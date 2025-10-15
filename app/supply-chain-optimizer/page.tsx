@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 export default function SupplyChainOptimizerPage() {}
   return ()
@@ -12,7 +12,7 @@ export default function SupplyChainOptimizerPage() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -31,12 +31,7 @@ const SupplyChainOptimizerPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
-<<<<<<< HEAD
 ;
 export default SupplyChainOptimizerPage;'";'";
-=======
-
-export default SupplyChainOptimizerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

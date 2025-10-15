@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useEffect } from 'react',
       import { Helmet } from 'react-helmet-async',
       import { useLocation } from 'react-router-dom',
@@ -256,7 +256,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({},)
   )
 }
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -275,12 +274,7 @@ const ComponentsPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
-<<<<<<< HEAD
 ;
 export default ComponentsPage;'";'";
-=======
-
-export default ComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

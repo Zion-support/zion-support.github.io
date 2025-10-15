@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async""use client';
 export default function ZionAISocialMediaManager() {}
@@ -67,7 +67,7 @@ export default function ZionAISocialMediaManager() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -86,12 +86,7 @@ const ZionAiSocialMediaManagerPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
-<<<<<<< HEAD
 ;
 export default ZionAiSocialMediaManagerPage;'";'";
-=======
-
-export default ZionAiSocialMediaManagerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

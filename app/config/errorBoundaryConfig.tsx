@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { Helmet } from "react-helmet-async";
 const ErrorboundaryconfigPage = () => {}
 }
@@ -45,7 +45,6 @@ const ErrorboundaryconfigPage = () => {}
   )
 }
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -64,12 +63,7 @@ const ConfigPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
-<<<<<<< HEAD
 ;
 export default ConfigPage;'";'";
-=======
-
-export default ConfigPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

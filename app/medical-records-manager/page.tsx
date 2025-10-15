@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 export default function MedicalRecordsManagerPage() {}
   return ()
@@ -12,7 +12,7 @@ export default function MedicalRecordsManagerPage() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -31,12 +31,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
-<<<<<<< HEAD
 ;
 export default MedicalRecordsManagerPage;'";'";
-=======
-
-export default MedicalRecordsManagerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react""use client';
 export default function ZionAiAccountingSuitePage() {}
   return ()
@@ -12,7 +12,7 @@ export default function ZionAiAccountingSuitePage() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -31,12 +31,7 @@ const ZionAiAccountingSuitePage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
-<<<<<<< HEAD
 ;
 export default ZionAiAccountingSuitePage;'";'";
-=======
-
-export default ZionAiAccountingSuitePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

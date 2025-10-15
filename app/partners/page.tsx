@@ -1,6 +1,5 @@
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
 const PartnersPage: React.FC = () => {}
   return ()
     <>{}</>
@@ -158,7 +157,6 @@ const PartnersPage: React.FC = () => {}
             </div>
           </div>
 
-=======
 const PartnersPage: React.FC = () => {
   return (
     <>
@@ -169,7 +167,7 @@ const PartnersPage: React.FC = () => {
         <div className ="text-center">";
           <h1 className ="text-4xl font-bold mb-4"> Partners Page</h1>";
           <p className ="text-gray-300">Coming soon...</p>";
->>>>>>> main
+
         </div>
       </div>
     </>
