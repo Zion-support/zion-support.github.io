@@ -9,9 +9,9 @@ export interface LogContext {
 export interface LogEntry {
   level: 'debug' | 'info' | 'warn' | 'error';
   message: string;
-  context?: LogContext;
+  context?: LogContext | undefined;
   timestamp: number;
-  stack?: string;
+  stack?: string | undefined;
 }
 
 class Logger {
@@ -37,12 +37,12 @@ class Logger {
     }
   }
 
-  debug(message: string, context?: LogContext): void {
+  debug(message: string, context?: LogContext | undefined): void {
     if (this.shouldLog('debug')) {
       const entry: LogEntry = {
         level: 'debug',
         message,
-        context,
+        context: context ?? undefined,
         timestamp: Date.now(),
       };
       this.addLog(entry);
@@ -50,12 +50,12 @@ class Logger {
     }
   }
 
-  info(message: string, context?: LogContext): void {
+  info(message: string, context?: LogContext | undefined): void {
     if (this.shouldLog('info')) {
       const entry: LogEntry = {
         level: 'info',
         message,
-        context,
+        context: context ?? undefined,
         timestamp: Date.now(),
       };
       this.addLog(entry);
@@ -63,12 +63,12 @@ class Logger {
     }
   }
 
-  warn(message: string, context?: LogContext): void {
+  warn(message: string, context?: LogContext | undefined): void {
     if (this.shouldLog('warn')) {
       const entry: LogEntry = {
         level: 'warn',
         message,
-        context,
+        context: context ?? undefined,
         timestamp: Date.now(),
       };
       this.addLog(entry);
@@ -76,13 +76,13 @@ class Logger {
     }
   }
 
-  error(message: string, error?: Error, context?: LogContext): void {
+  error(message: string, error?: Error | undefined, context?: LogContext | undefined): void {
     const entry: LogEntry = {
       level: 'error',
       message,
-      context,
+      context: context ?? undefined,
       timestamp: Date.now(),
-      stack: error?.stack,
+      stack: error?.stack ?? undefined,
     };
     this.addLog(entry);
     console.error(this.formatMessage('error', message, context), error);

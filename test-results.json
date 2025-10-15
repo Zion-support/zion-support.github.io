@@ -1,0 +1,27 @@
+{
+  "passed": 4,
+  "failed": 0,
+  "total": 4,
+  "details": [
+    {
+      "name": "TypeScript Check",
+      "status": "passed",
+      "critical": true
+    },
+    {
+      "name": "ESLint Check",
+      "status": "passed",
+      "critical": true
+    },
+    {
+      "name": "Build Test",
+      "status": "passed",
+      "critical": true
+    },
+    {
+      "name": "Bundle Analysis",
+      "status": "passed",
+      "critical": false
+    }
+  ]
+}

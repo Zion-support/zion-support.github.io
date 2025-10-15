@@ -12,6 +12,7 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import SEOOptimizer from './app/components/SEOOptimizer';
+import ErrorMonitoring from './app/components/ErrorMonitoring';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -130,9 +131,10 @@ function App() {
             
             <main className="flex-1">
               <ErrorBoundary>
-                <PerformanceMonitor />
-                <AccessibilityEnhancer />
-                <SEOOptimizer />
+                <ErrorMonitoring>
+                  <PerformanceMonitor />
+                  <AccessibilityEnhancer />
+                  <SEOOptimizer />
                 
                 <Suspense fallback={<LoadingFallback />}>
                   <Routes>
@@ -205,6 +207,7 @@ function App() {
                     </div>} />
                   </Routes>
                 </Suspense>
+                </ErrorMonitoring>
               </ErrorBoundary>
             </main>
             

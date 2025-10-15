@@ -73,6 +73,7 @@
     "security:audit": "npm audit --audit-level=moderate",
     "accessibility:audit": "node scripts/accessibility-audit.js",
     "test:comprehensive": "jest --coverage --watchAll=false --passWithNoTests",
+    "test:all": "node scripts/test-runner.js",
     "lint:comprehensive": "eslint . --ext .ts,.tsx,.js,.jsx --fix --max-warnings 0",
     "type-check:comprehensive": "tsc --noEmit --strict",
     "pwa:audit": "lighthouse http://localhost:4173 --only-categories=pwa --output=html --output-path=./pwa-audit-report.html",

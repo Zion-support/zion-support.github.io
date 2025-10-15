@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import {
   Bars3Icon,
-  XMarkIcon,
   HomeIcon,
   InformationCircleIcon,
   PhoneIcon,
@@ -18,7 +17,6 @@ import {
   CpuChipIcon,
   SignalIcon,
   UserGroupIcon,
-  EnvelopeIcon,
   ShareIcon,
   ChatBubbleLeftRightIcon,
   ChartBarIcon,
@@ -35,7 +33,6 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-  const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);

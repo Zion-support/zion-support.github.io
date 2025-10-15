@@ -5,11 +5,19 @@ const PerformanceMonitor: React.FC = () => {
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined') {
       import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
-        onCLS(console.log);
-        onFCP(console.log);
-        onLCP(console.log);
-        onTTFB(console.log);
-        onINP(console.log);
+        const logMetric = (metric: any) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('Web Vital:', metric);
+          }
+          // In production, send to analytics service
+          // sendToAnalytics(metric);
+        };
+
+        onCLS(logMetric);
+        onFCP(logMetric);
+        onLCP(logMetric);
+        onTTFB(logMetric);
+        onINP(logMetric);
       }).catch(() => {
         // Silently fail if web-vitals is not available
       });
@@ -20,7 +28,11 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
-            console.log('Navigation timing:', entry);
+            if (process.env.NODE_ENV === 'development') {
+              console.log('Navigation timing:', entry);
+            }
+            // In production, send to analytics service
+            // sendToAnalytics({ type: 'navigation', data: entry });
           }
         }
       });
