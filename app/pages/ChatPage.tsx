@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const ChatPage: React.FC = () => {}
   return ()
@@ -44,15 +43,3 @@ const ChatPage: React.FC = () => {}
         </div>
       </section>
 
-=======
-import React from 'react';
-
-export default function ChatPage() {
-  return (
-    <div>
-      <h1>ChatPage<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

@@ -1,47 +1,14 @@
-<<<<<<< HEAD
-export default function LoadingOptimizer() {}
-  // Function body
-
-}return ()
-    <div></div>
-      <Helmet></Helmet>
-        <title>Loading Optimizer - Zion Tech Group</title>
-      </Helmet>
-      <div  className ="loading-optimizer-container"></div>""
-        <div  className ="loading-spinner"></div>""
-          <div  className ="spinner"></div>""
-        </div>
-        <>
-          to="/contact""
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit""
-        ></>
-          Contact Us
-          <ArrowRight: className ="w-5 h-5 ml-2" />"
-        </>
-
-      </div>
-    </>
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default ComponentsPage;'";'";"
-=======
 import React from 'react';
 
 interface LoadingOptimizerProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function LoadingOptimizer({ className }: LoadingOptimizerProps) {
+export default function LoadingOptimizer({ className = '', children }: LoadingOptimizerProps) {
   return (
     <div className={className}>
-      <h2>LoadingOptimizer<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

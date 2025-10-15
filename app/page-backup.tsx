@@ -1,28 +1,14 @@
-<<<<<<< HEAD
-              Get Started Today;
-            </button>;
-          </div>;
-        </div>;
-      </div>;";"
-import SEOHead from '../../components/SEOHead";"'
-
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default AppPage;'";'";"
-=======
 import React from 'react';
 
-export default function pagebackup() {
+interface page-backupProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function page-backup({ className = '', children }: page-backupProps) {
   return (
-    <div>
-      <h1>page-backup<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    <div className={className}>
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

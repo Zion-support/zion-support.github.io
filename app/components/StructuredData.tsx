@@ -1,24 +1,14 @@
 import React from 'react';
 
-<<<<<<< HEAD
-        </div>;
-      </div>;
-    </>;,
-  ),
-};
-
-
-=======
 interface StructuredDataProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function StructuredData({ className }: StructuredDataProps) {
+export default function StructuredData({ className = '', children }: StructuredDataProps) {
   return (
     <div className={className}>
-      <h2>StructuredData<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

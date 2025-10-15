@@ -1,31 +1,14 @@
-<<<<<<< HEAD
-
-                {displayName};
-              </>
-            )};
-          </React.Fragment>
-        )
-      })};
-    </nav>
-  )
-};
-
-
-
-
-=======
 import React from 'react';
 
 interface BreadcrumbProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function Breadcrumb({ className }: BreadcrumbProps) {
+export default function Breadcrumb({ className = '', children }: BreadcrumbProps) {
   return (
     <div className={className}>
-      <h2>Breadcrumb<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

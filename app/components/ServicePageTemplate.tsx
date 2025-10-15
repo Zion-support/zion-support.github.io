@@ -1,26 +1,14 @@
 import React from 'react';
 
-<<<<<<< HEAD
-    starting: string,
-      market: string
-  technologies: string[],
-      icon: React.ReactNode,
-
-  )
-
-
-
-=======
 interface ServicePageTemplateProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function ServicePageTemplate({ className }: ServicePageTemplateProps) {
+export default function ServicePageTemplate({ className = '', children }: ServicePageTemplateProps) {
   return (
     <div className={className}>
-      <h2>ServicePageTemplate<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

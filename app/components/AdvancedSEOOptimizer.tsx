@@ -1,81 +1,14 @@
-<<<<<<< HEAD
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: any;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-interface AdvancedSEOOptimizerProps {};
-  seoData: SEOData;
-  enableStructuredData?: boolean;
-  enableSocialMeta?: boolean;
-  enableAdvancedFeatures?: boolean;
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps>  =  ({)};
-
-  seoData,
-  enableStructuredData = true,
-  enableSocialMeta = true,
-  enableAdvancedFeatures = true
-
-      script.text = JSON.stringify(seoData.structuredData);
-      document.head.appendChild(script);
-    };
-
-    // Set up meta tags for social media
-
-          document.head.appendChild(tagMeta);
-        });
-  }, [
-    seoData, enableStructuredData, enableSocialMeta, enableAdvancedFeatures
-  
-  ]);";"
-      <title>{seoData.title}</title>""
-      <meta name="description" content={seoData.description} />""
-      <meta name="keywords" content={seoData.keywords.join(', ")} />";"'
-import SEOHead from './components/SEOHead";"'
-
-
-  return ()
-    <Helmet>
-      <title>{seoData.title}</title>
-      <meta: name ="description" content={seoData.description} />"
-      <meta: name ="keywords" content={seoData.keywords.join(', ')} />"
-    </Helmet>
-
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default ComponentsPage;'";'";"
-=======
 import React from 'react';
 
 interface AdvancedSEOOptimizerProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function AdvancedSEOOptimizer({ className }: AdvancedSEOOptimizerProps) {
+export default function AdvancedSEOOptimizer({ className = '', children }: AdvancedSEOOptimizerProps) {
   return (
     <div className={className}>
-      <h2>AdvancedSEOOptimizer<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

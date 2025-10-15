@@ -2,13 +2,13 @@ import React from 'react';
 
 interface SEOHeadProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function SEOHead({ className }: SEOHeadProps) {
+export default function SEOHead({ className = '', children }: SEOHeadProps) {
   return (
     <div className={className}>
-      <h2>SEOHead<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }

@@ -1,25 +1,10 @@
 import React from 'react';
-import { render, screen } from '@testing-library// Comment
-import '@testing-library// Comment
+import { render, screen } from '@testing-library/react';
+import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
 
-<<<<<<< HEAD
-        </div>
-      </div>
-    </>
-  );
-,
-};";
-";";
-export default __tests__Page;";";";
-"
-
-=======
-const MockComponent = () => <div>Test Component<// Comment
-
-describe('EnhancedErrorBoundary.test', () => {
-  test('should render without crashing', () => {
-    render(<MockComponent // Comment
-    expect(screen.getByText('Test Component')).toBeInTheDocument();
+describe('EnhancedErrorBoundary', () => {
+  it('renders without crashing', () => {
+    render(<EnhancedErrorBoundary />);
+    expect(screen.getByRole('generic')).toBeInTheDocument();
   });
 });
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

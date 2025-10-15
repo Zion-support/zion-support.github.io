@@ -1,24 +1,14 @@
-<<<<<<< HEAD
-              Get Started Today;
-            </button>;
-          </div>;
-        </div>;
-      </div>;";"
-import SEOHead from './components/SEOHead";"'
+import React from 'react';
 
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default UtilsPage;'";'";"
-=======
-/// Comment
-
-export function navigation() {
-  /// Comment
-  return null;
+interface navigationProps {
+  className?: string;
+  children?: React.ReactNode;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
+
+export default function navigation({ className = '', children }: navigationProps) {
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
+}

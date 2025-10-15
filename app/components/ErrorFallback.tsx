@@ -1,28 +1,14 @@
-<<<<<<< HEAD
-interface ErrorFallbackProps {},
-      error: Error,
-  resetErrorBoundary: () => void
-},
-
-          Try Again
-        </button>
-      </div>";
-    </div>";";
-},"
-      export default ErrorFallback;"'""
-=======
 import React from 'react';
 
 interface ErrorFallbackProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function ErrorFallback({ className }: ErrorFallbackProps) {
+export default function ErrorFallback({ className = '', children }: ErrorFallbackProps) {
   return (
     <div className={className}>
-      <h2>ErrorFallback<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

@@ -2,19 +2,13 @@ import React from 'react';
 
 interface ThemeToggleProps {
   className?: string;
-<<<<<<< HEAD
-  title?: string;
-
-
-=======
+  children?: React.ReactNode;
 }
 
-export default function ThemeToggle({ className }: ThemeToggleProps) {
+export default function ThemeToggle({ className = '', children }: ThemeToggleProps) {
   return (
     <div className={className}>
-      <h2>ThemeToggle<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

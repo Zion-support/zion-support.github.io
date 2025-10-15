@@ -1,32 +1,14 @@
-<<<<<<< HEAD
-              Get Started Today;
-            </button>;
-          </div>;
-        </div>;
-      </div>;";"
-import SEOHead from './components/SEOHead";"'
-
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default ComponentsPage;'";'";"
-=======
 import React from 'react';
 
 interface PerformanceMetricsProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function PerformanceMetrics({ className }: PerformanceMetricsProps) {
+export default function PerformanceMetrics({ className = '', children }: PerformanceMetricsProps) {
   return (
     <div className={className}>
-      <h2>PerformanceMetrics<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

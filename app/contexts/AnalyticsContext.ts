@@ -1,23 +1,28 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, ReactNode } from 'react';
 
 interface AnalyticsContextContextType {
-  /// Comment
+  // Context properties
 }
 
 const AnalyticsContextContext = createContext<AnalyticsContextContextType | undefined>(undefined);
 
-export function AnalyticsContextProvider({ children }: { children: React.ReactNode }) {
-  return (
-    <AnalyticsContextContext.Provider value={{}}>
-      {children}
-    <// Comment
-  );
-}
-
-export function useAnalyticsContext() {
+export const useAnalyticsContext = () => {
   const context = useContext(AnalyticsContextContext);
   if (!context) {
-    throw new Error('useAnalyticsContext must be used within AnalyticsContextProvider');
+    throw new Error('useAnalyticsContext must be used within a AnalyticsContextProvider');
   }
   return context;
+};
+
+interface AnalyticsContextProviderProps {
+  children: ReactNode;
 }
+
+export const AnalyticsContextProvider = ({ children }: AnalyticsContextProviderProps) => {
+  const value = {};
+  return (
+    <AnalyticsContextContext.Provider value={value}>
+      {children}
+    </AnalyticsContextContext.Provider>
+  );
+};

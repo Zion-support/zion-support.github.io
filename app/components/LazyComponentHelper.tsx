@@ -1,22 +1,14 @@
-<<<<<<< HEAD
-
-
-    <LazyWrapper>
-      <LazyComponent {...(props as P)} />
-
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
 
 interface LazyComponentHelperProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function LazyComponentHelper({ className }: LazyComponentHelperProps) {
+export default function LazyComponentHelper({ className = '', children }: LazyComponentHelperProps) {
   return (
     <div className={className}>
-      <h2>LazyComponentHelper<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }

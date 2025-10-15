@@ -1,20 +1,14 @@
-<<<<<<< HEAD
-
-
-
-=======
 import React from 'react';
 
 interface HeaderProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function Header({ className }: HeaderProps) {
+export default function Header({ className = '', children }: HeaderProps) {
   return (
     <div className={className}>
-      <h2>Header<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

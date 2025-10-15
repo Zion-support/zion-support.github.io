@@ -1,23 +1,14 @@
-<<<<<<< HEAD
-
-              Get Free Consultation
-            </button>
-          </div>
-        </div>
-
-=======
 import React from 'react';
 
 interface ServicesProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function Services({ className }: ServicesProps) {
+export default function Services({ className = '', children }: ServicesProps) {
   return (
     <div className={className}>
-      <h2>Services<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

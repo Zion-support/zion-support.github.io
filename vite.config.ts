@@ -1,10 +1,28 @@
-import React from 'react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-export default function vite.config() {
-  return (
-    <div>
-      <h1>vite.config<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+        },
+      },
+    },
+  },
+  server: {
+    port: 3000,
+    open: true,
+  },
+  resolve: {
+    alias: {
+      '@': '/workspace',
+    },
+  },
+})

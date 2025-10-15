@@ -2,19 +2,13 @@ import React from 'react';
 
 interface SearchModalProps {
   className?: string;
-<<<<<<< HEAD
-  title?: string;
-
-
-=======
+  children?: React.ReactNode;
 }
 
-export default function SearchModal({ className }: SearchModalProps) {
+export default function SearchModal({ className = '', children }: SearchModalProps) {
   return (
     <div className={className}>
-      <h2>SearchModal<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

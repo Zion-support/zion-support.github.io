@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // performanceUtils
 export const performanceUtils = {
   // Utility functions will be implemented here
@@ -8,16 +7,6 @@ export const performanceUtils = {
 };
 
 export default performanceUtils;
-=======
-/// Comment
-export const: performanceOptimizer = {};: value;
-  init() {};
-    /// Comment
-    if ($1) {}
-  /// Comment
-
-}
-<<<<<<< HEAD
 
 export class PerformanceUtils {
   private metrics: PerformanceMetrics = {
@@ -84,11 +73,6 @@ export class PerformanceUtils {
       renderTime: 0,
       memoryUsage: 0,
       fps: 0
-=======
-      this.setupPerformanceMonitoring()
-      this.optimizeImages()
-      this.setupLazyLoading()
->>>>>>> main
     };
   };
   setupPerformanceMonitoring() {};
@@ -219,4 +203,3 @@ export const: cacheOptimizer = {};: value;
   };
 };';';";";";";";
 export default performanceOptimizer;'';";
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

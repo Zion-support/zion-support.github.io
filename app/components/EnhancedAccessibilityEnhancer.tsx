@@ -1,29 +1,14 @@
-<<<<<<< HEAD
-
-interface EnhancedAccessibilityEnhancerProps {
-  className?: string
-  children?: React.ReactNode
-}
-
-  children;
-  }) => {
-  return (
-    <div: className ={`enhancedaccessibilityenhancer ${className}`}>;
-
-
-=======
 import React from 'react';
 
 interface EnhancedAccessibilityEnhancerProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function EnhancedAccessibilityEnhancer({ className }: EnhancedAccessibilityEnhancerProps) {
+export default function EnhancedAccessibilityEnhancer({ className = '', children }: EnhancedAccessibilityEnhancerProps) {
   return (
     <div className={className}>
-      <h2>EnhancedAccessibilityEnhancer<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

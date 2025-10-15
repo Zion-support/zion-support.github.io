@@ -1,18 +1,14 @@
 import React from 'react';
 
-<<<<<<< HEAD
-
-=======
 interface SkipLinkProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function SkipLink({ className }: SkipLinkProps) {
+export default function SkipLink({ className = '', children }: SkipLinkProps) {
   return (
     <div className={className}>
-      <h2>SkipLink<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

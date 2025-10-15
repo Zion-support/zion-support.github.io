@@ -2,19 +2,13 @@ import React from 'react';
 
 interface SystemMonitorProps {
   className?: string;
-<<<<<<< HEAD
-  title?: string;
-
-
-=======
+  children?: React.ReactNode;
 }
 
-export default function SystemMonitor({ className }: SystemMonitorProps) {
+export default function SystemMonitor({ className = '', children }: SystemMonitorProps) {
   return (
     <div className={className}>
-      <h2>SystemMonitor<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

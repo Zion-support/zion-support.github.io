@@ -1,32 +1,14 @@
-<<<<<<< HEAD
-              Get Started Today;
-            </button>;
-          </div>;
-        </div>;
-      </div>;";"
-import SEOHead from './components/SEOHead";"'
-
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default ComponentsPage;'";'";"
-=======
 import React from 'react';
 
 interface NewContentAdvertisingBannerProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function NewContentAdvertisingBanner({ className }: NewContentAdvertisingBannerProps) {
+export default function NewContentAdvertisingBanner({ className = '', children }: NewContentAdvertisingBannerProps) {
   return (
     <div className={className}>
-      <h2>NewContentAdvertisingBanner<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

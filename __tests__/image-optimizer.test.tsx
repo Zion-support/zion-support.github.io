@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
@@ -9,17 +8,5 @@ describe('Image Optimizer', () => {
   test('renders image optimizer', () => {
     render(<MockImageOptimizer />);
     expect(screen.getByText('Image Optimizer')).toBeInTheDocument();
-=======
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-
-const MockComponent = () => <div>Test Component</div>;
-
-describe('image-optimizer.test', () => {
-  test('should render without crashing', () => {
-    render(<MockComponent />);
-    expect(screen.getByText('Test Component')).toBeInTheDocument();
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
   });
 });

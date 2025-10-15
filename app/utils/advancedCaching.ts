@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // advancedCaching
 export const advancedCaching = {
   // Utility functions will be implemented here
@@ -8,11 +7,3 @@ export const advancedCaching = {
 };
 
 export default advancedCaching;
-=======
-/// Comment
-
-export function advancedCaching() {
-  /// Comment
-  return null;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

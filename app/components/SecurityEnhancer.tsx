@@ -2,19 +2,13 @@ import React from 'react';
 
 interface SecurityEnhancerProps {
   className?: string;
-<<<<<<< HEAD
-  title?: string;
-
-
-=======
+  children?: React.ReactNode;
 }
 
-export default function SecurityEnhancer({ className }: SecurityEnhancerProps) {
+export default function SecurityEnhancer({ className = '', children }: SecurityEnhancerProps) {
   return (
     <div className={className}>
-      <h2>SecurityEnhancer<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

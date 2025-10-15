@@ -1,28 +1,14 @@
-<<<<<<< HEAD
-              Get Started Today;
-            </button>;
-          </div>;
-        </div>;
-      </div>;";"
-import SEOHead from '../../components/SEOHead";"'
-
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default AppPage;'";'";"
-=======
 import React from 'react';
 
-export default function pageoptimized() {
+interface page-optimizedProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function page-optimized({ className = '', children }: page-optimizedProps) {
   return (
-    <div>
-      <h1>page-optimized<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    <div className={className}>
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

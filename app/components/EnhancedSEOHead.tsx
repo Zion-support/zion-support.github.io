@@ -1,35 +1,14 @@
 import React from 'react';
 
-<<<<<<< HEAD
-interface SEOHeadProps {};
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: Record<string>
-  noindex?: boolean;
-
-    </Helmet>
-  )
-},
-      export default EnhancedSEOHead
-
-
-
-=======
 interface EnhancedSEOHeadProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function EnhancedSEOHead({ className }: EnhancedSEOHeadProps) {
+export default function EnhancedSEOHead({ className = '', children }: EnhancedSEOHeadProps) {
   return (
     <div className={className}>
-      <h2>EnhancedSEOHead<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

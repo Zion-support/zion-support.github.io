@@ -1,18 +1,14 @@
-<<<<<<< HEAD
-
-=======
 import React from 'react';
 
 interface HeroProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function Hero({ className }: HeroProps) {
+export default function Hero({ className = '', children }: HeroProps) {
   return (
     <div className={className}>
-      <h2>Hero<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

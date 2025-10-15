@@ -2,19 +2,13 @@ import React from 'react';
 
 interface UserExperienceEnhancerProps {
   className?: string;
-<<<<<<< HEAD
-  title?: string;
-
-
-=======
+  children?: React.ReactNode;
 }
 
-export default function UserExperienceEnhancer({ className }: UserExperienceEnhancerProps) {
+export default function UserExperienceEnhancer({ className = '', children }: UserExperienceEnhancerProps) {
   return (
     <div className={className}>
-      <h2>UserExperienceEnhancer<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

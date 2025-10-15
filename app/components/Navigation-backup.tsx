@@ -1,30 +1,14 @@
-<<<<<<< HEAD
-          This page is under development.;
-        </p>;
-      </div>;";"
-import SEOHead from './components/SEOHead";"'
-
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default ComponentsPage;'";'";"
-=======
 import React from 'react';
 
-interface Navigation-backupProps {
+interface NavigationBackupProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function Navigationbackup({ className }: Navigation-backupProps) {
+export default function NavigationBackup({ className = '', children }: NavigationBackupProps) {
   return (
     <div className={className}>
-      <h2>Navigation-backup<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

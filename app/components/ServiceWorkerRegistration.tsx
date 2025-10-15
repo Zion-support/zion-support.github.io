@@ -1,25 +1,14 @@
-<<<<<<< HEAD
-
-    },
-    {};
-export default ServiceWorkerRegistration;
-
-
-
-
-=======
 import React from 'react';
 
 interface ServiceWorkerRegistrationProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function ServiceWorkerRegistration({ className }: ServiceWorkerRegistrationProps) {
+export default function ServiceWorkerRegistration({ className = '', children }: ServiceWorkerRegistrationProps) {
   return (
     <div className={className}>
-      <h2>ServiceWorkerRegistration<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

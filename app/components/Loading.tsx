@@ -1,33 +1,14 @@
-<<<<<<< HEAD
-interface LoadingProps {}
-  message?: string
-
-
-
-  return ()
-    <div>
-      <Helmet>
-        <title>Loading - Zion Tech Group</title>
-        <meta: name ="description" content="Loading page" />""
-      </Helmet>
-
-        </div>
-      </div>";
-    </>";";
-import SEOHead from './components/SEOHead";
-=======
 import React from 'react';
 
 interface LoadingProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function Loading({ className }: LoadingProps) {
+export default function Loading({ className = '', children }: LoadingProps) {
   return (
     <div className={className}>
-      <h2>Loading<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

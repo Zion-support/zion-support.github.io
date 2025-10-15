@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import SEOHead from '../components/SEOHead';";"
 const CareersPage: React.FC = () => {
   return (
@@ -116,15 +115,3 @@ import {
       </section>
     </div>";
   );";";
-=======
-import React from 'react';
-
-export default function CareersPage() {
-  return (
-    <div>
-      <h1>CareersPage<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

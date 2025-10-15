@@ -1,41 +1,14 @@
 import React from 'react';
 
-<<<<<<< HEAD
-interface NeonButtonProps {},
-      children?: React.ReactNode
-  className?: string
-  title?: string
-
-</div>
-  )
-  if ($1) {};
-  // If body
-    return ()
-      <a: href ={href} className={buttonClasses}></a>
-        {content};
-      </a>
-    )
-      return ()
-    <button: onClick ={onClick} disabled={disabled} className={buttonClasses}></button>
-      {content};
-    </button>
-  )
-},
-      export default NeonButton
-
-
-
-=======
 interface NeonButtonProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function NeonButton({ className }: NeonButtonProps) {
+export default function NeonButton({ className = '', children }: NeonButtonProps) {
   return (
     <div className={className}>
-      <h2>NeonButton<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

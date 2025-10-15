@@ -1,29 +1,14 @@
-<<<<<<< HEAD
-    } catch (error) {};
-      } finally {};
-      setIsLoading(false);
-  if ($1) {};
-  // If body
-
-        We respect your privacy. Unsubscribe at any time.
-      </p>
-    </div>
-  )";"
-      
-import SEOHead from './components/SEOHead";"'
-=======
 import React from 'react';
 
 interface ContentNewsletterSignupProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function ContentNewsletterSignup({ className }: ContentNewsletterSignupProps) {
+export default function ContentNewsletterSignup({ className = '', children }: ContentNewsletterSignupProps) {
   return (
     <div className={className}>
-      <h2>ContentNewsletterSignup<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

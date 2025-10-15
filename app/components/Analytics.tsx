@@ -1,30 +1,14 @@
-<<<<<<< HEAD
-
-      declare global {},
-      interface Window {},
-      gtag: (_...args: unknown[
-  ]) => void
-      const Analytics: React.FC = () => {};
-}useEffect(() => {};
-
-          page_title: document.title;
-          page_location: window.location.href})
-    initAnalytics()
-
-
-=======
 import React from 'react';
 
 interface AnalyticsProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function Analytics({ className }: AnalyticsProps) {
+export default function Analytics({ className = '', children }: AnalyticsProps) {
   return (
     <div className={className}>
-      <h2>Analytics<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

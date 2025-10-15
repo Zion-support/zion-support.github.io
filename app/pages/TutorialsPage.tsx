@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 const TutorialsPage: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState('all');""
   const [selectedLevel, setSelectedLevel] = useState('all');""
@@ -181,13 +180,3 @@ with hands-on projects and real-world examples.
         </div>
       </section>
 
-=======
-export default function TutorialsPage() {
-  return (
-    <div>
-      <h1>TutorialsPage<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

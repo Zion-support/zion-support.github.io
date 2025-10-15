@@ -1,32 +1,14 @@
-<<<<<<< HEAD
-              Get Started Today;
-            </button>;
-          </div>;
-        </div>;
-      </div>;";"
-import SEOHead from './components/SEOHead";"'
-
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default ComponentsPage;'";'";"
-=======
 import React from 'react';
 
 interface AdDashboardProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function AdDashboard({ className }: AdDashboardProps) {
+export default function AdDashboard({ className = '', children }: AdDashboardProps) {
   return (
     <div className={className}>
-      <h2>AdDashboard<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

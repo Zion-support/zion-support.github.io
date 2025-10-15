@@ -1,28 +1,14 @@
-<<<<<<< HEAD
-              Get Started Today;
-            </button>;
-          </div>;
-        </div>;
-      </div>;";"
-import SEOHead from '../../components/SEOHead";"'
-
-
-        </div>;
-      </div>;
-    </>;,";
-  ),";";
-;"
-
-export default AppPage;'";'";"
-=======
 import React from 'react';
 
-export default function sitemappage() {
+interface sitemap-pageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function sitemap-page({ className = '', children }: sitemap-pageProps) {
   return (
-    <div>
-      <h1>sitemap-page<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    <div className={className}>
+      {children}
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
