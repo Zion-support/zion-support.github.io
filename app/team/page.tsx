@@ -178,14 +178,15 @@ const stats = [
                   
         <div className="flex space-x-4 justify-center">
                     <a
-    const href = {member.linkedin} target="_blank"
+                      href={member.linkedin}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors"
                     >
                       <Linkedin className="w-5 h-5 text-white" />
                     </a>
                     <a
-    const href = {`mailto: ${member.email}`}
+                      href={`mailto:${member.email}`}
                       className="w-10 h-10 bg-cyan-600 hover:bg-cyan-700 rounded-full flex items-center justify-center transition-colors"
                     >
                       <Mail className="w-5 h-5 text-white" />
@@ -210,13 +211,13 @@ const stats = [
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-    href="/careers"
+                  href="/careers"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
                   View Open Positions
                 </a>
                 <a
-    href="/contact"
+                  href="/contact"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   Contact Us
