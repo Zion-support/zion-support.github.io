@@ -42,7 +42,6 @@ export const focusManagement = {
     };
   },
 
-<<<<<<< HEAD
   // Move focus to next focusable element
   moveToNext: (currentElement: HTMLElement) => {
     const focusableElements = document.querySelectorAll(
@@ -68,26 +67,16 @@ export const focusManagement = {
 export const screenReader = {
   // Announce message to screen readers
   announce: (message: string) => {
-=======
-  // Announce changes to screen readers
-  announceToScreenReader: (message: string) => {
->>>>>>> cursor/analyze-improve-and-merge-code-7ff3
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
-<<<<<<< HEAD
-=======
-    
->>>>>>> cursor/analyze-improve-and-merge-code-7ff3
     document.body.appendChild(announcement);
     
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
-<<<<<<< HEAD
-=======
   },
 
   // Get focusable elements
@@ -109,20 +98,22 @@ export const screenReader = {
     const focusableElements = focusManagement.getFocusableElements(container);
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
     lastElement?.focus();
->>>>>>> cursor/analyze-improve-and-merge-code-7ff3
   }
 };
 
 // Keyboard navigation utilities
 export const keyboardNavigation = {
-<<<<<<< HEAD
   // Handle escape key
   handleEscape: (callback: () => void) => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         callback();
       }
-=======
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  },
+
   // Handle arrow key navigation
   handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number) => {
     let newIndex = currentIndex;
@@ -154,14 +145,6 @@ export const keyboardNavigation = {
     }
     
     return currentIndex;
-  },
-
-  // Handle escape key
-  handleEscape: (e: KeyboardEvent, callback: () => void) => {
-    if (e.key === 'Escape') {
-      e.preventDefault();
-      callback();
-    }
   }
 };
 
@@ -247,17 +230,11 @@ export const useKeyboardNavigation = (items: HTMLElement[], initialIndex = 0) =>
     const handleKeyDown = (e: KeyboardEvent) => {
       const newIndex = keyboardNavigation.handleArrowKeys(e, items, currentIndex);
       setCurrentIndex(newIndex);
->>>>>>> cursor/analyze-improve-and-merge-code-7ff3
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-<<<<<<< HEAD
-  }
-};
-=======
   }, [items, currentIndex]);
 
   return [currentIndex, setCurrentIndex] as const;
 };
->>>>>>> cursor/analyze-improve-and-merge-code-7ff3

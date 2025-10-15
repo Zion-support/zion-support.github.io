@@ -42,6 +42,8 @@ const ServicesPage: React.FC = () => {
       category: 'ai',
       description: 'Advanced business intelligence platform with AI-powered insights and real-time analytics',
       price: '$299/month',
+      marketPrice: '$599/month',
+      savings: '50% off',
       features: [
         'Real-time Data Visualization',
         'AI-Powered Predictions',
@@ -57,7 +59,10 @@ const ServicesPage: React.FC = () => {
       ],
       popular: true,
       rating: 4.9,
-      clients: 150
+      clients: 150,
+      serviceCategory: 'Analytics',
+      useCases: ['Sales tracking', 'Marketing ROI', 'Customer behavior', 'Performance metrics'],
+      integrations: ['Google Analytics', 'Salesforce', 'Stripe', 'Shopify']
     },
     {
       id: 'ai-content-generator',
@@ -299,6 +304,8 @@ const ServicesPage: React.FC = () => {
       category: 'saas',
       description: 'Workflow automation platform with drag-and-drop builder and integration capabilities',
       price: '$99/month',
+      marketPrice: '$199/month',
+      savings: '50% off',
       features: [
         'Workflow Builder',
         'Integration Hub',
@@ -314,7 +321,268 @@ const ServicesPage: React.FC = () => {
       ],
       popular: true,
       rating: 4.8,
-      clients: 180
+      clients: 180,
+      serviceCategory: 'Automation',
+      useCases: ['Process automation', 'Data processing', 'Notification management', 'Workflow optimization'],
+      integrations: ['Zapier', 'Microsoft Power Automate', 'Salesforce', 'HubSpot']
+    },
+
+    // Additional AI Services
+    {
+      id: 'ai-document-processor',
+      name: 'AI Document Processor Pro',
+      category: 'ai',
+      description: 'Intelligent document processing and management system with OCR, data extraction, and automated workflows',
+      price: '$199/month',
+      marketPrice: '$399/month',
+      savings: '50% off',
+      features: [
+        'OCR Processing',
+        'Data Extraction',
+        'Document Classification',
+        'Automated Workflows',
+        'Version Control',
+        'Search & Retrieval'
+      ],
+      benefits: [
+        'Process documents 10x faster',
+        'Reduce data entry errors by 95%',
+        'Save 30+ hours per week'
+      ],
+      popular: false,
+      rating: 4.7,
+      clients: 90,
+      serviceCategory: 'Document Management',
+      useCases: ['Invoice processing', 'Contract management', 'Data entry automation', 'Compliance'],
+      integrations: ['Google Drive', 'Dropbox', 'SharePoint', 'Box']
+    },
+    {
+      id: 'ai-social-media-manager',
+      name: 'AI Social Media Manager Pro',
+      category: 'ai',
+      description: 'Comprehensive social media management platform with AI-powered content scheduling and engagement analysis',
+      price: '$149/month',
+      marketPrice: '$299/month',
+      savings: '50% off',
+      features: [
+        'Content Scheduling',
+        'Engagement Analysis',
+        'Hashtag Optimization',
+        'Competitor Tracking',
+        'Performance Metrics',
+        'Auto-posting'
+      ],
+      benefits: [
+        'Increase engagement by 60%',
+        'Save 15+ hours per week',
+        'Improve content performance by 40%'
+      ],
+      popular: false,
+      rating: 4.6,
+      clients: 120,
+      serviceCategory: 'Social Media',
+      useCases: ['Content planning', 'Engagement tracking', 'Growth optimization', 'Brand monitoring'],
+      integrations: ['Facebook', 'Instagram', 'Twitter', 'LinkedIn']
+    },
+    {
+      id: 'ai-lead-generator',
+      name: 'AI Lead Generator Pro',
+      category: 'ai',
+      description: 'Intelligent lead generation and qualification system with AI-powered prospecting and scoring',
+      price: '$179/month',
+      marketPrice: '$359/month',
+      savings: '50% off',
+      features: [
+        'Lead Scoring',
+        'Prospect Identification',
+        'Email Sequences',
+        'CRM Integration',
+        'Conversion Tracking',
+        'ROI Analysis'
+      ],
+      benefits: [
+        'Increase qualified leads by 70%',
+        'Reduce cost per lead by 50%',
+        'Improve conversion rates by 35%'
+      ],
+      popular: true,
+      rating: 4.8,
+      clients: 200,
+      serviceCategory: 'Sales & Marketing',
+      useCases: ['Lead generation', 'Prospect qualification', 'Sales automation', 'Conversion optimization'],
+      integrations: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zoho CRM']
+    },
+
+    // Additional IT Services
+    {
+      id: 'blockchain-solutions',
+      name: 'Blockchain Development Solutions',
+      category: 'it',
+      description: 'Comprehensive blockchain development services including smart contracts, DeFi, and NFT platforms',
+      price: '$799/month',
+      marketPrice: '$1599/month',
+      savings: '50% off',
+      features: [
+        'Smart Contract Development',
+        'DeFi Platform Creation',
+        'NFT Marketplace',
+        'Blockchain Integration',
+        'Security Auditing',
+        'Token Development'
+      ],
+      benefits: [
+        'Secure and transparent transactions',
+        'Reduce transaction costs by 80%',
+        'Enable new business models'
+      ],
+      popular: false,
+      rating: 4.9,
+      clients: 25,
+      serviceCategory: 'Blockchain',
+      useCases: ['DeFi platforms', 'NFT marketplaces', 'Supply chain tracking', 'Digital identity'],
+      integrations: ['Ethereum', 'Polygon', 'Binance Smart Chain', 'Solana']
+    },
+    {
+      id: 'iot-solutions',
+      name: 'IoT Development Solutions',
+      category: 'it',
+      description: 'End-to-end IoT development services for connected devices and smart systems',
+      price: '$599/month',
+      marketPrice: '$1199/month',
+      savings: '50% off',
+      features: [
+        'Device Development',
+        'Sensor Integration',
+        'Data Analytics',
+        'Cloud Connectivity',
+        'Mobile Apps',
+        'Dashboard Creation'
+      ],
+      benefits: [
+        'Monitor and control devices remotely',
+        'Collect valuable data insights',
+        'Improve operational efficiency'
+      ],
+      popular: false,
+      rating: 4.7,
+      clients: 40,
+      serviceCategory: 'IoT',
+      useCases: ['Smart homes', 'Industrial monitoring', 'Asset tracking', 'Environmental sensing'],
+      integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Arduino']
+    },
+    {
+      id: 'ar-vr-solutions',
+      name: 'AR/VR Development Solutions',
+      category: 'it',
+      description: 'Immersive AR/VR applications for training, marketing, and entertainment',
+      price: '$999/month',
+      marketPrice: '$1999/month',
+      savings: '50% off',
+      features: [
+        'AR Application Development',
+        'VR Experience Creation',
+        '3D Modeling',
+        'Interactive Design',
+        'Cross-platform Support',
+        'Performance Optimization'
+      ],
+      benefits: [
+        'Enhance user engagement',
+        'Create immersive experiences',
+        'Reduce training costs by 60%'
+      ],
+      popular: false,
+      rating: 4.8,
+      clients: 15,
+      serviceCategory: 'AR/VR',
+      useCases: ['Training simulations', 'Marketing experiences', 'Virtual tours', 'Gaming'],
+      integrations: ['Unity', 'Unreal Engine', 'WebXR', 'Oculus']
+    },
+
+    // Additional Micro SAAS Services
+    {
+      id: 'ai-inventory-manager',
+      name: 'AI Inventory Manager Pro',
+      category: 'saas',
+      description: 'Smart inventory management system with AI-powered demand forecasting and automated reordering',
+      price: '$199/month',
+      marketPrice: '$399/month',
+      savings: '50% off',
+      features: [
+        'Demand Forecasting',
+        'Automated Reordering',
+        'Supply Chain Optimization',
+        'Real-time Tracking',
+        'Cost Analysis',
+        'Vendor Management'
+      ],
+      benefits: [
+        'Reduce inventory costs by 30%',
+        'Prevent stockouts by 90%',
+        'Optimize supply chain efficiency'
+      ],
+      popular: false,
+      rating: 4.6,
+      clients: 80,
+      serviceCategory: 'Inventory Management',
+      useCases: ['Stock optimization', 'Demand planning', 'Cost reduction', 'Supply chain'],
+      integrations: ['QuickBooks', 'SAP', 'Oracle', 'NetSuite']
+    },
+    {
+      id: 'ai-hr-assistant',
+      name: 'AI HR Assistant Pro',
+      category: 'saas',
+      description: 'Intelligent human resources management platform with AI-powered recruitment and employee analytics',
+      price: '$149/month',
+      marketPrice: '$299/month',
+      savings: '50% off',
+      features: [
+        'Resume Screening',
+        'Candidate Matching',
+        'Performance Analytics',
+        'Employee Engagement',
+        'Payroll Integration',
+        'Compliance Tracking'
+      ],
+      benefits: [
+        'Reduce hiring time by 50%',
+        'Improve employee satisfaction by 40%',
+        'Ensure compliance with regulations'
+      ],
+      popular: false,
+      rating: 4.7,
+      clients: 60,
+      serviceCategory: 'Human Resources',
+      useCases: ['Recruitment', 'Performance management', 'Employee engagement', 'Compliance'],
+      integrations: ['Workday', 'BambooHR', 'ADP', 'Paychex']
+    },
+    {
+      id: 'ai-financial-advisor',
+      name: 'AI Financial Advisor Pro',
+      category: 'saas',
+      description: 'Advanced financial planning and analysis tool with AI-powered insights and investment recommendations',
+      price: '$249/month',
+      marketPrice: '$499/month',
+      savings: '50% off',
+      features: [
+        'Financial Planning',
+        'Budget Optimization',
+        'Investment Analysis',
+        'Risk Assessment',
+        'Tax Optimization',
+        'Reporting'
+      ],
+      benefits: [
+        'Improve financial decision making',
+        'Optimize investment returns by 25%',
+        'Reduce financial risks'
+      ],
+      popular: true,
+      rating: 4.8,
+      clients: 100,
+      serviceCategory: 'Finance',
+      useCases: ['Financial planning', 'Investment analysis', 'Budget management', 'Tax optimization'],
+      integrations: ['QuickBooks', 'Xero', 'Mint', 'Personal Capital']
     }
   ];
 
@@ -373,7 +641,7 @@ const ServicesPage: React.FC = () => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {filteredServices.map((service) => (
               <div key={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${
                 service.popular 
@@ -399,9 +667,25 @@ const ServicesPage: React.FC = () => {
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   
                   <div className="flex items-center justify-between mb-4">
-                    <div className="text-2xl font-bold text-white">{service.price}</div>
+                    <div className="flex items-center space-x-2">
+                      <div className="text-2xl font-bold text-white">{service.price}</div>
+                      {service.marketPrice && (
+                        <>
+                          <div className="text-lg text-gray-400 line-through">{service.marketPrice}</div>
+                          <div className="bg-green-500 text-white px-2 py-1 rounded text-sm font-semibold">{service.savings}</div>
+                        </>
+                      )}
+                    </div>
                     <div className="text-sm text-gray-400">{service.clients} clients</div>
                   </div>
+                  
+                  {service.serviceCategory && (
+                    <div className="mb-4">
+                      <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full font-medium">
+                        {service.serviceCategory}
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 <div className="space-y-4 mb-8">

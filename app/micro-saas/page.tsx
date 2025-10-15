@@ -12,7 +12,10 @@ const MicroSaasPage: React.FC = () => {
       popular: true,
       icon: <Zap className="w-8 h-8" />,
       marketPrice: "$99/month",
-      savings: "50% off"
+      savings: "50% off",
+      category: "Content Creation",
+      useCases: ["Blog writing", "Social media", "Email marketing", "Product descriptions"],
+      integrations: ["WordPress", "HubSpot", "Mailchimp", "Hootsuite"]
     },
     {
       name: "AI Analytics Dashboard Pro",
@@ -22,7 +25,10 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       icon: <BarChart3 className="w-8 h-8" />,
       marketPrice: "$199/month",
-      savings: "50% off"
+      savings: "50% off",
+      category: "Analytics",
+      useCases: ["Sales tracking", "Marketing ROI", "Customer behavior", "Performance metrics"],
+      integrations: ["Google Analytics", "Salesforce", "Stripe", "Shopify"]
     },
     {
       name: "AI Security Shield Pro",
@@ -32,7 +38,10 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       icon: <Shield className="w-8 h-8" />,
       marketPrice: "$299/month",
-      savings: "50% off"
+      savings: "50% off",
+      category: "Security",
+      useCases: ["Threat prevention", "Compliance", "Incident response", "Risk management"],
+      integrations: ["AWS", "Azure", "Google Cloud", "Slack"]
     },
     {
       name: "AI Project Manager Pro",
@@ -42,7 +51,10 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       icon: <Users className="w-8 h-8" />,
       marketPrice: "$159/month",
-      savings: "50% off"
+      savings: "50% off",
+      category: "Project Management",
+      useCases: ["Team coordination", "Resource planning", "Timeline management", "Budget tracking"],
+      integrations: ["Jira", "Asana", "Trello", "Microsoft Teams"]
     },
     {
       name: "AI Email Marketing Pro",
@@ -52,7 +64,10 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       icon: <Zap className="w-8 h-8" />,
       marketPrice: "$139/month",
-      savings: "50% off"
+      savings: "50% off",
+      category: "Marketing",
+      useCases: ["Email campaigns", "Lead nurturing", "Customer retention", "Sales automation"],
+      integrations: ["Mailchimp", "Constant Contact", "Salesforce", "HubSpot"]
     },
     {
       name: "AI Customer Support Pro",
@@ -62,7 +77,88 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       icon: <Users className="w-8 h-8" />,
       marketPrice: "$179/month",
-      savings: "50% off"
+      savings: "50% off",
+      category: "Customer Support",
+      useCases: ["24/7 support", "Ticket management", "Customer satisfaction", "Issue resolution"],
+      integrations: ["Zendesk", "Freshdesk", "Intercom", "Slack"]
+    },
+    {
+      name: "AI Document Processor Pro",
+      description: "Intelligent document processing and management system with OCR, data extraction, and automated workflows.",
+      features: ["OCR processing", "Data extraction", "Document classification", "Automated workflows", "Version control", "Search & retrieval"],
+      price: "$59/month",
+      popular: true,
+      icon: <Zap className="w-8 h-8" />,
+      marketPrice: "$119/month",
+      savings: "50% off",
+      category: "Document Management",
+      useCases: ["Invoice processing", "Contract management", "Data entry automation", "Compliance"],
+      integrations: ["Google Drive", "Dropbox", "SharePoint", "Box"]
+    },
+    {
+      name: "AI Social Media Manager Pro",
+      description: "Comprehensive social media management platform with AI-powered content scheduling, engagement analysis, and growth optimization.",
+      features: ["Content scheduling", "Engagement analysis", "Hashtag optimization", "Competitor tracking", "Performance metrics", "Auto-posting"],
+      price: "$79/month",
+      popular: false,
+      icon: <BarChart3 className="w-8 h-8" />,
+      marketPrice: "$159/month",
+      savings: "50% off",
+      category: "Social Media",
+      useCases: ["Content planning", "Engagement tracking", "Growth optimization", "Brand monitoring"],
+      integrations: ["Facebook", "Instagram", "Twitter", "LinkedIn"]
+    },
+    {
+      name: "AI Inventory Manager Pro",
+      description: "Smart inventory management system with AI-powered demand forecasting, automated reordering, and supply chain optimization.",
+      features: ["Demand forecasting", "Automated reordering", "Supply chain optimization", "Real-time tracking", "Cost analysis", "Vendor management"],
+      price: "$129/month",
+      popular: false,
+      icon: <Shield className="w-8 h-8" />,
+      marketPrice: "$259/month",
+      savings: "50% off",
+      category: "Inventory Management",
+      useCases: ["Stock optimization", "Demand planning", "Cost reduction", "Supply chain"],
+      integrations: ["QuickBooks", "SAP", "Oracle", "NetSuite"]
+    },
+    {
+      name: "AI HR Assistant Pro",
+      description: "Intelligent human resources management platform with AI-powered recruitment, employee analytics, and performance tracking.",
+      features: ["Resume screening", "Candidate matching", "Performance analytics", "Employee engagement", "Payroll integration", "Compliance tracking"],
+      price: "$99/month",
+      popular: false,
+      icon: <Users className="w-8 h-8" />,
+      marketPrice: "$199/month",
+      savings: "50% off",
+      category: "Human Resources",
+      useCases: ["Recruitment", "Performance management", "Employee engagement", "Compliance"],
+      integrations: ["Workday", "BambooHR", "ADP", "Paychex"]
+    },
+    {
+      name: "AI Financial Advisor Pro",
+      description: "Advanced financial planning and analysis tool with AI-powered insights, budgeting, and investment recommendations.",
+      features: ["Financial planning", "Budget optimization", "Investment analysis", "Risk assessment", "Tax optimization", "Reporting"],
+      price: "$149/month",
+      popular: true,
+      icon: <BarChart3 className="w-8 h-8" />,
+      marketPrice: "$299/month",
+      savings: "50% off",
+      category: "Finance",
+      useCases: ["Financial planning", "Investment analysis", "Budget management", "Tax optimization"],
+      integrations: ["QuickBooks", "Xero", "Mint", "Personal Capital"]
+    },
+    {
+      name: "AI Lead Generator Pro",
+      description: "Intelligent lead generation and qualification system with AI-powered prospecting, scoring, and nurturing automation.",
+      features: ["Lead scoring", "Prospect identification", "Email sequences", "CRM integration", "Conversion tracking", "ROI analysis"],
+      price: "$89/month",
+      popular: false,
+      icon: <Zap className="w-8 h-8" />,
+      marketPrice: "$179/month",
+      savings: "50% off",
+      category: "Sales & Marketing",
+      useCases: ["Lead generation", "Prospect qualification", "Sales automation", "Conversion optimization"],
+      integrations: ["Salesforce", "HubSpot", "Pipedrive", "Zoho CRM"]
     }
   ];
 
@@ -134,9 +230,9 @@ const MicroSaasPage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
               {saasProducts.map((product, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 relative ${product.popular ? 'ring-2 ring-cyan-500' : ''}`}>
+                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 relative group ${product.popular ? 'ring-2 ring-cyan-500' : ''}`}>
                   {product.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
@@ -146,35 +242,80 @@ const MicroSaasPage: React.FC = () => {
                     </div>
                   )}
                   
-                  <div className="text-cyan-400 mb-4">
-                    {product.icon}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-cyan-400">
+                      {product.icon}
+                    </div>
+                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full font-medium">
+                      {product.category}
+                    </span>
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-white mb-4">{product.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">{product.name}</h3>
                   <p className="text-gray-300 mb-6">{product.description}</p>
                   
-                  <ul className="space-y-3 mb-8">
-                    {product.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
+                    <ul className="space-y-2">
+                      {product.features.slice(0, 4).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                      {product.features.length > 4 && (
+                        <li className="text-cyan-400 text-sm font-medium">
+                          +{product.features.length - 4} more features
+                        </li>
+                      )}
+                    </ul>
+                  </div>
                   
-                  <div className="mb-4">
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Use Cases:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {product.useCases.map((useCase, useCaseIndex) => (
+                        <span key={useCaseIndex} className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">
+                          {useCase}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Integrations:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {product.integrations.slice(0, 3).map((integration, integrationIndex) => (
+                        <span key={integrationIndex} className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">
+                          {integration}
+                        </span>
+                      ))}
+                      {product.integrations.length > 3 && (
+                        <span className="px-2 py-1 bg-gray-500/20 text-gray-300 text-xs rounded-full">
+                          +{product.integrations.length - 3} more
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  
+                  <div className="mb-6">
                     <div className="flex items-center space-x-2 mb-2">
                       <span className="text-3xl font-bold text-white">{product.price}</span>
                       <span className="text-lg text-gray-400 line-through">{product.marketPrice}</span>
                       <span className="bg-green-500 text-white px-2 py-1 rounded text-sm font-semibold">{product.savings}</span>
                     </div>
-                    <p className="text-sm text-gray-400">Billed monthly • Cancel anytime</p>
+                    <p className="text-sm text-gray-400">Billed monthly • Cancel anytime • 14-day free trial</p>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                    Start Free Trial
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
+                  <div className="space-y-3">
+                    <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">
+                      Start Free Trial
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                    <button className="w-full border border-cyan-500 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                      Learn More
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
