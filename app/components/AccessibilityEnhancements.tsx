@@ -86,7 +86,7 @@ const AccessibilityEnhancements: React.FC = () => {
     // Add high contrast mode detection
     const addHighContrastDetection = () => {
       const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-      const handleContrastChange = (e: MediaQueryListEvent) => {
+      const handleContrastChange = (e: MediaQueryListEvent | MediaQueryList) => {
         if (e.matches) {
           document.body.classList.add('high-contrast');
         } else {
@@ -101,7 +101,7 @@ const AccessibilityEnhancements: React.FC = () => {
     // Add reduced motion detection
     const addReducedMotionDetection = () => {
       const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-      const handleMotionChange = (e: MediaQueryListEvent) => {
+      const handleMotionChange = (e: MediaQueryListEvent | MediaQueryList) => {
         if (e.matches) {
           document.body.classList.add('reduced-motion');
         } else {

@@ -1,11 +1,14 @@
-'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Zap, FileText, Code, Database, Shield, BookOpen, Search, ArrowRight, Footer } from 'lucide-react';
+import { Book, Code, Zap, Shield, Search, ChevronDown, ChevronRight, ExternalLink } from 'lucide-react';
 
 const DocsPage: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
+
   const documentationSections = [
     {
+      id: 'getting-started',
       title: 'Getting Started',
       description: 'Learn how to get started with our AI solutions',
       content: 'Comprehensive guide to implementing AI in your business'
@@ -16,303 +19,268 @@ const DocsPage: React.FC = () => {
     {
       title: 'Getting Started',
       icon: <Zap className="w-6 h-6" />,
-      description: 'Quick start guides and setup instructions for all our services',
+      description: 'Quick start guides and setup instructions',
       articles: [
         { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min' },
-        { title: 'Installation Guide', description: 'Step-by-step installation instructions', readTime: '10 min' },
-        { title: 'Configuration', description: 'Configure your services and settings', readTime: '15 min' }]
-        { title: 'First Steps', description: 'Your first project with our platform', readTime: '20 min' }]
+        { title: 'Account Setup', description: 'Create and configure your account', readTime: '3 min' },
+        { title: 'First Project', description: 'Create your first AI project', readTime: '10 min' },
+        { title: 'API Keys', description: 'Generate and manage your API keys', readTime: '2 min' }
+      ]
     },
     {
-      title: 'API Documentation',
-      icon: <FileText className="w-6 h-6" />,
-      description: 'Complete API reference and integration guides',
-      articles: [
-        { title: 'API Overview', description: 'Introduction to our REST API', readTime: '10 min' },
-        { title: 'Authentication', description: 'API keys and authentication methods', readTime: '8 min' },
-        { title: 'Rate Limits', description: 'Understanding API rate limits', readTime: '5 min' }]
-        { title: 'Error Handling', description: 'Common errors and how to handle them', readTime: '12 min' }]
-    },
-    {
+      id: 'ai-services',
       title: 'AI Services',
       icon: <Code className="w-6 h-6" />,
-      description: 'Documentation for all AI-powered services and features',
+      description: 'Comprehensive guides for our AI services',
       articles: [
-        { title: 'AI Analytics', description: 'Using our AI analytics platform', readTime: '25 min' },
-        { title: 'Content Generation', description: 'AI-powered content creation tools', readTime: '20 min' },
-        { title: 'Machine Learning', description: 'ML model training and deployment', readTime: '30 min' }]
-        { title: 'Natural Language Processing', description: 'NLP services and capabilities', readTime: '18 min' }]
+        { title: 'Machine Learning API', description: 'Complete ML API reference', readTime: '15 min' },
+        { title: 'Computer Vision', description: 'Image and video processing guides', readTime: '12 min' },
+        { title: 'Natural Language Processing', description: 'Text analysis and generation', readTime: '8 min' },
+        { title: 'Predictive Analytics', description: 'Building predictive models', readTime: '20 min' }
+      ]
     },
     {
-      title: 'Cloud Services',
-      icon: <Database className="w-6 h-6" />,
-      description: 'Cloud infrastructure and deployment documentation',
-      articles: [
-        { title: 'Cloud Migration', description: 'Migrating to our cloud platform', readTime: '45 min' },
-        { title: 'Container Services', description: 'Docker and Kubernetes deployment', readTime: '35 min' },
-        { title: 'Database Management', description: 'Managing databases in the cloud', readTime: '25 min' }]
-        { title: 'Monitoring & Logging', description: 'System monitoring and log analysis', readTime: '20 min' }]
-    },
-    {
-      title: 'Security',
+      id: 'it-services',
+      title: 'IT Services',
       icon: <Shield className="w-6 h-6" />,
-      description: 'Security best practices and compliance guidelines',
+      description: 'Documentation for our IT solutions',
       articles: [
-        { title: 'Security Overview', description: 'Our security measures and protocols', readTime: '15 min' },
-        { title: 'Data Protection', description: 'Protecting sensitive data and privacy', readTime: '20 min' },
-        { title: 'Compliance', description: 'SOC 2, GDPR, and other compliance standards', readTime: '30 min' }]
-        { title: 'Access Control', description: 'User permissions and access management', readTime: '12 min' }]
+        { title: 'Cloud Infrastructure', description: 'Setting up cloud environments', readTime: '25 min' },
+        { title: 'Cybersecurity Setup', description: 'Security best practices', readTime: '18 min' },
+        { title: 'Web Development', description: 'Building modern web applications', readTime: '30 min' },
+        { title: 'Mobile Development', description: 'iOS and Android app development', readTime: '35 min' }
+      ]
     },
     {
-      title: 'Tutorials',
-      icon: <BookOpen className="w-6 h-6" />,
-      description: 'Step-by-step tutorials and hands-on guides',
+      id: 'api-reference',
+      title: 'API Reference',
+      icon: <Book className="w-6 h-6" />,
+      description: 'Complete API documentation and examples',
       articles: [
-        { title: 'Building Your First App', description: 'Complete tutorial for beginners', readTime: '60 min' },
-        { title: 'Advanced Features', description: 'Exploring advanced platform features', readTime: '45 min' },
-        { title: 'Integration Examples', description: 'Real-world integration examples', readTime: '40 min' }]
-        { title: 'Best Practices', description: 'Industry best practices and tips', readTime: '25 min' }]
+        { title: 'Authentication', description: 'API authentication methods', readTime: '5 min' },
+        { title: 'Endpoints', description: 'Complete endpoint reference', readTime: '45 min' },
+        { title: 'SDKs', description: 'Software development kits', readTime: '10 min' },
+        { title: 'Webhooks', description: 'Real-time event notifications', readTime: '8 min' }
+      ]
     }
   ];
 
-const popularArticles = [
+  const popularArticles = [
     { title: 'Quick Start Guide', category: 'Getting Started', readTime: '5 min', views: '12.5k' },
-    { title: 'API Authentication', category: 'API Documentation', readTime: '8 min', views: '8.2k' },
-    { title: 'AI Analytics Setup', category: 'AI Services', readTime: '25 min', views: '6.8k' },
-    { title: 'Cloud Migration Guide', category: 'Cloud Services', readTime: '45 min', views: '5.4k' },
-    { title: 'Security Best Practices', category: 'Security', readTime: '20 min', views: '4.9k' }
+    { title: 'Machine Learning API', category: 'AI Services', readTime: '15 min', views: '8.2k' },
+    { title: 'Authentication Guide', category: 'API Reference', readTime: '5 min', views: '6.8k' },
+    { title: 'Cloud Infrastructure Setup', category: 'IT Services', readTime: '25 min', views: '5.1k' },
+    { title: 'Computer Vision Tutorial', category: 'AI Services', readTime: '12 min', views: '4.7k' }
   ];
 
-const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services', 'Cloud Services', 'Security', 'Tutorials'];
+  const filteredSections = documentationSections.map(section => ({
+    ...section,
+    articles: section.articles.filter(article =>
+      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      article.description.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  })).filter(section => section.articles.length > 0);
+
   return (
     <>
       <Helmet>
-        <title>Docs - Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group - Docs page" />
+        <title>Documentation - Zion Tech Group | Complete Developer Guide</title>
+        <meta name="description" content="Comprehensive documentation for Zion Tech Group's AI and IT services. Find guides, tutorials, API references, and code examples." />
+        <meta name="keywords" content="documentation, API reference, developer guide, tutorials, code examples, technical docs" />
+        <meta property="og:title" content="Documentation - Zion Tech Group" />
+        <meta property="og:description" content="Complete developer documentation and guides" />
+        <meta property="og:type" content="website" />
       </Helmet>
       
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20">
-          
-        <div className="container mx-auto px-4">
-            
-        <div className="text-center max-w-4xl mx-auto">
-              
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Documentation</span>
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                <Book className="w-16 h-16 inline-block mr-4 text-cyan-400" />
+                Documentation
               </h1>
-              
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Complete guides, API references, and tutorials to help you get the most out of our platform.
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+                Complete guides, tutorials, and API references to help you build amazing solutions with our platform.
               </p>
-              {/* Search Bar */}
               
-        <div className="relative max-w-2xl mx-auto mb-8">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-    type="text"
-                  placeholder="Search documentation..."
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-transparent"
-                />
+              {/* Search Bar */}
+              <div className="max-w-2xl mx-auto">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search documentation..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </section>
-        {/* Category Filter */}
-        <section className="py-8 px-4">
-          
-        <div className="max-w-7xl mx-auto">
-            
-        <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-    const key = {category} className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
-                    category === 'All'
-                      ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800/50 text-gray-300 hover: bg-cyan-500/20 hover:text-cyan-400'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
+
+        {/* Popular Articles */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Popular Articles</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Most viewed and helpful documentation articles
+              </p>
             </div>
-          </div>
-        </section>
-        {/* Documentation Sections */}
-        <section className="py-16 px-4">
-          
-        <div className="max-w-7xl mx-auto">
             
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {documentationSections.map((section, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group">
-                  
-        <div className="flex items-center mb-6">
-                    
-        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                      
-        <div className="text-white">{section.icon}</div>
-                    </div>
-                    <h2 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-                      {section.title}
-                    </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {popularArticles.map((article, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 group">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
+                      {article.category}
+                    </span>
+                    <span className="text-gray-400 text-sm">{article.readTime}</span>
                   </div>
-                  
-          <p className="text-gray-300 mb-6">{section.description}</p>
-                  
-        <div className="space-y-3">
-                    {section.articles.map((article, articleIndex) => (
-                      <a
-    const key = {articleIndex} href={`/docs/${section.title.toLowerCase().replace(/\s+/g, '-')}/${article.title.toLowerCase().replace(/\s+/g, '-')}`}
-                        className="block p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors group"
-                      >
-                        
-        <div className="flex items-center justify-between">
-                          <div>
-                            <h3 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
-                              {article.title}
-                            </h3>
-                            
-          <p className="text-gray-400 text-sm">{article.description}</p>
-                          </div>
-                          
-        <div className="flex items-center space-x-2 text-gray-400 text-sm">
-                            <span>{article.readTime}</span>
-                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                          </div>
-                        </div>
-                      </a>
-                    ))}
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {article.title}
+                  </h3>
+                  <div className="flex items-center justify-between text-sm text-gray-400">
+                    <span>{article.views} views</span>
+                    <ExternalLink className="w-4 h-4" />
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        {/* Popular Articles */}
-        <section className="py-16 px-4 bg-white/5 backdrop-blur-sm">
-          
-        <div className="max-w-7xl mx-auto">
-            
-        <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Popular Articles</h2>
-              
-          <p className="text-xl text-gray-300">Most viewed documentation articles</p>
+
+        {/* Documentation Sections */}
+        <section className="py-16 bg-white/5">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Documentation Sections</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Browse our comprehensive documentation organized by topic
+              </p>
             </div>
             
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {popularArticles.map((article, index) => (
-                <a
-    const key = {index} href={`/docs/${article.category.toLowerCase().replace(/\s+/g, '-')}/${article.title.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group"
-                >
+            <div className="max-w-6xl mx-auto space-y-6">
+              {filteredSections.map((section) => (
+                <div key={section.id} className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+                  <button
+                    onClick={() => setExpandedSection(expandedSection === section.id ? null : section.id)}
+                    className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
+                  >
+                    <div className="flex items-center">
+                      <div className="text-cyan-400 mr-4">
+                        {section.icon}
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-white">{section.title}</h3>
+                        <p className="text-gray-300">{section.description}</p>
+                      </div>
+                    </div>
+                    {expandedSection === section.id ? (
+                      <ChevronDown className="w-6 h-6 text-cyan-400" />
+                    ) : (
+                      <ChevronRight className="w-6 h-6 text-cyan-400" />
+                    )}
+                  </button>
                   
-        <div className="flex items-center justify-between mb-3">
-                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
-                      {article.category}
-                    </span>
-                    <span className="text-gray-400 text-sm">{article.readTime}</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {article.title}
-                  </h3>
-                  
-        <div className="flex items-center justify-between">
-                    <span className="text-gray-400 text-sm">{article.views} views</span>
-                    <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </a>
+                  {expandedSection === section.id && (
+                    <div className="px-8 pb-6">
+                      <div className="grid md:grid-cols-2 gap-4">
+                        {section.articles.map((article, articleIndex) => (
+                          <div key={articleIndex} className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors cursor-pointer group">
+                            <div className="flex items-center justify-between mb-2">
+                              <h4 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                                {article.title}
+                              </h4>
+                              <span className="text-gray-400 text-sm">{article.readTime}</span>
+                            </div>
+                            <p className="text-gray-300 text-sm mb-2">{article.description}</p>
+                            <div className="flex items-center text-cyan-400 text-sm">
+                              <span>Read more</span>
+                              <ExternalLink className="w-3 h-3 ml-1" />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </div>
         </section>
-        {/* API Reference Quick Access */}
-        <section className="py-16 px-4">
-          
-        <div className="max-w-7xl mx-auto">
-            
-        <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">API Reference</h2>
-              
-          <p className="text-xl text-gray-300">Quick access to our API documentation</p>
-            </div>
-            
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 text-center">
-                <FileText className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">REST API</h3>
-                
-          <p className="text-gray-300 mb-6">Complete REST API reference with examples and interactive testing</p>
-                <a
-    href="/docs/api/rest"
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  View REST API Docs
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-              </div>
-              
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 text-center">
-                <Code className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">SDKs</h3>
-                
-          <p className="text-gray-300 mb-6">Official SDKs for Python, JavaScript, Java, and more</p>
-                <a
-    href="/docs/sdks"
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  View SDKs
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-              </div>
-              
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 text-center">
-                <Zap className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">Postman Collection</h3>
-                
-          <p className="text-gray-300 mb-6">Import our Postman collection for easy API testing</p>
-                <a
-    href="/docs/postman"
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  Download Collection
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
+
+        {/* Quick Start */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-xl p-12 text-center">
+                <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+                <p className="text-xl text-white/90 mb-8">
+                  Follow our quick start guide to begin building with our platform in just a few minutes.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                    Start Building
+                  </button>
+                  <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
+                    View Examples
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </section>
-        {/* Support Section */}
-        <section className="py-16 px-4 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-          
-        <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Need Help?</h2>
-            
-          <p className="text-xl text-gray-300 mb-8">
-              Can't find what you're looking for? Our support team is here to help.
-            </p>
-            
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-    href="/support"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Contact Support
-              </a>
-              <a
-    href="/contact"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Get in Touch
-              </a>
+
+        {/* Additional Resources */}
+        <section className="py-16 bg-white/5">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold text-white mb-6">Additional Resources</h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  More tools and resources to help you succeed
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
+                  <Code className="w-12 h-12 text-cyan-400 mx-auto mb-6" />
+                  <h3 className="text-xl font-bold text-white mb-4">Code Examples</h3>
+                  <p className="text-gray-300 mb-6">Real-world code examples and snippets for common use cases</p>
+                  <button className="text-cyan-400 hover:text-cyan-300 font-semibold">
+                    Browse Examples
+                  </button>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
+                  <Zap className="w-12 h-12 text-cyan-400 mx-auto mb-6" />
+                  <h3 className="text-xl font-bold text-white mb-4">Tutorials</h3>
+                  <p className="text-gray-300 mb-6">Step-by-step tutorials for building complete solutions</p>
+                  <button className="text-cyan-400 hover:text-cyan-300 font-semibold">
+                    View Tutorials
+                  </button>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
+                  <Shield className="w-12 h-12 text-cyan-400 mx-auto mb-6" />
+                  <h3 className="text-xl font-bold text-white mb-4">Best Practices</h3>
+                  <p className="text-gray-300 mb-6">Security, performance, and architecture best practices</p>
+                  <button className="text-cyan-400 hover:text-cyan-300 font-semibold">
+                    Learn More
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <Footer />
+        </section>
       </div>
     </>
   );
 };
+
 export default DocsPage;

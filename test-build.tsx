@@ -1,4 +1,4 @@
-import React from "react";
+// Test component for build verification
 
 const TestComponent = () => {
   return (

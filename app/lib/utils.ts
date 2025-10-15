@@ -1,1 +1,1 @@
-import { type ClassValue, clsx } from "clsx";
+// Utility functions for class name handling

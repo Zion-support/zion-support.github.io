@@ -1,45 +1,45 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { TrendingUp, Shield, PieChart, Target, DollarSign, CheckCircle, ArrowRight, Star, BarChart3, Users } from 'lucide-react';
+import { Heart, Brain, Shield, Users, CheckCircle, ArrowRight, Star, Zap, Activity } from 'lucide-react';
 
-const AiFinancialAdvisorPage: React.FC = () => {
+const AiHealthcareAssistantPage: React.FC = () => {
   const features = [
     {
-      icon: <PieChart className="w-8 h-8" />,
-      title: "Portfolio Management",
-      description: "AI-powered portfolio optimization and rebalancing based on market conditions and risk tolerance",
-      benefits: ["Automated rebalancing", "Risk assessment", "Diversification analysis", "Performance tracking"]
+      icon: <Heart className="w-8 h-8" />,
+      title: "Patient Monitoring",
+      description: "Real-time health monitoring with AI-powered analysis of vital signs and symptoms",
+      benefits: ["Continuous monitoring", "Early warning alerts", "Trend analysis", "Risk assessment"]
     },
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Investment Analysis",
-      description: "Advanced market analysis and investment recommendations using machine learning algorithms",
-      benefits: ["Market predictions", "Stock analysis", "Sector insights", "Trend identification"]
+      icon: <Brain className="w-8 h-8" />,
+      title: "Diagnosis Support",
+      description: "AI-assisted diagnostic tools that help healthcare professionals make informed decisions",
+      benefits: ["Symptom analysis", "Differential diagnosis", "Treatment recommendations", "Evidence-based insights"]
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Risk Assessment",
-      description: "Comprehensive risk evaluation and mitigation strategies for your financial portfolio",
-      benefits: ["Risk scoring", "Stress testing", "Scenario analysis", "Hedge recommendations"]
+      title: "Treatment Planning",
+      description: "Personalized treatment plans based on patient data and medical best practices",
+      benefits: ["Custom protocols", "Drug interactions", "Dosage optimization", "Follow-up scheduling"]
     },
     {
-      icon: <Target className="w-8 h-8" />,
-      title: "Goal Planning",
-      description: "Personalized financial goal setting and achievement tracking with AI-driven recommendations",
-      benefits: ["Goal prioritization", "Savings optimization", "Timeline planning", "Progress monitoring"]
+      icon: <Activity className="w-8 h-8" />,
+      title: "Health Analytics",
+      description: "Comprehensive health analytics and reporting for better patient outcomes",
+      benefits: ["Population health insights", "Outcome predictions", "Resource optimization", "Quality metrics"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Personal",
-      price: "$99",
+      name: "Starter",
+      price: "$179",
       period: "per month",
-      description: "Perfect for individual investors and small portfolios",
+      description: "Perfect for small clinics and individual practitioners",
       features: [
-        "Up to 5 portfolios",
-        "Basic AI analysis",
-        "Monthly rebalancing",
+        "Up to 100 patients",
+        "Basic AI diagnostics",
+        "Patient monitoring",
         "Email support",
         "Standard reporting"
       ],
@@ -47,31 +47,32 @@ const AiFinancialAdvisorPage: React.FC = () => {
     },
     {
       name: "Professional",
-      price: "$199",
+      price: "$299",
       period: "per month",
-      description: "Ideal for financial advisors and wealth managers",
+      description: "Ideal for medium-sized healthcare facilities",
       features: [
-        "Up to 25 portfolios",
-        "Advanced AI algorithms",
+        "Up to 500 patients",
+        "Advanced AI diagnostics",
         "Real-time monitoring",
-        "Custom strategies",
+        "Treatment planning",
         "Priority support",
-        "API integration"
+        "Custom integrations"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$499",
       period: "per month",
-      description: "Comprehensive solution for large financial institutions",
+      description: "Comprehensive solution for large healthcare systems",
       features: [
-        "Unlimited portfolios",
+        "Unlimited patients",
         "Full AI suite",
-        "White-label options",
-        "Custom models",
+        "Advanced analytics",
+        "Custom workflows",
         "24/7 support",
-        "Dedicated account manager"
+        "API access",
+        "White-label options"
       ],
       popular: false
     }
@@ -79,42 +80,35 @@ const AiFinancialAdvisorPage: React.FC = () => {
 
   const useCases = [
     {
-      title: "Individual Investors",
-      description: "Personalized investment advice and portfolio management for individual investors",
+      title: "Primary Care",
+      description: "Streamline routine checkups and preventive care with AI-powered patient assessment tools",
       icon: <Users className="w-6 h-6" />
     },
     {
-      title: "Financial Advisors",
-      description: "AI-powered tools to enhance advisory services and client portfolio management",
-      icon: <BarChart3 className="w-6 h-6" />
+      title: "Emergency Medicine",
+      description: "Rapid triage and critical care decision support for emergency departments",
+      icon: <Zap className="w-6 h-6" />
     },
     {
-      title: "Wealth Management",
-      description: "Comprehensive wealth management solutions for high-net-worth individuals",
-      icon: <DollarSign className="w-6 h-6" />
+      title: "Chronic Disease Management",
+      description: "Continuous monitoring and management of chronic conditions like diabetes and hypertension",
+      icon: <Heart className="w-6 h-6" />
     },
     {
-      title: "Institutional Trading",
-      description: "Advanced trading algorithms and risk management for institutional clients",
-      icon: <TrendingUp className="w-6 h-6" />
+      title: "Mental Health",
+      description: "AI-assisted mental health screening and treatment planning for better patient outcomes",
+      icon: <Brain className="w-6 h-6" />
     }
-  ];
-
-  const marketData = [
-    { metric: "Average Return", value: "12.5%", description: "Annual portfolio returns" },
-    { metric: "Risk Reduction", value: "35%", description: "Volatility reduction" },
-    { metric: "Client Satisfaction", value: "98%", description: "User satisfaction rate" },
-    { metric: "Assets Under Management", value: "$2.5B+", description: "Total AUM managed" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Financial Advisor - Zion Tech Group | Intelligent Investment Management</title>
-        <meta name="description" content="Advanced AI financial advisor with portfolio management, investment analysis, and risk assessment. Maximize returns with intelligent financial planning." />
-        <meta name="keywords" content="ai financial advisor, portfolio management, investment analysis, financial planning, wealth management, trading algorithms" />
-        <meta property="og:title" content="AI Financial Advisor - Zion Tech Group" />
-        <meta property="og:description" content="Intelligent financial planning and investment management" />
+        <title>AI Healthcare Assistant - Zion Tech Group | Advanced Medical AI Solutions</title>
+        <meta name="description" content="Revolutionary AI healthcare assistant with patient monitoring, diagnosis support, and treatment planning. Improve patient outcomes with cutting-edge medical AI technology." />
+        <meta name="keywords" content="ai healthcare, medical ai, patient monitoring, diagnosis support, healthcare technology, medical software" />
+        <meta property="og:title" content="AI Healthcare Assistant - Zion Tech Group" />
+        <meta property="og:description" content="Advanced AI solutions for healthcare professionals" />
         <meta property="og:type" content="website" />
       </Helmet>
       
@@ -132,50 +126,22 @@ const AiFinancialAdvisorPage: React.FC = () => {
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 relative">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  AI Financial Advisor
+                  AI Healthcare Assistant
                 </span>
                 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400/20 via-purple-400/20 to-pink-400/20 blur-lg opacity-75"></div>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Maximize your investment returns with our intelligent AI financial advisor. 
-                Advanced portfolio management, risk assessment, and personalized investment strategies.
+                Transform healthcare delivery with our advanced AI-powered assistant. 
+                Enhance patient care, improve diagnostics, and streamline medical workflows.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
                   Start Free Trial
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                  View Demo
+                  Schedule Demo
                 </button>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Market Performance Section */}
-        <section className="py-20 relative z-10">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Proven Performance</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI financial advisor delivers consistent results across all market conditions
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {marketData.map((data, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-md border border-cyan-500/30 rounded-xl p-6 text-center hover:border-cyan-400/60 transition-all duration-300 group">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2 group-hover:scale-110 transition-transform duration-300">
-                    {data.value}
-                  </div>
-                  <div className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors">
-                    {data.metric}
-                  </div>
-                  <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
-                    {data.description}
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </section>
@@ -184,9 +150,9 @@ const AiFinancialAdvisorPage: React.FC = () => {
         <section className="py-20 relative z-10">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Advanced AI Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Powerful AI Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive financial tools powered by cutting-edge artificial intelligence
+                Comprehensive AI tools designed to enhance every aspect of healthcare delivery
               </p>
             </div>
             
@@ -222,9 +188,9 @@ const AiFinancialAdvisorPage: React.FC = () => {
         <section className="py-20 bg-white/5 relative z-10">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Who Can Benefit</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Healthcare Applications</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI financial advisor serves diverse clients across the financial industry
+                Versatile AI solutions for different healthcare specialties and settings
               </p>
             </div>
             
@@ -252,7 +218,7 @@ const AiFinancialAdvisorPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Flexible Pricing Plans</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your financial advisory needs
+                Choose the perfect plan for your healthcare facility
               </p>
             </div>
             
@@ -313,12 +279,12 @@ const AiFinancialAdvisorPage: React.FC = () => {
               <div className="relative z-10">
                 <h2 className="text-4xl font-bold text-white mb-6 relative">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Ready to Optimize Your Investments?
+                    Ready to Transform Healthcare?
                   </span>
                   <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400/10 to-purple-400/10 blur-sm"></div>
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-                  Join thousands of investors who trust our AI financial advisor to maximize their returns and minimize risk.
+                  Join leading healthcare providers who are already using our AI assistant to improve patient outcomes and streamline operations.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 relative overflow-hidden group">
@@ -339,4 +305,4 @@ const AiFinancialAdvisorPage: React.FC = () => {
   );
 };
 
-export default AiFinancialAdvisorPage;
+export default AiHealthcareAssistantPage;

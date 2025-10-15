@@ -1,74 +1,74 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mic, Headphones, Zap, CheckCircle, ArrowRight, Star, Clock, Users, Award, MessageSquare, Globe } from 'lucide-react';
+import { Wifi, Zap, Shield, CheckCircle, ArrowRight, Star, Clock, Users, Award, Cpu, Globe } from 'lucide-react';
 
-const AiVoiceAssistantPage: React.FC = () => {
+const EdgeComputingSolutionsPage: React.FC = () => {
   const features = [
     {
-      icon: <Mic className="w-6 h-6" />,
-      title: "Natural Language Processing",
-      description: "Advanced NLP for understanding context, intent, and complex queries"
-    },
-    {
-      icon: <Headphones className="w-6 h-6" />,
-      title: "Multi-Language Support",
-      description: "Support for 50+ languages with accurate pronunciation and accent recognition"
+      icon: <Wifi className="w-6 h-6" />,
+      title: "Ultra-Low Latency",
+      description: "Process data locally with sub-millisecond response times for real-time applications"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Real-Time Processing",
-      description: "Ultra-low latency voice processing for seamless conversations"
+      title: "Distributed Processing",
+      description: "Distribute computing power across edge nodes for optimal performance and reliability"
     },
     {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "Context Awareness",
-      description: "Maintains conversation context and learns from user interactions"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Enhanced Security",
+      description: "Local data processing reduces security risks and ensures data privacy"
+    },
+    {
+      icon: <Cpu className="w-6 h-6" />,
+      title: "AI at the Edge",
+      description: "Run machine learning models locally for instant decision making"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Personal",
-      price: "$99",
+      name: "Edge Starter",
+      price: "$499",
       period: "/month",
-      description: "Perfect for personal use and small projects",
+      description: "Perfect for small IoT deployments and edge applications",
       features: [
-        "Up to 1,000 voice interactions",
-        "5 supported languages",
-        "Basic NLP capabilities",
+        "Up to 10 edge nodes",
+        "Basic edge computing platform",
+        "Standard monitoring",
         "Email support",
-        "Standard voice models"
+        "Cloud backup"
       ],
       popular: false
     },
     {
-      name: "Business",
-      price: "$299",
+      name: "Edge Professional",
+      price: "$1,299",
       period: "/month",
-      description: "Ideal for businesses and customer service",
+      description: "Ideal for medium-scale edge computing deployments",
       features: [
-        "Up to 10,000 voice interactions",
-        "25 supported languages",
-        "Advanced NLP & sentiment analysis",
+        "Up to 50 edge nodes",
+        "Advanced edge platform",
+        "Real-time monitoring",
         "Priority support",
-        "Custom voice training",
+        "Custom configurations",
         "Analytics dashboard"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$799",
+      name: "Edge Enterprise",
+      price: "$2,999",
       period: "/month",
-      description: "For large-scale voice applications",
+      description: "For large-scale edge computing infrastructure",
       features: [
-        "Unlimited voice interactions",
-        "50+ supported languages",
-        "Premium NLP & AI capabilities",
+        "Unlimited edge nodes",
+        "Enterprise edge platform",
+        "Advanced monitoring & alerting",
         "24/7 dedicated support",
-        "Custom voice synthesis",
-        "Advanced analytics",
-        "White-label solution"
+        "Custom integrations",
+        "White-label solution",
+        "SLA guarantee"
       ],
       popular: false
     }
@@ -76,42 +76,56 @@ const AiVoiceAssistantPage: React.FC = () => {
 
   const useCases = [
     {
-      title: "Customer Service",
-      description: "24/7 AI voice assistants for customer support and inquiries",
-      icon: <Users className="w-8 h-8" />
-    },
-    {
-      title: "Smart Home",
-      description: "Voice control for IoT devices and home automation systems",
-      icon: <Zap className="w-8 h-8" />
-    },
-    {
-      title: "Healthcare",
-      description: "Voice-enabled patient monitoring and medical assistance",
+      title: "Smart Manufacturing",
+      description: "Real-time quality control, predictive maintenance, and process optimization",
       icon: <Award className="w-8 h-8" />
     },
     {
-      title: "Education",
-      description: "Interactive voice learning and language tutoring systems",
+      title: "Autonomous Vehicles",
+      description: "Local processing for navigation, object detection, and decision making",
       icon: <Globe className="w-8 h-8" />
+    },
+    {
+      title: "Smart Cities",
+      description: "Traffic management, environmental monitoring, and public safety systems",
+      icon: <Wifi className="w-8 h-8" />
+    },
+    {
+      title: "Healthcare",
+      description: "Real-time patient monitoring, medical imaging, and emergency response",
+      icon: <Shield className="w-8 h-8" />
     }
   ];
 
-  const integrations = [
-    "Amazon Alexa", "Google Assistant", "Microsoft Cortana", "Siri", "WhatsApp", "Telegram", 
-    "Slack", "Discord", "WebRTC", "Twilio", "Vonage", "Zoom"
+  const benefits = [
+    {
+      metric: "99.9%",
+      description: "Uptime guarantee"
+    },
+    {
+      metric: "< 1ms",
+      description: "Latency response time"
+    },
+    {
+      metric: "50%",
+      description: "Reduction in bandwidth costs"
+    },
+    {
+      metric: "24/7",
+      description: "Monitoring and support"
+    }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Zion Tech Group | Conversational AI Solutions</title>
-        <meta name="description" content="Advanced AI voice assistant with natural language processing, multi-language support, and real-time voice processing for customer service, smart homes, and enterprise applications." />
-        <meta name="keywords" content="ai voice assistant, conversational ai, voice recognition, nlp, customer service, smart home, voice automation" />
-        <meta property="og:title" content="AI Voice Assistant - Zion Tech Group" />
-        <meta property="og:description" content="Intelligent voice assistant solutions powered by advanced AI" />
+        <title>Edge Computing Solutions - Zion Tech Group | Distributed Computing Platform</title>
+        <meta name="description" content="Revolutionary edge computing solutions with ultra-low latency, distributed processing, and AI at the edge. Perfect for IoT, smart cities, and real-time applications." />
+        <meta name="keywords" content="edge computing, distributed computing, iot, real-time processing, low latency, smart cities, autonomous vehicles" />
+        <meta property="og:title" content="Edge Computing Solutions - Zion Tech Group" />
+        <meta property="og:description" content="Next-generation edge computing for real-time applications" />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/edge-computing-solutions" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -120,20 +134,41 @@ const AiVoiceAssistantPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Voice Assistant</span>
+                Edge <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Computing Solutions</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Intelligent conversational AI that understands, responds, and learns from every interaction. 
-                Deploy voice assistants across multiple platforms with natural language processing.
+                Bring computing power closer to your data with ultra-low latency edge solutions. 
+                Process data locally for real-time applications and enhanced performance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                  Try Demo
+                  Request Demo
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  View API Docs
+                  View Architecture
                 </button>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 bg-white/5">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Edge Computing Benefits</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Transform your applications with distributed edge computing capabilities
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-5xl font-bold text-cyan-400 mb-2">{benefit.metric}</div>
+                  <div className="text-gray-300 text-lg">{benefit.description}</div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -142,9 +177,9 @@ const AiVoiceAssistantPage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Advanced Voice AI Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Advanced Edge Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powered by cutting-edge speech recognition and natural language understanding technologies
+                Powerful edge computing capabilities for modern applications
               </p>
             </div>
             
@@ -166,9 +201,9 @@ const AiVoiceAssistantPage: React.FC = () => {
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Voice AI Applications</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Edge Computing Applications</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your business with intelligent voice interactions across multiple industries
+                Real-world applications powered by our edge computing platform
               </p>
             </div>
             
@@ -188,33 +223,13 @@ const AiVoiceAssistantPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Integrations Section */}
+        {/* Pricing Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Platform Integrations</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Edge Computing Plans</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Seamlessly integrate with popular voice platforms and communication tools
-              </p>
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              {integrations.map((integration, index) => (
-                <span key={index} className="px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-cyan-500/20 hover:text-cyan-400 transition-all duration-300">
-                  {integration}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 bg-white/5">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Flexible Pricing Plans</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your voice AI needs. All plans include our advanced NLP technology.
+                Choose the perfect edge computing solution for your needs
               </p>
             </div>
             
@@ -253,7 +268,7 @@ const AiVoiceAssistantPage: React.FC = () => {
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                   }`}>
-                    Start Free Trial
+                    Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
                 </div>
@@ -266,14 +281,14 @@ const AiVoiceAssistantPage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Voice AI?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join thousands of developers and businesses using our AI voice assistant platform. 
-                Start building conversational AI experiences today.
+                Transform your applications with ultra-low latency edge computing. 
+                Request a demo to see how edge computing can accelerate your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-                  Start Free Trial
+                  Request Demo
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
                   Contact Sales
@@ -287,4 +302,4 @@ const AiVoiceAssistantPage: React.FC = () => {
   );
 };
 
-export default AiVoiceAssistantPage;
+export default EdgeComputingSolutionsPage;

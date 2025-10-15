@@ -1,74 +1,74 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mic, Headphones, Zap, CheckCircle, ArrowRight, Star, Clock, Users, Award, MessageSquare, Globe } from 'lucide-react';
+import { BookOpen, Brain, Users, CheckCircle, ArrowRight, Star, Clock, Award, TrendingUp, Target } from 'lucide-react';
 
-const AiVoiceAssistantPage: React.FC = () => {
+const AiPersonalizedLearningPage: React.FC = () => {
   const features = [
     {
-      icon: <Mic className="w-6 h-6" />,
-      title: "Natural Language Processing",
-      description: "Advanced NLP for understanding context, intent, and complex queries"
+      icon: <Brain className="w-6 h-6" />,
+      title: "Adaptive Learning Paths",
+      description: "AI creates personalized learning journeys based on individual strengths and weaknesses"
     },
     {
-      icon: <Headphones className="w-6 h-6" />,
-      title: "Multi-Language Support",
-      description: "Support for 50+ languages with accurate pronunciation and accent recognition"
+      icon: <BookOpen className="w-6 h-6" />,
+      title: "Multi-Modal Content",
+      description: "Interactive videos, simulations, quizzes, and hands-on projects for comprehensive learning"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Real-Time Processing",
-      description: "Ultra-low latency voice processing for seamless conversations"
+      icon: <Users className="w-6 h-6" />,
+      title: "Social Learning",
+      description: "Collaborative features with peer learning, group projects, and expert mentorship"
     },
     {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "Context Awareness",
-      description: "Maintains conversation context and learns from user interactions"
+      icon: <Target className="w-6 h-6" />,
+      title: "Progress Tracking",
+      description: "Real-time analytics and insights to track learning progress and achievements"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Personal",
-      price: "$99",
+      name: "Individual",
+      price: "$29",
       period: "/month",
-      description: "Perfect for personal use and small projects",
+      description: "Perfect for personal learning and skill development",
       features: [
-        "Up to 1,000 voice interactions",
-        "5 supported languages",
-        "Basic NLP capabilities",
-        "Email support",
-        "Standard voice models"
+        "Unlimited courses",
+        "Basic AI personalization",
+        "Mobile app access",
+        "Progress tracking",
+        "Email support"
       ],
       popular: false
     },
     {
-      name: "Business",
-      price: "$299",
+      name: "Professional",
+      price: "$99",
       period: "/month",
-      description: "Ideal for businesses and customer service",
+      description: "Ideal for professionals and small teams",
       features: [
-        "Up to 10,000 voice interactions",
-        "25 supported languages",
-        "Advanced NLP & sentiment analysis",
+        "All Individual features",
+        "Advanced AI personalization",
+        "Certification programs",
         "Priority support",
-        "Custom voice training",
+        "Team collaboration tools",
         "Analytics dashboard"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$299",
       period: "/month",
-      description: "For large-scale voice applications",
+      description: "For organizations and educational institutions",
       features: [
-        "Unlimited voice interactions",
-        "50+ supported languages",
-        "Premium NLP & AI capabilities",
+        "All Professional features",
+        "Custom learning paths",
+        "White-label platform",
         "24/7 dedicated support",
-        "Custom voice synthesis",
+        "Custom integrations",
         "Advanced analytics",
-        "White-label solution"
+        "Admin dashboard"
       ],
       popular: false
     }
@@ -76,42 +76,43 @@ const AiVoiceAssistantPage: React.FC = () => {
 
   const useCases = [
     {
-      title: "Customer Service",
-      description: "24/7 AI voice assistants for customer support and inquiries",
+      title: "Corporate Training",
+      description: "Upskill employees with personalized training programs and skill assessments",
       icon: <Users className="w-8 h-8" />
     },
     {
-      title: "Smart Home",
-      description: "Voice control for IoT devices and home automation systems",
-      icon: <Zap className="w-8 h-8" />
+      title: "Educational Institutions",
+      description: "Enhance student learning with adaptive curriculum and personalized instruction",
+      icon: <BookOpen className="w-8 h-8" />
     },
     {
-      title: "Healthcare",
-      description: "Voice-enabled patient monitoring and medical assistance",
+      title: "Professional Development",
+      description: "Career advancement through targeted skill development and certification programs",
       icon: <Award className="w-8 h-8" />
     },
     {
-      title: "Education",
-      description: "Interactive voice learning and language tutoring systems",
-      icon: <Globe className="w-8 h-8" />
+      title: "Language Learning",
+      description: "Master new languages with AI-powered pronunciation and conversation practice",
+      icon: <Brain className="w-8 h-8" />
     }
   ];
 
-  const integrations = [
-    "Amazon Alexa", "Google Assistant", "Microsoft Cortana", "Siri", "WhatsApp", "Telegram", 
-    "Slack", "Discord", "WebRTC", "Twilio", "Vonage", "Zoom"
+  const subjects = [
+    "Programming & Development", "Data Science & AI", "Business & Management", "Design & Creative",
+    "Marketing & Sales", "Finance & Accounting", "Healthcare & Medicine", "Engineering",
+    "Languages", "Soft Skills", "Certification Prep", "Technical Skills"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Zion Tech Group | Conversational AI Solutions</title>
-        <meta name="description" content="Advanced AI voice assistant with natural language processing, multi-language support, and real-time voice processing for customer service, smart homes, and enterprise applications." />
-        <meta name="keywords" content="ai voice assistant, conversational ai, voice recognition, nlp, customer service, smart home, voice automation" />
-        <meta property="og:title" content="AI Voice Assistant - Zion Tech Group" />
-        <meta property="og:description" content="Intelligent voice assistant solutions powered by advanced AI" />
+        <title>AI Personalized Learning - Zion Tech Group | Adaptive Education Platform</title>
+        <meta name="description" content="Revolutionary AI-powered personalized learning platform with adaptive curriculum, multi-modal content, and intelligent progress tracking for individuals and organizations." />
+        <meta name="keywords" content="ai personalized learning, adaptive education, online learning, corporate training, skill development, educational technology" />
+        <meta property="og:title" content="AI Personalized Learning - Zion Tech Group" />
+        <meta property="og:description" content="AI-powered personalized learning for individuals and organizations" />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-personalized-learning" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -120,18 +121,18 @@ const AiVoiceAssistantPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Voice Assistant</span>
+                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Personalized Learning</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Intelligent conversational AI that understands, responds, and learns from every interaction. 
-                Deploy voice assistants across multiple platforms with natural language processing.
+                Transform education with AI-powered personalized learning experiences. 
+                Adaptive curriculum, intelligent content delivery, and real-time progress tracking.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                  Try Demo
+                  Start Learning
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  View API Docs
+                  View Courses
                 </button>
               </div>
             </div>
@@ -142,9 +143,9 @@ const AiVoiceAssistantPage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Advanced Voice AI Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Intelligent Learning Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powered by cutting-edge speech recognition and natural language understanding technologies
+                Powered by advanced AI algorithms that adapt to each learner's unique needs and learning style
               </p>
             </div>
             
@@ -162,13 +163,33 @@ const AiVoiceAssistantPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Subjects Section */}
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Voice AI Applications</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Comprehensive Subject Coverage</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your business with intelligent voice interactions across multiple industries
+                Learn from thousands of courses across diverse subjects and industries
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              {subjects.map((subject, index) => (
+                <span key={index} className="px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-cyan-500/20 hover:text-cyan-400 transition-all duration-300">
+                  {subject}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Learning Applications</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our AI personalized learning platform serves diverse educational needs
               </p>
             </div>
             
@@ -188,33 +209,13 @@ const AiVoiceAssistantPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Integrations Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Platform Integrations</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Seamlessly integrate with popular voice platforms and communication tools
-              </p>
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              {integrations.map((integration, index) => (
-                <span key={index} className="px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-cyan-500/20 hover:text-cyan-400 transition-all duration-300">
-                  {integration}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Pricing Section */}
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Flexible Pricing Plans</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Flexible Learning Plans</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your voice AI needs. All plans include our advanced NLP technology.
+                Choose the perfect plan for your learning journey. All plans include our AI personalization engine.
               </p>
             </div>
             
@@ -253,7 +254,7 @@ const AiVoiceAssistantPage: React.FC = () => {
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                   }`}>
-                    Start Free Trial
+                    Start Learning
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
                 </div>
@@ -266,10 +267,10 @@ const AiVoiceAssistantPage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Voice AI?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Learning?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join thousands of developers and businesses using our AI voice assistant platform. 
-                Start building conversational AI experiences today.
+                Join millions of learners using our AI personalized learning platform. 
+                Start your personalized learning journey today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
@@ -287,4 +288,4 @@ const AiVoiceAssistantPage: React.FC = () => {
   );
 };
 
-export default AiVoiceAssistantPage;
+export default AiPersonalizedLearningPage;

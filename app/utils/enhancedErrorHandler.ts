@@ -7,11 +7,11 @@ export const enhancedErrorHandler = { handleError: (error: Error, context?: stri
     return { message: 'Something went wrong. Please try again.',
       code: 'GENERIC_ERROR' };
   },
-  handleApiError: (error: unknown) => { const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
+  handleApiError: (error: unknown) => { 
+    const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
 
-const status = errorWithResponse.response?.status;
-
-const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
+    const status = errorWithResponse.response?.status;
+    const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
     switch (status) { case 400: return { message: 'Invalid request', code: 'BAD_REQUEST' };
       case 401: return { message: 'Unauthorized', code: 'UNAUTHORIZED' };
       case 403: return { message: 'Forbidden', code: 'FORBIDDEN' };
@@ -20,12 +20,12 @@ const message = errorWithResponse.response?.data?.message || errorWithResponse.m
       default: return { message: message || 'An error occurred', code: 'UNKNOWN_ERROR' };
     }
   },
-  handleNetworkError: (error: unknown) => { return {
+  handleNetworkError: (_error: unknown) => { return {
 
     message: 'Network error. Please check your connection.',
       code: 'NETWORK_ERROR' };
   },
-  handleValidationError: (errors: Record<string string[]>) => { const errorMessages = Object.values(errors).flat();
+  handleValidationError: (errors: Record<string, string[]>) => { const errorMessages = Object.values(errors).flat();
   return {
       message: errorMessages.join(', '),
       code: 'VALIDATION_ERROR',
@@ -33,4 +33,4 @@ const message = errorWithResponse.response?.data?.message || errorWithResponse.m
   }
 };
 
-export default NotFoundPage;
+export default enhancedErrorHandler;

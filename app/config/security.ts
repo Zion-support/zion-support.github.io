@@ -7,4 +7,4 @@ export const securityConfig = { csp: {
     'connect-src': ["'self'", "https: "] }
 };
 
-export default NotFoundPage;
+export default securityConfig;

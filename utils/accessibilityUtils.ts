@@ -1,16 +1,12 @@
 // Accessibility utilities
-<<<<<<< HEAD
+import { useEffect, useRef, useState } from 'react';
+
 // Type definitions for better type safety
 interface KeyboardEvent extends Event {
   key: string;
   shiftKey: boolean;
   preventDefault(): void;
 }
-
-// Remove unused interface
-=======
-import { useEffect, useRef, useState } from 'react';
->>>>>>> cursor/analyze-improve-and-merge-code-7ff3
 
 // Focus management utilities
 export const focusManagement = {
@@ -46,7 +42,13 @@ export const focusManagement = {
     };
   },
 
-<<<<<<< HEAD
+  // Get focusable elements within a container
+  getFocusableElements: (container: HTMLElement) => {
+    return container.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+  },
+
   // Move focus to next focusable element
   moveToNext: (currentElement: HTMLElement) => {
     const focusableElements = document.querySelectorAll(
@@ -72,26 +74,17 @@ export const focusManagement = {
 export const screenReader = {
   // Announce message to screen readers
   announce: (message: string) => {
-=======
-  // Announce changes to screen readers
-  announceToScreenReader: (message: string) => {
->>>>>>> cursor/analyze-improve-and-merge-code-7ff3
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
-<<<<<<< HEAD
-=======
     
->>>>>>> cursor/analyze-improve-and-merge-code-7ff3
     document.body.appendChild(announcement);
     
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
-<<<<<<< HEAD
-=======
   },
 
   // Get focusable elements
@@ -113,20 +106,22 @@ export const screenReader = {
     const focusableElements = focusManagement.getFocusableElements(container);
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
     lastElement?.focus();
->>>>>>> cursor/analyze-improve-and-merge-code-7ff3
   }
 };
 
 // Keyboard navigation utilities
 export const keyboardNavigation = {
-<<<<<<< HEAD
   // Handle escape key
   handleEscape: (callback: () => void) => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         callback();
       }
-=======
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  },
+
   // Handle arrow key navigation
   handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number) => {
     let newIndex = currentIndex;
@@ -158,14 +153,6 @@ export const keyboardNavigation = {
     }
     
     return currentIndex;
-  },
-
-  // Handle escape key
-  handleEscape: (e: KeyboardEvent, callback: () => void) => {
-    if (e.key === 'Escape') {
-      e.preventDefault();
-      callback();
-    }
   }
 };
 
@@ -206,12 +193,15 @@ export const colorContrast = {
     if (!rgb) return 0;
     
     const { r, g, b } = rgb;
-    const [rs, gs, bs] = [r, g, b].map(c => {
-      c = c / 255;
-      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
-    });
+    const rs = r / 255;
+    const gs = g / 255;
+    const bs = b / 255;
     
-    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+    const rLuminance = rs <= 0.03928 ? rs / 12.92 : Math.pow((rs + 0.055) / 1.055, 2.4);
+    const gLuminance = gs <= 0.03928 ? gs / 12.92 : Math.pow((gs + 0.055) / 1.055, 2.4);
+    const bLuminance = bs <= 0.03928 ? bs / 12.92 : Math.pow((bs + 0.055) / 1.055, 2.4);
+    
+    return 0.2126 * rLuminance + 0.7152 * gLuminance + 0.0722 * bLuminance;
   }
 };
 
@@ -219,9 +209,9 @@ export const colorContrast = {
 function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result ? {
-    r: parseInt(result[1], 16),
-    g: parseInt(result[2], 16),
-    b: parseInt(result[3], 16)
+    r: parseInt(result[1]!, 16),
+    g: parseInt(result[2]!, 16),
+    b: parseInt(result[3]!, 16)
   } : null;
 }
 
@@ -251,17 +241,11 @@ export const useKeyboardNavigation = (items: HTMLElement[], initialIndex = 0) =>
     const handleKeyDown = (e: KeyboardEvent) => {
       const newIndex = keyboardNavigation.handleArrowKeys(e, items, currentIndex);
       setCurrentIndex(newIndex);
->>>>>>> cursor/analyze-improve-and-merge-code-7ff3
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-<<<<<<< HEAD
-  }
-};
-=======
   }, [items, currentIndex]);
 
   return [currentIndex, setCurrentIndex] as const;
 };
->>>>>>> cursor/analyze-improve-and-merge-code-7ff3

@@ -1,72 +1,72 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mic, Headphones, Zap, CheckCircle, ArrowRight, Star, Clock, Users, Award, MessageSquare, Globe } from 'lucide-react';
+import { Shield, Zap, CheckCircle, ArrowRight, Star, Clock, Users, Award, DollarSign, Lock } from 'lucide-react';
 
-const AiVoiceAssistantPage: React.FC = () => {
+const AiSmartContractsPage: React.FC = () => {
   const features = [
     {
-      icon: <Mic className="w-6 h-6" />,
-      title: "Natural Language Processing",
-      description: "Advanced NLP for understanding context, intent, and complex queries"
-    },
-    {
-      icon: <Headphones className="w-6 h-6" />,
-      title: "Multi-Language Support",
-      description: "Support for 50+ languages with accurate pronunciation and accent recognition"
+      icon: <Shield className="w-6 h-6" />,
+      title: "AI-Powered Security Audits",
+      description: "Automated smart contract vulnerability detection using advanced AI algorithms"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Real-Time Processing",
-      description: "Ultra-low latency voice processing for seamless conversations"
+      title: "Auto-Execution Logic",
+      description: "Intelligent contract execution based on predefined conditions and market data"
     },
     {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "Context Awareness",
-      description: "Maintains conversation context and learns from user interactions"
+      icon: <Lock className="w-6 h-6" />,
+      title: "Multi-Chain Support",
+      description: "Deploy and manage contracts across Ethereum, Polygon, BSC, and other networks"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Governance Integration",
+      description: "Built-in DAO governance mechanisms for decentralized decision making"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Personal",
-      price: "$99",
+      name: "Starter",
+      price: "$199",
       period: "/month",
-      description: "Perfect for personal use and small projects",
+      description: "Perfect for small projects and startups",
       features: [
-        "Up to 1,000 voice interactions",
-        "5 supported languages",
-        "Basic NLP capabilities",
+        "Up to 5 smart contracts",
+        "Basic AI security audit",
+        "Ethereum & Polygon support",
         "Email support",
-        "Standard voice models"
+        "Standard templates"
       ],
       popular: false
     },
     {
-      name: "Business",
-      price: "$299",
+      name: "Professional",
+      price: "$499",
       period: "/month",
-      description: "Ideal for businesses and customer service",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 10,000 voice interactions",
-        "25 supported languages",
-        "Advanced NLP & sentiment analysis",
+        "Up to 25 smart contracts",
+        "Advanced AI security audit",
+        "Multi-chain support",
         "Priority support",
-        "Custom voice training",
+        "Custom templates",
         "Analytics dashboard"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$999",
       period: "/month",
-      description: "For large-scale voice applications",
+      description: "For large-scale operations",
       features: [
-        "Unlimited voice interactions",
-        "50+ supported languages",
-        "Premium NLP & AI capabilities",
+        "Unlimited smart contracts",
+        "Premium AI security audit",
+        "All blockchain networks",
         "24/7 dedicated support",
-        "Custom voice synthesis",
+        "Custom development",
         "Advanced analytics",
         "White-label solution"
       ],
@@ -76,42 +76,37 @@ const AiVoiceAssistantPage: React.FC = () => {
 
   const useCases = [
     {
-      title: "Customer Service",
-      description: "24/7 AI voice assistants for customer support and inquiries",
-      icon: <Users className="w-8 h-8" />
+      title: "DeFi Protocols",
+      description: "Automated yield farming, liquidity provision, and token swapping contracts",
+      icon: <DollarSign className="w-8 h-8" />
     },
     {
-      title: "Smart Home",
-      description: "Voice control for IoT devices and home automation systems",
-      icon: <Zap className="w-8 h-8" />
-    },
-    {
-      title: "Healthcare",
-      description: "Voice-enabled patient monitoring and medical assistance",
+      title: "NFT Marketplaces",
+      description: "Smart contracts for minting, trading, and royalty distribution",
       icon: <Award className="w-8 h-8" />
     },
     {
-      title: "Education",
-      description: "Interactive voice learning and language tutoring systems",
-      icon: <Globe className="w-8 h-8" />
+      title: "Supply Chain",
+      description: "Track and verify product authenticity through blockchain",
+      icon: <Shield className="w-8 h-8" />
+    },
+    {
+      title: "Insurance",
+      description: "Automated claims processing and payouts based on real-world data",
+      icon: <Lock className="w-8 h-8" />
     }
-  ];
-
-  const integrations = [
-    "Amazon Alexa", "Google Assistant", "Microsoft Cortana", "Siri", "WhatsApp", "Telegram", 
-    "Slack", "Discord", "WebRTC", "Twilio", "Vonage", "Zoom"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Zion Tech Group | Conversational AI Solutions</title>
-        <meta name="description" content="Advanced AI voice assistant with natural language processing, multi-language support, and real-time voice processing for customer service, smart homes, and enterprise applications." />
-        <meta name="keywords" content="ai voice assistant, conversational ai, voice recognition, nlp, customer service, smart home, voice automation" />
-        <meta property="og:title" content="AI Voice Assistant - Zion Tech Group" />
-        <meta property="og:description" content="Intelligent voice assistant solutions powered by advanced AI" />
+        <title>AI Smart Contracts - Zion Tech Group | Blockchain Automation Solutions</title>
+        <meta name="description" content="Revolutionary AI-powered smart contracts for DeFi, NFTs, and enterprise applications. Automated security audits, multi-chain support, and intelligent execution." />
+        <meta name="keywords" content="ai smart contracts, blockchain, defi, nft, ethereum, polygon, automated security, smart contract audit" />
+        <meta property="og:title" content="AI Smart Contracts - Zion Tech Group" />
+        <meta property="og:description" content="AI-powered smart contract solutions for modern blockchain applications" />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-smart-contracts" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -120,18 +115,18 @@ const AiVoiceAssistantPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Voice Assistant</span>
+                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Smart Contracts</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Intelligent conversational AI that understands, responds, and learns from every interaction. 
-                Deploy voice assistants across multiple platforms with natural language processing.
+                Revolutionary blockchain automation powered by artificial intelligence. 
+                Deploy secure, intelligent smart contracts across multiple networks with automated security audits.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                  Try Demo
+                  Start Free Trial
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  View API Docs
+                  View Documentation
                 </button>
               </div>
             </div>
@@ -142,9 +137,9 @@ const AiVoiceAssistantPage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Advanced Voice AI Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Powerful AI Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powered by cutting-edge speech recognition and natural language understanding technologies
+                Leverage cutting-edge AI technology to create, deploy, and manage smart contracts with unprecedented security and efficiency
               </p>
             </div>
             
@@ -166,9 +161,9 @@ const AiVoiceAssistantPage: React.FC = () => {
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Voice AI Applications</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Real-World Applications</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your business with intelligent voice interactions across multiple industries
+                Our AI smart contracts are powering the next generation of blockchain applications
               </p>
             </div>
             
@@ -188,33 +183,13 @@ const AiVoiceAssistantPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Integrations Section */}
+        {/* Pricing Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Platform Integrations</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Transparent Pricing</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Seamlessly integrate with popular voice platforms and communication tools
-              </p>
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              {integrations.map((integration, index) => (
-                <span key={index} className="px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-cyan-500/20 hover:text-cyan-400 transition-all duration-300">
-                  {integration}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 bg-white/5">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Flexible Pricing Plans</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your voice AI needs. All plans include our advanced NLP technology.
+                Choose the perfect plan for your smart contract needs. All plans include our AI security audit technology.
               </p>
             </div>
             
@@ -253,7 +228,7 @@ const AiVoiceAssistantPage: React.FC = () => {
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                   }`}>
-                    Start Free Trial
+                    Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
                 </div>
@@ -266,10 +241,10 @@ const AiVoiceAssistantPage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Voice AI?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy AI Smart Contracts?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join thousands of developers and businesses using our AI voice assistant platform. 
-                Start building conversational AI experiences today.
+                Join hundreds of projects already using our AI-powered smart contract platform. 
+                Start your free trial today and experience the future of blockchain automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
@@ -287,4 +262,4 @@ const AiVoiceAssistantPage: React.FC = () => {
   );
 };
 
-export default AiVoiceAssistantPage;
+export default AiSmartContractsPage;

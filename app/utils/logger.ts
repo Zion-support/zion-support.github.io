@@ -1,4 +1,4 @@
-/* global console */
+// Logger utility for consistent logging across the application
 
 interface LogLevel {
   ERROR: 'error';
@@ -48,8 +48,8 @@ class Logger {
       level,
       message,
       timestamp: new Date().toISOString(),
-      context,
-      error
+      ...(context && { context }),
+      ...(error && { error })
     };
 
     const formattedMessage = this.formatMessage(entry);

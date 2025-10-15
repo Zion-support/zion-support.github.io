@@ -1,50 +1,98 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Cpu, Eye, MessageSquare, BarChart3, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+import { Brain, Eye, MessageSquare, BarChart3, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 
 const AiServicesPage: React.FC = () => {
   const aiServices = [
     {
       name: "Machine Learning Solutions",
       description: "Custom ML models and algorithms tailored to your specific business needs and data patterns.",
-      features: ["Predictive analytics", "Pattern recognition", "Custom model training", "Real-time inference"],
+      features: ["Predictive analytics", "Pattern recognition", "Custom model training", "Real-time inference", "Model optimization", "A/B testing"],
       icon: <Brain className="w-8 h-8" />,
-      applications: ["Fraud detection", "Demand forecasting", "Customer segmentation", "Quality control"]
+      applications: ["Fraud detection", "Demand forecasting", "Customer segmentation", "Quality control"],
+      price: "Starting at $2,999/month",
+      benefits: ["Increase accuracy by 40%", "Reduce manual analysis by 80%", "Scale to millions of predictions", "Real-time decision making"]
     },
     {
       name: "Computer Vision",
       description: "Advanced image and video analysis capabilities for automation and intelligent decision making.",
-      features: ["Object detection", "Facial recognition", "OCR processing", "Video analytics"],
+      features: ["Object detection", "Facial recognition", "OCR processing", "Video analytics", "3D reconstruction", "Medical imaging"],
       icon: <Eye className="w-8 h-8" />,
-      applications: ["Quality inspection", "Security monitoring", "Medical imaging", "Autonomous vehicles"]
+      applications: ["Quality inspection", "Security monitoring", "Medical imaging", "Autonomous vehicles"],
+      price: "Starting at $1,999/month",
+      benefits: ["Process 10,000+ images/hour", "99.9% accuracy rate", "Real-time processing", "Multi-format support"]
     },
     {
       name: "Natural Language Processing",
       description: "Transform text and speech data into actionable insights with our advanced NLP solutions.",
-      features: ["Sentiment analysis", "Language translation", "Text summarization", "Chatbot development"],
+      features: ["Sentiment analysis", "Language translation", "Text summarization", "Chatbot development", "Voice recognition", "Document analysis"],
       icon: <MessageSquare className="w-8 h-8" />,
-      applications: ["Customer service", "Content moderation", "Document processing", "Voice assistants"]
+      applications: ["Customer service", "Content moderation", "Document processing", "Voice assistants"],
+      price: "Starting at $1,499/month",
+      benefits: ["Support 50+ languages", "Process 1M+ documents daily", "95% accuracy in sentiment", "Real-time translation"]
     },
     {
       name: "AI Automation",
       description: "Intelligent automation solutions that streamline workflows and reduce manual processes.",
-      features: ["Process automation", "Workflow optimization", "Decision automation", "Integration APIs"],
+      features: ["Process automation", "Workflow optimization", "Decision automation", "Integration APIs", "RPA integration", "Smart scheduling"],
       icon: <Zap className="w-8 h-8" />,
-      applications: ["Document processing", "Email automation", "Data entry", "Report generation"]
+      applications: ["Document processing", "Email automation", "Data entry", "Report generation"],
+      price: "Starting at $999/month",
+      benefits: ["Reduce manual work by 70%", "Increase efficiency by 300%", "24/7 automated operations", "Error reduction by 95%"]
     },
     {
       name: "Predictive Analytics",
       description: "Leverage historical data to predict future trends and make informed business decisions.",
-      features: ["Trend forecasting", "Risk assessment", "Performance prediction", "Scenario modeling"],
+      features: ["Trend forecasting", "Risk assessment", "Performance prediction", "Scenario modeling", "Real-time alerts", "Custom dashboards"],
       icon: <BarChart3 className="w-8 h-8" />,
-      applications: ["Sales forecasting", "Risk management", "Inventory optimization", "Market analysis"]
+      applications: ["Sales forecasting", "Risk management", "Inventory optimization", "Market analysis"],
+      price: "Starting at $1,799/month",
+      benefits: ["85% prediction accuracy", "Reduce forecasting time by 90%", "Identify opportunities early", "Optimize resource allocation"]
     },
     {
       name: "AI Security Solutions",
       description: "Advanced AI-powered security systems to protect your digital assets and infrastructure.",
-      features: ["Threat detection", "Anomaly detection", "Behavioral analysis", "Incident response"],
+      features: ["Threat detection", "Anomaly detection", "Behavioral analysis", "Incident response", "Zero-day protection", "Compliance monitoring"],
       icon: <Shield className="w-8 h-8" />,
-      applications: ["Cybersecurity", "Fraud prevention", "Access control", "Network monitoring"]
+      applications: ["Cybersecurity", "Fraud prevention", "Access control", "Network monitoring"],
+      price: "Starting at $2,499/month",
+      benefits: ["Prevent 99.9% of threats", "Reduce false positives by 80%", "Real-time threat response", "Compliance automation"]
+    },
+    {
+      name: "AI Content Generation",
+      description: "Revolutionary AI-powered content creation for marketing, documentation, and creative writing.",
+      features: ["Article generation", "Marketing copy", "Technical documentation", "Creative writing", "SEO optimization", "Multi-language support"],
+      icon: <MessageSquare className="w-8 h-8" />,
+      applications: ["Content marketing", "Technical writing", "Blog creation", "Social media content"],
+      price: "Starting at $799/month",
+      benefits: ["Generate 100+ articles daily", "Maintain brand voice consistency", "SEO-optimized content", "Multi-language support"]
+    },
+    {
+      name: "AI Data Analytics",
+      description: "Advanced data analysis and business intelligence powered by artificial intelligence.",
+      features: ["Data mining", "Pattern recognition", "Statistical analysis", "Visualization", "Real-time insights", "Custom reporting"],
+      icon: <BarChart3 className="w-8 h-8" />,
+      applications: ["Business intelligence", "Market research", "Customer analytics", "Performance tracking"],
+      price: "Starting at $1,299/month",
+      benefits: ["Process big data efficiently", "Generate actionable insights", "Real-time analytics", "Custom dashboards"]
+    },
+    {
+      name: "AI Voice & Speech",
+      description: "Cutting-edge voice recognition, synthesis, and conversational AI solutions.",
+      features: ["Speech recognition", "Voice synthesis", "Conversational AI", "Voice cloning", "Multi-language support", "Real-time processing"],
+      icon: <MessageSquare className="w-8 h-8" />,
+      applications: ["Voice assistants", "Call centers", "Accessibility", "Interactive systems"],
+      price: "Starting at $1,599/month",
+      benefits: ["99% speech accuracy", "Natural voice synthesis", "Real-time processing", "Multi-language support"]
+    },
+    {
+      name: "AI Blockchain Solutions",
+      description: "Intelligent blockchain applications with AI-powered smart contracts and analytics.",
+      features: ["Smart contracts", "DeFi analytics", "NFT generation", "Blockchain monitoring", "Cryptocurrency analysis", "Risk assessment"],
+      icon: <Shield className="w-8 h-8" />,
+      applications: ["DeFi platforms", "NFT marketplaces", "Cryptocurrency trading", "Supply chain tracking"],
+      price: "Starting at $3,999/month",
+      benefits: ["Automated smart contracts", "Real-time blockchain analysis", "Fraud detection", "Optimized transactions"]
     }
   ];
 
@@ -128,6 +176,11 @@ const AiServicesPage: React.FC = () => {
                   </h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
                   
+                  <div className="mb-4">
+                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                    <p className="text-sm text-gray-400">Professional AI solutions</p>
+                  </div>
+                  
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -135,6 +188,17 @@ const AiServicesPage: React.FC = () => {
                         <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Key Benefits:</h4>
+                    <ul className="space-y-2">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="text-gray-300 text-sm">
+                          • {benefit}
                         </li>
                       ))}
                     </ul>
@@ -151,10 +215,21 @@ const AiServicesPage: React.FC = () => {
                     </div>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
+                  <div className="space-y-3">
+                    <a
+                      href="/contact"
+                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                    >
+                      Get Custom Quote
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </a>
+                    <a
+                      href="tel:+13024640950"
+                      className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
+                    >
+                      Call +1 302 464 0950
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>
