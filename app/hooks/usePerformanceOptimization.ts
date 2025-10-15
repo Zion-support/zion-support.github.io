@@ -58,7 +58,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
   // Debounce function
   const debounce = useCallback(
-    <T extends (...args: any[]) => any>(func: T): T => {
+    <T extends (...args: unknown[]) => unknown>(func: T): T => {
       if (!enableDebouncing) return func;
 
       return ((...args: Parameters<T>) => {

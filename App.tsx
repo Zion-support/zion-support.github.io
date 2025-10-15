@@ -72,6 +72,7 @@ import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
+import SEOOptimizer from './app/components/SEOOptimizer';
 
 // Loading component
 const LoadingFallback = () => (
@@ -100,9 +101,15 @@ export default function App() {
             <Navigation />
             <Sidebar />
             
-            <main className="flex-1">
+            <main className="flex-1" id="main-content">
               <PerformanceMonitor />
               <AccessibilityEnhancer />
+              <SEOOptimizer 
+                title="Zion Tech Group - Advanced AI and IT Solutions"
+                description="Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation."
+                keywords="AI solutions, IT services, cloud infrastructure, digital transformation, machine learning, artificial intelligence"
+                canonicalUrl="https://ziontechgroup.com"
+              />
               
               <Suspense fallback={<LoadingFallback />}>
                 <Routes>

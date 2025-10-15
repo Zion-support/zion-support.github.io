@@ -68,6 +68,7 @@ export function useForm<T extends Record<string, any>>({
         data: initialData, // Reset form
       }));
     } catch (error) {
+      // Log error in development only
       if (process.env.NODE_ENV === 'development') {
         console.error('Form submission error:', error);
       }

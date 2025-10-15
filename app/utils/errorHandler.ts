@@ -3,7 +3,7 @@ export interface AppError {
   message: string;
   code?: string;
   statusCode?: number;
-  details?: any;
+  details?: Record<string, unknown>;
 }
 
 export class CustomError extends Error {
@@ -11,7 +11,7 @@ export class CustomError extends Error {
   public statusCode?: number;
   public details?: any;
 
-  constructor(message: string, code?: string, statusCode?: number, details?: any) {
+  constructor(message: string, code?: string, statusCode?: number, details?: Record<string, unknown>) {
     super(message);
     this.name = 'CustomError';
     this.code = code;
@@ -52,6 +52,6 @@ export const logError = (error: AppError, context?: string) => {
   // Example: sendToErrorService(error, context);
 };
 
-export const createError = (message: string, code?: string, statusCode?: number, details?: any): CustomError => {
+export const createError = (message: string, code?: string, statusCode?: number, details?: Record<string, unknown>): CustomError => {
   return new CustomError(message, code, statusCode, details);
 };

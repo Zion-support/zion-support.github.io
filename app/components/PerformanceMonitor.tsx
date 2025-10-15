@@ -1,47 +1,14 @@
 import React, { useEffect } from 'react';
-
-interface WebVitalMetric {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
-  navigationType: string;
-}
+import { useWebVitals } from '../hooks/useWebVitals';
 
 const PerformanceMonitor: React.FC = () => {
-  useEffect(() => {
-    // Monitor Core Web Vitals with proper analytics
-    const sendToAnalytics = (metric: WebVitalMetric) => {
-      // Send to analytics service (replace with your analytics provider)
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          event_label: metric.id,
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-          non_interaction: true,
-        });
-      }
-      
-      // Also log in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log(`[Web Vitals] ${metric.name}:`, metric.value);
-      }
-    };
+  // Use the web vitals hook
+  useWebVitals({
+    enabled: true,
+    debug: process.env.NODE_ENV === 'development',
+  });
 
-    // Only load web-vitals in production or when needed
-    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
-      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
-        onCLS(sendToAnalytics);
-        onFCP(sendToAnalytics);
-        onLCP(sendToAnalytics);
-        onTTFB(sendToAnalytics);
-        onINP(sendToAnalytics);
-      }).catch((error) => {
-        if (process.env.NODE_ENV === 'development') {
-          console.warn('Failed to load web-vitals:', error);
-        }
-      });
-    }
+  useEffect(() => {
 
     // Monitor page load performance
     const measurePageLoad = () => {
@@ -51,10 +18,11 @@ const PerformanceMonitor: React.FC = () => {
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
           const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
           
-          if (process.env.NODE_ENV === 'development') {
-            console.log(`[Performance] Page Load Time: ${loadTime}ms`);
-            console.log(`[Performance] DOM Content Loaded: ${domContentLoaded}ms`);
-          }
+        // Log performance metrics in development
+        if (process.env.NODE_ENV === 'development') {
+          console.log(`[Performance] Page Load Time: ${loadTime}ms`);
+          console.log(`[Performance] DOM Content Loaded: ${domContentLoaded}ms`);
+        }
         }
       }
     };
