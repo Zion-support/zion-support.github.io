@@ -54,6 +54,27 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
+            <h4 className="text-md font-semibold mb-4">Advanced AI Services</h4>
+            <ul className="space-y-2">
+              <li><Link to="/ai-voice-assistant-pro" className="text-gray-300 hover:text-white">AI Voice Assistant Pro</Link></li>
+              <li><Link to="/ai-image-recognition-pro" className="text-gray-300 hover:text-white">AI Image Recognition Pro</Link></li>
+              <li><Link to="/ai-fraud-detection-pro" className="text-gray-300 hover:text-white">AI Fraud Detection Pro</Link></li>
+              <li><Link to="/ai-lead-scoring-pro" className="text-gray-300 hover:text-white">AI Lead Scoring Pro</Link></li>
+              <li><Link to="/ai-predictive-maintenance-pro" className="text-gray-300 hover:text-white">AI Predictive Maintenance Pro</Link></li>
+              <li><Link to="/ai-price-optimizer-pro" className="text-gray-300 hover:text-white">AI Price Optimizer Pro</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Enterprise Solutions</h4>
+            <ul className="space-y-2">
+              <li><Link to="/blockchain-solutions-pro" className="text-gray-300 hover:text-white">Blockchain Solutions Pro</Link></li>
+              <li><Link to="/iot-solutions-pro" className="text-gray-300 hover:text-white">IoT Solutions Pro</Link></li>
+              <li><Link to="/devops-automation-pro" className="text-gray-300 hover:text-white">DevOps Automation Pro</Link></li>
+            </ul>
+          </div>
+          
+          <div>
             <h4 className="text-md font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-300 hover:text-white">About</Link></li>

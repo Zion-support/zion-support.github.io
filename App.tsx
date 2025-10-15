@@ -64,6 +64,17 @@ const ZionAIEmailOptimizerPage = lazy(() => import('./app/zion-ai-email-optimize
 const ZionAIWebsiteAnalyzerPage = lazy(() => import('./app/zion-ai-website-analyzer/page'));
 const ZionAIDataVisualizerPage = lazy(() => import('./app/zion-ai-data-visualizer/page'));
 
+// Advanced AI Services
+const AIVoiceAssistantProPage = lazy(() => import('./app/ai-voice-assistant-pro/page'));
+const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
+const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
+const AILeadScoringProPage = lazy(() => import('./app/ai-lead-scoring-pro/page'));
+const AIPredictiveMaintenanceProPage = lazy(() => import('./app/ai-predictive-maintenance-pro/page'));
+const AIPriceOptimizerProPage = lazy(() => import('./app/ai-price-optimizer-pro/page'));
+const BlockchainSolutionsProPage = lazy(() => import('./app/blockchain-solutions-pro/page'));
+const IoTSolutionsProPage = lazy(() => import('./app/iot-solutions-pro/page'));
+const DevOpsAutomationProPage = lazy(() => import('./app/devops-automation-pro/page'));
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -174,6 +185,17 @@ export default function App() {
                   <Route path="/zion-ai-email-optimizer" element={<ZionAIEmailOptimizerPage />} />
                   <Route path="/zion-ai-website-analyzer" element={<ZionAIWebsiteAnalyzerPage />} />
                   <Route path="/zion-ai-data-visualizer" element={<ZionAIDataVisualizerPage />} />
+                  
+                  {/* Advanced AI Services */}
+                  <Route path="/ai-voice-assistant-pro" element={<AIVoiceAssistantProPage />} />
+                  <Route path="/ai-image-recognition-pro" element={<AIImageRecognitionProPage />} />
+                  <Route path="/ai-fraud-detection-pro" element={<AIFraudDetectionProPage />} />
+                  <Route path="/ai-lead-scoring-pro" element={<AILeadScoringProPage />} />
+                  <Route path="/ai-predictive-maintenance-pro" element={<AIPredictiveMaintenanceProPage />} />
+                  <Route path="/ai-price-optimizer-pro" element={<AIPriceOptimizerProPage />} />
+                  <Route path="/blockchain-solutions-pro" element={<BlockchainSolutionsProPage />} />
+                  <Route path="/iot-solutions-pro" element={<IoTSolutionsProPage />} />
+                  <Route path="/devops-automation-pro" element={<DevOpsAutomationProPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">

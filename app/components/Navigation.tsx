@@ -111,6 +111,37 @@ const Navigation: React.FC = () => {
                     <Link to="/zion-ai-workflow-automator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Workflow Automator
                     </Link>
+                    
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Advanced AI Services</div>
+                    <Link to="/ai-voice-assistant-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Voice Assistant Pro
+                    </Link>
+                    <Link to="/ai-image-recognition-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Image Recognition Pro
+                    </Link>
+                    <Link to="/ai-fraud-detection-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Fraud Detection Pro
+                    </Link>
+                    <Link to="/ai-lead-scoring-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Lead Scoring Pro
+                    </Link>
+                    <Link to="/ai-predictive-maintenance-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Predictive Maintenance Pro
+                    </Link>
+                    <Link to="/ai-price-optimizer-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Price Optimizer Pro
+                    </Link>
+                    
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Enterprise Solutions</div>
+                    <Link to="/blockchain-solutions-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Blockchain Solutions Pro
+                    </Link>
+                    <Link to="/iot-solutions-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      IoT Solutions Pro
+                    </Link>
+                    <Link to="/devops-automation-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      DevOps Automation Pro
+                    </Link>
                   </div>
                 </div>
               )}
@@ -224,6 +255,37 @@ const Navigation: React.FC = () => {
               </Link>
               <Link to="/zion-ai-workflow-automator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Workflow Automator
+              </Link>
+              
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Advanced AI Services</div>
+              <Link to="/ai-voice-assistant-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Voice Assistant Pro
+              </Link>
+              <Link to="/ai-image-recognition-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Image Recognition Pro
+              </Link>
+              <Link to="/ai-fraud-detection-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Fraud Detection Pro
+              </Link>
+              <Link to="/ai-lead-scoring-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Lead Scoring Pro
+              </Link>
+              <Link to="/ai-predictive-maintenance-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Predictive Maintenance Pro
+              </Link>
+              <Link to="/ai-price-optimizer-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Price Optimizer Pro
+              </Link>
+              
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Enterprise Solutions</div>
+              <Link to="/blockchain-solutions-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Blockchain Solutions Pro
+              </Link>
+              <Link to="/iot-solutions-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                IoT Solutions Pro
+              </Link>
+              <Link to="/devops-automation-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                DevOps Automation Pro
               </Link>
             </div>
             <Link to="/pricing" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
