@@ -34,6 +34,7 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/database-management" className="text-gray-300 hover:text-white">Database Management</Link></li>
               <li><Link to="/network-infrastructure" className="text-gray-300 hover:text-white">Network Infrastructure</Link></li>
               <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Solutions</Link></li>
+              <li><Link to="/5g-solutions" className="text-gray-300 hover:text-white">5G Solutions</Link></li>
             </ul>
           </div>
           
@@ -49,7 +50,7 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
               <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
               <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
-              <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
+              <li><Link to="/zion-ai-customer-sentiment-tracker" className="text-gray-300 hover:text-white">Sentiment Tracker</Link></li>
             </ul>
           </div>
           
