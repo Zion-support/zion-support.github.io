@@ -1500,7 +1500,6 @@ export default function MicroSaas() {
     }
   ];
 
-const MicroSaasPage: React.FC = () => {
   return (
     <>
       <SEOHead 
@@ -2011,6 +2010,4 @@ const MicroSaasPage: React.FC = () => {
       </div>
     </>
   );
-};
-
-export default MicroSaasPage;
+  }

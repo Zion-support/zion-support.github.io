@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucide-react';export default function AboutPage() {
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucide-react';
+
+export default function AboutPage() {
   const stats = [
     { number: "500+", label: "Projects Completed" },
     { number: "100+", label: "Happy Clients" },
@@ -31,21 +33,18 @@ import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucid
     }
   ];
 
-const AboutPage: React.FC = () => {
   return (
     <>
-      <SEOHead 
-        title="about - Zion Tech Group"
-        description="Zion Tech Group about service page"
-      />
+      <Helmet>
+        <title>About - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions." />
+      </Helmet>
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">about</h1>
+          <h1 className="text-4xl font-bold mb-4">About Us</h1>
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </>
   );
-};
-
-export default AboutPage;
+}

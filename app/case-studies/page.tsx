@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { TrendingUp, DollarSign } from "lucide-react";
+import { TrendingUp, DollarSign, CheckCircle, Users, ArrowRight } from "lucide-react";
 
 export default function CaseStudies() {
   const caseStudies = [
@@ -198,6 +198,4 @@ export default function CaseStudies() {
       </div>
     </>
   );
-};
-
-export default CaseStudiesPage;
+}

@@ -168,6 +168,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     };
   }, []);
 
+  return (
+    <>
+      {children}
       {/* Accessibility Styles */}
       <style jsx global>{`
         /* High Contrast Mode */
