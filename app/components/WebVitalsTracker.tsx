@@ -28,7 +28,8 @@ const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
       
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-        }
+        console.log('Web Vitals:', metric);
+      }
     };
 
     // Track Core Web Vitals
