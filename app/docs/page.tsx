@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Api, ArrowRight, BookOpen, Cloud, Code, Database, Download, Filter, Search, Shield, User, Zap } from 'lucide-react';
+import { ArrowRight, BookOpen, Cloud, Code, Database, Download, Filter, Search, Shield, User, Zap, FileText } from 'lucide-react';
 
 const DocsPage: React.FC = () => {
   const documentationSections = [
@@ -17,7 +17,7 @@ const DocsPage: React.FC = () => {
     },
     {
       title: 'API Documentation',
-      icon: <Api className="w-6 h-6" />,
+      icon: <FileText className="w-6 h-6" />,
       description: 'Complete API reference and integration guides',
       articles: [
         { title: 'API Overview', description: 'Introduction to our REST API', readTime: '10 min' },
@@ -227,7 +227,7 @@ const DocsPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 text-center">
-                <Api className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <FileText className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">REST API</h3>
                 <p className="text-gray-300 mb-6">Complete REST API reference with examples and interactive testing</p>
                 <a

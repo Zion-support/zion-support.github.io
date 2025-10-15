@@ -237,7 +237,7 @@ const AISolutionsPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
                     <div className="flex flex-wrap gap-2">
-                      { service.benefits.map((benefit, benefitIndex) => (
+                      { service.benefits?.map((benefit, benefitIndex) => (
                         <span key={benefitIndex } className="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-sm">
                           { benefit }
                         </span>
@@ -248,7 +248,7 @@ const AISolutionsPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Use Cases:</h4>
                     <div className="flex flex-wrap gap-2">
-                      { service.useCases.map((useCase, useCaseIndex) => (
+                      { service.useCases?.map((useCase, useCaseIndex) => (
                         <span key={useCaseIndex } className="bg-purple-400/20 text-purple-400 px-3 py-1 rounded-full text-sm">
                           { useCase }
                         </span>
@@ -257,7 +257,7 @@ const AISolutionsPage: React.FC = () => {
                   </div>
                   
                   <Link 
-                    to={ service.href }
+                    to={ service.href || '#' }
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold"
                   >
                     Learn More
@@ -280,9 +280,12 @@ const AISolutionsPage: React.FC = () => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               { benefits.map((benefit, index) => (
-                <div key={index } className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                  <CheckCircleIcon className="w-6 h-6 text-cyan-400 mr-4 flex-shrink-0" />
-                  <span className="text-white">{ benefit }</span>
+                <div key={index } className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                  <div className="flex items-center mb-4">
+                    { benefit.icon }
+                    <h3 className="text-white font-semibold ml-3">{ benefit.title }</h3>
+                  </div>
+                  <p className="text-gray-300 text-sm">{ benefit.description }</p>
                 </div>
               ))}
             </div>
