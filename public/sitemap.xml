@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/</loc>
 <<<<<<< HEAD
     <lastmod>2025-10-13T15:38:45.476Z</lastmod>
@@ -14,22 +15,28 @@
 >>>>>>> main
     <changefreq>daily</changefreq>
 =======
-    <loc>https://ziontechgroup.com</loc>
-    <lastmod>2025-10-15T12:16:58.932Z</lastmod>    <changefreq>daily</changefreq>
+ursor/fix-errors-and-merge-to-main-234bursor/fix-errors-and-merge-to-main-234b
+=======
 >>>>>>> main
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/about</loc>
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     <lastmod>2025-10-13T15:38:45.476Z</lastmod>
 =======
 <<<<<<< HEAD
+=======
+    <lastmod>2025-10-13T15:56:23.454Z</lastmod>
+=======
+    <lastmod>2025-10-13T16:20:07.903Z</lastmod>
+>>>>>>> origin/main
+=======
+=======
+>>>>>>> main
     <lastmod>2025-10-13T15:45:30.986Z</lastmod>
 =======
 <<<<<<< HEAD
-    <lastmod>2025-10-13T16:12:49.065Z</lastmod>
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> main
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -873,6 +880,9 @@
     <lastmod>2025-10-13T15:45:30.986Z</lastmod>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
     <lastmod>2025-10-13T16:12:49.065Z</lastmod>
 >>>>>>> main
 >>>>>>> main

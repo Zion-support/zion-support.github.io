@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface PerformanceMonitorProps {
@@ -12,6 +13,24 @@ export default function PerformanceMonitor({ className = '', children }: Perform
       <h3>Performance Monitor</h3>
       <p>Performance monitoring component</p>
       {children}
+=======
+'use client';
+import React, { useEffect } from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Monitor Core Web Vitals
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        console.log('Performance metric:', entry.name, entry.value);
+      }
+    });
+
+    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+    return () => {
+      observer.disconnect();
+>>>>>>> main
 =======
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react;'
@@ -44,11 +63,19 @@ const PerformanceMonitor: React.FC = () => {
         ttfb: Math.random() * 500 + 200,}
         loadTime: Math.random() * 3000 + 1000}
       });
+>>>>>>> main
     };
     // Simulate metrics after a delay
     const timer = setTimeout(simulateMetrics, 2000);
     return () => clearTimeout(timer);
   }, []);
+<<<<<<< HEAD
+
+  return null;
+};
+
+export default PerformanceMonitor;
+=======
   // Don't render anything in production''
   if (process.env.NODE_ENV === 'production') {''
     return null;
@@ -166,4 +193,5 @@ const ComponentsPage: React.FC = () => {
 ;
 export default ComponentsPage;'";'";
 
+>>>>>>> main
 >>>>>>> main
