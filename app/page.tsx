@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Video, Receipt, Code, Package } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -89,6 +89,50 @@ const HomePage = () => {
   ];
 
   const microSaasHighlights = [
+    {
+      name: "Zion AI Video Generator",
+      description: "Create professional videos from text prompts using advanced AI. Generate engaging content 10x faster with voice synthesis, smart templates, and multiple formats.",
+      price: "From $29/month",
+      icon: <Video className="w-6 h-6" />,
+      link: "/zion-ai-video-generator",
+      featured: true,
+      category: "Video Creation",
+      marketPrice: "$99-200/month",
+      benefits: ["AI video generation", "Voice synthesis", "200+ templates", "Multi-format support"]
+    },
+    {
+      name: "Zion AI Invoice Generator",
+      description: "Generate professional invoices automatically with AI-powered data extraction and smart automation. Multi-currency support and automated follow-ups.",
+      price: "From $19/month",
+      icon: <Receipt className="w-6 h-6" />,
+      link: "/zion-ai-invoice-generator",
+      featured: true,
+      category: "Billing & Finance",
+      marketPrice: "$59-120/month",
+      benefits: ["Auto invoice generation", "Multi-currency", "Payment tracking", "Automated reminders"]
+    },
+    {
+      name: "Zion AI Customer Insights",
+      description: "Unlock deep customer insights with AI-powered analytics, sentiment analysis, and predictive modeling. Understand your customers like never before.",
+      price: "From $39/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-customer-insights",
+      featured: true,
+      category: "Analytics",
+      marketPrice: "$150-300/month",
+      benefits: ["360° customer view", "Sentiment analysis", "Predictive analytics", "Real-time insights"]
+    },
+    {
+      name: "Zion AI Code Assistant",
+      description: "Supercharge your development with AI-powered code generation, intelligent review, and automated debugging. Support for 50+ programming languages.",
+      price: "From $29/month",
+      icon: <Code className="w-6 h-6" />,
+      link: "/ai-code-assistant",
+      featured: true,
+      category: "Development",
+      marketPrice: "$99-200/month",
+      benefits: ["AI code generation", "Intelligent review", "Bug detection", "50+ languages"]
+    },
     {
       name: "Zion AI Analytics Pro",
       description: "Advanced AI-powered business intelligence with real-time dashboards, predictive analytics, and automated insights. Features machine learning models for trend analysis and forecasting.",
