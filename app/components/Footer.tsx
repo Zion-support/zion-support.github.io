@@ -3,16 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gradient-to-t from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-cyan-500 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute top-32 right-20 w-32 h-32 bg-purple-500 rounded-full blur-2xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-pink-500 rounded-full blur-xl animate-pulse delay-2000"></div>
-      </div>
-      
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+    <footer className="bg-gray-800 text-white">
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold gradient-text mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -43,16 +36,46 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-cyan-400">Services</h4>
-            <ul className="space-y-3">
-              <li><Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">All Services</Link></li>
-              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">IT Services</Link></li>
-              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Micro SAAS Solutions</Link></li>
-              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Cloud Infrastructure</Link></li>
-              <li><Link to="/5g-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">5G Solutions</Link></li>
-              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Digital Transformation</Link></li>
-              <li><Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors block py-1">Pricing</Link></li>
+            <h4 className="text-md font-semibold mb-4">AI & ML Services</h4>
+            <ul className="space-y-2">
+              <li><Link to="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
+              <li><Link to="/ai-solutions" className="text-gray-300 hover:text-white">AI Solutions</Link></li>
+              <li><Link to="/ai-content-generator" className="text-gray-300 hover:text-white">AI Content Generator</Link></li>
+              <li><Link to="/data-analytics" className="text-gray-300 hover:text-white">Data Analytics</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">IT Services</h4>
+            <ul className="space-y-2">
+              <li><Link to="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
+              <li><Link to="/web-development" className="text-gray-300 hover:text-white">Web Development</Link></li>
+              <li><Link to="/mobile-development" className="text-gray-300 hover:text-white">Mobile Development</Link></li>
+              <li><Link to="/database-management" className="text-gray-300 hover:text-white">Database Management</Link></li>
+              <li><Link to="/network-infrastructure" className="text-gray-300 hover:text-white">Network Infrastructure</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Infrastructure</h4>
+            <ul className="space-y-2">
+              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-white">Cloud Infrastructure</Link></li>
+              <li><Link to="/5g-solutions" className="text-gray-300 hover:text-white">5G Solutions</Link></li>
+              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-white">Digital Transformation</Link></li>
+              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Solutions</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">AI Products</h4>
+            <ul className="space-y-2">
+              <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">AI Content Moderator</Link></li>
+              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">AI Customer Support Pro</Link></li>
+              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">AI Workflow Automator Pro</Link></li>
+              <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-white">AI Email Marketing Pro</Link></li>
+              <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-white">Customer Churn Predictor</Link></li>
+              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">Sales Predictor</Link></li>
+              <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
             </ul>
           </div>
           

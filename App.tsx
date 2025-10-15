@@ -33,6 +33,25 @@ const DatabaseManagementPage = lazy(() => import('./app/database-management/page
 const NetworkInfrastructurePage = lazy(() => import('./app/network-infrastructure/page'));
 const CookiesPage = lazy(() => import('./app/cookies/page'));
 
+// AI Tools Pages
+const ZionAIContentModeratorPage = lazy(() => import('./app/zion-ai-content-moderator/page'));
+const ZionAICustomerChurnPredictorPage = lazy(() => import('./app/zion-ai-customer-churn-predictor/page'));
+const ZionAICustomerChurnPredictorProPage = lazy(() => import('./app/zion-ai-customer-churn-predictor-pro/page'));
+const ZionAICustomerSentimentTrackerPage = lazy(() => import('./app/zion-ai-customer-sentiment-tracker/page'));
+const ZionAICustomerSupportProPage = lazy(() => import('./app/zion-ai-customer-support-pro/page'));
+const ZionAIDocumentAnalyzerPage = lazy(() => import('./app/zion-ai-document-analyzer/page'));
+const ZionAIEmailMarketingProPage = lazy(() => import('./app/zion-ai-email-marketing-pro/page'));
+const ZionAIFinancialForecasterPage = lazy(() => import('./app/zion-ai-financial-forecaster/page'));
+const ZionAIInventoryOptimizerProPage = lazy(() => import('./app/zion-ai-inventory-optimizer-pro/page'));
+const ZionAIMeetingTranscriberPage = lazy(() => import('./app/zion-ai-meeting-transcriber/page'));
+const ZionAISalesPredictorPage = lazy(() => import('./app/zion-ai-sales-predictor/page'));
+const ZionAISocialSchedulerProPage = lazy(() => import('./app/zion-ai-social-scheduler-pro/page'));
+const ZionAITaskSchedulerPage = lazy(() => import('./app/zion-ai-task-scheduler/page'));
+const ZionAIWorkflowAutomatorPage = lazy(() => import('./app/zion-ai-workflow-automator/page'));
+const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow-automator-pro/page'));
+const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
+const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -118,6 +137,26 @@ export default function App() {
                   <Route path="/partnerships" element={<PartnershipsPage />} />
                   <Route path="/api-docs" element={<APIDocsPage />} />
                   <Route path="/accessibility" element={<AccessibilityPage />} />
+                  
+                  {/* AI Tools Pages */}
+                  <Route path="/zion-ai-content-moderator" element={<ZionAIContentModeratorPage />} />
+                  <Route path="/zion-ai-customer-churn-predictor" element={<ZionAICustomerChurnPredictorPage />} />
+                  <Route path="/zion-ai-customer-churn-predictor-pro" element={<ZionAICustomerChurnPredictorProPage />} />
+                  <Route path="/zion-ai-customer-sentiment-tracker" element={<ZionAICustomerSentimentTrackerPage />} />
+                  <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+                  <Route path="/zion-ai-document-analyzer" element={<ZionAIDocumentAnalyzerPage />} />
+                  <Route path="/zion-ai-email-marketing-pro" element={<ZionAIEmailMarketingProPage />} />
+                  <Route path="/zion-ai-financial-forecaster" element={<ZionAIFinancialForecasterPage />} />
+                  <Route path="/zion-ai-inventory-optimizer-pro" element={<ZionAIInventoryOptimizerProPage />} />
+                  <Route path="/zion-ai-meeting-transcriber" element={<ZionAIMeetingTranscriberPage />} />
+                  <Route path="/zion-ai-sales-predictor" element={<ZionAISalesPredictorPage />} />
+                  <Route path="/zion-ai-social-scheduler-pro" element={<ZionAISocialSchedulerProPage />} />
+                  <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
+                  <Route path="/zion-ai-workflow-automator" element={<ZionAIWorkflowAutomatorPage />} />
+                  <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
+                  <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
+                  <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
+                  
                   {/* Catch all route */}
                   <Route path="*" element={
                     <div className="min-h-screen flex items-center justify-center bg-gray-50">

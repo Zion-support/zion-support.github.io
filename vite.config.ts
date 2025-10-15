@@ -6,31 +6,47 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    sourcemap: process.env.NODE_ENV === 'development',
-    minify: 'esbuild',
+    sourcemap: true,
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['@heroicons/react', 'framer-motion'],
+          ui: ['@heroicons/react', 'framer-motion', 'lucide-react'],
           utils: ['clsx', 'tailwind-merge']
         }
       }
     },
-    target: 'esnext',
-    cssCodeSplit: true,
-    chunkSizeWarningLimit: 1000
+    chunkSizeWarningLimit: 1000,
   },
   server: {
     port: 3000,
     open: true,
-    host: true
+    hmr: {
+      overlay: false
+    }
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'clsx', 'tailwind-merge']
+    include: [
+      'react', 
+      'react-dom', 
+      'react-router-dom',
+      '@heroicons/react',
+      'framer-motion',
+      'lucide-react'
+    ]
   },
   esbuild: {
-    drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : []
+    drop: ['console', 'debugger'],
+  },
+  css: {
+    devSourcemap: true,
   }
 })
