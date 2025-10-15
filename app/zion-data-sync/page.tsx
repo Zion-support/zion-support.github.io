@@ -127,6 +127,38 @@ const testimonials = [
         <meta
           name="description"
           content="Sync your data across all platforms with Zion Data Sync - the ultimate real-time data synchronization platform. Connect 100+ platforms with advanced error handling. Starting at $39/month."
+
+
+
+export default function ZionDataSync() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Data Sync - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion data sync solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Data Sync - Real-time Data Synchronization Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Sync your data across all platforms with Zion Data Sync - the ultimate real-time data synchronization platform. Connect 100+ platforms with advanced error handling. Starting at $39/month."
+
+
+
+export default function ZionDataSync() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Data Sync - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion data sync solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Data Sync - Real-time Data Synchronization Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Sync your data across all platforms with Zion Data Sync - the ultimate real-time data synchronization platform. Connect 100+ platforms with advanced error handling. Starting at $39/month."
         />
         <meta
           name="keywords"

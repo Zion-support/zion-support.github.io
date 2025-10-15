@@ -206,6 +206,194 @@ const testimonials = [
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">
                   Advanced Reporting Features
+
+
+
+export default function AIAutomatedReporting() {
+  return (
+    <>
+      <Helmet>
+        <title>A I Automated Reporting - Zion Tech Group</title>
+        <meta name="description" content="Advanced a i automated reporting solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>AI Automated Reporting - AI-Powered Report Generation Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Automate your reporting with AI Automated Reporting - the ultimate AI-powered report generation platform. Real-time data integration, custom templates, and interactive dashboards. Starting at $29/month."
+        />
+        <meta
+          name="keywords"
+          content="automated reporting, AI report generation, data visualization, report templates, business intelligence, dashboard creation, AI automated reporting"
+        />
+      </Helmet>
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 via-cyan-500/10 to-blue-500/10 animate-pulse"></div>
+        
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(20,184,166,0.3),transparent_50%)]"></div>
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          
+        <div className="max-w-7xl mx-auto text-center">
+            
+        <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-teal-500/20 to-cyan-500/20 border border-teal-500/30 mb-6">
+              <FileText className="w-4 h-4 text-teal-400 mr-2" />
+              <span className="text-teal-400 text-sm font-medium">#1 Automated Reporting Platform 2024</span>
+            </div>
+            
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-400 animate-pulse">
+                AI Automated Reporting
+              </span>
+              
+        <div className="absolute -inset-1 bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-400 rounded-lg blur opacity-30 animate-pulse"></div>
+            </h1>
+            
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              The ultimate AI-powered automated reporting platform that generates comprehensive reports from your data. 
+              Save 90% of your time on report creation with intelligent automation and real-time insights.
+            </p>
+            
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                to="/contact"
+                className="group bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-teal-500/25 hover:scale-105"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="border border-teal-400 text-teal-400 px-8 py-4 rounded-lg font-semibold hover:bg-teal-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+              >
+                Watch Demo
+              </Link>
+            </div>
+            {/* Reporting Stats */}
+            
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {reportingStats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  
+        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-teal-500/20 to-cyan-500/20 flex items-center justify-center">
+                    {stat.icon}
+                  </div>
+                  
+        <div className="text-3xl font-bold text-teal-400 mb-2">{stat.number}</div>
+                  
+        <div className="text-gray-300 text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">
+                  Advanced Reporting Features
+
+
+
+export default function AIAutomatedReporting() {
+  return (
+    <>
+      <Helmet>
+        <title>A I Automated Reporting - Zion Tech Group</title>
+        <meta name="description" content="Advanced a i automated reporting solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>AI Automated Reporting - AI-Powered Report Generation Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Automate your reporting with AI Automated Reporting - the ultimate AI-powered report generation platform. Real-time data integration, custom templates, and interactive dashboards. Starting at $29/month."
+        />
+        <meta
+          name="keywords"
+          content="automated reporting, AI report generation, data visualization, report templates, business intelligence, dashboard creation, AI automated reporting"
+        />
+      </Helmet>
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 via-cyan-500/10 to-blue-500/10 animate-pulse"></div>
+        
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(20,184,166,0.3),transparent_50%)]"></div>
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          
+        <div className="max-w-7xl mx-auto text-center">
+            
+        <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-teal-500/20 to-cyan-500/20 border border-teal-500/30 mb-6">
+              <FileText className="w-4 h-4 text-teal-400 mr-2" />
+              <span className="text-teal-400 text-sm font-medium">#1 Automated Reporting Platform 2024</span>
+            </div>
+            
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-400 animate-pulse">
+                AI Automated Reporting
+              </span>
+              
+        <div className="absolute -inset-1 bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-400 rounded-lg blur opacity-30 animate-pulse"></div>
+            </h1>
+            
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              The ultimate AI-powered automated reporting platform that generates comprehensive reports from your data. 
+              Save 90% of your time on report creation with intelligent automation and real-time insights.
+            </p>
+            
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                to="/contact"
+                className="group bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-teal-500/25 hover:scale-105"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="border border-teal-400 text-teal-400 px-8 py-4 rounded-lg font-semibold hover:bg-teal-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+              >
+                Watch Demo
+              </Link>
+            </div>
+            {/* Reporting Stats */}
+            
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {reportingStats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  
+        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-teal-500/20 to-cyan-500/20 flex items-center justify-center">
+                    {stat.icon}
+                  </div>
+                  
+        <div className="text-3xl font-bold text-teal-400 mb-2">{stat.number}</div>
+                  
+        <div className="text-gray-300 text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">
+                  Advanced Reporting Features
                 </span>
               </h2>
               

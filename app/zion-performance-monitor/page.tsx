@@ -137,6 +137,58 @@ const testimonials = [
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         
+
+
+
+export default function ZionPerformanceMonitor() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Performance Monitor - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion performance monitor solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Performance Monitor - AI-Powered Application Performance Monitoring | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Monitor your applications with Zion Performance Monitor - the ultimate AI-powered APM platform. Real-time monitoring, AI analytics, and custom dashboards. Starting at $39/month."
+        />
+        <meta
+          name="keywords"
+          content="application performance monitoring, APM, real-time monitoring, performance analytics, uptime monitoring, infrastructure monitoring, Zion Performance Monitor"
+        />
+      </Helmet>
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        
+
+
+
+export default function ZionPerformanceMonitor() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Performance Monitor - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion performance monitor solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Performance Monitor - AI-Powered Application Performance Monitoring | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Monitor your applications with Zion Performance Monitor - the ultimate AI-powered APM platform. Real-time monitoring, AI analytics, and custom dashboards. Starting at $39/month."
+        />
+        <meta
+          name="keywords"
+          content="application performance monitoring, APM, real-time monitoring, performance analytics, uptime monitoring, infrastructure monitoring, Zion Performance Monitor"
+        />
+      </Helmet>
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-indigo-500/10 animate-pulse"></div>
         
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.3),transparent_50%)]"></div>

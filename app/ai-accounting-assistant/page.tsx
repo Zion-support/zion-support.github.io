@@ -1,15 +1,14 @@
-import { ArrowRight, Calculator, Target, CheckCircle, Globe } from 'lucide-react';
+import { ArrowRight, Calculator, Target, CheckCircle, Globe, FileText, BarChart3, Shield, Clock } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AIAccountingAssistant() {
-  return;
-},
-    {
-      title: "Smart Expense Tracking",
-      description: "Intelligent expense tracking with receipt scanning, automatic categorization, and compliance monitoring",
-      icon: <FileText className="w-6 h-6" />,
-      included: true
-    },
+
+const features = [
+  {
+    title: "Smart Expense Tracking",
+    description: "Intelligent expense tracking with receipt scanning, automatic categorization, and compliance monitoring",
+    icon: <FileText className="w-6 h-6" />,
+    included: true
+  },
     {
       title: "Financial Reporting",
       description: "Generate comprehensive financial reports, profit/loss statements, and tax-ready documents automatically",
@@ -121,14 +120,13 @@ const testimonials = [
       avatar: "SC"
     }
   ];
+
+export default function AIAccountingAssistant() {
   return (
     <>
       <Helmet>
-        <title>AI Accounting Assistant - AI-Powered Accounting & Bookkeeping Platform | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Streamline your accounting with AI Accounting Assistant - the ultimate AI-powered accounting platform. Automated bookkeeping, expense tracking, and tax preparation. Starting at $29/month."
-        />
+        <title>AI Accounting Assistant - Zion Tech Group</title>
+        <meta name="description" content="Automate your accounting with AI-powered expense tracking, financial reporting, and tax preparation. Streamline your bookkeeping process." />
         <meta
           name="keywords"
           content="AI accounting, automated bookkeeping, expense tracking, tax preparation, financial reporting, accounting software, AI accounting assistant"

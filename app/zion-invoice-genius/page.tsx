@@ -132,6 +132,48 @@ const testimonials = [
           name="keywords"
           content="invoicing software, invoice generation, payment processing, automated billing, financial reporting, client management, Zion Invoice Genius"
         />
+
+
+
+export default function ZionInvoiceGenius() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Invoice Genius - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion invoice genius solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Invoice Genius - AI-Powered Invoicing & Payment Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Streamline your invoicing with Zion Invoice Genius - the ultimate AI-powered invoicing platform. Smart invoicing, automated billing, payment processing, and financial reporting. Starting at $19/month."
+        />
+        <meta
+          name="keywords"
+          content="invoicing software, invoice generation, payment processing, automated billing, financial reporting, client management, Zion Invoice Genius"
+        />
+
+
+
+export default function ZionInvoiceGenius() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Invoice Genius - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion invoice genius solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Invoice Genius - AI-Powered Invoicing & Payment Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Streamline your invoicing with Zion Invoice Genius - the ultimate AI-powered invoicing platform. Smart invoicing, automated billing, payment processing, and financial reporting. Starting at $19/month."
+        />
+        <meta
+          name="keywords"
+          content="invoicing software, invoice generation, payment processing, automated billing, financial reporting, client management, Zion Invoice Genius"
+        />
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 relative overflow-hidden">

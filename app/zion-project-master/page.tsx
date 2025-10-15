@@ -132,6 +132,48 @@ const testimonials = [
           name="keywords"
           content="project management, team collaboration, task management, time tracking, project planning, resource management, project analytics, Zion Project Master"
         />
+
+
+
+export default function ZionProjectMaster() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Project Master - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion project master solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Project Master - Advanced Project Management Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Master your projects with Zion Project Master - the ultimate project management platform. Advanced planning, team collaboration, time tracking, and analytics. Starting at $19/month."
+        />
+        <meta
+          name="keywords"
+          content="project management, team collaboration, task management, time tracking, project planning, resource management, project analytics, Zion Project Master"
+        />
+
+
+
+export default function ZionProjectMaster() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Project Master - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion project master solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Project Master - Advanced Project Management Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Master your projects with Zion Project Master - the ultimate project management platform. Advanced planning, team collaboration, time tracking, and analytics. Starting at $19/month."
+        />
+        <meta
+          name="keywords"
+          content="project management, team collaboration, task management, time tracking, project planning, resource management, project analytics, Zion Project Master"
+        />
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden">

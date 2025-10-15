@@ -219,6 +219,220 @@ const testimonials = [
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/10 relative overflow-hidden"
+
+
+
+export default function AIAutomatedTesting() {
+  return (
+    <>
+      <Helmet>
+        <title>A I Automated Testing - Zion Tech Group</title>
+        <meta name="description" content="Advanced a i automated testing solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>AI Automated Testing - AI-Powered Test Automation Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Automate your testing with AI Automated Testing - the ultimate AI-powered test automation platform. Smart test generation, cross-platform testing, and bug detection. Starting at $49/month."
+        />
+        <meta
+          name="keywords"
+          content="automated testing, AI test generation, test automation, cross-platform testing, visual testing, performance testing, bug detection, AI automated testing"
+        />
+      </Helmet>
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10 animate-pulse"></div>
+        
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(249,115,22,0.3),transparent_50%)]"></div>
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          
+        <div className="max-w-7xl mx-auto text-center">
+            
+        <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 mb-6">
+              <TestTube className="w-4 h-4 text-orange-400 mr-2" />
+              <span className="text-orange-400 text-sm font-medium">#1 AI Testing Platform 2024</span>
+            </div>
+            
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 animate-pulse">
+                AI Automated Testing
+              </span>
+              
+        <div className="absolute -inset-1 bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
+            </h1>
+            
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              The ultimate AI-powered test automation platform that generates, executes, and manages tests intelligently. 
+              Increase test coverage by 80% while reducing testing time and improving quality.
+            </p>
+            
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                to="/contact"
+                className="group bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-orange-500/25 hover:scale-105"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="border border-orange-400 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+              >
+                Watch Demo
+              </Link>
+            </div>
+            {/* Testing Stats */}
+            
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {testingStats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  
+        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 flex items-center justify-center">
+                    {stat.icon}
+                  </div>
+                  
+        <div className="text-3xl font-bold text-orange-400 mb-2">{stat.number}</div>
+                  
+        <div className="text-gray-300 text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+                  Advanced Testing Features
+                </span>
+              </h2>
+              
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to automate your testing process
+              </p>
+            </div>
+            
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/10 relative overflow-hidden"
+
+
+
+export default function AIAutomatedTesting() {
+  return (
+    <>
+      <Helmet>
+        <title>A I Automated Testing - Zion Tech Group</title>
+        <meta name="description" content="Advanced a i automated testing solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>AI Automated Testing - AI-Powered Test Automation Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Automate your testing with AI Automated Testing - the ultimate AI-powered test automation platform. Smart test generation, cross-platform testing, and bug detection. Starting at $49/month."
+        />
+        <meta
+          name="keywords"
+          content="automated testing, AI test generation, test automation, cross-platform testing, visual testing, performance testing, bug detection, AI automated testing"
+        />
+      </Helmet>
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10 animate-pulse"></div>
+        
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(249,115,22,0.3),transparent_50%)]"></div>
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          
+        <div className="max-w-7xl mx-auto text-center">
+            
+        <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 mb-6">
+              <TestTube className="w-4 h-4 text-orange-400 mr-2" />
+              <span className="text-orange-400 text-sm font-medium">#1 AI Testing Platform 2024</span>
+            </div>
+            
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 animate-pulse">
+                AI Automated Testing
+              </span>
+              
+        <div className="absolute -inset-1 bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
+            </h1>
+            
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              The ultimate AI-powered test automation platform that generates, executes, and manages tests intelligently. 
+              Increase test coverage by 80% while reducing testing time and improving quality.
+            </p>
+            
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                to="/contact"
+                className="group bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-orange-500/25 hover:scale-105"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="border border-orange-400 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+              >
+                Watch Demo
+              </Link>
+            </div>
+            {/* Testing Stats */}
+            
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {testingStats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  
+        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 flex items-center justify-center">
+                    {stat.icon}
+                  </div>
+                  
+        <div className="text-3xl font-bold text-orange-400 mb-2">{stat.number}</div>
+                  
+        <div className="text-gray-300 text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+                  Advanced Testing Features
+                </span>
+              </h2>
+              
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to automate your testing process
+              </p>
+            </div>
+            
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/10 relative overflow-hidden"
                 >
                   
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

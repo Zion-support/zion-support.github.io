@@ -132,6 +132,48 @@ const testimonials = [
           name="keywords"
           content="content creation, AI writing, design tools, video creation, brand consistency, content marketing, Zion Content Studio"
         />
+
+
+
+export default function ZionContentStudio() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Content Studio - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion content studio solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Content Studio - AI-Powered Content Creation Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Create amazing content with Zion Content Studio - the ultimate AI-powered content creation platform. Generate text, images, videos, and maintain brand consistency. Starting at $19/month."
+        />
+        <meta
+          name="keywords"
+          content="content creation, AI writing, design tools, video creation, brand consistency, content marketing, Zion Content Studio"
+        />
+
+
+
+export default function ZionContentStudio() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Content Studio - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion content studio solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Content Studio - AI-Powered Content Creation Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Create amazing content with Zion Content Studio - the ultimate AI-powered content creation platform. Generate text, images, videos, and maintain brand consistency. Starting at $19/month."
+        />
+        <meta
+          name="keywords"
+          content="content creation, AI writing, design tools, video creation, brand consistency, content marketing, Zion Content Studio"
+        />
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">

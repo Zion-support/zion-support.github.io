@@ -1,15 +1,14 @@
-import { ArrowRight, Leaf, Target, CheckCircle, Globe } from 'lucide-react';
+import { ArrowRight, Leaf, Target, CheckCircle, Globe, Shield, FileText, BarChart3, Clock, Settings } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AIAgriculturalIntelligencePro() {
-  return;
-},
-    {
-      title: "Yield Prediction",
-      description: "Advanced machine learning models that predict crop yields with 95% accuracy using weather, soil, and historical data",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
+
+const features = [
+  {
+    title: "Yield Prediction",
+    description: "Advanced machine learning models that predict crop yields with 95% accuracy using weather, soil, and historical data",
+    icon: <Target className="w-6 h-6" />,
+    included: true
+  },
     {
       title: "Disease Detection",
       description: "Early disease and pest detection using computer vision and AI to identify issues before they spread",
@@ -121,6 +120,8 @@ const testimonials = [
       avatar: "DC"
     }
   ];
+
+export default function AIAgriculturalIntelligencePro() {
   return (
     <>
       <Helmet>

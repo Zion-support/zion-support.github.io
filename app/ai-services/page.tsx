@@ -857,7 +857,6 @@ const benefits = [
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Services Grid */}
@@ -969,6 +968,7 @@ const benefits = [
         </div>
       </section>
     </div>
+    </>
   );
 };
 export default AIServicesPage;

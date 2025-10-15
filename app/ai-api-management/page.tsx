@@ -1,15 +1,14 @@
-import { ArrowRight, Globe, Target, CheckCircle } from 'lucide-react';
+import { ArrowRight, Globe, Target, CheckCircle, BarChart3, FileText, Shield, Users, Clock, Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AIAPIManagement() {
-  return;
-},
-    {
-      title: "Smart Analytics",
-      description: "AI-driven analytics that provide insights into API performance, usage patterns, and optimization opportunities",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
+
+const features = [
+  {
+    title: "Smart Analytics",
+    description: "AI-driven analytics that provide insights into API performance, usage patterns, and optimization opportunities",
+    icon: <BarChart3 className="w-6 h-6" />,
+    included: true
+  },
     {
       title: "Automated Documentation",
       description: "Auto-generate comprehensive API documentation with interactive testing and real-time updates",
@@ -121,6 +120,8 @@ const testimonials = [
       avatar: "MR"
     }
   ];
+
+export default function AIAPIManagement() {
   return (
     <>
       <Helmet>

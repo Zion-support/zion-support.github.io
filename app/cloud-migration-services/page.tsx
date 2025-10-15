@@ -18,103 +18,103 @@ import {
 
 const CloudMigrationServicesPage: React.FC = () => {
   const features = [
-    &quot;Comprehensive cloud readiness assessment&quot;,
-    &quot;Zero-downtime migration strategies&quot;,
-    &quot;Multi-cloud and hybrid cloud solutions&quot;,
-    &quot;Data security and compliance assurance&quot;,
-    &quot;Cost optimization and resource management&quot;,
-    &quot;Automated migration tools and scripts&quot;,
-    &quot;Performance monitoring and optimization&quot;,
-    &quot;Disaster recovery and backup solutions&quot;,
-    &quot;24/7 migration support and monitoring&quot;,
-    &quot;Post-migration optimization and training&quot;
+    "Comprehensive cloud readiness assessment",
+    "Zero-downtime migration strategies",
+    "Multi-cloud and hybrid cloud solutions",
+    "Data security and compliance assurance",
+    "Cost optimization and resource management",
+    "Automated migration tools and scripts",
+    "Performance monitoring and optimization",
+    "Disaster recovery and backup solutions",
+    "24/7 migration support and monitoring",
+    "Post-migration optimization and training"
   ];
 
   const cloudProviders = [
-    { name: &quot;AWS&quot;, icon: <Cloud className="w-6 h-6" />, color: &quot;text-orange-600&quot; },
-    { name: &quot;Azure&quot;, icon: <Server className="w-6 h-6" />, color: &quot;text-blue-600&quot; },
-    { name: &quot;Google Cloud&quot;, icon: <Globe className="w-6 h-6" />, color: &quot;text-green-600&quot; },
-    { name: &quot;IBM Cloud&quot;, icon: <Database className="w-6 h-6" />, color: &quot;text-blue-700&quot; },
-    { name: &quot;Oracle Cloud&quot;, icon: <Shield className="w-6 h-6" />, color: &quot;text-red-600&quot; },
-    { name: &quot;Alibaba Cloud&quot;, icon: <TrendingUp className="w-6 h-6" />, color: &quot;text-orange-500&quot; }
+    { name: "AWS", icon: <Cloud className="w-6 h-6" />, color: "text-orange-600" },
+    { name: "Azure", icon: <Server className="w-6 h-6" />, color: "text-blue-600" },
+    { name: "Google Cloud", icon: <Globe className="w-6 h-6" />, color: "text-green-600" },
+    { name: "IBM Cloud", icon: <Database className="w-6 h-6" />, color: "text-blue-700" },
+    { name: "Oracle Cloud", icon: <Shield className="w-6 h-6" />, color: "text-red-600" },
+    { name: "Alibaba Cloud", icon: <TrendingUp className="w-6 h-6" />, color: "text-orange-500" }
   ];
 
 const pricingPlans = [
     {
-      name: &quot;Assessment&quot;,
-      price: &quot;$2,500&quot;,
-      period: &quot;one-time&quot;,
-      description: &quot;Comprehensive cloud readiness assessment&quot;,
+      name: "Assessment",
+      price: "$2,500",
+      period: "one-time",
+      description: "Comprehensive cloud readiness assessment",
       features: [
-        &quot;Infrastructure analysis&quot;,
-        &quot;Security assessment&quot;,
-        &quot;Cost analysis&quot;,
-        &quot;Migration roadmap&quot;,
-        &quot;Risk assessment&quot;,
-        &quot;Timeline estimation&quot;
+        "Infrastructure analysis",
+        "Security assessment",
+        "Cost analysis",
+        "Migration roadmap",
+        "Risk assessment",
+        "Timeline estimation"
       ],
       popular: false
     },
     {
-      name: &quot;Migration&quot;,
-      price: &quot;$15,000&quot;,
-      period: &quot;project&quot;,
-      description: &quot;Complete cloud migration service&quot;,
+      name: "Migration",
+      price: "$15,000",
+      period: "project",
+      description: "Complete cloud migration service",
       features: [
-        &quot;Full migration execution&quot;,
-        &quot;Zero-downtime migration&quot;,
-        &quot;Data security assurance&quot;,
-        &quot;Performance optimization&quot;,
-        &quot;24/7 support during migration&quot;,
-        &quot;Post-migration monitoring&quot;
+        "Full migration execution",
+        "Zero-downtime migration",
+        "Data security assurance",
+        "Performance optimization",
+        "24/7 support during migration",
+        "Post-migration monitoring"
       ],
       popular: true
     },
     {
-      name: &quot;Enterprise&quot;,
-      price: &quot;Custom&quot;,
-      period: &quot;quote&quot;,
-      description: &quot;Large-scale enterprise migration&quot;,
+      name: "Enterprise",
+      price: "Custom",
+      period: "quote",
+      description: "Large-scale enterprise migration",
       features: [
-        &quot;Everything in Migration&quot;,
-        &quot;Multi-cloud strategy&quot;,
-        &quot;Custom security solutions&quot;,
-        &quot;Dedicated migration team&quot;,
-        &quot;Advanced monitoring&quot;,
-        &quot;Training and documentation&quot;,
-        &quot;Ongoing optimization&quot;
+        "Everything in Migration",
+        "Multi-cloud strategy",
+        "Custom security solutions",
+        "Dedicated migration team",
+        "Advanced monitoring",
+        "Training and documentation",
+        "Ongoing optimization"
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: &quot;99.9%&quot;, label: &quot;Uptime Guarantee&quot;, icon: <Shield className="w-6 h-6" /> },
-    { number: &quot;50%&quot;, label: &quot;Cost Reduction&quot;, icon: <TrendingUp className="w-6 h-6" /> },
-    { number: &quot;24/7&quot;, label: &quot;Support Available&quot;, icon: <Clock className="w-6 h-6" /> },
-    { number: &quot;100+&quot;, label: &quot;Successful Migrations&quot;, icon: <Users className="w-6 h-6" /> }
+    { number: "99.9%", label: "Uptime Guarantee", icon: <Shield className="w-6 h-6" /> },
+    { number: "50%", label: "Cost Reduction", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "24/7", label: "Support Available", icon: <Clock className="w-6 h-6" /> },
+    { number: "100+", label: "Successful Migrations", icon: <Users className="w-6 h-6" /> }
   ];
 
 const benefits = [
     {
       icon: <Zap className="w-8 h-8" />,
-      title: &quot;Zero-Downtime Migration&quot;,
-      description: &quot;Seamless migration with no business interruption&quot;
+      title: "Zero-Downtime Migration",
+      description: "Seamless migration with no business interruption"
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: &quot;Enhanced Security&quot;,
-      description: &quot;Advanced security measures and compliance assurance&quot;
+      title: "Enhanced Security",
+      description: "Advanced security measures and compliance assurance"
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: &quot;Cost Optimization&quot;,
-      description: &quot;Significant cost reduction through cloud optimization&quot;
+      title: "Cost Optimization",
+      description: "Significant cost reduction through cloud optimization"
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: &quot;Performance Boost&quot;,
-      description: &quot;Improved performance and scalability in the cloud&quot;
+      title: "Performance Boost",
+      description: "Improved performance and scalability in the cloud"
     }
   ];
   return (
@@ -336,7 +336,7 @@ const benefits = [
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                   }`}>
-                    {plan.popular ? &apos;Get Started&apos; : &apos;Choose Plan&apos;}
+                    {plan.popular ? 'Get Started' : 'Choose Plan'}
                     <ArrowRight className="w-4 h-4 ml-2 inline" />
                   </button>
                 </div>

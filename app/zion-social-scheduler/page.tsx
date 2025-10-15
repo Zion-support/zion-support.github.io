@@ -134,6 +134,52 @@ const testimonials = [
         />
       </Helmet>
       
+
+
+
+export default function ZionSocialScheduler() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Social Scheduler - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion social scheduler solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Social Scheduler - AI-Powered Social Media Management | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Manage your social media with Zion Social Scheduler - the ultimate AI-powered social media management platform. Multi-platform scheduling, content calendar, and analytics. Starting at $19/month."
+        />
+        <meta
+          name="keywords"
+          content="social media management, social media scheduling, content calendar, social media analytics, hashtag research, team collaboration, Zion Social Scheduler"
+        />
+      </Helmet>
+      
+
+
+
+export default function ZionSocialScheduler() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Social Scheduler - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion social scheduler solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Social Scheduler - AI-Powered Social Media Management | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Manage your social media with Zion Social Scheduler - the ultimate AI-powered social media management platform. Multi-platform scheduling, content calendar, and analytics. Starting at $19/month."
+        />
+        <meta
+          name="keywords"
+          content="social media management, social media scheduling, content calendar, social media analytics, hashtag research, team collaboration, Zion Social Scheduler"
+        />
+      </Helmet>
+      
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         

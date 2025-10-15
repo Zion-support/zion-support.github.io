@@ -133,6 +133,50 @@ const testimonials = [
           content="cybersecurity, threat detection, incident response, compliance management, zero trust, security analytics, SOC monitoring, Zion Security Shield"
         />
       </Helmet>
+
+
+
+export default function ZionSecurityShield() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Security Shield - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion security shield solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Security Shield - Advanced Cybersecurity Protection | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Protect your business with Zion Security Shield - the ultimate AI-powered cybersecurity platform. Real-time threat detection, automated incident response, and compliance management. Starting at $49/month."
+        />
+        <meta
+          name="keywords"
+          content="cybersecurity, threat detection, incident response, compliance management, zero trust, security analytics, SOC monitoring, Zion Security Shield"
+        />
+      </Helmet>
+
+
+
+export default function ZionSecurityShield() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Security Shield - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion security shield solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Security Shield - Advanced Cybersecurity Protection | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Protect your business with Zion Security Shield - the ultimate AI-powered cybersecurity platform. Real-time threat detection, automated incident response, and compliance management. Starting at $49/month."
+        />
+        <meta
+          name="keywords"
+          content="cybersecurity, threat detection, incident response, compliance management, zero trust, security analytics, SOC monitoring, Zion Security Shield"
+        />
+      </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}

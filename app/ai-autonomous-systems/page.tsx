@@ -212,6 +212,206 @@ const testimonials = [
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Everything you need to build and manage autonomous systems
               </p>
+
+
+
+export default function AIAutonomousSystems() {
+  return (
+    <>
+      <Helmet>
+        <title>A I Autonomous Systems - Zion Tech Group</title>
+        <meta name="description" content="Advanced a i autonomous systems solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>AI Autonomous Systems - AI-Powered Autonomous System Management | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Manage autonomous systems with AI Autonomous Systems - the ultimate AI-powered autonomous system platform. Self-learning systems, predictive maintenance, and multi-agent coordination. Starting at $199/month."
+        />
+        <meta
+          name="keywords"
+          content="autonomous systems, AI decision making, self-learning systems, predictive maintenance, multi-agent coordination, autonomous system management, AI autonomous systems"
+        />
+      </Helmet>
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        
+        <div className="absolute inset-0 bg-gradient-to-r from-violet-500/10 via-purple-500/10 to-fuchsia-500/10 animate-pulse"></div>
+        
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.3),transparent_50%)]"></div>
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          
+        <div className="max-w-7xl mx-auto text-center">
+            
+        <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 mb-6">
+              <Cpu className="w-4 h-4 text-violet-400 mr-2" />
+              <span className="text-violet-400 text-sm font-medium">#1 Autonomous Systems Platform 2024</span>
+            </div>
+            
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 animate-pulse">
+                AI Autonomous Systems
+              </span>
+              
+        <div className="absolute -inset-1 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded-lg blur opacity-30 animate-pulse"></div>
+            </h1>
+            
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              The ultimate AI-powered autonomous systems platform that enables intelligent, self-managing systems. 
+              Achieve 99.9% reliability with self-learning capabilities and predictive maintenance.
+            </p>
+            
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                to="/contact"
+                className="group bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-violet-500/25 hover:scale-105"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="border border-violet-400 text-violet-400 px-8 py-4 rounded-lg font-semibold hover:bg-violet-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+              >
+                Watch Demo
+              </Link>
+            </div>
+            {/* Autonomous Stats */}
+            
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {autonomousStats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  
+        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 flex items-center justify-center">
+                    {stat.icon}
+                  </div>
+                  
+        <div className="text-3xl font-bold text-violet-400 mb-2">{stat.number}</div>
+                  
+        <div className="text-gray-300 text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">
+                  Advanced Autonomous Features
+                </span>
+              </h2>
+              
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to build and manage autonomous systems
+              </p>
+
+
+
+export default function AIAutonomousSystems() {
+  return (
+    <>
+      <Helmet>
+        <title>A I Autonomous Systems - Zion Tech Group</title>
+        <meta name="description" content="Advanced a i autonomous systems solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>AI Autonomous Systems - AI-Powered Autonomous System Management | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Manage autonomous systems with AI Autonomous Systems - the ultimate AI-powered autonomous system platform. Self-learning systems, predictive maintenance, and multi-agent coordination. Starting at $199/month."
+        />
+        <meta
+          name="keywords"
+          content="autonomous systems, AI decision making, self-learning systems, predictive maintenance, multi-agent coordination, autonomous system management, AI autonomous systems"
+        />
+      </Helmet>
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        
+        <div className="absolute inset-0 bg-gradient-to-r from-violet-500/10 via-purple-500/10 to-fuchsia-500/10 animate-pulse"></div>
+        
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.3),transparent_50%)]"></div>
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          
+        <div className="max-w-7xl mx-auto text-center">
+            
+        <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 mb-6">
+              <Cpu className="w-4 h-4 text-violet-400 mr-2" />
+              <span className="text-violet-400 text-sm font-medium">#1 Autonomous Systems Platform 2024</span>
+            </div>
+            
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 animate-pulse">
+                AI Autonomous Systems
+              </span>
+              
+        <div className="absolute -inset-1 bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 rounded-lg blur opacity-30 animate-pulse"></div>
+            </h1>
+            
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              The ultimate AI-powered autonomous systems platform that enables intelligent, self-managing systems. 
+              Achieve 99.9% reliability with self-learning capabilities and predictive maintenance.
+            </p>
+            
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                to="/contact"
+                className="group bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-violet-500/25 hover:scale-105"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="border border-violet-400 text-violet-400 px-8 py-4 rounded-lg font-semibold hover:bg-violet-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+              >
+                Watch Demo
+              </Link>
+            </div>
+            {/* Autonomous Stats */}
+            
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {autonomousStats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  
+        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 flex items-center justify-center">
+                    {stat.icon}
+                  </div>
+                  
+        <div className="text-3xl font-bold text-violet-400 mb-2">{stat.number}</div>
+                  
+        <div className="text-gray-300 text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">
+                  Advanced Autonomous Features
+                </span>
+              </h2>
+              
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to build and manage autonomous systems
+              </p>
             </div>
             
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

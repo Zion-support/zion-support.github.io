@@ -198,6 +198,178 @@ const testimonials = [
           </div>
         </section>
         {/* Features Section */}
+
+
+
+export default function AIAPIManager() {
+  return (
+    <>
+      <Helmet>
+        <title>A I A P I Manager - Zion Tech Group</title>
+        <meta name="description" content="Advanced a i a p i manager solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>AI API Manager - AI-Powered API Orchestration & Management Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Orchestrate your APIs with AI API Manager - the ultimate AI-powered API orchestration platform. Smart load balancing, versioning, and developer tools. Starting at $39/month."
+        />
+        <meta
+          name="keywords"
+          content="API orchestration, API management, load balancing, API versioning, microservices, API monitoring, developer tools, AI API manager"
+        />
+      </Helmet>
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.3),transparent_50%)]"></div>
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          
+        <div className="max-w-7xl mx-auto text-center">
+            
+        <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6">
+              <Settings className="w-4 h-4 text-indigo-400 mr-2" />
+              <span className="text-indigo-400 text-sm font-medium">#1 API Orchestration Platform 2024</span>
+            </div>
+            
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 animate-pulse">
+                AI API Manager
+              </span>
+              
+        <div className="absolute -inset-1 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
+            </h1>
+            
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              The ultimate AI-powered API orchestration platform that simplifies complex API management with intelligent automation. 
+              Smart load balancing, versioning, and comprehensive developer tools.
+            </p>
+            
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                to="/contact"
+                className="group bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-indigo-500/25 hover:scale-105"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+              >
+                Watch Demo
+              </Link>
+            </div>
+            {/* Manager Stats */}
+            
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {managerStats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  
+        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 flex items-center justify-center">
+                    {stat.icon}
+                  </div>
+                  
+        <div className="text-3xl font-bold text-indigo-400 mb-2">{stat.number}</div>
+                  
+        <div className="text-gray-300 text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Features Section */}
+
+
+
+export default function AIAPIManager() {
+  return (
+    <>
+      <Helmet>
+        <title>A I A P I Manager - Zion Tech Group</title>
+        <meta name="description" content="Advanced a i a p i manager solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>AI API Manager - AI-Powered API Orchestration & Management Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Orchestrate your APIs with AI API Manager - the ultimate AI-powered API orchestration platform. Smart load balancing, versioning, and developer tools. Starting at $39/month."
+        />
+        <meta
+          name="keywords"
+          content="API orchestration, API management, load balancing, API versioning, microservices, API monitoring, developer tools, AI API manager"
+        />
+      </Helmet>
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.3),transparent_50%)]"></div>
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          
+        <div className="max-w-7xl mx-auto text-center">
+            
+        <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6">
+              <Settings className="w-4 h-4 text-indigo-400 mr-2" />
+              <span className="text-indigo-400 text-sm font-medium">#1 API Orchestration Platform 2024</span>
+            </div>
+            
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 animate-pulse">
+                AI API Manager
+              </span>
+              
+        <div className="absolute -inset-1 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
+            </h1>
+            
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              The ultimate AI-powered API orchestration platform that simplifies complex API management with intelligent automation. 
+              Smart load balancing, versioning, and comprehensive developer tools.
+            </p>
+            
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                to="/contact"
+                className="group bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-indigo-500/25 hover:scale-105"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+              >
+                Watch Demo
+              </Link>
+            </div>
+            {/* Manager Stats */}
+            
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {managerStats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  
+        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 flex items-center justify-center">
+                    {stat.icon}
+                  </div>
+                  
+        <div className="text-3xl font-bold text-indigo-400 mb-2">{stat.number}</div>
+                  
+        <div className="text-gray-300 text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">

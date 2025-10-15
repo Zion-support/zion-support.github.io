@@ -137,6 +137,58 @@ const testimonials = [
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         
+
+
+
+export default function ZionWorkflowAutomation() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Workflow Automation - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion workflow automation solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Workflow Automation - AI-Powered Business Process Automation | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Automate your business processes with Zion Workflow Automation - the ultimate AI-powered workflow platform. Visual builder, 200+ integrations, and advanced analytics. Starting at $39/month."
+        />
+        <meta
+          name="keywords"
+          content="workflow automation, business process automation, workflow builder, process optimization, task automation, workflow analytics, Zion Workflow Automation"
+        />
+      </Helmet>
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        
+
+
+
+export default function ZionWorkflowAutomation() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Workflow Automation - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion workflow automation solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Workflow Automation - AI-Powered Business Process Automation | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Automate your business processes with Zion Workflow Automation - the ultimate AI-powered workflow platform. Visual builder, 200+ integrations, and advanced analytics. Starting at $39/month."
+        />
+        <meta
+          name="keywords"
+          content="workflow automation, business process automation, workflow builder, process optimization, task automation, workflow analytics, Zion Workflow Automation"
+        />
+      </Helmet>
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        
         <div className="absolute inset-0 bg-gradient-to-r from-violet-500/10 via-purple-500/10 to-fuchsia-500/10 animate-pulse"></div>
         
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.3),transparent_50%)]"></div>

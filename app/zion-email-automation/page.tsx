@@ -134,6 +134,52 @@ const testimonials = [
         />
       </Helmet>
       
+
+
+
+export default function ZionEmailAutomation() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Email Automation - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion email automation solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Email Automation - AI-Powered Email Marketing Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Automate your email marketing with Zion Email Automation - the ultimate AI-powered email platform. Advanced workflows, personalization, and analytics. Starting at $29/month."
+        />
+        <meta
+          name="keywords"
+          content="email marketing, email automation, email campaigns, list management, personalization, email analytics, A/B testing, Zion Email Automation"
+        />
+      </Helmet>
+      
+
+
+
+export default function ZionEmailAutomation() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Email Automation - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion email automation solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Email Automation - AI-Powered Email Marketing Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Automate your email marketing with Zion Email Automation - the ultimate AI-powered email platform. Advanced workflows, personalization, and analytics. Starting at $29/month."
+        />
+        <meta
+          name="keywords"
+          content="email marketing, email automation, email campaigns, list management, personalization, email analytics, A/B testing, Zion Email Automation"
+        />
+      </Helmet>
+      
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         

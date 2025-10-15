@@ -133,6 +133,50 @@ const testimonials = [
           content="inventory management, inventory tracking, automated reordering, multi-location inventory, barcode scanning, inventory analytics, Zion Inventory Smart"
         />
       </Helmet>
+
+
+
+export default function ZionInventorySmart() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Inventory Smart - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion inventory smart solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Inventory Smart - AI-Powered Inventory Management Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Optimize your inventory with Zion Inventory Smart - the ultimate AI-powered inventory management platform. Smart tracking, automated reordering, and multi-location management. Starting at $29/month."
+        />
+        <meta
+          name="keywords"
+          content="inventory management, inventory tracking, automated reordering, multi-location inventory, barcode scanning, inventory analytics, Zion Inventory Smart"
+        />
+      </Helmet>
+
+
+
+export default function ZionInventorySmart() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Inventory Smart - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion inventory smart solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Inventory Smart - AI-Powered Inventory Management Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Optimize your inventory with Zion Inventory Smart - the ultimate AI-powered inventory management platform. Smart tracking, automated reordering, and multi-location management. Starting at $29/month."
+        />
+        <meta
+          name="keywords"
+          content="inventory management, inventory tracking, automated reordering, multi-location inventory, barcode scanning, inventory analytics, Zion Inventory Smart"
+        />
+      </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}

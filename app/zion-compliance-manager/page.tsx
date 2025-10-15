@@ -136,6 +136,56 @@ const testimonials = [
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
+
+
+
+export default function ZionComplianceManager() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Compliance Manager - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion compliance manager solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Compliance Manager - AI-Powered Compliance Management Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Streamline compliance with Zion Compliance Manager - the ultimate AI-powered compliance platform. Automated monitoring, risk assessment, and audit preparation. Starting at $49/month."
+        />
+        <meta
+          name="keywords"
+          content="compliance management, regulatory compliance, risk assessment, audit preparation, GDPR, HIPAA, SOC 2, compliance monitoring, Zion Compliance Manager"
+        />
+      </Helmet>
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+
+
+
+export default function ZionComplianceManager() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Compliance Manager - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion compliance manager solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Compliance Manager - AI-Powered Compliance Management Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Streamline compliance with Zion Compliance Manager - the ultimate AI-powered compliance platform. Automated monitoring, risk assessment, and audit preparation. Starting at $49/month."
+        />
+        <meta
+          name="keywords"
+          content="compliance management, regulatory compliance, risk assessment, audit preparation, GDPR, HIPAA, SOC 2, compliance monitoring, Zion Compliance Manager"
+        />
+      </Helmet>
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
         
         <div className="absolute inset-0 bg-gradient-to-r from-slate-500/10 via-gray-500/10 to-slate-500/10 animate-pulse"></div>
         

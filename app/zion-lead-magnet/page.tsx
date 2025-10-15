@@ -129,6 +129,42 @@ const testimonials = [
           content="Generate more leads with Zion Lead Magnet - the ultimate AI-powered lead generation platform. Advanced forms, email automation, lead scoring, and CRM integration. Starting at $29/month."
         />
         <meta
+
+
+
+export default function ZionLeadMagnet() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Lead Magnet - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion lead magnet solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Lead Magnet - AI-Powered Lead Generation Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Generate more leads with Zion Lead Magnet - the ultimate AI-powered lead generation platform. Advanced forms, email automation, lead scoring, and CRM integration. Starting at $29/month."
+        />
+        <meta
+
+
+
+export default function ZionLeadMagnet() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Lead Magnet - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion lead magnet solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Lead Magnet - AI-Powered Lead Generation Platform | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Generate more leads with Zion Lead Magnet - the ultimate AI-powered lead generation platform. Advanced forms, email automation, lead scoring, and CRM integration. Starting at $29/month."
+        />
+        <meta
           name="keywords"
           content="lead generation, lead capture, email automation, lead scoring, CRM integration, lead magnets, conversion optimization, Zion Lead Magnet"
         />

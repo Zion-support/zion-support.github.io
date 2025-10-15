@@ -1,47 +1,46 @@
-import { ArrowRight, Box, Target, CheckCircle, Globe, Sparkles, Star } from 'lucide-react';
+import { ArrowRight, Box, Target, CheckCircle, Globe, Sparkles, Star, Zap, FileText, Users, Clock } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AI3DGeneration() {
-  return;
-},
-    {
-      title: "Real-time Rendering",
-      description: "Real-time 3D rendering with photorealistic materials, lighting, and textures for instant previews",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Animation Generation",
-      description: "Create smooth 3D animations and motion graphics with AI-powered keyframe generation",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Material Library",
-      description: "Extensive library of AI-generated materials, textures, and shaders for realistic 3D objects",
-      icon: <FileText className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Team Collaboration",
-      description: "Collaborate on 3D projects with real-time editing, comments, and version control",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Export & Integration",
-      description: "Export to popular 3D formats and integrate with Blender, Maya, Unity, and other 3D software",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    }
-  ];
+
+const features = [
+  {
+    title: "Real-time Rendering",
+    description: "Real-time 3D rendering with photorealistic materials, lighting, and textures for instant previews",
+    icon: <Zap className="w-6 h-6" />,
+    included: true
+  },
+  {
+    title: "Animation Generation",
+    description: "Create smooth 3D animations and motion graphics with AI-powered keyframe generation",
+    icon: <Target className="w-6 h-6" />,
+    included: true
+  },
+  {
+    title: "Material Library",
+    description: "Extensive library of AI-generated materials, textures, and shaders for realistic 3D objects",
+    icon: <FileText className="w-6 h-6" />,
+    included: true
+  },
+  {
+    title: "Team Collaboration",
+    description: "Collaborate on 3D projects with real-time editing, comments, and version control",
+    icon: <Users className="w-6 h-6" />,
+    included: true
+  },
+  {
+    title: "Export & Integration",
+    description: "Export to popular 3D formats and integrate with Blender, Maya, Unity, and other 3D software",
+    icon: <Globe className="w-6 h-6" />,
+    included: true
+  }
+];
 
 const pricingPlans = [
-    {
-      name: "Creator",
-      price: 39,
-      period: "month",
-      description: "Perfect for individual creators",
+  {
+    name: "Creator",
+    price: 39,
+    period: "month",
+    description: "Perfect for individual creators",
       features: [
         "Up to 100 3D models/month",
         "Basic materials",
@@ -121,21 +120,20 @@ const testimonials = [
       avatar: "DK"
     }
   ];
+
+export default function AI3DGeneration() {
   return (
     <>
       <Helmet>
-        <title>AI 3D Generation - AI-Powered 3D Modeling & Animation Platform | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Create stunning 3D models with AI 3D Generation - the ultimate AI-powered 3D modeling platform. Generate models from text, images, and sketches with real-time rendering. Starting at $39/month."
-        />
+        <title>AI 3D Generation - Zion Tech Group</title>
+        <meta name="description" content="Transform your ideas into stunning 3D models with our AI-powered 3D generation platform. Create photorealistic 3D content in minutes." />
         <meta
           name="keywords"
           content="AI 3D generation, 3D modeling, 3D animation, 3D rendering, AI modeling, 3D design, product visualization, architectural rendering"
         />
       </Helmet>
       
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-rose-500/10 animate-pulse"></div>

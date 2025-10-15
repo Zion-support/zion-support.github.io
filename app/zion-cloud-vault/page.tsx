@@ -129,6 +129,40 @@ const testimonials = [
           name="description"
           content="Secure your files with Zion Cloud Vault - the ultimate cloud storage solution. Military-grade encryption, real-time sync, team collaboration, and compliance features. Starting at $9/month."
         />
+
+
+
+export default function ZionCloudVault() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Cloud Vault - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion cloud vault solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Cloud Vault - Secure Cloud Storage & File Sharing | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Secure your files with Zion Cloud Vault - the ultimate cloud storage solution. Military-grade encryption, real-time sync, team collaboration, and compliance features. Starting at $9/month."
+        />
+
+
+
+export default function ZionCloudVault() {
+  return (
+    <>
+      <Helmet>
+        <title>Zion Cloud Vault - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion cloud vault solutions powered by AI technology." />
+      </Helmet>
+      
+      <Helmet>
+        <title>Zion Cloud Vault - Secure Cloud Storage & File Sharing | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Secure your files with Zion Cloud Vault - the ultimate cloud storage solution. Military-grade encryption, real-time sync, team collaboration, and compliance features. Starting at $9/month."
+        />
         <meta
           name="keywords"
           content="cloud storage, file sharing, secure storage, team collaboration, file sync, data backup, encryption, compliance, Zion Cloud Vault"
