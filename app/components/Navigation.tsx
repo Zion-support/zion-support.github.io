@@ -172,7 +172,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Image Generator', href: '/zion-ai-image-generator', icon: EyeIcon },
         { name: 'AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber', icon: DocumentTextIcon },
         { name: 'AI Customer Churn Predictor', href: '/zion-ai-customer-churn-predictor', icon: ChartBarIcon },
-        { name: 'AI Customer Sentiment Tracker', href: '/zion-ai-customer-sentiment-tracker', icon: ChartBarIcon }
+        { name: 'AI Customer Sentiment Tracker', href: '/zion-ai-customer-sentiment-tracker', icon: ChartBarIcon },
+        { name: 'AI Project Manager', href: '/ai-project-manager', icon: ChartBarIcon },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro', icon: UserGroupIcon },
+        { name: 'AI Workflow Automator Pro', href: '/ai-workflow-automator-pro', icon: CogIcon }
       ]
     },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
@@ -221,8 +224,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
       <div className="absolute inset-0 opacity-30">
-        <div className="cyber-grid"></div>
+        <div className="cyber-grid-advanced"></div>
       </div>
+      <div className="absolute inset-0 quantum-field"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between h-16">
@@ -232,7 +236,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               <div className="h-8 w-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
-              <span className="ml-2 text-white font-bold text-xl group-hover:text-cyan-300 transition-colors holographic-text">Zion Tech Group</span>
+              <span className="ml-2 text-white font-bold text-xl group-hover:text-cyan-300 transition-colors holographic-text-enhanced">Zion Tech Group</span>
             </Link>
           </div>
 

@@ -124,7 +124,8 @@ const HomePage: React.FC = () => {
         {/* Hero Section */}
         <section className="relative overflow-hidden min-h-screen flex items-center">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-slate-900 to-cyan-900/30"></div>
-          <div className="absolute inset-0 cyber-grid-enhanced opacity-20"></div>
+          <div className="absolute inset-0 cyber-grid-advanced opacity-20"></div>
+          <div className="absolute inset-0 quantum-field"></div>
           
           {/* Quantum Particles */}
           <div className="quantum-particles">
@@ -161,9 +162,9 @@ const HomePage: React.FC = () => {
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
               <div className="text-center">
                 <div className="relative inline-block mb-6">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold holographic leading-tight neon-text">
-                    Zion Tech Group
-                  </h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold holographic-text-enhanced leading-tight neon-text-3d">
+                  Zion Tech Group
+                </h1>
                   <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-lg blur opacity-30 animate-pulse"></div>
                   <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 rounded-lg blur opacity-20 animate-pulse delay-1000"></div>
                 </div>
@@ -276,7 +277,7 @@ const HomePage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-                Featured <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent neon-text">Micro SAAS Solutions</span>
+                Featured <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent neon-text-3d cyber-pulse">Micro SAAS Solutions</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
                 Discover our innovative micro SAAS applications designed to solve specific business challenges with real functionality and AI-powered intelligence.
@@ -491,43 +492,43 @@ const HomePage: React.FC = () => {
                 </Link>
               </div>
 
-              {/* AI Financial Forecaster */}
+              {/* AI Project Manager */}
               <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/20 cyber-circuit">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
                     <ChartBarIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-yellow-400 font-medium neon-text">Finance AI</span>
+                  <span className="text-sm text-yellow-400 font-medium neon-text">Project AI</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
-                  AI Financial Forecaster Pro
+                  AI Project Manager Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Advanced financial forecasting with AI-powered predictions, risk analysis, and investment recommendations using machine learning.
+                  Intelligent project management with AI-powered planning, team optimization, and real-time analytics. Increase productivity by 40%.
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-yellow-400 neon-text">$399/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$699/mo</span>
+                  <span className="text-2xl font-bold text-yellow-400 neon-text">$149/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$299/mo</span>
                 </div>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>95% accuracy predictions</span>
+                    <span>40% faster project delivery</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Real-time market analysis</span>
+                    <span>AI-powered planning</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Risk assessment & alerts</span>
+                    <span>Smart team management</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Portfolio optimization</span>
+                    <span>Real-time tracking</span>
                   </div>
                 </div>
-                <Link to="/zion-ai-financial-forecaster"
+                <Link to="/ai-project-manager"
                   className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
@@ -577,43 +578,86 @@ const HomePage: React.FC = () => {
                 </Link>
               </div>
 
-              {/* AI Translation Service */}
+              {/* AI Customer Support Pro */}
               <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 cyber-circuit">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
-                    <GlobeAltIcon className="w-6 h-6 text-white" />
+                    <UserGroupIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-blue-400 font-medium neon-text">AI Translate</span>
+                  <span className="text-sm text-blue-400 font-medium neon-text">Support AI</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
-                  AI Translation Service Pro
+                  AI Customer Support Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Advanced AI-powered translation service supporting 100+ languages with context-aware translations and real-time processing.
+                  Transform customer support with AI-powered chatbots, smart ticket routing, and real-time analytics. Increase satisfaction by 95%.
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-blue-400 neon-text">$99/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$199/mo</span>
+                  <span className="text-2xl font-bold text-blue-400 neon-text">$299/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$599/mo</span>
                 </div>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>100+ languages supported</span>
+                    <span>95% customer satisfaction</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Context-aware translations</span>
+                    <span>AI-powered chatbots</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Real-time processing</span>
+                    <span>Smart ticket routing</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>API integration</span>
+                    <span>Real-time analytics</span>
                   </div>
                 </div>
-                <Link to="/zion-ai-translation-service"
+                <Link to="/ai-customer-support-pro"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+              
+              {/* AI Workflow Automator Pro */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/20 cyber-circuit">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <CogIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-green-400 font-medium neon-text">Workflow AI</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
+                  AI Workflow Automator Pro
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Automate business processes with AI-powered workflow automation. Reduce manual work by 90% and increase efficiency by 60%.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-green-400 neon-text">$499/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$999/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>90% manual work reduction</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Intelligent automation</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Real-time monitoring</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Advanced analytics</span>
+                  </div>
+                </div>
+                <Link to="/ai-workflow-automator-pro"
                   className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial

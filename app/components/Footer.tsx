@@ -29,15 +29,15 @@ const Footer: React.FC = memo(() => {
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             <div className="lg:col-span-2">
-              <h3 className="text-2xl font-bold mb-6 holographic-text font-['Orbitron'] cyber-glitch" data-text="ZION TECH GROUP">ZION TECH GROUP</h3>
+              <h3 className="text-2xl font-bold mb-6 holographic-text-enhanced font-['Orbitron'] cyber-glitch" data-text="ZION TECH GROUP">ZION TECH GROUP</h3>
               <p className="text-gray-300 mb-6 leading-relaxed matrix-text">
                 Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
               </p>
               <div className="space-y-2 text-sm text-gray-300">
-                <p className="flex items-center"><strong className="text-cyan-400 mr-2">📞</strong> <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors neon-glow">+1 302 464 0950</a></p>
-                <p className="flex items-center"><strong className="text-cyan-400 mr-2">✉️</strong> <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-300 transition-colors">kleber@ziontechgroup.com</a></p>
+                <p className="flex items-center"><strong className="text-cyan-400 mr-2">📞</strong> <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors neon-glow-enhanced">+1 (302) 464-0950</a></p>
+                <p className="flex items-center"><strong className="text-cyan-400 mr-2">✉️</strong> <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-300 transition-colors neon-glow">kleber@ziontechgroup.com</a></p>
                 <p className="flex items-center"><strong className="text-cyan-400 mr-2">📍</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
-                <p className="flex items-center"><strong className="text-cyan-400 mr-2">🌐</strong> <a href="https://ziontechgroup.com" className="hover:text-cyan-300 transition-colors">https://ziontechgroup.com</a></p>
+                <p className="flex items-center"><strong className="text-cyan-400 mr-2">🌐</strong> <a href="https://ziontechgroup.com" className="hover:text-cyan-300 transition-colors neon-glow">https://ziontechgroup.com</a></p>
               </div>
               <div className="flex space-x-4 mt-4">
                 <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-cyan-300 transition-colors neon-glow p-2 rounded-lg hover:bg-cyan-500/10">
