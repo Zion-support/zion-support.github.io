@@ -1,5 +1,5 @@
-'use client',";
-      import { Helmet } from 'react-helmet-async',";
+'use client',"
+      import { Helmet } from 'react-helmet-async',"
       import {},
       Server,
       Cloud,
@@ -24,24 +24,23 @@
       ShoppingCart,
       Search,
       Target,
-      Workflow;
-} from 'lucide-react';";
-
+      Workflow
+} from 'lucide-react'
 const ItServicesPage: React.FC = () => {
   return (
-    <>;
-      <SEOHead;
-        title="It Services - Zion Tech Group"";";
-        description="Professional it services solutions for modern businesses";";
-      />";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
-        <div: className ="text-center">";";
-          <h1: className ="text-4xl font-bold mb-4">It Services</h1>";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
-        </div>;
-      </div>;
-    </>;
+    <>
+      <SEOHead
+        title="It Services - Zion Tech Group""
+        description="Professional it services solutions for modern businesses"
+      />"
+      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
+        <div  className ="text-center">"
+          <h1  className ="text-4xl font-bold mb-4">It Services</h1>"
+          <p  className ="text-gray-300">Professional solutions coming soon...</p>;"
+        </div>
+      </div>
+    </>
   ),
-};
-;
-export default ItServicesPage;'";'";";";
+}
+
+export default ItServicesPage;'";'";"
