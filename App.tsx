@@ -69,17 +69,8 @@ const LoadingFallback = () => (
 
 export default function App() {
   useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      // Preload critical fonts
-      const fontPreload = document.createElement('link')
-      fontPreload.rel = 'preload'
-      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
-      fontPreload.as = 'style'
-      document.head.appendChild(fontPreload)
-    }
-
-    preloadCriticalResources()
+    // Initialize any necessary client-side features
+    console.log('App initialized successfully')
   }, [])
 
   return (
