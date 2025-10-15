@@ -12,7 +12,6 @@ import ITServicesPage from './app/it-services/page';
 import CloudInfrastructurePage from './app/cloud-infrastructure/page';
 import TeamPage from './app/team/page';
 import CareersPage from './app/careers/page';
-import BlogPage from './app/blog/page';
 import HelpPage from './app/help/page';
 import PrivacyPage from './app/privacy/page';
 import TermsPage from './app/terms/page';
@@ -28,7 +27,7 @@ import DatabaseManagementPage from './app/database-management/page';
 import MobileDevelopmentPage from './app/mobile-development/page';
 import NetworkInfrastructurePage from './app/network-infrastructure/page';
 import WebDevelopmentPage from './app/web-development/page';
-import MicroSAASSolutionsPage from './app/micro-saas-solutions/page';
+import MicroSaasSolutionsPage from './app/micro-saas-solutions/page';
 import APIDocsPage from './app/api-docs/page';
 import AccessibilityPage from './app/accessibility/page';
 import AIContentGeneratorPage from './app/ai-content-generator/page';
@@ -51,6 +50,7 @@ import ZionAIWorkflowAutomatorPage from './app/zion-ai-workflow-automator/page';
 import ZionAIWorkflowAutomatorProPage from './app/zion-ai-workflow-automator-pro/page';
 import ZionCustomerSatisfactionMonitorPage from './app/zion-customer-satisfaction-monitor/page';
 import ZionSmartExpenseTrackerPage from './app/zion-smart-expense-tracker/page';
+import BlogPage from './app/blog/page';
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -113,19 +113,15 @@ export default function App() {
                   <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
                   <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
                   <Route path="/web-development" element={<WebDevelopmentPage />} />
-                  <Route path="/micro-saas-solutions" element={<MicroSAASSolutionsPage />} />
+                  <Route path="/micro-saas-solutions" element={<MicroSaasSolutionsPage />} />
                   <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
                   
                   {/* Company Pages */}
                   <Route path="/team" element={<TeamPage />} />
                   <Route path="/careers" element={<CareersPage />} />
                   <Route path="/partnerships" element={<PartnershipsPage />} />
-                  
-                  {/* Content Pages */}
-                  <Route path="/blog" element={<BlogPage />} />
                   <Route path="/case-studies" element={<CaseStudiesPage />} />
                   <Route path="/pricing" element={<PricingPage />} />
-                  <Route path="/api-docs" element={<APIDocsPage />} />
                   
                   {/* Support Pages */}
                   <Route path="/help" element={<HelpPage />} />
@@ -133,6 +129,10 @@ export default function App() {
                   <Route path="/terms" element={<TermsPage />} />
                   <Route path="/cookies" element={<CookiesPage />} />
                   <Route path="/accessibility" element={<AccessibilityPage />} />
+                  
+                  {/* Additional Pages */}
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/api-docs" element={<APIDocsPage />} />
                   
                   {/* AI Tools Pages */}
                   <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
