@@ -42,24 +42,30 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6 text-cyan-400">AI Services</h4>
             <ul className="space-y-3">
-              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">All AI Services</Link></li>
+              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors font-semibold">All AI Services</Link></li>
               <li><Link to="/ai-content-generator" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Content Generator</Link></li>
-              <li><Link to="/ai-customer-support-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Customer Support</Link></li>
+              <li><Link to="/ai-customer-support-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Customer Support Pro</Link></li>
               <li><Link to="/ai-document-analyzer" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Document Analyzer</Link></li>
               <li><Link to="/ai-sales-predictor" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Sales Predictor</Link></li>
-              <li><Link to="/ai-translator" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Translator</Link></li>
+              <li><Link to="/ai-video-generator" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Video Generator</Link></li>
+              <li><Link to="/ai-code-reviewer" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Code Reviewer</Link></li>
+              <li><Link to="/ai-consulting-services" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Consulting</Link></li>
+              <li><Link to="/ai-ml-platform" className="text-gray-300 hover:text-cyan-400 transition-colors">AI/ML Platform</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-lg font-semibold mb-6 text-cyan-400">IT Solutions</h4>
             <ul className="space-y-3">
-              <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">All IT Services</Link></li>
+              <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors font-semibold">All IT Services</Link></li>
               <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors">Cloud Infrastructure</Link></li>
               <li><Link to="/web-development" className="text-gray-300 hover:text-cyan-400 transition-colors">Web Development</Link></li>
               <li><Link to="/mobile-development" className="text-gray-300 hover:text-cyan-400 transition-colors">Mobile Development</Link></li>
               <li><Link to="/database-management" className="text-gray-300 hover:text-cyan-400 transition-colors">Database Management</Link></li>
               <li><Link to="/devops-automation" className="text-gray-300 hover:text-cyan-400 transition-colors">DevOps & Automation</Link></li>
+              <li><Link to="/microservices-architecture" className="text-gray-300 hover:text-cyan-400 transition-colors">Microservices Architecture</Link></li>
+              <li><Link to="/data-engineering" className="text-gray-300 hover:text-cyan-400 transition-colors">Data Engineering</Link></li>
+              <li><Link to="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors">Cybersecurity</Link></li>
             </ul>
           </div>
           

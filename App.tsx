@@ -26,7 +26,22 @@ const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
 const DigitalTransformationPage = lazy(() => import('./app/digital-transformation/page'));
 const MicroSAASSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
 const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
+const AIVideoGeneratorPage = lazy(() => import('./app/ai-video-generator/page'));
+const AICodeReviewerPage = lazy(() => import('./app/ai-code-reviewer/page'));
+const AIConsultingServicesPage = lazy(() => import('./app/ai-consulting-services/page'));
+const AIMLPlatformPage = lazy(() => import('./app/ai-ml-platform/page'));
+const AICybersecurityMonitorPage = lazy(() => import('./app/ai-cybersecurity-monitor/page'));
+const AIHRAssistantPage = lazy(() => import('./app/ai-hr-assistant/page'));
+const AISupplyChainOptimizerPage = lazy(() => import('./app/ai-supply-chain-optimizer/page'));
+const AIEnergyMonitorPage = lazy(() => import('./app/ai-energy-monitor/page'));
+const AIQualityAssurancePage = lazy(() => import('./app/ai-quality-assurance/page'));
+const AIProjectManagerPage = lazy(() => import('./app/ai-project-manager/page'));
 const DataAnalyticsPage = lazy(() => import('./app/data-analytics/page'));
+const DataEngineeringPage = lazy(() => import('./app/data-engineering/page'));
+const MicroservicesArchitecturePage = lazy(() => import('./app/microservices-architecture/page'));
+const EnterpriseIntegrationPage = lazy(() => import('./app/enterprise-integration/page'));
+const PerformanceOptimizationPage = lazy(() => import('./app/performance-optimization/page'));
+const DisasterRecoveryPage = lazy(() => import('./app/disaster-recovery/page'));
 const WebDevelopmentPage = lazy(() => import('./app/web-development/page'));
 const MobileDevelopmentPage = lazy(() => import('./app/mobile-development/page'));
 const DatabaseManagementPage = lazy(() => import('./app/database-management/page'));
@@ -139,6 +154,23 @@ export default function App() {
                   
                   {/* AI Tools Pages */}
                   <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                  <Route path="/ai-video-generator" element={<AIVideoGeneratorPage />} />
+                  <Route path="/ai-code-reviewer" element={<AICodeReviewerPage />} />
+                  <Route path="/ai-consulting-services" element={<AIConsultingServicesPage />} />
+                  <Route path="/ai-ml-platform" element={<AIMLPlatformPage />} />
+                  <Route path="/ai-cybersecurity-monitor" element={<AICybersecurityMonitorPage />} />
+                  <Route path="/ai-hr-assistant" element={<AIHRAssistantPage />} />
+                  <Route path="/ai-supply-chain-optimizer" element={<AISupplyChainOptimizerPage />} />
+                  <Route path="/ai-energy-monitor" element={<AIEnergyMonitorPage />} />
+                  <Route path="/ai-quality-assurance" element={<AIQualityAssurancePage />} />
+                  <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
+                  
+                  {/* IT Solutions Pages */}
+                  <Route path="/data-engineering" element={<DataEngineeringPage />} />
+                  <Route path="/microservices-architecture" element={<MicroservicesArchitecturePage />} />
+                  <Route path="/enterprise-integration" element={<EnterpriseIntegrationPage />} />
+                  <Route path="/performance-optimization" element={<PerformanceOptimizationPage />} />
+                  <Route path="/disaster-recovery" element={<DisasterRecoveryPage />} />
                   
                   {/* Zion AI Tools */}
                   <Route path="/zion-ai-content-moderator" element={<ZionAIContentModeratorPage />} />
