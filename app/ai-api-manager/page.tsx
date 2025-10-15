@@ -1,9 +1,7 @@
-import { ArrowRight, Target, CheckCircle, Globe } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { ArrowRight, Target, CheckCircle, Globe, Zap, BarChart3, Shield, Users, Settings, Clock } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 export default function AIAPIManager() {
-  return;
-},
     {
       title: "Smart Load Balancing",
       description: "Intelligent load balancing with predictive scaling and automatic failover for optimal performance",

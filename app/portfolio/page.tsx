@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
+import { Award, Users, Star, Calendar, ArrowRight, ExternalLink, Github } from 'lucide-react';
 
 const PortfolioPage: React.FC = () => {
   const projects = [

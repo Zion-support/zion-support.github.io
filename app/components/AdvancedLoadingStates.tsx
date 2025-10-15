@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { LoadingState } from 'lucide-react';
 interface LoadingState {
   isLoading: boolean;
   progress: number;

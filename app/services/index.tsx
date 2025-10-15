@@ -1,10 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {CheckIcon, CpuChipIcon, ShieldCheckIcon, CloudIcon, ChartBarIcon, CurrencyDollarIcon, ClockIcon} from '@heroicons/react/24/outline';
-import { StarIcon } from '@heroicons/react/24/solid';
-import { Clock } from 'lucide-react';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { Star, CurrencyDollarIcon, Clock, CheckCircle, ArrowRight, IconComponent } from 'lucide-react';
 
 const Services: React.FC = () => {
   const microSaasServices = [
@@ -155,7 +152,7 @@ const enterpriseServices = [
                     </span>
                     
         <div className="flex items-center text-yellow-400">
-                      <StarIcon className="w-4 h-4 fill-current" />
+                      <Star className="w-4 h-4 fill-current" />
                       <span className="ml-1 text-sm font-semibold">4.9</span>
                     </div>
                   </div>
@@ -171,7 +168,7 @@ const enterpriseServices = [
                     </div>
                     
         <div className="flex items-center text-gray-400">
-                      <ClockIcon className="w-4 h-4 mr-1" />
+                      <Clock className="w-4 h-4 mr-1" />
                       <span className="text-sm">Setup in 5 min</span>
                     </div>
                   </div>
@@ -179,7 +176,7 @@ const enterpriseServices = [
                 <ul className="space-y-3 mb-8">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -191,7 +188,7 @@ const enterpriseServices = [
                     className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
                   >
                     Get Started
-                    <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <button className="w-full border border-gray-600 text-gray-300 py-3 rounded-lg font-semibold hover:bg-gray-700 hover:text-white transition-all duration-300">
                     View Demo
@@ -207,7 +204,7 @@ const enterpriseServices = [
               className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold text-lg group"
             >
               View All Micro SAAS Solutions
-              <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
@@ -242,7 +239,7 @@ const enterpriseServices = [
                   <ul className="space-y-2 mb-8">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckIcon className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         <span className="text-sm">{feature}</span>
                       </li>
                     ))}
@@ -252,7 +249,7 @@ const enterpriseServices = [
                     className="text-purple-400 hover:text-purple-300 font-semibold flex items-center group"
                   >
                     Learn More
-                    <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               );
@@ -289,19 +286,19 @@ const enterpriseServices = [
           <p className="text-gray-300 mb-8">Perfect for small businesses getting started with AI</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   <span>2 Micro SAAS tools</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   <span>Email support</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   <span>Basic analytics</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   <span>5GB storage</span>
                 </li>
               </ul>
@@ -328,23 +325,23 @@ const enterpriseServices = [
           <p className="text-gray-300 mb-8">Ideal for growing businesses with advanced needs</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   <span>Unlimited Micro SAAS tools</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   <span>Priority support</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   <span>Advanced analytics</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   <span>100GB storage</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   <span>API access</span>
                 </li>
               </ul>
@@ -364,23 +361,23 @@ const enterpriseServices = [
           <p className="text-gray-300 mb-8">Tailored solutions for large organizations</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   <span>Custom AI solutions</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   <span>Dedicated support</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   <span>Custom integrations</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   <span>Unlimited storage</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   <span>SLA guarantee</span>
                 </li>
               </ul>

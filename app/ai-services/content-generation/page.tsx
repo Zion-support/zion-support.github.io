@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
 
 const ContentGenerationPage: React.FC = () => { return (
     <> <Helmet> <title>Content Generation</title> <meta name="description" content="Professional content generation solutions and services" /> <meta name="keywords" content="content, generation" /> </Helmet> 

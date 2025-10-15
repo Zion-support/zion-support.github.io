@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, CheckCircle, Phone, Play, Star } from 'lucide-react';
+import { Brain, Shield, Users, Star, Phone, Play, CheckCircle, ArrowRight, Mail } from 'lucide-react';
 
 const AIProjectManagerProPage = () => {
   const features = [

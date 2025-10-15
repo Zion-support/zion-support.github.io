@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-import {BarChart3, Zap, Users, Mail, Lock} from 'lucide-react';
-import { Shield } from 'lucide-react';
+import { Brain, Eye, BarChart3, Globe, Shield, CreditCard, Users, Lock, Coins, AlertTriangle, Heart, EnhancedSEO, ArrowRight, Play, Zap, CheckCircle, Star, Mail, Phone, MapPin, Calendar } from 'lucide-react';
 const ZionAIFraudDetectionPro = () => {
   return;
 },

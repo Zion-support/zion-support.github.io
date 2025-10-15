@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, CheckCircle, Globe, Phone, Play, Star, Target } from 'lucide-react';
+import { BarChart3, Brain, Target, Globe, Shield, Zap, Star, Phone, Play, CheckCircle, ArrowRight, Mail } from 'lucide-react';
 
 const AiAnalyticsDashboardProPage = () => {
   useEffect(() => {

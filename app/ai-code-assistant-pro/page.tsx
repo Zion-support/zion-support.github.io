@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Bug, CheckCircle, Code, GitBranch, Globe, Star, Terminal } from 'lucide-react';
+import { Code, Bug, Brain, FileText, Terminal, GitBranch, Globe, CheckCircle, Star } from 'lucide-react';
 
 const AiCodeAssistantProPage = () => {
   useEffect(() => {

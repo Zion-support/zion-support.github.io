@@ -1,7 +1,7 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Cloud, Code, Database, Shield, Zap } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Zap, Shield, Cloud, Code, Database, ArrowRight } from 'lucide-react';
 
 const ServicesPage: React.FC = () => { const services = [ { icon: <Zap className="w-8 h-8 text-purple-400" />, title: "AI Solutions", description: "Cutting-edge artificial intelligence solutions for business automation and intelligence.", link: "/ai-solutions" }, { icon: <Shield className="w-8 h-8 text-cyan-400" />, title: "Cybersecurity", description: "Comprehensive security solutions to protect your digital assets and data.", link: "/cybersecurity" }, { icon: <Cloud className="w-8 h-8 text-green-400" />, title: "Cloud Services", description: "Scalable cloud infrastructure and migration services for modern businesses.", link: "/cloud-services" }, { icon: <Code className="w-8 h-8 text-yellow-400" />, title: "5G Technology", description: "Next-generation 5G infrastructure and implementation services.", link: "/5g-solutions" }, { icon: <Database className="w-8 h-8 text-red-400" />, title: "Data Analytics", description: "Advanced data analytics and business intelligence solutions.", link: "/data-analytics" } ];
   return (

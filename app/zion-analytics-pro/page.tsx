@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { TrendingUp, Target, Globe, Users, Shield, Star, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionAnalyticsPro() {
-  return;
-},
     {
       title: "Predictive Analytics",
       description: "AI-powered forecasting to predict trends and make data-driven decisions",

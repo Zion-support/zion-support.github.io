@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {CpuChipIcon, EyeIcon, ChatBubbleLeftRightIcon, DocumentTextIcon, LightBulbIcon, CheckCircleIcon, ChartBarIcon, CogIcon, ShieldCheckIcon} from '@heroicons/react/24/outline';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { CheckCircleIcon, Lightbulb, DocumentTextIcon, Cpu, ArrowRight } from 'lucide-react';
 const AISolutionsPage: React.FC = () => {
   const aiServices = [
     {
@@ -130,7 +129,7 @@ const benefits = [
     {
       title: "Better Decision Making",
       description: "Get data-driven insights and recommendations to make informed business decisions.",
-      icon: <LightBulbIcon className="w-6 h-6 text-yellow-500" />
+      icon: <Lightbulb className="w-6 h-6 text-yellow-500" />
     },
     {
       title: "Cost Reduction",
@@ -140,7 +139,7 @@ const benefits = [
     {
       title: "Scalable Solutions",
       description: "AI solutions that grow with your business and adapt to changing needs.",
-      icon: <CpuChipIcon className="w-6 h-6 text-purple-500" />
+      icon: <Cpu className="w-6 h-6 text-purple-500" />
     }
   ];
 
@@ -261,7 +260,7 @@ const industries = [
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold"
                   >
                     Learn More
-                    <ArrowRightIcon className="w-5 h-5 ml-2" />
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </div>
               ))}

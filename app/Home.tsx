@@ -1,10 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {CheckIcon, PlayIcon, ShieldCheckIcon, CpuChipIcon, CloudIcon, ChartBarIcon} from '@heroicons/react/24/outline';
-import { StarIcon } from '@heroicons/react/24/solid';
-import { Shield, Cloud } from 'lucide-react';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { ArrowRight, Play, Cpu, Shield, Cloud, BarChart3, CheckCircle, Star } from 'lucide-react';
 const Home: React.FC = () => {
   return (
     <>
@@ -48,13 +45,13 @@ const Home: React.FC = () => {
                 className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center"
               >
                 Explore Our Services
-                <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/contact"
                 className="group border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center"
               >
-                <PlayIcon className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2" />
                 Get Started Today
               </Link>
             </div>
@@ -107,14 +104,14 @@ const Home: React.FC = () => {
         <div className="group bg-slate-700/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-105">
               
         <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <CpuChipIcon className="w-8 h-8 text-white" />
+                <Cpu className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">AI Solutions</h3>
               
           <p className="text-gray-300 mb-6">Advanced artificial intelligence services including chatbots, automation, and machine learning solutions.</p>
               <Link to="/ai-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center group">
                 Learn More
-                <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
             {/* Cybersecurity */}
@@ -122,14 +119,14 @@ const Home: React.FC = () => {
         <div className="group bg-slate-700/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-105">
               
         <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <ShieldCheckIcon className="w-8 h-8 text-white" />
+                <Shield className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Cybersecurity</h3>
               
           <p className="text-gray-300 mb-6">Enterprise-grade security solutions to protect your data and infrastructure from threats.</p>
               <Link to="/cybersecurity" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center group">
                 Learn More
-                <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
             {/* Cloud Infrastructure */}
@@ -137,14 +134,14 @@ const Home: React.FC = () => {
         <div className="group bg-slate-700/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-105">
               
         <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <CloudIcon className="w-8 h-8 text-white" />
+                <Cloud className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Cloud Infrastructure</h3>
               
           <p className="text-gray-300 mb-6">Scalable cloud solutions and infrastructure management for modern businesses.</p>
               <Link to="/cloud-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center group">
                 Learn More
-                <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
             {/* Micro SAAS */}
@@ -152,14 +149,14 @@ const Home: React.FC = () => {
         <div className="group bg-slate-700/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-105">
               
         <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <ChartBarIcon className="w-8 h-8 text-white" />
+                <BarChart3 className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Micro SAAS</h3>
               
           <p className="text-gray-300 mb-6">Real, useful micro software-as-a-service solutions for specific business needs.</p>
               <Link to="/micro-saas" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center group">
                 Learn More
-                <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
@@ -185,7 +182,7 @@ const Home: React.FC = () => {
         <div className="text-center">
               
         <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckIcon className="w-10 h-10 text-white" />
+                <CheckCircle className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Proven Expertise</h3>
               
@@ -195,7 +192,7 @@ const Home: React.FC = () => {
         <div className="text-center">
               
         <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <StarIcon className="w-10 h-10 text-white" />
+                <Star className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Real Solutions</h3>
               
@@ -205,7 +202,7 @@ const Home: React.FC = () => {
         <div className="text-center">
               
         <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <ShieldCheckIcon className="w-10 h-10 text-white" />
+                <Shield className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
               

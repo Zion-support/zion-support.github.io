@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { FuturisticCardProps } from 'lucide-react';
 interface FuturisticCardProps {
   children: React.ReactNode;
   className?: string;

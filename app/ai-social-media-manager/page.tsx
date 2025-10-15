@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Share2, TrendingUp, CheckCircle, Star, ArrowRight, Target, MessageSquare, Video, Globe } from 'lucide-react';
+import { Globe, Image, Hash, Users, Video, TrendingUp, Clock, BarChart3, Zap, Target, MessageSquare, Star, CheckCircle, ArrowRight } from 'lucide-react';
 
 const AiSocialMediaManagerPage: React.FC = () => {
   const features = [

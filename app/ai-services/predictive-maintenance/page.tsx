@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
 
 const PredictiveMaintenancePage: React.FC = () => { return (
     <> <Helmet> <title>Predictive Maintenance</title> <meta name="description" content="Professional predictive maintenance solutions and services" /> <meta name="keywords" content="predictive, maintenance" /> </Helmet> 

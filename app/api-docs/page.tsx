@@ -1,4 +1,6 @@
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Code, Key, Star, ArrowRight, Zap } from 'lucide-react';
 
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
@@ -166,6 +168,8 @@ const features = [
       description: 'Enterprise-grade security with encryption and compliance standards'
     }
   ];
+
+export default function Page() {
   return (
     <>
       <Helmet>

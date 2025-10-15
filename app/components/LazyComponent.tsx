@@ -1,4 +1,6 @@
 import React, { Suspense, lazy, ComponentType } from "react";
+import { Suspense, React, Component } from 'react';
+import { Loader2, LazyComponent, HTMLElement, LazyComponentProps, DefaultFallback, HTMLDivElement } from 'lucide-react';
 interface LazyComponentProps {
   fallback?: React.ReactNode;
   delay?: number;

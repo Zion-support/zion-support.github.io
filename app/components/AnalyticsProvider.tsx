@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect } from 'react';
+import { AnalyticsContextType, AnalyticsProviderProps } from 'lucide-react';
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
   trackPageView: (pageName: string, pagePath: string) => void;

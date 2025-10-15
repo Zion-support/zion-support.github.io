@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
+import { SEOEnhancerProps } from 'lucide-react';
 interface SEOEnhancerProps {
   title?: string;
   description?: string;

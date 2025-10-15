@@ -1,6 +1,6 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import {Server, Database, Globe} from "lucide-react";
+import { Helmet } from 'react-helmet-async';
+import { Icon } from 'lucide-react';
 
 const CloudInfrastructurePage: React.FC = () => {
   const services = [

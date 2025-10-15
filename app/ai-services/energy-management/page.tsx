@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
 
 const EnergyManagementPage: React.FC = () => { return (
     <> <Helmet> <title>Energy Management</title> <meta name="description" content="Professional energy management solutions and services" /> <meta name="keywords" content="energy, management" /> </Helmet> 

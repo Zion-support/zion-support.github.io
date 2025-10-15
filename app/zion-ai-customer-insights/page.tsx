@@ -1,9 +1,5 @@
 import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import { BarChart3, Users } from 'lucide-react';
-import { Clock } from 'lucide-react';
+import { MessageSquare, TrendingUp, BarChart3, Target, Eye, EnhancedSEO, Sparkles, FuturisticButton, Users, Award, Clock, FuturisticCard, Brain, CheckCircle, Star } from 'lucide-react';
 const ZionAICustomerInsightsPage = () => {
   return;
 },

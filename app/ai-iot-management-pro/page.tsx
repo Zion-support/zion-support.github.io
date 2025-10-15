@@ -1,4 +1,5 @@
-import { ArrowRight, Brain, CheckCircle, Phone, Play, Star } from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Phone, Play, Star, Shield, Mail } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const AIIoTManagementProPage = () => {
   const deviceTypes = [
@@ -22,6 +23,8 @@ const features = [
     }
   ];
 
+
+export default function Page() {
 const metrics = [
     { name: "Uptime", value: "99.9%", icon: <Brain className="w-6 h-6" />, number: "99.9", label: "Uptime" },
     { name: "Devices Connected", value: "10,000+", icon: <Brain className="w-6 h-6" />, number: "10,000+", label: "Devices" },

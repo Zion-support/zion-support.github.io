@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { Zap, Globe, Target, Users, BarChart3, Shield, Clock, Workflow, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionWorkflowAutomation() {
-  return;
-},
     {
       title: "AI-Powered Automation",
       description: "Intelligent automation that learns from your patterns and suggests optimizations",

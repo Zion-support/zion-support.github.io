@@ -1,14 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  CheckIcon, 
-  UserGroupIcon,
-  LightBulbIcon,
-  ShieldCheckIcon,
-  CpuChipIcon,
-  CloudIcon
-} from '@heroicons/react/24/outline';
+import { Lightbulb, Shield, CheckCircle, Users, Cpu, Cloud } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
@@ -70,7 +63,7 @@ const About: React.FC = () => {
         <div className="bg-slate-700/50 backdrop-blur-sm rounded-xl p-8">
                 
         <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
-                  <LightBulbIcon className="w-8 h-8 text-white" />
+                  <Lightbulb className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Innovation First</h3>
                 
@@ -80,7 +73,7 @@ const About: React.FC = () => {
         <div className="bg-slate-700/50 backdrop-blur-sm rounded-xl p-8">
                 
         <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
-                  <ShieldCheckIcon className="w-8 h-8 text-white" />
+                  <Shield className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Security & Reliability</h3>
                 
@@ -159,7 +152,7 @@ const About: React.FC = () => {
         <div className="text-center group">
               
         <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                <CheckIcon className="w-10 h-10 text-white" />
+                <CheckCircle className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Excellence</h3>
               
@@ -169,7 +162,7 @@ const About: React.FC = () => {
         <div className="text-center group">
               
         <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                <UserGroupIcon className="w-10 h-10 text-white" />
+                <Users className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Collaboration</h3>
               
@@ -179,7 +172,7 @@ const About: React.FC = () => {
         <div className="text-center group">
               
         <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                <LightBulbIcon className="w-10 h-10 text-white" />
+                <Lightbulb className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Innovation</h3>
               
@@ -189,7 +182,7 @@ const About: React.FC = () => {
         <div className="text-center group">
               
         <div className="w-20 h-20 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                <ShieldCheckIcon className="w-10 h-10 text-white" />
+                <Shield className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Integrity</h3>
               
@@ -218,22 +211,22 @@ const About: React.FC = () => {
         <div className="bg-slate-700/50 backdrop-blur-sm rounded-xl p-8 group hover:bg-slate-600/50 transition-all duration-300">
               
         <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <CpuChipIcon className="w-8 h-8 text-white" />
+                <Cpu className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Artificial Intelligence</h3>
               
           <p className="text-gray-300 mb-6">Machine learning, deep learning, natural language processing, and computer vision solutions.</p>
               <ul className="space-y-2">
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   <span>Custom AI Models</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   <span>Chatbot Development</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   <span>Predictive Analytics</span>
                 </li>
               </ul>
@@ -242,22 +235,22 @@ const About: React.FC = () => {
         <div className="bg-slate-700/50 backdrop-blur-sm rounded-xl p-8 group hover:bg-slate-600/50 transition-all duration-300">
               
         <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <CloudIcon className="w-8 h-8 text-white" />
+                <Cloud className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3>
               
           <p className="text-gray-300 mb-6">Scalable, secure, and reliable cloud solutions for modern businesses.</p>
               <ul className="space-y-2">
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   <span>AWS & Azure Expertise</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   <span>DevOps & CI/CD</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   <span>Microservices Architecture</span>
                 </li>
               </ul>
@@ -266,22 +259,22 @@ const About: React.FC = () => {
         <div className="bg-slate-700/50 backdrop-blur-sm rounded-xl p-8 group hover:bg-slate-600/50 transition-all duration-300">
               
         <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <ShieldCheckIcon className="w-8 h-8 text-white" />
+                <Shield className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
               
           <p className="text-gray-300 mb-6">Comprehensive security solutions to protect your digital assets.</p>
               <ul className="space-y-2">
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   <span>Security Audits</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   <span>Penetration Testing</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckIcon className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   <span>Compliance Management</span>
                 </li>
               </ul>

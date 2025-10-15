@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BarChart3, Brain, ChevronDown,   Globe, Menu, Shield,  X, Zap } from 'lucide-react';
+import { Brain, Shield, Zap, Globe, BarChart3, ChevronDown, ArrowRight, Menu } from 'lucide-react';
 
 const EnhancedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);

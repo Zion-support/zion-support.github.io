@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
+import { Calendar, Clock, User, MessageSquare, CheckCircle } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
   const [formData, setFormData] = useState({

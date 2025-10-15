@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { FuturisticButtonProps } from 'lucide-react';
 
 interface FuturisticButtonProps {
   children: React.ReactNode;

@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-import { BarChart3, Settings, Zap, Users, FileText, Mail } from 'lucide-react';
+import { Users, FileText, Eye, BarChart3, Zap, ShoppingCart, Camera, Heart, Car, Store, Settings, EnhancedSEO, ArrowRight, Play, Target, Globe, CheckCircle, Star, Mail, Phone, MapPin, Calendar } from 'lucide-react';
 const ZionAIImageRecognitionPro = () => {
   return;
 },

@@ -1,9 +1,8 @@
-import { ArrowRight, Leaf, Target, CheckCircle, Globe } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-export default function AIAgriculturalIntelligencePro() {
-  return;
-},
+import { ArrowRight, Leaf, Target, CheckCircle, Globe, Shield, FileText, Settings, Clock } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
+const features = [
     {
       title: "Yield Prediction",
       description: "Advanced machine learning models that predict crop yields with 95% accuracy using weather, soil, and historical data",
@@ -35,6 +34,8 @@ export default function AIAgriculturalIntelligencePro() {
       included: true
     }
   ];
+
+export default function AIAgriculturalIntelligencePro() {
 
 const pricingPlans = [
     {

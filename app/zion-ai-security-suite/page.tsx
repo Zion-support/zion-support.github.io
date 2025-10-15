@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Shield, Zap, CheckCircle, Users, Target, Clock, AlertTriangle, Award, ArrowRight, Sparkles, Star } from 'lucide-react';
 
 const ZionAISecuritySuitePage: React.FC = () => {
   const features = [

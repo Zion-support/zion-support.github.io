@@ -1,6 +1,6 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Phone, Mail, MapPin, Send } from 'lucide-react';
 
 const ContactPage: React.FC = () => { return (
     <> <Helmet> <title>Contact Us - Zion Tech Group</title> <meta name="description" content="Get in touch with Zion Tech Group for your AI and IT needs." /> </Helmet> 

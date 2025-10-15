@@ -1,11 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import SEOHead from "../components/SEOHead";
-import FuturisticBackground from "../components/FuturisticBackground";
-import NeonButton from "../components/NeonButton";
-import AnimatedCard from "../components/AnimatedCard";
-import { services } from "../data/servicesData";
-import { ArrowRightIcon, PhoneIcon, EnvelopeIcon, MapPinIcon, RocketLaunchIcon, SparklesIcon, BoltIcon } from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom';
+import { SEOHead, FuturisticBackground, SparklesIcon, BoltIcon, RocketLaunchIcon, NeonButton, ArrowRight, Cpu, Shield, Cloud, BarChart3, GlobeAltIcon, AnimatedCard, Phone, EnvelopeIcon, MapPinIcon } from 'lucide-react';
 export default function HomePage() {
   return (
     <>
@@ -53,14 +48,14 @@ export default function HomePage() {
                 className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
                 Get Started Today
-                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
                 to="/services" 
                 className="group border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center gap-2"
               >
                 Explore Services
-                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
@@ -88,7 +83,7 @@ export default function HomePage() {
             {/* AI Solutions */}
             <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <CpuChipIcon className="w-8 h-8 text-white" />
+                <Cpu className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
               <p className="text-gray-300 mb-6">
@@ -96,14 +91,14 @@ export default function HomePage() {
                 natural language processing, and predictive analytics.
               </p>
               <Link to="/ai-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-                Learn More <ArrowRightIcon className="w-4 h-4" />
+                Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
             {/* Cybersecurity */}
             <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <ShieldCheckIcon className="w-8 h-8 text-white" />
+                <Shield className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
               <p className="text-gray-300 mb-6">
@@ -111,14 +106,14 @@ export default function HomePage() {
                 data, and infrastructure from evolving threats.
               </p>
               <Link to="/cybersecurity" className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-                Learn More <ArrowRightIcon className="w-4 h-4" />
+                Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
             {/* Cloud Infrastructure */}
             <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <CloudIcon className="w-8 h-8 text-white" />
+                <Cloud className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3>
               <p className="text-gray-300 mb-6">
@@ -126,14 +121,14 @@ export default function HomePage() {
                 performance and reduce operational costs.
               </p>
               <Link to="/cloud-solutions" className="text-green-400 hover:text-green-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-                Learn More <ArrowRightIcon className="w-4 h-4" />
+                Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
             {/* Digital Transformation */}
             <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-yellow-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <ChartBarIcon className="w-8 h-8 text-white" />
+                <BarChart3 className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Digital Transformation</h3>
               <p className="text-gray-300 mb-6">
@@ -141,7 +136,7 @@ export default function HomePage() {
                 processes and enhance customer experiences.
               </p>
               <Link to="/digital-transformation" className="text-yellow-400 hover:text-yellow-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-                Learn More <ArrowRightIcon className="w-4 h-4" />
+                Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
@@ -156,7 +151,7 @@ export default function HomePage() {
                 challenges with scalable, cost-effective applications.
               </p>
               <Link to="/micro-saas" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-                Learn More <ArrowRightIcon className="w-4 h-4" />
+                Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
@@ -171,7 +166,7 @@ export default function HomePage() {
                 IoT applications, and ultra-low latency services.
               </p>
               <Link to="/5g-solutions" className="text-indigo-400 hover:text-indigo-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-                Learn More <ArrowRightIcon className="w-4 h-4" />
+                Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -214,7 +209,7 @@ export default function HomePage() {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             
         <div className="flex items-center text-white">
-              <PhoneIcon className="w-6 h-6 mr-3 text-purple-400" />
+              <Phone className="w-6 h-6 mr-3 text-purple-400" />
               <span>+1 (302) 464-0950</span>
             </div>
             

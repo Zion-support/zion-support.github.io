@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
 
 const FiveGTraining: React.FC = () => { return (
     <> <Helmet> <title>5G Training</title> <meta name="description" content="Professional 5G Training solutions and services" /> <meta name="keywords" content="5G, training" /> </Helmet> 

@@ -1,6 +1,6 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { AlertTriangle, ArrowRight, CheckCircle, FileText, Scale, Shield, User } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 
 const TermsPage: React.FC = () => { const termsSections = [ { icon: <FileText className="w-6 h-6" />, title: "Acceptance of Terms", content: "By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service." }, { icon: <Scale className="w-6 h-6" />, title: "Use License", content: "Permission is granted to temporarily download one copy of the materials on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title." }, { icon: <Shield className="w-6 h-6" />, title: "Service Availability", content: "We strive to provide continuous service availability, but we do not guarantee that our services will be uninterrupted or error-free. We reserve the right to modify or discontinue services at any time." }, { icon: <AlertTriangle className="w-6 h-6" />, title: "Limitation of Liability", content: "In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use the materials on our website, even if we or our authorized representative has been notified orally or in writing." } ];
 

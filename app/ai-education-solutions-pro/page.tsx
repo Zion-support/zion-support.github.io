@@ -1,4 +1,5 @@
-import { ArrowRight, BookOpen, Brain, CheckCircle, Phone, Play, Star } from 'lucide-react';
+import { ArrowRight, BookOpen, Brain, CheckCircle, Phone, Play, Star, Users, Mail } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const AIEducationSolutionsProPage = () => {
   const features = [

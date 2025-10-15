@@ -1,4 +1,6 @@
-import { ArrowRight, Brain, CheckCircle, Heart, Phone, Play, Star } from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Heart, Phone, Play, Star, Shield, ShieldIcon, Mail } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Brain, Heart, Shield, Star, Phone, Play, CheckCircle, ArrowRight, Mail } from 'lucide-react';
 
 const ShieldIcon = Shield;
 
@@ -227,7 +229,7 @@ const testimonials = [
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105">
                     
         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <ShieldIcon className="w-6 h-6 text-white" />
+                      <Shield className="w-6 h-6 text-white" />
                     </div>
                     
         <div className="text-white font-semibold mb-2">{ item.name }</div>

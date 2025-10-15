@@ -1,9 +1,14 @@
-import { ArrowRight, Box, Target, CheckCircle, Globe, Sparkles, Star } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-export default function AI3DGeneration() {
-  return;
-},
+import { ArrowRight, Box, Target, CheckCircle, Globe, Sparkles, Star, Zap, FileText, Users, Clock } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
+const features = [
+    {
+      title: "AI-Powered 3D Modeling",
+      description: "Generate stunning 3D models from text descriptions, images, or sketches using advanced AI algorithms",
+      icon: <Box className="w-6 h-6" />,
+      included: true
+    },
     {
       title: "Real-time Rendering",
       description: "Real-time 3D rendering with photorealistic materials, lighting, and textures for instant previews",
@@ -35,6 +40,8 @@ export default function AI3DGeneration() {
       included: true
     }
   ];
+
+export default function AI3DGeneration() {
 
 const pricingPlans = [
     {

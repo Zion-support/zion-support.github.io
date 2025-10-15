@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { EnhancedSEOProps } from 'lucide-react';
 interface EnhancedSEOProps {
   title: string;
   description: string;

@@ -1,9 +1,7 @@
-import { ArrowRight, Target, CheckCircle, Globe } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { ArrowRight, Target, CheckCircle, Globe, Zap, Clock, BarChart3, Users, FileText } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 export default function AIAutomatedReporting() {
-  return;
-},
     {
       title: "Real-time Data Integration",
       description: "Connect to 100+ data sources and automatically update reports with real-time information",

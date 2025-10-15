@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { FuturisticBackgroundProps, HTMLCanvasElement } from 'lucide-react';
 interface FuturisticBackgroundProps {
   children: React.ReactNode;
   className?: string;

@@ -1,9 +1,7 @@
-import { ArrowRight, Globe, Target, CheckCircle } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-export default function AIAPIManagement() {
-  return;
-},
+import { ArrowRight, Globe, Target, CheckCircle, BarChart3, FileText, Shield, Users, Zap, Clock } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+const features = [
     {
       title: "Smart Analytics",
       description: "AI-driven analytics that provide insights into API performance, usage patterns, and optimization opportunities",
@@ -35,6 +33,8 @@ export default function AIAPIManagement() {
       included: true
     }
   ];
+
+export default function AIAPIManagement() {
 
 const pricingPlans = [
     {

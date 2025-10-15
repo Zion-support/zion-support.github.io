@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Wifi, Cloud, Smartphone, Shield, BarChart3, Settings, Cpu, Globe, Activity, CheckCircle, Star } from 'lucide-react';
 
 const FiveGImplementationPage: React.FC = () => {
   const features = [

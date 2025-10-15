@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async"; export default function Page() { return (
+import { Helmet } from 'react-helmet-async';
     <> <div>; <Helmet>; <title>_error Handler - Zion Tech Group</title>; <meta name="description" content="Professional _error Handler solutions and services" /> <meta name="keywords" content="_errorhandler" /> </Helmet> 
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900">
         

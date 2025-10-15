@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import { WebVitalsTrackerProps } from 'lucide-react';
 interface WebVitalsTrackerProps {
   children: React.ReactNode;
 }

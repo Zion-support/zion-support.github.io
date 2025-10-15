@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { Image, Video, Palette, Users, Clock, FileText, PenTool, Zap, Sparkles, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionContentStudio() {
-  return;
-},
     {
       title: "Visual Design Tools",
       description: "Professional design tools with templates, stock photos, and AI-powered image generation",

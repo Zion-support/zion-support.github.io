@@ -1,6 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
-import logger from '../../utils/logger';
+import { State } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;

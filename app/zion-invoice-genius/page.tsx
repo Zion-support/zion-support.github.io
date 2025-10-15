@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { Zap, Calculator, Users, BarChart3, Globe, FileText, Send, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionInvoiceGenius() {
-  return;
-},
     {
       title: "Automated Billing",
       description: "Set up recurring invoices, payment reminders, and automated follow-ups for overdue payments",

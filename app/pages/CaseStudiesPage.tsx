@@ -1,5 +1,7 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
+import { Route } from 'react-router-dom';
+import { ArrowRight, Clock, TrendingUp } from 'lucide-react';
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [

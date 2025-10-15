@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Footer } from 'lucide-react';
 
 const ConsultationPage: React.FC = () => { return (
     <> <Helmet> <title>Consultation</title> <meta name="description" content="Professional consultation solutions and services" /> <meta name="keywords" content="consultation" /> </Helmet> 
