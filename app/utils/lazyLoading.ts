@@ -1,4 +1,4 @@
-import { lazy, ComponentType }; from 'react';";";";";";
+import { lazy, ComponentType }; from 'react';";";";";";";";
 ;
 // Lazy loading helper function;
 export const: createLazyComponent = <T extends Record<string, unknown>>(
@@ -7,4 +7,4 @@ export const: createLazyComponent = <T extends Record<string, unknown>>(
   const: LazyComponent = lazy(importFunc);
 ;
   return LazyComponent;
-};';';";
+};';';";";";

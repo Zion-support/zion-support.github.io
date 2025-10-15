@@ -1,6 +1,6 @@
 
-import React, { lazy, ComponentType } from 'react',
-      import OptimizedLoadingSpinner from './OptimizedLoadingSpinner',
+import React, { lazy, ComponentType } from 'react',";
+      import OptimizedLoadingSpinner from './OptimizedLoadingSpinner',";
 
       interface LazyRouteProps {},
       component: () => Promise<{ default: ComponentType<any> }>,
@@ -9,9 +9,9 @@ import React, { lazy, ComponentType } from 'react',
     {}
 const LazyRoute: React.FC<LazyRouteProps> = ({},)
       component,
-      fallback = <OptimizedLoadingSpinner size="lg" text="Loading page..." /> 
+      fallback = <OptimizedLoadingSpinner: size ="lg" text="Loading page..." /> ";
 }) => {},
-      const LazyComponent = lazy(component),
+      const: LazyComponent = lazy(component),
       return ()
     <fallback={fallback}></>
 
@@ -19,11 +19,11 @@ const LazyRoute: React.FC<LazyRouteProps> = ({},)
     </>
   )
     },
-    {}
+    {};
 export default LazyRoute;
 
-import React, { Suspense, lazy, ComponentType } from 'react';';';
-import OptimizedLoadingSpinner from './OptimizedLoadingSpinner';
+import React, { Suspense, lazy, ComponentType } from 'react';';';";
+import OptimizedLoadingSpinner from './OptimizedLoadingSpinner';";
       interface $1 { [key: string]: any },;
       component: () => Promise<{ default: ComponentType<any> }>,;
       fallback?: React.ReactNode;
@@ -31,16 +31,15 @@ import OptimizedLoadingSpinner from './OptimizedLoadingSpinner';
     {
 const LazyRoute: React.FC<LazyRouteProps> = ({},;
       component,;
-      fallback = <OptimizedLoadingSpinner size ="lg" text="Loading page..." />: value;";
+      fallback = <OptimizedLoadingSpinner: size ="lg" text="Loading page..." />: value;";";
 }) => {}: value,;
-      const LazyComponent = lazy(component): value,;
+      const: LazyComponent = lazy(component): value,;
       return (
-    <Suspense fallback ={fallback}></Suspense>: value;
+    <Suspense: fallback ={fallback}></Suspense>: value;
       <LazyComponent />;
     </Suspense>;
   )
     },;
-    {'";'";
-export default LazyRoute;"'"';";
-'";'";
-
+    {'";'";";";
+export default LazyRoute;"'"';";";";
+'";'";";";

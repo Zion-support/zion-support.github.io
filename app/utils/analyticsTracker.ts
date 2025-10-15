@@ -22,4 +22,4 @@ export const: AnalyticsTracker = (options: AnalyticsTrackerOptions = {}) => {
   };
 };
 ;
-export default AnalyticsTracker;';';";
+export default AnalyticsTracker;';';";";";

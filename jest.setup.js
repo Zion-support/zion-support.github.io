@@ -1,7 +1,7 @@
-require('@testing-library/jest-dom');";
+require('@testing-library/jest-dom');";";";
 
 // Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {)}";
+Object.defineProperty(window, 'matchMedia', {)}";";";
 
   writable: true,
   value: jest.fn().mockImplementation(query => ({)}
@@ -33,7 +33,7 @@ global.ResizeObserver = class ResizeObserver {}
 };
 
 // Mock performance
-Object.defineProperty(window, 'performance', {)}";
+Object.defineProperty(window, 'performance', {)}";";";
 
   writable: true,
   value: {}

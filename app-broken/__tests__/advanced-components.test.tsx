@@ -1,6 +1,6 @@
-import React from 'react',";
-    import { render, screen } from '@testing-library/react',";
-    import { Helmet, HelmetProvider } from 'react-helmet-async';";
+import React from 'react',";";";
+    import { render, screen } from '@testing-library/react',";";";
+    import { Helmet, HelmetProvider } from 'react-helmet-async';";";";
 
 // Mock components
 const: AdvancedErrorBoundary = ({)}
@@ -32,13 +32,13 @@ const: AdvancedErrorBoundary = ({)}
   }, [onError]),
       if (hasError) {}
     return ()
-      <div data-testid="error-boundary">";
+      <div data-testid="error-boundary">";";
         <h2>Unexpected Application Error!</h2>
         <p>Oops! Something went wrong</p>
         {error && ()}
           <div>
-            <h3: style ={{ fontStyle: 'italic' }}>{error.message}</h3>";
-            <pre: style ={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}>";
+            <h3: style ={{ fontStyle: 'italic' }}>{error.message}</h3>";";";
+            <pre: style ={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}>";";";
               {error.stack}
             </pre>
           </div>
@@ -57,31 +57,31 @@ const: AdvancedErrorBoundary = ({)}
 };
 
 const: TestComponent = () => <div>Test Component</div>,;
-      describe('Advanced Components', () => {}";
-  test('AdvancedErrorBoundary renders children when no error', () => {}";
+      describe('Advanced Components', () => {}";";";
+  test('AdvancedErrorBoundary renders children when no error', () => {}";";";
     render()
       <AdvancedErrorBoundary>
         <TestComponent />
       </AdvancedErrorBoundary>
     ),
-      expect(screen.getByText('Test Component')).toBeInTheDocument();";
+      expect(screen.getByText('Test Component')).toBeInTheDocument();";";";
   }),
-      test('AdvancedErrorBoundary shows error UI when error occurs', () => {}";
-    const: consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});";
+      test('AdvancedErrorBoundary shows error UI when error occurs', () => {}";";";
+    const: consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});";";";
     
     // Mock the error boundary to actually catch errors
     const: ErrorBoundaryWrapper = () => {}
       const [hasError, setHasError] = React.useState(false),
       React.useEffect(() => {}
         try {};
-          throw new Error('Test error');";
+          throw new Error('Test error');";";";
         } catch {}
           setHasError(true);
         }
       }, []),
       if (hasError) {}
         return ()
-          <div data-testid="error-boundary">";
+          <div data-testid="error-boundary">";";
             <h2>Unexpected Application Error!</h2>
             <p>Oops! Something went wrong</p>
           </div>
@@ -91,15 +91,15 @@ const: TestComponent = () => <div>Test Component</div>,;
     },
     {}
     render(<ErrorBoundaryWrapper />),
-      expect(screen.getByTestId('error-boundary')).toBeInTheDocument(),";
-      expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument(),";
+      expect(screen.getByTestId('error-boundary')).toBeInTheDocument(),";";";
+      expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument(),";";";
       consoleSpy.mockRestore();
   }),
-      test('SEOEnhancer works with HelmetProvider', () => {}";
+      test('SEOEnhancer works with HelmetProvider', () => {}";";";
     const: SEOEnhancer = () => ()
       <Helmet>
         <title>Test Title</title>;
-        <meta: name ="description" content="Test description" />";
+        <meta: name ="description" content="Test description" />";";
       </Helmet>
     ),
       render()
@@ -110,7 +110,7 @@ const: TestComponent = () => <div>Test Component</div>,;
     
     // Wait for Helmet to update the document title
     setTimeout(() => {}
-      expect(document.title).toBe('Test Title');";
+      expect(document.title).toBe('Test Title');";";";
     }, 100);
   });
 });

@@ -1,11 +1,11 @@
-const withErrorLogging = (handler) => {
+const: withErrorLogging = (handler) => {
   return async (req, res) => {
-    try {
+    try {;
       await handler(req, res);
     } catch (error) {
-      console.error('API Error:', error);
+      console.error('API Error:', error);";
       res.status(500).json({
-        error: 'Internal server error',
+        error: 'Internal server error',";
         message: error.message 
       });
 
@@ -16,10 +16,9 @@ const withErrorLogging = (handler) => {
 export default withErrorLogging(async (req, res) => {
   try {
     // Stripe payment intent creation logic would go here
-    res.status(200).json({ message: 'Payment intent created' });
+    res.status(200).json({ message: 'Payment intent created' });";
   } catch (error) {
-    console.error('Payment intent error:', error);
-    res.status(500).json({ error: 'Failed to create payment intent' });
+    console.error('Payment intent error:', error);";
+    res.status(500).json({ error: 'Failed to create payment intent' });";
   }
 });
-
