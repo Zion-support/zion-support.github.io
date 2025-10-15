@@ -5,6 +5,15 @@ import { ArrowRight, Brain, Building, Camera, Car, CheckCircle, Home, Mail, Phon
 const AIIoTManagementProPage = () => {
   return (
     <>
+      <Helmet>
+        <title>AI IoT Management Pro - Zion Tech Group | Smart IoT Solutions</title>
+        <meta name="description" content="Manage your IoT ecosystem with our AI-powered platform. Smart device management, data analytics, and automated monitoring." />
+        <meta name="keywords" content="AI IoT, smart devices, IoT management, connected devices, smart home, industrial IoT" />
+        <meta property="og:title" content="AI IoT Management Pro - Zion Tech Group" />
+        <meta property="og:description" content="Advanced AI-powered IoT management platform for smart device control and monitoring." />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      
       { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>

@@ -5,6 +5,15 @@ import { ArrowRight, Brain, Camera, CheckCircle, Hash, Hashtag, Image, Mail, Mes
 const AISocialMediaManagerProPage = () => {
   return (
     <>
+      <Helmet>
+        <title>AI Social Media Manager Pro - Zion Tech Group | Advanced Social Media AI</title>
+        <meta name="description" content="Manage your social media presence with our AI-powered platform. Content creation, scheduling, analytics, and engagement optimization." />
+        <meta name="keywords" content="AI social media, social media management, content creation, social media analytics, engagement optimization" />
+        <meta property="og:title" content="AI Social Media Manager Pro - Zion Tech Group" />
+        <meta property="og:description" content="Advanced AI-powered social media management platform for content creation and engagement optimization." />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      
       { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>

@@ -5,6 +5,15 @@ import { ArrowRight, Brain, CheckCircle, Mail, Phone, Play, Shield, Star, Users 
 const AIProjectManagerProPage = () => {
   return (
     <>
+      <Helmet>
+        <title>AI Project Manager Pro - Zion Tech Group | Advanced Project Management</title>
+        <meta name="description" content="Streamline project management with our AI-powered platform. Task automation, resource optimization, and intelligent project tracking." />
+        <meta name="keywords" content="AI project management, project automation, task management, resource optimization, project tracking" />
+        <meta property="og:title" content="AI Project Manager Pro - Zion Tech Group" />
+        <meta property="og:description" content="Advanced AI-powered project management platform for task automation and resource optimization." />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      
       { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>

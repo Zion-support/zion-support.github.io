@@ -5,6 +5,15 @@ import { Ambulance, ArrowRight, Brain, CheckCircle, Heart, Hospital, Mail, Micro
 const AIHealthcareSolutionsProPage = () => {
   return (
     <>
+      <Helmet>
+        <title>AI Healthcare Solutions Pro - Zion Tech Group | Advanced Medical AI</title>
+        <meta name="description" content="Revolutionize healthcare with our AI-powered medical solutions. Advanced diagnostics, patient care, and medical data analysis." />
+        <meta name="keywords" content="AI healthcare, medical AI, healthcare technology, medical diagnostics, patient care" />
+        <meta property="og:title" content="AI Healthcare Solutions Pro - Zion Tech Group" />
+        <meta property="og:description" content="Advanced AI-powered healthcare solutions for medical diagnostics and patient care." />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      
       { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>

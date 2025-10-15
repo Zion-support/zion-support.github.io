@@ -5,6 +5,15 @@ import { ArrowRight, Brain, Briefcase, CheckCircle, FileText, Mail, Mail as Mail
 const AIMarketingAutomationProPage = () => {
   return (
     <>
+      <Helmet>
+        <title>AI Marketing Automation Pro - Zion Tech Group | Advanced Marketing AI</title>
+        <meta name="description" content="Automate your marketing with our AI-powered platform. Campaign optimization, customer segmentation, and predictive analytics." />
+        <meta name="keywords" content="AI marketing, marketing automation, customer segmentation, campaign optimization, marketing AI" />
+        <meta property="og:title" content="AI Marketing Automation Pro - Zion Tech Group" />
+        <meta property="og:description" content="Advanced AI-powered marketing automation platform for campaign optimization and customer insights." />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      
       { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>

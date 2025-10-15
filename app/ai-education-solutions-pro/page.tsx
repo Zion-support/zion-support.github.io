@@ -5,6 +5,15 @@ import { ArrowRight, Award, Award as AwardIcon, AwardIcon, Book, BookOpen, Brain
 const AIEducationSolutionsProPage = () => {
   return (
     <>
+      <Helmet>
+        <title>AI Education Solutions Pro - Zion Tech Group | Advanced Learning Platform</title>
+        <meta name="description" content="Transform education with our AI-powered learning platform. Personalized learning, intelligent tutoring, and advanced analytics for educational institutions." />
+        <meta name="keywords" content="AI education, learning platform, educational technology, personalized learning, intelligent tutoring" />
+        <meta property="og:title" content="AI Education Solutions Pro - Zion Tech Group" />
+        <meta property="og:description" content="Advanced AI-powered education platform for personalized learning and intelligent tutoring." />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      
       { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
