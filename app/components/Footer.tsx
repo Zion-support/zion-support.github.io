@@ -141,13 +141,13 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/quantum-computing-solutions" className="text-gray-300 hover:text-white">Quantum Computing</Link></li>
               <li><Link to="/edge-computing-solutions" className="text-gray-300 hover:text-white">Edge Computing</Link></li>
               <li><Link to="/augmented-reality-solutions" className="text-gray-300 hover:text-white">AR Solutions</Link></li>
-              <li><Link to="/virtual-reality-solutions" className="text-gray-300 hover:text-white">VR Solutions</Link></li>
-              <li><Link to="/robotic-process-automation" className="text-gray-300 hover:text-white">RPA Solutions</Link></li>
-              <li><Link to="/low-code-platform" className="text-gray-300 hover:text-white">Low-Code Platform</Link></li>
-              <li><Link to="/serverless-architecture" className="text-gray-300 hover:text-white">Serverless Architecture</Link></li>
-              <li><Link to="/container-orchestration" className="text-gray-300 hover:text-white">Container Orchestration</Link></li>
-              <li><Link to="/ai-infrastructure" className="text-gray-300 hover:text-white">AI Infrastructure</Link></li>
-              <li><Link to="/data-lake-solutions" className="text-gray-300 hover:text-white">Data Lake Solutions</Link></li>
+              <li><Link to="/augmented-reality-solutions" className="text-gray-300 hover:text-white">VR Solutions</Link></li>
+              <li><Link to="/devops-automation" className="text-gray-300 hover:text-white">RPA Solutions</Link></li>
+              <li><Link to="/web-development" className="text-gray-300 hover:text-white">Low-Code Platform</Link></li>
+              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-white">Serverless Architecture</Link></li>
+              <li><Link to="/devops-automation" className="text-gray-300 hover:text-white">Container Orchestration</Link></li>
+              <li><Link to="/ai-solutions" className="text-gray-300 hover:text-white">AI Infrastructure</Link></li>
+              <li><Link to="/data-analytics" className="text-gray-300 hover:text-white">Data Lake Solutions</Link></li>
             </ul>
           </div>
           

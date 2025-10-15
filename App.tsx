@@ -74,6 +74,12 @@ const HelpPage = lazy(() => import('./app/help/page'));
 const AccessibilityPage = lazy(() => import('./app/accessibility/page'));
 const APIDocsPage = lazy(() => import('./app/api-docs/page'));
 const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
+const DemoPage = lazy(() => import('./app/demo/page'));
+const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
+const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
+const QuantumComputingSolutionsPage = lazy(() => import('./app/quantum-computing-solutions/page'));
+const EdgeComputingSolutionsPage = lazy(() => import('./app/edge-computing-solutions/page'));
+const AugmentedRealitySolutionsPage = lazy(() => import('./app/augmented-reality-solutions/page'));
 
 // Additional missing pages
 const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
@@ -288,6 +294,12 @@ const App = memo(() => {
                     <Route path="/accessibility" element={<AccessibilityPage />} />
                     <Route path="/api-docs" element={<APIDocsPage />} />
                     <Route path="/partnerships" element={<PartnershipsPage />} />
+                    <Route path="/demo" element={<DemoPage />} />
+                    <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                    <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
+                    <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
+                    <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
+                    <Route path="/augmented-reality-solutions" element={<AugmentedRealitySolutionsPage />} />
                     
                     {/* Additional missing pages */}
                     <Route path="/accessibility-page" element={<AccessibilityPagePage />} />
