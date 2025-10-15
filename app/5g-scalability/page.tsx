@@ -54,6 +54,6 @@ const FiveGScalability: React.FC = () => {
   );
 };
 
-export default FiveGScalabilityPage;
+export default FiveGScalability;
 
 

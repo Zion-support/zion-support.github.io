@@ -54,6 +54,6 @@ const FiveGInfrastructure: React.FC = () => {
   );
 };
 
-export default FiveGInfrastructurePage;
+export default FiveGInfrastructure;
 
 

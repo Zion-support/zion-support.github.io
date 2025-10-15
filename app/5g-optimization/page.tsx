@@ -54,6 +54,6 @@ const FiveGOptimization: React.FC = () => {
   );
 };
 
-export default FiveGOptimizationPage;
+export default FiveGOptimization;
 
 
