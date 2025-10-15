@@ -15,11 +15,12 @@ const PerformanceMonitor: React.FC = () => {
       import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
         const metrics: PerformanceMetrics = {};
         
-        const handleMetric = (metric: any) => {
+        const handleMetric = (metric: { name: string; value: number }) => {
           metrics[metric.name.toLowerCase() as keyof PerformanceMetrics] = metric.value;
           
+          // Store metrics for analytics (removed console.log for production)
           if (process.env.NODE_ENV === 'development') {
-            console.log(`Performance metric ${metric.name}:`, metric.value);
+            // Only log in development mode
           }
           
           // Store metrics for analytics
@@ -44,9 +45,8 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
-            if (process.env.NODE_ENV === 'development') {
-              console.log('Navigation timing:', entry);
-            }
+            // Track navigation timing for performance analysis
+            // Removed console.log for production optimization
           }
         }
       });

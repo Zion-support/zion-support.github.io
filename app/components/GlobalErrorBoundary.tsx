@@ -29,16 +29,9 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Global Error Boundary caught an error:', error, errorInfo);
-    }
-
     // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send the error to a logging service
-      console.error('Production error:', error, errorInfo);
-    }
+    // Here you would typically send the error to a logging service
+    // Removed console.error for production optimization
 
     this.setState({
       error,

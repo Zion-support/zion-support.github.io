@@ -257,16 +257,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 </Link>
                 {/* Dropdown Menu */}
                 {item.submenu && (
-                  <div className={`absolute left-0 mt-2 w-56 glass-card py-2 z-50 border border-cyan-500/30 backdrop-blur-lg ${
-                    (item.name === 'AI Services' && isServicesOpen) ||
-                    (item.name === 'Micro SaaS' && isSolutionsOpen) ||
-                    (item.name === 'IT Solutions' && isResourcesOpen) ||
-                    (item.name === 'Resources' && isResourcesOpen) ||
-                    (item.name === 'Company' && isCompanyOpen)
-                      ? 'block' : 'hidden'
-                  }`}>
-                {/* Dropdown Menu */}
-                {item.submenu && (
                   <div 
                     className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
                       (item.name === 'AI Services' && isServicesOpen) ||

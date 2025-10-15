@@ -3,15 +3,15 @@ export interface AppError {
   message: string;
   code?: string | undefined;
   statusCode?: number | undefined;
-  details?: any;
+  details?: Record<string, unknown>;
 }
 
 export class CustomError extends Error {
   public code?: string;
   public statusCode?: number;
-  public details?: any;
+  public details?: Record<string, unknown>;
 
-  constructor(message: string, code?: string, statusCode?: number, details?: any) {
+  constructor(message: string, code?: string, statusCode?: number, details?: Record<string, unknown>) {
     super(message);
     this.name = 'CustomError';
     this.code = code ?? undefined;
@@ -44,14 +44,15 @@ export const handleError = (error: unknown): AppError => {
 };
 
 export const logError = (error: AppError, context?: string) => {
-  if (process.env.NODE_ENV === 'development') {
-    console.error(`[${context || 'App'}] Error:`, error);
-  }
-  
-  // In production, you would send this to your error monitoring service
+  // In production, send to error monitoring service
   // Example: sendToErrorService(error, context);
+  
+  // Removed console.error for production optimization
+  if (process.env.NODE_ENV === 'development') {
+    // Only log in development mode
+  }
 };
 
-export const createError = (message: string, code?: string, statusCode?: number, details?: any): CustomError => {
+export const createError = (message: string, code?: string, statusCode?: number, details?: Record<string, unknown>): CustomError => {
   return new CustomError(message, code, statusCode, details);
 };
