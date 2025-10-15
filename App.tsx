@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React, { Suspense, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-=======
-import React, { Suspense } from 'react';
-import {Routes, Route} from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-e1ef
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
@@ -17,11 +12,7 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 
-// Page Components
-import HomePage from './app/page';
-import AboutPage from './app/pages/AboutPage';
-import ContactPage from './app/pages/ContactPage';
-import ServicesPage from './app/pages/ServicesPage';
+// Page Components - Lazy loaded
 import BlogPage from './app/pages/BlogPage';
 import TutorialsPage from './app/pages/TutorialsPage';
 import DemoPage from './app/pages/DemoPage';

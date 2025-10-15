@@ -3,109 +3,109 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { TrendingUp, DollarSign, CheckCircle, Users, ArrowRight } from "lucide-react";
 
-const CaseStudiesPage: React.FC = () => {};
+const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
-    {};
-      id: 1;
-      title: "AI-Powered E-commerce Transformation";
-      client: "TechRetail Inc.";
-      industry: "E-commerce";
-      challenge: "Low conversion rates and poor customer experience";
-      solution: "Implemented AI-powered recommendation engine and chatbot";
+    {
+      id: 1,
+      title: "AI-Powered E-commerce Transformation",
+      client: "TechRetail Inc.",
+      industry: "E-commerce",
+      challenge: "Low conversion rates and poor customer experience",
+      solution: "Implemented AI-powered recommendation engine and chatbot",
       results: [
-        "40% increase in conversion rates";
-        "60% reduction in customer service tickets";
+        "40% increase in conversion rates",
+        "60% reduction in customer service tickets",
         "25% increase in average order value"
-      ];
-      image: "/images/case-studies/ecommerce-ai.jpg";
-      duration: "6 months";
+      ],
+      image: "/images/case-studies/ecommerce-ai.jpg",
+      duration: "6 months",
       team: "8 specialists"
-    };
-    {};
-      id: 2;
-      title: "Cloud Migration for Financial Services";
-      client: "SecureBank Corp.";
-      industry: "Financial Services";
-      challenge: "Legacy systems causing performance issues and security concerns";
-      solution: "Complete cloud migration with enhanced security measures";
+    },
+    {
+      id: 2,
+      title: "Cloud Migration for Financial Services",
+      client: "SecureBank Corp.",
+      industry: "Financial Services",
+      challenge: "Legacy systems causing performance issues and security concerns",
+      solution: "Complete cloud migration with enhanced security measures",
       results: [
-        "99.9% uptime achieved";
-        "50% reduction in infrastructure costs";
+        "99.9% uptime achieved",
+        "50% reduction in infrastructure costs",
         "Enhanced security compliance"
-      ];
-      image: "/images/case-studies/cloud-migration.jpg";
-      duration: "4 months";
+      ],
+      image: "/images/case-studies/cloud-migration.jpg",
+      duration: "4 months",
       team: "12 specialists"
-    };
-    {};
-      id: 3;
-      title: "Cybersecurity Implementation";
-      client: "HealthCare Plus";
-      industry: "Healthcare";
-      challenge: "Vulnerable to cyber attacks and data breaches";
-      solution: "Comprehensive cybersecurity framework and training";
+    },
+    {
+      id: 3,
+      title: "Cybersecurity Implementation",
+      client: "HealthCare Plus",
+      industry: "Healthcare",
+      challenge: "Vulnerable to cyber attacks and data breaches",
+      solution: "Comprehensive cybersecurity framework and training",
       results: [
-        "Zero security incidents";
-        "100% compliance with HIPAA";
+        "Zero security incidents",
+        "100% compliance with HIPAA",
         "50% reduction in security vulnerabilities"
-      ];
-      image: "/images/case-studies/cybersecurity.jpg";
-      duration: "3 months";
+      ],
+      image: "/images/case-studies/cybersecurity.jpg",
+      duration: "3 months",
       team: "6 specialists"
-    };
+    }
   ];
 
   const stats = [
-    { label: "Projects Completed", value: "150+", icon: <CheckCircle className="w-6 h-6" /> };
-    { label: "Client Satisfaction", value: "98%", icon: <TrendingUp className="w-6 h-6" /> };
-    { label: "Team Members", value: "50+", icon: <Users className="w-6 h-6" /> };
-    { label: "Cost Savings", value: "$2M+", icon: <DollarSign className="w-6 h-6" /> };
+    { label: "Projects Completed", value: "150+", icon: <CheckCircle className="w-6 h-6" /> },
+    { label: "Client Satisfaction", value: "98%", icon: <TrendingUp className="w-6 h-6" /> },
+    { label: "Team Members", value: "50+", icon: <Users className="w-6 h-6" /> },
+    { label: "Cost Savings", value: "$2M+", icon: <DollarSign className="w-6 h-6" /> }
   ];
 
   return (
     <>
-      <Helmet></Helmet>
+      <Helmet>
         <title>Case Studies - Zion Tech Group | Success Stories</title>
         <meta name="description" content="Explore our successful projects and case studies showcasing our expertise in AI, cloud, and cybersecurity solutions." />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white"></div>
-        {/* Hero Section */};
-        <section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20"></section>
-          <div className="max-w-7xl mx-auto px-4"></div>
-            <div className="text-center"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Case Studies</h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"></p>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Real success stories from our clients across various industries
               </p>
             </div>
           </div>
         </section>
 
-        {/* Stats Section */};
-        <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+        {/* Stats Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center"></div>
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <div className="text-white">{stat.icon}</div>
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-300">{stat.label}</div>
                 </div>
-              ))};
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Case Studies Grid */};
-        <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+        {/* Case Studies Grid */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Success Stories</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-                Discover how we've helped businesses transform and achieve their goals'
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover how we've helped businesses transform and achieve their goals
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
