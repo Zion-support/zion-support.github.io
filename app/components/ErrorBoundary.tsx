@@ -1,7 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { logger } from '../utils/logger';
 
 interface Props {
   children: ReactNode;
