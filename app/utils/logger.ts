@@ -1,4 +1,4 @@
-/* global console */
+/* eslint-disable no-redeclare */
 
 interface LogLevel {
   ERROR: 'error';

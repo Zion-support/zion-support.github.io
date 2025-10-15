@@ -12,7 +12,7 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "Access to Azure AI services",
         "Joint go-to-market initiatives",
-        "Technical support and training"]
+        "Technical support and training",
         "Co-marketing opportunities"]
     },
     {
@@ -23,7 +23,7 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "AWS certified solutions",
         "Cost optimization services",
-        "Migration expertise"]
+        "Migration expertise",
         "24/7 cloud support"]
     },
     {
@@ -34,7 +34,7 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "Google AI/ML services",
         "Data analytics solutions",
-        "Machine learning expertise"]
+        "Machine learning expertise",
         "Scalable infrastructure"]
     },
     {
@@ -45,7 +45,7 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "Salesforce certified experts",
         "Custom development",
-        "Integration services"]
+        "Integration services",
         "Training and support"]
     },
     {
@@ -56,7 +56,7 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "IBM Watson AI services",
         "Enterprise security solutions",
-        "Legacy system modernization"]
+        "Legacy system modernization",
         "Consulting services"]
     },
     {
@@ -67,7 +67,7 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "Oracle database expertise",
         "Cloud migration services",
-        "Performance optimization"]
+        "Performance optimization",
         "Security and compliance"]
     }
   ];
@@ -80,7 +80,7 @@ const partnershipTypes = [
       benefits: [
         "Access to cutting-edge technology",
         "Joint product development",
-        "Technical support and training"]
+        "Technical support and training",
         "Co-marketing opportunities"]
     },
     {
@@ -90,7 +90,7 @@ const partnershipTypes = [
       benefits: [
         "Competitive pricing and margins",
         "Marketing support and materials",
-        "Sales training and certification"]
+        "Sales training and certification",
         "Dedicated partner support"]
     },
     {
@@ -100,7 +100,7 @@ const partnershipTypes = [
       benefits: [
         "Joint solution development",
         "Technical integration support",
-        "Customer success collaboration"]
+        "Customer success collaboration",
         "Revenue sharing opportunities"]
     },
     {
@@ -110,7 +110,7 @@ const partnershipTypes = [
       benefits: [
         "Joint R&D initiatives",
         "Market expansion support",
-        "Exclusive partnership benefits"]
+        "Exclusive partnership benefits",
         "Strategic planning collaboration"]
     }
   ];
