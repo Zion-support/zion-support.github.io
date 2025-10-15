@@ -1,14 +1,11 @@
 'use client';
 import React from 'react';
-import { Loader2 } from 'lucide-react';
-
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   text?: string;
   fullScreen?: boolean;
   className?: string;
 }
-
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   text = 'Loading...',
@@ -22,28 +19,28 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     xl: 'w-16 h-16'
   };
 
-  const spinner = (
+const spinner = (
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <Loader2 className={`animate-spin text-purple-500 ${sizeClasses[size]}`} />
       {text && (
-        <p className="mt-2 text-sm text-gray-300">
+        
+          <p className="mt-2 text-sm text-gray-300">
           {text}
         </p>
       )}
     </div>
   );
-
   if (fullScreen) {
     return (
-      <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
+      
+        <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
+        
         <div className="bg-slate-800 rounded-lg p-8 shadow-xl">
           {spinner}
         </div>
       </div>
     );
   }
-
   return spinner;
 };
-
 export default LoadingSpinner;

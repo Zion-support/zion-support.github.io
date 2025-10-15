@@ -7,90 +7,11 @@ interface AccessibilityEnhancerProps {
   enableFocusIndicators?: boolean;
 }
 
-/**
- * Accessibility Enhancer Component
- * Provides comprehensive accessibility improvements
- */
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
-  enableSkipLinks = true,
-  enableKeyboardNav = true,
-  enableFocusIndicators = true,
-}) => {
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
-
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
-    // Check for reduced motion preference
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const handleChange = (e: MediaQueryListEvent) => {
-      setIsReducedMotion(e.matches);
-    };
-    
-    setIsReducedMotion(mediaQuery.matches);
-    mediaQuery.addEventListener('change', handleChange);
-
-    // Check for high contrast preference
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-      setIsHighContrast(e.matches);
-    };
-    
-    setIsHighContrast(highContrastQuery.matches);
-    highContrastQuery.addEventListener('change', handleContrastChange);
-
-    // Check for font size preference
-    const computedStyle = getComputedStyle(document.documentElement);
-    const rootFontSize = parseFloat(computedStyle.fontSize);
-    setFontSize(rootFontSize);
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleChange);
-      highContrastQuery.removeEventListener('change', handleContrastChange);
-    };
-  }, []);
-
-  // Enhanced keyboard navigation
-  const handleKeyDown = useCallback((e: KeyboardEvent) => {
-    // Skip to main content with Alt + M
-    if (e.altKey && e.key === 'm') {
-      e.preventDefault();
-      const main = document.querySelector('main');
-      if (main) {
-        (main as HTMLElement).focus();
-        (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-
-    // Skip to navigation with Alt + N
-    if (e.altKey && e.key === 'n') {
-      e.preventDefault();
-      const nav = document.querySelector('nav');
-      if (nav) {
-        (nav as HTMLElement).focus();
-        (nav as HTMLElement).scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-
-    // Close modals/dropdowns with Escape
-    if (e.key === 'Escape') {
-      const modals = document.querySelectorAll('[role="dialog"][aria-modal="true"]');
-      modals.forEach((modal) => {
-        const closeButton = modal.querySelector('[aria-label*="close" i], [aria-label*="dismiss" i]');
-        if (closeButton) {
-          (closeButton as HTMLElement).click();
-        }
-      });
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!enableKeyboardNav) return;
-
-    // Add keyboard navigation class on first keyboard use
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
+    // Focus management for keyboard navigation
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
       }
     };
@@ -100,6 +21,47 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.body.classList.remove('keyboard-navigation');
     };
 
+    // Add focus indicators for keyboard navigation
+    const addFocusStyles = () => {
+      const style = document.createElement('style');
+      style.textContent = `
+        .keyboard-navigation button:focus,
+        .keyboard-navigation a:focus,
+        .keyboard-navigation input:focus,
+        .keyboard-navigation textarea:focus,
+        .keyboard-navigation select:focus {
+          box-shadow: 0 0 0 2px #8b5cf6 !important;
+          outline: none !important;
+        }
+      `;
+      document.head.appendChild(style);
+    };
+
+    // Add ARIA labels to interactive elements
+    const addAriaLabels = () => {
+      const buttons = document.querySelectorAll('button:not([aria-label])');
+      buttons.forEach((button, index) => {
+        if (!button.getAttribute('aria-label')) {
+          button.setAttribute('aria-label', `Button ${index + 1}`);
+        }
+      });
+    };
+
+    // Add skip links
+    const addSkipLinks = () => {
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    };
+
+    // Initialize accessibility features
+    addFocusStyles();
+    addAriaLabels();
+    addSkipLinks();
+
+    // Add event listeners
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
     
@@ -235,7 +197,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }, 1000);
   }, []);
 
-  return <>{children}</>;
+  return (
+    <div id="main-content">
+      {children}
+    </div>
+  );
 };
 
 export default AccessibilityEnhancer;

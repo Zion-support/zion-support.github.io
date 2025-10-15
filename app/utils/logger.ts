@@ -1,4 +1,3 @@
-import { User } from 'lucide-react';
 interface LogLevel { ERROR: 'error';
   WARN: 'warn';
   INFO: 'info';
@@ -30,7 +29,8 @@ class Logger { private isDevelopment = process.env.NODE_ENV === 'development';
       timestamp: new Date().toISOString(),
       context,
       error };
-    const formattedMessage = this.formatMessage(entry);
+
+const formattedMessage = this.formatMessage(entry);
     // Console logging
     switch (level) { case 'error':
         break;
@@ -56,7 +56,7 @@ class Logger { private isDevelopment = process.env.NODE_ENV === 'development';
         error_stack: entry.error?.stack });
     }
   }
-  error(message: string, context?: Record<string, unknown>, error?: Error): void { this.log(LOG_LEVELS.ERROR, message, context, error); }
+  error(message: string, context?: Record<string, unknown>, error?: Error): void { this.log(LOG_LEVELS.ERROR, message, context); }
   warn(message: string, context?: Record<string, unknown>): void { this.log(LOG_LEVELS.WARN, message, context); }
   info(message: string, context?: Record<string, unknown>): void { this.log(LOG_LEVELS.INFO, message, context); }
   debug(message: string, context?: Record<string, unknown>): void { this.log(LOG_LEVELS.DEBUG, message, context); }

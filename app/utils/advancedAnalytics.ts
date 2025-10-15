@@ -24,3 +24,5 @@ export const advancedAnalytics = { trackPageView: (page: string) => {
     }
   }
 };
+
+export default NotFoundPage;

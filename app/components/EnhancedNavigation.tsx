@@ -1,19 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {ArrowRight, Brain, ChevronDown, Database, Globe, Menu, Video, X} from 'lucide-react';
-import {BarChart3, Zap} from 'lucide-react';
-import { Shield } from 'lucide-react';
-const EnhancedNavigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  const navigationItems = [
-    {
-      label: 'AI Services',
-      href: '/ai-services',
-      icon: <Brain className="w-4 h-4" />,
-      dropdown: [
-        { label: 'AI Voice Assistant Pro', href: '/zion-ai-voice-assistant-pro' },
+const EnhancedNavigation = () => {
+  return;
+},
         { label: 'AI Image Recognition Pro', href: '/zion-ai-image-recognition-pro' },
         { label: 'AI Fraud Detection Pro', href: '/zion-ai-fraud-detection-pro' },
         { label: 'AI Predictive Maintenance', href: '/zion-ai-predictive-maintenance' },
@@ -145,16 +135,17 @@ const EnhancedNavigation = () => {
     }
   ];
 
-  const quickLinks = [
+const quickLinks = [
     { label: 'Pricing', href: '/pricing' },
     { label: 'Demo', href: '/demo' },
     { label: 'Support', href: '/support' },
     { label: 'Consultation', href: '/consultation' }
   ];
-
   return (
     <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold text-white group">
@@ -162,7 +153,6 @@ const EnhancedNavigation = () => {
               Zion Tech Group
             </span>
           </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">
             {navigationItems.map((item) => (
@@ -180,11 +170,12 @@ const EnhancedNavigation = () => {
                   <span>{item.label}</span>
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                 </Link>
-                
                 {/* Dropdown Menu */}
                 {activeDropdown === item.label && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50">
-                    <div className="py-2">
+                  
+        <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50">
+                    
+        <div className="py-2">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.href}
@@ -200,10 +191,11 @@ const EnhancedNavigation = () => {
               </div>
             ))}
           </nav>
-
           {/* Quick Links & CTA */}
-          <div className="hidden md:flex items-center space-x-4">
-            <div className="hidden lg:flex space-x-4">
+          
+        <div className="hidden md:flex items-center space-x-4">
+            
+        <div className="hidden lg:flex space-x-4">
               {quickLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -222,7 +214,6 @@ const EnhancedNavigation = () => {
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -231,11 +222,12 @@ const EnhancedNavigation = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-white/10">
-            <div className="space-y-4">
+          
+        <div className="lg:hidden py-4 border-t border-white/10">
+            
+        <div className="space-y-4">
               {navigationItems.map((item) => (
                 <div key={item.label}>
                   <Link
@@ -246,7 +238,8 @@ const EnhancedNavigation = () => {
                     {item.icon}
                     <span className="font-medium">{item.label}</span>
                   </Link>
-                  <div className="ml-6 space-y-2">
+                  
+        <div className="ml-6 space-y-2">
                     {item.dropdown.slice(0, 4).map((dropdownItem) => (
                       <Link
                         key={dropdownItem.href}
@@ -270,8 +263,9 @@ const EnhancedNavigation = () => {
                 </div>
               ))}
               
-              <div className="pt-4 border-t border-white/10">
-                <div className="space-y-2">
+        <div className="pt-4 border-t border-white/10">
+                
+        <div className="space-y-2">
                   {quickLinks.map((link) => (
                     <Link
                       key={link.href}
@@ -291,5 +285,4 @@ const EnhancedNavigation = () => {
     </header>
   );
 };
-
 export default EnhancedNavigation;

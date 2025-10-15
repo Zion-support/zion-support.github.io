@@ -10,3 +10,5 @@ export const securityHeaders = { csp: {
       .join('; ');
   }
 };
+
+export default NotFoundPage;

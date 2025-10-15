@@ -11,8 +11,10 @@ export const errorHandler = { handle: (error: Error, context?: string) => {
       code: 'GENERIC_ERROR' };
   },
   handleApiError: (error: unknown) => { const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
-    const status = errorWithResponse.response?.status;
-    const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
+
+const status = errorWithResponse.response?.status;
+
+const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
     switch (status) { case 400:
         return { message: 'Invalid request', code: 'BAD_REQUEST' };
       case 401:
@@ -32,3 +34,5 @@ export const errorHandler = { handle: (error: Error, context?: string) => {
   report: (error: Error, context?: Record<string, unknown>) => { // Error reporting logic
     }
 };
+
+export default NotFoundPage;

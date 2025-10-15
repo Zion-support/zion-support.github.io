@@ -12,13 +12,14 @@ export const advancedCaching = { setCache: (key: string, value: unknown, ttl: nu
     if (!item) return null;
     try {
       const parsed: CacheItem = JSON.parse(item);
-      const now = Date.now();
+
+const now = Date.now();
       if (now - parsed.timestamp > parsed.ttl) {
         localStorage.removeItem(key);
-        return null; }
+  return null; }
       return parsed.value;
-    } catch (error) { localStorage.removeItem(key);
-      return null; }
+    } catch () { localStorage.removeItem(key);
+  return null; }
   },
   clearCache: (pattern?: string) => { if (pattern) {
       const keys = Object.keys(localStorage);
@@ -29,3 +30,5 @@ export const advancedCaching = { setCache: (key: string, value: unknown, ttl: nu
     } else { localStorage.clear(); }
   }
 };
+
+export default NotFoundPage;

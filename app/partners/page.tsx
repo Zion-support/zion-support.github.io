@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {ArrowRight, Award, CheckCircle, Database, Globe, Handshake, Star} from 'lucide-react';
-import { Users } from 'lucide-react';
+
 const PartnersPage: React.FC = () => {
   const partners = [
     {
@@ -78,7 +77,7 @@ const PartnersPage: React.FC = () => {
     }
   ];
 
-  const partnershipTypes = [
+const partnershipTypes = [
     {
       icon: <Handshake className="w-8 h-8" />,
       title: "Technology Partners",
@@ -125,13 +124,12 @@ const PartnersPage: React.FC = () => {
     }
   ];
 
-  const stats = [
+const stats = [
     { number: "50+", label: "Partners Worldwide" },
     { number: "25+", label: "Countries" },
     { number: "95%", label: "Partner Satisfaction" },
     { number: "200%", label: "Growth in Partner Revenue" }
   ];
-
   return (
     <>
       <Helmet>
@@ -142,53 +140,66 @@ const PartnersPage: React.FC = () => {
         <meta property="og:description" content="Strategic partnerships for mutual growth and innovation" />
         <meta property="og:type" content="website" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="text-center max-w-4xl mx-auto">
+              
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Partners</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+              
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 Strategic partnerships with leading technology providers to deliver comprehensive solutions and drive mutual growth.
               </p>
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 bg-white/5 backdrop-blur-sm">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+                  
+        <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
+                  
+        <div className="text-gray-300">{stat.label}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Partnership Types */}
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Partnership Types</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We offer various partnership opportunities to suit different business models and objectives.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partnershipTypes.map((type, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-white">{type.icon}</div>
+                  
+        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    
+        <div className="text-white">{type.icon}</div>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{type.title}</h3>
-                  <p className="text-gray-300 mb-6">{type.description}</p>
+                  
+          <p className="text-gray-300 mb-6">{type.description}</p>
                   <ul className="space-y-2">
                     {type.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-start">
@@ -202,29 +213,35 @@ const PartnersPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Current Partners */}
         <section className="py-20 bg-white/5 backdrop-blur-sm">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Our Technology Partners</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We work with industry leaders to deliver the best solutions to our clients.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {partners.map((partner, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
-                  <div className="text-center mb-6">
-                    <div className="w-32 h-16 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
+                  
+        <div className="text-center mb-6">
+                    
+        <div className="w-32 h-16 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
                       <span className="text-white font-bold text-lg">{partner.name}</span>
                     </div>
-                    <div className="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm inline-block mb-4">
+                    
+        <div className="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm inline-block mb-4">
                       {partner.category}
                     </div>
-                    <p className="text-gray-300 text-sm">{partner.description}</p>
+                    
+          <p className="text-gray-300 text-sm">{partner.description}</p>
                   </div>
-                  
                   <div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-3">Partnership Benefits:</h4>
                     <ul className="space-y-2">
@@ -241,42 +258,53 @@ const PartnersPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Become a Partner */}
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-4xl font-bold text-white mb-6">Become a Partner</h2>
-              <p className="text-xl text-gray-300 mb-8">
+              
+          <p className="text-xl text-gray-300 mb-8">
                 Join our partner ecosystem and unlock new opportunities for growth and success. 
                 We provide comprehensive support, training, and resources to help you succeed.
               </p>
               
-              <div className="grid md:grid-cols-3 gap-8 mb-12">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+                
+        <div className="text-center">
+                  
+        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Star className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">1. Apply</h3>
-                  <p className="text-gray-300">Submit your partnership application and tell us about your business</p>
+                  
+          <p className="text-gray-300">Submit your partnership application and tell us about your business</p>
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                
+        <div className="text-center">
+                  
+        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Handshake className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">2. Review</h3>
-                  <p className="text-gray-300">We review your application and discuss partnership terms</p>
+                  
+          <p className="text-gray-300">We review your application and discuss partnership terms</p>
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                
+        <div className="text-center">
+                  
+        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Award className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">3. Launch</h3>
-                  <p className="text-gray-300">Start your partnership journey with training and support</p>
+                  
+          <p className="text-gray-300">Start your partnership journey with training and support</p>
                 </div>
               </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact?type=partnership"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
@@ -298,5 +326,4 @@ const PartnersPage: React.FC = () => {
     </>
   );
 };
-
 export default PartnersPage;

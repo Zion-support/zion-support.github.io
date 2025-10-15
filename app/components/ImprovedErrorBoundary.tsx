@@ -1,21 +1,30 @@
 import React, { Component, ErrorInfo, ReactNode } from "react";
-import { AlertTriangle, Bug, RefreshCw } from 'lucide-react';
-import { Helmet } from "react-helmet-async"; interface Props { children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void; maxRetries?: number; } interface State { hasError: boolean; error: Error | null; retryCount: number; } class ImprovedErrorBoundary extends Component<Props, State> { private maxRetries: number; constructor(props: Props) { super(props); this.maxRetries = props.maxRetries || 3; this.state = { hasError: false, error: null, retryCount: 0 }; } static getDerivedStateFromError(error: Error): Partial<State> { return { hasError: true, error }; } componentDidCatch(error: Error, errorInfo: ErrorInfo) { if (this.props.onError) { this.props.onError(error, errorInfo); } } handleRetry = () => { this.setState(prevState => ({ hasError: false, error: null, retryCount: prevState.retryCount + 1 })); }; get canRetry(): boolean { return this.state.retryCount <this.maxRetries; } render() { if (this.state.hasError) { if (this.props.fallback) { return this.props.fallback; } return ( <> <Helmet> <title>Application Error - Zion Tech Group</title> <meta name="description" content="An error occurred in the application" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-            <div className="max-w-md w-full mx-auto p-8">
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
-                <div className="w-16 h-16 bg-red-500/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+import { Helmet } from "react-helmet-async"; interface Props { children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void; maxRetries?: number; } interface State { hasError: boolean; error: Error | null; retryCount: number; } class ImprovedErrorBoundary extends Component<Props, State> { private maxRetries: number;
+
+constructor(props: Props) { super(props); this.maxRetries = props.maxRetries || 3; this.state = { hasError: false, error: null, retryCount: 0 }; } static getDerivedStateFromError(error: Error): Partial<State> { return { hasError: true, error }; } componentDidCatch(error: Error, errorInfo: ErrorInfo) { if (this.props.onError) { this.props.onError( errorInfo); } } handleRetry = () => { this.setState(prevState => ({ hasError: false, error: null, retryCount: prevState.retryCount + 1 })); }; get canRetry(): boolean { return this.state.retryCount <this.maxRetries; } render() { if (this.state.hasError) { if (this.props.fallback) { return this.props.fallback; } return (
+    <> <Helmet> <title>Application Error - Zion Tech Group</title> <meta name="description" content="An error occurred in the application" /> </Helmet> 
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+            
+        <div className="max-w-md w-full mx-auto p-8">
+              
+        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+                
+        <div className="w-16 h-16 bg-red-500/20 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <AlertTriangle className="w-8 h-8 text-red-400" />
                 </div>
-                <h1 className="text-xl font-semibold text-white mb-2">
+                
+          <h1 className="text-xl font-semibold text-white mb-2">
                   Application Error
                 </h1>
-                <p className="text-gray-300 mb-6">
+                
+          <p className="text-gray-300 mb-6">
                   { this.canRetry 
                     ? `Something went wrong. You can try again (${this.state.retryCount }/${ this.maxRetries } attempts).`
                     : 'Something went wrong. Please refresh the page or contact support.'
                   }
                 </p>
-                <div className="space-y-3">
+                
+        <div className="space-y-3">
                   { this.canRetry && (
                     <button
                       onClick={this.handleRetry }

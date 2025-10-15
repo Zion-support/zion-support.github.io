@@ -1,61 +1,52 @@
-'use client';
+import { Helmet } from "react-helmet-async";
 
-import React from 'react';
-
-const BusinessIntelligencePage: React.FC = () => {
-  const biServices = [
-    {
-      id: 'data-analytics',
-      title: 'Advanced Data Analytics',
-      description: 'Transform raw data into actionable insights with our comprehensive analytics solutions.',
-      features: ['Real-time data processing', 'Predictive analytics', 'Custom dashboards', 'Data visualization'],
-      benefits: ['Data-driven decisions', 'Improved efficiency', 'Better forecasting', 'Competitive advantage'],
-      marketPrice: '$1,200-3,500/month',
-      category: 'Data Analytics',
-      technologies: ['Python', 'R', 'SQL', 'Tableau', 'Power BI']
-    },
-    {
-      id: 'business-intelligence',
-      title: 'Business Intelligence Solutions',
-      description: 'Comprehensive BI platforms that provide insights across all business functions.',
-      features: ['Executive dashboards', 'KPI tracking', 'Report automation', 'Data integration'],
-      benefits: ['360° business view', 'Faster reporting', 'Improved accuracy', 'Better planning'],
-      marketPrice: '$1,800-4,200/month',
-      category: 'BI Platforms',
-      technologies: ['Microsoft BI', 'QlikView', 'Looker', 'Sisense', 'Domo']
-    },
-    {
-      id: 'data-warehousing',
-      title: 'Data Warehousing & ETL',
-      description: 'Centralized data storage and processing solutions for enterprise-scale analytics.',
-      features: ['Data warehousing', 'ETL processes', 'Data quality management', 'Scalable architecture'],
-      benefits: ['Unified data source', 'Improved data quality', 'Better performance', 'Cost optimization'],
-      marketPrice: '$2,500-6,000/month',
-      category: 'Data Infrastructure',
-      technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Azure Synapse', 'Talend']
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Business Intelligence Services
+const BusinessIntelligencePage: React.FC = () => { return (
+    <> <Helmet> <title>Business Intelligence</title> <meta name="description" content="Professional business intelligence solutions and services" /> <meta name="keywords" content="business, intelligence" /> </Helmet> 
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        
+        <div className="container mx-auto px-4 py-16">
+          
+        <div className="text-center">
+            
+          <h1 className="text-4xl font-bold text-white mb-8">
+              Business Intelligence
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Transform your data into strategic insights that drive business growth
+            
+          <p className="text-xl text-gray-300 mb-8">
+              Professional business intelligence solutions and services
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                Explore BI Solutions
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Schedule Demo
-              </button>
+            
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                
+          <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              
+        <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                
+          <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              
+        <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                
+          <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -205,8 +196,7 @@ const BusinessIntelligencePage: React.FC = () => {
           ))}
         </section>
       </div>
-    </div>
+    </>
   );
 };
-
 export default BusinessIntelligencePage;

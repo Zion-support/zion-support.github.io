@@ -1,42 +1,20 @@
-
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {CpuChipIcon, ChartBarIcon, ClockIcon, UsersIcon, CheckCircleIcon, ShieldCheckIcon, CloudIcon} from '@heroicons/react/24/outline';
-import { StarIcon } from '@heroicons/react/24/solid';
+import { 
+  CpuChipIcon, 
+  ChartBarIcon, 
+  ClockIcon,
+  UsersIcon,
+  CheckCircleIcon,
+  ArrowRightIcon,
+  StarIcon,
+  ShieldCheckIcon,
+  CloudIcon,
+  RocketLaunchIcon
+} from '@heroicons/react/24/outline';
 export default function AiProjectManagementProPage() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "AI Project Management Pro",
-    "description": "Advanced AI-powered project management solution with intelligent task automation, resource optimization, and predictive analytics.",
-    "url": "https://ziontechgroup.com/ai-project-management-pro",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web, iOS, Android",
-    "offers": {
-      "@type": "Offer",
-      "price": "399",
-      "priceCurrency": "USD",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "399",
-        "priceCurrency": "USD",
-        "unitText": "MONTH"
-      }
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com"
-    }
-  };
-
-  const features = [
-    {
-      icon: CpuChipIcon,
-      title: 'AI Task Automation',
-      description: 'Intelligent task creation, assignment, and prioritization based on project requirements and team capabilities.',
-      benefits: ['Reduces manual planning by 80%', 'Improves task accuracy by 95%', 'Saves 15+ hours per week']
-    },
+  return;
+},
     {
       icon: ChartBarIcon,
       title: 'Predictive Analytics',
@@ -69,7 +47,7 @@ export default function AiProjectManagementProPage() {
     }
   ];
 
-  const pricingPlans = [
+const pricingPlans = [
     {
       name: 'Starter',
       price: '$199',
@@ -116,7 +94,7 @@ export default function AiProjectManagementProPage() {
     }
   ];
 
-  const testimonials = [
+const testimonials = [
     {
       name: 'Sarah Johnson',
       role: 'Project Manager',
@@ -139,7 +117,6 @@ export default function AiProjectManagementProPage() {
       rating: 5
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -151,38 +128,43 @@ export default function AiProjectManagementProPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
+        
         <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
+          
+        <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
         </div>
-        
         {/* Cyber Grid Overlay */}
-        <div className="absolute inset-0 cyber-grid opacity-30"></div>
         
+        <div className="absolute inset-0 cyber-grid opacity-30"></div>
         {/* Floating Elements */}
+        
         <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
+        
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating"></div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 holographic-text animate-hologram-flicker">
+          
+        <div className="max-w-4xl mx-auto">
+            
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 holographic-text animate-hologram-flicker">
               AI Project Management Pro
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your project management with AI-powered automation, predictive analytics, 
               and intelligent resource optimization. Complete projects faster and more efficiently.
             </p>
-            
             {/* Pricing Badge */}
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full px-6 py-3 mb-8">
+            
+        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full px-6 py-3 mb-8">
               <StarIcon className="w-5 h-5 text-green-400" />
               <span className="text-green-400 font-semibold">Starting at $199/month</span>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
@@ -199,37 +181,39 @@ export default function AiProjectManagementProPage() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-slate-900">
+        
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          
+        <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
               Powerful AI Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Leverage cutting-edge artificial intelligence to streamline your project management workflow
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="group bg-gradient-to-br from-slate-800/90 to-slate-700/90 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/70 transition-all duration-500 hover-lift relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
-                <div className="relative z-10">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 floating">
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+        <div className="relative z-10">
+                  
+        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 floating">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-4 gradient-text group-hover:neon-text transition-all duration-300">
                     {feature.title}
                   </h3>
                   
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+          <p className="text-gray-300 mb-6 leading-relaxed">
                     {feature.description}
                   </p>
-                  
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="text-sm text-gray-300 flex items-center">
@@ -244,20 +228,22 @@ export default function AiProjectManagementProPage() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+        
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          
+        <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
               Choose Your Plan
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Flexible pricing options to fit your team size and requirements
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-gradient-to-br from-slate-800/90 to-slate-700/90 p-8 rounded-xl border transition-all duration-500 hover-lift ${
                 plan.popular 
@@ -265,22 +251,25 @@ export default function AiProjectManagementProPage() {
                   : 'border-slate-600/50 hover:border-cyan-500/50'
               }`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                  
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    
+        <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </div>
                   </div>
                 )}
                 
-                <div className="text-center mb-8">
+        <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
+                  
+          <p className="text-gray-400 mb-4">{plan.description}</p>
+                  
+        <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
-                
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
@@ -289,7 +278,6 @@ export default function AiProjectManagementProPage() {
                     </li>
                   ))}
                 </ul>
-                
                 <Link
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
@@ -305,39 +293,45 @@ export default function AiProjectManagementProPage() {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 bg-slate-900">
+        
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          
+        <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
               What Our Clients Say
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Join thousands of satisfied customers who have transformed their project management
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-gradient-to-br from-slate-800/90 to-slate-700/90 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover-lift">
-                <div className="flex items-center mb-4">
+                
+        <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <StarIcon key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 
-                <p className="text-gray-300 mb-6 italic">
+          <p className="text-gray-300 mb-6 italic">
                   "{testimonial.content}"
                 </p>
                 
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+        <div className="flex items-center">
+                  
+        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
                     {testimonial.name.charAt(0)}
                   </div>
                   <div>
-                    <div className="text-white font-semibold">{testimonial.name}</div>
-                    <div className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</div>
+                    
+        <div className="text-white font-semibold">{testimonial.name}</div>
+                    
+        <div className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
               </div>
@@ -345,17 +339,19 @@ export default function AiProjectManagementProPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+        
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Project Management?
           </h2>
+          
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Start your free trial today and experience the power of AI-driven project management.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
