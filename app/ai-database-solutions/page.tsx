@@ -1,25 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Cloud, Database, Shield, Users, Zap } from 'lucide-react';
+import { CheckCircle, Database, Shield, Users } from 'lucide-react';
 
 const AiDatabaseSolutionsPage = () => {
   const features = [
     {
       icon: <Database className="w-8 h-8" />,
-      title: "AI-Powered Database Optimization",
-      description: "Intelligent query optimization and performance tuning using machine learning algorithms to maximize database efficiency." },
-    { icon: <Shield className="w-8 h-8" />,
+      title: "AI-Powered Optimization",
+      description: "Intelligent query optimization and performance tuning using machine learning algorithms to maximize database efficiency."
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
       title: "Advanced Security & Compliance",
-      description: "Enterprise-grade security with automated threat detection, encryption, and compliance management for sensitive data." },
-    { icon: <Zap className="w-8 h-8" />,
+      description: "Enterprise-grade security with automated threat detection, encryption, and compliance management for sensitive data."
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
       title: "Real-time Analytics",
-      description: "Live data processing and analytics with AI-driven insights for instant decision making and business intelligence." },
-    { icon: <Users className="w-8 h-8" />,
+      description: "Live data processing and analytics with AI-driven insights for instant decision making and business intelligence."
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
       title: "Scalable Architecture",
-      description: "Cloud-native database solutions that automatically scale with your business needs and data growth." }
+      description: "Cloud-native database solutions that automatically scale with your business needs and data growth."
+    }
   ];
   const services = [
-    { title: "AI Database Design",
+    { title: "AI Design",
       description: "Intelligent database architecture design using AI to optimize for your specific use cases and performance requirements.",
       features: ["Automated Schema Design", "Performance Optimization", "Scalability Planning", "Cost Analysis"] },
     { title: "Data Migration & Integration",
@@ -33,7 +40,7 @@ const AiDatabaseSolutionsPage = () => {
       features: ["Automated Backups", "Point-in-Time Recovery", "Disaster Recovery", "Data Integrity Checks"] }
   ];
   const benefits = [
-    "99.9% Database Uptime Guarantee",
+    "99.9% Uptime Guarantee",
     "50% Faster Query Performance",
     "Automated Security Monitoring",
     "Real-time Performance Analytics",
@@ -43,10 +50,10 @@ const AiDatabaseSolutionsPage = () => {
   return (
     <>
       <Helmet>
-        <title>AI Database Solutions - Zion Tech Group | Advanced Database Management</title>
+        <title>AI Solutions - Zion Tech Group | Advanced Management</title>
         <meta name="description" content="Revolutionary AI-powered database solutions with intelligent optimization, security, and analytics. Transform your data management with cutting-edge technology." />
         <meta name="keywords" content="AI database, database optimization, data analytics, database security, cloud databases, data management, AI solutions" />
-        <meta property="og:title" content="AI Database Solutions - Zion Tech Group" />
+        <meta property="og:title" content="AI Solutions - Zion Tech Group" />
         <meta property="og:description" content="Revolutionary AI-powered database solutions for modern businesses." />
         <meta property="og:type" content="website" />
       </Helmet>
@@ -56,7 +63,7 @@ const AiDatabaseSolutionsPage = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Database Solutions</span>
+                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 Revolutionize your data management with AI-powered database solutions that deliver 
@@ -126,7 +133,7 @@ const AiDatabaseSolutionsPage = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our AI Database Solutions?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our AI Solutions?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the power of AI-driven database management
               </p>
@@ -145,7 +152,7 @@ const AiDatabaseSolutionsPage = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Database?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your ?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Get started with our AI-powered database solutions and experience the future of data management.
               </p>

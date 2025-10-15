@@ -1,14 +1,12 @@
-import { Video } from 'lucide-react';
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import { 
   CpuChipIcon,
   EyeIcon,
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,
   LightBulbIcon,
-  ArrowRightIcon,
   CheckCircleIcon,
   ChartBarIcon,
   CogIcon,
@@ -185,7 +183,7 @@ const AISolutionsPage: React.FC = () => {
                   className="inline-flex items-center text-white hover:text-blue-400 transition-colors"
                 >
                   Learn More
-                  <ArrowRightIcon className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
             );

@@ -1,6 +1,52 @@
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, BarChart3, Brain, CheckCircle, Globe, Mail, Phone, Play, Shield, Star, Target, Zap } from 'lucide-react'; const AiAnalyticsDashboardProPage = () => { const [isVisible, setIsVisible] = useState(false); // const [activeTab, setActiveTab] = useState('overview'); useEffect(() => { setIsVisible(true); }, []); const features = [ { icon: <BarChart3 className="w-6 h-6" />, title: "Real-time Analytics", description: "Monitor your business metrics in real-time with live data streaming and instant updates.", benefits: ["Live data updates", "Instant insights", "Real-time alerts", "Performance monitoring"] }, { icon: <Brain className="w-6 h-6" />, title: "AI-Powered Insights", description: "Leverage machine learning algorithms to uncover hidden patterns and predict future trends.", benefits: ["Predictive analytics", "Pattern recognition", "Anomaly detection", "Smart recommendations"] }, { icon: <Target className="w-6 h-6" />, title: "Custom Dashboards", description: "Create personalized dashboards tailored to your specific business needs and KPIs.", benefits: ["Drag-and-drop builder", "Custom widgets", "Role-based views", "Mobile optimization"] }, { icon: <Globe className="w-6 h-6" />, title: "Multi-Data Source Integration", description: "Connect and analyze data from multiple sources including databases, APIs, and cloud services.", benefits: ["100+ integrations", "Data transformation", "ETL pipelines", "API management"] }, { icon: <Shield className="w-6 h-6" />, title: "Enterprise Security", description: "Bank-level security with encryption, access controls, and compliance management.", benefits: ["End-to-end encryption", "Role-based access", "Audit logs", "GDPR compliance"] }, { icon: <Zap className="w-6 h-6" />, title: "Automated Reporting", description: "Generate and distribute reports automatically with scheduled delivery and custom formats.", benefits: ["Scheduled reports", "Email delivery", "PDF/Excel export", "Custom templates"] } ];
+import { ArrowRight, BarChart3, Brain, CheckCircle, Globe, Mail, Phone, Play, Shield, Star, Target, Zap } from 'lucide-react';
+
+const AiAnalyticsDashboardProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const features = [
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Real-time Analytics",
+      description: "Monitor your business metrics in real-time with live data streaming and instant updates.",
+      benefits: ["Live data updates", "Instant insights", "Real-time alerts", "Performance monitoring"]
+    },
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: "AI-Powered Insights",
+      description: "Leverage machine learning algorithms to uncover hidden patterns and predict future trends.",
+      benefits: ["Predictive analytics", "Pattern recognition", "Anomaly detection", "Smart recommendations"]
+    },
+    {
+      icon: <Target className="w-6 h-6" />,
+      title: "Custom Dashboards",
+      description: "Create personalized dashboards tailored to your specific business needs and KPIs.",
+      benefits: ["Drag-and-drop builder", "Custom widgets", "Role-based views", "Mobile optimization"]
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      title: "Multi-Data Source Integration",
+      description: "Connect and analyze data from multiple sources including databases, APIs, and cloud services.",
+      benefits: ["100+ integrations", "Data transformation", "ETL pipelines", "API management"]
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Enterprise Security",
+      description: "Bank-level security with encryption, access controls, and compliance management.",
+      benefits: ["End-to-end encryption", "Role-based access", "Audit logs", "GDPR compliance"]
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Automated Reporting",
+      description: "Generate and distribute reports automatically with scheduled delivery and custom formats.",
+      benefits: ["Scheduled reports", "Email delivery", "PDF/Excel export", "Custom templates"]
+    }
+  ];
   const pricingPlans = [
     { name: "Starter",
       price: "$299",
