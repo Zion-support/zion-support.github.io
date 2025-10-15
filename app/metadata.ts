@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI and IT solutions for businesses worldwide. Transform your operations with cutting-edge technology.',
@@ -19,15 +18,3 @@ export const metadata = {
 };
 
 export default metadata;
-=======
-import React from 'react';
-
-export default function metadata() {
-  return (
-    <div>
-      <h1>metadata<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

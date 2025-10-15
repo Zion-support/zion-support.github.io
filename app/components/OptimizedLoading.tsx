@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function OptimizedLoading() {
 
         title="Components - Zion Tech Group"
@@ -27,19 +26,3 @@ export default function OptimizedLoading() {
     </>;";
   );";";
 ;"
-=======
-import React from 'react';
-
-interface OptimizedLoadingProps {
-  className?: string;
-}
-
-export default function OptimizedLoading({ className }: OptimizedLoadingProps) {
-  return (
-    <div className={className}>
-      <h2>OptimizedLoading<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

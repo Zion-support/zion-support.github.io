@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: ',''";
@@ -355,13 +354,3 @@ const ContactPage: React.FC = () => {
   ),
 
 
-=======
-export default function ContactPage() {
-  return (
-    <div>
-      <h1>ContactPage<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

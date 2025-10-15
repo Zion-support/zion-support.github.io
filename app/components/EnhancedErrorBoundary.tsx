@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -284,19 +283,3 @@ export default EnhancedErrorBoundary;
 
 
 };
-=======
-import React from 'react';
-
-interface EnhancedErrorBoundaryProps {
-  className?: string;
-}
-
-export default function EnhancedErrorBoundary({ className }: EnhancedErrorBoundaryProps) {
-  return (
-    <div className={className}>
-      <h2>EnhancedErrorBoundary<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

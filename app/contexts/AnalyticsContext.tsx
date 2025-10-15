@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
@@ -14,23 +13,6 @@ interface AnalyticsContextType {
 setIsEnabled(true)}, [
   ])
     // if analytics is enabled;
-=======
-import React, { createContext, useContext } from 'react';
-
-interface AnalyticsContextContextType {
-  /// Comment
-}
-
-const AnalyticsContextContext = createContext<AnalyticsContextContextType | undefined>(undefined);
-
-export function AnalyticsContextProvider({ children }: { children: React.ReactNode }) {
-  return (
-    <AnalyticsContextContext.Provider value={{}}>
-      {children}
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
 
 export function useAnalyticsContext() {
   const context = useContext(AnalyticsContextContext);

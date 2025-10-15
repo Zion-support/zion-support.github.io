@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       interface PerformanceMetrics {},
       loadTime: number,
       firstContentfulPaint: number,
@@ -187,19 +186,3 @@ if ((process.env.NODE_ENV !== 'development' && !showInProduction) || !metrics) {
 ;"
 
 export default ComponentsPage;'";'";"
-=======
-import React from 'react';
-
-interface EnhancedPerformanceMonitorProps {
-  className?: string;
-}
-
-export default function EnhancedPerformanceMonitor({ className }: EnhancedPerformanceMonitorProps) {
-  return (
-    <div className={className}>
-      <h2>EnhancedPerformanceMonitor<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

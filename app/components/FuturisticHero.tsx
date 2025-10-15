@@ -1,4 +1,3 @@
-<<<<<<< HEAD
             style={{},
       left: `${20 + index * 20}%`,
       top: `${30 + index * 15}%`,
@@ -42,19 +41,3 @@
     },";"
 
 import SEOHead from './components/SEOHead";"'
-=======
-import React from 'react';
-
-interface FuturisticHeroProps {
-  className?: string;
-}
-
-export default function FuturisticHero({ className }: FuturisticHeroProps) {
-  return (
-    <div className={className}>
-      <h2>FuturisticHero<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

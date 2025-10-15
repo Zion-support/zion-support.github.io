@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ComponentType, lazy } from 'react';
 
 // Lazy loading helper function
@@ -29,11 +28,3 @@ export const useIntersectionObserver = (
     disconnect: () => observer.disconnect()
   };
 };
-=======
-/// Comment
-
-export function lazyLoading() {
-  /// Comment
-  return null;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

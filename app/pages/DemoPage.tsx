@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 const DemoPage: React.FC = () => {}
   const [selectedDemo, setSelectedDemo] = useState('ai-solutions');""
   const  demos = [
@@ -357,13 +356,3 @@ and see how our technology can transform your business.
         </div>
       </section>
 
-=======
-export default function DemoPage() {
-  return (
-    <div>
-      <h1>DemoPage<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

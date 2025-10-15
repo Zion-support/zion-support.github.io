@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // API endpoint for shipping rates
 export default function handler(req: any, res: any) {
   if (req.method !== 'GET') {
@@ -21,15 +20,3 @@ export default function handler(req: any, res: any) {
   }
 }
 
-=======
-import React from 'react';
-
-export default function ShippingRates() {
-  return (
-    <div>
-      <h1>Shipping Rates</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

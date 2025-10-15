@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function UtilsPage() {}
   // Function body
 
@@ -35,11 +34,3 @@ export default function UtilsPage() {}
 ;"
 
 export default UtilsPage;'";'";"
-=======
-/// Comment
-
-export function link() {
-  /// Comment
-  return null;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

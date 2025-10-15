@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 };
 import React from 'react';";";";";
@@ -6,9 +5,6 @@ import SEOHead from './components/SEOHead";
 
 
 
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
 
 interface FuturisticLoaderProps {
   className?: string;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -246,19 +245,3 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 };
 
 export default Navigation;
-=======
-import React from 'react';
-
-interface NavigationProps {
-  className?: string;
-}
-
-export default function Navigation({ className }: NavigationProps) {
-  return (
-    <div className={className}>
-      <h2>Navigation<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

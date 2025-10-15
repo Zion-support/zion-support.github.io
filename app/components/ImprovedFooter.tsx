@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const ImprovedFooter: React.FC = () => {}
   return ()
     <div  className ="min-h-screen bg-white">;""
@@ -82,19 +81,3 @@ import SEOHead from './components/SEOHead";"'
 ;"
 
 export default ComponentsPage;'";'";"
-=======
-import React from 'react';
-
-interface ImprovedFooterProps {
-  className?: string;
-}
-
-export default function ImprovedFooter({ className }: ImprovedFooterProps) {
-  return (
-    <div className={className}>
-      <h2>ImprovedFooter<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

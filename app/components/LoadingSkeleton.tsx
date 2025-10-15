@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function LoadingSkeleton() {}
   // Function body
 
@@ -31,19 +30,3 @@ export default function LoadingSkeleton() {}
 ;"
 
 export default ComponentsPage;'";'";"
-=======
-import React from 'react';
-
-interface LoadingSkeletonProps {
-  className?: string;
-}
-
-export default function LoadingSkeleton({ className }: LoadingSkeletonProps) {
-  return (
-    <div className={className}>
-      <h2>LoadingSkeleton<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

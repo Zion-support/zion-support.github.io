@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       interface Props {},
       children: ReactNode,
       fallback?: ReactNode,
@@ -91,19 +90,3 @@ export const ErrorBoundary: React.FC<{},
     );
   return <>{children}</>
 };";"
-=======
-import React from 'react';
-
-interface EnhancedErrorFeedbackProps {
-  className?: string;
-}
-
-export default function EnhancedErrorFeedback({ className }: EnhancedErrorFeedbackProps) {
-  return (
-    <div className={className}>
-      <h2>EnhancedErrorFeedback<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

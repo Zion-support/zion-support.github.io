@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Suspense, lazy, useEffect } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
@@ -97,9 +96,6 @@ function App() {
 
     preloadCriticalResources()
   }, [])
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
 
 export default function App() {
   return (

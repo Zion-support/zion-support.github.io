@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface OptimizedLoadingSpinnerProps {},
       size?: "xs" | "sm" | "md" | "lg" | "xl"""
   variant?: "dots" | "pulse" | "spinner" | "skeleton" | "bars"""
@@ -113,19 +112,3 @@ color?: "blue" | "gray" | "green" | "red" | "purple"""
 ;"
 
 export default ComponentsPage;'";'";"
-=======
-import React from 'react';
-
-interface OptimizedLoadingSpinnerProps {
-  className?: string;
-}
-
-export default function OptimizedLoadingSpinner({ className }: OptimizedLoadingSpinnerProps) {
-  return (
-    <div className={className}>
-      <h2>OptimizedLoadingSpinner<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

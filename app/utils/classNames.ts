@@ -1,6 +1,5 @@
 /// Comment
 
-<<<<<<< HEAD
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -62,9 +61,3 @@ export function variantClass(
 }
 
 
-=======
-export function classNames() {
-  /// Comment
-  return null;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

@@ -1,33 +1,12 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
 
 export default function TermsPage() {
   return (
-<<<<<<< HEAD
-    <></>
-      <Helmet>
-
-
-      </section>
-    </>
-
-    </>
-  )
-}
-export default TermsPage
-
-
-
-}
-
-
-=======
-    <div>
-      <h1>TermsPage<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">Terms of Service</h1>
+        <p className="text-gray-600">This page is under construction.</p>
+      </div>
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

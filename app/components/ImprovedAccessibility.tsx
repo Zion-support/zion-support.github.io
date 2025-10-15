@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
@@ -84,19 +83,3 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps>  =  ({,
   );";
 };";";
 export default ImprovedAccessibility;"
-=======
-import React from 'react';
-
-interface ImprovedAccessibilityProps {
-  className?: string;
-}
-
-export default function ImprovedAccessibility({ className }: ImprovedAccessibilityProps) {
-  return (
-    <div className={className}>
-      <h2>ImprovedAccessibility<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae

@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 }
   return ()
     <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>""
@@ -45,13 +44,3 @@ import React from 'react';
 
 
 
-=======
-export default function pagebroken2() {
-  return (
-    <div>
-      <h1>page-broken2<// Comment
-      <p>This component is under construction.<// Comment
-    <// Comment
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ccae
