@@ -36,6 +36,9 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Content Moderator</Link></li>
               <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-white">Churn Predictor</Link></li>
+              <li><Link to="/zion-ai-customer-churn-predictor-pro" className="text-gray-300 hover:text-white">Churn Predictor Pro</Link></li>
+              <li><Link to="/zion-ai-customer-sentiment-tracker" className="text-gray-300 hover:text-white">Sentiment Tracker</Link></li>
+              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">Customer Support Pro</Link></li>
               <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">Sales Predictor</Link></li>
               <li><Link to="/zion-ai-workflow-automator" className="text-gray-300 hover:text-white">Workflow Automator</Link></li>
               <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
@@ -53,6 +56,7 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/partnerships" className="text-gray-300 hover:text-white">Partnerships</Link></li>
               <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
               <li><Link to="/case-studies" className="text-gray-300 hover:text-white">Case Studies</Link></li>
+              <li><Link to="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
             </ul>
           </div>
           
