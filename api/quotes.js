@@ -2,8 +2,7 @@ const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
       await handler(req, res);
-    } catch (error) {
-      console.error('API Error:', error);
+    } catch {
       res.status(500).json({ error: 'Internal server error' });
     }
   };
@@ -15,48 +14,25 @@ export default withErrorLogging(async (req, res) => {
   }
 
   try {
-    const { 
-      name, 
-      email, 
-      company, 
-      serviceType, 
-      projectDescription, 
-      budget, 
-      timeline 
-    } = req.body;
+    const { name, email, serviceType } = req.body;
     
-    // Validate required fields
     if (!name || !email || !serviceType) {
       return res.status(400).json({ 
         error: 'Name, email, and service type are required' 
       });
     }
 
-    // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return res.status(400).json({ error: 'Invalid email format' });
     }
-
-    // In a real application, you would save this to a database
-    // and send notifications to the sales team
-    console.log('Quote request received:', {
-      name,
-      email,
-      company,
-      serviceType,
-      projectDescription,
-      budget,
-      timeline
-    });
 
     res.status(200).json({ 
       success: true, 
       message: 'Quote request submitted successfully',
       quoteId: `quote_${Date.now()}`
     });
-  } catch (error) {
-    console.error('Quote request processing failed:', error);
+  } catch {
     res.status(500).json({ error: 'Failed to process quote request' });
   }
 });

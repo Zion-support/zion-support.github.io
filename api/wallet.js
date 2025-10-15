@@ -2,8 +2,7 @@ const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
       await handler(req, res);
-    } catch (error) {
-      console.error('API Error:', error);
+    } catch {
       res.status(500).json({ error: 'Internal server error' });
     }
   };
@@ -15,19 +14,18 @@ export default withErrorLogging(async (req, res) => {
   }
 
   try {
-    const { action, amount, walletId } = req.body;
+    const { action, amount } = req.body;
     
     if (!action) {
       return res.status(400).json({ error: 'Action is required' });
     }
 
-    // Mock wallet operations
     let result;
     
     switch (action) {
       case 'balance':
         result = {
-          balance: 1000, // Mock balance
+          balance: 1000,
           currency: 'USD'
         };
         break;
@@ -62,8 +60,7 @@ export default withErrorLogging(async (req, res) => {
     }
 
     res.status(200).json(result);
-  } catch (error) {
-    console.error('Wallet operation failed:', error);
+  } catch {
     res.status(500).json({ error: 'Failed to process wallet operation' });
   }
 });

@@ -2,8 +2,7 @@ const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
       await handler(req, res);
-    } catch (error) {
-      console.error('API Error:', error);
+    } catch {
       res.status(500).json({ error: 'Internal server error' });
     }
   };
@@ -15,7 +14,7 @@ export default withErrorLogging(async (req, res) => {
   }
 
   try {
-    const { email, name } = req.body;
+    const { email } = req.body;
     
     if (!email) {
       return res.status(400).json({ error: 'Email is required' });
@@ -27,16 +26,11 @@ export default withErrorLogging(async (req, res) => {
       return res.status(400).json({ error: 'Invalid email format' });
     }
 
-    // In a real application, you would save this to a database
-    // For now, we'll just log the subscription
-    console.log('Newsletter subscription:', { email, name });
-
     res.status(200).json({ 
       success: true, 
       message: 'Successfully subscribed to newsletter' 
     });
-  } catch (error) {
-    console.error('Newsletter subscription failed:', error);
+  } catch {
     res.status(500).json({ error: 'Failed to subscribe to newsletter' });
   }
 });

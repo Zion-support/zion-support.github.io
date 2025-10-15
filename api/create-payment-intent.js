@@ -2,8 +2,7 @@ const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
       await handler(req, res);
-    } catch (error) {
-      console.error('API Error:', error);
+    } catch {
       res.status(500).json({ error: 'Internal server error' });
     }
   };
@@ -17,7 +16,6 @@ export default withErrorLogging(async (req, res) => {
   try {
     const { amount, currency = 'usd' } = req.body;
     
-    // Mock payment intent creation
     const paymentIntent = {
       id: `pi_${Date.now()}`,
       amount,
@@ -27,8 +25,7 @@ export default withErrorLogging(async (req, res) => {
     };
 
     res.status(200).json({ paymentIntent });
-  } catch (error) {
-    console.error('Payment intent creation failed:', error);
+  } catch {
     res.status(500).json({ error: 'Failed to create payment intent' });
   }
 });
