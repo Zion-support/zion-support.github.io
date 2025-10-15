@@ -120,7 +120,7 @@ const SupportPage: React.FC = () => {
     <>
       <Helmet>
         <title>Support - Zion Tech Group | Technical Support & Help</title>
-        <meta name="description" content="Get technical support for Zion Tech Group's AI and IT services. Contact our expert team via chat, phone, or email for immediate assistance." />
+        <meta name="description" content="Get technical support for Zion Tech Group&apos;s AI and IT services. Contact our expert team via chat, phone, or email for immediate assistance." />
         <meta name="keywords" content="support, technical support, help desk, customer service, troubleshooting, assistance" />
         <meta property="og:title" content="Support - Zion Tech Group" />
         <meta property="og:description" content="Get expert technical support and assistance" />
@@ -137,7 +137,7 @@ const SupportPage: React.FC = () => {
                 Support
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Get expert help and support for all our AI and IT services. We're here to help you succeed.
+                Get expert help and support for all our AI and IT services. We&apos;re here to help you succeed.
               </p>
             </div>
           </div>
@@ -200,7 +200,7 @@ const SupportPage: React.FC = () => {
                   <div className="text-center py-12">
                     <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-white mb-2">Request Submitted!</h3>
-                    <p className="text-gray-300">Thank you for contacting us. We'll get back to you within the specified response time.</p>
+                    <p className="text-gray-300">Thank you for contacting us. We&apos;ll get back to you within the specified response time.</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">

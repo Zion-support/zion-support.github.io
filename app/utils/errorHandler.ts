@@ -1,8 +1,8 @@
 export const errorHandler = { 
   handle: (error: Error, context?: string) => {
     // Log to external service
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && (window as { gtag?: (command: string, action: string, params: Record<string, unknown>) => void }).gtag) {
+      (window as { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: context ? { context } : {}
@@ -29,10 +29,12 @@ const message = errorWithResponse.response?.data?.message || errorWithResponse.m
   },
   log: (error: Error, context?: Record<string, unknown>) => { 
     // Error logging logic
+    // eslint-disable-next-line no-console
     console.error('Error logged:', error, context);
   },
   report: (error: Error, context?: Record<string, unknown>) => { 
     // Error reporting logic
+    // eslint-disable-next-line no-console
     console.error('Error reported:', error, context);
   }
 };

@@ -4,7 +4,7 @@ export const usePerformanceMonitoring = () => {
   const reportMetric = useCallback((name: string, value: number) => {
     // Report to analytics service
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', name, {
+      (window as { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag('event', name, {
         event_category: 'Performance',
         value: Math.round(value),
         non_interaction: true,
@@ -13,6 +13,7 @@ export const usePerformanceMonitoring = () => {
 
     // Log in development
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.log(`Performance Metric - ${name}:`, value);
     }
   }, []);
@@ -23,7 +24,7 @@ export const usePerformanceMonitoring = () => {
     // Web Vitals monitoring
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        const metric = entry as any;
+        const metric = entry as PerformanceEntry & { startTime: number; processingStart?: number; hadRecentInput?: boolean; value?: number; responseStart?: number; requestStart?: number };
         
         switch (entry.entryType) {
           case 'paint':
@@ -53,6 +54,7 @@ export const usePerformanceMonitoring = () => {
     try {
       observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.warn('Performance Observer not supported:', error);
     }
 
@@ -83,6 +85,7 @@ export const useResourceTiming = () => {
         
         // Monitor slow resources
         if (resource.duration > 1000) {
+          // eslint-disable-next-line no-console
           console.warn('Slow resource detected:', {
             name: resource.name,
             duration: resource.duration,
@@ -96,6 +99,7 @@ export const useResourceTiming = () => {
     try {
       observer.observe({ entryTypes: ['resource'] });
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.warn('Resource timing observer not supported:', error);
     }
 
@@ -108,13 +112,16 @@ export const useMemoryMonitoring = () => {
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 
     const checkMemory = () => {
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      if (!memory) return;
+      
       const usedMB = memory.usedJSHeapSize / 1048576;
       const totalMB = memory.totalJSHeapSize / 1048576;
       const limitMB = memory.jsHeapSizeLimit / 1048576;
 
       // Alert if memory usage is high
       if (usedMB / limitMB > 0.8) {
+        // eslint-disable-next-line no-console
         console.warn('High memory usage detected:', {
           used: `${usedMB.toFixed(2)}MB`,
           total: `${totalMB.toFixed(2)}MB`,
