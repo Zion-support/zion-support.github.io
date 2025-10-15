@@ -6,3 +6,5 @@ export const securityConfig = { csp: {
     'font-src': ["'self'", "data:"],
     'connect-src': ["'self'", "https:"] }
 };
+
+export default NotFoundPage;

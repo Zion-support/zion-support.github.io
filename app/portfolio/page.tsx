@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {ArrowRight, Award, ExternalLink, Filter, Github, Star, Video, Users} from 'lucide-react';
 
 const PortfolioPage: React.FC = () => {
   const projects = [
@@ -97,14 +96,14 @@ const PortfolioPage: React.FC = () => {
     }
   ];
 
-  const categories = ['All', 'E-commerce', 'Healthcare', 'Smart City', 'FinTech', 'EdTech', 'Supply Chain'];
-  const stats = [
+const categories = ['All', 'E-commerce', 'Healthcare', 'Smart City', 'FinTech', 'EdTech', 'Supply Chain'];
+
+const stats = [
     { number: '50+', label: 'Projects Completed', icon: <Award className="w-6 h-6" /> },
     { number: '150+', label: 'Happy Clients', icon: <Users className="w-6 h-6" /> },
     { number: '99.9%', label: 'Success Rate', icon: <Star className="w-6 h-6" /> },
     { number: '5+', label: 'Years Experience', icon: <Calendar className="w-6 h-6" /> }
   ];
-
   return (
     <>
       <Helmet>
@@ -113,18 +112,22 @@ const PortfolioPage: React.FC = () => {
         <meta name="keywords" content="portfolio, projects, web development, AI solutions, mobile apps, enterprise software, case studies" />
         <link rel="canonical" href="https://ziontechgroup.com/portfolio" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          
+        <div className="max-w-7xl mx-auto text-center">
+            
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Our <span className="text-cyan-400">Portfolio</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Discover our successful projects and see how we've helped businesses transform their operations with cutting-edge technology solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors flex items-center justify-center space-x-2"
@@ -141,28 +144,33 @@ const PortfolioPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  
+        <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     {stat.icon}
                   </div>
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+                  
+        <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
+                  
+        <div className="text-gray-300">{stat.label}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Category Filter */}
         <section className="px-4 sm:px-6 lg:px-8 mb-12">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
                 <button
                   key={category}
@@ -178,23 +186,26 @@ const PortfolioPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Projects Grid */}
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project) => (
                 <div
                   key={project.id}
                   className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 group"
                 >
-                  <div className="relative overflow-hidden">
+                  
+        <div className="relative overflow-hidden">
                     <img
                       src={project.image}
                       alt={project.title}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute top-4 left-4">
+                    
+        <div className="absolute top-4 left-4">
                       <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
                         project.status === 'Completed' 
                           ? 'bg-green-500 text-white' 
@@ -203,20 +214,22 @@ const PortfolioPage: React.FC = () => {
                         {project.status}
                       </span>
                     </div>
-                    <div className="absolute top-4 right-4">
+                    
+        <div className="absolute top-4 right-4">
                       <span className="px-3 py-1 bg-slate-700 text-gray-300 text-sm rounded-full">
                         {project.category}
                       </span>
                     </div>
                   </div>
                   
-                  <div className="p-6">
+        <div className="p-6">
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-gray-300 mb-4">{project.description}</p>
                     
-                    <div className="flex flex-wrap gap-2 mb-4">
+          <p className="text-gray-300 mb-4">{project.description}</p>
+                    
+        <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, index) => (
                         <span
                           key={index}
@@ -227,18 +240,20 @@ const PortfolioPage: React.FC = () => {
                       ))}
                     </div>
                     
-                    <div className="space-y-2 mb-4">
-                      <div className="flex items-center text-sm text-gray-400">
+        <div className="space-y-2 mb-4">
+                      
+        <div className="flex items-center text-sm text-gray-400">
                         <Users className="w-4 h-4 mr-2" />
                         <span>{project.client}</span>
                       </div>
-                      <div className="flex items-center text-sm text-gray-400">
+                      
+        <div className="flex items-center text-sm text-gray-400">
                         <Calendar className="w-4 h-4 mr-2" />
                         <span>{project.duration}</span>
                       </div>
                     </div>
                     
-                    <div className="flex space-x-2">
+        <div className="flex space-x-2">
                       <Link
                         to={project.link}
                         className="flex-1 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
@@ -259,18 +274,21 @@ const PortfolioPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="px-4 sm:px-6 lg:px-8 pb-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12">
+          
+        <div className="max-w-4xl mx-auto text-center">
+            
+        <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12">
               <h2 className="text-3xl font-bold text-white mb-4">
                 Ready to Start Your Project?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              
+          <p className="text-xl text-gray-300 mb-8">
                 Let's discuss how we can help bring your vision to life with our expertise and innovative solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors flex items-center justify-center space-x-2"
@@ -292,5 +310,4 @@ const PortfolioPage: React.FC = () => {
     </>
   );
 };
-
 export default PortfolioPage;

@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+
 interface FuturisticButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
@@ -65,17 +67,9 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
 
   if (href) {
     return (
-      <motion.a
-        href={href}
-        className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${disabledClasses} ${className} group inline-block`}
-        whileHover={!disabled ? { scale: 1.05 } : {}}
-        whileTap={!disabled ? { scale: 0.95 } : {}}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-      >
+      <Link href={href} className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${disabledClasses} ${className} group inline-block`}>
         {buttonContent}
-      </motion.a>
+      </Link>
     );
   }
 

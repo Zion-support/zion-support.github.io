@@ -1,8 +1,4 @@
-'use client';
-
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
@@ -105,38 +101,36 @@ const ApiDocsPage: React.FC = () => {
     }
   ];
 
-  const sdkExamples = [
+const sdkExamples = [
     {
       language: 'Python',
-      code: `from ziontech import Client
-
-# Initialize client
-client = Client(api_key="your_api_key")
-
-# Make a prediction
-result = client.ai.predict(
-    model_id="sentiment-analysis-v1",
-    input_data={"text": "I love this product!"}
+      code: `import ziontech
+# Initialize the client
+client = ziontech.Client(api_key='your_api_key')
+# Generate AI content
+content = client.ai.content.generate(
+    prompt="Write about machine learning",
+    type="blog",
+    tone="professional"
 )
-
-print(result.predictions)`,
-      description: 'Python SDK example for making AI predictions'
+print(content.data.content)`,
+      icon: <Code className="w-6 h-6" />
     },
     {
       language: 'JavaScript',
-      code: `const { ZionTechClient } = require('ziontech-js');
-
-// Initialize client
-const client = new ZionTechClient('your_api_key');
-
-// Make a prediction
-const result = await client.ai.predict({
-  modelId: 'sentiment-analysis-v1',
-  inputData: { text: 'I love this product!' }
+      code: `const ziontech = require('ziontech-sdk');
+// Initialize the client
+const client = new ziontech.Client({
+  apiKey: 'your_api_key'
 });
-
-console.log(result.predictions);`,
-      description: 'JavaScript/Node.js SDK example'
+// Generate AI content
+client.ai.content.generate({
+  prompt: 'Write about machine learning',
+  type: 'blog',
+  tone: 'professional'
+}).then(response => {
+  });`,
+      icon: <Code className="w-6 h-6" />
     },
     {
       language: 'cURL',
@@ -148,71 +142,70 @@ console.log(result.predictions);`,
     "input_data": {
       "text": "I love this product!"
     }
-  }'`,
-      description: 'Direct API call using cURL'
-    }
   ];
 
+const features = [
+    {
+      icon: <Key className="w-8 h-8" />,
+      title: 'Authentication',
+      description: 'Secure API key-based authentication with role-based access control'
+    },
+    {
+      icon: <Star className="w-6 h-6" />,
+      title: 'Rate Limiting',
+      description: 'Intelligent rate limiting to ensure fair usage and optimal performance'
+    },
+    {
+      icon: <Star className="w-6 h-6" />,
+      title: 'Real-time Data',
+      description: 'Access to real-time data and analytics through our RESTful API'
+    },
+    {
+      icon: <Star className="w-6 h-6" />,
+      title: 'Security',
+      description: 'Enterprise-grade security with encryption and compliance standards'
+    }
+  ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              API Documentation
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              Complete API reference for integrating with our AI platform
-            </p>
+    <>
+      <Helmet>
+        <title>API Documentation - Zion Tech Group | Developer API Reference</title>
+        <meta name="description" content="Complete API documentation for Zion Tech Group services. RESTful APIs, SDKs, authentication, and integration guides for developers." />
+        <meta name="keywords" content="API documentation, REST API, developer guide, SDK, authentication, integration" />
+        <meta property="og:title" content="API Documentation - Zion Tech Group" />
+        <meta property="og:description" content="Complete developer API reference and documentation" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="py-20">
+          
+        <div className="container mx-auto px-4">
             
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search API endpoints..."
-                  className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Start */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Quick Start
-            </h2>
-            <p className="text-xl text-gray-600">
-              Get started with our API in minutes
-            </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 border border-blue-200">
-              <div className="flex items-center mb-4">
-                <Key className="w-8 h-8 text-blue-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">1. Get API Key</h3>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Sign up for an account and get your API key from the dashboard.
+        <div className="text-center max-w-4xl mx-auto">
+              
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                API <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Documentation</span>
+              </h1>
+              
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+                Complete API reference for integrating with Zion Tech Group services. RESTful APIs, SDKs, and comprehensive guides.
               </p>
-              <Link 
-                to="/contact"
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
-              >
-                Get API Key
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 border border-green-200">
-              <div className="flex items-center mb-4">
-                <Code className="w-8 h-8 text-green-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">2. Make Request</h3>
+              
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="#getting-started"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Started
+                </a>
+                <a
+                  href="#endpoints"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >
+                  View Endpoints
+                </a>
               </div>
               <p className="text-gray-600 mb-4">
                 Use our REST API or SDKs to make your first API call.
@@ -242,132 +235,202 @@ console.log(result.predictions);`,
               </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* API Endpoints */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              API Endpoints
-            </h2>
-            <p className="text-xl text-gray-600">
-              Complete reference for all available endpoints
-            </p>
-          </div>
-          <div className="space-y-12">
-            {apiEndpoints.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white rounded-lg shadow-lg p-8">
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{category.title}</h3>
-                  <p className="text-gray-600">{category.description}</p>
+        </section>
+        {/* Features */}
+        <section className="py-16 px-4">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center group">
+                  
+        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    
+        <div className="text-white">{feature.icon}</div>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                  
+          <p className="text-gray-300">{feature.description}</p>
                 </div>
-                <div className="space-y-8">
-                  {category.endpoints.map((endpoint, endpointIndex) => (
-                    <div key={endpointIndex} className="border border-gray-200 rounded-lg p-6">
-                      <div className="flex items-center mb-4">
-                        <span className={`px-3 py-1 rounded text-sm font-semibold mr-4 ${
-                          endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :
-                          endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
-                          'bg-gray-100 text-gray-800'
-                        }`}>
-                          {endpoint.method}
-                        </span>
-                        <code className="text-lg font-mono text-gray-900">{endpoint.path}</code>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Getting Started */}
+        <section id="getting-started" className="py-16 px-4 bg-white/5 backdrop-blur-sm">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Getting Started</h2>
+              
+          <p className="text-xl text-gray-300">Quick setup and authentication guide</p>
+            </div>
+            
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20">
+                <h3 className="text-xl font-bold text-white mb-4">1. Get Your API Key</h3>
+                
+          <p className="text-gray-300 mb-6">
+                  Sign up for an account and generate your API key from the dashboard.
+                </p>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                >
+                  Get API Key
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+              </div>
+              
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20">
+                <h3 className="text-xl font-bold text-white mb-4">2. Choose Your SDK</h3>
+                
+          <p className="text-gray-300 mb-6">
+                  We provide SDKs for Python, JavaScript, Java, and more languages.
+                </p>
+                <a
+                  href="#sdks"
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                >
+                  View SDKs
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* API Endpoints */}
+        <section id="endpoints" className="py-16 px-4">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">API Endpoints</h2>
+              
+          <p className="text-xl text-gray-300">Explore our RESTful API endpoints</p>
+            </div>
+            
+        <div className="space-y-8">
+              {apiEndpoints.map((endpoint, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20">
+                  
+        <div className="flex items-center mb-6">
+                    <span className={`px-3 py-1 rounded text-sm font-semibold mr-4 ${
+                      endpoint.method === 'GET' ? 'bg-green-500/20 text-green-400' :
+                      endpoint.method === 'POST' ? 'bg-blue-500/20 text-blue-400' :
+                      'bg-yellow-500/20 text-yellow-400'
+                    }`}>
+                      {endpoint.method}
+                    </span>
+                    <code className="text-cyan-400 font-mono text-lg">{endpoint.path}</code>
+                  </div>
+                  
+          <p className="text-gray-300 mb-6">{endpoint.description}</p>
+                  
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                      <h4 className="text-lg font-semibold text-cyan-400 mb-4">Parameters</h4>
+                      
+        <div className="space-y-3">
+                        {endpoint.parameters.map((param, paramIndex) => (
+                          <div key={paramIndex} className="flex items-start space-x-3">
+                            
+        <div className="flex-shrink-0">
+                              <span className="text-white font-mono text-sm">{param.name}</span>
+                              <span className="text-gray-400 text-xs ml-2">({param.type})</span>
+                              {param.required && <span className="text-red-400 text-xs ml-1">*</span>}
+                            </div>
+                            
+          <p className="text-gray-300 text-sm">{param.description}</p>
+                          </div>
+                        ))}
                       </div>
-                      <p className="text-gray-600 mb-4">{endpoint.description}</p>
-                      <div className="bg-gray-900 rounded-lg p-4 relative">
-                        <button
-                          onClick={() => copyToClipboard(endpoint.example, `${categoryIndex}-${endpointIndex}`)}
-                          className="absolute top-2 right-2 p-2 text-gray-400 hover:text-white transition-colors"
-                        >
-                          {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
-                            <Check className="w-4 h-4" />
-                          ) : (
-                            <Copy className="w-4 h-4" />
-                          )}
-                        </button>
-                        <pre className="text-green-400 text-sm overflow-x-auto">
-                          <code>{endpoint.example}</code>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-cyan-400 mb-4">Example</h4>
+                      
+        <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
+                        <pre className="text-gray-300 text-sm">
+                          <code>{endpoint.example.request}</code>
                         </pre>
                       </div>
                     </div>
-                  ))}
+                  </div>
+                  
+        <div className="mt-6">
+                    <h4 className="text-lg font-semibold text-cyan-400 mb-4">Response</h4>
+                    
+        <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
+                      <pre className="text-gray-300 text-sm">
+                        <code>{endpoint.example.response}</code>
+                      </pre>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* SDK Examples */}
-      <section id="examples" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              SDK Examples
-            </h2>
-            <p className="text-xl text-gray-600">
-              Code examples for different programming languages
-            </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {sdkExamples.map((example, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
-                <div className="bg-gray-50 px-6 py-4 border-b border-gray-200">
-                  <h3 className="text-lg font-semibold text-gray-900">{example.language}</h3>
-                  <p className="text-sm text-gray-600">{example.description}</p>
-                </div>
-                <div className="p-6">
-                  <div className="bg-gray-900 rounded-lg p-4 relative">
-                    <button
-                      onClick={() => copyToClipboard(example.code, `sdk-${index}`)}
-                      className="absolute top-2 right-2 p-2 text-gray-400 hover:text-white transition-colors"
-                    >
-                      {copiedCode === `sdk-${index}` ? (
-                        <Check className="w-4 h-4" />
-                      ) : (
-                        <Copy className="w-4 h-4" />
-                      )}
-                    </button>
-                    <pre className="text-green-400 text-sm overflow-x-auto">
-                      <code>{example.code}</code>
+        </section>
+        {/* SDK Examples */}
+        <section id="sdks" className="py-16 px-4 bg-white/5 backdrop-blur-sm">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">SDK Examples</h2>
+              
+          <p className="text-xl text-gray-300">Code examples in different programming languages</p>
+            </div>
+            
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {sdkExamples.map((sdk, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20">
+                  
+        <div className="flex items-center mb-6">
+                    
+        <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                      
+        <div className="text-white">{sdk.icon}</div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white">{sdk.language}</h3>
+                  </div>
+                  
+        <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
+                    <pre className="text-gray-300 text-sm">
+                      <code>{sdk.code}</code>
                     </pre>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Authentication */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Authentication
-            </h2>
-            <p className="text-xl text-gray-600">
-              Secure your API calls with proper authentication
+        </section>
+        {/* Support */}
+        <section className="py-16 px-4">
+          
+        <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">Need Help?</h2>
+            
+          <p className="text-xl text-gray-300 mb-8">
+              Our developer support team is here to help you integrate with our APIs.
             </p>
-          </div>
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">API Key Authentication</h3>
-            <p className="text-gray-600 mb-6">
-              All API requests require authentication using an API key. Include your API key in the Authorization header:
-            </p>
-            <div className="bg-gray-900 rounded-lg p-4">
-              <pre className="text-green-400 text-sm">
-                <code>Authorization: Bearer YOUR_API_KEY</code>
-              </pre>
-            </div>
-            <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-              <p className="text-yellow-800 text-sm">
-                <strong>Important:</strong> Keep your API key secure and never expose it in client-side code. 
-                Use environment variables or secure key management systems.
-              </p>
+            
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/support"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Contact Support
+              </a>
+              <a
+                href="/docs"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                View Full Docs
+              </a>
             </div>
           </div>
         </div>
@@ -447,5 +510,4 @@ console.log(result.predictions);`,
     </div>
   );
 };
-
 export default ApiDocsPage;

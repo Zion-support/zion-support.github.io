@@ -1,21 +1,21 @@
 export const dataTransformers = { transformToTableData: (data: unknown[]) => {
     return data.map((item, index) => {
       const itemObj = item as Record<string, unknown>;
-      return {
+  return {
         id: itemObj.id || index,
         ...itemObj };
     });
   },
   transformToChartData: (data: unknown[], xField: string, yField: string) => { return data.map(item => {
       const itemObj = item as Record<string, unknown>;
-      return {
+  return {
         x: itemObj[xField],
         y: itemObj[yField] };
     });
   },
   transformToSelectOptions: (data: unknown[], valueField: string, labelField: string) => { return data.map(item => {
       const itemObj = item as Record<string, unknown>;
-      return {
+  return {
         value: itemObj[valueField],
         label: itemObj[labelField] };
     });
@@ -25,3 +25,5 @@ export const dataTransformers = { transformToTableData: (data: unknown[]) => {
       ...item }));
   }
 };
+
+export default NotFoundPage;

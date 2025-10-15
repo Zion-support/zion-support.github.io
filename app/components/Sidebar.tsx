@@ -1,29 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {X, Menu, Home, Brain, Globe} from 'lucide-react';
+import { X,  Home, Brain, Shield, Zap, Globe, BarChart3, Users, Settings } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Users },
-    { name: 'AI Services', href: '/ai-services', icon: Brain },
-    { name: 'IT Services', href: '/services', icon: Shield },
-    { name: 'Micro SAAS', href: '/micro-saas', icon: Zap },
-    { name: '5G Solutions', href: '/5g-solutions', icon: Globe },
-    { name: 'Portfolio', href: '/portfolio', icon: BarChart3 },
-    { name: 'Blog', href: '/blog', icon: Globe },
-    { name: 'Tutorials', href: '/tutorials', icon: Settings },
-    { name: 'Demo', href: '/demo', icon: Settings },
-    { name: 'Support', href: '/support', icon: Settings },
-    { name: 'FAQ', href: '/faq', icon: Settings },
-    { name: 'Contact', href: '/contact', icon: Settings },
+    { name: &apos;Home&apos;, href: &apos;/&apos;, icon: Home },
+    { name: &apos;About&apos;, href: &apos;/about&apos;, icon: Users },
+    { name: &apos;AI Services&apos;, href: &apos;/ai-services&apos;, icon: Brain },
+    { name: &apos;IT Services&apos;, href: &apos;/services&apos;, icon: Shield },
+    { name: &apos;Micro SAAS&apos;, href: &apos;/micro-saas&apos;, icon: Zap },
+    { name: &apos;5G Solutions&apos;, href: &apos;/5g-solutions&apos;, icon: Globe },
+    { name: &apos;Portfolio&apos;, href: &apos;/portfolio&apos;, icon: BarChart3 },
+    { name: &apos;Blog&apos;, href: &apos;/blog&apos;, icon: Globe },
+    { name: &apos;Tutorials&apos;, href: &apos;/tutorials&apos;, icon: Settings },
+    { name: &apos;Demo&apos;, href: &apos;/demo&apos;, icon: Settings },
+    { name: &apos;Support&apos;, href: &apos;/support&apos;, icon: Settings },
+    { name: &apos;FAQ&apos;, href: &apos;/faq&apos;, icon: Settings },
+    { name: &apos;Contact&apos;, href: &apos;/contact&apos;, icon: Settings },
   ];
-
   return (
     <>
       {/* Overlay */}
@@ -33,11 +31,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           onClick={onClose}
         />
       )}
-
       {/* Sidebar */}
       <div className={`fixed top-0 left-0 h-full w-64 bg-slate-900/95 backdrop-blur-sm border-r border-white/10 z-50 transform transition-transform duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } lg:translate-x-0`}>
+        
         <div className="flex items-center justify-between p-4 border-b border-white/10">
           <h2 className="text-xl font-bold text-white">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -51,7 +49,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <X className="w-6 h-6" />
           </button>
         </div>
-
         <nav className="p-4 space-y-2">
           {navigationItems.map((item) => (
             <Link
@@ -65,7 +62,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             </Link>
           ))}
         </nav>
-
+        
         <div className="absolute bottom-4 left-4 right-4">
           <Link
             to="/contact"
@@ -78,5 +75,4 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     </>
   );
 };
-
 export default Sidebar;

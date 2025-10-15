@@ -23,3 +23,5 @@ export const performanceOptimizations = { debounce: <T extends (...args: unknown
     }) as T
   }
 };
+
+export default NotFoundPage;

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 interface EnhancedSEOProps {
@@ -9,9 +8,8 @@ interface EnhancedSEOProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: any;
+  structuredData?: unknown;
 }
-
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,
   description,
@@ -20,11 +18,10 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   ogImage = '/api/placeholder/1200/630',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData,
-}) => {
+  structuredData}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullDescription = description || 'Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation for modern businesses.';
 
+const fullDescription = description || 'Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation for modern businesses.';
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -32,7 +29,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="description" content={fullDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
       {canonical && <link rel="canonical" href={canonical} />}
-      
       {/* Open Graph Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
@@ -40,26 +36,22 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content="Zion Tech Group" />
       {canonical && <meta property="og:url" content={canonical} />}
-      
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={fullDescription} />
       <meta name="twitter:image" content={ogImage} />
-      
       {/* Additional SEO Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      
       {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}
-      
       {/* Default Structured Data */}
       {!structuredData && (
         <script type="application/ld+json">
@@ -94,7 +86,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
             "services": [
               "AI Solutions",
               "Cybersecurity",
-              "Cloud Infrastructure",
+              "Infrastructure",
               "Digital Transformation",
               "Micro SAAS",
               "5G Solutions"
@@ -105,5 +97,4 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     </Helmet>
   );
 };
-
 export default EnhancedSEO;

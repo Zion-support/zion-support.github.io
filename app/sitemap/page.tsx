@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {ArrowRight, ExternalLink, Map, Search, Video} from 'lucide-react';
 
 const SitemapPage: React.FC = () => {
   const sitemapSections = [
@@ -95,13 +94,12 @@ const SitemapPage: React.FC = () => {
     }
   ];
 
-  const quickLinks = [
+const quickLinks = [
     { name: 'Get Started', url: '/contact', icon: <ArrowRight className="w-4 h-4" /> },
     { name: 'View Services', url: '/services', icon: <ExternalLink className="w-4 h-4" /> },
     { name: 'Schedule Demo', url: '/demo', icon: <ExternalLink className="w-4 h-4" /> },
     { name: 'Contact Support', url: '/support', icon: <ExternalLink className="w-4 h-4" /> }
   ];
-
   return (
     <>
       <Helmet>
@@ -112,21 +110,25 @@ const SitemapPage: React.FC = () => {
         <meta property="og:description" content="Complete website sitemap and navigation" />
         <meta property="og:type" content="website" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="text-center max-w-4xl mx-auto">
+              
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Website <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Sitemap</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+              
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 Complete navigation guide to all pages and services on our website. Find what you're looking for quickly and easily.
               </p>
-              
               {/* Search Bar */}
-              <div className="relative max-w-2xl mx-auto mb-8">
+              
+        <div className="relative max-w-2xl mx-auto mb-8">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -137,11 +139,12 @@ const SitemapPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Quick Links */}
         <section className="py-8 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="flex flex-wrap justify-center gap-4">
               {quickLinks.map((link, index) => (
                 <a
                   key={index}
@@ -155,33 +158,39 @@ const SitemapPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Sitemap Sections */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
               {sitemapSections.map((section, sectionIndex) => (
                 <div key={sectionIndex} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
-                  <div className="flex items-center mb-6">
-                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                  
+        <div className="flex items-center mb-6">
+                    
+        <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
                       <Map className="w-5 h-5 text-white" />
                     </div>
                     <h2 className="text-xl font-bold text-white">{section.title}</h2>
                   </div>
                   
-                  <div className="space-y-3">
+        <div className="space-y-3">
                     {section.pages.map((page, pageIndex) => (
                       <a
                         key={pageIndex}
                         href={page.url}
                         className="block p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group"
                       >
-                        <div className="flex items-center justify-between">
-                          <div className="flex-1">
+                        
+        <div className="flex items-center justify-between">
+                          
+        <div className="flex-1">
                             <h3 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
                               {page.name}
                             </h3>
-                            <p className="text-gray-400 text-sm">{page.description}</p>
+                            
+          <p className="text-gray-400 text-sm">{page.description}</p>
                           </div>
                           <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
                         </div>
@@ -193,22 +202,27 @@ const SitemapPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Additional Resources */}
         <section className="py-16 px-4 bg-white/5 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Additional Resources</h2>
-              <p className="text-xl text-gray-300">Quick access to important resources and tools</p>
+              
+          <p className="text-xl text-gray-300">Quick access to important resources and tools</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 text-center hover:border-cyan-500/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 text-center hover:border-cyan-500/40 transition-all duration-300">
+                
+        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <ExternalLink className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">XML Sitemap</h3>
-                <p className="text-gray-300 text-sm mb-4">Machine-readable sitemap for search engines</p>
+                
+          <p className="text-gray-300 text-sm mb-4">Machine-readable sitemap for search engines</p>
                 <a
                   href="/sitemap.xml"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
@@ -217,12 +231,14 @@ const SitemapPage: React.FC = () => {
                 </a>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 text-center hover:border-cyan-500/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 text-center hover:border-cyan-500/40 transition-all duration-300">
+                
+        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Search className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">Search</h3>
-                <p className="text-gray-300 text-sm mb-4">Search across all pages and content</p>
+                
+          <p className="text-gray-300 text-sm mb-4">Search across all pages and content</p>
                 <a
                   href="/search"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
@@ -231,12 +247,14 @@ const SitemapPage: React.FC = () => {
                 </a>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 text-center hover:border-cyan-500/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 text-center hover:border-cyan-500/40 transition-all duration-300">
+                
+        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Map className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">RSS Feed</h3>
-                <p className="text-gray-300 text-sm mb-4">Subscribe to our content updates</p>
+                
+          <p className="text-gray-300 text-sm mb-4">Subscribe to our content updates</p>
                 <a
                   href="/rss.xml"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
@@ -245,12 +263,14 @@ const SitemapPage: React.FC = () => {
                 </a>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 text-center hover:border-cyan-500/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 text-center hover:border-cyan-500/40 transition-all duration-300">
+                
+        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <ArrowRight className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">Help Center</h3>
-                <p className="text-gray-300 text-sm mb-4">Get help and support</p>
+                
+          <p className="text-gray-300 text-sm mb-4">Get help and support</p>
                 <a
                   href="/support"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
@@ -261,15 +281,17 @@ const SitemapPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          
+        <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Can't Find What You're Looking For?</h2>
-            <p className="text-xl text-gray-300 mb-8">
+            
+          <p className="text-xl text-gray-300 mb-8">
               If you can't find the page or information you need, our team is here to help.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
@@ -289,5 +311,4 @@ const SitemapPage: React.FC = () => {
     </>
   );
 };
-
 export default SitemapPage;
