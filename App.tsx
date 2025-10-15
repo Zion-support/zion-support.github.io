@@ -2,6 +2,7 @@ import { Suspense, useEffect, lazy } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization'
+import { analytics } from './app/utils/analytics'
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -90,6 +91,13 @@ export default function App() {
   useEffect(() => {
     // Preload critical resources
     preloadResource('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', 'style');
+    
+    // Initialize analytics
+    analytics.trackPageView({
+      page_title: 'Zion Tech Group - AI & IT Solutions',
+      content_group1: 'Homepage',
+      content_group2: 'Landing'
+    });
   }, [preloadResource])
 
   return (

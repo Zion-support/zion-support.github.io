@@ -1,4 +1,5 @@
 import { useEffect, useCallback, useRef } from 'react';
+import { performanceUtils } from '../utils/performanceUtils';
 
 interface PerformanceOptimizationOptions {
   enableIntersectionObserver?: boolean;
@@ -107,6 +108,42 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       preloadResource('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', 'style');
     }
 
+    // Measure initial performance
+    const measureInitialPerformance = () => {
+      const metrics = performanceUtils.measurePageLoad();
+      
+      // Measure Web Vitals in production
+      if (process.env.NODE_ENV === 'production') {
+        performanceUtils.measureWebVitals().then((vitals) => {
+          const allMetrics = { ...metrics, ...vitals };
+          const score = performanceUtils.getPerformanceScore(allMetrics);
+          
+          // Send performance data to analytics
+          if (window.gtag) {
+            window.gtag('event', 'performance_metrics', {
+              event_category: 'Performance',
+              event_label: 'Page Load',
+              value: score,
+              custom_map: {
+                load_time: allMetrics.loadTime,
+                dom_content_loaded: allMetrics.domContentLoaded,
+                lcp: allMetrics.largestContentfulPaint,
+                fid: allMetrics.firstInputDelay,
+                cls: allMetrics.cumulativeLayoutShift,
+              }
+            });
+          }
+        });
+      }
+    };
+
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measureInitialPerformance();
+    } else {
+      window.addEventListener('load', measureInitialPerformance);
+    }
+
     return () => {
       if (observer) {
         observer.disconnect();
@@ -114,6 +151,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
+      window.removeEventListener('load', measureInitialPerformance);
     };
   }, [createIntersectionObserver, enablePreloading, preloadResource]);
 

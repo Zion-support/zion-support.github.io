@@ -28,6 +28,7 @@
     "build:production": "NODE_OPTIONS=\"--max-old-space-size=4096\" vite build",
     "build:clean": "node scripts/optimize-build.js",
     "build:final": "npm run build:clean && npm run build:production",
+    "build:enhanced": "npm run build:production && node scripts/enhanced-bundle-optimizer.cjs",
     "prebuild": "npm run clean",
     "performance:audit": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
     "performance:check": "pnpm build && pnpm serve & sleep 5 && pnpm performance:audit",
