@@ -4,39 +4,51 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🔧 Starting final merge conflict resolution...');
+console.log('🔧 Starting comprehensive merge conflict resolution...');
 
-// Function to clean merge conflicts aggressively
-function cleanMergeConflicts(filePath) {
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+    if (!content.includes('') && !content.includes('>>>>>>>')) {
       return false;
     }
     
-    console.log(`📝 Cleaning: ${filePath}`);
+    console.log(`📝 Processing: ${filePath}`);
     
-    // Strategy: Remove everything between conflict markers and keep the last version
-    content = content
-      .replace(/<<<<<<< HEAD[\s\S]*?=======/g, '')
-      .replace(/>>>>>>> [^\n]*/g, '')
-      .replace(/\n\s*\n\s*\n/g, '\n\n') // Clean up multiple newlines
-      .replace(/^\s*\n/g, '') // Remove leading newlines
-      .replace(/\n\s*$/g, '\n') // Remove trailing whitespace
-      .trim();
+    // Strategy 1: Keep the newer version (after =======)
+    if (content.includes('=======')) {
+      const parts = content.split('=======');
+      if (parts.length === 2) {
+        const beforeEquals = parts[0];
+        const afterEquals = parts[1];
+        
+        // Remove the HEAD marker and keep the newer version
+        const cleanBefore = beforeEquals.replace(/)
+        content = cleanBefore + '\n\n' + cleanAfter;
+      }
+    }
     
-    // Additional cleanup for common issues
+    // Strategy 2: If still has conflicts, try to merge intelligently
+    if (content.includes('/g, '')
+        .replace(/
+        .replace(/\n\s*\n\s*\n/g, '\n\n') // Clean up multiple newlines
+        .trim();
+    }
+    
+    // Clean up any remaining artifacts
     content = content
-      .replace(/\n\s*const\s+\w+:\s*React\.FC\s*=\s*\(\)\s*=>\s*{\s*\n\s*return\s*\(\s*<>\s*\n\s*<Helmet>\s*\n\s*<title>\w+ - Zion Tech Group<\/title>\s*\n\s*<meta name="description" content="\w+ - Zion Tech Group" \/>\s*\n\s*<\/Helmet>\s*\n\s*<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">\s*\n\s*<div className="text-center">\s*\n\s*<h1 className="text-4xl font-bold mb-4">\w+<\/h1>\s*\n\s*<p className="text-gray-300">\w+<\/p>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/>\s*\n\s*\);\s*\n\s*};\s*\n\s*export default \w+;/g, '')
-      .replace(/\n\s*const\s+\w+:\s*React\.FC\s*=\s*\(\)\s*=>\s*{\s*\n\s*return\s*\(\s*<>\s*\n\s*<Helmet>\s*\n\s*<title>\w+ - Zion Tech Group<\/title>\s*\n\s*<meta name="description" content="\w+ - Zion Tech Group" \/>\s*\n\s*<\/Helmet>\s*\n\s*<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">\s*\n\s*<div className="text-center">\s*\n\s*<h1 className="text-4xl font-bold mb-4">\w+<\/h1>\s*\n\s*<p className="text-gray-300">\w+<\/p>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/>\s*\n\s*\);\s*\n\s*};\s*\n\s*export default \w+;/g, '');
+      .replace(/\n\s*\n\s*\n/g, '\n\n')
+      .replace(/^\s*\n/g, '')
+      .replace(/\n\s*$/g, '\n');
     
     // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Cleaned: ${filePath}`);
+      console.log(`✅ Fixed: ${filePath}`);
       return true;
     }
     
@@ -69,7 +81,7 @@ function findFilesWithConflicts(dir) {
           if (/\.(ts|tsx|js|jsx)$/.test(item)) {
             try {
               const content = fs.readFileSync(fullPath, 'utf8');
-              if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+              if (content.includes('') || content.includes('>>>>>>>')) {
                 files.push(fullPath);
               }
             } catch (error) {
@@ -89,7 +101,7 @@ function findFilesWithConflicts(dir) {
 
 // Main execution
 try {
-  console.log('🔍 Scanning for remaining merge conflicts...');
+  console.log('🔍 Scanning for files with merge conflicts...');
   const conflictedFiles = findFilesWithConflicts('/workspace');
   
   console.log(`📊 Found ${conflictedFiles.length} files with merge conflicts`);
@@ -99,7 +111,7 @@ try {
   
   for (const file of conflictedFiles) {
     try {
-      if (cleanMergeConflicts(file)) {
+      if (resolveMergeConflicts(file)) {
         fixedCount++;
       }
     } catch (error) {
@@ -108,8 +120,8 @@ try {
     }
   }
   
-  console.log('\n📈 Final Cleanup Summary:');
-  console.log(`✅ Successfully cleaned: ${fixedCount} files`);
+  console.log('\n📈 Resolution Summary:');
+  console.log(`✅ Successfully fixed: ${fixedCount} files`);
   console.log(`❌ Errors: ${errorCount} files`);
   console.log(`📁 Total processed: ${conflictedFiles.length} files`);
   

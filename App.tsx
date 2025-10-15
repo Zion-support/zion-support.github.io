@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-import React, { Suspense } from 'react';
-=======
 import React, { Suspense, lazy } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -44,7 +41,7 @@ import CareersPage from './app/pages/CareersPage';
 import CybersecurityPage from './app/pages/CybersecurityPage';
 import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
-import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
+import FiveGSolutionsPage from './app/pages/FiveGSolutionsPage';
 import TeamPage from './app/pages/TeamPage';
 import DocumentationPage from './app/pages/DocumentationPage';
 

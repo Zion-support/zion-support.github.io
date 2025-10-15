@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-=======
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 'use client';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+
 const EnhancedFooter: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -28,15 +23,8 @@ const EnhancedFooter: React.FC = () => {
       </section>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
+
 };
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-export default EnhancedFooter;
-=======
 export default EnhancedFooter;
 '
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

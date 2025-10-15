@@ -14,11 +14,8 @@ export default async function handler(req, res) {
   }
 
   try {
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-    // Process the quote request
+// Process the quote request
     const quote = {
       id: Date.now().toString(),
       name,

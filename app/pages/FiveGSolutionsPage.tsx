@@ -8,11 +8,14 @@ const FiveGSolutionsPage: React.FC = () => {
         <title>FiveGSolutionsPage - Zion Tech Group</title>
         <meta name="description" content="FiveGSolutionsPage - Zion Tech Group" />
       </Helmet>
-      
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">FiveGSolutionsPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
+      <div className="min-h-screen bg-slate-900 text-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">FiveGSolutionsPage</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Welcome to FiveGSolutionsPage at Zion Tech Group.
+            </p>
+          </div>
         </div>
       </div>
     </>
