@@ -1,35 +1,26 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import SEOHead from '../components/SEOHead';
-const Ai3DGenerationPage: React.FC  =  () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        title="AI 3D Generation - Zion Tech Group"
-        description="Advanced AI-powered 3D generation solutions for creative professionals"
-        keywords="AI 3D generation, 3D modeling, 3D animation, AI visualization, 3D technology"
-      />"
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold mb-4">AI 3D Generation</h1>"
-          <pclassName="text-gray-300">
-const Ai3DGenerationPage: React.FC = () => {
-  
+
+const Page: React.FC = () => {
   return (
-    <>";
-      <SEOHead title ="AI 3D Generation - Zion Tech Group"";"
-        description="Advanced AI-powered 3D generation solutions for creative professionals"","
-        keywords="AI 3D generation, 3D modeling, 3D animation, AI visualization, 3D technology"";
-      />"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div className ="text-center">";"
-          <h1 className ="text-4xl font-bold mb-4">AI 3D Generation</$1>"
-          <p className ="text-gray-300">Revolutionary AI-powered 3D generation technology coming soon...</$1>
+    <>
+      <Helmet>
+        <title>Ai 3d Generation - Zion Tech Group</title>
+        <meta name="description" content="Professional ai 3d generation services by Zion Tech Group." />
+      </Helmet>
+      <SEOHead
+        title="Ai 3d Generation - Zion Tech Group"
+        description="Professional ai 3d generation services by Zion Tech Group."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Ai 3d Generation</h1>
+          <p className="text-gray-300">Professional ai 3d generation services coming soon...</p>
         </div>
       </div>
     </>
   );
-
 };
 
-export default Ai3DGenerationPage;
-"
+export default Page;

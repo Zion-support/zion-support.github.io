@@ -1,36 +1,26 @@
-import React from 'react',
-      import SEOHead from '../components/SEOHead',
-      const AiSmartSchedulerPage: React.FC  =  () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        title="Page - Zion Tech Group"
-        description="Advanced page solutions powered by AI"
-      />"
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold mb-4">Page</h1>"
-          <pclassName="text-gray-300">;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import SEOHead from '../components/SEOHead';
 
-import React from 'react';';
-import SEOHead from './components/SEOHead';
-
-const AiSmartSchedulerPage: React.FC  =  () => {
-  return (;
-    <>;
-      <SEOHead;"
-        title="AI Smart Scheduler - Zion Tech Group"";"
-        description="Intelligent AI-powered scheduling solutions for optimal time management and productivity.";"
-      />";"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div className ="text-center">";"
-          <h1 className ="text-4xl font-bold mb-4">AI Smart Scheduler</$1>"
-          <p className ="text-gray-300">Coming soon...</p>;";
-        </div>;
-      </div>;
-    </>;
-  ),
+const Page: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Ai Smart Scheduler - Zion Tech Group</title>
+        <meta name="description" content="Professional ai smart scheduler services by Zion Tech Group." />
+      </Helmet>
+      <SEOHead
+        title="Ai Smart Scheduler - Zion Tech Group"
+        description="Professional ai smart scheduler services by Zion Tech Group."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Ai Smart Scheduler</h1>
+          <p className="text-gray-300">Professional ai smart scheduler services coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
 };
-;"
-export default AiSmartSchedulerPage;'";'";
-"
+
+export default Page;

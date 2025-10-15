@@ -1,28 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import SEOHead from '../components/SEOHead';
-const AiSpaceMissionOptimizerPage: React.FC  =  () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        title="Page - Zion Tech Group"
-        description="Advanced page solutions powered by AI"
-      />"
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold mb-4">Page</h1>"
-          <pclassName="text-gray-300">
-const AiSpaceMissionOptimizerPage: React.FC = () => {
+
+const Page: React.FC = () => {
   return (
-    <>";
-      <SEOHead title ="ai-space-mission-optimizer - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group ai-space-mission-optimizer service page"";
-      />"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div className ="text-center">";"
-          <h1 className ="text-4xl font-bold mb-4">ai-space-mission-optimizer - Zion Tech Group</$1>"
-          <p className ="text-gray-300">Coming soon...</$1>
+    <>
+      <Helmet>
+        <title>Ai Space Mission Optimizer - Zion Tech Group</title>
+        <meta name="description" content="Professional ai space mission optimizer services by Zion Tech Group." />
+      </Helmet>
+      <SEOHead
+        title="Ai Space Mission Optimizer - Zion Tech Group"
+        description="Professional ai space mission optimizer services by Zion Tech Group."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Ai Space Mission Optimizer</h1>
+          <p className="text-gray-300">Professional ai space mission optimizer services coming soon...</p>
         </div>
       </div>
     </>
-  ),
+  );
 };
-"
+
+export default Page;

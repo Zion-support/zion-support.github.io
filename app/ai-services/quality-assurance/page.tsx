@@ -1,27 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import SEOHead from '../components/SEOHead';
-const PagePage: React.FC  =  () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        title="page - Zion Tech Group"
-        description="Zion Tech Group page service page"
-const QualityAssurancePage: React.FC = () => {
+
+const Page: React.FC = () => {
   return (
-    <>";
-      <SEOHead title ="quality-assurance - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group quality-assurance service page"";
-      />"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div className ="text-center">";"
-          <h1 className ="text-4xl font-bold mb-4">quality-assurance - Zion Tech Group</$1>"
-          <p className ="text-gray-300">Coming soon...</$1>
+    <>
+      <Helmet>
+        <title>Quality Assurance - Zion Tech Group</title>
+        <meta name="description" content="Professional quality assurance services by Zion Tech Group." />
+      </Helmet>
+      <SEOHead
+        title="Quality Assurance - Zion Tech Group"
+        description="Professional quality assurance services by Zion Tech Group."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Quality Assurance</h1>
+          <p className="text-gray-300">Professional quality assurance services coming soon...</p>
         </div>
       </div>
     </>
-  )
-    },
-    {}
-export default PagePage;
-  ),
+  );
 };
-"
+
+export default Page;

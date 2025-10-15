@@ -1,28 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import SEOHead from '../components/SEOHead';
-const AiCustomerServicePage: React.FC  =  () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        title="Page - Zion Tech Group"
-        description="Advanced page solutions powered by AI"
-      />"
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold mb-4">Page</h1>"
-          <pclassName="text-gray-300">
-const AiCustomerServicePage: React.FC = () => {
+
+const Page: React.FC = () => {
   return (
-    <>";
-      <SEOHead title ="ai-customer-service - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group ai-customer-service service page"";
-      />"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div className ="text-center">";"
-          <h1 className ="text-4xl font-bold mb-4">ai-customer-service - Zion Tech Group</$1>"
-          <p className ="text-gray-300">Coming soon...</$1>
+    <>
+      <Helmet>
+        <title>Ai Customer Service - Zion Tech Group</title>
+        <meta name="description" content="Professional ai customer service services by Zion Tech Group." />
+      </Helmet>
+      <SEOHead
+        title="Ai Customer Service - Zion Tech Group"
+        description="Professional ai customer service services by Zion Tech Group."
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Ai Customer Service</h1>
+          <p className="text-gray-300">Professional ai customer service services coming soon...</p>
         </div>
       </div>
     </>
-  ),
+  );
 };
-"
+
+export default Page;
