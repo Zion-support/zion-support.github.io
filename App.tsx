@@ -1,6 +1,7 @@
 import { Suspense, useEffect, lazy } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization'
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -40,31 +41,26 @@ import Footer from './app/components/Footer';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Enhanced loading component
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-      <p className="text-gray-600 animate-pulse">Loading...</p>
-    </div>
+    <LoadingSpinner size="lg" text="Loading..." />
   </div>
 )
 
 export default function App() {
+  const { preloadResource } = usePerformanceOptimization({
+    enablePreloading: true,
+    enableLazyLoading: true,
+    enableIntersectionObserver: true,
+  });
+
   useEffect(() => {
     // Preload critical resources
-    const preloadCriticalResources = () => {
-      // Preload critical fonts
-      const fontPreload = document.createElement('link')
-      fontPreload.rel = 'preload'
-      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
-      fontPreload.as = 'style'
-      document.head.appendChild(fontPreload)
-    }
-
-    preloadCriticalResources()
-  }, [])
+    preloadResource('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', 'style');
+  }, [preloadResource])
 
   return (
     <GlobalErrorBoundary>
