@@ -1,4 +1,42 @@
 <<<<<<< HEAD
+import SEOHead from '../components/SEOHead';";"
+const PerformanceOptimizationPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead= title ="performance-optimization - Zion Tech Group - Zion Tech Group"";"
+        description="Zion Tech Group performance-optimization service page"";"
+      />
+      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div  className ="text-center">";"
+          <h1  className ="text-4xl font-bold mb-4">performance-optimization - Zion Tech Group</h1>";"
+          <p  className ="text-gray-300">Coming soon...</p>";"
+        </div>
+      </div>
+    </>
+  )
+}
+export default PerformanceOptimizationPage
+=======
+<<<<<<< HEAD
+import SEOHead from '../components/SEOHead";
+const PagePage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
+        title="page - Zion Tech Group"
+        description="Zion Tech Group page service page"
+const PerformanceOptimizationPage: React.FC = () => {";";
+  return (";";";
+    <>";";";";
+      <SEOHead title ="performance-optimization - Zion Tech Group - Zion Tech Group"";"
+        description="Zion Tech Group performance-optimization service page"";";";";
+      />"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">performance-optimization - Zion Tech Group</$1>"
+          <p className ="text-gray-300">Coming soon...</$1>
+=======
+<<<<<<< HEAD
 import React from 'react;'";
 import { ArrowRight } from 'lucide-react;'";
 import { CheckCircle } from 'lucide-react;'";
@@ -154,16 +192,15 @@ const PerformanceOptimizationPage: React.FC = () => {
         <div: className ="text-center">";";
           <h1: className ="text-4xl font-bold mb-4">performance-optimization - Zion Tech Group</h1>";";
           <p: className ="text-gray-300">Coming soon...</p>";";
+>>>>>>> main
         </div>
       </div>
     </>
-
-  )
-    },
-    {}
-export default PagePage;
-
   ),
-};
-
+    },
+    {};
+export default PagePage;";
+  ),";";
+};";";";
+"
 >>>>>>> main

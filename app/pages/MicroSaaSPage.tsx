@@ -1,4 +1,27 @@
 <<<<<<< HEAD
+import SEOHead from '../components/SEOHead'
+=======
+<<<<<<< HEAD
+import SEOHead from '../components/SEOHead";
+const MicroSaaSPage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
+        title="MicroSaaSPage - Zion Tech Group"
+        description="Zion Tech Group MicroSaaSPage page"
+const MicroSaaSPage: React.FC = () => {";
+  ";";
+  return (";";";
+    <>";";";";
+      <SEOHead title ="MicroSaaSPage - Zion Tech Group - Zion Tech Group"";"
+        description="Zion Tech Group MicroSaaSPage page"";";";";
+      />"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">MicroSaaSPage - Zion Tech Group</$1>"
+          <p className ="text-gray-300">Coming soon...</$1>
+=======
+<<<<<<< HEAD
 import React from 'react;;''";
 import { Link } from 'react-router-dom;;''";
 import SEO from '../components/SEO;''";
@@ -67,10 +90,20 @@ const MicroSaaSPage: React.FC = () => {
 =======
 import SEOHead from '../components/SEOHead';";
 
+>>>>>>> main
 const MicroSaaSPage: React.FC = () => {}
   return ()
     <>{}</>
       <SEOHead>
+<<<<<<< HEAD
+        title="MicroSaaSPage - Zion Tech Group""
+        description="Zion Tech Group MicroSaaSPage page""
+      />
+      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
+        <div  className ="text-center">"
+          <h1  className ="text-4xl font-bold mb-4">MicroSaaSPage - Zion Tech Group</h1>"
+          <p  className ="text-gray-300">Coming soon...</p>"
+=======
         title="MicroSaaSPage - Zion Tech Group"";
 
         description="Zion Tech Group MicroSaaSPage page"";
@@ -86,13 +119,26 @@ const MicroSaaSPage: React.FC = () => {
         <div: className ="text-center">";";
           <h1: className ="text-4xl font-bold mb-4">MicroSaaSPage - Zion Tech Group</h1>";";
           <p: className ="text-gray-300">Coming soon...</p>";";
+>>>>>>> main
+>>>>>>> main
         </div>
       </div>
-    </>
+    </>,
   ),
-};
+<<<<<<< HEAD
+}
+export default MicroSaaSPage
+=======
 
+<<<<<<< HEAD
+};";
+";";
+export default MicroSaaSPage;";";";
+"
+=======
 export default MicroSaaSPage;
 >>>>>>> main
 
 }
+>>>>>>> main
+>>>>>>> main

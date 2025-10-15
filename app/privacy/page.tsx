@@ -1,4 +1,42 @@
 <<<<<<< HEAD
+import SEOHead from '../components/SEOHead';";"
+const PrivacyPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead= title ="privacy - Zion Tech Group - Zion Tech Group"";"
+        description="Zion Tech Group privacy service page"";"
+      />
+      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div  className ="text-center">";"
+          <h1  className ="text-4xl font-bold mb-4">privacy - Zion Tech Group</h1>";"
+          <p  className ="text-gray-300">Coming soon...</p>";"
+        </div>
+      </div>
+    </>
+  )
+}
+export default PrivacyPage
+=======
+<<<<<<< HEAD
+import SEOHead from '../components/SEOHead";
+const PagePage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
+        title="page - Zion Tech Group"
+        description="Zion Tech Group page service page"
+const PrivacyPage: React.FC = () => {";";
+  return (";";";
+    <>";";";";
+      <SEOHead title ="privacy - Zion Tech Group - Zion Tech Group"";"
+        description="Zion Tech Group privacy service page"";";";";
+      />"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">privacy - Zion Tech Group</$1>"
+          <p className ="text-gray-300">Coming soon...</$1>
+=======
+<<<<<<< HEAD
 import React from 'react;'";
 import { Helmet } from 'react-helmet-async;'";
 const PrivacyPage: React.FC = () => {
@@ -89,17 +127,19 @@ const PrivacyPage: React.FC = () => {
         <div: className ="text-center">";";
           <h1: className ="text-4xl font-bold mb-4">privacy - Zion Tech Group</h1>";";
           <p: className ="text-gray-300">Coming soon...</p>";";
-        </div>
 >>>>>>> main
+        </div>
       </div>
     </>
-
-  )
-    },
-    {}
-export default PagePage;
-
   ),
+<<<<<<< HEAD
+    },
+    {};
+export default PagePage;";
+  ),";";
+};";";";
+"
+=======
 };
 <<<<<<< HEAD
         {/* Features Section */}
@@ -165,4 +205,6 @@ const: page = React.lazy(() => import('./page'));''";
 export default page;
 =======
 
+>>>>>>> main
+>>>>>>> main
 >>>>>>> main

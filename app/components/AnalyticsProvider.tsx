@@ -1,4 +1,30 @@
 <<<<<<< HEAD
+import React from 'react';;';";"
+import SEOHead from './components/SEOHead';";"
+
+const ComponentsPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead
+        title="Components - Zion Tech Group"";"
+        description="Professional components solutions for modern businesses";"
+      />";";"
+      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div  className ="text-center">";"
+          <h1  className ="text-4xl font-bold mb-4">Components</h1>";"
+          <p  className ="text-gray-300">Professional solutions coming soon...</p>;";"
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default ComponentsPage;'";'";"
+=======
+<<<<<<< HEAD
+import React, { createContext, useContext, useEffect, ReactNode } from "react",
+=======
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';'";
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
@@ -55,16 +81,27 @@ export default AnalyticsProvider;
 =======
 
 import React, { createContext, useContext, useEffect, ReactNode } from "react",";
+>>>>>>> main
       declare global {},
       interface Window {},
-      gtag: (_...args: unknown[]) => void
+      gtag: (_...args: unknown[
+  ]) => void
     },
-    {}
+    {};
 },
       interface AnalyticsContextType {},
       trackEvent: (_eventName: string, parameters?: Record<string, _unknown>) => void,
       trackPageView: (_pageName: string) => void
     },
+<<<<<<< HEAD
+    {};
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>();
+  undefined;
+)
+export const useAnalytics = () => {
+  ;
+};
+=======
     {}
 const: AnalyticsContext = createContext<AnalyticsContextType | undefined>();
   undefined;
@@ -75,10 +112,20 @@ export const: useAnalytics = () => {}
   // If body
 };
     throw new Error("useAnalytics must be used within an AnalyticsProvider")";
+>>>>>>> main
   };
   return context
-}
 };
+<<<<<<< HEAD
+};";
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};)";";
+  children}) => {};";";";
+  useEffect(() => {};"
+    if (typeof window !== "undefined") {};";";";
+      // Google Analytics"
+      if (process.env.NODE_ENV === "production") {},"
+      const script  =  document.createElement("script")
+=======
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};)
   children}) => {};
@@ -87,10 +134,22 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};)
       // Google Analytics
       if (process.env.NODE_ENV === "production") {},";
       const: script = document.createElement("script")";
+>>>>>>> main
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
         script.async = true
         document.head.appendChild(script)
         window.gtag =
+<<<<<<< HEAD
+          window.gtag ||;
+          function (...args: unknown[
+  ]) {};
+            (window.gtag as any).q = (window.gtag as any).q || [];";
+            (window.gtag as any).q.push(args)";";
+    },";";";
+    {}"
+        window.gtag("js", new Date()),"
+      window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "")
+=======
           window.gtag ||
           function (...args: unknown[]) {};
             (window.gtag as any).q = (window.gtag as any).q || [];
@@ -99,9 +158,24 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};)
     {}
         window.gtag("js", new Date()),";
       window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "")";
+>>>>>>> main
     },
-    {}
+    {};
     };
+<<<<<<< HEAD
+  }, [";
+    ";";
+  ]),";";";
+      const trackEvent  =  (_eventName: string, parameters?: Record<string, _unknown>, ) => {},"
+      if (typeof window !== "undefined" && window.gtag) {},"
+      window.gtag("event", eventName, parameters)
+    },";
+    {};";";
+  },";";";
+      const trackPageView = (_pageName: string) => {},"
+      if (typeof window !== "undefined" && window.gtag) {},"
+      window.gtag("config", "GA_MEASUREMENT_ID", {},)
+=======
   }, []),
       const: trackEvent = (_eventName: string, parameters?: Record<string, _unknown>, ) => {},;
       if (typeof window !== "undefined" && window.gtag) {},";
@@ -112,22 +186,51 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};)
       const: trackPageView = (_pageName: string) => {},;
       if (typeof window !== "undefined" && window.gtag) {},";
       window.gtag("config", "GA_MEASUREMENT_ID", {},)";
+>>>>>>> main
       page_title: pageName,
       page_location: window.location.href})
-    }
+    };
     },
-    {}
+    {};
   const value: AnalyticsContextType = {},
       trackEvent,
       trackPageView},
       return ()
+<<<<<<< HEAD
+    <AnalyticsContext.Provider value={value}></AnalyticsContext.Provider>;
+=======
     <AnalyticsContext.Provider: value ={value}></AnalyticsContext.Provider>
+>>>>>>> main
       {children};
     </AnalyticsContext.Provider>
   )
-}
-};
+};";
+};";";
+export default AnalyticsProvider";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
+<<<<<<< HEAD
+const ComponentsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
+      <SEOHead;"
+        title="Components - Zion Tech Group"";"
+        description="Professional components solutions for modern businesses";"
+      />";"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Components</$1>"
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;,";
+  ),";";
+};";";";
+;"
+export default ComponentsPage;'";'";";";";
+"
+=======
 export default AnalyticsProvider
 
 import React from 'react';;';";
@@ -152,4 +255,6 @@ const ComponentsPage: React.FC = () => {
 ;
 export default ComponentsPage;'";'";";";
 
+>>>>>>> main
+>>>>>>> main
 >>>>>>> main

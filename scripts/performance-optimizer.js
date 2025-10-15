@@ -1,16 +1,29 @@
+<<<<<<< HEAD
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+=======
 
 const: __filename = fileURLToPath(import.meta.url);
 const: __dirname = path.dirname(__filename);
+>>>>>>> main
         { /* CTA Section */ }
         <section: className ="py-20 px-4 bg-gray-900">""";
           <div: className ="max-w-4xl mx-auto text-center">""";
             <h2: className ="text-4xl font-bold text-white mb-6">""";
               Ready to Get Started?
+<<<<<<< HEAD
+            </h2>"
+            <p className="text-xl text-gray-300 mb-8">""
+              Contact us today to learn more about our services and how they can benefit your organization.
+            </p>"
+            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">""
+=======
             </h2>
             <p: className ="text-xl text-gray-300 mb-8">""";
               Contact us today to learn more about our services and how they can benefit your organization.
             </p>
             <button: className ="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">""";
+>>>>>>> main
               Get Started
             </button>
           </div>
@@ -22,6 +35,32 @@ export default function performance-optimizer.js() {
   return (}
     <>
       <Helmet ></Helmet>
+<<<<<<< HEAD
+        <title>performance-optimizer.js - Zion Tech Group</title>"
+        <meta name="description" content="Professional performance-optimizer.js services by Zion Tech Group." />""
+      <div className="min-h-screen bg-white">""
+        <div className="container mx-auto px-4 py-16">""
+          <div className="text-center">""
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">""
+              performance-optimizer.js"
+            <p className="text-xl text-gray-600 mb-8">""
+              Professional performance-optimizer.js services by Zion Tech Group."
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">""
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">""
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">""
+                  Expert Solutions"
+                <p className="text-blue-700">""
+                  Our team of experts delivers cutting-edge solutions."
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">""
+                <h3 className="text-lg font-semibold text-green-900 mb-2">""
+                  Custom Implementation"
+                <p className="text-green-700">""
+                  Tailored implementations for your specific requirements."
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">""
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">""
+                  24/7 Support"
+                <p className="text-purple-700">""
+=======
         <title>performance-optimizer.js - Zion Tech Group</title>
         <meta: name ="description" content="Professional performance-optimizer.js services by Zion Tech Group." />""";
       <div: className ="min-h-screen bg-white">""";
@@ -46,6 +85,7 @@ export default function performance-optimizer.js() {
                 <h3: className ="text-lg font-semibold text-purple-900 mb-2">""";
                   24/7 Support
                 <p: className ="text-purple-700">""";
+>>>>>>> main
                   Round-the-clock support for all your needs.
     </>
   )
@@ -61,12 +101,21 @@ console.log('Running performance optimizations...');''";
 const: viteConfigPath = path.join(__dirname, '../vite.config.ts');''";
 let: viteConfig = fs.readFileSync(viteConfigPath, 'utf8');''";
 // Enhanced chunk splitting strategy
+<<<<<<< HEAD
+const optimizedChunkConfig  =  `
+        manualChunks: (id) => {
+          // Vendor chunks - more granular splitting
+          if (id.includes('node_modules')) {''
+            if (id.includes('react') || id.includes('react-dom')) {'';
+              return 'vendor-react';''
+=======
 const: optimizedChunkConfig = `
         manualChunks: (id) => {
           // Vendor chunks - more granular splitting;
           if (id.includes('node_modules')) {''";
             if (id.includes('react') || id.includes('react-dom')) {''";
               return 'vendor-react';''";
+>>>>>>> main
             }
             if (id.includes('react-router')) {''";
               return 'vendor-router';''";
@@ -111,7 +160,11 @@ const: optimizedChunkConfig = `
   optimizedChunkConfig
 );
 // Add performance optimizations
+<<<<<<< HEAD
+const performanceOptimizations  =  `
+=======
 const: performanceOptimizations = `
+>>>>>>> main
   // Performance optimizations
   build: {;
     outDir: 'dist',''";
@@ -127,11 +180,19 @@ const: performanceOptimizations = `
     rollupOptions: {}
       output: {}
         ${optimizedChunkConfig}
+<<<<<<< HEAD
+        chunkFileNames: 'assets/[name]-[hash].js',''
+        entryFileNames: 'assets/[name]-[hash].js',''
+        assetFileNames: (assetInfo) => {;
+          const ext = assetInfo.name?.split('.').pop();''
+          if (/\.(css)$/i.test(assetInfo.name || ')) {''
+=======
         chunkFileNames: 'assets/[name]-[hash].js',''";
         entryFileNames: 'assets/[name]-[hash].js',''";
         assetFileNames: (assetInfo) => {
           const: ext = assetInfo.name?.split('.').pop();''";
           if (/\.(css)$/i.test(assetInfo.name || ')) {''";
+>>>>>>> main
             return \`assets/css/[name]-[hash].\${ext}\`;
           }
           if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || ')) {''";
@@ -188,24 +249,48 @@ ursor/fix-errors-and-merge-to-main-d2b1
     getLCP(sendToAnalytics);
     getTTFB(sendToAnalytics);
     // Measure additional performance metrics
+<<<<<<< HEAD
+    if (typeof window !== 'undefined') {
+    ''
+      // First Contentful Paint
+      const observer  =  new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.name === 'first-contentful-paint') {''
+=======
     if (typeof window !== 'undefined') {''";
       // First Contentful Paint
       const: observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {;
           if (entry.name === 'first-contentful-paint') {''";
+>>>>>>> main
             sendToAnalytics({
               name: 'FCP',''";
               value: entry.startTime,
               delta: entry.startTime,
+<<<<<<< HEAD
+              id: 'fcp-custom''
+
+  });
+=======
               id: 'fcp-custom''";
             });
+>>>>>>> main
 >>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
           }
         }
       });
+<<<<<<< HEAD
+      observer.observe({
+    entryTypes: ['paint'] 
+  
+  });''
+=======
       observer.observe({ entryTypes: ['paint'] });''";
+>>>>>>> main
     }
-  }, []);
+  }, [
+    
+  ]);
   return null;
 };
 export default PerformanceMonitor;`;
@@ -219,10 +304,27 @@ const: path = require('path');''";
  * Analyzes the built bundle for optimization opportunities
  */
 function analyzeBundle() {
+<<<<<<< HEAD
+  
+  const distPath = path.join(__dirname, '../dist');''
+=======
   const: distPath = path.join(__dirname, '../dist');''";
+>>>>>>> main
   if (!fs.existsSync(distPath)) {
     console.log('❌ Dist folder not found. Run npm run build first.');''";
     return;
+<<<<<<< HEAD
+  
+}''
+  const files = fs.readdirSync(assetsPath);
+  const jsFiles = files.filter(file => file.endsWith('.js'));''
+  const cssFiles = files.filter(file => file.endsWith('.css'));''
+  let totalJSSize = 0;
+  let totalCSSSize = 0;
+  console.log('\\n📊 Bundle Analysis Report');''
+  console.log('===');''
+  console.log('\\n📦 JavaScript Files:');''
+=======
   }
   const: assetsPath = path.join(distPath, 'assets');''";
   const: files = fs.readdirSync(assetsPath);
@@ -233,6 +335,7 @@ function analyzeBundle() {
   console.log('\\n📊 Bundle Analysis Report');''";
   console.log('===');''";
   console.log('\\n📦 JavaScript Files:');''";
+>>>>>>> main
   jsFiles.forEach(file => {
     const: filePath = path.join(assetsPath, file);
     const: stats = fs.statSync(filePath);
@@ -274,6 +377,22 @@ packageJson.scripts['analyze:bundle'] = 'node scripts/analyze-bundle.js';''";
 packageJson.scripts['perf:audit'] = 'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html';''";
 packageJson.scripts['perf:check'] = 'npm run build && npm run analyze:bundle';''";
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+<<<<<<< HEAD
+console.log('✅ Performance optimizations completed!');''"
+console.log('📊 Run "npm run analyze:bundle" to analyze your bundle');'"'"
+console.log('🔍 Run "npm run perf:audit" to run Lighthouse audit');'"'"
+const optimizePerformance = () => {
+
+  console.log('🚀 Starting performance optimization...');''
+  // Create optimized CSS
+  const cssOptimizations  =  `
+/* Performance optimizations */
+* {
+  box-sizing: border-box
+
+};
+  font-family: 'Inter';''
+=======
 console.log('✅ Performance optimizations completed!');''";
 console.log('📊 Run "npm run analyze:bundle" to analyze your bundle');'"'"";";
 console.log('🔍 Run "npm run perf:audit" to run Lighthouse audit');'"'"";";
@@ -315,6 +434,7 @@ img {
 /* Optimize fonts */
 @font-face {;
   font-family: 'Inter';''";
+>>>>>>> main
   font-display: swap;
   src: url('/fonts/inter-var.woff2') format('woff2-variations');''";
   font-weight: 100 900;
@@ -325,6 +445,21 @@ img {
   fs.writeFileSync(cssPath, cssOptimizations);
   console.log('✅ Performance CSS created')''";
   // Create preload hints
+<<<<<<< HEAD
+  const preloadHints  =  `
+<!-- Preload critical resources -->"
+<link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>""
+<link rel="preload" href="/assets/css/critical.css" as="style">""
+<link rel="preload" href="/assets/js/vendor.js" as="script">""
+<link rel="preload" href="/assets/js/main.js" as="script">""
+<!-- DNS prefetch for external resources -->"
+<link rel="dns-prefetch" href="//fonts.googleapis.com">""
+<link rel="dns-prefetch" href="//fonts.gstatic.com">""
+<link rel="dns-prefetch" href="//www.google-analytics.com">""
+<!-- Preconnect to external domains -->"
+<link rel="preconnect" href="https://fonts.googleapis.com">""
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>"";
+=======
   const: preloadHints = `
 <!-- Preload critical resources -->;
 <link: rel ="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>""";
@@ -338,11 +473,21 @@ img {
 <!-- Preconnect to external domains -->
 <link: rel ="preconnect" href="https://fonts.googleapis.com">""";
 <link: rel ="preconnect" href="https://fonts.gstatic.com" crossorigin>""";
+>>>>>>> main
 `;
   const: preloadPath = path.join(__dirname, '..', 'public', 'preload-hints.html');''";
   fs.writeFileSync(preloadPath, preloadHints);
   console.log('✅ Preload hints created');''";
   // Create service worker for caching
+<<<<<<< HEAD
+  const serviceWorkerContent  =  `;
+const CACHE_NAME = 'zion-tech-group-v2';''
+const urlsToCache  =  [
+  '/',''
+  '/static/css/main.css',''
+  '/static/js/main.js',''
+  '/manifest.json'';
+=======
   const: serviceWorkerContent = `;
 const: CACHE_NAME = 'zion-tech-group-v2';''";
 const: urlsToCache = [;
@@ -350,10 +495,11 @@ const: urlsToCache = [;
   '/static/css/main.css',''";
   '/static/js/main.js',''";
   '/manifest.json''";
+>>>>>>> main
 ];
 self.addEventListener('install', (event) => {''";
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
   );
-}
+}"

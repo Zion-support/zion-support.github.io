@@ -1,4 +1,27 @@
 <<<<<<< HEAD
+import SEOHead from '../components/SEOHead'
+=======
+<<<<<<< HEAD
+import SEOHead from '../components/SEOHead";
+const FiveGSolutionsPage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
+        title="5GSolutionsPage - Zion Tech Group"
+        description="Zion Tech Group 5GSolutionsPage page"
+const FiveGSolutionsPage: React.FC = () => {";
+  ";";
+  return (";";";
+    <>";";";";
+      <SEOHead title ="5GSolutionsPage - Zion Tech Group - Zion Tech Group"";"
+        description="Zion Tech Group 5GSolutionsPage page"";";";";
+      />"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">5GSolutionsPage - Zion Tech Group</$1>"
+          <p className ="text-gray-300">Coming soon...</$1>
+=======
+<<<<<<< HEAD
 import React from 'react;'";
 import { Helmet } from 'react-helmet-async;'";
 export default function 5GSolutionsPage() {
@@ -59,10 +82,20 @@ export default function 5GSolutionsPage() {
 =======
 import SEOHead from '../components/SEOHead';";
 
+>>>>>>> main
 const FiveGSolutionsPage: React.FC = () => {}
   return ()
     <>{}</>
       <SEOHead>
+<<<<<<< HEAD
+        title="5GSolutionsPage - Zion Tech Group""
+        description="Zion Tech Group 5GSolutionsPage page""
+      />
+      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
+        <div  className ="text-center">"
+          <h1  className ="text-4xl font-bold mb-4">5GSolutionsPage - Zion Tech Group</h1>"
+          <p  className ="text-gray-300">Coming soon...</p>"
+=======
         title="5GSolutionsPage - Zion Tech Group"";
 
         description="Zion Tech Group 5GSolutionsPage page"";
@@ -78,11 +111,19 @@ const FiveGSolutionsPage: React.FC = () => {
         <div: className ="text-center">";";
           <h1: className ="text-4xl font-bold mb-4">5GSolutionsPage - Zion Tech Group</h1>";";
           <p: className ="text-gray-300">Coming soon...</p>";";
+>>>>>>> main
+>>>>>>> main
         </div>
       </div>
-    </>
+    </>,
   ),
-};
+<<<<<<< HEAD
+}
+export default FiveGSolutionsPage
+=======
 
-export default FiveGSolutionsPage;
+};";
+";";
+export default FiveGSolutionsPage;";";";
+"
 >>>>>>> main

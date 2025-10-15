@@ -1,4 +1,27 @@
 <<<<<<< HEAD
+import SEOHead from '../components/SEOHead'
+=======
+<<<<<<< HEAD
+import SEOHead from '../components/SEOHead";
+const TeamPage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
+        title="TeamPage - Zion Tech Group"
+        description="Zion Tech Group TeamPage page"
+const TeamPage: React.FC = () => {";
+  ";";
+  return (";";";
+    <>";";";";
+      <SEOHead title ="TeamPage - Zion Tech Group - Zion Tech Group"";"
+        description="Zion Tech Group TeamPage page"";";";";
+      />"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">TeamPage - Zion Tech Group</$1>"
+          <p className ="text-gray-300">Coming soon...</$1>
+=======
+<<<<<<< HEAD
 import React from 'react;;''";
 import { Link } from 'react-router-dom;;''";
 import SEO from '../components/SEO;''";
@@ -104,10 +127,20 @@ const TeamPage: React.FC = () => {
 =======
 import SEOHead from '../components/SEOHead';";
 
+>>>>>>> main
 const TeamPage: React.FC = () => {}
   return ()
     <>{}</>
       <SEOHead>
+<<<<<<< HEAD
+        title="TeamPage - Zion Tech Group""
+        description="Zion Tech Group TeamPage page""
+      />
+      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
+        <div  className ="text-center">"
+          <h1  className ="text-4xl font-bold mb-4">TeamPage - Zion Tech Group</h1>"
+          <p  className ="text-gray-300">Coming soon...</p>"
+=======
         title="TeamPage - Zion Tech Group"";
 
         description="Zion Tech Group TeamPage page"";
@@ -123,13 +156,26 @@ const TeamPage: React.FC = () => {
         <div: className ="text-center">";";
           <h1: className ="text-4xl font-bold mb-4">TeamPage - Zion Tech Group</h1>";";
           <p: className ="text-gray-300">Coming soon...</p>";";
+>>>>>>> main
+>>>>>>> main
         </div>
       </div>
-    </>
+    </>,
   ),
-};
+<<<<<<< HEAD
+}
+export default TeamPage
+=======
 
+<<<<<<< HEAD
+};";
+";";
+export default TeamPage;";";";
+"
+=======
 export default TeamPage;
 >>>>>>> main
 
 }
+>>>>>>> main
+>>>>>>> main
