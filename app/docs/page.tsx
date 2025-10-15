@@ -184,7 +184,7 @@ const DocsPage: React.FC = () => {
                   {expandedSection === section.id && (
                     <div className="px-8 pb-6">
                       <div className="grid md:grid-cols-2 gap-4">
-                        {(section as any).articles?.map((article: any, articleIndex: number) => (
+                        {section.articles?.map((article: { title: string; readTime: string; description: string }, articleIndex: number) => (
                           <div key={articleIndex} className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors cursor-pointer group">
                             <div className="flex items-center justify-between mb-2">
                               <h4 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
