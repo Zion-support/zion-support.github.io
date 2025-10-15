@@ -1,20 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Futuristictext({ className = '', children, ...props }: FuturistictextProps) {
   return (
     <div className={`futuristic-text ${className}`} {...props}>
+=======
+ursor/fix-errors-and-merge-to-main-234b
+>>>>>>> main
       {children}
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
-import React from 'react';;';
-import SEOHead from './components/SEOHead';
-
+>>>>>>> main
+=======
 interface FuturisticTextProps {},
       children: React.ReactNode,
       variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'gradient' | 'neon','

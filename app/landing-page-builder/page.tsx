@@ -190,9 +190,18 @@ const PagePage: React.FC = () => {}
 
 const LandingPageBuilderPage: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+=======
     <>
       <SEOHead title ="landing-page-builder - Zion Tech Group - Zion Tech Group"";
         description="Zion Tech Group landing-page-builder service page"";
+>>>>>>> main
 
       />
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
