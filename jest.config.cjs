@@ -1,11 +1,17 @@
-export default {
+module.exports = {
   testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.cjs"],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',  },
+    '^@/(.*)$': '<rootDir>/app/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+  },
   transform: {
-    '^.+\\.(ts|tsx)$': ['ts-jest', { useESM: true }],
+    '^.+\\.(ts|tsx)$': ['ts-jest', { 
+      useESM: false,
+      tsconfig: {
+        jsx: 'react-jsx'
+      }
+    }],
     '^.+\\.(js|jsx)$': 'babel-jest',
   },
   testMatch: [
@@ -20,4 +26,11 @@ export default {
   testPathIgnorePatterns: ["<rootDir>/out/", "<rootDir>/node_modules/"],
   transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$|@testing-library|@heroicons|framer-motion))',
-  ],};
+  ],
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
+  globals: {
+    'ts-jest': {
+      useESM: false
+    }
+  }
+};

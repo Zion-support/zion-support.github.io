@@ -11,13 +11,14 @@ describe("Advanced Components", () => {
   })
   
   it("should render test content", () => {
-}render(<TestComponent />)
+    render(<TestComponent />)
     expect(screen.getByText("Test content")).toBeInTheDocument()
   })
-  it("should handle console errors", () => {}
-}const consoleSpy = jest
+  
+  it("should handle console errors", () => {
+    const consoleSpy = jest
       .spyOn(console, "error")
-      .mockImplementation(() => {}
+      .mockImplementation(() => {})
 })
     // Test implementation
     consoleSpy.mockRestore()

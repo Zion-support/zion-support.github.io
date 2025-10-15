@@ -1,9 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3, Star } from 'lucide-react';
+import { Wifi, CheckCircle, Network, Cpu, Smartphone } from 'lucide-react';
 
 const G5gSolutionsPage: React.FC = () => {
-  const g5gServices = [
+  const services = [
     {
       icon: <Wifi className="w-8 h-8" />,
       title: "5G Network Design",
@@ -51,7 +51,8 @@ const G5gSolutionsPage: React.FC = () => {
     "Future-proof solutions"
   ];
 
-  const technologies = [
+  // Technologies used in 5G solutions
+  const techStack = [
     "5G NR", "Network Slicing", "Edge Computing", "IoT Protocols", 
     "AI/ML Integration", "Cloud-Native", "SDN/NFV", "MEC"
   ];
