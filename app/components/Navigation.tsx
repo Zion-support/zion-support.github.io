@@ -27,7 +27,10 @@ import {
   CodeBracketIcon,
   DevicePhoneMobileIcon,
   UserPlusIcon,
-  CheckCircleIcon
+  CheckCircleIcon,
+  SpeakerWaveIcon,
+  CubeIcon,
+  ScaleIcon
 } from '@heroicons/react/24/outline';
 
 interface NavigationProps {
@@ -68,6 +71,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Email Optimizer', href: '/ai-email-optimizer', icon: EnvelopeIcon },
         { name: 'AI Website Analyzer', href: '/ai-website-analyzer', icon: EyeIcon },
         { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
+        { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
+        { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
+        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: SpeakerWaveIcon },
+        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: CubeIcon },
+        { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ScaleIcon },
+        { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: UserGroupIcon },
         { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon }
       ]
     },
@@ -118,6 +127,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Data Engineering', href: '/data-engineering', icon: CircleStackIcon },
         { name: 'API Development', href: '/api-development', icon: CodeBracketIcon },
         { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon },
+        { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', icon: ShieldCheckIcon },
         { name: 'Quantum Computing', href: '/quantum-computing-solutions', icon: CpuChipIcon },
         { name: 'Edge Computing', href: '/edge-computing-solutions', icon: CloudIcon },
         { name: 'AR Solutions', href: '/augmented-reality-solutions', icon: EyeIcon },
@@ -127,7 +137,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Serverless Architecture', href: '/serverless-architecture', icon: CloudIcon },
         { name: 'Container Orchestration', href: '/container-orchestration', icon: CircleStackIcon },
         { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: CpuChipIcon },
-        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: CircleStackIcon }
+        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: CircleStackIcon },
+        { name: 'Machine Learning Ops', href: '/mlops-solutions', icon: CpuChipIcon },
+        { name: 'Data Science Platform', href: '/data-science-platform', icon: ChartBarIcon },
+        { name: 'Business Intelligence', href: '/business-intelligence', icon: ChartBarIcon },
+        { name: 'IT Consulting', href: '/it-consulting', icon: UserGroupIcon },
+        { name: 'Managed IT Services', href: '/managed-it-services', icon: CogIcon }
       ]
     },
     {
