@@ -41,6 +41,13 @@ import AiClimateSolutionsProPage from './app/ai-climate-solutions-pro/page';
 import AiAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
 import Ai3DGenerationPage from './app/ai-3d-generation/page';
 import AiBlockchainSolutionsPage from './app/ai-blockchain-solutions/page';
+import AiSocialMediaManagerPage from './app/ai-social-media-manager/page';
+import AiEmailMarketingProPage from './app/ai-email-marketing-pro/page';
+import AiProjectManagementProPage from './app/ai-project-management-pro/page';
+import AiCybersecuritySuitePage from './app/ai-cybersecurity-suite/page';
+import AiSmartHomeAutomationPage from './app/ai-smart-home-automation/page';
+import AiHealthcareAssistantPage from './app/ai-healthcare-assistant/page';
+import AiDataAnalyticsProPage from './app/ai-data-analytics-pro/page';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -118,6 +125,13 @@ const App: React.FC = () => {
                   <Route path="/ai-agricultural-intelligence-pro" element={<AiAgriculturalIntelligenceProPage />} />
                   <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
                   <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
+                  <Route path="/ai-social-media-manager" element={<AiSocialMediaManagerPage />} />
+                  <Route path="/ai-email-marketing-pro" element={<AiEmailMarketingProPage />} />
+                  <Route path="/ai-project-management-pro" element={<AiProjectManagementProPage />} />
+                  <Route path="/ai-cybersecurity-suite" element={<AiCybersecuritySuitePage />} />
+                  <Route path="/ai-smart-home-automation" element={<AiSmartHomeAutomationPage />} />
+                  <Route path="/ai-healthcare-assistant" element={<AiHealthcareAssistantPage />} />
+                  <Route path="/ai-data-analytics-pro" element={<AiDataAnalyticsProPage />} />
                 </Routes>
               </Suspense>
             </main>

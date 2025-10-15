@@ -70,7 +70,14 @@ const Footer: React.FC = () => {
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+        { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite' },
+        { name: 'AI Smart Home Automation', href: '/ai-smart-home-automation' },
+        { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant' },
+        { name: 'AI Data Analytics Pro', href: '/ai-data-analytics-pro' }
       ]
     }
   ];
@@ -105,7 +112,7 @@ const Footer: React.FC = () => {
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="container mx-auto px-4 py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-2 mb-6">
@@ -161,7 +168,7 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Service Categories */}
-            <div className="lg:col-span-2">
+            <div className="md:col-span-2 lg:col-span-2">
               <h3 className="text-xl font-bold text-white mb-6">Our Services</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {serviceCategories.map((category) => (
@@ -171,17 +178,24 @@ const Footer: React.FC = () => {
                       <h4 className="text-lg font-semibold text-white">{category.title}</h4>
                     </div>
                     <ul className="space-y-2">
-                      {category.services.map((service) => (
+                      {category.services.slice(0, 6).map((service) => (
                         <li key={service.name}>
                           <Link
                             to={service.href}
                             className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group"
                           >
                             <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <span className="text-sm">{service.name}</span>
+                            <span className="text-sm truncate">{service.name}</span>
                           </Link>
                         </li>
                       ))}
+                      {category.services.length > 6 && (
+                        <li>
+                          <span className="text-sm text-cyan-400 font-medium">
+                            +{category.services.length - 6} more services
+                          </span>
+                        </li>
+                      )}
                     </ul>
                   </div>
                 ))}
@@ -210,13 +224,13 @@ const Footer: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-4">
                   Get the latest updates on AI and IT innovations.
                 </p>
-                <div className="flex space-x-2">
+                <div className="flex flex-col space-y-2">
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="flex-1 px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                    className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
                   />
-                  <button className="px-4 py-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white rounded-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 font-semibold">
+                  <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white rounded-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 font-semibold">
                     Subscribe
                   </button>
                 </div>

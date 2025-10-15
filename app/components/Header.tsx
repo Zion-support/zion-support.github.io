@@ -76,7 +76,14 @@ const Header: React.FC = () => {
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+        { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite' },
+        { name: 'AI Smart Home Automation', href: '/ai-smart-home-automation' },
+        { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant' },
+        { name: 'AI Data Analytics Pro', href: '/ai-data-analytics-pro' }
       ]
     },
     {
@@ -156,12 +163,12 @@ const Header: React.FC = () => {
 
                   {/* Dropdown Menu */}
                   {item.dropdown && (
-                    <div className={`absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-2xl transition-all duration-300 ${
+                    <div className={`absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-2xl transition-all duration-300 z-50 ${
                       activeDropdown === item.name 
                         ? 'opacity-100 visible translate-y-0' 
                         : 'opacity-0 invisible translate-y-2'
                     }`}>
-                      <div className="py-2">
+                      <div className="py-2 max-h-96 overflow-y-auto">
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
@@ -201,7 +208,7 @@ const Header: React.FC = () => {
           isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
           <div className="bg-slate-800/95 backdrop-blur-md border-t border-cyan-500/20">
-            <div className="container mx-auto px-4 py-4 space-y-2">
+            <div className="container mx-auto px-4 py-4 space-y-2 max-h-screen overflow-y-auto">
               {navigationItems.map((item) => (
                 <div key={item.name}>
                   <Link
@@ -215,9 +222,10 @@ const Header: React.FC = () => {
                   >
                     {item.icon}
                     <span className="font-medium">{item.name}</span>
+                    {item.dropdown && <ChevronDown className="w-4 h-4 ml-auto" />}
                   </Link>
                   {item.dropdown && (
-                    <div className="ml-8 space-y-1">
+                    <div className="ml-8 space-y-1 mt-2">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.name}
@@ -226,17 +234,28 @@ const Header: React.FC = () => {
                           onClick={() => setIsMenuOpen(false)}
                         >
                           <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full"></div>
-                          <span>{dropdownItem.name}</span>
+                          <span className="truncate">{dropdownItem.name}</span>
                         </Link>
                       ))}
                     </div>
                   )}
                 </div>
               ))}
-              <div className="pt-4 border-t border-cyan-500/20">
-                <button className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300">
+              <div className="pt-4 border-t border-cyan-500/20 space-y-3">
+                <a
+                  href="tel:+13024640950"
+                  className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call +1 302 464 0950
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="w-full border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+                >
+                  <Mail className="w-4 h-4 mr-2" />
                   Get Quote
-                </button>
+                </a>
               </div>
             </div>
           </div>

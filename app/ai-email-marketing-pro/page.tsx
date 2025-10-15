@@ -1,101 +1,105 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Shield, 
-  Eye, 
-  AlertTriangle, 
+  Mail, 
+  Target, 
+  BarChart3, 
+  Users, 
+  Clock, 
   CheckCircle, 
   Star, 
   ArrowRight,
+  Send,
+  TrendingUp,
   Zap,
-  Globe,
   Smartphone,
-  Clock,
-  Users,
+  Palette,
+  Aperture,
   Phone,
-  Mail,
   MapPin
 } from 'lucide-react';
 
-const AiContentModerationProPage = () => {
+const AiEmailMarketingProPage = () => {
   const features = [
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "AI Content Filtering",
-      description: "Advanced AI-powered content filtering with 99.8% accuracy in detecting inappropriate content",
-      price: "$199/month"
+      icon: <Mail className="w-8 h-8" />,
+      title: "AI Email Generation",
+      description: "Create compelling email campaigns with AI-powered content generation and personalization",
+      price: "$59/month"
     },
     {
-      icon: <Eye className="w-8 h-8" />,
-      title: "Real-time Monitoring",
-      description: "24/7 real-time content monitoring and automated moderation across all platforms",
-      price: "$299/month"
+      icon: <Target className="w-8 h-8" />,
+      title: "Smart Segmentation",
+      description: "AI-driven audience segmentation for maximum engagement and conversion rates",
+      price: "$39/month"
     },
     {
-      icon: <AlertTriangle className="w-8 h-8" />,
-      title: "Threat Detection",
-      description: "AI-powered detection of hate speech, harassment, and dangerous content",
-      price: "$149/month"
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive email performance analytics with AI insights and recommendations",
+      price: "$49/month"
     },
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Multi-language Support",
-      description: "Content moderation in 50+ languages with cultural context understanding",
-      price: "$99/month"
+      icon: <Send className="w-8 h-8" />,
+      title: "Automated Sequences",
+      description: "Create complex email automation workflows with AI optimization",
+      price: "$34/month"
+    },
+    {
+      icon: <Aperture className="w-8 h-8" />,
+      title: "A/B Testing AI",
+      description: "Intelligent A/B testing with AI-powered optimization suggestions",
+      price: "$29/month"
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
-      title: "Image & Video Analysis",
-      description: "Advanced AI analysis of images and videos for inappropriate content detection",
-      price: "$179/month"
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Community Management",
-      description: "AI-powered community guidelines enforcement and user behavior analysis",
-      price: "$129/month"
+      title: "Mobile Optimization",
+      description: "AI-powered mobile email optimization for perfect display on all devices",
+      price: "$24/month"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$79",
       period: "per month",
-      description: "Perfect for small platforms",
+      description: "Perfect for small businesses and startups",
       features: [
-        "Up to 10K content items/day",
-        "Basic AI filtering",
-        "Text moderation",
+        "Up to 10,000 subscribers",
+        "Basic AI email generation",
+        "Simple automation",
+        "Basic analytics",
         "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$699",
+      price: "$149",
       period: "per month",
-      description: "Ideal for growing platforms",
+      description: "Ideal for growing businesses and agencies",
       features: [
-        "Up to 100K content items/day",
-        "Advanced AI moderation",
-        "Image & video analysis",
-        "Real-time monitoring",
+        "Up to 50,000 subscribers",
+        "Advanced AI personalization",
+        "Complex automation workflows",
+        "Advanced analytics & insights",
+        "A/B testing tools",
         "Priority support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$399",
       period: "per month",
-      description: "For large platforms and social networks",
+      description: "For large organizations and enterprises",
       features: [
-        "Unlimited content items",
+        "Unlimited subscribers",
         "Custom AI models",
         "White-label options",
-        "Dedicated moderation team",
+        "Advanced team collaboration",
+        "Dedicated account manager",
         "24/7 phone support",
         "Custom integrations"
       ],
@@ -106,47 +110,47 @@ const AiContentModerationProPage = () => {
   return (
     <>
       <Helmet>
-        <title>AI Content Moderation Pro - Zion Tech Group</title>
+        <title>AI Email Marketing Pro - Zion Tech Group</title>
         <meta
           name="description"
-          content="Advanced AI-powered content moderation with real-time filtering, threat detection, and multi-language support. Starting at $299/month. Contact us at +1 302 464 0950"
+          content="Revolutionary AI-powered email marketing with automated campaigns, smart segmentation, and advanced analytics. Starting at $79/month. Contact us at +1 302 464 0950"
         />
-        <meta name="keywords" content="AI content moderation, content filtering, automated moderation, hate speech detection, content safety, platform moderation" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-content-moderation-pro" />
+        <meta name="keywords" content="AI email marketing, email automation, email campaigns, email analytics, email personalization, email marketing software" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-email-marketing-pro" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-orange-500/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
-              <div className="inline-flex items-center px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-sm font-medium mb-6">
+              <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-sm font-medium mb-6">
                 <Zap className="w-4 h-4 mr-2" />
-                AI-Powered Content Moderation Solution
+                AI-Powered Email Marketing Solution
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
-                  AI Content Moderation
+                <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                  AI Email Marketing
                 </span>
                 <br />
                 <span className="text-white">Pro</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Protect your platform with advanced AI content moderation. Our system provides 
-                real-time filtering, threat detection, and automated moderation with 99.8% accuracy.
+                Transform your email marketing with intelligent automation. Our AI creates, 
+                personalizes, and optimizes email campaigns with 40% higher open rates.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a
                   href="tel:+13024640950"
-                  className="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-amber-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-amber-500/25 flex items-center justify-center"
+                  className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 flex items-center justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call +1 302 464 0950
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="border-2 border-amber-400 text-amber-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-amber-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+                  className="border-2 border-orange-400 text-orange-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Get Free Demo
@@ -161,17 +165,17 @@ const AiContentModerationProPage = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Advanced Moderation Features
+                Powerful Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to keep your platform safe with AI-powered content moderation
+                Everything you need to create high-converting email campaigns with AI intelligence
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-8 hover:border-amber-400/40 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-orange-500/20 rounded-2xl p-8 hover:border-orange-400/40 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-6">
                     <div className="text-white">{feature.icon}</div>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">
@@ -181,7 +185,7 @@ const AiContentModerationProPage = () => {
                     {feature.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-amber-400">{feature.price}</span>
+                    <span className="text-2xl font-bold text-orange-400">{feature.price}</span>
                     <div className="flex items-center text-yellow-400">
                       <Star className="w-4 h-4 fill-current" />
                       <Star className="w-4 h-4 fill-current" />
@@ -201,10 +205,10 @@ const AiContentModerationProPage = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Moderation Packages
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the moderation package that fits your platform needs. All packages include our core AI features.
+                Choose the plan that fits your email marketing needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -212,12 +216,12 @@ const AiContentModerationProPage = () => {
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
-                    ? 'border-amber-400/40 shadow-2xl shadow-amber-500/10 scale-105' 
-                    : 'border-amber-500/20'
+                    ? 'border-orange-400/40 shadow-2xl shadow-orange-500/10 scale-105' 
+                    : 'border-orange-500/20'
                 }`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                      <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </div>
                     </div>
@@ -227,7 +231,7 @@ const AiContentModerationProPage = () => {
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-5xl font-bold text-amber-400">{plan.price}</span>
+                      <span className="text-5xl font-bold text-orange-400">{plan.price}</span>
                       <span className="text-gray-400 ml-2">{plan.period}</span>
                     </div>
                   </div>
@@ -243,8 +247,8 @@ const AiContentModerationProPage = () => {
                   
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-amber-500 to-orange-600 text-white hover:from-amber-600 hover:to-orange-700 transform hover:scale-105'
-                      : 'border-2 border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900'
+                      ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-600 hover:to-red-700 transform hover:scale-105'
+                      : 'border-2 border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-slate-900'
                   }`}>
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2 inline" />
@@ -260,11 +264,11 @@ const AiContentModerationProPage = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Protect Your Platform?
+                Ready to Boost Your Email Marketing?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of platforms already using our AI content moderation system. 
-                Get started today with a free content audit.
+                Join thousands of businesses already using our AI email marketing platform. 
+                Get started today with a free 14-day trial.
               </p>
             </div>
             
@@ -302,5 +306,4 @@ const AiContentModerationProPage = () => {
   );
 };
 
-export default AiContentModerationProPage;
-
+export default AiEmailMarketingProPage;
