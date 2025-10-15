@@ -22,17 +22,41 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Services</h4>
+            <h4 className="text-md font-semibold mb-4">AI Services</h4>
             <ul className="space-y-2">
               <li><Link to="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
-              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-white">Cloud Infrastructure</Link></li>
-              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-white">Digital Transformation</Link></li>
+              <li><Link to="/ai-solutions" className="text-gray-300 hover:text-white">AI Solutions</Link></li>
+              <li><Link to="/ai-content-generator" className="text-gray-300 hover:text-white">AI Content Generator</Link></li>
+              <li><Link to="/ai-chatbot-builder" className="text-gray-300 hover:text-white">AI Chatbot Builder</Link></li>
+              <li><Link to="/ai-fraud-detection" className="text-gray-300 hover:text-white">AI Fraud Detection</Link></li>
+              <li><Link to="/ai-image-recognition" className="text-gray-300 hover:text-white">AI Image Recognition</Link></li>
               <li><Link to="/data-analytics" className="text-gray-300 hover:text-white">Data Analytics</Link></li>
+              <li><Link to="/data-engineering" className="text-gray-300 hover:text-white">Data Engineering</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">IT Services</h4>
+            <ul className="space-y-2">
+              <li><Link to="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
               <li><Link to="/web-development" className="text-gray-300 hover:text-white">Web Development</Link></li>
               <li><Link to="/mobile-development" className="text-gray-300 hover:text-white">Mobile Development</Link></li>
               <li><Link to="/database-management" className="text-gray-300 hover:text-white">Database Management</Link></li>
               <li><Link to="/network-infrastructure" className="text-gray-300 hover:text-white">Network Infrastructure</Link></li>
+              <li><Link to="/api-development" className="text-gray-300 hover:text-white">API Development</Link></li>
+              <li><Link to="/devops-automation" className="text-gray-300 hover:text-white">DevOps Automation</Link></li>
+              <li><Link to="/security-audit" className="text-gray-300 hover:text-white">Security Audit</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Infrastructure</h4>
+            <ul className="space-y-2">
+              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-white">Cloud Infrastructure</Link></li>
+              <li><Link to="/5g-solutions" className="text-gray-300 hover:text-white">5G Solutions</Link></li>
+              <li><Link to="/iot-solutions" className="text-gray-300 hover:text-white">IoT Solutions</Link></li>
+              <li><Link to="/blockchain-solutions" className="text-gray-300 hover:text-white">Blockchain Solutions</Link></li>
+              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-white">Digital Transformation</Link></li>
               <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Solutions</Link></li>
             </ul>
           </div>
