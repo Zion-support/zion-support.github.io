@@ -1,7 +1,85 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SEOHead from '../components/SEOHead';
 
 const ServicesPage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('all');
+
+  const tabs = [
+    { id: 'all', name: 'All Services', icon: '🚀', count: 12 },
+    { id: 'ai', name: 'AI Services', icon: '🤖', count: 6 },
+    { id: 'it', name: 'IT Services', icon: '💻', count: 4 },
+    { id: 'cloud', name: 'Cloud Solutions', icon: '☁️', count: 2 }
+  ];
+
+  const services = [
+    {
+      id: 'ai-content-generator',
+      title: 'AI Content Generator',
+      description: 'Generate high-quality content using advanced AI algorithms for blogs, social media, and marketing materials.',
+      features: ['Automated content creation', 'SEO optimization', 'Multiple content formats', 'Brand voice consistency'],
+      price: '$99/month',
+      priceNote: 'per user',
+      icon: '✍️',
+      category: 'ai',
+      badge: 'Popular'
+    },
+    {
+      id: 'data-analytics',
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable insights with our advanced analytics platform.',
+      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization'],
+      price: '$199/month',
+      priceNote: 'up to 10GB',
+      icon: '📊',
+      category: 'ai'
+    },
+    {
+      id: 'web-development',
+      title: 'Web Development',
+      description: 'Custom web applications built with modern technologies and best practices.',
+      features: ['Responsive design', 'Performance optimization', 'SEO friendly', 'Security features'],
+      price: 'From $2,999',
+      priceNote: 'one-time',
+      icon: '🌐',
+      category: 'it'
+    },
+    {
+      id: 'cloud-infrastructure',
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions that provide reliability, security, and performance.',
+      features: ['Auto-scaling', '99.9% uptime', 'Security compliance', '24/7 monitoring'],
+      price: '$299/month',
+      priceNote: 'starting',
+      icon: '☁️',
+      category: 'cloud'
+    },
+    {
+      id: 'ai-chatbot',
+      title: 'AI Chatbot',
+      description: 'Intelligent chatbots that provide 24/7 customer support and engagement.',
+      features: ['Natural language processing', 'Multi-language support', 'Integration ready', 'Analytics dashboard'],
+      price: '$149/month',
+      priceNote: 'per bot',
+      icon: '💬',
+      category: 'ai'
+    },
+    {
+      id: 'mobile-development',
+      title: 'Mobile Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android.',
+      features: ['Cross-platform compatibility', 'Native performance', 'App store optimization', 'Push notifications'],
+      price: 'From $4,999',
+      priceNote: 'one-time',
+      icon: '📱',
+      category: 'it'
+    }
+  ];
+
+  const getCurrentServices = () => {
+    if (activeTab === 'all') return services;
+    return services.filter(service => service.category === activeTab);
+  };
+
   return (
     <>
       <SEOHead
@@ -11,23 +89,37 @@ const ServicesPage: React.FC = () => {
         canonicalUrl="https://ziontechgroup.com/services"
       />
       
-      <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Services</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions tailored to your business needs
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        {/* Hero Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
+              Our Services
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+              Comprehensive AI and IT solutions tailored to accelerate your business growth and digital transformation.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Services</h3>
-              <p className="text-gray-600">
-                Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
-              </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              <div className="bg-white p-6 rounded-lg shadow-md border">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Services</h3>
+                <p className="text-gray-600">
+                  Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md border">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">IT Services</h3>
+                <p className="text-gray-600">
+                  Complete IT solutions including web development, mobile apps, and system integration.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md border">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Infrastructure</h3>
+                <p className="text-gray-600">
+                  Scalable cloud solutions that provide reliability, security, and performance for your business applications.
+                </p>
+              </div>
             </div>
-<<<<<<< HEAD
           </div>
         </section>
 
@@ -79,94 +171,50 @@ const ServicesPage: React.FC = () => {
                     {service.description}
                   </p>
 
-                  {/* Features */}
-                  <div className="space-y-2 mb-6">
-                    <h4 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
-                      Key Features
-                    </h4>
-                    <ul className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, idx) => (
-                        <li key={idx} className="text-sm text-gray-400 flex items-center">
-                          <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></span>
-                          {feature}
-                        </li>
-                      ))}
-                      {service.features.length > 3 && (
-                        <li className="text-sm text-gray-500">
-                          +{service.features.length - 3} more features
-                        </li>
-                      )}
-                    </ul>
-                  </div>
+                  {/* Service Features */}
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <span className="text-cyan-400 mr-3">✓</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
 
-                  {/* Pricing */}
+                  {/* Service Price */}
                   <div className="mb-6">
-                    <div className="flex items-baseline space-x-2">
-                      <span className="text-3xl font-bold gradient-text">
-                        ${service.pricing.basic.toLocaleString()}
-                      </span>
-                      <span className="text-gray-400">
-                        {activeTab === 'saas' ? '/month' : 'starting'}
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-400">
-                      Market Price: {service.marketPrice}
-                    </p>
+                    <span className="text-3xl font-bold text-cyan-400">
+                      {service.price}
+                    </span>
+                    {service.priceNote && (
+                      <span className="text-gray-400 ml-2">{service.priceNote}</span>
+                    )}
                   </div>
 
-                  {/* Benefits */}
-                  <div className="space-y-2 mb-6">
-                    <h4 className="text-sm font-semibold text-green-400 uppercase tracking-wide">
-                      Benefits
-                    </h4>
-                    <ul className="space-y-1">
-                      {service.benefits.slice(0, 2).map((benefit, idx) => (
-                        <li key={idx} className="text-sm text-gray-400 flex items-center">
-                          <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2"></span>
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* CTA Buttons */}
-                  <div className="space-y-3">
-                    <Link
-                      to={`/contact?service=${service.id}`}
-                      className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-medium text-center hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-                    >
-                      Get Quote
-                    </Link>
+                  {/* Service Actions */}
+                  <div className="flex flex-col sm:flex-row gap-3">
                     <a
-                      href={service.contactInfo.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full px-6 py-3 border border-cyan-500 text-cyan-400 rounded-lg font-medium text-center hover:bg-cyan-500 hover:text-white transition-all duration-300"
+                      href={`/contact?service=${service.id}`}
+                      className="btn-futuristic flex-1 text-center"
+                    >
+                      Get Started
+                    </a>
+                    <a
+                      href={`/services/${service.id}`}
+                      className="px-6 py-3 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 text-center"
                     >
                       Learn More
                     </a>
                   </div>
 
-                  {/* Contact Info */}
-                  <div className="mt-6 pt-6 border-t border-gray-700">
-                    <div className="space-y-2 text-sm">
-                      <div className="flex items-center space-x-2 text-gray-400">
-                        <span>📞</span>
-                        <a href={`tel:${service.contactInfo.phone}`} className="hover:text-cyan-400 transition-colors">
-                          {service.contactInfo.phone}
-                        </a>
-                      </div>
-                      <div className="flex items-center space-x-2 text-gray-400">
-                        <span>✉️</span>
-                        <a href={`mailto:${service.contactInfo.email}`} className="hover:text-cyan-400 transition-colors">
-                          {service.contactInfo.email}
-                        </a>
-                      </div>
+                  {/* Service Badge */}
+                  {service.badge && (
+                    <div className="absolute top-4 right-4">
+                      <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-semibold rounded-full">
+                        {service.badge}
+                      </span>
                     </div>
-                  </div>
-
-                  {/* Hover Effect Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 to-purple-500/0 group-hover:from-cyan-500/5 group-hover:to-purple-500/5 rounded-2xl transition-all duration-300"></div>
+                  )}
                 </div>
               ))}
             </div>
@@ -183,22 +231,18 @@ const ServicesPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Let's discuss how our AI and IT solutions can accelerate your digital transformation. 
                 Contact us today for a free consultation.
-=======
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Infrastructure</h3>
-              <p className="text-gray-600">
-                Scalable cloud solutions that provide reliability, security, and performance for your business applications.
               </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
-              <p className="text-gray-600">
-                Complete digital transformation services to modernize your business processes and systems.
->>>>>>> cursor/comprehensive-app-audit-and-update-1ae3
-              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact" className="btn-futuristic">
+                  Get Free Consultation
+                </a>
+                <a href="/pricing" className="px-8 py-3 border-2 border-cyan-500 text-cyan-400 rounded-full font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 hover:scale-105">
+                  View Pricing
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </>
   );
