@@ -6,20 +6,20 @@ const Navigation: React.FC = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="glass-card fixed top-0 left-0 right-0 z-50 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-blue-600">Zion Tech Group</h1>
+              <h1 className="text-3xl font-bold text-gradient holographic font-['Orbitron']">ZION TECH</h1>
             </Link>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 px-4 py-2 rounded-md text-sm font-medium transition-colors neon-glow">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 px-4 py-2 rounded-md text-sm font-medium transition-colors">
               About
             </Link>
             
@@ -28,7 +28,7 @@ const Navigation: React.FC = () => {
               <button
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+                className="text-gray-300 hover:text-cyan-400 px-4 py-2 rounded-md text-sm font-medium flex items-center transition-colors"
               >
                 Services
                 <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -39,20 +39,20 @@ const Navigation: React.FC = () => {
                 <div
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
-                  className="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg z-50"
+                  className="absolute left-0 mt-2 w-80 glass-card rounded-lg shadow-lg z-50"
                 >
                   <div className="py-1">
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100">AI & Machine Learning</div>
-                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors">
                       AI Services
                     </Link>
-                    <Link to="/ai-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/ai-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors">
                       AI Solutions
                     </Link>
-                    <Link to="/ai-content-generator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/ai-content-generator" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors">
                       AI Content Generator
                     </Link>
-                    <Link to="/data-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/data-analytics" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors">
                       Data Analytics
                     </Link>
                     
@@ -87,6 +87,20 @@ const Navigation: React.FC = () => {
                     </Link>
                     <Link to="/micro-saas-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Micro SaaS Solutions
+                    </Link>
+                    
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Micro SAAS Services</div>
+                    <Link to="/ai-chatbot-builder" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Chatbot Builder
+                    </Link>
+                    <Link to="/ai-form-builder" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Form Builder
+                    </Link>
+                    <Link to="/ai-fraud-detection" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Fraud Detection
+                    </Link>
+                    <Link to="/ai-price-optimizer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Price Optimizer
                     </Link>
                     
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">AI Tools</div>
@@ -201,6 +215,20 @@ const Navigation: React.FC = () => {
               </Link>
               <Link to="/micro-saas-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Micro SaaS Solutions
+              </Link>
+              
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Micro SAAS Services</div>
+              <Link to="/ai-chatbot-builder" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Chatbot Builder
+              </Link>
+              <Link to="/ai-form-builder" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Form Builder
+              </Link>
+              <Link to="/ai-fraud-detection" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Fraud Detection
+              </Link>
+              <Link to="/ai-price-optimizer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Price Optimizer
               </Link>
               
               <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">AI Tools</div>

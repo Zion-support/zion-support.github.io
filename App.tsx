@@ -2,6 +2,7 @@ import { Suspense, useEffect, lazy } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization'
+import './app/styles/futuristic.css'
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -53,9 +54,14 @@ const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow
 const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 
-// New Micro SaaS Services
-const ZionAIChatbotBuilderPage = lazy(() => import('./app/zion-ai-chatbot-builder/page'));
-const ZionAIFormBuilderPage = lazy(() => import('./app/zion-ai-form-builder/page'));
+// Micro SAAS Services
+const AIChatbotBuilderPage = lazy(() => import('./app/ai-chatbot-builder/page'));
+const AIFormBuilderPage = lazy(() => import('./app/ai-form-builder/page'));
+const AIFraudDetectionPage = lazy(() => import('./app/ai-fraud-detection/page'));
+const AIPriceOptimizerPage = lazy(() => import('./app/ai-price-optimizer/page'));
+const AIImageRecognitionPage = lazy(() => import('./app/ai-image-recognition/page'));
+
+// Additional Micro SaaS Services
 const ZionAIDocumentProcessorPage = lazy(() => import('./app/zion-ai-document-processor/page'));
 const ZionAISchedulingAssistantPage = lazy(() => import('./app/zion-ai-scheduling-assistant/page'));
 const ZionAISocialMediaManagerPage = lazy(() => import('./app/zion-ai-social-media-manager/page'));
@@ -164,9 +170,14 @@ export default function App() {
                   <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
                   <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
                   
-                  {/* New Micro SaaS Services */}
-                  <Route path="/zion-ai-chatbot-builder" element={<ZionAIChatbotBuilderPage />} />
-                  <Route path="/zion-ai-form-builder" element={<ZionAIFormBuilderPage />} />
+                  {/* Micro SAAS Services */}
+                  <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                  <Route path="/ai-form-builder" element={<AIFormBuilderPage />} />
+                  <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
+                  <Route path="/ai-price-optimizer" element={<AIPriceOptimizerPage />} />
+                  <Route path="/ai-image-recognition" element={<AIImageRecognitionPage />} />
+                  
+                  {/* Additional Micro SaaS Services */}
                   <Route path="/zion-ai-document-processor" element={<ZionAIDocumentProcessorPage />} />
                   <Route path="/zion-ai-scheduling-assistant" element={<ZionAISchedulingAssistantPage />} />
                   <Route path="/zion-ai-social-media-manager" element={<ZionAISocialMediaManagerPage />} />
