@@ -578,22 +578,67 @@ body {
 }
 
 /* Enhanced Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
   
-  .text-5xl {
-    font-size: 2.5rem;
+  .text-8xl {
+    font-size: 4rem;
+  }
+  
+  .text-7xl {
+    font-size: 3.5rem;
   }
   
   .text-6xl {
     font-size: 3rem;
   }
   
+  .text-5xl {
+    font-size: 2.5rem;
+  }
+  
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .py-20 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .py-16 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .text-8xl {
+    font-size: 3rem;
+  }
+  
   .text-7xl {
-    font-size: 3.5rem;
+    font-size: 2.75rem;
+  }
+  
+  .text-6xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-5xl {
+    font-size: 2.25rem;
+  }
+  
+  .text-4xl {
+    font-size: 1.875rem;
   }
   
   .grid-cols-3 {
@@ -602,6 +647,10 @@ body {
   
   .grid-cols-4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   
   .py-20 {
@@ -631,26 +680,55 @@ body {
   .gap-12 {
     gap: 2rem;
   }
+  
+  .cyber-card {
+    padding: 1rem;
+  }
+  
+  .cyber-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .neon-text {
+    font-size: 1.25rem;
+  }
 }
 
 @media (max-width: 640px) {
-  .text-4xl {
-    font-size: 1.875rem;
-  }
-  
-  .text-5xl {
-    font-size: 2.25rem;
-  }
-  
-  .text-6xl {
+  .text-8xl {
     font-size: 2.5rem;
   }
   
   .text-7xl {
-    font-size: 2.75rem;
+    font-size: 2.25rem;
+  }
+  
+  .text-6xl {
+    font-size: 2rem;
+  }
+  
+  .text-5xl {
+    font-size: 1.875rem;
+  }
+  
+  .text-4xl {
+    font-size: 1.75rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.25rem;
   }
   
   .grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .grid-cols-3 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   
@@ -705,6 +783,29 @@ body {
   
   .h-20 {
     height: 4rem;
+  }
+  
+  .cyber-card {
+    padding: 0.75rem;
+    margin: 0.5rem;
+  }
+  
+  .cyber-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+  
+  .neon-text {
+    font-size: 1rem;
+  }
+  
+  .cyber-grid {
+    --grid-size: 15px;
+  }
+  
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
