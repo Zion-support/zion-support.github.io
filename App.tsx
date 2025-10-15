@@ -54,7 +54,7 @@ const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-custom
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 
 // Import components
-import Navigation from './app/components/Navigation';
+import FuturisticNavigation from './app/components/FuturisticNavigation';
 import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
@@ -85,8 +85,8 @@ export default function App() {
     <GlobalErrorBoundary>
       <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-gray-50">
-            <Navigation />
+          <div className="min-h-screen bg-black">
+            <FuturisticNavigation />
             <Sidebar />
             
             <main className="flex-1">
