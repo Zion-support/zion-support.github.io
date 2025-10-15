@@ -50,17 +50,10 @@ const ContactPage: React.FC = () => {
 
   const contactInfo = [
     {
-<<<<<<< HEAD
-icon: 'Phone',
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9AM-6PM EST'
-=======
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
       details: ["+1 302 464 0950", "Mon-Fri 9AM-6PM EST"],
       action: "Call Now"
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
     },
     {
       icon: <Mail className="w-6 h-6" />,
@@ -75,38 +68,10 @@ icon: 'Phone',
       action: "Get Directions"
     },
     {
-<<<<<<< HEAD
-      icon: 'Clock',
-icon: Phone,
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9AM-6PM EST'
-    },
-    {
-      icon: Mail,
-      title: 'Email',
-      value: 'contact@ziontechgroup.com',
-      description: 'We respond within 24 hours'
-    },
-    {
-      icon: MapPin,
-      title: 'Address',
-      value: '123 Tech Street, Suite 100',
-      description: 'San Francisco, CA 94105'
-    },
-    {
-      icon: Clock,
-      title: 'Business Hours',
-      value: 'Monday - Friday',
-value: 'Monday - Friday',
-value: 'Monday - Friday',
-      description: '9:00 AM - 6:00 PM EST'
-=======
       icon: <Clock className="w-6 h-6" />,
       title: "Business Hours",
       details: ["Mon-Fri: 9AM-6PM EST", "Sat: 10AM-4PM EST"],
       action: "Schedule Call"
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
     }
   ];
 

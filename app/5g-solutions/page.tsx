@@ -35,12 +35,6 @@ const FiveGSolutionsPage: React.FC = () => {
       benefits: "Connect 10x more devices with ultra-low latency"
     },
     {
-<<<<<<< HEAD
-      icon: Wifi,
-title: 'IoT Connectivity',
-      description: 'Connect thousands of IoT devices with 5G technology',
-      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
-=======
       name: "5G Smart City Solutions",
       description: "Transform your city with 5G-powered smart infrastructure and citizen services.",
       features: ["Traffic management", "Public safety systems", "Energy efficiency", "Citizen services", "Environmental monitoring", "Emergency response"],
@@ -69,22 +63,14 @@ title: 'IoT Connectivity',
       popular: true,
       icon: <Shield className="w-8 h-8" />,
       benefits: "Achieve enterprise-grade security with private networks"
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
     }
   ];
 
   const benefits = [
     {
-<<<<<<< HEAD
-title: '5G Network Infrastructure',
-      description: 'Complete 5G network setup and optimization',
-      price: 'Starting at $50,000',
-      features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
-=======
       icon: <Clock className="w-6 h-6" />,
       title: "Ultra-Low Latency",
       description: "Achieve sub-millisecond latency for real-time applications"
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
     },
     {
       icon: <Network className="w-6 h-6" />,
@@ -92,12 +78,6 @@ title: '5G Network Infrastructure',
       description: "Support millions of devices per square kilometer"
     },
     {
-<<<<<<< HEAD
-      title: '5G IoT Solutions',
-      description: 'IoT device connectivity and management platform',
-      price: 'Starting at $35,000',
-      features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-=======
       icon: <Cpu className="w-6 h-6" />,
       title: "Edge Computing",
       description: "Process data locally for faster response times"
@@ -106,7 +86,6 @@ title: '5G Network Infrastructure',
       icon: <Shield className="w-6 h-6" />,
       title: "Enhanced Security",
       description: "Advanced encryption and network slicing for secure communications"
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
     }
   ];
 

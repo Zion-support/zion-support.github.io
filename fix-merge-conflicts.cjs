@@ -1,75 +1,75 @@
-#!/usr/bin/env node;
-const fs = require('fs');';
-const _path = require('_path');';
-// Function to fix common merge conflict issues;
-function fixMergeConflicts(content) {
-  // Remove merge conflict markers;
-  // Fix common syntax issues;
-  content = content.replace(/\}\s*\)\s*}/g, '})}'); // Fix })}';
-  content = content.replace(/\}\s*\)\s*\)/g, '}))'); // Fix }))';
-  content = content.replace(/\}\s*\)\s*\)\s*\)/g, '})))'); // Fix })))';
-  content = content.replace(/\}\s*\)\s*\)\s*\)\s*\)/g, '}))))'); // Fix }))))';
-  // Fix missing semicolons after imports;
-  content = content.replace(/import[^;]+from[^;]+(?=\n)/g, (match) => {
-    if (!match.endsWith(';')) {';
-      return match + ';';';
-    }
-    return match;
-  });
-  
-  // Fix missing semicolons after variable declarations;
-  content = content.replace(/(const|let|var)\s+[^=]+=[^;]+(?=\n)/g, (match) => {
-    if (!match.endsWith(';')) {';
-      return match + ';';';
-    }
-    return match;
-  });
-  
-  // Fix JSX closing tags;
-  content = content.replace(/>\s*}/g, '>}');';
-  content = content.replace(/>\s*\)/g, '>)');';
-  // Fix function declarations;
-  content = content.replace(/function\s+[^{]+{\s*}/g, (match) => {
-    return match.replace(/\s*}/, ' {}');';
-  });
-  
-  // Fix arrow functions;
-  content = content.replace(/=>\s*{\s*}/g, ' => {}');';
-  // Remove extra whitespace;
-  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');';
-  return content;
-}
+const fs = require('fs');
+const path = require('path');
 
-// Function to process a file;
-function processFile(filePath) {
+// List of files with merge conflicts
+const filesWithConflicts = [
+  './scripts/performance-analysis.js',
+  './scripts/generate-sitemap.js',
+  './scripts/accessibility-audit.js',
+  './jest.config.js',
+  './jest.setup.js',
+  './app/services/page.tsx',
+  './app/support/page.tsx',
+  './app/pages/AboutPage.tsx',
+  './app/pages/HomePage.tsx',
+  './app/micro-saas-solutions/page.tsx',
+  './app/it-solutions/page.tsx',
+  './app/demo/page.tsx',
+  './app/components/LoadingSpinner.tsx',
+  './app/contact/page.tsx',
+  './app/blog/page.tsx',
+  './app/components/AccessibilityEnhancer.tsx',
+  './app/ai-services/page.tsx',
+  './app/ai-solutions/page.tsx',
+  './app/ai-automation-platform/page.tsx',
+  './api/wallet.js',
+  './api/subscribe.js',
+  './app/5g-solutions/page.tsx'
+];
+
+function fixMergeConflicts(filePath) {
   try {
-    if (!fs.existsSync(filePath)) {
-      global.console.log(`File not found: ${filePath}`);
-      return;
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove merge conflict markers and keep the content after =======
+    const lines = content.split('\n');
+    const fixedLines = [];
+    let inConflict = false;
+    let keepContent = false;
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      if (line.includes('<<<<<<< HEAD')) {
+        inConflict = true;
+        continue;
+      }
+      
+      if (line.includes('=======')) {
+        keepContent = true;
+        continue;
+      }
+      
+      if (line.includes('>>>>>>> cursor/analyze-improve-and-merge-code-b7b5')) {
+        inConflict = false;
+        keepContent = false;
+        continue;
+      }
+      
+      if (!inConflict || keepContent) {
+        fixedLines.push(line);
+      }
     }
-
-    let content = fs.readFileSync(filePath, 'utf8');';
-    let originalContent = content;
-
-    // Remove merge conflict markers and keep the HEAD version;
-    // Clean up any double newlines that might have been created;
-    content = content.replace(/\n\n\n+/g, '\n\n');';
-    // Only write if content changed;
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');';
-      global.console.log(`Fixed merge conflicts in: ${filePath}`);
-    } else {
-      global.console.log(`No conflicts found in: ${filePath}`);
-    }
-  } catch (_error) {
-    global.console._error(`Error processing ${filePath}:`, _error.message);
+    
+    const fixedContent = fixedLines.join('\n');
+    fs.writeFileSync(filePath, fixedContent, 'utf8');
+    console.log(`Fixed merge conflicts in ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Main execution;
-global.console.log('Starting merge conflict resolution...');';
-filesWithConflicts.forEach(filePath => {
-  fixMergeConflicts(filePath);
-});
+// Fix all files
+filesWithConflicts.forEach(fixMergeConflicts);
 
-global.console.log('Merge conflict resolution completed!');';
+console.log('All merge conflicts fixed!');

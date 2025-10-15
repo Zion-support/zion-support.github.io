@@ -50,13 +50,6 @@ const AiServicesPage: React.FC = () => {
       benefits: ["85% prediction accuracy", "Reduce forecasting time by 90%", "Identify opportunities early", "Optimize resource allocation"]
     },
     {
-<<<<<<< HEAD
-icon: Zap,
-icon: Shield,
-      title: 'AI Security',
-      description: 'AI-powered security solutions to protect your business and data.',
-      color: 'from-cyan-500 to-blue-500'
-=======
       name: "AI Security Solutions",
       description: "Advanced AI-powered security systems to protect your digital assets and infrastructure.",
       features: ["Threat detection", "Anomaly detection", "Behavioral analysis", "Incident response", "Zero-day protection", "Compliance monitoring"],
@@ -100,7 +93,6 @@ icon: Shield,
       applications: ["DeFi platforms", "NFT marketplaces", "Cryptocurrency trading", "Supply chain tracking"],
       price: "Starting at $3,999/month",
       benefits: ["Automated smart contracts", "Real-time blockchain analysis", "Fraud detection", "Optimized transactions"]
->>>>>>> cursor/analyze-improve-and-merge-code-b7b5
     }
   ];
 
