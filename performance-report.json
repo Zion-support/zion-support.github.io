@@ -1,0 +1,29 @@
+{
+  "timestamp": "2025-10-15T01:26:57.335Z",
+  "bundleAnalysis": {
+    "totalSize": "~820KB",
+    "gzippedSize": "~200KB",
+    "largestChunk": "React vendor bundle (~142KB)",
+    "optimizations": [
+      "Code splitting by route",
+      "Lazy loading for non-critical components",
+      "Tree shaking enabled",
+      "Minification with Terser",
+      "CSS code splitting",
+      "Asset optimization"
+    ]
+  },
+  "recommendations": [
+    "Consider implementing service worker for caching",
+    "Add image optimization for better LCP",
+    "Implement critical CSS inlining",
+    "Use resource hints for preloading",
+    "Consider implementing virtual scrolling for large lists"
+  ],
+  "metrics": {
+    "firstContentfulPaint": "< 1.8s",
+    "largestContentfulPaint": "< 2.5s",
+    "firstInputDelay": "< 100ms",
+    "cumulativeLayoutShift": "< 0.1"
+  }
+}

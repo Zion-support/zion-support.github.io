@@ -1,43 +1,63 @@
-import { createContext, useContext, useState, useEffect } from 'react;
-'use client';
+import React, { createContext, useContext, ReactNode, useCallback } from "react";
+
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void;
-  setUser: (userId: string, properties?: Record<string, any>) => void;
-  isEnabled: boolean;
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (page: string) => void;
+  identifyUser: (userId: string, properties?: Record<string, unknown>) => void;
+  setUser: (userId: string, properties?: Record<string, unknown>) => void;
 }
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-const  ({ children }) => {
-  const [isEnabled, setIsEnabled] = useState(false);
-  const [userId, setUserId] = useState<string | null>(null);
-  useEffect(() => {
-    // if analytics is enabled;
-    setIsEnabled(true);
+
+export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+interface AnalyticsProviderProps {
+  children: ReactNode;
+}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  const trackEvent = useCallback((eventName: string, properties?: Record<string, unknown>) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('Event tracked:', eventName, properties);
+    }
+    // Add your analytics tracking logic here
   }, []);
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    if (!isEnabled) return;
-    // Track event logic here;
-    console.log('Analytics Event:', eventName, properties);
-  };
-  const trackPageView = (pageName: string) => {
-    if (!isEnabled) return;
-    // Track page view logic here;
-    console.log('Page View:', pageName);
-  };
-  const setUser = (newUserId: string, properties?: Record<string, any>) => {
-    setUserId(newUserId);
-    console.log('User Set:', newUserId, properties);
-  };
+
+  const trackPageView = useCallback((page: string) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('Page view tracked:', page);
+    }
+    // Add your page view tracking logic here
+  }, []);
+
+  const identifyUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
+    console.warn('User set:', userId, properties);
+    // Add your user identification logic here
+  }, []);
+
+  const setUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('User set:', userId, properties);
+    }
+    // Add your user setting logic here
+  }, []);
+
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
-    setUser,
-    isEnabled,
+    identifyUser,
+    setUser
   };
+
   return (
-    <AnalyticsContext.Provider value={value}>;
+    <AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContext.Provider>;
+    </AnalyticsContext.Provider>
   );
 };
-export { AnalyticsContext };
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};

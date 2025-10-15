@@ -1,55 +1,46 @@
-const fs = require('fs');';
-// Files to fix;
-const _files = [;
-  'app/about/page.tsx',';
-  'app/ai-analytics/page.tsx',';
-  'app/ai-automation-platform/page.tsx',';
-  'app/ai-code-assistant-pro/page.tsx',';
-  'app/ai-content-studio/page.tsx',';
-  'app/ai-customer-sentiment-tracker/page.tsx',';
-  'app/contact/page.tsx',';
-  'app/pricing/page.tsx'';
-];
+const fs = require('fs');
+const path = require('path');
 
-function fixUnusedImports(filePath) {
+// Function to fix a single page file
+function fixPageFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');';
-    // Remove unused lucide-react imports;
-    content = content.replace(/import\s*{\s*[^}]*}\s*from\s*['"]lucide-react['"];?\s*\n/g, '');';
-    // Remove unused react-router-dom imports;
-    content = content.replace(/import\s*{\s*[^}]*}\s*from\s*['"]react-router-dom['"];?\s*\n/g, '');';
-    // Remove unused component imports;
-    content = content.replace(/import\s*{\s*[^}]*}\s*from\s*['"]\.\.\/components\/[^'"]*['"];?\s*\n/g, '');';
-    // Remove unused variable declarations (simple cases)
-    const lines = content.split('\n');';
-    const filteredLines = [];
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
     
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      // Skip lines that declare unused variables;
-      if (line.includes('const ') && line.includes(' = [')) {';
-        const varName = line.match(/const\s+(\w+)\s*=/)?.[1];
-        if (varName) {
-          // Check if this variable is used elsewhere in the file;
-          const restOfFile = lines.slice(i + 1).join('\n');';
-          if (!restOfFile.includes(varName + '[') && !restOfFile.includes(varName + '.')) {';
-            // Skip this variable declaration;
-            continue;
-          }
-        }
-      }
-      
-      filteredLines.push(line);
+    // Fix HTML entities in import statements
+    content = content.replace(/&apos;/g, "'");
+    
+    // Write the fixed content back if it changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed imports in: ${filePath}`);
     }
     
-    content = filteredLines.join('\n');';
-    // Clean up multiple empty lines;
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');';
-    fs.writeFileSync(filePath, content);
-    global.console.log(`Fixed: ${filePath}`);
-  } catch (_error) {
-    global.console._error(`Error fixing ${filePath}:`, _error.message);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
+// Function to recursively find and fix page files
+function fixPageFiles(dir) {
+  const files = fs.readdirSync(dir);
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      // Skip node_modules and other non-app directories
+      if (!['node_modules', '.git', 'dist', '.next'].includes(file)) {
+        fixPageFiles(filePath);
+      }
+    } else if (file.endsWith('.tsx') && file === 'page.tsx') {
+      fixPageFile(filePath);
+    }
+  }
+}
+
+// Start fixing from the app directory
+console.log('Starting to fix import statements...');
+fixPageFiles('./app');
+console.log('Finished fixing import statements.');

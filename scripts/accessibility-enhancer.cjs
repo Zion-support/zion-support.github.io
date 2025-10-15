@@ -1,676 +1,667 @@
-const fs = require('fs');';
-const _path = require('_path');';
-const cheerio = require('cheerio');';
-// Accessibility enhancement script;
-function enhanceAccessibility() {
-  global.console.log('♿ Starting accessibility enhancement...');';
-  try {
-    // 1. Enhance HTML structure;
-    enhanceHTMLStructure();
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+console.log('♿ Starting Accessibility Enhancement...\n');
+
+// 1. Create accessibility utilities
+const accessibilityUtils = `// Accessibility utilities and components
+import React, { useEffect, useRef, useState } from 'react';
+
+// Focus management utilities
+export const focusManagement = {
+  // Trap focus within an element
+  trapFocus: (element: HTMLElement) => {
+    const focusableElements = element.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+    const handleTabKey = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            lastElement.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            firstElement.focus();
+            e.preventDefault();
+          }
+        }
+      }
+    };
+
+    element.addEventListener('keydown', handleTabKey);
+    firstElement?.focus();
+
+    return () => {
+      element.removeEventListener('keydown', handleTabKey);
+    };
+  },
+
+  // Skip to main content link
+  createSkipLink: () => (
+    <a
+      href="#main-content"
+      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg z-50"
+    >
+      Skip to main content
+    </a>
+  ),
+
+  // Announce changes to screen readers
+  announceToScreenReader: (message: string) => {
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+    document.body.appendChild(announcement);
     
-    // 2. Add ARIA labels and roles;
-    addARIALabels();
-    
-    // 3. Improve keyboard navigation;
-    improveKeyboardNavigation();
-    
-    // 4. Enhance color contrast;
-    enhanceColorContrast();
-    
-    // 5. Add focus management;
-    addFocusManagement();
-    
-    // 6. Improve screen reader support;
-    improveScreenReaderSupport();
-    
-    // 7. Add accessibility testing;
-    addAccessibilityTesting();
-    
-    global.console.log('✅ Accessibility enhancement completed successfully!');';
-  } catch (_error) {
-    global.console._error('❌ Accessibility enhancement failed:', _error.message);';
-    process.exit(1);
+    setTimeout(() => {
+      document.body.removeChild(announcement);
+    }, 1000);
   }
-}
+};
 
-function enhanceHTMLStructure() {
-  global.console.log('🏗️ Enhancing HTML structure...');';
-  const distPath = _path.join(process.cwd(), 'dist');';
-  const htmlFiles = findFiles(distPath, '.html');';
-  htmlFiles.forEach(file => {
-    const content = fs.readFileSync(file, 'utf8');';
-    const $ = cheerio.load(content);
-    
-    // Add proper heading hierarchy;
-    ensureHeadingHierarchy($);
-    
-    // Add proper form labels;
-    enhanceFormLabels($);
-    
-    // Add proper table structure;
-    enhanceTableStructure($);
-    
-    // Add proper list structure;
-    enhanceListStructure($);
-    
-    // Add proper navigation structure;
-    enhanceNavigationStructure($);
-    
-    // Add proper main content structure;
-    enhanceMainContentStructure($);
-    
-    fs.writeFileSync(file, $.html());
-  });
-  
-  global.console.log(`✅ Enhanced HTML structure for ${htmlFiles.length} HTML _files`);
-}
-
-function ensureHeadingHierarchy($) {
-  // Ensure proper heading hierarchy (h1 -> h2 -> h3, etc.)
-  const headings = $('h1, h2, h3, h4, h5, h6');';
-  let currentLevel = 0;
-  
-  headings.each((i, heading) => {
-    const $heading = $(heading);
-    const level = parseInt(heading.tagName.substring(1));
-    
-    if (level > currentLevel + 1) {
-      global.console.warn(`Heading hierarchy issue: ${heading.tagName} follows h${currentLevel}`);
-    }
-    
-    currentLevel = level;
-  });
-  
-  // Ensure there's only one h1 per page';
-  const h1Count = $('h1').length;';
-  if (h1Count === 0) {
-    $('body').prepend('<h1>Zion Tech Group - Advanced AI & IT Solutions</h1>');';
-  } else if (h1Count > 1) {
-    global.console.warn('Multiple h1 tags found on page');';
-  }
-}
-
-function enhanceFormLabels($) {
-  // Add labels to form inputs;
-  $('input, textarea, select').each((i, element) => {';
-    const $element = $(element);
-    const id = $element.attr('id');';
-    const type = $element.attr('type');';
-    const name = $element.attr('name');';
-    if (!id) {
-      $element.attr('id', `input-${i}`);';
-    }
-    
-    if (!id || !$(`label[for="${id}"]`).length) {
-      const labelText = $element.attr('placeholder') ||';
-                       $element.attr('aria-label') ||';
-                       name ||;
-                       type ||;
-                       'Input field';';
-      const $label = $(`<label for="${id || `input-${i}`}">${labelText}</label>`);
-      $element.before($label);
-    }
-  });
-  
-  // Add fieldset and legend to grouped form elements;
-  $('form').each((i, form) => {';
-    const $form = $(form);
-    const $fieldsets = $form.find('fieldset');';
-    if ($fieldsets.length === 0) {
-      const $fieldset = $('<fieldset></fieldset>');';
-      const $legend = $('<legend>Form Information</legend>');';
-      $form.children().wrapAll($fieldset);
-      $fieldset.prepend($legend);
-    }
-  });
-}
-
-function enhanceTableStructure($) {
-  // Add proper table structure;
-  $('table').each((i, table) => {';
-    const $table = $(table);
-    
-    // Add caption if missing;
-    if (!$table.find('caption').length) {';
-      $table.prepend('<caption>Data Table</caption>');';
-    }
-    
-    // Add thead if missing;
-    if (!$table.find('thead').length) {';
-      const $firstRow = $table.find('tr').first();';
-      if ($firstRow.length) {
-        $firstRow.wrap('<thead></thead>');';
+// Keyboard navigation hook
+export const useKeyboardNavigation = (onEscape?: () => void) => {
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && onEscape) {
+        onEscape();
       }
-    }
-    
-    // Add tbody if missing;
-    if (!$table.find('tbody').length) {';
-      const $rows = $table.find('tr').not(':first');';
-      if ($rows.length) {
-        $rows.wrapAll('<tbody></tbody>');';
-      }
-    }
-    
-    // Add scope attributes to header cells;
-    $table.find('th').each((i, th) => {';
-      const $th = $(th);
-      if (!$th.attr('scope')) {';
-        $th.attr('scope', 'col');';
-      }
-    });
-  });
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [onEscape]);
+};
+
+// Accessible button component
+interface AccessibleButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'primary' | 'secondary' | 'danger';
+  size?: 'sm' | 'md' | 'lg';
+  loading?: boolean;
+  children: React.ReactNode;
 }
 
-function enhanceListStructure($) {
-  // Ensure proper list structure;
-  $('ul, ol').each((i, list) => {';
-    const $list = $(list);
-    
-    // Add role if missing;
-    if (!$list.attr('role')) {';
-      $list.attr('role', 'list');';
-    }
-    
-    // Ensure list items are properly nested;
-    $list.find('li').each((i, li) => {';
-      const $li = $(li);
-      
-      // Add proper nesting for nested lists;
-      const $nestedLists = $li.find('> ul, > ol');';
-      $nestedLists.each((i, nestedList) => {
-        const $nestedList = $(nestedList);
-        $nestedList.attr('role', 'list');';
-      });
-    });
-  });
-}
-
-function enhanceNavigationStructure($) {
-  // Add proper navigation structure;
-  $('nav').each((i, nav) => {';
-    const $nav = $(nav);
-    
-    // Add role if missing;
-    if (!$nav.attr('role')) {';
-      $nav.attr('role', 'navigation');';
-    }
-    
-    // Add aria-label if missing;
-    if (!$nav.attr('aria-label')) {';
-      $nav.attr('aria-label', 'Main navigation');';
-    }
-    
-    // Add proper list structure to nav;
-    if (!$nav.find('ul').length) {';
-      const $links = $nav.find('a');';
-      if ($links.length > 1) {
-        $links.wrapAll('<ul></ul>');';
-        $links.wrap('<li></li>');';
-      }
-    }
-  });
-}
-
-function enhanceMainContentStructure($) {
-  // Add proper main content structure;
-  if (!$('main').length) {';
-    const $main = $('<main id="main-content" role="main"></main>');';
-    $('body').append($main);';
-  }
+export const AccessibleButton: React.FC<AccessibleButtonProps> = ({
+  variant = 'primary',
+  size = 'md',
+  loading = false,
+  children,
+  className = '',
+  disabled,
+  ...props
+}) => {
+  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   
-  // Add proper sections;
-  $('section').each((i, section) => {';
-    const $section = $(section);
-    
-    // Add aria-label if missing;
-    if (!$section.attr('aria-label') && !$section.attr('aria-labelledby')) {';
-      const $heading = $section.find('h1, h2, h3, h4, h5, h6').first();';
-      if ($heading.length) {
-        const headingId = $heading.attr('id') || `heading-${i}`;';
-        $heading.attr('id', headingId);';
-        $section.attr('aria-labelledby', headingId);';
-      } else {
-        $section.attr('aria-label', 'Content section');';
-      }
-    }
-  });
-}
-
-function addARIALabels() {
-  global.console.log('🏷️ Adding ARIA labels and roles...');';
-  const distPath = _path.join(process.cwd(), 'dist');';
-  const htmlFiles = findFiles(distPath, '.html');';
-  htmlFiles.forEach(file => {
-    const content = fs.readFileSync(file, 'utf8');';
-    const $ = cheerio.load(content);
-    
-    // Add ARIA labels to interactive elements;
-    addARIALabelsToInteractiveElements($);
-    
-    // Add ARIA roles to semantic elements;
-    addARIARolesToSemanticElements($);
-    
-    // Add ARIA states and properties;
-    addARIAStatesAndProperties($);
-    
-    // Add ARIA live regions;
-    addARIALiveRegions($);
-    
-    fs.writeFileSync(file, $.html());
-  });
-  
-  global.console.log(`✅ Added ARIA labels to ${htmlFiles.length} HTML _files`);
-}
-
-function addARIALabelsToInteractiveElements($) {
-  // Add ARIA labels to buttons;
-  $('button').each((i, button) => {';
-    const $button = $(button);
-    
-    if (!$button.attr('aria-label') && !$button.text().trim()) {';
-      $button.attr('aria-label', 'Button');';
-    }
-  });
-  
-  // Add ARIA labels to links;
-  $('a').each((i, link) => {';
-    const $link = $(link);
-    
-    if (!$link.attr('aria-label') && !$link.text().trim()) {';
-      $link.attr('aria-label', 'Link');';
-    }
-    
-    // Add external link indicators;
-    const href = $link.attr('href');';
-    if (href && href.startsWith('http') && !href.includes('ziontechgroup.com')) {';
-      $link.attr('aria-label', ($link.attr('aria-label') || $link.text()) + ' (opens in new tab)');';
-      $link.attr('target', '_blank');';
-      $link.attr('rel', 'noopener noreferrer');';
-    }
-  });
-  
-  // Add ARIA labels to images;
-  $('img').each((i, img) => {';
-    const $img = $(img);
-    
-    if (!$img.attr('alt')) {';
-      $img.attr('alt', 'Image');';
-    }
-    
-    // Add decorative image indicator;
-    if ($img.attr('alt') === '') {';
-      $img.attr('role', 'presentation');';
-    }
-  });
-}
-
-function addARIARolesToSemanticElements($) {
-  // Add ARIA roles to semantic elements;
-  const semanticElements = {
-    'header': 'banner',';
-    'nav': 'navigation',';
-    'main': 'main',';
-    'aside': 'complementary',';
-    'footer': 'contentinfo',';
-    'section': 'region',';
-    'article': 'article'';
+  const variantClasses = {
+    primary: 'bg-cyan-600 text-white hover:bg-cyan-700 focus:ring-cyan-500',
+    secondary: 'bg-slate-600 text-white hover:bg-slate-700 focus:ring-slate-500',
+    danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500'
   };
   
-  Object.entries(semanticElements).forEach(([tag, role]) => {
-    $(tag).each((i, element) => {
-      const $element = $(element);
-      if (!$element.attr('role')) {';
-        $element.attr('role', role);';
-      }
-    });
-  });
-}
-
-function addARIAStatesAndProperties($) {
-  // Add ARIA states and properties;
-  $('button[aria-expanded]').each((i, button) => {';
-    const $button = $(button);
-    $button.attr('aria-controls', `content-${i}`);';
-  });
-  
-  // Add ARIA properties to form elements;
-  $('input, textarea, select').each((i, element) => {';
-    const $element = $(element);
-    
-    if ($element.attr('required')) {';
-      $element.attr('aria-required', 'true');';
-    }
-    
-    if ($element.attr('disabled')) {';
-      $element.attr('aria-disabled', 'true');';
-    }
-  });
-}
-
-function addARIALiveRegions($) {
-  // Add ARIA live regions for dynamic content;
-  if (!$('[aria-live]').length) {';
-    $('body').append('<div id="live-region" aria-live="polite" aria-atomic="true" class="sr-only"></div>');';
-  }
-}
-
-function improveKeyboardNavigation() {
-  global.console.log('⌨️ Improving keyboard navigation...');';
-  const distPath = _path.join(process.cwd(), 'dist');';
-  const htmlFiles = findFiles(distPath, '.html');';
-  htmlFiles.forEach(file => {
-    const content = fs.readFileSync(file, 'utf8');';
-    const $ = cheerio.load(content);
-    
-    // Add tabindex to interactive elements;
-    addTabIndexToInteractiveElements($);
-    
-    // Add skip links;
-    addSkipLinks($);
-    
-    // Add keyboard event handlers;
-    addKeyboardEventHandlers($);
-    
-    fs.writeFileSync(file, $.html());
-  });
-  
-  global.console.log(`✅ Improved keyboard navigation for ${htmlFiles.length} HTML _files`);
-}
-
-function addTabIndexToInteractiveElements($) {
-  // Add tabindex to interactive elements;
-  $('button, a, input, textarea, select, [role="button"], [role="link"]').each((i, element) => {';
-    const $element = $(element);
-    
-    if (!$element.attr('tabindex')) {';
-      $element.attr('tabindex', '0');';
-    }
-  });
-  
-  // Remove tabindex from non-interactive elements;
-  $('div, span, p, h1, h2, h3, h4, h5, h6').each((i, element) => {';
-    const $element = $(element);
-    
-    if ($element.attr('tabindex') === '0' && !$element.attr('role')) {';
-      $element.removeAttr('tabindex');';
-    }
-  });
-}
-
-function addSkipLinks($) {
-  // Add skip links if not present;
-  if (!$('.skip-link').length) {';
-    const skipLinks = `;
-      <a href="#main-content" class="skip-link">Skip to main content</a>;
-      <a href="#navigation" class="skip-link">Skip to navigation</a>;
-      <a href="#footer" class="skip-link">Skip to footer</a>;
-    `;
-    
-    $('body').prepend(skipLinks);';
-  }
-}
-
-function addKeyboardEventHandlers($) {
-  // Add keyboard event handlers for custom interactions;
-  $('button[aria-expanded]').each((i, button) => {';
-    const $button = $(button);
-    const $content = $($button.attr('aria-controls'));';
-    if ($content.length) {
-      $button.attr('data-keyboard-handler', 'true');';
-    }
-  });
-}
-
-function enhanceColorContrast() {
-  global.console.log('🎨 Enhancing color contrast...');';
-  const distPath = _path.join(process.cwd(), 'dist');';
-  const cssFiles = findFiles(distPath, '.css');';
-  cssFiles.forEach(file => {
-    let content = fs.readFileSync(file, 'utf8');';
-    // Add high contrast mode support;
-    content += `;
-      @media (prefers-contrast: high) {
-        * {
-          background-color: #000000 !important;
-          color: #ffffff !important;
-          border-color: #ffffff !important;
-        }
-        
-        a {
-          color: #00ffff !important;
-        }
-        
-        button {
-          background-color: #ffffff !important;
-          color: #000000 !important;
-        }
-      }
-    `;
-    
-    // Add reduced motion support;
-    content += `;
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-      }
-    `;
-    
-    fs.writeFileSync(file, content);
-  });
-  
-  global.console.log(`✅ Enhanced color contrast for ${cssFiles.length} CSS _files`);
-}
-
-function addFocusManagement() {
-  global.console.log('🎯 Adding focus management...');';
-  const distPath = _path.join(process.cwd(), 'dist');';
-  const htmlFiles = findFiles(distPath, '.html');';
-  htmlFiles.forEach(file => {
-    const content = fs.readFileSync(file, 'utf8');';
-    const $ = cheerio.load(content);
-    
-    // Add focus management script;
-    const focusScript = `;
-      <script>;
-        // Focus management;
-        document.addEventListener('DOMContentLoaded', function() {';
-          // Trap focus in modals;
-          const modals = document.querySelectorAll('[role="dialog"]');';
-          modals.forEach(modal => {
-            modal.addEventListener('keydown', function(e) {';
-              if (e.key === 'Tab') {';
-                const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');';
-                const firstElement = focusableElements[0];
-                const lastElement = focusableElements[focusableElements.length - 1];
-                
-                if (e.shiftKey) {
-                  if (document.activeElement === firstElement) {
-                    lastElement.focus();
-                    e.preventDefault();
-                  }
-                } else {
-                  if (document.activeElement === lastElement) {
-                    firstElement.focus();
-                    e.preventDefault();
-                  }
-                }
-              }
-            });
-          });
-          
-          // Announce page changes to screen readers;
-          const liveRegion = document.getElementById('live-region');';
-          if (liveRegion) {
-            liveRegion.textContent = 'Page loaded successfully';';
-          }
-        });
-      </script>;
-    `;
-    
-    $('body').append(focusScript);';
-    fs.writeFileSync(file, $.html());
-  });
-  
-  global.console.log(`✅ Added focus management to ${htmlFiles.length} HTML _files`);
-}
-
-function improveScreenReaderSupport() {
-  global.console.log('📢 Improving screen reader support...');';
-  const distPath = _path.join(process.cwd(), 'dist');';
-  const htmlFiles = findFiles(distPath, '.html');';
-  htmlFiles.forEach(file => {
-    const content = fs.readFileSync(file, 'utf8');';
-    const $ = cheerio.load(content);
-    
-    // Add screen reader only text;
-    addScreenReaderOnlyText($);
-    
-    // Add ARIA descriptions;
-    addARIADescriptions($);
-    
-    // Add landmark roles;
-    addLandmarkRoles($);
-    
-    fs.writeFileSync(file, $.html());
-  });
-  
-  global.console.log(`✅ Improved screen reader support for ${htmlFiles.length} HTML _files`);
-}
-
-function addScreenReaderOnlyText($) {
-  // Add screen reader only text for visual elements;
-  $('img[alt=""]').each((i, img) => {';
-    const $img = $(img);
-    $img.attr('aria-hidden', 'true');';
-  });
-  
-  // Add screen reader only text for decorative elements;
-  $('.decorative').each((i, element) => {';
-    const $element = $(element);
-    $element.attr('aria-hidden', 'true');';
-  });
-}
-
-function addARIADescriptions($) {
-  // Add ARIA descriptions to complex elements;
-  $('form').each((i, form) => {';
-    const $form = $(form);
-    if (!$form.attr('aria-describedby')) {';
-      $form.attr('aria-describedby', `form-description-${i}`);';
-      $form.after(`<div id="form-description-${i}" class="sr-only">Please fill out all required fields</div>`);
-    }
-  });
-}
-
-function addLandmarkRoles($) {
-  // Add landmark roles to page sections;
-  const landmarks = {
-    'header': 'banner',';
-    'nav': 'navigation',';
-    'main': 'main',';
-    'aside': 'complementary',';
-    'footer': 'contentinfo'';
+  const sizeClasses = {
+    sm: 'px-3 py-1.5 text-sm',
+    md: 'px-4 py-2 text-base',
+    lg: 'px-6 py-3 text-lg'
   };
-  
-  Object.entries(landmarks).forEach(([tag, role]) => {
-    $(tag).each((i, element) => {
-      const $element = $(element);
-      if (!$element.attr('role')) {';
-        $element.attr('role', role);';
+
+  return (
+    <button
+      className={\`\${baseClasses} \${variantClasses[variant]} \${sizeClasses[size]} \${className}\`}
+      disabled={disabled || loading}
+      aria-disabled={disabled || loading}
+      {...props}
+    >
+      {loading && (
+        <svg className="animate-spin -ml-1 mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24">
+          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+        </svg>
+      )}
+      {children}
+    </button>
+  );
+};
+
+// Accessible modal component
+interface AccessibleModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  title: string;
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const AccessibleModal: React.FC<AccessibleModalProps> = ({
+  isOpen,
+  onClose,
+  title,
+  children,
+  className = ''
+}) => {
+  const modalRef = useRef<HTMLDivElement>(null);
+  const previousActiveElement = useRef<HTMLElement | null>(null);
+
+  useKeyboardNavigation(() => {
+    if (isOpen) onClose();
+  });
+
+  useEffect(() => {
+    if (isOpen) {
+      previousActiveElement.current = document.activeElement as HTMLElement;
+      if (modalRef.current) {
+        focusManagement.trapFocus(modalRef.current);
       }
-    });
-  });
+    } else if (previousActiveElement.current) {
+      previousActiveElement.current.focus();
+    }
+  }, [isOpen]);
+
+  if (!isOpen) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-50 overflow-y-auto"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div
+          className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+          aria-hidden="true"
+          onClick={onClose}
+        />
+        <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">
+          &#8203;
+        </span>
+        <div
+          ref={modalRef}
+          className={\`inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full \${className}\`}
+        >
+          <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+            <div className="sm:flex sm:items-start">
+              <div className="mt-3 text-center sm:mt-0 sm:text-left w-full">
+                <h3 className="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                  {title}
+                </h3>
+                <div className="mt-2">
+                  {children}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+            <AccessibleButton onClick={onClose} className="w-full sm:w-auto sm:ml-3">
+              Close
+            </AccessibleButton>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Accessible form field component
+interface AccessibleFormFieldProps {
+  label: string;
+  error?: string;
+  required?: boolean;
+  children: React.ReactElement;
+  className?: string;
 }
 
-function addAccessibilityTesting() {
-  global.console.log('🧪 Adding accessibility testing...');';
-  const distPath = _path.join(process.cwd(), 'dist');';
-  const htmlFiles = findFiles(distPath, '.html');';
-  htmlFiles.forEach(file => {
-    const content = fs.readFileSync(file, 'utf8');';
-    const $ = cheerio.load(content);
-    
-    // Add accessibility testing script;
-    const testingScript = `;
-      <script>;
-        // Accessibility testing;
-        document.addEventListener('DOMContentLoaded', function() {';
-          // Check for common accessibility issues;
-          const issues = [];
-          
-          // Check for missing alt text;
-          const images = document.querySelectorAll('img');';
-          images.forEach(img => {
-            if (!img.alt && !img.getAttribute('aria-hidden')) {';
-              issues.push('Image missing alt text: ' + img.src);';
-            }
-          });
-          
-          // Check for missing form labels;
-          const inputs = document.querySelectorAll('input, textarea, select');';
-          inputs.forEach(input => {
-            const id = input.id;
-            if (id && !document.querySelector('label[for="' + id + '"]') && !input.getAttribute('aria-label')) {';
-              issues.push('Input missing label: ' + id);';
-            }
-          });
-          
-          // Check for proper heading hierarchy;
-          const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');';
-          let currentLevel = 0;
-          headings.forEach(heading => {
-            const level = parseInt(heading.tagName.substring(1));
-            if (level > currentLevel + 1) {
-              issues.push('Heading hierarchy issue: ' + heading.tagName + ' follows h' + currentLevel);';
-            }
-            currentLevel = level;
-          });
-          
-          // Log issues to console;
-          if (issues.length > 0) {
-            global.console.warn('Accessibility issues found:', issues);';
-          } else {
-            global.console.log('No accessibility issues found');';
-          }
-        });
-      </script>;
-    `;
-    
-    $('body').append(testingScript);';
-    fs.writeFileSync(file, $.html());
-  });
-  
-  global.console.log(`✅ Added accessibility testing to ${htmlFiles.length} HTML _files`);
-}
+export const AccessibleFormField: React.FC<AccessibleFormFieldProps> = ({
+  label,
+  error,
+  required = false,
+  children,
+  className = ''
+}) => {
+  const fieldId = React.useId();
+  const errorId = \`\${fieldId}-error\`;
 
-function findFiles(dir, extensions) {
-  const _files = [];
-  const extArray = Array.isArray(extensions) ? extensions : [extensions];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    items.forEach(item => {
-      const fullPath = _path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
+  return (
+    <div className={\`mb-4 \${className}\`}>
+      <label
+        htmlFor={fieldId}
+        className="block text-sm font-medium text-gray-700 mb-1"
+      >
+        {label}
+        {required && <span className="text-red-500 ml-1" aria-label="required">*</span>}
+      </label>
+      {React.cloneElement(children, {
+        id: fieldId,
+        'aria-describedby': error ? errorId : undefined,
+        'aria-invalid': error ? 'true' : 'false',
+        required
+      })}
+      {error && (
+        <p id={errorId} className="mt-1 text-sm text-red-600" role="alert">
+          {error}
+        </p>
+      )}
+    </div>
+  );
+};
+
+// High contrast mode detection
+export const useHighContrastMode = () => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+    setIsHighContrast(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsHighContrast(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  return isHighContrast;
+};
+
+// Reduced motion detection
+export const useReducedMotion = () => {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setPrefersReducedMotion(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setPrefersReducedMotion(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  return prefersReducedMotion;
+};
+
+// Screen reader only text component
+export const ScreenReaderOnly: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <span className="sr-only">{children}</span>
+);
+
+// Skip link component
+export const SkipLink: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
+  <a
+    href={href}
+    className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg z-50 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+  >
+    {children}
+  </a>
+);
+`;
+
+const accessibilityUtilsPath = path.join(__dirname, '..', 'utils', 'accessibilityUtils.ts');
+fs.writeFileSync(accessibilityUtilsPath, accessibilityUtils);
+console.log('✅ Accessibility utilities created');
+
+// 2. Create accessibility testing utilities
+const accessibilityTesting = `// Accessibility testing utilities
+export const accessibilityTests = {
+  // Check for proper heading hierarchy
+  checkHeadingHierarchy: () => {
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    const issues = [];
+    let previousLevel = 0;
+
+    headings.forEach((heading, index) => {
+      const level = parseInt(heading.tagName.charAt(1));
       
-      if (stat.isDirectory()) {
-        traverse(fullPath);
-      } else if (stat.isFile()) {
-        const ext = _path.extname(item).toLowerCase();
-        if (extArray.includes(ext)) {
-          _files.push(fullPath);
-        }
+      if (index === 0 && level !== 1) {
+        issues.push('First heading should be h1');
+      }
+      
+      if (level > previousLevel + 1) {
+        issues.push(\`Heading \${heading.tagName} skips level after h\${previousLevel}\`);
+      }
+      
+      previousLevel = level;
+    });
+
+    return issues;
+  },
+
+  // Check for proper alt text on images
+  checkImageAltText: () => {
+    const images = document.querySelectorAll('img');
+    const issues = [];
+
+    images.forEach((img, index) => {
+      if (!img.alt && !img.getAttribute('aria-label')) {
+        issues.push(\`Image \${index + 1} missing alt text\`);
       }
     });
+
+    return issues;
+  },
+
+  // Check for proper form labels
+  checkFormLabels: () => {
+    const inputs = document.querySelectorAll('input, select, textarea');
+    const issues = [];
+
+    inputs.forEach((input, index) => {
+      const id = input.getAttribute('id');
+      const ariaLabel = input.getAttribute('aria-label');
+      const ariaLabelledby = input.getAttribute('aria-labelledby');
+      const label = id ? document.querySelector(\`label[for="\${id}"]\`) : null;
+
+      if (!label && !ariaLabel && !ariaLabelledby) {
+        issues.push(\`Form input \${index + 1} missing label\`);
+      }
+    });
+
+    return issues;
+  },
+
+  // Check for proper color contrast
+  checkColorContrast: () => {
+    // This would need a more sophisticated implementation
+    // For now, return a placeholder
+    return ['Color contrast check requires manual testing'];
+  },
+
+  // Check for keyboard navigation
+  checkKeyboardNavigation: () => {
+    const interactiveElements = document.querySelectorAll(
+      'a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    const issues = [];
+
+    interactiveElements.forEach((element, index) => {
+      if (element.getAttribute('tabindex') === '0' && !element.getAttribute('role')) {
+        issues.push(\`Element \${index + 1} has tabindex="0" but no role\`);
+      }
+    });
+
+    return issues;
+  },
+
+  // Run all accessibility tests
+  runAllTests: () => {
+    const results = {
+      headingHierarchy: accessibilityTests.checkHeadingHierarchy(),
+      imageAltText: accessibilityTests.checkImageAltText(),
+      formLabels: accessibilityTests.checkFormLabels(),
+      colorContrast: accessibilityTests.checkColorContrast(),
+      keyboardNavigation: accessibilityTests.checkKeyboardNavigation()
+    };
+
+    const totalIssues = Object.values(results).flat().length;
+    
+    console.log('Accessibility Test Results:', results);
+    console.log(\`Total Issues Found: \${totalIssues}\`);
+    
+    return { results, totalIssues };
+  }
+};
+
+// Initialize accessibility testing
+export const initAccessibilityTesting = () => {
+  if (process.env.NODE_ENV === 'development') {
+    // Run tests in development mode
+    setTimeout(() => {
+      accessibilityTests.runAllTests();
+    }, 1000);
+  }
+};
+`;
+
+const accessibilityTestingPath = path.join(__dirname, '..', 'utils', 'accessibilityTesting.ts');
+fs.writeFileSync(accessibilityTestingPath, accessibilityTesting);
+console.log('✅ Accessibility testing utilities created');
+
+// 3. Create enhanced CSS for accessibility
+const accessibilityCSS = `
+/* Enhanced accessibility styles */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  z-index: 1000;
+}
+
+/* Focus styles */
+.focus-visible:focus {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .bg-gradient-to-r {
+    background: #000000 !important;
+    color: #ffffff !important;
   }
   
-  traverse(dir);
-  return _files;
+  .text-gray-300 {
+    color: #ffffff !important;
+  }
+  
+  .border-cyan-500 {
+    border-color: #00ffff !important;
+  }
 }
 
-// Run accessibility enhancement;
-enhanceAccessibility();
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .animate-pulse,
+  .animate-spin,
+  .animate-bounce {
+    animation: none !important;
+  }
+}
+
+/* Skip link styles */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Focus trap styles */
+.focus-trap {
+  position: relative;
+}
+
+.focus-trap::before,
+.focus-trap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Screen reader announcements */
+.sr-announcement {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* High contrast mode indicators */
+.high-contrast {
+  filter: contrast(150%) brightness(120%);
+}
+
+/* Focus indicators for all interactive elements */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+[tabindex]:focus {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* Remove focus outline for mouse users */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+select:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+[tabindex]:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Ensure sufficient color contrast */
+.text-low-contrast {
+  color: #6b7280; /* gray-500 */
+}
+
+.text-high-contrast {
+  color: #1f2937; /* gray-800 */
+}
+
+/* Error states */
+.error {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 1px #ef4444;
+}
+
+.error:focus {
+  outline-color: #ef4444;
+}
+
+/* Success states */
+.success {
+  border-color: #10b981;
+  box-shadow: 0 0 0 1px #10b981;
+}
+
+.success:focus {
+  outline-color: #10b981;
+}
+
+/* Loading states */
+.loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #f3f4f6;
+  border-top: 2px solid #8b5cf6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Print styles for accessibility */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  
+  .sr-only {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+  }
+}
+`;
+
+// Append to existing CSS
+const cssPath = path.join(__dirname, '..', 'index.css');
+let cssContent = fs.readFileSync(cssPath, 'utf8');
+cssContent += accessibilityCSS;
+fs.writeFileSync(cssPath, cssContent);
+console.log('✅ Accessibility CSS added');
+
+// 4. Update package.json with accessibility scripts
+const packageJsonPath = path.join(__dirname, '..', 'package.json');
+const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+
+packageJson.scripts = {
+  ...packageJson.scripts,
+  'accessibility:test': 'node -e "require(\'./utils/accessibilityTesting\').initAccessibilityTesting()"',
+  'accessibility:enhance': 'node scripts/accessibility-enhancer.cjs',
+  'accessibility:check': 'npm run accessibility:enhance && npm run build'
+};
+
+fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+console.log('✅ Package.json accessibility scripts updated');
+
+console.log('\n🎉 Accessibility Enhancement Complete!');
+console.log('\n📋 Next Steps:');
+console.log('  1. Run: npm run accessibility:enhance');
+console.log('  2. Import accessibility utilities in components');
+console.log('  3. Test with screen readers and keyboard navigation');
+console.log('  4. Run: npm run accessibility:test');
+console.log('  5. Check color contrast and focus indicators');

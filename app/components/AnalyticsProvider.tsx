@@ -1,70 +1,77 @@
-import React from 'react';
-import { createContext, useContext, useEffect, ReactNode } from 'react;
+import React, { createContext, useContext, useEffect } from 'react';
+
 interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, any>) => void;
-  identify: (userId: string, traits?: Record<string, any>) => void;
-  page: (name: string, properties?: Record<string, any>) => void;
+  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackPageView: (pageName: string, pagePath: string) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 interface AnalyticsProviderProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const track = (event: string, properties?: Record<string, any>) => {
-    // Analytics tracking implementation;
-    console.log('Analytics Event:', event, properties);
-    // In a real implementation, you would send this to your analytics service;
-    if (typeof window !== 'undefined' && (window as any).gtag) {';
-      (window as any).gtag('event', event, properties);
-    }
-  };
-
-  const identify = (userId: string, traits?: Record<string, any>) => {
-    console.log('Analytics Identify:', userId, traits);
-    if (typeof window !== 'undefined' && (window as any).gtag) {';
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {';
-        user_id: userId,
-        custom_map: traits;
-      });
-    }
-  };
-
-  const page = (name: string, properties?: Record<string, any>) => {
-    console.log('Analytics Page:', name, properties);
-    if (typeof window !== 'undefined' && (window as any).gtag) {';
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {';
-        page_title: name,
-        page_location: window.location.href,
-        ...properties;
-      });
-    }
-  };
-
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
-    // Initialize analytics;
-    if (typeof window !== 'undefined') {';
-      // Load Google Analytics or other analytics scripts here;
-      console.log('Analytics initialized');
+    // Initialize Google Analytics or other analytics service
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+      // Add Google Analytics script here
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID || 'GA_MEASUREMENT_ID'}`;
+      document.head.appendChild(script);
+
+      script.onload = () => {
+        (window as any).dataLayer = (window as any).dataLayer || [];
+        function gtag(...args: any[]) {
+          (window as any).dataLayer.push(args);
+        }
+        (window as any).gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', process.env.REACT_APP_GA_ID || 'GA_MEASUREMENT_ID');
+      };
     }
   }, []);
 
+  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', eventName, parameters);
+    }
+    
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Analytics event:', eventName, parameters);
+    }
+  };
+
+  const trackPageView = (pageName: string, pagePath: string) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', process.env.REACT_APP_GA_ID || 'GA_MEASUREMENT_ID', {
+        page_title: pageName,
+        page_location: window.location.href,
+        page_path: pagePath,
+      });
+    }
+    
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Page view:', pageName, pagePath);
+    }
+  };
+
   const value: AnalyticsContextType = {
-    track,
-    identify,
-    page;
+    trackEvent,
+    trackPageView,
   };
 
   return (
-    <AnalyticsContext.Provider value={value}>;
+    <AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContext.Provider>;
+    </AnalyticsContext.Provider>
   );
 };
 
-const  (): AnalyticsContextType => {
+export const useAnalytics = (): AnalyticsContextType => {
   const context = useContext(AnalyticsContext);
   if (context === undefined) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');

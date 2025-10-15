@@ -1,216 +1,165 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
 
-console.log('🔧 Starting comprehensive error fixing process...');
+const filesToFix = [
+  'app/ai-education-solutions-pro/page.tsx',
+  'app/ai-healthcare-solutions-pro/page.tsx',
+  'app/ai-iot-management-pro/page.tsx',
+  'app/ai-marketing-automation-pro/page.tsx',
+  'app/ai-project-manager-pro/page.tsx',
+  'app/ai-social-media-manager-pro/page.tsx'
+];
 
-// Function to find all files with merge conflicts
-function findFilesWithConflicts(dir) {
-  const files = [];
-  
-  function searchDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules, .git, dist, etc.
-        if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
-          searchDirectory(fullPath);
-        }
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-            files.push(fullPath);
-          }
-        } catch (err) {
-          // Skip files that can't be read
-        }
-      }
-    }
-  }
-  
-  searchDirectory(dir);
-  return files;
-}
-
-// Function to fix merge conflicts
-function fixMergeConflicts(filePath) {
+const fixFile = (filePath) => {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
     
-    // Fix common merge conflict patterns
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, (match, headContent, branchContent) => {
-      // For most cases, prefer the HEAD content (current branch)
-      return headContent.trim();
-    });
+    // Extract the component name from the file path
+    const componentName = filePath.split('/').pop().replace('.tsx', '').split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('') + 'Page';
     
-    // Fix unterminated string literals
-    content = content.replace(/import React from 'react';']*)/g, "import React from 'react';");
-    content = content.replace(/import { Helmet } from 'react-helmet-async';']*)/g, "import { Helmet } from 'react-helmet-async';");
-    content = content.replace(/'use client';/g, "'use client';");
-    
-    // Fix malformed JSX
-    content = content.replace(/<>/g, '<>');
-    content = content.replace(/<\/>;/g, '</>');
-    content = content.replace(/<Helmet>/g, '<Helmet>');
-    content = content.replace(/<\/Helmet>;/g, '</Helmet>');
-    content = content.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>');
-    content = content.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
-    
-    // Fix common syntax errors
-    content = content.replace(/export default function ([^   {]+)\s*{/g, 'export default function $1    {');
-    content = content.replace(/return \(\s*<>/g, 'return (\n    <>');
-    content = content.replace(/;\s*<\/>;/g, '\n    </>');
-    content = content.replace(/;\s*\);/g, '\n  );');
-    
-    // Remove duplicate React imports
-    const lines = content.split('\n');
-    const reactImportLines = lines.filter(line => line.trim().startsWith('import React'));
-    if (reactImportLines.length > 1) {
-      const firstReactImport = reactImportLines[0];
-      content = content.replace(/import React[^;]+;/g, '');
-      content = firstReactImport + '\n' + content;
-    }
-    
-    // Fix test file issues
-    if (filePath.includes('.test.') || filePath.includes('__tests__')) {
-      content = content.replace(/describe\(/g, '// describe(');
-      content = content.replace(/test\(/g, '// test(');
-      content = content.replace(/it\(/g, '// it(');
-      content = content.replace(/expect\(/g, '// expect(');
-      content = content.replace(/beforeEach\(/g, '// beforeEach(');
-    }
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed merge conflicts in: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
+    // Clean up imports
+    content = content.replace(
+      /import React, \{ useState, useEffect \} from "react";\s+import \{ Helmet \} from "react-helmet-async";\s+import \{ [^}]+ \} from 'lucide-react';/,
+      'import React, { useState, useEffect } from "react";\nimport { Helmet } from "react-helmet-async";\nimport { ArrowRight, CheckCircle, Mail, Phone, Play, Star, Users } from \'lucide-react\';'
+    );
 
-// Function to fix unterminated string literals
-function fixUnterminatedStrings(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
-    
-    // Fix common unterminated string patterns
-    const lines = content.split('\n');
-    const fixedLines = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      let line = lines[i];
-      
-      // Fix unterminated string literals
-      if (line.includes("import React from 'react';'react;/, "import React from 'react';");
-      }
-      if (line.includes("import { Helmet } from 'react-helmet-async';'react-helmet-async;/, "import { Helmet } from 'react-helmet-async';");
-      }
-      if (line.includes("'use client';")) {
-        line = line.replace(/'use client';/, "'use client';");
-      }
-      
-      // Fix malformed JSX syntax
-      line = line.replace(/<>/g, '<>');
-      line = line.replace(/<\/>;/g, '</>');
-      line = line.replace(/<Helmet>/g, '<Helmet>');
-      line = line.replace(/<\/Helmet>;/g, '</Helmet>');
-      line = line.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>');
-      line = line.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
-      
-      fixedLines.push(line);
+    // Fix the data structure to match what the template expects
+    const correctDataStructure = `
+  const features = [
+    {
+      icon: <Star className="w-8 h-8" />,
+      title: "AI-Powered Features",
+      description: "Advanced AI capabilities that enhance productivity and efficiency.",
+      benefits: ["Improved efficiency", "Better insights", "Enhanced automation"]
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: "Real-time Analytics",
+      description: "Comprehensive insights and monitoring for better decision making.",
+      benefits: ["Live monitoring", "Instant feedback", "Data-driven decisions"]
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Collaborative Tools",
+      description: "Enhanced team collaboration and communication features.",
+      benefits: ["Team collaboration", "Better communication", "Shared workflows"]
     }
-    
-    const fixedContent = fixedLines.join('\n');
-    
-    if (fixedContent !== originalContent) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`✅ Fixed unterminated strings in: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`❌ Error fixing strings in ${filePath}:`, error.message);
-    return false;
-  }
-}
+  ];
 
-// Main execution
-async function main() {
-  console.log('🔍 Searching for files with merge conflicts...');
-  const conflictFiles = findFilesWithConflicts('.');
-  console.log(`Found ${conflictFiles.length} files with merge conflicts`);
-  
-  let fixedCount = 0;
-  
-  // Fix merge conflicts
-  for (const file of conflictFiles) {
-    if (fixMergeConflicts(file)) {
-      fixedCount++;
-    }
-  }
-  
-  // Also check for unterminated strings in all TypeScript/JavaScript files
-  console.log('🔍 Checking for unterminated strings...');
-  const allTsFiles = [];
-  
-  function findTsFiles(dir) {
-    const items = fs.readdirSync(dir);
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
-        findTsFiles(fullPath);
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
-        allTsFiles.push(fullPath);
-      }
-    }
-  }
-  
-  findTsFiles('.');
-  
-  for (const file of allTsFiles) {
-    if (fixUnterminatedStrings(file)) {
-      fixedCount++;
-    }
-  }
-  
-  console.log(`✅ Fixed ${fixedCount} files`);
-  
-  // Run linting to check remaining issues
-  console.log('🔍 Running linting to check remaining issues...');
-  try {
-    execSync('pnpm run lint', { stdio: 'inherit' });
-    console.log('✅ Linting passed!');
-  } catch (error) {
-    console.log('⚠️  Some linting issues remain, but major conflicts should be resolved');
-  }
-  
-  // Run type checking
-  console.log('🔍 Running type checking...');
-  try {
-    execSync('pnpm run type-check', { stdio: 'inherit' });
-    console.log('✅ Type checking passed!');
-  } catch (error) {
-    console.log('⚠️  Some type issues remain, but major conflicts should be resolved');
-  }
-  
-  console.log('🎉 Error fixing process completed!');
-}
+  const benefits = [
+    "Improved efficiency and productivity",
+    "Reduced operational costs",
+    "Enhanced user experience"
+  ];
 
-main().catch(console.error);
+  const useCases = [
+    "Enterprise Solutions",
+    "Small Business Applications", 
+    "Individual Productivity"
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Basic",
+      price: "$99",
+      period: "month",
+      description: "Perfect for getting started",
+      features: ["Basic features", "Email support", "Standard SLA"],
+      popular: false
+    },
+    {
+      name: "Professional", 
+      price: "$299",
+      period: "month",
+      description: "For growing businesses",
+      features: ["Advanced features", "Priority support", "Enhanced SLA"],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "Custom",
+      period: "",
+      description: "For large organizations",
+      features: ["Full feature set", "Dedicated support", "Custom SLA"],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "CEO, Tech Company",
+      company: "Tech Corp",
+      content: "This solution has transformed our business operations.",
+      rating: 5
+    }
+  ];
+
+  const deviceTypes = [
+    { name: "Sensors", description: "Environmental monitoring devices" },
+    { name: "Actuators", description: "Control and automation devices" },
+    { name: "Gateways", description: "Data collection and transmission hubs" }
+  ];
+
+  const channels = [
+    { name: "Email Marketing", description: "Automated email campaigns" },
+    { name: "Social Media", description: "Multi-platform social management" },
+    { name: "Content Marketing", description: "Automated content creation" }
+  ];
+
+  const platforms = [
+    { name: "Facebook", description: "Social media management" },
+    { name: "Twitter", description: "Micro-blogging platform" },
+    { name: "LinkedIn", description: "Professional networking" }
+  ];
+
+  const metrics = [
+    { name: "Engagement Rate", value: "85%" },
+    { name: "Conversion Rate", value: "12%" },
+    { name: "ROI", value: "340%" }
+  ];
+
+  const protocols = [
+    { name: "MQTT", description: "Lightweight messaging protocol" },
+    { name: "HTTP/HTTPS", description: "Web-based communication" },
+    { name: "CoAP", description: "Constrained application protocol" }
+  ];
+
+  const integrations = [
+    { name: "Slack", description: "Team communication" },
+    { name: "Jira", description: "Project management" },
+    { name: "GitHub", description: "Code repository" }
+  ];
+
+  const compliance = [
+    { name: "HIPAA", description: "Healthcare data protection" },
+    { name: "GDPR", description: "European data privacy" },
+    { name: "SOC 2", description: "Security compliance" }
+  ];`;
+
+    // Replace the existing data arrays
+    content = content.replace(
+      /const features = \[[\s\S]*?\];[\s\S]*?const benefits = \[[\s\S]*?\];[\s\S]*?const useCases = \[[\s\S]*?\];[\s\S]*?const pricingPlans = \[[\s\S]*?\];[\s\S]*?const testimonials = \[[\s\S]*?\];/,
+      correctDataStructure
+    );
+
+    // Fix export statement
+    content = content.replace(
+      /export default [A-Za-z]+Page;/,
+      `export default ${componentName};`
+    );
+
+    // Remove unused variables
+    content = content.replace(/\s+const \[isVisible, setIsVisible\] = useState\(false\);\s+useEffect\(\(\) => \{\s+setIsVisible\(true\);\s+\}, \[\]\);/g, '');
+
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+};
+
+filesToFix.forEach(fixFile);
+console.log('All files fixed');

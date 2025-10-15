@@ -1,95 +1,127 @@
-const fs = require('fs');';
-const _path = require('_path');';
-function fixHtmlEntities(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');';
-    let _modified = false;
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
 
-    // Fix common HTML entities;
-    const replacements = [;
-      { from: /&apos;/g, to: "'" },';
-      { from: /&quot;/g, to: '"' },';
-      { from: /&lt;/g, to: '<' },';
-      { from: /&gt;/g, to: '>' },';
-      { from: /&amp;/g, to: '&' },';
-      { from: /&nbsp;/g, to: ' ' },';
-      { from: /&rbrace;/g, to: '}' },';
-      { from: /&lbrace;/g, to: '{' },';
-      { from: /&rpar;/g, to: ')' },';
-      { from: /&lpar;/g, to: '(' },';
-      { from: /&rsqb;/g, to: ']' },';
-      { from: /&lsqb;/g, to: '[' },';
-      { from: /&comma;/g, to: ',' },';
-      { from: /&semi;/g, to: ';' },';
-      { from: /&colon;/g, to: ':' },';
-      { from: /&period;/g, to: '.' },';
-      { from: /&excl;/g, to: '!' },';
-      { from: /&quest;/g, to: '?' },';
-      { from: /&plus;/g, to: '+' },';
-      { from: /&minus;/g, to: '-' },';
-      { from: /&times;/g, to: '*' },';
-      { from: /&divide;/g, to: '/' },';
-      { from: /&equals;/g, to: '=' },';
-      { from: /&hash;/g, to: '#' },';
-      { from: /&dollar;/g, to: '$' },';
-      { from: /&percent;/g, to: '%' },';
-      { from: /&at;/g, to: '@' },';
-      { from: /&caret;/g, to: '^' },';
-      { from: /&tilde;/g, to: '~' },';
-      { from: /&grave;/g, to: '`' },';
-      { from: /&bar;/g, to: '|' },';
-      { from: /&bsol;/g, to: '\\' },';
-      { from: /&sol;/g, to: '/' },';
-      { from: /&lowbar;/g, to: '_' },';
-    ];
+// Function to fix HTML entities in TypeScript/JSX files
+function fixHtmlEntities(content) {
+  // Fix HTML entities in import statements
+  content = content.replace(/&apos;/g, "'");
+  content = content.replace(/&quot;/g, '"');
+  content = content.replace(/&lt;/g, '<');
+  content = content.replace(/&gt;/g, '>');
+  content = content.replace(/&amp;/g, '&');
+  
+  // Fix HTML entities in JSX attributes (but keep them in text content)
+  // This is a more complex fix that needs to distinguish between code and text
+  const lines = content.split('\n');
+  const fixedLines = [];
+  
+  for (const line of lines) {
+    let fixedLine = line;
+    
+    // Fix import statements
+    if (line.trim().startsWith('import')) {
+      fixedLine = fixedLine.replace(/&apos;/g, "'");
+      fixedLine = fixedLine.replace(/&quot;/g, '"');
+    }
+    
+    // Fix JSX attributes
+    if (line.includes('className=') || line.includes('href=') || line.includes('src=')) {
+      fixedLine = fixedLine.replace(/&apos;/g, "'");
+      fixedLine = fixedLine.replace(/&quot;/g, '"');
+    }
+    
+    // Fix other code constructs
+    if (line.includes('from ') || line.includes('export ') || line.includes('const ') || line.includes('function ')) {
+      fixedLine = fixedLine.replace(/&apos;/g, "'");
+      fixedLine = fixedLine.replace(/&quot;/g, '"');
+    }
+    
+    fixedLines.push(fixedLine);
+  }
+  
+  return fixedLines.join('\n');
+}
 
-    replacements.forEach(({ from, to }) => {
-      if (from.test(content)) {
-        content = content.replace(from, to);
-        _modified = true;
+// Function to fix malformed JSX
+function fixJSX(content) {
+  // Fix malformed JSX fragments
+  content = content.replace(/<>\s*<\s*\/\s*>/g, '<></>');
+  
+  // Fix malformed closing tags
+  content = content.replace(/<\s*\/\s*([^>]+)\s*>/g, '</$1>');
+  
+  // Fix malformed opening tags
+  content = content.replace(/<\s*([^>]+)\s*>/g, '<$1>');
+  
+  return content;
+}
+
+// Function to fix syntax errors
+function fixSyntaxErrors(content) {
+  // Fix missing semicolons in import statements
+  content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"]\s*$/gm, 'import $1 from "$2";');
+  
+  // Fix missing semicolons in export statements
+  content = content.replace(/export\s+default\s+([^;]+)\s*$/gm, 'export default $1;');
+  
+  // Fix malformed JSX attributes
+  content = content.replace(/className\s*=\s*"([^"]*)"\s*>/g, 'className="$1">');
+  content = content.replace(/className\s*=\s*'([^']*)'\s*>/g, 'className="$1">');
+  
+  return content;
+}
+
+// Main function to process files
+function processFiles() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'components/**/*.tsx',
+    'components/**/*.ts'
+  ];
+  
+  let processedFiles = 0;
+  let errorFiles = 0;
+  
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, { cwd: process.cwd() });
+    
+    files.forEach(file => {
+      try {
+        const filePath = path.join(process.cwd(), file);
+        let content = fs.readFileSync(filePath, 'utf8');
+        
+        // Skip if file is empty or has no content
+        if (!content.trim()) {
+          return;
+        }
+        
+        // Fix HTML entities
+        content = fixHtmlEntities(content);
+        
+        // Fix JSX
+        content = fixJSX(content);
+        
+        // Fix syntax errors
+        content = fixSyntaxErrors(content);
+        
+        // Write the cleaned content back
+        fs.writeFileSync(filePath, content, 'utf8');
+        processedFiles++;
+        
+      } catch (error) {
+        console.error(`Error processing ${file}:`, error.message);
+        errorFiles++;
       }
     });
-
-    if (_modified) {
-      fs.writeFileSync(filePath, content, 'utf8');';
-      global.console.log(`Fixed HTML entities in: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (_error) {
-    global.console._error(`Error processing ${filePath}:`, _error.message);
-    return false;
+  });
+  
+  console.log(`\nProcessed ${processedFiles} files`);
+  if (errorFiles > 0) {
+    console.log(`Errors in ${errorFiles} files`);
   }
 }
 
-function processDirectory(dirPath) {
-  let fixedCount = 0;
-  
-  try {
-    const items = fs.readdirSync(dirPath);
-    
-    for (const item of items) {
-      const fullPath = _path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other common directories;
-        if (!['node_modules', '.git', 'dist', 'build', '.next', 'coverage'].includes(item)) {';
-          fixedCount += processDirectory(fullPath);
-        }
-      } else if (stat.isFile() && /\.(tsx?|jsx?|ts|js)$/.test(item)) {
-        if (fixHtmlEntities(fullPath)) {
-          fixedCount++;
-        }
-      }
-    }
-  } catch (_error) {
-    global.console._error(`Error reading directory ${dirPath}:`, _error.message);
-  }
-  
-  return fixedCount;
-}
-
-global.console.log('Starting HTML entity fix...');';
-const totalFixed = processDirectory('./app');';
-global.console.log(`Fixed HTML entities in ${totalFixed} files.`);
+// Run the script
+processFiles();

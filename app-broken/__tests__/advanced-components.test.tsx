@@ -1,6 +1,7 @@
 import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { HelmetProvider } from 'react-helmet-async';
 
-<<<<<<< HEAD
 export default function Page() {
   return (
     <div>
@@ -9,28 +10,28 @@ export default function Page() {
     </div>
   );
 }
-=======
+
 // Mock components
-const AdvancedErrorBoundary = ({ children, enableRetry, onError }: { 
+const AdvancedErrorBoundary = ({ children, onError, enableRetry = true }: { 
   children: React.ReactNode; 
-  enableRetry?: boolean; 
-  onError?: any 
+  onError?: (error: Error) => void; 
+  enableRetry?: boolean;
 }) => {
   const [hasError, setHasError] = React.useState(false);
   const [error, setError] = React.useState<Error | null>(null);
 
   React.useEffect(() => {
-    const handleError = (error: Error) => {
+    const handleError = (err: Error) => {
       setHasError(true);
-      setError(error);
+      setError(err);
       if (onError) {
-        onError(error);
+        onError(err);
       }
     };
 
     // Simulate error boundary behavior
     try {
-      // This will catch any errors thrown by children
+      // This will catch unknown errors thrown by children
     } catch (err) {
       handleError(err as Error);
     }
@@ -42,24 +43,24 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
         <h2>Unexpected Application Error!</h2>
         <p>Oops! Something went wrong</p>
         {error && (
-          <>
+          <div>
             <h3 style={{ fontStyle: 'italic' }}>{error.message}</h3>
             <pre style={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}>
               {error.stack}
             </pre>
-          </>
+          </div>
         )}
         {enableRetry && (
-          <>
+          <div>
             <button>Try Again</button>
             <button>Reload Page</button>
-          </>
+          </div>
         )}
       </div>
     );
   }
 
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
 const TestComponent = () => <div>Test Component</div>;
@@ -93,12 +94,12 @@ describe('Advanced Components', () => {
 
   test('SEOEnhancer works with HelmetProvider', () => {
     const SEOEnhancer = () => (
-      <Helmet>
+      <HelmetProvider>
         <title>Test Title</title>
         <meta name="description" content="Test description" />
-      </Helmet>
+      </HelmetProvider>
     );
-
+    
     render(
       <HelmetProvider>
         <SEOEnhancer />
@@ -108,4 +109,3 @@ describe('Advanced Components', () => {
     expect(document.title).toBe('Test Title');
   });
 });
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79

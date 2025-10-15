@@ -1,85 +1,45 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client';
-const ErrorFallback: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-white">;
-      <Helmet>
-        <title>Error Fallback - Zion Tech Group</title>
-        <meta name="description" content="Professional error fallback services by Zion Tech Group." />
-      </Helmet>
-      {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">;
-        <div className="max-w-6xl mx-auto text-center">;
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">;
-            Error Fallback;
-          </h1>;
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-            Professional error fallback services;
-            designed to help your business grow and succeed.;
-          </p>;
-        </div>;
-      </section>;
-      {/* Content Section */}
-      <section className="py-16 px-4">;
-        <div className="max-w-6xl mx-auto">;
-          <div className="grid md:grid-cols-2 gap-12 items-center">;
-            <div>;
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>;
-              <p className="text-lg text-gray-600 mb-6">;
-                We provide comprehensive error fallback;
-                solutions tailored to your specific needs and requirements.;
-              </p>;
-              <ul className="space-y-3">;
-                <li className="flex items-center">;
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
-                  Custom solutions;
-                </li>;
-                <li className="flex items-center">;
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
-                  Expert consultation;
-                </li>;
-                <li className="flex items-center">;
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
-                  Ongoing support;
-                </li>;
-              </ul>;
-            </div>;
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">;
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>;
-              <p className="mb-6">;
-                Ready to transform your business with our error fallback services?;
-              </p>;
-              <a;
-                href="/contact";
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
-              >;
-                Contact Us;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-blue-600">;
-        <div className="max-w-4xl mx-auto text-center">;
-          <h2 className="text-3xl font-bold text-white mb-6">;
-            Ready to Get Started?;
-          </h2>;
-          <p className="text-xl text-blue-100 mb-8">;
-            Let's discuss how our error fallback';
-            services can help you achieve your goals.;
-          </p>;
-          <a;
-            href="/contact";
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";
-          >;
-            Get Started Today;
-          </a>;
-        </div>;
-      </section>;
-    </div>;
+import React from "react";
+import { AlertTriangle, Home, RefreshCw } from 'lucide-react';
+import { Helmet } from "react-helmet-async"; interface ErrorFallbackProps { error: Error; resetError: () => void; } const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetError }) => { return ( <> <Helmet> <title>Error - Zion Tech Group</title> <meta name="description" content="An error occurred while loading the page" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="max-w-md w-full mx-auto p-8">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
+            </div>
+            <h1 className="text-xl font-semibold text-white mb-2">
+              Something went wrong
+            </h1>
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Please try again.
+            </p>
+            <div className="flex space-x-3">
+              <button
+                onClick={resetError }
+                className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-2 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">
+                <RefreshCw className="w-4 h-4" />
+                Try Again
+              </button>
+              <button
+                onClick={ () => window.location.href = '/' }
+                className="flex-1 bg-white/10 text-white py-2 px-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">
+                <Home className="w-4 h-4" />
+                Go Home
+              </button>
+            </div>
+            { process.env.NODE_ENV === 'development' && (
+              <details className="mt-6 p-4 bg-gray-800/50 rounded-lg text-left">
+                <summary className="cursor-pointer font-medium text-gray-300 mb-2">
+                  Error Details (Development)
+                </summary>
+                <pre className="text-xs text-gray-400 overflow-auto">
+                  {error.toString() }
+                </pre>
+              </details>
+            )}
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
-
 export default ErrorFallback;

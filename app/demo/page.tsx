@@ -1,207 +1,227 @@
-<<<<<<< HEAD
-import React from 'react';'react-helmet-async;
-import { Play, Right, Circle, Star } from 'lucide-react;
-const DemoPage: React.FC = () => {
-  const features = [{
-      icon: 'Analytics',';
-      title: 'AI-Powered Analytics',';
-      description: 'See how our AI analyzes your data in real-time',';
-      demo: 'Live Demo'';
-    },
-    {
-      icon: 'Security',';
-      title: 'Advanced Security',';
-      description: 'Experience our enterprise-grade security features',';
-      demo: 'Demo'';
-    },
-    {
-      icon: 'Intelligence',';
-      title: 'Business Intelligence',';
-      description: 'Explore our comprehensive BI dashboard',';
-      demo: 'BI Demo'';
-    },
-    {
-      icon: 'Collaboration',';
-      title: 'Team Collaboration',';
-      description: 'See how teams work together seamlessly',';
-      demo: 'Collaboration Demo'';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Play, Right, Star, BarChart3, Shield } from 'lucide-react';
+import { CheckCircle, Phone, Calendar, Clock, MessageSquare, User } from 'lucide-react';
+import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
+
 
 const DemoPage: React.FC = () => {
-  const features = [
-    {
-icon: BarChart3,
-      title: 'AI-Powered Analytics',
-      description: 'See how our AI analyzes your data in real-time',
-      demo: 'Live Demo'
-    },
-    {
-icon: Shield,
-      title: 'Advanced Security',
-      description: 'Experience our enterprise-grade security features',
-      demo: 'Demo'
-    },
-    {
-icon: BarChart3,
-      title: 'Business Intelligence',
-      description: 'Explore our comprehensive BI dashboard',
-      demo: 'BI Demo'
-    },
-    {
-icon: Play,
-      title: 'Team Collaboration',
-      description: 'See how teams work together seamlessly',
-      demo: 'Collaboration Demo'
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-    }
-  ];
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: '',
+    preferredDate: '',
+    preferredTime: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const testimonials = [{
-      name: "Sarah Johnson",
-      company: "TechCorp Inc.",
-      content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.",
-      rating: 5;
-    },
-    {
-      name: "Michael Chen",
-      company: "DataFlow Systems",
-      content: "The live demonstration helped us understand the full potential of the AI solutions.",
-      rating: 5;
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "InnovateLabs",
-      content: "The demo team was knowledgeable and answered all our questions thoroughly.",
-      rating: 5;
-    }
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({ name: '', email: '', company: '', phone: '', service: '', message: '', preferredDate: '', preferredTime: '' });
+    }, 3000);
+  };
+
+  const demoOptions = [
+    { icon: <Calendar className="w-6 h-6" />, title: "AI Solutions Demo", description: "See our AI analytics, content generation, and automation tools in action.", duration: "30 minutes" },
+    { icon: <Clock className="w-6 h-6" />, title: "5G Technology Demo", description: "Experience next-generation connectivity and IoT solutions powered by 5G.", duration: "45 minutes" },
+    { icon: <User className="w-6 h-6" />, title: "IT Services Demo", description: "Explore our cloud infrastructure, security, and DevOps solutions.", duration: "30 minutes" },
+    { icon: <MessageSquare className="w-6 h-6" />, title: "Custom Demo", description: "Tailored demonstration based on your specific business needs and requirements.", duration: "60 minutes" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Demo - See Our Solutions in Action | Zion Tech Group</title>
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
-        <meta name="keywords" content="demo, demonstration, AI demo, IT solutions demo, interactive demo, product showcase" />
+        <title>Schedule Demo - Zion Tech Group | See Our Solutions in Action</title>
+        <meta name="description" content="Schedule a personalized demo of our AI solutions, 5G technology, and IT services. See how we can transform your business." />
+        <meta name="keywords" content="demo, schedule demo, AI solutions demo, 5G demo, IT services demo, consultation" />
+        <meta property="og:title" content="Schedule Demo - Zion Tech Group" />
+        <meta property="og:description" content="See our solutions in action with a personalized demo." />
+        <meta property="og:type" content="website" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4">;
-          <div className="max-w-7xl mx-auto text-center">;
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">;
-              See It In;
-              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
-                Action;
-              </span>;
-            </h1>;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-              Experience our AI and IT solutions through interactive demos.;
-              See how our technology can transform your business.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">;
-                <Play className="w-5 h-5 mr-2 inline" />;
-                Start Demo;
-              </button>;
-              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
-                Schedule Live Demo;
-              </button>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Demo Features */}
-        <section className="py-20 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <h2 className="text-4xl font-bold text-white text-center mb-16">;
-              Interactive Demos;
-            </h2>;
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {features.map((feature, _index) => {
-                const Icon = feature.icon;
-                return (
-                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">;
-                    <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">;
-                      <Icon className="w-8 h-8 text-white" />;
-                    </div>;
-                    <h3 className="text-xl font-semibold text-white mb-2 text-center">{feature.title}</h3>;
-                    <p className="text-gray-300 mb-4 text-center">{feature.description}</p>;
-                    <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">;
-                      {feature.demo}
-                    </button>;
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Schedule a <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Demo</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                See our AI solutions, 5G technology, and IT services in action. 
+                Get a personalized demonstration tailored to your business needs.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Demo Options */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Choose Your Demo</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Select the type of demonstration that best fits your interests and business needs
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {demoOptions.map((option, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      {option.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{option.title}</h3>
+                    <p className="text-gray-300 text-sm mb-4">{option.description}</p>
+                    <div className="text-cyan-400 text-sm font-medium">{option.duration}</div>
                   </div>
-  );
-              })}
-            </div>;
-          </div>;
-        </section>;
-        {/* Demo Section */}
-        <section className="py-20 px-4 bg-slate-800/30">;
-          <div className="max-w-6xl mx-auto">;
-            <h2 className="text-4xl font-bold text-white text-center mb-16">;
-              Watch Our Solutions in Action;
-            </h2>;
-            <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">;
-              <div className="aspect-video bg-slate-700/50 rounded-xl flex items-center justify-center">;
-                <div className="text-center">;
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">;
-                    <Play className="w-10 h-10 text-white ml-1" />;
-                  </div>;
-                  <h3 className="text-2xl font-bold text-white mb-2">Product Demo </h3>;
-                  <p className="text-gray-300 mb-4">See our AI solutions in action</p>;
-                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">;
-                    Play </button>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Testimonials */}
-        <section className="py-20 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <h2 className="text-4xl font-bold text-white text-center mb-16">;
-              What Say About Our Demos;
-            </h2>;
-            <div className="grid md:grid-cols-3 gap-8">;
-              {testimonials.map((testimonial, _index) => (
-                <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">;
-                  <div className="flex items-center mb-4">;
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
-                    ))}
-                  </div>;
-                  <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>;
-                  <div>;
-                    <p className="text-white font-semibold">{testimonial.name}</p>;
-                    <p className="text-cyan-400 text-sm">{testimonial.company}</p>;
-                  </div>;
-                </div>;
+                </div>
               ))}
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py-20 px-4">;
-          <div className="max-w-4xl mx-auto text-center">;
-            <h2 className="text-4xl font-bold text-white mb-6">;
-              Ready to See More?;
-            </h2>;
-            <p className="text-xl text-gray-300 mb-8">;
-              Schedule a personalized demo with our experts to see how our solutions can work for your specific needs.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">;
-                Schedule Live Demo;
-                <Right className="w-5 h-5 ml-2 inline" />;
-              </button>;
-              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
-                Contact Sales;
-              </button>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Form */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-2xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-white mb-6">Schedule Your Demo</h2>
+                <p className="text-xl text-gray-300">
+                  Fill out the form below and we'll get back to you within 24 hours to schedule your personalized demo.
+                </p>
+              </div>
+              
+              {isSubmitted ? (
+                <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-8 text-center">
+                  <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-white mb-2">Demo Request Submitted!</h3>
+                  <p className="text-gray-300">
+                    Thank you for your interest. We'll contact you within 24 hours to schedule your demo.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-white text-sm font-medium mb-2">Full Name *</label>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-white text-sm font-medium mb-2">Email *</label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                        placeholder="your.email@company.com"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-white text-sm font-medium mb-2">Company</label>
+                      <input
+                        type="text"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                        placeholder="Your company name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-white text-sm font-medium mb-2">Phone</label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                        placeholder="+1 (555) 123-4567"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-white text-sm font-medium mb-2">Service Interest</label>
+                    <select
+                      name="service"
+                      value={formData.service}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    >
+                      <option value="">Select a service</option>
+                      <option value="ai-solutions">AI Solutions</option>
+                      <option value="5g-technology">5G Technology</option>
+                      <option value="it-services">IT Services</option>
+                      <option value="micro-saas">Micro SAAS</option>
+                      <option value="custom">Custom Solution</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-white text-sm font-medium mb-2">Message</label>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      rows={4}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                      placeholder="Tell us about your specific needs and what you'd like to see in the demo..."
+                    />
+                  </div>
+
+                  <div className="text-center">
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center mx-auto"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Clock className="w-5 h-5 mr-2" />
+                          Scheduling...
+                        </>
+                      ) : (
+                        <>
+                          <Calendar className="w-5 h-5 mr-2" />
+                          Schedule Demo
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </form>
+              )}
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 };

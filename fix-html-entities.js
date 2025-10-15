@@ -1,110 +1,45 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 #!/usr/bin/env node
 
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { glob } from 'glob';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Find all TypeScript/TSX files in the app directory
+const files = await glob('app/**/*.{ts,tsx}');
 
-function fixHtmlEntities(filePath) {
+console.log(`Found ${files.length} files to process...`);
+
+let totalFixed = 0;
+
+for (const file of files) {
+  const filePath = path.join(process.cwd(), file);
+  
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
-
+    let originalContent = content;
     
-    // Fix common HTML entities
-    const fixes = [
-
-=======
-// Fix common HTML entities
-    const fixes = [
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-      { from: /&apos;/g, to: "'" },
-      { from: /&quot;/g, to: '"' },
-      { from: /&lt;/g, to: '<' },
-      { from: /&gt;/g, to: '>' },
-      { from: /&amp;/g, to: '&' },
-<<<<<<< HEAD
-
-      { from: /&rbrace;/g, to: '}' },
-=======
-{ from: /&rbrace;/g, to: '}' },
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-      { from: /&lbrace;/g, to: '{' }
-    ];
+    // Fix HTML entities in JSX
+    content = content.replace(/&apos;/g, "'");
+    content = content.replace(/&quot;/g, '"');
+    content = content.replace(/&lt;/g, '<');
+    content = content.replace(/&gt;/g, '>');
+    content = content.replace(/&amp;/g, '&');
     
-    let hasChanges = false;
-    fixes.forEach(fix => {
-      if (fix.from.test(content)) {
-        content = content.replace(fix.from, fix.to);
-        hasChanges = true;
-      }
-    });
+    // Fix any malformed JSX fragments
+    content = content.replace(/<>\s*<\/>/g, '<></>');
     
-    if (hasChanges) {
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+    // Fix any unclosed JSX fragments
+    content = content.replace(/<>\s*$/gm, '<>');
+    content = content.replace(/^\s*<\/>/gm, '</>');
+    
+    if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed HTML entities in: ${filePath}`);
-      return true;
+      console.log(`Fixed: ${file}`);
+      totalFixed++;
     }
-<<<<<<< HEAD
-
-    
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error processing ${file}:`, error.message);
   }
 }
 
-function findTsxFiles(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
-      }
-    }
-  }
-  
-  traverse(dir);
-  return files;
-}
-
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const files = findTsxFiles(appDir);
-
-console.log(`Found ${files.length} TypeScript files to process...`);
-
-let fixedCount = 0;
-files.forEach(file => {
-  if (fixHtmlEntities(file)) {
-    fixedCount++;
-  }
-});
-
-console.log(`Fixed HTML entities in ${fixedCount} files.`);
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+console.log(`\nFixed ${totalFixed} files with HTML entity issues.`);

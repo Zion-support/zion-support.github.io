@@ -1,14 +1,46 @@
-import React from 'react';
-'use client';
-export default function ComponentsPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">;
-      <div className="container mx-auto px-4">;
-        <h1 className="text-4xl font-bold mb-8">Components</h1>;
-        <p className="text-gray-300 text-lg">;
-          This page is under development.;
-        </p>;
-      </div>;
-    </div>;
-  );
+import React, { useEffect } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+
+interface WebVitalsTrackerProps {
+  children: React.ReactNode;
 }
+
+interface WebVitalsData {
+  name: string;
+  value: number;
+  delta: number;
+  id: string;
+  navigationType: string;
+}
+
+const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
+  useEffect(() => {
+    const sendToAnalytics = (metric: WebVitalsData) => {
+      // Send to Google Analytics or other analytics service
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'web_vitals', {
+          event_category: 'Web Vitals',
+          event_label: metric.name,
+          value: Math.round(metric.value),
+          non_interaction: true,
+        });
+      }
+      
+      // Log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Web Vitals:', metric);
+      }
+    };
+
+    // Track Core Web Vitals
+    onCLS(sendToAnalytics);
+    onINP(sendToAnalytics);
+    onFCP(sendToAnalytics);
+    onLCP(sendToAnalytics);
+    onTTFB(sendToAnalytics);
+  }, []);
+
+  return <>{children}</>;
+};
+
+export default WebVitalsTracker;

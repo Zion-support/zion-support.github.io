@@ -1,50 +1,37 @@
 import '@testing-library/jest-dom';
-import React from 'react';
 
-// Mock react-router-dom
-jest.mock('react-router-dom', () => {
-  const actual = jest.requireActual('react-router-dom');
-  return {
-    ...actual,
-<<<<<<< HEAD
+// Mock TextEncoder and TextDecoder
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-    useLocation: () => ({
-      pathname: '/',
-      search: '',
-      hash: '',
-      state: null,
-      key: 'default'
-    }),
-<<<<<<< HEAD
-
-    useNavigate: () => jest.fn(),
-=======
-useNavigate: () => jest.fn(),
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-    Link: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
-    NavLink: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
-    BrowserRouter: ({ children }) => React.createElement('div', { 'data-testid': 'browser-router' }, children),
-    MemoryRouter: ({ children }) => React.createElement('div', { 'data-testid': 'memory-router' }, children)
-  };
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
 });
 
-// Suppress console warnings
-<<<<<<< HEAD
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-const originalError = console.error;
-beforeAll(() => {
-  console.error = (...args) => {
-    if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render is no longer supported')) {
-      return;
-    }
-    originalError.call(console, ...args);
-  };
-});
-
-afterAll(() => {
-  console.error = originalError;
-});
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
