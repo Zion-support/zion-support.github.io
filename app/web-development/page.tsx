@@ -5,31 +5,40 @@ const WebDevelopmentPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Web Development - Zion Tech Group</title>
-        <meta name="description" content="Professional web development services for modern, responsive, and scalable websites." />
+        <title>Web Development Services - Zion Tech Group | Custom Websites & Web Apps</title>
+        <meta name="description" content="Professional web development services including custom websites, web applications, and e-commerce solutions." />
       </Helmet>
       
-      <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Web Development</h1>
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Web Development Services
+            </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Professional web development for modern businesses
+              Professional web development services including custom websites, web applications, and e-commerce solutions.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Frontend Development</h3>
-              <p className="text-gray-600">
-                Create beautiful, responsive user interfaces using modern web technologies.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Backend Development</h3>
-              <p className="text-gray-600">
-                Build robust, scalable backend systems and APIs for your web applications.
-              </p>
+
+          <div className="bg-white rounded-lg shadow-lg p-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Coming Soon</h2>
+            <p className="text-xl text-gray-600 mb-8">
+              We're working on creating an amazing web development experience for you. 
+              In the meantime, please contact us for a free consultation about your web development needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/contact" 
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              >
+                Get Free Consultation
+              </a>
+              <a 
+                href="tel:+13024640950" 
+                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors font-medium"
+              >
+                Call +1 302 464 0950
+              </a>
             </div>
           </div>
         </div>
