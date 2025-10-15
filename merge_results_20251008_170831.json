@@ -1,0 +1,31 @@
+{
+  "successful": [
+    {
+      "pr": 25946,
+      "branch": "cursor/fix-errors-and-merge-to-main-aebc"
+    },
+    {
+      "pr": 25943,
+      "branch": "cursor/fix-errors-and-merge-to-main-5b7e"
+    }
+  ],
+  "conflicts_resolved": [],
+  "failed": [
+    {
+      "pr": 25947,
+      "branch": "cursor/fix-errors-and-merge-to-main-3ec6",
+      "reason": "fetch_failed"
+    },
+    {
+      "pr": 25945,
+      "branch": "cursor/fix-errors-and-merge-to-main-1035",
+      "reason": "fetch_failed"
+    },
+    {
+      "pr": 25944,
+      "branch": "cursor/fix-errors-and-merge-to-main-a40c",
+      "reason": "fetch_failed"
+    }
+  ],
+  "skipped": []
+}
