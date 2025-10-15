@@ -11,16 +11,16 @@ const HomePage: React.FC = () => {
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "Innovation City",
-      "addressRegion": "IC",
-      "postalCode": "12345",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
       "addressCountry": "US"
     },
     "sameAs": [
@@ -57,39 +57,108 @@ const HomePage: React.FC = () => {
               Welcome to Zion Tech Group
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              We provide cutting-edge AI and IT solutions to help your business thrive in the digital age.
+              Leading provider of AI and IT solutions for modern businesses. We help companies transform through cutting-edge technology, intelligent automation, and innovative micro SaaS solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Get Started
+                Get Started Today
               </a>
               <a href="/about" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                 Learn More
               </a>
+              <a href="tel:+13024640950" className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors">
+                Call +1 (302) 464-0950
+              </a>
+            </div>
+            
+            {/* Stats Section */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
+                <div className="text-gray-600">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">99.9%</div>
+                <div className="text-gray-600">Uptime Guarantee</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
+                <div className="text-gray-600">Support Available</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
+                <div className="text-gray-600">AI Tools Available</div>
+              </div>
             </div>
             
             {/* Featured Services */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-              <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div className="text-4xl mb-4">🤖</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Services</h3>
                 <p className="text-gray-600 mb-4">
-                  Advanced artificial intelligence solutions including machine learning, NLP, and computer vision.
+                  Advanced artificial intelligence solutions including machine learning, NLP, computer vision, and automation.
                 </p>
-                <a href="/ai-services" className="text-blue-600 hover:text-blue-800">Explore AI Services →</a>
+                <div className="text-sm text-gray-500 mb-4">Starting at $2,500/month</div>
+                <a href="/ai-services" className="text-blue-600 hover:text-blue-800 font-medium">Explore AI Services →</a>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div className="text-4xl mb-4">☁️</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Infrastructure</h3>
                 <p className="text-gray-600 mb-4">
-                  Scalable cloud solutions that provide reliability, security, and performance for your business.
+                  Scalable cloud solutions that provide reliability, security, and performance for your business applications.
                 </p>
-                <a href="/cloud-infrastructure" className="text-blue-600 hover:text-blue-800">Explore Cloud Solutions →</a>
+                <div className="text-sm text-gray-500 mb-4">Starting at $4,000/month</div>
+                <a href="/cloud-infrastructure" className="text-blue-600 hover:text-blue-800 font-medium">Explore Cloud Solutions →</a>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
+              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div className="text-4xl mb-4">🔄</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Micro SaaS Solutions</h3>
                 <p className="text-gray-600 mb-4">
-                  Complete digital transformation services to modernize your business processes and systems.
+                  Ready-to-use AI tools and micro SaaS applications for specific business needs and workflows.
                 </p>
-                <a href="/digital-transformation" className="text-blue-600 hover:text-blue-800">Learn More →</a>
+                <div className="text-sm text-gray-500 mb-4">Starting at $19/month</div>
+                <a href="/micro-saas-solutions" className="text-blue-600 hover:text-blue-800 font-medium">Explore Micro SaaS →</a>
+              </div>
+            </div>
+
+            {/* AI Tools Preview */}
+            <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Popular AI Tools</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="/zion-ai-content-moderator" className="text-center group">
+                  <div className="bg-blue-50 p-4 rounded-lg group-hover:bg-blue-100 transition-colors">
+                    <div className="text-2xl mb-2">🛡️</div>
+                    <div className="text-sm font-medium">Content Moderator</div>
+                    <div className="text-xs text-gray-500">$29/month</div>
+                  </div>
+                </a>
+                <a href="/zion-ai-customer-churn-predictor" className="text-center group">
+                  <div className="bg-green-50 p-4 rounded-lg group-hover:bg-green-100 transition-colors">
+                    <div className="text-2xl mb-2">📈</div>
+                    <div className="text-sm font-medium">Churn Predictor</div>
+                    <div className="text-xs text-gray-500">$49/month</div>
+                  </div>
+                </a>
+                <a href="/zion-ai-document-analyzer" className="text-center group">
+                  <div className="bg-purple-50 p-4 rounded-lg group-hover:bg-purple-100 transition-colors">
+                    <div className="text-2xl mb-2">📄</div>
+                    <div className="text-sm font-medium">Document Analyzer</div>
+                    <div className="text-xs text-gray-500">$59/month</div>
+                  </div>
+                </a>
+                <a href="/zion-ai-workflow-automator" className="text-center group">
+                  <div className="bg-orange-50 p-4 rounded-lg group-hover:bg-orange-100 transition-colors">
+                    <div className="text-2xl mb-2">⚡</div>
+                    <div className="text-sm font-medium">Workflow Automator</div>
+                    <div className="text-xs text-gray-500">$89/month</div>
+                  </div>
+                </a>
+              </div>
+              <div className="text-center mt-6">
+                <a href="/micro-saas-solutions" className="text-blue-600 hover:text-blue-800 font-medium">
+                  View All AI Tools →
+                </a>
               </div>
             </div>
           </div>
