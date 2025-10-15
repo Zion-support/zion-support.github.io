@@ -52,6 +52,13 @@ const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow
 const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 
+// New AI Services Pages
+const AICodeAssistantPage = lazy(() => import('./app/ai-code-assistant/page'));
+const AIVideoGeneratorPage = lazy(() => import('./app/ai-video-generator/page'));
+const AIChatbotBuilderPage = lazy(() => import('./app/ai-chatbot-builder/page'));
+const AIDataAnalyticsPlatformPage = lazy(() => import('./app/ai-data-analytics-platform/page'));
+const AISEOOptimizerPage = lazy(() => import('./app/ai-seo-optimizer/page'));
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -156,6 +163,13 @@ export default function App() {
                   <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
                   <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
                   <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
+                  
+                  {/* New AI Services Routes */}
+                  <Route path="/ai-code-assistant" element={<AICodeAssistantPage />} />
+                  <Route path="/ai-video-generator" element={<AIVideoGeneratorPage />} />
+                  <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                  <Route path="/ai-data-analytics-platform" element={<AIDataAnalyticsPlatformPage />} />
+                  <Route path="/ai-seo-optimizer" element={<AISEOOptimizerPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={

@@ -49,6 +49,11 @@ const Footer: React.FC = () => {
               <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
               <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
               <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
+              <li><Link to="/ai-code-assistant" className="text-gray-300 hover:text-white">AI Code Assistant</Link></li>
+              <li><Link to="/ai-video-generator" className="text-gray-300 hover:text-white">AI Video Generator</Link></li>
+              <li><Link to="/ai-chatbot-builder" className="text-gray-300 hover:text-white">AI Chatbot Builder</Link></li>
+              <li><Link to="/ai-data-analytics-platform" className="text-gray-300 hover:text-white">AI Data Analytics</Link></li>
+              <li><Link to="/ai-seo-optimizer" className="text-gray-300 hover:text-white">AI SEO Optimizer</Link></li>
               <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
             </ul>
           </div>
@@ -67,7 +72,6 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-md font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
-<<<<<<< HEAD
               <li><Link to="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
               <li><Link to="/api-docs" className="text-gray-300 hover:text-white">API Docs</Link></li>
               <li><Link to="/help" className="text-gray-300 hover:text-white">Help Center</Link></li>
@@ -81,34 +85,28 @@ const Footer: React.FC = () => {
               <li><Link to="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
               <li><Link to="/terms" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
               <li><Link to="/cookies" className="text-gray-300 hover:text-white">Cookie Policy</Link></li>
-=======
-              <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
-              <li><Link to="/help" className="text-gray-300 hover:text-white">Help</Link></li>
-              <li><Link to="/api-docs" className="text-gray-300 hover:text-white">API Docs</Link></li>
-              <li><Link to="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
-              <li><Link to="/privacy" className="text-gray-300 hover:text-white">Privacy</Link></li>
-              <li><Link to="/terms" className="text-gray-300 hover:text-white">Terms</Link></li>
->>>>>>> cursor/fix-errors-and-merge-to-main-bd72
             </ul>
           </div>
         </div>
         
         <div className="mt-8 pt-8 border-t border-gray-700">
-<<<<<<< HEAD
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-center md:text-left text-gray-300">
-              © 2025 Zion Tech Group. All rights reserved. | <a href="https://ziontechgroup.com" className="hover:text-white">ziontechgroup.com</a>
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="text-center md:text-left text-gray-300 mb-4 md:mb-0">
+              <p className="mb-2">© 2025 Zion Tech Group. All rights reserved.</p>
+              <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
+                <a href="https://ziontechgroup.com" className="hover:text-white font-medium">ziontechgroup.com</a>
+                <div className="flex space-x-4 text-sm">
+                  <span>Mobile: +1 302 464 0950</span>
+                  <span>Email: kleber@ziontechgroup.com</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex space-x-6">
               <Link to="/privacy" className="text-gray-300 hover:text-white text-sm">Privacy Policy</Link>
               <Link to="/terms" className="text-gray-300 hover:text-white text-sm">Terms of Service</Link>
+              <Link to="/cookies" className="text-gray-300 hover:text-white text-sm">Cookie Policy</Link>
             </div>
           </div>
-=======
-          <p className="text-center text-gray-300">
-            © 2024 Zion Tech Group. All rights reserved.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-bd72
         </div>
       </div>
     </footer>

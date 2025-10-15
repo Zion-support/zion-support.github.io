@@ -111,6 +111,21 @@ const Navigation: React.FC = () => {
                     <Link to="/zion-ai-workflow-automator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Workflow Automator
                     </Link>
+                    <Link to="/ai-code-assistant" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Code Assistant
+                    </Link>
+                    <Link to="/ai-video-generator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Video Generator
+                    </Link>
+                    <Link to="/ai-chatbot-builder" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Chatbot Builder
+                    </Link>
+                    <Link to="/ai-data-analytics-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Data Analytics
+                    </Link>
+                    <Link to="/ai-seo-optimizer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI SEO Optimizer
+                    </Link>
                   </div>
                 </div>
               )}
@@ -224,6 +239,21 @@ const Navigation: React.FC = () => {
               </Link>
               <Link to="/zion-ai-workflow-automator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Workflow Automator
+              </Link>
+              <Link to="/ai-code-assistant" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Code Assistant
+              </Link>
+              <Link to="/ai-video-generator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Video Generator
+              </Link>
+              <Link to="/ai-chatbot-builder" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Chatbot Builder
+              </Link>
+              <Link to="/ai-data-analytics-platform" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Data Analytics
+              </Link>
+              <Link to="/ai-seo-optimizer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI SEO Optimizer
               </Link>
             </div>
             <Link to="/pricing" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
