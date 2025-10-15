@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
       icon: ShieldCheckIcon,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
-      href: '/cybersecurity',
+      href: '/security-audit',
       gradient: 'from-green-500 to-emerald-500',
       glow: 'shadow-green-500/25'
     },
@@ -42,7 +42,7 @@ const HomePage: React.FC = () => {
       icon: CloudIcon,
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions and infrastructure management for modern businesses.',
-      href: '/cloud-solutions',
+      href: '/cloud-infrastructure',
       gradient: 'from-blue-500 to-cyan-500',
       glow: 'shadow-blue-500/25'
     },
