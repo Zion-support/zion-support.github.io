@@ -168,7 +168,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Document Analyzer', href: '/zion-ai-document-analyzer', icon: DocumentTextIcon },
         { name: 'AI Task Scheduler', href: '/zion-ai-task-scheduler', icon: CogIcon },
         { name: 'AI Translation Service', href: '/zion-ai-translation-service', icon: GlobeAltIcon },
-        { name: 'AI Video Generator', href: '/zion-ai-video-generator', icon: EyeIcon }
+        { name: 'AI Video Generator', href: '/zion-ai-video-generator', icon: EyeIcon },
+        { name: 'AI Code Assistant', href: '/zion-ai-code-assistant', icon: CodeBracketIcon },
+        { name: 'AI Voice Assistant', href: '/zion-ai-voice-assistant', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Image Generator', href: '/zion-ai-image-generator', icon: EyeIcon },
+        { name: 'AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber', icon: DocumentTextIcon },
+        { name: 'AI Customer Churn Predictor', href: '/zion-ai-customer-churn-predictor', icon: ChartBarIcon },
+        { name: 'AI Customer Sentiment Tracker', href: '/zion-ai-customer-sentiment-tracker', icon: ChartBarIcon }
       ]
     },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
