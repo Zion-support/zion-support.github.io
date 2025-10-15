@@ -1,27 +1,16 @@
 {
-  "timestamp": "2025-10-08T22:56:10.476Z",
+  "timestamp": "2025-10-15T04:48:17.914Z",
   "summary": {
-    "totalIssues": 10,
-    "totalRecommendations": 2,
-    "score": 0
+    "totalIssues": 1,
+    "totalRecommendations": 0,
+    "score": 90
   },
   "audits": {
     "html": {
       "issues": [
-        "Missing Open Graph og:title tag",
-        "Missing Open Graph og:description tag",
-        "Missing Open Graph og:image tag",
-        "Missing Open Graph og:url tag",
-        "Missing Twitter Card twitter:card tag",
-        "Missing Twitter Card twitter:title tag",
-        "Missing Twitter Card twitter:description tag",
-        "Missing Twitter Card twitter:image tag",
-        "Missing structured data (JSON-LD)",
         "No heading tags found"
       ],
-      "recommendations": [
-        "Consider adding external links to authoritative sources"
-      ]
+      "recommendations": []
     },
     "sitemap": {
       "issues": [],
@@ -33,23 +22,11 @@
     },
     "performance": {
       "issues": [],
-      "recommendations": ["Consider optimizing large files: stats.html (171KB)"]
+      "recommendations": []
     }
   },
   "issues": [
-    "Missing Open Graph og:title tag",
-    "Missing Open Graph og:description tag",
-    "Missing Open Graph og:image tag",
-    "Missing Open Graph og:url tag",
-    "Missing Twitter Card twitter:card tag",
-    "Missing Twitter Card twitter:title tag",
-    "Missing Twitter Card twitter:description tag",
-    "Missing Twitter Card twitter:image tag",
-    "Missing structured data (JSON-LD)",
     "No heading tags found"
   ],
-  "recommendations": [
-    "Consider adding external links to authoritative sources",
-    "Consider optimizing large files: stats.html (171KB)"
-  ]
+  "recommendations": []
 }

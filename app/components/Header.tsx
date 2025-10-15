@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 
-const Header: React.FC = () => {
+const Header: React.FC = memo(() => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -37,9 +37,18 @@ const Header: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>
+    <>
+      {/* Skip to main content link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-200"
+      >
+        Skip to main content
+      </a>
+      
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      }`}>
       {/* Top Contact Bar */}
       <div className="bg-slate-800 text-white py-2 px-4 hidden lg:block">
         <div className="container mx-auto flex justify-between items-center text-sm">
@@ -132,6 +141,9 @@ const Header: React.FC = () => {
             <button
               className="lg:hidden text-white p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -140,7 +152,12 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/20">
+          <div 
+            id="mobile-menu"
+            className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/20"
+            role="navigation"
+            aria-label="Mobile navigation"
+          >
             <div className="container mx-auto px-4 py-4">
               {navigationItems.map((item) => (
                 <div key={item.name}>
@@ -187,7 +204,10 @@ const Header: React.FC = () => {
         )}
       </nav>
     </header>
+    </>
   );
-};
+});
+
+Header.displayName = 'Header';
 
 export default Header;
