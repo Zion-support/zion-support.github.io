@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Receipt, Code, Cpu, Database, Settings, Heart, TrendingUp, Lock, Eye, Zap as Lightning } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -90,52 +90,85 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
-      name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
+      name: "Zion AI Analytics Pro",
+      description: "Advanced AI-powered business intelligence with real-time dashboards, predictive analytics, and automated insights. Features machine learning models for trend analysis and forecasting.",
       price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro",
-      featured: true
+      link: "/zion-ai-analytics-pro",
+      featured: true,
+      features: ["Real-time dashboards", "Predictive analytics", "ML-powered insights", "Custom reporting"]
     },
     {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
-      price: "From $499/month",
+      name: "Zion CyberShield Enterprise",
+      description: "Next-generation cybersecurity platform with AI-powered threat detection, automated incident response, and 24/7 monitoring. Includes advanced behavioral analysis and zero-trust architecture.",
+      price: "From $599/month",
       icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield",
-      featured: true
+      link: "/zion-cybershield-enterprise",
+      featured: true,
+      features: ["AI threat detection", "Automated response", "24/7 monitoring", "Zero-trust security"]
     },
     {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
-      price: "From $99/month",
+      name: "Zion CloudVault Pro",
+      description: "Enterprise-grade secure cloud storage with end-to-end encryption, unlimited scalability, and advanced collaboration tools. Includes AI-powered file organization and smart backup.",
+      price: "From $149/month",
       icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault",
-      featured: true
+      link: "/zion-cloudvault-pro",
+      featured: true,
+      features: ["End-to-end encryption", "Unlimited storage", "AI file organization", "Smart backup"]
     },
     {
       name: "Zion AI CRM Pro",
-      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
-      price: "From $199/month",
+      description: "Intelligent customer relationship management with AI-powered lead scoring, automated follow-ups, and predictive customer insights. Includes advanced analytics and sales forecasting.",
+      price: "From $249/month",
       icon: <Users className="w-6 h-6" />,
       link: "/zion-ai-crm-pro",
-      featured: true
+      featured: true,
+      features: ["AI lead scoring", "Automated follow-ups", "Predictive insights", "Sales forecasting"]
     },
     {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
+      name: "Zion Marketing AI Suite",
+      description: "Complete AI-powered marketing automation platform with predictive content generation, multi-channel orchestration, and advanced customer journey mapping.",
+      price: "From $199/month",
       icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
-      featured: true
+      link: "/zion-marketing-ai-suite",
+      featured: true,
+      features: ["AI content generation", "Multi-channel automation", "Customer journey mapping", "Performance analytics"]
     },
     {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
+      name: "Zion Project AI Manager",
+      description: "Intelligent project management with AI-powered task prioritization, resource allocation, and risk prediction. Features automated scheduling and team performance optimization.",
+      price: "From $129/month",
       icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
-      featured: true
+      link: "/zion-project-ai-manager",
+      featured: true,
+      features: ["AI task prioritization", "Resource optimization", "Risk prediction", "Team analytics"]
+    },
+    {
+      name: "Zion AI Invoice Generator",
+      description: "Smart invoice generation with AI-powered data extraction, automated billing cycles, and intelligent payment tracking. Includes multi-currency support and tax compliance.",
+      price: "From $79/month",
+      icon: <Receipt className="w-6 h-6" />,
+      link: "/zion-ai-invoice-generator",
+      featured: false,
+      features: ["AI data extraction", "Automated billing", "Payment tracking", "Tax compliance"]
+    },
+    {
+      name: "Zion AI Video Studio",
+      description: "AI-powered video creation and editing platform with automated content generation, voice synthesis, and intelligent video optimization for social media platforms.",
+      price: "From $179/month",
+      icon: <Monitor className="w-6 h-6" />,
+      link: "/zion-ai-video-studio",
+      featured: false,
+      features: ["AI video generation", "Voice synthesis", "Auto-optimization", "Social media ready"]
+    },
+    {
+      name: "Zion AI Code Assistant",
+      description: "Advanced AI-powered coding assistant with intelligent code completion, bug detection, and automated testing. Supports 50+ programming languages and frameworks.",
+      price: "From $99/month",
+      icon: <Code className="w-6 h-6" />,
+      link: "/zion-ai-code-assistant",
+      featured: false,
+      features: ["Smart code completion", "Bug detection", "Auto-testing", "50+ languages"]
     }
   ];
 
@@ -181,35 +214,40 @@ const HomePage = () => {
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Animated Background Elements */}
+        {/* Enhanced Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-8 neon-border-animated">
+            <Sparkles className="w-5 h-5 text-cyan-400 mr-3 animate-spin" />
+            <span className="text-cyan-400 text-sm font-medium holographic-text">#1 Technology Solutions Provider 2024</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+            <span className="holographic-text glitch" data-text="Welcome to Zion Tech Group">
               Welcome to Zion Tech Group
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-            Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed text-center">
+            Leading provider of <span className="text-cyan-400 font-semibold">AI-powered solutions</span>, 
+            <span className="text-purple-400 font-semibold"> IT services</span>, 
+            <span className="text-pink-400 font-semibold"> micro SAAS</span>, and 
+            <span className="text-green-400 font-semibold"> digital transformation</span> for modern businesses. 
             Transform your operations with cutting-edge technology and innovative solutions.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <FuturisticButton
               href="/contact"
               variant="primary"
               size="lg"
               icon={<Sparkles className="w-5 h-5" />}
+              className="btn-neon-enhanced"
             >
               Get Started Today
             </FuturisticButton>
@@ -218,20 +256,21 @@ const HomePage = () => {
               variant="outline"
               size="lg"
               icon={<Monitor className="w-5 h-5" />}
+              className="btn-neon-enhanced"
             >
               Watch Demo
             </FuturisticButton>
           </div>
           
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          {/* Enhanced Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div key={index} className="text-center group cyber-card hover-lift">
+                <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 pulse-glow">
                   {stat.icon}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 holographic-text">{stat.number}</div>
+                <div className="text-gray-300 text-sm md:text-base">{stat.label}</div>
               </div>
             ))}
           </div>
