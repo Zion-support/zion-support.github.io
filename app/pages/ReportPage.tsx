@@ -1,15 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Bug, 
-  AlertTriangle, 
-  MessageSquare,
-  Mail,
-  Phone,
-  FileText
-} from 'lucide-react';
+import { Bug } from 'lucide-react';
 
 const ReportPage: React.FC = () => {
   return (

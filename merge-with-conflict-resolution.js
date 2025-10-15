@@ -1,5 +1,5 @@
 import { execSync } from 'child_process'
-import { readFileSync, writeFileSync } from 'fs'
+import { writeFileSync } from 'fs'
 #!/usr/bin/env node;
 console.log('🔄 Merging branches with automatic conflict resolution...')
       return false; // No conflicts}

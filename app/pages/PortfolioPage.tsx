@@ -1,29 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Zap,
-  Brain,
-  Cpu,
-  Cloud,
-  Shield,
-  Smartphone,
-  BarChart3,
-  Target,
-  Rocket,
-  Users,
-  Award,
-  Clock,
-  Globe,
-  Lock,
-  ExternalLink,
-  Github,
-  Filter,
-  Search
-} from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Zap, Brain, Cpu, Cloud, Smartphone, Target, Rocket, Globe, ExternalLink, Github, Filter, Search } from 'lucide-react';
 
 const PortfolioPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

@@ -1,17 +1,9 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
 import { Link } from 'react-router-dom';
 import SEOHead from './components/SEOHead';
-import { 
-  CpuChipIcon, 
-  ShieldCheckIcon, 
-  CloudIcon, 
-  RocketLaunchIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  StarIcon
-} from '@heroicons/react/24/outline';
+import { CpuChipIcon, ShieldCheckIcon, CloudIcon, RocketLaunchIcon, CheckCircleIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 
 const HomePage: React.FC = () => {
   const services = [

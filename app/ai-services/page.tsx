@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign, Globe, Lock, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Code, Database, Users, DollarSign, Globe, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Filter, Eye, Heart, Award, Mic, Video, Image, Calculator, Layers, Grid, Minimize, Square, Circle, Star as StarIcon } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -645,9 +645,6 @@ export default function AIServices() {
       featured: false
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       name: "AI Security Solutions",
       description: "Advanced AI-powered security systems to protect your digital assets and infrastructure.",
       features: ["Threat detection", "Anomaly detection", "Behavioral analysis", "Incident response", "Zero-day protection", "Compliance monitoring"],
@@ -683,8 +680,7 @@ export default function AIServices() {
       price: "Starting at $1,599/month",
       benefits: ["99% speech accuracy", "Natural voice synthesis", "Real-time processing", "Multi-language support"]
     },
-    {
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
+    {cursor/fix-errors-and-merge-to-main-ec45
       name: "AI Blockchain Solutions",
       description: "Intelligent blockchain applications with AI-powered smart contracts and analytics.",
       features: ["Smart contracts", "DeFi analytics", "NFT generation", "Blockchain monitoring", "Cryptocurrency analysis", "Risk assessment"],
@@ -692,9 +688,6 @@ export default function AIServices() {
       applications: ["DeFi platforms", "NFT marketplaces", "Cryptocurrency trading", "Supply chain tracking"],
       price: "Starting at $3,999/month",
       benefits: ["Automated smart contracts", "Real-time blockchain analysis", "Fraud detection", "Optimized transactions"]
-<<<<<<< HEAD
-    }  ];
-=======
       id: "ai-time-series-forecasting",
       name: "AI Time Series Forecasting",
       description: "Advanced time series analysis with forecasting, trend detection, and seasonal pattern recognition",
@@ -752,8 +745,7 @@ export default function AIServices() {
       link: "/ai-nlp-text-analysis",
       featured: false
     }
-  ];
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
+  ];cursor/comprehensive-app-audit-and-update-8a56
 
   const categories = [
     { name: "All", count: aiServices.length, active: true },

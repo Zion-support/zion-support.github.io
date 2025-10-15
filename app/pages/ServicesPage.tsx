@@ -1,41 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Zap, 
-  Brain, 
-  Server, 
-  Globe, 
-  Shield, 
-  Code, 
-  Database, 
-  Smartphone,
-  BarChart3,
-  Users,
-  Settings,
-  Award,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  TrendingUp,
-  Target,
-  Lightbulb,
-  Rocket,
-  Cloud,
-  Lock,
-  Wifi,
-  Monitor,
-  HardDrive,
-  Layers,
-  MessageSquare,
-  Eye,
-  FileText,
-  Network
-} from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Database, BarChart3, Users, Settings, Award, Clock, Star, TrendingUp, Target, Lightbulb, Rocket, Cloud, Network } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [

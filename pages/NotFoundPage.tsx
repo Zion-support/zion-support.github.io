@@ -1,16 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Home, 
-  ArrowLeft, 
-  Mail, 
-  Phone,
-  Zap,
-  Brain,
-  Server,
-  Target
-} from 'lucide-react';
+import { Home, ArrowLeft, Mail, Phone, Zap, Brain, Server, Target } from 'lucide-react';
 
 const NotFoundPage: React.FC = () => {
   const quickLinks = [

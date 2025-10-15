@@ -1,8 +1,6 @@
 import fs from 'fs;
 import path from 'path;
-import { fileURLToPath } from 'url;
-#!/usr/bin// Fixed regex;
-    let content = fs.readFileSync(filePath, 'utf8'';
+utf8'';
   console.error('Error:'';
     const lines = content.split('\n'';
       if (line.startsWith('<<<<<<<'';

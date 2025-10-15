@@ -1,36 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Shield, 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  // Zap,
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
-  ArrowRight,
-  Phone,
-  Mail,
-  MessageCircle,
-  Rocket,
-  Target,
-  BarChart3,
-  Code,
-  Cloud,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  // Database,
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
-  Settings
-} from 'lucide-react';
+import { CheckCircle, Star, Users, Shield, ArrowRight, Phone, Mail, MessageCircle, Rocket, Target, BarChart3, Code, Cloud, Settings } from 'lucide-react';
 
 const ServiceDetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();

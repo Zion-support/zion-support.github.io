@@ -1,13 +1,13 @@
-import { useState } from 'react;
-
-import { Helmet } from 'react-helmet-async';'lucide-react;
+import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Briefcase, Building, DollarSign, Calendar, Globe, Shield, Zap, Target, Award, TrendingUp, BarChart3, Code, Cloud, Database, Settings, MessageSquare, Phone, Mail, Heart, ThumbsUp, Eye, Bell, Share, Download, Upload, Search, Filter, Plus, Minus, X, Edit, Trash2, Save, RefreshCw, Play, Pause, Stop, SkipBack, SkipForward, Volume2, VolumeX, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Wifi, Battery, Camera, Headphones, Mic, Video, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone as PhoneIcon, Voicemail, Headset, Speaker, Volume2 as Volume2Icon, VolumeX as VolumeXIcon, Play as PlayIcon, Pause as PauseIcon, Stop as StopIcon, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize as MaximizeIcon, Minimize as MinimizeIcon, Square as SquareIcon, Circle as CircleIcon, Triangle as TriangleIcon, Hexagon as HexagonIcon, Octagon as OctagonIcon, Diamond as DiamondIcon, Star as StarIcon2, Moon as MoonIcon, Sun as SunIcon, Sunrise as SunriseIcon, Sunset as SunsetIcon, CloudRain as CloudRainIcon, CloudSnow as CloudSnowIcon, CloudLightning as CloudLightningIcon, Wind as WindIcon, Droplets as DropletsIcon, Thermometer as ThermometerIcon, Gauge as GaugeIcon, Timer as TimerIcon, Stopwatch as StopwatchIcon, Hourglass as HourglassIcon } from 'lucide-react';
 
 interface JobPosition {
   // Add properties here
 }
   id: number;
 
-import { Right, Circle, } from 'lucide-react;
+import { Right, Circle } from 'lucide-react';
 
 const PagePage: React.FC = () => {}
   title: string;

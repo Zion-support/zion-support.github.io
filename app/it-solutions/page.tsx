@@ -1,38 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Server, 
-  Shield, 
-  Cloud, 
-  Code, 
-  Database, 
-  Smartphone,
-  BarChart3,
-  Users,
-  Settings,
-  Award,
-  Clock,
-  TrendingUp,
-  Target,
-  Lightbulb,
-  Rocket,
-  Globe,
-  Lock,
-  Wifi,
-  Monitor,
-  HardDrive,
-  Layers,
-  MessageSquare,
-  Eye,
-  FileText,
-  Network,
-  Zap,
-  Cpu,
-  Smartphone as Mobile
-} from 'lucide-react';
+import { CheckCircle, ArrowRight, Shield, Cloud, Code, Database, Settings, TrendingUp, Rocket, Monitor, Network, Smartphone as Mobile } from 'lucide-react';
 
 const ITSolutionsPage: React.FC = () => {
   const itServices = [

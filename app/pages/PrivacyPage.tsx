@@ -1,19 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Shield,
-  Lock,
-  Eye,
-  Database,
-  Users,
-  Mail,
-  Phone,
-  Calendar,
-  CheckCircle,
-  AlertTriangle
-} from 'lucide-react';
+import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckCircle, AlertTriangle } from 'lucide-react';
 
 const PrivacyPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024';

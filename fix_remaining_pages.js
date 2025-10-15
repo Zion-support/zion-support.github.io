@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { Helmet } from 'react-helmet-async'
+
 import Layout from '../../layout'
 export default ${pageName}Page`;
 // List of all pages that need to be completely rewritten;

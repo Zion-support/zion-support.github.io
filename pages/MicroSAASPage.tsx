@@ -1,22 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Zap, 
-  BarChart3, 
-  Target, 
-  Rocket, 
-  Shield, 
-  Users, 
-  Clock,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  DollarSign,
-  Code,
-  Mail,
-  FileText
-} from 'lucide-react';
+import { Zap, BarChart3, Target, Rocket, Shield, Users, Clock, CheckCircle, Star, ArrowRight, DollarSign, Code, Mail, FileText } from 'lucide-react';
 
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
@@ -166,11 +151,7 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+=======cursor/comprehensive-app-audit-and-update-f3ea
   // const categories = ['All', 'Productivity', 'Development', 'Monitoring', 'Automation', 'Marketing', 'Document Management'];
 
 >>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c

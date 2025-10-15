@@ -43,13 +43,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {
     // Report to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      (window as any)['gtag']('event', name, {
-=======
-      (window as unknown as { gtag: (event: string, name: string, options: Record<string, unknown>) => void }).gtag('event', name, {
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
+      (window as unknown as { gtag: (event: string, name: string, options: Record<string, unknown>) => void }).gtag('event', name, {cursor/enhance-application-with-new-services-and-improvements-145c
 =======
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', name, {
 >>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
@@ -110,13 +104,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       try {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            const metric = entry as PerformanceEntry & { startTime: number; value?: number; hadRecentInput?: boolean };
-=======
-            const metric = entry as PerformanceEntry & { startTime?: number; value?: number };
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
+            const metric = entry as PerformanceEntry & { startTime?: number; value?: number };cursor/enhance-application-with-new-services-and-improvements-145c
 =======
 =======
 >>>>>>> cursor/comprehensive-app-audit-and-update-8a56
@@ -129,9 +117,6 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
               responseStart?: number;
               requestStart?: number;
             };
-<<<<<<< HEAD
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
-=======
 >>>>>>> cursor/comprehensive-app-audit-and-update-8a56
             
             switch (entry.entryType) {
@@ -146,15 +131,6 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
                 break;
               
               case 'first-input':
-<<<<<<< HEAD
-<<<<<<< HEAD
-                metricsRef.current.fid = (metric as any).processingStart - metric.startTime;
-                break;
-              
-              case 'layout-shift':
-                if (!metric.hadRecentInput) {
-                  metricsRef.current.cls = (metricsRef.current.cls || 0) + (metric.value || 0);
-=======
                 if (metric.processingStart !== undefined && metric.startTime !== undefined) {
                   metricsRef.current.fid = metric.processingStart - metric.startTime;
                 }
@@ -167,23 +143,16 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
                 }
                 break;
               
-              case 'layout-shift':
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
+              case 'layout-shift':cursor/comprehensive-app-audit-and-update-8a56
                 if (!metric.hadRecentInput && metric.value !== undefined) {
-                  metricsRef.current.cls = (metricsRef.current.cls || 0) + metric.value;
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+                  metricsRef.current.cls = (metricsRef.current.cls || 0) + metric.value;cursor/comprehensive-app-audit-and-update-f3ea
                 }
                 break;
               
               case 'navigation':
-<<<<<<< HEAD
-<<<<<<< HEAD
-                metricsRef.current.ttfb = (metric as any).responseStart - (metric as any).requestStart;
-=======
                 if (metric.responseStart !== undefined && metric.requestStart !== undefined) {
                   metricsRef.current.ttfb = metric.responseStart - metric.requestStart;
-                }
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+                }cursor/comprehensive-app-audit-and-update-f3ea
 =======
                 if (metric.responseStart !== undefined && metric.requestStart !== undefined) {
                   metricsRef.current.ttfb = metric.responseStart - metric.requestStart;
@@ -228,16 +197,11 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
         observer.observe({ entryTypes });
         observerRef.current = observer;
 
-<<<<<<< HEAD
-      } catch {
-        // console.warn('Performance Observer setup failed:', error);
-=======
       } catch (error) {
         if (process.env.NODE_ENV === 'development') {
           console.warn('Performance Observer setup failed:', error);
         }
-<<<<<<< HEAD
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+<<<<<<< HEADcursor/comprehensive-app-audit-and-update-f3ea
 =======
 >>>>>>> cursor/comprehensive-app-audit-and-update-8a56
       }
@@ -248,17 +212,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 
       const checkMemory = () => {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (memory) {
-          const usedMB = memory.usedJSHeapSize / 1048576;
-          const totalMB = memory.totalJSHeapSize / 1048576;
-          const limitMB = memory.jsHeapSizeLimit / 1048576;
 =======
-=======
-        if (!memory) return;
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+        if (!memory) return;cursor/comprehensive-app-audit-and-update-f3ea
 =======
         if (!memory) return;
 >>>>>>> cursor/comprehensive-app-audit-and-update-8a56
@@ -291,13 +246,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          const metric = entry as PerformanceEntry & { value: number; hadRecentInput: boolean };
-=======
-          const metric = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
+          const metric = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };cursor/enhance-application-with-new-services-and-improvements-145c
           if (!metric.hadRecentInput) {
 =======
           const metric = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
@@ -315,16 +264,11 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-<<<<<<< HEAD
-      } catch {
-        // console.warn('Layout shift monitoring not supported:', error);
-=======
       } catch (error) {
         if (process.env.NODE_ENV === 'development') {
           console.warn('Layout shift monitoring not supported:', error);
         }
-<<<<<<< HEAD
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+<<<<<<< HEADcursor/comprehensive-app-audit-and-update-f3ea
 =======
 >>>>>>> cursor/comprehensive-app-audit-and-update-8a56
       }
@@ -370,16 +314,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     reportInterval,
     memoryThreshold,
     longTaskThreshold,
-<<<<<<< HEAD
-=======
-    reportMetrics,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
-=======
 >>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
+=======cursor/comprehensive-app-audit-and-update-8a56
     reportMetric,
   ]);
 

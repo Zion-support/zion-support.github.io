@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
+import { MessageSquare, Phone, Mail, Send, FileText } from 'lucide-react';cursor/fix-errors-and-merge-to-main-ec45
 
 const SupportPage: React.FC = () => {
   const [formData, setFormData] = useState({

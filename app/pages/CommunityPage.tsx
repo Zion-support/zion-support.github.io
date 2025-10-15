@@ -1,21 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Users, 
-  MessageSquare, 
-  Star, 
-  Calendar,
-  Globe,
-  Code,
-  BookOpen,
-  Award,
-  TrendingUp,
-  Zap,
-  Shield,
-  Clock
-} from 'lucide-react';
+import { ArrowRight, MessageSquare, Code, BookOpen, Award } from 'lucide-react';
 
 const CommunityPage: React.FC = () => {
   const communityFeatures = [

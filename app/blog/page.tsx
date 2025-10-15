@@ -96,16 +96,7 @@ export default function Blog() {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">Page</h1>
-          <p className="text-gray-300 text-center">Coming soon...</p>
-        </div>
-      </div>    </>
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
+=======cursor/fix-errors-and-merge-to-main-ec45
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">

@@ -1,22 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Users, 
-  CheckCircle, 
-  Brain, 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  // Zap,
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
-  Shield,
-  Globe,
-  Lightbulb,
-  Rocket,
-  Target
-} from 'lucide-react';
+import { Users, CheckCircle, Brain, Globe, Lightbulb, Rocket, Target } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   const values = [

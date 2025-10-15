@@ -1,42 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Zap, 
-  Brain, 
-  Server, 
-  Globe, 
-  Shield, 
-  Code, 
-  Database, 
-  Smartphone,
-  BarChart3,
-  Users,
-  Settings,
-  Award,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  TrendingUp,
-  Target,
-  Lightbulb,
-  Rocket,
-  Cloud,
-  Lock,
-  Wifi,
-  Monitor,
-  HardDrive,
-  Layers,
-  MessageSquare,
-  Eye,
-  FileText,
-  Network,
-  X
-} from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Brain, Server, Code, Star, Cloud, Layers, X } from 'lucide-react';
 
 const PricingPage: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');

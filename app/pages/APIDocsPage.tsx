@@ -1,31 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Code, 
-  Copy,
-  ExternalLink,
-  Search,
-  Filter,
-  BookOpen,
-  Zap,
-  Shield,
-  Clock,
-  Users,
-  Settings,
-  Database,
-  Globe,
-  Smartphone,
-  BarChart3,
-  MessageSquare,
-  Cpu,
-  Network,
-  FileText,
-  Play,
-  Download
-} from 'lucide-react';
+import { ArrowRight, Code, Copy, Search, BookOpen, Zap, Shield, Clock, Users, Database, Globe, Smartphone, BarChart3, MessageSquare, FileText, Play, Download } from 'lucide-react';
 
 const APIDocsPage: React.FC = () => {
   const [selectedAPI, setSelectedAPI] = useState('ai-chatbot');

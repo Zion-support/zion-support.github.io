@@ -1,29 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Zap,
-  Brain,
-  Cpu,
-  Cloud,
-  Shield,
-  Smartphone,
-  BarChart3,
-  Target,
-  Rocket,
-  Users,
-  Award,
-  Clock,
-  Globe,
-  Lock,
-  TrendingUp,
-  Database,
-  Network,
-  Code
-} from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Target, Rocket, Users, Globe, TrendingUp } from 'lucide-react';
 
 const SolutionsPage: React.FC = () => {
   const industrySolutions = [

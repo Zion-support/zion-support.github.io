@@ -1,22 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Server, 
-  Shield, 
-  Cloud, 
-  Database, 
-  Code, 
-  Network, 
-  Settings, 
-  Zap,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Rocket,
-  Users,
-  Clock
-} from 'lucide-react';
+import { Server, Shield, Cloud, Database, Code, Network, Settings, Zap, CheckCircle, Star, ArrowRight, Rocket, Users, Clock } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
@@ -166,11 +151,7 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+=======cursor/comprehensive-app-audit-and-update-f3ea
   // const categories = ['All', 'Infrastructure', 'Security', 'DevOps', 'Database', 'Networking', 'Consulting'];
 
 >>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c

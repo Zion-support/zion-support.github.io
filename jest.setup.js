@@ -1,26 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import '@testing-library/jest-dom';
-import React from 'react';
-import { TextEncoder, TextDecoder } from 'util';
-
-// Polyfill for TextEncoder/TextDecoder
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
-
-// Mock TextEncoder and TextDecoder
-import { TextEncoder, TextDecoder } from 'util';
-=======
 require("@testing-library/jest-dom");
 // Polyfill for TextEncoder/TextDecoder
 const { TextEncoder, TextDecoder } = require("util");
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 // Mock window.matchMedia
 Object.defineProperty(window, "matchMedia", {
-=======
-import '@testing-library/jest-dom';
 
 // Mock TextEncoder and TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
@@ -79,14 +63,6 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn(),
   })),
 });
-<<<<<<< HEAD
-
-// Mock scrollTo
-Object.defineProperty(window, 'scrollTo', {
-  writable: true,
-  value: jest.fn(),
-<<<<<<< HEAD
-=======
 });
 
 // Suppress console warnings
@@ -97,8 +73,7 @@ beforeAll(() => {
       return;
     }
     originalError.call(console, ...args);
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
+  };cursor/fix-errors-and-merge-to-main-ec45
 });
 // Mock localStorage
 const localStorageMock = {

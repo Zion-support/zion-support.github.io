@@ -1,22 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { 
-  CheckCircle, 
-  Star, 
-  ArrowRight, 
-  Brain, 
-  Server,
-  Rocket,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  // Users,
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
-  Settings
-} from 'lucide-react';
+import { CheckCircle, Star, ArrowRight, Brain, Server, Rocket } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

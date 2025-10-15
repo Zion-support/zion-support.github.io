@@ -2,115 +2,83 @@
 import os
 import re
 import glob
-import ast
-import sys
 
-def remove_unused_imports(file_path):
-    """Remove unused imports from a TypeScript/TSX file"""
+def fix_unused_imports(file_path):
+    """Remove unused imports from a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
+        # Skip if file doesn't exist or is empty
+        if not content.strip():
+            return False
+        
+        # Skip test files and broken files
+        if 'test' in file_path or 'broken' in file_path or 'disabled' in file_path:
+            return False
+        
         # Find all import statements
-        import_pattern = r'import\s+.*?from\s+[\'"][^\'"]+[\'"];?\n?'
+        import_pattern = r'import\s+{([^}]+)}\s+from\s+["\'][^"\']+["\'];?'
         imports = re.findall(import_pattern, content, re.MULTILINE)
         
-        # Find all used identifiers in the file
-        used_identifiers = set()
+        if not imports:
+            return False
         
-        # Remove import statements to find used identifiers
-        content_without_imports = re.sub(import_pattern, '', content)
-        
-        # Find all identifiers that might be used
-        identifier_pattern = r'\b[A-Za-z_$][A-Za-z0-9_$]*\b'
-        all_identifiers = re.findall(identifier_pattern, content_without_imports)
-        
-        # Filter out common keywords and built-ins
-        keywords = {
-            'const', 'let', 'var', 'function', 'class', 'interface', 'type', 'enum',
-            'if', 'else', 'for', 'while', 'do', 'switch', 'case', 'default', 'break',
-            'continue', 'return', 'try', 'catch', 'finally', 'throw', 'new', 'this',
-            'super', 'extends', 'implements', 'import', 'export', 'from', 'as',
-            'true', 'false', 'null', 'undefined', 'typeof', 'instanceof', 'in', 'of',
-            'void', 'any', 'string', 'number', 'boolean', 'object', 'array', 'never',
-            'unknown', 'bigint', 'symbol', 'void', 'null', 'undefined', 'never',
-            'React', 'useState', 'useEffect', 'useCallback', 'useMemo', 'useRef',
-            'useContext', 'useReducer', 'useLayoutEffect', 'useImperativeHandle',
-            'useDebugValue', 'memo', 'lazy', 'Suspense', 'Fragment', 'StrictMode',
-            'createContext', 'createElement', 'cloneElement', 'isValidElement',
-            'Children', 'Component', 'PureComponent', 'forwardRef', 'createRef',
-            'createPortal', 'unmountComponentAtNode', 'findDOMNode', 'hydrate',
-            'render', 'unmount', 'createFactory', 'isValidElement', 'version',
-            'PropTypes', 'createClass', 'addons', 'DOM', 'Fragment', 'StrictMode',
-            'Suspense', 'lazy', 'memo', 'forwardRef', 'createRef', 'createPortal',
-            'unmountComponentAtNode', 'findDOMNode', 'hydrate', 'render', 'unmount',
-            'createFactory', 'isValidElement', 'version', 'PropTypes', 'createClass',
-            'addons', 'DOM', 'Fragment', 'StrictMode', 'Suspense', 'lazy', 'memo',
-            'forwardRef', 'createRef', 'createPortal', 'unmountComponentAtNode',
-            'findDOMNode', 'hydrate', 'render', 'unmount', 'createFactory',
-            'isValidElement', 'version', 'PropTypes', 'createClass', 'addons', 'DOM'
-        }
-        
-        # Add identifiers that are likely used
-        for identifier in all_identifiers:
-            if identifier not in keywords and len(identifier) > 1:
-                used_identifiers.add(identifier)
-        
-        # Process each import statement
-        new_imports = []
-        for import_stmt in imports:
-            # Extract the import part (before 'from')
-            import_part = import_stmt.split('from')[0].strip()
+        # For each import statement, check if the imported items are used
+        for import_match in re.finditer(import_pattern, content):
+            import_statement = import_match.group(0)
+            import_items = import_match.group(1)
             
-            # Handle different import patterns
-            if '{' in import_part:
-                # Named imports: import { A, B, C } from 'module'
-                named_imports = re.findall(r'\{([^}]+)\}', import_part)
-                if named_imports:
-                    used_named_imports = []
-                    for named_group in named_imports:
-                        imports_in_group = [imp.strip() for imp in named_group.split(',')]
-                        for imp in imports_in_group:
-                            # Handle 'as' aliases
-                            actual_name = imp.split(' as ')[0].strip()
-                            if actual_name in used_identifiers or imp in used_identifiers:
-                                used_named_imports.append(imp)
-                    
-                    if used_named_imports:
-                        new_import_stmt = f"import {{ {', '.join(used_named_imports)} }} from {import_stmt.split('from')[1]}"
-                        new_imports.append(new_import_stmt)
+            # Parse individual imports
+            items = [item.strip() for item in import_items.split(',')]
+            used_items = []
+            
+            for item in items:
+                # Handle "as" aliases
+                if ' as ' in item:
+                    original_name = item.split(' as ')[0].strip()
+                    alias = item.split(' as ')[1].strip()
+                    # Check if either the original name or alias is used
+                    if (original_name in content and original_name != item) or (alias in content and alias != item):
+                        used_items.append(item)
+                else:
+                    # Check if the item is used in the content (excluding the import statement itself)
+                    content_without_import = content.replace(import_statement, '')
+                    if item in content_without_import:
+                        used_items.append(item)
+            
+            # If some items are used, update the import
+            if used_items:
+                new_import = f"import {{ {', '.join(used_items)} }} from {import_match.group(0).split(' from ')[1]}"
+                content = content.replace(import_statement, new_import)
             else:
-                # Default import: import React from 'react'
-                default_import = import_part.replace('import', '').strip()
-                if default_import in used_identifiers:
-                    new_imports.append(import_stmt)
+                # If no items are used, remove the entire import
+                content = content.replace(import_statement, '')
         
-        # Replace all imports with the cleaned ones
-        if new_imports:
-            new_content = '\n'.join(new_imports) + '\n\n' + content_without_imports
-        else:
-            new_content = content_without_imports
-        
-        # Clean up extra newlines
-        new_content = re.sub(r'\n\s*\n\s*\n+', '\n\n', new_content)
-        
+        # Write the updated content
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(new_content)
+            f.write(content)
         
         print(f"Fixed unused imports in: {file_path}")
         return True
+        
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    # Find all .tsx files in the app directory
-    app_files = glob.glob('/workspace/app/**/*.tsx', recursive=True)
+    # Find all TypeScript and JavaScript files
+    patterns = ['**/*.tsx', '**/*.ts', '**/*.js', '**/*.jsx']
     
     fixed_count = 0
-    for file_path in app_files:
-        if remove_unused_imports(file_path):
-            fixed_count += 1
+    for pattern in patterns:
+        for file_path in glob.glob(pattern, recursive=True):
+            # Skip node_modules and other directories
+            if 'node_modules' in file_path or 'dist' in file_path or 'build' in file_path:
+                continue
+                
+            if fix_unused_imports(file_path):
+                fixed_count += 1
     
     print(f"Fixed unused imports in {fixed_count} files")
 
