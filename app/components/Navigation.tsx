@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import { Bars3Icon, HomeIcon, InformationCircleIcon, PhoneIcon, DocumentTextIcon, AcademicCapIcon, QuestionMarkCircleIcon, ShieldCheckIcon, CurrencyDollarIcon, CogIcon, ChevronDownIcon, GlobeAltIcon, CloudIcon, CpuChipIcon, SignalIcon, UserGroupIcon, EnvelopeIcon, ShareIcon, ChatBubbleLeftRightIcon, ChartBarIcon, EyeIcon, CircleStackIcon, CodeBracketIcon, DevicePhoneMobileIcon, UserPlusIcon, XMarkIcon, SparklesIcon, RocketLaunchIcon, MicrophoneIcon, ClockIcon, VideoCameraIcon, ScaleIcon, HeartIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, HomeIcon, InformationCircleIcon, PhoneIcon, DocumentTextIcon, AcademicCapIcon, QuestionMarkCircleIcon, ShieldCheckIcon, CurrencyDollarIcon, CogIcon, ChevronDownIcon, GlobeAltIcon, CloudIcon, CpuChipIcon, SignalIcon, UserGroupIcon, EnvelopeIcon, ShareIcon, ChatBubbleLeftRightIcon, ChartBarIcon, EyeIcon, CircleStackIcon, CodeBracketIcon, DevicePhoneMobileIcon, UserPlusIcon, XMarkIcon, SparklesIcon, RocketLaunchIcon, MicrophoneIcon, ClockIcon, VideoCameraIcon, ScaleIcon, HeartIcon, CubeIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
@@ -19,6 +19,7 @@ const Navigation: React.FC<NavigationProps> = () => {
       href: '/ai-services',
       icon: CpuChipIcon,
       submenu: [
+        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon, badge: 'Overview' },
         { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: ChatBubbleLeftRightIcon, badge: 'Popular' },
         { name: 'AI Document Processor', href: '/ai-document-processor', icon: DocumentTextIcon, badge: 'New' },
         { name: 'AI Form Builder', href: '/ai-form-builder', icon: DocumentTextIcon },
@@ -38,7 +39,28 @@ const Navigation: React.FC<NavigationProps> = () => {
         { name: 'AI Translation Service', href: '/ai-translator', icon: GlobeAltIcon },
         { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ScaleIcon },
         { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: HeartIcon },
-        { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: AcademicCapIcon }
+        { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: AcademicCapIcon },
+        { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: HomeIcon },
+        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: CogIcon },
+        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: CubeIcon },
+        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: MicrophoneIcon }
+      ]
+    },
+    {
+      name: 'Micro SaaS',
+      href: '/micro-saas-solutions',
+      icon: CloudIcon,
+      submenu: [
+        { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: CloudIcon, badge: 'Overview' },
+        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon, badge: 'Popular' },
+        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon },
+        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
+        { name: 'AI Content Generator', href: '/ai-content-generator', icon: DocumentTextIcon },
+        { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
+        { name: 'AI Video Generator', href: '/ai-video-generator', icon: VideoCameraIcon },
+        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: MicrophoneIcon },
+        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
+        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: UserGroupIcon }
       ]
     },
     {
@@ -46,22 +68,40 @@ const Navigation: React.FC<NavigationProps> = () => {
       href: '/it-services',
       icon: CodeBracketIcon,
       submenu: [
+        { name: 'IT Services Overview', href: '/it-services', icon: CodeBracketIcon, badge: 'Overview' },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon, badge: 'Popular' },
-        { name: 'API Development', href: '/api-development', icon: CodeBracketIcon },
-        { name: 'DevOps Automation', href: '/devops-automation', icon: CogIcon },
-        { name: 'Data Engineering', href: '/data-engineering', icon: ChartBarIcon },
         { name: 'Web Development', href: '/web-development', icon: GlobeAltIcon },
         { name: 'Mobile Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
+        { name: 'API Development', href: '/api-development', icon: CodeBracketIcon },
         { name: 'Database Management', href: '/database-management', icon: CircleStackIcon },
         { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },
+        { name: 'DevOps Automation', href: '/devops-automation', icon: CogIcon },
+        { name: 'Data Engineering', href: '/data-engineering', icon: ChartBarIcon },
         { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon },
         { name: 'Digital Transformation', href: '/digital-transformation', icon: RocketLaunchIcon }
       ]
     },
     {
+      name: 'Zion AI Services',
+      href: '/zion-ai-services',
+      icon: SparklesIcon,
+      submenu: [
+        { name: 'Zion AI Chatbot Builder', href: '/zion-ai-chatbot-builder', icon: ChatBubbleLeftRightIcon, badge: 'Pro' },
+        { name: 'Zion AI Code Assistant', href: '/zion-ai-code-assistant', icon: CodeBracketIcon },
+        { name: 'Zion AI Content Moderator', href: '/zion-ai-content-moderator', icon: ShieldCheckIcon },
+        { name: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro', icon: UserGroupIcon, badge: 'Pro' },
+        { name: 'Zion AI Workflow Automator Pro', href: '/zion-ai-workflow-automator-pro', icon: CogIcon, badge: 'Pro' },
+        { name: 'Zion AI Email Marketing Pro', href: '/zion-ai-email-marketing-pro', icon: EnvelopeIcon, badge: 'Pro' },
+        { name: 'Zion AI Financial Forecaster', href: '/zion-ai-financial-forecaster', icon: CurrencyDollarIcon },
+        { name: 'Zion AI Sales Predictor', href: '/zion-ai-sales-predictor', icon: ChartBarIcon },
+        { name: 'Zion AI Translation Service', href: '/zion-ai-translation-service', icon: GlobeAltIcon },
+        { name: 'Zion AI Voice Synthesis', href: '/zion-ai-voice-synthesis', icon: MicrophoneIcon }
+      ]
+    },
+    {
       name: 'Advanced Solutions',
       href: '/solutions',
-      icon: SparklesIcon,
+      icon: RocketLaunchIcon,
       submenu: [
         { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: CircleStackIcon, badge: 'Hot' },
         { name: 'IoT Solutions', href: '/iot-solutions', icon: SignalIcon },
@@ -72,7 +112,10 @@ const Navigation: React.FC<NavigationProps> = () => {
         { name: 'Quantum Computing', href: '/quantum-computing-solutions', icon: CpuChipIcon },
         { name: 'Robotic Process Automation', href: '/robotic-process-automation', icon: CogIcon },
         { name: 'Low-Code Platform', href: '/low-code-platform', icon: CodeBracketIcon },
-        { name: 'Serverless Architecture', href: '/serverless-architecture', icon: CloudIcon }
+        { name: 'Serverless Architecture', href: '/serverless-architecture', icon: CloudIcon },
+        { name: 'Container Orchestration', href: '/container-orchestration', icon: CogIcon },
+        { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: CpuChipIcon },
+        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: CircleStackIcon }
       ]
     },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },

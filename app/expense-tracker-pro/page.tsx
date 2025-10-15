@@ -4,10 +4,7 @@ import {
   ChartBarIcon, 
   CheckCircleIcon,
   StarIcon,
-<<<<<<< HEAD
-=======
   ShieldCheckIcon,
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-c0a0
   SparklesIcon,
   CpuChipIcon,
   ReceiptRefundIcon,
