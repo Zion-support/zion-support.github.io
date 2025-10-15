@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
     <nav className="bg-white shadow-lg">
@@ -130,21 +131,6 @@ const Navigation: React.FC = () => {
             <Link to="/about" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
               About
             </Link>
-<<<<<<< HEAD
-            <div className="px-3 py-2">
-              <div className="text-gray-700 text-base font-medium mb-2">Services</div>
-              <div className="ml-4 space-y-1">
-                <Link to="/services" className="text-gray-600 hover:text-blue-600 block px-3 py-1 rounded-md text-sm">All Services</Link>
-                <Link to="/ai-services" className="text-gray-600 hover:text-blue-600 block px-3 py-1 rounded-md text-sm">AI Services</Link>
-                <Link to="/it-services" className="text-gray-600 hover:text-blue-600 block px-3 py-1 rounded-md text-sm">IT Services</Link>
-                <Link to="/cloud-infrastructure" className="text-gray-600 hover:text-blue-600 block px-3 py-1 rounded-md text-sm">Cloud Infrastructure</Link>
-                <Link to="/digital-transformation" className="text-gray-600 hover:text-blue-600 block px-3 py-1 rounded-md text-sm">Digital Transformation</Link>
-                <Link to="/data-analytics" className="text-gray-600 hover:text-blue-600 block px-3 py-1 rounded-md text-sm">Data Analytics</Link>
-                <Link to="/web-development" className="text-gray-600 hover:text-blue-600 block px-3 py-1 rounded-md text-sm">Web Development</Link>
-                <Link to="/mobile-development" className="text-gray-600 hover:text-blue-600 block px-3 py-1 rounded-md text-sm">Mobile Development</Link>
-                <Link to="/5g-solutions" className="text-gray-600 hover:text-blue-600 block px-3 py-1 rounded-md text-sm">5G Solutions</Link>
-              </div>
-=======
             <div className="space-y-1">
               <div className="text-gray-700 px-3 py-2 text-base font-medium">Core Services</div>
               <Link to="/services" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
@@ -178,7 +164,6 @@ const Navigation: React.FC = () => {
               <Link to="/zion-ai-email-marketing-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 AI Email Marketing Pro
               </Link>
->>>>>>> 748b6713b45d0a679f6f194e7bb97b394e7c38be
             </div>
             <div className="px-3 py-2">
               <div className="text-gray-700 text-base font-medium mb-2">AI Tools</div>
