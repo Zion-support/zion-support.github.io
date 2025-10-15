@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Bug, CheckCircle, Cloud, Code, Cpu, Database, FileText, GitBranch, Globe, Star, Terminal } from 'lucide-react';
 
-const AiCodeAssistantProPage = () => { const [isVisible, setIsVisible] = useState(false);
-
+const AiCodeAssistantProPage = () => {
   useEffect(() => {
-    setIsVisible(true); }, []);
+    // Animation logic can be added here if needed
+  }, []);
 
   const features = [
     { icon: <Code className="w-6 h-6" />,

@@ -1,11 +1,117 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, Award, Award as AwardIcon, AwardIcon, Book, BookOpen, Brain, Briefcase, CheckCircle, Download, Download as DownloadIcon, DownloadIcon, GraduationCap, Mail, Monitor, Phone, Play, Shield, Star, Target, Target as TargetIcon, TargetIcon, Users, Users as UsersIcon, UsersIcon } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { ArrowRight, CheckCircle, Mail, Phone, Play, Star } from 'lucide-react';
 
 const AIEducationSolutionsProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const features = [
+    {
+      icon: <Star className="w-6 h-6" />,
+      title: "AI-Powered Learning",
+      description: "Personalized learning experiences powered by artificial intelligence that adapt to each student's needs.",
+      benefits: ["Adaptive learning paths", "Personalized content", "Real-time feedback", "Progress tracking"]
+    },
+    {
+      icon: <CheckCircle className="w-6 h-6" />,
+      title: "Interactive Assessments",
+      description: "Smart assessment tools that provide instant feedback and identify learning gaps.",
+      benefits: ["Instant feedback", "Gap analysis", "Performance metrics", "Adaptive testing"]
+    }
+  ];
+
+  const subjects = [
+    { name: "Math", icon: "📊", description: "Algebra to Calculus" },
+    { name: "Science", icon: "🔬", description: "Physics & Chemistry" },
+    { name: "Language", icon: "📚", description: "English & Literature" },
+    { name: "History", icon: "🏛️", description: "World & US History" },
+    { name: "Art", icon: "🎨", description: "Creative Arts" },
+    { name: "Music", icon: "🎵", description: "Music Theory" },
+    { name: "Coding", icon: "💻", description: "Programming" },
+    { name: "Sports", icon: "⚽", description: "Physical Education" }
+  ];
+
+  const useCases = [
+    {
+      title: "K-12 Education",
+      description: "Comprehensive AI solutions for primary and secondary education",
+      icon: <Star className="w-8 h-8" />,
+      benefits: ["Curriculum alignment", "Student progress tracking", "Parent engagement", "Teacher tools"]
+    },
+    {
+      title: "Higher Education",
+      description: "Advanced AI tools for universities and colleges",
+      icon: <CheckCircle className="w-8 h-8" />,
+      benefits: ["Research assistance", "Academic writing", "Course management", "Student analytics"]
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$99",
+      period: "month",
+      description: "Perfect for small schools getting started with AI education",
+      features: [
+        "Up to 100 students",
+        "Basic AI tutoring",
+        "Progress tracking",
+        "Email support"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$299",
+      period: "month",
+      description: "Ideal for growing schools with advanced needs",
+      features: [
+        "Up to 500 students",
+        "Advanced AI features",
+        "Custom curriculum",
+        "Priority support"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$599",
+      period: "month",
+      description: "Complete solution for large educational institutions",
+      features: [
+        "Unlimited students",
+        "Custom AI training",
+        "API access",
+        "24/7 support"
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Dr. Sarah Johnson",
+      company: "Lincoln High School",
+      role: "Principal",
+      content: "AI Education Pro has transformed our teaching methods. Student engagement has increased by 60% and test scores are up 35%.",
+      rating: 5
+    },
+    {
+      name: "Prof. Michael Chen",
+      company: "State University",
+      role: "Dean of Education",
+      content: "The AI-powered personalized learning has revolutionized our curriculum. Students are more engaged and learning outcomes have improved significantly.",
+      rating: 5
+    }
+  ];
+
   return (
     <>
-      { /* Animated Background */ }
+      <div className="relative min-h-screen">
+        { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -285,4 +391,4 @@ const AIEducationSolutionsProPage = () => {
     </>
   );
 };
-export default AiEducationSolutionsProPage;
+export default AIEducationSolutionsProPage;
