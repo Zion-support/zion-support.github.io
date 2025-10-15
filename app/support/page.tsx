@@ -6,9 +6,9 @@ const SupportPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
-const resources = [ { title: "Documentation", description: "Comprehensive guides and API references", icon: BookOpen, link: "/docs", }, { title: "Community Forum", description: "Connect with other users and experts", icon: Users, link: "/community", }, { title: "Video Tutorials", description: "Step-by-step video guides", icon: Zap, link: "/tutorials", }, ];
+const resources = [ { title: "Documentation", description: "Comprehensive guides and API references", icon: BookOpen, link: "/docs"}, { title: "Community Forum", description: "Connect with other users and experts", icon: Users, link: "/community"}, { title: "Video Tutorials", description: "Step-by-step video guides", icon: Zap, link: "/tutorials"}];
 
-const faqs: FAQ[] = [ { question: "How do I get started with your AI solutions?", answer: "Contact our team for a free consultation where we'll assess your needs and recommend the best AI solutions for your business. We'll guide you through the entire process from planning to implementation.", category: "general", }, { question: "What support do you provide after implementation?", answer: "We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly. Our support includes monitoring, troubleshooting, and performance optimization.", category: "support", }, { question: "How long does implementation typically take?", answer: "Implementation time varies based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise systems may take 3-6 months. We provide detailed timelines during the planning phase.", category: "implementation", }, { question: "Do you offer training for our team?", answer: "Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions. Training includes hands-on workshops, documentation, and ongoing support.", category: "training", }, { question: "What security measures do you have in place?", answer: "We implement enterprise-grade security including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA.", category: "security", }, { question: "Can you integrate with our existing systems?", answer: "Absolutely. We specialize in seamless integration with existing systems and can work with most platforms, databases, and APIs to ensure smooth data flow and functionality.", category: "integration", }, { question: "What happens if we need to scale up?", answer: "Our solutions are designed to scale with your business. We can easily add more capacity, features, or users as your needs grow, with minimal disruption to your operations.", category: "scaling", }, { question: "Do you provide custom development?", answer: "Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.", category: "development", }, ];
+const faqs: FAQ[] = [ { question: "How do I get started with your AI solutions?", answer: "Contact our team for a free consultation where we'll assess your needs and recommend the best AI solutions for your business. We'll guide you through the entire process from planning to implementation.", category: "general"}, { question: "What support do you provide after implementation?", answer: "We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly. Our support includes monitoring, troubleshooting, and performance optimization.", category: "support"}, { question: "How long does implementation typically take?", answer: "Implementation time varies based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise systems may take 3-6 months. We provide detailed timelines during the planning phase.", category: "implementation"}, { question: "Do you offer training for our team?", answer: "Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions. Training includes hands-on workshops, documentation, and ongoing support.", category: "training"}, { question: "What security measures do you have in place?", answer: "We implement enterprise-grade security including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA.", category: "security"}, { question: "Can you integrate with our existing systems?", answer: "Absolutely. We specialize in seamless integration with existing systems and can work with most platforms, databases, and APIs to ensure smooth data flow and functionality.", category: "integration"}, { question: "What happens if we need to scale up?", answer: "Our solutions are designed to scale with your business. We can easily add more capacity, features, or users as your needs grow, with minimal disruption to your operations.", category: "scaling"}, { question: "Do you provide custom development?", answer: "Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.", category: "development"}];
 
 const supportChannels = [
     { name: "Phone Support",
@@ -16,26 +16,25 @@ const supportChannels = [
       icon: Phone,
       contact: "+1 302 464 0950",
       availability: "24/7 Available",
-      color: "text-blue-400", },
+      color: "text-blue-400"},
     { name: "Email Support",
       description: "Get detailed responses to your questions",
       icon: Mail,
       contact: "kleber@ziontechgroup.com",
       availability: "Response within 2 hours",
-      color: "text-green-400", },
+      color: "text-green-400"},
     { name: "Live Chat",
       description: "Instant help when you need it most",
       icon: MessageCircle,
       contact: "Available on website",
       availability: "Mon-Fri 9AM-6PM EST",
-      color: "text-purple-400", },
+      color: "text-purple-400"},
     { name: "Emergency Support",
       description: "Critical issues resolved quickly",
       icon: Zap,
       contact: "+1 302 464 0950",
       availability: "24/7 Critical Support",
-      color: "text-red-400", },
-  ];
+      color: "text-red-400"}];
 
 const categories = [
     "all",
@@ -46,8 +45,7 @@ const categories = [
     "security",
     "integration",
     "scaling",
-    "development",
-  ];
+    "development"];
 
 const filteredFAQs = faqs.filter((faq) => { const matchesSearch =
       faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -91,7 +89,7 @@ const toggleFAQ = () => {
                 <input
     type="text"
                   placeholder="Search for help..."
-                value={ searchTerm } onChange={ (e) => setSearchTerm(e.target.value) }
+                const value = { searchTerm } onChange={ (e) => setSearchTerm(e.target.value) }
                 className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
@@ -143,9 +141,9 @@ const toggleFAQ = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               { supportChannels.map((channel, index) => (
                 <div
-    key={index } className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center">
+    const key = {index } className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center">
                   <div
-    className={ `w-16 h-16 ${channel.color } bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center`}
+    const className = { `w-16 h-16 ${channel.color } bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center`}
                   >
                     <channel.icon className="w-8 h-8" />
                   </div>
@@ -177,7 +175,7 @@ const toggleFAQ = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               { resources.map((resource, index) => (
                 <div
-    key={index } className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group">
+    const key = {index } className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group">
                   
         <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center mb-4">
                     <resource.icon className="w-6 h-6 text-slate-900" />
@@ -188,7 +186,7 @@ const toggleFAQ = () => {
                   
           <p className="text-gray-300 mb-4">{ resource.description }</p>
                   <a
-    href={ resource.link } className="text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
+    const href = { resource.link } className="text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
                     Access Resource →
                   </a>
                 </div>
@@ -214,8 +212,8 @@ const toggleFAQ = () => {
         <div className="flex flex-wrap justify-center gap-4 mb-8">
                 { categories.map((category) => (
                   <button
-    key={category } onClick={ () => setSelectedCategory(category) }
-                    className={ `px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+    const key = {category } onClick={ () => setSelectedCategory(category) }
+                    const className = { `px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       selectedCategory === category
                         ? "bg-gradient-to-r from-purple-500 to-blue-500 text-white"
                         : "bg-white/10 text-gray-300 hover: bg-white/20" }`}
@@ -231,14 +229,14 @@ const toggleFAQ = () => {
         <div className="space-y-4">
               { filteredFAQs.map((faq, index) => (
                 <div
-    key={index } className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden">
+    const key = {index } className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden">
                   <button
-    onClick={ () => toggleFAQ(index) } className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
+    const onClick = { () => toggleFAQ(index) } className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
                     <h3 className="text-lg font-semibold text-white pr-4">
                       { faq.question }
                     </h3>
                     <div
-    className={ `transform transition-transform ${expandedFAQ === index ? "rotate-180" : "" }`}
+    const className = { `transform transition-transform ${expandedFAQ === index ? "rotate-180" : "" }`}
                     >
                       <HelpCircle className="w-6 h-6 text-purple-400" />
                     </div>

@@ -38,8 +38,7 @@ const AiDatabaseSolutionsPage = () => {
     "Automated Security Monitoring",
     "Real-time Performance Analytics",
     "24/7 AI-Powered Support",
-    "Compliance with Industry Standards"
-  ];
+    "Compliance with Industry Standards"];
   return (
     <>
       <Helmet>

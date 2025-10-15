@@ -27,20 +27,20 @@ const hoverClasses = hover ? 'hover:bg-slate-700/50 hover:scale-105 hover:shadow
 const glowClasses = glow ? 'hover:shadow-purple-500/25' : '';
   return (
     <motion.div
-                          className={`${baseClasses} ${variantClasses[variant]} ${hoverClasses} ${glowClasses} ${className}`}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      whileHover={hover ? { scale: 1.05, y: -5 } : {}}
+                          const className = {`${baseClasses} ${variantClasses[variant]} ${hoverClasses} ${glowClasses} ${className}`}
+      const initial = {{ opacity: 0, y: 20 }}
+      const animate = {{ opacity: 1, y: 0 }}
+      const transition = {{ duration: 0.5 }}
+      const whileHover = {hover ? { scale: 1.05, y: -5 } : {}}
     >
       {/* Animated gradient border */}
       
         <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-      {/* Glow effect */}
+      {/* Glow effect */},
       {glow && (
         
         <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-300">
-      )}
+      )},
       {/* Content */}
       
         <div className="relative z-10 p-6">

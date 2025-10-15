@@ -108,7 +108,7 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 { features.map((feature, index) => (
                   <div
-    key={index } className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 hover:border-red-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 neon-card">
+    const key = {index } className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 hover:border-red-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 neon-card">
                     
         <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       
@@ -155,7 +155,7 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 { threatTypes.map((threat, index) => (
                   <div
-    key={index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 hover:border-red-400/40 transition-all duration-300 hover:transform hover:scale-105">
+    const key = {index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 hover:border-red-400/40 transition-all duration-300 hover:transform hover:scale-105">
                     
         <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
                       
@@ -194,7 +194,7 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
                 { complianceStandards.map((standard, index) => (
                   <div
-    key={index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-red-500/20 rounded-xl p-6 text-center hover:border-red-400/40 transition-all duration-300 hover:transform hover:scale-105">
+    const key = {index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-red-500/20 rounded-xl p-6 text-center hover:border-red-400/40 transition-all duration-300 hover:transform hover:scale-105">
                     
         <div className="text-red-400 font-bold text-lg mb-2">{ standard.name }</div>
                     
@@ -224,7 +224,7 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 { pricingPlans.map((plan, index) => (
                   <div
-    key={index } className={ `relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl ${
+    const key = {index } className={ `relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl ${
                       plan.popular 
                         ? 'border-red-400/40 shadow-red-500/10' 
                         : 'border-red-500/20 hover: border-red-400/40' }`}
@@ -260,7 +260,7 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
                     </div>
                     <a
     href="tel:+13024640950"
-                      className={ `w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+                      const className = { `w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
                         plan.popular
                           ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700'
                           : 'border-2 border-red-400 text-red-400 hover: bg-red-400 hover:text-slate-900' }`}
@@ -292,7 +292,7 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
         <div className="grid md:grid-cols-3 gap-8">
                 { testimonials.map((testimonial, index) => (
                   <div
-    key={index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 hover:border-red-400/40 transition-all duration-300">
+    const key = {index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 hover:border-red-400/40 transition-all duration-300">
                     
         <div className="flex items-center mb-4">
                       { [...Array(testimonial.rating)].map((_, i) => (

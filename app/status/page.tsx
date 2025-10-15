@@ -76,8 +76,7 @@ const incidents = [
         {
           time: '2024-01-20T14:30:00Z',
           message: 'We are investigating reports of slow file upload performance.']
-        }]
-      ]
+        }]]
     },
     {
       id: 2,
@@ -96,8 +95,7 @@ const incidents = [
         {
           time: '2024-01-19T02:00:00Z',
           message: 'Scheduled maintenance started. Database services may be temporarily unavailable.']
-        }]
-      ]
+        }]]
     }
   ];
 
@@ -178,7 +176,7 @@ const refreshStatus = async () => {
                   </span>
                 </div>
                 <button
-    onClick={refreshStatus} disabled={isRefreshing}
+    const onClick = {refreshStatus} disabled={isRefreshing}
                   className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors disabled:opacity-50"
                 >
                   <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />

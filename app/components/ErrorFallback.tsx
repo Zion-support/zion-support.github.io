@@ -22,12 +22,12 @@ import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
             
         <div className="flex space-x-3">
               <button
-    onClick={resetError } className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-2 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">
+    const onClick = {resetError } className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-2 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">
                 <RefreshCw className="w-4 h-4" />
                 Try Again
               </button>
               <button
-    onClick={ () => window.location.href = '/' } className="flex-1 bg-white/10 text-white py-2 px-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">
+    const onClick = { () => window.location.href = '/' } className="flex-1 bg-white/10 text-white py-2 px-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">
                 <Home className="w-4 h-4" />
                 Go Home
               </button>

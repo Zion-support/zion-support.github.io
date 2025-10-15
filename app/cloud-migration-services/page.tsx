@@ -13,8 +13,7 @@ const CloudMigrationServicesPage: React.FC = () => {
     "Performance monitoring and optimization",
     "Disaster recovery and backup solutions",
     "24/7 migration support and monitoring",
-    "Post-migration optimization and training"
-  ];
+    "Post-migration optimization and training"];
 
   const cloudProviders = [
     { name: "AWS", icon: <Cloud className="w-6 h-6" />, color: "text-orange-600" },
@@ -36,9 +35,8 @@ const pricingPlans = [
         "Security assessment",
         "Cost analysis",
         "Migration roadmap",
-        "Risk assessment",]
-        "Timeline estimation"]
-      ],
+        "Risk assessment"]
+        "Timeline estimation"]],
       popular: false
     },
     {
@@ -51,9 +49,8 @@ const pricingPlans = [
         "Zero-downtime migration",
         "Data security assurance",
         "Performance optimization",
-        "24/7 support during migration",]
-        "Post-migration monitoring"]
-      ],
+        "24/7 support during migration"]
+        "Post-migration monitoring"]],
       popular: true
     },
     {
@@ -67,9 +64,8 @@ const pricingPlans = [
         "Custom security solutions",
         "Dedicated migration team",
         "Advanced monitoring",
-        "Training and documentation",]
-        "Ongoing optimization"]
-      ],
+        "Training and documentation"]
+        "Ongoing optimization"]],
       popular: false
     }
   ];

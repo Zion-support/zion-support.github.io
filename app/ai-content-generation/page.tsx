@@ -15,15 +15,13 @@ const AIContentGenerationPage: React.FC = () => {
         'Research integration',
         'Brand voice consistency',
         'Multi-language support',
-        'Content calendar automation',]
-        'Performance analytics']
-      ],
+        'Content calendar automation']
+        'Performance analytics']],
       benefits: [
         'Create 10x more content',
         'Improve SEO rankings by 150%',
-        'Save 40+ hours per week',]
-        'Increase organic traffic by 200%']
-      ],
+        'Save 40+ hours per week']
+        'Increase organic traffic by 200%']],
       marketPrice: '$500-1000/month',
       technologies: ['OpenAI GPT-4', 'Claude', 'Custom Fine-tuned Models', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
@@ -38,15 +36,13 @@ const AIContentGenerationPage: React.FC = () => {
         'Hashtag research automation',
         'Engagement prediction',
         'Visual content generation',
-        'Posting schedule optimization',]
-        'Viral content analysis']
-      ],
+        'Posting schedule optimization']
+        'Viral content analysis']],
       benefits: [
         'Increase engagement by 300%',
         'Grow followers organically',
-        'Save 25+ hours per week',]
-        'Improve brand awareness']
-      ],
+        'Save 25+ hours per week']
+        'Improve brand awareness']],
       marketPrice: '$300-600/month',
       technologies: ['OpenAI GPT-4', 'DALL-E', 'Instagram API', 'Twitter API', 'LinkedIn API'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
@@ -61,15 +57,13 @@ const AIContentGenerationPage: React.FC = () => {
         'A/B testing automation',
         'Send time optimization',
         'Subject line generation',
-        'Email sequence creation',]
-        'Performance tracking']
-      ],
+        'Email sequence creation']
+        'Performance tracking']],
       benefits: [
         'Increase open rates by 250%',
         'Boost click-through rates by 180%',
-        'Save 30+ hours per week',]
-        'Improve customer engagement']
-      ],
+        'Save 30+ hours per week']
+        'Improve customer engagement']],
       marketPrice: '$200-500/month',
       technologies: ['OpenAI GPT-4', 'Mailchimp API', 'SendGrid API', 'Custom ML Models'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
@@ -84,15 +78,13 @@ const AIContentGenerationPage: React.FC = () => {
         'Visual cue suggestions',
         'Timing optimization',
         'Multiple video formats',
-        'Hook and CTA optimization',]
-        'Trend analysis integration']
-      ],
+        'Hook and CTA optimization']
+        'Trend analysis integration']],
       benefits: [
         'Create engaging video content',
         'Reduce production time by 60%',
-        'Improve viewer retention',]
-        'Increase conversion rates']
-      ],
+        'Improve viewer retention']
+        'Increase conversion rates']],
       marketPrice: '$150-400/month',
       technologies: ['OpenAI GPT-4', 'Video Analysis AI', 'Trend Detection APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
@@ -107,8 +99,7 @@ const contentTypes = [
     "Technical documentation",
     "Press releases and announcements",
     "Website copy and landing pages",
-    "Ad copy and marketing materials"
-  ];
+    "Ad copy and marketing materials"];
   return (
     <>
       <Helmet>

@@ -25,8 +25,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = 'summary_large_image',
   structuredData,
   noIndex = false,
-  noFollow = false,
-}) => {
+  noFollow = false}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   
   return (
@@ -73,14 +72,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="phone" content="+1-302-464-0950" />
       <meta name="address" content="364 E Main St STE 1008, Middletown, DE 19709" />
       
-      {/* Structured Data */}
+      {/* Structured Data */},
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}
-      
-      {/* Default Structured Data for Organization */}
+      ,
+      {/* Default Structured Data for Organization */},
       {!structuredData && (
         <script type="application/ld+json">
           {JSON.stringify({
@@ -106,8 +105,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
             },
             "sameAs": [
               "https: //twitter.com/ziontechgroup",
-              "https://linkedin.com/company/ziontechgroup"
-            ],
+              "https://linkedin.com/company/ziontechgroup"],
             "foundingDate": "2020",
             "numberOfEmployees": "10-50",
             "industry": "Technology",
@@ -118,8 +116,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
               "Cloud Infrastructure",
               "Digital Transformation",
               "Micro SAAS",
-              "5G Solutions"
-            ]
+              "5G Solutions"]
           })}
         </script>
       )}

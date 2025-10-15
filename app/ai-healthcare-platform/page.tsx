@@ -86,9 +86,8 @@ const pricingPlans = [
         "EHR system",
         "Telemedicine",
         "Email support",
-        "Basic analytics",]
-        "HIPAA compliance"]
-      ],
+        "Basic analytics"]
+        "HIPAA compliance"]],
       popular: false },
     { name: "Hospital",
       price: "$899",
@@ -101,9 +100,8 @@ const pricingPlans = [
         "Advanced telemedicine",
         "Priority support",
         "Advanced analytics",
-        "Custom integrations",]
-        "Multi-location support"]
-      ],
+        "Custom integrations"]
+        "Multi-location support"]],
       popular: true },
     { name: "Enterprise",
       price: "$1,999",
@@ -116,9 +114,8 @@ const pricingPlans = [
         "Enterprise telemedicine",
         "24/7 dedicated support",
         "Custom development",
-        "On-premise deployment",]
-        "White-label options"]
-      ],
+        "On-premise deployment"]
+        "White-label options"]],
       popular: false }
   ];
 

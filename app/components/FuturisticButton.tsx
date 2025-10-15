@@ -54,7 +54,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       
       {/* Content */}
       <span className="relative z-10 flex items-center justify-center gap-2">
-        {icon && <span className="flex-shrink-0">{icon}</span>}
+        {icon && <span className="flex-shrink-0">{icon}</span>},
         {children}
       </span>
       
@@ -75,13 +75,13 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
 
   return (
     <motion.button
-                          type={type} onClick={onClick}
-      disabled={disabled} className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${disabledClasses} ${className} group`}
-      whileHover={!disabled ? { scale: 1.05 } : {}}
-      whileTap={!disabled ? { scale: 0.95 } : {}}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
+                          const type = {type} onClick={onClick}
+      const disabled = {disabled} className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${disabledClasses} ${className} group`}
+      const whileHover = {!disabled ? { scale: 1.05 } : {}}
+      const whileTap = {!disabled ? { scale: 0.95 } : {}}
+      const initial = {{ opacity: 0, y: 20 }}
+      const animate = {{ opacity: 1, y: 0 }}
+      const transition = {{ duration: 0.3 }}
     >
       {buttonContent}
     </motion.button>

@@ -40,6 +40,11 @@ export default [
         // Node.js globals
         process: 'readonly',
         NodeJS: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
         // Test globals
         describe: 'readonly',
         it: 'readonly',

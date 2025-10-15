@@ -174,7 +174,7 @@ const stats = [
         <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
                 <button
-    key={category} className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+    const key = {category} className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
                     category === 'All'
                       ? 'bg-cyan-500 text-white'
                       : 'bg-slate-800/50 text-gray-300 hover: bg-cyan-500/20 hover:text-cyan-400'
@@ -194,12 +194,12 @@ const stats = [
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project) => (
                 <div
-    key={project.id} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 group"
+    const key = {project.id} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 group"
                 >
                   
         <div className="relative overflow-hidden">
                     <img
-    src={project.image} alt={project.title}
+    const src = {project.image} alt={project.title}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     
@@ -230,7 +230,7 @@ const stats = [
         <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, index) => (
                         <span
-    key={index} className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded"
+    const key = {index} className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded"
                         >
                           {tech}
                         </span>
@@ -252,13 +252,13 @@ const stats = [
                     
         <div className="flex space-x-2">
                       <Link
-    to={project.link} className="flex-1 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
+    const to = {project.link} className="flex-1 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                       >
                         <span>View Project</span>
                         <ExternalLink className="w-4 h-4" />
                       </Link>
                       <Link
-    to={project.github} className="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors flex items-center justify-center"
+    const to = {project.github} className="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors flex items-center justify-center"
                       >
                         <Github className="w-4 h-4" />
                       </Link>

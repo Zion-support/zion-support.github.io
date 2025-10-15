@@ -13,8 +13,7 @@ const AiEmailMarketingPage: React.FC = () => {
     "Email template library with AI suggestions",
     "Spam score optimization",
     "Multi-channel campaign coordination",
-    "ROI tracking and attribution modeling"
-  ];
+    "ROI tracking and attribution modeling"];
 
 const integrations = [
     { name: "Shopify", icon: <Target className="w-6 h-6" />, color: "text-green-600" },
@@ -36,9 +35,8 @@ const pricingPlans = [
         "Basic AI features",
         "Email templates",
         "Basic analytics",
-        "Email support",]
-        "1 user account"]
-      ],
+        "Email support"]
+        "1 user account"]],
       popular: false
     },
     {
@@ -53,9 +51,8 @@ const pricingPlans = [
         "Advanced analytics",
         "Priority support",
         "5 user accounts",
-        "A/B testing",]
-        "Automation workflows"]
-      ],
+        "A/B testing"]
+        "Automation workflows"]],
       popular: true
     },
     {
@@ -71,9 +68,8 @@ const pricingPlans = [
         "24/7 phone support",
         "Unlimited users",
         "Advanced automation",
-        "API access",]
-        "Dedicated account manager"]
-      ],
+        "API access"]
+        "Dedicated account manager"]],
       popular: false
     }
   ];

@@ -359,24 +359,19 @@ const benefits = [
     {
       title: 'Quick Setup',
       description: 'Get started in minutes with our intuitive setup process.',
-      icon: Zap,
-    },
+      icon: Zap},
     {
       title: 'Affordable Pricing',
       description: 'Access powerful tools at fraction of enterprise costs.',
-      icon: Award,
-    },
+      icon: Award},
     {
       title: 'No Long-term Contracts',
       description: 'Cancel anytime with our flexible monthly billing.',
-      icon: Heart,
-    },
+      icon: Heart},
     {
       title: '24/7 Support',
       description: 'Get help when you need it with our dedicated support team.',
-      icon: Globe,
-    },
-  ];
+      icon: Globe}];
   return (
     <>
       <Helmet>
@@ -449,7 +444,7 @@ const benefits = [
         <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
                 <button
-    key={category} className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+    const key = {category} className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
                     category === 'All'
                       ? 'bg-cyan-500 text-white'
                       : 'bg-slate-800/50 text-gray-300 hover: bg-cyan-500/20 hover:text-cyan-400'
@@ -474,7 +469,7 @@ const benefits = [
                 const IconComponent = product.icon;
   return (
                   <div
-    key={product.id} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${
+    const key = {product.id} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${
                       product.popular 
                         ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
                         : 'border-cyan-500/20'
@@ -523,7 +518,7 @@ const benefits = [
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span className="text-sm">{feature}</span>
                         </li>
-                      ))}
+                      ))},
                       {product.features.length > 4 && (
                         <li className="text-sm text-cyan-400">
                           +{product.features.length - 4} more features
@@ -552,14 +547,14 @@ const benefits = [
                     
         <div className="space-y-2">
                       <Link
-    to={`/${product.id}`}
+    const to = {`/${product.id}`}
                         className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105"
                       >
                         <span>Start Free Trial</span>
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                       <a
-    href={product.link} target="_blank"
+    const href = {product.link} target="_blank"
                         rel="noopener noreferrer"
                         className="w-full border border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 font-semibold py-2 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-sm"
                       >

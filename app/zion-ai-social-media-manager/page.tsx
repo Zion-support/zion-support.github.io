@@ -54,9 +54,8 @@ const pricing = [
         "30 Posts per Month",
         "Basic Analytics",
         "Hashtag Research",
-        "Content Calendar",]
-        "Email Support"]
-      ],
+        "Content Calendar"]
+        "Email Support"]],
       popular: false
     },
     {
@@ -71,9 +70,8 @@ const pricing = [
         "AI Content Suggestions",
         "Team Collaboration",
         "Priority Support",
-        "Brand Monitoring",]
-        "Competitor Analysis"]
-      ],
+        "Brand Monitoring"]
+        "Competitor Analysis"]],
       popular: true
     },
     {
@@ -88,9 +86,8 @@ const pricing = [
         "White-label Options",
         "API Access",
         "Dedicated Support",
-        "Advanced Automation",]
-        "Custom Integrations"]
-      ],
+        "Advanced Automation"]
+        "Custom Integrations"]],
       popular: false
     }
   ];
@@ -214,7 +211,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
-    key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+    const key = {index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                 >
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>
                     {feature.icon}
@@ -245,7 +242,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <div
-    key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+    const key = {index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular 
                       ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
                       : 'border-white/20'
@@ -280,7 +277,7 @@ const testimonials = [
                   </ul>
                   <Link
     to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
+                    const className = {`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900'
@@ -312,7 +309,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
-    key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+    const key = {index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
                   
         <div className="flex items-center mb-4">
@@ -325,7 +322,7 @@ const testimonials = [
                   
         <div className="flex items-center">
                     <img
-    src={testimonial.avatar} alt={testimonial.name}
+    const src = {testimonial.avatar} alt={testimonial.name}
                       className="w-12 h-12 rounded-full mr-4"
                     />
                     <div>

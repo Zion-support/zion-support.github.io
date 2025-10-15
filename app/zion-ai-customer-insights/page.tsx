@@ -33,9 +33,8 @@ const ZionAICustomerInsightsPage = () => {
         "Basic sentiment analysis",
         "Standard reports",
         "Email support",
-        "API access",]
-        "Data export"]
-      ],
+        "API access"]
+        "Data export"]],
       popular: false
     },
     {
@@ -50,9 +49,8 @@ const ZionAICustomerInsightsPage = () => {
         "Custom dashboards",
         "Priority support",
         "Advanced API",
-        "Team collaboration",]
-        "White-label options"]
-      ],
+        "Team collaboration"]
+        "White-label options"]],
       popular: true
     },
     {
@@ -69,9 +67,8 @@ const ZionAICustomerInsightsPage = () => {
         "Dedicated account manager",
         "Custom reporting",
         "On-premise deployment",
-        "Advanced security",]
-        "SLA guarantee"]
-      ],
+        "Advanced security"]
+        "SLA guarantee"]],
       popular: false
     }
   ];
@@ -197,7 +194,7 @@ const ZionAICustomerInsightsPage = () => {
     href="/contact"
               variant="primary"
               size="lg"
-              icon={<Brain className="w-5 h-5" />}
+              const icon = {<Brain className="w-5 h-5" />}
             >
               Start Analyzing Customers
             </FuturisticButton>
@@ -205,7 +202,7 @@ const ZionAICustomerInsightsPage = () => {
     href="#demo"
               variant="outline"
               size="lg"
-              icon={<Eye className="w-5 h-5" />}
+              const icon = {<Eye className="w-5 h-5" />}
             >
               View Demo
             </FuturisticButton>
@@ -439,8 +436,8 @@ const ZionAICustomerInsightsPage = () => {
                 </div>
                 <FuturisticButton
     href="/contact"
-                  variant={plan.popular ? "primary" : "outline"} className="w-full"
-                  icon={<ArrowRight className="w-4 h-4" />}
+                  const variant = {plan.popular ? "primary" : "outline"} className="w-full"
+                  const icon = {<ArrowRight className="w-4 h-4" />}
                 >
                   Get Started
                 </FuturisticButton>
@@ -511,7 +508,7 @@ const ZionAICustomerInsightsPage = () => {
     href="/contact"
               variant="primary"
               size="lg"
-              icon={<Brain className="w-5 h-5" />}
+              const icon = {<Brain className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -519,7 +516,7 @@ const ZionAICustomerInsightsPage = () => {
     href="/demo"
               variant="outline"
               size="lg"
-              icon={<Eye className="w-5 h-5" />}
+              const icon = {<Eye className="w-5 h-5" />}
             >
               View Demo
             </FuturisticButton>

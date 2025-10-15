@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
               {services.map((service) => (
                 <li key={service.name}>
                     <Link
-    to={service.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
+    const to = {service.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
                     >
                     <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
               {company.map((item) => (
                 <li key={item.name}>
                     <Link
-    to={item.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
+    const to = {item.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
                     >
                     <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
               {resources.map((resource) => (
                 <li key={resource.name}>
                     <Link
-    to={resource.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
+    const to = {resource.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
                     >
                     <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {resource.name}
@@ -118,15 +118,15 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center">
               <Phone className="h-5 w-5 text-purple-400 mr-3" />
-              <span className="text-gray-300">+1 (555) 123-4567</span>
+              <span className="text-gray-300">+1 302 464 0950</span>
             </div>
             <div className="flex items-center">
               <Mail className="h-5 w-5 text-purple-400 mr-3" />
-              <span className="text-gray-300">info@ziontechgroup.com</span>
+              <span className="text-gray-300">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
               <MapPin className="h-5 w-5 text-purple-400 mr-3" />
-              <span className="text-gray-300">San Francisco, CA</span>
+              <span className="text-gray-300">364 E Main St STE 1008 Middletown DE 19709</span>
             </div>
           </div>
         </div>

@@ -85,13 +85,13 @@ const robotsContent = [
       {/* DNS Prefetch for performance */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-      {/* Structured Data */}
+      {/* Structured Data */},
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
-      )}
-      {/* Default Structured Data for Organization */}
+      )},
+      {/* Default Structured Data for Organization */},
       {!structuredData && (
         <script type="application/ld+json">
           {JSON.stringify({
@@ -114,8 +114,7 @@ const robotsContent = [
             },
             "sameAs": [
               "https: //linkedin.com/company/zion-tech-group",
-              "https://twitter.com/ziontechgroup"
-            ]
+              "https://twitter.com/ziontechgroup"]
           })}
         </script>
       )}

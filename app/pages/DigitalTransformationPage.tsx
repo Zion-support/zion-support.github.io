@@ -48,8 +48,7 @@ const benefits = [
     "Reduced operational costs and manual errors",
     "Better data-driven decision making",
     "Enhanced competitive advantage",
-    "Future-ready business processes"
-  ];
+    "Future-ready business processes"];
   return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">

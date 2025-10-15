@@ -33,9 +33,8 @@ const ZionAIVideoGeneratorPage = () => {
         "HD quality (1080p)",
         "Basic templates",
         "5-minute max duration",
-        "Standard voice synthesis",]
-        "Email support"]
-      ],
+        "Standard voice synthesis"]
+        "Email support"]],
       popular: false
     },
     {
@@ -50,9 +49,8 @@ const ZionAIVideoGeneratorPage = () => {
         "15-minute max duration",
         "Advanced voice synthesis",
         "Custom branding",
-        "Priority support",]
-        "API access"]
-      ],
+        "Priority support"]
+        "API access"]],
       popular: true
     },
     {
@@ -69,9 +67,8 @@ const ZionAIVideoGeneratorPage = () => {
         "White-label solution",
         "24/7 support",
         "Advanced API",
-        "Team collaboration",]
-        "Analytics dashboard"]
-      ],
+        "Team collaboration"]
+        "Analytics dashboard"]],
       popular: false
     }
   ];
@@ -170,7 +167,7 @@ const ZionAIVideoGeneratorPage = () => {
     href="/contact"
               variant="primary"
               size="lg"
-              icon={<Play className="w-5 h-5" />}
+              const icon = {<Play className="w-5 h-5" />}
             >
               Start Creating Videos
             </FuturisticButton>
@@ -178,7 +175,7 @@ const ZionAIVideoGeneratorPage = () => {
     href="#demo"
               variant="outline"
               size="lg"
-              icon={<Video className="w-5 h-5" />}
+              const icon = {<Video className="w-5 h-5" />}
             >
               Watch Demo
             </FuturisticButton>
@@ -365,8 +362,8 @@ const ZionAIVideoGeneratorPage = () => {
                 </div>
                 <FuturisticButton
     href="/contact"
-                  variant={plan.popular ? "primary" : "outline"} className="w-full"
-                  icon={<ArrowRight className="w-4 h-4" />}
+                  const variant = {plan.popular ? "primary" : "outline"} className="w-full"
+                  const icon = {<ArrowRight className="w-4 h-4" />}
                 >
                   Get Started
                 </FuturisticButton>
@@ -437,7 +434,7 @@ const ZionAIVideoGeneratorPage = () => {
     href="/contact"
               variant="primary"
               size="lg"
-              icon={<Play className="w-5 h-5" />}
+              const icon = {<Play className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -445,7 +442,7 @@ const ZionAIVideoGeneratorPage = () => {
     href="/demo"
               variant="outline"
               size="lg"
-              icon={<Video className="w-5 h-5" />}
+              const icon = {<Video className="w-5 h-5" />}
             >
               Watch Demo
             </FuturisticButton>

@@ -71,8 +71,7 @@ const securityMeasures = [
     'Incident response procedures',
     'Data backup and recovery systems',
     'Privacy by design principles',
-    'Regular software updates and patches'
-  ];
+    'Regular software updates and patches'];
   return (
     <>
       <Helmet>

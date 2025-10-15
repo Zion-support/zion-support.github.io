@@ -66,9 +66,8 @@ export default function ZionPerformanceMonitor() {
         "Basic alerts",
         "Email support",
         "1 user account",
-        "Standard dashboards",]
-        "Basic reporting"]
-      ],
+        "Standard dashboards"]
+        "Basic reporting"]],
       popular: false
     },
     {
@@ -83,9 +82,8 @@ export default function ZionPerformanceMonitor() {
         "Up to 10 user accounts",
         "Custom dashboards",
         "Advanced reporting",
-        "AI analytics",]
-        "API access"]
-      ],
+        "AI analytics"]
+        "API access"]],
       popular: true
     },
     {
@@ -100,9 +98,8 @@ export default function ZionPerformanceMonitor() {
         "Unlimited users",
         "White-label dashboards",
         "Custom reporting",
-        "White-label solution",]
-        "SSO integration"]
-      ],
+        "White-label solution"]
+        "SSO integration"]],
       popular: false
     }
   ];
@@ -237,7 +234,7 @@ export default function ZionPerformanceMonitor() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
                   
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -285,7 +282,7 @@ export default function ZionPerformanceMonitor() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
-    key={index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
+    const key = {index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
                     plan.popular 
                       ? 'border-cyan-500/50 bg-gradient-to-br from-cyan-500/10 to-blue-500/10' 
                       : 'border-white/20 hover: border-cyan-500/30'
@@ -321,7 +318,7 @@ export default function ZionPerformanceMonitor() {
                   </ul>
                   <Link
     to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
+                    const className = {`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700 shadow-lg hover:shadow-cyan-500/25'
                         : 'border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900'
@@ -352,7 +349,7 @@ export default function ZionPerformanceMonitor() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
                   
         <div className="flex items-center mb-4">

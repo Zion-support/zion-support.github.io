@@ -66,9 +66,8 @@ export default function ZionSecurityShield() {
         "Basic threat detection",
         "Email support",
         "Standard compliance reports",
-        "1 user account",]
-        "30-day log retention"]
-      ],
+        "1 user account"]
+        "30-day log retention"]],
       popular: false
     },
     {
@@ -83,9 +82,8 @@ export default function ZionSecurityShield() {
         "Custom compliance reports",
         "Up to 5 user accounts",
         "1-year log retention",
-        "API access",]
-        "Automated incident response"]
-      ],
+        "API access"]
+        "Automated incident response"]],
       popular: true
     },
     {
@@ -100,9 +98,8 @@ export default function ZionSecurityShield() {
         "Custom compliance frameworks",
         "Unlimited users",
         "Unlimited log retention",
-        "White-label solution",]
-        "24/7 SOC monitoring"]
-      ],
+        "White-label solution"]
+        "24/7 SOC monitoring"]],
       popular: false
     }
   ];
@@ -160,7 +157,7 @@ export default function ZionSecurityShield() {
         
         <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 animate-pulse"></div>
         
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.3),transparent_50%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,0.3),transparent_50%)]"></div>
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
@@ -237,7 +234,7 @@ export default function ZionSecurityShield() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 relative overflow-hidden"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 relative overflow-hidden"
                 >
                   
         <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -285,7 +282,7 @@ export default function ZionSecurityShield() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
-    key={index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
+    const key = {index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
                     plan.popular 
                       ? 'border-red-500/50 bg-gradient-to-br from-red-500/10 to-orange-500/10' 
                       : 'border-white/20 hover: border-red-500/30'
@@ -321,7 +318,7 @@ export default function ZionSecurityShield() {
                   </ul>
                   <Link
     to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
+                    const className = {`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
                       plan.popular
                         ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700 shadow-lg hover:shadow-red-500/25'
                         : 'border border-red-400 text-red-400 hover: bg-red-400 hover:text-slate-900'
@@ -352,7 +349,7 @@ export default function ZionSecurityShield() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 relative overflow-hidden"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 relative overflow-hidden"
                 >
                   
         <div className="flex items-center mb-4">

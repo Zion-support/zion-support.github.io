@@ -28,15 +28,15 @@ const fullDescription = description || 'Leading provider of AI-powered solutions
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      {canonical && <link rel="canonical" href={canonical} />}
+      {keywords && <meta name="keywords" content={keywords} />},
+      {canonical && <link rel="canonical" href={canonical} />},
       {/* Open Graph Tags */}
       <meta property="og: title" content={fullTitle} />
       <meta property="og: description" content={fullDescription} />
       <meta property="og: image" content={ogImage} />
       <meta property="og: type" content={ogType} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      {canonical && <meta property="og: url" content={canonical} />}
+      {canonical && <meta property="og: url" content={canonical} />},
       {/* Twitter Card Tags */}
       <meta name="twitter: card" content={twitterCard} />
       <meta name="twitter: title" content={fullTitle} />
@@ -47,13 +47,13 @@ const fullDescription = description || 'Leading provider of AI-powered solutions
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      {/* Structured Data */}
+      {/* Structured Data */},
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
-      )}
-      {/* Default Structured Data */}
+      )},
+      {/* Default Structured Data */},
       {!structuredData && (
         <script type="application/ld+json">
           {JSON.stringify({
@@ -79,8 +79,7 @@ const fullDescription = description || 'Leading provider of AI-powered solutions
             },
             "sameAs": [
               "https: //linkedin.com/company/zion-tech-group",
-              "https://twitter.com/ziontechgroup"
-            ],
+              "https://twitter.com/ziontechgroup"],
             "foundingDate": "2020",
             "numberOfEmployees": "10-50",
             "industry": "Technology",
@@ -90,8 +89,7 @@ const fullDescription = description || 'Leading provider of AI-powered solutions
               "Infrastructure",
               "Digital Transformation",
               "Micro SAAS",
-              "5G Solutions"
-            ]
+              "5G Solutions"]
           })}
         </script>
       )}
