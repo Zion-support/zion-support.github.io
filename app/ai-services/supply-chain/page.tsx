@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const SupplyChainPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const SupplyChainPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="supply-chain - Zion Tech Group"
@@ -15,7 +14,8 @@ const SupplyChainPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default SupplyChainPage;

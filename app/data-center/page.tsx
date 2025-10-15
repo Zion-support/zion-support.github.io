@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const DataCenterPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const DataCenterPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="data-center - Zion Tech Group"
@@ -15,7 +14,8 @@ const DataCenterPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default DataCenterPage;

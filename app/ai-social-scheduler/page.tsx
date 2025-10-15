@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiSocialSchedulerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiSocialSchedulerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-social-scheduler - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiSocialSchedulerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiSocialSchedulerPage;

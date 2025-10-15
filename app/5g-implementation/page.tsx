@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const G5gImplementationPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const G5gImplementationPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="5g-implementation - Zion Tech Group"
@@ -15,7 +14,8 @@ const G5gImplementationPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default G5gImplementationPage;

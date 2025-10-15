@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiDataVisualizationPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiDataVisualizationPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-data-visualization - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiDataVisualizationPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiDataVisualizationPage;

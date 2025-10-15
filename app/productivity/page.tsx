@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ProductivityPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ProductivityPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="productivity - Zion Tech Group"
@@ -15,7 +14,8 @@ const ProductivityPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ProductivityPage;

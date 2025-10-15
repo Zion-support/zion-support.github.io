@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const DataEngineeringPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const DataEngineeringPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="data-engineering - Zion Tech Group"
@@ -15,7 +14,8 @@ const DataEngineeringPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default DataEngineeringPage;

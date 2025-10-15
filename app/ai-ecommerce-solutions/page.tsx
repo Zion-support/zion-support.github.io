@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiEcommerceSolutionsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiEcommerceSolutionsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-ecommerce-solutions - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiEcommerceSolutionsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiEcommerceSolutionsPage;

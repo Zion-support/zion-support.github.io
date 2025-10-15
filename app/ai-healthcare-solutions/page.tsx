@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiHealthcareSolutionsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiHealthcareSolutionsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-healthcare-solutions - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiHealthcareSolutionsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiHealthcareSolutionsPage;

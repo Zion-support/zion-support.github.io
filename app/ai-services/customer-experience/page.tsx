@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const CustomerExperiencePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const CustomerExperiencePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="customer-experience - Zion Tech Group"
@@ -15,7 +14,8 @@ const CustomerExperiencePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default CustomerExperiencePage;

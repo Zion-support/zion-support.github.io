@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const G5gMobileApplicationsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const G5gMobileApplicationsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="5g-mobile-applications - Zion Tech Group"
@@ -15,7 +14,8 @@ const G5gMobileApplicationsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default G5gMobileApplicationsPage;

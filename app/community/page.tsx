@@ -1,7 +1,6 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
-const CommunityPage: React.FC = () => {
+import React from 'react',
+      import SEOHead from '../components/SEOHead',
+      const CommunityPage: React.FC = () => {
   return (
     <>
       <SEOHead 
@@ -15,7 +14,8 @@ const CommunityPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default CommunityPage;

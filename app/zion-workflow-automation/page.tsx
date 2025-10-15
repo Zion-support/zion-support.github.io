@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ZionWorkflowAutomationPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ZionWorkflowAutomationPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="zion-workflow-automation - Zion Tech Group"
@@ -15,7 +14,8 @@ const ZionWorkflowAutomationPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionWorkflowAutomationPage;

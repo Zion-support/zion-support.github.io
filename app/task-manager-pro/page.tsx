@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const TaskManagerProPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const TaskManagerProPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="task-manager-pro - Zion Tech Group"
@@ -15,7 +14,8 @@ const TaskManagerProPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default TaskManagerProPage;

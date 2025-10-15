@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ZionAiContentModerationPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ZionAiContentModerationPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="zion-ai-content-moderation - Zion Tech Group"
@@ -15,7 +14,8 @@ const ZionAiContentModerationPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionAiContentModerationPage;

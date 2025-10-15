@@ -1,7 +1,6 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
-const AiSmartSchedulerPage: React.FC = () => {
+import React from 'react',
+      import SEOHead from '../components/SEOHead',
+      const AiSmartSchedulerPage: React.FC = () => {
   return (
     <>
       <SEOHead 
@@ -15,7 +14,8 @@ const AiSmartSchedulerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiSmartSchedulerPage;

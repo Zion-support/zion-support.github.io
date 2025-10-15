@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const G5gNetworkInfrastructurePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const G5gNetworkInfrastructurePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="5g-network-infrastructure - Zion Tech Group"
@@ -15,7 +14,8 @@ const G5gNetworkInfrastructurePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default G5gNetworkInfrastructurePage;

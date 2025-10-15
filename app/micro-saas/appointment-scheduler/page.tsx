@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AppointmentSchedulerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AppointmentSchedulerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="appointment-scheduler - Zion Tech Group"
@@ -15,7 +14,8 @@ const AppointmentSchedulerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AppointmentSchedulerPage;

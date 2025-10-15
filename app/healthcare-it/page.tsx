@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const HealthcareItPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const HealthcareItPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="healthcare-it - Zion Tech Group"
@@ -15,7 +14,8 @@ const HealthcareItPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default HealthcareItPage;

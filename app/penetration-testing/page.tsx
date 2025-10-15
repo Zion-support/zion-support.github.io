@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const PenetrationTestingPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const PenetrationTestingPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="penetration-testing - Zion Tech Group"
@@ -15,7 +14,8 @@ const PenetrationTestingPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default PenetrationTestingPage;

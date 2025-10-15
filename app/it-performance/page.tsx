@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ItPerformancePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ItPerformancePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="it-performance - Zion Tech Group"
@@ -15,7 +14,8 @@ const ItPerformancePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ItPerformancePage;

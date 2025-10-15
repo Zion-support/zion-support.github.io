@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiFinancialCrimeDetectionProPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiFinancialCrimeDetectionProPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-financial-crime-detection-pro - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiFinancialCrimeDetectionProPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiFinancialCrimeDetectionProPage;

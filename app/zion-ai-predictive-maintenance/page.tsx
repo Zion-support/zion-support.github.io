@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ZionAiPredictiveMaintenancePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ZionAiPredictiveMaintenancePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="zion-ai-predictive-maintenance - Zion Tech Group"
@@ -15,7 +14,8 @@ const ZionAiPredictiveMaintenancePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionAiPredictiveMaintenancePage;

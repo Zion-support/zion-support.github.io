@@ -1,12 +1,11 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
+import React from 'react',
+      import { Helmet } from 'react-helmet-async',
+      import { 
   CheckCircle, 
   ArrowRight, 
   TrendingUp
-} from 'lucide-react';
-
-const AIEmailMarketingAutomationPage: React.FC = () => {
+} from 'lucide-react',
+      const AIEmailMarketingAutomationPage: React.FC = () => {
   const features = [
     'AI-powered email content generation',
     'Advanced segmentation & targeting',
@@ -18,18 +17,16 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
     'Integration with 100+ platforms',
     'Compliance & deliverability tools',
     '24/7 customer support'
-  ];
-
-  const benefits = [
+  ],
+      const benefits = [
     'Increase email open rates by 65%',
     'Boost click-through rates by 80%',
     'Reduce campaign setup time by 90%',
     'Improve conversion rates by 45%',
     'Save 20+ hours per week on email marketing',
     'Scale campaigns without additional resources'
-  ];
-
-  const pricingPlans = [
+  ],
+      const pricingPlans = [
     {
       name: 'Starter',
       price: '$49/mo',
@@ -79,9 +76,8 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
-  const useCases = [
+  ],
+      const useCases = [
     {
       title: 'E-commerce',
       description: 'Drive sales with personalized product recommendations and abandoned cart recovery',
@@ -106,9 +102,8 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
       icon: <Heart className="w-6 h-6 text-red-400" />,
       results: '50% reduction in no-shows'
     }
-  ];
-
-  return (
+  ],
+      return (
     <>
       <Helmet>
         <title>AI Email Marketing Automation - Intelligent Email Campaigns | Zion Tech Group</title>
@@ -353,7 +348,8 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AIEmailMarketingAutomationPage;

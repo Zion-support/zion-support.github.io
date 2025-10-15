@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const DatabasePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const DatabasePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="database - Zion Tech Group"
@@ -15,7 +14,8 @@ const DatabasePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default DatabasePage;

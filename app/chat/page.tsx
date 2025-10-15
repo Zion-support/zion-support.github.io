@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ChatPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ChatPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="chat - Zion Tech Group"
@@ -15,7 +14,8 @@ const ChatPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ChatPage;

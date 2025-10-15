@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const NotFoundPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const NotFoundPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="not-found - Zion Tech Group"
@@ -15,7 +14,8 @@ const NotFoundPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default NotFoundPage;

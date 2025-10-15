@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ZionContentStudioPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ZionContentStudioPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="zion-content-studio - Zion Tech Group"
@@ -15,7 +14,8 @@ const ZionContentStudioPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionContentStudioPage;

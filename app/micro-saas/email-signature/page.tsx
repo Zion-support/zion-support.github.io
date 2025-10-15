@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const EmailSignaturePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const EmailSignaturePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="email-signature - Zion Tech Group"
@@ -15,7 +14,8 @@ const EmailSignaturePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default EmailSignaturePage;

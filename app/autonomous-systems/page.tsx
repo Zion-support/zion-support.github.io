@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AutonomousSystemsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AutonomousSystemsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="autonomous-systems - Zion Tech Group"
@@ -15,7 +14,8 @@ const AutonomousSystemsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AutonomousSystemsPage;

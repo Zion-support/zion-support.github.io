@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const TermsOfServicePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const TermsOfServicePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="terms-of-service - Zion Tech Group"
@@ -15,7 +14,8 @@ const TermsOfServicePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default TermsOfServicePage;

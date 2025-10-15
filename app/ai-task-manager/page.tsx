@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiTaskManagerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiTaskManagerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-task-manager - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiTaskManagerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiTaskManagerPage;

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const WebDevelopmentPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const WebDevelopmentPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="web-development - Zion Tech Group"
@@ -15,7 +14,8 @@ const WebDevelopmentPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default WebDevelopmentPage;

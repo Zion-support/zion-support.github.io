@@ -8,25 +8,28 @@ export const focusManagement = {};
     const firstElement = focusableElements[0] as HTMLElement
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
     const handleTabKey = (e: KeyboardEvent) => {};
-}if (e.key === 'Tab') {};
-        if (e.shiftKey) {};
-          if (document.activeElement === firstElement) {};
-            lastElement.focus()
+}if (e.key === 'Tab') {},
+      if (e.shiftKey) {},
+      if (document.activeElement === firstElement) {},
+      lastElement.focus()
             e.preventDefault()
           };
-        } else {};
-          if (document.activeElement === lastElement) {};
-            firstElement.focus()
+        } else {},
+      if (document.activeElement === lastElement) {},
+      firstElement.focus()
             e.preventDefault()
-          };
-        };
-      };
-    };
+          }
+    },
+    {
+      }
+    },
+    {
     element.addEventListener('keydown', handleTabKey)
     return () => {};
 }element.removeEventListener('keydown', handleTabKey)
-    };
-  };
+    }
+    },
+    {
   // Move focus to next focusable element
   focusNext: (currentElement: HTMLElement) => {};
 }const focusableElements = document.querySelectorAll()
@@ -44,8 +47,9 @@ export const focusManagement = {};
     const currentIndex = Array.from(focusableElements).indexOf(currentElement)
     const previousElement = focusableElements[currentIndex - 1] as HTMLElement
     if (previousElement) previousElement.focus()
-  };
-};
+  }
+    },
+    {
 // Screen reader utilities
 export const screenReaderUtils = {};
   // Announce message to screen readers
@@ -69,40 +73,42 @@ export const screenReaderUtils = {};
 export const keyboardNavigation = {};
   // Handle arrow key navigation
   handleArrowKeys: ()
-    event: React.KeyboardEvent;
-    items: HTMLElement[];
-    currentIndex: number;
-    onIndexChange: (index: number) => void
+    event: React.KeyboardEvent,
+      items: HTMLElement[],
+      currentIndex: number,
+      onIndexChange: (index: number) => void
   ) => {};
-}switch (event.key) {};
+}switch (event.key) {},
       case 'ArrowDown':
-      case 'ArrowRight': {};
-        event.preventDefault()
+      case 'ArrowRight': {},
+      event.preventDefault()
         const nextIndex = (currentIndex + 1) % items.length
         onIndexChange(nextIndex)
         items[nextIndex]?.focus()
         break
-      };
+      },
       case 'ArrowUp':
-      case 'ArrowLeft': {};
-        event.preventDefault()
+      case 'ArrowLeft': {},
+      event.preventDefault()
         const prevIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1
         onIndexChange(prevIndex)
         items[prevIndex]?.focus()
         break
-      };
-      case 'Home': {};
-        event.preventDefault()
+      },
+      case 'Home': {},
+      event.preventDefault()
         onIndexChange(0)
         items[0]?.focus()
         break
-      };
-      case 'End': {};
-        event.preventDefault()
+      },
+      case 'End': {},
+      event.preventDefault()
         onIndexChange(items.length - 1)
         items[items.length - 1]?.focus()
         break
-      };
-    };
-  };
-};
+      }
+    },
+    {
+  }
+    },
+    {

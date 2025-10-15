@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiInfrastructureMonitoringPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiInfrastructureMonitoringPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-infrastructure-monitoring - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiInfrastructureMonitoringPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiInfrastructureMonitoringPage;

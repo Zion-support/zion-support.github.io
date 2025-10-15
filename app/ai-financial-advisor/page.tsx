@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiFinancialAdvisorPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiFinancialAdvisorPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-financial-advisor - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiFinancialAdvisorPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiFinancialAdvisorPage;

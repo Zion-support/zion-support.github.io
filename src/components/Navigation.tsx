@@ -5,17 +5,17 @@ export default Navigation
   // Removed unused state variables
   const [isScrolled, setIsScrolled] = useState(false)
  50)
-    };
-    window.addEventListener('scroll', handleScroll)
+    },
+      window.addEventListener('scroll', handleScroll)
  window.removeEventListener('scroll', handleScroll)
   }, [])
     setIsMenuOpen(false)
     setIsServicesOpen(false)
-  };
-    setIsMenuOpen(!isMenuOpen)
+  },
+      setIsMenuOpen(!isMenuOpen)
       closeAllMenus()
-  };
-    setIsServicesOpen(!isServicesOpen)
+  },
+      setIsServicesOpen(!isServicesOpen)
   };
   ]
   ]
@@ -27,17 +27,17 @@ export default Navigation
                 <span>Services</span>
                         Micro SAAS
                             <span>{service.name}</span>
-                        ))};
-                        AI Services
+                        ))},
+      AI Services
                             <span>{service.name}</span>
-                        ))};
-                        IT Services
+                        ))},
+      IT Services
                             <span>{service.name}</span>
                         ))};
                         <span>View All Services</span>
                         <span>Specialized Solutions</span>
-              )};
-              About
+              )},
+      About
               Blog
               Case Studies
               Pricing
@@ -53,10 +53,10 @@ export default Navigation
                         ))};
                       <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
                             {service.name};
-                        ))};
-                      View All Services →
-                )};
-                About
+                        ))},
+      View All Services →
+                )},
+      About
                 Blog
                 Case Studies
                 Pricing

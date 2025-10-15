@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const NewsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const NewsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="news - Zion Tech Group"
@@ -15,7 +14,8 @@ const NewsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default NewsPage;

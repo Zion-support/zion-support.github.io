@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ZionAiSupplyChainOptimizerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ZionAiSupplyChainOptimizerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="zion-ai-supply-chain-optimizer - Zion Tech Group"
@@ -15,7 +14,8 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionAiSupplyChainOptimizerPage;

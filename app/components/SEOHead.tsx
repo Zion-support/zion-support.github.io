@@ -1,23 +1,23 @@
 
-import { Helmet } from 'react-helmet-async';
-
-interface SEOHeadProps {};
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-};
-const SEOHead: React.FC<SEOHeadProps> = ({};
-  title = 'Zion Tech Group - Advanced AI and IT Solutions', description = 'Leading provider of AI-powered micro SAAS solutions, IT services, _and innovative technology solutions.', keywords = 'AI solutions, _micro SAAS, _IT services, _software development, _cloud computing, _cybersecurity, _data analytics', image = 'https://ziontechgroup.com/og-image.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', _publishedTime, _modifiedTime, _section, tags = [], _canonical, _ogTitle, _ogDescription, _ogImage, _ogUrl, twitterCard = 'summary_large_image', twitterSite = '@ziontechgroup', twitterCreator = '@ziontechgroup', _structuredData, noindex = false, nofollow = false
-}) => {};
-  const structuredData = {};
+import { Helmet } from 'react-helmet-async',
+      interface SEOHeadProps {},
+      title?: string,
+      description?: string,
+      keywords?: string,
+      image?: string,
+      url?: string,
+      type?: string,
+      author?: string,
+      publishedTime?: string,
+      modifiedTime?: string,
+      section?: string,
+      tags?: string[]
+    },
+    {
+const SEOHead: React.FC<SEOHeadProps> = ({},
+      title = 'Zion Tech Group - Advanced AI and IT Solutions', description = 'Leading provider of AI-powered micro SAAS solutions, IT services, _and innovative technology solutions.', keywords = 'AI solutions, _micro SAAS, _IT services, _software development, _cloud computing, _cybersecurity, _data analytics', image = 'https://ziontechgroup.com/og-image.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', _publishedTime, _modifiedTime, _section, tags = [], _canonical, _ogTitle, _ogDescription, _ogImage, _ogUrl, twitterCard = 'summary_large_image', twitterSite = '@ziontechgroup', twitterCreator = '@ziontechgroup', _structuredData, noindex = false, nofollow = false
+}) => {},
+      const structuredData = {};
     "@context": "https://schema.org";
     "@type": "Organization";
     "name": "Zion Tech Group";
@@ -38,23 +38,20 @@ const SEOHead: React.FC<SEOHeadProps> = ({};
       "contactType": "customer service";
       "email": "kleber@ziontechgroup.com"
     };
-    "sameAs": [
-      "https://twitter.com/ziontechgroup";
-      "https://linkedin.com/company/ziontechgroup"
+    "sameAs": ["https://twitter.com/ziontechgroup",
+        "https://linkedin.com/company/ziontechgroup"
     ];
     "foundingDate": "2020";
     "numberOfEmployees": "10-50";
     "industry": "Technology";
-    "services": [
-      "AI Solutions";
-      "Cybersecurity";
-      "Cloud Infrastructure";
-      "Digital Transformation";
+    "services": ["AI Solutions",
+        "Cybersecurity",
+        "Cloud Infrastructure",
+        "Digital Transformation";
       "IT Services"
     ]
-  };
-
-  return (<Helmet></Helmet>
+  },
+      return (<Helmet></Helmet>
       {/* Basic Meta Tags */};
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -114,7 +111,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({};
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
     </Helmet>
-  );
-};
+  )
+    },
+    {
 
 export default SEOHead;

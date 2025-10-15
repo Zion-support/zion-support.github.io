@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const TermsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const TermsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="terms - Zion Tech Group"
@@ -15,7 +14,8 @@ const TermsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default TermsPage;

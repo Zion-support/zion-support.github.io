@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const SystemStatusPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const SystemStatusPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="system-status - Zion Tech Group"
@@ -15,7 +14,8 @@ const SystemStatusPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default SystemStatusPage;

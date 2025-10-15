@@ -1,6 +1,6 @@
 
-const CloudSolutionsPage: React.FC = () => {};
-  return (
+const CloudSolutionsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="CloudSolutionsPage - Zion Tech Group"
@@ -13,7 +13,8 @@ const CloudSolutionsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default CloudSolutionsPage;

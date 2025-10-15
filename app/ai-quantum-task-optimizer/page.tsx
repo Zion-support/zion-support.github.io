@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiQuantumTaskOptimizerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiQuantumTaskOptimizerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-quantum-task-optimizer - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiQuantumTaskOptimizerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiQuantumTaskOptimizerPage;

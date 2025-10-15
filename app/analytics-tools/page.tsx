@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AnalyticsToolsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AnalyticsToolsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="analytics-tools - Zion Tech Group"
@@ -15,7 +14,8 @@ const AnalyticsToolsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AnalyticsToolsPage;

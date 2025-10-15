@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const CloudNativeDevelopmentPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const CloudNativeDevelopmentPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="cloud-native-development - Zion Tech Group"
@@ -15,7 +14,8 @@ const CloudNativeDevelopmentPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default CloudNativeDevelopmentPage;

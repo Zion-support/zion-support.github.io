@@ -1,8 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { TrendingUp } from "lucide-react";
-
-const AiSolutionsPage: React.FC = () => {
+import React from 'react',
+      import { Helmet } from 'react-helmet-async',
+      import { TrendingUp } from "lucide-react",
+      const AiSolutionsPage: React.FC = () => {
   const aiServices = [
     {
       id: 'ai-chatbot-enterprise',
@@ -186,9 +185,8 @@ const AiSolutionsPage: React.FC = () => {
     }
   ];
 
-  // const categories = ['All', 'Conversational AI', 'Computer Vision', 'Content Creation', 'Analytics', 'Automation', 'Blockchain'];
-
-  const useCases = [
+  // const categories = ['All', 'Conversational AI', 'Computer Vision', 'Content Creation', 'Analytics', 'Automation', 'Blockchain'],
+      const useCases = [
     {
       title: 'Customer Service',
       description: 'Automate customer support with intelligent chatbots',
@@ -213,9 +211,8 @@ const AiSolutionsPage: React.FC = () => {
       icon: <Settings className="w-6 h-6 text-orange-400" />,
       benefits: ['Efficiency Gains', 'Error Reduction', 'Cost Savings', 'Scalable Growth']
     }
-  ];
-
-  const pricingTiers = [
+  ],
+      const pricingTiers = [
     {
       name: 'Starter',
       price: '$199/mo',
@@ -257,9 +254,8 @@ const AiSolutionsPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
-  return (
+  ],
+      return (
     <>
       <Helmet>
         <title>AI Solutions - Advanced Artificial Intelligence Services | Zion Tech Group</title>
@@ -508,7 +504,8 @@ const AiSolutionsPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AISolutionsPage;

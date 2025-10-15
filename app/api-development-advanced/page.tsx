@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ApiDevelopmentAdvancedPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ApiDevelopmentAdvancedPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="api-development-advanced - Zion Tech Group"
@@ -15,7 +14,8 @@ const ApiDevelopmentAdvancedPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ApiDevelopmentAdvancedPage;

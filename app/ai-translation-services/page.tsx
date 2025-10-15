@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiTranslationServicesPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiTranslationServicesPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-translation-services - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiTranslationServicesPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiTranslationServicesPage;

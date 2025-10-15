@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ManagedItPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ManagedItPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="managed-it - Zion Tech Group"
@@ -15,7 +14,8 @@ const ManagedItPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ManagedItPage;

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ServerManagementPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ServerManagementPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="server-management - Zion Tech Group"
@@ -15,7 +14,8 @@ const ServerManagementPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ServerManagementPage;

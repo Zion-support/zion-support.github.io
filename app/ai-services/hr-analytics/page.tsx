@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const HrAnalyticsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const HrAnalyticsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="hr-analytics - Zion Tech Group"
@@ -15,7 +14,8 @@ const HrAnalyticsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default HrAnalyticsPage;

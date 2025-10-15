@@ -1,76 +1,73 @@
 
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckCircle, AlertTriangle } from 'lucide-react';const PrivacyPage: React.FC = () => {};
-  const lastUpdated = 'January 1, 2024';
-
-  const sections = [
-    {};
-      title: 'Information We Collect';
+import { Helmet } from 'react-helmet-async',
+      import { Link } from 'react-router-dom',
+      import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckCircle, AlertTriangle } from 'lucide-react';const PrivacyPage: React.FC = () => {},
+      const lastUpdated = 'January 1, 2024',
+      const sections = [
+    {},
+      title: 'Information We Collect',
       content: 'We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support. This may include your name, email address, phone number, company information, and any other information you choose to provide.'
     };
-    {};
-      title: 'How We Use Your Information';
+    {},
+      title: 'How We Use Your Information',
       content: 'We use the information we collect to provide, maintain, and improve our services, process transactions, send you technical notices and support messages, respond to your comments and questions, and communicate with you about products, services, and events.'
     };
-    {};
-      title: 'Information Sharing and Disclosure';
+    {},
+      title: 'Information Sharing and Disclosure',
       content: 'We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy. We may share your information with service providers who assist us in operating our website and conducting our business.'
     };
-    {};
-      title: 'Data Security';
+    {},
+      title: 'Data Security',
       content: 'We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure.'
     };
-    {};
-      title: 'Your Rights and Choices';
+    {},
+      title: 'Your Rights and Choices',
       content: 'You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us. To exercise these rights, please contact us using the information provided below.'
     };
-    {};
-      title: 'Cookies and Tracking Technologies';
+    {},
+      title: 'Cookies and Tracking Technologies',
       content: 'We use cookies and similar tracking technologies to collect and use personal information about you. You can control cookies through your browser settings, but disabling cookies may affect the functionality of our services.'
     };
-    {};
-      title: 'Third-Party Services';
+    {},
+      title: 'Third-Party Services',
       content: 'Our services may contain links to third-party websites or services. We are not responsible for the privacy practices of these third parties. We encourage you to read their privacy policies before providing any personal information.'
     };
-    {};
-      title: 'International Data Transfers';
+    {},
+      title: 'International Data Transfers',
       content: 'Your information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and that appropriate safeguards are in place.'
     };
-    {};
+    {},
       title: 'Children\'s Privacy','
       content: 'Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information.'
     };
-    {};
-      title: 'Changes to This Policy';
+    {},
+      title: 'Changes to This Policy',
       content: 'We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date. We encourage you to review this policy periodically.'
     };
-  ];
-
-  const dataTypes = [
-    {};
-      icon: Users;
-      title: 'Personal Information';
+  ],
+      const dataTypes = [
+    {},
+      icon: Users,
+      title: 'Personal Information',
       description: 'Name, email, phone number, and other identifying information'
     };
-    {};
-      icon: Database;
-      title: 'Usage Data';
+    {},
+      icon: Database,
+      title: 'Usage Data',
       description: 'Information about how you use our services and website'
     };
-    {};
-      icon: Eye;
-      title: 'Device Information';
+    {},
+      icon: Eye,
+      title: 'Device Information',
       description: 'IP address, browser type, operating system, and device identifiers'
     };
-    {};
-      icon: Calendar;
-      title: 'Communication Data';
+    {},
+      icon: Calendar,
+      title: 'Communication Data',
       description: 'Records of our communications with you'
     };
-  ];
-
-  const yourRights = [
+  ],
+      const yourRights = [
     'Access your personal information';
     'Correct inaccurate information';
     'Delete your personal information';
@@ -78,9 +75,8 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
     'Data portability';
     'Withdraw consent';
     'Lodge a complaint with a supervisory authority'
-  ];
-
-  return (<>
+  ],
+      return (<>
       <Helmet></Helmet>
         <title>Privacy Policy - Zion Tech Group | Data Protection & Privacy</title>
         <meta name="description" content="Learn how Zion Tech Group protects your privacy and handles your personal data. Our comprehensive privacy policy explains our data practices." />
@@ -275,7 +271,8 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
         </div>
       </section>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default PrivacyPage;

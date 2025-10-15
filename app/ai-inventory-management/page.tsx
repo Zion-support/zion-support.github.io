@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiInventoryManagementPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiInventoryManagementPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-inventory-management - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiInventoryManagementPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiInventoryManagementPage;

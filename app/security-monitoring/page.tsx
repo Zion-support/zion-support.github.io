@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const SecurityMonitoringPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const SecurityMonitoringPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="security-monitoring - Zion Tech Group"
@@ -15,7 +14,8 @@ const SecurityMonitoringPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default SecurityMonitoringPage;

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ZionAiEmailAssistantPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ZionAiEmailAssistantPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="zion-ai-email-assistant - Zion Tech Group"
@@ -15,7 +14,8 @@ const ZionAiEmailAssistantPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionAiEmailAssistantPage;

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const PerformanceOptimizationPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const PerformanceOptimizationPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="performance-optimization - Zion Tech Group"
@@ -15,7 +14,8 @@ const PerformanceOptimizationPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default PerformanceOptimizationPage;

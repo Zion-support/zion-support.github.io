@@ -1,8 +1,7 @@
 
-import { MessageSquare } from "lucide-react";
-
-const ChatPage: React.FC = () => {};
-  return (
+import { MessageSquare } from "lucide-react",
+      const ChatPage: React.FC = () => {},
+      return (
     <>
       <Helmet></Helmet>
         <title>Live Chat - Zion Tech Group | Get Instant Support</title>
@@ -42,7 +41,8 @@ const ChatPage: React.FC = () => {};
         </div>
       </section>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ChatPage;

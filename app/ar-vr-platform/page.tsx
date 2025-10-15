@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ArVrPlatformPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ArVrPlatformPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ar-vr-platform - Zion Tech Group"
@@ -15,7 +14,8 @@ const ArVrPlatformPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ArVrPlatformPage;

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiPasswordManagerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiPasswordManagerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-password-manager - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiPasswordManagerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiPasswordManagerPage;

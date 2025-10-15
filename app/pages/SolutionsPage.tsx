@@ -1,12 +1,12 @@
 
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Target, Rocket, Users, Globe, TrendingUp } from 'lucide-react';const SolutionsPage: React.FC = () => {};
-  const industrySolutions = [
-    {};
-      title: 'Healthcare';
-      description: 'AI-powered healthcare solutions for improved patient care and operational efficiency.';
-      icon: Users;
+import { Helmet } from 'react-helmet-async',
+      import { Link } from 'react-router-dom',
+      import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Target, Rocket, Users, Globe, TrendingUp } from 'lucide-react';const SolutionsPage: React.FC = () => {},
+      const industrySolutions = [
+    {},
+      title: 'Healthcare',
+      description: 'AI-powered healthcare solutions for improved patient care and operational efficiency.',
+      icon: Users,
       features: [
         'AI Medical Diagnosis';
         'Patient Data Analytics';
@@ -14,13 +14,13 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
         'Drug Discovery AI';
         'Medical Imaging Analysis';
         'Health Monitoring Systems'
-      ];
+      ],
       color: 'from-blue-500 to-cyan-600'
     };
-    {};
-      title: 'Finance';
-      description: 'Advanced fintech solutions for secure, efficient financial operations.';
-      icon: TrendingUp;
+    {},
+      title: 'Finance',
+      description: 'Advanced fintech solutions for secure, efficient financial operations.',
+      icon: TrendingUp,
       features: [
         'Fraud Detection AI';
         'Algorithmic Trading';
@@ -28,13 +28,13 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
         'Digital Banking Solutions';
         'Payment Processing';
         'Regulatory Compliance'
-      ];
+      ],
       color: 'from-green-500 to-emerald-600'
     };
-    {};
-      title: 'E-commerce';
-      description: 'Comprehensive e-commerce solutions to boost sales and customer experience.';
-      icon: Globe;
+    {},
+      title: 'E-commerce',
+      description: 'Comprehensive e-commerce solutions to boost sales and customer experience.',
+      icon: Globe,
       features: [
         'AI Product Recommendations';
         'Dynamic Pricing';
@@ -42,13 +42,13 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
         'Customer Analytics';
         'Chatbot Support';
         'Personalized Shopping'
-      ];
+      ],
       color: 'from-purple-500 to-pink-600'
     };
-    {};
-      title: 'Manufacturing';
-      description: 'Smart manufacturing solutions for increased productivity and quality.';
-      icon: Cpu;
+    {},
+      title: 'Manufacturing',
+      description: 'Smart manufacturing solutions for increased productivity and quality.',
+      icon: Cpu,
       features: [
         'Predictive Maintenance';
         'Quality Control AI';
@@ -56,13 +56,13 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
         'IoT Integration';
         'Production Analytics';
         'Automated Workflows'
-      ];
+      ],
       color: 'from-orange-500 to-red-600'
     };
-    {};
-      title: 'Education';
-      description: 'Innovative educational technology solutions for modern learning.';
-      icon: Brain;
+    {},
+      title: 'Education',
+      description: 'Innovative educational technology solutions for modern learning.',
+      icon: Brain,
       features: [
         'Personalized Learning';
         'AI Tutoring Systems';
@@ -70,13 +70,13 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
         'Virtual Classrooms';
         'Assessment Automation';
         'Content Generation'
-      ];
+      ],
       color: 'from-indigo-500 to-purple-600'
     };
-    {};
-      title: 'Real Estate';
-      description: 'Smart real estate solutions for property management and transactions.';
-      icon: Home;
+    {},
+      title: 'Real Estate',
+      description: 'Smart real estate solutions for property management and transactions.',
+      icon: Home,
       features: [
         'Property Valuation AI';
         'Virtual Tours';
@@ -84,16 +84,15 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
         'Tenant Screening';
         'Maintenance Automation';
         'Investment Analytics'
-      ];
+      ],
       color: 'from-yellow-500 to-orange-600'
     };
-  ];
-
-  const technologySolutions = [
-    {};
-      title: 'AI & Machine Learning';
-      description: 'Cutting-edge AI solutions that transform data into actionable insights.';
-      icon: Brain;
+  ],
+      const technologySolutions = [
+    {},
+      title: 'AI & Machine Learning',
+      description: 'Cutting-edge AI solutions that transform data into actionable insights.',
+      icon: Brain,
       solutions: [
         'Natural Language Processing';
         'Computer Vision';
@@ -103,10 +102,10 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
         'Automated Decision Making'
       ]
     };
-    {};
-      title: 'Cloud & Infrastructure';
-      description: 'Scalable cloud solutions that grow with your business.';
-      icon: Cloud;
+    {},
+      title: 'Cloud & Infrastructure',
+      description: 'Scalable cloud solutions that grow with your business.',
+      icon: Cloud,
       solutions: [
         'Cloud Migration';
         'Multi-cloud Strategy';
@@ -116,10 +115,10 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
         'Disaster Recovery'
       ]
     };
-    {};
-      title: 'Data & Analytics';
-      description: 'Transform raw data into strategic business intelligence.';
-      icon: BarChart3;
+    {},
+      title: 'Data & Analytics',
+      description: 'Transform raw data into strategic business intelligence.',
+      icon: BarChart3,
       solutions: [
         'Data Warehousing';
         'Real-time Analytics';
@@ -129,10 +128,10 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
         'Data Governance'
       ]
     };
-    {};
-      title: 'Cybersecurity';
-      description: 'Comprehensive security solutions to protect your digital assets.';
-      icon: Shield;
+    {},
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets.',
+      icon: Shield,
       solutions: [
         'Security Audits';
         'Threat Detection';
@@ -142,75 +141,72 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
         'Incident Response'
       ]
     };
-  ];
-
-  const microSaaSSolutions = [
-    {};
-      title: 'AI Project Manager Pro';
-      description: 'Intelligent project management with AI-powered insights and automation.';
-      features: ['Smart Task Assignment', 'Progress Prediction', 'Resource Optimization', 'Risk Analysis'];
+  ],
+      const microSaaSSolutions = [
+    {},
+      title: 'AI Project Manager Pro',
+      description: 'Intelligent project management with AI-powered insights and automation.',
+      features: ['Smart Task Assignment', 'Progress Prediction', 'Resource Optimization', 'Risk Analysis'],
       path: '/micro-saas/ai-project-manager-pro'
     };
-    {};
-      title: 'AI Content Writer Pro';
-      description: 'Advanced content creation tool with AI-powered writing assistance.';
-      features: ['SEO Optimization', 'Multi-language Support', 'Brand Voice Matching', 'Content Planning'];
+    {},
+      title: 'AI Content Writer Pro',
+      description: 'Advanced content creation tool with AI-powered writing assistance.',
+      features: ['SEO Optimization', 'Multi-language Support', 'Brand Voice Matching', 'Content Planning'],
       path: '/micro-saas/ai-content-writer-pro'
     };
-    {};
-      title: 'AI Analytics Dashboard';
-      description: 'Comprehensive analytics platform with real-time insights and reporting.';
-      features: ['Custom Dashboards', 'Real-time Data', 'Predictive Analytics', 'Automated Reports'];
+    {},
+      title: 'AI Analytics Dashboard',
+      description: 'Comprehensive analytics platform with real-time insights and reporting.',
+      features: ['Custom Dashboards', 'Real-time Data', 'Predictive Analytics', 'Automated Reports'],
       path: '/micro-saas/analytics-dashboard'
     };
-    {};
-      title: 'AI Email Marketing';
-      description: 'Intelligent email marketing platform with personalization and automation.';
-      features: ['Smart Segmentation', 'A/B Testing', 'Send Time Optimization', 'Performance Analytics'];
+    {},
+      title: 'AI Email Marketing',
+      description: 'Intelligent email marketing platform with personalization and automation.',
+      features: ['Smart Segmentation', 'A/B Testing', 'Send Time Optimization', 'Performance Analytics'],
       path: '/micro-saas/ai-email-marketing'
     };
-  ];
-
-  const caseStudies = [
-    {};
-      title: 'Healthcare AI Implementation';
-      client: 'MedTech Solutions';
-      challenge: 'Reduce diagnostic time and improve accuracy';
-      solution: 'AI-powered medical imaging analysis system';
+  ],
+      const caseStudies = [
+    {},
+      title: 'Healthcare AI Implementation',
+      client: 'MedTech Solutions',
+      challenge: 'Reduce diagnostic time and improve accuracy',
+      solution: 'AI-powered medical imaging analysis system',
       results: [
         '40% reduction in diagnostic time';
         '95% accuracy in image analysis';
         '60% improvement in patient satisfaction'
-      ];
+      ],
       industry: 'Healthcare'
     };
-    {};
-      title: 'E-commerce Personalization';
-      client: 'RetailMax';
-      challenge: 'Increase conversion rates and customer engagement';
-      solution: 'AI-driven recommendation engine';
+    {},
+      title: 'E-commerce Personalization',
+      client: 'RetailMax',
+      challenge: 'Increase conversion rates and customer engagement',
+      solution: 'AI-driven recommendation engine',
       results: [
         '35% increase in conversion rates';
         '50% improvement in customer engagement';
         '25% boost in average order value'
-      ];
+      ],
       industry: 'E-commerce'
     };
-    {};
-      title: 'Manufacturing Optimization';
-      client: 'AutoParts Inc';
-      challenge: 'Optimize production efficiency and reduce downtime';
-      solution: 'IoT and AI-powered predictive maintenance';
+    {},
+      title: 'Manufacturing Optimization',
+      client: 'AutoParts Inc',
+      challenge: 'Optimize production efficiency and reduce downtime',
+      solution: 'IoT and AI-powered predictive maintenance',
       results: [
         '30% reduction in downtime';
         '20% increase in production efficiency';
         '15% decrease in maintenance costs'
-      ];
+      ],
       industry: 'Manufacturing'
     };
-  ];
-
-  return (<>
+  ],
+      return (<>
       <Helmet></Helmet>
         <title>Solutions - Zion Tech Group | Industry-Specific AI & IT Solutions</title>
         <meta name="description" content="Discover our comprehensive solutions for healthcare, finance, _e-commerce, _manufacturing, _education, and real estate industries. AI-powered technology solutions." />
@@ -348,9 +344,9 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
             {microSaaSSolutions.map((solution, index) => (<Link
-                key={index};
-                to={solution.path};
-                className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                key={index},
+      to={solution.path},
+      className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
               ></Link
 >
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors"></h3>
@@ -448,7 +444,8 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
         </div>
       </section>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default SolutionsPage;

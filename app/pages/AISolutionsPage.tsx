@@ -1,6 +1,6 @@
 
-const AISolutionsPage: React.FC = () => {};
-  return (
+const AISolutionsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="AISolutionsPage - Zion Tech Group"
@@ -13,7 +13,8 @@ const AISolutionsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AISolutionsPage;

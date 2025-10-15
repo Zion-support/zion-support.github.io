@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiQuantumFinancialOraclePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiQuantumFinancialOraclePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-quantum-financial-oracle - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiQuantumFinancialOraclePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiQuantumFinancialOraclePage;

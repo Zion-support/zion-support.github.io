@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const SystemIntegrationPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const SystemIntegrationPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="system-integration - Zion Tech Group"
@@ -15,7 +14,8 @@ const SystemIntegrationPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default SystemIntegrationPage;

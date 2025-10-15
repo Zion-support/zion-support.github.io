@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const MicroSaaSPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const MicroSaaSPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="MicroSaaSPage - Zion Tech Group"
@@ -15,7 +14,8 @@ const MicroSaaSPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default MicroSaaSPage;

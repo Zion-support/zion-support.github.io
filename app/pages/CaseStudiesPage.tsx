@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const CaseStudiesPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const CaseStudiesPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="CaseStudiesPage - Zion Tech Group"
@@ -15,7 +14,8 @@ const CaseStudiesPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default CaseStudiesPage;

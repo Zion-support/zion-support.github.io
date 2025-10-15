@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiTimeTrackerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiTimeTrackerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-time-tracker - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiTimeTrackerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiTimeTrackerPage;

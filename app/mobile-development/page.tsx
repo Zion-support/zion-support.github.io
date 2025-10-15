@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const MobileDevelopmentPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const MobileDevelopmentPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="mobile-development - Zion Tech Group"
@@ -15,7 +14,8 @@ const MobileDevelopmentPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default MobileDevelopmentPage;

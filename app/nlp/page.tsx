@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const NlpPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const NlpPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="nlp - Zion Tech Group"
@@ -15,7 +14,8 @@ const NlpPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default NlpPage;

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const GdprPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const GdprPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="gdpr - Zion Tech Group"
@@ -15,7 +14,8 @@ const GdprPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default GdprPage;

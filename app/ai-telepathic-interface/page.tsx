@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiTelepathicInterfacePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiTelepathicInterfacePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-telepathic-interface - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiTelepathicInterfacePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiTelepathicInterfacePage;

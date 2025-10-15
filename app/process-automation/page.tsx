@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ProcessAutomationPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ProcessAutomationPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="process-automation - Zion Tech Group"
@@ -15,7 +14,8 @@ const ProcessAutomationPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ProcessAutomationPage;

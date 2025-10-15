@@ -1,62 +1,61 @@
-import React, { useState } from 'react';
-import React, { useState, useEffect } from "react";
-
-interface ContentItem {};
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  category: string;
-  featured?: boolean;
-};
-interface DynamicContentShowcaseProps {};
-  items?: ContentItem[]
+import React, { useState } from 'react',
+      import React, { useState, useEffect } from "react",
+      interface ContentItem {},
+      id: string,
+      title: string,
+      description: string,
+      image: string,
+      category: string,
+      featured?: boolean
+    },
+    {
+interface DynamicContentShowcaseProps {},
+      items?: ContentItem[]
   autoPlay?: boolean
   interval?: number
   className?: string
-};
-const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({};
-  items = [
-    {};
+},
+      const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({},
+      items = [
+    {},
       id: "1", title: "AI-Powered Solutions", _description:
-        "Transform your business with cutting-edge artificial intelligence technology.", _image: "/api/placeholder/400/300", _category: "AI Solutions", _featured: true, _}, _{};
+        "Transform your business with cutting-edge artificial intelligence technology.", _image: "/api/placeholder/400/300", _category: "AI Solutions", _featured: true, _}, _{},
       id: "2", _title: "Cloud Migration", _description:
-        "Seamlessly migrate your infrastructure to the cloud with our expert services.", _image: "/api/placeholder/400/300", _category: "Cloud Services", _}, _{};
+        "Seamlessly migrate your infrastructure to the cloud with our expert services.", _image: "/api/placeholder/400/300", _category: "Cloud Services", _}, _{},
       id: "3", _title: "Data Analytics", _description:
-        "Unlock insights from your data with advanced analytics and visualization.", _image: "/api/placeholder/400/300", _category: "Data Services", _}, _], autoPlay = true, interval = 5000, className = "", _}) => {};
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(autoPlay);
-
-  useEffect(() => {};
-    if (!isPlaying) return;
-
-    const timer = setInterval(() => {};
+        "Unlock insights from your data with advanced analytics and visualization.", _image: "/api/placeholder/400/300", _category: "Data Services", _}, _], autoPlay = true, interval = 5000, className = "", _}) => {},
+      const [currentIndex, setCurrentIndex] = useState(0),
+      const [isPlaying, setIsPlaying] = useState(autoPlay),
+      useEffect(() => {},
+      if (!isPlaying) return,
+      const timer = setInterval(() => {},
       setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-    }, interval);
+    }, interval),
+      return () => clearInterval(timer);
+  }, [isPlaying, interval, items.length]),
+      const goToPrevious = () => {},
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length;
+    )
+    },
+    {
 
-    return () => clearInterval(timer);
-  }, [isPlaying, interval, items.length]);
+  const goToNext = () => {},
+      setCurrentIndex(prevIndex) => (prevIndex + 1) % items.length)
+    },
+    {
 
-  const goToPrevious = () => {};
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length;
-    );
-  };
+  const togglePlayPause = () => {},
+      setIsPlaying(!isPlaying)
+    },
+    {
 
-  const goToNext = () => {};
-    setCurrentIndex(prevIndex) => (prevIndex + 1) % items.length);
-  };
+  const goToSlide = (_index: number) => {},
+      setCurrentIndex(index)
+    },
+    {
 
-  const togglePlayPause = () => {};
-    setIsPlaying(!isPlaying);
-  };
-
-  const goToSlide = (_index: number) => {};
-    setCurrentIndex(index);
-  };
-
-  const currentItem = items[currentIndex];
-
-  return (
+  const currentItem = items[currentIndex],
+      return (
     <div className={`relative ${className}`}></div>
       <div className="relative overflow-hidden rounded-lg bg-gray-900"></div>
         <div className="flex transition-transform duration-500 ease-in-out"></div>
@@ -85,9 +84,9 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({};
               </div>
               <div className="relative"></div>
                 <img
-                  src={currentItem.image};
-                  alt={currentItem.title};
-                  className="w-full h-64 object-cover rounded-lg"
+                  src={currentItem.image},
+      alt={currentItem.title},
+      className="w-full h-64 object-cover rounded-lg"
                 />
                 {currentItem.featured && ()
                   <div className="absolute top-4 right-4 bg-yellow-500 text-yellow-900 px-2 py-1 rounded text-sm font-semibold"></div>
@@ -103,15 +102,15 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({};
       <div className="flex items-center justify-between mt-6"></div>
         <div className="flex space-x-2"></div>
           <button
-            onClick={goToPrevious};
-            className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
+            onClick={goToPrevious},
+      className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
           ></button
 >
             <ChevronLeft className="w-5 h-5" />
           </button>
           <button
-            onClick={togglePlayPause};
-            className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
+            onClick={togglePlayPause},
+      className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
           ></button
 >
             {isPlaying ? ()
@@ -121,8 +120,8 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({};
             )};
           </button>
           <button
-            onClick={goToNext};
-            className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
+            onClick={goToNext},
+      className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
           ></button
 >
             <ChevronRight className="w-5 h-5" />
@@ -131,16 +130,15 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({};
         {/* Dots indicator */};
         <div className="flex space-x-2"></div>
           {items.map(( index) => (<button
-              key={index};
-              onClick={() => goToSlide(index)};
-              className={`w-3 h-3 rounded-full transition-colors ${};
-                index === currentIndex ? "bg-cyan-500" : "bg-gray-600"
-              }`};
-            />
+              key={index},
+      onClick={() => goToSlide(index)},
+      className={`w-3 h-3 rounded-full transition-colors ${},
+      index === currentIndex ? "bg-cyan-500" : "bg-gray-600"
+              }`} />
           ))};
         </div>
       </div>
     </div>
   )
-};
-export default DynamicContentShowcase
+},
+      export default DynamicContentShowcase

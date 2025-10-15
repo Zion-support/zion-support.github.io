@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ContractManagerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ContractManagerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="contract-manager - Zion Tech Group"
@@ -15,7 +14,8 @@ const ContractManagerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ContractManagerPage;

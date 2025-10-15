@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const CloudMigrationAdvancedPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const CloudMigrationAdvancedPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="cloud-migration-advanced - Zion Tech Group"
@@ -15,7 +14,8 @@ const CloudMigrationAdvancedPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default CloudMigrationAdvancedPage;

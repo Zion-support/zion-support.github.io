@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ZionComplianceManagerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ZionComplianceManagerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="zion-compliance-manager - Zion Tech Group"
@@ -15,7 +14,8 @@ const ZionComplianceManagerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionComplianceManagerPage;

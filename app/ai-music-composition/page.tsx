@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiMusicCompositionPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiMusicCompositionPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-music-composition - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiMusicCompositionPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiMusicCompositionPage;

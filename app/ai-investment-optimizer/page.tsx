@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiInvestmentOptimizerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiInvestmentOptimizerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-investment-optimizer - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiInvestmentOptimizerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiInvestmentOptimizerPage;

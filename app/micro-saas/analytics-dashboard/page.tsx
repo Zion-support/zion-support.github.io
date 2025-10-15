@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AnalyticsDashboardPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AnalyticsDashboardPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="analytics-dashboard - Zion Tech Group"
@@ -15,7 +14,8 @@ const AnalyticsDashboardPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AnalyticsDashboardPage;

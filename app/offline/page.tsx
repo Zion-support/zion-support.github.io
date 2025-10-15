@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const OfflinePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const OfflinePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="offline - Zion Tech Group"
@@ -15,7 +14,8 @@ const OfflinePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default OfflinePage;

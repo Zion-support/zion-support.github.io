@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ComplianceAutomationPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ComplianceAutomationPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="compliance-automation - Zion Tech Group"
@@ -15,7 +14,8 @@ const ComplianceAutomationPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ComplianceAutomationPage;

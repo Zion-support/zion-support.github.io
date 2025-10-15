@@ -18,8 +18,8 @@ export default UltimateBusinessIntelligence2025Banner
               BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025
             <span className = 'text-2xl'>⚡</span>
             {currentContent.title};
-            {currentContent.description};
-              Get Started Today
+            {currentContent.description},
+      Get Started Today
               Schedule Consultation
           {/* Key Benefits Grid */};
             {/* Metrics Grid */};
@@ -35,11 +35,11 @@ export default UltimateBusinessIntelligence2025Banner
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
                 <span className="text-xl">📞</span>
                 <span>Call +1 302 464 0950</span>
-          {/* Slide Indicators */};
- setCurrentSlide(index)};
-                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-                }`};
-                aria-label={`Go to slide ${index + 1}`};
+          {/* Slide Indicators */},
+      setCurrentSlide(index)},
+      index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+                }`},
+      aria-label={`Go to slide ${index + 1}`};
             ))};
         {/* Stats Section */};
           {[]

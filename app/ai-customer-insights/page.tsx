@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiCustomerInsightsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiCustomerInsightsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-customer-insights - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiCustomerInsightsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiCustomerInsightsPage;

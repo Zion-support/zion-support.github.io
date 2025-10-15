@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AccessibilityPagePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AccessibilityPagePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="accessibility-page - Zion Tech Group"
@@ -15,7 +14,8 @@ const AccessibilityPagePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AccessibilityPagePage;

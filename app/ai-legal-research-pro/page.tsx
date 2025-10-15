@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiLegalResearchProPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiLegalResearchProPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-legal-research-pro - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiLegalResearchProPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiLegalResearchProPage;

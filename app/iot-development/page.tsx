@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const IotDevelopmentPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const IotDevelopmentPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="iot-development - Zion Tech Group"
@@ -15,7 +14,8 @@ const IotDevelopmentPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default IotDevelopmentPage;

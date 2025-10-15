@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiHealthTrackerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiHealthTrackerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-health-tracker - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiHealthTrackerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiHealthTrackerPage;

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const FiveGSolutionsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const FiveGSolutionsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="FiveGSolutionsPage - Zion Tech Group"
@@ -15,7 +14,8 @@ const FiveGSolutionsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default FiveGSolutionsPage;

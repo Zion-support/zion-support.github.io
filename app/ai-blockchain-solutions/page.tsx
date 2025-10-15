@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiBlockchainSolutionsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiBlockchainSolutionsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-blockchain-solutions - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiBlockchainSolutionsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiBlockchainSolutionsPage;

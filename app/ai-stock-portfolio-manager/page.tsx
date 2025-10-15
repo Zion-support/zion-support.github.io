@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiStockPortfolioManagerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiStockPortfolioManagerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-stock-portfolio-manager - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiStockPortfolioManagerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiStockPortfolioManagerPage;

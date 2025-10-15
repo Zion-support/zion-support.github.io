@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ZionChatAiPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ZionChatAiPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="zion-chat-ai - Zion Tech Group"
@@ -15,7 +14,8 @@ const ZionChatAiPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionChatAiPage;

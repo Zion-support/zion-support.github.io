@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiCybersecurityMonitorProPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiCybersecurityMonitorProPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-cybersecurity-monitor-pro - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiCybersecurityMonitorProPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiCybersecurityMonitorProPage;

@@ -1,73 +1,70 @@
-import React, { useState } from 'react';
-import { Copy, Search, BookOpen, MessageSquare, Play, Download } from "lucide-react";
-
-const APIDocsPage: React.FC = () => {};
-  const [selectedAPI, setSelectedAPI] = useState('ai-chatbot');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const apis = [
-    {};
-      id: 'ai-chatbot';
-      name: 'AI Chatbot API';
-      description: 'Integrate our AI chatbot into your applications';
-      version: 'v2.1';
-      status: 'Active';
-      endpoints: 12;
+import React, { useState } from 'react',
+      import { Copy, Search, BookOpen, MessageSquare, Play, Download } from "lucide-react",
+      const APIDocsPage: React.FC = () => {},
+      const [selectedAPI, setSelectedAPI] = useState('ai-chatbot'),
+      const [searchTerm, setSearchTerm] = useState(''),
+      const apis = [
+    {},
+      id: 'ai-chatbot',
+      name: 'AI Chatbot API',
+      description: 'Integrate our AI chatbot into your applications',
+      version: 'v2.1',
+      status: 'Active',
+      endpoints: 12,
       icon: <MessageSquare className="w-6 h-6 text-cyan-400" />
     };
-    {};
-      id: 'ai-analytics';
-      name: 'AI Analytics API';
-      description: 'Access advanced analytics and insights';
-      version: 'v1.8';
-      status: 'Active';
-      endpoints: 8;
+    {},
+      id: 'ai-analytics',
+      name: 'AI Analytics API',
+      description: 'Access advanced analytics and insights',
+      version: 'v1.8',
+      status: 'Active',
+      endpoints: 8,
       icon: <BarChart3 className="w-6 h-6 text-blue-400" />
     };
-    {};
-      id: 'content-generation';
-      name: 'Content Generation API';
-      description: 'Generate high-quality content with AI';
-      version: 'v3.0';
-      status: 'Active';
-      endpoints: 15;
+    {},
+      id: 'content-generation',
+      name: 'Content Generation API',
+      description: 'Generate high-quality content with AI',
+      version: 'v3.0',
+      status: 'Active',
+      endpoints: 15,
       icon: <FileText className="w-6 h-6 text-purple-400" />
     };
-    {};
-      id: 'computer-vision';
-      name: 'Computer Vision API';
-      description: 'Image and video analysis capabilities';
-      version: 'v2.5';
-      status: 'Active';
-      endpoints: 10;
+    {},
+      id: 'computer-vision',
+      name: 'Computer Vision API',
+      description: 'Image and video analysis capabilities',
+      version: 'v2.5',
+      status: 'Active',
+      endpoints: 10,
       icon: <Globe className="w-6 h-6 text-green-400" />
     };
-    {};
-      id: 'data-processing';
-      name: 'Data Processing API';
-      description: 'Process and transform data at scale';
-      version: 'v1.3';
-      status: 'Active';
-      endpoints: 6;
+    {},
+      id: 'data-processing',
+      name: 'Data Processing API',
+      description: 'Process and transform data at scale',
+      version: 'v1.3',
+      status: 'Active',
+      endpoints: 6,
       icon: <Database className="w-6 h-6 text-orange-400" />
     };
-    {};
-      id: 'mobile-sdk';
-      name: 'Mobile SDK';
-      description: 'Native mobile app integration';
-      version: 'v4.2';
-      status: 'Active';
-      endpoints: 20;
+    {},
+      id: 'mobile-sdk',
+      name: 'Mobile SDK',
+      description: 'Native mobile app integration',
+      version: 'v4.2',
+      status: 'Active',
+      endpoints: 20,
       icon: <Smartphone className="w-6 h-6 text-pink-400" />
     };
-  ];
-
-  const codeExamples = {};
-    'ai-chatbot': {};
-      title: 'Send a Message';
-      description: 'Send a message to the AI chatbot and get a response';
-      method: 'POST';
-      endpoint: '/api/v2/chatbot/message';
+  ],
+      const codeExamples = {};
+    'ai-chatbot': {},
+      title: 'Send a Message',
+      description: 'Send a message to the AI chatbot and get a response',
+      method: 'POST',
+      endpoint: '/api/v2/chatbot/message',
       code: `curl -X POST "https://api.ziontechgroup.com/v2/chatbot/message" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
@@ -80,19 +77,19 @@ const APIDocsPage: React.FC = () => {};
     };
   }'`'
     };
-    'ai-analytics': {};
-      title: 'Get Analytics Data';
-      description: 'Retrieve analytics data for your application';
-      method: 'GET';
-      endpoint: '/api/v1/analytics/data';
+    'ai-analytics': {},
+      title: 'Get Analytics Data',
+      description: 'Retrieve analytics data for your application',
+      method: 'GET',
+      endpoint: '/api/v1/analytics/data',
       code: `curl -X GET "https://api.ziontechgroup.com/v1/analytics/data?start_date=2024-01-01&end_date=2024-01-31" \\
   -H "Authorization: Bearer YOUR_API_KEY"`
     };
-    'content-generation': {};
-      title: 'Generate Content';
-      description: 'Generate high-quality content using AI';
-      method: 'POST';
-      endpoint: '/api/v3/content/generate';
+    'content-generation': {},
+      title: 'Generate Content',
+      description: 'Generate high-quality content using AI',
+      method: 'POST',
+      endpoint: '/api/v3/content/generate',
       code: `curl -X POST "https://api.ziontechgroup.com/v3/content/generate" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
@@ -102,41 +99,39 @@ const APIDocsPage: React.FC = () => {};
     "length": "1000";
     "tone": "professional"
   }'`'
-    };
-  };
+    }
+    },
+    {
 
   const features = [
-    {};
-      icon: <Zap className="w-8 h-8 text-yellow-400" />;
-      title: 'Fast & Reliable';
+    {},
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      title: 'Fast & Reliable',
       description: '99.9% uptime with sub-100ms response times'
     };
-    {};
-      icon: <Shield className="w-8 h-8 text-green-400" />;
-      title: 'Secure';
+    {},
+      icon: <Shield className="w-8 h-8 text-green-400" />,
+      title: 'Secure',
       description: 'Enterprise-grade security with OAuth 2.0'
     };
-    {};
-      icon: <Code className="w-8 h-8 text-blue-400" />;
-      title: 'Easy Integration';
+    {},
+      icon: <Code className="w-8 h-8 text-blue-400" />,
+      title: 'Easy Integration',
       description: 'RESTful APIs with comprehensive documentation'
     };
-    {};
-      icon: <Users className="w-8 h-8 text-purple-400" />;
-      title: 'Developer Support';
+    {},
+      icon: <Users className="w-8 h-8 text-purple-400" />,
+      title: 'Developer Support',
       description: '24/7 support and dedicated developer resources'
     };
-  ];
-
-  const filteredAPIs = apis.filter(api => 
+  ],
+      const filteredAPIs = apis.filter(api => 
     api.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     api.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  const selectedAPIData = apis.find(api => api.id === selectedAPI);
-  const selectedCodeExample = codeExamples[selectedAPI as keyof typeof codeExamples];
-
-  return (
+  ),
+      const selectedAPIData = apis.find(api => api.id === selectedAPI),
+      const selectedCodeExample = codeExamples[selectedAPI as keyof typeof codeExamples],
+      return (
     <>
       <Helmet></Helmet>
         <title>API Documentation - Zion Tech Group | Developer Resources</title>
@@ -233,9 +228,9 @@ const APIDocsPage: React.FC = () => {};
                   <input
                     type="text"
                     placeholder="Search APIs..."
-                    value={searchTerm};
-                    onChange={(e) => setSearchTerm(e.target.value)};
-                    className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    value={searchTerm},
+      onChange={(e) => setSearchTerm(e.target.value)},
+      className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -243,10 +238,10 @@ const APIDocsPage: React.FC = () => {};
               <div className="space-y-2"></div>
                 {filteredAPIs.map((api) => (
                   <button
-                    key={api.id};
-                    onClick={() => setSelectedAPI(api.id)};
-                    className={`w-full p-4 rounded-lg border transition-all duration-300 text-left ${};
-                      selectedAPI === api.id
+                    key={api.id},
+      onClick={() => setSelectedAPI(api.id)},
+      className={`w-full p-4 rounded-lg border transition-all duration-300 text-left ${},
+      selectedAPI === api.id
                         ? 'bg-blue-600 border-blue-500 text-white'
                         : 'bg-slate-700/50 border-slate-600/50 text-gray-300 hover:bg-slate-700/70 hover:border-blue-500/50'
                     }`};
@@ -361,7 +356,8 @@ const APIDocsPage: React.FC = () => {};
         </div>
       </section>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default APIDocsPage;

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const G5gSmartCitySolutionsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const G5gSmartCitySolutionsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="5g-smart-city-solutions - Zion Tech Group"
@@ -15,7 +14,8 @@ const G5gSmartCitySolutionsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default G5gSmartCitySolutionsPage;

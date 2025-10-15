@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const PricingPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const PricingPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="pricing - Zion Tech Group"
@@ -15,7 +14,8 @@ const PricingPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default PricingPage;

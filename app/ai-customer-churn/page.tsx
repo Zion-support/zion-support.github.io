@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiCustomerChurnPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiCustomerChurnPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-customer-churn - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiCustomerChurnPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiCustomerChurnPage;

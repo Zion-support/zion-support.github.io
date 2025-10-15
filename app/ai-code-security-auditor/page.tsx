@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiCodeSecurityAuditorPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiCodeSecurityAuditorPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-code-security-auditor - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiCodeSecurityAuditorPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiCodeSecurityAuditorPage;

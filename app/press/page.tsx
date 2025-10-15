@@ -53,8 +53,8 @@
                     <h3 className="text-xl font-semibold mb-3 text-white">{article.title}</h3>
                     <p className="text-gray-300 mb-4">{article.summary}</p>
                     <Link
-                      to={article.url};
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                      to={article.url},
+      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                     ></Link
 >
                       Read Article
@@ -83,5 +83,6 @@
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {

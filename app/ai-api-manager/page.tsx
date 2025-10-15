@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiApiManagerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiApiManagerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-api-manager - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiApiManagerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiApiManagerPage;

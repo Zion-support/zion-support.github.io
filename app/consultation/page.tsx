@@ -1,32 +1,32 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { DollarSign } from "lucide-react";
-
-export default function Consultation() {};
-  const [formData, setFormData] = useState({};
-    name: '';
-    email: '';
-    company: '';
-    phone: '';
-    service: '';
-    timeline: '';
-    budget: '';
-    message: ''
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
-    const { name, value } = e.target;
-    setFormData(prev => ({};
+import React, { useState } from 'react',
+      import { Helmet } from 'react-helmet-async',
+      import { DollarSign } from "lucide-react",
+      export default function Consultation() {},
+      const [formData, setFormData] = useState({},
+      name: '',
+      email: '',
+      company: '',
+      phone: '',
+      service: '',
+      timeline: '',
+      budget: '',
+      message: ''
+  }),
+      const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {},
+      const { name, value } = e.target,
+      setFormData(prev => ({};
       ...prev;
       [name]: value
-    }));
-  };
+    }))
+    },
+    {
 
-  const handleSubmit = (e: React.FormEvent) => {};
-    e.preventDefault();
+  const handleSubmit = (e: React.FormEvent) => {},
+      e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
-  };
+    console.log('Form submitted:', formData)
+    },
+    {
 
   const services = [
     'AI Solutions';
@@ -35,39 +35,36 @@ export default function Consultation() {};
     'IT Services';
     'Digital Transformation';
     'Custom Development'
-  ];
-
-  const timelines = [
+  ],
+      const timelines = [
     'Immediate (1-3 months)';
     'Short-term (3-6 months)';
     'Medium-term (6-12 months)';
     'Long-term (12+ months)'
-  ];
-
-  const benefits = [
-    {};
-      title: "Free Consultation";
-      description: "No cost initial consultation to understand your needs";
+  ],
+      const benefits = [
+    {},
+      title: "Free Consultation",
+      description: "No cost initial consultation to understand your needs",
       icon: <DollarSign className="w-8 h-8" />
     };
-    {};
-      title: "Expert Team";
-      description: "Certified professionals with years of experience";
+    {},
+      title: "Expert Team",
+      description: "Certified professionals with years of experience",
       icon: <Users className="w-8 h-8" />
     };
-    {};
-      title: "Quick Response";
-      description: "Get back to you within 24 hours";
+    {},
+      title: "Quick Response",
+      description: "Get back to you within 24 hours",
       icon: <Clock className="w-8 h-8" />
     };
-    {};
-      title: "Secure & Confidential";
-      description: "Your information is protected and confidential";
+    {},
+      title: "Secure & Confidential",
+      description: "Your information is protected and confidential",
       icon: <Shield className="w-8 h-8" />
     };
-  ];
-
-  return (
+  ],
+      return (
     <>
       <Helmet></Helmet>
         <title>Free Consultation - Zion Tech Group | Get Expert Advice</title>
@@ -131,9 +128,9 @@ export default function Consultation() {};
                       type="text"
                       id="name"
                       name="name"
-                      value={formData.name};
-                      onChange={handleInputChange};
-                      required
+                      value={formData.name},
+      onChange={handleInputChange},
+      required
                       className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white placeholder-gray-400"
                       placeholder="Your full name"
                     />
@@ -146,9 +143,9 @@ export default function Consultation() {};
                       type="email"
                       id="email"
                       name="email"
-                      value={formData.email};
-                      onChange={handleInputChange};
-                      required
+                      value={formData.email},
+      onChange={handleInputChange},
+      required
                       className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white placeholder-gray-400"
                       placeholder="your.email@company.com"
                     />
@@ -164,9 +161,9 @@ export default function Consultation() {};
                       type="text"
                       id="company"
                       name="company"
-                      value={formData.company};
-                      onChange={handleInputChange};
-                      className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white placeholder-gray-400"
+                      value={formData.company},
+      onChange={handleInputChange},
+      className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white placeholder-gray-400"
                       placeholder="Your company name"
                     />
                   </div>
@@ -178,9 +175,9 @@ export default function Consultation() {};
                       type="tel"
                       id="phone"
                       name="phone"
-                      value={formData.phone};
-                      onChange={handleInputChange};
-                      className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white placeholder-gray-400"
+                      value={formData.phone},
+      onChange={handleInputChange},
+      className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white placeholder-gray-400"
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
@@ -194,9 +191,9 @@ export default function Consultation() {};
                     <select
                       id="service"
                       name="service"
-                      value={formData.service};
-                      onChange={handleInputChange};
-                      required
+                      value={formData.service},
+      onChange={handleInputChange},
+      required
                       className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white"
                     ></select
 >
@@ -215,9 +212,9 @@ export default function Consultation() {};
                     <select
                       id="timeline"
                       name="timeline"
-                      value={formData.timeline};
-                      onChange={handleInputChange};
-                      className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white"
+                      value={formData.timeline},
+      onChange={handleInputChange},
+      className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white"
                     ></select
 >
                       <option value="">Select timeline</option>
@@ -237,9 +234,9 @@ export default function Consultation() {};
                   <select
                     id="budget"
                     name="budget"
-                    value={formData.budget};
-                    onChange={handleInputChange};
-                    className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white"
+                    value={formData.budget},
+      onChange={handleInputChange},
+      className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white"
                   ></select
 >
                     <option value="">Select budget range</option>
@@ -257,11 +254,11 @@ export default function Consultation() {};
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message};
-                    onChange={handleInputChange};
-                    required
-                    rows={4};
-                    className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white placeholder-gray-400"
+                    value={formData.message},
+      onChange={handleInputChange},
+      required
+                    rows={4},
+      className="w-full px-4 py-3 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white placeholder-gray-400"
                     placeholder="Tell us about your project, challenges, and goals..."
                   />
                 </div>
@@ -282,7 +279,8 @@ export default function Consultation() {};
         </section>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ConsultationPage;

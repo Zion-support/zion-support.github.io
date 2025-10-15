@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ItTrainingPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ItTrainingPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="it-training - Zion Tech Group"
@@ -15,7 +14,8 @@ const ItTrainingPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ItTrainingPage;

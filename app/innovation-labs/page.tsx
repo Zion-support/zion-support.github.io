@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const InnovationLabsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const InnovationLabsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="innovation-labs - Zion Tech Group"
@@ -15,7 +14,8 @@ const InnovationLabsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default InnovationLabsPage;

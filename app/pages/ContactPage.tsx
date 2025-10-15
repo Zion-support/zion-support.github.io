@@ -1,83 +1,81 @@
-import React, { useState } from 'react';
-import { Send, MessageSquare, Headphones } from "lucide-react";
-
-const ContactPage: React.FC = () => {};
-  const [formData, setFormData] = useState({};
-    name: '';
-    email: '';
-    company: '';
-    phone: '';
-    service: '';
-    budget: '';
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
-    setFormData({};
+import React, { useState } from 'react',
+      import { Send, MessageSquare, Headphones } from "lucide-react",
+      const ContactPage: React.FC = () => {},
+      const [formData, setFormData] = useState({},
+      name: '',
+      email: '',
+      company: '',
+      phone: '',
+      service: '',
+      budget: '',
+      message: ''
+  }),
+      const [isSubmitting, setIsSubmitting] = useState(false),
+      const [isSubmitted, setIsSubmitted] = useState(false),
+      const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {},
+      setFormData({};
       ...formData;
       [e.target.name]: e.target.value
-    });
-  };
+    })
+    },
+    {
 
-  const handleSubmit = async (e: React.FormEvent) => {};
-    e.preventDefault();
-    setIsSubmitting(true);
+  const handleSubmit = async (e: React.FormEvent) => {},
+      e.preventDefault(),
+      setIsSubmitting(true);
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    await new Promise(resolve => setTimeout(resolve, 2000)),
+      setIsSubmitting(false),
+      setIsSubmitted(true);
     
     // Reset form after 3 seconds
-    setTimeout(() => {};
-      setIsSubmitted(false);
-      setFormData({};
-        name: '';
-        email: '';
-        company: '';
-        phone: '';
-        service: '';
-        budget: '';
-        message: ''
+    setTimeout(() => {},
+      setIsSubmitted(false),
+      setFormData({},
+      name: '',
+      email: '',
+      company: '',
+      phone: '',
+      service: '',
+      budget: '',
+      message: ''
       });
-    }, 3000);
-  };
+    }, 3000)
+    },
+    {
 
   const contactMethods = [
-    {};
-      icon: Phone;
-      title: 'Phone';
-      details: '+1 302 464 0950';
-      description: 'Call us for immediate assistance';
+    {},
+      icon: Phone,
+      title: 'Phone',
+      details: '+1 302 464 0950',
+      description: 'Call us for immediate assistance',
       action: 'tel:+13024640950'
     };
-    {};
-      icon: Mail;
-      title: 'Email';
-      details: 'kleber@ziontechgroup.com';
-      description: 'Send us an email anytime';
+    {},
+      icon: Mail,
+      title: 'Email',
+      details: 'kleber@ziontechgroup.com',
+      description: 'Send us an email anytime',
       action: 'mailto:kleber@ziontechgroup.com'
     };
-    {};
-      icon: MapPin;
-      title: 'Office';
-      details: '364 E Main St STE 1008, Middletown DE 19709';
-      description: 'Visit our headquarters';
+    {},
+      icon: MapPin,
+      title: 'Office',
+      details: '364 E Main St STE 1008, Middletown DE 19709',
+      description: 'Visit our headquarters',
       action: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
     };
-    {};
-      icon: Clock;
-      title: 'Hours';
-      details: 'Mon-Fri: 9AM-6PM EST';
+    {},
+      icon: Clock,
+      title: 'Hours',
+      details: 'Mon-Fri: 9AM-6PM EST',
       description: 'We\'re here to help','
       action: null
     };
-  ];
-
-  const services = [
+  ],
+      const services = [
     'AI Solutions';
     'Micro SAAS Development';
     'IT Services';
@@ -88,18 +86,16 @@ const ContactPage: React.FC = () => {};
     'Data Analytics';
     'Custom Software';
     'Consulting'
-  ];
-
-  const budgetRanges = [
+  ],
+      const budgetRanges = [
     'Under $10K';
     '$10K - $50K';
     '$50K - $100K';
     '$100K - $500K';
     '$500K+';
     'Not sure yet'
-  ];
-
-  return (
+  ],
+      return (
     <>
       <Helmet></Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
@@ -152,8 +148,8 @@ const ContactPage: React.FC = () => {};
                 <p className="text-gray-300 text-sm mb-4">{method.description}</p>
                 {method.action && (
                   <a
-                    href={method.action};
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
+                    href={method.action},
+      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
                   ></a
 >
                     <Zap className="w-4 h-4 mr-1" />
@@ -194,9 +190,9 @@ const ContactPage: React.FC = () => {};
                       type="text"
                       id="name"
                       name="name"
-                      value={formData.name};
-                      onChange={handleChange};
-                      required
+                      value={formData.name},
+      onChange={handleChange},
+      required
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Enter your full name"
                     />
@@ -209,9 +205,9 @@ const ContactPage: React.FC = () => {};
                       type="email"
                       id="email"
                       name="email"
-                      value={formData.email};
-                      onChange={handleChange};
-                      required
+                      value={formData.email},
+      onChange={handleChange},
+      required
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Enter your email address"
                     />
@@ -227,9 +223,9 @@ const ContactPage: React.FC = () => {};
                       type="text"
                       id="company"
                       name="company"
-                      value={formData.company};
-                      onChange={handleChange};
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      value={formData.company},
+      onChange={handleChange},
+      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Enter your company name"
                     />
                   </div>
@@ -241,9 +237,9 @@ const ContactPage: React.FC = () => {};
                       type="tel"
                       id="phone"
                       name="phone"
-                      value={formData.phone};
-                      onChange={handleChange};
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      value={formData.phone},
+      onChange={handleChange},
+      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Enter your phone number"
                     />
                   </div>
@@ -257,9 +253,9 @@ const ContactPage: React.FC = () => {};
                     <select
                       id="service"
                       name="service"
-                      value={formData.service};
-                      onChange={handleChange};
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      value={formData.service},
+      onChange={handleChange},
+      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     ></select
 >
                       <option value="">Select a service</option>
@@ -275,9 +271,9 @@ const ContactPage: React.FC = () => {};
                     <select
                       id="budget"
                       name="budget"
-                      value={formData.budget};
-                      onChange={handleChange};
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      value={formData.budget},
+      onChange={handleChange},
+      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     ></select
 >
                       <option value="">Select budget range</option>
@@ -295,11 +291,11 @@ const ContactPage: React.FC = () => {};
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message};
-                    onChange={handleChange};
-                    required
-                    rows={6};
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
+                    value={formData.message},
+      onChange={handleChange},
+      required
+                    rows={6},
+      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                     placeholder="Tell us about your project, goals, and any specific requirements..."
                   />
                 </div>
@@ -307,8 +303,8 @@ const ContactPage: React.FC = () => {};
                 <div className="text-center"></div>
                   <button
                     type="submit"
-                    disabled={isSubmitting};
-                    className="group bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center mx-auto disabled:transform-none disabled:shadow-none"
+                    disabled={isSubmitting},
+      className="group bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center mx-auto disabled:transform-none disabled:shadow-none"
                   ></button
 >
                     {isSubmitting ? (
@@ -371,7 +367,8 @@ const ContactPage: React.FC = () => {};
         </div>
       </section>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ContactPage;

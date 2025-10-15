@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const BlockchainIntegrationServicesPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const BlockchainIntegrationServicesPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="blockchain-integration-services - Zion Tech Group"
@@ -15,7 +14,8 @@ const BlockchainIntegrationServicesPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default BlockchainIntegrationServicesPage;

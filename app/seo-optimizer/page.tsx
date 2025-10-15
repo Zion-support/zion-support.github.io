@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const SeoOptimizerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const SeoOptimizerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="seo-optimizer - Zion Tech Group"
@@ -15,7 +14,8 @@ const SeoOptimizerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default SeoOptimizerPage;

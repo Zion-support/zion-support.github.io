@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiDataAnalyticsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiDataAnalyticsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-data-analytics - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiDataAnalyticsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiDataAnalyticsPage;

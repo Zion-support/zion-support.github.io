@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiCloudInfrastructurePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiCloudInfrastructurePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-cloud-infrastructure - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiCloudInfrastructurePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiCloudInfrastructurePage;

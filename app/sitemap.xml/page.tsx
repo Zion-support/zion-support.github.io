@@ -1,6 +1,6 @@
 
-const Sitemap.xmlPage: React.FC = () => {};
-  return (
+const Sitemap.xmlPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="sitemap.xml - Zion Tech Group"
@@ -13,7 +13,8 @@ const Sitemap.xmlPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default Sitemap.xmlPage;

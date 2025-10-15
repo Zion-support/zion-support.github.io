@@ -1,106 +1,99 @@
 
-const AiPersonalizedLearningPage: React.FC = () => {};
-  const features = [
-    {};
-      icon: <Brain className="w-6 h-6" />;
-      title: "Adaptive Learning Paths";
+const AiPersonalizedLearningPage: React.FC = () => {},
+      const features = [
+    {},
+      icon: <Brain className="w-6 h-6" />,
+      title: "Adaptive Learning Paths",
       description: "AI creates personalized learning journeys based on individual strengths and weaknesses"
     };
-    {};
-      icon: <BookOpen className="w-6 h-6" />;
-      title: "Multi-Modal Content";
+    {},
+      icon: <BookOpen className="w-6 h-6" />,
+      title: "Multi-Modal Content",
       description: "Interactive videos, simulations, quizzes, and hands-on projects for comprehensive learning"
     };
-    {};
-      icon: <Users className="w-6 h-6" />;
-      title: "Social Learning";
+    {},
+      icon: <Users className="w-6 h-6" />,
+      title: "Social Learning",
       description: "Collaborative features with peer learning, group projects, and expert mentorship"
     };
-    {};
-      icon: <Target className="w-6 h-6" />;
-      title: "Progress Tracking";
+    {},
+      icon: <Target className="w-6 h-6" />,
+      title: "Progress Tracking",
       description: "Real-time analytics and insights to track learning progress and achievements"
     };
-  ];
-
-  const pricingPlans = [
-    {};
-      name: "Individual";
-      price: "$29";
-      period: "/month";
-      description: "Perfect for personal learning and skill development";
-      features: [
-        "Unlimited courses";
-        "Basic AI personalization";
-        "Mobile app access";
-        "Progress tracking";
+  ],
+      const pricingPlans = [
+    {},
+      name: "Individual",
+      price: "$29",
+      period: "/month",
+      description: "Perfect for personal learning and skill development",
+      features: ["Unlimited courses",
+        "Basic AI personalization",
+        "Mobile app access",
+        "Progress tracking",
         "Email support"
-      ];
+      ],
       popular: false
     };
-    {};
-      name: "Professional";
-      price: "$99";
-      period: "/month";
-      description: "Ideal for professionals and small teams";
-      features: [
-        "All Individual features";
-        "Advanced AI personalization";
-        "Certification programs";
-        "Priority support";
-        "Team collaboration tools";
+    {},
+      name: "Professional",
+      price: "$99",
+      period: "/month",
+      description: "Ideal for professionals and small teams",
+      features: ["All Individual features",
+        "Advanced AI personalization",
+        "Certification programs",
+        "Priority support",
+        "Team collaboration tools",
         "Analytics dashboard"
-      ];
+      ],
       popular: true
     };
-    {};
-      name: "Enterprise";
-      price: "$299";
-      period: "/month";
-      description: "For organizations and educational institutions";
-      features: [
-        "All Professional features";
-        "Custom learning paths";
-        "White-label platform";
-        "24/7 dedicated support";
-        "Custom integrations";
-        "Advanced analytics";
+    {},
+      name: "Enterprise",
+      price: "$299",
+      period: "/month",
+      description: "For organizations and educational institutions",
+      features: ["All Professional features",
+        "Custom learning paths",
+        "White-label platform",
+        "24/7 dedicated support",
+        "Custom integrations",
+        "Advanced analytics",
         "Admin dashboard"
-      ];
+      ],
       popular: false
     };
-  ];
-
-  const useCases = [
-    {};
-      title: "Corporate Training";
-      description: "Upskill employees with personalized training programs and skill assessments";
+  ],
+      const useCases = [
+    {},
+      title: "Corporate Training",
+      description: "Upskill employees with personalized training programs and skill assessments",
       icon: <Users className="w-8 h-8" />
     };
-    {};
-      title: "Educational Institutions";
-      description: "Enhance student learning with adaptive curriculum and personalized instruction";
+    {},
+      title: "Educational Institutions",
+      description: "Enhance student learning with adaptive curriculum and personalized instruction",
       icon: <BookOpen className="w-8 h-8" />
     };
-    {};
-      title: "Professional Development";
-      description: "Career advancement through targeted skill development and certification programs";
+    {},
+      title: "Professional Development",
+      description: "Career advancement through targeted skill development and certification programs",
       icon: <Award className="w-8 h-8" />
     };
-    {};
-      title: "Language Learning";
-      description: "Master new languages with AI-powered pronunciation and conversation practice";
+    {},
+      title: "Language Learning",
+      description: "Master new languages with AI-powered pronunciation and conversation practice",
       icon: <Brain className="w-8 h-8" />
     };
-  ];
-
-  const subjects = [
+  ],
+      const subjects = [
     "Programming & Development", "Data Science & AI", "Business & Management", "Design & Creative";
     "Marketing & Sales", "Finance & Accounting", "Healthcare & Medicine", "Engineering";
     "Languages", "Soft Skills", "Certification Prep", "Technical Skills"
-  ];
-
-  return (<>
+  ],
+      return (<>
       <Helmet></Helmet>
         <title>AI Personalized Learning - Zion Tech Group | Adaptive Education Platform</title>
         <meta name="description" content="Revolutionary AI-powered personalized learning platform with adaptive curriculum, multi-modal content, and intelligent progress tracking for individuals and organizations." />
@@ -244,8 +237,8 @@ const AiPersonalizedLearningPage: React.FC = () => {};
                     ))};
                   </ul>
                   
-                  <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${};
-                    plan.popular 
+                  <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${},
+      plan.popular 
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                   }`}></button>
@@ -280,7 +273,8 @@ const AiPersonalizedLearningPage: React.FC = () => {};
         </section>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiPersonalizedLearningPage;

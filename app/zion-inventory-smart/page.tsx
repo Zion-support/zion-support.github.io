@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ZionInventorySmartPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ZionInventorySmartPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="zion-inventory-smart - Zion Tech Group"
@@ -15,7 +14,8 @@ const ZionInventorySmartPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionInventorySmartPage;

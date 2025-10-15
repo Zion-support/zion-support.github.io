@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiEnergyGridManagementProPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiEnergyGridManagementProPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-energy-grid-management-pro - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiEnergyGridManagementProPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiEnergyGridManagementProPage;

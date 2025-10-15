@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const DisasterRecoveryAdvancedPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const DisasterRecoveryAdvancedPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="disaster-recovery-advanced - Zion Tech Group"
@@ -15,7 +14,8 @@ const DisasterRecoveryAdvancedPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default DisasterRecoveryAdvancedPage;

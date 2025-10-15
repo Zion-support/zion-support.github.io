@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ZionDataSyncPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ZionDataSyncPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="zion-data-sync - Zion Tech Group"
@@ -15,7 +14,8 @@ const ZionDataSyncPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionDataSyncPage;

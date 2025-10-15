@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiHolographicWorkspacePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiHolographicWorkspacePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-holographic-workspace - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiHolographicWorkspacePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiHolographicWorkspacePage;

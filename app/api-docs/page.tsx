@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ApiDocsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ApiDocsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="api-docs - Zion Tech Group"
@@ -15,7 +14,8 @@ const ApiDocsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ApiDocsPage;

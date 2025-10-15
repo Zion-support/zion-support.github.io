@@ -1,12 +1,11 @@
 
-import { Star, Target, MessageSquare } from "lucide-react";
-
-const PartnershipsPage: React.FC = () => {};
-  const partnershipTypes = [
-    {};
-      title: 'Technology Partners';
-      description: 'Integrate with leading technology platforms and tools';
-      icon: <Cpu className="w-8 h-8 text-blue-400" />;
+import { Star, Target, MessageSquare } from "lucide-react",
+      const PartnershipsPage: React.FC = () => {},
+      const partnershipTypes = [
+    {},
+      title: 'Technology Partners',
+      description: 'Integrate with leading technology platforms and tools',
+      icon: <Cpu className="w-8 h-8 text-blue-400" />,
       benefits: [
         'API integrations';
         'Technical support';
@@ -14,10 +13,10 @@ const PartnershipsPage: React.FC = () => {};
         'Joint product development'
       ]
     };
-    {};
-      title: 'Channel Partners';
-      description: 'Resell and distribute our solutions through your network';
-      icon: <Users className="w-8 h-8 text-green-400" />;
+    {},
+      title: 'Channel Partners',
+      description: 'Resell and distribute our solutions through your network',
+      icon: <Users className="w-8 h-8 text-green-400" />,
       benefits: [
         'Competitive margins';
         'Sales training';
@@ -25,10 +24,10 @@ const PartnershipsPage: React.FC = () => {};
         'Dedicated support'
       ]
     };
-    {};
-      title: 'Strategic Partners';
-      description: 'Long-term partnerships for mutual growth and innovation';
-      icon: <Target className="w-8 h-8 text-purple-400" />;
+    {},
+      title: 'Strategic Partners',
+      description: 'Long-term partnerships for mutual growth and innovation',
+      icon: <Target className="w-8 h-8 text-purple-400" />,
       benefits: [
         'Joint ventures';
         'Shared resources';
@@ -36,10 +35,10 @@ const PartnershipsPage: React.FC = () => {};
         'Innovation collaboration'
       ]
     };
-    {};
-      title: 'Solution Partners';
-      description: 'Complementary services and solutions integration';
-      icon: <Settings className="w-8 h-8 text-orange-400" />;
+    {},
+      title: 'Solution Partners',
+      description: 'Complementary services and solutions integration',
+      icon: <Settings className="w-8 h-8 text-orange-400" />,
       benefits: [
         'Solution bundling';
         'Cross-referrals';
@@ -47,26 +46,23 @@ const PartnershipsPage: React.FC = () => {};
         'Shared customer success'
       ]
     };
-  ];
-
-  const requirements = [
+  ],
+      const requirements = [
     'Proven track record in your industry';
     'Strong customer relationships';
     'Technical expertise in relevant areas';
     'Commitment to customer success';
     'Alignment with our values and mission'
-  ];
-
-  const benefits = [
+  ],
+      const benefits = [
     'Access to cutting-edge technology';
     'Comprehensive training and support';
     'Marketing and sales resources';
     'Competitive partner program';
     'Joint go-to-market opportunities';
     'Technical integration support'
-  ];
-
-  return (
+  ],
+      return (
     <>
       <Helmet></Helmet>
         <title>Partnerships - Zion Tech Group | Partner With Us</title>
@@ -91,8 +87,8 @@ const PartnershipsPage: React.FC = () => {};
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
-              Join our growing ecosystem of partners and unlock new opportunities for growth;
-              innovation, and mutual success.
+              Join our growing ecosystem of partners and unlock new opportunities for growth,
+      innovation, and mutual success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
               <Link
@@ -211,7 +207,8 @@ const PartnershipsPage: React.FC = () => {};
         </div>
       </section>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default PartnershipsPage;

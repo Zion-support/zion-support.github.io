@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const DocumentationPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const DocumentationPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="DocumentationPage - Zion Tech Group"
@@ -15,7 +14,8 @@ const DocumentationPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default DocumentationPage;

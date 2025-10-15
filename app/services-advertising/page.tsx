@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ServicesAdvertisingPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ServicesAdvertisingPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="services-advertising - Zion Tech Group"
@@ -15,7 +14,8 @@ const ServicesAdvertisingPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ServicesAdvertisingPage;

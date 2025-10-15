@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ComputerVisionPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ComputerVisionPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="computer-vision - Zion Tech Group"
@@ -15,7 +14,8 @@ const ComputerVisionPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ComputerVisionPage;

@@ -1,53 +1,52 @@
-import React, { useState } from 'react';
-import React, { useState, useRef, useEffect } from 'react';
-
-interface OptimizedImageProps {};
-  src: string;
-  alt: string;
-  className?: string;
-  width?: number;
-  height?: number;
-  priority?: boolean;
-  placeholder?: string;
-  onLoad?: () => void;
-  onError?: () => void;
-};
-const OptimizedImage: React.FC<OptimizedImageProps> = ({};
-  src, alt, className = '', _width, _height, priority = false, placeholder = 'data:image/svg+xml;base64, _PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+', _onLoad, _onError, _}) => {};
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {};
-    if (priority) return;
-
-    const observer = new IntersectionObserver(([entry]) => {};
-        if (entry.isIntersecting) {};
-          setIsInView(true);
-          observer.disconnect();
-        };
+import React, { useState } from 'react',
+      import React, { useState, useRef, useEffect } from 'react',
+      interface OptimizedImageProps {},
+      src: string,
+      alt: string,
+      className?: string,
+      width?: number,
+      height?: number,
+      priority?: boolean,
+      placeholder?: string,
+      onLoad?: () => void,
+      onError?: () => void
+    },
+    {
+const OptimizedImage: React.FC<OptimizedImageProps> = ({},
+      src, alt, className = '', _width, _height, priority = false, placeholder = 'data:image/svg+xml;base64, _PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+', _onLoad, _onError, _}) => {},
+      const [isLoaded, setIsLoaded] = useState(false),
+      const [isInView, setIsInView] = useState(priority),
+      const [hasError, setHasError] = useState(false),
+      const imgRef = useRef<HTMLImageElement>(null),
+      useEffect(() => {},
+      if (priority) return,
+      const observer = new IntersectionObserver(([entry]) => {},
+      if (entry.isIntersecting) {},
+      setIsInView(true),
+      observer.disconnect()
+    },
+    {
       };
       { threshold: 0.1 };
     )
-    if (imgRef.current) {};
+    if (imgRef.current) {},
       observer.observe(imgRef.current)
-    };
-    return () => observer.disconnect()
+    },
+      return () => observer.disconnect()
   }, [priority])
   const handleLoad = () => {};
 }setIsLoaded(true)
     onLoad?.()
-  };
-  const handleError = () => {};
+  },
+      const handleError = () => {};
 }setHasError(true)
     onError?.()
-  };
-  const imageSrc = isInView ? src : placeholder
+  },
+      const imageSrc = isInView ? src : placeholder
   return ()
     <div
-      ref={imgRef};
-      className={`relative overflow-hidden ${className}`};
+      ref={imgRef},
+      className={`relative overflow-hidden ${className}`},
       style={{ width, height }};
     ></div
 >
@@ -62,18 +61,18 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({};
         </div>
       ) : ()
         <img
-          src={imageSrc};
-          alt={alt};
-          className={`transition-opacity duration-300 ${};
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          }`};
-          onLoad={handleLoad};
-          onError={handleError};
-          loading={priority ? 'eager' : 'lazy'};
-          decoding="async"
+          src={imageSrc},
+      alt={alt},
+      className={`transition-opacity duration-300 ${},
+      isLoaded ? 'opacity-100' : 'opacity-0'
+          }`},
+      onLoad={handleLoad},
+      onError={handleError},
+      loading={priority ? 'eager' : 'lazy'},
+      decoding="async"
         />
       )};
     </div>
   )
-};
-export default OptimizedImage
+},
+      export default OptimizedImage

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ContentGeneratorPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ContentGeneratorPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="content-generator - Zion Tech Group"
@@ -15,7 +14,8 @@ const ContentGeneratorPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ContentGeneratorPage;

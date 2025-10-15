@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiRecommendationEnginePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiRecommendationEnginePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-recommendation-engine - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiRecommendationEnginePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiRecommendationEnginePage;

@@ -1,118 +1,112 @@
-import React, { useState } from 'react';
-import { Search, BookOpen } from "lucide-react";
-
-const BlogPage: React.FC = () => {};
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const categories = [
+import React, { useState } from 'react',
+      import { Search, BookOpen } from "lucide-react",
+      const BlogPage: React.FC = () => {},
+      const [selectedCategory, setSelectedCategory] = useState('all'),
+      const [searchTerm, setSearchTerm] = useState(''),
+      const categories = [
     { id: 'all', name: 'All Posts', count: 24 };
     { id: 'ai', name: 'AI & Machine Learning', count: 8 };
     { id: 'saas', name: 'Micro SAAS', count: 6 };
     { id: 'cloud', name: 'Cloud & Infrastructure', count: 5 };
     { id: 'mobile', name: 'Mobile Development', count: 3 };
     { id: 'business', name: 'Business Insights', count: 2 };
-  ];
-
-  const blogPosts = [
-    {};
-      id: 1;
-      title: 'The Future of AI in Business: Trends and Predictions for 2024';
-      excerpt: 'Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.';
+  ],
+      const blogPosts = [
+    {},
+      id: 1,
+      title: 'The Future of AI in Business: Trends and Predictions for 2024',
+      excerpt: 'Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.',
       content: 'Artificial Intelligence continues to revolutionize business operations across industries. In 2024, we\'re seeing unprecedented adoption of AI technologies...','
-      author: 'Kleber Santos';
-      authorRole: 'CEO & AI Expert';
-      publishDate: '2024-01-15';
-      readTime: '8 min read';
-      category: 'ai';
-      tags: ['AI', 'Business', 'Technology', 'Future'];
-      image: '/api/placeholder/600/400';
+      author: 'Kleber Santos',
+      authorRole: 'CEO & AI Expert',
+      publishDate: '2024-01-15',
+      readTime: '8 min read',
+      category: 'ai',
+      tags: ['AI', 'Business', 'Technology', 'Future'],
+      image: '/api/placeholder/600/400',
       featured: true
     };
-    {};
-      id: 2;
-      title: 'Building Scalable Micro SAAS Applications: A Complete Guide';
-      excerpt: 'Learn how to build and scale micro SAAS applications that can grow with your business needs.';
-      content: 'Micro SAAS applications are becoming the preferred choice for businesses looking to solve specific problems...';
-      author: 'Sarah Johnson';
-      authorRole: 'CTO';
-      publishDate: '2024-01-12';
-      readTime: '12 min read';
-      category: 'saas';
-      tags: ['SAAS', 'Development', 'Scalability', 'Architecture'];
-      image: '/api/placeholder/600/400';
+    {},
+      id: 2,
+      title: 'Building Scalable Micro SAAS Applications: A Complete Guide',
+      excerpt: 'Learn how to build and scale micro SAAS applications that can grow with your business needs.',
+      content: 'Micro SAAS applications are becoming the preferred choice for businesses looking to solve specific problems...',
+      author: 'Sarah Johnson',
+      authorRole: 'CTO',
+      publishDate: '2024-01-12',
+      readTime: '12 min read',
+      category: 'saas',
+      tags: ['SAAS', 'Development', 'Scalability', 'Architecture'],
+      image: '/api/placeholder/600/400',
       featured: false
     };
-    {};
-      id: 3;
-      title: 'Cloud Security Best Practices for Enterprise Applications';
-      excerpt: 'Essential security measures every enterprise should implement when migrating to the cloud.';
-      content: 'Cloud security is a critical concern for enterprises moving their applications and data to cloud platforms...';
-      author: 'Michael Chen';
-      authorRole: 'Security Expert';
-      publishDate: '2024-01-10';
-      readTime: '10 min read';
-      category: 'cloud';
-      tags: ['Security', 'Cloud', 'Enterprise', 'Best Practices'];
-      image: '/api/placeholder/600/400';
+    {},
+      id: 3,
+      title: 'Cloud Security Best Practices for Enterprise Applications',
+      excerpt: 'Essential security measures every enterprise should implement when migrating to the cloud.',
+      content: 'Cloud security is a critical concern for enterprises moving their applications and data to cloud platforms...',
+      author: 'Michael Chen',
+      authorRole: 'Security Expert',
+      publishDate: '2024-01-10',
+      readTime: '10 min read',
+      category: 'cloud',
+      tags: ['Security', 'Cloud', 'Enterprise', 'Best Practices'],
+      image: '/api/placeholder/600/400',
       featured: false
     };
-    {};
-      id: 4;
-      title: 'Mobile-First Design: Creating Apps That Users Love';
-      excerpt: 'Discover the principles of mobile-first design and how to create engaging mobile experiences.';
+    {},
+      id: 4,
+      title: 'Mobile-First Design: Creating Apps That Users Love',
+      excerpt: 'Discover the principles of mobile-first design and how to create engaging mobile experiences.',
       content: 'Mobile-first design isn\'t just a trend—it\'s a necessity in today\'s mobile-dominated world...','
-      author: 'Emily Rodriguez';
-      authorRole: 'UX Designer';
-      publishDate: '2024-01-08';
-      readTime: '6 min read';
-      category: 'mobile';
-      tags: ['Mobile', 'UX', 'Design', 'User Experience'];
-      image: '/api/placeholder/600/400';
+      author: 'Emily Rodriguez',
+      authorRole: 'UX Designer',
+      publishDate: '2024-01-08',
+      readTime: '6 min read',
+      category: 'mobile',
+      tags: ['Mobile', 'UX', 'Design', 'User Experience'],
+      image: '/api/placeholder/600/400',
       featured: false
     };
-    {};
-      id: 5;
-      title: 'The ROI of AI Implementation: Measuring Success in Business';
-      excerpt: 'How to measure and maximize the return on investment when implementing AI solutions.';
-      content: 'Implementing AI solutions can be a significant investment, but the returns can be substantial...';
-      author: 'David Kim';
-      authorRole: 'Business Analyst';
-      publishDate: '2024-01-05';
-      readTime: '9 min read';
-      category: 'business';
-      tags: ['ROI', 'AI', 'Business', 'Analytics'];
-      image: '/api/placeholder/600/400';
+    {},
+      id: 5,
+      title: 'The ROI of AI Implementation: Measuring Success in Business',
+      excerpt: 'How to measure and maximize the return on investment when implementing AI solutions.',
+      content: 'Implementing AI solutions can be a significant investment, but the returns can be substantial...',
+      author: 'David Kim',
+      authorRole: 'Business Analyst',
+      publishDate: '2024-01-05',
+      readTime: '9 min read',
+      category: 'business',
+      tags: ['ROI', 'AI', 'Business', 'Analytics'],
+      image: '/api/placeholder/600/400',
       featured: false
     };
-    {};
-      id: 6;
-      title: 'Data Analytics: Turning Raw Data into Business Insights';
-      excerpt: 'Learn how to transform your data into actionable insights that drive business growth.';
-      content: 'Data is the new oil, but only if you know how to refine it into valuable insights...';
-      author: 'Lisa Wang';
-      authorRole: 'Data Scientist';
-      publishDate: '2024-01-03';
-      readTime: '11 min read';
-      category: 'ai';
-      tags: ['Data', 'Analytics', 'Insights', 'Business Intelligence'];
-      image: '/api/placeholder/600/400';
+    {},
+      id: 6,
+      title: 'Data Analytics: Turning Raw Data into Business Insights',
+      excerpt: 'Learn how to transform your data into actionable insights that drive business growth.',
+      content: 'Data is the new oil, but only if you know how to refine it into valuable insights...',
+      author: 'Lisa Wang',
+      authorRole: 'Data Scientist',
+      publishDate: '2024-01-03',
+      readTime: '11 min read',
+      category: 'ai',
+      tags: ['Data', 'Analytics', 'Insights', 'Business Intelligence'],
+      image: '/api/placeholder/600/400',
       featured: false
     };
-  ];
-
-  const filteredPosts = blogPosts.filter(post => {};
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  ],
+      const filteredPosts = blogPosts.filter(post => {},
+      const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory,
+      const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
-
-  const featuredPost = blogPosts.find(post => post.featured);
-  const regularPosts = filteredPosts.filter(post => !post.featured);
-
-  return (
+                         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+      return matchesCategory && matchesSearch;
+  }),
+      const featuredPost = blogPosts.find(post => post.featured),
+      const regularPosts = filteredPosts.filter(post => !post.featured),
+      return (
     <>
       <Helmet></Helmet>
         <title>Blog - Zion Tech Group | AI & IT Insights</title>
@@ -172,9 +166,9 @@ const BlogPage: React.FC = () => {};
               <input
                 type="text"
                 placeholder="Search articles..."
-                value={searchTerm};
-                onChange={(e) => setSearchTerm(e.target.value)};
-                className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                value={searchTerm},
+      onChange={(e) => setSearchTerm(e.target.value)},
+      className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
 
@@ -182,10 +176,10 @@ const BlogPage: React.FC = () => {};
             <div className="flex flex-wrap gap-2"></div>
               {categories.map((category) => (
                 <button
-                  key={category.id};
-                  onClick={() => setSelectedCategory(category.id)};
-                  className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${};
-                    selectedCategory === category.id
+                  key={category.id},
+      onClick={() => setSelectedCategory(category.id)},
+      className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${},
+      selectedCategory === category.id
                       ? 'bg-cyan-600 text-white'
                       : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
                   }`};
@@ -257,8 +251,8 @@ const BlogPage: React.FC = () => {};
                     ))};
                   </div>
                   <Link
-                    to={`/blog/${featuredPost.id}`};
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
+                    to={`/blog/${featuredPost.id}`},
+      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
                   ></Link
 >
                     Read Full Article
@@ -334,8 +328,8 @@ const BlogPage: React.FC = () => {};
                   </div>
 
                   <Link
-                    to={`/blog/${post.id}`};
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors text-sm"
+                    to={`/blog/${post.id}`},
+      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors text-sm"
                   ></Link
 >
                     Read More
@@ -380,7 +374,8 @@ const BlogPage: React.FC = () => {};
         </div>
       </section>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default BlogPage;

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ItAssetManagementPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ItAssetManagementPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="it-asset-management - Zion Tech Group"
@@ -15,7 +14,8 @@ const ItAssetManagementPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ItAssetManagementPage;

@@ -31,24 +31,24 @@ export default SystemMonitor
     largestContentfulPaint: number
     firstInputDelay: number
     cumulativeLayoutShift: number
-  };
-    total: number
+  },
+      total: number
     byType: Record<string, number></string,>
     byCategory: Record<string, number></string,>
     bySeverity: Record<string, number></string,>
     recent: Array
-  };
-    used: number
+  },
+      used: number
     total: number
     limit: number
     percentage: number
-  };
-    effectiveType: string
+  },
+      effectiveType: string
     downlink: number
     rtt: number
     saveData: boolean
-  };
-  refreshInterval?: number
+  },
+      refreshInterval?: number
   showDetails?: boolean
   enableExport?: boolean
   className?: string
@@ -70,7 +70,7 @@ const performanceScore = calculatePerformanceScore()
             timestamp: error.context.timestamp
           }))
         network: networkInfo
-      };
+      },
       setMetrics(newMetrics)
       setLastUpdate(new Date())
       // console.error('Failed to update metrics:', error)
@@ -78,8 +78,8 @@ const performanceScore = calculatePerformanceScore()
   // Initialize monitoring
       setIsMonitoring(true)
       updateMetrics()
-    };
-    initializeMonitoring()
+    },
+      initializeMonitoring()
       // Stop monitoring (placeholder - implement, as, needed)
       setIsMonitoring(false)
     };
@@ -95,17 +95,19 @@ const performanceScore = calculatePerformanceScore()
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
       const percentage = (used / limit) * 100
-      return { used, total, limit, percentage };
-    return { used: 0, total: 0, limit: 0, percentage: 0 };
-  };
+      return { used, total, limit, percentage },
+      return { used: 0, total: 0, limit: 0, percentage: 0 }
+    },
+    {
   // Get network information
       const nav = navigator as NavigatorWithConnection
 const connection = nav.connection
         saveData: connection?.saveData || false
-      };
+      },
       saveData: false
-    };
-  };
+    }
+    },
+    {
   // Export data
     if (!metrics) return
     };
@@ -136,10 +138,10 @@ const a = document.createElement('a')
   )
         <h2 className = "text-2xl font-bold text-gray-900">System Monitor</h2>
             <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
-              {isMonitoring ? 'Monitoring' : 'Stopped'};
-              Export Data
-          )};
-          Last updated: {lastUpdate.toLocaleTimeString()};
+              {isMonitoring ? 'Monitoring' : 'Stopped'},
+      Export Data
+          )},
+      Last updated: {lastUpdate.toLocaleTimeString()};
       )};
       {/* Performance Metrics */};
         <h3 className = "text-lg font-semibold text-gray-900 mb-4">Performance</h3>
@@ -176,8 +178,8 @@ const a = document.createElement('a')
                 <span>{metrics.memory.limit.toFixed(2)} MB</span>
  80 ? 'bg-red-500' :
  60 ? 'bg-yellow-500' : 'bg-green-500'
-                  }`};
-                  style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }};
+                  }`},
+      style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }};
                 ></div>
             <h4 className="text-sm font-medium text-gray-600 mb-2">Network</h4>
                 <span>Connection</span>

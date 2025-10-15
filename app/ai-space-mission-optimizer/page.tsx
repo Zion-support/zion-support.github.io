@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiSpaceMissionOptimizerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiSpaceMissionOptimizerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-space-mission-optimizer - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiSpaceMissionOptimizerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiSpaceMissionOptimizerPage;

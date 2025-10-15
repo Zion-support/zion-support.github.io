@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiProjectManagementPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiProjectManagementPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-project-management - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiProjectManagementPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiProjectManagementPage;

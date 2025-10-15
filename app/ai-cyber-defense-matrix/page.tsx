@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiCyberDefenseMatrixPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiCyberDefenseMatrixPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-cyber-defense-matrix - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiCyberDefenseMatrixPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiCyberDefenseMatrixPage;

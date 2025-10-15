@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const NetworkSolutionsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const NetworkSolutionsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="network-solutions - Zion Tech Group"
@@ -15,7 +14,8 @@ const NetworkSolutionsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default NetworkSolutionsPage;

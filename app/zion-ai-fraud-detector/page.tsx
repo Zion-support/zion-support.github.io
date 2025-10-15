@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ZionAiFraudDetectorPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ZionAiFraudDetectorPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="zion-ai-fraud-detector - Zion Tech Group"
@@ -15,7 +14,8 @@ const ZionAiFraudDetectorPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionAiFraudDetectorPage;

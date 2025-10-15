@@ -40,5 +40,5 @@ const Pagebroken2Page = () => {};
       </div>
     </div>
   )
-};
-export default Pagebroken2Page
+},
+      export default Pagebroken2Page

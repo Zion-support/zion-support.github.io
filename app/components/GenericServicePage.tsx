@@ -1,22 +1,22 @@
 
 import { Helmet } from "react-helmet-async"
-interface GenericServicePageProps {};
-  title: string
+interface GenericServicePageProps {},
+      title: string
   description: string
   icon: React.ComponentType<any></any>
   features: string[]
   benefits: string[]
   pricing?: string
   category: "AI" | "IT" | "MicroSAAS" | "Emerging"
-};
-const GenericServicePage: React.FC<GenericServicePageProps> = ({};
-  title, description, _icon: Icon, _features, _benefits, _pricing, _category, _}) => {};
-  const categoryColors = {};
-    AI: "from-purple-500 to-pink-600";
-    IT: "from-blue-500 to-cyan-600";
-    MicroSAAS: "from-green-500 to-emerald-600";
-    Emerging: "from-orange-500 to-red-600"};
-  const categoryColor =
+},
+      const GenericServicePage: React.FC<GenericServicePageProps> = ({},
+      title, description, _icon: Icon, _features, _benefits, _pricing, _category, _}) => {},
+      const categoryColors = {},
+      AI: "from-purple-500 to-pink-600",
+      IT: "from-blue-500 to-cyan-600",
+      MicroSAAS: "from-green-500 to-emerald-600",
+      Emerging: "from-orange-500 to-red-600"},
+      const categoryColor =
     categoryColors[category] || "from-cyan-500 to-purple-600"
   return ()
     <div></div>
@@ -25,8 +25,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({};
         <meta name="description" content={description} />
         <meta
           name="keywords"
-          content={`${title.toLowerCase()}, AI solutions, IT services, ${category.toLowerCase()}`};
-        />
+          content={`${title.toLowerCase()}, AI solutions, IT services, ${category.toLowerCase()}`} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></main>
@@ -82,8 +81,8 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({};
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               {features.map((feature, index) => ()
                 <div
-                  key={index};
-                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
+                  key={index},
+      className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
                 ></div
 >
                   <div className="flex items-center mb-4"></div>
@@ -189,5 +188,5 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({};
       </div>
 </div>
   )
-};
-export default GenericServicePage
+},
+      export default GenericServicePage

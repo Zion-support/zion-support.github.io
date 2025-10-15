@@ -1,106 +1,101 @@
-import { TrendingUp } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function AISupplyChainOptimizer() {};
-  const features = [
-    {};
-      title: "Demand Forecasting";
-      description: "AI-powered demand prediction with 95% accuracy using machine learning and market analysis";
-      icon: <BarChart3 className="w-6 h-6" />;
+import { TrendingUp } from "lucide-react",
+      import { Helmet } from "react-helmet-async",
+      import { Link } from "react-router-dom",
+      export default function AISupplyChainOptimizer() {},
+      const features = [
+    {},
+      title: "Demand Forecasting",
+      description: "AI-powered demand prediction with 95% accuracy using machine learning and market analysis",
+      icon: <BarChart3 className="w-6 h-6" />,
       benefits: ["95% Forecast Accuracy", "Seasonal Pattern Recognition", "Market Trend Analysis", "Inventory Optimization"]
     };
-    {};
-      title: "Route Optimization";
-      description: "Intelligent logistics planning with real-time traffic, weather, and cost optimization";
-      icon: <Globe className="w-6 h-6" />;
+    {},
+      title: "Route Optimization",
+      description: "Intelligent logistics planning with real-time traffic, weather, and cost optimization",
+      icon: <Globe className="w-6 h-6" />,
       benefits: ["30% Cost Reduction", "Faster Delivery Times", "Fuel Efficiency", "Carbon Footprint Reduction"]
     };
-    {};
-      title: "Supplier Management";
-      description: "Automated supplier evaluation, risk assessment, and performance monitoring";
-      icon: <Target className="w-6 h-6" />;
+    {},
+      title: "Supplier Management",
+      description: "Automated supplier evaluation, risk assessment, and performance monitoring",
+      icon: <Target className="w-6 h-6" />,
       benefits: ["Risk Mitigation", "Performance Tracking", "Cost Analysis", "Quality Control"]
     };
-    {};
-      title: "Inventory Intelligence";
-      description: "Smart inventory management with automated reordering and waste reduction";
-      icon: <Zap className="w-6 h-6" />;
+    {},
+      title: "Inventory Intelligence",
+      description: "Smart inventory management with automated reordering and waste reduction",
+      icon: <Zap className="w-6 h-6" />,
       benefits: ["25% Inventory Reduction", "Zero Stockouts", "Waste Elimination", "Cash Flow Optimization"]
     };
-  ];
-
-  const industries = [
-    {};
-      title: "Manufacturing";
-      description: "Optimize production schedules, raw material procurement, and distribution networks";
+  ],
+      const industries = [
+    {},
+      title: "Manufacturing",
+      description: "Optimize production schedules, raw material procurement, and distribution networks",
       impact: "40% cost reduction, 50% faster delivery"
     };
-    {};
-      title: "Retail & E-commerce";
-      description: "Streamline inventory management, last-mile delivery, and customer fulfillment";
+    {},
+      title: "Retail & E-commerce",
+      description: "Streamline inventory management, last-mile delivery, and customer fulfillment",
       impact: "35% inventory reduction, 60% faster fulfillment"
     };
-    {};
-      title: "Food & Beverage";
-      description: "Manage perishable goods, cold chain logistics, and demand fluctuations";
+    {},
+      title: "Food & Beverage",
+      description: "Manage perishable goods, cold chain logistics, and demand fluctuations",
       impact: "45% waste reduction, 30% cost savings"
     };
-    {};
-      title: "Healthcare & Pharma";
-      description: "Ensure critical supply availability, compliance, and temperature-controlled logistics";
+    {},
+      title: "Healthcare & Pharma",
+      description: "Ensure critical supply availability, compliance, and temperature-controlled logistics",
       impact: "99.9% availability, 100% compliance"
     };
-  ];
-
-  const pricing = [
-    {};
-      plan: "Starter";
-      price: "$279/month";
-      description: "Perfect for small to medium businesses";
-      features: ["Up to 100 SKUs", "Basic forecasting", "Route optimization", "Email support"];
+  ],
+      const pricing = [
+    {},
+      plan: "Starter",
+      price: "$279/month",
+      description: "Perfect for small to medium businesses",
+      features: ["Up to 100 SKUs", "Basic forecasting", "Route optimization", "Email support"],
       popular: false
     };
-    {};
-      plan: "Professional";
-      price: "$559/month";
-      description: "Ideal for growing enterprises";
-      features: ["Up to 1,000 SKUs", "Advanced analytics", "Supplier management", "API integration", "Priority support"];
+    {},
+      plan: "Professional",
+      price: "$559/month",
+      description: "Ideal for growing enterprises",
+      features: ["Up to 1,000 SKUs", "Advanced analytics", "Supplier management", "API integration", "Priority support"],
       popular: true
     };
-    {};
-      plan: "Enterprise";
-      price: "Custom Pricing";
-      description: "Comprehensive solution for large organizations";
-      features: ["Unlimited SKUs", "Full AI suite", "Custom integrations", "Dedicated support", "Training & consultation"];
+    {},
+      plan: "Enterprise",
+      price: "Custom Pricing",
+      description: "Comprehensive solution for large organizations",
+      features: ["Unlimited SKUs", "Full AI suite", "Custom integrations", "Dedicated support", "Training & consultation"],
       popular: false
     };
-  ];
-
-  const benefits = [
-    {};
-      metric: "30%";
-      label: "Cost Reduction";
+  ],
+      const benefits = [
+    {},
+      metric: "30%",
+      label: "Cost Reduction",
       description: "Average cost savings across all supply chain operations"
     };
-    {};
-      metric: "50%";
-      label: "Faster Delivery";
+    {},
+      metric: "50%",
+      label: "Faster Delivery",
       description: "Improvement in delivery times through optimized routing"
     };
-    {};
-      metric: "95%";
-      label: "Forecast Accuracy";
+    {},
+      metric: "95%",
+      label: "Forecast Accuracy",
       description: "AI-powered demand prediction accuracy rate"
     };
-    {};
-      metric: "25%";
-      label: "Inventory Reduction";
+    {},
+      metric: "25%",
+      label: "Inventory Reduction",
       description: "Decrease in excess inventory while maintaining service levels"
     };
-  ];
-
-  return (
+  ],
+      return (
     <>
       <Helmet></Helmet>
         <title>AI Supply Chain Optimizer - Zion Tech Group | Intelligent Logistics Solutions</title>
@@ -138,8 +133,8 @@ export default function AISupplyChainOptimizer() {};
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"></p>
-              Transform your supply chain with AI-powered optimization. Intelligent demand forecasting;
-              route planning, and inventory management that reduces costs and improves efficiency.
+              Transform your supply chain with AI-powered optimization. Intelligent demand forecasting,
+      route planning, and inventory management that reduces costs and improves efficiency.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16"></div>
@@ -193,8 +188,8 @@ export default function AISupplyChainOptimizer() {};
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
               {features.map((feature, index) => (
                 <div
-                  key={index};
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden"
+                  key={index},
+      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden"
                 ></div
 >
                   <div className="flex items-start space-x-4"></div>
@@ -239,8 +234,8 @@ export default function AISupplyChainOptimizer() {};
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {industries.map((industry, index) => (
                 <div
-                  key={index};
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden"
+                  key={index},
+      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden"
                 ></div
 >
                   <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-slate-300 transition-colors"></h3>
@@ -273,9 +268,9 @@ export default function AISupplyChainOptimizer() {};
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
               {pricing.map((plan, index) => (
                 <div
-                  key={index};
-                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden ${};
-                    plan.popular 
+                  key={index},
+      className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden ${},
+      plan.popular 
                       ? 'border-slate-500/50 bg-gradient-to-br from-slate-500/10 to-gray-500/10' 
                       : 'border-white/20 hover:bg-white/20'
                   }`};
@@ -306,8 +301,8 @@ export default function AISupplyChainOptimizer() {};
                   <div className="text-center"></div>
                     <Link
                       to="/contact"
-                      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 group ${};
-                        plan.popular
+                      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 group ${},
+      plan.popular
                           ? 'bg-gradient-to-r from-slate-500 to-gray-600 text-white hover:from-slate-600 hover:to-gray-700 shadow-lg hover:shadow-slate-500/25'
                           : 'border border-slate-400 text-slate-400 hover:bg-slate-400 hover:text-slate-900'
                       }`};
@@ -330,8 +325,8 @@ export default function AISupplyChainOptimizer() {};
               Ready to Optimize Your Supply Chain?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
-              Join leading companies using our AI supply chain optimizer to reduce costs, improve efficiency;
-              and gain competitive advantage. Start your transformation today.
+              Join leading companies using our AI supply chain optimizer to reduce costs, improve efficiency,
+      and gain competitive advantage. Start your transformation today.
             </p>
             
             {/* Contact Information */};
@@ -381,7 +376,8 @@ export default function AISupplyChainOptimizer() {};
         </section>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiSupplyChainOptimizerPage;

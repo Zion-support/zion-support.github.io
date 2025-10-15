@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const IntelligentDatabaseMigrationPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const IntelligentDatabaseMigrationPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="intelligent-database-migration - Zion Tech Group"
@@ -15,7 +14,8 @@ const IntelligentDatabaseMigrationPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default IntelligentDatabaseMigrationPage;

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const MarketingToolsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const MarketingToolsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="marketing-tools - Zion Tech Group"
@@ -15,7 +14,8 @@ const MarketingToolsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default MarketingToolsPage;

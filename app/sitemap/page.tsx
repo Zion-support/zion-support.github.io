@@ -33,9 +33,9 @@
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
               {mainPages.map((page, index) => (
                 <Link
-                  key={index};
-                  to={page.path};
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                  key={index},
+      to={page.path},
+      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                 ></Link
 >
                   <div className="flex items-center justify-between"></div>
@@ -66,9 +66,9 @@
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>
               {aiServices.map((service, index) => (
                 <Link
-                  key={index};
-                  to={service.path};
-                  className="group bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+                  key={index},
+      to={service.path},
+      className="group bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
                 ></Link
 >
                   <div className="flex items-center justify-between"></div>
@@ -96,9 +96,9 @@
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>
               {microSaasServices.map((service, index) => (
                 <Link
-                  key={index};
-                  to={service.path};
-                  className="group bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+                  key={index},
+      to={service.path},
+      className="group bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
                 ></Link
 >
                   <div className="flex items-center justify-between"></div>
@@ -126,9 +126,9 @@
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>
               {fiveGServices.map((service, index) => (
                 <Link
-                  key={index};
-                  to={service.path};
-                  className="group bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+                  key={index},
+      to={service.path},
+      className="group bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
                 ></Link
 >
                   <div className="flex items-center justify-between"></div>
@@ -155,9 +155,9 @@
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
               {legalPages.map((page, index) => (
                 <Link
-                  key={index};
-                  to={page.path};
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                  key={index},
+      to={page.path},
+      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                 ></Link
 >
                   <div className="flex items-center justify-between"></div>
@@ -201,7 +201,8 @@
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default SitemapPage;

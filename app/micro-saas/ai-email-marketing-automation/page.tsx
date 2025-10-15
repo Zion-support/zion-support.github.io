@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiEmailMarketingAutomationPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiEmailMarketingAutomationPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-email-marketing-automation - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiEmailMarketingAutomationPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiEmailMarketingAutomationPage;

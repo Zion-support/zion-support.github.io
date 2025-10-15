@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const CloudSecurityPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const CloudSecurityPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="cloud-security - Zion Tech Group"
@@ -15,7 +14,8 @@ const CloudSecurityPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default CloudSecurityPage;

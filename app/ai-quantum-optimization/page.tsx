@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiQuantumOptimizationPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiQuantumOptimizationPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-quantum-optimization - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiQuantumOptimizationPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiQuantumOptimizationPage;

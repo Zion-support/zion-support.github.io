@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ZionAiDataCleanerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ZionAiDataCleanerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="zion-ai-data-cleaner - Zion Tech Group"
@@ -15,7 +14,8 @@ const ZionAiDataCleanerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionAiDataCleanerPage;

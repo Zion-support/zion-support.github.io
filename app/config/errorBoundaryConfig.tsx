@@ -40,5 +40,5 @@ const ErrorboundaryconfigPage = () => {};
       </div>
     </div>
   )
-};
-export default ErrorboundaryconfigPage
+},
+      export default ErrorboundaryconfigPage

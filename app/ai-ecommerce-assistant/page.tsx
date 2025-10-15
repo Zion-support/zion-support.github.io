@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiEcommerceAssistantPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiEcommerceAssistantPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-ecommerce-assistant - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiEcommerceAssistantPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiEcommerceAssistantPage;

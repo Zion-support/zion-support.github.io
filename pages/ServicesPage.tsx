@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
-import {};
-  CheckCircle;
-  Star;
-  ArrowRight;
-  Brain;
-  Server;
-  Rocket;
-  // Users;
-  Settings
+import {},
+      CheckCircle,
+      Star,
+      ArrowRight,
+      Brain,
+      Server,
+      Rocket;
+  // Users,
+      Settings
 } from 'lucide-react'
 const ServicesPage: React.FC = () => {};
 }const [selectedCategory, setSelectedCategory] = useState('all')
@@ -20,12 +20,12 @@ const ServicesPage: React.FC = () => {};
   ]
   const services = []
     // AI Services
-    {};
-      id: 'ai-analytics-dashboard';
-      name: 'AI Analytics Dashboard Pro';
-      category: 'ai';
-      description: 'Advanced business intelligence platform with AI-powered insights and real-time analytics';
-      price: '$299/month';
+    {},
+      id: 'ai-analytics-dashboard',
+      name: 'AI Analytics Dashboard Pro',
+      category: 'ai',
+      description: 'Advanced business intelligence platform with AI-powered insights and real-time analytics',
+      price: '$299/month',
       features: []
         'Real-time Data Visualization';
         'AI-Powered Predictions';
@@ -33,22 +33,22 @@ const ServicesPage: React.FC = () => {};
         'API Integration';
         'Mobile App Access';
         '24/7 Support'
-      ];
+      ],
       benefits: []
         'Increase decision speed by 40%';
         'Reduce manual reporting by 80%';
         'Improve forecast accuracy by 60%'
-      ];
-      popular: true;
-      rating: 4.9;
+      ],
+      popular: true,
+      rating: 4.9,
       clients: 150
     };
-    {};
-      id: 'ai-content-generator';
-      name: 'AI Content Generator Studio';
-      category: 'ai';
-      description: 'Automated content creation platform with multi-language support and brand voice customization';
-      price: '$199/month';
+    {},
+      id: 'ai-content-generator',
+      name: 'AI Content Generator Studio',
+      category: 'ai',
+      description: 'Automated content creation platform with multi-language support and brand voice customization',
+      price: '$199/month',
       features: []
         'Multi-language Support';
         'SEO Optimization';
@@ -56,22 +56,22 @@ const ServicesPage: React.FC = () => {};
         'Bulk Content Generation';
         'Plagiarism Detection';
         'Content Calendar Integration'
-      ];
+      ],
       benefits: []
         'Save 70% content creation time';
         'Increase SEO rankings by 50%';
         'Maintain consistent brand voice'
-      ];
-      popular: false;
-      rating: 4.8;
+      ],
+      popular: false,
+      rating: 4.8,
       clients: 120
     };
-    {};
-      id: 'ai-customer-support';
-      name: 'AI Customer Support Suite';
-      category: 'ai';
-      description: 'Intelligent customer service automation with natural language processing and sentiment analysis';
-      price: '$399/month';
+    {},
+      id: 'ai-customer-support',
+      name: 'AI Customer Support Suite',
+      category: 'ai',
+      description: 'Intelligent customer service automation with natural language processing and sentiment analysis',
+      price: '$399/month',
       features: []
         'Natural Language Processing';
         'Sentiment Analysis';
@@ -79,22 +79,22 @@ const ServicesPage: React.FC = () => {};
         'Knowledge Base Integration';
         'Escalation Management';
         'Performance Analytics'
-      ];
+      ],
       benefits: []
         'Reduce response time by 90%';
         'Increase customer satisfaction by 35%';
         'Handle 80% queries automatically'
-      ];
-      popular: true;
-      rating: 4.9;
+      ],
+      popular: true,
+      rating: 4.9,
       clients: 200
     };
-    {};
-      id: 'ai-code-assistant';
-      name: 'AI Code Assistant Pro';
-      category: 'ai';
-      description: 'Advanced code generation and review platform with intelligent debugging and optimization suggestions';
-      price: '$249/month';
+    {},
+      id: 'ai-code-assistant',
+      name: 'AI Code Assistant Pro',
+      category: 'ai',
+      description: 'Advanced code generation and review platform with intelligent debugging and optimization suggestions',
+      price: '$249/month',
       features: []
         'Code Generation';
         'Bug Detection & Fixes';
@@ -102,23 +102,23 @@ const ServicesPage: React.FC = () => {};
         'Performance Optimization';
         'Security Scanning';
         'Documentation Generation'
-      ];
+      ],
       benefits: []
         'Increase development speed by 50%';
         'Reduce bugs by 70%';
         'Improve code quality significantly'
-      ];
-      popular: false;
-      rating: 4.7;
+      ],
+      popular: false,
+      rating: 4.7,
       clients: 80
     };
     // IT Services
-    {};
-      id: 'cloud-infrastructure';
-      name: 'Cloud Infrastructure Management';
-      category: 'it';
-      description: 'Comprehensive cloud solutions with auto-scaling, monitoring, and security compliance';
-      price: '$199/month';
+    {},
+      id: 'cloud-infrastructure',
+      name: 'Cloud Infrastructure Management',
+      category: 'it',
+      description: 'Comprehensive cloud solutions with auto-scaling, monitoring, and security compliance',
+      price: '$199/month',
       features: []
         'Auto-scaling Infrastructure';
         '99.9% Uptime Guarantee';
@@ -126,22 +126,22 @@ const ServicesPage: React.FC = () => {};
         'Security Compliance';
         'Backup & Recovery';
         'Cost Optimization'
-      ];
+      ],
       benefits: []
         'Reduce infrastructure costs by 30%';
         'Improve system reliability';
         'Scale automatically with demand'
-      ];
-      popular: true;
-      rating: 4.8;
+      ],
+      popular: true,
+      rating: 4.8,
       clients: 180
     };
-    {};
-      id: 'cybersecurity-suite';
-      name: 'Advanced Cybersecurity Suite';
-      category: 'it';
-      description: 'Enterprise-grade security monitoring and protection with real-time threat detection';
-      price: '$499/month';
+    {},
+      id: 'cybersecurity-suite',
+      name: 'Advanced Cybersecurity Suite',
+      category: 'it',
+      description: 'Enterprise-grade security monitoring and protection with real-time threat detection',
+      price: '$499/month',
       features: []
         'Threat Detection & Response';
         'Real-time Security Monitoring';
@@ -149,22 +149,22 @@ const ServicesPage: React.FC = () => {};
         'Incident Response';
         'Security Training';
         'Penetration Testing'
-      ];
+      ],
       benefits: []
         'Prevent 99.9% of cyber attacks';
         'Meet compliance requirements';
         'Reduce security incidents by 95%'
-      ];
-      popular: true;
-      rating: 4.9;
+      ],
+      popular: true,
+      rating: 4.9,
       clients: 100
     };
-    {};
-      id: 'devops-automation';
-      name: 'DevOps Automation Platform';
-      category: 'it';
-      description: 'Complete CI/CD pipeline automation with monitoring, testing, and deployment management';
-      price: '$349/month';
+    {},
+      id: 'devops-automation',
+      name: 'DevOps Automation Platform',
+      category: 'it',
+      description: 'Complete CI/CD pipeline automation with monitoring, testing, and deployment management',
+      price: '$349/month',
       features: []
         'CI/CD Pipeline Automation';
         'Automated Testing';
@@ -172,22 +172,22 @@ const ServicesPage: React.FC = () => {};
         'Performance Monitoring';
         'Rollback Capabilities';
         'Team Collaboration Tools'
-      ];
+      ],
       benefits: []
         'Deploy 10x faster';
         'Reduce deployment errors by 90%';
         'Improve team productivity by 60%'
-      ];
-      popular: false;
-      rating: 4.7;
+      ],
+      popular: false,
+      rating: 4.7,
       clients: 90
     };
-    {};
-      id: 'database-solutions';
-      name: 'Database Management Solutions';
-      category: 'it';
-      description: 'Advanced database administration with optimization, backup, and performance monitoring';
-      price: '$279/month';
+    {},
+      id: 'database-solutions',
+      name: 'Database Management Solutions',
+      category: 'it',
+      description: 'Advanced database administration with optimization, backup, and performance monitoring',
+      price: '$279/month',
       features: []
         'Database Optimization';
         'Automated Backups';
@@ -195,23 +195,23 @@ const ServicesPage: React.FC = () => {};
         'Query Optimization';
         'Security Hardening';
         'Disaster Recovery'
-      ];
+      ],
       benefits: []
         'Improve query performance by 80%';
         'Ensure data integrity';
         'Reduce downtime by 95%'
-      ];
-      popular: false;
-      rating: 4.6;
+      ],
+      popular: false,
+      rating: 4.6,
       clients: 70
     };
     // Micro SAAS Services
-    {};
-      id: 'project-management-pro';
-      name: 'Project Management Pro';
-      category: 'saas';
-      description: 'Comprehensive project management platform with AI-powered insights and team collaboration';
-      price: '$149/month';
+    {},
+      id: 'project-management-pro',
+      name: 'Project Management Pro',
+      category: 'saas',
+      description: 'Comprehensive project management platform with AI-powered insights and team collaboration',
+      price: '$149/month',
       features: []
         'Task Management';
         'Team Collaboration';
@@ -219,22 +219,22 @@ const ServicesPage: React.FC = () => {};
         'Resource Planning';
         'Time Tracking';
         'Reporting & Analytics'
-      ];
+      ],
       benefits: []
         'Increase project success rate by 40%';
         'Improve team productivity by 50%';
         'Reduce project delays by 60%'
-      ];
-      popular: true;
-      rating: 4.8;
+      ],
+      popular: true,
+      rating: 4.8,
       clients: 250
     };
-    {};
-      id: 'api-management';
-      name: 'API Management Platform';
-      category: 'saas';
-      description: 'Complete API lifecycle management with monitoring, security, and developer portal';
-      price: '$179/month';
+    {},
+      id: 'api-management',
+      name: 'API Management Platform',
+      category: 'saas',
+      description: 'Complete API lifecycle management with monitoring, security, and developer portal',
+      price: '$179/month',
       features: []
         'API Gateway';
         'Rate Limiting';
@@ -242,22 +242,22 @@ const ServicesPage: React.FC = () => {};
         'API Documentation';
         'Developer Portal';
         'Analytics & Monitoring'
-      ];
+      ],
       benefits: []
         'Secure API access';
         'Improve API performance';
         'Simplify API management'
-      ];
-      popular: false;
-      rating: 4.7;
+      ],
+      popular: false,
+      rating: 4.7,
       clients: 60
     };
-    {};
-      id: 'monitoring-suite';
-      name: 'Application Monitoring Suite';
-      category: 'saas';
-      description: 'Real-time application performance monitoring with alerting and root cause analysis';
-      price: '$129/month';
+    {},
+      id: 'monitoring-suite',
+      name: 'Application Monitoring Suite',
+      category: 'saas',
+      description: 'Real-time application performance monitoring with alerting and root cause analysis',
+      price: '$129/month',
       features: []
         'Real-time Monitoring';
         'Performance Metrics';
@@ -265,22 +265,22 @@ const ServicesPage: React.FC = () => {};
         'Alert Management';
         'Root Cause Analysis';
         'Custom Dashboards'
-      ];
+      ],
       benefits: []
         'Prevent 90% of outages';
         'Improve application performance';
         'Reduce mean time to resolution'
-      ];
-      popular: false;
-      rating: 4.6;
+      ],
+      popular: false,
+      rating: 4.6,
       clients: 110
     };
-    {};
-      id: 'automation-tools';
-      name: 'Business Automation Tools';
-      category: 'saas';
-      description: 'Workflow automation platform with drag-and-drop builder and integration capabilities';
-      price: '$99/month';
+    {},
+      id: 'automation-tools',
+      name: 'Business Automation Tools',
+      category: 'saas',
+      description: 'Workflow automation platform with drag-and-drop builder and integration capabilities',
+      price: '$99/month',
       features: []
         'Workflow Builder';
         'Integration Hub';
@@ -288,14 +288,14 @@ const ServicesPage: React.FC = () => {};
         'Data Processing';
         'Notification System';
         'Analytics Dashboard'
-      ];
+      ],
       benefits: []
         'Automate 80% of repetitive tasks';
         'Reduce manual errors by 95%';
         'Save 20+ hours per week'
-      ];
-      popular: true;
-      rating: 4.8;
+      ],
+      popular: true,
+      rating: 4.8,
       clients: 180
     };
   ]
@@ -354,10 +354,10 @@ const ServicesPage: React.FC = () => {};
           <div className="flex flex-wrap justify-center gap-4"></div>
             {categories.map((category) => ()
               <button
-                key={category.id};
-                onClick={() => setSelectedCategory(category.id)};
-                className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${};
-                  selectedCategory === category.id
+                key={category.id},
+      onClick={() => setSelectedCategory(category.id)},
+      className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${},
+      selectedCategory === category.id
                     ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white'
                     : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50'
                 }`};
@@ -379,8 +379,8 @@ const ServicesPage: React.FC = () => {};
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"></div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8"></div>
             {filteredServices.map((service) => ()
-              <div key={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 lg:p-8 border transition-all duration-300 hover:transform hover:scale-105 ${};
-                service.popular
+              <div key={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 lg:p-8 border transition-all duration-300 hover:transform hover:scale-105 ${},
+      service.popular
                   ? 'border-purple-500/60 ring-2 ring-purple-500/20'
                   : 'border-purple-500/20 hover:border-purple-500/40'
               }`}></div>
@@ -428,9 +428,9 @@ const ServicesPage: React.FC = () => {};
                 </div>
                 <div className="space-y-2 sm:space-y-3"></div>
                   <Link
-                    to={`/service/${service.id}`};
-                    className={`w-full inline-flex items-center justify-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${};
-                      service.popular
+                    to={`/service/${service.id}`},
+      className={`w-full inline-flex items-center justify-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base ${},
+      service.popular
                         ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600'
                         : 'border border-purple-500 text-purple-300 hover:bg-purple-500/10'
                     }`};
@@ -483,5 +483,5 @@ const ServicesPage: React.FC = () => {};
       </section>
 </div>
   )
-};
-export default ServicesPage
+},
+      export default ServicesPage

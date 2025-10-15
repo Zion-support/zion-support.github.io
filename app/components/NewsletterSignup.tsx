@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
-
-export default function NewsletterSignup() {};
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (_e: React.FormEvent) => {};
-    e.preventDefault();
+import React, { useState } from 'react',
+      import React, { useState } from "react",
+      import { Helmet } from "react-helmet-async",
+      export default function NewsletterSignup() {},
+      const [email, setEmail] = useState(""),
+      const handleSubmit = (_e: React.FormEvent) => {},
+      e.preventDefault();
     // Handle newsletter signup
-    };
-
-  return (<>
+    },
+      return (<>
       <Helmet></Helmet>
         <title>Newsletter Signup - Zion Tech Group</title>
       </Helmet>
@@ -23,9 +20,9 @@ export default function NewsletterSignup() {};
               <Mail className="w-5 h-5" />
               <input
                 type="email"
-                value={email};
-                onChange={(e) => setEmail(e.target.value)};
-                placeholder="Enter your email"
+                value={email},
+      onChange={(e) => setEmail(e.target.value)},
+      placeholder="Enter your email"
                 required
               />
               <button type="submit">Subscribe</button>

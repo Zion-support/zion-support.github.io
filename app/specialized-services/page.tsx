@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const SpecializedServicesPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const SpecializedServicesPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="specialized-services - Zion Tech Group"
@@ -15,7 +14,8 @@ const SpecializedServicesPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default SpecializedServicesPage;

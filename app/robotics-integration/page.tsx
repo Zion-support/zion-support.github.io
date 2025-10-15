@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const RoboticsIntegrationPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const RoboticsIntegrationPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="robotics-integration - Zion Tech Group"
@@ -15,7 +14,8 @@ const RoboticsIntegrationPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default RoboticsIntegrationPage;

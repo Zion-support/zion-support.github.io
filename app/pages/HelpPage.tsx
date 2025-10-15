@@ -1,163 +1,157 @@
-import React, { useState } from 'react';
-import { Search, MessageSquare, Star, BookOpen, HelpCircle, Video, Download, ChevronDown, ChevronRight } from "lucide-react";
-
-const HelpPage: React.FC = () => {};
-  const [searchTerm, setSearchTerm] = useState('');
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
-
-  const helpCategories = [
-    {};
-      title: 'Getting Started';
-      icon: <Zap className="w-6 h-6 text-yellow-400" />;
-      articles: 12;
+import React, { useState } from 'react',
+      import { Search, MessageSquare, Star, BookOpen, HelpCircle, Video, Download, ChevronDown, ChevronRight } from "lucide-react",
+      const HelpPage: React.FC = () => {},
+      const [searchTerm, setSearchTerm] = useState(''),
+      const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null),
+      const helpCategories = [
+    {},
+      title: 'Getting Started',
+      icon: <Zap className="w-6 h-6 text-yellow-400" />,
+      articles: 12,
       description: 'Learn the basics and get up and running quickly'
     };
-    {};
-      title: 'Account & Billing';
-      icon: <Users className="w-6 h-6 text-blue-400" />;
-      articles: 8;
+    {},
+      title: 'Account & Billing',
+      icon: <Users className="w-6 h-6 text-blue-400" />,
+      articles: 8,
       description: 'Manage your account, billing, and subscription'
     };
-    {};
-      title: 'API & Integration';
-      icon: <Globe className="w-6 h-6 text-green-400" />;
-      articles: 15;
+    {},
+      title: 'API & Integration',
+      icon: <Globe className="w-6 h-6 text-green-400" />,
+      articles: 15,
       description: 'Integrate our services with your applications'
     };
-    {};
-      title: 'Troubleshooting';
-      icon: <HelpCircle className="w-6 h-6 text-red-400" />;
-      articles: 10;
+    {},
+      title: 'Troubleshooting',
+      icon: <HelpCircle className="w-6 h-6 text-red-400" />,
+      articles: 10,
       description: 'Common issues and how to resolve them'
     };
-    {};
-      title: 'Security & Privacy';
-      icon: <Award className="w-6 h-6 text-purple-400" />;
-      articles: 6;
+    {},
+      title: 'Security & Privacy',
+      icon: <Award className="w-6 h-6 text-purple-400" />,
+      articles: 6,
       description: 'Keep your data secure and understand our privacy practices'
     };
-    {};
-      title: 'Advanced Features';
-      icon: <Star className="w-6 h-6 text-orange-400" />;
-      articles: 9;
+    {},
+      title: 'Advanced Features',
+      icon: <Star className="w-6 h-6 text-orange-400" />,
+      articles: 9,
       description: 'Unlock the full potential of our platform'
     };
-  ];
-
-  const faqs = [
-    {};
-      id: 1;
-      question: 'How do I get started with your services?';
-      answer: 'Getting started is easy! Simply create an account, choose your plan, and follow our onboarding guide. We provide step-by-step tutorials and 24/7 support to help you get up and running quickly.';
+  ],
+      const faqs = [
+    {},
+      id: 1,
+      question: 'How do I get started with your services?',
+      answer: 'Getting started is easy! Simply create an account, choose your plan, and follow our onboarding guide. We provide step-by-step tutorials and 24/7 support to help you get up and running quickly.',
       category: 'Getting Started'
     };
-    {};
-      id: 2;
-      question: 'What payment methods do you accept?';
-      answer: 'We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. Enterprise customers can also pay via invoice with net 30 terms.';
+    {},
+      id: 2,
+      question: 'What payment methods do you accept?',
+      answer: 'We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. Enterprise customers can also pay via invoice with net 30 terms.',
       category: 'Account & Billing'
     };
-    {};
-      id: 3;
-      question: 'How do I integrate your API into my application?';
-      answer: 'Our API documentation provides comprehensive guides and code examples. You can also use our SDKs for popular programming languages, or contact our developer support team for custom integration assistance.';
+    {},
+      id: 3,
+      question: 'How do I integrate your API into my application?',
+      answer: 'Our API documentation provides comprehensive guides and code examples. You can also use our SDKs for popular programming languages, or contact our developer support team for custom integration assistance.',
       category: 'API & Integration'
     };
-    {};
-      id: 4;
-      question: 'What should I do if I encounter an error?';
-      answer: 'First, check our troubleshooting guide for common solutions. If the issue persists, contact our support team with details about the error, including any error messages and steps to reproduce the issue.';
+    {},
+      id: 4,
+      question: 'What should I do if I encounter an error?',
+      answer: 'First, check our troubleshooting guide for common solutions. If the issue persists, contact our support team with details about the error, including any error messages and steps to reproduce the issue.',
       category: 'Troubleshooting'
     };
-    {};
-      id: 5;
-      question: 'How do you protect my data?';
-      answer: 'We use enterprise-grade security measures including encryption at rest and in transit, regular security audits, and compliance with industry standards. Your data is never shared with third parties without your explicit consent.';
+    {},
+      id: 5,
+      question: 'How do you protect my data?',
+      answer: 'We use enterprise-grade security measures including encryption at rest and in transit, regular security audits, and compliance with industry standards. Your data is never shared with third parties without your explicit consent.',
       category: 'Security & Privacy'
     };
-    {};
-      id: 6;
-      question: 'Can I customize the features to fit my needs?';
-      answer: 'Yes! Our platform is highly customizable. You can configure settings, create custom workflows, and use our API to build custom integrations. Enterprise customers get additional customization options.';
+    {},
+      id: 6,
+      question: 'Can I customize the features to fit my needs?',
+      answer: 'Yes! Our platform is highly customizable. You can configure settings, create custom workflows, and use our API to build custom integrations. Enterprise customers get additional customization options.',
       category: 'Advanced Features'
     };
-  ];
-
-  const supportChannels = [
-    {};
-      icon: <MessageSquare className="w-8 h-8 text-cyan-400" />;
-      title: 'Live Chat';
-      description: 'Get instant help from our support team';
-      availability: '24/7';
-      responseTime: 'Immediate';
+  ],
+      const supportChannels = [
+    {},
+      icon: <MessageSquare className="w-8 h-8 text-cyan-400" />,
+      title: 'Live Chat',
+      description: 'Get instant help from our support team',
+      availability: '24/7',
+      responseTime: 'Immediate',
       action: 'Start Chat'
     };
-    {};
-      icon: <Phone className="w-8 h-8 text-green-400" />;
-      title: 'Phone Support';
-      description: 'Speak directly with our technical experts';
-      availability: 'Mon-Fri 9AM-6PM EST';
-      responseTime: 'Immediate';
+    {},
+      icon: <Phone className="w-8 h-8 text-green-400" />,
+      title: 'Phone Support',
+      description: 'Speak directly with our technical experts',
+      availability: 'Mon-Fri 9AM-6PM EST',
+      responseTime: 'Immediate',
       action: 'Call Now'
     };
-    {};
-      icon: <Mail className="w-8 h-8 text-purple-400" />;
-      title: 'Email Support';
-      description: 'Send us detailed questions and get comprehensive answers';
-      availability: '24/7';
-      responseTime: 'Within 4 hours';
+    {},
+      icon: <Mail className="w-8 h-8 text-purple-400" />,
+      title: 'Email Support',
+      description: 'Send us detailed questions and get comprehensive answers',
+      availability: '24/7',
+      responseTime: 'Within 4 hours',
       action: 'Send Email'
     };
-    {};
-      icon: <Calendar className="w-8 h-8 text-orange-400" />;
-      title: 'Schedule Call';
-      description: 'Book a dedicated session with our experts';
-      availability: 'Mon-Fri 9AM-6PM EST';
-      responseTime: 'Scheduled';
+    {},
+      icon: <Calendar className="w-8 h-8 text-orange-400" />,
+      title: 'Schedule Call',
+      description: 'Book a dedicated session with our experts',
+      availability: 'Mon-Fri 9AM-6PM EST',
+      responseTime: 'Scheduled',
       action: 'Book Now'
     };
-  ];
-
-  const resources = [
-    {};
-      title: 'Documentation';
-      description: 'Comprehensive guides and API references';
-      icon: <BookOpen className="w-6 h-6 text-blue-400" />;
-      type: 'Documentation';
+  ],
+      const resources = [
+    {},
+      title: 'Documentation',
+      description: 'Comprehensive guides and API references',
+      icon: <BookOpen className="w-6 h-6 text-blue-400" />,
+      type: 'Documentation',
       items: 25
     };
-    {};
-      title: 'Video Tutorials';
-      description: 'Step-by-step video guides and walkthroughs';
-      icon: <Video className="w-6 h-6 text-red-400" />;
-      type: 'Videos';
+    {},
+      title: 'Video Tutorials',
+      description: 'Step-by-step video guides and walkthroughs',
+      icon: <Video className="w-6 h-6 text-red-400" />,
+      type: 'Videos',
       items: 15
     };
-    {};
-      title: 'Knowledge Base';
-      description: 'Searchable articles and troubleshooting guides';
-      icon: <FileText className="w-6 h-6 text-green-400" />;
-      type: 'Articles';
+    {},
+      title: 'Knowledge Base',
+      description: 'Searchable articles and troubleshooting guides',
+      icon: <FileText className="w-6 h-6 text-green-400" />,
+      type: 'Articles',
       items: 50
     };
-    {};
-      title: 'Download Center';
-      description: 'SDKs, tools, and resources for developers';
-      icon: <Download className="w-6 h-6 text-purple-400" />;
-      type: 'Downloads';
+    {},
+      title: 'Download Center',
+      description: 'SDKs, tools, and resources for developers',
+      icon: <Download className="w-6 h-6 text-purple-400" />,
+      type: 'Downloads',
       items: 12
     };
-  ];
-
-  const filteredFAQs = faqs.filter(faq => 
+  ],
+      const filteredFAQs = faqs.filter(faq => 
     faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchTerm.toLowerCase()) ||
     faq.category.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  const toggleFAQ = (id: number) => {};
-    setExpandedFAQ(expandedFAQ === id ? null : id);
-  };
+  ),
+      const toggleFAQ = (id: number) => {},
+      setExpandedFAQ(expandedFAQ === id ? null : id)
+    },
+    {
 
   return (
     <>
@@ -195,9 +189,9 @@ const HelpPage: React.FC = () => {};
                 <input
                   type="text"
                   placeholder="Search for help articles, FAQs, and documentation..."
-                  value={searchTerm};
-                  onChange={(e) => setSearchTerm(e.target.value)};
-                  className="w-full pl-12 pr-4 py-4 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
+                  value={searchTerm},
+      onChange={(e) => setSearchTerm(e.target.value)},
+      className="w-full pl-12 pr-4 py-4 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
                 />
               </div>
             </div>
@@ -237,8 +231,8 @@ const HelpPage: React.FC = () => {};
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {helpCategories.map((category) => (
               <Link
-                key={index};
-                to="/help"
+                key={index},
+      to="/help"
                 className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"
               ></Link
 >
@@ -311,8 +305,8 @@ const HelpPage: React.FC = () => {};
               {filteredFAQs.map((faq) => (
                 <div key={faq.id} className="bg-slate-700/50 backdrop-blur-sm border border-slate-600/50 rounded-xl hover:border-purple-500/50 transition-all duration-300"></div>
                   <button
-                    onClick={() => toggleFAQ(faq.id)};
-                    className="w-full p-6 text-left flex items-center justify-between"
+                    onClick={() => toggleFAQ(faq.id)},
+      className="w-full p-6 text-left flex items-center justify-between"
                   >
                     <div></div>
                       <h3 className="text-xl font-semibold text-white mb-2">{faq.question}</h3>
@@ -360,8 +354,8 @@ const HelpPage: React.FC = () => {};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {resources.map((resource) => (
               <Link
-                key={index};
-                to="/resources"
+                key={index},
+      to="/resources"
                 className="group bg-slate-800/50 hover:bg-slate-800/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"
               ></Link
 >
@@ -412,7 +406,8 @@ const HelpPage: React.FC = () => {};
         </div>
       </section>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default HelpPage;

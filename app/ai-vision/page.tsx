@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiVisionPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiVisionPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-vision - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiVisionPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiVisionPage;

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ReportPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ReportPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="report - Zion Tech Group"
@@ -15,7 +14,8 @@ const ReportPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ReportPage;

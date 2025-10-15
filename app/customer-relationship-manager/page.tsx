@@ -1,120 +1,113 @@
 
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import EnhancedSEO from '../components/EnhancedSEO';
-
-const CustomerRelationshipManagerPage = () => {};
-  const features = [
-    {};
-      title: "Contact Management";
-      description: "Centralized contact database with detailed customer profiles and interaction history";
-      icon: <Users className="w-8 h-8" />;
+import FuturisticCard from '../components/FuturisticCard',
+      import FuturisticButton from '../components/FuturisticButton',
+      import ResponsiveContainer from '../components/ResponsiveContainer',
+      import EnhancedSEO from '../components/EnhancedSEO',
+      const CustomerRelationshipManagerPage = () => {},
+      const features = [
+    {},
+      title: "Contact Management",
+      description: "Centralized contact database with detailed customer profiles and interaction history",
+      icon: <Users className="w-8 h-8" />,
       benefits: ["Unified contact view", "Interaction tracking", "Custom fields", "Import/Export"]
     };
-    {};
-      title: "Sales Pipeline";
-      description: "Visual sales pipeline to track deals from lead to close";
-      icon: <Target className="w-8 h-8" />;
+    {},
+      title: "Sales Pipeline",
+      description: "Visual sales pipeline to track deals from lead to close",
+      icon: <Target className="w-8 h-8" />,
       benefits: ["Deal tracking", "Stage management", "Forecasting", "Sales analytics"]
     };
-    {};
-      title: "Lead Management";
-      description: "Capture, qualify, and nurture leads with automated workflows";
-      icon: <Zap className="w-8 h-8" />;
+    {},
+      title: "Lead Management",
+      description: "Capture, qualify, and nurture leads with automated workflows",
+      icon: <Zap className="w-8 h-8" />,
       benefits: ["Lead scoring", "Automated follow-up", "Lead assignment", "Conversion tracking"]
     };
-    {};
-      title: "Communication Hub";
-      description: "Unified communication center for emails, calls, and meetings";
-      icon: <Phone className="w-8 h-8" />;
+    {},
+      title: "Communication Hub",
+      description: "Unified communication center for emails, calls, and meetings",
+      icon: <Phone className="w-8 h-8" />,
       benefits: ["Email integration", "Call logging", "Meeting scheduler", "Activity timeline"]
     };
-    {};
-      title: "Analytics & Reporting";
-      description: "Comprehensive analytics to track sales performance and customer insights";
-      icon: <BarChart3 className="w-8 h-8" />;
+    {},
+      title: "Analytics & Reporting",
+      description: "Comprehensive analytics to track sales performance and customer insights",
+      icon: <BarChart3 className="w-8 h-8" />,
       benefits: ["Sales reports", "Customer analytics", "Performance metrics", "Custom dashboards"]
     };
-    {};
-      title: "Task Management";
-      description: "Organize and track tasks, follow-ups, and appointments";
-      icon: <Calendar className="w-8 h-8" />;
+    {},
+      title: "Task Management",
+      description: "Organize and track tasks, follow-ups, and appointments",
+      icon: <Calendar className="w-8 h-8" />,
       benefits: ["Task automation", "Reminder system", "Team collaboration", "Progress tracking"]
     };
-  ];
-
-  const pricing = [
-    {};
-      name: "Starter";
-      price: "$39";
-      period: "per month";
-      description: "Perfect for small businesses and startups";
-      features: [
-        "Up to 1,000 contacts";
-        "Basic sales pipeline";
-        "Email integration";
-        "Mobile app access";
+  ],
+      const pricing = [
+    {},
+      name: "Starter",
+      price: "$39",
+      period: "per month",
+      description: "Perfect for small businesses and startups",
+      features: ["Up to 1,000 contacts",
+        "Basic sales pipeline",
+        "Email integration",
+        "Mobile app access",
         "Email support"
-      ];
+      ],
       popular: false
     };
-    {};
-      name: "Professional";
-      price: "$79";
-      period: "per month";
-      description: "Ideal for growing sales teams";
-      features: [
-        "Up to 10,000 contacts";
-        "Advanced analytics";
-        "Lead scoring";
-        "API access";
-        "Priority support";
+    {},
+      name: "Professional",
+      price: "$79",
+      period: "per month",
+      description: "Ideal for growing sales teams",
+      features: ["Up to 10,000 contacts",
+        "Advanced analytics",
+        "Lead scoring",
+        "API access",
+        "Priority support",
         "Custom fields"
-      ];
+      ],
       popular: true
     };
-    {};
-      name: "Enterprise";
-      price: "$149";
-      period: "per month";
-      description: "For large organizations with complex needs";
-      features: [
-        "Unlimited contacts";
-        "Advanced automation";
-        "Custom integrations";
-        "Dedicated support";
-        "Advanced security";
+    {},
+      name: "Enterprise",
+      price: "$149",
+      period: "per month",
+      description: "For large organizations with complex needs",
+      features: ["Unlimited contacts",
+        "Advanced automation",
+        "Custom integrations",
+        "Dedicated support",
+        "Advanced security",
         "Custom reporting"
-      ];
+      ],
       popular: false
     };
-  ];
-
-  const benefits = [
-    {};
-      title: "Increase Sales";
-      description: "Boost sales productivity by up to 35% with better lead management";
+  ],
+      const benefits = [
+    {},
+      title: "Increase Sales",
+      description: "Boost sales productivity by up to 35% with better lead management",
       icon: <Target className="w-6 h-6" />
     };
-    {};
-      title: "Better Customer Service";
-      description: "Provide personalized service with complete customer history";
+    {},
+      title: "Better Customer Service",
+      description: "Provide personalized service with complete customer history",
       icon: <Users className="w-6 h-6" />
     };
-    {};
-      title: "Data-Driven Decisions";
-      description: "Make informed decisions with comprehensive analytics and reporting";
+    {},
+      title: "Data-Driven Decisions",
+      description: "Make informed decisions with comprehensive analytics and reporting",
       icon: <BarChart3 className="w-6 h-6" />
     };
-    {};
-      title: "Team Collaboration";
-      description: "Improve team coordination with shared customer information";
+    {},
+      title: "Team Collaboration",
+      description: "Improve team coordination with shared customer information",
       icon: <Globe className="w-6 h-6" />
     };
-  ];
-
-  return (
+  ],
+      return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <EnhancedSEO
         title="Customer Relationship Manager - Zion Tech Group | CRM Software for Sales Teams"
@@ -230,8 +223,8 @@ const CustomerRelationshipManagerPage = () => {};
                 </ul>
                 <FuturisticButton
                   href="/contact"
-                  variant={plan.popular ? "primary" : "outline"};
-                  size="sm"
+                  variant={plan.popular ? "primary" : "outline"},
+      size="sm"
                   className="w-full"
                 ></FuturisticButton
 >
@@ -298,7 +291,8 @@ const CustomerRelationshipManagerPage = () => {};
         </ResponsiveContainer>
       </section>
     </div>
-  );
-};
+  )
+    },
+    {
 
 export default CustomerRelationshipManagerPage;

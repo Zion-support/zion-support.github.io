@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiFitnessCoachPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiFitnessCoachPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-fitness-coach - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiFitnessCoachPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiFitnessCoachPage;

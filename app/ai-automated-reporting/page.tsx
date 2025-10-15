@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiAutomatedReportingPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiAutomatedReportingPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-automated-reporting - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiAutomatedReportingPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiAutomatedReportingPage;

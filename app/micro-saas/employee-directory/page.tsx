@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const EmployeeDirectoryPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const EmployeeDirectoryPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="employee-directory - Zion Tech Group"
@@ -15,7 +14,8 @@ const EmployeeDirectoryPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default EmployeeDirectoryPage;

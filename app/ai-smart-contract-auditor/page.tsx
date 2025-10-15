@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiSmartContractAuditorPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiSmartContractAuditorPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-smart-contract-auditor - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiSmartContractAuditorPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiSmartContractAuditorPage;

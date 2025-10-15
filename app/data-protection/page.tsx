@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const DataProtectionPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const DataProtectionPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="data-protection - Zion Tech Group"
@@ -15,7 +14,8 @@ const DataProtectionPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default DataProtectionPage;

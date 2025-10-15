@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const CloudCostOptimizationPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const CloudCostOptimizationPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="cloud-cost-optimization - Zion Tech Group"
@@ -15,7 +14,8 @@ const CloudCostOptimizationPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default CloudCostOptimizationPage;

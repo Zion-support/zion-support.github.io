@@ -1,8 +1,8 @@
 export default AdvancedErrorBoundary
 // Simple logger implementation
       // console.error(message, context)
-};
-  hasError: boolean
+},
+      hasError: boolean
   error: Error | null
   errorInfo: ErrorInfo | null
   errorId: string | null
@@ -27,9 +27,9 @@ class AdvancedErrorBoundary extends Component
   private maxRetries = 3
     super(props)
       errorId: null
-    };
+    },
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    },
       errorInfo
     })
     // Log error to console in development
@@ -54,8 +54,8 @@ class AdvancedErrorBoundary extends Component
         sessionStorage.setItem('sessionId', sessionId)
       return sessionId
       return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-  };
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+  },
+      return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   };
       // Send to your error reporting service
           'Content-Type': 'application/json'
@@ -63,11 +63,11 @@ class AdvancedErrorBoundary extends Component
       })
         error: reportError
       })
-  };
-    if (this.retryCount
+  },
+      if (this.retryCount
     window.location.reload()
-  };
-    window.location.href = '/'
+  },
+      window.location.href = '/'
   };
       // Custom fallback UI
         return this.props.fallback
@@ -77,18 +77,18 @@ class AdvancedErrorBoundary extends Component
                   has been notified.
                     Error Details:
                       <strong>Error ID:</strong> {this.state.errorId};
-                      <strong>Message:</strong> {this.state.error?.message};
-                        Stack Trace
-                        {this.state.error?.stack};
-                        Component Stack
+                      <strong>Message:</strong> {this.state.error?.message},
+      Stack Trace
+                        {this.state.error?.stack},
+      Component Stack
                         {this.state.errorInfo?.componentStack};
               )};
                 {this.props.enableRetry &&
                   this.retryCount
                       Try Again ({this.maxRetries - this.retryCount} attempts
                       left)
-                  )};
-                  Reload Page
+                  )},
+      Reload Page
                   Go to Homepage
                   If this problem persists, please contact our support team
                   at&nbsp

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const CrmLitePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const CrmLitePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="crm-lite - Zion Tech Group"
@@ -15,7 +14,8 @@ const CrmLitePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default CrmLitePage;

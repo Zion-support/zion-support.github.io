@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const QualityAssurancePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const QualityAssurancePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="quality-assurance - Zion Tech Group"
@@ -15,7 +14,8 @@ const QualityAssurancePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default QualityAssurancePage;

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ZionAiVideoEditorPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ZionAiVideoEditorPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="zion-ai-video-editor - Zion Tech Group"
@@ -15,7 +14,8 @@ const ZionAiVideoEditorPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionAiVideoEditorPage;

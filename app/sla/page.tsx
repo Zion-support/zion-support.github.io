@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const SlaPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const SlaPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="sla - Zion Tech Group"
@@ -15,7 +14,8 @@ const SlaPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default SlaPage;

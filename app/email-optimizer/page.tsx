@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const EmailOptimizerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const EmailOptimizerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="email-optimizer - Zion Tech Group"
@@ -15,7 +14,8 @@ const EmailOptimizerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default EmailOptimizerPage;

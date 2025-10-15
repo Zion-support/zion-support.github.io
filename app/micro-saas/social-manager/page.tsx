@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const SocialManagerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const SocialManagerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="social-manager - Zion Tech Group"
@@ -15,7 +14,8 @@ const SocialManagerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default SocialManagerPage;

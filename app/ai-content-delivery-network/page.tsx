@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiContentDeliveryNetworkPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiContentDeliveryNetworkPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-content-delivery-network - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiContentDeliveryNetworkPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiContentDeliveryNetworkPage;

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const InvestorsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const InvestorsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="investors - Zion Tech Group"
@@ -15,7 +14,8 @@ const InvestorsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default InvestorsPage;

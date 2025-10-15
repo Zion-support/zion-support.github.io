@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiLoadTestingPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiLoadTestingPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-load-testing - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiLoadTestingPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiLoadTestingPage;

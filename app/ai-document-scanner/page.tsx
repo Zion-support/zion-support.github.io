@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiDocumentScannerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiDocumentScannerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-document-scanner - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiDocumentScannerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiDocumentScannerPage;

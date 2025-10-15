@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiCrmPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiCrmPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-crm - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiCrmPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiCrmPage;

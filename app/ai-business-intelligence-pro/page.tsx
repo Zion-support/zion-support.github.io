@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiBusinessIntelligenceProPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiBusinessIntelligenceProPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-business-intelligence-pro - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiBusinessIntelligenceProPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiBusinessIntelligenceProPage;

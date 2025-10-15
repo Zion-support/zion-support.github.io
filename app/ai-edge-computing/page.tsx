@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiEdgeComputingPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiEdgeComputingPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-edge-computing - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiEdgeComputingPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiEdgeComputingPage;

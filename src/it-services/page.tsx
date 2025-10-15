@@ -7,8 +7,8 @@ export default ITServicesPage
   // Removed unused benefits array
   ]
   // Removed unused benefits variable
-        {/* Hero Section */};
-              IT Services & Infrastructure
+        {/* Hero Section */},
+      IT Services & Infrastructure
             Comprehensive IT solutions to support and optimize your business infrastructure.
             From cloud migration to cybersecurity, we keep your technology running smoothly.
               Get Free IT Assessment

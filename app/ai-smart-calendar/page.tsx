@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiSmartCalendarPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiSmartCalendarPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-smart-calendar - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiSmartCalendarPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiSmartCalendarPage;

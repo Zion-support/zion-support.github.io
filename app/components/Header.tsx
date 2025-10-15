@@ -1,10 +1,9 @@
 
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-
-export default function Header() {};
-  return (
+import { Helmet } from "react-helmet-async",
+      import { Link } from "react-router-dom",
+      import { ArrowRight } from "lucide-react",
+      export default function Header() {},
+      return (
     <div></div>
       <Helmet></Helmet>
         <title>Header - Zion Tech Group</title>
@@ -30,5 +29,6 @@ export default function Header() {};
         </div>
       </div>
     </div>
-  );
-};
+  )
+    },
+    {

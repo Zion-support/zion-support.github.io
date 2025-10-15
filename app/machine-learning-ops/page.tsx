@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const MachineLearningOpsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const MachineLearningOpsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="machine-learning-ops - Zion Tech Group"
@@ -15,7 +14,8 @@ const MachineLearningOpsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default MachineLearningOpsPage;

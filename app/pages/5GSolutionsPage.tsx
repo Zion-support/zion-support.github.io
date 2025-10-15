@@ -1,6 +1,6 @@
 
-const FiveGSolutionsPage: React.FC = () => {};
-  return (
+const FiveGSolutionsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="5GSolutionsPage - Zion Tech Group"
@@ -13,7 +13,8 @@ const FiveGSolutionsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default 5GSolutionsPage;

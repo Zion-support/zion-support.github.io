@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const BackupRecoveryPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const BackupRecoveryPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="backup-recovery - Zion Tech Group"
@@ -15,7 +14,8 @@ const BackupRecoveryPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default BackupRecoveryPage;

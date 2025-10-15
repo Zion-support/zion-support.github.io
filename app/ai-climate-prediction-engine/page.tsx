@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiClimatePredictionEnginePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiClimatePredictionEnginePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-climate-prediction-engine - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiClimatePredictionEnginePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiClimatePredictionEnginePage;

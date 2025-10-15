@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const SearchPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const SearchPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="search - Zion Tech Group"
@@ -15,7 +14,8 @@ const SearchPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default SearchPage;

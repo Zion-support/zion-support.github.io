@@ -1,61 +1,61 @@
 
-import { Helmet } from 'react-helmet-async';
-import {};
-  Users;
-  CheckCircle;
-  Brain;
-  Shield;
-  Globe;
-  Lightbulb;
-  Rocket;
-  Target
+import { Helmet } from 'react-helmet-async',
+      import {},
+      Users,
+      CheckCircle,
+      Brain,
+      Shield,
+      Globe,
+      Lightbulb,
+      Rocket,
+      Target
 } from 'lucide-react'
 const AboutPage: React.FC = () => {};
 }const values = []
-    {};
-      icon: Brain;
-      title: 'Innovation First';
+    {},
+      icon: Brain,
+      title: 'Innovation First',
       description: 'We stay at the forefront of technology, constantly exploring new ways to solve complex business challenges.'
     };
-    {};
-      icon: Shield;
-      title: 'Security & Trust';
+    {},
+      icon: Shield,
+      title: 'Security & Trust',
       description: 'Your data and systems are protected with enterprise-grade security measures and compliance standards.'
     };
-    {};
-      icon: Users;
-      title: 'Client Success';
+    {},
+      icon: Users,
+      title: 'Client Success',
       description: 'We measure our success by the success of our clients, ensuring every solution delivers real business value.'
     };
-    {};
-      icon: Globe;
-      title: 'Global Reach';
+    {},
+      icon: Globe,
+      title: 'Global Reach',
       description: 'Serving clients worldwide with 24/7 support and localized solutions for different markets and time zones.'
     };
   ]
   const team = []
-    {};
-      name: 'Kleber Santos';
-      role: 'CEO & Founder';
-      description: 'Visionary leader with 15+ years in AI and IT solutions';
+    {},
+      name: 'Kleber Santos',
+      role: 'CEO & Founder',
+      description: 'Visionary leader with 15+ years in AI and IT solutions',
       image: '/api/placeholder/300/300'
     };
-    {};
-      name: 'AI Research Team';
-      role: 'Machine Learning Engineers';
-      description: 'Experts in cutting-edge AI technologies and algorithms';
+    {},
+      name: 'AI Research Team',
+      role: 'Machine Learning Engineers',
+      description: 'Experts in cutting-edge AI technologies and algorithms',
       image: '/api/placeholder/300/300'
     };
-    {};
-      name: 'DevOps Specialists';
-      role: 'Infrastructure Engineers';
-      description: 'Cloud and infrastructure experts ensuring 99.9% uptime';
+    {},
+      name: 'DevOps Specialists',
+      role: 'Infrastructure Engineers',
+      description: 'Cloud and infrastructure experts ensuring 99.9% uptime',
       image: '/api/placeholder/300/300'
     };
-    {};
-      name: 'Customer Success';
-      role: 'Support Team';
-      description: 'Dedicated professionals ensuring your success 24/7';
+    {},
+      name: 'Customer Success',
+      role: 'Support Team',
+      description: 'Dedicated professionals ensuring your success 24/7',
       image: '/api/placeholder/300/300'
     };
   ]
@@ -85,8 +85,8 @@ const AboutPage: React.FC = () => {};
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
               We are a leading technology company specializing in AI, IT, and Micro SAAS solutions.
-              Our mission is to empower businesses with cutting-edge technology that drives growth;
-              efficiency, and innovation.
+              Our mission is to empower businesses with cutting-edge technology that drives growth,
+      efficiency, and innovation.
             </p>
           </div>
         </div>
@@ -278,5 +278,5 @@ const AboutPage: React.FC = () => {};
       </section>
 </div>
   )
-};
-export default AboutPage
+},
+      export default AboutPage

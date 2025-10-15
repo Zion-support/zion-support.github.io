@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiMlPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiMlPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-ml - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiMlPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiMlPage;

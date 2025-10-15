@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiWritingAssistantPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiWritingAssistantPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-writing-assistant - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiWritingAssistantPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiWritingAssistantPage;

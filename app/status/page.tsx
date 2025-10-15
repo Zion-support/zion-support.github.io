@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const StatusPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const StatusPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="status - Zion Tech Group"
@@ -15,7 +14,8 @@ const StatusPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default StatusPage;

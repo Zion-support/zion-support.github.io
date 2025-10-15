@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiVoiceCloningPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiVoiceCloningPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-voice-cloning - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiVoiceCloningPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiVoiceCloningPage;

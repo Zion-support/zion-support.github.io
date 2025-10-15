@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const DevopsCicdPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const DevopsCicdPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="devops-cicd - Zion Tech Group"
@@ -15,7 +14,8 @@ const DevopsCicdPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default DevopsCicdPage;

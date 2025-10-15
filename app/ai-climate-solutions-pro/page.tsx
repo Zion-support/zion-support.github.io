@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiClimateSolutionsProPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiClimateSolutionsProPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-climate-solutions-pro - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiClimateSolutionsProPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiClimateSolutionsProPage;

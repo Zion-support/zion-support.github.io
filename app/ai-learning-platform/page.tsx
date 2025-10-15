@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiLearningPlatformPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiLearningPlatformPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-learning-platform - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiLearningPlatformPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiLearningPlatformPage;

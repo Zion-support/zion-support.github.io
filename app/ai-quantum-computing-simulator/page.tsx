@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiQuantumComputingSimulatorPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiQuantumComputingSimulatorPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-quantum-computing-simulator - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiQuantumComputingSimulatorPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiQuantumComputingSimulatorPage;

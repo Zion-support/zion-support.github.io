@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiSmartInvoicePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiSmartInvoicePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-smart-invoice - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiSmartInvoicePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiSmartInvoicePage;

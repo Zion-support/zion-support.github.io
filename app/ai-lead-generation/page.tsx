@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiLeadGenerationPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiLeadGenerationPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-lead-generation - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiLeadGenerationPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiLeadGenerationPage;

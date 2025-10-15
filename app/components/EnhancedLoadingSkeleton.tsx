@@ -1,27 +1,26 @@
 
-interface SkeletonProps {};
-  width?: string | number
+interface SkeletonProps {},
+      width?: string | number
   height?: string | number
   className?: string
   rounded?: boolean
   animated?: boolean
-};
-const Skeleton: React.FC<SkeletonProps> = ({};
-  width = "100%", height = "1rem", className = "", rounded = true, animated = true, }) => {};
-  const style = {};
-    width: typeof width === "number" ? `${width}px` : width;
-    height: typeof height === "number" ? `${height}px` : height};
-  return ()
+},
+      const Skeleton: React.FC<SkeletonProps> = ({},
+      width = "100%", height = "1rem", className = "", rounded = true, animated = true, }) => {},
+      const style = {},
+      width: typeof width === "number" ? `${width}px` : width,
+      height: typeof height === "number" ? `${height}px` : height},
+      return ()
     <div
-      className={`bg-gray-700 ${rounded ? "rounded" : ""} ${animated ? "animate-pulse" : ""} ${className}`};
-      style={style};
-    />
+      className={`bg-gray-700 ${rounded ? "rounded" : ""} ${animated ? "animate-pulse" : ""} ${className}`},
+      style={style} />
   )
-};
-const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({};
-  type = "card", count = 1, className = "", }) => {};
-  const renderSkeleton = () => {};
-    switch (type) {};
+},
+      const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({},
+      type = "card", count = 1, className = "", }) => {},
+      const renderSkeleton = () => {},
+      switch (type) {},
       case "card":
         return ()
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
@@ -69,8 +68,9 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({};
         return <Skeleton width={120} height={40} rounded />
       default:
         return <Skeleton width="100%" height={100} />
-    };
-  };
+    }
+    },
+    {
   return ()
     <div className={className}></div>
       {Array.from({ length: count }).map(( index) => (
@@ -80,5 +80,5 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({};
       ))};
     </div>
   )
-};
-export default EnhancedLoadingSkeleton
+},
+      export default EnhancedLoadingSkeleton

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiVideoAnalysisPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiVideoAnalysisPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-video-analysis - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiVideoAnalysisPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiVideoAnalysisPage;

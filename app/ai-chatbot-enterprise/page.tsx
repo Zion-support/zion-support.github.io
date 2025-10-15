@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiChatbotEnterprisePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiChatbotEnterprisePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-chatbot-enterprise - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiChatbotEnterprisePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiChatbotEnterprisePage;

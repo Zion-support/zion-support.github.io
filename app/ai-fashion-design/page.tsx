@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiFashionDesignPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiFashionDesignPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-fashion-design - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiFashionDesignPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiFashionDesignPage;

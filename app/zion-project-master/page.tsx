@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ZionProjectMasterPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ZionProjectMasterPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="zion-project-master - Zion Tech Group"
@@ -15,7 +14,8 @@ const ZionProjectMasterPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionProjectMasterPage;

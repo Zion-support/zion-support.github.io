@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const DocumentProcessorPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const DocumentProcessorPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="document-processor - Zion Tech Group"
@@ -15,7 +14,8 @@ const DocumentProcessorPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default DocumentProcessorPage;

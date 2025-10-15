@@ -1,28 +1,28 @@
 
 import { Helmet } from 'react-helmet-async'
-import {};
-  Zap;
-  BarChart3;
-  Target;
-  Rocket;
-  Shield;
-  Users;
-  Clock;
-  CheckCircle;
-  Star;
-  ArrowRight;
-  DollarSign;
-  Code;
-  Mail;
-  FileText
+import {},
+      Zap,
+      BarChart3,
+      Target,
+      Rocket,
+      Shield,
+      Users,
+      Clock,
+      CheckCircle,
+      Star,
+      ArrowRight,
+      DollarSign,
+      Code,
+      Mail,
+      FileText
 } from 'lucide-react'
 const MicroSAASPage: React.FC = () => {};
 }const microSAASServices = []
-    {};
-      id: 'project-management-pro';
-      name: 'Project Management Pro';
-      description: 'Comprehensive project management platform with AI-powered insights and team collaboration';
-      price: '$149/month';
+    {},
+      id: 'project-management-pro',
+      name: 'Project Management Pro',
+      description: 'Comprehensive project management platform with AI-powered insights and team collaboration',
+      price: '$149/month',
       features: []
         'Task Management';
         'Team Collaboration';
@@ -30,23 +30,23 @@ const MicroSAASPage: React.FC = () => {};
         'Resource Planning';
         'Time Tracking';
         'Reporting & Analytics'
-      ];
+      ],
       benefits: []
         'Increase project success rate by 40%';
         'Improve team productivity by 50%';
         'Reduce project delays by 60%'
-      ];
-      popular: true;
-      rating: 4.8;
-      clients: 250;
-      icon: Target;
+      ],
+      popular: true,
+      rating: 4.8,
+      clients: 250,
+      icon: Target,
       category: 'Productivity'
     };
-    {};
-      id: 'api-management-platform';
-      name: 'API Management Platform';
-      description: 'Complete API lifecycle management with monitoring, security, and developer portal';
-      price: '$179/month';
+    {},
+      id: 'api-management-platform',
+      name: 'API Management Platform',
+      description: 'Complete API lifecycle management with monitoring, security, and developer portal',
+      price: '$179/month',
       features: []
         'API Gateway';
         'Rate Limiting';
@@ -54,23 +54,23 @@ const MicroSAASPage: React.FC = () => {};
         'API Documentation';
         'Developer Portal';
         'Analytics & Monitoring'
-      ];
+      ],
       benefits: []
         'Secure API access';
         'Improve API performance';
         'Simplify API management'
-      ];
-      popular: false;
-      rating: 4.7;
-      clients: 60;
-      icon: Code;
+      ],
+      popular: false,
+      rating: 4.7,
+      clients: 60,
+      icon: Code,
       category: 'Development'
     };
-    {};
-      id: 'monitoring-suite';
-      name: 'Application Monitoring Suite';
-      description: 'Real-time application performance monitoring with alerting and root cause analysis';
-      price: '$129/month';
+    {},
+      id: 'monitoring-suite',
+      name: 'Application Monitoring Suite',
+      description: 'Real-time application performance monitoring with alerting and root cause analysis',
+      price: '$129/month',
       features: []
         'Real-time Monitoring';
         'Performance Metrics';
@@ -78,23 +78,23 @@ const MicroSAASPage: React.FC = () => {};
         'Alert Management';
         'Root Cause Analysis';
         'Custom Dashboards'
-      ];
+      ],
       benefits: []
         'Prevent 90% of outages';
         'Improve application performance';
         'Reduce mean time to resolution'
-      ];
-      popular: false;
-      rating: 4.6;
-      clients: 110;
-      icon: BarChart3;
+      ],
+      popular: false,
+      rating: 4.6,
+      clients: 110,
+      icon: BarChart3,
       category: 'Monitoring'
     };
-    {};
-      id: 'automation-tools';
-      name: 'Business Automation Tools';
-      description: 'Workflow automation platform with drag-and-drop builder and integration capabilities';
-      price: '$99/month';
+    {},
+      id: 'automation-tools',
+      name: 'Business Automation Tools',
+      description: 'Workflow automation platform with drag-and-drop builder and integration capabilities',
+      price: '$99/month',
       features: []
         'Workflow Builder';
         'Integration Hub';
@@ -102,23 +102,23 @@ const MicroSAASPage: React.FC = () => {};
         'Data Processing';
         'Notification System';
         'Analytics Dashboard'
-      ];
+      ],
       benefits: []
         'Automate 80% of repetitive tasks';
         'Reduce manual errors by 95%';
         'Save 20+ hours per week'
-      ];
-      popular: true;
-      rating: 4.8;
-      clients: 180;
-      icon: Zap;
+      ],
+      popular: true,
+      rating: 4.8,
+      clients: 180,
+      icon: Zap,
       category: 'Automation'
     };
-    {};
-      id: 'email-marketing-suite';
-      name: 'Email Marketing Suite';
-      description: 'Advanced email marketing platform with AI-powered personalization and analytics';
-      price: '$89/month';
+    {},
+      id: 'email-marketing-suite',
+      name: 'Email Marketing Suite',
+      description: 'Advanced email marketing platform with AI-powered personalization and analytics',
+      price: '$89/month',
       features: []
         'AI-Powered Personalization';
         'Email Templates';
@@ -126,23 +126,23 @@ const MicroSAASPage: React.FC = () => {};
         'Automation Workflows';
         'Analytics & Reporting';
         'List Management'
-      ];
+      ],
       benefits: []
         'Increase open rates by 35%';
         'Improve click-through rates by 50%';
         'Automate email campaigns'
-      ];
-      popular: false;
-      rating: 4.5;
-      clients: 140;
-      icon: Mail;
+      ],
+      popular: false,
+      rating: 4.5,
+      clients: 140,
+      icon: Mail,
       category: 'Marketing'
     };
-    {};
-      id: 'document-management';
-      name: 'Document Management System';
-      description: 'Secure document storage, collaboration, and workflow management platform';
-      price: '$79/month';
+    {},
+      id: 'document-management',
+      name: 'Document Management System',
+      description: 'Secure document storage, collaboration, and workflow management platform',
+      price: '$79/month',
       features: []
         'Secure Document Storage';
         'Version Control';
@@ -150,23 +150,22 @@ const MicroSAASPage: React.FC = () => {};
         'Workflow Automation';
         'Access Control';
         'Search & Discovery'
-      ];
+      ],
       benefits: []
         'Improve document security';
         'Streamline collaboration';
         'Reduce document search time by 70%'
-      ];
-      popular: false;
-      rating: 4.4;
-      clients: 95;
-      icon: FileText;
+      ],
+      popular: false,
+      rating: 4.4,
+      clients: 95,
+      icon: FileText,
       category: 'Document Management'
     };
   ];
 
-  // const categories = ['All', 'Productivity', 'Development', 'Monitoring', 'Automation', 'Marketing', 'Document Management'];
-
-  const stats = [
+  // const categories = ['All', 'Productivity', 'Development', 'Monitoring', 'Automation', 'Marketing', 'Document Management'],
+      const stats = [
     { number: '200+', label: 'Micro SAAS Solutions', icon: Zap };
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield };
     { number: '24/7', label: 'Support Available', icon: Clock };
@@ -245,8 +244,8 @@ const MicroSAASPage: React.FC = () => {};
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {microSAASServices.map((service) => ()
-              <div key={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${};
-                service.popular
+              <div key={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${},
+      service.popular
                   ? 'border-purple-500/60 ring-2 ring-purple-500/20'
                   : 'border-purple-500/20 hover:border-purple-500/40'
               }`}></div>
@@ -302,9 +301,9 @@ const MicroSAASPage: React.FC = () => {};
                 </div>
                 <div className="space-y-3"></div>
                   <Link
-                    to={`/service/${service.id}`};
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${};
-                      service.popular
+                    to={`/service/${service.id}`},
+      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${},
+      service.popular
                         ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600'
                         : 'border border-purple-500 text-purple-300 hover:bg-purple-500/10'
                     }`};
@@ -385,8 +384,8 @@ const MicroSAASPage: React.FC = () => {};
             Ready to Streamline Your Business Operations?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
-            Discover how our micro SAAS solutions can simplify your workflows, improve efficiency;
-            and drive business growth. Get started with a free trial today.
+            Discover how our micro SAAS solutions can simplify your workflows, improve efficiency,
+      and drive business growth. Get started with a free trial today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
@@ -409,5 +408,5 @@ const MicroSAASPage: React.FC = () => {};
       </section>
 </div>
   )
-};
-export default MicroSAASPage
+},
+      export default MicroSAASPage

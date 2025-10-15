@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ChatAnalyticsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ChatAnalyticsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="chat-analytics - Zion Tech Group"
@@ -15,7 +14,8 @@ const ChatAnalyticsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ChatAnalyticsPage;

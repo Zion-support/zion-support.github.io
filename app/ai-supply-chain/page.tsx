@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiSupplyChainPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiSupplyChainPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-supply-chain - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiSupplyChainPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiSupplyChainPage;

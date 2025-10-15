@@ -1,15 +1,14 @@
 
-import { Helmet } from 'react-helmet-async';
-import { Zap, Brain, Cloud, Shield, Code, Database, Users, DollarSign, Globe, Settings, Target, TrendingUp, Cpu, Monitor, Eye, Heart, Award, Mic, Video, Image, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from 'lucide-react';
-
-const ServicesPage: React.FC = () => {};
-  const serviceCategories = [
-    {};
-      title: 'Micro SAAS Solutions';
-      description: 'Powerful, affordable micro software-as-a-service solutions designed for modern businesses';
-      icon: <Zap className="w-12 h-12 text-purple-400" />;
-      link: '/micro-saas-solutions';
-      color: 'from-purple-500 to-cyan-500';
+import { Helmet } from 'react-helmet-async',
+      import { Zap, Brain, Cloud, Shield, Code, Database, Users, DollarSign, Globe, Settings, Target, TrendingUp, Cpu, Monitor, Eye, Heart, Award, Mic, Video, Image, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from 'lucide-react',
+      const ServicesPage: React.FC = () => {},
+      const serviceCategories = [
+    {},
+      title: 'Micro SAAS Solutions',
+      description: 'Powerful, affordable micro software-as-a-service solutions designed for modern businesses',
+      icon: <Zap className="w-12 h-12 text-purple-400" />,
+      link: '/micro-saas-solutions',
+      color: 'from-purple-500 to-cyan-500',
       services: [
         'AI Accounting Assistant - $29/mo';
         'AI Content Moderation Pro - $49/mo';
@@ -19,12 +18,12 @@ const ServicesPage: React.FC = () => {};
         'AI Code Assistant Pro - $199/mo'
       ]
     };
-    {};
-      title: 'AI Services';
-      description: 'Advanced artificial intelligence services that transform your business operations';
-      icon: <Brain className="w-12 h-12 text-cyan-400" />;
-      link: '/ai-solutions';
-      color: 'from-cyan-500 to-purple-500';
+    {},
+      title: 'AI Services',
+      description: 'Advanced artificial intelligence services that transform your business operations',
+      icon: <Brain className="w-12 h-12 text-cyan-400" />,
+      link: '/ai-solutions',
+      color: 'from-cyan-500 to-purple-500',
       services: [
         'AI Chatbot Enterprise - $299/mo';
         'AI Computer Vision - $399/mo';
@@ -34,12 +33,12 @@ const ServicesPage: React.FC = () => {};
         'AI Blockchain Solutions - $599/mo'
       ]
     };
-    {};
-      title: 'IT Services';
-      description: 'Comprehensive technology services including cloud, security, and development';
-      icon: <Server className="w-12 h-12 text-blue-400" />;
-      link: '/it-solutions';
-      color: 'from-blue-500 to-green-500';
+    {},
+      title: 'IT Services',
+      description: 'Comprehensive technology services including cloud, security, and development',
+      icon: <Server className="w-12 h-12 text-blue-400" />,
+      link: '/it-solutions',
+      color: 'from-blue-500 to-green-500',
       services: [
         'Cloud Infrastructure - From $2,500/mo';
         'Cybersecurity Solutions - From $1,500/mo';
@@ -49,12 +48,12 @@ const ServicesPage: React.FC = () => {};
         'Database Management - From $2,000'
       ]
     };
-    {};
-      title: '5G Solutions';
-      description: 'Next-generation 5G implementation, IoT solutions, and smart city technologies';
-      icon: <Globe className="w-12 h-12 text-green-400" />;
-      link: '/5g-solutions';
-      color: 'from-green-500 to-blue-500';
+    {},
+      title: '5G Solutions',
+      description: 'Next-generation 5G implementation, IoT solutions, and smart city technologies',
+      icon: <Globe className="w-12 h-12 text-green-400" />,
+      link: '/5g-solutions',
+      color: 'from-green-500 to-blue-500',
       services: [
         '5G Implementation - Custom';
         '5G IoT Solutions - Custom';
@@ -64,102 +63,98 @@ const ServicesPage: React.FC = () => {};
         '5G Network Optimization - Custom'
       ]
     };
-  ];
-
-  const features = [
-    {};
-      icon: <Shield className="w-8 h-8 text-green-400" />;
-      title: 'Enterprise Security';
+  ],
+      const features = [
+    {},
+      icon: <Shield className="w-8 h-8 text-green-400" />,
+      title: 'Enterprise Security',
       description: 'Bank-level security with 99.9% uptime guarantee and comprehensive data protection'
     };
-    {};
-      icon: <Clock className="w-8 h-8 text-blue-400" />;
-      title: '24/7 Support';
+    {},
+      icon: <Clock className="w-8 h-8 text-blue-400" />,
+      title: '24/7 Support',
       description: 'Round-the-clock expert support to ensure your systems run smoothly at all times'
     };
-    {};
-      icon: <TrendingUp className="w-8 h-8 text-purple-400" />;
-      title: 'Scalable Solutions';
+    {},
+      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
+      title: 'Scalable Solutions',
       description: 'Solutions that grow with your business, from startup to enterprise scale'
     };
-    {};
-      icon: <Award className="w-8 h-8 text-yellow-400" />;
-      title: 'Certified Experts';
+    {},
+      icon: <Award className="w-8 h-8 text-yellow-400" />,
+      title: 'Certified Experts',
       description: 'Our team consists of certified professionals with years of industry experience'
     };
-    {};
-      icon: <Rocket className="w-8 h-8 text-cyan-400" />;
-      title: 'Fast Deployment';
+    {},
+      icon: <Rocket className="w-8 h-8 text-cyan-400" />,
+      title: 'Fast Deployment',
       description: 'Quick implementation and deployment to get you up and running in no time'
     };
-    {};
-      icon: <Users className="w-8 h-8 text-orange-400" />;
-      title: '500+ Happy Clients';
+    {},
+      icon: <Users className="w-8 h-8 text-orange-400" />,
+      title: '500+ Happy Clients',
       description: 'Trusted by businesses worldwide for our innovative solutions and exceptional service'
     };
-  ];
-
-  const processSteps = [
-    {};
-      step: '01';
-      title: 'Discovery & Analysis';
-      description: 'We analyze your business needs and current technology stack to understand your requirements.';
+  ],
+      const processSteps = [
+    {},
+      step: '01',
+      title: 'Discovery & Analysis',
+      description: 'We analyze your business needs and current technology stack to understand your requirements.',
       icon: <Target className="w-8 h-8 text-cyan-400" />
     };
-    {};
-      step: '02';
-      title: 'Solution Design';
-      description: 'Our experts design a customized solution that perfectly fits your business objectives.';
+    {},
+      step: '02',
+      title: 'Solution Design',
+      description: 'Our experts design a customized solution that perfectly fits your business objectives.',
       icon: <Lightbulb className="w-8 h-8 text-purple-400" />
     };
-    {};
-      step: '03';
-      title: 'Implementation';
-      description: 'We implement the solution with minimal disruption to your existing operations.';
+    {},
+      step: '03',
+      title: 'Implementation',
+      description: 'We implement the solution with minimal disruption to your existing operations.',
       icon: <Settings className="w-8 h-8 text-green-400" />
     };
-    {};
-      step: '04';
-      title: 'Testing & Optimization';
-      description: 'Thorough testing and optimization to ensure peak performance and reliability.';
+    {},
+      step: '04',
+      title: 'Testing & Optimization',
+      description: 'Thorough testing and optimization to ensure peak performance and reliability.',
       icon: <BarChart3 className="w-8 h-8 text-blue-400" />
     };
-    {};
-      step: '05';
-      title: 'Launch & Support';
-      description: 'We launch your solution and provide ongoing support and maintenance.';
+    {},
+      step: '05',
+      title: 'Launch & Support',
+      description: 'We launch your solution and provide ongoing support and maintenance.',
       icon: <Rocket className="w-8 h-8 text-orange-400" />
     };
-  ];
-
-  const testimonials = [
-    {};
-      name: 'Sarah Johnson';
-      company: 'TechStart Inc.';
-      role: 'CEO';
-      content: 'Zion Tech Group transformed our business with their AI solutions. Our efficiency increased by 300% in just 6 months.';
-      rating: 5;
+  ],
+      const testimonials = [
+    {},
+      name: 'Sarah Johnson',
+      company: 'TechStart Inc.',
+      role: 'CEO',
+      content: 'Zion Tech Group transformed our business with their AI solutions. Our efficiency increased by 300% in just 6 months.',
+      rating: 5,
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face'
     };
-    {};
-      name: 'Michael Chen';
-      company: 'Global Enterprises';
-      role: 'CTO';
-      content: 'The micro SAAS platform they built for us is incredibly powerful and cost-effective. Highly recommended!';
-      rating: 5;
+    {},
+      name: 'Michael Chen',
+      company: 'Global Enterprises',
+      role: 'CTO',
+      content: 'The micro SAAS platform they built for us is incredibly powerful and cost-effective. Highly recommended!',
+      rating: 5,
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
     };
-    {};
-      name: 'Emily Rodriguez';
-      company: 'InnovateCorp';
-      role: 'Operations Director';
+    {},
+      name: 'Emily Rodriguez',
+      company: 'InnovateCorp',
+      role: 'Operations Director',
       content: 'Their 5G solutions helped us implement smart city technologies that improved our city\'s infrastructure significantly.','
-      rating: 5;
+      rating: 5,
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face'
     };
-  ];
-
-  return (<>
+  ],
+      return (<>
       <Helmet></Helmet>
         <title>Our Services - Comprehensive AI & IT Solutions | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive range of services including micro SAAS solutions, AI services, _IT solutions, and 5G technologies. Expert solutions for your business needs." />
@@ -226,9 +221,9 @@ const ServicesPage: React.FC = () => {};
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {serviceCategories.map((category, index) => (
               <Link
-                key={index};
-                to={category.link};
-                className="group bg-slate-700/50 hover:bg-slate-600/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10"
+                key={index},
+      to={category.link},
+      className="group bg-slate-700/50 hover:bg-slate-600/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10"
               ></Link
 >
                 <div className="mb-6 group-hover:scale-110 transition-transform"></div>
@@ -351,9 +346,9 @@ const ServicesPage: React.FC = () => {};
                 </p>
                 <div className="flex items-center"></div>
                   <img
-                    src={testimonial.image};
-                    alt={testimonial.name};
-                    className="w-12 h-12 rounded-full mr-4 object-cover"
+                    src={testimonial.image},
+      alt={testimonial.name},
+      className="w-12 h-12 rounded-full mr-4 object-cover"
                   />
                   <div></div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
@@ -395,7 +390,8 @@ const ServicesPage: React.FC = () => {};
         </div>
       </section>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ServicesPage;

@@ -1,8 +1,8 @@
 
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Bug } from 'lucide-react';const ReportPage: React.FC = () => {};
-  return (
+import { Helmet } from 'react-helmet-async',
+      import { Link } from 'react-router-dom',
+      import { Bug } from 'lucide-react';const ReportPage: React.FC = () => {},
+      return (
     <>
       <Helmet></Helmet>
         <title>Report Issue - Zion Tech Group | Bug Reports & Support</title>
@@ -43,7 +43,8 @@ import { Bug } from 'lucide-react';const ReportPage: React.FC = () => {};
         </div>
       </section>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ReportPage;

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const CookiesPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const CookiesPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="cookies - Zion Tech Group"
@@ -15,7 +14,8 @@ const CookiesPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default CookiesPage;

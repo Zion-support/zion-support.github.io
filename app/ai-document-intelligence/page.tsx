@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiDocumentIntelligencePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiDocumentIntelligencePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-document-intelligence - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiDocumentIntelligencePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiDocumentIntelligencePage;

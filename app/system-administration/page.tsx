@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const SystemAdministrationPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const SystemAdministrationPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="system-administration - Zion Tech Group"
@@ -15,7 +14,8 @@ const SystemAdministrationPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default SystemAdministrationPage;

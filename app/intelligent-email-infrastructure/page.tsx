@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const IntelligentEmailInfrastructurePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const IntelligentEmailInfrastructurePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="intelligent-email-infrastructure - Zion Tech Group"
@@ -15,7 +14,8 @@ const IntelligentEmailInfrastructurePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default IntelligentEmailInfrastructurePage;

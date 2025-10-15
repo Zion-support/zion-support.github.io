@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
-import {Star, Play} from "lucide-react";
-
-const DemoPage: React.FC = () => {};
-  const [selectedDemo, setSelectedDemo] = useState('ai-solutions');
-
-  const demos = [
-    {};
-      id: 'ai-solutions';
-      title: 'AI Solutions Demo';
-      description: 'Experience our AI-powered solutions in action';
-      icon: Brain;
+import React, { useState } from 'react',
+      import {Star, Play} from "lucide-react",
+      const DemoPage: React.FC = () => {},
+      const [selectedDemo, setSelectedDemo] = useState('ai-solutions'),
+      const demos = [
+    {},
+      id: 'ai-solutions',
+      title: 'AI Solutions Demo',
+      description: 'Experience our AI-powered solutions in action',
+      icon: Brain,
       features: [
         'Natural Language Processing';
         'Computer Vision';
@@ -17,15 +15,15 @@ const DemoPage: React.FC = () => {};
         'Chatbot Interface';
         'Data Visualization';
         'Real-time Insights'
-      ];
-      duration: '15 minutes';
+      ],
+      duration: '15 minutes',
       category: 'AI & Machine Learning'
     };
-    {};
-      id: 'micro-saas';
-      title: 'Micro SAAS Platform';
-      description: 'Explore our scalable software-as-a-service solutions';
-      icon: Cpu;
+    {},
+      id: 'micro-saas',
+      title: 'Micro SAAS Platform',
+      description: 'Explore our scalable software-as-a-service solutions',
+      icon: Cpu,
       features: [
         'Project Management';
         'Content Creation';
@@ -33,15 +31,15 @@ const DemoPage: React.FC = () => {};
         'Email Marketing';
         'User Management';
         'API Integration'
-      ];
-      duration: '20 minutes';
+      ],
+      duration: '20 minutes',
       category: 'Micro SAAS'
     };
-    {};
-      id: 'cloud-infrastructure';
-      title: 'Cloud Infrastructure';
-      description: 'See our cloud solutions and infrastructure management';
-      icon: Cloud;
+    {},
+      id: 'cloud-infrastructure',
+      title: 'Cloud Infrastructure',
+      description: 'See our cloud solutions and infrastructure management',
+      icon: Cloud,
       features: [
         'Auto-scaling';
         'Security Monitoring';
@@ -49,15 +47,15 @@ const DemoPage: React.FC = () => {};
         'Performance Analytics';
         'Cost Optimization';
         'Disaster Recovery'
-      ];
-      duration: '25 minutes';
+      ],
+      duration: '25 minutes',
       category: 'Cloud & Infrastructure'
     };
-    {};
-      id: 'mobile-apps';
-      title: 'Mobile Applications';
-      description: 'Test our mobile apps and cross-platform solutions';
-      icon: Smartphone;
+    {},
+      id: 'mobile-apps',
+      title: 'Mobile Applications',
+      description: 'Test our mobile apps and cross-platform solutions',
+      icon: Smartphone,
       features: [
         'Native iOS/Android';
         'Cross-platform Development';
@@ -65,69 +63,65 @@ const DemoPage: React.FC = () => {};
         'Push Notifications';
         'Biometric Authentication';
         'Real-time Sync'
-      ];
-      duration: '18 minutes';
+      ],
+      duration: '18 minutes',
       category: 'Mobile Development'
     };
-  ];
-
-  const demoSteps = [
-    {};
-      step: '01';
-      title: 'Schedule Your Demo';
-      description: 'Choose a convenient time that works for your schedule';
+  ],
+      const demoSteps = [
+    {},
+      step: '01',
+      title: 'Schedule Your Demo',
+      description: 'Choose a convenient time that works for your schedule',
       icon: Calendar
     };
-    {};
-      step: '02';
-      title: 'Meet Our Expert';
-      description: 'Connect with our solution specialist via video call';
+    {},
+      step: '02',
+      title: 'Meet Our Expert',
+      description: 'Connect with our solution specialist via video call',
       icon: Users
     };
-    {};
-      step: '03';
-      title: 'See It In Action';
-      description: 'Watch live demonstrations of our solutions';
+    {},
+      step: '03',
+      title: 'See It In Action',
+      description: 'Watch live demonstrations of our solutions',
       icon: Play
     };
-    {};
-      step: '04';
-      title: 'Ask Questions';
-      description: 'Get answers to all your questions and concerns';
+    {},
+      step: '04',
+      title: 'Ask Questions',
+      description: 'Get answers to all your questions and concerns',
       icon: Target
     };
-    {};
-      step: '05';
-      title: 'Get Custom Quote';
-      description: 'Receive a tailored proposal for your needs';
+    {},
+      step: '05',
+      title: 'Get Custom Quote',
+      description: 'Receive a tailored proposal for your needs',
       icon: Award
     };
-  ];
-
-  const testimonials = [
-    {};
-      name: 'Sarah Johnson';
-      role: 'CTO, TechCorp';
-      content: 'The demo was incredibly insightful. We could see exactly how the AI solutions would fit into our workflow.';
+  ],
+      const testimonials = [
+    {},
+      name: 'Sarah Johnson',
+      role: 'CTO, TechCorp',
+      content: 'The demo was incredibly insightful. We could see exactly how the AI solutions would fit into our workflow.',
       rating: 5
     };
-    {};
-      name: 'Michael Chen';
-      role: 'Founder, StartupXYZ';
-      content: 'The micro SAAS demo showed us the potential to scale our business quickly and efficiently.';
+    {},
+      name: 'Michael Chen',
+      role: 'Founder, StartupXYZ',
+      content: 'The micro SAAS demo showed us the potential to scale our business quickly and efficiently.',
       rating: 5
     };
-    {};
-      name: 'Emily Rodriguez';
-      role: 'IT Director, Enterprise Inc';
-      content: 'The cloud infrastructure demo convinced us that Zion Tech Group was the right partner for our migration.';
+    {},
+      name: 'Emily Rodriguez',
+      role: 'IT Director, Enterprise Inc',
+      content: 'The cloud infrastructure demo convinced us that Zion Tech Group was the right partner for our migration.',
       rating: 5
     };
-  ];
-
-  const selectedDemoData = demos.find(demo => demo.id === selectedDemo);
-
-  return (
+  ],
+      const selectedDemoData = demos.find(demo => demo.id === selectedDemo),
+      return (
     <>
       <Helmet></Helmet>
         <title>Demo - Zion Tech Group | See Our Solutions in Action</title>
@@ -190,17 +184,17 @@ const DemoPage: React.FC = () => {};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"></div>
             {demos.map((demo) => (
               <button
-                key={demo.id};
-                onClick={() => setSelectedDemo(demo.id)};
-                className={`p-6 rounded-xl border transition-all duration-300 text-left ${};
-                  selectedDemo === demo.id
+                key={demo.id},
+      onClick={() => setSelectedDemo(demo.id)},
+      className={`p-6 rounded-xl border transition-all duration-300 text-left ${},
+      selectedDemo === demo.id
                     ? 'bg-cyan-600 border-cyan-500 text-white'
                     : 'bg-slate-700/50 border-slate-600/50 text-gray-300 hover:bg-slate-700/70 hover:border-cyan-500/50'
                 }`};
               >
                 <div className="flex items-center mb-4"></div>
-                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mr-4 ${};
-                    selectedDemo === demo.id
+                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mr-4 ${},
+      selectedDemo === demo.id
                       ? 'bg-white/20'
                       : 'bg-gradient-to-r from-cyan-500 to-purple-600'
                   }`}></div>
@@ -354,7 +348,8 @@ const DemoPage: React.FC = () => {};
         </div>
       </section>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default DemoPage;

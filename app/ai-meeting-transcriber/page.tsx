@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiMeetingTranscriberPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiMeetingTranscriberPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-meeting-transcriber - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiMeetingTranscriberPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiMeetingTranscriberPage;

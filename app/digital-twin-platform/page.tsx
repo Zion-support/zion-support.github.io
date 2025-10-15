@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const DigitalTwinPlatformPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const DigitalTwinPlatformPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="digital-twin-platform - Zion Tech Group"
@@ -15,7 +14,8 @@ const DigitalTwinPlatformPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default DigitalTwinPlatformPage;

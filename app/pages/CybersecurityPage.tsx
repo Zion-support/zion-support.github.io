@@ -1,6 +1,6 @@
 
-const CybersecurityPage: React.FC = () => {};
-  return (
+const CybersecurityPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="CybersecurityPage - Zion Tech Group"
@@ -13,7 +13,8 @@ const CybersecurityPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default CybersecurityPage;

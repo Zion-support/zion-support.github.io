@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiExpenseTrackerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiExpenseTrackerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-expense-tracker - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiExpenseTrackerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiExpenseTrackerPage;

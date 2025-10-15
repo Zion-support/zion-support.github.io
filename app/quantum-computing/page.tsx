@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const QuantumComputingPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const QuantumComputingPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="quantum-computing - Zion Tech Group"
@@ -15,7 +14,8 @@ const QuantumComputingPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default QuantumComputingPage;

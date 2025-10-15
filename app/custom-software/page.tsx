@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const CustomSoftwarePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const CustomSoftwarePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="custom-software - Zion Tech Group"
@@ -15,7 +14,8 @@ const CustomSoftwarePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default CustomSoftwarePage;

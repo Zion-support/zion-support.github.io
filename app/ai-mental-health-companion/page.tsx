@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiMentalHealthCompanionPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiMentalHealthCompanionPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-mental-health-companion - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiMentalHealthCompanionPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiMentalHealthCompanionPage;

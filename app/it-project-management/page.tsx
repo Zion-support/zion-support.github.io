@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ItProjectManagementPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ItProjectManagementPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="it-project-management - Zion Tech Group"
@@ -15,7 +14,8 @@ const ItProjectManagementPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ItProjectManagementPage;

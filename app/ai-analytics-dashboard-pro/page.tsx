@@ -1,21 +1,17 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
+import React from 'react',
+      import { Helmet } from 'react-helmet-async',
+      import { 
   CheckCircle, 
   ArrowRight, 
   BarChart3, 
   TrendingUp, 
   Target, 
   Database,
-<<<<<<< HEAD
   Cloud,
   ShoppingCart,
   DollarSign
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9
-} from 'lucide-react';
-
-const AIAnalyticsDashboardProPage: React.FC = () => {
+} from 'lucide-react',
+      const AIAnalyticsDashboardProPage: React.FC = () => {
   const features = [
     'AI-powered data analysis and insights',
     'Real-time dashboard customization',
@@ -27,27 +23,24 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
     'White-label dashboard options',
     'Mobile-responsive design',
     'API access and custom integrations'
-  ];
-
-  const benefits = [
+  ],
+      const benefits = [
     'Make data-driven decisions 3x faster',
     'Identify trends and opportunities automatically',
     'Reduce reporting time by 90%',
     'Improve business performance by 35%',
     'Save 20+ hours weekly on data analysis',
     'Scale analytics with business growth'
-  ];
-
-  const integrations = [
+  ],
+      const integrations = [
     { name: 'Google Analytics', icon: <BarChart3 className="w-6 h-6 text-orange-400" /> },
     { name: 'Salesforce', icon: <Cloud className="w-6 h-6 text-blue-400" /> },
     { name: 'HubSpot', icon: <Target className="w-6 h-6 text-orange-400" /> },
     { name: 'MySQL', icon: <Database className="w-6 h-6 text-blue-600" /> },
     { name: 'PostgreSQL', icon: <Database className="w-6 h-6 text-indigo-400" /> },
     { name: 'MongoDB', icon: <Database className="w-6 h-6 text-green-400" /> }
-  ];
-
-  const pricingPlans = [
+  ],
+      const pricingPlans = [
     {
       name: 'Starter',
       price: '$79/mo',
@@ -97,9 +90,8 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
-  const useCases = [
+  ],
+      const useCases = [
     {
       title: 'E-commerce',
       description: 'Track sales, customer behavior, and inventory analytics',
@@ -124,16 +116,14 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
       icon: <DollarSign className="w-6 h-6 text-green-600" />,
       results: '35% better financial forecasting'
     }
-  ];
-
-  const stats = [
+  ],
+      const stats = [
     { number: '3x', label: 'Faster Decisions' },
     { number: '90%', label: 'Less Reporting Time' },
     { number: '35%', label: 'Better Performance' },
     { number: '20+', label: 'Hours Saved Weekly' }
-  ];
-
-  return (
+  ],
+      return (
     <>
       <Helmet>
         <title>AI Analytics Dashboard Pro - Intelligent Business Analytics | Zion Tech Group</title>
@@ -397,7 +387,8 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AIAnalyticsDashboardProPage;

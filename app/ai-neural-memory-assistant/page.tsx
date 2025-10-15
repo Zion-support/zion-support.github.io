@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiNeuralMemoryAssistantPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiNeuralMemoryAssistantPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-neural-memory-assistant - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiNeuralMemoryAssistantPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiNeuralMemoryAssistantPage;

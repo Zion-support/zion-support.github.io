@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const SmartCityInfrastructurePage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const SmartCityInfrastructurePage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="smart-city-infrastructure - Zion Tech Group"
@@ -15,7 +14,8 @@ const SmartCityInfrastructurePage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default SmartCityInfrastructurePage;

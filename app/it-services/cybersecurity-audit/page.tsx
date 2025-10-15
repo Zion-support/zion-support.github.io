@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const CybersecurityAuditPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const CybersecurityAuditPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="cybersecurity-audit - Zion Tech Group"
@@ -15,7 +14,8 @@ const CybersecurityAuditPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default CybersecurityAuditPage;

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const DevopsAdvancedPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const DevopsAdvancedPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="devops-advanced - Zion Tech Group"
@@ -15,7 +14,8 @@ const DevopsAdvancedPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default DevopsAdvancedPage;

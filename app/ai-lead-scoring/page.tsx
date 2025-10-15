@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiLeadScoringPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiLeadScoringPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-lead-scoring - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiLeadScoringPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiLeadScoringPage;

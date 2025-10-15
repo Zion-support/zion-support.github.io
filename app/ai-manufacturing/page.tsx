@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiManufacturingPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiManufacturingPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-manufacturing - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiManufacturingPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiManufacturingPage;

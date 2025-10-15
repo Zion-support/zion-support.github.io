@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const AiSmartHomeControllerPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const AiSmartHomeControllerPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="ai-smart-home-controller - Zion Tech Group"
@@ -15,7 +14,8 @@ const AiSmartHomeControllerPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default AiSmartHomeControllerPage;

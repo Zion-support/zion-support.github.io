@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ItSecurityServicesPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ItSecurityServicesPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="it-security-services - Zion Tech Group"
@@ -15,7 +14,8 @@ const ItSecurityServicesPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ItSecurityServicesPage;

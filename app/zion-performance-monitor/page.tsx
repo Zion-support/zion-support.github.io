@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ZionPerformanceMonitorPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ZionPerformanceMonitorPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="zion-performance-monitor - Zion Tech Group"
@@ -15,7 +14,8 @@ const ZionPerformanceMonitorPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionPerformanceMonitorPage;

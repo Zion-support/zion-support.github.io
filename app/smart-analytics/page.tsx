@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const SmartAnalyticsPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const SmartAnalyticsPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="smart-analytics - Zion Tech Group"
@@ -15,7 +14,8 @@ const SmartAnalyticsPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default SmartAnalyticsPage;

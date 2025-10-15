@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const DigitalTransformationPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const DigitalTransformationPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="DigitalTransformationPage - Zion Tech Group"
@@ -15,7 +14,8 @@ const DigitalTransformationPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default DigitalTransformationPage;

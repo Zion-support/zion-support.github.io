@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const InfrastructureManagementPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const InfrastructureManagementPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="infrastructure-management - Zion Tech Group"
@@ -15,7 +14,8 @@ const InfrastructureManagementPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default InfrastructureManagementPage;

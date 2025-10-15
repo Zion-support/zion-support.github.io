@@ -1,53 +1,51 @@
 
-import { Helmet } from 'react-helmet-async';
-  const features = [
-    {};
-      icon: BarChart3;
-      title: 'AI-Powered Analytics';
-      description: 'See how our AI analyzes your data in real-time';
+import { Helmet } from 'react-helmet-async',
+      const features = [
+    {},
+      icon: BarChart3,
+      title: 'AI-Powered Analytics',
+      description: 'See how our AI analyzes your data in real-time',
       demo: 'Live Demo'
     };
-    {};
-      icon: Shield;
-      title: 'Advanced Security';
-      description: 'Experience our enterprise-grade security features';
+    {},
+      icon: Shield,
+      title: 'Advanced Security',
+      description: 'Experience our enterprise-grade security features',
       demo: 'Demo'
     };
-    {};
-      icon: BarChart3;
-      title: 'Business Intelligence';
-      description: 'Explore our comprehensive BI dashboard';
+    {},
+      icon: BarChart3,
+      title: 'Business Intelligence',
+      description: 'Explore our comprehensive BI dashboard',
       demo: 'BI Demo'
     };
-    {};
-      icon: Play;
-      title: 'Team Collaboration';
-      description: 'See how teams work together seamlessly';
+    {},
+      icon: Play,
+      title: 'Team Collaboration',
+      description: 'See how teams work together seamlessly',
       demo: 'Collaboration Demo'
     };
-  ];
-
-  const testimonials = [{};
-      name: "Sarah Johnson";
-      company: "TechCorp Inc.";
-      content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.";
+  ],
+      const testimonials = [{},
+      name: "Sarah Johnson",
+      company: "TechCorp Inc.",
+      content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.",
       rating: 5
     };
-    {};
-      name: "Michael Chen";
-      company: "DataFlow Systems";
-      content: "The live demonstration helped us understand the full potential of the AI solutions.";
+    {},
+      name: "Michael Chen",
+      company: "DataFlow Systems",
+      content: "The live demonstration helped us understand the full potential of the AI solutions.",
       rating: 5
     };
-    {};
-      name: "Emily Rodriguez";
-      company: "InnovateLabs";
-      content: "The demo team was knowledgeable and answered all our questions thoroughly.";
+    {},
+      name: "Emily Rodriguez",
+      company: "InnovateLabs",
+      content: "The demo team was knowledgeable and answered all our questions thoroughly.",
       rating: 5
     };
-  ];
-
-  return (
+  ],
+      return (
     <>
       <Helmet></Helmet>
         <title>Demo - Zion Tech Group | AI & IT Solutions</title>
@@ -60,11 +58,12 @@ import { Helmet } from 'react-helmet-async';
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
-export default DemoPage;
-  return (
+export default DemoPage,
+      return (
     <>
       <SEOHead 
         title="demo - Zion Tech Group"
@@ -77,7 +76,8 @@ export default DemoPage;
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default DemoPage;

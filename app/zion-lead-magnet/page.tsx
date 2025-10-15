@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ZionLeadMagnetPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ZionLeadMagnetPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="zion-lead-magnet - Zion Tech Group"
@@ -15,7 +14,8 @@ const ZionLeadMagnetPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionLeadMagnetPage;

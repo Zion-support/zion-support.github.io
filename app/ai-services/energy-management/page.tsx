@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const EnergyManagementPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const EnergyManagementPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="energy-management - Zion Tech Group"
@@ -15,7 +14,8 @@ const EnergyManagementPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default EnergyManagementPage;

@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const ZionInvoiceGeniusPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const ZionInvoiceGeniusPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="zion-invoice-genius - Zion Tech Group"
@@ -15,7 +14,8 @@ const ZionInvoiceGeniusPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default ZionInvoiceGeniusPage;

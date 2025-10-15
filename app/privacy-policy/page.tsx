@@ -1,8 +1,7 @@
 
-import SEOHead from '../components/SEOHead';
-
-const PrivacyPolicyPage: React.FC = () => {};
-  return (
+import SEOHead from '../components/SEOHead',
+      const PrivacyPolicyPage: React.FC = () => {},
+      return (
     <>
       <SEOHead 
         title="privacy-policy - Zion Tech Group"
@@ -15,7 +14,8 @@ const PrivacyPolicyPage: React.FC = () => {};
         </div>
       </div>
     </>
-  );
-};
+  )
+    },
+    {
 
 export default PrivacyPolicyPage;
