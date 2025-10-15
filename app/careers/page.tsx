@@ -16,14 +16,16 @@ const CareersPage: React.FC = () => {
         'PhD in Computer Science or related field',
         '5+ years experience in AI/ML',
         'Expertise in Python, TensorFlow, PyTorch',
-        'Experience with cloud platforms (AWS, GCP, Azure)']
-        'Strong problem-solving and communication skills'],
+        'Experience with cloud platforms (AWS, GCP, Azure)',
+        'Strong problem-solving and communication skills'
+      ],
       benefits: [
         'Competitive salary and equity',
         'Health, dental, and vision insurance',
         'Flexible work arrangements',
-        'Professional development budget']
-        '401(k) with company matching']
+        'Professional development budget',
+        '401(k) with company matching'
+      ]
     },
     {
       title: 'Full-Stack Developer',
@@ -36,14 +38,16 @@ const CareersPage: React.FC = () => {
         'Bachelor\'s degree in Computer Science',
         '3+ years full-stack development experience',
         'Proficiency in React, Node.js, TypeScript',
-        'Experience with databases (PostgreSQL, MongoDB)']
-        'Knowledge of cloud services and DevOps'],
+        'Experience with databases (PostgreSQL, MongoDB)',
+        'Knowledge of cloud services and DevOps'
+      ],
       benefits: [
         'Competitive salary',
         'Comprehensive health benefits',
         'Remote work flexibility',
-        'Learning and development opportunities']
-        'Team building events']
+        'Learning and development opportunities',
+        'Team building events'
+      ]
     },
     {
       title: 'AI Product Manager',
@@ -56,14 +60,16 @@ const CareersPage: React.FC = () => {
         'Bachelor\'s degree in Business or Technical field',
         '4+ years product management experience',
         'Experience with AI/ML products',
-        'Strong analytical and communication skills']
-        'MBA preferred'],
+        'Strong analytical and communication skills',
+        'MBA preferred'
+      ],
       benefits: [
         'Competitive salary and bonus',
         'Health and wellness benefits',
         'Flexible PTO policy',
-        'Professional development opportunities']
-        'Stock options']
+        'Professional development opportunities',
+        'Stock options'
+      ]
     },
     {
       title: 'DevOps Engineer',
@@ -76,14 +82,16 @@ const CareersPage: React.FC = () => {
         '3+ years DevOps experience',
         'Expertise in AWS, Docker, Kubernetes',
         'Experience with CI/CD pipelines',
-        'Knowledge of monitoring and logging tools']
-        'Scripting skills (Python, Bash)'],
+        'Knowledge of monitoring and logging tools',
+        'Scripting skills (Python, Bash)'
+      ],
       benefits: [
         'Competitive salary',
         'Health insurance',
         'Remote work options',
-        'Certification reimbursement']
-        'Performance bonuses']
+        'Certification reimbursement',
+        'Performance bonuses'
+      ]
     }
   ];
 
@@ -128,7 +136,7 @@ const CareersPage: React.FC = () => {
         <meta property="og:type" content="website" />
       </Helmet>
       
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20">
           
@@ -158,8 +166,7 @@ const CareersPage: React.FC = () => {
                   Contact Us
                 </a>
               </div>
-            ))}
-          </div>
+            </div>
         </section>
         {/* Stats Section */}
         <section className="py-16 bg-white/5 backdrop-blur-sm">
@@ -320,37 +327,11 @@ const CareersPage: React.FC = () => {
                   Email Us
                 </a>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Don't See the Right Role?
-          </h2>
-          <p className="text-xl mb-8 text-blue-100">
-            We&apos;re always looking for talented individuals. Send us your resume and let&apos;s talk!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-    to="/contact"
-              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-            >
-              Send Your Resume
-            </Link>
-            <Link
-    to="/about"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-            >
-              Learn About Us
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 export default CareersPage;
