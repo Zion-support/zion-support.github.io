@@ -1,6 +1,9 @@
 const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [
   '/',
+  '/about',
+  '/services',
+  '/contact',
   '/static/js/bundle.js',
   '/static/css/main.css',
   '/manifest.json'
@@ -24,8 +27,7 @@ self.addEventListener('fetch', (event) => {
       .then((response) => {
         // Return cached version or fetch from network
         return response || fetch(event.request);
-      }
-    )
+      })
   );
 });
 

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ServicesPage: React.FC = () => {
+const ServicesPage: React.FC = memo(() => {
   return (
     <>
       <Helmet>
@@ -42,6 +42,8 @@ const ServicesPage: React.FC = () => {
       </div>
     </>
   );
-};
+});
+
+ServicesPage.displayName = 'ServicesPage';
 
 export default ServicesPage;

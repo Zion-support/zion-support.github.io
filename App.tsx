@@ -39,14 +39,31 @@ import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
+import PerformanceDashboard from './app/components/PerformanceDashboard';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
-// Enhanced loading component
+// Enhanced loading component with skeleton
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-      <p className="text-gray-600 animate-pulse">Loading...</p>
+  <div className="min-h-screen bg-gray-50">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="text-center mb-8">
+        <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+        <div className="h-8 bg-gray-200 rounded w-64 mx-auto mb-2 animate-pulse"></div>
+        <div className="h-4 bg-gray-200 rounded w-96 mx-auto animate-pulse"></div>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {Array.from({ length: 6 }).map((_, index) => (
+          <div key={index} className="bg-white p-6 rounded-lg shadow-md border">
+            <div className="h-6 bg-gray-200 rounded mb-4 animate-pulse"></div>
+            <div className="space-y-2">
+              <div className="h-4 bg-gray-200 rounded animate-pulse"></div>
+              <div className="h-4 bg-gray-200 rounded w-3/4 animate-pulse"></div>
+              <div className="h-4 bg-gray-200 rounded w-1/2 animate-pulse"></div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 )
@@ -63,7 +80,21 @@ export default function App() {
       document.head.appendChild(fontPreload)
     }
 
+    // Register service worker
+    const registerServiceWorker = () => {
+      if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            console.log('SW registered: ', registration);
+          })
+          .catch((registrationError) => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      }
+    }
+
     preloadCriticalResources()
+    registerServiceWorker()
   }, [])
 
   return (
@@ -76,6 +107,7 @@ export default function App() {
             
             <main className="flex-1">
               <PerformanceMonitor />
+              <PerformanceDashboard />
               <AccessibilityEnhancer />
               
               <Suspense fallback={<LoadingFallback />}>

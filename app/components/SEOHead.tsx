@@ -1,33 +1,74 @@
+import React, { memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function componentsPage() {
-  return (
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Components services and solutions from Zion Tech Group." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Components
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional Components services and solutions for your business needs.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-                Get Started
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+interface SEOHeadProps {
+  title: string;
+  description: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  structuredData?: object;
+  noIndex?: boolean;
+  noFollow?: boolean;
 }
+
+const SEOHead: React.FC<SEOHeadProps> = memo(({
+  title,
+  description,
+  keywords,
+  canonicalUrl,
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  ogType = 'website',
+  structuredData,
+  noIndex = false,
+  noFollow = false
+}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;
+  const canonical = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
+
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      <link rel="canonical" href={canonical} />
+      
+      {/* Robots */}
+      <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      
+      {/* Additional Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="language" content="English" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="theme-color" content="#2563eb" />
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
+    </Helmet>
+  );
+});
+
+SEOHead.displayName = 'SEOHead';
+
+export default SEOHead;

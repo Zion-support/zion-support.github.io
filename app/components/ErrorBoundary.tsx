@@ -1,4 +1,5 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
+import { errorHandler } from '../utils/errorHandler';
 
 interface Props {
   children: ReactNode;
@@ -7,6 +8,7 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
+  errorId?: string;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -21,6 +23,17 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
+    
+    // Report error to error handler
+    const errorId = errorHandler.reportError(error, {
+      component: 'ErrorBoundary',
+      action: 'componentDidCatch',
+      url: window.location.href,
+      userAgent: navigator.userAgent,
+      timestamp: new Date().toISOString()
+    });
+    
+    this.setState({ errorId });
   }
 
   render() {
@@ -38,12 +51,25 @@ class ErrorBoundary extends Component<Props, State> {
               <p className="mt-2 text-sm text-gray-500">
                 {this.state.error?.message || 'An unexpected error occurred'}
               </p>
-              <button
-                onClick={() => this.setState({ hasError: false, error: undefined })}
-                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                Try again
-              </button>
+              {this.state.errorId && (
+                <p className="mt-2 text-xs text-gray-400">
+                  Error ID: {this.state.errorId}
+                </p>
+              )}
+              <div className="mt-4 space-x-2">
+                <button
+                  onClick={() => this.setState({ hasError: false, error: undefined, errorId: undefined })}
+                  className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  Try again
+                </button>
+                <button
+                  onClick={() => window.location.reload()}
+                  className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                >
+                  Reload page
+                </button>
+              </div>
             </div>
           </div>
         </div>

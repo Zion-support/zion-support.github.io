@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, memo, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useFormValidation } from '../hooks/useFormValidation';
 
-const ContactPage: React.FC = () => {
+const ContactPage: React.FC = memo(() => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,18 +11,56 @@ const ContactPage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const validationRules = {
+    name: {
+      required: true,
+      minLength: 2,
+      maxLength: 50
+    },
+    email: {
+      required: true,
+      pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+      custom: (value: string) => {
+        if (!value.includes('@')) return 'Please enter a valid email address';
+        return null;
+      }
+    },
+    message: {
+      required: true,
+      minLength: 10,
+      maxLength: 1000
+    }
+  };
+
+  const { errors, validateField, validateForm, clearErrors } = useFormValidation(validationRules);
+
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
-  };
+    
+    // Clear error when user starts typing
+    if (errors[name]) {
+      const error = validateField(name, value);
+      if (!error) {
+        clearErrors();
+      }
+    }
+  }, [errors, validateField, clearErrors]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate form before submission
+    if (!validateForm(formData)) {
+      return;
+    }
+    
     setIsSubmitting(true);
     setSubmitStatus('idle');
+    clearErrors();
 
     try {
       // Simulate API call
@@ -38,7 +77,7 @@ const ContactPage: React.FC = () => {
     } finally {
       setIsSubmitting(false);
     }
-  };
+  }, [formData, validateForm, clearErrors]);
 
   return (
     <>
@@ -102,9 +141,14 @@ const ContactPage: React.FC = () => {
                     required
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                      errors.name ? 'border-red-500' : 'border-gray-300'
+                    }`}
                     placeholder="Your full name"
                   />
+                  {errors.name && (
+                    <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                  )}
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
@@ -117,9 +161,14 @@ const ContactPage: React.FC = () => {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                      errors.email ? 'border-red-500' : 'border-gray-300'
+                    }`}
                     placeholder="your.email@example.com"
                   />
+                  {errors.email && (
+                    <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                  )}
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
@@ -132,9 +181,14 @@ const ContactPage: React.FC = () => {
                     required
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                      errors.message ? 'border-red-500' : 'border-gray-300'
+                    }`}
                     placeholder="Tell us about your project or how we can help..."
                   ></textarea>
+                  {errors.message && (
+                    <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+                  )}
                 </div>
                 <button
                   type="submit"
@@ -150,6 +204,8 @@ const ContactPage: React.FC = () => {
       </div>
     </>
   );
-};
+});
+
+ContactPage.displayName = 'ContactPage';
 
 export default ContactPage;

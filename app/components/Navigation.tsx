@@ -1,9 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, memo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
-const Navigation: React.FC = () => {
+const Navigation: React.FC = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+
+  const toggleMenu = useCallback(() => {
+    setIsOpen(prev => !prev);
+  }, []);
+
+  const handleServicesMouseEnter = useCallback(() => {
+    setServicesOpen(true);
+  }, []);
+
+  const handleServicesMouseLeave = useCallback(() => {
+    setServicesOpen(false);
+  }, []);
 
   return (
     <nav className="bg-white shadow-lg">
@@ -26,8 +38,8 @@ const Navigation: React.FC = () => {
             {/* Services Dropdown */}
             <div className="relative">
               <button
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
+                onMouseEnter={handleServicesMouseEnter}
+                onMouseLeave={handleServicesMouseLeave}
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
               >
                 Services
@@ -37,8 +49,8 @@ const Navigation: React.FC = () => {
               </button>
               {servicesOpen && (
                 <div
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
+                  onMouseEnter={handleServicesMouseEnter}
+                  onMouseLeave={handleServicesMouseLeave}
                   className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50"
                 >
                   <div className="py-1">
@@ -72,7 +84,7 @@ const Navigation: React.FC = () => {
 
           <div className="md:hidden flex items-center">
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={toggleMenu}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -121,6 +133,8 @@ const Navigation: React.FC = () => {
       )}
     </nav>
   );
-};
+});
+
+Navigation.displayName = 'Navigation';
 
 export default Navigation;
