@@ -14,7 +14,11 @@ interface State {
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
+<<<<<<< HEAD
     hasError: false,
+=======
+    hasError: false
+>>>>>>> cursor/fix-errors-and-merge-to-main-14bb
   };
 
   public static getDerivedStateFromError(error: Error): State {

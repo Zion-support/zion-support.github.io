@@ -1,7 +1,12 @@
 import React, { Suspense, lazy, ComponentType } from "react";
 import { Loader2 } from "lucide-react";
+<<<<<<< HEAD
 interface LazyComponentProps<P = {}> {
   importFunc: () => Promise<{ default: ComponentType<P> }>;
+=======
+
+interface LazyComponentProps {
+>>>>>>> cursor/fix-errors-and-merge-to-main-14bb
   fallback?: React.ReactNode;
   delay?: number;
 }
@@ -14,54 +19,78 @@ const DefaultFallback = () => (
     </div>
   </div>
 );
+
 // Higher-order component for lazy loading with custom fallback
 export function withLazyLoading<P extends object>(
+  importFunc: () => Promise<{ default: ComponentType<P> }>,
   fallback?: React.ReactNode
-) { const LazyComponent = lazy(importFunc);
+) {
+  const LazyComponent = lazy(importFunc);
+  
   return function WrappedComponent(props: P) {
     return (
-      <Suspense fallback={fallback || <DefaultFallback /> }>
-        <LazyComponent { ...props } />
+      <Suspense fallback={fallback || <DefaultFallback />}>
+        <LazyComponent {...props} />
       </Suspense>
     );
   };
 }
+
 // Hook for lazy loading with intersection observer
-export function useLazyLoad(ref: React.RefObject<HTMLElement>, options?: IntersectionObserverInit) { const [isVisible, setIsVisible] = React.useState(false);
+export function useLazyLoad(ref: React.RefObject<HTMLElement>, options?: IntersectionObserverInit) {
+  const [isVisible, setIsVisible] = React.useState(false);
+
   React.useEffect(() => {
     if (!ref.current) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); }
+          observer.disconnect();
+        }
       },
-      { threshold: 0.1,
+      {
+        threshold: 0.1,
         rootMargin: '50px',
-        ...options }
+        ...options
+      }
     );
+
     observer.observe(ref.current);
+
     return () => observer.disconnect();
   }, [ref, options]);
+
   return isVisible;
 }
+
 // Component for lazy loading with intersection observer
-export const LazyComponent: React.FC<LazyComponentProps & { children: React.ReactNode }> = ({ children,
+export const LazyComponent: React.FC<LazyComponentProps & { children: React.ReactNode }> = ({
+  children,
   fallback = <DefaultFallback />,
-  delay = 0 }) => { const [shouldRender, setShouldRender] = React.useState(false);
+  delay = 0
+}) => {
+  const [shouldRender, setShouldRender] = React.useState(false);
   const ref = React.useRef<HTMLDivElement>(null);
   const isVisible = useLazyLoad(ref);
+
   React.useEffect(() => {
     if (isVisible) {
       if (delay > 0) {
         const timer = setTimeout(() => setShouldRender(true), delay);
-        return () => clearTimeout(timer); } else { setShouldRender(true); }
+        return () => clearTimeout(timer);
+      } else {
+        setShouldRender(true);
+      }
     }
   }, [isVisible, delay]);
+
   return (
-    <div ref={ ref }>
-      { shouldRender ? children : fallback }
+    <div ref={ref}>
+      {shouldRender ? children : fallback}
     </div>
   );
 };
+
 export default LazyComponent;
