@@ -1,130 +1,121 @@
-;
-interface PerformanceMetrics {
-  renderTime: number;
-  componentName: string;
-  timestamp: number;
+import { useEffect, useState, useCallback } from 'react';
+import { getPerformanceTracker, PerformanceMetrics } from '../utils/performance';
+
+export interface UsePerformanceOptions {
+  trackWebVitals?: boolean;
+  trackNavigation?: boolean;
+  trackResources?: boolean;
+  reportInterval?: number;
 }
-;
-/**;
- * Hook for performance monitoring and optimization;
- */;
-export function usePerformance(componentName: string) {
-  const: renderStartTime = useRef<number>(0);
-  const: renderCount = useRef<number>(0);
-;
-  // Track render performance;
+
+export const usePerformance = (options: UsePerformanceOptions = {}) => {
+  const {
+    trackWebVitals = true,
+    trackNavigation = true,
+    trackResources = true,
+    reportInterval = 5000
+  } = options;
+
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+  const [isTracking, setIsTracking] = useState(false);
+
+  const tracker = getPerformanceTracker();
+
+  const updateMetrics = useCallback(() => {
+    const currentMetrics = tracker.getMetrics();
+    setMetrics(currentMetrics);
+  }, [tracker]);
+
   useEffect(() => {
-    renderStartTime.current = performance.now();
-    renderCount.current += 1;
-;
+    if (typeof window === 'undefined') return;
+
+    setIsTracking(true);
+
+    // Update metrics immediately
+    updateMetrics();
+
+    // Set up interval for periodic updates
+    const interval = setInterval(updateMetrics, reportInterval);
+
     return () => {
-      const: renderTime = performance.now() - renderStartTime.current;
-      if (renderTime > 16) { // More than one frame (16ms)
-        console.warn(`Slow render detected in ${componentName}`, {
-          renderTime,;
-          renderCount: renderCount.current,;
-          componentName;
-        });
-      }
+      clearInterval(interval);
+      setIsTracking(false);
     };
-  });
-;
-  // Debounced function for expensive operations;
-  const: debounce = useCallback(<T extends (...args: any[]) => any>(
-      func: T,;
-      delay: number;
-    ): ((...args: Parameters<T>) => void) => {
-      let timeoutId: NodeJS.Timeout;
-      return (...args: Parameters<T>) => {
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => func(...args), delay);
-      };
-    },;
-    []
-  );
-;
-  // Throttled function for frequent operations;
-  const: throttle = useCallback(<T extends (...args: any[]) => any>(
-      func: T,;
-      delay: number;
-    ): ((...args: Parameters<T>) => void) => {
-      let: lastCall = 0;
-      return (...args: Parameters<T>) => {
-        const: now = Date.now();
-        if (now - lastCall >= delay) {
-          lastCall = now;
-          func(...args);
-        }
-      };
-    },;
-    []
-  );
-;
-  // Memoization helper;
-  const: memoize = useCallback(<T extends (...args: any[]) => any>(func: T): T => {
-      const: cache = new Map();
-      return ((...args: Parameters<T>) => {
-        const: key = JSON.stringify(args);
-        if (cache.has(key)) {
-          return cache.get(key);
-        }
-        const: result = func(...args);
-        cache.set(key, result);
-        return result;
-      }) as T;
-    },;
-    []
-  );
-;
-  // Performance measurement helper;
-  const: measurePerformance = useCallback((operation: string, fn: () => void) => {
-      const: start = performance.now();
-      fn();
-      const: end = performance.now();
-      const: duration = end - start;
-;
-      console.log(`Performance - ${operation}:`, duration, { componentName });
-;
-      return duration;
-    },;
-    [componentName]
-  );
-;
-  return {
-    debounce,;
-    throttle,;
-    memoize,;
-    measurePerformance,;
-    renderCount: renderCount.current;
-  };
-}
-;
-/**;
- * Hook for memory usage monitoring;
- */;
-export function useMemoryMonitor(componentName: string) {
-  useEffect(() => {';';";";";";";
-    if (process.env.NODE_ENV === 'development' && 'memory' in performance) {";";";";";
-      const: checkMemory = () => {
-        const: memory = (performance as any).memory;
-        if (memory) {
-          const: used = memory.usedJSHeapSize / 1024 / 1024; // MB;
-          const: total = memory.totalJSHeapSize / 1024 / 1024; // MB;
-          const: limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB;
-          if (used > limit * 0.8) {
-            console.warn(`High memory usage detected in ${componentName}`, {
-              used: `${used.toFixed(2)}MB`,;
-              total: `${total.toFixed(2)}MB`,;
-              limit: `${limit.toFixed(2)}MB`,;
-              percentage: `${((used / limit) * 100).toFixed(2)}%`;
-            });
-          }
-        }
-      };
-      const: interval = setInterval(checkMemory, 30000); // Check every 30 seconds;
-      return () => clearInterval(interval);
+  }, [updateMetrics, reportInterval]);
+
+  const getMetricValue = useCallback((metricName: keyof PerformanceMetrics) => {
+    return metrics[metricName];
+  }, [metrics]);
+
+  const isMetricGood = useCallback((metricName: keyof PerformanceMetrics) => {
+    const value = metrics[metricName];
+    if (value === undefined) return null;
+
+    // Core Web Vitals thresholds
+    switch (metricName) {
+      case 'cls':
+        return value <= 0.1; // Good: ≤ 0.1, Needs Improvement: ≤ 0.25, Poor: > 0.25
+      case 'fcp':
+        return value <= 1800; // Good: ≤ 1.8s, Needs Improvement: ≤ 3.0s, Poor: > 3.0s
+      case 'lcp':
+        return value <= 2500; // Good: ≤ 2.5s, Needs Improvement: ≤ 4.0s, Poor: > 4.0s
+      case 'ttfb':
+        return value <= 800; // Good: ≤ 800ms, Needs Improvement: ≤ 1800ms, Poor: > 1800ms
+      case 'inp':
+        return value <= 200; // Good: ≤ 200ms, Needs Improvement: ≤ 500ms, Poor: > 500ms
+      default:
+        return null;
     }
-  }, [componentName]);
-}
-;
-export default usePerformance;';';";
+  }, [metrics]);
+
+  const getPerformanceScore = useCallback(() => {
+    const metricNames: (keyof PerformanceMetrics)[] = ['cls', 'fcp', 'lcp', 'ttfb', 'inp'];
+    const scores = metricNames
+      .map(name => isMetricGood(name))
+      .filter(score => score !== null) as boolean[];
+    
+    if (scores.length === 0) return null;
+    
+    const goodCount = scores.filter(score => score).length;
+    return Math.round((goodCount / scores.length) * 100);
+  }, [isMetricGood]);
+
+  const getPerformanceReport = useCallback(() => {
+    const score = getPerformanceScore();
+    const report = {
+      score,
+      metrics,
+      isTracking,
+      recommendations: [] as string[]
+    };
+
+    // Generate recommendations based on metrics
+    if (metrics.lcp && metrics.lcp > 2500) {
+      report.recommendations.push('Consider optimizing images and reducing server response time for better LCP');
+    }
+    if (metrics.fcp && metrics.fcp > 1800) {
+      report.recommendations.push('Optimize critical rendering path and reduce render-blocking resources for better FCP');
+    }
+    if (metrics.cls && metrics.cls > 0.1) {
+      report.recommendations.push('Ensure images and ads have size attributes to prevent layout shifts');
+    }
+    if (metrics.ttfb && metrics.ttfb > 800) {
+      report.recommendations.push('Improve server response time and consider using a CDN');
+    }
+    if (metrics.inp && metrics.inp > 200) {
+      report.recommendations.push('Optimize JavaScript execution and reduce main thread blocking time');
+    }
+
+    return report;
+  }, [metrics, isTracking, getPerformanceScore]);
+
+  return {
+    metrics,
+    isTracking,
+    getMetricValue,
+    isMetricGood,
+    getPerformanceScore,
+    getPerformanceReport,
+    updateMetrics
+  };
+};

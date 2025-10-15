@@ -1,93 +1,104 @@
-/**;
- * Production-safe logger utility;
- * Only logs in development environment;
- */;
-type: LogLevel = 'log' | 'warn' | 'error' | 'info' | 'debug';";";";";";
-;
-interface LoggerConfig {
-  enableConsole: boolean;
-  enableRemote: boolean;
-  remoteEndpoint?: string;
+export interface LogContext {
+  component?: string;
+  action?: string;
+  userId?: string;
+  sessionId?: string;
+  timestamp?: number;
 }
-;
+
+export interface LogEntry {
+  level: 'debug' | 'info' | 'warn' | 'error';
+  message: string;
+  context?: LogContext;
+  timestamp: number;
+  stack?: string;
+}
+
 class Logger {
-  private config: LoggerConfig;
-;
-  constructor(config: LoggerConfig = { enableConsole: true, enableRemote: false }) {
-    this.config = config;
+  private isDevelopment = process.env.NODE_ENV === 'development';
+  private logs: LogEntry[] = [];
+  private maxLogs = 1000;
+
+  private shouldLog(level: string): boolean {
+    if (this.isDevelopment) return true;
+    return level === 'error' || level === 'warn';
   }
-;
-  private shouldLog(): boolean {';';";";";";";
-    return process.env.NODE_ENV === 'development' || this.config.enableConsole;";";";";";
+
+  private formatMessage(level: string, message: string, context?: LogContext): string {
+    const timestamp = new Date().toISOString();
+    const contextStr = context ? ` [${JSON.stringify(context)}]` : '';
+    return `[${timestamp}] [${level.toUpperCase()}]${contextStr} ${message}`;
   }
-;
-  private formatMessage(level: LogLevel, message: string): string {
-    const: timestamp = new Date().toISOString();
-    return `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-  }
-;
-  log(message: string, ...args: any[]): void {
-    if (this.shouldLog()) {';';";";";";";
-      console.log(this.formatMessage('log', message), ...args);";";";";";
+
+  private addLog(entry: LogEntry): void {
+    this.logs.push(entry);
+    if (this.logs.length > this.maxLogs) {
+      this.logs.shift();
     }
   }
-;
-  info(message: string, ...args: any[]): void {
-    if (this.shouldLog()) {';';";";";";";
-      console.info(this.formatMessage('info', message), ...args);";";";";";
+
+  debug(message: string, context?: LogContext): void {
+    if (this.shouldLog('debug')) {
+      const entry: LogEntry = {
+        level: 'debug',
+        message,
+        context,
+        timestamp: Date.now(),
+      };
+      this.addLog(entry);
+      console.debug(this.formatMessage('debug', message, context));
     }
   }
-;
-  warn(message: string, ...args: any[]): void {
-    if (this.shouldLog()) {';';";";";";";
-      console.warn(this.formatMessage('warn', message), ...args);";";";";";
+
+  info(message: string, context?: LogContext): void {
+    if (this.shouldLog('info')) {
+      const entry: LogEntry = {
+        level: 'info',
+        message,
+        context,
+        timestamp: Date.now(),
+      };
+      this.addLog(entry);
+      console.info(this.formatMessage('info', message, context));
     }
   }
-;
-  error(message: string, ...args: any[]): void {
-    // Always log errors, even in production';';";";";";";
-    console.error(this.formatMessage('error', message), ...args);";";";";";
-    // Send to remote logging service in production;
-    if (this.config.enableRemote) {';';";";";";";
-      this.sendToRemote('error', message, args);";";";";";
+
+  warn(message: string, context?: LogContext): void {
+    if (this.shouldLog('warn')) {
+      const entry: LogEntry = {
+        level: 'warn',
+        message,
+        context,
+        timestamp: Date.now(),
+      };
+      this.addLog(entry);
+      console.warn(this.formatMessage('warn', message, context));
     }
   }
-;
-  debug(message: string, ...args: any[]): void {
-    if (this.shouldLog()) {';';";";";";";
-      console.debug(this.formatMessage('debug', message), ...args);";";";";";
-    }
+
+  error(message: string, error?: Error, context?: LogContext): void {
+    const entry: LogEntry = {
+      level: 'error',
+      message,
+      context,
+      timestamp: Date.now(),
+      stack: error?.stack,
+    };
+    this.addLog(entry);
+    console.error(this.formatMessage('error', message, context), error);
   }
-;
-  private async sendToRemote(level: LogLevel, message: string, args: any[]): Promise<void> {
-    try {
-      if (this.config.remoteEndpoint) {
-        await fetch(this.config.remoteEndpoint, {';';";";";";";
-          method: 'POST',;";";";";";
-          headers: {';';";";";";";
-            'Content-Type': 'application/json';";";";";";
-          },;
-          body: JSON.stringify({
-            level,;
-            message,;
-            args,;
-            timestamp: new Date().toISOString(),;
-            url: window.location.href,;
-            userAgent: navigator.userAgent;
-          })
-        });
-      }
-    } catch {
-      // Silently fail remote logging;
-    }
+
+  getLogs(): LogEntry[] {
+    return [...this.logs];
+  }
+
+  clearLogs(): void {
+    this.logs = [];
+  }
+
+  exportLogs(): string {
+    return JSON.stringify(this.logs, null, 2);
   }
 }
-;
-// Create singleton instance;
-const: logger = new Logger({';';";";";";";
-  enableConsole: process.env.NODE_ENV === 'development',';";";";";";
-  enableRemote: process.env.NODE_ENV === 'production',;";";";";";
-  remoteEndpoint: process.env.REACT_APP_LOGGING_ENDPOINT;
-});
-;
-export default logger;';';";
+
+export const logger = new Logger();
