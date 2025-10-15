@@ -1,10 +1,10 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Award, BarChart3, Brain, CheckCircle, Clock, Eye, MessageSquare, Sparkles, Star, Target, TrendingUp, User, Users } from 'lucide-react';
+import {ArrowRight, Award, Brain, CheckCircle, Eye, MessageSquare, Sparkles, Star, Target, TrendingUp, User} from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
-
+import { BarChart3, Users } from 'lucide-react';
+import { Clock } from 'lucide-react';
 const ZionAICustomerInsightsPage = () => {
   const features = [
     {

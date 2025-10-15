@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Shield, Users, Award, Zap, Globe, Target } from 'lucide-react';
+import {Brain, Award, Globe, Target} from 'lucide-react';
+import {Zap, Users} from 'lucide-react';
+import { Shield } from 'lucide-react';
 
 // Company values
 const values = [

@@ -1,6 +1,8 @@
-import { ArrowRight, Cpu, Zap, Target, BarChart3, CheckCircle, Clock, DollarSign, Users, Settings, Globe, Shield, Brain } from "lucide-react";
+import {ArrowRight, Cpu, Target, CheckCircle, Globe, Brain} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import {BarChart3, Zap, Users} from 'lucide-react';
+import { Shield, Clock } from 'lucide-react';
 
 export default function AIAutonomousSystems() {
   const features = [

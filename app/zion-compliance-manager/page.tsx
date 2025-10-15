@@ -1,6 +1,8 @@
-import { ArrowRight, Shield, CheckCircle, FileText, Target, Zap, BarChart3, Clock, DollarSign, Users, Settings, Globe, AlertTriangle } from "lucide-react";
+import {ArrowRight, CheckCircle, Target, Globe, AlertTriangle} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import {Users, FileText} from 'lucide-react';
+import { Shield, Clock } from 'lucide-react';
 
 export default function ZionComplianceManager() {
   const features = [

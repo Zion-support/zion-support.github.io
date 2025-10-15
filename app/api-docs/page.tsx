@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Code, Key, Star } from 'lucide-react';
-
 const ApiDocsPage: React.FC = () => {
   const apiEndpoints = [
     {

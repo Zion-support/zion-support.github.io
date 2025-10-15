@@ -1,20 +1,8 @@
-import { Cloud } from 'lucide-react';
-import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  CpuChipIcon, 
-  ChartBarIcon, 
-  ClockIcon,
-  UsersIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  StarIcon,
-  ShieldCheckIcon,
-  CloudIcon,
-  RocketLaunchIcon
-} from '@heroicons/react/24/outline';
-
+import {CpuChipIcon, ChartBarIcon, ClockIcon, UsersIcon, CheckCircleIcon, ShieldCheckIcon, CloudIcon} from '@heroicons/react/24/outline';
+import { StarIcon } from '@heroicons/react/24/solid';
 export default function AiProjectManagementProPage() {
   const structuredData = {
     "@context": "https://schema.org",

@@ -1,28 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Brain, 
-  Code, 
-  Cloud, 
-  Wifi, 
-  Shield, 
-  Mail, 
-  Users, 
-  Target, 
-  BarChart3, 
-  Zap, 
-  CheckCircle, 
-  Star,
-  ArrowRight,
-  Clock,
-  TrendingUp,
-  Globe,
-  Database,
-  Settings,
-  Phone,
-  MapPin
-} from 'lucide-react';
-
+import {Brain, Code, Wifi, Target, CheckCircle, Star, ArrowRight, TrendingUp, Globe, Database, Phone, MapPin} from 'lucide-react';
+import {Zap, Users, Mail} from 'lucide-react';
+import { Shield, Cloud, Clock } from 'lucide-react';
 const ServicesOverviewPage: React.FC = () => {
   const serviceCategories = [
     {

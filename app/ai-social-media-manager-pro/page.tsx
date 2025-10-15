@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, Camera, CheckCircle, Hash, Image, Mail, MessageCircle, Phone, Play, Star, Users } from 'lucide-react';
-
+import {ArrowRight, Brain, Camera, CheckCircle, Image, MessageCircle, Phone, Play, Star} from 'lucide-react';
+import { Users, Mail } from 'lucide-react';
 const AISocialMediaManagerProPage = () => {
   const [isVisible, setIsVisible] = useState(false);
 

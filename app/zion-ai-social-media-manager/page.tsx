@@ -1,24 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { 
-  Globe, 
-  BarChart3, 
-  Calendar, 
-  Hash, 
-  Users, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight,
-  Star,
-  Clock,
-  Zap,
-  Target,
-  MessageSquare,
-  Image,
-  Video,
-  Share2
-} from "lucide-react";
+import {Globe, TrendingUp, CheckCircle, ArrowRight, Star, Target, MessageSquare, Image, Video, BarChart3, Zap, Users} from 'lucide-react';
 
 const ZionAiSocialMediaManagerPage: React.FC = () => {
   const features = [

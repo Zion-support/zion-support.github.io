@@ -1,119 +1,201 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Common icon components that are used
+const commonIcons = {
+  'Shield': 'lucide-react',
+  'BarChart3': 'lucide-react',
+  'Settings': 'lucide-react',
+  'Zap': 'lucide-react',
+  'Users': 'lucide-react',
+  'FileText': 'lucide-react',
+  'Mail': 'lucide-react',
+  'StarIcon': '@heroicons/react/24/solid',
+  'TrophyIcon': '@heroicons/react/24/solid',
+  'Cloud': 'lucide-react',
+  'DollarSign': 'lucide-react',
+  'Clock': 'lucide-react',
+  'ArrowRightIcon': '@heroicons/react/24/solid',
+  'Lock': 'lucide-react'
+};
 
-// Get all page files in the app directory
-function getAllPageFiles() {
-  const appDir = path.join(__dirname, 'app');
-  const files = [];
+// Get all TypeScript/JavaScript files
+const getAllFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
+  let files = [];
+  const items = fs.readdirSync(dir);
   
-  function scanDir(dir) {
-    const items = fs.readdirSync(dir);
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        scanDir(fullPath);
-      } else if (item === 'page.tsx') {
-        files.push(path.relative(__dirname, fullPath));
-      }
-    }
-  }
-  
-  scanDir(appDir);
-  return files;
-}
-
-// Check which icons are actually used in a file
-function getUsedIcons(content) {
-  const usedIcons = new Set();
-  
-  // Common patterns for icon usage
-  const patterns = [
-    /<([A-Z][a-zA-Z]+)\s+className="w-[0-9]+ h-[0-9]+"/g,
-    /<([A-Z][a-zA-Z]+)\s+className="w-[0-9]+ h-[0-9]+ mr-[0-9]+"/g,
-    /<([A-Z][a-zA-Z]+)\s+className="w-[0-9]+ h-[0-9]+ ml-[0-9]+"/g,
-    /<([A-Z][a-zA-Z]+)\s+className="w-[0-9]+ h-[0-9]+ text-[a-zA-Z0-9-]+"/g,
-    /<([A-Z][a-zA-Z]+)\s+className="w-[0-9]+ h-[0-9]+ fill-current"/g
-  ];
-  
-  patterns.forEach(pattern => {
-    let match;
-    while ((match = pattern.exec(content)) !== null) {
-      usedIcons.add(match[1]);
-    }
-  });
-  
-  return usedIcons;
-}
-
-// Fix a single file
-function fixFile(filePath) {
-  const fullPath = path.join(__dirname, filePath);
-  
-  if (!fs.existsSync(fullPath)) {
-    return;
-  }
-  
-  let content = fs.readFileSync(fullPath, 'utf8');
-  const originalContent = content;
-  
-  // Get used icons
-  const usedIcons = getUsedIcons(content);
-  
-  // Always include these common icons
-  const commonIcons = ['CheckCircle', 'Star', 'Phone', 'Mail', 'Play', 'ArrowRight'];
-  commonIcons.forEach(icon => usedIcons.add(icon));
-  
-  // Find and fix lucide-react imports
-  const importMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
-  if (importMatch) {
-    const currentImports = importMatch[1]
-      .split(',')
-      .map(imp => imp.trim())
-      .filter(imp => imp.length > 0);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    // Filter to only used icons
-    const filteredImports = currentImports.filter(imp => {
-      const iconName = imp.split(' as ')[0].trim();
-      return usedIcons.has(iconName);
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files = files.concat(getAllFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+};
+
+// Fix all remaining errors in a file
+const fixAllErrors = (filePath) => {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // 1. Remove unused React imports
+    if (content.includes("import React from 'react';") && !content.includes('React.')) {
+      content = content.replace(/import React from 'react';\n?/g, '');
+      modified = true;
+    }
+    
+    // 2. Remove unused variable declarations
+    const unusedVars = ['isVisible', 'setIsVisible', 'specialties', 'Cloud', 'Clock', 'ArrowRightIcon'];
+    unusedVars.forEach(varName => {
+      const regex = new RegExp(`const\\s+${varName}\\s*=.*?;\\n?`, 'g');
+      if (content.match(regex)) {
+        content = content.replace(regex, '');
+        modified = true;
+      }
     });
     
-    if (filteredImports.length > 0) {
-      const newImport = `import { \n  ${filteredImports.join(',\n  ')}\n} from 'lucide-react';`;
-      content = content.replace(importMatch[0], newImport);
-    } else {
-      // Remove the import if no icons are used
-      content = content.replace(importMatch[0], '');
+    // 3. Find all used components that need imports
+    const usedComponents = new Set();
+    
+    // Check for JSX usage
+    Object.keys(commonIcons).forEach(component => {
+      if (content.includes(`<${component}`) || content.includes(`{${component}`)) {
+        usedComponents.add(component);
+      }
+    });
+    
+    // 4. Group components by their source
+    const importsBySource = {};
+    usedComponents.forEach(component => {
+      const source = commonIcons[component];
+      if (!importsBySource[source]) {
+        importsBySource[source] = [];
+      }
+      importsBySource[source].push(component);
+    });
+    
+    // 5. Check if imports already exist
+    const existingImports = new Set();
+    const importRegex = /import\s+{([^}]+)}\s+from\s+['"]([^'"]+)['"];?/g;
+    let match;
+    
+    while ((match = importRegex.exec(content)) !== null) {
+      const importList = match[1].split(',').map(imp => imp.trim());
+      const source = match[2];
+      importList.forEach(imp => {
+        const cleanImport = imp.replace(/\s+as\s+\w+/, '').trim();
+        existingImports.add(`${cleanImport}:${source}`);
+      });
     }
+    
+    // 6. Add missing imports
+    const newImports = [];
+    Object.entries(importsBySource).forEach(([source, components]) => {
+      const missingComponents = components.filter(comp => 
+        !existingImports.has(`${comp}:${source}`)
+      );
+      
+      if (missingComponents.length > 0) {
+        newImports.push(`import { ${missingComponents.join(', ')} } from '${source}';`);
+      }
+    });
+    
+    // 7. Remove unused imports
+    const allImports = [];
+    const importRegex2 = /import\s+{([^}]+)}\s+from\s+['"]([^'"]+)['"];?/g;
+    let match2;
+    
+    while ((match2 = importRegex2.exec(content)) !== null) {
+      const importList = match2[1].split(',').map(imp => imp.trim());
+      const source = match2[2];
+      
+      // Check which imports are actually used
+      const usedImports = importList.filter(imp => {
+        const cleanImport = imp.replace(/\s+as\s+\w+/, '').trim();
+        const isUsed = content.includes(`<${cleanImport}`) || 
+                      content.includes(`{${cleanImport}`) ||
+                      content.includes(`${cleanImport}.`) ||
+                      content.includes(`${cleanImport}(`) ||
+                      content.includes(` ${cleanImport} `) ||
+                      content.includes(`=${cleanImport}`) ||
+                      content.includes(`:${cleanImport}`) ||
+                      content.includes(`[${cleanImport}`) ||
+                      content.includes(`${cleanImport}]`) ||
+                      content.includes(`${cleanImport},`) ||
+                      content.includes(`${cleanImport};`) ||
+                      (content.includes(`${cleanImport}`) && content.indexOf(`${cleanImport}`) !== content.lastIndexOf(`${cleanImport}`));
+        
+        return isUsed;
+      });
+      
+      if (usedImports.length === 0) {
+        // Remove entire import line
+        content = content.replace(match2[0], '');
+        modified = true;
+      } else if (usedImports.length !== importList.length) {
+        // Update import to only include used imports
+        const newImport = `import { ${usedImports.join(', ')} } from '${source}';`;
+        content = content.replace(match2[0], newImport);
+        modified = true;
+      }
+    }
+    
+    // 8. Add new imports if needed
+    if (newImports.length > 0) {
+      // Find the best place to insert imports (after existing imports)
+      const lines = content.split('\n');
+      let insertIndex = 0;
+      
+      // Find the last import statement
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].trim().startsWith('import ')) {
+          insertIndex = i + 1;
+        }
+      }
+      
+      // Insert new imports
+      lines.splice(insertIndex, 0, ...newImports);
+      content = lines.join('\n');
+      modified = true;
+    }
+    
+    // 9. Clean up multiple empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed errors in: ${filePath}`);
+    }
+    
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
   }
-  
-  // Fix React imports - remove unused React import
-  if (content.includes('import React, { useState, useEffect }') && !content.includes('<React.')) {
-    content = content.replace('import React, { useState, useEffect }', 'import { useState, useEffect }');
+};
+
+// Main execution
+console.log('Fixing all remaining errors...');
+
+const files = getAllFiles('./app');
+let fixedCount = 0;
+
+files.forEach(file => {
+  try {
+    fixAllErrors(file);
+    fixedCount++;
+  } catch (error) {
+    console.error(`Error with file ${file}:`, error.message);
   }
-  
-  // Remove unused activeTab variables
-  content = content.replace(/const \[activeTab, setActiveTab\] = useState\('overview'\);/g, '');
-  content = content.replace(/\/\/ const \[activeTab, setActiveTab\] = useState\('overview'\);/g, '');
-  
-  // Clean up multiple empty lines
-  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-  
-  if (content !== originalContent) {
-    fs.writeFileSync(fullPath, content);
-    console.log(`Fixed ${filePath}`);
-  }
-}
+});
 
-// Get all page files and fix them
-const pageFiles = getAllPageFiles();
-console.log(`Found ${pageFiles.length} page files`);
+console.log(`Processed ${fixedCount} files`);
 
-pageFiles.forEach(fixFile);
+// Also fix the main App.tsx
+fixAllErrors('./App.tsx');
 
-console.log('Fixed all remaining errors');
+console.log('All remaining errors fix completed!');

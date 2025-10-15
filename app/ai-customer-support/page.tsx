@@ -1,23 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  MessageSquare, 
-  Headphones, 
-  Bot, 
-  Zap, 
-  CheckCircle, 
-  Star,
-  ArrowRight,
-  Clock,
-  Users,
-  TrendingUp,
-  Shield,
-  Globe,
-  Phone,
-  Mail,
-  MessageCircle
-} from 'lucide-react';
-
+import {MessageSquare, Headphones, Bot, CheckCircle, Star, ArrowRight, TrendingUp, Globe, Phone, MessageCircle} from 'lucide-react';
+import {Zap, Users, Mail} from 'lucide-react';
+import { Shield, Clock } from 'lucide-react';
 const AiCustomerSupportPage: React.FC = () => {
   const features = [
     "AI-powered chatbot with natural language processing",

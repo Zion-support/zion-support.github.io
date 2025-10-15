@@ -1,6 +1,8 @@
-import { ArrowRight, PenTool, Image, Video, FileText, Sparkles, CheckCircle, Clock, DollarSign, Target, Zap, Globe, Users, Palette } from "lucide-react";
+import {ArrowRight, PenTool, Image, Video, Sparkles, CheckCircle, Target, Globe, Palette} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { Zap, Users, FileText } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 export default function ZionContentStudio() {
   const features = [

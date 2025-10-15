@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Package } from "lucide-react";
+import {Brain, Globe, ArrowRight, Star, Award, Sparkles, Smartphone, Monitor, Target, Package} from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -8,7 +8,8 @@ import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
-
+import {BarChart3, Zap, Users, Mail} from 'lucide-react';
+import { Shield, Cloud } from 'lucide-react';
 const HomePage = () => {
   const structuredData = {
     "@context": "https://schema.org",

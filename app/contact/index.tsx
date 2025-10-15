@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  PhoneIcon, 
-  EnvelopeIcon, 
-  MapPinIcon,
-  ClockIcon,
-  CheckIcon,
-  ArrowRightIcon
-} from '@heroicons/react/24/outline';
+import {PhoneIcon, EnvelopeIcon, MapPinIcon, ClockIcon, CheckIcon} from '@heroicons/react/24/outline';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({

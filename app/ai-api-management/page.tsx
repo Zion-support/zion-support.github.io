@@ -1,6 +1,8 @@
-import { ArrowRight, Globe, Zap, Target, BarChart3, CheckCircle, Clock, DollarSign, Users, Settings, Shield, FileText, Lock } from "lucide-react";
+import {ArrowRight, Globe, Target, CheckCircle} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import {BarChart3, Zap, Users, FileText} from 'lucide-react';
+import { Shield, Clock } from 'lucide-react';
 
 export default function AIAPIManagement() {
   const features = [

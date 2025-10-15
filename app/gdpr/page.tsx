@@ -1,7 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { AlertTriangle, ArrowRight, CheckCircle, Download, Mail, Phone, Shield } from 'lucide-react';
-
+import {AlertTriangle, ArrowRight, CheckCircle, Download, Phone} from 'lucide-react';
+import {Mail} from 'lucide-react';
+import { Shield } from 'lucide-react';
 const GDPRPage: React.FC = () => {
   const rights = [
     {

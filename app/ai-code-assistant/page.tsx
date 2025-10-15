@@ -1,8 +1,9 @@
-import { Code, Zap, Brain, Shield, CheckCircle, Terminal, Bug, FileText, Sparkles, Award, Users, Star, ArrowRight } from 'lucide-react';
+import {Code, Brain, CheckCircle, Terminal, Bug, Sparkles, Award, Star, ArrowRight} from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
-
+import {Zap, Users, FileText} from 'lucide-react';
+import { Shield } from 'lucide-react';
 const AICodeAssistantPage = () => {
   const features = [
     {

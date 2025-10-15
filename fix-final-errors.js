@@ -1,69 +1,99 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Get all TypeScript/JavaScript files
+const getAllFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
+  let files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files = files.concat(getAllFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+};
 
-// Fix specific files with known issues
-const fixes = {
-  'app/ai-analytics-dashboard-pro/page.tsx': {
-    addImports: ['BarChart3'],
-    removeImports: ['ArrowRight']
-  },
-  'app/ai-cybersecurity-platform/page.tsx': {
-    addImports: ['BarChart3'],
-    removeImports: ['ArrowRight']
-  },
-  'app/ai-database-solutions/page.tsx': {
-    removeImports: ['ArrowRight']
-  },
-  'app/ai-ecommerce-platform/page.tsx': {
-    removeImports: ['ArrowRight', 'ShoppingCart', 'Zap', 'Globe', 'MapPin', 'Download', 'Pause', 'RefreshCw', 'Eye', 'Filter', 'Calendar', 'Target', 'CreditCard', 'Truck', 'Award', 'TrendingUp', 'Cpu', 'Database', 'Activity', 'Lock']
+// Fix final errors in a file
+const fixFinalErrors = (filePath) => {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // 1. Remove unused React imports
+    if (content.includes("import React from 'react';") && !content.includes('React.')) {
+      content = content.replace(/import React from 'react';\n?/g, '');
+      modified = true;
+    }
+    
+    // 2. Remove unused variable declarations
+    const unusedVars = ['isVisible', 'setIsVisible', 'specialties', 'Cloud', 'Clock', 'ArrowRightIcon', 'Hash', 'Share2', 'Calendar'];
+    unusedVars.forEach(varName => {
+      const regex = new RegExp(`const\\s+${varName}\\s*=.*?;\\n?`, 'g');
+      if (content.match(regex)) {
+        content = content.replace(regex, '');
+        modified = true;
+      }
+    });
+    
+    // 3. Remove unused imports
+    const unusedImports = ['Shield', 'Cloud', 'React', 'Clock', 'ArrowRightIcon', 'Hash', 'Share2', 'Calendar'];
+    unusedImports.forEach(importName => {
+      // Remove from import statements
+      const importRegex = new RegExp(`import\\s+{[^}]*\\b${importName}\\b[^}]*}\\s+from\\s+['"][^'"]+['"];?`, 'g');
+      content = content.replace(importRegex, (match) => {
+        // Extract the import part
+        const importList = match.match(/{([^}]+)}/);
+        if (importList) {
+          const imports = importList[1].split(',').map(imp => imp.trim()).filter(imp => imp !== importName);
+          if (imports.length === 0) {
+            return ''; // Remove entire import line
+          } else {
+            return match.replace(importList[1], imports.join(', '));
+          }
+        }
+        return match;
+      });
+      modified = true;
+    });
+    
+    // 4. Clean up multiple empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed final errors in: ${filePath}`);
+    }
+    
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
   }
 };
 
-function fixFile(filePath, config) {
-  const fullPath = path.join(__dirname, filePath);
-  
-  if (!fs.existsSync(fullPath)) {
-    console.log(`File not found: ${filePath}`);
-    return;
-  }
-  
-  let content = fs.readFileSync(fullPath, 'utf8');
-  
-  // Find the lucide-react import
-  const importMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
-  if (importMatch) {
-    let currentImports = importMatch[1].split(',').map(imp => imp.trim());
-    
-    // Remove specified imports
-    if (config.removeImports) {
-      currentImports = currentImports.filter(imp => !config.removeImports.includes(imp.trim()));
-    }
-    
-    // Add specified imports
-    if (config.addImports) {
-      config.addImports.forEach(imp => {
-        if (!currentImports.includes(imp)) {
-          currentImports.push(imp);
-        }
-      });
-    }
-    
-    // Create new import statement
-    const newImport = `import { \n  ${currentImports.join(',\n  ')}\n} from 'lucide-react';`;
-    content = content.replace(importMatch[0], newImport);
-  }
-  
-  fs.writeFileSync(fullPath, content);
-  console.log(`Fixed ${filePath}`);
-}
+// Main execution
+console.log('Fixing final errors...');
 
-// Apply fixes
-Object.entries(fixes).forEach(([filePath, config]) => {
-  fixFile(filePath, config);
+const files = getAllFiles('./app');
+let fixedCount = 0;
+
+files.forEach(file => {
+  try {
+    fixFinalErrors(file);
+    fixedCount++;
+  } catch (error) {
+    console.error(`Error with file ${file}:`, error.message);
+  }
 });
 
-console.log('Fixed all final errors');
+console.log(`Processed ${fixedCount} files`);
+
+// Also fix the main App.tsx
+fixFinalErrors('./App.tsx');
+
+console.log('Final errors fix completed!');

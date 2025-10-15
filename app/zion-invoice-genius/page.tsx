@@ -1,6 +1,8 @@
-import { ArrowRight, FileText, Calculator, Send, BarChart3, CheckCircle, Clock, DollarSign, Target, Zap, Globe, Users, Settings } from "lucide-react";
+import {ArrowRight, Calculator, Send, CheckCircle, Target, Globe} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { BarChart3, Zap, Users, FileText } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 export default function ZionInvoiceGenius() {
   const features = [

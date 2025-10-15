@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 interface FuturisticButtonProps {
   children: React.ReactNode;
   onClick?: () => void;

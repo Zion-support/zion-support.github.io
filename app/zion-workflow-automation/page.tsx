@@ -1,6 +1,8 @@
-import { ArrowRight, Workflow, Zap, Target, BarChart3, CheckCircle, Clock, DollarSign, Users, Settings, Globe, FileText, Shield } from "lucide-react";
+import {ArrowRight, Workflow, Target, CheckCircle, Globe} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import {BarChart3, Zap, Users} from 'lucide-react';
+import { Shield, Clock } from 'lucide-react';
 
 export default function ZionWorkflowAutomation() {
   const features = [

@@ -1,4 +1,5 @@
-import { Helmet } from "react-helmet-async"; const SupportPage: React.FC = () => { return ( <> <Helmet> <title>Support - Zion Tech Group</title> <meta name="description" content="Gethelp and support from our expert team"
+import { Helmet } from "react-helmet-async";
+const SupportPage: React.FC = () => { return ( <> <Helmet> <title>Support - Zion Tech Group</title> <meta name="description" content="Gethelp and support from our expert team"
         />
         <meta
           name="keywords"

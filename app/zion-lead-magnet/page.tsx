@@ -1,6 +1,8 @@
-import { ArrowRight, Target, Users, Zap, BarChart3, CheckCircle, Clock, DollarSign, Mail, Share2, Globe, TrendingUp } from "lucide-react";
+import {ArrowRight, Target, CheckCircle, Globe, TrendingUp} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { BarChart3, Zap, Users, Mail } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 export default function ZionLeadMagnet() {
   const features = [

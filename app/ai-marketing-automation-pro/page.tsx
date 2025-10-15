@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, CheckCircle, Mail, Phone, Play, Star } from 'lucide-react';
-
+import {ArrowRight, Brain, CheckCircle, Phone, Play, Star} from 'lucide-react';
+import { Mail } from 'lucide-react';
 const AIMarketingAutomationProPage = () => {
   const [isVisible, setIsVisible] = useState(false);
 

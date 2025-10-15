@@ -1,19 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  CpuChipIcon,
-  EyeIcon,
-  ChatBubbleLeftRightIcon,
-  DocumentTextIcon,
-  LightBulbIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  ChartBarIcon,
-  CogIcon,
-  ShieldCheckIcon
-} from '@heroicons/react/24/outline';
-
+import {CpuChipIcon, EyeIcon, ChatBubbleLeftRightIcon, DocumentTextIcon, LightBulbIcon, CheckCircleIcon, ChartBarIcon, CogIcon, ShieldCheckIcon} from '@heroicons/react/24/outline';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 const AISolutionsPage: React.FC = () => {
   const aiServices = [
     {

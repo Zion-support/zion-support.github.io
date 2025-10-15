@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 interface FuturisticCardProps {
   children: React.ReactNode;
   className?: string;

@@ -1,6 +1,8 @@
-import { ArrowRight, Share2, Calendar, BarChart3, CheckCircle, Clock, DollarSign, Target, Zap, Globe, Users, FileText, Settings } from "lucide-react";
+import {ArrowRight, CheckCircle, Target, Globe} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { BarChart3, Zap, Users } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 export default function ZionSocialScheduler() {
   const features = [
