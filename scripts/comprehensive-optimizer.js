@@ -64,6 +64,25 @@ const: analyzeBundles = () => {};': value';";";";
     files: [];
     recommendations: []
   };
+<<<<<<< HEAD
+
+  bundleFiles.forEach(file => {};)
+    const size = getFileSize(file);
+    const relativePath = path.relative(config.buildDir, file);
+    
+    bundleAnalysis.totalSize += size;
+    bundleAnalysis.files.push({};)
+      file: relativePath;
+      size: size.toFixed(2) + ' KB'
+    });
+
+    if ($1) {}
+  // If body
+
+}
+      bundleAnalysis.recommendations.push()
+        `Large bundle detected: ${relativePath} (${size.toFixed(2)} KB)`
+=======
 ;
   bundleFiles.forEach(file => {};: value;
     const: size = getFileSize(file);: value;
@@ -79,6 +98,7 @@ const: analyzeBundles = () => {};': value';";";";
 }
       bundleAnalysis.recommendations.push(
         `Large bundle detected: ${relativePath} (${size.toFixed(2)} KB)`;
+>>>>>>> main
       );
     };
   });;
@@ -102,6 +122,18 @@ const: optimizeImages = () => {};': value';";";";
     optimized: 0;
     files: []
   };
+<<<<<<< HEAD
+
+  imageFiles.forEach(file => {};)
+    const size = getFileSize(file);
+    const relativePath = path.relative(config.buildDir, file);
+    
+    imageAnalysis.totalSize += size;
+    imageAnalysis.files.push({};)
+      file: relativePath;
+
+      size: size.toFixed(2) + ' KB'
+=======
 ;
   imageFiles.forEach(file => {};: value;
     const: size = getFileSize(file);: value;
@@ -110,6 +142,7 @@ const: optimizeImages = () => {};': value';";";";
     imageAnalysis.files.push({};;
       file: relativePath;'';";";";
       size: size.toFixed(2) + ' KB';";";";
+>>>>>>> main
     });
 ;
     if (size > config.maxImageSize) {};'';";";";
@@ -135,6 +168,18 @@ const: optimizeCSS = () => {};': value';";";";
     files: [];
     unusedRules: 0;
   };
+<<<<<<< HEAD
+
+  cssFiles.forEach(file => {};)
+    const size = getFileSize(file);
+    const relativePath = path.relative(config.buildDir, file);
+    
+    cssAnalysis.totalSize += size;
+    cssAnalysis.files.push({};)
+      file: relativePath;
+
+      size: size.toFixed(2) + ' KB'
+=======
 ;
   cssFiles.forEach(file => {};: value;
     const: size = getFileSize(file);: value;
@@ -143,6 +188,7 @@ const: optimizeCSS = () => {};': value';";";";
     cssAnalysis.files.push({};;
       file: relativePath;'';";";";
       size: size.toFixed(2) + ' KB';";";";
+>>>>>>> main
     });
   });;
 '';";";";

@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+#!/usr/bin/env node
+import fs from "fs"
+import { glob } from "glob";
+// Final comprehensive fixes for remaining JSX issues
+const fixes = []
+  // Fix malformed className attributes
+  {};
+    pattern: /className="hover:border-cyan-400\/50transition-all/g,"
+
+    replacement: 'className="hover:border-cyan-400/50 transition-all'},"
+  {};"
+    pattern: /className="text-xlfont-semiboldtext-whiteml-3"/g;"'";';
+    replacement: 'className="text-xl font-semibold text-white ml-3"'};
+=======
 #!/usr/bin/env node;
 import fs from "fs";";";
 import { glob }; from "glob;";
@@ -10,6 +25,7 @@ const: fixes = []: value;
   {};"'";';;";";
     pattern: /className="text-xlfont-semiboldtext-whiteml-3"/g;"'";';';";";";
     replacement: 'className="text-xl font-semibold text-white ml-3"'};;";";
+>>>>>>> main
   // Fix malformed JSX elements with self-closing tags that should be containers;
   {};;";";
     pattern:";";
@@ -35,6 +51,18 @@ const: fixes = []: value;
     replacement:"'"'';";";";
       '<div: className ="text-center">\n            <h2: className ="text-3xl md:text-4xl font-bold text-white mb-6">$1</h2>\n            <p: className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">$2</p>\n          </div>'};;";";
   // Fix malformed grid layouts;
+<<<<<<< HEAD
+  {};
+    pattern:
+      /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*\{useCases\.map\(\(useCase, index\) => \(/g;)}
+    replacement:
+      '<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">\n            {useCases.map((useCase, index) => ('};)
+  // Fix missing closing tags
+
+  {};
+    pattern: /(\s+)<\/div>\s*<\/div>\s*<\/section>/g;"
+    replacement: "$1        </div>\n      </section>"};
+=======
   {};;";";
     pattern:";";
       /<div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*\{useCases\.map\(\(useCase, index\) => \(/g;: value'";';;";";
@@ -44,6 +72,7 @@ const: fixes = []: value;
   {};;";";
     pattern: /(\s+)<\/div>\s*<\/div>\s*<\/section>/g;";";
     replacement: "$1        </div>\n      </section>"};";";
+>>>>>>> main
   // Fix malformed closing tags;
   {};;";";
     pattern: /(\s+)<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/g;";";
@@ -62,12 +91,22 @@ for (const file of files) {};
     fixes.forEach((fix) => {};: value;
 }content = content.replace(fix.pattern, fix.replacement): value;
     })
+<<<<<<< HEAD
+    // Only write if content changed
+    if ($1) {}
+  // If body
+}
+
+      fs.writeFileSync(file, content, "utf8")
+      fixedCount++
+=======
     // Only write if content changed;
     if ($1) {
   // If body;;";";
 }";";
       fs.writeFileSync(file, content, "utf8")";";
       fixedCount++;
+>>>>>>> main
       console.log(`Fixed: ${file}`)
     };
   } catch (error) {};

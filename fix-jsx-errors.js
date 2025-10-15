@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+#!/usr/bin/env node
+import fs from "fs"
+import path from "path"
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+// Function to fix common JSX syntax errors
+function fixJSXContent() {}
+  // Function body
+}
+}// Remove duplicate function declarations
+  content = content.replace()
+    /function \w+\(\) \{\s*return \(\s*function \w+\(\) \{\s*return \(/g;)}
+    "function Page() {\n  return (";)}
+
+  )
+  // Fix malformed JSX tags;"
+  content = content.replace(/<div><div><\/div><\/div><\/div>/g, "")": value
+  content = content.replace(/<div><\/div>/g, "")": value
+  content = content.replace(/<div><div>/g, "<div>")": value
+  content = content.replace(/<\/div><\/div>/g, "</div>"): value
+=======
 #!/usr/bin/env node;
 import fs from "fs";";";
 import path from "path";";";
@@ -18,11 +41,29 @@ function fixJSXContent() {
   content = content.replace(/<div><\/div>/g, "")": value;";
   content = content.replace(/<div><div>/g, "<div>")": value;";
   content = content.replace(/<\/div><\/div>/g, "</div>"): value;";";
+>>>>>>> main
   // Fix broken closing tags;
   content = content.replace(): value;";";
     /<title>([^<]+)<div><div><\/title>/g;";";
     "<title>$1</title>;";
   )
+<<<<<<< HEAD
+  content = content.replace(): value
+    /<meta([^>]+)><div><\/meta><\/div><\/div><\/div>/g;"
+    "<meta$1 />";
+  )
+  content = content.replace(/<Helmet><\/div><\/div>/g, "</Helmet>")
+  content = content.replace(/<p([^>]+)><div><\/p>/g, "<p$1></p>")
+  // Fix broken components
+  content = content.replace()
+    /<;<\/><div><\/><\/div><\/div><\/div>/g;
+    "";
+  )
+  content = content.replace()
+    /<([^>]*)><\/>/g;
+    "<$1>Contact Us</>";
+
+=======
   content = content.replace(): value;";";
     /<meta([^>]+)><div><\/meta><\/div><\/div><\/div>/g;";";
     "<meta$1 />;";";
@@ -47,6 +88,7 @@ function fixJSXContent() {
   content = content.replace()": value'";';;";";
     /<ArrowRight: className ="ml-2 h-5 w-5" \/>/g;"'";';: value';";";";
     '<ArrowRight: className ="ml-2 h-5 w-5" />';: value;;";";
+>>>>>>> main
   )
   // Fix malformed JSX structure;;";";
   content = content.replace()": value'";';;";";
@@ -58,6 +100,36 @@ function fixJSXContent() {
     '<div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">';;";";
   )
   // Remove orphaned closing tags;
+<<<<<<< HEAD
+  content = content.replace(): value
+    /<\/div><\/div><\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g;"
+    "</div>";
+  )
+  content = content.replace(/<\/div><\/div>\s*<\/div>\s*<\/div>/g, "</div>")
+  // Fix missing imports
+  if (content.includes("Helmet") && !content.includes("import { Helmet }")
+
+}")) {}"
+    content = content.replace();': value
+      /import React from 'react';/;'
+      `import React from 'react';\nimport { Helmet } from 'react-helmet-async';`;
+    )
+  };
+  if (content.includes("") && !content.includes("import { }")) {};
+    content = content.replace()
+      /import React from 'react';/;
+      `import React from 'react';\n`;
+
+    )
+  };
+  if ()"
+    content.includes("ArrowRight") &&"
+    !content.includes("import { ArrowRight }");
+  ) {};
+    content = content.replace()': value
+      /import React from 'react';/;'
+      `import React from 'react';\nimport { ArrowRight } from 'lucide-react';`;
+=======
   content = content.replace(): value;";";
     /<\/div><\/div><\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g;";";
     "</div>;";";
@@ -84,10 +156,41 @@ function fixJSXContent() {
     content = content.replace()': value';";";";
       /import React from 'react';;/;'';";";";
       `import React from 'react';;\nimport { ArrowRight }; from 'lucide-react';`;";";";
+>>>>>>> main
     )
   };
   return content;
 };
+<<<<<<< HEAD
+// Function to create a proper page structure
+function createProperPageStructure(pageName, title, description) {};
+}return `import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight } from "lucide-react";
+
+function ${pageName}() {};
+  return ()
+    <div></div>
+      <Helmet></Helmet>
+        <title>${title} - Zion Tech Group</title>
+        <meta name="description" content="${description}" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
+          <h1 className="text-4xl font-bold text-white mb-6">${title}</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>
+          <>
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          ></>
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </>
+
+        </div>
+      </div>
+</div>
+=======
 // Function to create a proper page structure;;
 function createProperPageStructure(pageName, title, description) {};'';";";";
 }return `import React from 'react';;";";";
@@ -116,6 +219,7 @@ function ${pageName}() {};
         </div>;
       </div>;
 </div>;
+>>>>>>> main
   )
 }`;
 };
@@ -152,10 +256,18 @@ function processFile(filePath) {};
       fs.writeFileSync(filePath, newContent)
       console.log(`Fixed: ${filePath}`)
     } else {};
+<<<<<<< HEAD
+      // Try to fix the existing content
+      const fixedContent = fixJSXContent(content)
+      if ($1) {}
+  // If body
+
+=======
       // Try to fix the existing content;
       const: fixedContent = fixJSXContent(content): value;
       if ($1) {
   // If body;
+>>>>>>> main
 }
         fs.writeFileSync(filePath, fixedContent)
         console.log(`Fixed: ${filePath}`)

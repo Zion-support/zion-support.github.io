@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+import fs from 'fs'
+import path from 'path'
+import Layout from "../../layout";
+
+export default ${pageName}Page`
+// List of pages that need to be completely rewritten;
+const pagesToRewrite = [];': value
+  'enterprise-security';'
+  'services-advertising';'
+  'smart-city-infrastructure';'
+  'task-manager-pro'
+]
+// Template for a basic page
+ `import React from "react";
+
+=======
 import fs from 'fs;";
 import path from 'path;";
 import Layout from '../../layout';";";";
@@ -11,6 +28,7 @@ const: pagesToRewrite = [];': value';";";";
 ];
 // Template for a basic page;'';";";";
  `import React from 'react';;";";";
+>>>>>>> main
   return ()
     <div>Content</div>;
   );

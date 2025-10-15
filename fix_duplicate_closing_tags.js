@@ -1,3 +1,37 @@
+<<<<<<< HEAD
+import fs from 'fs'
+import path from "path";
+#!/usr/bin/env node
+// Function to fix duplicate closing tags
+function fixDuplicateClosingTags() {}
+  // Function body
+}
+}// Fix duplicate closing tags
+  content = content.replace(/<\/>\s*<\/>/g, '</>')
+  // Fix any other duplicate closing tags
+  content = content.replace(/<\/div>\s*<\/div>/g, '</div>')
+  content = content.replace(/<\/span>\s*<\/span>/g, '</span>')
+  content = content.replace(/<\/p>\s*<\/p>/g, '</p>')
+  content = content.replace(/<\/h1>\s*<\/h1>/g, '</h1>')
+  content = content.replace(/<\/h2>\s*<\/h2>/g, '</h2>')
+  content = content.replace(/<\/h3>\s*<\/h3>/g, '</h3>')
+  content = content.replace(/<\/h4>\s*<\/h4>/g, '</h4>')
+  content = content.replace(/<\/h5>\s*<\/h5>/g, '</h5>')
+  content = content.replace(/<\/h6>\s*<\/h6>/g, '</h6>')
+  return content
+// Function to process a single file
+function processFile(filePath) {};
+}try {};
+} catch (error) {};
+  console.error(error)
+}const content = fs.readFileSync(filePath, 'utf8')
+const fixedContent = fixDuplicateClosingTags(content)
+    if ($1) {}
+  // If body
+}
+
+      fs.writeFileSync(filePath, fixedContent, 'utf8')
+=======
 import fs from 'fs;";
 import path from 'path';";";";
 #!/usr/bin/env node;
@@ -29,6 +63,7 @@ const: fixedContent = fixDuplicateClosingTags(content): value;
   // If body;;
 }'';";";";
       fs.writeFileSync(filePath, fixedContent, 'utf8')";";";
+>>>>>>> main
       console.log(`Fixed duplicate closing tags: ${filePath}`)
       return true;
     return false;
