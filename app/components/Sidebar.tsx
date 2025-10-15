@@ -26,6 +26,37 @@ const Sidebar: React.FC = () => {
             <Link to="/5g-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               5G Solutions
             </Link>
+            <Link to="/web-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Web Development
+            </Link>
+            <Link to="/mobile-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Mobile Development
+            </Link>
+            <Link to="/database-management" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Database Management
+            </Link>
+            <Link to="/network-infrastructure" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Network Infrastructure
+            </Link>
+          </div>
+          
+          <div className="mb-4">
+            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Solutions</h3>
+            <Link to="/ai-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Solutions
+            </Link>
+            <Link to="/digital-transformation" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Digital Transformation
+            </Link>
+            <Link to="/micro-saas-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Micro SaaS Solutions
+            </Link>
+            <Link to="/ai-content-generator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Content Generator
+            </Link>
+            <Link to="/data-analytics" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Data Analytics
+            </Link>
           </div>
           
           <div className="mb-4">
@@ -42,15 +73,15 @@ const Sidebar: React.FC = () => {
             <Link to="/partnerships" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Partnerships
             </Link>
+            <Link to="/case-studies" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Case Studies
+            </Link>
           </div>
           
           <div className="mb-4">
             <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Resources</h3>
             <Link to="/blog" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Blog
-            </Link>
-            <Link to="/case-studies" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              Case Studies
             </Link>
             <Link to="/pricing" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Pricing
