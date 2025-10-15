@@ -194,7 +194,7 @@ function generatePerformanceReport() {
   try {
     const report = {
       timestamp: new Date().toISOString(),
-      optimizations: [;
+      optimizations: [
         'Images optimized with WebP conversion',
         'Critical CSS generated for above-the-fold content',
         'JavaScript bundles minified and optimized',
