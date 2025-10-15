@@ -38,8 +38,8 @@ const ContactPage: React.FC = memo(() => {
   return (
     <>
       <SEOHead
-        title="Contact Us"
-        description="Get in touch with Zion Tech Group for your AI and IT solution needs. We're here to help."
+        title="Contact Us - Zion Tech Group | AI & IT Solutions"
+        description="Get in touch with Zion Tech Group for your AI and IT solution needs. Call +1 (302) 464-0950 or email kleber@ziontechgroup.com. Located in Middletown, DE."
         canonicalUrl="https://ziontechgroup.com/contact"
       />
       

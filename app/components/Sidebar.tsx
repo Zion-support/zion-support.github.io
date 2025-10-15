@@ -61,7 +61,26 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Image Recognition', href: '/ai-image-recognition', icon: Settings },
         { name: 'AI Lead Scoring', href: '/ai-lead-scoring', icon: Settings },
         { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Settings },
-        { name: 'AI Price Optimizer', href: '/ai-price-optimizer', icon: Settings }
+        { name: 'AI Price Optimizer', href: '/ai-price-optimizer', icon: Settings },
+        { name: 'AI Project Manager Pro', href: '/ai-project-manager-pro', icon: Settings },
+        { name: 'AI Financial Advisor Pro', href: '/ai-financial-advisor-pro', icon: Settings },
+        { name: 'AI Health Monitor Pro', href: '/ai-health-monitor-pro', icon: Settings },
+        { name: 'AI Smart Home Pro', href: '/ai-smart-home-pro', icon: Settings }
+      ]
+    },
+    {
+      title: 'AI Pro Services',
+      items: [
+        { name: 'AI Project Manager Pro', href: '/ai-project-manager-pro', icon: Settings },
+        { name: 'AI Financial Advisor Pro', href: '/ai-financial-advisor-pro', icon: Settings },
+        { name: 'AI Health Monitor Pro', href: '/ai-health-monitor-pro', icon: Settings },
+        { name: 'AI Smart Home Pro', href: '/ai-smart-home-pro', icon: Settings },
+        { name: 'AI Voice Assistant Pro', href: '/ai-voice-assistant-pro', icon: Settings },
+        { name: 'AI Image Recognition Pro', href: '/ai-image-recognition-pro', icon: Settings },
+        { name: 'AI Fraud Detection Pro', href: '/ai-fraud-detection-pro', icon: Settings },
+        { name: 'AI Lead Scoring Pro', href: '/ai-lead-scoring-pro', icon: Settings },
+        { name: 'AI Predictive Maintenance Pro', href: '/ai-predictive-maintenance-pro', icon: Settings },
+        { name: 'AI Price Optimizer Pro', href: '/ai-price-optimizer-pro', icon: Settings }
       ]
     },
     {

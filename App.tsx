@@ -135,6 +135,12 @@ const ZionSmartCRMAutomationPage = lazy(() => import('./app/zion-smart-crm-autom
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 const ZionSmartInventoryManagerPage = lazy(() => import('./app/zion-smart-inventory-manager/page'));
 
+// New AI Services
+const AIProjectManagerProPage = lazy(() => import('./app/ai-project-manager-pro/page'));
+const AIFinancialAdvisorProPage = lazy(() => import('./app/ai-financial-advisor-pro/page'));
+const AIHealthMonitorProPage = lazy(() => import('./app/ai-health-monitor-pro/page'));
+const AISmartHomeProPage = lazy(() => import('./app/ai-smart-home-pro/page'));
+
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -342,6 +348,12 @@ function App() {
                     <Route path="/zion-smart-crm-automation" element={<ZionSmartCRMAutomationPage />} />
                     <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
                     <Route path="/zion-smart-inventory-manager" element={<ZionSmartInventoryManagerPage />} />
+                    
+                    {/* New AI Services */}
+                    <Route path="/ai-project-manager-pro" element={<AIProjectManagerProPage />} />
+                    <Route path="/ai-financial-advisor-pro" element={<AIFinancialAdvisorProPage />} />
+                    <Route path="/ai-health-monitor-pro" element={<AIHealthMonitorProPage />} />
+                    <Route path="/ai-smart-home-pro" element={<AISmartHomeProPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">

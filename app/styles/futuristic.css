@@ -44,6 +44,130 @@ body {
   background: var(--dark-bg);
   color: var(--text-primary);
   overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Responsive Design Improvements */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .grid {
+    gap: 1rem;
+  }
+  
+  .text-responsive {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+  
+  .heading-responsive {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+  }
+  
+  .subheading-responsive {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+  }
+  
+  /* Navigation responsive */
+  .nav-menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Card responsive */
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  /* Button responsive */
+  .button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Grid responsive */
+  .grid-cols-1 {
+    grid-template-columns: 1fr;
+  }
+  
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  .grid {
+    gap: 0.75rem;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+  
+  .button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Text responsive for very small screens */
+  .heading-responsive {
+    font-size: clamp(1.25rem, 8vw, 2rem);
+  }
+  
+  .subheading-responsive {
+    font-size: clamp(0.875rem, 5vw, 1rem);
+  }
+}
+
+/* Large screens optimization */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1400px;
+  }
 }
 
 /* Animated Background */

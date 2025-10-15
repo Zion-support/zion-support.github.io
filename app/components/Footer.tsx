@@ -94,6 +94,10 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/ai-education-tutor" className="text-gray-300 hover:text-white">AI Education Tutor</Link></li>
               <li><Link to="/ai-real-estate-analyzer" className="text-gray-300 hover:text-white">AI Real Estate Analyzer</Link></li>
               <li><Link to="/ai-supply-chain-optimizer" className="text-gray-300 hover:text-white">AI Supply Chain Optimizer</Link></li>
+              <li><Link to="/ai-project-manager-pro" className="text-gray-300 hover:text-white">AI Project Manager Pro</Link></li>
+              <li><Link to="/ai-financial-advisor-pro" className="text-gray-300 hover:text-white">AI Financial Advisor Pro</Link></li>
+              <li><Link to="/ai-health-monitor-pro" className="text-gray-300 hover:text-white">AI Health Monitor Pro</Link></li>
+              <li><Link to="/ai-smart-home-pro" className="text-gray-300 hover:text-white">AI Smart Home Pro</Link></li>
             </ul>
           </div>
           
