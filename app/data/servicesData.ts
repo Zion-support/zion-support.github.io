@@ -4602,8 +4602,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/database-management'
-<<<<<<< HEAD
-},
+      }
     }
   ],
   // New AI Services
