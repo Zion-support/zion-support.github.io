@@ -10,7 +10,7 @@ export const advancedAnalytics = { trackPageView: (page: string) => {
         page_path: page });
     }
   },
-  trackEvent: (eventName: string, parameters: Record<string unknown> = {}) => { if (typeof window !== 'undefined' && window.gtag) {
+  trackEvent: (eventName: string, parameters: Record<string, unknown> = {}) => { if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters); }
   },
   trackConversion: (conversionId: string, value?: number, currency?: string) => { if (typeof window !== 'undefined' && window.gtag) {

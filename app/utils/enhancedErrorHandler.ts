@@ -7,11 +7,11 @@ export const enhancedErrorHandler = { handleError: (error: Error, context?: stri
     return { message: 'Something went wrong. Please try again.',
       code: 'GENERIC_ERROR' };
   },
-  handleApiError: (error: unknown) => { const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
+  handleApiError: (error: unknown) => { 
+    const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
 
-const status = errorWithResponse.response?.status;
-
-const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
+    const status = errorWithResponse.response?.status;
+    const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
     switch (status) { case 400: return { message: 'Invalid request', code: 'BAD_REQUEST' };
       case 401: return { message: 'Unauthorized', code: 'UNAUTHORIZED' };
       case 403: return { message: 'Forbidden', code: 'FORBIDDEN' };
