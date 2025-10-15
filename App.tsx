@@ -1,13 +1,14 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import './app/styles/futuristic.css';
 
 // Components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
-import Header from './app/components/Header';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
+import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
@@ -39,12 +40,35 @@ import CaseStudiesPage from './app/case-studies/page';
 import CareersPage from './app/careers/page';
 
 // Additional Pages
+<<<<<<< HEAD
 import CybersecurityPage from './app/cybersecurity/page';
 import CloudSolutionsPage from './app/cloud-services/page';
 import MicroSaaSPage from './app/micro-saas-solutions/page';
 import FiveGSolutionsPage from './app/5g-solutions/page';
 import TeamPage from './app/team/page';
 import DocumentationPage from './app/docs/page';
+=======
+import CybersecurityPage from './app/pages/CybersecurityPage';
+import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
+import MicroSaaSPage from './app/pages/MicroSaaSPage';
+import FiveGSolutionsPage from './app/5g-solutions/page';
+import TeamPage from './app/pages/TeamPage';
+import DocumentationPage from './app/pages/DocumentationPage';
+<<<<<<< HEAD
+import PartnershipsPage from './app/pages/PartnershipsPage';
+import APIDocsPage from './app/pages/APIDocsPage';
+import HelpPage from './app/pages/HelpPage';
+import CommunityPage from './app/pages/CommunityPage';
+import ChatPage from './app/pages/ChatPage';
+import StatusPage from './app/pages/StatusPage';
+import ReportPage from './app/pages/ReportPage';
+import SoftwareDevelopmentPage from './app/pages/SoftwareDevelopmentPage';
+=======
+import PartnershipsPage from './app/partnerships/page';
+import ChatPage from './app/chat/page';
+import ReportPage from './app/report/page';
+>>>>>>> cursor/analyze-improve-and-merge-code-4a9f
+>>>>>>> 4322005aab0ef7243ec1380fa17dedddf01c149e
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -77,7 +101,7 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   return (
-    <ErrorBoundary>
+    <GlobalErrorBoundary>
       <HelmetProvider>
         <Router>
           <SEOHead />
@@ -123,6 +147,19 @@ function App() {
                       {/* Additional Pages */}
                       <Route path="/team" element={<TeamPage />} />
                       <Route path="/docs" element={<DocumentationPage />} />
+                      <Route path="/partnerships" element={<PartnershipsPage />} />
+<<<<<<< HEAD
+                      <Route path="/api-docs" element={<APIDocsPage />} />
+                      <Route path="/help" element={<HelpPage />} />
+                      <Route path="/community" element={<CommunityPage />} />
+                      <Route path="/chat" element={<ChatPage />} />
+                      <Route path="/status" element={<StatusPage />} />
+                      <Route path="/report" element={<ReportPage />} />
+                      <Route path="/software-development" element={<SoftwareDevelopmentPage />} />
+=======
+                      <Route path="/chat" element={<ChatPage />} />
+                      <Route path="/report" element={<ReportPage />} />
+>>>>>>> cursor/analyze-improve-and-merge-code-4a9f
                       
                       {/* Catch all route */}
                       <Route path="*" element={
@@ -147,7 +184,7 @@ function App() {
           </div>
         </Router>
       </HelmetProvider>
-    </ErrorBoundary>
+    </GlobalErrorBoundary>
   );
 }
 

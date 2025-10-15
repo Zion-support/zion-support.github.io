@@ -1,20 +1,18 @@
-import React from 'react';
-import { cn } from '../lib/utils';
-
-interface FuturisticCardProps {
-  children: React.ReactNode;
-  className?: string;
-  glowColor?: 'cyan' | 'purple' | 'pink' | 'blue' | 'green' | 'orange' | 'red' | 'yellow';
-  hover?: boolean;
+import React from 'react'
+import { cn } from '../lib/utils'
+interface FuturisticCardProps {}
+  children: React.ReactNode
+  className?: string
+  glowColor?: 'cyan' | 'purple' | 'pink' | 'blue' | 'green' | 'orange' | 'red' | 'yellow'
+  hover?: boolean
 }
-
-const FuturisticCard = ({ 
-  children, 
-  className, 
+const FuturisticCard = ({}
+  children,
+  className,
   glowColor = 'cyan',
-  hover = true 
-}: FuturisticCardProps) => {
-  const glowColors = {
+  hover = true
+}: FuturisticCardProps) => {}
+}const glowColors = {}
     cyan: 'hover:shadow-cyan-500/25',
     purple: 'hover:shadow-purple-500/25',
     pink: 'hover:shadow-pink-500/25',
@@ -22,12 +20,10 @@ const FuturisticCard = ({
     green: 'hover:shadow-green-500/25',
     orange: 'hover:shadow-orange-500/25',
     red: 'hover:shadow-red-500/25',
-    yellow: 'hover:shadow-yellow-500/25',
-  };
-
-  return (
+    yellow: 'hover:shadow-yellow-500/25'}
+  return ()
     <div
-      className={cn(
+      className={cn()
         'relative bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 transition-all duration-300',
         hover && 'hover:bg-white/20 hover:scale-105 hover:shadow-2xl',
         hover && glowColors[glowColor],
@@ -40,7 +36,6 @@ const FuturisticCard = ({
         {children}
       </div>
     </div>
-  );
-};
-
-export default FuturisticCard;
+  )
+}
+export default FuturisticCard

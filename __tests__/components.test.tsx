@@ -1,23 +1,23 @@
-import { describe, test, expect } from "@jest/globals";
-import { render, screen } from "@testing-library/react";
-import { HelmetProvider } from "react-helmet-async";
-import Loading from "../app/components/Loading";
-import SEOHead from "../app/components/SEOHead";
-describe("Components", () => {
-  test("Loading component renders", () => {
-    render(
-      <HelmetProvider>
+import { describe, test, expect } from "@jest/globals"
+import { render, screen } from "@testing-library/react"
+import { HelmetProvider } from "react-helmet-async"
+import Loading from "../app/components/Loading"
+import SEOHead from "../app/components/SEOHead"
+describe("Components", () => {}
+}test("Loading component renders", () => {}
+}render()
+      <HelmetProvider></Helmet>
         <Loading />
       </HelmetProvider>,
-    );
-    expect(screen.getByText("Loading...")).toBeInTheDocument();
-  });
-  test("SEOHead component renders", () => {
-    render(
-      <HelmetProvider>
+    )
+    expect(screen.getByText("Loading...")).toBeInTheDocument()
+  })
+  test("SEOHead component renders", () => {}
+}render()
+      <HelmetProvider></Helmet>
         <SEOHead title="Test Title" description="Test Description" />
       </HelmetProvider>,
-    );
-    expect(document.head).toBeInTheDocument();
-  });
-});
+    )
+    expect(document.head).toBeInTheDocument()
+  })
+})

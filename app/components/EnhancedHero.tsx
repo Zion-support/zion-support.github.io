@@ -1,82 +1,70 @@
-import React from "react";
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
-
-interface EnhancedHeroProps {
-  title?: string;
-  subtitle?: string;
-  description?: string;
-  primaryCta?: {
-    text: string;
-    href: string;
-  };
-  secondaryCta?: {
-    text: string;
-    href: string;
-  };
-  benefits?: string[];
-  backgroundImage?: string;
-  className?: string;
+import React from "react"
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from "lucide-react"
+import { Link } from "react-router-dom"
+interface EnhancedHeroProps {}
+  title?: string
+  subtitle?: string
+  description?: string
+  primaryCta?: {}
+    text: string
+    href: string
+  }
+  secondaryCta?: {}
+    text: string
+    href: string
+  }
+  benefits?: string[]
+  backgroundImage?: string
+  className?: string
 }
-
-const EnhancedHero: React.FC<EnhancedHeroProps> = ({
+const EnhancedHero: React.FC<EnhancedHeroProps> = ({}
   title = "Transform Your Business with AI",
   subtitle = "Leading Provider of AI Solutions",
   description = "Revolutionize your operations with cutting-edge artificial intelligence technology. Our advanced solutions deliver measurable results and drive unprecedented growth.",
-  primaryCta = {
+  primaryCta = {}
     text: "Get Started",
-    href: "/contact",
-  },
-  secondaryCta = {
+    href: "/contact"},
+  secondaryCta = {}
     text: "Learn More",
-    href: "/about",
-  },
-  benefits = [
+    href: "/about"},
+  benefits = []
     "Advanced AI technology integration",
     "Real-time processing and analytics",
     "Enterprise-grade security and compliance",
     "Scalable and flexible solutions",
     "24/7 technical support",
-    "Custom implementation and training",
-  ],
+    "Custom implementation and training"],
   backgroundImage = "/api/placeholder/1920/1080",
-  className = "",
-}) => {
-  const contactInfo = [
-    {
+  className = ""}) => {}
+}const contactInfo = []
+    {}
       icon: Phone,
       title: "Call Us",
       details: "+1 (555) 123-4567",
-      description: "Mon-Fri 9 AM-6 PM PST",
-    },
-    {
+      description: "Mon-Fri 9 AM-6 PM PST"},
+    {}
       icon: Mail,
       title: "Email Us",
       details: "info@ziontechgroup.com",
-      description: "We respond within 24 hours",
-    },
-    {
+      description: "We respond within 24 hours"},
+    {}
       icon: MapPin,
       title: "Visit Us",
       details: "123 Tech Street, San Francisco, CA",
-      description: "Schedule a meeting",
-    },
-  ];
-
-  return (
+      description: "Schedule a meeting"}]
+  return ()
     <div
       className={`relative min-h-screen flex items-center justify-center overflow-hidden ${className}`}
     >
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {backgroundImage && (
+        {backgroundImage && ()
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
             style={{ backgroundImage: `url(${backgroundImage})` }}
           />
         )}
       </div>
-
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -91,7 +79,6 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
               </p>
               <p className="text-lg text-gray-300 mb-8">{description}</p>
             </div>
-
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -108,10 +95,9 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
                 {secondaryCta.text}
               </Link>
             </div>
-
             {/* Benefits */}
             <div className="grid sm:grid-cols-2 gap-4">
-              {benefits.slice(0, 4).map((benefit, index) => (
+              {benefits.slice(0, 4).map((benefit, index) => ()
                 <div key={index} className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span className="text-sm">{benefit}</span>
@@ -119,7 +105,6 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
               ))}
             </div>
           </div>
-
           {/* Right Column - Contact Info */}
           <div className="space-y-6">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
@@ -127,7 +112,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
                 Get in Touch
               </h3>
               <div className="space-y-4">
-                {contactInfo.map((info, index) => (
+                {contactInfo.map((info, index) => ()
                   <div key={index} className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
                       <info.icon className="w-6 h-6 text-cyan-400" />
@@ -143,7 +128,6 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
                 ))}
               </div>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center">
@@ -163,7 +147,6 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
         </div>
       </div>
     </div>
-  );
-};
-
-export default EnhancedHero;
+  )
+}
+export default EnhancedHero

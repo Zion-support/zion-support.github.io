@@ -1,88 +1,71 @@
-import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
-
-interface ContentItem {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  category: string;
-  featured?: boolean;
+import React, { useState, useEffect } from "react"
+import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react"
+interface ContentItem {}
+  id: string
+  title: string
+  description: string
+  image: string
+  category: string
+  featured?: boolean
 }
-
-interface DynamicContentShowcaseProps {
-  items?: ContentItem[];
-  autoPlay?: boolean;
-  interval?: number;
-  className?: string;
+interface DynamicContentShowcaseProps {}
+  items?: ContentItem[]
+  autoPlay?: boolean
+  interval?: number
+  className?: string
 }
-
-const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
-  items = [
-    {
+const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({}
+  items = []
+    {}
       id: "1",
       title: "AI-Powered Solutions",
       description:
         "Transform your business with cutting-edge artificial intelligence technology.",
       image: "/api/placeholder/400/300",
       category: "AI Solutions",
-      featured: true,
-    },
-    {
+      featured: true},
+    {}
       id: "2",
       title: "Cloud Migration",
       description:
         "Seamlessly migrate your infrastructure to the cloud with our expert services.",
       image: "/api/placeholder/400/300",
-      category: "Cloud Services",
-    },
-    {
+      category: "Cloud Services"},
+    {}
       id: "3",
       title: "Data Analytics",
       description:
         "Unlock insights from your data with advanced analytics and visualization.",
       image: "/api/placeholder/400/300",
-      category: "Data Services",
-    },
-  ],
+      category: "Data Services"}],
   autoPlay = true,
   interval = 5000,
-  className = "",
-}) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(autoPlay);
-
-  useEffect(() => {
-    if (!isPlaying) return;
-
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-    }, interval);
-
-    return () => clearInterval(timer);
-  }, [isPlaying, interval, items.length]);
-
-  const goToPrevious = () => {
-    setCurrentIndex(
+  className = ""}) => {}
+}const [currentIndex, setCurrentIndex] = useState(0)
+  const [isPlaying, setIsPlaying] = useState(autoPlay)
+  useEffect(() => {}
+}if (!isPlaying) return
+    const timer = setInterval(() => {}
+}setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length)
+    }, interval)
+    return () => clearInterval(timer)
+  }, [isPlaying, interval, items.length])
+  const goToPrevious = () => {}
+}setCurrentIndex()
       (prevIndex) => (prevIndex - 1 + items.length) % items.length,
-    );
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-  };
-
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
-
-  const currentItem = items[currentIndex];
-
-  return (
+    )
+  }
+  const goToNext = () => {}
+}setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length)
+  }
+  const togglePlayPause = () => {}
+}setIsPlaying(!isPlaying)
+  }
+  const goToSlide = (index: number) => {}
+}setCurrentIndex(index)
+  }
+  const currentItem = items[currentIndex]
+  return ()
     <div className={`relative ${className}`}>
       <div className="relative overflow-hidden rounded-lg bg-gray-900">
         <div className="flex transition-transform duration-500 ease-in-out">
@@ -100,7 +83,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
                     {currentItem.description}
                   </p>
                 </div>
-
                 <div className="flex space-x-4">
                   <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                     Learn More
@@ -110,14 +92,13 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
                   </button>
                 </div>
               </div>
-
               <div className="relative">
                 <img
                   src={currentItem.image}
                   alt={currentItem.title}
                   className="w-full h-64 object-cover rounded-lg"
                 />
-                {currentItem.featured && (
+                {currentItem.featured && ()
                   <div className="absolute top-4 right-4 bg-yellow-500 text-yellow-900 px-2 py-1 rounded text-sm font-semibold">
                     Featured
                   </div>
@@ -127,7 +108,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
           </div>
         </div>
       </div>
-
       {/* Controls */}
       <div className="flex items-center justify-between mt-6">
         <div className="flex space-x-2">
@@ -141,9 +121,9 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
             onClick={togglePlayPause}
             className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
           >
-            {isPlaying ? (
+            {isPlaying ? ()
               <Pause className="w-5 h-5" />
-            ) : (
+            ) : ()
               <Play className="w-5 h-5" />
             )}
           </button>
@@ -154,14 +134,13 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
-
         {/* Dots indicator */}
         <div className="flex space-x-2">
-          {items.map((_, index) => (
+          {items.map((_, index) => ()
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
+              className={`w-3 h-3 rounded-full transition-colors ${}
                 index === currentIndex ? "bg-cyan-500" : "bg-gray-600"
               }`}
             />
@@ -169,7 +148,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
         </div>
       </div>
     </div>
-  );
-};
-
-export default DynamicContentShowcase;
+  )
+}
+export default DynamicContentShowcase

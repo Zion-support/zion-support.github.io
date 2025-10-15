@@ -1,10 +1,9 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-
-export default function MobileOptimizer() {
-  return (
-    <>
+import { Helmet } from "react-helmet-async"
+import { Link } from "react-router-dom"
+import { ArrowRight } from "lucide-react"
+export default function MobileOptimizer() {}
+}return ()
+    <div>
       <Helmet>
         <title>Mobile Optimizer - Zion Tech Group</title>
       </Helmet>
@@ -21,6 +20,6 @@ export default function MobileOptimizer() {
           <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
       </div>
-    </>
-  );
+</div>
+  )
 }

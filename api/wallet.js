@@ -1,4 +1,5 @@
 // API endpoint for wallet operations
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -9,10 +10,6 @@ export default function handler(req, res) {
     return res.status(405).json({ _error: "Method not allowed" });
   }
 
-<<<<<<< HEAD
-  res.status(200).json({ message: "Wallet operation successful" });
-}
-=======
   const { address, type, name, userId } = req.body;
   if (!address || !type) {
     res.setHeader('Content-Type', 'application/json');
@@ -59,4 +56,12 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ error: 'Failed to save wallet' }));
   }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
+=======
+import fs from 'fs'
+import path from 'path'
+const file = path.join(process.cwd(), 'data', 'wallets.json')
+export default function handler(req, res) {}
+}if (req.method !== "POST") {}
+    return res.status(405).json({ _error: "Method not allowed" })
+  }
+>>>>>>> cursor/analyze-improve-and-merge-code-4a9f
