@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -90,51 +90,51 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
-      name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
+      name: "Zion AI Email Assistant",
+      description: "AI-powered email management with smart categorization, response suggestions, and automation",
+      price: "From $29/month",
+      icon: <Mail className="w-6 h-6" />,
+      link: "/zion-ai-email-assistant",
+      featured: true
+    },
+    {
+      name: "AI Financial Crime Detection Pro",
+      description: "Advanced fraud detection and AML compliance with 99.7% accuracy and real-time monitoring",
       price: "From $299/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro",
-      featured: true
-    },
-    {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
-      price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield",
+      link: "/ai-financial-crime-detection-pro",
       featured: true
     },
     {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
-      price: "From $99/month",
+      name: "AI Climate Prediction Engine",
+      description: "Revolutionary weather forecasting with 95%+ accuracy and climate change analysis",
+      price: "From $199/month",
       icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault",
+      link: "/ai-climate-prediction-engine",
       featured: true
     },
     {
       name: "Zion AI CRM Pro",
       description: "AI-powered customer relationship management with intelligent lead scoring and automation",
-      price: "From $199/month",
+      price: "From $49/month",
       icon: <Users className="w-6 h-6" />,
       link: "/zion-ai-crm-pro",
       featured: true
     },
     {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
-      icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
+      name: "Zion Content Studio",
+      description: "AI-powered content creation platform for blogs, social media, and marketing materials",
+      price: "From $29/month",
+      icon: <Sparkles className="w-6 h-6" />,
+      link: "/zion-content-studio",
       featured: true
     },
     {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
+      name: "Zion Inventory Smart",
+      description: "Smart inventory management with predictive analytics and automated reordering",
+      price: "From $39/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-inventory-smart",
       featured: true
     }
   ];
