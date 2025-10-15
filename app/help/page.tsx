@@ -64,7 +64,7 @@ const HelpPage: React.FC = () => {
     },
     {
       question: "How secure is my data?",
-      answer: "We take data security seriously. All data is encrypted in transit and at rest, we're SOC 2 compliant, and we follow industry best practices for data protection. We also offer additional security features for enterprise clients."
+      answer: "We take data security seriously. All data is encrypted in transit and at rest, we&apos;re SOC 2 compliant, and we follow industry best practices for data protection. We also offer additional security features for enterprise clients."
     }
   ];
 

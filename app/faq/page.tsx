@@ -108,7 +108,7 @@ const faqData = [
         },
         {
           question: "Do you offer refunds?",
-          answer: "We offer a 30-day money-back guarantee for most of our services. If you're not satisfied with our solution within the first 30 days, we'll provide a full refund. Some custom development projects may have different terms."
+          answer: "We offer a 30-day money-back guarantee for most of our services. If you&apos;re not satisfied with our solution within the first 30 days, we&apos;ll provide a full refund. Some custom development projects may have different terms."
         }]
     }
   ];

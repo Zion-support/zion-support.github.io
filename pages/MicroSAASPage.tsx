@@ -166,7 +166,6 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Development', 'Monitoring', 'Automation', 'Marketing', 'Document Management'];
 
   const stats = [
     { number: '200+', label: 'Micro SAAS Solutions', icon: Zap },

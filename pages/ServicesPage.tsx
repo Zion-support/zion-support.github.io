@@ -7,9 +7,7 @@ import {
   ArrowRight, 
   Brain, 
   Server, 
-  Zap,
   Rocket,
-  Users,
   Settings
 } from 'lucide-react';
 
