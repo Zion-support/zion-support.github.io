@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Briefcase, MapPin, Clock, Users, CheckCircle, Heart, DollarSign, Home, GraduationCap, Zap, Shield } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
-<<<<<<< HEAD
   const benefits = [
     {
       icon: <Heart className="w-8 h-8" />,
