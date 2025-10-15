@@ -146,7 +146,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6 text-lg">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
             {this.state.errorId && (
