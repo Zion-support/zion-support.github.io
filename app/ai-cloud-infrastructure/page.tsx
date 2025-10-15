@@ -8,13 +8,15 @@ const features = [ { icon: <Cloud className="w-6 h-6" />, title: "AI-Powered Aut
 
 
 export default function Page() {
-const pricingPlans = [ { name: "Starter", price: "$499", period: "month", description: "Perfect for small businesses starting their cloud journey", features: [ "Up to 10 servers", "Basic AI monitoring", "Standard support", "99.9% uptime SLA", "Email support", "1TB storage" ], popular: false }, { name: "Professional", price: "$999", period: "month", description: "Ideal for growing businesses with complex infrastructure needs", features: [ "Up to 50 servers", "Advanced AI analytics", "Priority support", "99.99% uptime SLA", "Phone & email support", "10TB storage", "Multi-cloud support", "Custom integrations" ], popular: true }, { name: "Enterprise", price: "$1,999", period: "month", description: "Complete solution for large organizations with mission-critical workloads", features: [ "Unlimited servers", "Full AI suite", "24/7 dedicated support", "99.999% uptime SLA", "Dedicated account manager", "Unlimited storage", "Custom architecture", "On-premise hybrid", "Compliance management" ], popular: false } ];
-
-const testimonials = [ { name: "Alex Rodriguez", company: "TechCorp Solutions", role: "CTO", content: "The AI-powered auto-scaling has reduced our infrastructure costs by 40% while improving performance. Incredible technology.", rating: 5 }, { name: "Maria Santos", company: "Global Enterprises", role: "Infrastructure Director", content: "The multi-cloud architecture gives us the flexibility we need. The AI monitoring has prevented several potential outages.", rating: 5 }, { name: "James Wilson", company: "StartupX", role: "Founder", content: "Zion Tech Group's cloud infrastructure has been the backbone of our rapid growth. Reliable, scalable, and cost-effective.", rating: 5 } ];
+  const features = [ { icon: <Cloud className="w-6 h-6" />, title: "AI-Powered Auto-Scaling", description: "Intelligent resource management that automatically scales your infrastructure based on demand and AI predictions.", benefits: ["Predictive scaling", "Cost optimization", "Performance monitoring", "Automatic failover"]
+;
+  const pricingPlans = [ { name: "Starter", price: "$499", period: "month", description: "Perfect for small businesses starting their cloud journey", features: [ "Up to 10 servers", "Basic AI monitoring", "Standard support", "99.9% uptime SLA", "Email support", "1TB storage" ]
+;
+  const testimonials = [ { name: "Alex Rodriguez", company: "TechCorp Solutions", role: "CTO", content: "The AI-powered auto-scaling has reduced our infrastructure costs by 40% while improving performance. Incredible technology.", rating: 5 }, { name: "Maria Santos", company: "Global Enterprises", role: "Infrastructure Director", content: "The multi-cloud architecture gives us the flexibility we need. The AI monitoring has prevented several potential outages.", rating: 5 }, { name: "James Wilson", company: "StartupX", role: "Founder", content: "Zion Tech Group's cloud infrastructure has been the backbone of our rapid growth. Reliable, scalable, and cost-effective.", rating: 5 } ]
+;
   return (
     <> <Helmet> <title>AI Cloud Infrastructure - Advanced Cloud Solutions | Zion Tech Group</title> <meta name="description" content="Transform your business with AI-powered cloud infrastructure. Scalable, secure, and intelligent cloud solutions for modern enterprises." /> <meta name="keywords" content="AI cloud infrastructure, cloud computing, multi-cloud, auto-scaling, cloud security, managed services" /> <meta property="og:title" content="AI Cloud Infrastructure - Zion Tech Group" /> <meta property="og:description" content="Advanced AI-powered cloud infrastructure solutions" /> <meta property="og:type" content="website" /> <meta property="og:url" content="https://ziontechgroup.com/ai-cloud-infrastructure" /> </Helmet> 
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        { /* Animated Background */ }
         
         <div className="absolute inset-0">
           
@@ -24,14 +26,12 @@ const testimonials = [ { name: "Alex Rodriguez", company: "TechCorp Solutions", 
           
         <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
         </div>
-        { /* Grid Pattern */ }
         
         <div className="absolute inset-0 opacity-20">
           
         <div className="h-full w-full"></div>
         </div>
         <main className="relative z-10">
-          { /* Hero Section */ }
           <section className="relative py-20 overflow-hidden">
             
         <div className="container mx-auto px-4">
@@ -70,7 +70,6 @@ const testimonials = [ { name: "Alex Rodriguez", company: "TechCorp Solutions", 
               </div>
             </div>
           </section>
-          { /* Features Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             
         <div className="container mx-auto px-4">
@@ -98,18 +97,15 @@ const testimonials = [ { name: "Alex Rodriguez", company: "TechCorp Solutions", 
         <div className="text-white">{ feature.icon }</div>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                      { feature.title }
                     </h3>
                     
           <p className="text-gray-300 mb-6 leading-relaxed">
-                      { feature.description }
                     </p>
                     
         <div className="space-y-2">
                       { feature.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex } className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          { benefit }
                         </div>
                       ))}
                     </div>
@@ -118,7 +114,6 @@ const testimonials = [ { name: "Alex Rodriguez", company: "TechCorp Solutions", 
               </div>
             </div>
           </section>
-          { /* Pricing Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">
@@ -144,15 +139,6 @@ const testimonials = [ { name: "Alex Rodriguez", company: "TechCorp Solutions", 
                         ? 'border-cyan-400/40 shadow-cyan-500/10' 
                         : 'border-cyan-500/20 hover:border-cyan-400/40' }`}
                   >
-                    { plan.popular && (
-                      
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        
-        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                          Most Popular
-                        </div>
-                      </div>
-                    ) }
                     
         <div className="text-center mb-8">
                       <h3 className="text-2xl font-bold text-white mb-2">{ plan.name }</h3>
@@ -169,7 +155,6 @@ const testimonials = [ { name: "Alex Rodriguez", company: "TechCorp Solutions", 
                       { plan.features.map((feature, featureIndex) => (
                         <div key={featureIndex } className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          { feature }
                         </div>
                       ))}
                     </div>
@@ -188,7 +173,6 @@ const testimonials = [ { name: "Alex Rodriguez", company: "TechCorp Solutions", 
               </div>
             </div>
           </section>
-          { /* Testimonials Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             
         <div className="container mx-auto px-4">
@@ -233,7 +217,6 @@ const testimonials = [ { name: "Alex Rodriguez", company: "TechCorp Solutions", 
               </div>
             </div>
           </section>
-          { /* CTA Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">
@@ -267,6 +250,5 @@ const testimonials = [ { name: "Alex Rodriguez", company: "TechCorp Solutions", 
         </main>
       </div>
     </>
-  );
-};
-export default AiCloudInfrastructurePage;
+}
+}}}

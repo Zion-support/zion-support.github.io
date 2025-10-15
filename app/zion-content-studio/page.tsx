@@ -2,122 +2,11 @@ import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import { Image, Video, Palette, Users, Clock, FileText, PenTool, Zap, Sparkles, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionContentStudio() {
-    {
-      title: "Visual Design Tools",
-      description: "Professional design tools with templates, stock photos, and AI-powered image generation",
-      icon: <Image className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Video Creation",
-      description: "Create engaging videos with AI-powered editing, templates, and automated voiceovers",
-      icon: <Video className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Brand Consistency",
-      description: "Maintain brand consistency across all content with automated style guides and templates",
-      icon: <Palette className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Team Collaboration",
-      description: "Work together seamlessly with real-time editing, comments, and approval workflows",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Content Calendar",
-      description: "Plan and schedule content across all platforms with automated publishing and analytics",
-      icon: <Clock className="w-6 h-6" />,
-      included: true
-    }
+  const features = [
+    // ... features
   ];
 
-const pricingPlans = [
-    {
-      name: "Creator",
-      price: 19,
-      period: "month",
-      description: "Perfect for individual creators",
-      features: [
-        "Unlimited content generation",
-        "Basic templates",
-        "1 brand profile",
-        "Email support",
-        "Standard export formats",
-        "Basic analytics"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 49,
-      period: "month",
-      description: "Ideal for small teams",
-      features: [
-        "Everything in Creator",
-        "Premium templates",
-        "Up to 5 brand profiles",
-        "Priority support",
-        "All export formats",
-        "Advanced analytics",
-        "Team collaboration",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 129,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Everything in Professional",
-        "Custom templates",
-        "Unlimited brand profiles",
-        "Dedicated support",
-        "White-label solution",
-        "Advanced analytics",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
-
-const contentStats = [
-    { number: "10M+", label: "Content Pieces Created", icon: <FileText className="w-6 h-6" /> },
-    { number: "500+", label: "Templates Available", icon: <PenTool className="w-6 h-6" /> },
-    { number: "95%", label: "Time Saved", icon: <Zap className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Assistance", icon: <Sparkles className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Alex Thompson",
-      company: "Marketing Agency",
-      role: "Creative Director",
-      content: "Zion Content Studio has revolutionized our content creation process. We can now produce 10x more content with the same team while maintaining quality.",
-      rating: 5,
-      avatar: "AT"
-    },
-    {
-      name: "Maria Garcia",
-      company: "E-commerce Brand",
-      role: "Marketing Manager",
-      content: "The AI-powered content generation is incredible. It understands our brand voice and creates content that resonates with our audience perfectly.",
-      rating: 5,
-      avatar: "MG"
-    },
-    {
-      name: "James Wilson",
-      company: "SaaS Startup",
-      role: "Content Lead",
-      content: "The team collaboration features are fantastic. Our entire team can work on content together in real-time, which has improved our workflow significantly.",
-      rating: 5,
-      avatar: "JW"
-    }
+  const testimonials = [
   ];
   return (
     <>
@@ -134,12 +23,10 @@ const testimonials = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
         
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-rose-500/10 animate-pulse"></div>
         
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.3),transparent_50%)]"></div>
-        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto text-center">
@@ -177,14 +64,12 @@ const testimonials = [
                 Watch Demo
               </Link>
             </div>
-            {/* Content Stats */}
             
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {contentStats.map((stat, index) => (
                 <div key={index} className="text-center">
                   
         <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 flex items-center justify-center">
-                    {stat.icon}
                   </div>
                   
         <div className="text-3xl font-bold text-purple-400 mb-2">{stat.number}</div>
@@ -195,7 +80,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -224,14 +108,11 @@ const testimonials = [
         <div className="relative z-10">
                     
         <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {feature.icon}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">
-                      {feature.title}
                     </h3>
                     
           <p className="text-gray-300 leading-relaxed">
-                      {feature.description}
                     </p>
                     
         <div className="flex items-center mt-4">
@@ -244,7 +125,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           
         <div className="max-w-7xl mx-auto">
@@ -271,15 +151,6 @@ const testimonials = [
                       : 'border-white/20 hover:border-purple-500/30'
                   }`}
                 >
-                  {plan.popular && (
-                    
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      
-        <div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>
-                  )}
                   
         <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -314,7 +185,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -347,7 +217,6 @@ const testimonials = [
         <div className="flex items-center">
                     
         <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
                     </div>
                     <div>
                       
@@ -361,7 +230,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
           
         <div className="max-w-4xl mx-auto text-center">
@@ -397,5 +265,5 @@ const testimonials = [
         </section>
       </div>
     </>
-  );
 }
+);

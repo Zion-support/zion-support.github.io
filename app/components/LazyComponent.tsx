@@ -43,40 +43,9 @@ const observer = new IntersectionObserver(
           observer.disconnect();
         }
       },
-      {
-        threshold: 0.1,
-        rootMargin: '50px',
-        ...options
-      }
     );
     observer.observe(ref.current);
-  return () => observer.disconnect();
-  }, [ref, options]);
-  return isVisible;
-}
-// Component for lazy loading with intersection observer
-export const LazyComponent: React.FC<LazyComponentProps & { children: React.ReactNode }> = ({ 
-  children,
-  fallback = <DefaultFallback />,
-  delay = 0 
-}) => {
-  const [shouldRender, setShouldRender] = React.useState(false);
-
-const ref = React.useRef<HTMLDivElement>(null);
-  React.useEffect(() => {
-    if (isVisible) {
-      if (delay > 0) {
-        const timer = setTimeout(() => setShouldRender(true), delay);
-  return () => clearTimeout(timer);
-      } else {
-        setShouldRender(true);
-      }
-    }
-  }, [isVisible, delay]);
-  return (
-    <div ref={ref}>
-      {shouldRender ? children : fallback}
-    </div>
+  
   );
-};
-export default LazyComponent;
+}
+}

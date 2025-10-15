@@ -2,122 +2,11 @@ import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import { Zap, Users, Target, BarChart3, Settings, Mail, FileText, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionEmailAutomation() {
-    {
-      title: "Automated Workflows",
-      description: "Set up complex email automation workflows with triggers, conditions, and actions",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "List Management",
-      description: "Advanced list segmentation, tagging, and subscriber management with detailed profiles",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Personalization Engine",
-      description: "AI-powered personalization that adapts content based on subscriber behavior and preferences",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Analytics & Reporting",
-      description: "Comprehensive email analytics with open rates, click rates, and conversion tracking",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "A/B Testing",
-      description: "Test different subject lines, content, and send times to optimize your email performance",
-      icon: <Settings className="w-6 h-6" />,
-      included: true
-    }
+  const features = [
+    // ... features
   ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 29,
-      period: "month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 1,000 subscribers",
-        "Up to 10,000 emails/month",
-        "Basic templates",
-        "Email support",
-        "Basic analytics",
-        "Standard automation"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 79,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 10,000 subscribers",
-        "Up to 100,000 emails/month",
-        "Premium templates",
-        "Priority support",
-        "Advanced analytics",
-        "Advanced automation",
-        "A/B testing",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 199,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited subscribers",
-        "Unlimited emails",
-        "Custom templates",
-        "Dedicated support",
-        "Custom analytics",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
-
-const emailStats = [
-    { number: "300%", label: "Higher Open Rates", icon: <Mail className="w-6 h-6" /> },
-    { number: "45%", label: "Better Click Rates", icon: <Target className="w-6 h-6" /> },
-    { number: "50+", label: "Email Templates", icon: <FileText className="w-6 h-6" /> },
-    { number: "24/7", label: "Automation", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Sarah Martinez",
-      company: "E-commerce Brand",
-      role: "Marketing Manager",
-      content: "Zion Email Automation has revolutionized our email marketing. The automation workflows and personalization features have increased our open rates by 300%.",
-      rating: 5,
-      avatar: "SM"
-    },
-    {
-      name: "David Kim",
-      company: "SaaS Company",
-      role: "Growth Manager",
-      content: "The A/B testing features are incredible. We've optimized our email campaigns and improved our click rates by 45% in just 3 months.",
-      rating: 5,
-      avatar: "DK"
-    },
-    {
-      name: "Lisa Chen",
-      company: "Digital Agency",
-      role: "Email Marketing Specialist",
-      content: "The list management and segmentation features are fantastic. We can now send highly targeted emails that resonate with our audience.",
-      rating: 5,
-      avatar: "LC"
-    }
+  const testimonials = [
   ];
   return (
     <>
@@ -134,12 +23,10 @@ const testimonials = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
         
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10 animate-pulse"></div>
         
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(249,115,22,0.3),transparent_50%)]"></div>
-        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto text-center">
@@ -177,14 +64,12 @@ const testimonials = [
                 Watch Demo
               </Link>
             </div>
-            {/* Email Stats */}
             
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {emailStats.map((stat, index) => (
                 <div key={index} className="text-center">
                   
         <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 flex items-center justify-center">
-                    {stat.icon}
                   </div>
                   
         <div className="text-3xl font-bold text-orange-400 mb-2">{stat.number}</div>
@@ -195,7 +80,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -224,14 +108,11 @@ const testimonials = [
         <div className="relative z-10">
                     
         <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {feature.icon}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-orange-300 transition-colors">
-                      {feature.title}
                     </h3>
                     
           <p className="text-gray-300 leading-relaxed">
-                      {feature.description}
                     </p>
                     
         <div className="flex items-center mt-4">
@@ -244,7 +125,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-orange-800/50">
           
         <div className="max-w-7xl mx-auto">
@@ -271,15 +151,6 @@ const testimonials = [
                       : 'border-white/20 hover:border-orange-500/30'
                   }`}
                 >
-                  {plan.popular && (
-                    
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      
-        <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>
-                  )}
                   
         <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -314,7 +185,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -347,7 +217,6 @@ const testimonials = [
         <div className="flex items-center">
                     
         <div className="w-10 h-10 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
                     </div>
                     <div>
                       
@@ -361,7 +230,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-orange-900/30 to-red-900/30">
           
         <div className="max-w-4xl mx-auto text-center">
@@ -397,5 +265,5 @@ const testimonials = [
         </section>
       </div>
     </>
-  );
 }
+);

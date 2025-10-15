@@ -38,7 +38,6 @@ const DatabaseSolutionsPage: React.FC = () => {
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        { /* Hero Section */ }
         <section className="relative py-20 overflow-hidden">
           
         <div className="container mx-auto px-4">
@@ -78,7 +77,6 @@ const DatabaseSolutionsPage: React.FC = () => {
             </div>
           </div>
         </section>
-        { /* Services Section */ }
         <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
           
         <div className="container mx-auto px-4">
@@ -105,18 +103,15 @@ const DatabaseSolutionsPage: React.FC = () => {
         <div className="text-white">{ feature.icon }</div>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">
-                    { feature.title }
                   </h3>
                   
           <p className="text-gray-300 mb-6 leading-relaxed">
-                    { feature.description }
                   </p>
                   
         <div className="space-y-2">
                     { feature.features.map((item, featureIndex) => (
                       <div key={featureIndex } className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        { item }
                       </div>
                     ))}
                   </div>
@@ -125,7 +120,6 @@ const DatabaseSolutionsPage: React.FC = () => {
             </div>
           </div>
         </section>
-        { /* CTA Section */ }
         <section className="py-20 bg-gray-900">
           
         <div className="container mx-auto px-4">

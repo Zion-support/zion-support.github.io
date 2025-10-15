@@ -16,30 +16,11 @@ import {
 
 const FiveGImplementationPage: React.FC = () => {
   const features = [
-    { icon: <Wifi className="w-6 h-6" />,
-      title: "Ultra-Fast 5G Networks",
-      description: "Deploy cutting-edge 5G infrastructure with speeds up to 10 Gbps and ultra-low latency under 1ms.",
-      benefits: ["10 Gbps speeds", "Sub-1ms latency", "Massive connectivity", "Network slicing"] },
-    { icon: <Cloud className="w-6 h-6" />,
-      title: "Edge Computing Integration",
-      description: "Implement edge computing solutions to process data closer to the source for maximum performance.",
-      benefits: ["Edge servers", "Local processing", "Reduced latency", "Real-time analytics"] },
-    { icon: <Smartphone className="w-6 h-6" />,
-      title: "IoT Device Management",
-      description: "Connect and manage millions of IoT devices with our advanced device management platform.",
-      benefits: ["Device provisioning", "Remote management", "Firmware updates", "Security monitoring"] },
-    { icon: <Shield className="w-6 h-6" />,
-      title: "Advanced Security",
-      description: "Protect your 5G network with enterprise-grade security including encryption and threat detection.",
-      benefits: ["End-to-end encryption", "Threat detection", "Access control", "Compliance"] },
-    { icon: <BarChart3 className="w-6 h-6" />,
-      title: "Network Analytics",
-      description: "Monitor and optimize your 5G network performance with real-time analytics and insights.",
-      benefits: ["Real-time monitoring", "Performance optimization", "Predictive analytics", "Custom dashboards"] },
-    { icon: <Settings className="w-6 h-6" />,
-      title: "Custom Solutions",
-      description: "Tailored 5G implementations designed specifically for your business requirements and use cases.",
-      benefits: ["Custom architecture", "Scalable design", "Integration support", "Future-proofing"] }
+  const features = [
+      { icon: <Wifi className="w-6 h-6" />,
+        title: "Ultra-Fast 5G Networks",
+        description: "Deploy cutting-edge 5G infrastructure with speeds up to 10 Gbps and ultra-low latency under 1ms.",
+        benefits: ["10 Gbps speeds", "Sub-1ms latency", "Massive connectivity", "Network slicing"] },
   ];
 
 const useCases = [
@@ -137,7 +118,6 @@ const testimonials = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        { /* Animated Background */ }
         
         <div className="absolute inset-0">
           
@@ -147,13 +127,11 @@ const testimonials = [
           
         <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
         </div>
-        { /* Grid Pattern */ }
         
         <div className="absolute inset-0 opacity-20">
           
         <div className="h-full w-full"></div>
         </div>
-        { /* Hero Section */ }
         <section className="relative py-20">
           
         <div className="container mx-auto px-4">
@@ -180,7 +158,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        { /* Features Section */ }
         <section className="relative py-20">
           
         <div className="container mx-auto px-4">
@@ -198,7 +175,6 @@ const testimonials = [
                 <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   
         <div className="text-cyan-400 mb-4">
-                    { feature.icon }
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{ feature.title }</h3>
                   
@@ -207,7 +183,6 @@ const testimonials = [
                     { feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex } className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                        { benefit }
                       </li>
                     ))}
                   </ul>
@@ -216,7 +191,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        { /* Use Cases Section */ }
         <section className="relative py-20 bg-white/5">
           
         <div className="container mx-auto px-4">
@@ -234,7 +208,6 @@ const testimonials = [
                 <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                   
         <div className="text-cyan-400 mb-4">
-                    { useCase.icon }
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{ useCase.title }</h3>
                   
@@ -243,7 +216,6 @@ const testimonials = [
                     { useCase.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex } className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-                        { benefit }
                       </li>
                     ))}
                   </ul>
@@ -252,7 +224,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        { /* Pricing Section */ }
         <section className="relative py-20">
           
         <div className="container mx-auto px-4">
@@ -268,14 +239,6 @@ const testimonials = [
         <div className="grid md:grid-cols-3 gap-8">
               { pricingPlans.map((plan, index) => (
                 <div key={index } className={ `bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-cyan-400' : 'border-white/20' } relative`}>
-                  { plan.popular && (
-                    
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  ) }
                   
         <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{ plan.name }</h3>
@@ -290,7 +253,6 @@ const testimonials = [
                     { plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex } className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-                        { feature }
                       </li>
                     ))}
                   </ul>
@@ -305,7 +267,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        { /* Testimonials Section */ }
         <section className="relative py-20 bg-white/5">
           
         <div className="container mx-auto px-4">
@@ -342,7 +303,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        { /* CTA Section */ }
         <section className="relative py-20">
           
         <div className="container mx-auto px-4">

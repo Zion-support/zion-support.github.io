@@ -55,41 +55,6 @@ const CookiesPage: React.FC = () => {
   ];
 
 const cookieDetails = [
-    {
-      name: 'session_id',
-      purpose: 'Maintains user session state',
-      type: 'Essential',
-      duration: 'Session',
-      provider: 'Zion Tech Group'
-    },
-    {
-      name: '_ga',
-      purpose: 'Distinguishes unique users',
-      type: 'Analytics',
-      duration: '2 years',
-      provider: 'Google Analytics'
-    },
-    {
-      name: '_gid',
-      purpose: 'Distinguishes unique users',
-      type: 'Analytics',
-      duration: '24 hours',
-      provider: 'Google Analytics'
-    },
-    {
-      name: 'language_preference',
-      purpose: 'Stores user language preference',
-      type: 'Functional',
-      duration: '1 year',
-      provider: 'Zion Tech Group'
-    },
-    {
-      name: 'cookie_consent',
-      purpose: 'Remembers cookie consent choice',
-      type: 'Essential',
-      duration: '1 year',
-      provider: 'Zion Tech Group'
-    }
   ];
   return (
     <>
@@ -103,7 +68,6 @@ const cookieDetails = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -124,7 +88,6 @@ const cookieDetails = [
             </div>
           </div>
         </section>
-        {/* What Are Cookies */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -145,7 +108,6 @@ const cookieDetails = [
             </div>
           </div>
         </section>
-        {/* Cookie Types */}
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -165,11 +127,6 @@ const cookieDetails = [
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white">{type.title}</h3>
-                        {type.required && (
-                          <span className="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded-full">
-                            Required
-                          </span>
-                        )}
                       </div>
                     </div>
                     
@@ -191,7 +148,6 @@ const cookieDetails = [
             </div>
           </div>
         </section>
-        {/* Cookie Details */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -221,7 +177,6 @@ const cookieDetails = [
                             cookie.type === 'Analytics' ? 'bg-blue-500/20 text-blue-400' :
                             'bg-green-500/20 text-green-400'
                           }`}>
-                            {cookie.type}
                           </span>
                         </td>
                         <td className="py-3 px-4 text-gray-300 text-sm">{cookie.duration}</td>
@@ -234,7 +189,6 @@ const cookieDetails = [
             </div>
           </div>
         </section>
-        {/* Managing Cookies */}
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -299,7 +253,6 @@ const cookieDetails = [
             </div>
           </div>
         </section>
-        {/* Third-Party Cookies */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -343,7 +296,6 @@ const cookieDetails = [
             </div>
           </div>
         </section>
-        {/* Contact */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="container mx-auto px-4">

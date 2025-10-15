@@ -8,7 +8,6 @@ const rights = [ "Access your personal information", "Correct inaccurate data", 
   return (
     <> <Helmet> <title>Privacy Policy - Zion Tech Group | Data Protection & Privacy</title> <meta name="description" content="Learn about Zion Tech Group's privacy policy, data protection practices, and how we handle your personal information." /> <meta name="keywords" content="privacy policy, data protection, GDPR, personal information, data security" /> <meta property="og:title" content="Privacy Policy - Zion Tech Group" /> <meta property="og:description" content="Our commitment to protecting your privacy and personal information." /> <meta property="og:type" content="website" /> </Helmet> 
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        { /* Hero Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -29,7 +28,6 @@ const rights = [ "Access your personal information", "Correct inaccurate data", 
             </div>
           </div>
         </section>
-        { /* Privacy Sections */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -55,7 +53,6 @@ const rights = [ "Access your personal information", "Correct inaccurate data", 
             </div>
           </div>
         </section>
-        { /* Your Rights Section */ }
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -81,7 +78,6 @@ const rights = [ "Access your personal information", "Correct inaccurate data", 
             </div>
           </div>
         </section>
-        { /* Contact Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">

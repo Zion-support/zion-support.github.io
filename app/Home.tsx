@@ -10,9 +10,7 @@ const Home: React.FC = () => {
         <meta name="description" content="Transform your business with cutting-edge AI and IT solutions. Real micro SAAS services, cybersecurity, cloud infrastructure, and digital transformation." />
         <meta name="keywords" content="AI solutions, IT services, micro SAAS, cybersecurity, cloud infrastructure, digital transformation" />
       </Helmet>
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Animated Background */}
         
         <div className="absolute inset-0">
           
@@ -55,7 +53,6 @@ const Home: React.FC = () => {
                 Get Started Today
               </Link>
             </div>
-            {/* Trust Indicators */}
             
         <div className="pt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               
@@ -83,7 +80,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Services Overview */}
       <section className="py-20 bg-slate-800">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,7 +95,6 @@ const Home: React.FC = () => {
           </div>
           
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* AI Solutions */}
             
         <div className="group bg-slate-700/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-105">
               
@@ -114,7 +109,6 @@ const Home: React.FC = () => {
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
-            {/* Cybersecurity */}
             
         <div className="group bg-slate-700/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-105">
               
@@ -129,7 +123,6 @@ const Home: React.FC = () => {
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
-            {/* Cloud Infrastructure */}
             
         <div className="group bg-slate-700/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-105">
               
@@ -144,7 +137,6 @@ const Home: React.FC = () => {
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
-            {/* Micro SAAS */}
             
         <div className="group bg-slate-700/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-105">
               
@@ -162,7 +154,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Why Choose Us */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -211,7 +202,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* CTA Section */}
       <section className="py-20 bg-slate-800">
         
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">

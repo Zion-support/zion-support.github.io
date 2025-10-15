@@ -5,119 +5,7 @@ import { BarChart3, TrendingUp, Shield, Zap, Sparkles, ArrowRight, Clock, Users,
 
 const ZionAIAnalyticsProPage: React.FC = () => {
   const features = [
-    {
-      title: "Real-time Analytics Dashboard",
-      description: "Monitor your business performance with live data visualization and instant insights.",
-      icon: <BarChart3 className="w-8 h-8" />,
-      benefits: ["Live data updates", "Custom dashboards", "Mobile responsive", "Export capabilities"]
-    },
-    {
-      title: "AI-Powered Forecasting",
-      description: "Predict future trends and outcomes using advanced machine learning algorithms.",
-      icon: <TrendingUp className="w-8 h-8" />,
-      benefits: ["Predictive modeling", "Trend analysis", "Risk assessment", "Scenario planning"]
-    },
-    {
-      title: "Advanced Security",
-      description: "Enterprise-grade security with end-to-end encryption and compliance monitoring.",
-      icon: <Shield className="w-8 h-8" />,
-      benefits: ["Data encryption", "Access controls", "Audit logs", "GDPR compliance"]
-    },
-    {
-      title: "Automated Insights",
-      description: "Get intelligent recommendations and automated reports without manual analysis.",
-      icon: <Zap className="w-8 h-8" />,
-      benefits: ["Smart alerts", "Auto reports", "Anomaly detection", "Performance optimization"]
-    }
-  ];
-
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$299",
-      period: "per month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 5 data sources",
-        "Basic dashboards",
-        "Email support",
-        "Standard reports",
-        "1 user account"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$499",
-      period: "per month",
-      description: "Ideal for growing companies",
-      features: [
-        "Up to 25 data sources",
-        "Advanced dashboards",
-        "Priority support",
-        "Custom reports",
-        "Up to 10 user accounts",
-        "API access",
-        "Data export"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$999",
-      period: "per month",
-      description: "For large organizations",
-      features: [
-        "Unlimited data sources",
-        "Custom dashboards",
-        "24/7 support",
-        "White-label reports",
-        "Unlimited users",
-        "Full API access",
-        "Custom integrations",
-        "Dedicated account manager"
-      ],
-      popular: false
-    }
-  ];
-
-const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion AI Analytics Pro transformed our data analysis. We've seen a 40% improvement in decision-making speed and accuracy.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "DataCorp Solutions",
-      role: "CTO",
-      content: "The AI-powered forecasting is incredibly accurate. It helped us predict market trends 3 months in advance.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Growth Analytics",
-      role: "Data Director",
-      content: "The automated insights save us 20 hours per week. The ROI was evident within the first month.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
-const integrations = [
-    { name: "Google Analytics", logo: "GA" },
-    { name: "Salesforce", logo: "SF" },
-    { name: "HubSpot", logo: "HS" },
-    { name: "Stripe", logo: "ST" },
-    { name: "Shopify", logo: "SH" },
-    { name: "MySQL", logo: "MY" },
-    { name: "PostgreSQL", logo: "PG" },
-    { name: "MongoDB", logo: "MG" }
-  ];
+  
   return (
     <>
       <Helmet>
@@ -128,7 +16,6 @@ const integrations = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced">
-        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           
         <div className="absolute inset-0 overflow-hidden">
@@ -172,7 +59,6 @@ const integrations = [
                 <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
-            {/* Key Stats */}
             
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               
@@ -222,7 +108,6 @@ const integrations = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
         <div className="max-w-7xl mx-auto">
@@ -247,17 +132,14 @@ const integrations = [
         <div className="flex items-center mb-6">
                     
         <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-6 group-hover:scale-110 transition-transform">
-                      {feature.icon}
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                        {feature.title}
                       </h3>
                     </div>
                   </div>
                   
           <p className="text-gray-300 mb-6 leading-relaxed">
-                    {feature.description}
                   </p>
                   
         <div className="space-y-2">
@@ -273,7 +155,6 @@ const integrations = [
             </div>
           </div>
         </section>
-        {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           
         <div className="max-w-7xl mx-auto">
@@ -298,15 +179,6 @@ const integrations = [
                       : 'border-white/20 hover:border-cyan-500/40'
                   }`}
                 >
-                  {plan.popular && (
-                    
-        <div className="absolute top-4 right-4">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center space-x-1">
-                        <Star className="w-3 h-3" />
-                        <span>Most Popular</span>
-                      </span>
-                    </div>
-                  )}
                   
         <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -342,7 +214,6 @@ const integrations = [
             </div>
           </div>
         </section>
-        {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
         <div className="max-w-7xl mx-auto">
@@ -377,7 +248,6 @@ const integrations = [
         <div className="flex items-center">
                     
         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                      {testimonial.avatar}
                     </div>
                     <div>
                       
@@ -391,7 +261,6 @@ const integrations = [
             </div>
           </div>
         </section>
-        {/* Integrations Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           
         <div className="max-w-7xl mx-auto">
@@ -414,18 +283,15 @@ const integrations = [
                 >
                   
         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold mx-auto mb-2 group-hover:scale-110 transition-transform">
-                    {integration.logo}
                   </div>
                   
         <div className="text-sm text-gray-300 group-hover:text-cyan-400 transition-colors">
-                    {integration.name}
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
         <div className="max-w-4xl mx-auto text-center">

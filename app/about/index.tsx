@@ -11,7 +11,6 @@ const About: React.FC = () => {
         <meta name="description" content="Learn about Zion Tech Group's mission to transform businesses through cutting-edge AI and IT solutions. Meet our expert team and discover our proven track record." />
         <meta name="keywords" content="about us, AI experts, IT solutions team, technology company, digital transformation" />
       </Helmet>
-      {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
         
         <div className="absolute inset-0">
@@ -35,7 +34,6 @@ const About: React.FC = () => {
           </p>
         </div>
       </section>
-      {/* Mission & Vision */}
       <section className="py-20 bg-slate-800">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,7 +81,6 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Our Story */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,7 +129,6 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Our Values */}
       <section className="py-20 bg-slate-800">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -191,7 +187,6 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Our Expertise */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -282,7 +277,6 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Stats */}
       <section className="py-20 bg-slate-800">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -329,7 +323,6 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900">
         
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -338,7 +331,7 @@ const About: React.FC = () => {
           </h2>
           
           <p className="text-xl text-gray-300 mb-8">
-            Let&apos;s discuss how we can help transform your business with our AI and IT solutions.
+            Let's discuss how we can help transform your business with our AI and IT solutions.
           </p>
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

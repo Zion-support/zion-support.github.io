@@ -50,7 +50,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
         <div className="mb-6 p-4 bg-slate-800 rounded-lg text-left">
                 <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
                 <pre className="text-xs text-gray-300 overflow-auto">
-                  {this.state.error.toString()}
                 </pre>
               </div>
             )}
@@ -91,4 +90,8 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
     return this.props.children;
   }
+}
+</ErrorBoundaryProps>
+    </>
+  );
 }

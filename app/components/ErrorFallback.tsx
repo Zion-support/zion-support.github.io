@@ -40,7 +40,6 @@ import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
                   Error Details (Development)
                 </summary>
                 <pre className="text-xs text-gray-400 overflow-auto">
-                  {error.toString() }
                 </pre>
               </details>
             )}

@@ -2,113 +2,21 @@ import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import { TrendingUp, Target, Globe, Users, Shield, Star, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionAnalyticsPro() {
+  const features = [
     {
       title: "Predictive Analytics",
-      description: "AI-powered forecasting to predict trends and make data-driven decisions",
-      icon: <TrendingUp className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Custom Reports",
-      description: "Generate automated reports tailored to your business needs and schedule",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Multi-source Integration",
-      description: "Connect data from 50+ platforms including Google Analytics, Facebook, Shopify, and more",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Team Collaboration",
-      description: "Share insights and collaborate with your team with role-based access control",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Advanced Security",
-      description: "Enterprise-grade security with end-to-end encryption and SOC 2 compliance",
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    }
-  ];
-
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 29,
-      period: "month",
-      description: "Perfect for small businesses getting started",
-      features: [
-        "Up to 5 data sources",
-        "Basic dashboards",
-        "Email support",
-        "1 user account",
-        "30-day data retention"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 79,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 25 data sources",
-        "Advanced analytics",
-        "Custom reports",
-        "Priority support",
-        "Up to 5 user accounts",
-        "1-year data retention",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 199,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited data sources",
-        "White-label solution",
-        "Custom integrations",
-        "Dedicated support",
-        "Unlimited users",
-        "Unlimited data retention",
-        "Advanced security features"
-      ],
-      popular: false
-    }
-  ];
-
-const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion Analytics Pro transformed how we understand our business. The predictive analytics helped us increase revenue by 40% in just 3 months.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Solutions",
-      role: "CTO",
-      content: "The real-time dashboards are incredible. We can now make decisions based on live data instead of waiting for weekly reports.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Digital Marketing Agency",
-      role: "Operations Director",
-      content: "The multi-source integration saved us hours every week. Now we have all our data in one place with beautiful visualizations.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
+        description: "AI-powered forecasting to predict trends and make data-driven decisions",
+        icon: <TrendingUp className="w-6 h-6" />,
+        included: true
+      },
+  ]
+;
+  const pricingPlans = [
+  ]
+;
+  const testimonials = [
+  ]
+;
   return (
     <>
       <Helmet>
@@ -124,12 +32,10 @@ const testimonials = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
         
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto text-center">
@@ -167,7 +73,6 @@ const testimonials = [
                 Watch Demo
               </Link>
             </div>
-            {/* Key Stats */}
             
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               
@@ -201,7 +106,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -230,14 +134,11 @@ const testimonials = [
         <div className="relative z-10">
                     
         <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {feature.icon}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                      {feature.title}
                     </h3>
                     
           <p className="text-gray-300 leading-relaxed">
-                      {feature.description}
                     </p>
                     
         <div className="flex items-center mt-4">
@@ -250,7 +151,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           
         <div className="max-w-7xl mx-auto">
@@ -277,15 +177,6 @@ const testimonials = [
                       : 'border-white/20 hover:border-cyan-500/30'
                   }`}
                 >
-                  {plan.popular && (
-                    
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      
-        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>
-                  )}
                   
         <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -320,7 +211,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -353,7 +243,6 @@ const testimonials = [
         <div className="flex items-center">
                     
         <div className="w-10 h-10 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
                     </div>
                     <div>
                       
@@ -367,7 +256,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           
         <div className="max-w-4xl mx-auto text-center">
@@ -403,5 +291,5 @@ const testimonials = [
         </section>
       </div>
     </>
-  );
 }
+);

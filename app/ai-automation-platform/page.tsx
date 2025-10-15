@@ -59,7 +59,6 @@ const automationTypes = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -92,7 +91,6 @@ const automationTypes = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -112,7 +110,6 @@ const automationTypes = [
         <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     
         <div className="text-white">
-                      {feature.icon}
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
@@ -123,7 +120,6 @@ const automationTypes = [
             </div>
           </div>
         </section>
-        {/* Automation Types Section */}
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -149,7 +145,6 @@ const automationTypes = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="container mx-auto px-4">

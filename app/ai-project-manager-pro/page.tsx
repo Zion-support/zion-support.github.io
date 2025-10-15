@@ -3,58 +3,12 @@ import { Brain, Shield, Users, Star, Phone, Play, CheckCircle, ArrowRight, Mail 
 
 const AIProjectManagerProPage = () => {
   const features = [
-    {
-      title: "AI-Powered Task Management",
-      description: "Intelligent task assignment and prioritization based on team capabilities and project requirements",
-      icon: <Brain className="w-6 h-6" />,
-      benefits: ["Smart task distribution", "Priority optimization", "Deadline management"]
-    },
-    {
-      title: "Predictive Risk Analysis",
-      description: "Advanced AI algorithms predict potential project risks and suggest mitigation strategies",
-      icon: <Shield className="w-6 h-6" />,
-      benefits: ["Risk prediction", "Mitigation strategies", "Early warning system"]
-    },
-    {
-      title: "Team Performance Analytics",
-      description: "Comprehensive analytics on team performance, productivity, and collaboration patterns",
-      icon: <Users className="w-6 h-6" />,
-      benefits: ["Performance tracking", "Productivity insights", "Team optimization"]
-    }
-  ];
-
-const integrations = [
-    { name: "Slack", description: "Real-time team communication", icon: "💬" },
-    { name: "Jira", description: "Issue tracking and project management", icon: "🎯" },
-    { name: "GitHub", description: "Code repository integration", icon: "💻" },
-    { name: "Trello", description: "Visual project boards", icon: "📋" }
-  ];
+  
 
 const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "per month",
-      features: ["Up to 5 projects", "Basic AI insights", "Email support"],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$79",
-      period: "per month",
-      features: ["Up to 25 projects", "Advanced AI analytics", "Priority support", "Team collaboration"],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$199",
-      period: "per month",
-      features: ["Unlimited projects", "Custom AI models", "24/7 support", "Advanced integrations"],
-      popular: false
-    }
   ];
 
-const testimonials = [
+  const testimonials = [
     { name: "Sarah Johnson", role: "Project Manager", content: "Revolutionary project management!", rating: 5, company: "Tech Corp" },
     { name: "Mike Chen", role: "Team Lead", content: "AI insights changed our workflow!", rating: 5, company: "Innovation Labs" }
   ];
@@ -67,7 +21,6 @@ const testimonials = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        { /* Animated Background */ }
         
         <div className="absolute inset-0">
           
@@ -77,14 +30,12 @@ const testimonials = [
           
         <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
         </div>
-        { /* Grid Pattern */ }
         
         <div className="absolute inset-0 opacity-20">
           
         <div className="h-full w-full"></div>
         </div>
         <main className="relative z-10">
-          { /* Hero Section */ }
           <section className="relative py-20 overflow-hidden">
             
         <div className="container mx-auto px-4">
@@ -123,7 +74,6 @@ const testimonials = [
               </div>
             </div>
           </section>
-          { /* Features Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             
         <div className="container mx-auto px-4">
@@ -151,18 +101,15 @@ const testimonials = [
         <div className="text-white">{ feature.icon }</div>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                      { feature.title }
                     </h3>
                     
           <p className="text-gray-300 mb-6 leading-relaxed">
-                      { feature.description }
                     </p>
                     
         <div className="space-y-2">
                       { feature.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex } className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          { benefit }
                         </div>
                       ))}
                     </div>
@@ -171,7 +118,6 @@ const testimonials = [
               </div>
             </div>
           </section>
-          { /* Integrations Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">
@@ -202,7 +148,6 @@ const testimonials = [
               </div>
             </div>
           </section>
-          { /* Pricing Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             
         <div className="container mx-auto px-4">
@@ -228,15 +173,6 @@ const testimonials = [
                         ? 'border-cyan-400/40 shadow-cyan-500/10' 
                         : 'border-cyan-500/20 hover:border-cyan-400/40' }`}
                   >
-                    { plan.popular && (
-                      
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        
-        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                          Most Popular
-                        </div>
-                      </div>
-                    ) }
                     
         <div className="text-center mb-8">
                       <h3 className="text-2xl font-bold text-white mb-2">{ plan.name }</h3>
@@ -253,7 +189,6 @@ const testimonials = [
                       { plan.features.map((feature, featureIndex) => (
                         <div key={featureIndex } className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          { feature }
                         </div>
                       ))}
                     </div>
@@ -272,7 +207,6 @@ const testimonials = [
               </div>
             </div>
           </section>
-          { /* Testimonials Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">
@@ -317,7 +251,6 @@ const testimonials = [
               </div>
             </div>
           </section>
-          { /* CTA Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">

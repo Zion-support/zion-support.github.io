@@ -5,81 +5,7 @@ import { Zap, FileText, Code, Database, Shield, BookOpen, Search, ArrowRight, Fo
 
 const DocsPage: React.FC = () => {
   const documentationSections = [
-    {
-      title: 'Getting Started',
-      icon: <Zap className="w-6 h-6" />,
-      description: 'Quick start guides and setup instructions for all our services',
-      articles: [
-        { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min' },
-        { title: 'Installation Guide', description: 'Step-by-step installation instructions', readTime: '10 min' },
-        { title: 'Configuration', description: 'Configure your services and settings', readTime: '15 min' },
-        { title: 'First Steps', description: 'Your first project with our platform', readTime: '20 min' }
-      ]
-    },
-    {
-      title: 'API Documentation',
-      icon: <FileText className="w-6 h-6" />,
-      description: 'Complete API reference and integration guides',
-      articles: [
-        { title: 'API Overview', description: 'Introduction to our REST API', readTime: '10 min' },
-        { title: 'Authentication', description: 'API keys and authentication methods', readTime: '8 min' },
-        { title: 'Rate Limits', description: 'Understanding API rate limits', readTime: '5 min' },
-        { title: 'Error Handling', description: 'Common errors and how to handle them', readTime: '12 min' }
-      ]
-    },
-    {
-      title: 'AI Services',
-      icon: <Code className="w-6 h-6" />,
-      description: 'Documentation for all AI-powered services and features',
-      articles: [
-        { title: 'AI Analytics', description: 'Using our AI analytics platform', readTime: '25 min' },
-        { title: 'Content Generation', description: 'AI-powered content creation tools', readTime: '20 min' },
-        { title: 'Machine Learning', description: 'ML model training and deployment', readTime: '30 min' },
-        { title: 'Natural Language Processing', description: 'NLP services and capabilities', readTime: '18 min' }
-      ]
-    },
-    {
-      title: 'Cloud Services',
-      icon: <Database className="w-6 h-6" />,
-      description: 'Cloud infrastructure and deployment documentation',
-      articles: [
-        { title: 'Cloud Migration', description: 'Migrating to our cloud platform', readTime: '45 min' },
-        { title: 'Container Services', description: 'Docker and Kubernetes deployment', readTime: '35 min' },
-        { title: 'Database Management', description: 'Managing databases in the cloud', readTime: '25 min' },
-        { title: 'Monitoring & Logging', description: 'System monitoring and log analysis', readTime: '20 min' }
-      ]
-    },
-    {
-      title: 'Security',
-      icon: <Shield className="w-6 h-6" />,
-      description: 'Security best practices and compliance guidelines',
-      articles: [
-        { title: 'Security Overview', description: 'Our security measures and protocols', readTime: '15 min' },
-        { title: 'Data Protection', description: 'Protecting sensitive data and privacy', readTime: '20 min' },
-        { title: 'Compliance', description: 'SOC 2, GDPR, and other compliance standards', readTime: '30 min' },
-        { title: 'Access Control', description: 'User permissions and access management', readTime: '12 min' }
-      ]
-    },
-    {
-      title: 'Tutorials',
-      icon: <BookOpen className="w-6 h-6" />,
-      description: 'Step-by-step tutorials and hands-on guides',
-      articles: [
-        { title: 'Building Your First App', description: 'Complete tutorial for beginners', readTime: '60 min' },
-        { title: 'Advanced Features', description: 'Exploring advanced platform features', readTime: '45 min' },
-        { title: 'Integration Examples', description: 'Real-world integration examples', readTime: '40 min' },
-        { title: 'Best Practices', description: 'Industry best practices and tips', readTime: '25 min' }
-      ]
-    }
-  ];
-
-const popularArticles = [
-    { title: 'Quick Start Guide', category: 'Getting Started', readTime: '5 min', views: '12.5k' },
-    { title: 'API Authentication', category: 'API Documentation', readTime: '8 min', views: '8.2k' },
-    { title: 'AI Analytics Setup', category: 'AI Services', readTime: '25 min', views: '6.8k' },
-    { title: 'Cloud Migration Guide', category: 'Cloud Services', readTime: '45 min', views: '5.4k' },
-    { title: 'Security Best Practices', category: 'Security', readTime: '20 min', views: '4.9k' }
-  ];
+  
 
 const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services', 'Cloud Services', 'Security', 'Tutorials'];
   return (
@@ -90,7 +16,6 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -104,7 +29,6 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 Complete guides, API references, and tutorials to help you get the most out of our platform.
               </p>
-              {/* Search Bar */}
               
         <div className="relative max-w-2xl mx-auto mb-8">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -117,7 +41,6 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
             </div>
           </div>
         </section>
-        {/* Category Filter */}
         <section className="py-8 px-4">
           
         <div className="max-w-7xl mx-auto">
@@ -132,13 +55,11 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
                       : 'bg-slate-800/50 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400'
                   }`}
                 >
-                  {category}
                 </button>
               ))}
             </div>
           </div>
         </section>
-        {/* Documentation Sections */}
         <section className="py-16 px-4">
           
         <div className="max-w-7xl mx-auto">
@@ -154,7 +75,6 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
         <div className="text-white">{section.icon}</div>
                     </div>
                     <h2 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-                      {section.title}
                     </h2>
                   </div>
                   
@@ -171,7 +91,6 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
         <div className="flex items-center justify-between">
                           <div>
                             <h3 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
-                              {article.title}
                             </h3>
                             
           <p className="text-gray-400 text-sm">{article.description}</p>
@@ -190,7 +109,6 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
             </div>
           </div>
         </section>
-        {/* Popular Articles */}
         <section className="py-16 px-4 bg-white/5 backdrop-blur-sm">
           
         <div className="max-w-7xl mx-auto">
@@ -211,12 +129,10 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
                   
         <div className="flex items-center justify-between mb-3">
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
-                      {article.category}
                     </span>
                     <span className="text-gray-400 text-sm">{article.readTime}</span>
                   </div>
                   <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {article.title}
                   </h3>
                   
         <div className="flex items-center justify-between">
@@ -228,7 +144,6 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
             </div>
           </div>
         </section>
-        {/* API Reference Quick Access */}
         <section className="py-16 px-4">
           
         <div className="max-w-7xl mx-auto">
@@ -285,7 +200,6 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
             </div>
           </div>
         </section>
-        {/* Support Section */}
         <section className="py-16 px-4 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="max-w-4xl mx-auto text-center">
@@ -317,3 +231,9 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
   );
 };
 export default DocsPage;
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>

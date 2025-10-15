@@ -1,161 +1,21 @@
 import { Link } from 'react-router-dom';
 import { MessageSquare, TrendingUp, BarChart3, Target, Eye, EnhancedSEO, Sparkles, FuturisticButton, Users, Award, Clock, FuturisticCard, Brain, CheckCircle, Star } from 'lucide-react';
 const ZionAICustomerInsightsPage = () => {
-  return;
-},
-    {
-      title: "Real-Time Sentiment Analysis",
-      description: "Monitor customer sentiment across all touchpoints with real-time analysis of reviews, social media, and support tickets.",
-      icon: <MessageSquare className="w-6 h-6" />,
-      stats: "Real-time monitoring"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Forecast customer behavior, churn risk, and lifetime value using advanced machine learning models.",
-      icon: <TrendingUp className="w-6 h-6" />,
-      stats: "95% accuracy"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate comprehensive reports and dashboards automatically with insights and recommendations.",
-      icon: <BarChart3 className="w-6 h-6" />,
-      stats: "Auto-generated insights"
-    }
+  const features = [
   ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$39",
-      period: "/month",
-      description: "Perfect for small businesses and startups",
-      features: [
-        "1,000 customer profiles",
-        "Basic sentiment analysis",
-        "Standard reports",
-        "Email support",
-        "API access",
-        "Data export"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$99",
-      period: "/month",
-      description: "Ideal for growing businesses and agencies",
-      features: [
-        "10,000 customer profiles",
-        "Advanced sentiment analysis",
-        "Predictive analytics",
-        "Custom dashboards",
-        "Priority support",
-        "Advanced API",
-        "Team collaboration",
-        "White-label options"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$249",
-      period: "/month",
-      description: "For large organizations and enterprises",
-      features: [
-        "Unlimited customer profiles",
-        "AI-powered insights",
-        "Advanced predictive models",
-        "Custom integrations",
-        "24/7 support",
-        "Dedicated account manager",
-        "Custom reporting",
-        "On-premise deployment",
-        "Advanced security",
-        "SLA guarantee"
-      ],
-      popular: false
-    }
+  const pricingPlans = [
   ];
 
-const testimonials = [
-    {
-      name: "Rachel Thompson",
-      company: "E-commerce Platform",
-      role: "Customer Success Director",
-      content: "Zion AI Customer Insights helped us reduce churn by 35% and increase customer satisfaction by 40%. The predictive analytics are incredibly accurate.",
-      rating: 5,
-      avatar: "RT"
-    },
-    {
-      name: "Mark Chen",
-      company: "SaaS Startup",
-      role: "CEO",
-      content: "The real-time sentiment analysis gives us instant feedback on our product releases. We can now respond to customer concerns before they become problems.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Sarah Williams",
-      company: "Retail Chain",
-      role: "Marketing Director",
-      content: "The customer segmentation and insights have transformed our marketing campaigns. Our conversion rates have increased by 60% since implementing this tool.",
-      rating: 5,
-      avatar: "SW"
-    }
+  const testimonials = [
   ];
 
-const useCases = [
-    {
-      title: "Customer Retention",
-      description: "Identify at-risk customers and implement targeted retention strategies",
-      icon: <Target className="w-8 h-8" />,
-      examples: ["Churn Prediction", "Retention Campaigns", "Loyalty Programs", "Win-back Strategies"]
-    },
-    {
-      title: "Product Development",
-      description: "Understand customer needs and preferences to guide product decisions",
-      icon: <Eye className="w-8 h-8" />,
-      examples: ["Feature Requests", "User Feedback", "Product Roadmap", "A/B Testing"]
-    },
-    {
-      title: "Marketing Optimization",
-      description: "Create targeted campaigns based on customer behavior and preferences",
-      icon: <TrendingUp className="w-8 h-8" />,
-      examples: ["Segmentation", "Personalization", "Campaign Targeting", "ROI Optimization"]
-    },
-    {
-      title: "Customer Support",
-      description: "Improve support quality with proactive insights and sentiment monitoring",
-      icon: <MessageSquare className="w-8 h-8" />,
-      examples: ["Sentiment Tracking", "Issue Prevention", "Support Optimization", "Quality Monitoring"]
-    }
+  const useCases = [
   ];
 
-const insights = [
-    {
-      title: "Customer Lifetime Value Prediction",
-      description: "Predict how much each customer will spend over their lifetime",
-      accuracy: "94%",
-      impact: "Increase revenue by 25%"
-    },
-    {
-      title: "Churn Risk Scoring",
-      description: "Identify customers likely to churn before they leave",
-      accuracy: "91%",
-      impact: "Reduce churn by 40%"
-    },
-    {
-      title: "Sentiment Trend Analysis",
-      description: "Track customer sentiment changes over time",
-      accuracy: "89%",
-      impact: "Improve satisfaction by 35%"
-    },
-    {
-      title: "Purchase Intent Prediction",
-      description: "Predict when customers are ready to make a purchase",
-      accuracy: "87%",
-      impact: "Increase conversions by 50%"
-    }
+  const insights = [
+  
+
   ];
   return (
     
@@ -166,7 +26,6 @@ const insights = [
         keywords="AI customer insights, customer analytics, sentiment analysis, predictive analytics, customer intelligence, behavioral analysis, customer data platform"
         canonical="https://ziontechgroup.com/zion-ai-customer-insights"
       />
-      {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden cyber-grid-enhanced quantum-dots">
         
         <div className="absolute inset-0 overflow-hidden">
@@ -210,7 +69,6 @@ const insights = [
               View Demo
             </FuturisticButton>
           </div>
-          {/* Stats */}
           
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             
@@ -260,7 +118,6 @@ const insights = [
           </div>
         </div>
       </section>
-      {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         
         <div className="max-w-7xl mx-auto">
@@ -280,19 +137,15 @@ const insights = [
               <FuturisticCard key={index} className="group hover:scale-105 transition-all duration-300">
                 
         <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                  {feature.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-indigo-400 transition-colors">
-                  {feature.title}
                 </h3>
                 
           <p className="text-gray-300 mb-4 leading-relaxed text-sm">
-                  {feature.description}
                 </p>
                 
         <div className="text-center">
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-400">
-                    {feature.stats}
                   </span>
                 </div>
               </FuturisticCard>
@@ -300,7 +153,6 @@ const insights = [
           </div>
         </div>
       </section>
-      {/* Insights Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-indigo-800/50 cyber-grid-enhanced">
         
         <div className="max-w-7xl mx-auto">
@@ -323,11 +175,9 @@ const insights = [
                   <Brain className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                  {insight.title}
                 </h3>
                 
           <p className="text-gray-300 mb-6 leading-relaxed">
-                  {insight.description}
                 </p>
                 
         <div className="space-y-3">
@@ -347,7 +197,6 @@ const insights = [
           </div>
         </div>
       </section>
-      {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         
         <div className="max-w-7xl mx-auto">
@@ -367,21 +216,17 @@ const insights = [
               <FuturisticCard key={index} className="group hover:scale-105 transition-all duration-300">
                 
         <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
-                  {useCase.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors">
-                  {useCase.title}
                 </h3>
                 
           <p className="text-gray-300 mb-6 leading-relaxed">
-                  {useCase.description}
                 </p>
                 
         <div className="space-y-2">
                   {useCase.examples.map((example, idx) => (
                     <div key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {example}
                     </div>
                   ))}
                 </div>
@@ -390,7 +235,6 @@ const insights = [
           </div>
         </div>
       </section>
-      {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-indigo-800/50 cyber-grid-enhanced">
         
         <div className="max-w-7xl mx-auto">
@@ -408,15 +252,6 @@ const insights = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <FuturisticCard key={index} className={`relative ${plan.popular ? 'ring-2 ring-indigo-500 scale-105' : ''}`}>
-                {plan.popular && (
-                  
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
-                      <Star className="w-4 h-4" />
-                      <span>Most Popular</span>
-                    </span>
-                  </div>
-                )}
                 
         <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -450,7 +285,6 @@ const insights = [
           </div>
         </div>
       </section>
-      {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         
         <div className="max-w-7xl mx-auto">
@@ -480,7 +314,6 @@ const insights = [
         <div className="flex items-center">
                   
         <div className="w-10 h-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold text-sm mr-4">
-                    {testimonial.avatar}
                   </div>
                   <div>
                     
@@ -494,7 +327,6 @@ const insights = [
           </div>
         </div>
       </section>
-      {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-indigo-900/30">
         
         <div className="max-w-4xl mx-auto text-center">
@@ -535,3 +367,6 @@ const insights = [
   );
 };
 export default ZionAICustomerInsightsPage;
+    </>
+  );
+}

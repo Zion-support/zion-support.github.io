@@ -3,105 +3,9 @@ import { ArrowRight, CheckCircle, Star, Shield, Brain, BarChart, MessageSquare, 
 
 const DynamicPageLoader = () => {
   const features = [
-    {
-      title: "Advanced AI Integration",
-      description: "Cutting-edge artificial intelligence solutions tailored to your business needs",
-      icon: <Brain className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Real-time Analytics",
-      description: "Comprehensive analytics and insights for data-driven decision making",
-      icon: <BarChart className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Enterprise Security",
-      description: "Bank-level security with advanced threat protection and compliance",
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "24/7 Support",
-      description: "Round-the-clock support from our expert team",
-      icon: <MessageSquare className="w-6 h-6" />,
-      included: true
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: 29,
-      period: "month",
-      description: "Perfect for small businesses",
-      features: [
-        "Basic features",
-        "Email support",
-        "1 user account",
-        "Standard templates"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 79,
-      period: "month",
-      description: "Ideal for growing companies",
-      features: [
-        "Advanced features",
-        "Priority support",
-        "Up to 5 user accounts",
-        "Custom templates",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 199,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "All features",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom integrations",
-        "White-label solution"
-      ],
-      popular: false
-    }
-  ];
-
-  const stats = [
-    { number: "10x", label: "Faster Processing", icon: <Zap className="w-6 h-6" /> },
-    { number: "95%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
-    { number: "50+", label: "Integrations", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Support", icon: <Brain className="w-6 h-6" /> }
-  ];
+  
 
   const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CTO, TechCorp",
-      content: "This solution transformed our business operations completely.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      role: "CEO, DataFlow",
-      content: "The AI integration exceeded our expectations in every way.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "VP Engineering, CloudScale",
-      content: "Outstanding support and incredible results from day one.",
-      rating: 5,
-      avatar: "ER"
-    }
   ];
 
   return (
@@ -149,13 +53,10 @@ const DynamicPageLoader = () => {
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
                   <div className="text-cyan-400 mb-4 flex justify-center">
-                    {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">
-                    {feature.title}
                   </h3>
                   <p className="text-gray-300">
-                    {feature.description}
                   </p>
                 </div>
               ))}
@@ -169,13 +70,10 @@ const DynamicPageLoader = () => {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-cyan-400 mb-4 flex justify-center">
-                    {stat.icon}
                   </div>
                   <div className="text-4xl font-bold text-white mb-2">
-                    {stat.number}
                   </div>
                   <div className="text-gray-300">
-                    {stat.label}
                   </div>
                 </div>
               ))}
@@ -196,16 +94,9 @@ const DynamicPageLoader = () => {
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-                  {plan.popular && (
-                    <div className="bg-cyan-400 text-gray-900 text-sm font-semibold px-3 py-1 rounded-full text-center mb-4">
-                      Most Popular
-                    </div>
-                  )}
                   <h3 className="text-2xl font-bold text-white mb-2">
-                    {plan.name}
                   </h3>
                   <p className="text-gray-300 mb-4">
-                    {plan.description}
                   </p>
                   <div className="mb-6">
                     <span className="text-4xl font-bold text-white">
@@ -219,7 +110,6 @@ const DynamicPageLoader = () => {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -255,14 +145,11 @@ const DynamicPageLoader = () => {
                   </p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-cyan-400 rounded-full flex items-center justify-center text-gray-900 font-semibold mr-3">
-                      {testimonial.avatar}
                     </div>
                     <div>
                       <div className="font-semibold text-white">
-                        {testimonial.name}
                       </div>
                       <div className="text-gray-400 text-sm">
-                        {testimonial.role}
                       </div>
                     </div>
                   </div>

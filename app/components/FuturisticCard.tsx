@@ -33,20 +33,11 @@ const glowClasses = glow ? 'hover:shadow-purple-500/25' : '';
       transition={{ duration: 0.5 }}
       whileHover={hover ? { scale: 1.05, y: -5 } : {}}
     >
-      {/* Animated gradient border */}
       
         <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-      {/* Glow effect */}
-      {glow && (
-        
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-300">
-      )}
-      {/* Content */}
       
         <div className="relative z-10 p-6">
-        {children}
       </div>
-      {/* Animated corner accents */}
       
         <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-purple-500/50 rounded-tl-xl">
       
@@ -55,3 +46,20 @@ const glowClasses = glow ? 'hover:shadow-purple-500/25' : '';
   );
 };
 export default FuturisticCard;
+</FuturisticCardProps>
+</motion>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </>
+  );
+}

@@ -44,79 +44,9 @@ const ZionAiSocialMediaManagerPage: React.FC = () => {
   ];
 
 const pricing = [
-    {
-      name: "Starter",
-      price: "$39",
-      period: "/month",
-      description: "Perfect for small businesses",
-      features: [
-        "3 Social Media Accounts",
-        "30 Posts per Month",
-        "Basic Analytics",
-        "Hashtag Research",
-        "Content Calendar",
-        "Email Support"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$79",
-      period: "/month",
-      description: "Ideal for growing businesses",
-      features: [
-        "10 Social Media Accounts",
-        "Unlimited Posts",
-        "Advanced Analytics",
-        "AI Content Suggestions",
-        "Team Collaboration",
-        "Priority Support",
-        "Brand Monitoring",
-        "Competitor Analysis"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$149",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited Accounts",
-        "Unlimited Posts",
-        "Custom Analytics",
-        "White-label Options",
-        "API Access",
-        "Dedicated Support",
-        "Advanced Automation",
-        "Custom Integrations"
-      ],
-      popular: false
-    }
   ];
 
 const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "Digital Marketing Agency",
-      content: "Zion AI Social Media Manager has transformed our social media strategy. The AI-powered insights have increased our engagement by 150%.",
-      rating: 5,
-      avatar: "/api/placeholder/60/60"
-    },
-    {
-      name: "Mike Chen",
-      company: "E-commerce Store",
-      content: "The scheduling feature saves us hours every week. The hashtag optimization alone has doubled our reach.",
-      rating: 5,
-      avatar: "/api/placeholder/60/60"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Tech Startup",
-      content: "The analytics are incredibly detailed and help us make data-driven decisions. Highly recommended!",
-      rating: 5,
-      avatar: "/api/placeholder/60/60"
-    }
   ];
   return (
     <>
@@ -128,7 +58,6 @@ const testimonials = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           
         <div className="max-w-7xl mx-auto text-center">
@@ -162,7 +91,6 @@ const testimonials = [
                 Watch Demo
               </Link>
             </div>
-            {/* Stats */}
             
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               
@@ -196,7 +124,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
         <div className="max-w-7xl mx-auto">
@@ -218,7 +145,6 @@ const testimonials = [
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                 >
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>
-                    {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   
@@ -228,7 +154,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           
         <div className="max-w-7xl mx-auto">
@@ -253,14 +178,6 @@ const testimonials = [
                       : 'border-white/20'
                   }`}
                 >
-                  {plan.popular && (
-                    
-        <div className="text-center mb-4">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
                   
         <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -296,7 +213,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
         <div className="max-w-7xl mx-auto">
@@ -344,7 +260,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
         <div className="max-w-4xl mx-auto text-center">

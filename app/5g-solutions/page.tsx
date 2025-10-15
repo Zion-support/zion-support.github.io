@@ -7,7 +7,6 @@ const FiveGSolutionsPage: React.FC = () => { const fiveGServices = [ { icon: <Wi
   return (
     <> <Helmet> <title>5G Solutions - Zion Tech Group | Next-Generation Connectivity</title> <meta name="description" content="Comprehensive 5G solutions including network implementation, IoT solutions, edge computing, private networks, and smart city technologies." /> <meta name="keywords" content="5G solutions, 5G implementation, IoT solutions, edge computing, private networks, smart city, connectivity" /> <meta property="og:title" content="5G Solutions - Zion Tech Group" /> <meta property="og:description" content="Transform your business with next-generation 5G connectivity solutions." /> <meta property="og:type" content="website" /> </Helmet> 
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        { /* Hero Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -25,7 +24,6 @@ const FiveGSolutionsPage: React.FC = () => { const fiveGServices = [ { icon: <Wi
             </div>
           </div>
         </section>
-        { /* 5G Services Grid */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -45,7 +43,6 @@ const FiveGSolutionsPage: React.FC = () => { const fiveGServices = [ { icon: <Wi
         <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     
         <div className="text-white">
-                      { service.icon }
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{ service.title }</h3>
@@ -71,7 +68,6 @@ const FiveGSolutionsPage: React.FC = () => { const fiveGServices = [ { icon: <Wi
             </div>
           </div>
         </section>
-        { /* CTA Section */ }
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="container mx-auto px-4">

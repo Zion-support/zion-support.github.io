@@ -115,7 +115,6 @@ const stats = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           
         <div className="max-w-7xl mx-auto text-center">
@@ -145,7 +144,6 @@ const stats = [
             </div>
           </div>
         </section>
-        {/* Stats Section */}
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
           
         <div className="max-w-7xl mx-auto">
@@ -155,7 +153,6 @@ const stats = [
                 <div key={index} className="text-center">
                   
         <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    {stat.icon}
                   </div>
                   
         <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
@@ -166,7 +163,6 @@ const stats = [
             </div>
           </div>
         </section>
-        {/* Category Filter */}
         <section className="px-4 sm:px-6 lg:px-8 mb-12">
           
         <div className="max-w-7xl mx-auto">
@@ -181,13 +177,11 @@ const stats = [
                       : 'bg-slate-800/50 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400'
                   }`}
                 >
-                  {category}
                 </button>
               ))}
             </div>
           </div>
         </section>
-        {/* Projects Grid */}
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
           
         <div className="max-w-7xl mx-auto">
@@ -212,20 +206,17 @@ const stats = [
                           ? 'bg-green-500 text-white' 
                           : 'bg-yellow-500 text-black'
                       }`}>
-                        {project.status}
                       </span>
                     </div>
                     
         <div className="absolute top-4 right-4">
                       <span className="px-3 py-1 bg-slate-700 text-gray-300 text-sm rounded-full">
-                        {project.category}
                       </span>
                     </div>
                   </div>
                   
         <div className="p-6">
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                      {project.title}
                     </h3>
                     
           <p className="text-gray-300 mb-4">{project.description}</p>
@@ -236,7 +227,6 @@ const stats = [
                           key={index}
                           className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded"
                         >
-                          {tech}
                         </span>
                       ))}
                     </div>
@@ -275,7 +265,6 @@ const stats = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="px-4 sm:px-6 lg:px-8 pb-20">
           
         <div className="max-w-4xl mx-auto text-center">

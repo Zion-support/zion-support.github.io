@@ -1,138 +1,19 @@
 import { Link } from 'react-router-dom';
 import { Calculator, DollarSign, Send, Users, TrendingUp, Award, Shield, EnhancedSEO, Sparkles, FuturisticButton, FileText, Clock, FuturisticCard, CheckCircle, Star } from 'lucide-react';
 const ZionAIInvoiceGeneratorPage = () => {
-  return;
-},
-    {
-      title: "Smart Data Extraction",
-      description: "Automatically extract billing information from emails, contracts, and project management tools to populate invoices.",
-      icon: <Calculator className="w-6 h-6" />,
-      stats: "Auto-populate fields"
-    },
-    {
-      title: "Multi-Currency Support",
-      description: "Create invoices in 150+ currencies with real-time exchange rates and automatic tax calculations.",
-      icon: <DollarSign className="w-6 h-6" />,
-      stats: "150+ currencies"
-    },
-    {
-      title: "Automated Follow-ups",
-      description: "Set up automated payment reminders and follow-up sequences to improve collection rates and cash flow.",
-      icon: <Send className="w-6 h-6" />,
-      stats: "40% faster payments"
-    }
+  const features = [
   ];
 
-const pricingPlans = [
-    {
-      name: "Solo",
-      price: "$19",
-      period: "/month",
-      description: "Perfect for freelancers and solo entrepreneurs",
-      features: [
-        "50 invoices/month",
-        "Basic templates",
-        "PDF generation",
-        "Email delivery",
-        "Payment tracking",
-        "Basic reporting",
-        "Email support"
-      ],
-      popular: false
-    },
-    {
-      name: "Business",
-      price: "$49",
-      period: "/month",
-      description: "Ideal for small to medium businesses",
-      features: [
-        "200 invoices/month",
-        "Premium templates",
-        "Custom branding",
-        "Multi-currency support",
-        "Automated reminders",
-        "Advanced reporting",
-        "API access",
-        "Priority support"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$99",
-      period: "/month",
-      description: "For large organizations and accounting firms",
-      features: [
-        "Unlimited invoices",
-        "Custom templates",
-        "White-label solution",
-        "Advanced automation",
-        "Team collaboration",
-        "Advanced analytics",
-        "24/7 support",
-        "Custom integrations",
-        "Bulk operations",
-        "Compliance tools"
-      ],
-      popular: false
-    }
+  const pricingPlans = [
   ];
 
-const testimonials = [
-    {
-      name: "David Kim",
-      company: "Freelance Designer",
-      role: "Owner",
-      content: "Zion AI Invoice Generator has saved me hours every week. The automatic data extraction is incredible and the invoices look professional.",
-      rating: 5,
-      avatar: "DK"
-    },
-    {
-      name: "Lisa Martinez",
-      company: "Creative Agency",
-      role: "Finance Manager",
-      content: "We've reduced our invoice processing time by 80%. The automated reminders have significantly improved our payment collection rates.",
-      rating: 5,
-      avatar: "LM"
-    },
-    {
-      name: "James Wilson",
-      company: "Consulting Firm",
-      role: "CEO",
-      content: "The multi-currency support and tax calculations are spot-on. Our international clients love the professional invoices we generate.",
-      rating: 5,
-      avatar: "JW"
-    }
+  const testimonials = [
   ];
 
-const useCases = [
-    {
-      title: "Freelancers & Consultants",
-      description: "Streamline billing for project-based work with automated invoice generation",
-      icon: <Users className="w-8 h-8" />,
-      examples: ["Project Invoices", "Hourly Billing", "Recurring Services", "Expense Tracking"]
-    },
-    {
-      title: "Small Businesses",
-      description: "Professional invoicing with automated follow-ups and payment tracking",
-      icon: <TrendingUp className="w-8 h-8" />,
-      examples: ["Product Sales", "Service Billing", "Subscription Management", "Payment Reminders"]
-    },
-    {
-      title: "Agencies & Studios",
-      description: "Manage multiple clients with branded invoices and detailed reporting",
-      icon: <Award className="w-8 h-8" />,
-      examples: ["Client Billing", "Project Tracking", "Team Collaboration", "Financial Reports"]
-    },
-    {
-      title: "E-commerce & Retail",
-      description: "Automated order-to-invoice workflow with inventory integration",
-      icon: <Shield className="w-8 h-8" />,
-      examples: ["Order Processing", "Inventory Management", "Tax Calculations", "Multi-location Billing"]
-    }
+  const useCases = [
   ];
 
-const integrations = [
+  const integrations = [
     { name: "QuickBooks", logo: "QB" },
     { name: "Xero", logo: "X" },
     { name: "FreshBooks", logo: "FB" },
@@ -151,7 +32,6 @@ const integrations = [
         keywords="AI invoice generator, automated invoicing, professional invoices, billing software, invoice automation, payment tracking, financial management"
         canonical="https://ziontechgroup.com/zion-ai-invoice-generator"
       />
-      {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden cyber-grid-enhanced quantum-dots">
         
         <div className="absolute inset-0 overflow-hidden">
@@ -195,7 +75,6 @@ const integrations = [
               View Demo
             </FuturisticButton>
           </div>
-          {/* Stats */}
           
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             
@@ -245,7 +124,6 @@ const integrations = [
           </div>
         </div>
       </section>
-      {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         
         <div className="max-w-7xl mx-auto">
@@ -265,19 +143,15 @@ const integrations = [
               <FuturisticCard key={index} className="group hover:scale-105 transition-all duration-300">
                 
         <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                  {feature.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-green-400 transition-colors">
-                  {feature.title}
                 </h3>
                 
           <p className="text-gray-300 mb-4 leading-relaxed text-sm">
-                  {feature.description}
                 </p>
                 
         <div className="text-center">
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-400">
-                    {feature.stats}
                   </span>
                 </div>
               </FuturisticCard>
@@ -285,7 +159,6 @@ const integrations = [
           </div>
         </div>
       </section>
-      {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-green-800/50 cyber-grid-enhanced">
         
         <div className="max-w-7xl mx-auto">
@@ -305,21 +178,17 @@ const integrations = [
               <FuturisticCard key={index} className="group hover:scale-105 transition-all duration-300">
                 
         <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
-                  {useCase.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">
-                  {useCase.title}
                 </h3>
                 
           <p className="text-gray-300 mb-6 leading-relaxed">
-                  {useCase.description}
                 </p>
                 
         <div className="space-y-2">
                   {useCase.examples.map((example, idx) => (
                     <div key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {example}
                     </div>
                   ))}
                 </div>
@@ -328,7 +197,6 @@ const integrations = [
           </div>
         </div>
       </section>
-      {/* Integrations Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         
         <div className="max-w-7xl mx-auto">
@@ -351,14 +219,12 @@ const integrations = [
                   <span className="font-bold text-sm">{integration.logo}</span>
                 </div>
                 <h3 className="text-sm font-semibold text-white group-hover:text-purple-400 transition-colors">
-                  {integration.name}
                 </h3>
               </FuturisticCard>
             ))}
           </div>
         </div>
       </section>
-      {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-green-800/50 cyber-grid-enhanced">
         
         <div className="max-w-7xl mx-auto">
@@ -376,15 +242,6 @@ const integrations = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <FuturisticCard key={index} className={`relative ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''}`}>
-                {plan.popular && (
-                  
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
-                      <Star className="w-4 h-4" />
-                      <span>Most Popular</span>
-                    </span>
-                  </div>
-                )}
                 
         <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -418,7 +275,6 @@ const integrations = [
           </div>
         </div>
       </section>
-      {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         
         <div className="max-w-7xl mx-auto">
@@ -448,7 +304,6 @@ const integrations = [
         <div className="flex items-center">
                   
         <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-semibold text-sm mr-4">
-                    {testimonial.avatar}
                   </div>
                   <div>
                     
@@ -462,7 +317,6 @@ const integrations = [
           </div>
         </div>
       </section>
-      {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-green-900/30">
         
         <div className="max-w-4xl mx-auto text-center">
@@ -503,3 +357,6 @@ const integrations = [
   );
 };
 export default ZionAIInvoiceGeneratorPage;
+    </>
+  );
+}

@@ -2,17 +2,11 @@ import { Helmet } from 'react-helmet-async';
 import { Shield, Zap, Users, CheckCircle } from 'lucide-react';
 
 const AiDatabaseSolutionsPage = () => {
-  return;
-},
-    { icon: <Shield className="w-8 h-8" />,
-      title: "Advanced Security & Compliance",
-      description: "Enterprise-grade security with automated threat detection, encryption, and compliance management for sensitive data." },
-    { icon: <Zap className="w-8 h-8" />,
-      title: "Real-time Analytics",
-      description: "Live data processing and analytics with AI-driven insights for instant decision making and business intelligence." },
-    { icon: <Users className="w-8 h-8" />,
-      title: "Scalable Architecture",
-      description: "Cloud-native database solutions that automatically scale with your business needs and data growth." }
+  const features = [
+  const features = [
+      { icon: <Shield className="w-8 h-8" />,
+        title: "Advanced Security & Compliance",
+        description: "Enterprise-grade security with automated threat detection, encryption, and compliance management for sensitive data." },
   ];
 
 const services = [
@@ -50,7 +44,6 @@ const benefits = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        { /* Hero Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -77,7 +70,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        { /* Features Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -95,7 +87,6 @@ const benefits = [
                 <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   
         <div className="text-cyan-400 mb-4">
-                    { feature.icon }
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{ feature.title }</h3>
                   
@@ -105,7 +96,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        { /* Services Section */ }
         <section className="py-20 bg-white/5">
           
         <div className="container mx-auto px-4">
@@ -128,7 +118,6 @@ const benefits = [
                     { service.features.map((feature, featureIndex) => (
                       <li key={featureIndex } className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-                        { feature }
                       </li>
                     ))}
                   </ul>
@@ -137,7 +126,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        { /* Benefits Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -160,7 +148,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        { /* CTA Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">

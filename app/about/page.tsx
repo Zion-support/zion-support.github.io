@@ -11,18 +11,8 @@ import {
 } from 'lucide-react';
 // Company values
 const values = [
-  { icon: <Brain className="w-8 h-8" />,
-    title: "Innovation First",
-    description: "We constantly push the boundaries of what's possible with cutting-edge technology and creative solutions." },
-  { icon: <Shield className="w-8 h-8" />,
-    title: "Security & Trust",
-    description: "We prioritize the security and privacy of our clients' data with enterprise-grade protection measures." },
-  { icon: <Users className="w-8 h-8" />,
-    title: "Client Success",
-    description: "Our success is measured by our clients' success. We're committed to delivering exceptional results." },
-  { icon: <Award className="w-8 h-8" />,
-    title: "Excellence",
-    description: "We maintain the highest standards of quality in everything we do, from code to customer service." }
+  
+
 ];
 // Company stats
 const stats = [
@@ -52,18 +42,8 @@ const team = [
 ];
 // Services we offer
 const services = [
-  { icon: <Zap className="w-6 h-6" />,
-    title: "AI Solutions",
-    description: "Custom AI implementations for business automation and intelligence" },
-  { icon: <Globe className="w-6 h-6" />,
-    title: "Web Development",
-    description: "Modern, responsive websites and web applications" },
-  { icon: <Target className="w-6 h-6" />,
-    title: "Digital Transformation",
-    description: "Complete digital transformation strategies and implementation" },
-  { icon: <Shield className="w-6 h-6" />,
-    title: "Cybersecurity",
-    description: "Comprehensive security solutions to protect your business" }
+  
+
 ];
 
 const AboutPage: React.FC = () => { return (
@@ -78,7 +58,6 @@ const AboutPage: React.FC = () => { return (
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -96,7 +75,6 @@ const AboutPage: React.FC = () => { return (
             </div>
           </div>
         </section>
-        { /* Stats Section */ }
         <section className="py-20 bg-white/5">
           
         <div className="container mx-auto px-4">
@@ -106,18 +84,15 @@ const AboutPage: React.FC = () => { return (
                 <div key={index } className="text-center">
                   
         <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
-                    { stat.number }
                   </div>
                   
         <div className="text-gray-300 text-lg">
-                    { stat.label }
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        { /* Values Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -135,7 +110,6 @@ const AboutPage: React.FC = () => { return (
                 <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                   
         <div className="text-cyan-400 mb-4 flex justify-center">
-                    { value.icon }
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{ value.title }</h3>
                   
@@ -145,7 +119,6 @@ const AboutPage: React.FC = () => { return (
             </div>
           </div>
         </section>
-        { /* Services Section */ }
         <section className="py-20 bg-white/5">
           
         <div className="container mx-auto px-4">
@@ -163,7 +136,6 @@ const AboutPage: React.FC = () => { return (
                 <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                   
         <div className="text-cyan-400 mb-4">
-                    { service.icon }
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{ service.title }</h3>
                   
@@ -173,7 +145,6 @@ const AboutPage: React.FC = () => { return (
             </div>
           </div>
         </section>
-        { /* Team Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -205,7 +176,6 @@ const AboutPage: React.FC = () => { return (
             </div>
           </div>
         </section>
-        { /* CTA Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">

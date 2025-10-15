@@ -26,51 +26,6 @@ const services = [
   ];
 
 const pricingPlans = [
-    {
-      name: "Assessment",
-      price: "$5,000",
-      period: "one-time",
-      description: "Comprehensive security assessment",
-      features: [
-        "Security audit and assessment",
-        "Vulnerability scanning",
-        "Risk analysis report",
-        "Security recommendations",
-        "Compliance check",
-        "Executive summary"
-      ],
-      popular: false
-    },
-    {
-      name: "Consulting",
-      price: "$15,000",
-      period: "month",
-      description: "Ongoing cybersecurity consulting",
-      features: [
-        "Monthly security reviews",
-        "Incident response support",
-        "Security training sessions",
-        "Compliance monitoring",
-        "Threat intelligence updates",
-        "24/7 emergency support"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "Custom",
-      period: "quote",
-      description: "Comprehensive security program",
-      features: [
-        "Everything in Consulting",
-        "Dedicated security team",
-        "Custom security solutions",
-        "Advanced threat protection",
-        "Security operations center",
-        "Ongoing optimization"
-      ],
-      popular: false
-    }
   ];
 
 const stats = [
@@ -114,7 +69,6 @@ const benefits = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20 relative overflow-hidden">
           
         <div className="absolute inset-0">
@@ -157,7 +111,6 @@ const benefits = [
                   View Security Report
                 </button>
               </div>
-              {/* Stats */}
               
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 {stats.map((stat, index) => (
@@ -177,7 +130,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        {/* Benefits Section */}
         <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
           
         <div className="container mx-auto px-4">
@@ -210,7 +162,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -241,7 +192,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        {/* Services Section */}
         <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
           
         <div className="container mx-auto px-4">
@@ -267,7 +217,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        {/* Pricing Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -287,15 +236,6 @@ const benefits = [
                     ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/10' 
                     : 'border-cyan-500/20 hover:border-cyan-400/40'
                 } transition-all duration-300 hover:transform hover:scale-105`}>
-                  {plan.popular && (
-                    
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      
-        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>
-                  )}
                   
         <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -329,7 +269,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="container mx-auto px-4">

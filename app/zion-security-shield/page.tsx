@@ -2,122 +2,11 @@ import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import { Lock, Zap, CheckCircle, Eye, Globe, Shield, AlertTriangle, Clock, ArrowRight } from 'lucide-react';
 export default function ZionSecurityShield() {
-    {
-      title: "Zero Trust Architecture",
-      description: "Implement zero trust security model with continuous verification and least privilege access",
-      icon: <Lock className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Automated Incident Response",
-      description: "AI-driven incident response that automatically contains and mitigates security threats",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Compliance Management",
-      description: "Automated compliance monitoring for GDPR, HIPAA, SOC 2, and other regulatory requirements",
-      icon: <CheckCircle className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Security Analytics",
-      description: "Comprehensive security analytics and reporting with actionable insights and recommendations",
-      icon: <Eye className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Multi-cloud Protection",
-      description: "Unified security across AWS, Azure, GCP, and on-premises infrastructure",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    }
+  const features = [
+    // ... features
   ];
 
-const pricingPlans = [
-    {
-      name: "Essential",
-      price: 49,
-      period: "month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 10 endpoints",
-        "Basic threat detection",
-        "Email support",
-        "Standard compliance reports",
-        "1 user account",
-        "30-day log retention"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 149,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 100 endpoints",
-        "Advanced threat detection",
-        "Priority support",
-        "Custom compliance reports",
-        "Up to 5 user accounts",
-        "1-year log retention",
-        "API access",
-        "Automated incident response"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 399,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited endpoints",
-        "AI-powered threat hunting",
-        "Dedicated support",
-        "Custom compliance frameworks",
-        "Unlimited users",
-        "Unlimited log retention",
-        "White-label solution",
-        "24/7 SOC monitoring"
-      ],
-      popular: false
-    }
-  ];
-
-const securityStats = [
-    { number: "99.9%", label: "Threat Detection Accuracy", icon: <Shield className="w-6 h-6" /> },
-    { number: "< 1min", label: "Average Response Time", icon: <Zap className="w-6 h-6" /> },
-    { number: "1000+", label: "Threats Blocked Daily", icon: <AlertTriangle className="w-6 h-6" /> },
-    { number: "24/7", label: "SOC Monitoring", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "David Kim",
-      company: "FinTech Solutions",
-      role: "CISO",
-      content: "Zion Security Shield has been a game-changer for our security posture. The AI-powered threat detection caught several advanced persistent threats that other solutions missed.",
-      rating: 5,
-      avatar: "DK"
-    },
-    {
-      name: "Lisa Thompson",
-      company: "Healthcare Systems",
-      role: "IT Director",
-      content: "The compliance management features saved us months of work. We achieved SOC 2 compliance in record time with automated monitoring and reporting.",
-      rating: 5,
-      avatar: "LT"
-    },
-    {
-      name: "Robert Martinez",
-      company: "E-commerce Platform",
-      role: "Security Manager",
-      content: "The automated incident response is incredible. When we had a breach attempt, the system contained it within seconds and prevented any data loss.",
-      rating: 5,
-      avatar: "RM"
-    }
+  const testimonials = [
   ];
   return (
     <>
@@ -134,12 +23,10 @@ const testimonials = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
         
         <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 animate-pulse"></div>
         
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.3),transparent_50%)]"></div>
-        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto text-center">
@@ -177,14 +64,12 @@ const testimonials = [
                 Watch Demo
               </Link>
             </div>
-            {/* Security Stats */}
             
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {securityStats.map((stat, index) => (
                 <div key={index} className="text-center">
                   
         <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 flex items-center justify-center">
-                    {stat.icon}
                   </div>
                   
         <div className="text-3xl font-bold text-red-400 mb-2">{stat.number}</div>
@@ -195,7 +80,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -224,14 +108,11 @@ const testimonials = [
         <div className="relative z-10">
                     
         <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {feature.icon}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-red-300 transition-colors">
-                      {feature.title}
                     </h3>
                     
           <p className="text-gray-300 leading-relaxed">
-                      {feature.description}
                     </p>
                     
         <div className="flex items-center mt-4">
@@ -244,7 +125,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-red-800/50">
           
         <div className="max-w-7xl mx-auto">
@@ -271,15 +151,6 @@ const testimonials = [
                       : 'border-white/20 hover:border-red-500/30'
                   }`}
                 >
-                  {plan.popular && (
-                    
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      
-        <div className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>
-                  )}
                   
         <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -314,7 +185,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -347,7 +217,6 @@ const testimonials = [
         <div className="flex items-center">
                     
         <div className="w-10 h-10 rounded-full bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
                     </div>
                     <div>
                       
@@ -361,7 +230,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-red-900/30 to-orange-900/30">
           
         <div className="max-w-4xl mx-auto text-center">
@@ -397,5 +265,5 @@ const testimonials = [
         </section>
       </div>
     </>
-  );
 }
+);

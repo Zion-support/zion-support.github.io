@@ -4,143 +4,13 @@ import { Link } from 'react-router-dom';
 import { CheckCircleIcon, Lightbulb, DocumentTextIcon, Cpu, ArrowRight } from 'lucide-react';
 const AISolutionsPage: React.FC = () => {
   const aiServices = [
-    {
-      title: "Machine Learning Models",
-      description: "Custom machine learning models tailored to your specific business needs with advanced algorithms and real-time processing.",
-      icon: CpuChipIcon,
-      features: [
-        "Custom algorithm development",
-        "Real-time model training",
-        "A/B testing framework",
-        "Model performance monitoring",
-        "Automated retraining",
-        "Edge deployment"
-      ],
-      color: "from-purple-500 to-pink-500",
-      price: "Starting at $3,500/month",
-      benefits: ["95% accuracy", "Real-time processing", "Custom algorithms"],
-      useCases: ["Predictive analytics", "Recommendation engines", "Fraud detection"],
-      href: "/ai-machine-learning" },
-    { title: "Natural Language Processing",
-      description: "Advanced NLP solutions for text analysis, sentiment analysis, language translation, and conversational AI.",
-      icon: ChatBubbleLeftRightIcon,
-      features: [
-        "Text analysis and processing",
-        "Sentiment analysis",
-        "Language translation",
-        "Chatbot development",
-        "Voice recognition",
-        "Document summarization"
-      ],
-      color: "from-blue-500 to-cyan-500",
-      price: "Starting at $2,800/month",
-      benefits: ["Multi-language support", "Real-time processing", "High accuracy"],
-      useCases: ["Customer service", "Content analysis", "Language translation"],
-      href: "/ai-nlp" },
-    { title: "Computer Vision",
-      description: "Image and video analysis solutions for object detection, facial recognition, and visual content understanding.",
-      icon: EyeIcon,
-      features: [
-        "Object detection and recognition",
-        "Facial recognition",
-        "Image classification",
-        "Video analysis",
-        "OCR (Optical Character Recognition)",
-        "Medical imaging analysis"
-      ],
-      color: "from-green-500 to-teal-500",
-      price: "Starting at $4,200/month",
-      benefits: ["High accuracy", "Real-time processing", "Custom models"],
-      useCases: ["Security systems", "Medical diagnosis", "Quality control"],
-      href: "/ai-computer-vision" },
-    { title: "Predictive Analytics",
-      description: "Data-driven insights and predictions to help businesses make informed decisions and optimize operations.",
-      icon: DocumentTextIcon,
-      features: [
-        "Data analysis and visualization",
-        "Predictive modeling",
-        "Trend analysis",
-        "Risk assessment",
-        "Performance optimization",
-        "Custom dashboards"
-      ],
-      color: "from-orange-500 to-red-500",
-      price: "Starting at $3,000/month",
-      benefits: ["Data-driven insights", "Accurate predictions", "Real-time analytics"],
-      useCases: ["Business intelligence", "Risk management", "Operational optimization"],
-      href: "/ai-predictive-analytics" },
-    { title: "AI Automation",
-      description: "Intelligent automation solutions to streamline business processes and reduce manual work.",
-      icon: LightBulbIcon,
-      features: [
-        "Process automation",
-        "Workflow optimization",
-        "Task automation",
-        "Data processing",
-        "Report generation",
-        "System integration"
-      ],
-      color: "from-indigo-500 to-purple-500",
-      price: "Starting at $2,500/month",
-      benefits: ["Increased efficiency", "Reduced errors", "Cost savings"],
-      useCases: ["Business process automation", "Data processing", "Workflow optimization"],
-      href: "/ai-automation" },
-    {
-      title: "AI-Powered Automation",
-      description: "Streamline your business processes with intelligent automation that learns and adapts to your workflow patterns.",
-      icon: CogIcon,
-      features: [
-        "Workflow Automation",
-        "Data Processing",
-        "Customer Service Bots",
-        "Smart Scheduling"
-      ]
-    },
-    {
-      title: "Intelligent Analytics",
-      description: "Transform raw data into actionable insights with AI-driven analytics and visualization tools.",
-      icon: ChartBarIcon,
-      features: [
-        "Real-time Dashboards",
-        "Predictive Insights",
-        "Data Visualization",
-        "Trend Analysis"
-      ]
-    },
-    {
-      title: "AI Security Solutions",
-      description: "Advanced cybersecurity powered by artificial intelligence to protect your digital assets and data.",
-      icon: ShieldCheckIcon,
-      features: [
-        "Threat Detection",
-        "Anomaly Detection",
-        "Automated Response",
-        "Security Monitoring"
-      ]
-    }
+  
+
   ];
 
 const benefits = [
-    {
-      title: "Increased Efficiency",
-      description: "Automate repetitive tasks and optimize processes to save time and resources.",
-      icon: <CheckCircleIcon className="w-6 h-6 text-green-500" />
-    },
-    {
-      title: "Better Decision Making",
-      description: "Get data-driven insights and recommendations to make informed business decisions.",
-      icon: <Lightbulb className="w-6 h-6 text-yellow-500" />
-    },
-    {
-      title: "Cost Reduction",
-      description: "Reduce operational costs through intelligent automation and optimization.",
-      icon: <DocumentTextIcon className="w-6 h-6 text-blue-500" />
-    },
-    {
-      title: "Scalable Solutions",
-      description: "AI solutions that grow with your business and adapt to changing needs.",
-      icon: <Cpu className="w-6 h-6 text-purple-500" />
-    }
+  
+
   ];
 
 const industries = [
@@ -163,7 +33,6 @@ const industries = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        { /* Hero Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -190,7 +59,6 @@ const industries = [
             </div>
           </div>
         </section>
-        { /* Services Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -227,7 +95,6 @@ const industries = [
                       { service.features.map((feature, featureIndex) => (
                         <li key={featureIndex } className="flex items-center text-gray-300 text-sm">
                           <CheckCircleIcon className="w-4 h-4 text-cyan-400 mr-2" />
-                          { feature }
                         </li>
                       ))}
                     </ul>
@@ -238,7 +105,6 @@ const industries = [
                     <div className="flex flex-wrap gap-2">
                       { service.benefits?.map((benefit, benefitIndex) => (
                         <span key={benefitIndex } className="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-sm">
-                          { benefit }
                         </span>
                       ))}
                     </div>
@@ -250,7 +116,6 @@ const industries = [
         <div className="flex flex-wrap gap-2">
                       { service.useCases?.map((useCase, useCaseIndex) => (
                         <span key={useCaseIndex } className="bg-purple-400/20 text-purple-400 px-3 py-1 rounded-full text-sm">
-                          { useCase }
                         </span>
                       ))}
                     </div>
@@ -267,7 +132,6 @@ const industries = [
             </div>
           </div>
         </section>
-        { /* Benefits Section */ }
         <section className="py-20 bg-white/5">
           
         <div className="container mx-auto px-4">
@@ -285,7 +149,6 @@ const industries = [
                 <div key={index } className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                   
         <div className="flex items-center mb-4">
-                    { benefit.icon }
                     <h3 className="text-white font-semibold ml-3">{ benefit.title }</h3>
                   </div>
                   
@@ -295,7 +158,6 @@ const industries = [
             </div>
           </div>
         </section>
-        { /* Industries Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -318,7 +180,6 @@ const industries = [
             </div>
           </div>
         </section>
-        { /* CTA Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">

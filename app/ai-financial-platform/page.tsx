@@ -8,13 +8,16 @@ const features = [ { icon: <Brain className="w-6 h-6" />, title: "AI Financial A
 
 
 export default function Page() {
-const aiCapabilities = [ { title: "Credit Risk Assessment", description: "AI-powered credit scoring and risk analysis for lending decisions", icon: <Shield className="w-8 h-8" />, accuracy: "98.5%" }, { title: "Fraud Detection", description: "Real-time fraud detection using machine learning and behavioral analysis", icon: <Eye className="w-8 h-8" />, accuracy: "99.7%" }, { title: "Market Prediction", description: "Predictive analytics for market trends and investment opportunities", icon: <TrendingUp className="w-8 h-8" />, accuracy: "87.3%" }, { title: "Tax Optimization", description: "AI-driven tax planning and optimization strategies", icon: <Receipt className="w-8 h-8" />, accuracy: "94.2%" } ];
-
-const pricingPlans = [ { name: "Startup", price: "$299", period: "month", description: "Perfect for small businesses and startups", features: [ "Basic financial analytics", "Payment processing", "Basic accounting", "Email support", "Up to 1,000 transactions", "Standard security", "Basic reporting" ], popular: false }, { name: "Professional", price: "$699", period: "month", description: "Ideal for growing businesses and financial institutions", features: [ "Advanced AI analytics", "Full payment suite", "Advanced accounting", "Priority support", "Up to 10,000 transactions", "Advanced security", "Custom integrations", "Multi-currency support" ], popular: true }, { name: "Enterprise", price: "$1,499", period: "month", description: "Complete solution for large financial organizations", features: [ "Full AI capabilities", "Custom payment solutions", "Enterprise accounting", "24/7 dedicated support", "Unlimited transactions", "Bank-level security", "Custom development", "On-premise deployment" ], popular: false } ];
-
-const testimonials = [ { name: "Jennifer Martinez", company: "FinTech Solutions", role: "CFO", content: "The AI financial platform has revolutionized our operations. We've reduced processing time by 60% and improved accuracy by 95%.", rating: 5 }, { name: "David Chen", company: "Investment Group", role: "Portfolio Manager", content: "The investment management features have helped us optimize our portfolios and increase returns by 25% while reducing risk.", rating: 5 }, { name: "Sarah Johnson", company: "Regional Bank", role: "Risk Manager", content: "The fraud detection system has prevented millions in potential losses. The accuracy and speed are exceptional.", rating: 5 } ];
-
-const integrations = [ { name: "QuickBooks", logo: "📊" }, { name: "Xero", logo: "📈" }, { name: "Stripe", logo: "💳" }, { name: "PayPal", logo: "💰" }, { name: "Square", logo: "⬜" }, { name: "Wise", logo: "🌍" }, { name: "Revolut", logo: "🔄" }, { name: "Plaid", logo: "🔗" }, { name: "Yodlee", logo: "📱" }, { name: "Bloomberg", logo: "📰" }, { name: "Reuters", logo: "📡" }, { name: "TradingView", logo: "📊" } ];
+  const features = [ { icon: <Brain className="w-6 h-6" />, title: "AI Financial Analysis", description: "Advanced machine learning algorithms that analyze market trends, predict investment opportunities, and provide personalized financial advice.", benefits: ["Market prediction", "Risk assessment", "Portfolio optimization", "Investment recommendations"]
+;
+  const aiCapabilities = [ { title: "Credit Risk Assessment", description: "AI-powered credit scoring and risk analysis for lending decisions", icon: <Shield className="w-8 h-8" />, accuracy: "98.5%" }, { title: "Fraud Detection", description: "Real-time fraud detection using machine learning and behavioral analysis", icon: <Eye className="w-8 h-8" />, accuracy: "99.7%" }, { title: "Market Prediction", description: "Predictive analytics for market trends and investment opportunities", icon: <TrendingUp className="w-8 h-8" />, accuracy: "87.3%" }, { title: "Tax Optimization", description: "AI-driven tax planning and optimization strategies", icon: <Receipt className="w-8 h-8" />, accuracy: "94.2%" } ]
+;
+  const pricingPlans = [ { name: "Startup", price: "$299", period: "month", description: "Perfect for small businesses and startups", features: [ "Basic financial analytics", "Payment processing", "Basic accounting", "Email support", "Up to 1,000 transactions", "Standard security", "Basic reporting" ]
+;
+  const testimonials = [ { name: "Jennifer Martinez", company: "FinTech Solutions", role: "CFO", content: "The AI financial platform has revolutionized our operations. We've reduced processing time by 60% and improved accuracy by 95%.", rating: 5 }, { name: "David Chen", company: "Investment Group", role: "Portfolio Manager", content: "The investment management features have helped us optimize our portfolios and increase returns by 25% while reducing risk.", rating: 5 }, { name: "Sarah Johnson", company: "Regional Bank", role: "Risk Manager", content: "The fraud detection system has prevented millions in potential losses. The accuracy and speed are exceptional.", rating: 5 } ]
+;
+  const integrations = [ { name: "QuickBooks", logo: "📊" }, { name: "Xero", logo: "📈" }, { name: "Stripe", logo: "💳" }, { name: "PayPal", logo: "💰" }, { name: "Square", logo: "⬜" }, { name: "Wise", logo: "🌍" }, { name: "Revolut", logo: "🔄" }, { name: "Plaid", logo: "🔗" }, { name: "Yodlee", logo: "📱" }, { name: "Bloomberg", logo: "📰" }, { name: "Reuters", logo: "📡" }, { name: "TradingView", logo: "📊" } ]
+;
   return (
     <> <Helmet> <title>AI Financial Platform - Intelligent Financial Solutions | Zion Tech Group</title> <meta name="description" content="Transform financial operations with our AI-powered platform. Advanced analytics, payment processing, and investment management for modern businesses." /> <meta name="keywords" content="AI financial platform, fintech, payment processing, financial analytics, investment management, fraud detection" /> <meta property="og:title" content="AI Financial Platform - Zion Tech Group" /> <meta property="og:description" content="Intelligent financial platform with AI-powered analytics and payment processing" /> <meta property="og:type" content="website" /> <meta property="og:url" content="https://ziontechgroup.com/ai-financial-platform" /> </Helmet> 
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"> { /* Animated Background */ } 
@@ -22,14 +25,12 @@ const integrations = [ { name: "QuickBooks", logo: "📊" }, { name: "Xero", log
         <div className="absolute top-20 left-10 w-72 h-72 bg-green-500/10 rounded-full blur-3xl animate-pulse"></div> 
         <div className="absolute top-40 right-10 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div> 
         <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div> </div>
-        { /* Grid Pattern */ }
         
         <div className="absolute inset-0 opacity-20">
           
         <div className="h-full w-full"></div>
         </div>
         <main className="relative z-10">
-          { /* Hero Section */ }
           <section className="relative py-20 overflow-hidden">
             
         <div className="container mx-auto px-4">
@@ -68,7 +69,6 @@ const integrations = [ { name: "QuickBooks", logo: "📊" }, { name: "Xero", log
               </div>
             </div>
           </section>
-          { /* Features Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             
         <div className="container mx-auto px-4">
@@ -96,18 +96,15 @@ const integrations = [ { name: "QuickBooks", logo: "📊" }, { name: "Xero", log
         <div className="text-white">{ feature.icon }</div>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors duration-300">
-                      { feature.title }
                     </h3>
                     
           <p className="text-gray-300 mb-6 leading-relaxed">
-                      { feature.description }
                     </p>
                     
         <div className="space-y-2">
                       { feature.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex } className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          { benefit }
                         </div>
                       ))}
                     </div>
@@ -116,7 +113,6 @@ const integrations = [ { name: "QuickBooks", logo: "📊" }, { name: "Xero", log
               </div>
             </div>
           </section>
-          { /* AI Capabilities Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">
@@ -156,7 +152,6 @@ const integrations = [ { name: "QuickBooks", logo: "📊" }, { name: "Xero", log
               </div>
             </div>
           </section>
-          { /* Integrations Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             
         <div className="container mx-auto px-4">
@@ -187,7 +182,6 @@ const integrations = [ { name: "QuickBooks", logo: "📊" }, { name: "Xero", log
               </div>
             </div>
           </section>
-          { /* Pricing Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">
@@ -213,15 +207,6 @@ const integrations = [ { name: "QuickBooks", logo: "📊" }, { name: "Xero", log
                         ? 'border-green-400/40 shadow-green-500/10' 
                         : 'border-green-500/20 hover:border-green-400/40' }`}
                   >
-                    { plan.popular && (
-                      
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        
-        <div className="bg-gradient-to-r from-green-500 to-yellow-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                          Most Popular
-                        </div>
-                      </div>
-                    ) }
                     
         <div className="text-center mb-8">
                       <h3 className="text-2xl font-bold text-white mb-2">{ plan.name }</h3>
@@ -238,7 +223,6 @@ const integrations = [ { name: "QuickBooks", logo: "📊" }, { name: "Xero", log
                       { plan.features.map((feature, featureIndex) => (
                         <div key={featureIndex } className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          { feature }
                         </div>
                       ))}
                     </div>
@@ -256,7 +240,6 @@ const integrations = [ { name: "QuickBooks", logo: "📊" }, { name: "Xero", log
               </div>
             </div>
           </section>
-          { /* Testimonials Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             
         <div className="container mx-auto px-4">
@@ -301,7 +284,6 @@ const integrations = [ { name: "QuickBooks", logo: "📊" }, { name: "Xero", log
               </div>
             </div>
           </section>
-          { /* CTA Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">
@@ -335,6 +317,5 @@ const integrations = [ { name: "QuickBooks", logo: "📊" }, { name: "Xero", log
         </main>
       </div>
     </>
-  );
-};
-export default AiFinancialPlatformPage;
+}
+}}}

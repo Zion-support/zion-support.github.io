@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Navigation, Phone, Mail, CheckCircle, Brain, Play, Star, Footer } from 'lucide-react';
+import { Navigation, Phone, Mail, CheckCircle, Brain, Play, Star, ArrowDown } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const features = [
@@ -51,27 +51,6 @@ const HomePage: React.FC = () => {
   ];
 
   const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO, TechCorp Inc.',
-      content: 'Zion Tech Group transformed our entire IT infrastructure. The AI solutions they implemented increased our efficiency by 300%.',
-      rating: 5,
-      company: 'TechCorp Inc.'
-    },
-    {
-      name: 'Michael Chen',
-      role: 'CEO, DataFlow Systems',
-      content: 'Their quantum computing solutions helped us solve complex optimization problems that were impossible before.',
-      rating: 5,
-      company: 'DataFlow Systems'
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'VP Engineering, CloudScale',
-      content: 'The security implementation was flawless. We now have enterprise-grade protection with zero compromises.',
-      rating: 5,
-      company: 'CloudScale'
-    }
   ];
 
   return (
@@ -89,7 +68,6 @@ const HomePage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
-        {/* Hero Section */}
         <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
           <div className="absolute inset-0 cyber-grid"></div>
@@ -160,7 +138,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Stats Section */}
         <section className="py-16 bg-slate-800/50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -170,10 +147,8 @@ const HomePage: React.FC = () => {
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
-                    {stat.number}
                   </div>
                   <div className="text-gray-300 font-medium">
-                    {stat.label}
                   </div>
                 </div>
               ))}
@@ -181,7 +156,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Features Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -200,10 +174,8 @@ const HomePage: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                    {feature.title}
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
-                    {feature.description}
                   </p>
                 </div>
               ))}
@@ -211,7 +183,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Testimonials Section */}
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -251,7 +222,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -280,7 +250,7 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        <Footer />
+        <ArrowDown />
       </div>
     </>
   );

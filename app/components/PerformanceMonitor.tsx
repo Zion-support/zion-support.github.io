@@ -42,13 +42,14 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
   }
 
   return (
-    <>
+    <div className="performance-monitor">
       {children}
-      <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-2 rounded-lg text-xs font-mono z-50">
+      <div className="fixed bottom-4 right-4 bg-black/80 text-white p-2 rounded text-xs font-mono">
         <div>Load: {metrics.loadTime}ms</div>
+        <div>Render: {metrics.renderTime}ms</div>
         <div>Memory: {metrics.memoryUsage}MB</div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -2,122 +2,11 @@ import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import { Zap, Globe, Target, BarChart3, Settings, Package, DollarSign, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionInventorySmart() {
-    {
-      title: "Automated Reordering",
-      description: "Set up automatic reorder points and let the system handle your purchasing decisions",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Multi-Location Management",
-      description: "Manage inventory across multiple warehouses, stores, and locations from one dashboard",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Barcode Scanning",
-      description: "Scan barcodes with your mobile device for quick inventory updates and tracking",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Analytics & Reporting",
-      description: "Comprehensive inventory analytics with turnover rates, profit margins, and performance insights",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Integration Hub",
-      description: "Connect with 100+ e-commerce platforms, accounting software, and shipping providers",
-      icon: <Settings className="w-6 h-6" />,
-      included: true
-    }
+  const features = [
+    // ... features
   ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 29,
-      period: "month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 1,000 products",
-        "1 location",
-        "Basic tracking",
-        "Email support",
-        "Standard reports",
-        "Basic integrations"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 79,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 10,000 products",
-        "Up to 5 locations",
-        "Advanced tracking",
-        "Priority support",
-        "Advanced reports",
-        "All integrations",
-        "Barcode scanning",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 199,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited products",
-        "Unlimited locations",
-        "Custom tracking",
-        "Dedicated support",
-        "Custom reports",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
-
-const inventoryStats = [
-    { number: "60%", label: "Reduction in Stockouts", icon: <Package className="w-6 h-6" /> },
-    { number: "40%", label: "Lower Inventory Costs", icon: <DollarSign className="w-6 h-6" /> },
-    { number: "100+", label: "Platform Integrations", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Automated Monitoring", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Michael Chen",
-      company: "E-commerce Retailer",
-      role: "Operations Manager",
-      content: "Zion Inventory Smart has completely transformed our inventory management. We've reduced stockouts by 60% and improved our cash flow significantly.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Lisa Rodriguez",
-      company: "Wholesale Distributor",
-      role: "Inventory Manager",
-      content: "The automated reordering feature is incredible. We never run out of stock anymore, and our inventory costs have decreased by 40%.",
-      rating: 5,
-      avatar: "LR"
-    },
-    {
-      name: "James Wilson",
-      company: "Multi-Store Chain",
-      role: "Supply Chain Director",
-      content: "Managing inventory across multiple locations used to be a nightmare. Now we have complete visibility and control from one platform.",
-      rating: 5,
-      avatar: "JW"
-    }
+  const testimonials = [
   ];
   return (
     <>
@@ -134,12 +23,10 @@ const testimonials = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
         
         <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 via-yellow-500/10 to-orange-500/10 animate-pulse"></div>
         
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(245,158,11,0.3),transparent_50%)]"></div>
-        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto text-center">
@@ -177,14 +64,12 @@ const testimonials = [
                 Watch Demo
               </Link>
             </div>
-            {/* Inventory Stats */}
             
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {inventoryStats.map((stat, index) => (
                 <div key={index} className="text-center">
                   
         <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-amber-500/20 to-yellow-500/20 flex items-center justify-center">
-                    {stat.icon}
                   </div>
                   
         <div className="text-3xl font-bold text-amber-400 mb-2">{stat.number}</div>
@@ -195,7 +80,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -224,14 +108,11 @@ const testimonials = [
         <div className="relative z-10">
                     
         <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-amber-500 to-yellow-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {feature.icon}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-amber-300 transition-colors">
-                      {feature.title}
                     </h3>
                     
           <p className="text-gray-300 leading-relaxed">
-                      {feature.description}
                     </p>
                     
         <div className="flex items-center mt-4">
@@ -244,7 +125,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-amber-800/50">
           
         <div className="max-w-7xl mx-auto">
@@ -271,15 +151,6 @@ const testimonials = [
                       : 'border-white/20 hover:border-amber-500/30'
                   }`}
                 >
-                  {plan.popular && (
-                    
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      
-        <div className="bg-gradient-to-r from-amber-500 to-yellow-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>
-                  )}
                   
         <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -314,7 +185,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -347,7 +217,6 @@ const testimonials = [
         <div className="flex items-center">
                     
         <div className="w-10 h-10 rounded-full bg-gradient-to-r from-amber-500 to-yellow-500 flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
                     </div>
                     <div>
                       
@@ -361,7 +230,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-amber-900/30 to-yellow-900/30">
           
         <div className="max-w-4xl mx-auto text-center">
@@ -397,5 +265,5 @@ const testimonials = [
         </section>
       </div>
     </>
-  );
 }
+);

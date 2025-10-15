@@ -3,122 +3,11 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Zap, Target, Coins, BarChart3, Shield, Globe, Clock, RouterLink, ArrowRight, CheckCircle } from 'lucide-react';
 export default function AIBlockchainSolutions() {
-    {
-      title: "Decentralized AI Networks",
-      description: "Build and deploy AI models on blockchain networks with decentralized computing and data sharing",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Blockchain Integration",
-      description: "Seamlessly integrate blockchain technology into existing systems with AI-powered automation",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Cryptocurrency Solutions",
-      description: "Complete cryptocurrency solutions including wallets, exchanges, and payment processing",
-      icon: <Coins className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "DeFi Protocol Development",
-      description: "Build and deploy DeFi protocols with AI-powered optimization and risk management",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Security & Compliance",
-      description: "Advanced security features and compliance tools for blockchain applications and smart contracts",
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    }
+  const features = [
+    // ... features
   ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 149,
-      period: "month",
-      description: "Perfect for small projects",
-      features: [
-        "Up to 3 blockchain projects",
-        "Basic smart contracts",
-        "Email support",
-        "1 user account",
-        "Standard security",
-        "Basic compliance"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 399,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 15 blockchain projects",
-        "Advanced smart contracts",
-        "Priority support",
-        "Up to 10 user accounts",
-        "Advanced security",
-        "Advanced compliance",
-        "DeFi protocols",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 999,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited blockchain projects",
-        "Custom smart contracts",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom security",
-        "White-label solution",
-        "Custom integrations",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
-
-const blockchainStats = [
-    { number: "99.9%", label: "Smart Contract Uptime", icon: <Link className="w-6 h-6" /> },
-    { number: "50+", label: "Blockchain Networks", icon: <Globe className="w-6 h-6" /> },
-    { number: "95%", label: "Security Score", icon: <Shield className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Monitoring", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Dr. Michael Chen",
-      company: "FinTech Startup",
-      role: "CTO",
-      content: "AI Blockchain Solutions has enabled us to build sophisticated DeFi protocols that were previously impossible. Our smart contracts are now self-optimizing and secure.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Sarah Rodriguez",
-      company: "Crypto Exchange",
-      role: "Technical Director",
-      content: "The AI-powered smart contracts and security features have made our platform incredibly robust. We've achieved 99.9% uptime and zero security incidents.",
-      rating: 5,
-      avatar: "SR"
-    },
-    {
-      name: "David Kim",
-      company: "DeFi Protocol",
-      role: "Lead Developer",
-      content: "The decentralized AI networks and blockchain integration features have revolutionized our development process. We can now build complex DeFi solutions in record time.",
-      rating: 5,
-      avatar: "DK"
-    }
+  const testimonials = [
   ];
   return (
     <>
@@ -135,12 +24,10 @@ const testimonials = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
         
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.3),transparent_50%)]"></div>
-        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto text-center">
@@ -178,14 +65,12 @@ const testimonials = [
                 Watch Demo
               </RouterLink>
             </div>
-            {/* Blockchain Stats */}
             
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {blockchainStats.map((stat, index) => (
                 <div key={index} className="text-center">
                   
         <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 flex items-center justify-center">
-                    {stat.icon}
                   </div>
                   
         <div className="text-3xl font-bold text-indigo-400 mb-2">{stat.number}</div>
@@ -196,7 +81,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -225,14 +109,11 @@ const testimonials = [
         <div className="relative z-10">
                     
         <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {feature.icon}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-indigo-300 transition-colors">
-                      {feature.title}
                     </h3>
                     
           <p className="text-gray-300 leading-relaxed">
-                      {feature.description}
                     </p>
                     
         <div className="flex items-center mt-4">
@@ -245,7 +126,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-indigo-800/50">
           
         <div className="max-w-7xl mx-auto">
@@ -272,15 +152,6 @@ const testimonials = [
                       : 'border-white/20 hover:border-indigo-500/30'
                   }`}
                 >
-                  {plan.popular && (
-                    
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      
-        <div className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>
-                  )}
                   
         <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -315,7 +186,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -348,7 +218,6 @@ const testimonials = [
         <div className="flex items-center">
                     
         <div className="w-10 h-10 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
                     </div>
                     <div>
                       
@@ -362,7 +231,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-indigo-900/30 to-purple-900/30">
           
         <div className="max-w-4xl mx-auto text-center">
@@ -398,5 +266,5 @@ const testimonials = [
         </section>
       </div>
     </>
-  );
 }
+);

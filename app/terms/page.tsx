@@ -10,7 +10,6 @@ const userObligations = [ "Provide accurate and complete information when using 
   return (
     <> <Helmet> <title>Terms of Service - Zion Tech Group | Legal Terms & Conditions</title> <meta name="description" content="Read Zion Tech Group's terms of service, user agreements, and legal conditions for using our AI and IT services." /> <meta name="keywords" content="terms of service, legal terms, user agreement, conditions, AI services, IT services" /> <meta property="og:title" content="Terms of Service - Zion Tech Group" /> <meta property="og:description" content="Legal terms and conditions for using our services." /> <meta property="og:type" content="website" /> </Helmet> 
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        { /* Hero Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -31,7 +30,6 @@ const userObligations = [ "Provide accurate and complete information when using 
             </div>
           </div>
         </section>
-        { /* Terms Sections */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -57,7 +55,6 @@ const userObligations = [ "Provide accurate and complete information when using 
             </div>
           </div>
         </section>
-        { /* Prohibited Uses */ }
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -83,7 +80,6 @@ const userObligations = [ "Provide accurate and complete information when using 
             </div>
           </div>
         </section>
-        { /* User Obligations */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -109,7 +105,6 @@ const userObligations = [ "Provide accurate and complete information when using 
             </div>
           </div>
         </section>
-        { /* Contact Section */ }
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="container mx-auto px-4">

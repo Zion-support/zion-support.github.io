@@ -4,53 +4,6 @@ import { Brain, Shield, Zap, Cloud, Database, Globe, Users, FuturisticButton } f
 
 const HomePage = () => {
   const services = [
-    {
-      title: "AI Services",
-      description: "Cutting-edge artificial intelligence solutions including machine learning, natural language processing, and computer vision for business automation",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-      stats: "95% accuracy",
-      link: "/ai-services"
-    },
-    {
-      title: "IT Services",
-      description: "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and digital transformation for modern businesses",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      stats: "99.9% uptime SLA",
-      link: "/services"
-    },
-    {
-      title: "Micro SAAS",
-      description: "Ready-to-use software solutions for immediate deployment including analytics, security, and productivity tools",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
-      stats: "50+ solutions",
-      link: "/micro-saas"
-    }
-  ];
-
-  const features = [
-    {
-      icon: <Cloud className="w-6 h-6" />,
-      title: "Cloud Infrastructure",
-      description: "Scalable and secure cloud solutions for modern businesses"
-    },
-    {
-      icon: <Database className="w-6 h-6" />,
-      title: "Data Management",
-      description: "Advanced data analytics and management solutions"
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Global Reach",
-      description: "Worldwide deployment and support capabilities"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Expert Team",
-      description: "Experienced professionals delivering exceptional results"
-    }
   ];
 
   const stats = [
@@ -68,7 +21,6 @@ const HomePage = () => {
         <meta name="keywords" content="AI services, IT solutions, micro SAAS, cloud infrastructure, cybersecurity, digital transformation" />
       </Helmet>
 
-      {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center">
@@ -91,7 +43,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Services Section */}
       <section className="mb-16" aria-labelledby="services-heading">
         <div className="container mx-auto px-4">
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
@@ -105,7 +56,6 @@ const HomePage = () => {
             {services.map((service, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300">
                 <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-6`}>
-                  {service.icon}
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
@@ -121,7 +71,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="py-20 bg-white/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -133,7 +82,6 @@ const HomePage = () => {
             {features.map((feature, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center mx-auto mb-4">
-                  {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -143,7 +91,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
@@ -157,12 +104,11 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss how our AI services and IT solutions can help you achieve your goals.
+            Let's discuss how our AI services and IT solutions can help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton href="/contact" variant="secondary" size="lg">
@@ -179,3 +125,6 @@ const HomePage = () => {
 };
 
 export default HomePage;
+    </>
+  );
+}

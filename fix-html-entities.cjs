@@ -2,55 +2,62 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-// Function to fix HTML entities in JSX
-function fixHtmlEntities(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+// Function to fix HTML entities in files
+function fixHtmlEntities(content, filePath) {
+  let fixed = content;
+  let changes = 0;
 
-    // Fix unescaped quotes in JSX
-    content = content.replace(/([^\\])"/g, '$1&quot;');
-    content = content.replace(/^"/g, '&quot;');
-    
-    // Fix unescaped apostrophes in JSX
-    content = content.replace(/([^\\])'/g, '$1&apos;');
-    content = content.replace(/^'/g, '&apos;');
+  // Replace common HTML entities
+  const replacements = [
+    { from: /&quot;/g, to: '"' },
+    { from: /&apos;/g, to: "'" },
+    { from: /&lt;/g, to: '<' },
+    { from: /&gt;/g, to: '>' },
+    { from: /&amp;/g, to: '&' },
+    { from: /&nbsp;/g, to: ' ' },
+    { from: /&copy;/g, to: '©' },
+    { from: /&reg;/g, to: '®' },
+    { from: /&trade;/g, to: '™' }
+  ];
 
-    // Fix specific patterns that are common
-    content = content.replace(/don't/g, 'don&apos;t');
-    content = content.replace(/can't/g, 'can&apos;t');
-    content = content.replace(/won't/g, 'won&apos;t');
-    content = content.replace(/it's/g, 'it&apos;s');
-    content = content.replace(/we're/g, 'we&apos;re');
-    content = content.replace(/you're/g, 'you&apos;re');
-    content = content.replace(/they're/g, 'they&apos;re');
-    content = content.replace(/I'm/g, 'I&apos;m');
-    content = content.replace(/I'll/g, 'I&apos;ll');
-    content = content.replace(/I've/g, 'I&apos;ve');
-    content = content.replace(/I'd/g, 'I&apos;d');
-
-    // Fix quotes in specific contexts
-    content = content.replace(/"([^"]*)"([^>]*>)/g, '&quot;$1&quot;$2');
-    content = content.replace(/([^=])"([^"]*)"([^>]*>)/g, '$1&quot;$2&quot;$3');
-
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed HTML entities in: ${filePath}`);
-      modified = true;
+  replacements.forEach(({ from, to }) => {
+    const before = fixed;
+    fixed = fixed.replace(from, to);
+    if (fixed !== before) {
+      changes++;
     }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
+  });
+
+  return { content: fixed, changes };
 }
 
-// Get all TypeScript and TSX files
-const files = glob.sync('app/**/*.{ts,tsx}', { cwd: __dirname });
+// Function to process all TSX files
+function processFiles() {
+  const pattern = 'app/**/*.tsx';
+  const files = glob.sync(pattern);
+  let totalChanges = 0;
+  let processedFiles = 0;
 
-console.log(`Found ${files.length} files to process...`);
+  console.log(`Found ${files.length} TSX files to process...`);
 
-files.forEach(file => {
-  const fullPath = path.join(__dirname, file);
-  fixHtmlEntities(fullPath);
-});
+  files.forEach(filePath => {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      const result = fixHtmlEntities(content, filePath);
+      
+      if (result.changes > 0) {
+        fs.writeFileSync(filePath, result.content);
+        console.log(`Fixed ${result.changes} HTML entities in ${filePath}`);
+        totalChanges += result.changes;
+        processedFiles++;
+      }
+    } catch (error) {
+      console.error(`Error processing ${filePath}:`, error.message);
+    }
+  });
 
-console.log('HTML entities cleanup completed!');
+  console.log(`\nProcessed ${processedFiles} files with ${totalChanges} total changes.`);
+}
+
+// Run the fix
+processFiles();

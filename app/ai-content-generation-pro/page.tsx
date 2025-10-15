@@ -8,13 +8,15 @@ const features = [ { icon: <Wand2 className="w-6 h-6" />, title: "AI-Powered Wri
 
 
 export default function Page() {
-const pricingPlans = [ { name: "Starter", price: "$99", period: "month", description: "Perfect for small businesses and content creators", features: [ "10,000 words per month", "5 content templates", "Basic SEO optimization", "Email support", "Standard quality", "1 user account" ], popular: false }, { name: "Professional", price: "$199", period: "month", description: "Ideal for growing businesses with content needs", features: [ "50,000 words per month", "Unlimited templates", "Advanced SEO tools", "Priority support", "High quality content", "5 user accounts", "API access", "Custom integrations" ], popular: true }, { name: "Enterprise", price: "$499", period: "month", description: "Complete solution for large organizations", features: [ "Unlimited words", "Custom templates", "Full SEO suite", "24/7 dedicated support", "Premium quality", "Unlimited users", "Advanced API", "White-label options", "Custom training" ], popular: false } ];
-
-const testimonials = [ { name: "Jennifer Martinez", company: "Content Marketing Co.", role: "Content Director", content: "The AI Content Generation Pro has revolutionized our content production. We've increased our output by 300% while maintaining quality.", rating: 5 }, { name: "David Kim", company: "TechStart Inc.", role: "Marketing Manager", content: "The SEO optimization features are incredible. Our organic traffic has increased by 150% since we started using this platform.", rating: 5 }, { name: "Sarah Thompson", company: "Global Media Group", role: "Editor-in-Chief", content: "The multi-language support has allowed us to expand into new markets effortlessly. The quality is consistently excellent.", rating: 5 } ];
+  const features = [ { icon: <Wand2 className="w-6 h-6" />, title: "AI-Powered Writing", description: "Generate high-quality content using advanced AI models trained on millions of articles and documents.", benefits: ["Natural language generation", "Context-aware writing", "Multiple writing styles", "Real-time suggestions"]
+;
+  const pricingPlans = [ { name: "Starter", price: "$99", period: "month", description: "Perfect for small businesses and content creators", features: [ "10,000 words per month", "5 content templates", "Basic SEO optimization", "Email support", "Standard quality", "1 user account" ]
+;
+  const testimonials = [ { name: "Jennifer Martinez", company: "Content Marketing Co.", role: "Content Director", content: "The AI Content Generation Pro has revolutionized our content production. We've increased our output by 300% while maintaining quality.", rating: 5 }, { name: "David Kim", company: "TechStart Inc.", role: "Marketing Manager", content: "The SEO optimization features are incredible. Our organic traffic has increased by 150% since we started using this platform.", rating: 5 }, { name: "Sarah Thompson", company: "Global Media Group", role: "Editor-in-Chief", content: "The multi-language support has allowed us to expand into new markets effortlessly. The quality is consistently excellent.", rating: 5 } ]
+;
   return (
     <> <Helmet> <title>AI Content Generation Pro - Advanced Content Creation | Zion Tech Group</title> <meta name="description" content="Transform your content strategy with AI-powered content generation. Create high-quality, SEO-optimized content at scale with our advanced AI writing platform." /> <meta name="keywords" content="AI content generation, content creation, AI writing, SEO content, content marketing, automated writing" /> <meta property="og:title" content="AI Content Generation Pro - Zion Tech Group" /> <meta property="og:description" content="Advanced AI-powered content generation platform for businesses" /> <meta property="og:type" content="website" /> <meta property="og:url" content="https://ziontechgroup.com/ai-content-generation-pro" /> </Helmet> 
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        { /* Animated Background */ }
         
         <div className="absolute inset-0">
           
@@ -24,14 +26,12 @@ const testimonials = [ { name: "Jennifer Martinez", company: "Content Marketing 
           
         <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
         </div>
-        { /* Grid Pattern */ }
         
         <div className="absolute inset-0 opacity-20">
           
         <div className="h-full w-full"></div>
         </div>
         <main className="relative z-10">
-          { /* Hero Section */ }
           <section className="relative py-20 overflow-hidden">
             
         <div className="container mx-auto px-4">
@@ -70,7 +70,6 @@ const testimonials = [ { name: "Jennifer Martinez", company: "Content Marketing 
               </div>
             </div>
           </section>
-          { /* Features Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             
         <div className="container mx-auto px-4">
@@ -98,18 +97,15 @@ const testimonials = [ { name: "Jennifer Martinez", company: "Content Marketing 
         <div className="text-white">{ feature.icon }</div>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                      { feature.title }
                     </h3>
                     
           <p className="text-gray-300 mb-6 leading-relaxed">
-                      { feature.description }
                     </p>
                     
         <div className="space-y-2">
                       { feature.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex } className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          { benefit }
                         </div>
                       ))}
                     </div>
@@ -118,7 +114,6 @@ const testimonials = [ { name: "Jennifer Martinez", company: "Content Marketing 
               </div>
             </div>
           </section>
-          { /* Pricing Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">
@@ -144,15 +139,6 @@ const testimonials = [ { name: "Jennifer Martinez", company: "Content Marketing 
                         ? 'border-cyan-400/40 shadow-cyan-500/10' 
                         : 'border-cyan-500/20 hover:border-cyan-400/40' }`}
                   >
-                    { plan.popular && (
-                      
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        
-        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                          Most Popular
-                        </div>
-                      </div>
-                    ) }
                     
         <div className="text-center mb-8">
                       <h3 className="text-2xl font-bold text-white mb-2">{ plan.name }</h3>
@@ -169,7 +155,6 @@ const testimonials = [ { name: "Jennifer Martinez", company: "Content Marketing 
                       { plan.features.map((feature, featureIndex) => (
                         <div key={featureIndex } className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          { feature }
                         </div>
                       ))}
                     </div>
@@ -188,7 +173,6 @@ const testimonials = [ { name: "Jennifer Martinez", company: "Content Marketing 
               </div>
             </div>
           </section>
-          { /* Testimonials Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             
         <div className="container mx-auto px-4">
@@ -233,7 +217,6 @@ const testimonials = [ { name: "Jennifer Martinez", company: "Content Marketing 
               </div>
             </div>
           </section>
-          { /* CTA Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">
@@ -267,6 +250,5 @@ const testimonials = [ { name: "Jennifer Martinez", company: "Content Marketing 
         </main>
       </div>
     </>
-  );
-};
-export default AiContentGenerationProPage;
+}
+}}}

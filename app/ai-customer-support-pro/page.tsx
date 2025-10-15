@@ -49,11 +49,19 @@ const features = [
 
 
 export default function Page() {
-const pricingPlans = [ { name: "Starter", price: "$99", period: "month", description: "Perfect for small businesses starting with AI customer support", features: [ "Up to 1,000 conversations/month", "Basic AI chatbot", "Email & chat support", "Basic analytics", "Email support", "5 agents max" ], popular: false }, { name: "Professional", price: "$299", period: "month", description: "Ideal for growing companies with advanced support needs", features: [ "Up to 10,000 conversations/month", "Advanced AI chatbot", "Omnichannel support", "Advanced analytics", "Priority support", "25 agents max", "Custom integrations", "API access" ], popular: true }, { name: "Enterprise", price: "$599", period: "month", description: "Complete solution for large organizations with complex requirements", features: [ "Unlimited conversations", "Custom AI training", "All channels supported", "Full analytics suite", "24/7 dedicated support", "Unlimited agents", "Custom development", "On-premise deployment" ], popular: false } ];
-
-const testimonials = [ { name: "Jennifer Martinez", company: "E-commerce Plus", role: "Customer Success Manager", content: "AI Customer Support Pro has reduced our response time by 80% and increased customer satisfaction by 45%. The AI chatbot handles 70% of inquiries automatically.", rating: 5 }, { name: "David Thompson", company: "TechStart Inc.", role: "VP of Operations", content: "The omnichannel support and analytics have given us unprecedented visibility into customer interactions. Our team productivity has increased significantly.", rating: 5 }, { name: "Sarah Johnson", company: "Global Services Ltd", role: "Head of Support", content: "The AI-powered automation and smart routing have streamlined our support operations. We can now handle 3x more tickets with the same team size.", rating: 5 } ];
-
-const useCases = [ { title: "E-commerce Support", description: "Handle order inquiries, product questions, and returns with AI-powered assistance", icon: <ShoppingCart className="w-8 h-8" />, benefits: ["Order tracking", "Product recommendations", "Return processing", "Inventory queries"] }, { title: "SaaS Support", description: "Provide technical support and onboarding assistance for software products", icon: <Cpu className="w-8 h-8" />, benefits: ["Technical troubleshooting", "Feature explanations", "Onboarding guidance", "Bug reporting"] }, { title: "Financial Services", description: "Secure customer support for banking, insurance, and financial products", icon: <Shield className="w-8 h-8" />, benefits: ["Account inquiries", "Transaction support", "Compliance assistance", "Security alerts"] }, { title: "Healthcare Support", description: "HIPAA-compliant patient support and appointment scheduling", icon: <Activity className="w-8 h-8" />, benefits: ["Appointment scheduling", "Insurance verification", "Prescription inquiries", "Emergency routing"] } ];
+  const features = [
+    {
+      icon: <Bot className="w-6 h-6" />,
+      title: "AI-Powered Chatbots",
+      description: "Intelligent chatbots that understand context, provide instant responses, and escalate complex issues to human agents.",
+      benefits: ["24/7 availability", "Instant responses", "Context awareness", "Multi-language support"]
+;
+  const pricingPlans = [ { name: "Starter", price: "$99", period: "month", description: "Perfect for small businesses starting with AI customer support", features: [ "Up to 1,000 conversations/month", "Basic AI chatbot", "Email & chat support", "Basic analytics", "Email support", "5 agents max" ]
+;
+  const testimonials = [ { name: "Jennifer Martinez", company: "E-commerce Plus", role: "Customer Success Manager", content: "AI Customer Support Pro has reduced our response time by 80% and increased customer satisfaction by 45%. The AI chatbot handles 70% of inquiries automatically.", rating: 5 }, { name: "David Thompson", company: "TechStart Inc.", role: "VP of Operations", content: "The omnichannel support and analytics have given us unprecedented visibility into customer interactions. Our team productivity has increased significantly.", rating: 5 }, { name: "Sarah Johnson", company: "Global Services Ltd", role: "Head of Support", content: "The AI-powered automation and smart routing have streamlined our support operations. We can now handle 3x more tickets with the same team size.", rating: 5 } ]
+;
+  const useCases = [ { title: "E-commerce Support", description: "Handle order inquiries, product questions, and returns with AI-powered assistance", icon: <ShoppingCart className="w-8 h-8" />, benefits: ["Order tracking", "Product recommendations", "Return processing", "Inventory queries"]
+;
   return (
     <> <Helmet> <title>AI Customer Support Pro - Intelligent Support Platform | Zion Tech Group</title> <meta name="description" content="Transform your customer support with AI-powered chatbots, omnichannel support, and intelligent automation. Reduce response times and increase satisfaction." /> <meta name="keywords" content="AI customer support, chatbot, omnichannel support, customer service automation, NLP, customer satisfaction" /> <meta property="og:title" content="AI Customer Support Pro - Zion Tech Group" /> <meta property="og:description" content="Intelligent customer support platform with AI-powered chatbots and omnichannel capabilities" /> <meta property="og:type" content="website" /> <meta property="og:url" content="https://ziontechgroup.com/ai-customer-support-pro" /> </Helmet> 
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"> { /* Animated Background */ } 
@@ -61,14 +69,12 @@ const useCases = [ { title: "E-commerce Support", description: "Handle order inq
         <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div> 
         <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div> 
         <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div> </div>
-        { /* Grid Pattern */ }
         
         <div className="absolute inset-0 opacity-20">
           
         <div className="h-full w-full"></div>
         </div>
         <main className="relative z-10">
-          { /* Hero Section */ }
           <section className="relative py-20 overflow-hidden">
             
         <div className="container mx-auto px-4">
@@ -107,7 +113,6 @@ const useCases = [ { title: "E-commerce Support", description: "Handle order inq
               </div>
             </div>
           </section>
-          { /* Features Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             
         <div className="container mx-auto px-4">
@@ -135,18 +140,15 @@ const useCases = [ { title: "E-commerce Support", description: "Handle order inq
         <div className="text-white">{ feature.icon }</div>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                      { feature.title }
                     </h3>
                     
           <p className="text-gray-300 mb-6 leading-relaxed">
-                      { feature.description }
                     </p>
                     
         <div className="space-y-2">
                       { feature.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex } className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          { benefit }
                         </div>
                       ))}
                     </div>
@@ -155,7 +157,6 @@ const useCases = [ { title: "E-commerce Support", description: "Handle order inq
               </div>
             </div>
           </section>
-          { /* Use Cases Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">
@@ -190,7 +191,6 @@ const useCases = [ { title: "E-commerce Support", description: "Handle order inq
                       { useCase.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex } className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          { benefit }
                         </div>
                       ))}
                     </div>
@@ -199,7 +199,6 @@ const useCases = [ { title: "E-commerce Support", description: "Handle order inq
               </div>
             </div>
           </section>
-          { /* Pricing Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             
         <div className="container mx-auto px-4">
@@ -225,15 +224,6 @@ const useCases = [ { title: "E-commerce Support", description: "Handle order inq
                         ? 'border-cyan-400/40 shadow-cyan-500/10' 
                         : 'border-cyan-500/20 hover:border-cyan-400/40' }`}
                   >
-                    { plan.popular && (
-                      
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        
-        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                          Most Popular
-                        </div>
-                      </div>
-                    ) }
                     
         <div className="text-center mb-8">
                       <h3 className="text-2xl font-bold text-white mb-2">{ plan.name }</h3>
@@ -250,7 +240,6 @@ const useCases = [ { title: "E-commerce Support", description: "Handle order inq
                       { plan.features.map((feature, featureIndex) => (
                         <div key={featureIndex } className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          { feature }
                         </div>
                       ))}
                     </div>
@@ -269,7 +258,6 @@ const useCases = [ { title: "E-commerce Support", description: "Handle order inq
               </div>
             </div>
           </section>
-          { /* Testimonials Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">
@@ -314,7 +302,6 @@ const useCases = [ { title: "E-commerce Support", description: "Handle order inq
               </div>
             </div>
           </section>
-          { /* CTA Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             
         <div className="container mx-auto px-4">
@@ -348,6 +335,5 @@ const useCases = [ { title: "E-commerce Support", description: "Handle order inq
         </main>
       </div>
     </>
-  );
-};
-export default AiCustomerSupportProPage;
+}
+}}}}

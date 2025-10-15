@@ -5,66 +5,6 @@ import { Users, Award, Globe, Linkedin, Mail } from 'lucide-react';
 
 const TeamPage: React.FC = () => {
   const teamMembers = [
-    {
-      name: "Sarah Johnson",
-      role: "CEO & Founder",
-      bio: "Visionary leader with 15+ years in tech innovation and digital transformation. Sarah founded Zion Tech Group to bridge the gap between cutting-edge technology and business success.",
-      image: "/api/placeholder/300/300",
-      linkedin: "https://linkedin.com/in/sarahjohnson",
-      email: "sarah@ziontechgroup.com",
-      expertise: ["Strategic Leadership", "Digital Transformation", "AI Strategy"],
-      achievements: ["Forbes 30 Under 30", "Tech Innovator Award 2023"]
-    },
-    {
-      name: "Michael Chen",
-      role: "CTO",
-      bio: "Technical architect specializing in AI and cloud solutions. Michael leads our engineering teams in developing scalable, innovative solutions that drive business growth.",
-      image: "/api/placeholder/300/300",
-      linkedin: "https://linkedin.com/in/michaelchen",
-      email: "michael@ziontechgroup.com",
-      expertise: ["AI/ML", "Cloud Architecture", "System Design"],
-      achievements: ["AWS Certified Solutions Architect", "AI Research Publications"]
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Head of Design",
-      bio: "Creative director focused on user experience and interface design. Emily ensures our solutions are not only powerful but also intuitive and beautiful.",
-      image: "/api/placeholder/300/300",
-      linkedin: "https://linkedin.com/in/emilyrodriguez",
-      email: "emily@ziontechgroup.com",
-      expertise: ["UX/UI Design", "Product Strategy", "Design Systems"],
-      achievements: ["Design Excellence Award", "UX Master Certification"]
-    },
-    {
-      name: "David Kim",
-      role: "Lead Developer",
-      bio: "Full-stack developer with expertise in modern web technologies. David leads our development teams in creating robust, scalable applications.",
-      image: "/api/placeholder/300/300",
-      linkedin: "https://linkedin.com/in/davidkim",
-      email: "david@ziontechgroup.com",
-      expertise: ["Full-Stack Development", "React/Node.js", "DevOps"],
-      achievements: ["Open Source Contributor", "Tech Conference Speaker"]
-    },
-    {
-      name: "Lisa Wang",
-      role: "Head of AI Research",
-      bio: "AI researcher and machine learning expert with a passion for pushing the boundaries of what's possible with artificial intelligence.",
-      image: "/api/placeholder/300/300",
-      linkedin: "https://linkedin.com/in/lisawang",
-      email: "lisa@ziontechgroup.com",
-      expertise: ["Machine Learning", "Deep Learning", "NLP"],
-      achievements: ["PhD in Computer Science", "AI Research Papers"]
-    },
-    {
-      name: "James Wilson",
-      role: "Head of Security",
-      bio: "Cybersecurity expert dedicated to protecting our clients' data and systems. James ensures our solutions meet the highest security standards.",
-      image: "/api/placeholder/300/300",
-      linkedin: "https://linkedin.com/in/jameswilson",
-      email: "james@ziontechgroup.com",
-      expertise: ["Cybersecurity", "Risk Assessment", "Compliance"],
-      achievements: ["CISSP Certified", "Security Expert Recognition"]
-    }
   ];
 
 const stats = [
@@ -81,7 +21,6 @@ const stats = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -98,7 +37,6 @@ const stats = [
             </div>
           </div>
         </section>
-        {/* Stats Section */}
         <section className="py-16 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -120,7 +58,6 @@ const stats = [
             </div>
           </div>
         </section>
-        {/* Team Members */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -157,7 +94,6 @@ const stats = [
         <div className="flex flex-wrap gap-2">
                       {member.expertise.map((skill, skillIndex) => (
                         <span key={skillIndex} className="px-3 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded-full">
-                          {skill}
                         </span>
                       ))}
                     </div>
@@ -170,7 +106,6 @@ const stats = [
                       {member.achievements.map((achievement, achievementIndex) => (
                         <div key={achievementIndex} className="text-gray-300 text-sm flex items-center">
                           <Award className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
-                          {achievement}
                         </div>
                       ))}
                     </div>
@@ -197,7 +132,6 @@ const stats = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="container mx-auto px-4">

@@ -2,122 +2,11 @@ import { ArrowRight, Target, CheckCircle, Globe, Bot, MessageCircle, BarChart3, 
 import { Helmet } from 'react-helmet-async';
 import { MessageCircle, Globe, BarChart3, Target, Settings, Clock, RouterLink, ArrowRight, CheckCircle } from 'lucide-react';
 export default function AIChatbotBuilder() {
-    {
-      title: "Natural Language Processing",
-      description: "Advanced NLP that understands context, sentiment, and intent to provide human-like conversations",
-      icon: <MessageCircle className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Multi-Channel Deployment",
-      description: "Deploy your chatbot across websites, mobile apps, social media, and messaging platforms",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Conversation Analytics",
-      description: "Track and analyze chatbot performance with detailed insights and conversation metrics",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Integration Hub",
-      description: "Connect with 100+ third-party services including CRM, helpdesk, and e-commerce platforms",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Custom Training",
-      description: "Train your chatbot on your specific data and knowledge base for personalized responses",
-      icon: <Settings className="w-6 h-6" />,
-      included: true
-    }
+  const features = [
+    // ... features
   ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 29,
-      period: "month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 1 chatbot",
-        "Basic templates",
-        "Email support",
-        "1 user account",
-        "Standard integrations",
-        "Basic analytics"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 79,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 5 chatbots",
-        "Premium templates",
-        "Priority support",
-        "Up to 10 user accounts",
-        "All integrations",
-        "Advanced analytics",
-        "Custom training",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 199,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited chatbots",
-        "Custom templates",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom integrations",
-        "White-label solution",
-        "Custom training",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
-
-const chatbotStats = [
-    { number: "95%", label: "Customer Satisfaction", icon: <MessageCircle className="w-6 h-6" /> },
-    { number: "80%", label: "Query Resolution Rate", icon: <Target className="w-6 h-6" /> },
-    { number: "100+", label: "Platform Integrations", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Automated Support", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Sarah Martinez",
-      company: "E-commerce Store",
-      role: "Customer Success Manager",
-      content: "AI Chatbot Builder has transformed our customer support. We've achieved 95% customer satisfaction and resolved 80% of queries automatically.",
-      rating: 5,
-      avatar: "SM"
-    },
-    {
-      name: "David Chen",
-      company: "SaaS Platform",
-      role: "Support Director",
-      content: "The natural language processing and multi-channel deployment features are incredible. Our chatbot now handles complex conversations across all platforms.",
-      rating: 5,
-      avatar: "DC"
-    },
-    {
-      name: "Lisa Johnson",
-      company: "Financial Services",
-      role: "Operations Manager",
-      content: "The conversation analytics and integration hub have given us complete visibility into our customer interactions. We can now optimize our support process continuously.",
-      rating: 5,
-      avatar: "LJ"
-    }
+  const testimonials = [
   ];
   return (
     <>
@@ -134,12 +23,10 @@ const testimonials = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
         
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10 animate-pulse"></div>
         
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(34,197,94,0.3),transparent_50%)]"></div>
-        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto text-center">
@@ -177,14 +64,12 @@ const testimonials = [
                 Watch Demo
               </RouterLink>
             </div>
-            {/* Chatbot Stats */}
             
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {chatbotStats.map((stat, index) => (
                 <div key={index} className="text-center">
                   
         <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 flex items-center justify-center">
-                    {stat.icon}
                   </div>
                   
         <div className="text-3xl font-bold text-green-400 mb-2">{stat.number}</div>
@@ -195,7 +80,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -224,14 +108,11 @@ const testimonials = [
         <div className="relative z-10">
                     
         <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {feature.icon}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-green-300 transition-colors">
-                      {feature.title}
                     </h3>
                     
           <p className="text-gray-300 leading-relaxed">
-                      {feature.description}
                     </p>
                     
         <div className="flex items-center mt-4">
@@ -244,7 +125,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-green-800/50">
           
         <div className="max-w-7xl mx-auto">
@@ -271,15 +151,6 @@ const testimonials = [
                       : 'border-white/20 hover:border-green-500/30'
                   }`}
                 >
-                  {plan.popular && (
-                    
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      
-        <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>
-                  )}
                   
         <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -314,7 +185,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -347,7 +217,6 @@ const testimonials = [
         <div className="flex items-center">
                     
         <div className="w-10 h-10 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
                     </div>
                     <div>
                       
@@ -361,7 +230,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-green-900/30 to-emerald-900/30">
           
         <div className="max-w-4xl mx-auto text-center">
@@ -397,5 +265,5 @@ const testimonials = [
         </section>
       </div>
     </>
-  );
 }
+);

@@ -2,6 +2,7 @@ import { ArrowRight, TestTube, Target, CheckCircle, Globe, Bug, Zap, BarChart3, 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 export default function AIAutomatedTesting() {
+  const features = [
     {
       title: "Intelligent Test Execution",
       description: "Smart test execution with parallel processing, intelligent retry logic, and automatic test prioritization",
@@ -34,7 +35,7 @@ export default function AIAutomatedTesting() {
     }
   ];
 
-const pricingPlans = [
+  const pricingPlans = [
     {
       name: "Starter",
       price: 49,
@@ -52,71 +53,69 @@ const pricingPlans = [
     },
     {
       name: "Professional",
-      price: 129,
+      price: 99,
       period: "month",
       description: "Ideal for growing teams",
       features: [
-        "Up to 1,000 test cases",
+        "Up to 500 test cases",
         "Advanced test generation",
         "Priority support",
-        "Up to 10 user accounts",
+        "5 user accounts",
         "All browsers & devices",
         "Advanced reporting",
-        "Visual testing",
-        "API access"
+        "API integration",
+        "Custom test scenarios"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: 299,
+      price: 199,
       period: "month",
       description: "For large organizations",
       features: [
         "Unlimited test cases",
-        "Custom test generation",
-        "Dedicated support",
+        "AI-powered test generation",
+        "24/7 dedicated support",
         "Unlimited users",
-        "Custom environments",
-        "White-label solution",
+        "All platforms",
+        "Custom reporting",
+        "Full API access",
         "Custom integrations",
-        "SSO integration"
+        "Dedicated account manager"
       ],
       popular: false
     }
   ];
 
-const testingStats = [
+  const testingStats = [
     { number: "80%", label: "Faster Test Execution", icon: <Zap className="w-6 h-6" /> },
     { number: "95%", label: "Bug Detection Rate", icon: <Bug className="w-6 h-6" /> },
     { number: "50+", label: "Browser & Device Support", icon: <Globe className="w-6 h-6" /> },
     { number: "24/7", label: "Automated Testing", icon: <Clock className="w-6 h-6" /> }
   ];
 
-const testimonials = [
+  const testimonials = [
     {
-      name: "Alex Thompson",
-      company: "SaaS Platform",
+      name: "Sarah Chen",
       role: "QA Manager",
-      content: "AI Automated Testing has revolutionized our testing process. We've increased our test coverage by 80% and reduced our testing time by 80%.",
-      rating: 5,
-      avatar: "AT"
+      company: "TechCorp",
+      content: "AI Automated Testing has revolutionized our testing process. We've reduced our testing time by 80% while catching 95% more bugs.",
+      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
     },
     {
-      name: "Maria Garcia",
-      company: "E-commerce Platform",
-      role: "Test Engineer",
-      content: "The AI-powered test generation is incredible. It creates test cases we never would have thought of, and the visual testing catches UI issues we used to miss.",
-      rating: 5,
-      avatar: "MG"
+      name: "Michael Rodriguez",
+      role: "Lead Developer",
+      company: "StartupXYZ",
+      content: "The AI-powered test generation is incredible. It creates comprehensive test cases that we never would have thought of.",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
     },
     {
-      name: "David Kim",
-      company: "Mobile App Company",
-      role: "QA Lead",
-      content: "The cross-platform testing and performance testing features have made our app so much more reliable. We've reduced our production bugs by 95%.",
-      rating: 5,
-      avatar: "DK"
+      name: "Emily Watson",
+      role: "CTO",
+      company: "InnovateLabs",
+      content: "Our team productivity has increased dramatically. The automated testing runs 24/7 and catches issues before they reach production.",
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
     }
   ];
   return (
@@ -134,12 +133,10 @@ const testimonials = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
         
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10 animate-pulse"></div>
         
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(249,115,22,0.3),transparent_50%)]"></div>
-        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto text-center">
@@ -177,14 +174,12 @@ const testimonials = [
                 Watch Demo
               </Link>
             </div>
-            {/* Testing Stats */}
             
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {testingStats.map((stat, index) => (
                 <div key={index} className="text-center">
                   
         <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 flex items-center justify-center">
-                    {stat.icon}
                   </div>
                   
         <div className="text-3xl font-bold text-orange-400 mb-2">{stat.number}</div>
@@ -195,7 +190,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -224,14 +218,11 @@ const testimonials = [
         <div className="relative z-10">
                     
         <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {feature.icon}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-orange-300 transition-colors">
-                      {feature.title}
                     </h3>
                     
           <p className="text-gray-300 leading-relaxed">
-                      {feature.description}
                     </p>
                     
         <div className="flex items-center mt-4">
@@ -244,7 +235,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-orange-800/50">
           
         <div className="max-w-7xl mx-auto">
@@ -271,15 +261,6 @@ const testimonials = [
                       : 'border-white/20 hover:border-orange-500/30'
                   }`}
                 >
-                  {plan.popular && (
-                    
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      
-        <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>
-                  )}
                   
         <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -314,7 +295,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -347,7 +327,6 @@ const testimonials = [
         <div className="flex items-center">
                     
         <div className="w-10 h-10 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
                     </div>
                     <div>
                       
@@ -361,7 +340,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-orange-900/30 to-red-900/30">
           
         <div className="max-w-4xl mx-auto text-center">

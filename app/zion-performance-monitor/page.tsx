@@ -2,122 +2,11 @@ import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import { BarChart3, Target, Globe, Users, FileText, Activity, Zap, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionPerformanceMonitor() {
-    {
-      title: "AI-Powered Analytics",
-      description: "Advanced AI analytics that predict issues before they occur and provide actionable insights",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Custom Dashboards",
-      description: "Create custom dashboards with widgets, charts, and metrics tailored to your specific needs",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Multi-Platform Support",
-      description: "Monitor applications across cloud platforms, on-premises, and hybrid environments",
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Team Collaboration",
-      description: "Share insights with your team, set up alerts, and collaborate on incident response",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate comprehensive performance reports with automated scheduling and distribution",
-      icon: <FileText className="w-6 h-6" />,
-      included: true
-    }
+  const features = [
+    // ... features
   ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 39,
-      period: "month",
-      description: "Perfect for small applications",
-      features: [
-        "Up to 10 monitors",
-        "Basic alerts",
-        "Email support",
-        "1 user account",
-        "Standard dashboards",
-        "Basic reporting"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 99,
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 100 monitors",
-        "Advanced alerts",
-        "Priority support",
-        "Up to 10 user accounts",
-        "Custom dashboards",
-        "Advanced reporting",
-        "AI analytics",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 249,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited monitors",
-        "Custom alerts",
-        "Dedicated support",
-        "Unlimited users",
-        "White-label dashboards",
-        "Custom reporting",
-        "White-label solution",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
-
-const performanceStats = [
-    { number: "99.9%", label: "Uptime Monitoring", icon: <Activity className="w-6 h-6" /> },
-    { number: "50+", label: "Platform Integrations", icon: <Globe className="w-6 h-6" /> },
-    { number: "90%", label: "Faster Issue Resolution", icon: <Zap className="w-6 h-6" /> },
-    { number: "24/7", label: "Monitoring Coverage", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Alex Thompson",
-      company: "SaaS Platform",
-      role: "DevOps Engineer",
-      content: "Zion Performance Monitor has revolutionized our monitoring strategy. We've reduced our mean time to resolution by 90% and improved our uptime to 99.9%.",
-      rating: 5,
-      avatar: "AT"
-    },
-    {
-      name: "Maria Garcia",
-      company: "E-commerce Platform",
-      role: "Site Reliability Engineer",
-      content: "The AI-powered analytics are incredible. We can now predict and prevent issues before they impact our users, which has significantly improved our customer satisfaction.",
-      rating: 5,
-      avatar: "MG"
-    },
-    {
-      name: "David Kim",
-      company: "Financial Services",
-      role: "Infrastructure Manager",
-      content: "The custom dashboards and team collaboration features have made our incident response so much more efficient. Our team can now respond to issues in real-time.",
-      rating: 5,
-      avatar: "DK"
-    }
+  const testimonials = [
   ];
   return (
     <>
@@ -134,12 +23,10 @@ const testimonials = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
         
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-indigo-500/10 animate-pulse"></div>
         
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.3),transparent_50%)]"></div>
-        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto text-center">
@@ -177,14 +64,12 @@ const testimonials = [
                 Watch Demo
               </Link>
             </div>
-            {/* Performance Stats */}
             
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {performanceStats.map((stat, index) => (
                 <div key={index} className="text-center">
                   
         <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
-                    {stat.icon}
                   </div>
                   
         <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
@@ -195,7 +80,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -224,14 +108,11 @@ const testimonials = [
         <div className="relative z-10">
                     
         <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {feature.icon}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                      {feature.title}
                     </h3>
                     
           <p className="text-gray-300 leading-relaxed">
-                      {feature.description}
                     </p>
                     
         <div className="flex items-center mt-4">
@@ -244,7 +125,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-cyan-800/50">
           
         <div className="max-w-7xl mx-auto">
@@ -271,15 +151,6 @@ const testimonials = [
                       : 'border-white/20 hover:border-cyan-500/30'
                   }`}
                 >
-                  {plan.popular && (
-                    
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      
-        <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>
-                  )}
                   
         <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -314,7 +185,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -347,7 +217,6 @@ const testimonials = [
         <div className="flex items-center">
                     
         <div className="w-10 h-10 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
                     </div>
                     <div>
                       
@@ -361,7 +230,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-blue-900/30">
           
         <div className="max-w-4xl mx-auto text-center">
@@ -397,5 +265,5 @@ const testimonials = [
         </section>
       </div>
     </>
-  );
 }
+);

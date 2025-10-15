@@ -4,107 +4,57 @@ import { Globe, Image, Hash, Users, Video, TrendingUp, Clock, BarChart3, Zap, Ta
 
 const AiSocialMediaManagerPage: React.FC = () => {
   const features = [
-    &quot;AI-powered content generation for all platforms&quot;,
-    &quot;Automated posting schedule optimization&quot;,
-    &quot;Real-time engagement analytics and insights&quot;,
-    &quot;Hashtag research and optimization&quot;,
-    &quot;Competitor analysis and benchmarking&quot;,
-    &quot;Multi-platform content adaptation&quot;,
-    &quot;Brand voice consistency monitoring&quot;,
-    &quot;Influencer collaboration management&quot;,
-    &quot;Crisis management and response&quot;,
-    &quot;ROI tracking and attribution modeling&quot;
+    "AI-powered content generation for all platforms",
+    "Automated posting schedule optimization",
+    "Real-time engagement analytics and insights",
+    "Hashtag research and optimization",
+    "Competitor analysis and benchmarking",
+    "Multi-platform content adaptation",
+    "Brand voice consistency monitoring",
+    "Influencer collaboration management",
+    "Crisis management and response",
+    "ROI tracking and attribution modeling"
   ];
 
   const integrations = [
-    { name: &quot;Facebook&quot;, icon: <Globe className="w-6 h-6" />, color: &quot;text-blue-600&quot; },
-    { name: &quot;Instagram&quot;, icon: <Image className="w-6 h-6" />, color: &quot;text-pink-600&quot; },
-    { name: &quot;Twitter&quot;, icon: <Hash className="w-6 h-6" />, color: &quot;text-cyan-600&quot; },
-    { name: &quot;LinkedIn&quot;, icon: <Users className="w-6 h-6" />, color: &quot;text-blue-700&quot; },
-    { name: &quot;YouTube&quot;, icon: <Video className="w-6 h-6" />, color: &quot;text-red-600&quot; },
-    { name: &quot;TikTok&quot;, icon: <TrendingUp className="w-6 h-6" />, color: &quot;text-black&quot; }
+    { name: "Facebook", icon: <Globe className="w-6 h-6" />, color: "text-blue-600" },
+    { name: "Instagram", icon: <Image className="w-6 h-6" />, color: "text-pink-600" },
+    { name: "Twitter", icon: <Hash className="w-6 h-6" />, color: "text-cyan-600" },
+    { name: "LinkedIn", icon: <Users className="w-6 h-6" />, color: "text-blue-700" },
+    { name: "YouTube", icon: <Video className="w-6 h-6" />, color: "text-red-600" },
+    { name: "TikTok", icon: <TrendingUp className="w-6 h-6" />, color: "text-black" }
   ];
 
 const pricingPlans = [
-    {
-      name: &quot;Starter&quot;,
-      price: &quot;$29&quot;,
-      period: &quot;month&quot;,
-      description: &quot;Perfect for small businesses and influencers&quot;,
-      features: [
-        &quot;3 social media accounts&quot;,
-        &quot;Basic AI features&quot;,
-        &quot;Content scheduling&quot;,
-        &quot;Basic analytics&quot;,
-        &quot;Email support&quot;,
-        &quot;1 user account&quot;
-      ],
-      popular: false
-    },
-    {
-      name: &quot;Professional&quot;,
-      price: &quot;$99&quot;,
-      period: &quot;month&quot;,
-      description: &quot;Ideal for growing businesses&quot;,
-      features: [
-        &quot;10 social media accounts&quot;,
-        &quot;Advanced AI features&quot;,
-        &quot;Advanced analytics&quot;,
-        &quot;Priority support&quot;,
-        &quot;5 user accounts&quot;,
-        &quot;Hashtag research&quot;,
-        &quot;Competitor analysis&quot;,
-        &quot;Influencer outreach&quot;
-      ],
-      popular: true
-    },
-    {
-      name: &quot;Enterprise&quot;,
-      price: &quot;$299&quot;,
-      period: &quot;month&quot;,
-      description: &quot;For large organizations&quot;,
-      features: [
-        &quot;Unlimited accounts&quot;,
-        &quot;Full AI suite&quot;,
-        &quot;White-label options&quot;,
-        &quot;Custom analytics&quot;,
-        &quot;24/7 phone support&quot;,
-        &quot;Unlimited users&quot;,
-        &quot;Advanced automation&quot;,
-        &quot;API access&quot;,
-        &quot;Dedicated account manager&quot;
-      ],
-      popular: false
-    }
   ];
 
   const stats = [
-    { number: &quot;300%&quot;, label: &quot;Engagement Increase&quot;, icon: <TrendingUp className="w-6 h-6" /> },
-    { number: &quot;50%&quot;, label: &quot;Time Saved&quot;, icon: <Clock className="w-6 h-6" /> },
-    { number: &quot;200%&quot;, label: &quot;Follower Growth&quot;, icon: <Users className="w-6 h-6" /> },
-    { number: &quot;150%&quot;, label: &quot;ROI Improvement&quot;, icon: <BarChart3 className="w-6 h-6" /> }
+    { number: "300%", label: "Engagement Increase", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "50%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
+    { number: "200%", label: "Follower Growth", icon: <Users className="w-6 h-6" /> },
+    { number: "150%", label: "ROI Improvement", icon: <BarChart3 className="w-6 h-6" /> }
   ];
 
 const benefits = [
     {
       icon: <Zap className="w-8 h-8" />,
-      title: &quot;300% Engagement Increase&quot;,
-      description: &quot;AI-powered content optimization dramatically boosts engagement rates&quot;
+      title: "300% Engagement Increase",
+      description: "AI-powered content optimization dramatically boosts engagement rates"
     },
     {
       icon: <Target className="w-8 h-8" />,
-      title: &quot;Smart Content Strategy&quot;,
-      description: &quot;Data-driven content planning and optimization for maximum impact&quot;
+      title: "Smart Content Strategy",
+      description: "Data-driven content planning and optimization for maximum impact"
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: &quot;Advanced Analytics&quot;,
-      description: &quot;Comprehensive insights and performance tracking across all platforms&quot;
+      title: "Advanced Analytics",
+      description: "Comprehensive insights and performance tracking across all platforms"
     },
     {
       icon: <MessageSquare className="w-8 h-8" />,
-      title: &quot;Community Management&quot;,
-      description: &quot;Automated responses and intelligent community engagement&quot;
+      title: "Community Management",
+      description: "Automated responses and intelligent community engagement"
     }
   ];
   return (
@@ -119,7 +69,6 @@ const benefits = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20 relative overflow-hidden">
           
         <div className="absolute inset-0">
@@ -162,7 +111,6 @@ const benefits = [
                   View Demo
                 </button>
               </div>
-              {/* Stats */}
               
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 {stats.map((stat, index) => (
@@ -182,7 +130,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        {/* Benefits Section */}
         <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
           
         <div className="container mx-auto px-4">
@@ -215,7 +162,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -246,7 +192,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        {/* Integrations Section */}
         <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
           
         <div className="container mx-auto px-4">
@@ -272,7 +217,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        {/* Pricing Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -292,15 +236,6 @@ const benefits = [
                     ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/10' 
                     : 'border-cyan-500/20 hover:border-cyan-400/40'
                 } transition-all duration-300 hover:transform hover:scale-105`}>
-                  {plan.popular && (
-                    
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      
-        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>
-                  )}
                   
         <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -326,7 +261,7 @@ const benefits = [
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                   }`}>
-                    {plan.popular ? &apos;Get Started&apos; : &apos;Choose Plan&apos;}
+                    {plan.popular ? 'Get Started' : 'Choose Plan'}
                     <ArrowRight className="w-4 h-4 ml-2 inline" />
                   </button>
                 </div>
@@ -334,7 +269,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="container mx-auto px-4">

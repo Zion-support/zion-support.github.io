@@ -4,38 +4,7 @@ import { Link } from 'react-router-dom';
 import { BarChart3, TrendingUp, Database, Eye, Zap, Shield, Target, Users, CheckCircle } from 'lucide-react';
 
 const AiAnalyticsPage: React.FC = () => {
-  const features = [
-    {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "Real-time Analytics",
-      description: "Monitor your business metrics in real-time with interactive dashboards and live data feeds."
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Predictive Insights",
-      description: "AI-powered forecasting and trend analysis to help you make data-driven decisions."
-    },
-    {
-      icon: <Database className="w-8 h-8" />,
-      title: "Data Integration",
-      description: "Seamlessly connect and analyze data from multiple sources and platforms."
-    },
-    {
-      icon: <Eye className="w-8 h-8" />,
-      title: "Custom Dashboards",
-      description: "Create personalized dashboards tailored to your specific business needs and KPIs."
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Automated Reports",
-      description: "Generate and schedule automated reports with AI-powered insights and recommendations."
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Enterprise Security",
-      description: "Bank-level security with role-based access control and data encryption."
-    }
-  ];
+  
 
 const capabilities = [
     "Advanced data visualization and charting",
@@ -49,26 +18,8 @@ const capabilities = [
   ];
 
 const useCases = [
-    {
-      title: "Business Intelligence",
-      description: "Transform raw data into actionable insights for strategic decision making.",
-      icon: <Target className="w-6 h-6" />
-    },
-    {
-      title: "Customer Analytics",
-      description: "Understand customer behavior, preferences, and lifetime value through advanced analytics.",
-      icon: <Users className="w-6 h-6" />
-    },
-    {
-      title: "Performance Monitoring",
-      description: "Track key performance indicators and operational metrics in real-time.",
-      icon: <BarChart3 className="w-6 h-6" />
-    },
-    {
-      title: "Predictive Modeling",
-      description: "Forecast trends, demand, and outcomes using machine learning algorithms.",
-      icon: <TrendingUp className="w-6 h-6" />
-    }
+  
+
   ];
   return (
     <>
@@ -82,7 +33,6 @@ const useCases = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -115,7 +65,6 @@ const useCases = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -135,7 +84,6 @@ const useCases = [
         <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     
         <div className="text-white">
-                      {feature.icon}
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
@@ -146,7 +94,6 @@ const useCases = [
             </div>
           </div>
         </section>
-        {/* Capabilities Section */}
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -172,7 +119,6 @@ const useCases = [
             </div>
           </div>
         </section>
-        {/* Use Cases Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -192,7 +138,6 @@ const useCases = [
         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     
         <div className="text-white">
-                      {useCase.icon}
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
@@ -203,7 +148,6 @@ const useCases = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="container mx-auto px-4">

@@ -18,9 +18,8 @@ const [isSubmitting, setIsSubmitting] = useState(false);
 
 const [isSubmitted, setIsSubmitted] = useState(false);
 
-const handleInputChange = () => {
-  return;
-} = e.target;
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
@@ -52,7 +51,6 @@ const demoOptions = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -70,7 +68,6 @@ const demoOptions = [
             </div>
           </div>
         </section>
-        {/* Demo Options */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -90,7 +87,6 @@ const demoOptions = [
         <div className="text-center">
                     
         <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      {option.icon}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">{option.title}</h3>
                     
@@ -103,7 +99,6 @@ const demoOptions = [
             </div>
           </div>
         </section>
-        {/* Contact Form */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -117,119 +112,6 @@ const demoOptions = [
                   Fill out the form below and we'll get back to you within 24 hours to schedule your personalized demo.
                 </p>
               </div>
-              {isSubmitted ? (
-                
-        <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-8 text-center">
-                  <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-white mb-2">Demo Request Submitted!</h3>
-                  
-          <p className="text-gray-300">
-                    Thank you for your interest. We'll contact you within 24 hours to schedule your demo.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  
-        <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-white text-sm font-medium mb-2">Full Name *</label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                        placeholder="Your full name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-white text-sm font-medium mb-2">Email *</label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                        placeholder="your.email@company.com"
-                      />
-                    </div>
-                  </div>
-                  
-        <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-white text-sm font-medium mb-2">Company</label>
-                      <input
-                        type="text"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                        placeholder="Your company name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-white text-sm font-medium mb-2">Phone</label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                        placeholder="+1 (555) 123-4567"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-white text-sm font-medium mb-2">Service Interest</label>
-                    <select
-                      name="service"
-                      value={formData.service}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                    >
-                      <option value="">Select a service</option>
-                      <option value="ai-solutions">AI Solutions</option>
-                      <option value="5g-technology">5G Technology</option>
-                      <option value="it-services">IT Services</option>
-                      <option value="micro-saas">Micro SAAS</option>
-                      <option value="custom">Custom Solution</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-white text-sm font-medium mb-2">Message</label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      rows={4}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                      placeholder="Tell us about your specific needs and what you'd like to see in the demo..."
-                    />
-                  </div>
-                  
-        <div className="text-center">
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center mx-auto"
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <Clock className="w-5 h-5 mr-2" />
-                          Scheduling...
-                        </>
-                      ) : (
-                        <>
-                          <Calendar className="w-5 h-5 mr-2" />
-                          Schedule Demo
-                        </>
-                      )}
-                    </button>
-                  </div>
-                </form>
-              )}
             </div>
           </div>
         </section>

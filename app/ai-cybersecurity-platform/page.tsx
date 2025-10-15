@@ -8,13 +8,16 @@ const features = [ { icon: <Brain className="w-6 h-6" />, title: "AI Threat Dete
 
 
 export default function Page() {
-const threatTypes = [ { title: "Malware Protection", description: "Advanced detection and prevention of malware, ransomware, and other malicious software", icon: <Bug className="w-8 h-8" />, coverage: "99.9%" }, { title: "Phishing Defense", description: "AI-powered email security that identifies and blocks sophisticated phishing attempts", icon: <Mail className="w-8 h-8" />, coverage: "99.7%" }, { title: "DDoS Mitigation", description: "Real-time protection against distributed denial-of-service attacks", icon: <Network className="w-8 h-8" />, coverage: "100%" }, { title: "Insider Threats", description: "Behavioral analysis to detect and prevent insider threats and data exfiltration", icon: <Users className="w-8 h-8" />, coverage: "98.5%" } ];
-
-const pricingPlans = [ { name: "Essential", price: "$299", period: "month", description: "Perfect for small businesses and startups", features: [ "Basic threat detection", "Email security", "Firewall protection", "24/7 monitoring", "Email support", "Up to 50 users", "Basic reporting" ], popular: false }, { name: "Professional", price: "$699", period: "month", description: "Ideal for growing companies with advanced security needs", features: [ "Advanced AI detection", "Full security suite", "Incident response", "Priority support", "Up to 500 users", "Advanced analytics", "Compliance tools", "Custom integrations" ], popular: true }, { name: "Enterprise", price: "$1,499", period: "month", description: "Complete security solution for large organizations", features: [ "Full AI capabilities", "Custom security policies", "Dedicated SOC team", "24/7 phone support", "Unlimited users", "Custom development", "On-premise deployment", "White-label options" ], popular: false } ];
-
-const testimonials = [ { name: "Michael Chen", company: "FinTech Solutions", role: "CISO", content: "The AI cybersecurity platform has reduced our security incidents by 95%. The predictive capabilities are game-changing.", rating: 5 }, { name: "Sarah Williams", company: "Healthcare Corp", role: "IT Director", content: "HIPAA compliance has never been easier. The automated monitoring and reporting save us hours every week.", rating: 5 }, { name: "David Rodriguez", company: "Manufacturing Inc", role: "Security Manager", content: "The threat detection is incredibly accurate. We've prevented several potential breaches before they could cause damage.", rating: 5 } ];
-
-const complianceStandards = [ { name: "SOC 2", description: "Security controls" }, { name: "ISO 27001", description: "Information security" }, { name: "GDPR", description: "Data protection" }, { name: "HIPAA", description: "Healthcare privacy" }, { name: "PCI DSS", description: "Payment security" }, { name: "NIST", description: "Cybersecurity framework" } ];
+  const features = [ { icon: <Brain className="w-6 h-6" />, title: "AI Threat Detection", description: "Advanced machine learning algorithms that detect and prevent cyber threats in real-time.", benefits: ["Real-time detection", "Zero-day protection", "Behavioral analysis", "Predictive security"]
+;
+  const threatTypes = [ { title: "Malware Protection", description: "Advanced detection and prevention of malware, ransomware, and other malicious software", icon: <Bug className="w-8 h-8" />, coverage: "99.9%" }, { title: "Phishing Defense", description: "AI-powered email security that identifies and blocks sophisticated phishing attempts", icon: <Mail className="w-8 h-8" />, coverage: "99.7%" }, { title: "DDoS Mitigation", description: "Real-time protection against distributed denial-of-service attacks", icon: <Network className="w-8 h-8" />, coverage: "100%" }, { title: "Insider Threats", description: "Behavioral analysis to detect and prevent insider threats and data exfiltration", icon: <Users className="w-8 h-8" />, coverage: "98.5%" } ]
+;
+  const pricingPlans = [ { name: "Essential", price: "$299", period: "month", description: "Perfect for small businesses and startups", features: [ "Basic threat detection", "Email security", "Firewall protection", "24/7 monitoring", "Email support", "Up to 50 users", "Basic reporting" ]
+;
+  const testimonials = [ { name: "Michael Chen", company: "FinTech Solutions", role: "CISO", content: "The AI cybersecurity platform has reduced our security incidents by 95%. The predictive capabilities are game-changing.", rating: 5 }, { name: "Sarah Williams", company: "Healthcare Corp", role: "IT Director", content: "HIPAA compliance has never been easier. The automated monitoring and reporting save us hours every week.", rating: 5 }, { name: "David Rodriguez", company: "Manufacturing Inc", role: "Security Manager", content: "The threat detection is incredibly accurate. We've prevented several potential breaches before they could cause damage.", rating: 5 } ]
+;
+  const complianceStandards = [ { name: "SOC 2", description: "Security controls" }, { name: "ISO 27001", description: "Information security" }, { name: "GDPR", description: "Data protection" }, { name: "HIPAA", description: "Healthcare privacy" }, { name: "PCI DSS", description: "Payment security" }, { name: "NIST", description: "Cybersecurity framework" } ]
+;
   return (
     <> <Helmet> <title>AI Cybersecurity Platform - Advanced Threat Protection | Zion Tech Group</title> <meta name="description" content="Protect your business with our AI-powered cybersecurity platform. Advanced threat detection, 24/7 monitoring, and compliance management for modern enterprises." /> <meta name="keywords" content="AI cybersecurity, threat detection, security monitoring, data protection, compliance, SOC 2, HIPAA, GDPR" /> <meta property="og:title" content="AI Cybersecurity Platform - Zion Tech Group" /> <meta property="og:description" content="Advanced AI-powered cybersecurity platform with real-time threat detection and protection" /> <meta property="og:type" content="website" /> <meta property="og:url" content="https://ziontechgroup.com/ai-cybersecurity-platform" /> </Helmet> 
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"> { /* Animated Background */ } 
@@ -22,14 +25,12 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
         <div className="absolute top-20 left-10 w-72 h-72 bg-red-500/10 rounded-full blur-3xl animate-pulse"></div> 
         <div className="absolute top-40 right-10 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div> 
         <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div> </div>
-        { /* Grid Pattern */ }
         
         <div className="absolute inset-0 opacity-20">
           
         <div className="h-full w-full"></div>
         </div>
         <main className="relative z-10">
-          { /* Hero Section */ }
           <section className="relative py-20 overflow-hidden">
             
         <div className="container mx-auto px-4">
@@ -68,7 +69,6 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
               </div>
             </div>
           </section>
-          { /* Features Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             
         <div className="container mx-auto px-4">
@@ -96,18 +96,15 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
         <div className="text-white">{ feature.icon }</div>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors duration-300">
-                      { feature.title }
                     </h3>
                     
           <p className="text-gray-300 mb-6 leading-relaxed">
-                      { feature.description }
                     </p>
                     
         <div className="space-y-2">
                       { feature.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex } className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          { benefit }
                         </div>
                       ))}
                     </div>
@@ -116,7 +113,6 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
               </div>
             </div>
           </section>
-          { /* Threat Protection Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">
@@ -156,7 +152,6 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
               </div>
             </div>
           </section>
-          { /* Compliance Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             
         <div className="container mx-auto px-4">
@@ -187,7 +182,6 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
               </div>
             </div>
           </section>
-          { /* Pricing Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">
@@ -213,15 +207,6 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
                         ? 'border-red-400/40 shadow-red-500/10' 
                         : 'border-red-500/20 hover:border-red-400/40' }`}
                   >
-                    { plan.popular && (
-                      
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        
-        <div className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                          Most Popular
-                        </div>
-                      </div>
-                    ) }
                     
         <div className="text-center mb-8">
                       <h3 className="text-2xl font-bold text-white mb-2">{ plan.name }</h3>
@@ -238,7 +223,6 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
                       { plan.features.map((feature, featureIndex) => (
                         <div key={featureIndex } className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          { feature }
                         </div>
                       ))}
                     </div>
@@ -256,7 +240,6 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
               </div>
             </div>
           </section>
-          { /* Testimonials Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             
         <div className="container mx-auto px-4">
@@ -301,7 +284,6 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
               </div>
             </div>
           </section>
-          { /* CTA Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">
@@ -335,6 +317,5 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
         </main>
       </div>
     </>
-  );
-};
-export default AiCybersecurityPlatformPage;
+}
+}}}

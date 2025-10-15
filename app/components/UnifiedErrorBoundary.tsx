@@ -116,14 +116,12 @@ const { showDetails = process.env.NODE_ENV === 'development' } = this.props;
         <div className="max-w-2xl w-full">
               
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-                {/* Error Icon */}
                 
         <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-red-500/20 flex items-center justify-center">
                   <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
                   </svg>
                 </div>
-                {/* Error Message */}
                 
           <h1 className="text-2xl md:text-3xl font-bold text-white mb-4">
                   Oops! Something went wrong
@@ -132,50 +130,8 @@ const { showDetails = process.env.NODE_ENV === 'development' } = this.props;
           <p className="text-gray-300 mb-6 leading-relaxed">
                   We're sorry, but something unexpected happened. Our team has been notified and we're working to fix it.
                 </p>
-                {/* Error Details (Development only) */}
-                {showDetails && error && (
-                  
-        <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left">
-                    <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
-                    
-          <p className="text-red-300 text-sm font-mono break-all">{error.message}</p>
-                    {error.stack && (
-                      <details className="mt-2">
-                        <summary className="text-red-400 text-sm cursor-pointer">Stack Trace</summary>
-                        <pre className="text-red-300 text-xs mt-2 overflow-auto max-h-32 font-mono">
-                          {error.stack}
-                        </pre>
-                      </details>
-                    )}
-                  </div>
-                )}
-                {/* Retry Count */}
-                {retryCount > 0 && (
-                  
-          <p className="text-yellow-400 text-sm mb-4">
-                    Retry attempt {retryCount} of {this.maxRetries}
-                  </p>
-                )}
-                {/* Action Buttons */}
                 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  {this.canRetry && (
-                    <button
-                      onClick={this.handleRetry}
-                      disabled={isRetrying}
-                      className="bg-cyan-500 hover:bg-cyan-600 disabled:bg-cyan-500/50 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center gap-2"
-                    >
-                      {isRetrying ? (
-                        <>
-                          
-        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                          Retrying...
-                        </>
-                      ) : (
-                        'Try Again'
-                      )}
-                    </button>
-                  )}
                   <button
                     onClick={this.handleReset}
                     className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200"
@@ -189,7 +145,6 @@ const { showDetails = process.env.NODE_ENV === 'development' } = this.props;
                     Go Home
                   </button>
                 </div>
-                {/* Contact Information */}
                 
         <div className="mt-8 pt-6 border-t border-white/10">
                   
@@ -222,3 +177,5 @@ const { showDetails = process.env.NODE_ENV === 'development' } = this.props;
   }
 }
 export default UnifiedErrorBoundary;
+</Props>
+</State>

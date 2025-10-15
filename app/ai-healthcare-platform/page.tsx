@@ -8,35 +8,22 @@ const AiHealthcarePlatformPage: React.FC = () => {
   }, []);
 
 const features = [
-    { icon: <Brain className="w-6 h-6" />,
-      title: "AI Diagnosis Assistant",
-      description: "Advanced machine learning algorithms that assist healthcare professionals in accurate diagnosis and treatment planning.",
-      benefits: ["Symptom analysis", "Disease prediction", "Treatment recommendations", "Risk assessment"] },
-    { icon: <Camera className="w-6 h-6" />,
-      title: "Medical Imaging AI",
-      description: "AI-powered analysis of -rays, MRIs, CT scans, and other medical images for faster and more accurate diagnosis.",
-      benefits: ["Image analysis", "Anomaly detection", "Pattern recognition", "Radiology assistance"] },
-    { icon: <FileText className="w-6 h-6" />,
-      title: "Electronic Health Records",
-      description: "Comprehensive EHR system with AI-powered data analysis, patient history tracking, and automated documentation.",
-      benefits: ["Patient records", "Data analysis", "Automated notes", "Interoperability"] },
-    { icon: <Stethoscope className="w-6 h-6" />,
-      title: "Telemedicine Platform",
-      description: "Secure video consultations, remote patient monitoring, and virtual care delivery with AI assistance.",
-      benefits: ["consultations", "Remote monitoring", "Virtual care", "Patient engagement"] },
-    { icon: <Star className="w-6 h-6" />,
-      title: "HIPAA Compliance",
-      description: "Enterprise-grade security and privacy protection with full HIPAA compliance and data encryption.",
-      benefits: ["HIPAA compliance", "Data encryption", "Access controls", "Audit trails"] },
-    { icon: <Star className="w-6 h-6" />,
-      title: "Healthcare Analytics",
-      description: "Comprehensive analytics and reporting for population health, clinical outcomes, and operational efficiency.",
-      benefits: ["Population health", "Clinical outcomes", "Operational metrics", "Predictive analytics"] }
+  const features = [
+      { icon: <Brain className="w-6 h-6" />,
+        title: "AI Diagnosis Assistant",
+        description: "Advanced machine learning algorithms that assist healthcare professionals in accurate diagnosis and treatment planning.",
+        benefits: ["Symptom analysis", "Disease prediction", "Treatment recommendations", "Risk assessment"] },
   ];
 
-
 export default function Page() {
-const aiCapabilities = [
+  const features = [
+  const features = [
+      { icon: <Brain className="w-6 h-6" />,
+        title: "AI Diagnosis Assistant",
+        description: "Advanced machine learning algorithms that assist healthcare professionals in accurate diagnosis and treatment planning.",
+        benefits: ["Symptom analysis", "Disease prediction", "Treatment recommendations", "Risk assessment"]
+;
+  const aiCapabilities = [
     { title: "Drug Interaction Checker",
       description: "AI-powered system that identifies potential drug interactions and adverse effects",
       icon: <Pill className="w-8 h-8" />,
@@ -53,9 +40,9 @@ const aiCapabilities = [
       description: "AI-driven treatment recommendations based on patient data and medical literature",
       icon: <Syringe className="w-8 h-8" />,
       accuracy: "97.3%" }
-  ];
-
-const pricingPlans = [
+  ]
+;
+  const pricingPlans = [
     { name: "Clinic",
       price: "$399",
       period: "month",
@@ -68,41 +55,9 @@ const pricingPlans = [
         "Email support",
         "Basic analytics",
         "HIPAA compliance"
-      ],
-      popular: false },
-    { name: "Hospital",
-      price: "$899",
-      period: "month",
-      description: "Ideal for hospitals and large healthcare facilities",
-      features: [
-        "Up to 1,000 patients",
-        "Advanced AI features",
-        "Full EHR suite",
-        "Advanced telemedicine",
-        "Priority support",
-        "Advanced analytics",
-        "Custom integrations",
-        "Multi-location support"
-      ],
-      popular: true },
-    { name: "Enterprise",
-      price: "$1,999",
-      period: "month",
-      description: "Complete solution for healthcare systems and networks",
-      features: [
-        "Unlimited patients",
-        "Full AI capabilities",
-        "Custom EHR",
-        "Enterprise telemedicine",
-        "24/7 dedicated support",
-        "Custom development",
-        "On-premise deployment",
-        "White-label options"
-      ],
-      popular: false }
-  ];
-
-const testimonials = [
+      ]
+;
+  const testimonials = [
     { name: "Dr. Sarah Williams",
       company: "Metro General Hospital",
       role: "Chief Medical Officer",
@@ -118,15 +73,17 @@ const testimonials = [
       role: "IT Director",
       content: "The platform's analytics have given us insights into patient care patterns that we never had before. Our operational efficiency has improved by 40%.",
       rating: 5 }
-  ];
-  // const specialties = [
+  ]
+;
+  const specialties = [
   //   { name: "Cardiology", icon: <className="w-6 h-6" /> },
   //   { name: "Radiology", icon: <Camera className="w-6 h-6" /> },
   //   { name: "Oncology", icon: <Microscope className="w-6 h-6" /> },
   //   { name: "Neurology", icon: <Brain className="w-6 h-6" /> },
   //   { name: "Pediatrics", icon: <className="w-6 h-6" /> },
   //   { name: "Emergency Medicine", icon: <className="w-6 h-6" /> }
-  // ];
+  // ]
+;
   return (
     <>
       <Helmet>
@@ -139,7 +96,6 @@ const testimonials = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        { /* Hero Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -166,7 +122,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        { /* Features Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -184,7 +139,6 @@ const testimonials = [
                 <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   
         <div className="text-cyan-400 mb-4">
-                    { feature.icon }
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{ feature.title }</h3>
                   
@@ -193,7 +147,6 @@ const testimonials = [
                     { feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex } className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                        { benefit }
                       </li>
                     ))}
                   </ul>
@@ -202,7 +155,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        { /* AI Capabilities Section */ }
         <section className="py-20 bg-white/5">
           
         <div className="container mx-auto px-4">
@@ -220,7 +172,6 @@ const testimonials = [
                 <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                   
         <div className="text-cyan-400 mb-4 flex justify-center">
-                    { capability.icon }
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{ capability.title }</h3>
                   
@@ -234,7 +185,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        { /* Pricing Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -250,14 +200,6 @@ const testimonials = [
         <div className="grid md:grid-cols-3 gap-8">
               { pricingPlans.map((plan, index) => (
                 <div key={index } className={ `bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-cyan-400' : 'border-white/20' } relative`}>
-                  { plan.popular && (
-                    
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  ) }
                   
         <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{ plan.name }</h3>
@@ -272,7 +214,6 @@ const testimonials = [
                     { plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex } className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-                        { feature }
                       </li>
                     ))}
                   </ul>
@@ -287,7 +228,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        { /* Testimonials Section */ }
         <section className="py-20 bg-white/5">
           
         <div className="container mx-auto px-4">
@@ -324,7 +264,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        { /* CTA Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -349,6 +288,5 @@ const testimonials = [
         </section>
       </div>
     </>
-  );
-};
-export default AiHealthcarePlatformPage;
+}
+}}}

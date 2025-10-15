@@ -8,30 +8,11 @@ const AiCodeAssistantProPage = () => {
   }, []);
 
   const features = [
-    { icon: <Code className="w-6 h-6" />,
-      title: "Intelligent Code Generation",
-      description: "Generate high-quality code in 50+ programming languages with AI-powered suggestions and completions.",
-      benefits: ["50+ ", "Context-aware suggestions", "Code completion", "Syntax optimization"] },
-    { icon: <Bug className="w-6 h-6" />,
-      title: "Advanced Bug Detection",
-      description: "Automatically identify and fix bugs, security vulnerabilities, and performance issues in your code.",
-      benefits: ["Static analysis", "Security scanning", "Performance optimization", "Error prevention"] },
-    { icon: <Brain className="w-6 h-6" />,
-      title: "AI Code Review",
-      description: "Get intelligent code reviews with suggestions for improvements, best practices, and optimization.",
-      benefits: ["Automated reviews", "Best practices", "Code quality metrics", "Learning recommendations"] },
-    { icon: <FileText className="w-6 h-6" />,
-      title: "Documentation Generation",
-      description: "Automatically generate comprehensive documentation, comments, and API references for your code.",
-      benefits: ["Auto-documentation", "API references", "Code comments", "README generation"] },
-    { icon: <Terminal className="w-6 h-6" />,
-      title: "Performance Optimization",
-      description: "Analyze and optimize your code for better performance, memory usage, and execution speed.",
-      benefits: ["Performance analysis", "Memory optimization", "Algorithm suggestions", "Bottleneck detection"] },
-    { icon: <GitBranch className="w-6 h-6" />,
-      title: "Version Control Integration",
-      description: "Seamlessly integrate with Git and other version control systems for collaborative development.",
-      benefits: ["Git integration", "Merge conflict resolution", "Branch management", "Commit optimization"] }
+  const features = [
+      { icon: <Code className="w-6 h-6" />,
+        title: "Intelligent Code Generation",
+        description: "Generate high-quality code in 50+ programming languages with AI-powered suggestions and completions.",
+        benefits: ["50+ ", "Context-aware suggestions", "Code completion", "Syntax optimization"] },
   ];
 
 const supportedLanguages = [
@@ -144,7 +125,6 @@ const useCases = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        { /* Animated Background */ }
         
         <div className="absolute inset-0">
           
@@ -154,13 +134,11 @@ const useCases = [
           
         <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
         </div>
-        { /* Grid Pattern */ }
         
         <div className="absolute inset-0 opacity-20">
           
         <div className="h-full w-full"></div>
         </div>
-        { /* Hero Section */ }
         <section className="relative py-20">
           
         <div className="container mx-auto px-4">
@@ -187,7 +165,6 @@ const useCases = [
             </div>
           </div>
         </section>
-        { /* Features Section */ }
         <section className="relative py-20">
           
         <div className="container mx-auto px-4">
@@ -205,7 +182,6 @@ const useCases = [
                 <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   
         <div className="text-cyan-400 mb-4">
-                    { feature.icon }
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{ feature.title }</h3>
                   
@@ -214,7 +190,6 @@ const useCases = [
                     { feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex } className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                        { benefit }
                       </li>
                     ))}
                   </ul>
@@ -223,7 +198,6 @@ const useCases = [
             </div>
           </div>
         </section>
-        { /* Supported Section */ }
         <section className="relative py-20 bg-white/5">
           
         <div className="container mx-auto px-4">
@@ -250,7 +224,6 @@ const useCases = [
             </div>
           </div>
         </section>
-        { /* Use Cases Section */ }
         <section className="relative py-20">
           
         <div className="container mx-auto px-4">
@@ -268,7 +241,6 @@ const useCases = [
                 <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                   
         <div className="text-cyan-400 mb-4">
-                    { useCase.icon }
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{ useCase.title }</h3>
                   
@@ -277,7 +249,6 @@ const useCases = [
         <div className="flex flex-wrap gap-2">
                     { useCase.technologies.map((tech, techIndex) => (
                       <span key={techIndex } className="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-sm">
-                        { tech }
                       </span>
                     ))}
                   </div>
@@ -286,7 +257,6 @@ const useCases = [
             </div>
           </div>
         </section>
-        { /* Pricing Section */ }
         <section className="relative py-20 bg-white/5">
           
         <div className="container mx-auto px-4">
@@ -302,14 +272,6 @@ const useCases = [
         <div className="grid md:grid-cols-3 gap-8">
               { pricingPlans.map((plan, index) => (
                 <div key={index } className={ `bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-cyan-400' : 'border-white/20' } relative`}>
-                  { plan.popular && (
-                    
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  ) }
                   
         <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{ plan.name }</h3>
@@ -324,7 +286,6 @@ const useCases = [
                     { plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex } className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-                        { feature }
                       </li>
                     ))}
                   </ul>
@@ -339,7 +300,6 @@ const useCases = [
             </div>
           </div>
         </section>
-        { /* Testimonials Section */ }
         <section className="relative py-20">
           
         <div className="container mx-auto px-4">
@@ -376,7 +336,6 @@ const useCases = [
             </div>
           </div>
         </section>
-        { /* CTA Section */ }
         <section className="relative py-20">
           
         <div className="container mx-auto px-4">

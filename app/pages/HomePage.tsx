@@ -11,13 +11,11 @@ export default function HomePage() {
         structuredData={structuredData}
       />
       <FuturisticBackground />
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           
         <div className="max-w-5xl mx-auto">
-            {/* Animated Title */}
             
         <div className="mb-8">
               
@@ -40,7 +38,6 @@ export default function HomePage() {
               Empowering businesses with cutting-edge artificial intelligence, cybersecurity, 
               cloud infrastructure, and digital transformation solutions.
             </p>
-            {/* CTA Buttons */}
             
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <NeonButton 
@@ -61,13 +58,11 @@ export default function HomePage() {
           </div>
         </div>
         
-        {/* Floating Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500 rounded-full opacity-20 animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-20 w-16 h-16 bg-pink-500 rounded-full opacity-20 animate-pulse delay-500"></div>
       </section>
 
-      {/* Services Section */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -80,7 +75,6 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* AI Solutions */}
             <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Cpu className="w-8 h-8 text-white" />
@@ -95,7 +89,6 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Cybersecurity */}
             <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Shield className="w-8 h-8 text-white" />
@@ -110,7 +103,6 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Cloud Infrastructure */}
             <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Cloud className="w-8 h-8 text-white" />
@@ -125,7 +117,6 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Digital Transformation */}
             <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-yellow-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <BarChart3 className="w-8 h-8 text-white" />
@@ -140,7 +131,6 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Micro SaaS */}
             <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-pink-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <GlobeAltIcon className="w-8 h-8 text-white" />
@@ -155,7 +145,6 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* 5G Solutions */}
             <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-indigo-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <GlobeAltIcon className="w-8 h-8 text-white" />
@@ -172,7 +161,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* Services Section */}
       <section className="py-20 px-4 bg-black/50 backdrop-blur-sm">
         
         <div className="container mx-auto">
@@ -194,7 +182,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* Contact Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-purple-900/20 to-cyan-900/20">
         
         <div className="container mx-auto text-center">
@@ -228,3 +215,4 @@ export default function HomePage() {
     </>
   );
 }
+</NeonButton>

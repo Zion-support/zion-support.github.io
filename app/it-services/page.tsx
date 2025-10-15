@@ -7,7 +7,6 @@ const ItServicesPage: React.FC = () => { const itServices = [ { icon: <Cloud cla
   return (
     <> <Helmet> <title>IT Services - Zion Tech Group | Information Technology Solutions</title> <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, database solutions, performance monitoring, DevOps, and API management." /> <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, database solutions, DevOps, API management, performance monitoring" /> <meta property="og:title" content="IT Services - Zion Tech Group" /> <meta property="og:description" content="Transform your IT infrastructure with our comprehensive technology solutions." /> <meta property="og:type" content="website" /> </Helmet> 
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        { /* Hero Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -25,7 +24,6 @@ const ItServicesPage: React.FC = () => { const itServices = [ { icon: <Cloud cla
             </div>
           </div>
         </section>
-        { /* IT Services Grid */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -45,7 +43,6 @@ const ItServicesPage: React.FC = () => { const itServices = [ { icon: <Cloud cla
         <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     
         <div className="text-white">
-                      { service.icon }
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{ service.title }</h3>
@@ -71,7 +68,6 @@ const ItServicesPage: React.FC = () => { const itServices = [ { icon: <Cloud cla
             </div>
           </div>
         </section>
-        { /* CTA Section */ }
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="container mx-auto px-4">
@@ -100,7 +96,6 @@ const ItServicesPage: React.FC = () => { const itServices = [ { icon: <Cloud cla
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -135,3 +130,6 @@ const ItServicesPage: React.FC = () => { const itServices = [ { icon: <Cloud cla
 };
 
 export default ITServicesPage;
+    </>
+  );
+}

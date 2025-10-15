@@ -52,7 +52,6 @@ const value: AnalyticsContextType = {
   };
   return (
     <AnalyticsContext.Provider value={value}>
-      {children}
     </AnalyticsContext.Provider>
   );
 };
@@ -64,3 +63,10 @@ export const useAnalytics = (): AnalyticsContextType => {
   return context;
 };
 export default AnalyticsProvider;
+</string>
+</AnalyticsContextType>
+</AnalyticsProviderProps>
+</AnalyticsContext>
+    </>
+  );
+}

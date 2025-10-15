@@ -1,154 +1,16 @@
 import { Link } from 'react-router-dom';
 import { Brain, Eye, BarChart3, Globe, Shield, CreditCard, Users, Lock, Coins, AlertTriangle, Heart, EnhancedSEO, ArrowRight, Play, Zap, CheckCircle, Star, Mail, Phone, MapPin, Calendar } from 'lucide-react';
 const ZionAIFraudDetectionPro = () => {
-  return;
-},
-    {
-      title: "Machine Learning Models",
-      description: "Self-learning models that continuously improve detection accuracy based on new fraud patterns",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Behavioral Analysis",
-      description: "Analyzes user behavior patterns to identify anomalies and suspicious activities",
-      icon: <Eye className="w-8 h-8" />,
-      color: "from-purple-500 to-indigo-500"
-    },
-    {
-      title: "Risk Scoring",
-      description: "Comprehensive risk scoring system that evaluates transaction likelihood of being fraudulent",
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-orange-500 to-yellow-500"
-    },
-    {
-      title: "Multi-Channel Monitoring",
-      description: "Monitors fraud across all channels including online, mobile, and in-person transactions",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Compliance Ready",
-      description: "Built-in compliance features for PCI DSS, GDPR, and other regulatory requirements",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-teal-500 to-cyan-500"
-    }
+  const features = [
   ];
 
-const detectionTypes = [
-    {
-      title: "Payment Fraud",
-      description: "Detect unauthorized credit card transactions, chargebacks, and payment fraud",
-      icon: <CreditCard className="w-6 h-6" />,
-      accuracy: "99.7%"
-    },
-    {
-      title: "Identity Theft",
-      description: "Identify stolen identities and synthetic identity fraud attempts",
-      icon: <Users className="w-6 h-6" />,
-      accuracy: "98.9%"
-    },
-    {
-      title: "Account Takeover",
-      description: "Detect unauthorized access to user accounts and credential stuffing attacks",
-      icon: <Lock className="w-6 h-6" />,
-      accuracy: "99.2%"
-    },
-    {
-      title: "Money Laundering",
-      description: "Identify suspicious money movement patterns and laundering activities",
-      icon: <Coins className="w-6 h-6" />,
-      accuracy: "97.8%"
-    },
-    {
-      title: "Synthetic Fraud",
-      description: "Detect synthetic identities and fabricated customer information",
-      icon: <AlertTriangle className="w-6 h-6" />,
-      accuracy: "96.5%"
-    },
-    {
-      title: "Friendly Fraud",
-      description: "Identify legitimate-looking transactions that are actually fraudulent",
-      icon: <Heart className="w-6 h-6" />,
-      accuracy: "95.3%"
-    }
+  const detectionTypes = [
   ];
 
-const pricing = [
-    {
-      name: "Starter",
-      price: "$199",
-      period: "/month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 10,000 transactions/month",
-        "Basic fraud detection",
-        "Email alerts",
-        "Standard support",
-        "Basic reporting"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$599",
-      period: "/month",
-      description: "Ideal for growing companies",
-      features: [
-        "Up to 100,000 transactions/month",
-        "Advanced ML models",
-        "Real-time alerts",
-        "Priority support",
-        "Advanced analytics",
-        "Custom rules engine",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$1,999",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited transactions",
-        "All detection types",
-        "24/7 monitoring",
-        "Dedicated support",
-        "Custom ML models",
-        "White-label options",
-        "SLA guarantee",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
+  const pricing = [
   ];
 
-const testimonials = [
-    {
-      name: "David Kim",
-      company: "FinTech Solutions",
-      role: "CISO",
-      content: "Zion AI Fraud Detection Pro reduced our fraud losses by 85% in just 3 months. The real-time detection is incredibly accurate and fast.",
-      rating: 5,
-      avatar: "DK"
-    },
-    {
-      name: "Lisa Martinez",
-      company: "E-commerce Giant",
-      role: "Risk Manager",
-      content: "The machine learning models are constantly improving. We've seen a 90% reduction in false positives while catching more fraud than ever.",
-      rating: 5,
-      avatar: "LM"
-    },
-    {
-      name: "Robert Johnson",
-      company: "Banking Corp",
-      role: "Head of Security",
-      content: "Implementation was seamless and the results exceeded our expectations. Our fraud detection accuracy improved dramatically.",
-      rating: 5,
-      avatar: "RJ"
-    }
+  const testimonials = [
   ];
   return (
     
@@ -159,7 +21,6 @@ const testimonials = [
         keywords="AI fraud detection, fraud prevention, machine learning fraud, real-time fraud monitoring, payment fraud, identity theft protection, risk management"
         canonical="/zion-ai-fraud-detection-pro"
       />
-      {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         
         <div className="absolute inset-0 overflow-hidden">
@@ -204,7 +65,6 @@ const testimonials = [
               <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
             </Link>
           </div>
-          {/* Stats */}
           
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             
@@ -254,7 +114,6 @@ const testimonials = [
           </div>
         </div>
       </section>
-      {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         
         <div className="max-w-7xl mx-auto">
@@ -279,21 +138,17 @@ const testimonials = [
                 <div
                   className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
-                  {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-red-400 transition-colors">
-                  {feature.title}
                 </h3>
                 
           <p className="text-gray-300 text-center leading-relaxed">
-                  {feature.description}
                 </p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* Detection Types Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         
         <div className="max-w-7xl mx-auto">
@@ -320,10 +175,8 @@ const testimonials = [
         <div className="flex items-center">
                     
         <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                      {type.icon}
                     </div>
                     <h3 className="text-lg font-semibold text-white group-hover:text-red-400 transition-colors">
-                      {type.title}
                     </h3>
                   </div>
                   
@@ -336,14 +189,12 @@ const testimonials = [
                 </div>
                 
           <p className="text-gray-300 text-sm leading-relaxed">
-                  {type.description}
                 </p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         
         <div className="max-w-7xl mx-auto">
@@ -368,14 +219,6 @@ const testimonials = [
                     : 'border-white/20 hover:border-white/30'
                 }`}
               >
-                {plan.popular && (
-                  
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
                 
         <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -412,7 +255,6 @@ const testimonials = [
           </div>
         </div>
       </section>
-      {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         
         <div className="max-w-7xl mx-auto">
@@ -445,7 +287,6 @@ const testimonials = [
         <div className="flex items-center">
                   
         <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                    {testimonial.avatar}
                   </div>
                   <div>
                     
@@ -459,7 +300,6 @@ const testimonials = [
           </div>
         </div>
       </section>
-      {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-900/30 to-pink-900/30">
         
         <div className="max-w-4xl mx-auto text-center">
@@ -471,7 +311,6 @@ const testimonials = [
             Don't wait for fraud to happen. Join thousands of businesses already using 
             Zion AI Fraud Detection Pro to protect their revenue and reputation.
           </p>
-          {/* Contact Information */}
           
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             
@@ -528,3 +367,6 @@ const testimonials = [
   );
 };
 export default ZionAIFraudDetectionPro;
+    </>
+  );
+}

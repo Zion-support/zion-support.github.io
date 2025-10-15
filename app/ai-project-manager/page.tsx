@@ -26,55 +26,6 @@ const integrations = [
   ];
 
 const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "month",
-      description: "Perfect for small teams and startups",
-      features: [
-        "Up to 5 projects",
-        "Basic AI features",
-        "Team collaboration",
-        "Basic analytics",
-        "Email support",
-        "5 team members"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$99",
-      period: "month",
-      description: "Ideal for growing teams",
-      features: [
-        "Unlimited projects",
-        "Advanced AI features",
-        "Advanced analytics",
-        "Priority support",
-        "25 team members",
-        "Custom integrations",
-        "Advanced reporting",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$299",
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Everything in Professional",
-        "White-label options",
-        "Custom analytics",
-        "24/7 phone support",
-        "Unlimited team members",
-        "Advanced automation",
-        "Dedicated account manager",
-        "Custom training"
-      ],
-      popular: false
-    }
   ];
 
 const stats = [
@@ -118,7 +69,6 @@ const benefits = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20 relative overflow-hidden">
           
         <div className="absolute inset-0">
@@ -161,7 +111,6 @@ const benefits = [
                   View Demo
                 </button>
               </div>
-              {/* Stats */}
               
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 {stats.map((stat, index) => (
@@ -181,7 +130,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        {/* Benefits Section */}
         <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
           
         <div className="container mx-auto px-4">
@@ -214,7 +162,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -245,7 +192,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        {/* Integrations Section */}
         <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
           
         <div className="container mx-auto px-4">
@@ -271,7 +217,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        {/* Pricing Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -291,15 +236,6 @@ const benefits = [
                     ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/10' 
                     : 'border-cyan-500/20 hover:border-cyan-400/40'
                 } transition-all duration-300 hover:transform hover:scale-105`}>
-                  {plan.popular && (
-                    
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      
-        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>
-                  )}
                   
         <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -333,7 +269,6 @@ const benefits = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="container mx-auto px-4">

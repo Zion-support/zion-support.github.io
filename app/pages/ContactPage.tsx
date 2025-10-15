@@ -17,7 +17,6 @@ const ContactPage: React.FC = () => { return (
             </p>
           </div>
         </section>
-        { /* Contact Info */ }
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           
         <div className="max-w-7xl mx-auto">
@@ -45,7 +44,6 @@ const ContactPage: React.FC = () => { return (
           <p className="text-gray-300">Wilmington, DE, USA</p>
               </div>
             </div>
-            { /* Contact Form */ }
             
         <div className="max-w-2xl mx-auto">
               

@@ -5,8 +5,8 @@ import { ArrowRight, Clock, TrendingUp } from 'lucide-react';
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
-    {
-      title: "E-commerce Platform AI Optimization",
+  {
+    title: "E-commerce Platform AI Optimization",
       client: "TechRetail Inc.",
       industry: "E-commerce",
       duration: "6 months",
@@ -20,8 +20,8 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: "/api/placeholder/400/300"
     },
-    {
-      title: "Healthcare Data Analytics Platform",
+  {
+    title: "Healthcare Data Analytics Platform",
       client: "MediCare Solutions",
       industry: "Healthcare",
       duration: "8 months",
@@ -35,8 +35,8 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: "/api/placeholder/400/300"
     },
-    {
-      title: "Manufacturing IoT Integration",
+  {
+    title: "Manufacturing IoT Integration",
       client: "AutoParts Manufacturing",
       industry: "Manufacturing",
       duration: "12 months",
@@ -50,8 +50,8 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: "/api/placeholder/400/300"
     },
-    {
-      title: "Financial Services Cloud Migration",
+  {
+    title: "Financial Services Cloud Migration",
       client: "SecureBank Ltd.",
       industry: "Financial Services",
       duration: "10 months",
@@ -65,8 +65,8 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: "/api/placeholder/400/300"
     },
-    {
-      title: "Education Learning Management System",
+  {
+    title: "Education Learning Management System",
       client: "EduTech University",
       industry: "Education",
       duration: "7 months",
@@ -80,8 +80,8 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: "/api/placeholder/400/300"
     },
-    {
-      title: "Logistics Route Optimization",
+  {
+    title: "Logistics Route Optimization",
       client: "FastDelivery Corp.",
       industry: "Logistics",
       duration: "5 months",
@@ -104,7 +104,6 @@ const CaseStudiesPage: React.FC = () => {
         <meta name="description" content="Explore our successful projects and case studies across various industries including e-commerce, healthcare, manufacturing, and more." />
         <meta name="keywords" content="case studies, success stories, project portfolio, AI solutions, IT services" />
       </Helmet>
-      {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         
         <div className="container mx-auto px-4">
@@ -132,7 +131,6 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Case Studies Grid */}
       <section className="py-20 bg-slate-900">
         
         <div className="container mx-auto px-4">
@@ -151,11 +149,9 @@ const CaseStudiesPage: React.FC = () => {
                   
         <div className="flex items-center justify-between mb-4">
                     <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">
-                      {study.industry}
                     </span>
                     <span className="text-gray-400 text-sm flex items-center">
                       <Clock className="w-4 h-4 mr-1" />
-                      {study.duration}
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{study.title}</h3>
@@ -180,7 +176,6 @@ const CaseStudiesPage: React.FC = () => {
                       {study.results.slice(0, 3).map((result, resultIndex) => (
                         <li key={resultIndex} className="flex items-center">
                           <TrendingUp className="w-3 h-3 text-green-400 mr-2" />
-                          {result}
                         </li>
                       ))}
                     </ul>
@@ -194,7 +189,6 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600">
         
         <div className="container mx-auto px-4">
@@ -223,3 +217,6 @@ const CaseStudiesPage: React.FC = () => {
   );
 };
 export default CaseStudiesPage;
+    </>
+  );
+}

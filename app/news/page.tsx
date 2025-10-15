@@ -94,7 +94,6 @@ const featuredArticle = newsArticles.find(article => article.featured);
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -111,7 +110,6 @@ const featuredArticle = newsArticles.find(article => article.featured);
             </div>
           </div>
         </section>
-        {/* Featured Article */}
         {featuredArticle && (
           <section className="py-16 px-4">
             
@@ -176,7 +174,6 @@ const featuredArticle = newsArticles.find(article => article.featured);
             </div>
           </section>
         )}
-        {/* Category Filter */}
         <section className="py-8 px-4">
           
         <div className="max-w-7xl mx-auto">
@@ -191,13 +188,11 @@ const featuredArticle = newsArticles.find(article => article.featured);
                       : 'bg-slate-800/50 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400'
                   }`}
                 >
-                  {category}
                 </button>
               ))}
             </div>
           </div>
         </section>
-        {/* News Grid */}
         <section className="py-16 px-4 pb-20">
           
         <div className="max-w-7xl mx-auto">
@@ -216,12 +211,10 @@ const featuredArticle = newsArticles.find(article => article.featured);
                     
         <div className="flex items-center space-x-4 mb-3">
                       <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
-                        {article.category}
                       </span>
                       <span className="text-gray-400 text-sm">{article.readTime}</span>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                      {article.title}
                     </h3>
                     
           <p className="text-gray-300 mb-4 line-clamp-3">{article.excerpt}</p>
@@ -247,11 +240,6 @@ const featuredArticle = newsArticles.find(article => article.featured);
                         className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         <span>Read</span>
-                        {article.external ? (
-                          <ExternalLink className="w-4 h-4" />
-                        ) : (
-                          <ArrowRight className="w-4 h-4" />
-                        )}
                       </a>
                     </div>
                   </div>
@@ -260,7 +248,6 @@ const featuredArticle = newsArticles.find(article => article.featured);
             </div>
           </div>
         </section>
-        {/* Newsletter Signup */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="container mx-auto px-4">

@@ -28,8 +28,11 @@ const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
   ].filter(Boolean).join(' ');
   return (
     <div className={gridClasses}>
-      {children}
     </div>
   );
 };
 export default ResponsiveGrid;
+</ResponsiveGridProps>
+    </>
+  );
+}

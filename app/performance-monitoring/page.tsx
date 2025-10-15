@@ -38,7 +38,6 @@ const PerformanceMonitoringPage: React.FC = () => {
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           
         <div className="container mx-auto px-4">
@@ -55,7 +54,6 @@ const PerformanceMonitoringPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-20 px-4">
           
         <div className="container mx-auto">
@@ -70,7 +68,6 @@ const PerformanceMonitoringPage: React.FC = () => {
         <div className="flex items-center mb-4">
                     
         <div className="text-purple-400 mr-3">
-                      {feature.icon}
                     </div>
                     <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                   </div>
@@ -80,7 +77,6 @@ const PerformanceMonitoringPage: React.FC = () => {
                     {feature.features.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                        {item}
                       </li>
                     ))}
                   </ul>

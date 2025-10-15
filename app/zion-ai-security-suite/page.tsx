@@ -5,137 +5,19 @@ import { Shield, Zap, CheckCircle, Users, Target, Clock, AlertTriangle, Award, A
 
 const ZionAISecuritySuitePage: React.FC = () => {
   const features = [
-    {
-      title: "AI-Powered Threat Detection",
-      description: "Advanced machine learning algorithms detect and prevent cyber threats in real-time.",
-      icon: <Shield className="w-8 h-8" />,
-      benefits: ["Real-time monitoring", "Behavioral analysis", "Anomaly detection", "Zero-day protection"]
-    },
-    {
-      title: "Automated Incident Response",
-      description: "Instant response to security incidents with automated containment and remediation.",
-      icon: <Zap className="w-8 h-8" />,
-      benefits: ["Auto containment", "Instant alerts", "Response playbooks", "Recovery automation"]
-    },
-    {
-      title: "Compliance Monitoring",
-      description: "Ensure compliance with GDPR, HIPAA, SOX, and other regulatory requirements.",
-      icon: <CheckCircle className="w-8 h-8" />,
-      benefits: ["GDPR compliance", "HIPAA monitoring", "SOX reporting", "Audit trails"]
-    },
-    {
-      title: "Security Training Platform",
-      description: "Educate your team with AI-powered security awareness training and simulations.",
-      icon: <Users className="w-8 h-8" />,
-      benefits: ["Phishing simulations", "Security quizzes", "Progress tracking", "Certification programs"]
-    }
+  
+
   ];
 
 const securityMetrics = [
-    {
-      title: "Threat Detection Rate",
-      value: "99.9%",
-      description: "Accuracy in detecting real threats",
-      icon: <Target className="w-6 h-6" />
-    },
-    {
-      title: "Response Time",
-      value: "< 30s",
-      description: "Average incident response time",
-      icon: <Clock className="w-6 h-6" />
-    },
-    {
-      title: "False Positives",
-      value: "< 0.1%",
-      description: "Minimal false positive rate",
-      icon: <AlertTriangle className="w-6 h-6" />
-    },
-    {
-      title: "Uptime SLA",
-      value: "99.99%",
-      description: "Guaranteed service availability",
-      icon: <Award className="w-6 h-6" />
-    }
+  
+
   ];
 
 const pricingPlans = [
-    {
-      name: "Essential",
-      price: "$499",
-      period: "per month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 50 endpoints",
-        "Basic threat detection",
-        "Email support",
-        "Standard reports",
-        "1 admin account",
-        "Basic compliance monitoring"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$999",
-      period: "per month",
-      description: "Ideal for growing companies",
-      features: [
-        "Up to 500 endpoints",
-        "Advanced AI detection",
-        "Priority support",
-        "Custom reports",
-        "Up to 10 admin accounts",
-        "Full compliance suite",
-        "Security training platform",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$1999",
-      period: "per month",
-      description: "For large organizations",
-      features: [
-        "Unlimited endpoints",
-        "AI-powered threat hunting",
-        "24/7 dedicated support",
-        "White-label reports",
-        "Unlimited admin accounts",
-        "Custom compliance frameworks",
-        "Advanced training modules",
-        "Full API access",
-        "Dedicated security consultant"
-      ],
-      popular: false
-    }
   ];
 
 const testimonials = [
-    {
-      name: "David Kim",
-      company: "SecureTech Corp",
-      role: "CISO",
-      content: "Zion AI Security Suite has reduced our security incidents by 85%. The AI threat detection is incredibly accurate.",
-      rating: 5,
-      avatar: "DK"
-    },
-    {
-      name: "Lisa Martinez",
-      company: "FinanceFirst",
-      role: "IT Director",
-      content: "The compliance monitoring saved us from a potential GDPR violation. The automated reporting is a game-changer.",
-      rating: 5,
-      avatar: "LM"
-    },
-    {
-      name: "James Wilson",
-      company: "HealthTech Solutions",
-      role: "Security Manager",
-      content: "Our team's security awareness improved dramatically with the training platform. Highly recommend!",
-      rating: 5,
-      avatar: "JW"
-    }
   ];
 
 const complianceFrameworks = [
@@ -156,7 +38,6 @@ const complianceFrameworks = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced">
-        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           
         <div className="absolute inset-0 overflow-hidden">
@@ -200,14 +81,12 @@ const complianceFrameworks = [
                 <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
-            {/* Security Metrics */}
             
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {securityMetrics.map((metric, index) => (
                 <div key={index} className="text-center group data-stream">
                   
         <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 neon-border">
-                    {metric.icon}
                   </div>
                   
         <div className="text-xl md:text-2xl font-bold text-white mb-2 holographic-text">{metric.value}</div>
@@ -220,7 +99,6 @@ const complianceFrameworks = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
         <div className="max-w-7xl mx-auto">
@@ -245,17 +123,14 @@ const complianceFrameworks = [
         <div className="flex items-center mb-6">
                     
         <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-center text-white mr-6 group-hover:scale-110 transition-transform">
-                      {feature.icon}
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white group-hover:text-red-400 transition-colors">
-                        {feature.title}
                       </h3>
                     </div>
                   </div>
                   
           <p className="text-gray-300 mb-6 leading-relaxed">
-                    {feature.description}
                   </p>
                   
         <div className="space-y-2">
@@ -271,7 +146,6 @@ const complianceFrameworks = [
             </div>
           </div>
         </section>
-        {/* Compliance Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-red-800/50">
           
         <div className="max-w-7xl mx-auto">
@@ -294,21 +168,17 @@ const complianceFrameworks = [
                 >
                   
         <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center text-white font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
-                    {framework.name.charAt(0)}
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-red-400 transition-colors">
-                    {framework.name}
                   </h3>
                   
           <p className="text-gray-300 text-sm">
-                    {framework.description}
                   </p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
         <div className="max-w-7xl mx-auto">
@@ -333,15 +203,6 @@ const complianceFrameworks = [
                       : 'border-white/20 hover:border-red-500/40'
                   }`}
                 >
-                  {plan.popular && (
-                    
-        <div className="absolute top-4 right-4">
-                      <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center space-x-1">
-                        <Star className="w-3 h-3" />
-                        <span>Most Popular</span>
-                      </span>
-                    </div>
-                  )}
                   
         <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -377,7 +238,6 @@ const complianceFrameworks = [
             </div>
           </div>
         </section>
-        {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-red-800/50">
           
         <div className="max-w-7xl mx-auto">
@@ -412,7 +272,6 @@ const complianceFrameworks = [
         <div className="flex items-center">
                     
         <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                      {testimonial.avatar}
                     </div>
                     <div>
                       
@@ -426,7 +285,6 @@ const complianceFrameworks = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           
         <div className="max-w-4xl mx-auto text-center">

@@ -41,7 +41,6 @@ const value: AnalyticsContextType = {
   };
   return (
     <AnalyticsContext.Provider value={value}>
-      {children}
     </AnalyticsContext.Provider>
   );
 };
@@ -54,3 +53,45 @@ export const useAnalytics = () => {
 };
 
 export default NotFoundPage;
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</AnalyticsContextType>
+</AnalyticsProviderProps>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</string>
+</AnalyticsContext>
+    </>
+  );
+}

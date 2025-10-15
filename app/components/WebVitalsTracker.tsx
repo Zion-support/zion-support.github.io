@@ -30,3 +30,4 @@ const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
   return <>{children}</>;
 };
 export default WebVitalsTracker;
+</WebVitalsTrackerProps>

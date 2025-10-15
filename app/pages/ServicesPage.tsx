@@ -19,7 +19,6 @@ const ServicesPage: React.FC = () => { const services = [ { icon: <Zap className
             </p>
           </div>
         </section>
-        { /* Services Grid */ }
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           
         <div className="max-w-7xl mx-auto">
@@ -29,14 +28,11 @@ const ServicesPage: React.FC = () => { const services = [ { icon: <Zap className
                 <div key={index } className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-slate-700 hover:border-purple-500 transition-colors">
                   
         <div className="mb-4">
-                    { service.icon }
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
-                    { service.title }
                   </h3>
                   
           <p className="text-gray-300 mb-4">
-                    { service.description }
                   </p>
                   <Link 
                     to={ service.link }
@@ -49,7 +45,6 @@ const ServicesPage: React.FC = () => { const services = [ { icon: <Zap className
             </div>
           </div>
         </section>
-        { /* CTA Section */ }
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           
         <div className="max-w-4xl mx-auto text-center">

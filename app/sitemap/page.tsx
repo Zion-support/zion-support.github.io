@@ -4,103 +4,7 @@ import { ArrowRight, ExternalLink, Search, Map } from 'lucide-react';
 
 const SitemapPage: React.FC = () => {
   const sitemapSections = [
-    {
-      title: 'Main Pages',
-      pages: [
-        { name: 'Home', url: '/', description: 'Main landing page' },
-        { name: 'About Us', url: '/about', description: 'Company information and team' },
-        { name: 'Contact', url: '/contact', description: 'Get in touch with us' },
-        { name: 'Portfolio', url: '/portfolio', description: 'Our work and projects' },
-        { name: 'Blog', url: '/blog', description: 'Latest news and insights' },
-        { name: 'Demo', url: '/demo', description: 'Schedule a product demo' }
-      ]
-    },
-    {
-      title: 'AI Services',
-      pages: [
-        { name: 'AI Analytics', url: '/ai-analytics', description: 'AI-powered business analytics' },
-        { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content creation' },
-        { name: 'AI Customer Support', url: '/ai-customer-support', description: 'Intelligent customer service' },
-        { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security solutions' },
-        { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data analysis' },
-        { name: 'AI Marketing Automation', url: '/ai-marketing-automation', description: 'Automated marketing campaigns' },
-        { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Voice-enabled AI solutions' },
-        { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Business process automation' }
-      ]
-    },
-    {
-      title: 'IT Services',
-      pages: [
-        { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud infrastructure migration' },
-        { name: 'DevOps Services', url: '/devops-services', description: 'Development and operations' },
-        { name: 'IT Consulting', url: '/it-consulting', description: 'Technology consulting services' },
-        { name: 'Network Security', url: '/network-security', description: 'Cybersecurity solutions' },
-        { name: 'Software Development', url: '/software-development', description: 'Custom software solutions' },
-        { name: 'System Integration', url: '/system-integration', description: 'System integration services' },
-        { name: 'Web Development', url: '/web-development', description: 'Modern web applications' }
-      ]
-    },
-    {
-      title: 'Micro SAAS',
-      pages: [
-        { name: 'Zion AI Video Generator', url: '/zion-ai-video-generator', description: 'AI-powered video creation' },
-        { name: 'Zion AI Invoice Generator', url: '/zion-ai-invoice-generator', description: 'Automated invoice generation' },
-        { name: 'Zion AI CRM Pro', url: '/zion-ai-crm-pro', description: 'Intelligent CRM system' },
-        { name: 'Zion AI Marketing Automation', url: '/zion-ai-marketing-automation', description: 'Marketing automation platform' },
-        { name: 'Zion AI Content Studio', url: '/zion-ai-content-studio', description: 'Content creation suite' },
-        { name: 'Zion AI Financial Analytics', url: '/zion-ai-financial-analytics', description: 'Financial data analysis' },
-        { name: 'Zion AI Inventory Smart', url: '/zion-inventory-smart', description: 'Smart inventory management' },
-        { name: 'Zion AI Data Cleaner', url: '/zion-ai-data-cleaner', description: 'Data cleaning and validation' }
-      ]
-    },
-    {
-      title: '5G Solutions',
-      pages: [
-        { name: '5G Implementation', url: '/5g-implementation', description: '5G network deployment' },
-        { name: '5G Network Infrastructure', url: '/5g-network-infrastructure', description: '5G infrastructure solutions' },
-        { name: '5G IoT Solutions', url: '/5g-iot-solutions', description: 'IoT connectivity solutions' },
-        { name: '5G Edge Computing', url: '/5g-edge-computing', description: 'Edge computing services' },
-        { name: '5G Private Networks', url: '/5g-private-networks', description: 'Private 5G networks' },
-        { name: '5G Smart City Solutions', url: '/5g-smart-city-solutions', description: 'Smart city implementations' }
-      ]
-    },
-    {
-      title: 'Resources',
-      pages: [
-        { name: 'Support', url: '/support', description: 'Technical support and help' },
-        { name: 'Documentation', url: '/docs', description: 'Technical documentation' },
-        { name: 'API Documentation', url: '/api-docs', description: 'API reference and guides' },
-        { name: 'Tutorials', url: '/tutorials', description: 'Learning resources and guides' },
-        { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' },
-        { name: 'Case Studies', url: '/case-studies', description: 'Success stories and examples' },
-        { name: 'News', url: '/news', description: 'Company news and updates' },
-        { name: 'Status Page', url: '/status', description: 'System status and uptime' }
-      ]
-    },
-    {
-      title: 'Company',
-      pages: [
-        { name: 'Our Team', url: '/team', description: 'Meet our team members' },
-        { name: 'Careers', url: '/careers', description: 'Job opportunities' },
-        { name: 'Partners', url: '/partners', description: 'Partnership information' }
-      ]
-    },
-    {
-      title: 'Legal',
-      pages: [
-        { name: 'Privacy Policy', url: '/privacy', description: 'Data protection and privacy' },
-        { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' },
-        { name: 'Cookie Policy', url: '/cookies', description: 'Cookie usage information' }
-      ]
-    }
-  ];
-
-const quickLinks = [
-    { name: 'Get Started', url: '/contact', icon: <ArrowRight className="w-4 h-4" /> },
-    { name: 'View Services', url: '/services', icon: <ExternalLink className="w-4 h-4" /> },
-    { name: 'Schedule Demo', url: '/demo', icon: <ExternalLink className="w-4 h-4" /> },
-    { name: 'Contact Support', url: '/support', icon: <ExternalLink className="w-4 h-4" /> }
-  ];
+  
   return (
     <>
       <Helmet>
@@ -113,7 +17,6 @@ const quickLinks = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -127,7 +30,6 @@ const quickLinks = [
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 Complete navigation guide to all pages and services on our website. Find what you're looking for quickly and easily.
               </p>
-              {/* Search Bar */}
               
         <div className="relative max-w-2xl mx-auto mb-8">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -140,7 +42,6 @@ const quickLinks = [
             </div>
           </div>
         </section>
-        {/* Quick Links */}
         <section className="py-8 px-4">
           
         <div className="max-w-7xl mx-auto">
@@ -153,13 +54,11 @@ const quickLinks = [
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-cyan-500/20 rounded-lg px-6 py-3 text-cyan-400 hover:bg-cyan-500/20 hover:text-cyan-300 transition-all duration-300"
                 >
                   <span>{link.name}</span>
-                  {link.icon}
                 </a>
               ))}
             </div>
           </div>
         </section>
-        {/* Sitemap Sections */}
         <section className="py-16 px-4">
           
         <div className="max-w-7xl mx-auto">
@@ -188,7 +87,6 @@ const quickLinks = [
                           
         <div className="flex-1">
                             <h3 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
-                              {page.name}
                             </h3>
                             
           <p className="text-gray-400 text-sm">{page.description}</p>
@@ -203,7 +101,6 @@ const quickLinks = [
             </div>
           </div>
         </section>
-        {/* Additional Resources */}
         <section className="py-16 px-4 bg-white/5 backdrop-blur-sm">
           
         <div className="max-w-7xl mx-auto">
@@ -282,7 +179,6 @@ const quickLinks = [
             </div>
           </div>
         </section>
-        {/* Contact Section */}
         <section className="py-16 px-4">
           
         <div className="max-w-4xl mx-auto text-center">

@@ -2,123 +2,11 @@ import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import { Zap, Share, Users, Shield, CheckCircle, Cloud, Lock, Clock, ArrowRight } from 'lucide-react';
 export default function ZionCloudVault() {
-    {
-      title: "Real-time Sync",
-      description: "Automatic synchronization across all your devices with conflict resolution and version control",
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Advanced Sharing",
-      description: "Secure file sharing with granular permissions, password protection, and expiration dates",
-      icon: <Share className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Team Collaboration",
-      description: "Work together seamlessly with real-time editing, comments, and activity tracking",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Backup & Recovery",
-      description: "Automated backups with point-in-time recovery and ransomware protection",
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Compliance Ready",
-      description: "GDPR, HIPAA, and SOC 2 compliant with audit trails and data residency controls",
-      icon: <CheckCircle className="w-6 h-6" />,
-      included: true
-    }
+  const features = [
+    // ... features
   ];
 
-const pricingPlans = [
-    {
-      name: "Personal",
-      price: 9,
-      period: "month",
-      description: "Perfect for individuals",
-      features: [
-        "100 GB storage",
-        "5 devices",
-        "Basic sharing",
-        "Email support",
-        "30-day version history",
-        "Standard encryption"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 29,
-      period: "month",
-      description: "Ideal for small teams",
-      features: [
-        "1 TB storage",
-        "Unlimited devices",
-        "Advanced sharing",
-        "Priority support",
-        "1-year version history",
-        "Advanced encryption",
-        "Team collaboration",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Business",
-      price: 79,
-      period: "month",
-      description: "For growing businesses",
-      features: [
-        "5 TB storage",
-        "Unlimited devices",
-        "Enterprise sharing",
-        "Dedicated support",
-        "Unlimited version history",
-        "Military-grade encryption",
-        "Advanced admin controls",
-        "SSO integration",
-        "Compliance reporting"
-      ],
-      popular: false
-    }
-  ];
-
-const storageStats = [
-    { number: "99.99%", label: "Uptime SLA", icon: <Cloud className="w-6 h-6" /> },
-    { number: "256-bit", label: "AES Encryption", icon: <Lock className="w-6 h-6" /> },
-    { number: "5x", label: "Faster Sync", icon: <Zap className="w-6 h-6" /> },
-    { number: "24/7", label: "Support", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Jennifer Adams",
-      company: "Creative Agency",
-      role: "Creative Director",
-      content: "Zion Cloud Vault has revolutionized how our team collaborates. The real-time sync and sharing features have made remote work seamless and secure.",
-      rating: 5,
-      avatar: "JA"
-    },
-    {
-      name: "Mark Wilson",
-      company: "Legal Firm",
-      role: "Managing Partner",
-      content: "The compliance features are outstanding. We can confidently store sensitive client documents knowing they're protected with military-grade encryption.",
-      rating: 5,
-      avatar: "MW"
-    },
-    {
-      name: "Sarah Chen",
-      company: "Startup Inc.",
-      role: "CTO",
-      content: "The API integration capabilities are fantastic. We've seamlessly integrated Zion Cloud Vault into our existing workflow without any disruption.",
-      rating: 5,
-      avatar: "SC"
-    }
+  const testimonials = [
   ];
   return (
     <>
@@ -135,12 +23,10 @@ const testimonials = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
         
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-teal-500/10 animate-pulse"></div>
         
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.3),transparent_50%)]"></div>
-        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto text-center">
@@ -178,14 +64,12 @@ const testimonials = [
                 Watch Demo
               </Link>
             </div>
-            {/* Storage Stats */}
             
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {storageStats.map((stat, index) => (
                 <div key={index} className="text-center">
                   
         <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center">
-                    {stat.icon}
                   </div>
                   
         <div className="text-3xl font-bold text-blue-400 mb-2">{stat.number}</div>
@@ -196,7 +80,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -225,14 +108,11 @@ const testimonials = [
         <div className="relative z-10">
                     
         <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {feature.icon}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors">
-                      {feature.title}
                     </h3>
                     
           <p className="text-gray-300 leading-relaxed">
-                      {feature.description}
                     </p>
                     
         <div className="flex items-center mt-4">
@@ -245,7 +125,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
           
         <div className="max-w-7xl mx-auto">
@@ -272,15 +151,6 @@ const testimonials = [
                       : 'border-white/20 hover:border-blue-500/30'
                   }`}
                 >
-                  {plan.popular && (
-                    
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      
-        <div className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>
-                  )}
                   
         <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -315,7 +185,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -348,7 +217,6 @@ const testimonials = [
         <div className="flex items-center">
                     
         <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
                     </div>
                     <div>
                       
@@ -362,7 +230,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
           
         <div className="max-w-4xl mx-auto text-center">
@@ -398,5 +265,5 @@ const testimonials = [
         </section>
       </div>
     </>
-  );
 }
+);

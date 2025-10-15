@@ -2,122 +2,11 @@ import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import { Users, Target, Clock, Settings, BarChart3, CheckSquare, Calendar, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionProjectMaster() {
-    {
-      title: "Team Collaboration",
-      description: "Real-time collaboration with team members, comments, and file sharing capabilities",
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Task Management",
-      description: "Advanced task management with priorities, deadlines, and automated notifications",
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Time Tracking",
-      description: "Built-in time tracking with detailed reports and productivity analytics",
-      icon: <Clock className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Resource Management",
-      description: "Manage team resources, workload distribution, and capacity planning",
-      icon: <Settings className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: "Reporting & Analytics",
-      description: "Comprehensive project reports and analytics to track progress and performance",
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    }
+  const features = [
+    // ... features
   ];
 
-const pricingPlans = [
-    {
-      name: "Starter",
-      price: 19,
-      period: "month",
-      description: "Perfect for small teams",
-      features: [
-        "Up to 5 projects",
-        "Up to 10 team members",
-        "Basic task management",
-        "Email support",
-        "Standard templates",
-        "Basic reporting"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 49,
-      period: "month",
-      description: "Ideal for growing teams",
-      features: [
-        "Up to 25 projects",
-        "Up to 50 team members",
-        "Advanced task management",
-        "Priority support",
-        "Premium templates",
-        "Advanced reporting",
-        "Time tracking",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 129,
-      period: "month",
-      description: "For large organizations",
-      features: [
-        "Unlimited projects",
-        "Unlimited team members",
-        "Custom workflows",
-        "Dedicated support",
-        "Custom templates",
-        "Custom reporting",
-        "White-label solution",
-        "SSO integration"
-      ],
-      popular: false
-    }
-  ];
-
-const projectStats = [
-    { number: "40%", label: "Faster Project Delivery", icon: <CheckSquare className="w-6 h-6" /> },
-    { number: "60%", label: "Better Team Productivity", icon: <Users className="w-6 h-6" /> },
-    { number: "95%", label: "On-time Delivery Rate", icon: <Calendar className="w-6 h-6" /> },
-    { number: "24/7", label: "Project Monitoring", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-const testimonials = [
-    {
-      name: "Michael Chen",
-      company: "Software Development",
-      role: "Project Manager",
-      content: "Zion Project Master has transformed how we manage projects. The real-time collaboration and advanced reporting features have improved our team productivity by 60%.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Lisa Rodriguez",
-      company: "Marketing Agency",
-      role: "Operations Director",
-      content: "The resource management features are incredible. We can now properly allocate team members across projects and avoid overloading anyone.",
-      rating: 5,
-      avatar: "LR"
-    },
-    {
-      name: "James Wilson",
-      company: "Construction Company",
-      role: "Project Director",
-      content: "The time tracking and analytics have given us complete visibility into our project performance. We've improved our on-time delivery rate to 95%.",
-      rating: 5,
-      avatar: "JW"
-    }
+  const testimonials = [
   ];
   return (
     <>
@@ -134,12 +23,10 @@ const testimonials = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
         
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.3),transparent_50%)]"></div>
-        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto text-center">
@@ -177,14 +64,12 @@ const testimonials = [
                 Watch Demo
               </Link>
             </div>
-            {/* Project Stats */}
             
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {projectStats.map((stat, index) => (
                 <div key={index} className="text-center">
                   
         <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 flex items-center justify-center">
-                    {stat.icon}
                   </div>
                   
         <div className="text-3xl font-bold text-indigo-400 mb-2">{stat.number}</div>
@@ -195,7 +80,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -224,14 +108,11 @@ const testimonials = [
         <div className="relative z-10">
                     
         <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {feature.icon}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-indigo-300 transition-colors">
-                      {feature.title}
                     </h3>
                     
           <p className="text-gray-300 leading-relaxed">
-                      {feature.description}
                     </p>
                     
         <div className="flex items-center mt-4">
@@ -244,7 +125,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-indigo-800/50">
           
         <div className="max-w-7xl mx-auto">
@@ -271,15 +151,6 @@ const testimonials = [
                       : 'border-white/20 hover:border-indigo-500/30'
                   }`}
                 >
-                  {plan.popular && (
-                    
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      
-        <div className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>
-                  )}
                   
         <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -314,7 +185,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           
         <div className="max-w-7xl mx-auto">
@@ -347,7 +217,6 @@ const testimonials = [
         <div className="flex items-center">
                     
         <div className="w-10 h-10 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
                     </div>
                     <div>
                       
@@ -361,7 +230,6 @@ const testimonials = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-indigo-900/30 to-purple-900/30">
           
         <div className="max-w-4xl mx-auto text-center">
@@ -397,5 +265,5 @@ const testimonials = [
         </section>
       </div>
     </>
-  );
 }
+);

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { NavigationProps, Bars3Icon } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import {
   Bars3Icon, 
   XMarkIcon,
   ChevronDownIcon
@@ -33,7 +33,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
@@ -45,12 +44,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     : 'text-gray-300 hover:bg-slate-700 hover:text-white'
                 }`}
               >
-                {item.name}
               </Link>
             ))}
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={onSidebarToggle}

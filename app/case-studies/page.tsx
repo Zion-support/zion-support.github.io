@@ -131,7 +131,6 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -148,7 +147,6 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
             </div>
           </div>
         </section>
-        {/* Stats Section */}
         <section className="py-16 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -170,7 +168,6 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
             </div>
           </div>
         </section>
-        {/* Featured Case Study */}
         {featuredCaseStudy && (
           <section className="py-16 px-4">
             
@@ -234,7 +231,6 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
             </div>
           </section>
         )}
-        {/* Industry */}
         <section className="py-8 px-4">
           
         <div className="max-w-7xl mx-auto">
@@ -249,13 +245,11 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
                       : 'bg-slate-800/50 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400'
                   }`}
                 >
-                  {industry}
                 </button>
               ))}
             </div>
           </div>
         </section>
-        {/* Case Studies Grid */}
         <section className="py-16 px-4 pb-20">
           
         <div className="max-w-7xl mx-auto">
@@ -274,12 +268,10 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
                     
         <div className="flex items-center space-x-4 mb-3">
                       <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
-                        {study.industry}
                       </span>
                       <span className="text-gray-400 text-sm">{study.duration}</span>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                      {study.title}
                     </h3>
                     
           <p className="text-gray-300 mb-4 text-sm">{study.solution}</p>
@@ -294,12 +286,6 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
                             <span className="text-gray-300 text-xs">{result}</span>
                           </div>
                         ))}
-                        {study.results.length > 2 && (
-                          
-        <div className="text-xs text-cyan-400">
-                            +{study.results.length - 2} more results
-                          </div>
-                        )}
                       </div>
                     </div>
                     
@@ -323,7 +309,6 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="container mx-auto px-4">

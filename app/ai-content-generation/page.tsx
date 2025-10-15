@@ -5,98 +5,30 @@ import { CheckCircle } from 'lucide-react';
 
 const AIContentGenerationPage: React.FC = () => {
   const contentServices = [
+  const features = [
     {
       title: 'AI Blog Content Generator Pro',
-      description: 'Advanced AI-powered blog content creation with SEO optimization, research integration, and brand voice consistency.',
-      icon: '✍️',
-      price: '$199/month',
-      features: [
-        'SEO-optimized content generation',
-        'Research integration',
-        'Brand voice consistency',
-        'Multi-language support',
-        'Content calendar automation',
-        'Performance analytics'
-      ],
-      benefits: [
-        'Create 10x more content',
-        'Improve SEO rankings by 150%',
-        'Save 40+ hours per week',
-        'Increase organic traffic by 200%'
-      ],
-      marketPrice: '$500-1000/month',
-      technologies: ['OpenAI GPT-4', 'Claude', 'Custom Fine-tuned Models', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Social Media Content Suite',
-      description: 'Comprehensive social media content creation with platform-specific optimization, hashtag research, and engagement prediction.',
-      icon: '📱',
-      price: '$149/month',
-      features: [
-        'Platform-specific optimization',
-        'Hashtag research automation',
-        'Engagement prediction',
-        'Visual content generation',
-        'Posting schedule optimization',
-        'Viral content analysis'
-      ],
-      benefits: [
-        'Increase engagement by 300%',
-        'Grow followers organically',
-        'Save 25+ hours per week',
-        'Improve brand awareness'
-      ],
-      marketPrice: '$300-600/month',
-      technologies: ['OpenAI GPT-4', 'DALL-E', 'Instagram API', 'Twitter API', 'LinkedIn API'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Email Marketing Automation',
-      description: 'Intelligent email campaign creation with personalization, A/B testing, and performance optimization.',
-      icon: '📧',
-      price: '$99/month',
-      features: [
-        'Personalized email content',
-        'A/B testing automation',
-        'Send time optimization',
-        'Subject line generation',
-        'Email sequence creation',
-        'Performance tracking'
-      ],
-      benefits: [
-        'Increase open rates by 250%',
-        'Boost click-through rates by 180%',
-        'Save 30+ hours per week',
-        'Improve customer engagement'
-      ],
-      marketPrice: '$200-500/month',
-      technologies: ['OpenAI GPT-4', 'Mailchimp API', 'SendGrid API', 'Custom ML Models'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Video Script Generator',
-      description: 'Professional video script creation for marketing, educational, and entertainment content with visual cues and timing.',
-      icon: '🎬',
-      price: '$79/month',
-      features: [
-        'Video script generation',
-        'Visual cue suggestions',
-        'Timing optimization',
-        'Multiple video formats',
-        'Hook and CTA optimization',
-        'Trend analysis integration'
-      ],
-      benefits: [
-        'Create engaging video content',
-        'Reduce production time by 60%',
-        'Improve viewer retention',
-        'Increase conversion rates'
-      ],
-      marketPrice: '$150-400/month',
-      technologies: ['OpenAI GPT-4', 'Video Analysis AI', 'Trend Detection APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
+        description: 'Advanced AI-powered blog content creation with SEO optimization, research integration, and brand voice consistency.',
+        icon: '✍️',
+        price: '$199/month',
+        features: [
+          'SEO-optimized content generation',
+          'Research integration',
+          'Brand voice consistency',
+          'Multi-language support',
+          'Content calendar automation',
+          'Performance analytics'
+        ],
+        benefits: [
+          'Create 10x more content',
+          'Improve SEO rankings by 150%',
+          'Save 40+ hours per week',
+          'Increase organic traffic by 200%'
+        ],
+        marketPrice: '$500-1000/month',
+        technologies: ['OpenAI GPT-4', 'Claude', 'Custom Fine-tuned Models', 'React', 'Node.js'],
+        contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      },
   ];
 
 const contentTypes = [
@@ -118,7 +50,6 @@ const contentTypes = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -151,7 +82,6 @@ const contentTypes = [
             </div>
           </div>
         </section>
-        {/* Features Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -171,7 +101,6 @@ const contentTypes = [
         <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     
         <div className="text-white">
-                      {feature.icon}
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
@@ -182,7 +111,6 @@ const contentTypes = [
             </div>
           </div>
         </section>
-        {/* Content Types Section */}
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -216,7 +144,6 @@ const contentTypes = [
           </div>
         </section>
 
-        {/* Process Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
@@ -232,10 +159,8 @@ const contentTypes = [
               {processSteps.map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="bg-gradient-to-r from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-                    {step.step}
                   </div>
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    {step.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
                   <p className="text-gray-600">{step.description}</p>
@@ -244,7 +169,6 @@ const contentTypes = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="container mx-auto px-4">

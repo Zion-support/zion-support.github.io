@@ -51,122 +51,12 @@ const SecurityPage: React.FC = () => {
   ];
 
 const complianceStandards = [
-    {
-      name: 'SOC 2 Type II',
-      description: 'Audited controls for security, availability, processing integrity, confidentiality, and privacy',
-      status: 'Certified',
-      icon: <CheckCircle className="w-6 h-6" />
-    },
-    {
-      name: 'ISO 27001',
-      description: 'International standard for information security management systems',
-      status: 'Compliant',
-      icon: <CheckCircle className="w-6 h-6" />
-    },
-    {
-      name: 'GDPR',
-      description: 'General Data Protection Regulation compliance for EU data protection',
-      status: 'Compliant',
-      icon: <CheckCircle className="w-6 h-6" />
-    },
-    {
-      name: 'HIPAA',
-      description: 'Health Insurance Portability and Accountability Act compliance',
-      status: 'Compliant',
-      icon: <CheckCircle className="w-6 h-6" />
-    },
-    {
-      name: 'PCI DSS',
-      description: 'Payment Card Industry Data Security Standard for payment processing',
-      status: 'Compliant',
-      icon: <CheckCircle className="w-6 h-6" />
-    },
-    {
-      name: 'NIST Framework',
-      description: 'National Institute of Standards and Technology cybersecurity framework',
-      status: 'Aligned',
-      icon: <CheckCircle className="w-6 h-6" />
-    }
   ];
 
 const securityMeasures = [
-    {
-      category: 'Infrastructure Security',
-      measures: [
-        'Secure cloud infrastructure with AWS/Azure',
-        'Network segmentation and firewalls',
-        'DDoS protection and mitigation',
-        'Regular security updates and patches',
-        'Intrusion detection systems',
-        'Vulnerability scanning and management'
-      ]
-    },
-    {
-      category: 'Application Security',
-      measures: [
-        'Secure coding practices and code reviews',
-        'Automated security testing in CI/CD',
-        'Web Application Firewall (WAF)',
-        'API security and rate limiting',
-        'Input validation and sanitization',
-        'Regular penetration testing'
-      ]
-    },
-    {
-      category: 'Data Protection',
-      measures: [
-        'Data classification and handling procedures',
-        'Encryption at rest and in transit',
-        'Secure data backup and recovery',
-        'Data loss prevention (DLP)',
-        'Secure data disposal',
-        'Privacy by design principles'
-      ]
-    },
-    {
-      category: 'Operational Security',
-      measures: [
-        'Security awareness training',
-        'Incident response procedures',
-        'Regular security assessments',
-        'Third-party security reviews',
-        'Security monitoring and alerting',
-        'Business continuity planning'
-      ]
-    }
   ];
 
 const incidentResponse = [
-    {
-      phase: 'Detection',
-      description: 'Automated monitoring detects potential security incidents',
-      timeline: 'Immediate'
-    },
-    {
-      phase: 'Analysis',
-      description: 'Security team analyzes the incident and determines severity',
-      timeline: 'Within 1 hour'
-    },
-    {
-      phase: 'Containment',
-      description: 'Immediate steps to contain and prevent further damage',
-      timeline: 'Within 2 hours'
-    },
-    {
-      phase: 'Eradication',
-      description: 'Remove the threat and vulnerabilities from the system',
-      timeline: 'Within 24 hours'
-    },
-    {
-      phase: 'Recovery',
-      description: 'Restore systems to normal operation with enhanced security',
-      timeline: 'Within 48 hours'
-    },
-    {
-      phase: 'Lessons Learned',
-      description: 'Post-incident review and security improvements',
-      timeline: 'Within 1 week'
-    }
   ];
   return (
     <>
@@ -180,7 +70,6 @@ const incidentResponse = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -197,7 +86,6 @@ const incidentResponse = [
             </div>
           </div>
         </section>
-        {/* Security Features */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -238,7 +126,6 @@ const incidentResponse = [
             </div>
           </div>
         </section>
-        {/* Compliance Standards */}
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -254,7 +141,6 @@ const incidentResponse = [
                       <h3 className="text-lg font-bold text-white">{standard.name}</h3>
                       
         <div className="flex items-center text-green-400">
-                        {standard.icon}
                         <span className="ml-2 text-sm font-semibold">{standard.status}</span>
                       </div>
                     </div>
@@ -266,7 +152,6 @@ const incidentResponse = [
             </div>
           </div>
         </section>
-        {/* Security Measures */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -292,7 +177,6 @@ const incidentResponse = [
             </div>
           </div>
         </section>
-        {/* Incident Response */}
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -307,7 +191,6 @@ const incidentResponse = [
         <div className="flex items-center justify-between mb-4">
                       <h3 className="text-xl font-bold text-white">{phase.phase}</h3>
                       <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
-                        {phase.timeline}
                       </span>
                     </div>
                     
@@ -318,7 +201,6 @@ const incidentResponse = [
             </div>
           </div>
         </section>
-        {/* Security Resources */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -373,7 +255,6 @@ const incidentResponse = [
             </div>
           </div>
         </section>
-        {/* Contact Security Team */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="container mx-auto px-4">

@@ -62,7 +62,6 @@ const categories = ['All', 'AI & Technology', 'Cybersecurity', '5G & IoT', 'Busi
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Header */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           
         <div className="max-w-7xl mx-auto text-center">
@@ -74,7 +73,6 @@ const categories = ['All', 'AI & Technology', 'Cybersecurity', '5G & IoT', 'Busi
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Stay ahead with the latest technology trends, expert insights, and practical solutions from our team of industry professionals.
             </p>
-            {/* Search and Filter */}
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
               
@@ -92,7 +90,6 @@ const categories = ['All', 'AI & Technology', 'Cybersecurity', '5G & IoT', 'Busi
                 <select className="pl-10 pr-8 py-3 bg-slate-800/50 border border-cyan-500/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-transparent">
                   {categories.map((category) => (
                     <option key={category} value={category} className="bg-slate-800">
-                      {category}
                     </option>
                   ))}
                 </select>
@@ -100,7 +97,6 @@ const categories = ['All', 'AI & Technology', 'Cybersecurity', '5G & IoT', 'Busi
             </div>
           </div>
         </section>
-        {/* Featured Post */}
         <section className="px-4 sm:px-6 lg:px-8 mb-16">
           
         <div className="max-w-7xl mx-auto">
@@ -122,7 +118,6 @@ const categories = ['All', 'AI & Technology', 'Cybersecurity', '5G & IoT', 'Busi
                     
         <div className="flex items-center space-x-4 mb-4">
                       <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
-                        {post.category}
                       </span>
                       <span className="text-gray-400 text-sm">{post.readTime}</span>
                     </div>
@@ -158,7 +153,6 @@ const categories = ['All', 'AI & Technology', 'Cybersecurity', '5G & IoT', 'Busi
             ))}
           </div>
         </section>
-        {/* Blog Posts Grid */}
         <section className="px-4 sm:px-6 lg:px-8 pb-20">
           
         <div className="max-w-7xl mx-auto">
@@ -177,12 +171,10 @@ const categories = ['All', 'AI & Technology', 'Cybersecurity', '5G & IoT', 'Busi
                     
         <div className="flex items-center space-x-4 mb-3">
                       <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
-                        {post.category}
                       </span>
                       <span className="text-gray-400 text-sm">{post.readTime}</span>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                      {post.title}
                     </h3>
                     
           <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>

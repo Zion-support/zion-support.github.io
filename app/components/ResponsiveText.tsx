@@ -22,8 +22,11 @@ const ResponsiveText: React.FC<ResponsiveTextProps> = ({
   ].filter(Boolean).join(' ');
   return (
     <p className={textClasses}>
-      {children}
     </p>
   );
 };
 export default ResponsiveText;
+</ResponsiveTextProps>
+    </>
+  );
+}

@@ -4,78 +4,6 @@ import { Handshake, Globe, Users, Award, CheckCircle, Star, ArrowRight } from 'l
 
 const PartnersPage: React.FC = () => {
   const partners = [
-    {
-      name: "Microsoft",
-      logo: "/api/placeholder/200/100",
-      category: "Technology Partner",
-      description: "Strategic partnership for Azure cloud services and AI solutions",
-      benefits: [
-        "Access to Azure AI services",
-        "Joint go-to-market initiatives",
-        "Technical support and training",
-        "Co-marketing opportunities"
-      ]
-    },
-    {
-      name: "Amazon Web Services",
-      logo: "/api/placeholder/200/100",
-      category: "Cloud Partner",
-      description: "Premier AWS partner delivering scalable cloud solutions",
-      benefits: [
-        "AWS certified solutions",
-        "Cost optimization services",
-        "Migration expertise",
-        "24/7 cloud support"
-      ]
-    },
-    {
-      name: "Google Cloud",
-      logo: "/api/placeholder/200/100",
-      category: "AI Partner",
-      description: "Advanced AI and machine learning solutions on Google Cloud",
-      benefits: [
-        "Google AI/ML services",
-        "Data analytics solutions",
-        "Machine learning expertise",
-        "Scalable infrastructure"
-      ]
-    },
-    {
-      name: "Salesforce",
-      logo: "/api/placeholder/200/100",
-      category: "CRM Partner",
-      description: "Certified Salesforce implementation and customization partner",
-      benefits: [
-        "Salesforce certified experts",
-        "Custom development",
-        "Integration services",
-        "Training and support"
-      ]
-    },
-    {
-      name: "IBM",
-      logo: "/api/placeholder/200/100",
-      category: "Enterprise Partner",
-      description: "Enterprise solutions and Watson AI integration",
-      benefits: [
-        "IBM Watson AI services",
-        "Enterprise security solutions",
-        "Legacy system modernization",
-        "Consulting services"
-      ]
-    },
-    {
-      name: "Oracle",
-      logo: "/api/placeholder/200/100",
-      category: "Database Partner",
-      description: "Oracle database and cloud infrastructure solutions",
-      benefits: [
-        "Oracle database expertise",
-        "Cloud migration services",
-        "Performance optimization",
-        "Security and compliance"
-      ]
-    }
   ];
 
 const partnershipTypes = [
@@ -143,7 +71,6 @@ const stats = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -160,7 +87,6 @@ const stats = [
             </div>
           </div>
         </section>
-        {/* Stats Section */}
         <section className="py-16 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -177,7 +103,6 @@ const stats = [
             </div>
           </div>
         </section>
-        {/* Partnership Types */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -214,7 +139,6 @@ const stats = [
             </div>
           </div>
         </section>
-        {/* Current Partners */}
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -238,7 +162,6 @@ const stats = [
                     </div>
                     
         <div className="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm inline-block mb-4">
-                      {partner.category}
                     </div>
                     
           <p className="text-gray-300 text-sm">{partner.description}</p>
@@ -259,7 +182,6 @@ const stats = [
             </div>
           </div>
         </section>
-        {/* Become a Partner */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">

@@ -37,30 +37,6 @@ const GDPRPage: React.FC = () => {
   ];
 
 const dataCategories = [
-    {
-      category: 'Identity Data',
-      examples: ['Name', 'Email address', 'Phone number', 'Company name'],
-      purpose: 'Account creation, communication, service delivery',
-      legalBasis: 'Contract performance, legitimate interests'
-    },
-    {
-      category: 'Technical Data',
-      examples: ['IP address', 'Browser type', 'Device information', 'Cookies'],
-      purpose: 'Website functionality, security, analytics',
-      legalBasis: 'Legitimate interests, consent'
-    },
-    {
-      category: 'Usage Data',
-      examples: ['Page views', 'Click patterns', 'Session duration', 'Feature usage'],
-      purpose: 'Service improvement, analytics, personalization',
-      legalBasis: 'Legitimate interests, consent'
-    },
-    {
-      category: 'Marketing Data',
-      examples: ['Communication preferences', 'Marketing responses', 'Event attendance'],
-      purpose: 'Marketing communications, event management',
-      legalBasis: 'Consent, legitimate interests'
-    }
   ];
 
 const securityMeasures = [
@@ -85,7 +61,6 @@ const securityMeasures = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -106,7 +81,6 @@ const securityMeasures = [
             </div>
           </div>
         </section>
-        {/* Overview */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -127,7 +101,6 @@ const securityMeasures = [
             </div>
           </div>
         </section>
-        {/* Your Rights */}
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -155,7 +128,6 @@ const securityMeasures = [
             </div>
           </div>
         </section>
-        {/* Data Categories */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -197,7 +169,6 @@ const securityMeasures = [
             </div>
           </div>
         </section>
-        {/* Security Measures */}
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -223,7 +194,6 @@ const securityMeasures = [
             </div>
           </div>
         </section>
-        {/* Data Retention */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -270,7 +240,6 @@ const securityMeasures = [
             </div>
           </div>
         </section>
-        {/* Contact DPO */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="container mx-auto px-4">

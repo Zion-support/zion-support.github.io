@@ -59,8 +59,11 @@ const textClasses = [
   ].filter(Boolean).join(' ');
   return (
     <Component className={textClasses}>
-      {children}
     </Component>
   );
 };
 export default FuturisticText;
+</FuturisticTextProps>
+    </>
+  );
+}

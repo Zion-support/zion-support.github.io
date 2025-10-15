@@ -1,11 +1,10 @@
 import React, { useState, useEffect, memo, lazy, Suspense } from "react";
 import { Helmet } from 'react-helmet-async';
-import { React, Suspense } from 'react';
-import { Search, 2min, HelpCircle, BookOpen, Users, Clock, Phone, Mail } from 'lucide-react';
+import { Search, HelpCircle, BookOpen, Users, Clock, Phone, Mail, Zap } from 'lucide-react';
 
-const [selectedCategory, setSelectedCategory] = useState("all");
-
-const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+const SupportPage = () => {
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
 const resources = [ { title: "Documentation", description: "Comprehensive guides and API references", icon: BookOpen, link: "/docs", }, { title: "Community Forum", description: "Connect with other users and experts", icon: Users, link: "/community", }, { title: "Video Tutorials", description: "Step-by-step video guides", icon: Zap, link: "/tutorials", }, ];
 
@@ -38,7 +37,7 @@ const supportChannels = [
       color: "text-red-400", },
   ];
 
-const categories = [
+  const categories = [
     "all",
     "general",
     "support",
@@ -50,7 +49,7 @@ const categories = [
     "development",
   ];
 
-const filteredFAQs = faqs.filter((faq) => { const matchesSearch =
+  const filteredFAQs = faqs.filter((faq) => { const matchesSearch =
       faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
 
@@ -69,7 +68,6 @@ const toggleFAQ = () => {
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        { /* Hero Section */ }
         <section className="py-20 px-4">
           
         <div className="max-w-7xl mx-auto text-center">
@@ -85,7 +83,6 @@ const toggleFAQ = () => {
               Get the help you need, when you need it. Our expert support team
               is available 24/7 to assist with all your AI and IT solutions.
             </p>
-            { /* Search Bar */ }
             
         <div className="max-w-2xl mx-auto relative mb-8">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -97,14 +94,13 @@ const toggleFAQ = () => {
                 className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
-            { /* Quick Stats */ }
             
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               
         <div className="text-center">
                 
         <div className="text-3xl font-bold text-white mb-2">
-                  <2min
+                  2min
                 </div>
                 
         <div className="text-gray-400">Average Response Time</div>
@@ -126,7 +122,6 @@ const toggleFAQ = () => {
             </div>
           </div>
         </section>
-        { /* Support Channels */ }
         <section className="py-16 px-4">
           
         <div className="max-w-7xl mx-auto">
@@ -153,23 +148,19 @@ const toggleFAQ = () => {
                     <channel.icon className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">
-                    { channel.name }
                   </h3>
                   
           <p className="text-gray-300 mb-4">{ channel.description }</p>
                   <p className={ `${channel.color } font-medium mb-2`}>
-                    { channel.contact }
                   </p>
                   
           <p className="text-sm text-gray-400">
-                    { channel.availability }
                   </p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        { /* Resources Section */ }
         <section className="py-16 px-4">
           
         <div className="max-w-7xl mx-auto">
@@ -187,7 +178,6 @@ const toggleFAQ = () => {
                     <resource.icon className="w-6 h-6 text-slate-900" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    { resource.title }
                   </h3>
                   
           <p className="text-gray-300 mb-4">{ resource.description }</p>
@@ -201,7 +191,6 @@ const toggleFAQ = () => {
             </div>
           </div>
         </section>
-        { /* FAQ Section */ }
         <section className="py-16 px-4">
           
         <div className="max-w-4xl mx-auto">
@@ -214,7 +203,6 @@ const toggleFAQ = () => {
           <p className="text-xl text-gray-300 mb-8">
                 Find answers to common questions
               </p>
-              { /* Category Filter */ }
               
         <div className="flex flex-wrap justify-center gap-4 mb-8">
                 { categories.map((category) => (
@@ -243,7 +231,6 @@ const toggleFAQ = () => {
                     onClick={ () => toggleFAQ(index) }
                     className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors">
                     <h3 className="text-lg font-semibold text-white pr-4">
-                      { faq.question }
                     </h3>
                     <div
                       className={ `transform transition-transform ${expandedFAQ === index ? "rotate-180" : "" }`}
@@ -256,7 +243,6 @@ const toggleFAQ = () => {
         <div className="px-6 pb-6">
                       
           <p className="text-gray-300 leading-relaxed">
-                        {faq.answer }
                       </p>
                     </div>
                   )}
@@ -275,7 +261,6 @@ const toggleFAQ = () => {
             ) }
           </div>
         </section>
-        { /* Resources Section */ }
         <section className="py-16 px-4">
           
         <div className="max-w-7xl mx-auto">
@@ -338,7 +323,6 @@ const toggleFAQ = () => {
             </div>
           </div>
         </section>
-        { /* Contact CTA */ }
         <section className="py-16 px-4">
           
         <div className="max-w-4xl mx-auto text-center">

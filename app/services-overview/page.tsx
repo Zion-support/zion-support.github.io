@@ -4,76 +4,7 @@ import { Brain, Code, Wifi, Cloud, Target, Users, TrendingUp, Clock, Zap, Shield
 
 const ServicesOverviewPage: React.FC = () => {
   const serviceCategories = [
-    {
-      title: "AI Services",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-600",
-      description: "Revolutionary AI-powered solutions for modern businesses",
-      services: [
-        { name: "AI Analytics Dashboard Pro", price: "$299/month", features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards"] },
-        { name: "AI Content Generation Pro", price: "$199/month", features: ["AI Writing", "Content Optimization", "Multi-language Support"] },
-        { name: "AI Automation Suite", price: "$399/month", features: ["Workflow Automation", "Process Optimization", "Integration APIs"] },
-        { name: "AI Business Intelligence Pro", price: "$249/month", features: ["Advanced Analytics", "Data Visualization", "Custom Reports"] },
-        { name: "AI Code Assistant Pro", price: "$199/month", features: ["Code Generation", "Bug Detection", "Performance Optimization"] },
-        { name: "AI Chatbot Enterprise", price: "$149/month", features: ["Multi-language Support", "Advanced NLP", "Integration APIs"] },
-        { name: "AI Social Media Manager", price: "$149/month", features: ["AI Content Generation", "Multi-platform Support", "Analytics Dashboard"] },
-        { name: "AI Project Manager", price: "$99/month", features: ["AI Planning", "Resource Optimization", "Progress Tracking"] },
-        { name: "AI Customer Support", price: "$149/month", features: ["24/7 Support", "Multi-language", "Omnichannel"] },
-        { name: "AI Email Marketing", price: "$99/month", features: ["AI Content Generation", "Advanced Analytics", "A/B Testing"] }
-      ]
-    },
-    {
-      title: "IT Services",
-      icon: <Code className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-600",
-      description: "Comprehensive IT solutions and infrastructure services",
-      services: [
-        { name: "Cloud Infrastructure", price: "$499/month", features: ["Auto-scaling", "AI Monitoring", "Cost Optimization"] },
-        { name: "API Management", price: "$199/month", features: ["API Gateway", "Rate Limiting", "Analytics"] },
-        { name: "Database Solutions", price: "$299/month", features: ["Database Design", "Performance Tuning", "Backup & Recovery"] },
-        { name: "Advanced Security Suite", price: "$399/month", features: ["AI Threat Detection", "Automated Response", "Compliance Management"] },
-        { name: "Performance Monitoring", price: "$149/month", features: ["Real-time Monitoring", "Alerting", "Performance Optimization"] },
-        { name: "DevOps Solutions", price: "$249/month", features: ["CI/CD Pipeline", "Infrastructure as Code", "Automated Deployment"] },
-        { name: "Cloud Migration Services", price: "From $2,999", features: ["Zero Downtime", "Cost Optimization", "Multi-cloud Support"] },
-        { name: "Cybersecurity Consulting", price: "From $2,999", features: ["Security Assessment", "Penetration Testing", "Compliance Management"] }
-      ]
-    },
-    {
-      title: "5G Solutions",
-      icon: <Wifi className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-600",
-      description: "Next-generation 5G technology and IoT solutions",
-      services: [
-        { name: "5G Implementation", price: "$999/month", features: ["5G Network Setup", "IoT Integration", "Edge Computing"] },
-        { name: "5G Network Infrastructure", price: "$1,499/month", features: ["Network Design", "Hardware Installation", "Optimization"] },
-        { name: "5G IoT Solutions", price: "$799/month", features: ["IoT Platform", "Device Management", "Data Analytics"] },
-        { name: "5G Smart City Solutions", price: "$2,999/month", features: ["Smart Infrastructure", "Traffic Management", "Environmental Monitoring"] },
-        { name: "5G Edge Computing", price: "$1,199/month", features: ["Edge Infrastructure", "Low Latency", "Real-time Processing"] },
-        { name: "5G Private Networks", price: "$1,799/month", features: ["Private 5G", "Custom Configuration", "Dedicated Support"] }
-      ]
-    },
-    {
-      title: "Micro SAAS",
-      icon: <Cloud className="w-8 h-8" />,
-      color: "from-orange-500 to-red-600",
-      description: "Specialized micro SAAS solutions for specific business needs",
-      services: [
-        { name: "AI Accounting Assistant", price: "$79/month", features: ["Automated Bookkeeping", "Tax Preparation", "Financial Reports"] },
-        { name: "AI Content Moderation Pro", price: "$199/month", features: ["AI Moderation", "Content Filtering", "Compliance Monitoring"] },
-        { name: "AI Climate Solutions Pro", price: "$299/month", features: ["Climate Analytics", "Carbon Tracking", "Sustainability Reports"] },
-        { name: "AI Agricultural Intelligence Pro", price: "$399/month", features: ["Crop Monitoring", "Yield Prediction", "Weather Analysis"] },
-        { name: "AI 3D Generation", price: "$149/month", features: ["3D Modeling", "Rendering", "Animation"] },
-        { name: "AI Blockchain Solutions", price: "$249/month", features: ["Smart Contracts", "DeFi Integration", "NFT Platform"] }
-      ]
-    }
-  ];
-
-const stats = [
-    { number: "500+", label: "Projects Completed", icon: <Target className="w-6 h-6" /> },
-    { number: "150+", label: "Happy Clients", icon: <Users className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime Guarantee", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Clock className="w-6 h-6" /> }
-  ];
+  
 
 const whyChooseUs = [
     {
@@ -109,7 +40,6 @@ const whyChooseUs = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20 relative overflow-hidden">
           
         <div className="absolute inset-0">
@@ -157,7 +87,6 @@ const whyChooseUs = [
                   Get Quote
                 </a>
               </div>
-              {/* Stats */}
               
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 {stats.map((stat, index) => (
@@ -177,7 +106,6 @@ const whyChooseUs = [
             </div>
           </div>
         </section>
-        {/* Service Categories */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -237,7 +165,6 @@ const whyChooseUs = [
             </div>
           </div>
         </section>
-        {/* Why Choose Us Section */}
         <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
           
         <div className="container mx-auto px-4">
@@ -266,7 +193,6 @@ const whyChooseUs = [
             </div>
           </div>
         </section>
-        {/* Contact Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="container mx-auto px-4">

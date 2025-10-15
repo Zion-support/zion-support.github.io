@@ -5,118 +5,7 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const openPositions = [
-    {
-      title: 'Senior AI Engineer',
-      department: 'AI Research',
-      location: 'Remote / Delaware',
-      type: 'Full-time',
-      experience: '5+ years',
-      description: 'Lead development of cutting-edge AI solutions and machine learning models.',
-      requirements: [
-        'PhD in Computer Science or related field',
-        '5+ years experience in AI/ML',
-        'Expertise in Python, TensorFlow, PyTorch',
-        'Experience with cloud platforms (AWS, GCP, Azure)',
-        'Strong problem-solving and communication skills'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Health, dental, and vision insurance',
-        'Flexible work arrangements',
-        'Professional development budget',
-        '401(k) with company matching'
-      ]
-    },
-    {
-      title: 'Full-Stack Developer',
-      department: 'Engineering',
-      location: 'Remote / Delaware',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Build scalable web applications and APIs for our AI platform.',
-      requirements: [
-        'Bachelor\'s degree in Computer Science',
-        '3+ years full-stack development experience',
-        'Proficiency in React, Node.js, TypeScript',
-        'Experience with databases (PostgreSQL, MongoDB)',
-        'Knowledge of cloud services and DevOps'
-      ],
-      benefits: [
-        'Competitive salary',
-        'Comprehensive health benefits',
-        'Remote work flexibility',
-        'Learning and development opportunities',
-        'Team building events'
-      ]
-    },
-    {
-      title: 'AI Product Manager',
-      department: 'Product',
-      location: 'Remote / Delaware',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Drive product strategy and roadmap for our AI solutions.',
-      requirements: [
-        'Bachelor\'s degree in Business or Technical field',
-        '4+ years product management experience',
-        'Experience with AI/ML products',
-        'Strong analytical and communication skills',
-        'MBA preferred'
-      ],
-      benefits: [
-        'Competitive salary and bonus',
-        'Health and wellness benefits',
-        'Flexible PTO policy',
-        'Professional development opportunities',
-        'Stock options'
-      ]
-    },
-    {
-      title: 'DevOps Engineer',
-      department: 'Infrastructure',
-      location: 'Remote / Delaware',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Manage cloud infrastructure and deployment pipelines.',
-      requirements: [
-        '3+ years DevOps experience',
-        'Expertise in AWS, Docker, Kubernetes',
-        'Experience with CI/CD pipelines',
-        'Knowledge of monitoring and logging tools',
-        'Scripting skills (Python, Bash)'
-      ],
-      benefits: [
-        'Competitive salary',
-        'Health insurance',
-        'Remote work options',
-        'Certification reimbursement',
-        'Performance bonuses'
-      ]
-    }
-  ];
-
-const benefits = [
-    {
-      icon: '🚀',
-      title: 'Innovation',
-      description: 'We push the boundaries of what\'s possible with AI and technology.'
-    },
-    {
-      icon: '🤝',
-      title: 'Collaboration',
-      description: 'We believe in the power of diverse teams working together.'
-    },
-    {
-      icon: '📈',
-      title: 'Growth',
-      description: 'We invest in our people\'s professional and personal development.'
-    },
-    {
-      icon: '⚡',
-      title: 'Impact',
-      description: 'We create solutions that make a real difference in the world.'
-    }
-  ];
+  
 
 const stats = [
     { number: "50+", label: "Team Members" },
@@ -136,7 +25,6 @@ const stats = [
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -168,7 +56,6 @@ const stats = [
             ))}
           </div>
         </section>
-        {/* Stats Section */}
         <section className="py-16 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -185,7 +72,6 @@ const stats = [
             </div>
           </div>
         </section>
-        {/* Benefits Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -214,7 +100,6 @@ const stats = [
             </div>
           </div>
         </section>
-        {/* Open Positions */}
         <section id="open-positions" className="py-20 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -240,21 +125,17 @@ const stats = [
                         
         <div className="flex items-center">
                           <MapPin className="w-4 h-4 mr-1" />
-                          {position.location}
                         </div>
                         
         <div className="flex items-center">
                           <Clock className="w-4 h-4 mr-1" />
-                          {position.type}
                         </div>
                         
         <div className="flex items-center">
                           <Users className="w-4 h-4 mr-1" />
-                          {position.experience}
                         </div>
                         
         <div className="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-xs">
-                          {position.department}
                         </div>
                       </div>
                       
@@ -301,7 +182,6 @@ const stats = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -332,7 +212,6 @@ const stats = [
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -361,3 +240,41 @@ const stats = [
   );
 };
 export default CareersPage;
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </>
+  );
+}

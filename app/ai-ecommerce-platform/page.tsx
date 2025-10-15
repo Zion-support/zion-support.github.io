@@ -8,13 +8,16 @@ const features = [ { icon: <Brain className="w-6 h-6" />, title: "AI Product Rec
 
 
 export default function Page() {
-const aiFeatures = [ { title: "Dynamic Pricing", description: "AI-powered pricing optimization based on demand, competition, and market conditions", icon: <Percent className="w-8 h-8" />, benefit: "Increase revenue by 15-25%" }, { title: "Inventory Prediction", description: "Predictive analytics to optimize stock levels and reduce overstock/understock issues", icon: <Package className="w-8 h-8" />, benefit: "Reduce inventory costs by 30%" }, { title: "Customer Segmentation", description: "AI-driven customer segmentation for targeted marketing and personalized experiences", icon: <Users className="w-8 h-8" />, benefit: "Improve conversion by 40%" }, { title: "Chatbot Support", description: "24/7 AI-powered customer support with natural language understanding", icon: <MessageSquare className="w-8 h-8" />, benefit: "Reduce support costs by 60%" } ];
-
-const pricingPlans = [ { name: "Starter", price: "$199", period: "month", description: "Perfect for small online stores and startups", features: [ "Up to 1,000 products", "Basic AI recommendations", "Standard analytics", "Email support", "Mobile responsive", "SSL certificate", "Basic integrations" ], popular: false }, { name: "Professional", price: "$499", period: "month", description: "Ideal for growing e-commerce businesses", features: [ "Up to 10,000 products", "Advanced AI features", "Advanced analytics", "Priority support", "PWA capabilities", "Custom integrations", "Multi-language support", "Advanced SEO tools" ], popular: true }, { name: "Enterprise", price: "$999", period: "month", description: "Complete solution for large e-commerce operations", features: [ "Unlimited products", "Full AI capabilities", "Custom analytics", "24/7 dedicated support", "Custom development", "White-label options", "Advanced security", "On-premise deployment" ], popular: false } ];
-
-const testimonials = [ { name: "Lisa Chen", company: "Fashion Forward", role: "CEO", content: "The AI recommendations have increased our average order value by 35%. Our customers love the personalized experience.", rating: 5 }, { name: "Mark Thompson", company: "TechGadgets Pro", role: "Founder", content: "The platform is incredibly easy to use. We launched our store in just 2 weeks and saw immediate results.", rating: 5 }, { name: "Sarah Johnson", company: "Home & Garden Co", role: "Marketing Director", content: "The analytics dashboard gives us insights we never had before. We've optimized our inventory and increased profits by 50%.", rating: 5 } ];
-
-const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerce", logo: "🛒" }, { name: "Magento", logo: "🛒" }, { name: "BigCommerce", logo: "🛒" }, { name: "Salesforce", logo: "☁️" }, { name: "HubSpot", logo: "🎯" }, { name: "Mailchimp", logo: "📧" }, { name: "Stripe", logo: "💳" }, { name: "PayPal", logo: "💰" }, { name: "Amazon", logo: "📦" }, { name: "eBay", logo: "🏪" }, { name: "Facebook", logo: "📘" } ];
+  const features = [ { icon: <Brain className="w-6 h-6" />, title: "AI Product Recommendations", description: "Advanced machine learning algorithms that personalize product suggestions based on user behavior and preferences.", benefits: ["Personalized suggestions", "Behavioral analysis", "Cross-selling", "Upselling optimization"]
+;
+  const aiFeatures = [ { title: "Dynamic Pricing", description: "AI-powered pricing optimization based on demand, competition, and market conditions", icon: <Percent className="w-8 h-8" />, benefit: "Increase revenue by 15-25%" }, { title: "Inventory Prediction", description: "Predictive analytics to optimize stock levels and reduce overstock/understock issues", icon: <Package className="w-8 h-8" />, benefit: "Reduce inventory costs by 30%" }, { title: "Customer Segmentation", description: "AI-driven customer segmentation for targeted marketing and personalized experiences", icon: <Users className="w-8 h-8" />, benefit: "Improve conversion by 40%" }, { title: "Chatbot Support", description: "24/7 AI-powered customer support with natural language understanding", icon: <MessageSquare className="w-8 h-8" />, benefit: "Reduce support costs by 60%" } ]
+;
+  const pricingPlans = [ { name: "Starter", price: "$199", period: "month", description: "Perfect for small online stores and startups", features: [ "Up to 1,000 products", "Basic AI recommendations", "Standard analytics", "Email support", "Mobile responsive", "SSL certificate", "Basic integrations" ]
+;
+  const testimonials = [ { name: "Lisa Chen", company: "Fashion Forward", role: "CEO", content: "The AI recommendations have increased our average order value by 35%. Our customers love the personalized experience.", rating: 5 }, { name: "Mark Thompson", company: "TechGadgets Pro", role: "Founder", content: "The platform is incredibly easy to use. We launched our store in just 2 weeks and saw immediate results.", rating: 5 }, { name: "Sarah Johnson", company: "Home & Garden Co", role: "Marketing Director", content: "The analytics dashboard gives us insights we never had before. We've optimized our inventory and increased profits by 50%.", rating: 5 } ]
+;
+  const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerce", logo: "🛒" }, { name: "Magento", logo: "🛒" }, { name: "BigCommerce", logo: "🛒" }, { name: "Salesforce", logo: "☁️" }, { name: "HubSpot", logo: "🎯" }, { name: "Mailchimp", logo: "📧" }, { name: "Stripe", logo: "💳" }, { name: "PayPal", logo: "💰" }, { name: "Amazon", logo: "📦" }, { name: "eBay", logo: "🏪" }, { name: "Facebook", logo: "📘" } ]
+;
   return (
     <> <Helmet> <title>AI E-commerce Platform - Intelligent Online Store Solutions | Zion Tech Group</title> <meta name="description" content="Build intelligent e-commerce stores with our AI-powered platform. Advanced recommendations, analytics, and automation for modern online businesses." /> <meta name="keywords" content="AI e-commerce, online store, e-commerce platform, AI recommendations, e-commerce analytics, online shopping" /> <meta property="og:title" content="AI E-commerce Platform - Zion Tech Group" /> <meta property="og:description" content="Intelligent e-commerce platform with AI-powered recommendations and analytics" /> <meta property="og:type" content="website" /> <meta property="og:url" content="https://ziontechgroup.com/ai-ecommerce-platform" /> </Helmet> 
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"> { /* Animated Background */ } 
@@ -22,14 +25,12 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
         <div className="absolute top-20 left-10 w-72 h-72 bg-green-500/10 rounded-full blur-3xl animate-pulse"></div> 
         <div className="absolute top-40 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div> 
         <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div> </div>
-        { /* Grid Pattern */ }
         
         <div className="absolute inset-0 opacity-20">
           
         <div className="h-full w-full"></div>
         </div>
         <main className="relative z-10">
-          { /* Hero Section */ }
           <section className="relative py-20 overflow-hidden">
             
         <div className="container mx-auto px-4">
@@ -68,7 +69,6 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
               </div>
             </div>
           </section>
-          { /* Features Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             
         <div className="container mx-auto px-4">
@@ -96,18 +96,15 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
         <div className="text-white">{ feature.icon }</div>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors duration-300">
-                      { feature.title }
                     </h3>
                     
           <p className="text-gray-300 mb-6 leading-relaxed">
-                      { feature.description }
                     </p>
                     
         <div className="space-y-2">
                       { feature.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex } className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          { benefit }
                         </div>
                       ))}
                     </div>
@@ -116,7 +113,6 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
               </div>
             </div>
           </section>
-          { /* AI Features Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">
@@ -156,7 +152,6 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
               </div>
             </div>
           </section>
-          { /* Integrations Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             
         <div className="container mx-auto px-4">
@@ -187,7 +182,6 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
               </div>
             </div>
           </section>
-          { /* Pricing Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">
@@ -213,15 +207,6 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
                         ? 'border-green-400/40 shadow-green-500/10' 
                         : 'border-green-500/20 hover:border-green-400/40' }`}
                   >
-                    { plan.popular && (
-                      
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        
-        <div className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                          Most Popular
-                        </div>
-                      </div>
-                    ) }
                     
         <div className="text-center mb-8">
                       <h3 className="text-2xl font-bold text-white mb-2">{ plan.name }</h3>
@@ -238,7 +223,6 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
                       { plan.features.map((feature, featureIndex) => (
                         <div key={featureIndex } className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          { feature }
                         </div>
                       ))}
                     </div>
@@ -256,7 +240,6 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
               </div>
             </div>
           </section>
-          { /* Testimonials Section */ }
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             
         <div className="container mx-auto px-4">
@@ -301,7 +284,6 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
               </div>
             </div>
           </section>
-          { /* CTA Section */ }
           <section className="py-20 bg-slate-900">
             
         <div className="container mx-auto px-4">
@@ -335,6 +317,5 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
         </main>
       </div>
     </>
-  );
-};
-export default AiEcommercePlatformPage;
+}
+}}}

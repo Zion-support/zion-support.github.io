@@ -29,7 +29,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     // Add focus indicators for keyboard navigation
     const addFocusStyles = () => {
-      const style = document.createElement('style');
       style.textContent = `
         .keyboard-navigation *:focus {
           outline: 2px solid #8b5cf6 !important;
@@ -67,7 +66,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     // Add high contrast mode support
     const addHighContrastSupport = () => {
-      const style = document.createElement('style');
       style.textContent = `
         @media (prefers-contrast: high) {
           * {
@@ -84,8 +82,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     // Add reduced motion support
     const addReducedMotionSupport = () => {
-      const style = document.createElement('style');
-      style.textContent = `
+        style.textContent = `
         @media (prefers-reduced-motion: reduce) {
           *, *::before, *::after {
             animation-duration: 0.01ms !important;
@@ -117,7 +114,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   // Focus management
   const handleFocusIn = useCallback((event: FocusEvent) => {
-    const target = event.target as HTMLElement;
     
     // Add focus ring for keyboard navigation
     if (target.matches('button, a, input, textarea, select, [tabindex]')) {
@@ -218,31 +214,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     return () => {
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
+      if (style && style.parentNode) {
+        style.parentNode.removeChild(style);
+      }
     };
   }, []);
-
-  // Screen reader announcements
-  const announceToScreenReader = useCallback((message: string) => {
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    
-    document.body.appendChild(announcement);
-    
-    setTimeout(() => {
-      if (announcement.parentNode) {
-        announcement.parentNode.removeChild(announcement);
-      }
-    }, 1000);
-  }, []);
-
-  return (
-    <div id="main-content">
-      {children}
-    </div>
-  );
-};
+}
 
 export default AccessibilityEnhancer;

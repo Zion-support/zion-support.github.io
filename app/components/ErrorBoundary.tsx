@@ -77,14 +77,6 @@ class ErrorBoundary extends Component<Props, State> {
         <div className="mb-2">
                     <strong>Error:</strong> {this.state.error.message}
                   </div>
-                  {this.state.errorInfo && (
-                    <div>
-                      <strong>Stack Trace:</strong>
-                      <pre className="mt-1 whitespace-pre-wrap">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
-                  )}
                 </div>
               </details>
             )}
@@ -124,3 +116,8 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
+
+</Props>
+    </>
+  );
+}

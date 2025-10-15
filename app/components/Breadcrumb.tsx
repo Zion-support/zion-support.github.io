@@ -45,27 +45,7 @@ const getBreadcrumbName = () => {
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
 
 const isLast = index === pathnames.length - 1;
-  return (
-              <li key={path} className="flex items-center space-x-2">
-                <ChevronRight className="w-4 h-4 text-gray-500" />
-                {isLast ? (
-                  <span className="text-cyan-400 font-medium">
-                    {getBreadcrumbName(path)}
-                  </span>
-                ) : (
-                  <Link
-                    to={routeTo}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {getBreadcrumbName(path)}
-                  </Link>
-                )}
-              </li>
-            );
-          })}
-        </ol>
-      </div>
-    </nav>
+  
   );
-};
-export default Breadcrumb;
+}
+}

@@ -182,22 +182,11 @@ const serviceCategories = [
 ];
 // Process steps
 const processSteps = [
-  { step: "01",
-    title: "Discovery & Analysis",
-    description: "We begin by understanding your business goals, challenges, and requirements through comprehensive analysis and stakeholder interviews." },
-  { step: "02",
-    title: "Strategy & Planning",
-    description: "Our team develops a customized strategy and detailed implementation plan tailored to your specific needs and objectives." },
-  { step: "03",
-    title: "Development & Implementation",
-    description: "We execute the solution using cutting-edge technologies and best practices, ensuring quality and performance at every step." },
-  { step: "04",
-    title: "Testing & Optimization",
-    description: "Rigorous testing and optimization ensure your solution meets all requirements and performs at peak efficiency." },
-  { step: "05",
-    title: "Deployment & Support",
-    description: "We handle the deployment process and provide ongoing support to ensure your solution continues to deliver value." }
-];
+  const features = [
+    { step: "01",
+      title: "Discovery & Analysis",
+      description: "We begin by understanding your business goals, challenges, and requirements through comprehensive analysis and stakeholder interviews." },
+  ];
 
 const ServicesPage: React.FC = () => { return (
     <>
@@ -211,7 +200,6 @@ const ServicesPage: React.FC = () => { return (
       </Helmet>
       
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -229,7 +217,6 @@ const ServicesPage: React.FC = () => { return (
             </div>
           </div>
         </section>
-        { /* Service Categories */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -250,7 +237,6 @@ const ServicesPage: React.FC = () => { return (
                     <div className={ `w-16 h-16 bg-gradient-to-r ${category.color } rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                       
         <div className="text-white">
-                        { category.icon }
                       </div>
                     </div>
                     
@@ -263,7 +249,6 @@ const ServicesPage: React.FC = () => { return (
                   <h3 className="text-2xl font-bold text-white mb-4">{ category.title }</h3>
                   
           <p className="text-gray-300 mb-6 leading-relaxed">{ category.description }</p>
-                  {/* Rating and Users */}
                   
         <div className="flex items-center justify-between mb-4">
                     <span className="text-sm text-gray-400">{category.users} users</span>
@@ -280,12 +265,6 @@ const ServicesPage: React.FC = () => { return (
                         <span className="text-sm text-gray-300">{ service }</span>
                       </div>
                     ))}
-                    {category.services.length > 4 && (
-                      
-        <div className="text-sm text-cyan-400">
-                        +{category.services.length - 4} more services
-                      </div>
-                    )}
                   </div>
                   
         <div className="mb-6">
@@ -312,7 +291,6 @@ const ServicesPage: React.FC = () => { return (
             </div>
           </div>
         </section>
-        { /* Process Section */ }
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
@@ -334,7 +312,6 @@ const ServicesPage: React.FC = () => { return (
         <div className="flex-shrink-0">
                       
         <div className="w-16 h-16 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">
-                        { step.step }
                       </div>
                     </div>
                     
@@ -349,7 +326,6 @@ const ServicesPage: React.FC = () => { return (
             </div>
           </div>
         </section>
-        { /* Why Choose Our Services */ }
         <section className="py-20">
           
         <div className="container mx-auto px-4">
@@ -396,7 +372,6 @@ const ServicesPage: React.FC = () => { return (
             </div>
           </div>
         </section>
-        { /* CTA Section */ }
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           
         <div className="container mx-auto px-4">
