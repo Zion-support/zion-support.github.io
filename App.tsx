@@ -8,6 +8,7 @@ import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
@@ -240,13 +241,13 @@ function App() {
             <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
             
             <main className="flex-1">
-              <ErrorBoundary>
+              <EnhancedErrorBoundary>
                 <PerformanceMonitor />
                 <AccessibilityEnhancer />
                 <SEOOptimizer />
                 
                 <Suspense fallback={<LoadingFallback />}>
-                  <ErrorBoundary>
+                  <EnhancedErrorBoundary>
                     <Routes>
                     {/* Main Pages */}
                     <Route path="/" element={<HomePage />} />
@@ -417,9 +418,9 @@ function App() {
                       </div>
                     </div>} />
                     </Routes>
-                  </ErrorBoundary>
+                  </EnhancedErrorBoundary>
                 </Suspense>
-              </ErrorBoundary>
+              </EnhancedErrorBoundary>
             </main>
             
             <Footer />          </div>
