@@ -21,7 +21,17 @@ const AISolutionsPage: React.FC = () => {
       description: "Custom machine learning models tailored to your specific business needs with advanced algorithms and real-time processing.",
       icon: CpuChipIcon,
       features: [
-
+        "Custom algorithm development",
+        "Real-time data processing",
+        "Predictive analytics",
+        "Model optimization",
+        "Continuous learning",
+        "Performance monitoring"
+      ],
+      color: "from-purple-500 to-indigo-500",
+      price: "Starting at $2,500/month",
+      href: "/machine-learning"
+    }
   ];
 
   const benefits = [
