@@ -22,7 +22,7 @@ export const advancedAnalytics = {
       })
     }
   },
-  set UserProperties: (properties: Record<string, unknown>) => {
+  setUserProperties: (properties: Record<string, unknown>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         user_properties: properties

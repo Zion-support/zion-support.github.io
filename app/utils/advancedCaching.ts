@@ -1,5 +1,5 @@
 export const advancedCaching = {
-  setCache: (key: string, value: unknown;, ttl: number = 3 6 0 0) => {
+  setCache: (key: string, value: unknown, ttl: number = 3600) => {
     const item = {
       value,
       timestamp: Date.now(),
@@ -20,7 +20,7 @@ export const advancedCaching = {
     
     return parsed.value
   },
-  clear Cache: (pattern?: string) => {
+  clearCache: (pattern?: string) => {
     if (pattern) {
       const keys = Object.keys(localStorage)
       keys.forEach(key => {
