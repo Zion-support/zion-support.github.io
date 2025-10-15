@@ -11,6 +11,18 @@ const Footer: React.FC = memo(() => {
             <p className="text-gray-300 mb-4">
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
+            <div className="mb-4">
+              <p className="text-gray-300 text-sm mb-1">
+                <strong>Phone:</strong> <a href="tel:+13024640950" className="hover:text-white">+1 302 464 0950</a>
+              </p>
+              <p className="text-gray-300 text-sm mb-1">
+                <strong>Email:</strong> <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white">kleber@ziontechgroup.com</a>
+              </p>
+              <p className="text-gray-300 text-sm">
+                <strong>Address:</strong> 364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </p>
+            </div>
             <div className="flex space-x-4">
               <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
                 <span className="sr-only">Website</span>
@@ -22,17 +34,42 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Services</h4>
+            <h4 className="text-md font-semibold mb-4">AI Services</h4>
             <ul className="space-y-2">
               <li><Link to="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
-              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-white">Cloud Infrastructure</Link></li>
-              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-white">Digital Transformation</Link></li>
+              <li><Link to="/ai-fraud-detection" className="text-gray-300 hover:text-white">AI Fraud Detection</Link></li>
+              <li><Link to="/ai-image-recognition" className="text-gray-300 hover:text-white">AI Image Recognition</Link></li>
+              <li><Link to="/ai-lead-scoring" className="text-gray-300 hover:text-white">AI Lead Scoring</Link></li>
+              <li><Link to="/ai-predictive-maintenance" className="text-gray-300 hover:text-white">AI Predictive Maintenance</Link></li>
+              <li><Link to="/ai-price-optimizer" className="text-gray-300 hover:text-white">AI Price Optimizer</Link></li>
+              <li><Link to="/ai-voice-assistant" className="text-gray-300 hover:text-white">AI Voice Assistant</Link></li>
               <li><Link to="/data-analytics" className="text-gray-300 hover:text-white">Data Analytics</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">IT Services</h4>
+            <ul className="space-y-2">
+              <li><Link to="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
               <li><Link to="/web-development" className="text-gray-300 hover:text-white">Web Development</Link></li>
               <li><Link to="/mobile-development" className="text-gray-300 hover:text-white">Mobile Development</Link></li>
+              <li><Link to="/api-development" className="text-gray-300 hover:text-white">API Development</Link></li>
               <li><Link to="/database-management" className="text-gray-300 hover:text-white">Database Management</Link></li>
+              <li><Link to="/data-engineering" className="text-gray-300 hover:text-white">Data Engineering</Link></li>
               <li><Link to="/network-infrastructure" className="text-gray-300 hover:text-white">Network Infrastructure</Link></li>
+              <li><Link to="/devops-automation" className="text-gray-300 hover:text-white">DevOps Automation</Link></li>
+              <li><Link to="/security-audit" className="text-gray-300 hover:text-white">Security Audit</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Emerging Tech</h4>
+            <ul className="space-y-2">
+              <li><Link to="/blockchain-solutions" className="text-gray-300 hover:text-white">Blockchain Solutions</Link></li>
+              <li><Link to="/iot-solutions" className="text-gray-300 hover:text-white">IoT Solutions</Link></li>
+              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-white">Cloud Infrastructure</Link></li>
+              <li><Link to="/5g-solutions" className="text-gray-300 hover:text-white">5G Solutions</Link></li>
+              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-white">Digital Transformation</Link></li>
               <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Solutions</Link></li>
             </ul>
           </div>
@@ -72,7 +109,6 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/help" className="text-gray-300 hover:text-white">Help Center</Link></li>
               <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
               <li><Link to="/accessibility" className="text-gray-300 hover:text-white">Accessibility</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
               <li><Link to="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
               <li><Link to="/terms" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
               <li><Link to="/cookies" className="text-gray-300 hover:text-white">Cookie Policy</Link></li>

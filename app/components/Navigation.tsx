@@ -52,6 +52,24 @@ const Navigation: React.FC = () => {
                     <Link to="/ai-content-generator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       AI Content Generator
                     </Link>
+                    <Link to="/ai-fraud-detection" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Fraud Detection
+                    </Link>
+                    <Link to="/ai-image-recognition" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Image Recognition
+                    </Link>
+                    <Link to="/ai-lead-scoring" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Lead Scoring
+                    </Link>
+                    <Link to="/ai-predictive-maintenance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Predictive Maintenance
+                    </Link>
+                    <Link to="/ai-price-optimizer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Price Optimizer
+                    </Link>
+                    <Link to="/ai-voice-assistant" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Voice Assistant
+                    </Link>
                     <Link to="/data-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Data Analytics
                     </Link>
@@ -66,11 +84,23 @@ const Navigation: React.FC = () => {
                     <Link to="/mobile-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Mobile Development
                     </Link>
+                    <Link to="/api-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      API Development
+                    </Link>
                     <Link to="/database-management" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Database Management
                     </Link>
+                    <Link to="/data-engineering" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Data Engineering
+                    </Link>
                     <Link to="/network-infrastructure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Network Infrastructure
+                    </Link>
+                    <Link to="/devops-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      DevOps Automation
+                    </Link>
+                    <Link to="/security-audit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Security Audit
                     </Link>
                     
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Infrastructure</div>
@@ -79,6 +109,14 @@ const Navigation: React.FC = () => {
                     </Link>
                     <Link to="/5g-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       5G Solutions
+                    </Link>
+                    <Link to="/iot-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      IoT Solutions
+                    </Link>
+                    
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Emerging Technologies</div>
+                    <Link to="/blockchain-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Blockchain Solutions
                     </Link>
                     
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Business Solutions</div>
@@ -166,6 +204,24 @@ const Navigation: React.FC = () => {
               <Link to="/ai-content-generator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 AI Content Generator
               </Link>
+              <Link to="/ai-fraud-detection" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Fraud Detection
+              </Link>
+              <Link to="/ai-image-recognition" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Image Recognition
+              </Link>
+              <Link to="/ai-lead-scoring" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Lead Scoring
+              </Link>
+              <Link to="/ai-predictive-maintenance" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Predictive Maintenance
+              </Link>
+              <Link to="/ai-price-optimizer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Price Optimizer
+              </Link>
+              <Link to="/ai-voice-assistant" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Voice Assistant
+              </Link>
               <Link to="/data-analytics" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Data Analytics
               </Link>
@@ -180,11 +236,23 @@ const Navigation: React.FC = () => {
               <Link to="/mobile-development" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Mobile Development
               </Link>
+              <Link to="/api-development" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                API Development
+              </Link>
               <Link to="/database-management" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Database Management
               </Link>
+              <Link to="/data-engineering" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Data Engineering
+              </Link>
               <Link to="/network-infrastructure" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Network Infrastructure
+              </Link>
+              <Link to="/devops-automation" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                DevOps Automation
+              </Link>
+              <Link to="/security-audit" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Security Audit
               </Link>
               
               <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Infrastructure</div>
@@ -193,6 +261,14 @@ const Navigation: React.FC = () => {
               </Link>
               <Link to="/5g-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 5G Solutions
+              </Link>
+              <Link to="/iot-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                IoT Solutions
+              </Link>
+              
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Emerging Technologies</div>
+              <Link to="/blockchain-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Blockchain Solutions
               </Link>
               
               <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Business Solutions</div>
