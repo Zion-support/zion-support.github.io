@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
+const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add skip link functionality
     const addSkipLink = () => {
@@ -106,7 +106,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
   }, []);
 
-  return null;
+  return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;
