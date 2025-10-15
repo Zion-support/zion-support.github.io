@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+'use client;'
+=======
 
 import { Helmet } from 'react-helmet-async';
 import { TrendingUp, DollarSign, CheckCircle, Users, ArrowRight } from "lucide-react";
@@ -202,3 +205,4 @@ const CaseStudiesPage: React.FC = () => {
 };
 ;
 export default CaseStudiesPage;'";'";
+>>>>>>> main

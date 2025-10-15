@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import React from 'react';;';
 import SEOHead from '../../components/SEOHead';
 
@@ -381,3 +384,4 @@ const AppPage: React.FC = () => {
 ;
 export default AppPage;'";'";
 
+>>>>>>> main

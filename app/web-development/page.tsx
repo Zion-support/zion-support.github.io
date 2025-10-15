@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+'use client;'
+=======
 import SEOHead from '../components/SEOHead';
 
 const PagePage: React.FC = () => {}
@@ -30,3 +33,4 @@ export default PagePage;
   ),
 };
 
+>>>>>>> main

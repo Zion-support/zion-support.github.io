@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react',
       import React, { useState } from "react",
       interface ContentNewsletterSignupProps {},
@@ -97,3 +99,4 @@ const ComponentsPage: React.FC = () => {
 ;
 export default ComponentsPage;'";'";
 
+>>>>>>> main

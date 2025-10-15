@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 "use client",
       import React, { createContext, useContext, useEffect } from "react",
       interface AnalyticsContextType {},
@@ -231,3 +234,4 @@ declare global {}
 
 export default AnalyticsProvider;
 
+>>>>>>> main

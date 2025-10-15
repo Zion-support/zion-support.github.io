@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 
@@ -190,3 +193,4 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({},';';
 
 export default ComponentsPage;';';
 
+>>>>>>> main

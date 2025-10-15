@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+'use client;'
+=======
 
 import React, { useState } from 'react',
       import React, { Component, ErrorInfo, ReactNode } from 'react',
@@ -226,3 +229,4 @@ const ComponentsPage: React.FC = () => {
 ;
 export default ComponentsPage;'";'";
 
+>>>>>>> main

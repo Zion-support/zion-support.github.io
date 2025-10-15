@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+
+  return (
+    <></>
+      <Helmet>
+=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 const SupportPage: React.FC = () => {}
@@ -413,3 +419,4 @@ const SupportPage: React.FC = () => {
 };
 
 export default SupportPage;
+>>>>>>> main
