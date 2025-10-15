@@ -106,6 +106,7 @@ export const FocusTrap: React.FC<{ children: React.ReactNode; active: boolean }>
     if (active && containerRef.current) {
       return focusManagement.trapFocus(containerRef.current);
     }
+    return undefined;
   }, [active]);
 
   return <div ref={containerRef}>{children}</div>;
@@ -119,7 +120,7 @@ export const useBreakpoint = (breakpoint: string) => {
     const mediaQuery = window.matchMedia(breakpoint);
     setMatches(mediaQuery.matches);
 
-    const handleChange = (e: any) => {
+    const handleChange = (e: MediaQueryListEvent) => {
       setMatches(e.matches);
     };
 
@@ -138,7 +139,7 @@ export const useHighContrast = () => {
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     setIsHighContrast(mediaQuery.matches);
 
-    const handleChange = (e: any) => {
+    const handleChange = (e: MediaQueryListEvent) => {
       setIsHighContrast(e.matches);
     };
 

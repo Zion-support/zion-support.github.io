@@ -36,37 +36,37 @@ class Logger {
     return levels[level] >= levels[this.config.level];
   }
 
-  private formatMessage(level: LogLevel, message: string, ...args: any[]): [string, ...any[]] {
+  private formatMessage(level: LogLevel, message: string, ...args: unknown[]): [string, ...unknown[]] {
     const timestamp = new Date().toISOString();
     const prefix = `${this.config.prefix} [${timestamp}] [${level.toUpperCase()}]`;
     return [`${prefix} ${message}`, ...args];
   }
 
-  log(message: string, ...args: any[]): void {
+  log(message: string, ...args: unknown[]): void {
     if (this.shouldLog('log')) {
       console.log(...this.formatMessage('log', message, ...args));
     }
   }
 
-  info(message: string, ...args: any[]): void {
+  info(message: string, ...args: unknown[]): void {
     if (this.shouldLog('info')) {
       console.info(...this.formatMessage('info', message, ...args));
     }
   }
 
-  warn(message: string, ...args: any[]): void {
+  warn(message: string, ...args: unknown[]): void {
     if (this.shouldLog('warn')) {
       console.warn(...this.formatMessage('warn', message, ...args));
     }
   }
 
-  error(message: string, ...args: any[]): void {
+  error(message: string, ...args: unknown[]): void {
     if (this.shouldLog('error')) {
       console.error(...this.formatMessage('error', message, ...args));
     }
   }
 
-  debug(message: string, ...args: any[]): void {
+  debug(message: string, ...args: unknown[]): void {
     if (this.shouldLog('debug')) {
       console.debug(...this.formatMessage('debug', message, ...args));
     }
