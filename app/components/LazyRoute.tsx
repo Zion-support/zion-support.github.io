@@ -8,8 +8,9 @@
       <LazyComponent />
     </>
   )
-      fallback = <OptimizedLoadingSpinner: size ="lg" text="Loading page..." />: value";"
-}) => {}: value,;
-      const LazyComponent  = lazy(component): value,;
-      return (
-    {'"'";"
+      fallback = <OptimizedLoadingSpinner size ="lg" text="Loading page..." />: value""
+}) => {}: value,;"
+      const LazyComponent  = lazy(component): value,""
+      return ("""
+    {'"'""""
+"""

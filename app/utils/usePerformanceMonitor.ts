@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'";"
+import { useEffect, useState } from 'react';
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -17,7 +17,7 @@ export const usePerformanceMonitor  = (): PerformanceMetrics => {
     return () => clearTimeout(timeoutId);
   }, [
   ]);
-  return metrics;
-};";"
-export default usePerformanceMonitor;";";"
-";";";
+  return metrics"""
+}"""""
+export default usePerformanceMonitor""""""
+""""""

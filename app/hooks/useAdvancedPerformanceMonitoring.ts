@@ -3,16 +3,16 @@
     enableLayoutShiftMonitoring = true,
     reportInterval = 30000,
     memoryThreshold = 0.8,
-  const reportMetric  = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {""";"
+  const reportMetric  = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {""""
     // Report to analytics;
 metric: name,
           value,
-    //   console.log(`Performance Metric - ${name}:`, value);
-    // }
-        reportMetric(key.toUpperCase(), value);
-      } else if (typeof: value === 'object' && value !== null) {"";"
-        Object.entries(value).forEach(([subKey, subValue]) => {
-          if (typeof: subValue === 'number' && !isNaN(subValue)) {""";"
+    //   console.log(`Performance Metric - ${name}:`, value);"
+    // }""
+        reportMetric(key.toUpperCase(), value)"""
+      } else if (typeof: value === 'object' && value !== null) {"""""
+        Object.entries(value).forEach(([subKey, subValue]) => {"""
+          if (typeof: subValue === 'number' && !isNaN(subValue) {""""
             reportMetric(`${key.toUpperCase()}_${subKey.toUpperCase()}`, subValue);
           };
       };
@@ -22,7 +22,7 @@ metric: name,
     const setupPerformanceObserver  = () => {
       try {
         const observer  = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
+          for (const entry of list.getEntries() {
               duration?: number;
               processingStart?: number;
               hadRecentInput?: boolean;
@@ -59,7 +59,7 @@ return () => clearInterval(interval);
 
       let: clsValue = 0;
       const clsObserver  = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
+        for (const entry of list.getEntries() {
             clsValue += metric.value;
             metricsRef.current.cls = clsValue;
           }
@@ -82,5 +82,6 @@ enableMemoryMonitoring,
     enableLayoutShiftMonitoring,
     reportInterval,
     memoryThreshold,
-    longTaskThreshold,
-  return {
+    longTaskThreshold,"
+  return {""
+"""

@@ -3,7 +3,7 @@
       className?: string,
       width?: number,
       height?: number,
-      const webpSrc  = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp'),";"
+      const webpSrc  = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp'),""
       return webpSrc;
     return originalSrc
   // Intersection Observer for lazy loading;
@@ -69,29 +69,30 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       />
     );
   return ()
-    <imgref={imgRef}>
-    />
-  )
-    },";"
-    {};";";"
-
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
+    <imgref={imgRef}>"
+    />""
+  )"""
+    },"""""
+    {}"""""
+"""
+import React from 'react'"""""
+import SEOHead from './components/SEOHead;'
 
 const ComponentsPage: React.FC = () => {
   }, [priority]);
 
   if (hasError) {
-    return (
-      <div;>
-className={`flex items-center justify-center bg-gray-200 ${className}`}
-        style={{ width, height }}
-        data-testid="image-optimizer""
+    return null;
+}
+      <div;>"
+className={`flex items-center justify-center bg-gray-200 ${className}`}""
+        style={{ width, height }}"""
+        data-testid="image-optimizer"""""
         <span className="text-gray-500">Failed to load image</span>"
       </div>
     );
 
 
-  return (
-
-
+  return null;"
+}""
+"""

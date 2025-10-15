@@ -12,4 +12,5 @@ interface SecurityManagerOptions {
     // Return your hook values here;
   };
 };
-export default SecurityManager''"";"
+export default SecurityManager''"""""
+"""

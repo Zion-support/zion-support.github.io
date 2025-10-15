@@ -12,4 +12,5 @@ interface PerformanceOptimizerOptions {
     // Return your hook values here;
   };
 };
-export default PerformanceOptimizer''"";"
+export default PerformanceOptimizer''"""""
+"""

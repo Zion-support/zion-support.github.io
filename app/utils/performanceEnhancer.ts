@@ -12,4 +12,5 @@ interface PerformanceEnhancerOptions {
     // Return your hook values here;
   };
 };
-export default PerformanceEnhancer''"";"
+export default PerformanceEnhancer''"""""
+"""

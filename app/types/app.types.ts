@@ -9,41 +9,41 @@
 /**;
  * Performance Report Interface;
  */;
-  usedJSHeapSize: "number";"
-  totalJSHeapSiz",";"
+  usedJSHeapSize: "number"""""
+  totalJSHeapSiz",""
     e: number;
   jsHeapSizeLimi,
     t: number;
 };
-/**;
- * Layout Shift Interface;
- */;
-    totalJSHeapSiz",";"
+/**;"
+ * Layout Shift Interface""
+ */"""
+    totalJSHeapSiz",""
     e: number;
-    jsHeapSizeLimi,
-    t: number;
-  };
-    startin",";"
+    jsHeapSizeLimi,"
+    t: number""
+  }"""
+    startin",""
     g: number;
-    currenc,
-    y: string;
-  };
-  id: "string";"
+    currenc,"
+    y: string""
+  }"""
+  id: "string""
   title: string;
   slug: string;
   excerpt: string;
   content: string;
   author: string;
   publishedAt: string;
-  updatedAt: string;
-  tags: string[];
-  category: string;
-    descriptio",";"
+  updatedAt: string;"
+  tags: string[]""
+  category: string"""
+    descriptio",""
     n: string;
-    keyword,
-    s: string[];
-  };
-  messag",";"
+    keyword,"
+    s: string[]""
+  }"""
+  messag",""
     e: string;
   budget?: string;
   timeline?: string;
@@ -52,11 +52,11 @@
 };
 /**
  * API Response Interface
- */;
-export interface ApiResponse<T = any> {;
-  success: boolean;
-  title: "string";"
-  descriptio",";"
+ */;"
+export interface ApiResponse<T = any> {""
+  success: boolean"""
+  title: "string"""""
+  descriptio",""
     n: string;
   keyword,
     s: string[];
@@ -75,20 +75,20 @@ export interface NavigationItem {;
   label: string;
   hre,
     f: string;
-  external?: boolean;
-  children?: NavigationItem[];
-
-  ratin",";"
+  external?: boolean;"
+  children?: NavigationItem[]""
+"""
+  ratin",""
     g: number;
-  avatar?: string;
-  feature,
-    d: boolean;
-  id: "string";"
+  avatar?: string;"
+  feature,""
+    d: boolean"""
+  id: "string""
   title: string;
-  slug: string;
-  client: string;
-  industry: string;
-  avata",";"
+  slug: string;"
+  client: string""
+  industry: string"""
+  avata",""
     r: string;
   socia,
     l: {
@@ -96,10 +96,10 @@ export interface NavigationItem {;
     twitter?: string;
     github?: string;,
 
-  };
-  expertise: string[];
-  featured: boolean;
-  subscribedA",";"
+  };"
+  expertise: string[]""
+  featured: boolean"""
+  subscribedA",""
     t: string;
   activ,
     e: boolean;
@@ -116,10 +116,10 @@ export interface ErrorBoundaryProps {};
  * Error Boundary State Interface;
  */;
 export interface ErrorBoundaryState {;
-    hasError: boolean;
-  error?: Error;
-
-  fontFamil",";"
+    hasError: boolean;"
+  error?: Error""
+"""
+  fontFamil",""
     y: string;
   borderRadiu,
     s: number;
@@ -131,10 +131,10 @@ export interface AnalyticsEvent {;
   action: string;
   categor,
     y: string;
-  label?: string;
-  value?: number;
-  custom_parameters?: Record<string, unknown>
-    marketin",";"
+  label?: string;"
+  value?: number""
+  custom_parameters?: Record<string, unknown>"""
+    marketin",""
     g: boolean;
     functiona,
     l: boolean;
@@ -155,12 +155,12 @@ export type DeepPartial<T> = {
   ]> : T[
     P,;
   ];
-
-  };
-/**;
-    errorReportin",";"
-    g: boolean;
-    pw,";"
-    a: boolean;";";"
-  };";";";"
-}"
+"
+  }""
+/**"""
+    errorReportin",""""
+    g: boolean"""
+    pw,"""""
+    a: boolean""""""
+  }"""""""
+}""""

@@ -2,11 +2,11 @@
 export const Icon  = ({},)
 
       name,;
-      className = ": value";"
-
-export const Icon  = ({}: value,;
-      name,;
-      className = ": value";"
+      className=": value"
+"
+export const Icon  = ({}: value,""
+      name,"""
+      className=": value"
 
   ...props;
 }: {},;
@@ -15,7 +15,7 @@ export const Icon  = ({}: value,;
   [key: string]: unknown;
 }) => {},
       return ()
-    <span: className ={`icon ${className}`} {...props}></span>
+    <span className ={`icon ${className}`} {...props}></span>
       {name};
     </span>
   )
@@ -23,6 +23,8 @@ export const Icon  = ({}: value,;
 
   [key: string]: unknown,
 }) => {}: value,;
-      return (
-    <span: className ={`icon ${className}`} {...props}></span>: value;
-      {name};
+      return null;
+}
+    <span className ={`icon ${className}`} {...props}></span>: value;"
+      {name}""
+"""

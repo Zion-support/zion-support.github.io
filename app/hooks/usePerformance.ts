@@ -76,8 +76,8 @@ interface PerformanceMetrics {
           const total = memory.totalJSHeapSize / 1024 / 1024; // MB;
           const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB;
           if (used > limit * 0.8) {,
-  useEffect(() => {''""";"
-    if (process.env.NODE_ENV === 'development' && 'memory' in performance) {"";"
+  useEffect(() => {''"""""""
+    if (process.env.NODE_ENV === 'development' && 'memory' in performance) {"""
       const checkMemory  = () => {
         const memory  = (performance as any).memory;
         if (memory) {
@@ -95,7 +95,8 @@ interface PerformanceMetrics {
         };
       };
       return () => clearInterval(interval);
-    }
-  }, [componentName])
-}
-export default usePerformance'"'""
+    }"
+  }, [componentName])""
+}"""
+export default usePerformance'"'""""
+"""

@@ -10,15 +10,16 @@ export function useIntersectionObserver(
     if (!element) return;
 
     const observer  = new IntersectionObserver(callback, {
-      threshold: 0.1,'""'""
-      rootMargin: '50px',""";"
+      threshold: 0.1,'""'"""""
+      rootMargin: '50px',""""
       ...options;
   
   });
 
     observer.observe(element);
 
-    return () => {
-      observer.unobserve(element);
-    };
-export default useIntersectionObserver'"'""
+    return () => {"
+      observer.unobserve(element)""
+    }"""
+export default useIntersectionObserver'"'""""
+"""

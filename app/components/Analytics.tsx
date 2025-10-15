@@ -7,7 +7,8 @@
 }if ($1) {}
   // If body
 
-        window.gtag("config", "GA_MEASUREMENT_ID", {};)";"
+        window.gtag("config", "GA_MEASUREMENT_ID", {};)""
           page_title: document.title;
-          page_location: window.location.href})
-    initAnalytics()
+          page_location: window.location.href})"
+    initAnalytics()""
+"""

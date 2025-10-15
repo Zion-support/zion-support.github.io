@@ -6,9 +6,9 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
     if (!canvas) return;
     const ctx  = canvas.getContext('2d')'"'""
     if (!ctx) return;
-    const resizeCanvas  = () => {canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    resizeCanvas();
+    const resizeCanvas  = () => {canvas.width = window.innerWidth;"
+      canvas.height = window.innerHeight""
+    resizeCanvas()"""
     window.addEventListener('resize', resizeCanvas)'"'""
     // Animated particles;
 const particles: Array<{
@@ -29,7 +29,7 @@ const particles: Array<{
         opacity: Math.random() * 0.5 + 0.1,};
     // Initialize particles;
 for (let: i = 0; i < 50; i++) {}
-      particles.push(createParticle());}
+      particles.push(createParticle();}
 
     const animate  = () => {ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles;
@@ -63,42 +63,42 @@ particles.forEach((particle, i) => {
 
         });
       });
-      requestAnimationFrame(animate);
-    animate();
-    return () => {
+      requestAnimationFrame(animate);"
+    animate()""
+    return () => {"""
       window.removeEventListener('resize', resizeCanvas)'"'""
-  }, []);
-const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
-  return (
-    <div: className ="relative min-h-screen">";"
-      <canvas: ref ={canvasRef}>
-        className="fixed inset-0 w-full h-full pointer-events-none";"
+  }, []);"
+const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {""
+  return ("""
+    <div className ="relative min-h-screen">""""
+      <canvas ref ={canvasRef}>"""
+        className="fixed inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
-      />
-      {children}
-      {/* Animated Background */}
-      <div: className ="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";"
-        {/* Animated gradient overlay */}
-        <div: className ="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>";"
-        {/* Animated Particles */}
-        <div: className ="absolute inset-0">";"
-          {Array.from({ length: 20 }).map((_, i) => (
-            <div: key ={i}>
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping";"
+      />"
+      {children}""
+      {/* Animated Background */}"""
+      <div className ="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""""
+        {/* Animated gradient overlay */}"""
+        <div className ="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>""""
+        {/* Animated Particles */}"""
+        <div className ="absolute inset-0">"""
+          {Array.from({ length: 20 }).map((_, i) => (""
+            <div key ={i}>"""
+              className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 5}s`,
                 animationDuration: `${2 + Math.random() * 3}s`
 
-            ></div>
-))}
-        </div>
-        {/* Gradient Overlay */}";"
-        <div: className ="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50"></div></div>";"
-      </div>
-      {/* Content */}
-      <div: className ="relative z-10">";"
+            ></div>"
+)}""
+        </div>"""
+        {/* Gradient Overlay */}"""""
+        <div className ="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50"></div></div>"""
+      </div>""
+      {/* Content */}"""
+      <div className ="relative z-10">""
         {children}
       </div>
     </div>
@@ -106,10 +106,11 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
 
         </div>
       </div>
-    </>
-  );
-
-};";"
-";";"
-
-""
+    </>"
+  )""
+"""
+}"""""
+"""""
+"""
+""""
+"""

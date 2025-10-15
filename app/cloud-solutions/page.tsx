@@ -1,9 +1,9 @@
       <Helmet>
         <title>Cloud Solutions - Zion Tech Group</title>
-        <meta: name ="description" content="Cloud Solutions - Zion Tech Group" />";"
-      </Helmet>
-      <div: className ="container mx-auto px-4 py-16">";"
-        <div: className ="text-center">";"
+        <meta name ="description" content="Cloud Solutions - Zion Tech Group" />""""
+      </Helmet>"""
+      <div className ="container mx-auto px-4 py-16">"""""
+        <div className ="text-center">""
           <h1>Cloud Solutions</h1>
           <p>
             This page is under construction. Please check back later.
@@ -20,7 +20,8 @@ import {
   CpuChipIcon,
 
   ]
-  return (
+  return null;
+}
                   View Portfolio
                 </button>
               </div>
@@ -34,7 +35,7 @@ import {
             </div>
             
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -45,14 +46,15 @@ import {
             </div>
             
                       </li>
-                    ))};
+                    )};
                   </ul>
                 </div>
                 View Case Studies
               </button>
             </div>
           </div>
-        </section>
-      </div>
-    </>
-const page  = React.lazy(() => import('./page'))";"
+        </section>"
+      </div>""
+    </>"""
+const page  = React.lazy(() => import("./page")""
+"""

@@ -82,43 +82,43 @@ newMetrics.memory = {}
 observer.disconnect();
         clearInterval(interval);
   }, [
-    measurePerformance, enableRealTimeMonitoring";"
-  ";";"
-  ]);";";";"
+    measurePerformance, enableRealTimeMonitoring"""""
+  """"""
+  ])"""""""
   // This component doesn"t render anything visible"
   return null;
 
     if (onMetricsUpdate) {}
       onMetricsUpdate(newMetrics)
-
-
-    if (logToConsole) {}
-      console.log('Performance Metrics:', newMetrics);""
+"
+""
+    if (logToConsole) {}"""
+      console.log('Performance Metrics:', newMetrics)""
 
   }, [onMetricsUpdate, logToConsole])
   useEffect(() => {}
     // Initial measurement;
 measurePerformance()
     if (enableRealTimeMonitoring) {}
-      // Set up real-time monitoring;
-const  observer = new PerformanceObserver((list) => {}
-        list.getEntries().forEach((entry) => {}
-          if (entry.entryType === 'largest-contentful-paint' ||)""
-              entry.entryType === 'first-input' || ""
+      // Set up real-time monitoring;"
+const  observer = new PerformanceObserver((list) => {}""
+        list.getEntries().forEach((entry) => {}"""
+          if (entry.entryType === 'largest-contentful-paint' ||)"""""
+              entry.entryType === 'first-input' || """""
               entry.entryType === 'layout-shift') {}""
             measurePerformance()
-
-        })
-      })
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });""
+"
+        })""
+      })"""
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })""
       // Periodic monitoring;
 const  interval = setInterval(measurePerformance, 5000)
       return () => {}
         observer.disconnect()
         clearInterval(interval)
-
-
-  }, [measurePerformance, enableRealTimeMonitoring])
+"
+""
+  }, [measurePerformance, enableRealTimeMonitoring])"""
   // This component doesn't render anything visible""'
   return null
 
@@ -126,25 +126,27 @@ const  interval = setInterval(measurePerformance, 5000)
   return null;
 
 const ComponentsPage: React.FC = () => {
-  return (
-      <SEOHead;>
-        </div>;
-      </div>;
-    </>;,";"
-  ),";";"
-};";";";"
-;""
-
-        title="Components - Zion Tech Group";"
-        description="Professional components solutions for modern businesses";"
-      />";"
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div: className ="text-center">";"
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";"
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>";"
+  return null;
+}
+      <SEOHead;>"
+        </div>""
+      </div>"""
+    </>;,"""""
+  ),""""""
+}"""""""
+""""
+"""
+        title="Components - Zion Tech Group"""""
+        description="Professional components solutions for modern businesses"""""
+      />"""""
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"""""
+        <div className ="text-center">"""""
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>"""""
+          <p className ="text-gray-300">Professional solutions coming soon...</p>""
         </div>;
       </div>;
     </>;
   ),
-
-
+"
+""
+"""

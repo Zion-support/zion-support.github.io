@@ -12,4 +12,5 @@ interface AccessibilityEnhancerOptions {
     // Return your hook values here;
   };
 };
-export default AccessibilityEnhancer''"";"
+export default AccessibilityEnhancer''"""""
+"""

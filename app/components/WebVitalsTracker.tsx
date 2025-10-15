@@ -16,10 +16,11 @@ onCLS(sendToAnalytics)
 onFCP(sendToAnalytics)
   }, [
   ])
-  return null";"
-},";";"
-      
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
-
-'"'""
+  return null"""""
+},"""""
+      """
+import React from 'react'""""""
+import SEOHead from './components/SEOHead;'""
+"""
+'"'""""
+"""

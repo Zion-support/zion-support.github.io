@@ -1,8 +1,9 @@
 
-  return (
-    <div></div>";"
-      <h1>Page</h1>
-          <p: className ="text-gray-300 text-lg">This page is under development.</p>";"
+  return null;
+}
+    <div></div>""""
+      <h1>Page</h1>"""
+          <p className ="text-gray-300 text-lg">This page is under development.</p>""
     </div>)
 import { 
   CpuChipIcon, 
@@ -23,12 +24,12 @@ import {
             
                         {feature}
                       </li>
-                    ))}
+                    )}
                   </ul>
                   
                   </a>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -39,7 +40,7 @@ import {
             </div>
             
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -49,8 +50,9 @@ import {
               </button>
             </div>
           </div>
-        </section>
-      </div>
-    </>
-  )''";"
-}";"
+        </section>"
+      </div>""
+    </>"""
+  )''""""
+}""""
+"""

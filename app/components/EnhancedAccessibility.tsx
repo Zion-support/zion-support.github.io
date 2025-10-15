@@ -13,7 +13,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }>  =  ({
   }, [
   ])
   useEffect(() => {};
-    const style  = document.createElement('style')";"
+    const style  = document.createElement('style')""
     style.textContent = `
       .skip-links {},
       position: absolute;
@@ -38,10 +38,10 @@ transition: top 0.3s
     return () => {};
 }skipLinks.remove()
       style.remove()
-  }, [
-  ])
-  // Add keyboard navigation support;
-const focusableElements  = document.querySelectorAll()'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'";"
+  }, ["
+  ])""
+  // Add keyboard navigation support"""
+const focusableElements  = document.querySelectorAll()'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'""
         )
         const firstElement  = focusableElements[0] as HTMLElement;
 const lastElement  = focusableElements[focusableElements.length - 1] as HTMLElement;
@@ -50,27 +50,29 @@ if (event.shiftKey && document.activeElement === firstElement) {},
           lastElement?.focus()
         } else if (!event.shiftKey && document.activeElement === lastElement) {},
       event.preventDefault()
-          firstElement?.focus()
-      {children};
-    </div>
-  )";"
-},";";"
-      
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
+          firstElement?.focus()"
+      {children}""
+    </div>"""
+  )"""""
+},"""""
+      """
+import React from 'react'"""""
+import SEOHead from './components/SEOHead;'
 
 const ComponentsPage: React.FC = () => {
-  return (
-      <SEOHead;>
-        title="Components - Zion Tech Group";"
-        description="Professional components solutions for modern businesses";"
-      />";"
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div: className ="text-center">";"
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";"
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>";"
+  return null;"
+}""
+      <SEOHead;>"""
+        title="Components - Zion Tech Group"""""
+        description="Professional components solutions for modern businesses"""""
+      />"""""
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"""""
+        <div className ="text-center">"""""
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>"""""
+          <p className ="text-gray-300">Professional solutions coming soon...</p>""
         </div>;
       </div>;
     </>;
-  ),
-
+  ),"
+""
+"""

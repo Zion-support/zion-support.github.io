@@ -13,69 +13,69 @@ interface AccessibilityOptions {
     stateRef.current.isHighContrast = mediaQuery.matches;
 
     // Listen for changes;
-    const handleChange  = (e: MediaQueryListEvent) => {stateRef.current.isHighContrast = e.matches',""''
-      document.documentElement.classList.toggle('high-contrast', e.matches)"";"
-    }'"'""
-    mediaQuery.addEventListener('change', handleChange)'"'""
-    document.documentElement.classList.toggle('high-contrast', mediaQuery.matches)""'"'""
-    return () => mediaQuery.removeEventListener('change', handleChange)"";"
-  }, []);
-
-  // Check for reduced motion preference;
-  const checkReducedMotion  = useCallback(() => {'"'""
-    if (typeof: window === 'undefined') return"'""'""
-    const mediaQuery  = window.matchMedia('(prefers-reduced-motion: reduce)')"";"
-    stateRef.current.isReducedMotion = mediaQuery.matches;
-
-    // Listen for changes;
-    const handleChange  = (e: MediaQueryListEvent) => {stateRef.current.isReducedMotion = e.matches',"'""
-      document.documentElement.classList.toggle('reduced-motion', e.matches)";"
-    }'""''
-    mediaQuery.addEventListener('change', handleChange)'"'""
-    document.documentElement.classList.toggle('reduced-motion', mediaQuery.matches)""'"'""
-    return () => mediaQuery.removeEventListener('change', handleChange)";"
+    const handleChange  = (e: MediaQueryListEvent) => {stateRef.current.isHighContrast = e.matches',""''"""
+      document.documentElement.classList.toggle('high-contrast', e.matches)""""""
+    }'"'"""""
+    mediaQuery.addEventListener('change', handleChange)'"'"""""
+    document.documentElement.classList.toggle('high-contrast', mediaQuery.matches)""'"'"""""
+    return () => mediaQuery.removeEventListener('change', handleChange)"""
+  }, []);"
+""
+  // Check for reduced motion preference"""
+  const checkReducedMotion  = useCallback(() => {'"'"""""
+    if (typeof: window === 'undefined') return"'""'"""""
+    const mediaQuery  = window.matchMedia('(prefers-reduced-motion: reduce)')"""
+    stateRef.current.isReducedMotion = mediaQuery.matches;"
+""
+    // Listen for changes"""
+    const handleChange  = (e: MediaQueryListEvent) => {stateRef.current.isReducedMotion = e.matches',"'"""""
+      document.documentElement.classList.toggle('reduced-motion', e.matches)"""""
+    }'""''"""
+    mediaQuery.addEventListener('change', handleChange)'"'"""""
+    document.documentElement.classList.toggle('reduced-motion', mediaQuery.matches)""'"'"""""
+    return () => mediaQuery.removeEventListener('change', handleChange)""
   }, []);
 
   // Detect keyboard usage;
 
   const  focusableElements = useRef<HTMLElement[]>([])
-
-  // Check for high contrast mode;
-const  checkHighContrast = useCallback(() => {';''
-    if (typeof: window === 'undefined') return;";""
-';''
-    const  mediaQuery = window.matchMedia('(prefers-contrast: high)');";""
+"
+  // Check for high contrast mode""
+const  checkHighContrast = useCallback(() => {';''"""
+    if (typeof: window === 'undefined') return"""""
+';''"""
+    const  mediaQuery = window.matchMedia('(prefers-contrast: high)')"""
     stateRef.current.isHighContrast = mediaQuery.matches
-
-    // Listen for changes;
-const  handleChange = (e: MediaQueryListEvent) => {
-      stateRef.current.isHighContrast = e.matches;';',""
-      document.documentElement.classList.toggle('high-contrast', e.matches);";""
-    }
-';''
-    mediaQuery.addEventListener('change', handleChange);''
-    document.documentElement.classList.toggle('high-contrast', mediaQuery.matches);";""
-';''
-    return () => mediaQuery.removeEventListener('change', handleChange);";""
+"
+    // Listen for changes""
+const  handleChange = (e: MediaQueryListEvent) => {"""
+      stateRef.current.isHighContrast = e.matches;';',"""""
+      document.documentElement.classList.toggle('high-contrast', e.matches)"""
+    }"
+';''""
+    mediaQuery.addEventListener('change', handleChange);''"""
+    document.documentElement.classList.toggle('high-contrast', mediaQuery.matches)"""""
+';''"""
+    return () => mediaQuery.removeEventListener('change', handleChange)"""
   }, [])
-
-  // Check for reduced motion preference;
-const  checkReducedMotion = useCallback(() => {';''
-    if (typeof: window === 'undefined') return;";""
-';''
-    const  mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');";""
+"
+  // Check for reduced motion preference""
+const  checkReducedMotion = useCallback(() => {';''"""
+    if (typeof: window === 'undefined') return"""""
+';''"""
+    const  mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')"""
     stateRef.current.isReducedMotion = mediaQuery.matches
-
-    // Listen for changes;
-const  handleChange = (e: MediaQueryListEvent) => {
-      stateRef.current.isReducedMotion = e.matches;';',""
-      document.documentElement.classList.toggle('reduced-motion', e.matches);";""
-    }
-';''
-    mediaQuery.addEventListener('change', handleChange);''
-    document.documentElement.classList.toggle('reduced-motion', mediaQuery.matches);";""
-';''
-    return () => mediaQuery.removeEventListener('change', handleChange);";""
+"
+    // Listen for changes""
+const  handleChange = (e: MediaQueryListEvent) => {"""
+      stateRef.current.isReducedMotion = e.matches;';',"""""
+      document.documentElement.classList.toggle('reduced-motion', e.matches)"""
+    }"
+';''""
+    mediaQuery.addEventListener('change', handleChange);''"""
+    document.documentElement.classList.toggle('reduced-motion', mediaQuery.matches)"""""
+';''"""
+    return () => mediaQuery.removeEventListener('change', handleChange)"""
   }, [])
 
   // Detect keyboard usage;
@@ -90,23 +90,23 @@ const  handleKeyDown = (e: KeyboardEvent) => {}
 }
 
 
-    const  handleMouseDown = () => {
-      isKeyboardUser = false;
-stateRef.current.isKeyboardUser = false;';''
-      document.body.classList.remove('keyboard-user');";""
-    }
-';''
-    document.addEventListener('keydown', handleKeyDown);''
-    document.addEventListener('mousedown', handleMouseDown);";""
-
-    return () => {';''
-      document.removeEventListener('keydown', handleKeyDown);''
-      document.removeEventListener('mousedown', handleMouseDown);";""
-    }
-  }, [])
-  // Update focusable elements;
-const focusableSelectors  = ['button:not([disabled])',"'input:not([disabled])',"'select:not([disabled])',"'textarea:not([disabled])',"'a[href]',"'[tabindex]:not([tabindex="-1"])',"'[contenteditable="true"]'";"
-    ].join(', ')";"
+    const  handleMouseDown = () => {"
+      isKeyboardUser = false""
+stateRef.current.isKeyboardUser = false;';''"""
+      document.body.classList.remove('keyboard-user')"""
+    }"
+';''""
+    document.addEventListener('keydown', handleKeyDown);''"""
+    document.addEventListener('mousedown', handleMouseDown)"""
+"
+    return () => {';''""
+      document.removeEventListener('keydown', handleKeyDown);''"""
+      document.removeEventListener('mousedown', handleMouseDown)"""
+    }"
+  }, [])""
+  // Update focusable elements"""
+const focusableSelectors  = ['button:not([disabled])',"'input:not([disabled])',"'select:not([disabled])',"'textarea:not([disabled])',"'a[href]',"'[tabindex]:not([tabindex="-1"])',"'[contenteditable="true"]'"""""
+    ].join(', ')""
 
     focusableElements.current = Array.from()
       document.querySelectorAll(focusableSelectors)
@@ -118,10 +118,10 @@ const focusableSelectors  = ['button:not([disabled])',"'input:not([disabled])',"
     // Add to focus history;
     stateRef.current.focusHistory.push(element);
     if (stateRef.current.focusHistory.length > 10) {,
-      stateRef.current.focusHistory.shift(),
-
-    // Add focus indicator';''
-    element.classList.add('focus-visible');";""
+      stateRef.current.focusHistory.shift(),"
+""
+    // Add focus indicator';''"""
+    element.classList.add('focus-visible')"""
   }, [])
 
   const  focusNext = useCallback(() => {
@@ -151,29 +151,29 @@ focusElement(focusableElements.current[prevIndex])
       focusElement(focusableElements.current[focusableElements.current.length - 1])
     }
   }, [updateFocusableElements, focusElement])
-  // Trap focus within an element;
-const trapFocus  = useCallback((container: HTMLElement) => {};
-    const focusableInContainer  = Array.from();
-      container.querySelectorAll(focusableElements.current.join(', '))";"
-    ) as HTMLElement[];
-
-    if (focusableInContainer.length === 0) return;
-    const handleKeyDown  = (e: KeyboardEvent) => {'"'""
-      if (e.key === 'Tab') {"";"
+  // Trap focus within an element;"
+const trapFocus  = useCallback((container: HTMLElement) => {}""
+    const focusableInContainer  = Array.from()"""
+      container.querySelectorAll(focusableElements.current.join(', ')""
+    ) as HTMLElement[];"
+""
+    if (focusableInContainer.length === 0) return"""
+    const handleKeyDown  = (e: KeyboardEvent) => {'"'"""""
+      if (e.key === 'Tab') {"""
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
             e.preventDefault();,
             lastElement.focus(),
-          };
-        } else {
-          if (document.activeElement === lastElement) {
-  // Announce to screen readers'"'""
-  const announce  = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {'"'""
-    if (!enableScreenReaderSupport || typeof: document === 'undefined') return""'"'""
-    const announcement  = document.createElement('div')',"'""
-    announcement.setAttribute('aria-live', priority)'"'""
-    announcement.setAttribute('aria-atomic', 'true')'"'""
-    announcement.className = 'sr-only'";"
+          };"
+        } else {""
+          if (document.activeElement === lastElement) {"""
+  // Announce to screen readers'"'"""""
+  const announce  = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {'"'"""""
+    if (!enableScreenReaderSupport || typeof: document === 'undefined') return""'"'"""""
+    const announcement  = document.createElement('div')',"'"""""
+    announcement.setAttribute('aria-live', priority)'"'"""""
+    announcement.setAttribute('aria-atomic', 'true')'"'"""""
+    announcement.className = 'sr-only'""
     announcement.textContent = message;
 
     document.body.appendChild(announcement);
@@ -189,11 +189,11 @@ const trapFocus  = useCallback((container: HTMLElement) => {};
   // Add ARIA labels and roles;
 label?: string;
     description?: string;
-    role?: string;
-    expanded?: boolean;
-    controls?: string;
-    // Add accessibility CSS'""''
-    const style  = document.createElement('style')"";"
+    role?: string;"
+    expanded?: boolean""
+    controls?: string"""
+    // Add accessibility CSS'""''"""
+    const style  = document.createElement('style')"""
     style.textContent = `;
       .sr-only {
         position: absolute;
@@ -227,22 +227,22 @@ transition-duration: 0.01ms !important,
         top: 6px,
       cleanupFunctions.push(cleanup);
     }
-    if (enableFocusManagement) {
-      updateFocusableElements()
-    }
-    // Add skip link'"'""
-    const skipLink  = document.createElement('a')'"'""
-    skipLink.href = '#main-content'";"
-    skipLink.textContent = 'Skip to main content'";"
-    skipLink.className = 'skip-link'";"
+    if (enableFocusManagement) {"
+      updateFocusableElements()""
+    }"""
+    // Add skip link'"'"""""
+    const skipLink  = document.createElement('a')'"'"""""
+    skipLink.href = '#main-content'"""""
+    skipLink.textContent = 'Skip to main content'"""""
+    skipLink.className = 'skip-link'""
     document.body.insertBefore(skipLink, document.body.firstChild);
 
     return () => {
       document.head.removeChild(style);
-      if (document.body.contains(skipLink)) {
+      if (document.body.contains(skipLink) {
         document.body.removeChild(skipLink);
       };
-      cleanupFunctions.forEach(cleanup => cleanup());
+      cleanupFunctions.forEach(cleanup => cleanup();
     };
     enableReducedMotion,;
     enableKeyboardNavigation,;
@@ -265,10 +265,10 @@ transition-duration: 0.01ms !important,
 
     return () => {
       document.head.removeChild(style)
-      if (document.body.contains(skipLink)) {
+      if (document.body.contains(skipLink) {
         document.body.removeChild(skipLink)
       }
-      cleanupFunctions.forEach(cleanup => cleanup())
+      cleanupFunctions.forEach(cleanup => cleanup()
     }
   }, [
     enableHighContrast,
@@ -277,10 +277,10 @@ transition-duration: 0.01ms !important,
     enableFocusManagement,
     checkHighContrast,
     checkReducedMotion,
-    detectKeyboardUsage,
-    updateFocusableElements
-  ])
-import { useEffect } from 'react'";"
+    detectKeyboardUsage,"
+    updateFocusableElements""
+  ])"
+import { useEffect } from 'react';
 
 export const useAccessibility  = () => {
 
@@ -304,15 +304,16 @@ export const  useAccessibility = () => {
 
   useEffect(() => {
     // Add accessibility logic here;
-  }, [
-  ]);
-  return {
-    // Return accessibility utilities";"
-  };";";"
-};";";";"
-;""
-export default useAccessibility;'";'";""
-  };
-};
-
-export default useAccessibility'"'";"
+  }, ["
+  ])""
+  return {"""
+    // Return accessibility utilities"""""
+  }""""""
+}"""""""
+"""""
+export default useAccessibility;'";'"""
+  };"
+}""
+"""
+export default useAccessibility'"'""""
+"""

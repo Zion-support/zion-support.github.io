@@ -12,4 +12,5 @@ interface LoggerOptions {
     // Return your hook values here;
   };
 };
-export default Logger''"";"
+export default Logger''"""""
+"""

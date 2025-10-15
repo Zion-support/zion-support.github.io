@@ -11,186 +11,186 @@
       modifiedTime?: string,
       section?: string,
       canonical,
-      ogImage = "https://ziontechgroup.com/og-image.jpg",""
-      noIndex = false,
-      structuredData,
+      ogImage = "https://ziontechgroup.com/og-image.jpg","""
+      noIndex = false,""
+      structuredData,"""
       author = "Zion Tech Group",""
-      publishedTime,
-      modifiedTime = new Date().toISOString(),
-
-      "description": description;""
-      "foundingDate": "2020""
-      "address": {};""
-        "@type": "PostalAddress""
-        "streetAddress": "364 E Main St STE 1008""
-        "addressLocality": "Middletown""
-        "addressRegion": "DE""
-        "postalCode": "19709""
-        "addressCountry": "US"""
-
-      "contactPoint": []""
-
-          "@type": "ContactPoint""
-          "telephone": "+1-302-464-0950""
-          "contactType": "customer service""
-          "areaServed": "US""
-          "availableLanguage": "English""
-          "email": "kleber@ziontechgroup.com"""
-
-
-          "@type": "ContactPoint""
-          "telephone": "+1-302-464-0950""
-          "contactType": "technical support""
-          "areaServed": "US""
-          "availableLanguage": "English""
-          "email": "support@ziontechgroup.com"""
-
-      ]
-      "sameAs": []""
-        "https://linkedin.com/company/ziontechgroup",""
-        "https://twitter.com/ziontechgroup",""
-        "https://github.com/ziontechgroup",""
-        "https://facebook.com/ziontechgroup"""
-      ],
-      "service": []""
-
-          "@type": "Service""
-          "name": "AI Solutions""
-          "description": "Cutting-edge artificial intelligence solutions for business automation and optimization""
-          "provider": {};""
-            "@type": "Organization""
-            "name": "Zion Tech Group"""
-
-          "offers": {};""
-            "@type": "Offer""
-            "availability": "https://schema.org/InStock""
-            "priceCurrency": "USD""
+      publishedTime,"
+      modifiedTime = new Date().toISOString(),""
+"""
+      "description": description"""""
+      "foundingDate": "2020"""""
+      "address": {}"""""
+        "@type": "PostalAddress"""""
+        "streetAddress": "364 E Main St STE 1008"""""
+        "addressLocality": "Middletown"""""
+        "addressRegion": "DE"""""
+        "postalCode": "19709"""""
+        "addressCountry": "US"""""
+"""
+      "contactPoint": []""""
+"""
+          "@type": "ContactPoint"""""
+          "telephone": "+1-302-464-0950"""""
+          "contactType": "customer service"""""
+          "areaServed": "US"""""
+          "availableLanguage": "English"""""
+          "email": "kleber@ziontechgroup.com""""
+""
+"""
+          "@type": "ContactPoint"""""
+          "telephone": "+1-302-464-0950"""""
+          "contactType": "technical support"""""
+          "areaServed": "US"""""
+          "availableLanguage": "English"""""
+          "email": "support@ziontechgroup.com""""
+""
+      ]"""
+      "sameAs": []"""""
+        "https://linkedin.com/company/ziontechgroup","""""
+        "https://twitter.com/ziontechgroup","""""
+        "https://github.com/ziontechgroup","""""
+        "https://facebook.com/ziontechgroup"""""
+      ],"""
+      "service": []""""
+"""
+          "@type": "Service"""""
+          "name": "AI Solutions"""""
+          "description": "Cutting-edge artificial intelligence solutions for business automation and optimization"""""
+          "provider": {}"""""
+            "@type": "Organization"""""
+            "name": "Zion Tech Group"""""
+"""
+          "offers": {}"""""
+            "@type": "Offer"""""
+            "availability": "https://schema.org/InStock"""""
+            "priceCurrency": "USD"""""
             "category": "Technology Services"""
-
-
-
-          "@type": "Service""
-          "name": "IT Services""
-          "description": "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and custom development""
-          "provider": {};""
-            "@type": "Organization""
-            "name": "Zion Tech Group"""
-
-          "offers": {};""
-            "@type": "Offer""
-            "availability": "https://schema.org/InStock""
-            "priceCurrency": "USD""
+"
+""
+"""
+          "@type": "Service"""""
+          "name": "IT Services"""""
+          "description": "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and custom development"""""
+          "provider": {}"""""
+            "@type": "Organization"""""
+            "name": "Zion Tech Group"""""
+"""
+          "offers": {}"""""
+            "@type": "Offer"""""
+            "availability": "https://schema.org/InStock"""""
+            "priceCurrency": "USD"""""
             "category": "Technology Services"""
-
-
-
-          "@type": "Service""
-          "name": "5G Implementation""
-          "description": "Next-generation connectivity and infrastructure services for modern businesses""
-          "provider": {};""
-            "@type": "Organization""
-            "name": "Zion Tech Group"""
-
-          "offers": {};""
-            "@type": "Offer""
-            "availability": "https://schema.org/InStock""
-            "priceCurrency": "USD""
+"
+""
+"""
+          "@type": "Service"""""
+          "name": "5G Implementation"""""
+          "description": "Next-generation connectivity and infrastructure services for modern businesses"""""
+          "provider": {}"""""
+            "@type": "Organization"""""
+            "name": "Zion Tech Group"""""
+"""
+          "offers": {}"""""
+            "@type": "Offer"""""
+            "availability": "https://schema.org/InStock"""""
+            "priceCurrency": "USD"""""
             "category": "Technology Services"""
-
-
-
-          "@type": "Service""
-          "name": "Micro SaaS Solutions""
-          "description": "Ready-to-use software solutions for immediate deployment and business growth""
-          "provider": {};""
-            "@type": "Organization""
-            "name": "Zion Tech Group"""
-
-          "offers": {};""
-            "@type": "Offer""
-            "availability": "https://schema.org/InStock""
-            "priceCurrency": "USD""
+"
+""
+"""
+          "@type": "Service"""""
+          "name": "Micro SaaS Solutions"""""
+          "description": "Ready-to-use software solutions for immediate deployment and business growth"""""
+          "provider": {}"""""
+            "@type": "Organization"""""
+            "name": "Zion Tech Group"""""
+"""
+          "offers": {}"""""
+            "@type": "Offer"""""
+            "availability": "https://schema.org/InStock"""""
+            "priceCurrency": "USD"""""
             "category": "Software Solutions"""
-
-
-      ]
-      "hasOfferCatalog": {};""
-        "@type": "OfferCatalog""
-        "name": "Technology Services Catalog""
-        "itemListElement": []""
-
-            "@type": "Offer""
-            "itemOffered": {};""
-              "@type": "Service""
-              "name": "AI Analytics""
+"
+""
+      ]"""
+      "hasOfferCatalog": {}"""""
+        "@type": "OfferCatalog"""""
+        "name": "Technology Services Catalog"""""
+        "itemListElement": []""""
+"""
+            "@type": "Offer"""""
+            "itemOffered": {}"""""
+              "@type": "Service"""""
+              "name": "AI Analytics"""""
               "description": "Advanced AI-powered analytics solutions"""
-
-
-
-            "@type": "Offer""
-            "itemOffered": {};""
-              "@type": "Service""
-              "name": "Cybersecurity Solutions""
+"
+""
+"""
+            "@type": "Offer"""""
+            "itemOffered": {}"""""
+              "@type": "Service"""""
+              "name": "Cybersecurity Solutions"""""
               "description": "Comprehensive cybersecurity protection services"""
-
-
-
-            "@type": "Offer""
-            "itemOffered": {};""
-              "@type": "Service""
-              "name": "Cloud Infrastructure""
+"
+""
+"""
+            "@type": "Offer"""""
+            "itemOffered": {}"""""
+              "@type": "Service"""""
+              "name": "Cloud Infrastructure"""""
               "description": "Scalable cloud infrastructure solutions"""
 
         ];
     // Add page-specific structured data;
 if ($1) {}
   // If body
-
-      return {}
-        ...baseStructuredData
-        "@type": "WebSite""
-        "potentialAction": {};""
-          "@type": "SearchAction""
-          "target": "https://ziontechgroup.com/search?q={search_term_string}""
-          "query-input": "required= name =search_term_string"""
-
-        "mainEntity": {};""
-          "@type": "ItemList""
-          "itemListElement": []""
-
-              "@type": "ListItem""
-              "position": 1;""
-              "name": "AI Solutions""
-              "url": "https://ziontechgroup.com/ai-services"""
-
-
-              "@type": "ListItem""
-              "position": 2;""
-              "name": "IT Services""
-              "url": "https://ziontechgroup.com/services"""
-
-
-              "@type": "ListItem""
-              "position": 3;""
-              "name": "Micro SaaS""
-              "url": "https://ziontechgroup.com/micro-saas"""
-
-
-              "@type": "ListItem""
-              "position": 4;""
-              "name": "5G Solutions""
+"
+      return {}""
+        ...baseStructuredData"""
+        "@type": "WebSite"""""
+        "potentialAction": {}"""""
+          "@type": "SearchAction"""""
+          "target": "https://ziontechgroup.com/search?q={search_term_string}"""""
+          "query-input": "required= name =search_term_string"""""
+"""
+        "mainEntity": {}"""""
+          "@type": "ItemList"""""
+          "itemListElement": []""""
+"""
+              "@type": "ListItem"""""
+              "position": 1"""""
+              "name": "AI Solutions"""""
+              "url": "https://ziontechgroup.com/ai-services""""
+""
+"""
+              "@type": "ListItem"""""
+              "position": 2"""""
+              "name": "IT Services"""""
+              "url": "https://ziontechgroup.com/services""""
+""
+"""
+              "@type": "ListItem"""""
+              "position": 3"""""
+              "name": "Micro SaaS"""""
+              "url": "https://ziontechgroup.com/micro-saas""""
+""
+"""
+              "@type": "ListItem"""""
+              "position": 4"""""
+              "name": "5G Solutions"""""
               "url": "https://ziontechgroup.com/5g-solutions"""
 
     const path  = location.pathname;
-if ($1) {}
-  // If body
-      return {};
-        ...baseStructuredData"@type": "WebSite"potentialAction": {}"@type": "SearchAction"target": "https://ziontechgroup.com/search?q={search_term_string}"query-input": "required: name =search_term_string";"
-        }"mainEntity": {}"@type": "ItemList"itemListElement": []";"
-            {}"@type": "ListItem"position": 1"name": "AI Solutions"url": "https://ziontechgroup.com/ai-services";"
-            {}"@type": "ListItem"position": 2"name": "IT Services"url": "https://ziontechgroup.com/services";"
-            {}"@type": "ListItem"position": 3"name": "Micro SaaS"url": "https://ziontechgroup.com/micro-saas";"
-            {}"@type": "ListItem"position": 4"name": "5G Solutions"url": "https://ziontechgroup.com/5g-solutions";"
+if ($1) {}"
+  // If body""
+      return {}"""
+        ...baseStructuredData"@type": "WebSite"potentialAction": {}"@type": "SearchAction"target": "https://ziontechgroup.com/search?q={search_term_string}"query-input": "required: name =search_term_string"""""
+        }"mainEntity": {}"@type": "ItemList"itemListElement": []"""""
+            {}"@type": "ListItem"position": 1"name": "AI Solutions"url": "https://ziontechgroup.com/ai-services"""""
+            {}"@type": "ListItem"position": 2"name": "IT Services"url": "https://ziontechgroup.com/services"""""
+            {}"@type": "ListItem"position": 3"name": "Micro SaaS"url": "https://ziontechgroup.com/micro-saas"""""
+            {}"@type": "ListItem"position": 4"name": "5G Solutions"url": "https://ziontechgroup.com/5g-solutions""
           ]
 
 
@@ -198,66 +198,66 @@ if ($1) {}
 
 
 
-
-
-
-        "offers": {};""
-          "@type": "Offer""
-          "availability": "https://schema.org/InStock""
-          "priceCurrency": "USD""
-          "category": "Technology Services""
-          "validFrom": "2024-01-01""
-          "validThrough": "2025-12-31"""
-
-        "areaServed": {};""
-          "@type": "Country""
-          "name": "United States"""
-
-        "serviceType": "AI and IT Solutions""
-        "hasOfferCatalog": {};""
-          "@type": "OfferCatalog""
-          "name": `${title} Services`"
-          "itemListElement": []""
-
-              "@type": "Offer""
-              "itemOffered": {};""
-                "@type": "Service""
-                "name": title;""
+"
+""
+"""
+        "offers": {}"""""
+          "@type": "Offer"""""
+          "availability": "https://schema.org/InStock"""""
+          "priceCurrency": "USD"""""
+          "category": "Technology Services"""""
+          "validFrom": "2024-01-01"""""
+          "validThrough": "2025-12-31"""""
+"""
+        "areaServed": {}"""""
+          "@type": "Country"""""
+          "name": "United States"""""
+"""
+        "serviceType": "AI and IT Solutions"""""
+        "hasOfferCatalog": {}"""""
+          "@type": "OfferCatalog"""""
+          "name": `${title} Services`""""
+          "itemListElement": []""""
+"""
+              "@type": "Offer"""""
+              "itemOffered": {}"""""
+                "@type": "Service"""""
+                "name": title"""""
                 "description": description""
 
           ];
-      return baseStructuredData
-
-  // Generate FAQ structured data
-      question: "What services does Zion Tech Group offer?",";"
-      answer: "Zion Tech Group offers comprehensive AI solutions, IT services, micro SaaS products, and 5G implementation services. We specialize in digital transformation, cybersecurity, cloud computing, and business automation.";"
-      question: "How can I contact Zion Tech Group?",";"
-      answer: "You can contact us by phone at +1 (302) 464-0950, email at kleber@ziontechgroup.com, or visit our office at 364 E Main St STE 1008, Middletown, DE 19709.";"
-      question: "What is the uptime guarantee for your services?",";"
-      answer: "We provide a 99.9% uptime SLA guarantee for all our services, ensuring maximum reliability and availability for your business operations.";"
-      question: "Do you offer 24/7 support?",";"
-      answer: "Yes, we provide 24/7 technical support to ensure your systems are always running smoothly and any issues are resolved quickly.";"
-      question: "What makes Zion Tech Group different?",";"
-      answer: "We combine cutting-edge AI technology with proven IT expertise to deliver innovative solutions that drive real business results. Our team of experts provides personalized service and ongoing support.";"
-    ]
-    return {}"@context": "https://schema.org"@type": "FAQPage"mainEntity": faqs.map(faq => ({};)"@type": "Question"name": faq.question"acceptedAnswer": {}"@type": "Answer"text": faq.answer";"
-      }))
-  // Generate breadcrumb structured data
-    ]
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ')""
-      breadcrumbs.push({};)
-}// Track page view in analytics;
-if (typeof window !== 'undefined' && window.gtag) {},""
+      return baseStructuredData"
+""
+  // Generate FAQ structured data"""
+      question: "What services does Zion Tech Group offer?","""""
+      answer: "Zion Tech Group offers comprehensive AI solutions, IT services, micro SaaS products, and 5G implementation services. We specialize in digital transformation, cybersecurity, cloud computing, and business automation."""""
+      question: "How can I contact Zion Tech Group?","""""
+      answer: "You can contact us by phone at +1 (302) 464-0950, email at kleber@ziontechgroup.com, or visit our office at 364 E Main St STE 1008, Middletown, DE 19709."""""
+      question: "What is the uptime guarantee for your services?","""""
+      answer: "We provide a 99.9% uptime SLA guarantee for all our services, ensuring maximum reliability and availability for your business operations."""""
+      question: "Do you offer 24/7 support?","""""
+      answer: "Yes, we provide 24/7 technical support to ensure your systems are always running smoothly and any issues are resolved quickly."""""
+      question: "What makes Zion Tech Group different?","""""
+      answer: "We combine cutting-edge AI technology with proven IT expertise to deliver innovative solutions that drive real business results. Our team of experts provides personalized service and ongoing support.""""
+    ]"""
+    return {}"@context": "https://schema.org"@type": "FAQPage"mainEntity": faqs.map(faq => ({};)"@type": "Question"name": faq.question"acceptedAnswer": {}"@type": "Answer"text": faq.answer""
+      })
+  // Generate breadcrumb structured data"
+    ]""
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1)"""
+        .join(' ')"""
+      breadcrumbs.push({};)""
+}// Track page view in analytics"""
+if (typeof window !== 'undefined' && window.gtag) {},"""""
       window.gtag('config', 'GA_MEASUREMENT_ID', {},)""
       page_title: title,
       page_location: currentUrl,
-      })
-
-    // Track SEO performance;
-if (typeof window !== 'undefined' && window.gtag) {},""
-      window.gtag('event', 'seo_optimization', {},)""
-      event_category: 'SEO',""
+      })"
+""
+    // Track SEO performance"""
+if (typeof window !== 'undefined' && window.gtag) {},"""""
+      window.gtag('event', 'seo_optimization', {},)"""""
+      event_category: 'SEO',"""""
       event_label: 'page_loaded',""
       value: 1
       })
@@ -266,52 +266,54 @@ if (typeof window !== 'undefined' && window.gtag) {},""
   return ()
     <Helmet></Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
-      </script>
-      {/* FAQ Structured Data */}
-      <script: type ="application/ld+json"></script>""
-        {JSON.stringify(faqStructuredData)}
-      </script>
-      {/* Breadcrumb Structured Data */}
-      <script: type ="application/ld+json"></script>""
-        {JSON.stringify(breadcrumbStructuredData)}
-      </script>
-      {/* Preload critical resources */}
-      <link: rel ="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />""
-      <link: rel ="preload" href="/assets/index-Dq8n7JAm.css" as="style" />""
-      <link: rel ="preload" href="/assets/index-DApGEc-z.js" as="script" />""
-      {/* DNS prefetch for performance */}
-      <link: rel ="dns-prefetch" href="//fonts.googleapis.com" />""
-      <link: rel ="dns-prefetch" href="//fonts.gstatic.com" />""
-      <link: rel ="dns-prefetch" href="//www.google-analytics.com" />""
-      <link: rel ="dns-prefetch" href="//www.googletagmanager.com" />""
-      {/* Preconnect to external domains */}
-      <link: rel ="preconnect" href="https://fonts.googleapis.com" />""
-      <link: rel ="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />""
+      <title>{title}</title>"
+      </script>""
+      {/* FAQ Structured Data */}"""
+      <script type ="application/ld+json"></script>""
+        {JSON.stringify(faqStructuredData)}"
+      </script>""
+      {/* Breadcrumb Structured Data */}"""
+      <script type ="application/ld+json"></script>""
+        {JSON.stringify(breadcrumbStructuredData)}"
+      </script>""
+      {/* Preload critical resources */}"""
+      <link rel ="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />"""""
+      <link rel ="preload" href="/assets/index-Dq8n7JAm.css" as="style" />"""""
+      <link rel ="preload" href="/assets/index-DApGEc-z.js" as="script" />""""
+      {/* DNS prefetch for performance */}"""
+      <link rel ="dns-prefetch" href="//fonts.googleapis.com" />"""""
+      <link rel ="dns-prefetch" href="//fonts.gstatic.com" />"""""
+      <link rel ="dns-prefetch" href="//www.google-analytics.com" />"""""
+      <link rel ="dns-prefetch" href="//www.googletagmanager.com" />""""
+      {/* Preconnect to external domains */}"""
+      <link rel ="preconnect" href="https://fonts.googleapis.com" />"""""
+      <link rel ="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />""
     </Helmet>
   )
 
 
 const ComponentsPage: React.FC = () => {
-  return (
-      <SEOHead;>
-        </div>;
-      </div>;
-    </>;,";"
-  ),";";"
-};";";";"
-;""
-
-        title="Components - Zion Tech Group";"
-        description="Professional components solutions for modern businesses";"
-      />";"
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div: className ="text-center">";"
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";"
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>";"
+  return null;
+}
+      <SEOHead;>"
+        </div>""
+      </div>"""
+    </>;,"""""
+  ),""""""
+}"""""""
+""""
+"""
+        title="Components - Zion Tech Group"""""
+        description="Professional components solutions for modern businesses"""""
+      />"""""
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"""""
+        <div className ="text-center">"""""
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>"""""
+          <p className ="text-gray-300">Professional solutions coming soon...</p>""
         </div>;
       </div>;
     </>;
   ),
-
-
+"
+""
+"""

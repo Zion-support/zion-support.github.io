@@ -13,90 +13,90 @@ useEffect(() => {}
       if (savedSettings) {}
       try {}
 
-        setSettings(JSON.parse(savedSettings))
+        setSettings(JSON.parse(savedSettings)
       } catch (error) {}
 
   useEffect(() => {
-    const savedSettings  = localStorage.getItem('accessibility-settings')";"
+    const savedSettings  = localStorage.getItem('accessibility-settings')""
     if (savedSettings) {
-      try {
-        setSettings(JSON.parse(savedSettings));
-      } catch (error) {
-        console.error('Error loading accessibility settings: ', error)";"
+      try {"
+        setSettings(JSON.parse(savedSettings)""
+      } catch (error) {"""
+        console.error('Error loading accessibility settings: ', error)""
 
 
 
   }, [])
   // Apply accessibility settings
-
-  // Save settings to localStorage;
-useEffect(() => {
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings))";"
+"
+  // Save settings to localStorage""
+useEffect(() => {"""
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings)""
   }, [settings]);
 
   // Apply accessibility settings to document;
 useEffect(() => {
-    const root  = document.documentElement;
-    
-    if (settings.highContrast) {
-      root.classList.add('high-contrast')";"
-    } else {
-      root.classList.remove('high-contrast')";"
+    const root  = document.documentElement;"
+    ""
+    if (settings.highContrast) {"""
+      root.classList.add('high-contrast')""""
+    } else {"""
+      root.classList.remove('high-contrast')""
 
 
     
     // Large text mode;
 if (newSettings.largeText) {}
-
-
-    if (settings.largeText) {
-      root.classList.add('large-text')";"
-    } else {
-      root.classList.remove('large-text')";"
+"
+""
+    if (settings.largeText) {"""
+      root.classList.add('large-text')""""
+    } else {"""
+      root.classList.remove('large-text')""
 
 
     
     // Reduced motion;
 if (newSettings.reducedMotion) {}
-
-
-    if (settings.reducedMotion) {
-      root.classList.add('reduced-motion')";"
-    } else {
-      root.classList.remove('reduced-motion')";"
+"
+""
+    if (settings.reducedMotion) {"""
+      root.classList.add('reduced-motion')""""
+    } else {"""
+      root.classList.remove('reduced-motion')""
 
 
     
     // Screen reader optimizations;
 if (newSettings.screenReader) {}
-
-
-    if (settings.screenReader) {
-      root.classList.add('screen-reader-optimized')";"
-    } else {
-      root.classList.remove('screen-reader-optimized')";"
+"
+""
+    if (settings.screenReader) {"""
+      root.classList.add('screen-reader-optimized')""""
+    } else {"""
+      root.classList.remove('screen-reader-optimized')""
 
 
     
     // Focus visible;
 if (newSettings.focusVisible) {}
-
-
-    if (settings.focusVisible) {
-      root.classList.add('focus-visible')";"
-    } else {
-      root.classList.remove('focus-visible')";"
+"
+""
+    if (settings.focusVisible) {"""
+      root.classList.add('focus-visible')""""
+    } else {"""
+      root.classList.remove('focus-visible')""
 
 
     
     // Keyboard navigation;
 if (newSettings.keyboardNavigation) {}
-
-
-    if (settings.keyboardNavigation) {
-      root.classList.add('keyboard-navigation')";"
-    } else {
-      root.classList.remove('keyboard-navigation')";"
+"
+""
+    if (settings.keyboardNavigation) {"""
+      root.classList.add('keyboard-navigation')""""
+    } else {"""
+      root.classList.remove('keyboard-navigation')""
 
 
   }, [settings]);
@@ -116,7 +116,7 @@ const togglePanel  = () => {}
 setSettings(prev => ({)}
       ...prev,
       [key]: value
-    }))
+    })
 
   return ()
     <>{}</>
@@ -126,10 +126,10 @@ setSettings(prev => ({)}
         </svg>
       </button>
 
-      {/* Accessibility Settings Panel */}
-
-      {isVisible && ()}
-        <div  className ="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-80 max-h-96 overflow-y-auto">""
+      {/* Accessibility Settings Panel */}"
+""
+      {isVisible && ()}"""
+        <div  className ="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-80 max-h-96 overflow-y-auto">"""""
           <h3  className ="text-lg font-semibold mb-4 text-gray-900 dark:text-white">""
             Accessibility Settings
           </h3>
@@ -154,16 +154,17 @@ setSettings(prev => ({)}
           </div>
 
           <buttononClick={togglePanel}>
-            Close
-          </button>
-
-              className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover: bg-blue-700 transition-colors",";"
+            Close"
+          </button>""
+"""
+              className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover: bg-blue-700 transition-colors",""
               Close
             </button>
           </div>
-        </div>
-      )};
-    </>
-  )";"
-    },";";"
-    {}";";";"
+        </div>"
+      )}""
+    </>"""
+  )"""""
+    },""""""
+    {}""""""
+"""

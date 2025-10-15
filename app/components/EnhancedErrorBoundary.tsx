@@ -52,58 +52,58 @@ if (this.props.onError) {
       this.props.onError(error, errorInfo)
 
   private: handleRetry = () => {
-    this.setState(prevState => ({
-      hasError: false,
-      error: null,
+    this.setState(prevState => ({"
+      hasError: false,""
+      error: null,"""
     window.location.href = '/'}'"'""
   render() {
     if (this.state.hasError) {
       // Custom fallback UI;
-if (this.props.fallback) {
-              </div>
-            )}
-            <div: className ="flex flex-col sm:flex-row gap-4 justify-center mb-6">";"
-              <button: onClick ={() => window.location.reload()}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2";"
-                <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform duration-500" />";"
-                Try Again
-              </button>
-              <button: onClick ={this.handleGoHome}>
-                className="flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 group";"
-                <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />";"
-                Go Home
-              </button>
-              <button: onClick ={this.handleReload}>
-                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20";"
-                <RefreshCw className="w-5 h-5 mr-2" />";"
-                Reload Page
-              </button>
-            </div>
-            <div: className ="flex flex-col sm:flex-row gap-4 justify-center">";"
-              <Link: to ="/";">
-                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20";"
-                <Home className="w-5 h-5 mr-2" />";"
-                Go Home
-              </Link>
-              <a: href ="mailto:support@ziontechgroup.com";">
-                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20";"
-                <Mail className="w-5 h-5 mr-2" />";"
-                Contact Support
-              </a>
-            </div>
-            <div: className ="mt-6 text-sm text-gray-400">";"
+if (this.props.fallback) {"
+              </div>""
+            )}"""
+            <div className ="flex flex-col sm:flex-row gap-4 justify-center mb-6">""""
+              <button onClick ={() => window.location.reload()}"""
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2""""
+                <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform duration-500" />""
+                Try Again"
+              </button>""
+              <button onClick ={this.handleGoHome}>"""
+                className="flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 group""""
+                <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />""
+                Go Home"
+              </button>""
+              <button onClick ={this.handleReload}>"""
+                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20""""
+                <RefreshCw className="w-5 h-5 mr-2" />""
+                Reload Page"
+              </button>""
+            </div>"""
+            <div className ="flex flex-col sm:flex-row gap-4 justify-center">"""""
+              <Link to ="/"">"""
+                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20""""
+                <Home className="w-5 h-5 mr-2" />"""
+                Go Home""
+              </Link>"""
+              <a href ="mailto:support@ziontechgroup.com"">"""
+                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20""""
+                <Mail className="w-5 h-5 mr-2" />""
+                Contact Support"
+              </a>""
+            </div>"""
+            <div className ="mt-6 text-sm text-gray-400">""
               <p>Error ID: {this.state.errorId}</p>
               <p>If this problem persists, please contact our support team with this error ID.</p>
             </div>
           </div>
         </>
       )}
-    return this.props.children}
-
-
-            <div: className ="mt-6 text-sm text-gray-400">";"
-              <p>If this problem persists, please contact our support team.</p>
-              <p: className ="mt-2">";"
+    return this.props.children}"
+""
+"""
+            <div className ="mt-6 text-sm text-gray-400">""""
+              <p>If this problem persists, please contact our support team.</p>"""
+              <p className ="mt-2">""
                 Error ID: {Date.now().toString(36)}-{Math.random().toString(36).substr(2, 9)}
               </p>
             </div>
@@ -126,9 +126,9 @@ interface ErrorBoundaryProps {},
       enableErrorDetails?: boolean
 class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {},
       private retryTimeout: NodeJS.Timeout | null = null,
-      constructor(props: ErrorBoundaryProps) {},
-      super(props),
-      this.state = {},
+      constructor(props: ErrorBoundaryProps) {},"
+      super(props),""
+      this.state = {},"""
       errorId: ',"'""
       retryCount: 0,
       isRetrying: false
@@ -142,25 +142,25 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       const { errorId } = this.state,
       this.setState({},)
       errorInfo,;
-      errorId;
-    });
-    // Log error to console in development;
-console.error('Error caught by boundary:', error)";"
-      console.error('Error info:', errorInfo)";"
+      errorId;"
+    })""
+    // Log error to console in development"""
+console.error('Error caught by boundary:', error)"""""
+      console.error('Error info:', errorInfo)""
     // Report error to external service;
 if (enableErrorReporting) {},
       this.reportError(error, errorInfo, errorId)
-    // Call custom error handler;
-if (onError) {},
-      onError(error, errorInfo, errorId)
-                   document.cookie.split(').find(c => c.trim().startsWith('userId='))?.split('=')[1],"'""
-      return userId || null
-    },";"
-    {};";";"
-  private getSessionId = (): string => {},";";";"
-      let sessionId  =  sessionStorage.getItem('sessionId"),";"'
-      if (!sessionId) {},";";"
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,";";";"
+    // Call custom error handler;"
+if (onError) {},""
+      onError(error, errorInfo, errorId)"""
+                   document.cookie.split(').find(c => c.trim().startsWith('userId=')?.split('=')[1],"'""""
+      return userId || null"""
+    },"""""
+    {}""""""
+  private getSessionId = (): string => {},"""""""
+      let sessionId  =  sessionStorage.getItem('sessionId"),""'"""
+      if (!sessionId) {},""""""
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,"""""""
       sessionStorage.setItem('sessionId", sessionId)"'
     this.setState({
     isRetrying: true 
@@ -169,18 +169,18 @@ if (onError) {},
     // Call custom retry handler;
 if (onRetry) {},
       onRetry()
-    // Reset error state after a short delay;
-this.retryTimeout = setTimeout(() => {},
-      this.setState({},)
+    // Reset error state after a short delay;"
+this.retryTimeout = setTimeout(() => {},""
+      this.setState({},)"""
       errorId: ',"'""
       retryCount: retryCount + 1,
       isRetrying: false
-      });
-    }, 1000)
-      window.location.reload()
-    },";"
-    {};";";"
-  private handleGoHome = () => {},";";";"
+      });"
+    }, 1000)""
+      window.location.reload()"""
+    },"""""
+    {}""""""
+  private handleGoHome = () => {},"""""""
       window.location.href = '/""'
       const issueData  = {},
       errorId,
@@ -199,67 +199,67 @@ this.retryTimeout = setTimeout(() => {},
       // Use custom fallback if provided;
 if (fallback) {},
       return fallback
-            </p>
-            
-            {process.env.NODE_ENV === 'development' && this.state.error && ('
-              <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left">"
-                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>"
+            </p>"
+            ""
+            {process.env.NODE_ENV === 'development' && this.state.error && ('"""
+              <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left">""""
+                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>""""
                 <p className="text-red-300 text-sm font-mono break-all">"
-                  {this.state.error.message}
-                </p>
-                {this.state.error.stack && (
+                  {this.state.error.message}"
+                </p>""
+                {this.state.error.stack && ("""
                   <pre className="text-red-300 text-xs mt-2 overflow-auto max-h-32">"
                     {this.state.error.stack}
                   </pre>
                 )}
-              </div>
-            )}
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button;>
-onClick={this.handleRetry}
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors""
-                Try Again
-            {enableErrorDetails && ()}
-              <details: className ="error-details"></details>";"
-                <summary>Error Details</summary>
-                <div: className ="error-details-content"></div>";"
-                  <p><strong>Error ID:</strong> {errorId}</p>
-                  <p><strong>Error Message:</strong> {error?.message}</p>
-                  <p><strong>Retry Count:</strong> {retryCount}/{maxRetries}</p>
-                  {process.env.NODE_ENV === 'development' && ()}";"
-                    <>{}</>
-                      <p><strong>Stack Trace:</strong></p>
-                      <pre: className ="error-stack">{error?.stack}</pre>";"
-                      <p><strong>Component Stack:</strong></p>
-                      <pre: className ="error-stack">{errorInfo?.componentStack}</pre>";"
+              </div>"
+            )}""
+            """
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <button;>""
+onClick={this.handleRetry}"""
+                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"""
+                Try Again""
+            {enableErrorDetails && ()}"""
+              <details className ="error-details"></details>""""
+                <summary>Error Details</summary>"""
+                <div className ="error-details-content"></div>""
+                  <p><strong>Error ID:</strong> {errorId}</p>"
+                  <p><strong>Error Message:</strong> {error?.message}</p>""
+                  <p><strong>Retry Count:</strong> {retryCount}/{maxRetries}</p>"""
+                  {process.env.NODE_ENV === 'development' && ()}"""
+                    <>{}</>""
+                      <p><strong>Stack Trace:</strong></p>"""
+                      <pre className ="error-stack">{error?.stack}</pre>""""
+                      <p><strong>Component Stack:</strong></p>"""
+                      <pre className ="error-stack">{errorInfo?.componentStack}</pre>""
                     </>
                   )};
-                </div>
-              </details>
-            )};
-            <div: className ="error-actions"></div>";"
-              {enableRetry && retryCount < maxRetries && ()}
-                <buttonclassName="error-button retry-button">";"
-                  onClick={this.handleRetry},
-      disabled={isRetrying};
-                ></>
-                  {isRetrying ? 'Retrying...' : 'Try Again'}";"
-                </button>
-              )};
-              <buttonclassName="error-button reload-button">";"
+                </div>"
+              </details>""
+            )}"""
+            <div className ="error-actions"></div>""""
+              {enableRetry && retryCount < maxRetries && ()}"""
+                <buttonclassName="error-button retry-button">""
+                  onClick={this.handleRetry},"
+      disabled={isRetrying}""
+                ></>"""
+                  {isRetrying ? 'Retrying...' : 'Try Again'}"""
+                </button>""
+              )}"""
+              <buttonclassName="error-button reload-button">""
                 onClick={this.handleReload};
               ></button
                 Reload Page
-              </button>
-              <button;>
-onClick={this.handleGoHome}
+              </button>"
+              <button;>""
+onClick={this.handleGoHome}"""
                 className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-medium transition-colors""
                 Go Home
               </button>
-              </p>
-            </div>
-            
+              </p>"
+            </div>""
+            """
             <p className="text-gray-400 text-sm mt-6">"
               Error ID: {this.state.errorId}
             </p>
@@ -384,15 +384,16 @@ onClick={this.handleGoHome}
         </div>
 
 const ComponentsPage: React.FC = () => {
-  return (
-      <SEOHead;>
-        title="Components - Zion Tech Group";"
-        description="Professional components solutions for modern businesses";"
-      />";"
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div: className ="text-center">";"
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";"
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>";"
+  return null;"
+}""
+      <SEOHead;>"""
+        title="Components - Zion Tech Group"""""
+        description="Professional components solutions for modern businesses"""""
+      />"""""
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"""""
+        <div className ="text-center">"""""
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>"""""
+          <p className ="text-gray-300">Professional solutions coming soon...</p>""
         </div>;
       </div>;
     </>;
@@ -404,5 +405,6 @@ const ComponentsPage: React.FC = () => {
     return this.props.children;
 
 
-
-
+"
+""
+"""
