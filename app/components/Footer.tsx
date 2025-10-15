@@ -23,31 +23,31 @@ const Footer: React.FC = () => {
     {
       title: 'Micro SAAS Solutions',
       services: [
-        { name: 'AI Content Writer', path: '/micro-saas/ai-content-writer' },
-        { name: 'Project Manager', path: '/micro-saas/ai-project-manager' },
-        { name: 'Email Marketing', path: '/micro-saas/ai-email-marketing' },
-        { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard' },
-        { name: 'Document Processor', path: '/micro-saas/document-processor' }
+        { name: 'AI Content Writer', path: '/micro-saas' },
+        { name: 'Project Manager', path: '/micro-saas' },
+        { name: 'Email Marketing', path: '/micro-saas' },
+        { name: 'Analytics Dashboard', path: '/micro-saas' },
+        { name: 'Document Processor', path: '/micro-saas' }
       ]
     },
     {
       title: 'AI Services',
       services: [
-        { name: 'AI Automation', path: '/ai-services/automation' },
-        { name: 'Machine Learning', path: '/ai-services/ml' },
-        { name: 'Computer Vision', path: '/ai-services/computer-vision' },
-        { name: 'Natural Language Processing', path: '/ai-services/nlp' },
-        { name: 'Predictive Analytics', path: '/ai-services/predictive-analytics' }
+        { name: 'AI Automation', path: '/ai-services' },
+        { name: 'Machine Learning', path: '/ai-services' },
+        { name: 'Computer Vision', path: '/ai-services' },
+        { name: 'Natural Language Processing', path: '/ai-services' },
+        { name: 'Predictive Analytics', path: '/ai-services' }
       ]
     },
     {
       title: 'IT Services',
       services: [
-        { name: 'Cloud Migration', path: '/it-services/cloud-migration' },
-        { name: 'Cybersecurity', path: '/it-services/cybersecurity' },
-        { name: 'DevOps', path: '/it-services/devops' },
-        { name: 'Mobile Development', path: '/it-services/mobile-development' },
-        { name: 'Web Development', path: '/it-services/web-development' }
+        { name: 'Cloud Migration', path: '/it-services' },
+        { name: 'Cybersecurity', path: '/it-services' },
+        { name: 'DevOps', path: '/it-services' },
+        { name: 'Mobile Development', path: '/it-services' },
+        { name: 'Web Development', path: '/it-services' }
       ]
     }
   ];
@@ -57,19 +57,32 @@ const Footer: React.FC = () => {
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'Pricing', path: '/pricing' },
     { name: 'News', path: '/news' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Contact', path: '/contact' }
+  ];
+
+  const legalLinks = [
     { name: 'Privacy Policy', path: '/privacy-policy' },
     { name: 'Terms of Service', path: '/terms' },
-    { name: 'SLA', path: '/sla' }
+    { name: 'Service Level Agreement', path: '/sla' },
+    { name: 'Cookie Policy', path: '/cookies' },
+    { name: 'GDPR Compliance', path: '/gdpr' }
+  ];
+
+  const supportLinks = [
+    { name: 'Help Center', path: '/help' },
+    { name: 'Documentation', path: '/docs' },
+    { name: 'API Reference', path: '/api-docs' },
+    { name: 'System Status', path: '/status' },
+    { name: 'Report Issue', path: '/support' }
   ];
 
   return (
     <footer className="bg-slate-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">Z</span>
@@ -106,39 +119,39 @@ const Footer: React.FC = () => {
 
             {/* Social Links */}
             <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
                 <Instagram className="w-6 h-6" />
               </a>
             </div>
           </div>
 
           {/* Services */}
-          <div className="lg:col-span-2">
+          <div>
             <h3 className="text-xl font-semibold mb-6">Our Services</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="space-y-4">
               {serviceCategories.map((category, index) => (
                 <div key={index}>
-                  <h4 className="text-lg font-medium text-blue-400 mb-4">{category.title}</h4>
+                  <h4 className="text-lg font-medium text-blue-400 mb-3">{category.title}</h4>
                   <ul className="space-y-2">
                     {category.services.map((service, serviceIndex) => (
                       <li key={serviceIndex}>
                         <Link
                           to={service.path}
-                          className="text-gray-300 hover:text-white transition-colors flex items-center group"
+                          className="text-gray-300 hover:text-white transition-colors flex items-center group text-sm"
                         >
-                          <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                           {service.name}
                         </Link>
                       </li>
@@ -149,7 +162,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Quick Links & Newsletter */}
+          {/* Quick Links */}
           <div>
             <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-2 mb-8">
@@ -157,7 +170,38 @@ const Footer: React.FC = () => {
                 <li key={index}>
                   <Link
                     to={link.path}
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="text-xl font-semibold mb-6">Support</h3>
+            <ul className="space-y-2">
+              {supportLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.path}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal & Newsletter */}
+          <div>
+            <h3 className="text-xl font-semibold mb-6">Legal</h3>
+            <ul className="space-y-2 mb-8">
+              {legalLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.path}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -175,9 +219,9 @@ const Footer: React.FC = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-3 py-2 bg-slate-700 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="flex-1 px-3 py-2 bg-slate-700 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
                 />
-                <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition-colors">
+                <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition-colors text-sm">
                   Subscribe
                 </button>
               </div>
@@ -217,7 +261,7 @@ const Footer: React.FC = () => {
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            <div className="flex space-x-6 text-sm">
+            <div className="flex flex-wrap gap-4 text-sm">
               <Link to="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
                 Privacy Policy
               </Link>
@@ -226,6 +270,12 @@ const Footer: React.FC = () => {
               </Link>
               <Link to="/sla" className="text-gray-400 hover:text-white transition-colors">
                 SLA
+              </Link>
+              <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors">
+                Cookie Policy
+              </Link>
+              <Link to="/gdpr" className="text-gray-400 hover:text-white transition-colors">
+                GDPR
               </Link>
             </div>
           </div>
