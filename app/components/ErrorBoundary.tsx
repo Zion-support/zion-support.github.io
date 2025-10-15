@@ -1,7 +1,10 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
+import { memo } from 'react';
 
 interface Props {
   children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
@@ -20,22 +23,23 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Use proper error handling instead of console.error
+    // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
     }
     
-    // Report error to error handler
-    const { errorHandler } = require('../utils/errorHandler');
-    errorHandler.reportError(error, {
-      component: 'ErrorBoundary',
-      action: 'componentDidCatch',
-      ...errorInfo
-    });
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
   }
 
   render() {
     if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
@@ -50,10 +54,10 @@ class ErrorBoundary extends Component<Props, State> {
                 {this.state.error?.message || 'An unexpected error occurred'}
               </p>
               <button
-                onClick={() => this.setState({ hasError: false, error: undefined })}
+                onClick={() => window.location.reload()}
                 className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                Try again
+                Reload Page
               </button>
             </div>
           </div>
@@ -65,4 +69,4 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default ErrorBoundary;
+export default memo(ErrorBoundary);

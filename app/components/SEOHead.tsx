@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { memo } from 'react';
 
 interface SEOHeadProps {
   title: string;
@@ -9,9 +10,10 @@ interface SEOHeadProps {
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
+  noIndex?: boolean;
 }
 
-export default function SEOHead({
+const SEOHead = memo(({
   title,
   description,
   keywords = 'AI, IT solutions, artificial intelligence, cloud infrastructure, digital transformation, Zion Tech Group',
@@ -19,8 +21,9 @@ export default function SEOHead({
   ogImage = '/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData
-}: SEOHeadProps) {
+  structuredData,
+  noIndex = false
+}: SEOHeadProps) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;
   const fullDescription = description || 'Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation.';
   
@@ -31,7 +34,7 @@ export default function SEOHead({
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
       {/* Canonical URL */}
@@ -84,4 +87,8 @@ export default function SEOHead({
       </script>
     </Helmet>
   );
-}
+});
+
+SEOHead.displayName = 'SEOHead';
+
+export default SEOHead;

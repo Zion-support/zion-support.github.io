@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const HomePage: React.FC = () => {
+const HomePage: React.FC = memo(() => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -97,6 +97,8 @@ const HomePage: React.FC = () => {
       </div>
     </>
   );
-};
+});
+
+HomePage.displayName = 'HomePage';
 
 export default HomePage;

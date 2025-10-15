@@ -1,4 +1,4 @@
-import { Suspense, useEffect, lazy } from 'react'
+import { Suspense, useEffect, lazy, memo } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -59,18 +59,21 @@ import Footer from './app/components/Footer';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Enhanced loading component
-const LoadingFallback = () => (
+const LoadingFallback = memo(() => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-      <p className="text-gray-600 animate-pulse">Loading...</p>
+      <LoadingSpinner size="lg" ariaLabel="Loading page" />
+      <p className="text-gray-600 animate-pulse mt-4">Loading...</p>
     </div>
   </div>
-)
+))
 
-export default function App() {
+LoadingFallback.displayName = 'LoadingFallback'
+
+const App = memo(() => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
@@ -201,4 +204,8 @@ export default function App() {
       </HelmetProvider>
     </GlobalErrorBoundary>
   )
-}
+})
+
+App.displayName = 'App'
+
+export default App
