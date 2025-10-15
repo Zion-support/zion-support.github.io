@@ -1,11 +1,12 @@
-import  { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { ArrowRight, Brain, CheckCircle, Globe, Phone, Play, Star, Target } from 'lucide-react';
 
 const AiAnalyticsDashboardProPage = () => {
-  return;
-}, []);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-const features = [
+  const features = [
     {
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Real-time Analytics",

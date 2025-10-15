@@ -1,10 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Brain, Bug, CheckCircle, Code, GitBranch, Globe, Star, Terminal } from 'lucide-react';
 
 const AiCodeAssistantProPage = () => {
-  const [, setIsVisible] = useState(false);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-const features = [
+  const features = [
     { icon: <Code className="w-6 h-6" />,
       title: "Intelligent Code Generation",
       description: "Generate high-quality code in 50+ programming languages with AI-powered suggestions and completions.",

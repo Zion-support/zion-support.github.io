@@ -1,4 +1,4 @@
-import { ArrowRight, FileText, Zap, Target, BarChart3, CheckCircle, Clock,  Users,  Globe} from "lucide-react";
+import { ArrowRight, Target, CheckCircle, Globe } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 export default function AIAutomatedReporting() {

@@ -236,8 +236,7 @@ const industries = [
                   
         <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
-                    
-        <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2">
                       { service.benefits?.map((benefit, benefitIndex) => (
                         <span key={benefitIndex } className="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-sm">
                           { benefit }

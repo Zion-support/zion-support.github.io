@@ -1,11 +1,8 @@
-import  { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { ArrowRight, Brain, CheckCircle, Phone, Play, Star } from 'lucide-react';
 
 const AIProjectManagerProPage = () => {
-  return;
-}, []);
-
-const features = [
+  const features = [
     {
       title: "AI-Powered Task Management",
       description: "Intelligent task assignment and prioritization based on team capabilities and project requirements",

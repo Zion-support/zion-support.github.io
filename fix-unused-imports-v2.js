@@ -1,6 +1,4 @@
 import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
 
 // Files with TypeScript errors that need fixing
 const filesToFix = [
@@ -37,39 +35,13 @@ const filesToFix = [
   'app/DynamicPageLoader.tsx'
 ];
 
-// Unused imports to remove
-const unusedImports = [
-  'BarChart3', 'DollarSign', 'Settings', 'Zap', 'Users', 'Lock', 'FileText', 'Shield', 'Mail',
-  'Cloud', 'Cpu', 'React', 'Helmet', 'Clock', 'Calendar', 'PieChart', 'Hash', 'Image', 'MessageCircle',
-  'ArrowRightIcon', 'RocketLaunchIcon'
-];
-
 function fixUnusedImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Remove unused imports from lucide-react
-    const lucideImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g;
-    content = content.replace(lucideImportRegex, (match, imports) => {
-      const importList = imports.split(',').map(imp => imp.trim());
-      const usedImports = importList.filter(imp => {
-        const cleanImport = imp.replace(/\s+as\s+\w+/, '').trim();
-        return !unusedImports.includes(cleanImport);
-      });
-      
-      if (usedImports.length === 0) {
-        modified = true;
-        return ''; // Remove entire import line
-      } else if (usedImports.length !== importList.length) {
-        modified = true;
-        return `import { ${usedImports.join(', ')} } from 'lucide-react';`;
-      }
-      return match;
-    });
-    
-    // Remove unused React imports
-    if (content.includes("import React") && !content.includes("React.") && !content.includes("<React.")) {
+    // Remove unused React imports (only if React is not used in JSX)
+    if (content.includes("import React") && !content.includes("<React.") && !content.includes("React.")) {
       content = content.replace(/import\s+React[^;]*;?\s*\n?/g, '');
       modified = true;
     }
@@ -80,7 +52,7 @@ function fixUnusedImports(filePath) {
       modified = true;
     }
     
-    // Remove unused variables
+    // Remove unused useState variables
     const unusedVars = ['isVisible', 'setIsVisible', 'error', 'specialties'];
     unusedVars.forEach(varName => {
       const regex = new RegExp(`const\\s+\\[${varName}[^\\]]*\\]\\s*=\\s*useState[^;]*;?\\s*\\n?`, 'g');
@@ -89,6 +61,12 @@ function fixUnusedImports(filePath) {
         modified = true;
       }
     });
+    
+    // Remove unused useEffect imports
+    if (content.includes("import { useEffect }") && !content.includes("useEffect(")) {
+      content = content.replace(/import\s*{\s*useEffect\s*}\s*from[^;]*;?\s*\n?/g, '');
+      modified = true;
+    }
     
     if (modified) {
       fs.writeFileSync(filePath, content);

@@ -1,10 +1,7 @@
-import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, Camera, CheckCircle,  Image, Mail, MessageCircle, Phone, Play, Star, Users } from 'lucide-react';
+import { ArrowRight, Brain, Camera, CheckCircle, Phone, Play, Star } from 'lucide-react';
 
 const AISocialMediaManagerProPage = () => {
-  const [isVisible, ] = useState(false);
-
   const features = [
     {
       icon: <Brain className="w-8 h-8" />,
@@ -21,16 +18,16 @@ const AISocialMediaManagerProPage = () => {
   ];
 
   const platforms = [
-    { name: &quot;Facebook&quot;, status: &quot;Active&quot;, color: &quot;text-blue-500&quot;, icon: <Brain className="w-6 h-6" /> },
-    { name: &quot;Twitter&quot;, status: &quot;Active&quot;, color: &quot;text-blue-400&quot;, icon: <Camera className="w-6 h-6" /> },
-    { name: &quot;Instagram&quot;, status: &quot;Active&quot;, color: &quot;text-pink-500&quot;, icon: <Image className="w-6 h-6" /> },
-    { name: &quot;LinkedIn&quot;, status: &quot;Inactive&quot;, color: &quot;text-blue-600&quot;, icon: <MessageCircle className="w-6 h-6" /> }
+    { name: "Facebook", status: "Active", color: "text-blue-500", icon: <MessageCircle className="w-6 h-6" /> },
+    { name: "Twitter", status: "Active", color: "text-sky-500", icon: <Hash className="w-6 h-6" /> },
+    { name: "Instagram", status: "Active", color: "text-pink-500", icon: <Camera className="w-6 h-6" /> },
+    { name: "LinkedIn", status: "Inactive", color: "text-blue-600", icon: <Mail className="w-6 h-6" /> }
   ];
 
   const metrics = [
-    { name: &quot;Engagement Rate&quot;, value: &quot;15.2%&quot;, icon: <Star className="w-5 h-5" />, number: &quot;15.2%&quot;, label: &quot;Engagement&quot; },
-    { name: &quot;Followers&quot;, value: &quot;50K+&quot;, icon: <Users className="w-5 h-5" />, number: &quot;50K+&quot;, label: &quot;Followers&quot; },
-    { name: &quot;Posts per Day&quot;, value: &quot;5&quot;, icon: <Mail className="w-5 h-5" />, number: &quot;5&quot;, label: &quot;Posts/Day&quot; }
+    { name: "Engagement Rate", value: "15.2%", icon: <Star className="w-6 h-6" />, number: "15.2%", label: "Engagement Rate" },
+    { name: "Followers", value: "50K+", icon: <CheckCircle className="w-6 h-6" />, number: "50K+", label: "Followers" },
+    { name: "Posts per Day", value: "5", icon: <Play className="w-6 h-6" />, number: "5", label: "Posts per Day" }
   ];
 
   const pricingPlans = [
