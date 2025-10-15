@@ -62,6 +62,11 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/ai-predictive-maintenance" className="text-gray-300 hover:text-white">AI Predictive Maintenance</Link></li>
               <li><Link to="/ai-price-optimizer" className="text-gray-300 hover:text-white">AI Price Optimizer</Link></li>
               <li><Link to="/ai-scheduling-assistant" className="text-gray-300 hover:text-white">AI Scheduling Assistant</Link></li>
+              <li><Link to="/ai-crm-optimizer" className="text-gray-300 hover:text-white">AI CRM Optimizer</Link></li>
+              <li><Link to="/ai-data-visualizer" className="text-gray-300 hover:text-white">AI Data Visualizer</Link></li>
+              <li><Link to="/ai-email-optimizer" className="text-gray-300 hover:text-white">AI Email Optimizer</Link></li>
+              <li><Link to="/ai-website-analyzer" className="text-gray-300 hover:text-white">AI Website Analyzer</Link></li>
+              <li><Link to="/ai-social-media-manager" className="text-gray-300 hover:text-white">AI Social Media Manager</Link></li>
               <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
             </ul>
           </div>
@@ -78,6 +83,16 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
               <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
               <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
+              <li><Link to="/ai-code-assistant" className="text-gray-300 hover:text-white">AI Code Assistant</Link></li>
+              <li><Link to="/ai-translator" className="text-gray-300 hover:text-white">AI Translator</Link></li>
+              <li><Link to="/ai-video-generator" className="text-gray-300 hover:text-white">AI Video Generator</Link></li>
+              <li><Link to="/ai-audio-processor" className="text-gray-300 hover:text-white">AI Audio Processor</Link></li>
+              <li><Link to="/ai-3d-model-generator" className="text-gray-300 hover:text-white">AI 3D Model Generator</Link></li>
+              <li><Link to="/ai-legal-assistant" className="text-gray-300 hover:text-white">AI Legal Assistant</Link></li>
+              <li><Link to="/ai-medical-assistant" className="text-gray-300 hover:text-white">AI Medical Assistant</Link></li>
+              <li><Link to="/ai-education-tutor" className="text-gray-300 hover:text-white">AI Education Tutor</Link></li>
+              <li><Link to="/ai-real-estate-analyzer" className="text-gray-300 hover:text-white">AI Real Estate Analyzer</Link></li>
+              <li><Link to="/ai-supply-chain-optimizer" className="text-gray-300 hover:text-white">AI Supply Chain Optimizer</Link></li>
             </ul>
           </div>
           
@@ -111,6 +126,16 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/blockchain-solutions-pro" className="text-gray-300 hover:text-white">Blockchain Solutions Pro</Link></li>
               <li><Link to="/iot-solutions-pro" className="text-gray-300 hover:text-white">IoT Solutions Pro</Link></li>
               <li><Link to="/devops-automation-pro" className="text-gray-300 hover:text-white">DevOps Automation Pro</Link></li>
+              <li><Link to="/quantum-computing-solutions" className="text-gray-300 hover:text-white">Quantum Computing</Link></li>
+              <li><Link to="/edge-computing-solutions" className="text-gray-300 hover:text-white">Edge Computing</Link></li>
+              <li><Link to="/augmented-reality-solutions" className="text-gray-300 hover:text-white">AR Solutions</Link></li>
+              <li><Link to="/virtual-reality-solutions" className="text-gray-300 hover:text-white">VR Solutions</Link></li>
+              <li><Link to="/robotic-process-automation" className="text-gray-300 hover:text-white">RPA Solutions</Link></li>
+              <li><Link to="/low-code-platform" className="text-gray-300 hover:text-white">Low-Code Platform</Link></li>
+              <li><Link to="/serverless-architecture" className="text-gray-300 hover:text-white">Serverless Architecture</Link></li>
+              <li><Link to="/container-orchestration" className="text-gray-300 hover:text-white">Container Orchestration</Link></li>
+              <li><Link to="/ai-infrastructure" className="text-gray-300 hover:text-white">AI Infrastructure</Link></li>
+              <li><Link to="/data-lake-solutions" className="text-gray-300 hover:text-white">Data Lake Solutions</Link></li>
             </ul>
           </div>
           

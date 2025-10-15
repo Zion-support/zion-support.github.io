@@ -175,39 +175,158 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Individual Service Pricing */}
+          {/* AI Services Pricing */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Individual AI Tools Pricing</h2>
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">AI Services Pricing</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="border border-gray-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Fraud Detection</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$299<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Real-time fraud prevention with ML</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Image Recognition</h3>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Chatbot Builder Pro</h3>
                 <div className="text-2xl font-bold text-blue-600 mb-2">$199<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Advanced computer vision solutions</p>
+                <p className="text-gray-600 text-sm">Advanced conversational AI with natural language understanding</p>
               </div>
-              <div className="border border-gray-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Lead Scoring</h3>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Document Analyzer Pro</h3>
                 <div className="text-2xl font-bold text-blue-600 mb-2">$149<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Intelligent lead qualification</p>
+                <p className="text-gray-600 text-sm">Intelligent document processing and analysis</p>
               </div>
-              <div className="border border-gray-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Predictive Maintenance</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$399<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Prevent equipment failures</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Price Optimizer</h3>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Sales Predictor Pro</h3>
                 <div className="text-2xl font-bold text-blue-600 mb-2">$299<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Dynamic pricing intelligence</p>
+                <p className="text-gray-600 text-sm">Advanced sales forecasting and lead scoring</p>
               </div>
-              <div className="border border-gray-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Voice Assistant</h3>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Financial Forecaster Pro</h3>
+                <div className="text-2xl font-bold text-blue-600 mb-2">$399<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Comprehensive financial forecasting and risk assessment</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Customer Sentiment Tracker</h3>
                 <div className="text-2xl font-bold text-blue-600 mb-2">$199<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Intelligent voice interactions</p>
+                <p className="text-gray-600 text-sm">Real-time customer sentiment analysis</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Meeting Transcriber Pro</h3>
+                <div className="text-2xl font-bold text-blue-600 mb-2">$99<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Advanced meeting transcription and analysis</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Customer Churn Predictor</h3>
+                <div className="text-2xl font-bold text-blue-600 mb-2">$249<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Predict and prevent customer churn</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Content Moderator Pro</h3>
+                <div className="text-2xl font-bold text-blue-600 mb-2">$199<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Automated content moderation with AI</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Task Scheduler Pro</h3>
+                <div className="text-2xl font-bold text-blue-600 mb-2">$79<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Intelligent task scheduling and optimization</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Micro SaaS Pricing */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Micro SaaS Solutions Pricing</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Task Manager Pro</h3>
+                <div className="text-2xl font-bold text-green-600 mb-2">$29<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">AI-powered task management and team collaboration</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Smart Expense Tracker Pro</h3>
+                <div className="text-2xl font-bold text-green-600 mb-2">$19<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">AI-powered expense tracking and financial management</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Lead Generator Pro</h3>
+                <div className="text-2xl font-bold text-green-600 mb-2">$99<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">AI-powered lead generation and qualification</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Time Tracker Pro</h3>
+                <div className="text-2xl font-bold text-green-600 mb-2">$39<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Comprehensive time tracking and productivity analytics</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Invoice Generator Pro</h3>
+                <div className="text-2xl font-bold text-green-600 mb-2">$29<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Professional invoice generation and management</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">CRM Pro</h3>
+                <div className="text-2xl font-bold text-green-600 mb-2">$49<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">AI-powered customer relationship management</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Analytics Dashboard Pro</h3>
+                <div className="text-2xl font-bold text-green-600 mb-2">$79<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Comprehensive business analytics and reporting</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Form Builder Pro</h3>
+                <div className="text-2xl font-bold text-green-600 mb-2">$39<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Advanced form builder with AI optimization</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Survey Builder Pro</h3>
+                <div className="text-2xl font-bold text-green-600 mb-2">$49<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Professional survey creation and analysis</p>
+              </div>
+            </div>
+          </div>
+
+          {/* IT Solutions Pricing */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">IT Solutions Pricing</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Cloud Infrastructure</h3>
+                <div className="text-2xl font-bold text-purple-600 mb-2">$1,000<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Scalable cloud solutions and infrastructure management</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">DevOps Automation</h3>
+                <div className="text-2xl font-bold text-purple-600 mb-2">$2,000<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Comprehensive DevOps solutions with CI/CD pipelines</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">API Development</h3>
+                <div className="text-2xl font-bold text-purple-600 mb-2">$3,000<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Comprehensive API development and integration services</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Data Engineering</h3>
+                <div className="text-2xl font-bold text-purple-600 mb-2">$4,000<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Comprehensive data engineering and ETL solutions</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Blockchain Solutions</h3>
+                <div className="text-2xl font-bold text-purple-600 mb-2">$8,000<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Comprehensive blockchain and Web3 development</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">IoT Solutions</h3>
+                <div className="text-2xl font-bold text-purple-600 mb-2">$5,000<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Comprehensive IoT and edge computing solutions</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Security Audit</h3>
+                <div className="text-2xl font-bold text-purple-600 mb-2">$3,000<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Comprehensive security assessment and penetration testing</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Web Development</h3>
+                <div className="text-2xl font-bold text-purple-600 mb-2">$3,000<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Modern web development with responsive design</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Mobile Development</h3>
+                <div className="text-2xl font-bold text-purple-600 mb-2">$5,000<span className="text-sm text-gray-500">/month</span></div>
+                <p className="text-gray-600 text-sm">Native and cross-platform mobile app development</p>
               </div>
             </div>
           </div>
