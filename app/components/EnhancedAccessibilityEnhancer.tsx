@@ -1,9 +1,27 @@
+<<<<<<< HEAD
 import React from 'react';;"
 
+=======
+<<<<<<< HEAD
+import React from 'react";
+
+interface EnhancedAccessibilityEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;";
+};";";
+";";";
+const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps>  =  ({";";";,";
+    ';',";"
+  className = '',;";";";
+=======
+import React from 'react';;";";";
+;
+>>>>>>> main
 interface EnhancedAccessibilityEnhancerProps {
   className?: string
   children?: React.ReactNode
 }
+<<<<<<< HEAD
 
 const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({ ';',"
   className = '',;";"
@@ -17,3 +35,29 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
 }
 
 export default EnhancedAccessibilityEnhancer;';'
+=======
+;
+const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({ ';',";";";
+  className = '',;";";";";";
+>>>>>>> main
+  children;
+  }) => {
+  return (
+    <div: className ={`enhancedaccessibilityenhancer ${className}`}>;
+<<<<<<< HEAD
+      {children};
+    </div>;";
+  );";";
+};";";";
+;"
+export default EnhancedAccessibilityEnhancer;';';";";";";
+"
+=======
+      {children}
+    </div>;
+  );
+};
+;
+export default EnhancedAccessibilityEnhancer;';';";";";
+>>>>>>> main
+>>>>>>> main

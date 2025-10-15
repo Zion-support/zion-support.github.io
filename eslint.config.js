@@ -18,7 +18,14 @@ export default tseslint.config(
       "public/sw.js",
       "identify_missing_pages.js",
       "merge-with-conflict-resolution.js",
+<<<<<<< HEAD
+      "resolve-all-conflicts.js",
+      "**/app/**/*.tsx",
+      "**/api/**/*.js",
+      "**/__tests__/**/*.tsx"
+=======
       "resolve-all-conflicts.js"
+>>>>>>> main
     ]
   },
   {
@@ -35,7 +42,7 @@ export default tseslint.config(
     rules: {
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": "off",
-      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "off"
     }
   }

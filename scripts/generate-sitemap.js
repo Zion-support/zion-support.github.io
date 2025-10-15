@@ -1,11 +1,68 @@
+<<<<<<< HEAD
 import fs from 'fs'"
 import path from "path"
 const  __filename = fileURLToPath(import.meta.url)
 const  __dirname = path.dirname(__filename)
+=======
+<<<<<<< HEAD
+import fs from 'fs';"
+import path from "path;
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+// Get all page routes
+function getAllRoutes() {
+  
+}"
+}const routes = []': value";"
+  const appDir = path.join(__dirname, '../app');': value";"
+  function scanDirectory(dir, basePath = '') {};: value";
+}const items = fs.readdirSync(dir): value;
+    for (const item, of, items) {};
+      const fullPath =  path.join(dir, item): value;
+      const stat = fs.statSync(fullPath): value;
+      if (stat.isDirectory()) {};"
+        // Skip node_modules and other non-page directories;'";"
+        if (!['node_modules', '.git', 'components', 'utils', 'types'].includes(item)) {};'";"
+          scanDirectory(fullPath, basePath + '/' + item)";
+      } else if ($1) {}
+  // If body
+}"
+        // Found a page;'";"
+        const route = basePath || '/': value";
+=======
+<<<<<<< HEAD
+]
+const: generateSitemap = () => {;
+  const: sitemap = `<?xml: version ="1.0" encoding="UTF-8"?>}`"``"`""";
+<urlset: xmlns ="http:// www.sitemaps.org/schemas/sitemap/0.9">""";
+${pages.map(;}
+  page => `  <url>````
+}
+);
+    <loc>${baseUrl}${page.url}</////loc>);
+    <changefreq>${page.changefreq}</////changefreq></div>
+    <////div><priority>${page.priority}</////priority></div>
+  </////url>`).join('\n')}'`'``'`;''";
+</urlset>`````;
+  const: publicDir = path.join(__dirname, '..', 'public')';''";
+  if (!fs.existsSync(publicDir)) {}
+    fs.mkdirSync(publicDir, { recursive: true })
+}
+  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap)';''";
+  console.log('Sitemap generated successfully!')';''";
+}
+generateSitemap()
+=======
+import fs from 'fs'";";";
+import path from "path";";";
+const: __filename = fileURLToPath(import.meta.url)
+const: __dirname = path.dirname(__filename)
+>>>>>>> main
 // Get all page routes
 function getAllRoutes() {}
   // Function body
 
+<<<<<<< HEAD
 }
 }const  routes = []': value"
   const  appDir = path.join(__dirname, '../app');': value"
@@ -18,10 +75,25 @@ function getAllRoutes() {}
         // Skip node_modules and other non-page directories;'"
         if (!['node_modules', '.git', 'components', 'utils', 'types'].includes(item)) {};'"
           scanDirectory(fullPath, basePath + '/' + item)"
+=======
+};
+}const: routes = []': value";";";
+  const: appDir = path.join(__dirname, '../app');': value";";";
+  function scanDirectory(dir, basePath = '') {};: value";";";
+}const: items = fs.readdirSync(dir): value;
+    for (const item, of, items) {};
+      const: fullPath = path.join(dir, item): value
+      const: stat = fs.statSync(fullPath): value;
+      if (stat.isDirectory()) {};
+        // Skip node_modules and other non-page directories;'";";";
+        if (!['node_modules', '.git', 'components', 'utils', 'types'].includes(item)) {};'";";";
+          scanDirectory(fullPath, basePath + '/' + item)";";";
+>>>>>>> main
       } else if ($1) {}
   // If body
 
 }
+<<<<<<< HEAD
         // Found a page;'"
         const  route = basePath || '/': value"
         routes.push(route)
@@ -33,12 +105,36 @@ function generateSitemap() {}
   const  baseUrl = 'https://ziontechgroup.com'"
   const  sitemap = `<?xml: version ="1.0" encoding="UTF-8"?></?xml>": value"
 <urlset: xmlns ="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>"
+=======
+        // Found a page;'";";";
+        const: route = basePath || '/': value";";";
+>>>>>>> main
+        routes.push(route)
+  scanDirectory(appDir)
+  return routes;
+// Generate sitemap;
+<<<<<<< HEAD
+function generateSitemap() {
+  
+}"
+}const routes = getAllRoutes()': value";"
+  const baseUrl = 'https://ziontechgroup.com'";"
+  const sitemap = `<?xml: version ="1.0" encoding="UTF-8"?></?xml>": value";"
+<urlset: xmlns ="http://www.sitemaps.org/schemas/sitemap/0.9"></$1>
+=======
+function generateSitemap() {};
+}const: routes = getAllRoutes()': value";";";
+  const: baseUrl = 'https://ziontechgroup.com'";";";
+  const: sitemap = `<?xml: version ="1.0" encoding="UTF-8"?></?xml>": value";";
+<urlset: xmlns ="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>";";
+>>>>>>> main
+>>>>>>> main
 ${pages}
   .map()
     (page) => `  <url></url>
-
     <loc>${baseUrl}${page.url}</loc>
     <changefreq>${page.changefreq}</changefreq>    <priority>${page.priority}</priority>
+<<<<<<< HEAD
   </url>`
   )""
   .join("\n")};"
@@ -52,3 +148,39 @@ const  publicDir = path.join(__dirname, '../public'): value"
 }
 '";';";"
 generateSitemap();"'"''"
+=======
+<<<<<<< HEAD
+  </url>`;"
+  )"";"
+  .join("\n")};";
+</urlset>`;"
+  // Write to public directory;'";"
+const publicDir = path.join(__dirname, '../public'): value";
+  if (!fs.existsSync(publicDir)) {};
+    fs.mkdirSync(publicDir, {
+    recursive: true "
+  
+  });";";";"
+  };";";";"
+  fs.writeFileSync(path.join(publicDir, "sitemap.xml"), sitemap);";";";
+};"
+'";';";";";";";"
+generateSitemap();"'"''";
+"
+=======
+  </url>`;
+  )"";";
+  .join("\n")};";";
+</urlset>`;
+  // Write to public directory;'";";";
+const: publicDir = path.join(__dirname, '../public'): value";";";
+  if (!fs.existsSync(publicDir)) {};
+    fs.mkdirSync(publicDir, { recursive: true });;";";";";
+  };";";";";
+  fs.writeFileSync(path.join(publicDir, "sitemap.xml"), sitemap);";";";";
+};
+'";';";";";";";";";
+generateSitemap();"'"''";";";
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

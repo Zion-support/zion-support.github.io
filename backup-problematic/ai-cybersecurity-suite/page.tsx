@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 
 export default function AICybersecuritySuitePage() {}
   // Function body
 
 }
 }return ()
+=======
+export default function AICybersecuritySuitePage() {
+  ;
+};
+>>>>>>> main
     <div>Content</div>
   )
     <div>Component content</div>
