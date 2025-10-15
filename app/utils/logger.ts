@@ -1,4 +1,4 @@
-/* eslint-disable no-redeclare */
+// Logger utility for consistent logging across the application
 
 interface LogLevel {
   ERROR: 'error';
