@@ -64,6 +64,16 @@ const ZionAIEmailOptimizerPage = lazy(() => import('./app/zion-ai-email-optimize
 const ZionAIWebsiteAnalyzerPage = lazy(() => import('./app/zion-ai-website-analyzer/page'));
 const ZionAIDataVisualizerPage = lazy(() => import('./app/zion-ai-data-visualizer/page'));
 
+// Additional AI Services
+const AICodeAssistantPage = lazy(() => import('./app/ai-code-assistant/page'));
+const AIImageGeneratorPage = lazy(() => import('./app/ai-image-generator/page'));
+const AIPredictiveAnalyticsPage = lazy(() => import('./app/ai-predictive-analytics/page'));
+
+// Additional IT Services
+const APIDevelopmentPage = lazy(() => import('./app/api-development/page'));
+const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
+const IoTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -174,6 +184,16 @@ export default function App() {
                   <Route path="/zion-ai-email-optimizer" element={<ZionAIEmailOptimizerPage />} />
                   <Route path="/zion-ai-website-analyzer" element={<ZionAIWebsiteAnalyzerPage />} />
                   <Route path="/zion-ai-data-visualizer" element={<ZionAIDataVisualizerPage />} />
+                  
+                  {/* Additional AI Services */}
+                  <Route path="/ai-code-assistant" element={<AICodeAssistantPage />} />
+                  <Route path="/ai-image-generator" element={<AIImageGeneratorPage />} />
+                  <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
+                  
+                  {/* Additional IT Services */}
+                  <Route path="/api-development" element={<APIDevelopmentPage />} />
+                  <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
+                  <Route path="/iot-solutions" element={<IoTSolutionsPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
