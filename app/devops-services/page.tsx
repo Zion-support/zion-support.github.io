@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Code, Cloud, Shield, Zap, ArrowRight, CheckCircle, Users, BarChart3, Clock, Globe } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
+import {  } from "lucide-react";
+import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -102,11 +102,12 @@ const DevOpsServicesPage = () => {
     }
   ];
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="DevOps Services - Zion Tech Group | CI/CD, Infrastructure as Code, Cloud Migration"
-        description="Professional DevOps services including CI/CD pipeline setup, _infrastructure as code, _container orchestration, and cloud migration. Accelerate your software delivery."
-        keywords="DevOps services, _CI/CD pipeline, _infrastructure as code, _Kubernetes, _Docker, _cloud migration, _monitoring, automation"
+        description="Professional DevOps services including CI/CD pipeline setup, infrastructure as code, container orchestration, and cloud migration. Accelerate your software delivery."
+        keywords="DevOps services, CI/CD pipeline, infrastructure as code, Kubernetes, Docker, cloud migration, monitoring, automation"
         canonical="https://ziontechgroup.com/devops-services"
       />
 
@@ -120,7 +121,7 @@ const DevOpsServicesPage = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Accelerate your software delivery with our comprehensive DevOps solutions. 
-            From CI/CD pipelines to cloud migration, _we help you build, _deploy, and scale faster.
+            From CI/CD pipelines to cloud migration, we help you build, deploy, and scale faster.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
@@ -156,7 +157,8 @@ const DevOpsServicesPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (<FuturisticCard key={index} className="h-full">
+            {services.map((service) => (
+              <FuturisticCard key={index} className="h-full">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     {service.icon}
@@ -199,7 +201,7 @@ const DevOpsServicesPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit) => (
               <div key={index} className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   {benefit.icon}
@@ -224,7 +226,7 @@ const DevOpsServicesPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-            {process.map((step, index) => (
+            {process.map((step) => (
               <div key={index} className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
                   {step.step}

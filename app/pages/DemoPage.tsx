@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Smartphone, Target, Rocket, Users, Award, Clock, Play, Calendar, Phone } from 'lucide-react';const DemoPage: React.FC = () => {
+import { Star, Brain, Cloud, Target, Play } from "lucide-react";
+
+const DemoPage: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState('ai-solutions');
 
   const demos = [
@@ -128,11 +127,12 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Smartphone, Target, R
 
   const selectedDemoData = demos.find(demo => demo.id === selectedDemo);
 
-  return (<>
+  return (
+    <>
       <Helmet>
         <title>Demo - Zion Tech Group | See Our Solutions in Action</title>
         <meta name="description" content="Schedule a personalized demo of our AI and IT solutions. See how our technology can transform your business." />
-        <meta name="keywords" content="demo, AI demo, _IT solutions demo, _micro SAAS demo, _cloud demo, mobile app demo" />
+        <meta name="keywords" content="demo, AI demo, IT solutions demo, micro SAAS demo, cloud demo, mobile app demo" />
         <link rel="canonical" href="https://ziontechgroup.com/demo" />
       </Helmet>
 
@@ -186,7 +186,8 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Smartphone, Target, R
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {demos.map((demo) => (<button
+            {demos.map((demo) => (
+              <button
                 key={demo.id}
                 onClick={() => setSelectedDemo(demo.id)}
                 className={`p-6 rounded-xl border transition-all duration-300 text-left ${
@@ -218,7 +219,8 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Smartphone, Target, R
           </div>
 
           {/* Selected Demo Details */}
-          {selectedDemoData && (<div className="bg-slate-700/50 rounded-xl p-8 border border-slate-600/50">
+          {selectedDemoData && (
+            <div className="bg-slate-700/50 rounded-xl p-8 border border-slate-600/50">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                   <div className="flex items-center mb-6">
@@ -246,7 +248,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Smartphone, Target, R
                 <div>
                   <h4 className="text-xl font-semibold text-white mb-4">What You'll See:</h4>
                   <ul className="space-y-3">
-                    {selectedDemoData.features.map((feature, index) => (
+                    {selectedDemoData.features.map((feature) => (
                       <li key={index} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -271,7 +273,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Smartphone, Target, R
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-            {demoSteps.map((step, index) => (
+            {demoSteps.map((step) => (
               <div key={index} className="relative">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -303,10 +305,10 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Smartphone, Target, R
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial) => (
               <div key={index} className="bg-slate-700/50 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map(( i) => (
+                  {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>

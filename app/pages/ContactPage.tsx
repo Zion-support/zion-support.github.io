@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, Headphones, Zap } from 'lucide-react';const ContactPage: React.FC = () => {
+import { Send, MessageSquare, Headphones } from "lucide-react";
+
+const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,14 +14,14 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar,
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (_e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (_e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -78,22 +78,16 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar,
   ];
 
   const services = [
-    'AI Email Marketing Automation',
-    'AI Social Media Manager',
-    'AI Customer Support Chatbot',
-    'AI Project Management Pro',
-    'AI Analytics Dashboard Pro',
-    'Micro SAAS Solutions',
+    'AI Solutions',
+    'Micro SAAS Development',
     'IT Services',
     'Cloud Infrastructure',
-    'Cybersecurity Solutions',
+    'Cybersecurity',
+    'Mobile Development',
     'Web Development',
-    'Mobile App Development',
-    'Database Management',
-    'Network Infrastructure',
-    'Custom Software Development',
-    'Digital Transformation',
-    'Consulting Services'
+    'Data Analytics',
+    'Custom Software',
+    'Consulting'
   ];
 
   const budgetRanges = [
@@ -105,11 +99,12 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar,
     'Not sure yet'
   ];
 
-  return (<>
+  return (
+    <>
       <Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get in touch via phone, email, or our contact form. We're here to help transform your business." />
-        <meta name="keywords" content="contact, _get in touch, _AI solutions, _IT services, _consultation, support" />
+        <meta name="keywords" content="contact, get in touch, AI solutions, IT services, consultation, support" />
         <link rel="canonical" href="https://ziontechgroup.com/contact" />
       </Helmet>
 
@@ -147,7 +142,7 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar,
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactMethods.map((method, index) => (
+            {contactMethods.map((method) => (
               <div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <method.icon className="w-8 h-8 text-white" />
@@ -187,7 +182,8 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar,
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent Successfully!</h3>
                 <p className="text-gray-300">Thank you for contacting us. We'll get back to you soon.</p>
               </div>
-            ) : (<form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8">
+            ) : (
+              <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label htmlFor="name" className="block text-white font-medium mb-2">
@@ -265,7 +261,7 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar,
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
                       <option value="">Select a service</option>
-                      {services.map((service, index) => (
+                      {services.map((service) => (
                         <option key={index} value={service}>{service}</option>
                       ))}
                     </select>
@@ -282,7 +278,7 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar,
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
                       <option value="">Select budget range</option>
-                      {budgetRanges.map((range, index) => (
+                      {budgetRanges.map((range) => (
                         <option key={index} value={range}>{range}</option>
                       ))}
                     </select>

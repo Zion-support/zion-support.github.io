@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3, Cloud } from 'lucide-react';const EnhancedNavigation = () => {
+import { ChevronDown, Menu, X } from "lucide-react";
+
+const EnhancedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -146,7 +147,8 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
     { label: 'Sitemap', href: '/sitemap' }
   ];
 
-  return (<header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
+  return (
+    <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
@@ -157,7 +159,8 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
           </Link>
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">
-            {navigationItems.map((item) => (<div
+            {navigationItems.map((item) => (
+              <div
                 key={item.label}
                 className="relative group"
                 onMouseEnter={() => setActiveDropdown(item.label)}
@@ -172,7 +175,8 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                 </Link>
                 {/* Dropdown Menu */}
-                {activeDropdown === item.label && (<div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50">
+                {activeDropdown === item.label && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50">
                     <div className="py-2">
                       {item.dropdown.map((dropdownItem) => ()
                         <Link
@@ -219,9 +223,11 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
           </button>
         </div>
         {/* Mobile Navigation */}
-        {isOpen && (<div className="lg:hidden py-4 border-t border-white/10">
+        {isOpen && (
+          <div className="lg:hidden py-4 border-t border-white/10">
             <div className="space-y-4">
-              {navigationItems.map((item) => (<div key={item.label}>
+              {navigationItems.map((item) => (
+                <div key={item.label}>
                   <Link
                     to={item.href}
                     className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
@@ -231,7 +237,8 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
                     <span className="font-medium">{item.label}</span>
                   </Link>
                   <div className="ml-6 space-y-2">
-                    {item.dropdown.slice(0, 4).map((dropdownItem) => (<Link
+                    {item.dropdown.slice(0, 4).map((dropdownItem) => (
+                      <Link
                         key={dropdownItem.href}
                         to={dropdownItem.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1"
@@ -240,7 +247,8 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
                         {dropdownItem.label}
                       </Link>
                     ))}
-                    {item.dropdown.length > 4 && (<Link
+                    {item.dropdown.length > 4 && (
+                      <Link
                         to={item.href}
                         className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
                         onClick={() => setIsOpen(false)}
@@ -253,7 +261,8 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
               ))}
               <div className="pt-4 border-t border-white/10">
                 <div className="space-y-2">
-                  {quickLinks.map((link) => (<Link
+                  {quickLinks.map((link) => (
+                    <Link
                       key={link.href}
                       to={link.href}
                       className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"

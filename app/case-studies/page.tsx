@@ -1,7 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, TrendingUp, Users, DollarSign } from 'lucide-react';export default function CaseStudies() {
+import { TrendingUp, DollarSign } from "lucide-react";
+
+export default function CaseStudies() {
   const caseStudies = [
     {
       id: 1,
@@ -60,7 +62,8 @@ import { ArrowRight, CheckCircle, TrendingUp, Users, DollarSign } from 'lucide-r
     { label: "Cost Savings", value: "$2M+", icon: <DollarSign className="w-6 h-6" /> }
   ];
 
-  return (<>
+  return (
+    <>
       <Helmet>
         <title>Case Studies - Zion Tech Group | Success Stories</title>
         <meta name="description" content="Explore our successful projects and case studies showcasing our expertise in AI, cloud, and cybersecurity solutions." />
@@ -106,7 +109,8 @@ import { ArrowRight, CheckCircle, TrendingUp, Users, DollarSign } from 'lucide-r
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {caseStudies.map((study) => (<div key={study.id} className="bg-white/10 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+              {caseStudies.map((study) => (
+                <div key={study.id} className="bg-white/10 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
                   <img
                     src={study.image}
                     alt={study.title}

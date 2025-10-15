@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Shield, Cloud, Code, Database, Smartphone, Settings, TrendingUp, Rocket, Network, Smartphone as Mobile } from 'lucide-react';const ITSolutionsPage: React.FC = () => {
+import {  } from "lucide-react";
+
+const ITSolutionsPage: React.FC = () => {
   const itServices = [
     {
       id: 'cloud-infrastructure',
@@ -179,6 +179,8 @@ import { CheckCircle, ArrowRight, Shield, Cloud, Code, Database, Smartphone, Set
     }
   ];
 
+  const categories = ['All', 'Infrastructure', 'Security', 'Development', 'Mobile', 'Database', 'Networking'];
+
   const useCases = [
     {
       title: 'Cloud Migration',
@@ -250,13 +252,14 @@ import { CheckCircle, ArrowRight, Shield, Cloud, Code, Database, Smartphone, Set
     }
   ];
 
-  return (<>
+  return (
+    <>
       <Helmet>
         <title>IT Solutions - Comprehensive Technology Services | Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, _web development, _mobile apps, and database management. Expert technology services for your business." />
-        <meta name="keywords" content="IT solutions, _cloud infrastructure, _cybersecurity, _web development, _mobile development, _database management, network infrastructure" />
+        <meta name="description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, web development, mobile apps, and database management. Expert technology services for your business." />
+        <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, web development, mobile development, database management, network infrastructure" />
         <meta property="og:title" content="IT Solutions - Comprehensive Technology Services" />
-        <meta property="og:description" content="Discover our comprehensive IT solutions including cloud infrastructure, _cybersecurity, _web development, _mobile apps, and database management." />
+        <meta property="og:description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, web development, mobile apps, and database management." />
         <meta property="og:url" content="https://ziontechgroup.com/it-solutions" />
         <link rel="canonical" href="https://ziontechgroup.com/it-solutions" />
       </Helmet>
@@ -313,7 +316,8 @@ import { CheckCircle, ArrowRight, Shield, Cloud, Code, Database, Smartphone, Set
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (<div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
+            {useCases.map((useCase) => (
+              <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105 group">
                 <div className="mb-4 group-hover:scale-110 transition-transform">
                   {useCase.icon}
                 </div>
@@ -350,7 +354,7 @@ import { CheckCircle, ArrowRight, Shield, Cloud, Code, Database, Smartphone, Set
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {itServices.map((service, index) => (
+            {itServices.map((service) => (
               <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10 group relative ${
                 service.popular ? 'ring-2 ring-blue-500' : ''
               }`}>
@@ -428,7 +432,7 @@ import { CheckCircle, ArrowRight, Shield, Cloud, Code, Database, Smartphone, Set
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map((tier) => (
               <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
                 tier.popular ? 'ring-2 ring-blue-500 bg-slate-700/50' : ''
               }`}>

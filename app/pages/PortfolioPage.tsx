@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Zap, Brain, Cpu, Cloud, Smartphone, Target, Rocket, Globe, ExternalLink, Github, Filter, Search } from 'lucide-react';const PortfolioPage: React.FC = () => {
+import { Star, Brain, Cloud, Target, Github, Search } from "lucide-react";
+
+const PortfolioPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -207,11 +206,12 @@ import { ArrowRight, CheckCircle, Star, Zap, Brain, Cpu, Cloud, Smartphone, Targ
     { number: '24/7', label: 'Support Available' }
   ];
 
-  return (<>
+  return (
+    <>
       <Helmet>
         <title>Portfolio - Zion Tech Group | Our Work & Success Stories</title>
         <meta name="description" content="Explore our portfolio of successful AI and IT projects. See how we've helped businesses transform with cutting-edge technology solutions." />
-        <meta name="keywords" content="portfolio, projects, _case studies, _AI solutions, _web development, _mobile apps, cloud solutions" />
+        <meta name="keywords" content="portfolio, projects, case studies, AI solutions, web development, mobile apps, cloud solutions" />
         <link rel="canonical" href="https://ziontechgroup.com/portfolio" />
       </Helmet>
 
@@ -258,7 +258,7 @@ import { ArrowRight, CheckCircle, Star, Zap, Brain, Cpu, Cloud, Smartphone, Targ
       <section className="py-20 bg-slate-800">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat) => (
               <div key={index} className="text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
@@ -279,14 +279,15 @@ import { ArrowRight, CheckCircle, Star, Zap, Brain, Cpu, Cloud, Smartphone, Targ
                 type="text"
                 placeholder="Search projects..."
                 value={searchTerm}
-                onChange={(_e) => setSearchTerm(e.target.value)}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
 
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (<button
+              {categories.map((category) => (
+                <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${
@@ -357,7 +358,7 @@ import { ArrowRight, CheckCircle, Star, Zap, Brain, Cpu, Cloud, Smartphone, Targ
                   <div className="mb-4">
                     <h4 className="text-white font-medium mb-2 text-sm">Technologies:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, index) => (
+                      {project.technologies.map((tech) => (
                         <span key={index} className="bg-slate-600 text-gray-300 px-2 py-1 rounded text-xs">
                           {tech}
                         </span>
@@ -369,7 +370,7 @@ import { ArrowRight, CheckCircle, Star, Zap, Brain, Cpu, Cloud, Smartphone, Targ
                   <div className="mb-6">
                     <h4 className="text-white font-medium mb-2 text-sm">Key Results:</h4>
                     <ul className="space-y-1">
-                      {project.results.slice(0, 2).map((result, index) => (
+                      {project.results.slice(0, 2).map((result) => (
                         <li key={index} className="flex items-center text-green-400 text-sm">
                           <CheckCircle className="w-3 h-3 mr-2 flex-shrink-0" />
                           {result}
