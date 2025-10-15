@@ -57,7 +57,7 @@ const Header: React.FC = memo(() => {
       </a>
       
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg shadow-cyan-500/10' : 'bg-transparent'
       }`}>
       {/* Top Contact Bar */}
       <div className="bg-slate-800 text-white py-2 px-4 hidden lg:block">
@@ -87,11 +87,11 @@ const Header: React.FC = memo(() => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2 text-white font-bold text-xl">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">Z</span>
+            <Link to="/" className="flex items-center space-x-2 text-white font-bold text-xl group">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-500/25 group-hover:shadow-cyan-500/50 transition-all duration-300 group-hover:scale-110">
+                <span className="text-white font-bold group-hover:text-cyan-200 transition-colors">Z</span>
               </div>
-              <span>Zion Tech Group</span>
+              <span className="group-hover:text-cyan-300 transition-colors duration-300">Zion Tech Group</span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -110,22 +110,23 @@ const Header: React.FC = memo(() => {
                   ) : (
                     <Link
                       to={item.path}
-                      className={`text-white hover:text-blue-400 transition-colors ${
-                        isActive(item.path) ? 'text-blue-400 font-semibold' : ''
+                      className={`text-white hover:text-cyan-400 transition-all duration-300 relative group ${
+                        isActive(item.path) ? 'text-cyan-400 font-semibold' : ''
                       }`}
                     >
                       {item.name}
+                      <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></div>
                     </Link>
                   )}
                   
                   {/* Dropdown Menu */}
                   {item.dropdown && activeDropdown === item.name && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                    <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 py-2 z-50">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.name}
                           to={dropdownItem.path}
-                          className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                          className="block px-4 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 transition-all duration-300"
                           onClick={() => setActiveDropdown(null)}
                         >
                           {dropdownItem.name}
@@ -141,9 +142,10 @@ const Header: React.FC = memo(() => {
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 relative overflow-hidden group"
               >
-                Get Started
+                <span className="relative z-10">Get Started</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
             </div>
 
