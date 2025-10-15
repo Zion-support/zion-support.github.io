@@ -12,8 +12,9 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min' },
         { title: 'Installation Guide', description: 'Step-by-step installation instructions', readTime: '10 min' },
-        { title: 'Configuration', description: 'Configure your services and settings', readTime: '15 min' }]
-        { title: 'First Steps', description: 'Your first project with our platform', readTime: '20 min' }]
+        { title: 'Configuration', description: 'Configure your services and settings', readTime: '15 min' },
+        { title: 'First Steps', description: 'Your first project with our platform', readTime: '20 min' }
+      ]
     },
     {
       title: 'API Documentation',
@@ -22,8 +23,9 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'API Overview', description: 'Introduction to our REST API', readTime: '10 min' },
         { title: 'Authentication', description: 'API keys and authentication methods', readTime: '8 min' },
-        { title: 'Rate Limits', description: 'Understanding API rate limits', readTime: '5 min' }]
-        { title: 'Error Handling', description: 'Common errors and how to handle them', readTime: '12 min' }]
+        { title: 'Rate Limits', description: 'Understanding API rate limits', readTime: '5 min' },
+        { title: 'Error Handling', description: 'Common errors and how to handle them', readTime: '12 min' }
+      ]
     },
     {
       title: 'AI Services',
@@ -32,8 +34,9 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'AI Analytics', description: 'Using our AI analytics platform', readTime: '25 min' },
         { title: 'Content Generation', description: 'AI-powered content creation tools', readTime: '20 min' },
-        { title: 'Machine Learning', description: 'ML model training and deployment', readTime: '30 min' }]
-        { title: 'Natural Language Processing', description: 'NLP services and capabilities', readTime: '18 min' }]
+        { title: 'Machine Learning', description: 'ML model training and deployment', readTime: '30 min' },
+        { title: 'Natural Language Processing', description: 'NLP services and capabilities', readTime: '18 min' }
+      ]
     },
     {
       title: 'Cloud Services',
@@ -42,8 +45,9 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'Cloud Migration', description: 'Migrating to our cloud platform', readTime: '45 min' },
         { title: 'Container Services', description: 'Docker and Kubernetes deployment', readTime: '35 min' },
-        { title: 'Database Management', description: 'Managing databases in the cloud', readTime: '25 min' }]
-        { title: 'Monitoring & Logging', description: 'System monitoring and log analysis', readTime: '20 min' }]
+        { title: 'Database Management', description: 'Managing databases in the cloud', readTime: '25 min' },
+        { title: 'Monitoring & Logging', description: 'System monitoring and log analysis', readTime: '20 min' }
+      ]
     },
     {
       title: 'Security',
