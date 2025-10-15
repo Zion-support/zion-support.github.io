@@ -21,7 +21,53 @@ const AISolutionsPage: React.FC = () => {
       description: "Custom machine learning models tailored to your specific business needs with advanced algorithms and real-time processing.",
       icon: CpuChipIcon,
       features: [
-
+        "Custom model development",
+        "Real-time data processing",
+        "Predictive analytics",
+        "Natural language processing",
+        "Computer vision",
+        "Deep learning algorithms"
+      ]
+    },
+    {
+      title: "AI Chatbots",
+      description: "Intelligent conversational AI that understands context and provides human-like responses.",
+      icon: ChatBubbleLeftRightIcon,
+      features: [
+        "Natural language understanding",
+        "Multi-language support",
+        "Integration with existing systems",
+        "24/7 customer support",
+        "Learning capabilities",
+        "Analytics and reporting"
+      ]
+    },
+    {
+      title: "Document Processing",
+      description: "Automated document analysis, extraction, and processing using advanced AI techniques.",
+      icon: DocumentTextIcon,
+      features: [
+        "OCR and text extraction",
+        "Document classification",
+        "Data validation",
+        "Automated workflows",
+        "Compliance checking",
+        "Batch processing"
+      ]
+    },
+    {
+      title: "Business Intelligence",
+      description: "Transform raw data into actionable insights with AI-powered analytics and visualization.",
+      icon: LightBulbIcon,
+      features: [
+        "Data visualization",
+        "Predictive modeling",
+        "Trend analysis",
+        "Custom dashboards",
+        "Real-time reporting",
+        "Automated insights"
+      ]
+    }
   ];
 
   const benefits = [

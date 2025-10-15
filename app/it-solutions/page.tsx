@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -32,19 +31,7 @@ const ITSolutionsPage: React.FC = () => {
     },
     {
       title: "Cybersecurity Solutions",
-
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBarIcon, GlobeAltIcon, ArrowRightIcon, CheckCircleIcon, PhoneIcon, EnvelopeIcon, CurrencyDollarIcon, ClockIcon, UserGroupIcon, CogIcon, EyeIcon, ChatBubbleLeftRightIcon, DocumentTextIcon, LightBulbIcon } from "@heroicons/react/24/outline"; const ITSolutionsPage: React.FC = () => { const solutions = [ { title: "Cloud Infrastructure", description: "Scalable and secure cloud infrastructure solutions for modern businesses.", icon: CloudIcon, features: [ "Scalable architecture", "High availability", "Security compliance", "Cost optimization", "24/7 monitoring", "Disaster recovery" ], color: "from-blue-500 to-cyan-500",
-      price: "Starting at $1,500/month",
-      benefits: ["Scalability", "Reliability", "Cost efficiency"],
-      useCases: ["Web hosting", "Data storage", "Application hosting"],
-      href: "/cloud-infrastructure" },
-    { title: "Cybersecurity Solutions",
       description: "Comprehensive cybersecurity solutions to protect your digital assets and data.",
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
-
       icon: ShieldCheckIcon,
       features: [
         "Security assessments",
@@ -52,12 +39,13 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
         "Incident response",
         "Compliance management",
         "Security training",
-
-      href: "/cybersecurity" },
-    { title: "IT Consulting",
-      description: "Strategic IT consulting to help you make informed technology decisions.",
-      icon: LightBulbIcon,
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
+        "Threat monitoring"
+      ]
+    },
+    {
+      title: "Network Solutions",
+      description: "Robust network infrastructure design and implementation for optimal performance.",
+      icon: ServerIcon,
       features: [
         "Network design & implementation",
         "Wireless solutions",
@@ -65,9 +53,12 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
         "Load balancing",
         "Network monitoring",
         "Performance optimization"
-      ],
-      color: "from-green-500 to-emerald-500",
-
+      ]
+    },
+    {
+      title: "Database Management",
+      description: "Expert database design, optimization, and management services.",
+      icon: DatabaseIcon,
       features: [
         "Database design & optimization",
         "Performance tuning",
@@ -75,441 +66,179 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
         "Data migration",
         "Security hardening",
         "Monitoring & maintenance"
-      ],
-      color: "from-purple-500 to-indigo-500",
-      price: "Starting at $1,800/month",
-
-      benefits: ["Reliable connectivity", "Enhanced security", "Performance"],
-      useCases: ["Office networking", "Remote work", "Data centers"],
-      href: "/network-solutions" },
-    { title: "Data Management",
-      description: "Comprehensive data management solutions for storage, processing, and analytics.",
-      icon: ChartBarIcon,
-      features: [
-        "Data storage",
-        "Data processing",
-        "Analytics and reporting",
-        "Data security",
-        "Backup and recovery",
-        "Data governance"
-      ],
-      color: "from-orange-500 to-red-500",
-      price: "Starting at $2,000/month",
-      benefits: ["Better insights", "Data security", "Compliance"],
-      useCases: ["Business intelligence", "Data analytics", "Compliance"],
-      href: "/data-management" },
-    { title: "IT Support",
-      description: "Comprehensive IT support services to keep your systems running smoothly.",
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
-      icon: UserGroupIcon,
-      features: [
-        "24/7 technical support",
-        "System maintenance",
-        "Software updates",
-        "Hardware management",
-        "User training",
-        "Help desk services"
-      ],
-
-      icon: CogIcon,
-      features: [
-        "CI/CD pipeline setup",
-        "Infrastructure as Code",
-        "Container orchestration",
-        "Monitoring & logging",
-        "Performance optimization",
-        "Team training"
       ]
     },
     {
-
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
+      title: "IT Consulting",
+      description: "Strategic IT consulting to help you make informed technology decisions.",
+      icon: CogIcon,
+      features: [
+        "Technology strategy",
+        "Digital transformation",
+        "Process optimization",
+        "Vendor management",
+        "Project planning",
+        "Risk assessment"
+      ]
+    },
+    {
+      title: "Web Development",
+      description: "Modern web applications and websites built with cutting-edge technologies.",
+      icon: GlobeAltIcon,
+      features: [
+        "Responsive design",
+        "Performance optimization",
+        "SEO optimization",
+        "Security implementation",
+        "Content management",
+        "E-commerce solutions"
+      ]
+    }
   ];
+
   const benefits = [
-    "Expert IT professionals with years of experience",
-    "24/7 monitoring and support services",
-    "Scalable solutions that grow with your business",
-    "Proactive maintenance to prevent issues",
-    "Cost-effective solutions tailored to your needs",
-    "Latest technology and best practices"
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock technical support to ensure your systems run smoothly.",
+      icon: <CheckCircleIcon className="w-6 h-6 text-green-500" />
+    },
+    {
+      title: "Scalable Solutions",
+      description: "IT solutions that grow with your business and adapt to changing needs.",
+      icon: <CpuChipIcon className="w-6 h-6 text-blue-500" />
+    },
+    {
+      title: "Security First",
+      description: "Comprehensive security measures to protect your data and systems.",
+      icon: <ShieldCheckIcon className="w-6 h-6 text-red-500" />
+    },
+    {
+      title: "Cost Effective",
+      description: "Optimized solutions that deliver maximum value for your investment.",
+      icon: <CogIcon className="w-6 h-6 text-purple-500" />
+    }
   ];
-
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
-
-        <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, and consulting services." />
-        <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, IT consulting, network solutions" />
+        <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, network solutions, and more. Expert IT services for modern businesses." />
+        <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, network solutions, database management, IT consulting" />
       </Helmet>
-      <div className="min-h-screen bg-white">
-        { /* Hero Section */ }
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              IT Solutions
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Comprehensive IT Solutions
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Comprehensive IT solutions designed to modernize your infrastructure, 
-              enhance security, and drive business growth.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our expert IT services. From cloud infrastructure to cybersecurity, 
+              we provide end-to-end solutions tailored to your needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Get Started
-              </Link>
-              <Link 
-                to="/demo" 
-                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-                View Demo
-              </Link>
-            </div>
-          </div>
-        </section>
-        { /* Solutions Grid */ }
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Our IT Solutions
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              { solutions.map((solution, index) => (
-                <div key={index } className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <div className={ `w-12 h-12 rounded-lg bg-gradient-to-r ${solution.color } flex items-center justify-center mb-4`}>
-                    <solution.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{ solution.title }</h3>
-                  <p className="text-gray-600 mb-4">{ solution.description }</p>
-                  <div className="mb-4">
-                    <p className="text-blue-600 font-semibold">{ solution.price }</p>
-                  </div>
-                  <Link 
-                    to={ solution.href }
-                    className="text-blue-600 hover:text-blue-700 font-medium flex items-center">
-                    Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        { /* Features Section */ }
-        <section className="py-20 px-4 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Why Choose Our IT Solutions?
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              { features.map((feature, index) => (
-                <div key={index } className="text-center">
-                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{ feature.title }</h3>
-                  <p className="text-gray-600">{ feature.description }</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        { /* CTA Section */ }
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Transform Your IT Infrastructure?
-            </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Let's discuss how our IT solutions can help you achieve your business goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Contact Us
-              </Link>
-              <Link 
-                to="/demo" 
-                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-                Schedule Demo
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-        <meta name="description" content="Comprehensive IT solutions including infrastructure management, cloud migration, cybersecurity, database management, and more. Expert IT services for modern businesses." />
-        <meta name="keywords" content="IT solutions, infrastructure management, cloud migration, cybersecurity, database management, IT support, network security" />
-      </Helmet>
-      { /* Hero Section */ }
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">
-              IT Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive IT services to power your business with reliable, secure, and scalable technology solutions
-            </p>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              From cloud infrastructure to cybersecurity, our expert IT team delivers solutions that keep your business running smoothly and securely.
-            </p>
-
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
-                Get Started Today
-                <ArrowRightIcon className="w-5 h-5 ml-2" />
-              </Link>
-              <Link 
-                to="/demo" 
-                className="border-2 border-blue-400 text-blue-300 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 flex items-center justify-center">
-                Schedule Demo
-                <ArrowRightIcon className="w-5 h-5 ml-2" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">IT Services</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose from our comprehensive range of IT solutions designed to meet your business needs.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            { solutions.map((solution, index) => {
-              const Icon = solution.icon;
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
-              return (
-                <div key={index } className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="flex items-center mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-4`}>
-                      <Icon className="w-8 h-8 text-white" />
-                    </div>
-
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
-                        <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                        { feature }
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="flex items-center justify-between">
-                    <span className="text-blue-400 font-semibold">{ solution.pricing }</span>
-                    <Link 
-                      to="/contact" 
-                      className="text-blue-400 hover:text-blue-300 font-semibold flex items-center">
-                      Learn More
-                      <ArrowRightIcon className="w-4 h-4 ml-1" />
-                    </Link>
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
-                  </div>
-                  
-                  <Link 
-                    to={service.href} 
-                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
-                  >
-                    Learn More
-                    <ArrowRightIcon className="w-4 h-4 ml-2" />
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      { /* Why Choose Our IT Solutions */ }
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose Our IT Solutions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Expert IT services backed by years of experience and cutting-edge technology
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <ServerIcon className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Expert Team</h3>
-              <p className="text-gray-300">
-                Certified IT professionals with extensive experience in enterprise infrastructure and cloud technologies.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <ClockIcon className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Round-the-clock monitoring and support to ensure your IT infrastructure runs smoothly at all times.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <ShieldCheckIcon className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
-              <p className="text-gray-300">
-                Bank-level security measures and compliance standards to protect your critical business data.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CogIcon className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Scalable Solutions</h3>
-              <p className="text-gray-300">
-                Flexible IT solutions that grow with your business and adapt to changing requirements.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      { /* IT Implementation Process */ }
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our IT Implementation Process
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A systematic approach to delivering reliable and efficient IT solutions
-            </p>
-          </div>
-          <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-xl">1</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Assessment & Planning</h3>
-              <p className="text-gray-300">
-                We assess your current IT infrastructure and develop a comprehensive implementation plan.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-xl">2</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Design & Configuration</h3>
-              <p className="text-gray-300">
-                We design and configure your IT solutions according to best practices and your requirements.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-xl">3</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Implementation & Testing</h3>
-              <p className="text-gray-300">
-                We implement the solutions and conduct thorough testing to ensure everything works perfectly.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-xl">4</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Monitoring & Support</h3>
-              <p className="text-gray-300">
-                We provide ongoing monitoring, maintenance, and support to keep your systems running optimally.
-              </p>
-
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
-            </div>
-          </div>
-        </div>
-      </section>
-
-      { /* CTA Section */ }
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Ready to Optimize Your IT Infrastructure?
-            </h2>
-            <p className="text-xl text-gray-300 mb-12">
-              Let's discuss how our IT solutions can enhance your business operations and security
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
-                Get Free IT Consultation
-                <ArrowRightIcon className="w-5 h-5" />
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 transition-colors"
+              >
+                Get Started
+                <ArrowRightIcon className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                to="/demo"
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
-                Schedule IT Demo
-                <ArrowRightIcon className="w-5 h-5" />
+                to="/about"
+                className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
               </Link>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-gray-300">
-              <div className="flex items-center gap-3">
-                <PhoneIcon className="w-6 h-6 text-purple-400" />
-                <span>+1-302-464-0950</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <EnvelopeIcon className="w-6 h-6 text-purple-400" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
             </div>
           </div>
         </div>
       </section>
-    </>
-  );
-}
 
-export default ITSolutionsPage;
+      {/* Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our IT Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We offer a comprehensive range of IT services to help your business thrive in the digital age.
+            </p>
+          </div>
 
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
-      <section className="py-20 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {itServices.map((service, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <service.icon className="h-8 w-8 text-purple-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircleIcon className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our IT Solutions?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We deliver exceptional value through our expertise, reliability, and commitment to your success.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your IT Infrastructure?
           </h2>
-
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive IT solutions designed to accelerate your business growth and digital transformation. 
-            From cloud infrastructure to cybersecurity, we have everything you need.
+          <p className="text-xl text-gray-300 mb-8">
+            Let our experts help you build a robust, secure, and scalable IT environment that drives your business forward.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-
+              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 transition-colors"
             >
-              Start Your IT Journey
-              <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              Get Free Consultation
+              <ArrowRightIcon className="ml-2 h-5 w-5" />
             </Link>
             <Link
-              to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              to="/portfolio"
+              className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-gray-900 transition-colors"
             >
-
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center">
-              Start Your Project
-              <ArrowRightIcon className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              to="/pricing"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center justify-center">
-              View Pricing
->>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
-              <ArrowRightIcon className="w-5 h-5 ml-2" />
-
+              View Our Work
             </Link>
           </div>
         </div>
@@ -518,5 +247,4 @@ export default ITSolutionsPage;
   );
 };
 
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
-
+export default ITSolutionsPage;

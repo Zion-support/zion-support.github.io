@@ -1,60 +1,50 @@
 import React, { Suspense, lazy, ComponentType } from "react";
 import { Loader2 } from "lucide-react";
-importFunc: () => Promise<{ default: ComponentType<P> }>, interface LazyComponentProps { fallback?: React.ReactNode; delay?: number; } const DefaultFallback = () => ( <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
+interface LazyComponentProps {
+  fallback?: React.ReactNode;
+  delay?: number;
+}
+
+const DefaultFallback = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
     <div className="text-center">
       <Loader2 className="w-8 h-8 animate-spin text-cyan-400 mx-auto mb-4" />
       <div className="text-white text-lg">Loading...</div>
     </div>
   </div>
 );
+
 // Higher-order component for lazy loading with custom fallback
-export function withLazyLoading<P extends object>(
+function withLazyLoading<P extends object>(
+  importFunc: () => Promise<{ default: ComponentType<P> }>,
   fallback?: React.ReactNode
-) { const LazyComponent = lazy(importFunc);
-  return function WrappedComponent(props: P) {
+) {
+  const LazyComponent = lazy(importFunc);
+
+  return function LazyWrapper(props: P & LazyComponentProps) {
+    const { fallback: customFallback, delay, ...componentProps } = props;
+    
     return (
-      <Suspense fallback={fallback || <DefaultFallback /> }>
-        <LazyComponent { ...props } />
+      <Suspense fallback={customFallback || fallback || <DefaultFallback />}>
+        <LazyComponent {...(componentProps as P)} />
       </Suspense>
     );
   };
 }
-// Hook for lazy loading with intersection observer
-export function useLazyLoad(ref: React.RefObject<HTMLElement>, options?: IntersectionObserverInit) { const [isVisible, setIsVisible] = React.useState(false);
-  React.useEffect(() => {
-    if (!ref.current) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect(); }
-      },
-      { threshold: 0.1,
-        rootMargin: '50px',
-        ...options }
-    );
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [ref, options]);
-  return isVisible;
+
+// Utility function to create lazy components with error boundaries
+export function createLazyComponent<P extends object>(
+  importFunc: () => Promise<{ default: ComponentType<P> }>,
+  fallback?: React.ReactNode
+) {
+  return withLazyLoading(importFunc, fallback);
 }
-// Component for lazy loading with intersection observer
-export const LazyComponent: React.FC<LazyComponentProps & { children: React.ReactNode }> = ({ children,
-  fallback = <DefaultFallback />,
-  delay = 0 }) => { const [shouldRender, setShouldRender] = React.useState(false);
-  const ref = React.useRef<HTMLDivElement>(null);
-  const isVisible = useLazyLoad(ref);
-  React.useEffect(() => {
-    if (isVisible) {
-      if (delay > 0) {
-        const timer = setTimeout(() => setShouldRender(true), delay);
-        return () => clearTimeout(timer); } else { setShouldRender(true); }
-    }
-  }, [isVisible, delay]);
-  return (
-    <div ref={ ref }>
-      { shouldRender ? children : fallback }
-    </div>
-  );
-};
-export default LazyComponent;
+
+// Pre-configured lazy components
+export const LazyHomePage = createLazyComponent(() => import("../pages/HomePage"));
+export const LazyAboutPage = createLazyComponent(() => import("../pages/AboutPage"));
+export const LazyContactPage = createLazyComponent(() => import("../pages/ContactPage"));
+export const LazyServicesPage = createLazyComponent(() => import("../pages/ServicesPage"));
+
+export default withLazyLoading;
