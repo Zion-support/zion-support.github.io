@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { AlertTriangle, Brain, Camera, CheckCircle, Heart, Microscope, Pill, Star, Stethoscope, Syringe, Thermometer, Users, FileText } from 'lucide-react';
+import { Brain, Camera, CheckCircle, Microscope, Pill, Star, Stethoscope, Syringe, Thermometer, FileText } from 'lucide-react';
 
 const AiHealthcarePlatformPage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {
-    setIsVisible(true);
+    // setIsVisible(true);
   }, []);
   const features = [
     { icon: <Brain className="w-6 h-6" />,
@@ -115,14 +115,14 @@ const AiHealthcarePlatformPage: React.FC = () => {
       content: "The platform's analytics have given us insights into patient care patterns that we never had before. Our operational efficiency has improved by 40%.",
       rating: 5 }
   ];
-  const specialties = [
-    { name: "Cardiology", icon: <Heart className="w-6 h-6" /> },
-    { name: "Radiology", icon: <Camera className="w-6 h-6" /> },
-    { name: "Oncology", icon: <Microscope className="w-6 h-6" /> },
-    { name: "Neurology", icon: <Brain className="w-6 h-6" /> },
-    { name: "Pediatrics", icon: <Users className="w-6 h-6" /> },
-    { name: "Emergency Medicine", icon: <AlertTriangle className="w-6 h-6" /> }
-  ];
+  // const specialties = [
+  //   { name: "Cardiology", icon: <Heart className="w-6 h-6" /> },
+  //   { name: "Radiology", icon: <Camera className="w-6 h-6" /> },
+  //   { name: "Oncology", icon: <Microscope className="w-6 h-6" /> },
+  //   { name: "Neurology", icon: <Brain className="w-6 h-6" /> },
+  //   { name: "Pediatrics", icon: <Users className="w-6 h-6" /> },
+  //   { name: "Emergency Medicine", icon: <AlertTriangle className="w-6 h-6" /> }
+  // ];
   return (
     <>
       <Helmet>

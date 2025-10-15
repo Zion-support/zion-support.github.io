@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import {ArrowRight, Brain, CheckCircle, Heart, Phone, Play, Star} from 'lucide-react';
 import {Mail} from 'lucide-react';
@@ -6,7 +6,7 @@ import { Shield } from 'lucide-react';
 const ShieldIcon = Shield;
 
 const AIHealthcareSolutionsProPage = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
 
   const features = [
     {
@@ -80,7 +80,7 @@ const AIHealthcareSolutionsProPage = () => {
           { /* Hero Section */ }
           <section className="relative py-20 overflow-hidden">
             <div className="container mx-auto px-4">
-              <div className={ `text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10' }`}>
+              <div className="text-center max-w-6xl mx-auto transition-all duration-1000 opacity-100 translate-y-0">
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                   <Star className="w-4 h-4 mr-2" />
                   #1 AI Healthcare Platform

@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Bug, CheckCircle, Code, GitBranch, Globe, Star, Terminal, FileText } from 'lucide-react';
 
 const AiCodeAssistantProPage = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
+    // setIsVisible(true);
   }, []);
 
   const features = [

@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 
 // Components
 import Navigation from './app/components/Navigation';
+import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';

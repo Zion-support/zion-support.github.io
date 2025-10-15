@@ -402,7 +402,7 @@ const ZionAICustomerInsightsPage = () => {
                 </div>
                 <FuturisticButton
                   href="/contact"
-                  variant={plan.popular ? "primary" : "outline"}
+                  variant={plan.popular ? "primary" : "secondary"}
                   className="w-full"
                   icon={<ArrowRight className="w-4 h-4" />}
                 >

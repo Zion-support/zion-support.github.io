@@ -439,14 +439,15 @@ const AICodeAssistantPage = () => {
                     </div>
                   ))}
                 </div>
-                <FuturisticButton
-                  href="/contact"
-                  variant={plan.popular ? "primary" : "outline"}
-                  className="w-full"
-                  icon={<ArrowRight className="w-4 h-4" />}
-                >
-                  Get Started
-                </FuturisticButton>
+                <a href="/contact">
+                  <FuturisticButton
+                    variant={plan.popular ? "primary" : "secondary"}
+                    className="w-full"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2" />
+                    Get Started
+                  </FuturisticButton>
+                </a>
               </FuturisticCard>
             ))}
           </div>

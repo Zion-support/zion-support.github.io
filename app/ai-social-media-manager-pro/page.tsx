@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Brain, Camera, CheckCircle, Image, Mail, MessageCircle, Phone, Play, Star, Users } from 'lucide-react';
 const AISocialMediaManagerProPage = () => {

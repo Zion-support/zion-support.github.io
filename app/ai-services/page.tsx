@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {ArrowRight, Award, Brain, CheckCircle, Globe, Star} from 'lucide-react';
+import {ArrowRight, Award, Brain, CheckCircle, Globe, Star, BarChart3, Users, Shield, Zap, Settings} from 'lucide-react';
 import { Clock } from 'lucide-react';
 const AIServicesPage: React.FC = () => {
   const aiServices = [
