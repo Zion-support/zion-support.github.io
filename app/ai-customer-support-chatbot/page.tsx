@@ -1,25 +1,36 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-} from 'lucide-react''
-    'Natural Language Processing (NLP)''
-    'Multi-language support (50+ languages)''
-    '24/7 automated customer support''
-    'Seamless human handoff''
-    'Integration with CRM systems''
-    'Real-time conversation analytics''
-    'Custom knowledge base training''
-    'Sentiment analysis and mood detection''
-    'Voice and text support''
-    'Advanced conversation routing''
-    'Reduce support costs by 60%''
-    'Improve response time by 90%''
-    'Handle 1000+ conversations simultaneously''
-    'Increase customer satisfaction by 45%''
-    'Available 24/7 without breaks''
-    'Scale support without additional staff''
-    { name: 'Salesforce''
-    { name: 'HubSpot''
-    { name: 'Zendesk''
-    { name: 'Intercom''
-    { name: 'Slack''
-    { name: 'Microsoft Teams''}
+import React from 'react';
+import SEOHead from '../components/SEOHead';
+
+const AiCustomerSupportChatbotPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead 
+        title="AI Customer Support Chatbot - Zion Tech Group"
+        description="Advanced AI-powered customer support chatbot with natural language processing, multi-language support, and seamless human handoff."
+        keywords="AI chatbot, customer support AI, NLP chatbot, automated support, AI customer service"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 text-white">
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="text-center max-w-4xl mx-auto px-4">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              AI Customer Support Chatbot
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Advanced AI-powered customer support chatbot with natural language processing, multi-language support, and seamless human handoff.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Coming Soon
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default AiCustomerSupportChatbotPage;

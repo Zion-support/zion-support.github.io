@@ -1,25 +1,36 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-} from 'lucide-react''
-    'AI-powered task prioritization and scheduling''
-    'Intelligent resource allocation and workload balancing''
-    'Automated project timeline generation''
-    'Real-time collaboration and communication tools''
-    'Advanced analytics and performance insights''
-    'Risk assessment and mitigation suggestions''
-    'Custom workflow automation''
-    'Integration with 100+ popular tools''
-    'Mobile app for on-the-go management''
-    'Advanced reporting and dashboard customization''
-    'Increase project completion rate by 40%''
-    'Reduce project delays by 60%''
-    'Improve team productivity by 35%''
-    'Save 15+ hours per week on project management''
-    'Better resource utilization and cost control''
-    'Enhanced team collaboration and communication''
-    { name: 'Slack''
-    { name: 'Microsoft Teams''
-    { name: 'Google Workspace''
-    { name: 'Jira''
-    { name: 'Trello''
-    { name: 'Asana''}
+import React from 'react';
+import SEOHead from '../components/SEOHead';
+
+const AiProjectManagementProPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead 
+        title="AI Project Management Pro - Zion Tech Group"
+        description="Intelligent AI-powered project management platform with automated task scheduling, resource optimization, and progress tracking."
+        keywords="AI project management, project AI, task automation, resource optimization, project analytics"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 text-white">
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="text-center max-w-4xl mx-auto px-4">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              AI Project Management Pro
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Intelligent AI-powered project management platform with automated task scheduling, resource optimization, and progress tracking.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Coming Soon
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default AiProjectManagementProPage;

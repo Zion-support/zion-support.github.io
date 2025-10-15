@@ -511,4 +511,4 @@ const AISolutionsPage: React.FC = () => {
   );
 };
 
-export default AiSolutionsPage;
+export default AISolutionsPage;
