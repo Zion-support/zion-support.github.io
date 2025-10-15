@@ -27,7 +27,12 @@ import {
   CodeBracketIcon,
   DevicePhoneMobileIcon,
   UserPlusIcon,
-  CheckCircleIcon
+  CheckCircleIcon,
+  VideoCameraIcon,
+  MusicalNoteIcon,
+  CubeIcon,
+  ScaleIcon,
+  HeartIcon
 } from '@heroicons/react/24/outline';
 
 interface NavigationProps {
@@ -68,7 +73,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Email Optimizer', href: '/ai-email-optimizer', icon: EnvelopeIcon },
         { name: 'AI Website Analyzer', href: '/ai-website-analyzer', icon: EyeIcon },
         { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
-        { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon }
+        { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon },
+        { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
+        { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
+        { name: 'AI Video Generator', href: '/ai-video-generator', icon: VideoCameraIcon },
+        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: MusicalNoteIcon },
+        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: CubeIcon },
+        { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ScaleIcon },
+        { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: HeartIcon }
       ]
     },
     {
@@ -217,8 +229,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
       <div className="absolute inset-0 opacity-30">
-        <div className="cyber-grid"></div>
+        <div className="cyber-matrix"></div>
       </div>
+      
+      {/* Neural Synapse Effect */}
+      <div className="absolute inset-0 neural-synapse"></div>
+      
+      {/* Data Stream Effect */}
+      <div className="absolute inset-0 data-stream"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between h-16">

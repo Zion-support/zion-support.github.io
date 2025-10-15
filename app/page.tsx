@@ -124,24 +124,30 @@ const HomePage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-slate-900 to-cyan-900/30"></div>
           <div className="absolute inset-0 cyber-grid opacity-20"></div>
           
-          {/* Floating Particles */}
-          <div className="floating-particles">
-            {[...Array(30)].map((_, i) => (
-              <div key={i} className="particle" style={{
+          {/* Quantum Particles */}
+          <div className="quantum-particles">
+            {[...Array(50)].map((_, i) => (
+              <div key={i} className="quantum-particle" style={{
                 left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 15}s`,
-                animationDuration: `${15 + Math.random() * 10}s`
+                animationDelay: `${Math.random() * 8}s`,
+                animationDuration: `${8 + Math.random() * 4}s`
               }}></div>
             ))}
           </div>
           
+          {/* Neural Network Background */}
+          <div className="absolute inset-0 neural-network"></div>
+          
           {/* Animated Background Elements */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse floating"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000 floating"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-2xl animate-pulse delay-500 floating"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse floating cyber-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000 floating cyber-pulse"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-2xl animate-pulse delay-500 floating cyber-pulse"></div>
+          
+          {/* Quantum Tunnel Effect */}
+          <div className="absolute inset-0 quantum-tunnel opacity-20"></div>
           
           {/* Holographic Overlay */}
-          <div className="absolute inset-0 holographic-card opacity-10"></div>
+          <div className="absolute inset-0 holographic-overlay"></div>
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
             <div className="text-center">
               <div className="relative inline-block mb-6">
