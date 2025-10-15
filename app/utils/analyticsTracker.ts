@@ -7,8 +7,8 @@ interface AnalyticsTrackerState {
   // Add your state here;
 }
 ;
-export const: AnalyticsTracker = (options: AnalyticsTrackerOptions = {}) => {
-  const: stateRef = useRef<AnalyticsTrackerState>({
+export const AnalyticsTracker = (options: AnalyticsTrackerOptions = {}) => {
+  const stateRef = useRef<AnalyticsTrackerState>({
     // Initialize your state here;
   });
 ;

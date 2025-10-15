@@ -7,8 +7,8 @@ interface MonitoringState {
   // Add your state here;
 }
 ;
-export const: Monitoring = (options: MonitoringOptions = {}) => {
-  const: stateRef = useRef<MonitoringState>({
+export const Monitoring = (options: MonitoringOptions = {}) => {
+  const stateRef = useRef<MonitoringState>({
     // Initialize your state here;
   });
 ;

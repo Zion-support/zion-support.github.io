@@ -7,8 +7,8 @@ interface LoggerState {
   // Add your state here;
 }
 ;
-export const: Logger = (options: LoggerOptions = {}) => {
-  const: stateRef = useRef<LoggerState>({
+export const Logger = (options: LoggerOptions = {}) => {
+  const stateRef = useRef<LoggerState>({
     // Initialize your state here;
   });
 ;

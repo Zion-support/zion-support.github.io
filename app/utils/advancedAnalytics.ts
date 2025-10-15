@@ -7,8 +7,8 @@ interface AdvancedAnalyticsState {
   // Add your state here;
 }
 ;
-export const: AdvancedAnalytics = (options: AdvancedAnalyticsOptions = {}) => {
-  const: stateRef = useRef<AdvancedAnalyticsState>({
+export const AdvancedAnalytics = (options: AdvancedAnalyticsOptions = {}) => {
+  const stateRef = useRef<AdvancedAnalyticsState>({
     // Initialize your state here;
   });
 ;
