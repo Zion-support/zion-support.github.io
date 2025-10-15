@@ -27,7 +27,7 @@ function fixTsxFile(filePath) {
       !content.includes("  );\n};\n\nexport default")
     ) {
       content = content.replace(
-        /  \)\n\}\n\nexport default (\w+)/,
+        / {2}\)\n\}\n\nexport default (\w+)/,
         "  );\n};\n\nexport default $1;",
       );
       modified = true;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
@@ -270,4 +271,6 @@ const ComponentsPage: React.FC = () => {
 export default ComponentsPage;'";'";
 
 >>>>>>> main
+>>>>>>> main
+=======
 >>>>>>> main

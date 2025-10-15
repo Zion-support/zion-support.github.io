@@ -1,24 +1,14 @@
+<<<<<<< HEADursor/delete-records-a75eursor/fix-errors-and-merge-to-main-234b
+        </div>
+      </div>
+    </div>
+  );
+}
 <<<<<<< HEAD
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
-<<<<<<< HEAD
-'use client;'
+>>>>>>> cursor/fix-errors-and-merge-to-main-234b
 =======
-import SEOHead from '../components/SEOHead';
->>>>>>> main
-
-const PagePage: React.FC = () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        title="page - Zion Tech Group"
-        description="Zion Tech Group page service page"
-
-const WebDevelopmentPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead title ="web-development - Zion Tech Group - Zion Tech Group"";
-        description="Zion Tech Group web-development service page"";
-
       />
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
         <div className ="text-center">";
@@ -52,5 +42,6 @@ export default PagePage;
 <<<<<<< HEAD
 export default WebDevelopmentPage;
 =======
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main

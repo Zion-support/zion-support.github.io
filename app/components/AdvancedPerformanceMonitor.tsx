@@ -324,4 +324,16 @@ const ComponentsPage: React.FC = () => {
 
 };
 ;
+export default AdvancedPerformanceMonitor;
+>>>>>>> cursor/delete-records-a75eursor/fix-errors-and-merge-to-main-234b
+      {children}
+    </div>
+  );
+}
+<<<<<<< HEAD
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-234b
+=======
 export default ComponentsPage;'";'";
+>>>>>>> main
