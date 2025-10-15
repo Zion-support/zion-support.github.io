@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-10-13T22:54:01.901Z",
+  "issues": [
+    {
+      "type": "HTML lang attribute",
+      "severity": "high",
+      "message": "HTML should have a lang attribute",
+      "status": "pass"
+    },
+    {
+      "type": "Alt attributes for images",
+      "severity": "high",
+      "message": "Images should have alt attributes",
+      "status": "fail"
+    },
+    {
+      "type": "Form labels",
+      "severity": "medium",
+      "message": "Form inputs should have associated labels",
+      "status": "fail"
+    }
+  ],
+  "recommendations": [
+    "🔧 Images should have alt attributes",
+    "🔧 Form inputs should have associated labels",
+    "📱 Test with screen readers (NVDA, JAWS, VoiceOver)",
+    "🎨 Verify color contrast ratios meet WCAG AA standards",
+    "⌨️ Test keyboard navigation and focus management",
+    "🔍 Use automated tools like axe-core or Lighthouse"
+  ],
+  "score": 70
+}
