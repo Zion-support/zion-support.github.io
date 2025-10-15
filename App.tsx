@@ -6,7 +6,6 @@ import './app/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
-import ErrorBoundary from './app/components/ErrorBoundary';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
@@ -81,6 +80,8 @@ const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
 // Micro SaaS pages
 const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
 const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
+const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
+const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
 
 // Missing pages
 const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
