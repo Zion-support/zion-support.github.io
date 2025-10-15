@@ -2,8 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
-  Calendar, 
   Users, 
+  TrendingUp, 
+  BarChart3, 
   Target, 
   CheckCircle, 
   Star,
@@ -14,63 +15,60 @@ import {
   Zap,
   Shield,
   Clock,
-  Award,
-  BarChart3,
-  TrendingUp,
-  AlertTriangle
+  Award
 } from 'lucide-react';
 
-const AiProjectManagementProPage: React.FC = () => {
+const AiCustomerInsightsProPage: React.FC = () => {
   const features = [
-    "AI-Powered Task Prioritization",
-    "Intelligent Resource Allocation",
-    "Automated Risk Assessment",
-    "Smart Deadline Prediction",
-    "Team Performance Analytics",
-    "Real-time Project Health Monitoring",
-    "Automated Progress Reporting",
-    "Intelligent Dependency Management",
-    "Predictive Budget Analysis",
-    "Custom Workflow Automation"
+    "Real-time Customer Behavior Analysis",
+    "Predictive Customer Lifetime Value",
+    "Automated Sentiment Analysis",
+    "Churn Prediction & Prevention",
+    "Personalized Recommendation Engine",
+    "Customer Segmentation & Targeting",
+    "Multi-channel Data Integration",
+    "Advanced Analytics Dashboard",
+    "API Integration & Webhooks",
+    "Custom Report Generation"
   ];
 
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$79",
+      price: "$99",
       period: "/month",
-      description: "Perfect for small teams",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 5 team members",
-        "Basic AI task management",
+        "Up to 1,000 customers",
+        "Basic analytics dashboard",
         "Email support",
-        "Standard templates",
-        "Basic reporting"
+        "Standard integrations",
+        "Monthly reports"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$199",
+      price: "$299",
       period: "/month",
-      description: "Ideal for growing teams",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 25 team members",
-        "Advanced AI insights",
+        "Up to 10,000 customers",
+        "Advanced analytics & AI insights",
         "Priority support",
-        "Custom workflows",
-        "Advanced analytics",
-        "Integration APIs"
+        "Custom integrations",
+        "Real-time dashboards",
+        "Predictive analytics"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$599",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited team members",
+        "Unlimited customers",
         "Full AI suite & custom models",
         "24/7 dedicated support",
         "White-label solution",
@@ -84,36 +82,29 @@ const AiProjectManagementProPage: React.FC = () => {
   const benefits = [
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "Increase Productivity by 40%",
-      description: "AI-powered task prioritization and resource allocation help teams work more efficiently."
+      title: "Increase Revenue by 35%",
+      description: "Our AI-driven insights help you identify high-value customers and optimize your sales strategies."
     },
     {
       icon: <Target className="w-8 h-8" />,
-      title: "Reduce Project Delays by 60%",
-      description: "Predictive analytics and risk assessment prevent common project pitfalls and delays."
+      title: "Reduce Churn by 50%",
+      description: "Predict and prevent customer churn with our advanced machine learning algorithms."
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Improve Team Collaboration",
-      description: "Intelligent workflow automation and communication tools enhance team coordination."
+      title: "Improve Customer Satisfaction",
+      description: "Understand customer needs better and deliver personalized experiences at scale."
     }
-  ];
-
-  const stats = [
-    { number: "500+", label: "Projects Managed", icon: <Calendar className="w-6 h-6" /> },
-    { number: "95%", label: "On-Time Delivery", icon: <Clock className="w-6 h-6" /> },
-    { number: "40%", label: "Productivity Increase", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Monitoring", icon: <Shield className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Project Management Pro - Zion Tech Group | Intelligent Project Management</title>
-        <meta name="description" content="Revolutionize project management with AI-powered insights, automated workflows, and intelligent resource allocation. Increase productivity and reduce project delays." />
-        <meta name="keywords" content="AI project management, intelligent workflows, resource allocation, project analytics, team collaboration, productivity tools" />
-        <meta property="og:title" content="AI Project Management Pro - Intelligent Project Management" />
-        <meta property="og:description" content="AI-powered project management platform for enhanced productivity and team collaboration." />
+        <title>AI Customer Insights Pro - Zion Tech Group | Advanced Customer Analytics</title>
+        <meta name="description" content="Transform customer data into actionable insights with our AI-powered analytics platform. Increase revenue, reduce churn, and improve customer satisfaction." />
+        <meta name="keywords" content="customer analytics, AI insights, customer behavior, predictive analytics, churn prediction, customer segmentation" />
+        <meta property="og:title" content="AI Customer Insights Pro - Advanced Customer Analytics" />
+        <meta property="og:description" content="AI-powered customer insights platform for data-driven business growth." />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -129,20 +120,20 @@ const AiProjectManagementProPage: React.FC = () => {
             <div className="text-center max-w-6xl mx-auto">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                 <Star className="w-4 h-4 mr-2" />
-                AI-Powered Project Management
+                AI-Powered Customer Analytics
               </div>
               
               <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  AI Project Management
+                  AI Customer Insights
                 </span>
                 <br />
                 <span className="text-white">Pro</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                Transform your project management with AI-powered insights, automated workflows, 
-                and intelligent resource allocation. Increase productivity and deliver projects on time, every time.
+                Transform your customer data into actionable insights with our advanced AI-powered analytics platform. 
+                Increase revenue, reduce churn, and deliver personalized experiences at scale.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -158,41 +149,24 @@ const AiProjectManagementProPage: React.FC = () => {
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                 >
                   <Mail className="w-5 h-5 mr-2" />
-                  Start Free Trial
+                  Get Free Demo
                 </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-16 bg-gradient-to-b from-slate-800 to-slate-900">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-cyan-400">{stat.icon}</div>
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
-                  <div className="text-gray-400 text-sm">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Features Section */}
-        <section className="py-20">
+        <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  Intelligent Features
+                  Powerful Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Advanced AI capabilities that revolutionize how you manage projects and teams.
+                Advanced AI capabilities that give you deep insights into your customer behavior and preferences.
               </p>
             </div>
             
@@ -214,12 +188,12 @@ const AiProjectManagementProPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Proven Results</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI-powered project management delivers measurable business impact
+                Our AI-powered insights deliver measurable business impact
               </p>
             </div>
             
@@ -238,12 +212,12 @@ const AiProjectManagementProPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20">
+        <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Simple, Transparent Pricing</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your team size and project needs. All plans include our core AI features.
+                Choose the plan that fits your business needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -297,9 +271,9 @@ const AiProjectManagementProPage: React.FC = () => {
         <section className="py-20 bg-gray-900">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Revolutionize Your Project Management?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Customer Analytics?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Contact us today to schedule a free demo and see how AI Project Management Pro can transform your team's productivity.
+                Contact us today to schedule a free demo and see how AI Customer Insights Pro can revolutionize your business.
               </p>
             </div>
             
@@ -337,4 +311,4 @@ const AiProjectManagementProPage: React.FC = () => {
   );
 };
 
-export default AiProjectManagementProPage;
+export default AiCustomerInsightsProPage;

@@ -1,6 +1,7 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import './globals.css';
 
 // Components
 import Header from './app/components/Header';
@@ -43,6 +44,14 @@ import AiClimateSolutionsProPage from './app/ai-climate-solutions-pro/page';
 import AiAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
 import Ai3DGenerationPage from './app/ai-3d-generation/page';
 import AiBlockchainSolutionsPage from './app/ai-blockchain-solutions/page';
+import AiCustomerInsightsProPage from './app/ai-customer-insights-pro/page';
+import AiProjectManagementProPage from './app/ai-project-management-pro/page';
+import AiSocialMediaManagerProPage from './app/ai-social-media-manager-pro/page';
+import AiEmailMarketingProPage from './app/ai-email-marketing-pro/page';
+import AiInventoryManagementProPage from './app/ai-inventory-management-pro/page';
+import AiHrAssistantProPage from './app/ai-hr-assistant-pro/page';
+import AiSalesOptimizerProPage from './app/ai-sales-optimizer-pro/page';
+import MicroSaasPage from './app/micro-saas/page';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -70,7 +79,7 @@ const App: React.FC = () => {
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <Header />
-            <main className="relative z-10 pt-20" id="main-content" role="main">
+            <main className="relative z-10 pt-20 lg:ml-80" id="main-content" role="main">
               <Suspense fallback={
                 <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                   <div className="text-center">
@@ -83,6 +92,7 @@ const App: React.FC = () => {
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/micro-saas" element={<MicroSaasPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/privacy" element={<PrivacyPage />} />
                   <Route path="/terms" element={<TermsPage />} />
@@ -120,6 +130,13 @@ const App: React.FC = () => {
                   <Route path="/ai-agricultural-intelligence-pro" element={<AiAgriculturalIntelligenceProPage />} />
                   <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
                   <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
+                  <Route path="/ai-customer-insights-pro" element={<AiCustomerInsightsProPage />} />
+                  <Route path="/ai-project-management-pro" element={<AiProjectManagementProPage />} />
+                  <Route path="/ai-social-media-manager-pro" element={<AiSocialMediaManagerProPage />} />
+                  <Route path="/ai-email-marketing-pro" element={<AiEmailMarketingProPage />} />
+                  <Route path="/ai-inventory-management-pro" element={<AiInventoryManagementProPage />} />
+                  <Route path="/ai-hr-assistant-pro" element={<AiHrAssistantProPage />} />
+                  <Route path="/ai-sales-optimizer-pro" element={<AiSalesOptimizerProPage />} />
                 </Routes>
               </Suspense>
             </main>
