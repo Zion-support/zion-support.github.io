@@ -1,12 +1,10 @@
-import React from 'react';;";
-;
+import React from 'react';;
 interface AccessibilityEnhancerProps {
   className?: string;
   children?: React.ReactNode;
 }
-;
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ';',";
-  className = '',;";";";
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ';',
+  className = '',;
   children;
 }) => {
   return (
@@ -15,5 +13,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ';',";
     </div>;
   );
 };
-;
-export default AccessibilityEnhancer;';';";
+export default AccessibilityEnhancer;';';

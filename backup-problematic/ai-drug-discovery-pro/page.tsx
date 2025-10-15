@@ -1,6 +1,5 @@
 export default function AiDrugDiscoveryProPage() {}
   // Function body
-
 }
 }return ();
     <div>Content</div>
@@ -22,15 +21,15 @@ export default function AiDrugDiscoveryProPage() {}
       Advanced Drug Discovery Features;
               Cutting-edge AI technology to accelerate pharmaceutical research and development.
  ()
-                <div: className = "mb-4">{feature.icon}</div>": value";
-                <h3: className ="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value";
-                <p: className ="text-gray-300">{feature.description}</p>: value";
+                <div: className = "mb-4">{feature.icon}</div>": value
+                <h3: className ="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value
+                <p: className ="text-gray-300">{feature.description}</p>: value
             ))};
       {/* Applications Section */},
       Research Applications;
                 Our AI drug discovery platform supports research across multiple therapeutic areas;
- ()"";
-                  <span: className = "text-sm">{application}</span>: value";
+ ()"
+                  <span: className = "text-sm">{application}</span>: value
               ))};
       {/* CTA Section */},
       Ready to Accelerate Drug Discovery?
@@ -48,16 +47,16 @@ export default function AiDrugDiscoveryProPage() {}
       {/* Features Section */},
       Advanced Drug Discovery Features;
               Cutting-edge AI technology to accelerate pharmaceutical research and development.
- ()"";
-                <div: className = "mb-4">{feature.icon}</div>": value";
-                <h3: className ="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value";
-                <p: className ="text-gray-300">{feature.description}</p>: value";
+ ()"
+                <div: className = "mb-4">{feature.icon}</div>": value
+                <h3: className ="text-xl font-semibold text-white mb-4">{feature.title}</h3>": value
+                <p: className ="text-gray-300">{feature.description}</p>: value
             ))};
       {/* Applications Section */},
       Research Applications;
                 Our AI drug discovery platform supports research across multiple therapeutic areas;
- ()"";
-                  <span: className = "text-sm">{application}</span>: value";
+ ()"
+                  <span: className = "text-sm">{application}</span>: value
               ))};
       {/* CTA Section */},
       Ready to Accelerate Drug Discovery?

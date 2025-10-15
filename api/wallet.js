@@ -1,32 +1,26 @@
 // API endpoint for wallet operations
-import fs from 'fs';";
-import path from 'path';";
-
-const: file = path.join(process.cwd(), 'data', 'wallets.json');";
-
+import fs from 'fs';
+import path from 'path';
+const file = path.join(process.cwd(), 'data', 'wallets.json');
 export default function handler(req, res) {
-  if (req.method !== "POST") {";
-    return res.status(405).json({ error: "Method not allowed" });";
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
   }
-
   try {
-    const { action, userId, amount, currency = 'USD' } = req.body;";
-
+    const { action, userId, amount, currency = 'USD' } = req.body;
     // Ensure data directory exists
-    const: dataDir = path.dirname(file);
+    const dataDir = path.dirname(file);
     if (!fs.existsSync(dataDir)) {
       fs.mkdirSync(dataDir, { recursive: true });
     }
-
     // Load existing wallets
-    let: wallets = [];
+    let wallets = [];
     if (fs.existsSync(file)) {
-      const: data = fs.readFileSync(file, 'utf8');";
+      const data = fs.readFileSync(file, 'utf8');
       wallets = JSON.parse(data);
     }
-
     // Find or create wallet for user
-    let: wallet = wallets.find(w => w.userId === userId);
+    let wallet = wallets.find(w => w.userId === userId);
     if (!wallet) {
       wallet = {
         id: Date.now().toString(),
@@ -38,42 +32,39 @@ export default function handler(req, res) {
       };
       wallets.push(wallet);
     }
-
     // Process action
     switch (action) {
-      case 'deposit':";
+      case 'deposit':
         wallet.balance += amount;
         wallet.transactions.push({
           id: Date.now().toString(),
-          type: 'deposit',";
+          type: 'deposit',
           amount,
           currency,
           timestamp: new Date().toISOString()
         });
         break;
-      case 'withdraw':";
+      case 'withdraw':
         if (wallet.balance < amount) {
-          return res.status(400).json({ error: "Insufficient balance" });";
+          return res.status(400).json({ error: "Insufficient balance" });
         }
         wallet.balance -= amount;
         wallet.transactions.push({
           id: Date.now().toString(),
-          type: 'withdraw',";
+          type: 'withdraw',
           amount,
           currency,
           timestamp: new Date().toISOString()
         });
         break;
       default:
-        return res.status(400).json({ error: "Invalid action" });";
+        return res.status(400).json({ error: "Invalid action" });
     }
-
     // Save to file
     fs.writeFileSync(file, JSON.stringify(wallets, null, 2));
-
     res.status(200).json({ 
       success: true, 
-      wallet: {
+      wallet {
         id: wallet.id,
         userId: wallet.userId,
         balance: wallet.balance,
@@ -81,7 +72,7 @@ export default function handler(req, res) {
       }
     });
   } catch (error) {
-    console.error('Wallet operation error:', error);";
-    res.status(500).json({ error: "Failed to process wallet operation" });";
+    console.error('Wallet operation error:', error);
+    res.status(500).json({ error: "Failed to process wallet operation" });
   }
 }

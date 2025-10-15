@@ -1,18 +1,14 @@
 const fs = require("fs");
-
 // Read the App.tsx file
-const appTsxPath = "./App.tsx";
+const appTsxPath = "./App.tsx
 let content = fs.readFileSync(appTsxPath, "utf8");
-
 // Remove all the unused lazy imports and their corresponding routes
 const lines = content.split("\n");
 const cleanedLines = [];
 let skipNextLines = false;
 let braceCount = 0;
-
 for (let i = 0; i < lines.length; i++) {
   const line = lines[i];
-
   // Skip lines that contain unused lazy imports
   if (
     line.includes("const ") &&
@@ -91,7 +87,6 @@ for (let i = 0; i < lines.length; i++) {
     console.log(`Removing unused lazy import: ${line.trim()}`);
     continue;
   }
-
   // Skip corresponding route definitions
   if (
     line.includes("<Route path=") &&
@@ -167,14 +162,11 @@ for (let i = 0; i < lines.length; i++) {
     console.log(`Removing unused route: ${line.trim()}`);
     continue;
   }
-
   cleanedLines.push(line);
 }
-
 // Write the cleaned content back
 const cleanedContent = cleanedLines.join("\n");
 fs.writeFileSync(appTsxPath, cleanedContent, "utf8");
-
 console.log(
   "Comprehensively cleaned up App.tsx - removed unused imports and routes",
 );

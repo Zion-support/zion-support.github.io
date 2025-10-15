@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-
 // List of files that need fixing based on the error patterns
 const filesToFix = [
   'app/ad-management/page.tsx',
@@ -71,39 +70,31 @@ const filesToFix = [
   'app/web-hosting/page.tsx',
   'app/web-security/page.tsx'
 ];
-
 function fixFile(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
       console.log(`File not found: ${filePath}`);
       return;
     }
-
     let content = fs.readFileSync(filePath, 'utf8');
-    
     // Extract the page name from the file path
     const pathParts = filePath.split('/');
     const pageName = pathParts[pathParts.length - 2]; // Get the directory name before page.tsx
-    
     // Create a proper page name from the path
     const properPageName = pageName
       .split('-')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');
-    
     // Create a proper component name
     const componentName = pageName
       .split('-')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join('') + 'Page';
-
     // Create a proper description
     const description = `Professional ${pageName.replace(/-/g, ' ')} solutions for modern businesses`;
-
     // Create the fixed content
     const fixedContent = `import React from 'react';
 import SEOHead from '../components/SEOHead';
-
 const ${componentName}: React.FC = () => {
   return (
     <>
@@ -120,17 +111,13 @@ const ${componentName}: React.FC = () => {
     </>
   );
 };
-
 export default ${componentName};`;
-
     fs.writeFileSync(filePath, fixedContent);
     console.log(`Fixed: ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
-
 // Fix all files
 filesToFix.forEach(fixFile);
-
 console.log('All files have been processed.');

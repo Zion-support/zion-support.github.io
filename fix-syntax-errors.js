@@ -1,118 +1,161 @@
-import fs from 'fs';";
-import { glob } from 'glob';";
-
-/**
- * Comprehensive fix for syntax errors
- * This script addresses various syntax issues across the codebase
- */
-
-async function fixSyntaxErrors() {
+#!/usr/bin/env node
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
+// Patterns to fix
+const fixes = [
+  // Fix unterminated string literals with extra quotes and semicolons
+  { pattern: /";\s*$/gm, replacement: '' },
+  { pattern: /";\s*";\s*$/gm, replacement: '' },
+  { pattern: /";\s*";\s*";\s*$/gm, replacement: '' },
+  { pattern: /";\s*";\s*";\s*";\s*$/gm, replacement: '' },
+  { pattern: /";\s*";\s*";\s*";\s*";\s*$/gm, replacement: '' },
+  { pattern: /";\s*";\s*";\s*";\s*";\s*";\s*$/gm, replacement: '' },
+  // Fix import statements with extra quotes and semicolons
+  { pattern: /import\s+([^;]+);\s*";\s*$/gm, replacement: 'import $1;' },
+  { pattern: /import\s+([^;]+);\s*";\s*";\s*$/gm, replacement: 'import $1;' },
+  { pattern: /import\s+([^;]+);\s*";\s*";\s*";\s*$/gm, replacement: 'import $1;' },
+  // Fix export statements
+  { pattern: /export\s+([^;]+);\s*";\s*$/gm, replacement: 'export $1;' },
+  { pattern: /export\s+([^;]+);\s*";\s*";\s*$/gm, replacement: 'export $1;' },
+  // Fix JSX attributes with extra quotes
+  { pattern: /<(\w+)\s+([^>]*?);\s*";\s*>/gm, replacement: '<$1 $2>' },
+  { pattern: /<(\w+)\s+([^>]*?);\s*";\s*";\s*>/gm, replacement: '<$1 $2>' },
+  // Fix variable declarations with extra colons
+  { pattern: /const:\s+/gm, replacement: 'const ' },
+  { pattern: /let:\s+/gm, replacement: 'let ' },
+  { pattern: /var:\s+/gm, replacement: 'var ' },
+  // Fix type annotations with extra colons
+  { pattern: /:\s*:\s*/gm, replacement: ': ' },
+  // Fix JSX closing tags with extra quotes
+  { pattern: /<\/(\w+)>\s*";\s*$/gm, replacement: '</$1>' },
+  { pattern: /<\/(\w+)>\s*";\s*";\s*$/gm, replacement: '</$1>' },
+  // Fix function declarations
+  { pattern: /function\s+([^(]+)\s*\(\s*([^)]*)\s*\)\s*{\s*";\s*$/gm, replacement: 'function $1($2) {' },
+  // Fix arrow functions
+  { pattern: /=>\s*{\s*";\s*$/gm, replacement: '=> {' },
+  { pattern: /=>\s*{\s*";\s*";\s*$/gm, replacement: '=> {' },
+  // Fix object properties
+  { pattern: /(\w+):\s*([^,}]+);\s*";\s*$/gm, replacement: '$1: $2' },
+  // Fix array elements
+  { pattern: /,\s*";\s*$/gm, replacement: '' },
+  { pattern: /,\s*";\s*";\s*$/gm, replacement: '' },
+  // Fix template literals
+  { pattern: /`([^`]*);\s*";\s*`/gm, replacement: '`$1`' },
+  // Fix comments
+  { pattern: /\/\/\s*([^;]+);\s*";\s*$/gm, replacement: '// $1' },
+  { pattern: /\/\*\s*([^*]+)\*\/\s*";\s*$/gm, replacement: '/* $1 */' },
+  // Fix vite config specific issues
+  { pattern: /import\s+([^;]+);\s*";\s*from\s+['"]([^'"]+)['"];?\s*";\s*$/gm, replacement: "import $1 from '$2';" },
+  // Fix React component syntax
+  { pattern: /const\s+(\w+):\s*(\w+)\s*=\s*\([^)]*\)\s*=>\s*{\s*";\s*$/gm, replacement: 'const $1: $2 = ($3) => {' },
+  // Fix JSX return statements
+  { pattern: /return\s*\(\s*";\s*$/gm, replacement: 'return (' },
+  { pattern: /return\s*\(\s*";\s*";\s*$/gm, replacement: 'return (' },
+  // Fix closing parentheses and braces
+  { pattern: /\)\s*;\s*";\s*$/gm, replacement: ');' },
+  { pattern: /}\s*;\s*";\s*$/gm, replacement: '};' },
+  { pattern: /}\s*;\s*";\s*";\s*$/gm, replacement: '};' },
+  // Fix semicolons at end of lines
+  { pattern: /;\s*";\s*$/gm, replacement: ';' },
+  { pattern: /;\s*";\s*";\s*$/gm, replacement: ';' },
+  // Fix quotes in strings
+  { pattern: /'([^']*);\s*";\s*'/gm, replacement: "'$1'" },
+  { pattern: /"([^"]*);\s*";\s*"/gm, replacement: '"$1"' },
+  // Fix multiline strings
+  { pattern: /;\s*";\s*\n/gm, replacement: '\n' },
+  { pattern: /;\s*";\s*";\s*\n/gm, replacement: '\n' },
+  // Fix specific patterns found in the files
+  { pattern: /import\s+{\s*([^}]+)\s*}\s*;\s*from\s+['"]([^'"]+)['"]\s*;\s*";\s*$/gm, replacement: "import { $1 } from '$2';" },
+  { pattern: /import\s+{\s*([^}]+)\s*}\s*;\s*from\s+['"]([^'"]+)['"]\s*;\s*";\s*";\s*$/gm, replacement: "import { $1 } from '$2';" },
+  // Fix Helmet import specifically
+  { pattern: /import\s+{\s*Helmet\s*}\s*;\s*from\s+["']react-helmet-async["']\s*;\s*";\s*";\s*";\s*$/gm, replacement: "import { Helmet } from 'react-helmet-async';" },
+  // Fix Brain, Shield, Users, Award imports
+  { pattern: /import\s+{\s*Brain,\s*Shield,\s*Users,\s*Award\s*}\s*;\s*from\s+['"]([^'"]+)['"]\s*;\s*";\s*";\s*";\s*";\s*$/gm, replacement: "import { Brain, Shield, Users, Award } from '$1';" },
+  // Fix SEOHead type definition
+  { pattern: /const:\s*SEOHead\s*=\s*\([^)]*\)\s*=>\s*\(\s*";\s*$/gm, replacement: 'const SEOHead = ($1) => (' },
+  // Fix meta tag syntax
+  { pattern: /<meta:\s*name\s*=\s*["']([^"']+)["']\s*content\s*=\s*{([^}]+)}\s*\/>\s*;\s*";\s*";\s*$/gm, replacement: '<meta name="$1" content={$2} />' },
+  // Fix closing Helmet tag
+  { pattern: /<\/Helmet>\s*;\s*";\s*$/gm, replacement: '</Helmet>' },
+  { pattern: /<\/Helmet>\s*;\s*";\s*";\s*$/gm, replacement: '</Helmet>' },
+  // Fix closing parenthesis
+  { pattern: /\)\s*;\s*";\s*$/gm, replacement: ')' },
+  { pattern: /\)\s*;\s*";\s*";\s*$/gm, replacement: ')' },
+  // Fix semicolon at end of file
+  { pattern: /;\s*";\s*$/gm, replacement: ';' },
+  { pattern: /;\s*";\s*";\s*$/gm, replacement: ';' },
+  // Fix empty lines with just quotes and semicolons
+  { pattern: /^\s*";\s*$/gm, replacement: '' },
+  { pattern: /^\s*";\s*";\s*$/gm, replacement: '' },
+  { pattern: /^\s*";\s*";\s*";\s*$/gm, replacement: '' },
+  { pattern: /^\s*";\s*";\s*";\s*";\s*$/gm, replacement: '' },
+  { pattern: /^\s*";\s*";\s*";\s*";\s*";\s*$/gm, replacement: '' },
+  { pattern: /^\s*";\s*";\s*";\s*";\s*";\s*";\s*$/gm, replacement: '' },
+  // Fix lines that are just semicolons
+  { pattern: /^\s*;\s*$/gm, replacement: '' },
+  { pattern: /^\s*;\s*";\s*$/gm, replacement: '' },
+  { pattern: /^\s*;\s*";\s*";\s*$/gm, replacement: '' },
+];
+function fixFile(filePath) {
   try {
-    console.log('🔧 Starting comprehensive syntax error fixes...');";
-    
-    // Find all TypeScript and JavaScript files
-    const: files = await glob('**/*.{ts,tsx,js,jsx}', {";
-      ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**']";
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+    // Apply all fixes
+    fixes.forEach(fix => {
+      content = content.replace(fix.pattern, fix.replacement);
     });
-    
-    console.log(`Found ${files.length} files to process`);
-    
-    let: fixedCount = 0;
-    let: errorCount = 0;
-    
-    for (const file of files) {
-      try {
-        if (await fixFile(file)) {
-          fixedCount++;
-        }
-      } catch (error) {
-        console.error(`❌ Error processing ${file}:`, error.message);
-        errorCount++;
-      }
-    }
-    
-    console.log(`\n✅ Syntax Error Fix Complete!`);
-    console.log(`   - Files processed: ${files.length}`);
-    console.log(`   - Files fixed: ${fixedCount}`);
-    console.log(`   - Errors encountered: ${errorCount}`);
-    
-  } catch (error) {
-    console.error('❌ Error in syntax fixing:', error.message);";
-    throw error;
-  }
-}
-
-async function fixFile(filePath) {
-  try {
-    let: content = fs.readFileSync(filePath, 'utf8');";
-    const: originalContent = content;
-    
-    // Fix unterminated string literals: content = content.replace(/"([^"]*?)\n/g, '"$1";\n');";";
-    content = content.replace(/'([^']*?)\n/g, (match, p1) => "'" + p1 + '";\n');";";
-    
-    // Fix missing semicolons after import statements;
-    content = content.replace(/import\s+[^;]+(?!;)\n/g, (match) => {
-      if (!match.trim().endsWith(';')) {";
-        return match.trim() + ';\n';";
-      }
-      return match;
-    });
-    
-    // Fix missing semicolons after variable declarations: content = content.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+(?!;)\n/g, (match) => {
-      if (!match.trim().endsWith(';')) {";
-        return match.trim() + ';\n';";
-      }
-      return match;
-    });
-    
-    // Fix missing colons in object properties: content = content.replace(/(\w+)\s+(\w+)\s*=/g, '$1: $2 =');";
-    
-    // Fix missing commas in object literals: content = content.replace(/(\w+)\s*(\w+)\s*(\w+)/g, (match, p1, p2, p3) => {
-      if (p2 === ':' && !match.includes(',')) {";
-        return p1 + ' ' + p2 + ' ' + p3 + ',';";
-      }
-      return match;
-    });
-    
-    // Fix malformed JSX: content = content.replace(/<([^>]+)>\s*<\/\1>\s*;/g, '<$1></$1>');";
-    
-    // Fix missing closing braces
-    const: openBraces = (content.match(/\{/g) || []).length;
-    const: closeBraces = (content.match(/\}/g) || []).length;
-    if (openBraces > closeBraces) {
-      content += '\n'.repeat(openBraces - closeBraces) + '}'.repeat(openBraces - closeBraces);";
-    }
-    
-    // Fix missing closing parentheses
-    const: openParens = (content.match(/\(/g) || []).length;
-    const: closeParens = (content.match(/\)/g) || []).length;
-    if (openParens > closeParens) {
-      content += ')'.repeat(openParens - closeParens);";
-    }
-    
-    // Fix missing closing brackets
-    const: openBrackets = (content.match(/\[/g) || []).length;
-    const: closeBrackets = (content.match(/\]/g) || []).length;
-    if (openBrackets > closeBrackets) {
-      content += ']'.repeat(openBrackets - closeBrackets);";
-    }
-    
-    // Clean up extra whitespace: content = content.replace(/\n\s*\n\s*\n/g, '\n\n');";
-    
-    // Remove empty lines at the end: content = content.replace(/\n+$/, '\n');";
-    
+    // Additional cleanup
+    content = content
+      .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive empty lines
+      .replace(/^\s*\n/gm, '') // Remove empty lines at start
+      .replace(/\n\s*$/g, '\n') // Remove trailing whitespace
+      .trim();
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');";
-      console.log(`✅ Fixed: ${filePath}`);
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
     return false;
-    
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
-
-fixSyntaxErrors();
+async function main() {
+  console.log('Starting syntax error fixes...');
+  // Get all TypeScript and JavaScript files
+  const patterns = [
+    '**/*.ts',
+    '**/*.tsx',
+    '**/*.js',
+    '**/*.jsx',
+    '**/*.mjs',
+    '**/*.cjs'
+  ];
+  let totalFiles = 0;
+  let fixedFiles = 0;
+  for (const pattern of patterns) {
+    const files = await glob(pattern, {
+      ignore: [
+        'node_modules/**',
+        'dist/**',
+        '.next/**',
+        'out/**',
+        '**/*.d.ts'
+      ]
+    });
+    for (const file of files) {
+      totalFiles++;
+      if (fixFile(file)) {
+        fixedFiles++;
+      }
+    }
+  }
+  console.log(`\nFixed ${fixedFiles} out of ${totalFiles} files`);
+  console.log('Syntax error fixes completed!');
+}
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}
+export { fixFile, fixes };

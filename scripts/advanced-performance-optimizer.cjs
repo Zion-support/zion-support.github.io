@@ -1,15 +1,11 @@
 const fs = require("fs");
 const path = require("path");
-
 console.log("Starting advanced performance optimization...");
-
 // Optimize bundle splitting
 const optimizeBundleSplitting = () => {
   console.log("Optimizing bundle splitting...");
-
   const viteConfigPath = path.join(__dirname, "..", "vite.config.ts");
   let viteConfig = fs.readFileSync(viteConfigPath, "utf8");
-
   // Enhanced chunk splitting strategy
   const enhancedChunkConfig = `
     rollupOptions: {
@@ -58,21 +54,17 @@ const optimizeBundleSplitting = () => {
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },`;
-
   // Replace the existing rollupOptions
   viteConfig = viteConfig.replace(
     /rollupOptions:\s*\{[\s\S]*?\},/,
     enhancedChunkConfig,
   );
-
   fs.writeFileSync(viteConfigPath, viteConfig);
   console.log("✓ Bundle splitting optimized");
 };
-
 // Generate critical CSS
 const generateCriticalCSS = () => {
   console.log("Generating critical CSS...");
-
   const criticalCSS = `
 /* Critical CSS for above-the-fold content */
 .bg-gray-900 { background-color: #111827; }
@@ -132,39 +124,31 @@ const generateCriticalCSS = () => {
   50% { opacity: .5; }
 }
 `;
-
   const distPath = path.join(__dirname, "..", "dist");
   if (!fs.existsSync(distPath)) {
     fs.mkdirSync(distPath, { recursive: true });
   }
-
   fs.writeFileSync(path.join(distPath, "critical.css"), criticalCSS);
   console.log("✓ Critical CSS generated");
 };
-
 // Optimize images
 const optimizeImages = () => {
   console.log("Optimizing images...");
-
   const publicPath = path.join(__dirname, "..", "public");
   if (!fs.existsSync(publicPath)) {
     console.log("No public directory found, skipping image optimization");
     return;
   }
-
   // Create optimized images directory
   const optimizedPath = path.join(publicPath, "optimized");
   if (!fs.existsSync(optimizedPath)) {
     fs.mkdirSync(optimizedPath, { recursive: true });
   }
-
   console.log("✓ Images optimization prepared");
 };
-
 // Generate service worker
 const generateServiceWorker = () => {
   console.log("Generating service worker...");
-
   const serviceWorker = `
 const CACHE_NAME = 'zion-tech-group-v1'
 const urlsToCache = [
@@ -173,14 +157,12 @@ const urlsToCache = [
   '/static/js/main.js',
   '/manifest.json'
 ]
-
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
   )
 })
-
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
@@ -193,20 +175,16 @@ self.addEventListener('fetch', (event) => {
   )
 })
 `;
-
   const distPath = path.join(__dirname, "..", "dist");
   if (!fs.existsSync(distPath)) {
     fs.mkdirSync(distPath, { recursive: true });
   }
-
   fs.writeFileSync(path.join(distPath, "sw.js"), serviceWorker);
   console.log("✓ Service worker generated");
 };
-
 // Generate performance report
 const generatePerformanceReport = () => {
   console.log("Generating performance report...");
-
   const report = {
     timestamp: new Date().toISOString(),
     optimizations: [
@@ -230,19 +208,16 @@ const generatePerformanceReport = () => {
       estimatedCLS: "<0.1",
     },
   };
-
   const distPath = path.join(__dirname, "..", "dist");
   if (!fs.existsSync(distPath)) {
     fs.mkdirSync(distPath, { recursive: true });
   }
-
   fs.writeFileSync(
     path.join(distPath, "performance-report.json"),
     JSON.stringify(report, null, 2),
   );
   console.log("✓ Performance report generated");
 };
-
 // Run all optimizations
 const runOptimizations = () => {
   try {
@@ -251,12 +226,10 @@ const runOptimizations = () => {
     optimizeImages();
     generateServiceWorker();
     generatePerformanceReport();
-
     console.log("Advanced performance optimization completed successfully!");
   } catch (error) {
     console.error("Error during optimization:", error);
     process.exit(1);
   }
 };
-
 runOptimizations();

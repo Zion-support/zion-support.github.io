@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-
 // List of files to fix
 const filesToFix = [
   "app/accessibility-page/page.tsx",
@@ -163,13 +162,11 @@ const filesToFix = [
   "app/blockchain-development/page.tsx",
   "app/blockchain-integration-services/page.tsx",
 ];
-
 function createBasicPageContent(pageName, pageTitle, pageDescription) {
   return `'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Star, Zap, Brain, Target, Clock, Users, Globe } from 'lucide-react'
-
 export default function ${pageName}Page() {
   const features = [
     {
@@ -191,7 +188,6 @@ export default function ${pageName}Page() {
       benefits: ['Personalized approach', 'Industry expertise', 'Flexible implementation', 'Ongoing support']
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -199,7 +195,6 @@ export default function ${pageName}Page() {
         <meta name="description" content="${pageDescription}" />
         <meta name="keywords" content="AI solutions, technology, automation, Zion Tech Group" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -209,7 +204,6 @@ export default function ${pageName}Page() {
             ${pageDescription}
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -227,7 +221,6 @@ export default function ${pageName}Page() {
             </div>
           ))}
         </div>
-
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -242,7 +235,6 @@ export default function ${pageName}Page() {
   );
 }`;
 }
-
 function fixPageFile(filePath) {
   try {
     // Extract page name from path
@@ -256,22 +248,18 @@ function fixPageFile(filePath) {
       .replace(/-/g, " ")
       .replace(/\b\w/g, (l) => l.toUpperCase());
     const pageDescription = `Professional ${pageTitle.toLowerCase()} services and solutions powered by advanced AI technology.`;
-
     // Create new content
     const newContent = createBasicPageContent(
       pageName,
       pageTitle,
       pageDescription,
     );
-
     fs.writeFileSync(filePath, newContent);
     console.log(`Fixed: ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
-
 // Fix all files
 filesToFix.forEach(fixPageFile);
-
 console.log("Comprehensive page fixing completed!");
