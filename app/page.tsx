@@ -6,14 +6,16 @@ const HomePage: React.FC = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "description": "Leading provider of AI and IT solutions for modern businesses",
+    "description": "Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation.",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
+    "image": "https://ziontechgroup.com/og-image.jpg",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com",
+      "availableLanguage": "English"
     },
     "address": {
       "@type": "PostalAddress",
@@ -26,25 +28,50 @@ const HomePage: React.FC = () => {
     "sameAs": [
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup"
-    ]
+    ],
+    "foundingDate": "2020",
+    "numberOfEmployees": "10-50",
+    "areaServed": "United States",
+    "serviceType": ["AI Solutions", "IT Services", "Cloud Infrastructure", "Digital Transformation"]
   };
 
   return (
     <>
       <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation." />
-        <meta name="keywords" content="AI solutions, IT services, cloud infrastructure, digital transformation, machine learning, artificial intelligence" />
+        <title>Zion Tech Group - Advanced AI and IT Solutions | Expert Technology Services</title>
+        <meta name="description" content="Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation. Contact us at +1-302-464-0950." />
+        <meta name="keywords" content="AI solutions, IT services, cloud infrastructure, digital transformation, machine learning, artificial intelligence, micro SAAS, 5G solutions, data analytics, web development" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="bingbot" content="index, follow" />
+        
+        {/* Open Graph */}
         <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
         <meta property="og:description" content="Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
         <meta name="twitter:description" content="Leading provider of AI and IT solutions for modern businesses." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta name="twitter:site" content="@ziontechgroup" />
+        <meta name="twitter:creator" content="@ziontechgroup" />
+        
+        {/* Additional SEO */}
         <link rel="canonical" href="https://ziontechgroup.com" />
+        <meta name="theme-color" content="#00ffff" />
+        <meta name="msapplication-TileColor" content="#00ffff" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+        
+        {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

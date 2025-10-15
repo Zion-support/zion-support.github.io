@@ -22,6 +22,26 @@ const PerformanceMonitor: React.FC = () => {
         });
       }
       
+      // Send to custom analytics endpoint
+      if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+        fetch('/api/analytics/web-vitals', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            metric: metric.name,
+            value: metric.value,
+            delta: metric.delta,
+            id: metric.id,
+            navigationType: metric.navigationType,
+            timestamp: Date.now()
+          })
+        }).catch(() => {
+          // Silently fail if analytics endpoint is not available
+        });
+      }
+      
       // Also log in development
       if (process.env.NODE_ENV === 'development') {
         console.log(`[Web Vitals] ${metric.name}:`, metric.value);

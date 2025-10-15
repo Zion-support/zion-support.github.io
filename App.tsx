@@ -2,36 +2,45 @@ import { Suspense, useEffect, lazy } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./app/page'));
-const AboutPage = lazy(() => import('./app/about/page'));
-const ServicesPage = lazy(() => import('./app/services/page'));
-const ContactPage = lazy(() => import('./app/contact/page'));
-const AIServicesPage = lazy(() => import('./app/ai-services/page'));
-const ITServicesPage = lazy(() => import('./app/it-services/page'));
-const CloudInfrastructurePage = lazy(() => import('./app/cloud-infrastructure/page'));
-const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));
-const TeamPage = lazy(() => import('./app/team/page'));
-const CareersPage = lazy(() => import('./app/careers/page'));
-const HelpPage = lazy(() => import('./app/help/page'));
-const PrivacyPage = lazy(() => import('./app/privacy/page'));
-const TermsPage = lazy(() => import('./app/terms/page'));
-const PricingPage = lazy(() => import('./app/pricing/page'));
-const BlogPage = lazy(() => import('./app/blog/page'));
-const CaseStudiesPage = lazy(() => import('./app/case-studies/page'));
-const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
-const APIDocsPage = lazy(() => import('./app/api-docs/page'));
-const AccessibilityPage = lazy(() => import('./app/accessibility/page'));
-const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
-const DigitalTransformationPage = lazy(() => import('./app/digital-transformation/page'));
-const MicroSAASSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
-const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
-const DataAnalyticsPage = lazy(() => import('./app/data-analytics/page'));
-const WebDevelopmentPage = lazy(() => import('./app/web-development/page'));
-const MobileDevelopmentPage = lazy(() => import('./app/mobile-development/page'));
-const DatabaseManagementPage = lazy(() => import('./app/database-management/page'));
-const NetworkInfrastructurePage = lazy(() => import('./app/network-infrastructure/page'));
-const CookiesPage = lazy(() => import('./app/cookies/page'));
+// Lazy load pages for better performance with error boundaries
+const lazyWithRetry = (importFn: () => Promise<any>) => {
+  return lazy(() => 
+    importFn().catch((error) => {
+      console.error('Failed to load page:', error);
+      return { default: () => <div>Failed to load page. Please refresh.</div> };
+    })
+  );
+};
+
+const HomePage = lazyWithRetry(() => import('./app/page'));
+const AboutPage = lazyWithRetry(() => import('./app/about/page'));
+const ServicesPage = lazyWithRetry(() => import('./app/services/page'));
+const ContactPage = lazyWithRetry(() => import('./app/contact/page'));
+const AIServicesPage = lazyWithRetry(() => import('./app/ai-services/page'));
+const ITServicesPage = lazyWithRetry(() => import('./app/it-services/page'));
+const CloudInfrastructurePage = lazyWithRetry(() => import('./app/cloud-infrastructure/page'));
+const FiveGSolutionsPage = lazyWithRetry(() => import('./app/5g-solutions/page'));
+const TeamPage = lazyWithRetry(() => import('./app/team/page'));
+const CareersPage = lazyWithRetry(() => import('./app/careers/page'));
+const HelpPage = lazyWithRetry(() => import('./app/help/page'));
+const PrivacyPage = lazyWithRetry(() => import('./app/privacy/page'));
+const TermsPage = lazyWithRetry(() => import('./app/terms/page'));
+const PricingPage = lazyWithRetry(() => import('./app/pricing/page'));
+const BlogPage = lazyWithRetry(() => import('./app/blog/page'));
+const CaseStudiesPage = lazyWithRetry(() => import('./app/case-studies/page'));
+const PartnershipsPage = lazyWithRetry(() => import('./app/partnerships/page'));
+const APIDocsPage = lazyWithRetry(() => import('./app/api-docs/page'));
+const AccessibilityPage = lazyWithRetry(() => import('./app/accessibility/page'));
+const AISolutionsPage = lazyWithRetry(() => import('./app/ai-solutions/page'));
+const DigitalTransformationPage = lazyWithRetry(() => import('./app/digital-transformation/page'));
+const MicroSAASSolutionsPage = lazyWithRetry(() => import('./app/micro-saas-solutions/page'));
+const AIContentGeneratorPage = lazyWithRetry(() => import('./app/ai-content-generator/page'));
+const DataAnalyticsPage = lazyWithRetry(() => import('./app/data-analytics/page'));
+const WebDevelopmentPage = lazyWithRetry(() => import('./app/web-development/page'));
+const MobileDevelopmentPage = lazyWithRetry(() => import('./app/mobile-development/page'));
+const DatabaseManagementPage = lazyWithRetry(() => import('./app/database-management/page'));
+const NetworkInfrastructurePage = lazyWithRetry(() => import('./app/network-infrastructure/page'));
+const CookiesPage = lazyWithRetry(() => import('./app/cookies/page'));
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -41,29 +50,68 @@ import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
-// Enhanced loading component
+// Import utilities
+import { performanceUtils } from './app/utils/performanceUtils';
+import { accessibilityUtils } from './app/utils/accessibilityUtils';
+
+// Enhanced loading component with accessibility
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-900">
     <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
-      <p className="text-gray-600 animate-pulse">Loading...</p>
+      <div 
+        className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"
+        role="status"
+        aria-label="Loading content"
+      ></div>
+      <p className="text-gray-300 animate-pulse text-lg">Loading amazing content...</p>
+      <div className="mt-4 flex justify-center space-x-1">
+        <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce"></div>
+        <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
+        <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+      </div>
     </div>
   </div>
 )
 
 export default function App() {
   useEffect(() => {
+    // Initialize accessibility features
+    accessibilityUtils.init({
+      enableHighContrast: true,
+      enableReducedMotion: true,
+      enableKeyboardNavigation: true,
+      fontSize: 'medium',
+      colorScheme: 'auto'
+    });
+
     // Preload critical resources
-    const preloadCriticalResources = () => {
-      // Preload critical fonts
-      const fontPreload = document.createElement('link')
-      fontPreload.rel = 'preload'
-      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
-      fontPreload.as = 'style'
-      document.head.appendChild(fontPreload)
+    performanceUtils.preloadCriticalResources();
+
+    // Create skip link for accessibility
+    accessibilityUtils.createSkipLink();
+
+    // Add ARIA labels
+    accessibilityUtils.addAriaLabels();
+
+    // Performance monitoring
+    const measurePerformance = async () => {
+      const metrics = performanceUtils.monitor.measurePageLoad();
+      const webVitals = await performanceUtils.monitor.measureWebVitals();
+      
+      const allMetrics = { ...metrics, ...webVitals };
+      performanceUtils.monitor.sendToAnalytics(allMetrics);
     }
 
-    preloadCriticalResources()
+    // Measure performance after load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
+
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    }
   }, [])
 
   return (
@@ -74,7 +122,7 @@ export default function App() {
             <Navigation />
             <Sidebar />
             
-            <main className="flex-1">
+            <main id="main-content" className="flex-1">
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               
