@@ -5,9 +5,10 @@ interface WebVitalsData {}
   delta: number
   id: string
   navigationType: string
-}
+};
 const CoreWebVitals: React.FC = () => {}
-}const reportWebVitals = useCallback((data: WebVitalsData) => {}
+};
+const reportWebVitals = useCallback((data: WebVitalsData) => {}
 }// Send to Google Analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {}
       (window as any).gtag('event', 'web_vitals', {}

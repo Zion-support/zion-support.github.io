@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const AiDevopsAutomationPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const AiDevopsAutomationPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AiDevopsAutomationPage;

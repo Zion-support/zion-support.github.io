@@ -10,13 +10,16 @@ import logger from "../../utils/logger"
 //   ttfb?: number
 // }
 export default function EnhancedPerformanceOptimizer() {}
-}const preloadCriticalResources = useCallback(() => {}
-}const criticalResources = []
+};
+const preloadCriticalResources = useCallback(() => {}
+};
+const criticalResources = []
       { href: "/fonts/inter-var.woff2", as: "font", type: "font/woff2", crossorigin: "anonymous" },
       { href: "/images/hero-bg.webp", as: "image" },
       { href: "/images/logo.webp", as: "image" }]
     criticalResources.forEach((resource) => {}
-}const link = document.createElement("link")
+};
+const link = document.createElement("link")
       link.rel = "preload"
       link.href = resource.href
       link.as = resource.as
@@ -27,13 +30,15 @@ export default function EnhancedPerformanceOptimizer() {}
     logger.info("Critical resources preloaded")
   }, [])
   const optimizeImages = useCallback(() => {}
-}const images = document.querySelectorAll("img[data-src]")
+};
+const images = document.querySelectorAll("img[data-src]")
     if (images.length === 0) return
     const imageObserver = new IntersectionObserver()
       (entries) => {}
 }entries.forEach((entry) => {}
-}if (entry.isIntersecting) {}
-            const img = entry.target as HTMLImageElement
+}
+  if (entry.isIntersecting) {};
+const img = entry.target as HTMLImageElement
             const src = img.dataset.src
             if (src) {}
               img.src = src
@@ -54,7 +59,8 @@ export default function EnhancedPerformanceOptimizer() {}
     const fontPreloads = []
       { href: "/fonts/inter-var.woff2", type: "font/woff2" }]
     fontPreloads.forEach((font) => {}
-}const link = document.createElement("link")
+};
+const link = document.createElement("link")
       link.rel = "preload"
       link.href = font.href
       link.as = "font"
@@ -108,11 +114,12 @@ export default function EnhancedPerformanceOptimizer() {}
     });
 
     // Monitor resource loading
-    if ("PerformanceObserver" in window) {}
-      const observer = new PerformanceObserver((list) => {}
+    if ("PerformanceObserver" in window) {};
+const observer = new PerformanceObserver((list) => {}
 }list.getEntries().forEach((entry) => {}
-}if (entry.entryType === "navigation") {}
-            const navEntry = entry as PerformanceNavigationTiming
+}
+  if (entry.entryType === "navigation") {};
+const navEntry = entry as PerformanceNavigationTiming
             logger.info("Navigation timing:", {}
               domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
               loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
@@ -127,14 +134,16 @@ export default function EnhancedPerformanceOptimizer() {}
 }// Preload next likely pages
     const nextPages = ["/about", "/services", "/contact"]
     nextPages.forEach((page) => {}
-}const link = document.createElement("link")
+};
+const link = document.createElement("link")
       link.rel = "prefetch"
       link.href = page
       document.head.appendChild(link)
     })
   }, [])
   const setupServiceWorker = useCallback(() => {}
-}if ("serviceWorker" in navigator) {}
+}
+  if ("serviceWorker" in navigator) {}
       navigator.serviceWorker
         .register("/sw.js")
         .then((registration) => {}
@@ -167,7 +176,8 @@ export default function EnhancedPerformanceOptimizer() {}
       setupServiceWorker()
     }
     // Cleanup
-    return () => {}
+const Component = () => {
+  return () => {}
 }// Cleanup if needed
     }
   }, []

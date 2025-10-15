@@ -8,15 +8,13 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
-  }
-
-  const { email } = req.body;
+  };
+const { email } = req.body;
   if (!email) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email is required' }));
     return;
   }
-
   if (!isValidEmail(email)) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Invalid email format' }));

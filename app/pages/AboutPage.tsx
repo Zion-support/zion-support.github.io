@@ -31,7 +31,7 @@ const AboutPage: React.FC = () => {
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
   ];
-
+const Component = () => {
   return (<>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
@@ -130,5 +130,6 @@ const AboutPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AboutPage;

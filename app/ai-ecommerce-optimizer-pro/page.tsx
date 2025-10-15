@@ -1,6 +1,6 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-
+const Component = () => {
   return (<>
       <Helmet>
         <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>

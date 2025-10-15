@@ -1,7 +1,8 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code-4a9f
+
 
 const AiQuantumComputingPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -309,5 +310,6 @@ const AiQuantumComputingPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AiQuantumComputingPage;

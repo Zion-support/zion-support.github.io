@@ -11,7 +11,7 @@ export default function NewsletterSignup() {
     e.preventDefault();
     // Handle newsletter signup
     };
-
+const Component = () => {
   return (<>
       <Helmet>
         <title>Newsletter Signup - Zion Tech Group</title>
@@ -44,4 +44,5 @@ export default function NewsletterSignup() {
       </div>
 </div>
   )
+}
 }

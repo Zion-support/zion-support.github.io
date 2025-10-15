@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 
 const AISolutionsPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -19,5 +20,6 @@ const AISolutionsPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AISolutionsPage;

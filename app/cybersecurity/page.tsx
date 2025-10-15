@@ -12,6 +12,7 @@ const CybersecurityPage: React.FC = () => {
         keywords="cybersecurity, security solutions, threat detection, vulnerability assessment, security consulting"
       />
       
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center">
         <div className="absolute inset-0 bg-black/50"></div>
@@ -163,7 +164,8 @@ const CybersecurityPage: React.FC = () => {
               Schedule Consultation
             </Link>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20">

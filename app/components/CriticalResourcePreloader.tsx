@@ -2,7 +2,8 @@
 import { useEffect } from 'react'
 const CriticalResourcePreloader = () => {}
 }useEffect(() => {}
-}const preloadCriticalResources = () => {}
+};
+const preloadCriticalResources = () => {}
 }// Critical fonts
       const criticalFonts = []
         {}
@@ -35,7 +36,8 @@ const CriticalResourcePreloader = () => {}
       ]
       // Preload fonts
       criticalFonts.forEach(font => {}
-}const link = document.createElement('link')
+};
+const link = document.createElement('link')
         link.rel = 'preload'
         link.href = font.href
         link.as = font.as
@@ -45,7 +47,8 @@ const CriticalResourcePreloader = () => {}
       })
       // Preload CSS
       criticalCSS.forEach(css => {}
-}const link = document.createElement('link')
+};
+const link = document.createElement('link')
         link.rel = 'preload'
         link.href = css
         link.as = 'style'
@@ -53,7 +56,8 @@ const CriticalResourcePreloader = () => {}
       })
       // Preload JavaScript
       criticalJS.forEach(js => {}
-}const link = document.createElement('link')
+};
+const link = document.createElement('link')
         link.rel = 'preload'
         link.href = js
         link.as = 'script'
@@ -61,7 +65,8 @@ const CriticalResourcePreloader = () => {}
       })
       // Preload images
       criticalImages.forEach(img => {}
-}const link = document.createElement('link')
+};
+const link = document.createElement('link')
         link.rel = 'preload'
         link.href = img
         link.as = 'image'
@@ -70,7 +75,8 @@ const CriticalResourcePreloader = () => {}
     }
     // Preconnect to external domains
     const preconnectDomains = () => {}
-}const domains = []
+};
+const domains = []
         'https://fonts.googleapis.com',
         'https://fonts.gstatic.com',
         'https://www.google-analytics.com',
@@ -78,7 +84,8 @@ const CriticalResourcePreloader = () => {}
         'https://cdn.jsdelivr.net'
       ]
       domains.forEach(domain => {}
-}const link = document.createElement('link')
+};
+const link = document.createElement('link')
         link.rel = 'preconnect'
         link.href = domain
         link.crossOrigin = 'anonymous'
@@ -87,13 +94,15 @@ const CriticalResourcePreloader = () => {}
     }
     // DNS prefetch for additional domains
     const dnsPrefetchDomains = () => {}
-}const domains = []
+};
+const domains = []
         'https://api.ziontechgroup.com',
         'https://cdn.ziontechgroup.com',
         'https://analytics.ziontechgroup.com'
       ]
       domains.forEach(domain => {}
-}const link = document.createElement('link')
+};
+const link = document.createElement('link')
         link.rel = 'dns-prefetch'
         link.href = domain
         document.head.appendChild(link)

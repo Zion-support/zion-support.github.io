@@ -129,6 +129,7 @@ export default function ZionAiMarketingAutomationPro() {
   ];
 
 const ZionAiMarketingAutomationProPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -447,5 +448,7 @@ const ZionAiMarketingAutomationProPage: React.FC = () => {
     </>
   );
 };
+}
+}
 
 export default ZionAiMarketingAutomationProPage;

@@ -12,9 +12,9 @@ import EnhancedNavigation from "./components/EnhancedNavigation";
 
 interface LayoutProps {
   children: React.ReactNode;
-}
+};
 const Layout: React.FC<LayoutProps> = ({ children }) => {}
-}return ()
+  return ()
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <HelmetProvider>
         <BrowserRouter>

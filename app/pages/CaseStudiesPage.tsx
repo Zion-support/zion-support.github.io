@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const CaseStudiesPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const CaseStudiesPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default CaseStudiesPage;

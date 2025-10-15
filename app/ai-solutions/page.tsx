@@ -259,7 +259,7 @@ const AISolutionsPage: React.FC = () => {
       popular: false
     }
   ];
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -511,5 +511,6 @@ const AISolutionsPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AiSolutionsPage;

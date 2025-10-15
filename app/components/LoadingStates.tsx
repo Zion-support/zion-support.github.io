@@ -8,6 +8,7 @@ interface LoadingPageProps {}
 export const LoadingPage: React.FC<LoadingPageProps> = ({ 
   message = "Loading...", showIcon = true 
 }) => {
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -49,7 +50,8 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
       default:
         return <Brain className="w-8 h-8 text-cyan-400" />
     }
-  }
+  };
+const Component = () => {
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center max-w-md mx-auto px-4">
@@ -77,6 +79,7 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
 export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = ({ 
   error = "Something went wrong", onRetry 
 }) => {
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center max-w-md mx-auto px-4">
@@ -100,7 +103,7 @@ export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = 
   )
 }
 export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {}
-}return ()
+  return ()
     <div className="animate-pulse">
       {Array.from({ length: lines }).map(( index) => (
         <div
@@ -114,7 +117,7 @@ export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
   )
 }
 export const CardSkeleton: React.FC = () => {}
-}return ()
+  return ()
     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
       <div className="w-16 h-16 bg-gray-700 rounded-lg mb-4"></div>
       <div className="h-6 bg-gray-700 rounded mb-3"></div>

@@ -16,8 +16,7 @@ interface EnhancedHeroProps {}
   benefits?: string[]
   backgroundImage?: string
   className?: string
-}
-
+};
 const EnhancedHero: React.FC<EnhancedHeroProps> = ({
   title = "Transform Your Business with AI", subtitle = "Leading Provider of AI Solutions", description = "Revolutionize your operations with cutting-edge artificial intelligence technology. Our advanced solutions deliver measurable results and drive unprecedented growth.", primaryCta = {
     text: "Get Started", href: "/contact", _}, secondaryCta = {
@@ -39,6 +38,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
       title: "Visit Us",
       details: "123 Tech Street, San Francisco, CA",
       description: "Schedule a meeting"}]
+const Component = () => {
   return ()
     <div
       className={`relative min-h-screen flex items-center justify-center overflow-hidden ${className}`}

@@ -24,8 +24,7 @@ import {
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
-}
-
+};
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation()
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())
@@ -95,7 +94,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const isActive = (_path: string) => location.pathname === path
 
   if (!isOpen) return null
-
+const Component = () => {
   return (<>
       {/* Overlay */}
       <div 
@@ -317,5 +316,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       </div>
   </>);
 };
+}
 
 export default Sidebar;

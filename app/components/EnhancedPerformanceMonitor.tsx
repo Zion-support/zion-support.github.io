@@ -13,8 +13,7 @@ interface PerformanceMetrics {
 }
 interface PerformanceMonitorProps {}
   showInProduction?: boolean
-}
-
+};
 const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
   showInProduction = false 
 }) => {
@@ -99,17 +98,17 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       measurePerformance()
     } else {}
       window.addEventListener('load', measurePerformance)
-    }
-    return () => {}
+    };
+const Component = () => {
+  return () => {}
 }window.removeEventListener('load', measurePerformance)
     }
   }, [])
   // Only show in development or if explicitly enabled
   if ((process.env.NODE_ENV !== 'development' && !showInProduction) || !metrics) {}
     return null
-  }
-
-  const getScoreColor = (_value: number, thresholds: { good: number; needsImprovement: number }) => {
+  };
+const getScoreColor = (_value: number, thresholds: { good: number; needsImprovement: number }) => {
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.needsImprovement) return 'text-yellow-500';
     return 'text-red-500';
@@ -120,7 +119,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (value <= thresholds.needsImprovement) return 'Needs Improvement';
     return 'Poor';
   };
-
+const Component = () => {
   return (<div className="fixed bottom-4 right-4 z-50">
       <button
         onClick={() => setIsVisible(!isVisible)}

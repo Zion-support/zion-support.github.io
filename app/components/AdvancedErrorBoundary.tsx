@@ -73,18 +73,20 @@ class AdvancedErrorBoundary extends Component<Props, State> {}
     })
   }
   handleReportError = () => {}
-}const { error, errorId } = this.state
+};
+const { error, errorId } = this.state
     const subject = `Error Report - ${errorId}`
     const body = `Error: ${error?.message}\n\nStack: ${error?.stack}\n\nPlease describe what you were doing when this error occurred:`
     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     window.open(mailtoLink)
   }
   render() {}
-    if (this.state.hasError) {}
-      if (this.props.fallback) {}
+  if (this.state.hasError) {}
+  if (this.props.fallback) {}
         return this.props.fallback
-      }
-      return ()
+      };
+const Component = () => {
+  return ()
         <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
           <div className="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="flex justify-center mb-6">

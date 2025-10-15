@@ -4,10 +4,10 @@ interface SearchBarProps {}
   className?: string
   title?: string
   description?: string
-}
-
+};
 const SearchBar: React.FC<SearchBarProps> = ({
   children, className = "", title, _description, _}) => {
+const Component = () => {
   return (
     <div className={`enhanced-component ${className}`}>
       {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>}

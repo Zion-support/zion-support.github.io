@@ -66,7 +66,7 @@ export default function Consultation() {
       icon: <Shield className="w-8 h-8" />
     }
   ];
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -280,5 +280,6 @@ export default function Consultation() {
     </>
   );
 };
+}
 
 export default ConsultationPage;

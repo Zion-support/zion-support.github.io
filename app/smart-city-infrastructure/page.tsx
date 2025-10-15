@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const SmartCityInfrastructurePage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const SmartCityInfrastructurePage: React.FC = () => {
     </>
   );
 };
+}
 
 export default SmartCityInfrastructurePage;

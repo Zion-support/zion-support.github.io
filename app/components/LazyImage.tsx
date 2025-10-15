@@ -12,8 +12,7 @@ interface LazyImageProps {
   loading?: 'lazy' | 'eager';
   sizes?: string;
   srcSet?: string;
-}
-
+};
 const LazyImage: React.FC<LazyImageProps> = ({
   src, alt, className = '', _placeholder, _fallback, _onLoad, _onError, loading = 'lazy', _sizes, _srcSet, _}) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -34,20 +33,22 @@ const LazyImage: React.FC<LazyImageProps> = ({
     )
     if (imgRef.current) {}
       observer.observe(imgRef.current)
-    }
-    return () => observer.disconnect()
+    };
+const Component = () => {
+  return () => observer.disconnect()
   }, [])
   const handleLoad = () => {}
 }setIsLoaded(true)
     onLoad?.()
-  }
-  const handleError = () => {}
+  };
+const handleError = () => {}
 }setIsError(true)
     onError?.()
   }
   if (isError && fallback) {}
     return <>{fallback}</>
-  }
+  };
+const Component = () => {
   return ()
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
       {!isLoaded && !isError && placeholder && ()

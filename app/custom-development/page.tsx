@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const CustomDevelopmentPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -181,5 +182,6 @@ const CustomDevelopmentPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default CustomDevelopmentPage;

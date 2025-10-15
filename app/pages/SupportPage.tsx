@@ -131,7 +131,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
-
+const Component = () => {
   return (<>
       <Helmet>
         <title>Support - Zion Tech Group | Help & Support Center</title>
@@ -359,5 +359,6 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
     </>
   );
 };
+}
 
 export default SupportPage;

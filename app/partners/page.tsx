@@ -90,7 +90,7 @@ import { CheckCircle, Users, Globe, Shield, Zap } from 'lucide-react';export def
       benefits: ["Standard support", "Partner portal access", "Co-marketing opportunities", "Technical documentation"]
     }
   ];
-
+const Component = () => {
   return (<>
       <Helmet>
         <title>Partners - Zion Tech Group | Strategic Partnerships</title>
@@ -233,5 +233,6 @@ import { CheckCircle, Users, Globe, Shield, Zap } from 'lucide-react';export def
     </>
   );
 };
+}
 
 export default PartnersPage;

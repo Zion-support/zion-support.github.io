@@ -18,9 +18,10 @@ interface SEOMetrics {}
   imageAltTexts: number | null
   internalLinks: number | null
   externalLinks: number | null
-}
+};
 const AdvancedSEOOptimizer: React.FC = () => {}
-}const [settings, setSettings] = useState<SEOSettings>({}
+};
+const [settings, setSettings] = useState<SEOSettings>({}
     metaTags: false,
     structuredData: false,
     sitemap: false,
@@ -39,7 +40,8 @@ const AdvancedSEOOptimizer: React.FC = () => {}
   const [isVisible, setIsVisible] = useState(false)
   const [isOptimizing, setIsOptimizing] = useState(false)
   const analyzeSEO = useCallback(() => {}
-}if (typeof window === 'undefined') return
+}
+  if (typeof window === 'undefined') return
     // Analyze title length
     const title = document.title
     setMetrics(prev => ({ ...prev, titleLength: title.length }))
@@ -60,9 +62,10 @@ const AdvancedSEOOptimizer: React.FC = () => {}
     let internalLinks = 0
     let externalLinks = 0
     links.forEach(link => {}
-}const href = link.getAttribute('href')
+};
+const href = link.getAttribute('href')
       if (href) {}
-        if (href.startsWith('/') || href.includes(window.location.hostname)) {}
+  if (href.startsWith('/') || href.includes(window.location.hostname)) {}
           internalLinks++
         } else if (href.startsWith('http')) {}
           externalLinks++
@@ -90,19 +93,19 @@ const AdvancedSEOOptimizer: React.FC = () => {}
     if (settings.metaTags) {}
       // Optimizing meta tags...
     }
-    if (settings.structuredData) {}
+  if (settings.structuredData) {}
       // Adding structured data...
     }
-    if (settings.sitemap) {}
+  if (settings.sitemap) {}
       // Generating sitemap...
     }
-    if (settings.robotsTxt) {}
+  if (settings.robotsTxt) {}
       // Updating robots.txt...
     }
-    if (settings.canonicalUrls) {}
+  if (settings.canonicalUrls) {}
       // Setting canonical URLs...
     }
-    if (settings.altTexts) {}
+  if (settings.altTexts) {}
       // Adding alt texts to images...
     }
     setIsOptimizing(false)
@@ -115,8 +118,8 @@ const AdvancedSEOOptimizer: React.FC = () => {}
       ...prev,
       [key]: !prev[key]
     }))
-  }
-  const seoFeatures = []
+  };
+const seoFeatures = []
     {}
       key: 'metaTags' as keyof SEOSettings,
       title: 'Meta Tags',
@@ -172,7 +175,8 @@ const AdvancedSEOOptimizer: React.FC = () => {}
   };
 
   if (!isVisible) {
-    return (<button
+const Component = () => {
+  return (<button
         onClick={() => setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
         aria-label="Open SEO optimizer"
@@ -180,8 +184,8 @@ const AdvancedSEOOptimizer: React.FC = () => {}
         <Search className="w-6 h-6" />
       </button>
     )
-  }
-
+  };
+const Component = () => {
   return (<div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6 w-80 z-50">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">

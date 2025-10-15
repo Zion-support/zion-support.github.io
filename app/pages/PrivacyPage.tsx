@@ -79,7 +79,7 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
     'Withdraw consent',
     'Lodge a complaint with a supervisory authority'
   ];
-
+const Component = () => {
   return (<>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group | Data Protection & Privacy</title>
@@ -272,5 +272,6 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
     </>
   );
 };
+}
 
 export default PrivacyPage;

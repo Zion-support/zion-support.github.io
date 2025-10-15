@@ -24,7 +24,7 @@ const CommunityPage: React.FC = () => {
       description: 'Get recognized for your contributions and expertise'
     }
   ];
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -93,5 +93,6 @@ const CommunityPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default CommunityPage;

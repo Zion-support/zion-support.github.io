@@ -139,7 +139,7 @@ import { ArrowRight, Clock, Search, Filter, Play, BookOpen, Star, Target } from 
 
   const featuredTutorial = tutorials.find(tutorial => tutorial.featured);
   const regularTutorials = filteredTutorials.filter(tutorial => !tutorial.featured);
-
+const Component = () => {
   return (<>
       <Helmet>
         <title>Tutorials - Zion Tech Group | Learn AI & IT Skills</title>
@@ -450,5 +450,6 @@ import { ArrowRight, Clock, Search, Filter, Play, BookOpen, Star, Target } from 
     </>
   );
 };
+}
 
 export default TutorialsPage;

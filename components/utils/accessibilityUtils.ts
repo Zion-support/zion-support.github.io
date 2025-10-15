@@ -2,7 +2,8 @@
 export const focusManagement = {}
   // Trap focus within an element
   trapFocus: (element: HTMLElement) => {}
-}const focusableElements = element.querySelectorAll()
+};
+const focusableElements = element.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
@@ -26,8 +27,8 @@ export const focusManagement = {}
 
     element.addEventListener('keydown', handleTabKey);
     firstElement?.focus();
-
-    return () => {
+const Component = () => {
+  return () => {
       element.removeEventListener('keydown', handleTabKey);
     };
   },
@@ -112,8 +113,7 @@ export const keyboardNavigation = {
         newIndex = items.length - 1;
         break;
     }
-    
-    if (newIndex !== currentIndex) {
+  if (newIndex !== currentIndex) {
       items[newIndex]?.focus();
       return newIndex;
     }

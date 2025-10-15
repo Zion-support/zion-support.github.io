@@ -9,7 +9,7 @@ import { CheckCircle, Database } from 'lucide-react';const StatusPage: React.FC 
     { name: 'CDN', status: 'operational', uptime: '99.9%' },
     { name: 'Authentication', status: 'operational', uptime: '99.9%' }
   ];
-
+const Component = () => {
   return (<>
       <Helmet>
         <title>System Status - Zion Tech Group | Service Status</title>
@@ -71,5 +71,6 @@ import { CheckCircle, Database } from 'lucide-react';const StatusPage: React.FC 
     </>
   );
 };
+}
 
 export default StatusPage;

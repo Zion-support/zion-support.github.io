@@ -9,6 +9,7 @@ interface LoadingPageProps {}
 export const LoadingPage: React.FC<LoadingPageProps> = ({ 
   message = "Loading...", showProgress = false, progress = 0 
 }) => {
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -56,9 +57,10 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({
       default:
         return <Loader2 className="w-16 h-16 text-white" />
     }
-  }
-  const getServiceMessage = () => {}
-}if (message) return message
+  };
+const getServiceMessage = () => {}
+}
+  if (message) return message
     switch (serviceType) {}
       case 'ai':
         return "Initializing AI Solutions..."
@@ -71,7 +73,8 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({
       default:
         return "Loading..."
     }
-  }
+  };
+const Component = () => {
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -113,7 +116,8 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
   const renderSkeleton = () => {
     switch (type) {
       case 'card':
-        return ()
+const Component = () => {
+  return ()
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
             <div className="w-16 h-16 bg-gray-600 rounded-lg mb-4"></div>
             <div className="h-6 bg-gray-600 rounded mb-3"></div>
@@ -122,7 +126,8 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
           </div>
         )
       case 'list':
-        return ()
+const Component = () => {
+  return ()
           <div className="space-y-4">
             {Array.from({ length: count }).map(( index) => (
               <div key={index} className="flex items-center space-x-4 animate-pulse">
@@ -136,7 +141,8 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
           </div>
         )
       case 'text':
-        return ()
+const Component = () => {
+  return ()
           <div className="space-y-3 animate-pulse">
             {Array.from({ length: count }).map(( index) => (
               <div key={index} className="space-y-2">
@@ -148,7 +154,8 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
           </div>
         )
       case 'image':
-        return ()
+const Component = () => {
+  return ()
           <div className="animate-pulse">
             <div className="w-full h-64 bg-gray-600 rounded-lg"></div>
           </div>
@@ -156,7 +163,8 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
       default:
         return <div className="animate-pulse bg-gray-600 rounded h-4"></div>
     }
-  }
+  };
+const Component = () => {
   return ()
     <div className="space-y-4">
       {Array.from({ length: count }).map(( index) => (
@@ -171,6 +179,7 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
 export const ErrorLoading: React.FC<ErrorLoadingProps> = ({ 
   error, onRetry 
 }) => {
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -195,6 +204,7 @@ export const ErrorLoading: React.FC<ErrorLoadingProps> = ({
 export const ProgressLoading: React.FC<ProgressLoadingProps> = ({ 
   progress, message, _subMessage 
 }) => {
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center max-w-md mx-auto">
@@ -231,5 +241,9 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({
       </div>
     </div>
   )
+}
+}
+}
+}
 }
 export default LoadingPage

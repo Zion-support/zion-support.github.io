@@ -15,8 +15,7 @@ interface DynamicContentShowcaseProps {}
   autoPlay?: boolean
   interval?: number
   className?: string
-}
-
+};
 const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
   items = [
     {
@@ -35,8 +34,8 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
     }, interval);
-
-    return () => clearInterval(timer);
+const Component = () => {
+  return () => clearInterval(timer);
   }, [isPlaying, interval, items.length]);
 
   const goToPrevious = () => {
@@ -57,7 +56,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
   };
 
   const currentItem = items[currentIndex];
-
+const Component = () => {
   return (
     <div className={`relative ${className}`}>
       <div className="relative overflow-hidden rounded-lg bg-gray-900">

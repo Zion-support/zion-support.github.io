@@ -8,15 +8,17 @@ interface PerformanceMetrics {
   cls: number;
   ttfb: number;
   loadTime: number;
-}
+};
 const PerformanceEnhancer: React.FC = () => {}
-}const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
+};
+const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {}
 }// Only run in browser environment
     if (typeof window === 'undefined') return
     const measurePerformance = () => {}
-}const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+};
+const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       const paintEntries = performance.getEntriesByType('paint')
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry
@@ -37,13 +39,15 @@ const PerformanceEnhancer: React.FC = () => {}
       window.addEventListener('load', measurePerformance)
     }
     // Cleanup
-    return () => {}
+const Component = () => {
+  return () => {}
 }window.removeEventListener('load', measurePerformance)
     }
   }, [])
   // Preload critical resources
   useEffect(() => {}
-}const preloadCriticalResources = () => {}
+};
+const preloadCriticalResources = () => {}
 }// Preload critical CSS
       const criticalCSS = document.createElement('link')
       criticalCSS.rel = 'preload'
@@ -63,12 +67,15 @@ const PerformanceEnhancer: React.FC = () => {}
   }, [])
   // Optimize images
   useEffect(() => {}
-}const optimizeImages = () => {}
-}const images = document.querySelectorAll('img[data-src]')
+};
+const optimizeImages = () => {}
+};
+const images = document.querySelectorAll('img[data-src]')
       const imageObserver = new IntersectionObserver((entries) => {}
 }entries.forEach((entry) => {}
-}if (entry.isIntersecting) {}
-            const img = entry.target as HTMLImageElement
+}
+  if (entry.isIntersecting) {};
+const img = entry.target as HTMLImageElement
             img.src = img.dataset.src || ''
             img.classList.remove('lazy')
             imageObserver.unobserve(img)
@@ -82,8 +89,8 @@ const PerformanceEnhancer: React.FC = () => {}
   // Only show in development
   if (process.env.NODE_ENV !== 'development' || !metrics) {}
     return null
-  }
-
+  };
+const Component = () => {
   return (<div className="fixed bottom-4 right-4 z-50">
       <button
         onClick={() => setIsVisible(!isVisible)}

@@ -14,7 +14,7 @@ interface ContentCarouselProps {}
   autoPlay?: boolean
   interval?: number
   className?: string
-}
+};
 const defaultSlides: Slide[] = []
   {}
     id: 1,
@@ -44,23 +44,27 @@ export default function ContentCarousel({}
   autoPlay = true,
   interval = 5000,
   className = ""}: ContentCarouselProps) {}
-}const [currentSlide, setCurrentSlide] = useState(0)
+};
+const [currentSlide, setCurrentSlide] = useState(0)
   useEffect(() => {}
-}if (!autoPlay) return
+}
+  if (!autoPlay) return
     const timer = setInterval(() => {}
 }setCurrentSlide((prev) => (prev + 1) % slides.length)
     }, interval)
-    return () => clearInterval(timer)
+const Component = () => {
+  return () => clearInterval(timer)
   }, [autoPlay, interval, slides.length])
   const goToSlide = (index: number) => {}
 }setCurrentSlide(index)
-  }
-  const goToPrevious = () => {}
+  };
+const goToPrevious = () => {}
 }setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  }
-  const goToNext = () => {}
+  };
+const goToNext = () => {}
 }setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }
+  };
+const Component = () => {
   return ()
     <div className={`relative w-full ${className}`}>
       {/* Carousel Container */}

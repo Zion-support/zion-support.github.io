@@ -210,7 +210,7 @@ import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Database, Globe, Target
       popular: false
     }
   ];
-
+const Component = () => {
   return (<>
       <Helmet>
         <title>Micro SAAS Solutions - Innovative Software for Modern Businesses | Zion Tech Group</title>
@@ -232,5 +232,6 @@ import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Database, Globe, Target
     </>
   );
 };
+}
 
 export default MicroSaasSolutionsPage;

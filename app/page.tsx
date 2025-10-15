@@ -94,7 +94,7 @@ const HomePage: React.FC = () => {
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
   ];
-
+const Component = () => {
   return (
     <>
       <UnifiedSEOHead 
@@ -323,5 +323,6 @@ const HomePage: React.FC = () => {
     </>
   );
 };
+}
 
 export default HomePage;

@@ -4,10 +4,10 @@ interface ThemeToggleProps {}
   className?: string
   title?: string
   description?: string
-}
-
+};
 const ThemeToggle: React.FC<ThemeToggleProps> = ({
   children, className = "", title, _description, _}) => {
+const Component = () => {
   return (
     <div className={`enhanced-component ${className}`}>
       {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>}

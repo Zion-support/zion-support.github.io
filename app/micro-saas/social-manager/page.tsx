@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const SocialManagerPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const SocialManagerPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default SocialManagerPage;

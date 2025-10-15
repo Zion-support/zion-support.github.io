@@ -13,7 +13,7 @@ const MobileNavigation: React.FC = () => {
   const closeMenu = () => {
     setIsOpen(false);
   };
-
+const Component = () => {
   return (
     <>
       {/* Mobile menu button */}
@@ -120,5 +120,6 @@ const MobileNavigation: React.FC = () => {
       )}
 </div>
   )
+}
 }
 export default MobileNavigation

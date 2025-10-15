@@ -135,7 +135,7 @@ const APIDocsPage: React.FC = () => {
 
   const selectedAPIData = apis.find(api => api.id === selectedAPI);
   const selectedCodeExample = codeExamples[selectedAPI as keyof typeof codeExamples];
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -359,5 +359,6 @@ const APIDocsPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default APIDocsPage;

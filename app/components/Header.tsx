@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 export default function Header() {
+const Component = () => {
   return (
     <div>
       <Helmet>
@@ -30,4 +31,5 @@ export default function Header() {
       </div>
     </div>
   );
+}
 }

@@ -111,7 +111,7 @@ const BlogPage: React.FC = () => {
 
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = filteredPosts.filter(post => !post.featured);
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -379,5 +379,6 @@ const BlogPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default BlogPage;

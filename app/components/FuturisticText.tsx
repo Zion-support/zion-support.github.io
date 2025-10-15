@@ -8,8 +8,7 @@ interface FuturisticTextProps {
   speed?: number;
   className?: string;
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
-}
-
+};
 const FuturisticText = (_{ 
   text, delay = 0, speed = 100, className, as: Component = 'span'
 }: FuturisticTextProps) => {
@@ -23,22 +22,25 @@ const FuturisticText = (_{
         setDisplayedText(prev => prev + text[currentIndex]);
         setCurrentIndex(prev => prev + 1);
       }, speed);
-
-      return () => clearTimeout(timeout);
+const Component = () => {
+  return () => clearTimeout(timeout);
     } else {
       setIsComplete(true);
     }
   }, [currentIndex, text, speed])
   useEffect(() => {}
-}if (delay > 0) {}
-      const timeout = setTimeout(() => {}
+}
+  if (delay > 0) {};
+const timeout = setTimeout(() => {}
 }setCurrentIndex(0)
         setDisplayedText('')
         setIsComplete(false)
       }, delay)
-      return () => clearTimeout(timeout)
+const Component = () => {
+  return () => clearTimeout(timeout)
     }
   }, [delay])
+const Component = () => {
   return ()
     <Component
       className={cn()

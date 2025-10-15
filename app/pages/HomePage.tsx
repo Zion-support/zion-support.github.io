@@ -18,6 +18,7 @@ const structuredData = {
   };
 
 const HomePage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -33,5 +34,7 @@ const HomePage: React.FC = () => {
     </>
   );
 };
+}
+}
 
 export default HomePage;

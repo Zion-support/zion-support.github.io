@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const AnalyticsToolsPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const AnalyticsToolsPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AnalyticsToolsPage;

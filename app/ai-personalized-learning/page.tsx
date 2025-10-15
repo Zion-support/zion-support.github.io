@@ -101,7 +101,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
     "Marketing & Sales", "Finance & Accounting", "Healthcare & Medicine", "Engineering",
     "Languages", "Soft Skills", "Certification Prep", "Technical Skills"
   ];
-
+const Component = () => {
   return (<>
       <Helmet>
         <title>AI Personalized Learning - Zion Tech Group | Adaptive Education Platform</title>
@@ -285,5 +285,6 @@ const AiPersonalizedLearningPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AiPersonalizedLearningPage;

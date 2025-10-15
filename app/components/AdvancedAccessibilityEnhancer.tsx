@@ -10,9 +10,10 @@ interface AccessibilitySettings {
   keyboardNavigation: boolean;
   reducedMotion: boolean;
   focusIndicator: boolean;
-}
+};
 const AdvancedAccessibilityEnhancer: React.FC = () => {}
-}const [settings, setSettings] = useState<AccessibilitySettings>({}
+};
+const [settings, setSettings] = useState<AccessibilitySettings>({}
     highContrast: false,
     largeText: false,
     screenReader: false,
@@ -43,17 +44,17 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {}
     } else {
       root.classList.remove('high-contrast');
     }
-    if (newSettings.largeText) {}
+  if (newSettings.largeText) {}
       root.classList.add('large-text')
     } else {}
       root.classList.remove('large-text')
     }
-    if (newSettings.reducedMotion) {}
+  if (newSettings.reducedMotion) {}
       root.classList.add('reduced-motion')
     } else {}
       root.classList.remove('reduced-motion')
     }
-    if (newSettings.focusIndicator) {}
+  if (newSettings.focusIndicator) {}
       root.classList.add('enhanced-focus')
     } else {}
       root.classList.remove('enhanced-focus')
@@ -65,8 +66,8 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {}
       ...prev,
       [key]: !prev[key]
     }))
-  }
-  const accessibilityFeatures = []
+  };
+const accessibilityFeatures = []
     {}
       key: 'highContrast' as keyof AccessibilitySettings,
       icon: Contrast,
@@ -106,7 +107,8 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {}
   ];
 
   if (!isVisible) {
-    return (<button
+const Component = () => {
+  return (<button
         onClick={() => setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
         aria-label="Open accessibility settings"
@@ -114,8 +116,8 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {}
         <Eye className="w-6 h-6" />
       </button>
     )
-  }
-
+  };
+const Component = () => {
   return (<div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6 w-80 z-50">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -132,7 +134,8 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {}
       <div className="space-y-4">
         {accessibilityFeatures.map((feature) => {
           const Icon = feature.icon;
-          return (<div key={feature.key} className="flex items-center justify-between">
+const Component = () => {
+  return (<div key={feature.key} className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <Icon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
                 <div>

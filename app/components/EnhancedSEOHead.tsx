@@ -12,8 +12,7 @@ interface SEOHeadProps {
   structuredData?: Record<string, unknown>;
   noindex?: boolean;
   nofollow?: boolean;
-}
-
+};
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   title, description, _keywords, _canonical, ogImage = '/images/og-default.jpg', ogType = 'website', twitterCard = 'summary_large_image', _structuredData, noindex = false, nofollow = false
 }) => {
@@ -47,10 +46,11 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       "https://linkedin.com/company/ziontechgroup",
       "https://github.com/ziontechgroup"
     ]
-  }
-  const mergedStructuredData = structuredData
+  };
+const mergedStructuredData = structuredData
     ? { ...defaultStructuredData, ...structuredData }
     : defaultStructuredData
+const Component = () => {
   return ()
     <Helmet>
       {/* Basic Meta Tags */}

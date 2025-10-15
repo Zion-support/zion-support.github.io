@@ -209,7 +209,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
       industry: 'Manufacturing'
     }
   ];
-
+const Component = () => {
   return (<>
       <Helmet>
         <title>Solutions - Zion Tech Group | Industry-Specific AI & IT Solutions</title>
@@ -444,5 +444,6 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
     </>
   );
 };
+}
 
 export default SolutionsPage;

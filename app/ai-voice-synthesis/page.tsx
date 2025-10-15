@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const AiVoiceSynthesisPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const AiVoiceSynthesisPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AiVoiceSynthesisPage;

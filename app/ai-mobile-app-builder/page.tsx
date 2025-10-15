@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const AiMobileAppBuilderPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const AiMobileAppBuilderPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AiMobileAppBuilderPage;

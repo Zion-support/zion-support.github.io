@@ -55,7 +55,7 @@ const G5gSolutionsPage: React.FC = () => {
     "5G NR", "Network Slicing", "Edge Computing", "IoT Protocols", 
     "AI/ML Integration", "Cloud-Native", "SDN/NFV", "MEC"
   ];
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -137,5 +137,6 @@ const G5gSolutionsPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default G5gSolutionsPage;

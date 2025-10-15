@@ -147,6 +147,7 @@ const AIProjectManagementProPage: React.FC = () => {
   ];
 
 const AiProjectManagementProPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -413,5 +414,7 @@ const AiProjectManagementProPage: React.FC = () => {
     </>
   );
 };
+}
+}
 
 export default AIProjectManagementProPage;

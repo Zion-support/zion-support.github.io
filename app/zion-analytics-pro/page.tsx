@@ -83,6 +83,7 @@ export default function ZionAnalyticsPro() {
   ];
 
 const ZionAnalyticsProPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -329,5 +330,7 @@ const ZionAnalyticsProPage: React.FC = () => {
     </>
   );
 };
+}
+}
 
 export default ZionAnalyticsProPage;

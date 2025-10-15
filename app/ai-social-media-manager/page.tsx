@@ -140,7 +140,7 @@ const AISocialMediaManagerPage: React.FC = () => {
       results: '200% increase in follower growth'
     }
   ];
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -418,5 +418,6 @@ const AISocialMediaManagerPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AISocialMediaManagerPage;

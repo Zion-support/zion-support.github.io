@@ -2,6 +2,7 @@ import React from 'react';
 import {  } from "lucide-react";
 
 const CybersecurityPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const CybersecurityPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default CybersecurityPage;

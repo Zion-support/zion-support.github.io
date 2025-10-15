@@ -9,8 +9,7 @@ interface ImageOptimizerProps {
   height?: number;
   priority?: boolean;
   placeholder?: string;
-}
-
+};
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   src, alt, className = '', _width, _height, priority = false, _placeholder, effect = 'blur', threshold = 100, _onLoad, _onError
 }) => {
@@ -46,9 +45,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const generateSrcSet = (_baseSrc: string) => {
     if (baseSrc.startsWith('http') || baseSrc.startsWith('/')) {
       return baseSrc;
-    }
-
-    const sizes = [320, 640, 768, 1024, 1280, 1920];
+    };
+const sizes = [320, 640, 768, 1024, 1280, 1920];
     const srcSet = sizes
       .map(size => `${baseSrc}?w=${size} ${size}w`)
       .join(', ');
@@ -60,7 +58,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const srcSet = generateSrcSet(src);
 
   if (hasError) {
-    return (
+const Component = () => {
+  return (
       <div 
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height }}
@@ -69,9 +68,9 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       </div>
     );
   }
-
   if (priority) {
-    return (
+const Component = () => {
+  return (
       <img
         ref={imgRef}
         src={optimizedSrc}
@@ -86,8 +85,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         decoding="async"
       />
     );
-  }
-
+  };
+const Component = () => {
   return (
 <div
       ref={imgRef}
@@ -127,5 +126,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     </div>
   );
 };
+}
+}
+}
 
 export default ImageOptimizer;

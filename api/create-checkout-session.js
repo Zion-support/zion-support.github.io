@@ -15,9 +15,8 @@ export default withErrorLogging(async (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
-  }
-
-  const { productId } = req.body;
+  };
+const { productId } = req.body;
   if (!productId) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Product ID is required' }));

@@ -1,6 +1,6 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-
+const Component = () => {
   return (<>
       <Helmet>
         <title>Sitemap - Zion Tech Group | Complete Website Directory</title>

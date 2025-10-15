@@ -3,9 +3,11 @@ export function useIntersectionObserver()
   callback: IntersectionObserverCallback,
   options?: IntersectionObserverInit
 ) {}
-}const ref = useRef<HTMLElement>(null)
+};
+const ref = useRef<HTMLElement>(null)
   useEffect(() => {}
-}const element = ref.current
+};
+const element = ref.current
     if (!element) return
     const observer = new IntersectionObserver(callback, {}
       threshold: 0.1,
@@ -13,7 +15,8 @@ export function useIntersectionObserver()
       ...options
     })
     observer.observe(element)
-    return () => {}
+const Component = () => {
+  return () => {}
 }observer.unobserve(element)
     }
   }, [callback, options])

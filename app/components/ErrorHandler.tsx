@@ -70,11 +70,12 @@ class ErrorHandler extends Component<Props, State> {}
 }window.location.href = '/'
   }
   render() {}
-    if (this.state.hasError) {}
-      if (this.props.fallback) {}
+  if (this.state.hasError) {}
+  if (this.props.fallback) {}
         return this.props.fallback
-      }
-      return ()
+      };
+const Component = () => {
+  return ()
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="flex justify-center mb-4">

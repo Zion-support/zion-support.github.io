@@ -10,8 +10,7 @@ interface SEOOptimizerProps {
   ogImage?: string;
   noIndex?: boolean;
   structuredData?: unknown;
-}
-
+};
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions", description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, _and digital transformation expertise. 99.9% uptime SLA, _24/7 support.", keywords = "AI solutions, _IT services, _cybersecurity, _cloud computing, _digital transformation, _business automation, _technology consulting, _Zion Tech Group, _machine learning, _5G solutions, _micro SaaS, _enterprise software", _canonical, ogImage = "https://ziontechgroup.com/og-image.jpg", noIndex = false, _structuredData
 }) => {
@@ -21,7 +20,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   // Generate breadcrumb structured data
   const generateBreadcrumbData = () => {}
-}const pathSegments = location.pathname.split('/').filter(Boolean)
+};
+const pathSegments = location.pathname.split('/').filter(Boolean)
     const breadcrumbs = []
       {}
         "@type": "ListItem",
@@ -105,7 +105,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }
   // Page-specific structured data
   const getPageStructuredData = () => {}
-}const path = location.pathname
+};
+const path = location.pathname
     if (path === '/') {}
       return {}
         ...defaultStructuredData,
@@ -117,19 +118,19 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         }
       }
     }
-    if (path === '/about') {}
+  if (path === '/about') {}
       return {}
         ...defaultStructuredData,
         "@type": "AboutPage"
       }
     }
-    if (path === '/contact') {}
+  if (path === '/contact') {}
       return {}
         ...defaultStructuredData,
         "@type": "ContactPage"
       }
     }
-    if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-')) {}
+  if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-')) {}
       return {}
         ...defaultStructuredData,
         "@type": "Service",
@@ -153,8 +154,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       }
     }
     return defaultStructuredData
-  }
-  const finalStructuredData = structuredData || getPageStructuredData()
+  };
+const finalStructuredData = structuredData || getPageStructuredData()
   const breadcrumbData = generateBreadcrumbData()
   // Track page views
   useEffect(() => {}
@@ -165,6 +166,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         page_location: currentUrl})
     }
   }, [title, currentUrl])
+const Component = () => {
   return ()
     <Helmet>
       {/* Basic Meta Tags */}

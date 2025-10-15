@@ -1,7 +1,7 @@
 "use client"
 import { Suspense, lazy } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { HelmetProvider } from "react-helmet-async"
+import { HelmetProvider, Helmet } from "react-helmet-async"
 import ErrorBoundary from "./components/ErrorBoundary"
 import PerformanceMonitor from "./components/PerformanceMonitor"
 import AccessibilityEnhancer from "./components/AccessibilityEnhancer"
@@ -38,9 +38,14 @@ const FiveGSmartCitySolutionsPage = lazy(() => import("./5g-smart-city-solutions
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 
 // Main App Component
-function App() {}
-}return ()
-    <HelmetProvider></Helmet>
+function App() {
+const Component = () => {
+  return (
+    <HelmetProvider>
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <meta name="description" content="Leading provider of AI-powered solutions, 5G technology, and comprehensive IT services." />
+      </Helmet>
       <BrowserRouter>
         <ErrorBoundary>
           <PerformanceMonitor />
@@ -103,5 +108,6 @@ function App() {}
       </BrowserRouter>
     </HelmetProvider>
   )
+}
 }
 export default App

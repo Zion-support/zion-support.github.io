@@ -82,6 +82,7 @@ const ServicesPage: React.FC = () => {
   ];
 
 const ServicesPage: React.FC = () => {ursor/analyze-improve-and-merge-code-4a9f
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -97,5 +98,7 @@ const ServicesPage: React.FC = () => {ursor/analyze-improve-and-merge-code-4a9f
     </>
   );
 };
+}
+}
 
 export default ServicesPage;

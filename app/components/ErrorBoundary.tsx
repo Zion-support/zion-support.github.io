@@ -61,9 +61,9 @@ class ErrorBoundary extends Component<Props, State> {
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback
-      }
-
-      return (
+      };
+const Component = () => {
+  return (
         <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white">
           <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-6 text-center">
             <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full">
@@ -139,6 +139,7 @@ class ErrorBoundary extends Component<Props, State> {
 
     return this.props.children
   }
+}
 }
 
 export default ErrorBoundary;

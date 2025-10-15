@@ -158,7 +158,7 @@ const HelpPage: React.FC = () => {
   const toggleFAQ = (id: number) => {
     setExpandedFAQ(expandedFAQ === id ? null : id);
   };
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -408,5 +408,6 @@ const HelpPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default HelpPage;

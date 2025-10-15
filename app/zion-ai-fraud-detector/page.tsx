@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const ZionAiFraudDetectorPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const ZionAiFraudDetectorPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default ZionAiFraudDetectorPage;

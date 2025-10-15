@@ -4,19 +4,19 @@ import OptimizedLoadingSpinner from './OptimizedLoadingSpinner';
 interface LazyRouteProps {
   component: () => Promise<{ default: ComponentType<any> }>;
   fallback?: React.ReactNode;
-}
-
+};
 const LazyRoute: React.FC<LazyRouteProps> = ({ 
   component, 
   fallback = <OptimizedLoadingSpinner size="lg" text="Loading page..." /> 
 }) => {
   const LazyComponent = lazy(component);
-
+const Component = () => {
   return (
     <Suspense fallback={fallback}>
       <LazyComponent />
     </Suspense>
   );
 };
+}
 
 export default LazyRoute;

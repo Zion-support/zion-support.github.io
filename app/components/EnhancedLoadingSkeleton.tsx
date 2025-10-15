@@ -5,27 +5,27 @@ interface SkeletonProps {}
   className?: string
   rounded?: boolean
   animated?: boolean
-}
-
+};
 const Skeleton: React.FC<SkeletonProps> = ({
   width = "100%", height = "1rem", className = "", rounded = true, animated = true, }) => {
   const style = {
     width: typeof width === "number" ? `${width}px` : width,
-    height: typeof height === "number" ? `${height}px` : height}
+    height: typeof height === "number" ? `${height}px` : height};
+const Component = () => {
   return ()
     <div
       className={`bg-gray-700 ${rounded ? "rounded" : ""} ${animated ? "animate-pulse" : ""} ${className}`}
       style={style}
     />
   )
-}
-
+};
 const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
   type = "card", count = 1, className = "", }) => {
   const renderSkeleton = () => {
     switch (type) {
       case "card":
-        return ()
+const Component = () => {
+  return ()
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
             <Skeleton width={60} height={20} className="mb-4" />
             <Skeleton width="100%" height={24} className="mb-2" />
@@ -42,7 +42,8 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
           </div>
         )
       case "list":
-        return ()
+const Component = () => {
+  return ()
           <div className="space-y-4">
             {Array.from({ length: count }).map(( index) => (
               <div key={index} className="flex items-center space-x-4">
@@ -56,7 +57,8 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
           </div>
         )
       case "text":
-        return ()
+const Component = () => {
+  return ()
           <div className="space-y-2">
             <Skeleton width="100%" height={20} />
             <Skeleton width="95%" height={16} />
@@ -72,7 +74,8 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
       default:
         return <Skeleton width="100%" height={100} />
     }
-  }
+  };
+const Component = () => {
   return ()
     <div className={className}>
       {Array.from({ length: count }).map(( index) => (
@@ -82,5 +85,9 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
       ))}
     </div>
   )
+}
+}
+}
+}
 }
 export default EnhancedLoadingSkeleton

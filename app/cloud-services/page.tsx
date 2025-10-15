@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const CloudServicesPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -122,5 +123,6 @@ const CloudServicesPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default CloudServicesPage;

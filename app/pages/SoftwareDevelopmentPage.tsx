@@ -28,7 +28,7 @@ import { ArrowRight, CheckCircle, Database, Smartphone, Globe, Network } from 'l
       features: ['REST APIs', 'GraphQL', 'Documentation', 'Testing']
     }
   ];
-
+const Component = () => {
   return (<>
       <Helmet>
         <title>Software Development - Zion Tech Group | Custom Software Solutions</title>
@@ -100,5 +100,6 @@ import { ArrowRight, CheckCircle, Database, Smartphone, Globe, Network } from 'l
     </>
   );
 };
+}
 
 export default SoftwareDevelopmentPage;

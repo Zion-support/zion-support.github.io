@@ -11,8 +11,7 @@ interface OptimizedImageProps {
   placeholder?: string;
   onLoad?: () => void;
   onError?: () => void;
-}
-
+};
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src, alt, className = '', _width, _height, priority = false, placeholder = 'data:image/svg+xml;base64, _PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+', _onLoad, _onError, _}) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -33,18 +32,20 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     )
     if (imgRef.current) {}
       observer.observe(imgRef.current)
-    }
-    return () => observer.disconnect()
+    };
+const Component = () => {
+  return () => observer.disconnect()
   }, [priority])
   const handleLoad = () => {}
 }setIsLoaded(true)
     onLoad?.()
-  }
-  const handleError = () => {}
+  };
+const handleError = () => {}
 }setHasError(true)
     onError?.()
-  }
-  const imageSrc = isInView ? src : placeholder
+  };
+const imageSrc = isInView ? src : placeholder
+const Component = () => {
   return ()
     <div
       ref={imgRef}

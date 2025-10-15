@@ -1,6 +1,6 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-
+const Component = () => {
   return (<>
       <Helmet>
         <title>Community - Zion Tech Group | Tech Community & Events</title>

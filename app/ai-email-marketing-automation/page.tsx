@@ -125,7 +125,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
       results: '50% reduction in no-shows'
     }
   ];
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -373,5 +373,6 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AIEmailMarketingAutomationPage;

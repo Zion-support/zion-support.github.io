@@ -26,8 +26,8 @@ export function responsiveClass()
   md?: string,
   lg?: string,
   xl?: string
-): string {}
-  const classes = [base]
+): string {};
+const classes = [base]
   if (sm) classes.push(`sm:${sm}`)
   if (md) classes.push(`md:${md}`)
   if (lg) classes.push(`lg:${lg}`)
@@ -40,8 +40,8 @@ export function responsiveClass()
 export function stateClass()
   state: 'default' | 'hover' | 'focus' | 'active' | 'disabled',
   baseClass: string
-): string {}
-  const stateMap = {}
+): string {};
+const stateMap = {}
     default: baseClass,
     hover: `hover:${baseClass}`,
     focus: `focus:${baseClass}`,

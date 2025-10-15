@@ -21,8 +21,7 @@ interface StructuredData {
   '@context': string;
   '@type': string;
   [key: string]: unknown;
-}
-
+};
 const UnifiedSEOHead: React.FC<SEOHeadProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 99.9% uptime SLA, 24/7 support.",
@@ -127,8 +126,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({
         }
       };
     }
-
-    if (path === '/about') {
+  if (path === '/about') {
       return {
         ...baseData,
         '@type': 'AboutPage',
@@ -142,8 +140,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({
         }
       };
     }
-
-    if (path === '/contact') {
+  if (path === '/contact') {
       return {
         ...baseData,
         '@type': 'ContactPage',
@@ -160,8 +157,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({
         }
       };
     }
-
-    if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-') || path.startsWith('/5g-')) {
+  if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-') || path.startsWith('/5g-')) {
       return {
         ...baseData,
         '@type': 'Service',
@@ -290,7 +286,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({
       });
     }
   }, [title, currentUrl]);
-
+const Component = () => {
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -394,5 +390,6 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({
     </Helmet>
   );
 };
+}
 
 export default UnifiedSEOHead;

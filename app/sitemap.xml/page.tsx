@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const Sitemap.xmlPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const Sitemap.xmlPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default Sitemap.xmlPage;

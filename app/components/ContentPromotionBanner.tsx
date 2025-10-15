@@ -8,8 +8,7 @@ interface ContentPromotionBannerProps {}
   ctaLink?: string
   variant?: "primary" | "secondary" | "success"
   className?: string
-}
-
+};
 const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
   title = "Transform Your Business with AI", description = "Discover how our cutting-edge AI solutions can revolutionize your operations and drive unprecedented growth.", ctaText = "Get Started Today", ctaLink = "/contact", variant = "primary", className = "", }) => {
   const getVariantStyles = () => {
@@ -23,8 +22,8 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
       default:
         return "bg-gradient-to-r from-cyan-500 to-purple-600"
     }
-  }
-  const getIcon = () => {}
+  };
+const getIcon = () => {}
 }switch (variant) {}
       case "primary":
         return <Zap className="w-6 h-6" />
@@ -35,7 +34,8 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
       default:
         return <Zap className="w-6 h-6" />
     }
-  }
+  };
+const Component = () => {
   return ()
     <div
       className={`relative overflow-hidden rounded-lg p-8 text-white ${getVariantStyles()} ${className}`}

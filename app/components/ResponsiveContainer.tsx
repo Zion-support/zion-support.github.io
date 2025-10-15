@@ -4,8 +4,7 @@ interface ResponsiveContainerProps {}
   children: React.ReactNode
   className?: string
   maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | 'full'
-}
-
+};
 const ResponsiveContainer = (_{ 
   children, className, maxWidth = '7xl'
 }: ResponsiveContainerProps) => {
@@ -21,7 +20,8 @@ const ResponsiveContainer = (_{
     '6xl': 'max-w-6xl',
     '7xl': 'max-w-7xl',
     full: 'max-w-full'
-  }
+  };
+const Component = () => {
   return ()
     <div className={cn()
       'mx-auto px-4 sm:px-6 lg:px-8',

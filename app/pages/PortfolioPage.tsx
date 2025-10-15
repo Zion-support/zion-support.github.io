@@ -205,7 +205,7 @@ const PortfolioPage: React.FC = () => {
     { number: '99.9%', label: 'Client Satisfaction' },
     { number: '24/7', label: 'Support Available' }
   ];
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -467,5 +467,6 @@ const PortfolioPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default PortfolioPage;

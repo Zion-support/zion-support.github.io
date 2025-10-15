@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { ArrowRight } from "lucide-react"
 export default function OptimizedLoading() {}
-}return ()
+  return ()
     <div className="optimized-loading-container">
       <div className="loading-content">
         <div className="spinner"></div>

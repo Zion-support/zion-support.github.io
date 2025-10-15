@@ -138,6 +138,7 @@ export default function ZionAiVideoGenerator() {
   ];
 
 const ZionAiVideoGeneratorPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -445,5 +446,7 @@ const ZionAiVideoGeneratorPage: React.FC = () => {
     </>
   );
 };
+}
+}
 
 export default ZionAiVideoGeneratorPage;

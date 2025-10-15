@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const AiSmartInvoicePage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const AiSmartInvoicePage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AiSmartInvoicePage;

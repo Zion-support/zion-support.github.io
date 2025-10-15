@@ -3,7 +3,7 @@ interface LoadingProps {}
   message?: string
 }
 export default function Loading({ message = "Loading..." }: LoadingProps) {}
-}return ()
+  return ()
     <div>
       <Helmet>
         <title>Loading - Zion Tech Group</title>

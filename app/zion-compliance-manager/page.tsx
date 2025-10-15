@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const ZionComplianceManagerPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const ZionComplianceManagerPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default ZionComplianceManagerPage;

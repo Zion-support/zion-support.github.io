@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const ZionAiCodeReviewerPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const ZionAiCodeReviewerPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default ZionAiCodeReviewerPage;

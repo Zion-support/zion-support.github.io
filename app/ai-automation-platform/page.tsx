@@ -1,6 +1,6 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code-4a9f
-
+import { Helmet } from 'react-helmet-async';
+const Component = () => {
   return (<>
       <Helmet>
         <title>AI Automation Platform - Intelligent Process Automation | Zion Tech Group</title>

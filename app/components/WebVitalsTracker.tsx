@@ -6,8 +6,7 @@ interface WebVitalsData {}
   delta: number
   id: string
   navigationType: string
-}
-
+};
 const WebVitalsTracker: React.FC = () => {
   useEffect(() => {
     const sendToAnalytics = (_metric: WebVitalsData) => {
@@ -42,9 +41,10 @@ const WebVitalsTracker: React.FC = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {}
       // Track page load time
       window.addEventListener('load', () => {}
-}const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        if (navigation) {}
-          const loadTime = navigation.loadEventEnd - navigation.loadEventStart
+};
+const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        if (navigation) {};
+const loadTime = navigation.loadEventEnd - navigation.loadEventStart
           sendToAnalytics({}
             name: 'LOAD_TIME',
             value: loadTime,
@@ -54,8 +54,8 @@ const WebVitalsTracker: React.FC = () => {
         }
       })
       // Track memory usage (if available)
-      if ('memory' in performance) {}
-        const memory = (performance as any).memory
+      if ('memory' in performance) {};
+const memory = (performance as any).memory
         const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
         sendToAnalytics({}
           name: 'MEMORY_USAGE',

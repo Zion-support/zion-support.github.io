@@ -114,7 +114,7 @@ const WebsiteAnalyticsToolPage = () => {
       icon: <TrendingUp className="w-6 h-6" />
     }
   ];
-
+const Component = () => {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Website Analytics Tool - Zion Tech Group | Advanced Web Analytics & Tracking"
@@ -298,5 +298,6 @@ const WebsiteAnalyticsToolPage = () => {
     </div>
   );
 };
+}
 
 export default WebsiteAnalyticsToolPage;

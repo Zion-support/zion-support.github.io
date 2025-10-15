@@ -2,6 +2,7 @@ import React from 'react';
 import { MessageSquare } from "lucide-react";
 
 const ChatPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -43,5 +44,6 @@ const ChatPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default ChatPage;

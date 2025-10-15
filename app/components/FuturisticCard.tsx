@@ -5,8 +5,7 @@ interface FuturisticCardProps {}
   className?: string
   glowColor?: 'cyan' | 'purple' | 'pink' | 'blue' | 'green' | 'orange' | 'red' | 'yellow'
   hover?: boolean
-}
-
+};
 const FuturisticCard = (_{ 
   children, className, glowColor = 'cyan', hover = true 
 }: FuturisticCardProps) => {
@@ -18,7 +17,8 @@ const FuturisticCard = (_{
     green: 'hover:shadow-green-500/25',
     orange: 'hover:shadow-orange-500/25',
     red: 'hover:shadow-red-500/25',
-    yellow: 'hover:shadow-yellow-500/25'}
+    yellow: 'hover:shadow-yellow-500/25'};
+const Component = () => {
   return ()
     <div
       className={cn()

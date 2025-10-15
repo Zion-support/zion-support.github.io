@@ -114,7 +114,7 @@ import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle,
     { number: "25%", label: "Faster Fulfillment" },
     { number: "50%", label: "Less Waste" }
   ];
-
+const Component = () => {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Smart Inventory Optimizer | Zion Tech Group</title>
@@ -168,5 +168,6 @@ import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle,
     </>
   );
 };
+}
 
 export default SmartInventoryOptimizerPage;

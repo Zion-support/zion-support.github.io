@@ -50,8 +50,8 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
 
     mediaQuery.addEventListener('change', handleChange);
     document.documentElement.classList.toggle('high-contrast', mediaQuery.matches);
-
-    return () => mediaQuery.removeEventListener('change', handleChange);
+const Component = () => {
+  return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
   // Check for reduced motion preference
@@ -69,8 +69,8 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
 
     mediaQuery.addEventListener('change', handleChange);
     document.documentElement.classList.toggle('reduced-motion', mediaQuery.matches);
-
-    return () => mediaQuery.removeEventListener('change', handleChange);
+const Component = () => {
+  return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
   // Detect keyboard usage
@@ -93,8 +93,8 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
 
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
-
-    return () => {
+const Component = () => {
+  return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
     };
@@ -194,8 +194,8 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
 
     container.addEventListener('keydown', handleKeyDown);
     firstElement.focus();
-
-    return () => {
+const Component = () => {
+  return () => {
       container.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
@@ -303,18 +303,15 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
       const cleanup = checkHighContrast();
       if (cleanup) cleanupFunctions.push(cleanup);
     }
-
-    if (enableReducedMotion) {
+  if (enableReducedMotion) {
       const cleanup = checkReducedMotion();
       if (cleanup) cleanupFunctions.push(cleanup);
     }
-
-    if (enableKeyboardNavigation) {
+  if (enableKeyboardNavigation) {
       const cleanup = detectKeyboardUsage();
       cleanupFunctions.push(cleanup);
     }
-
-    if (enableFocusManagement) {
+  if (enableFocusManagement) {
       updateFocusableElements();
     }
 
@@ -324,8 +321,8 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'skip-link';
     document.body.insertBefore(skipLink, document.body.firstChild);
-
-    return () => {
+const Component = () => {
+  return () => {
       document.head.removeChild(style);
       if (document.body.contains(skipLink)) {
         document.body.removeChild(skipLink);
@@ -356,5 +353,10 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     updateFocusableElements
   };
 };
+}
+}
+}
+}
+}
 
 export default useAccessibility;

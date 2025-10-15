@@ -47,7 +47,7 @@ import { Play, BarChart3, Shield } from 'lucide-react';const DemoPage: React.FC 
       rating: 5
     }
   ];
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -65,6 +65,7 @@ import { Play, BarChart3, Shield } from 'lucide-react';const DemoPage: React.FC 
 };
 
 export default DemoPage;
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -80,5 +81,6 @@ export default DemoPage;
     </>
   );
 };
+}
 
 export default DemoPage;

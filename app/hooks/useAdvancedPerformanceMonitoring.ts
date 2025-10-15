@@ -23,7 +23,8 @@ interface PerformanceConfig {}
   longTaskThreshold?: number
 }
 export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {}) => {}
-}const {}
+};
+const {}
     enableMemoryMonitoring = true,
     enableResourceTiming = true,
     enableLongTaskMonitoring = true,
@@ -125,7 +126,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
                 if (entry.name === 'time-to-interactive') {}
                   metricsRef.current.tti = metric.duration
                 }
-                if (entry.name === 'first-meaningful-paint') {}
+  if (entry.name === 'first-meaningful-paint') {}
                   metricsRef.current.fmp = metric.startTime
                 }
                 break
@@ -146,7 +147,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
         if (enableLongTaskMonitoring) {}
           entryTypes.push('longtask')
         }
-        if (enableResourceTiming) {}
+  if (enableResourceTiming) {}
           entryTypes.push('resource')
         }
 
@@ -182,8 +183,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       }
       checkMemory()
       const interval = setInterval(checkMemory, 10000); // Check every 10 seconds
-      
-      return () => clearInterval(interval);
+const Component = () => {
+  return () => clearInterval(interval);
     };
 
     const setupLayoutShiftMonitoring = () => {
@@ -206,9 +207,9 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
         clsObserver.observe({ entryTypes: ['layout-shift'] });
 
 
-      }
-
-      return () => clsObserver.disconnect();
+      };
+const Component = () => {
+  return () => clsObserver.disconnect();
     };
 
     // Setup all monitoring
@@ -222,17 +223,19 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 }reportMetrics()
     }
     window.addEventListener('beforeunload', handleBeforeUnload)
-    return () => {}
-}if (observerRef.current) {}
+const Component = () => {
+  return () => {}
+}
+  if (observerRef.current) {}
         observerRef.current.disconnect()
       }
-      if (memoryCleanup) {}
+  if (memoryCleanup) {}
         memoryCleanup()
       }
-      if (clsCleanup) {}
+  if (clsCleanup) {}
         clsCleanup()
       }
-      if (reportIntervalRef.current) {}
+  if (reportIntervalRef.current) {}
         clearInterval(reportIntervalRef.current)
       }
       window.removeEventListener('beforeunload', handleBeforeUnload)

@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const GdprCompliancePage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const GdprCompliancePage: React.FC = () => {
     </>
   );
 };
+}
 
 export default GdprCompliancePage;

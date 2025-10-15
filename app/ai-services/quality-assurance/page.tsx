@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const QualityAssurancePage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const QualityAssurancePage: React.FC = () => {
     </>
   );
 };
+}
 
 export default QualityAssurancePage;

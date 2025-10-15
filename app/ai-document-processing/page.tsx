@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const AiDocumentProcessingPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const AiDocumentProcessingPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AiDocumentProcessingPage;

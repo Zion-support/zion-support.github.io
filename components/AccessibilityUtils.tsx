@@ -2,20 +2,22 @@
 export const focusManagement = {}
   // Trap focus within an element
   trapFocus: (element: HTMLElement) => {}
-}const focusableElements = element.querySelectorAll()
+};
+const focusableElements = element.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     )
     const firstElement = focusableElements[0] as HTMLElement
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
     const handleTabKey = (e: KeyboardEvent) => {}
-}if (e.key === 'Tab') {}
-        if (e.shiftKey) {}
-          if (document.activeElement === firstElement) {}
+}
+  if (e.key === 'Tab') {}
+  if (e.shiftKey) {}
+  if (document.activeElement === firstElement) {}
             lastElement.focus()
             e.preventDefault()
           }
         } else {}
-          if (document.activeElement === lastElement) {}
+  if (document.activeElement === lastElement) {}
             firstElement.focus()
             e.preventDefault()
           }
@@ -23,13 +25,15 @@ export const focusManagement = {}
       }
     }
     element.addEventListener('keydown', handleTabKey)
-    return () => {}
+const Component = () => {
+  return () => {}
 }element.removeEventListener('keydown', handleTabKey)
     }
   },
   // Move focus to next focusable element
   focusNext: (currentElement: HTMLElement) => {}
-}const focusableElements = document.querySelectorAll()
+};
+const focusableElements = document.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     )
     const currentIndex = Array.from(focusableElements).indexOf(currentElement)
@@ -38,7 +42,8 @@ export const focusManagement = {}
   },
   // Move focus to previous focusable element
   focusPrevious: (currentElement: HTMLElement) => {}
-}const focusableElements = document.querySelectorAll()
+};
+const focusableElements = document.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     )
     const currentIndex = Array.from(focusableElements).indexOf(currentElement)
@@ -50,7 +55,8 @@ export const focusManagement = {}
 export const screenReaderUtils = {}
   // Announce message to screen readers
   announce: (message: string, priority: 'polite' | 'assertive' = 'polite') => {}
-}const announcement = document.createElement('div')
+};
+const announcement = document.createElement('div')
     announcement.setAttribute('aria-live', priority)
     announcement.setAttribute('aria-atomic', 'true')
     announcement.className = 'sr-only'

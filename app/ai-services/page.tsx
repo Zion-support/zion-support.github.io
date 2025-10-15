@@ -197,7 +197,7 @@ const AiServicesPage: React.FC = () => {
       color: "from-teal-500 to-cyan-500"
     }
   ];
-
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -351,5 +351,6 @@ const AiServicesPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AiServicesPage;

@@ -10,8 +10,7 @@ interface FuturisticButtonProps {}
   className?: string
   icon?: React.ReactNode
   disabled?: boolean
-}
-
+};
 const FuturisticButton = (_{ 
   children, href, _onClick, variant = 'primary', size = 'md', _className, _icon, disabled = false
 }: FuturisticButtonProps) => {
@@ -21,14 +20,14 @@ const FuturisticButton = (_{
     sm: 'px-4 py-2 text-sm rounded-lg',
     md: 'px-6 py-3 text-base rounded-lg',
     lg: 'px-8 py-4 text-lg rounded-xl'
-  }
-  const variantClasses = {}
+  };
+const variantClasses = {}
     primary: 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25 hover:scale-105',
     secondary: 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 shadow-lg hover:shadow-purple-500/25 hover:scale-105',
     outline: 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 hover:scale-105',
     ghost: 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 hover:scale-105'
-  }
-  const buttonClasses = cn()
+  };
+const buttonClasses = cn()
     baseClasses,
     sizeClasses[size],
     variantClasses[variant],
@@ -42,8 +41,9 @@ const FuturisticButton = (_{
       <span className="relative z-10">{children}</span>
 </div>
   )
-  if (href) {}
-    return ()
+  if (href) {};
+const Component = () => {
+  return ()
       <Link
         to={href}
         className={buttonClasses}
@@ -52,7 +52,8 @@ const FuturisticButton = (_{
         {content}
       </Link>
     )
-  }
+  };
+const Component = () => {
   return ()
     <button
       className={buttonClasses}

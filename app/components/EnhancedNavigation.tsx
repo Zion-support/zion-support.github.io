@@ -146,7 +146,7 @@ const EnhancedNavigation = () => {
     { label: 'Consultation', href: '/consultation' },
     { label: 'Sitemap', href: '/sitemap' }
   ];
-
+const Component = () => {
   return (
     <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

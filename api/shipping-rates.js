@@ -9,9 +9,8 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
-  }
-
-  const { destination, weight } = req.body;
+  };
+const { destination, weight } = req.body;
   if (!destination || !weight) {
     return res.status(400).json({ error: 'Destination and weight are required' });
   }
@@ -24,9 +23,8 @@ export default async function handler(req, res) {
     }
   } catch (error) {
     console.error('Error reading existing rates:', error);
-  }
-
-  const distanceMultiplier = destination === 'US' ? 1 : 2;
+  };
+const distanceMultiplier = destination === 'US' ? 1 : 2;
   const baseRate = 10;
   const rate = baseRate + (weight * 0.5 * distanceMultiplier);
 

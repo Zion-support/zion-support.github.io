@@ -139,6 +139,7 @@ export default function ZionAiInvoiceGenerator() {
   ];
 
 const ZionAiInvoiceGeneratorPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -445,5 +446,7 @@ const ZionAiInvoiceGeneratorPage: React.FC = () => {
     </>
   );
 };
+}
+}
 
 export default ZionAiInvoiceGeneratorPage;

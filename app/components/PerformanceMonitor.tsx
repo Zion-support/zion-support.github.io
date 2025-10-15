@@ -7,8 +7,7 @@ interface PerformanceMetrics {
   FCP: number | null;
   LCP: number | null;
   TTFB: number | null;
-}
-
+};
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     CLS: null,

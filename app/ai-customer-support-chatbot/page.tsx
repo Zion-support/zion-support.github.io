@@ -146,6 +146,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
   ];
 
 const AiCustomerSupportChatbotPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -412,5 +413,7 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
     </>
   );
 };
+}
+}
 
 export default AICustomerSupportChatbotPage;

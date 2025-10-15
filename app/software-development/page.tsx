@@ -109,7 +109,7 @@ const SoftwareDevelopmentPage = () => {
       icon: <Shield className="w-6 h-6" />
     }
   ];
-
+const Component = () => {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Software Development Services - Zion Tech Group | Custom Web & Mobile Apps"
@@ -302,5 +302,6 @@ const SoftwareDevelopmentPage = () => {
     </div>
   );
 };
+}
 
 export default SoftwareDevelopmentPage;

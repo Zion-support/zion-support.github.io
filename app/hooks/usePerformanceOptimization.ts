@@ -161,8 +161,8 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     // Observe lazy load elements
     const lazyElements = document.querySelectorAll('.lazy-load');
     lazyElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
+const Component = () => {
+  return () => observer.disconnect();
   }, [enableLazyLoading]);
 
   // Bundle analysis
@@ -197,8 +197,8 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     setupPerformanceMonitoring();
     const lazyCleanup = setupLazyLoading();
     analyzeBundle();
-
-    return () => {
+const Component = () => {
+  return () => {
       observerRef.current?.disconnect();
       lazyCleanup?.();
     };
@@ -220,3 +220,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     analyzeBundle,
   };
 };
+}
+}
+
+export default Component;

@@ -4,8 +4,7 @@ import { Mail, CheckCircle } from "lucide-react";
 
 interface ContentNewsletterSignupProps {
   className?: string;
-}
-
+};
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   className = "", }) => {
   const [email, setEmail] = useState("");
@@ -27,8 +26,9 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       setIsLoading(false);
     }
   }
-  if (isSubscribed) {}
-    return ()
+  if (isSubscribed) {};
+const Component = () => {
+  return ()
       <div
         className={`bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg text-center ${className}`}
       >
@@ -39,8 +39,8 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         <p>You'll receive our latest updates and exclusive content.</p>
       </div>
     )
-  }
-
+  };
+const Component = () => {
   return (<div
       className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`}
     >
@@ -75,5 +75,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       </p>
     </div>
   )
+}
 }
 export default ContentNewsletterSignup

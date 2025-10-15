@@ -8,7 +8,8 @@ interface PerformanceMetrics {}
   timeToInteractive: number
 }
 export const usePerformanceMonitor = () => {}
-}const metricsRef = useRef<PerformanceMetrics>({}
+};
+const metricsRef = useRef<PerformanceMetrics>({}
     loadTime: 0,
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
@@ -17,8 +18,10 @@ export const usePerformanceMonitor = () => {}
     timeToInteractive: 0
   })
   useEffect(() => {}
-}const measurePerformance = () => {}
-}if (typeof window === 'undefined' || !window.performance) return
+};
+const measurePerformance = () => {}
+}
+  if (typeof window === 'undefined' || !window.performance) return
       // Measure page load time
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {}
@@ -33,7 +36,8 @@ export const usePerformanceMonitor = () => {}
         }
         // Largest Contentful Paint (LCP)
         const lcpObserver = new PerformanceObserver((list) => {}
-}const entries = list.getEntries()
+};
+const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1]
           metricsRef.current.largestContentfulPaint = lastEntry.startTime
         })
@@ -60,7 +64,8 @@ export const usePerformanceMonitor = () => {}
         clsObserver.observe({ entryTypes: ['layout-shift'] })
         // Time to Interactive (TTI) - approximation
         const ttiObserver = new PerformanceObserver((list) => {}
-}const entries = list.getEntries()
+};
+const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1]
           metricsRef.current.timeToInteractive = lastEntry.startTime
         })
@@ -98,7 +103,8 @@ export const usePerformanceMonitor = () => {}
     }
     measurePerformance()
     // Cleanup
-    return () => {}
+const Component = () => {
+  return () => {}
 }// Cleanup is handled by the setTimeout in measureWebVitals
     }
   }, [])

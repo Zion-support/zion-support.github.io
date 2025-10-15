@@ -124,6 +124,7 @@ const SupportPage: React.FC = () => {
   };
 
 export default function Support() {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -139,5 +140,7 @@ export default function Support() {
     </>
   );
 };
+}
+}
 
 export default SupportPage;

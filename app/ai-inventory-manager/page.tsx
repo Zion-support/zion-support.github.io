@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const AiInventoryManagerPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const AiInventoryManagerPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AiInventoryManagerPage;

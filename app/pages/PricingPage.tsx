@@ -265,7 +265,7 @@ const PricingPage: React.FC = () => {
   const filteredPricing = selectedCategory === 'all' 
     ? allPricing 
     : allPricing.filter(item => item.category === selectedCategory);
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -572,5 +572,6 @@ const PricingPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default PricingPage;

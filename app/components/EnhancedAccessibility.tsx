@@ -7,9 +7,10 @@ interface AccessibilitySettings {
   largeText: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
-}
+};
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {}
-}const [settings, setSettings] = useState<AccessibilitySettings>({}
+};
+const [settings, setSettings] = useState<AccessibilitySettings>({}
     highContrast: false,
     largeText: false,
     reducedMotion: false,
@@ -42,8 +43,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
     mediaQueries.highContrast.addEventListener('change', handleHighContrastChange);
     mediaQueries.reducedMotion.addEventListener('change', handleReducedMotionChange);
-
-    return () => {
+const Component = () => {
+  return () => {
       mediaQueries.highContrast.removeEventListener('change', handleHighContrastChange);
       mediaQueries.reducedMotion.removeEventListener('change', handleReducedMotionChange);
     };
@@ -57,13 +58,14 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       body.classList.add('high-contrast');
     } else {
       body.classList.remove('high-contrast');
-    }
-    const handleReducedMotionChange = (e: MediaQueryListEvent) => {}
+    };
+const handleReducedMotionChange = (e: MediaQueryListEvent) => {}
 }setSettings(prev => ({ ...prev, reducedMotion: e.matches }))
     }
     mediaQueries.highContrast.addEventListener('change', handleHighContrastChange)
     mediaQueries.reducedMotion.addEventListener('change', handleReducedMotionChange)
-    return () => {}
+const Component = () => {
+  return () => {}
 }mediaQueries.highContrast.removeEventListener('change', handleHighContrastChange)
       mediaQueries.reducedMotion.removeEventListener('change', handleReducedMotionChange)
     }
@@ -76,17 +78,17 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     } else {}
       body.classList.remove('high-contrast')
     }
-    if (settings.largeText) {}
+  if (settings.largeText) {}
       body.classList.add('large-text')
     } else {}
       body.classList.remove('large-text')
     }
-    if (settings.reducedMotion) {}
+  if (settings.reducedMotion) {}
       body.classList.add('reduced-motion')
     } else {}
       body.classList.remove('reduced-motion')
     }
-    if (settings.screenReader) {}
+  if (settings.screenReader) {}
       body.classList.add('screen-reader')
     } else {}
       body.classList.remove('screen-reader')
@@ -95,7 +97,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   }, [settings])
   // Add skip links
   useEffect(() => {}
-}const skipLinks = document.createElement('div')
+};
+const skipLinks = document.createElement('div')
     skipLinks.innerHTML = `
       <a href="#main-content" class="skip-link">Skip to main content</a>
       <a href="#navigation" class="skip-link">Skip to navigation</a>
@@ -129,25 +132,27 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       }
     `
     document.head.appendChild(style)
-    return () => {}
+const Component = () => {
+  return () => {}
 }skipLinks.remove()
       style.remove()
     }
   }, [])
   // Add ARIA landmarks
   useEffect(() => {}
-}const main = document.querySelector('main')
+};
+const main = document.querySelector('main')
     if (main) {}
       main.setAttribute('id', 'main-content')
       main.setAttribute('role', 'main')
-    }
-    const nav = document.querySelector('nav')
+    };
+const nav = document.querySelector('nav')
     if (nav) {}
       nav.setAttribute('id', 'navigation')
       nav.setAttribute('role', 'navigation')
       nav.setAttribute('aria-label', 'Main navigation')
-    }
-    const footer = document.querySelector('footer')
+    };
+const footer = document.querySelector('footer')
     if (footer) {}
       footer.setAttribute('id', 'footer')
       footer.setAttribute('role', 'contentinfo')
@@ -164,8 +169,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         }
       }
       // Tab navigation improvements
-      if (event.key === 'Tab') {}
-        const focusableElements = document.querySelectorAll()
+      if (event.key === 'Tab') {};
+const focusableElements = document.querySelectorAll()
           'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
         )
         const firstElement = focusableElements[0] as HTMLElement
@@ -180,8 +185,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       }
     }
     document.addEventListener('keydown', handleKeyDown)
-    return () => document.removeEventListener('keydown', handleKeyDown)
+const Component = () => {
+  return () => document.removeEventListener('keydown', handleKeyDown)
   }, [])
+const Component = () => {
   return ()
     <div className="accessibility-wrapper">
       {children}

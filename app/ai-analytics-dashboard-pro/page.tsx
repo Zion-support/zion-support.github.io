@@ -144,7 +144,7 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
     { number: '35%', label: 'Better Performance' },
     { number: '20+', label: 'Hours Saved Weekly' }
   ];
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -411,5 +411,6 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AIAnalyticsDashboardProPage;

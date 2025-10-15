@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 interface LazyWrapperProps {}
   fallback?: React.ReactNode
   children: React.ReactNode
-}
+};
 const DefaultFallback = () => ()
   <div className="min-h-screen flex items-center justify-center bg-slate-900">
     <div className="flex flex-col items-center space-y-4">
@@ -15,7 +15,7 @@ export const LazyWrapper: React.FC<LazyWrapperProps> = ({}
   fallback = <DefaultFallback />,
   children
 }) => {}
-}return ()
+  return ()
     <Suspense fallback={fallback}>
       {children}
     </Suspense>

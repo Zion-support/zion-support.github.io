@@ -15,15 +15,16 @@ const CookieConsent: React.FC = () => {
   const handleAccept = () => {}
 }localStorage.setItem("cookie-consent", "accepted")
     setIsVisible(false)
-  }
-  const handleReject = () => {}
+  };
+const handleReject = () => {}
 }localStorage.setItem("cookie-consent", "rejected")
     setIsVisible(false)
-  }
-  const handleSettings = () => {}
+  };
+const handleSettings = () => {}
 }setShowSettings(!showSettings)
   }
   if (!isVisible) return null
+const Component = () => {
   return ()
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-gray-900 border-t border-gray-700 p-4">
       <div className="max-w-6xl mx-auto">

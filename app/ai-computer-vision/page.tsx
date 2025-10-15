@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const AiComputerVisionPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const AiComputerVisionPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AiComputerVisionPage;

@@ -8,7 +8,8 @@ import {}
   ArrowRight} from "lucide-react"
 import { Link } from "react-router-dom"
 const EnhancedServicesShowcase: React.FC = () => {}
-}const services = []
+};
+const services = []
     {}
       icon: Brain,
       title: "AI Solutions",
@@ -52,7 +53,7 @@ const EnhancedServicesShowcase: React.FC = () => {}
       ],
     },
   ];
-
+const Component = () => {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">

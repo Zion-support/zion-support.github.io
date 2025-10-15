@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const AiContentStudioPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const AiContentStudioPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AiContentStudioPage;

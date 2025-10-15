@@ -112,6 +112,7 @@ const filteredData = faqData.map(category => ({
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
   })).filter(category => category.questions.length > 0);
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -150,8 +151,8 @@ const filteredData = faqData.map(category => ({
                   {category.questions.map((item, itemIndex) => {
                     const globalIndex = categoryIndex * 10 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
-                    
-                    return (
+const Component = () => {
+  return (
                       <div key={itemIndex} className="bg-slate-700 rounded-lg overflow-hidden">
                         <button
                           onClick={() => toggleItem(globalIndex)}
@@ -212,5 +213,7 @@ const filteredData = faqData.map(category => ({
     </>
   );
 };
+}
+}
 
 export default FaqPage;

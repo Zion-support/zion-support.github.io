@@ -114,7 +114,7 @@ const CustomerRelationshipManagerPage = () => {
       icon: <Globe className="w-6 h-6" />
     }
   ];
-
+const Component = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -300,5 +300,6 @@ const CustomerRelationshipManagerPage = () => {
     </div>
   );
 };
+}
 
 export default CustomerRelationshipManagerPage;

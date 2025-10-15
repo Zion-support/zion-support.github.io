@@ -65,7 +65,7 @@ const PartnershipsPage: React.FC = () => {
     'Joint go-to-market opportunities',
     'Technical integration support'
   ];
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -209,5 +209,6 @@ const PartnershipsPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default PartnershipsPage;

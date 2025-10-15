@@ -98,7 +98,7 @@ const ContactPage: React.FC = () => {
     '$500K+',
     'Not sure yet'
   ];
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -369,5 +369,6 @@ const ContactPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default ContactPage;

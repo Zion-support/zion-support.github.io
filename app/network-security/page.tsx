@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const NetworkSecurityPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const NetworkSecurityPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default NetworkSecurityPage;

@@ -9,8 +9,7 @@ interface OptimizedLoadingSpinnerProps {}
   className?: string
   color?: "blue" | "gray" | "green" | "red" | "purple"
   fullScreen?: boolean
-}
-
+};
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({
     size = "md", variant = "spinner", text = "Loading...", className = "", color = "blue", fullScreen = false, }) => {
     const sizeClasses = useMemo(() => ({
@@ -42,7 +41,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({
     const renderSpinner = () => {}
 }switch (variant) {}
         case "dots":
-          return (<div className="flex space-x-1">
+const Component = () => {
+  return (<div className="flex space-x-1">
               {[0, 1, _2].map((i) => (
                 <div
                   key={i}
@@ -55,26 +55,30 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({
             </div>
           )
         case "pulse":
-          return ()
+const Component = () => {
+  return ()
             <div
               className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`}
             />
           )
         case "spinner":
-          return ()
+const Component = () => {
+  return ()
             <div
               className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`}
             />
           )
         case "skeleton":
-          return ()
+const Component = () => {
+  return ()
             <div className="space-y-2">
               <div className={`h-4 bg-gray-300 rounded animate-pulse`} />
               <div className={`h-4 bg-gray-300 rounded animate-pulse w-3/4`} />
             </div>
           )
         case "bars":
-          return (<div className="flex space-x-1">
+const Component = () => {
+  return (<div className="flex space-x-1">
               {[0, 1, _2, _3].map((i) => (
                 <div
                   key={i}
@@ -88,17 +92,19 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({
             </div>
           )
         default:
-          return ()
+const Component = () => {
+  return ()
             <div
               className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`}
             />
           )
       }
-    }
-    const containerClasses = fullScreen
+    };
+const containerClasses = fullScreen
       ? "fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
       : "flex flex-col items-center justify-center space-y-4"
-    return ()
+const Component = () => {
+  return ()
       <div>
         <Helmet>
           <title>Loading - Zion Tech Group</title>
@@ -123,6 +129,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({
 </div>
     )
   },
+}
 )
 OptimizedLoadingSpinner.displayName = "OptimizedLoadingSpinner"
 export default OptimizedLoadingSpinner

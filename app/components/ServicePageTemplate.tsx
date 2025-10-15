@@ -16,8 +16,7 @@ interface ServicePageProps {
   technologies: string[];
   icon: React.ReactNode;
   popular?: boolean;
-}
-
+};
 const ServicePageTemplate: React.FC<ServicePageProps> = ({
   title,
   description,
@@ -29,6 +28,7 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({
   icon,
   popular = false
 }) => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -191,5 +191,6 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({
     </>
   );
 };
+}
 
 export default ServicePageTemplate;

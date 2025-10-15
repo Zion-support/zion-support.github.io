@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const G5gPrivateNetworksPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const G5gPrivateNetworksPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default G5gPrivateNetworksPage;

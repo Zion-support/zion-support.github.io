@@ -113,33 +113,30 @@ import { useEffect, useState } from 'react'
       if (metrics.fcp > 1800) score -= 20
       else if (metrics.fcp > 1000) score -= 10
     }
-
-    if (metrics.lcp !== null) {
+  if (metrics.lcp !== null) {
       factors++
       if (metrics.lcp > 2500) score -= 20
       else if (metrics.lcp > 1500) score -= 10
     }
-
-    if (metrics.cls !== null) {
+  if (metrics.cls !== null) {
       factors++
       if (metrics.cls > 0.25) score -= 20
       else if (metrics.cls > 0.1) score -= 10
     }
-
-    if (metrics.fid !== null) {
+  if (metrics.fid !== null) {
       factors++
       if (metrics.fid > 300) score -= 20
       else if (metrics.fid > 100) score -= 10
     }
 
     return factors > 0 ? Math.max(0, score) : null
-  }
-
-  const performanceScore = calculateScore()
+  };
+const performanceScore = calculateScore()
 
   // Render performance dashboard in development
   if (process.env.NODE_ENV === 'development') {
-    return (
+const Component = () => {
+  return (
       <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50">
         <div className="font-bold mb-2">Performance Metrics</div>
         <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>

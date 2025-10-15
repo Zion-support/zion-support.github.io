@@ -8,8 +8,7 @@ interface ResponsiveTextProps {}
   color?: 'white' | 'gray' | 'cyan' | 'purple' | 'pink' | 'blue' | 'green' | 'orange' | 'red' | 'yellow'
   align?: 'left' | 'center' | 'right' | 'justify'
   className?: string
-}
-
+};
 const ResponsiveText = (_{ 
   children, as: Component = 'p', size = 'base', weight = 'normal', color = 'white', align = 'left', className
 }: ResponsiveTextProps) => {
@@ -25,8 +24,8 @@ const ResponsiveText = (_{
     '5xl': 'text-5xl sm:text-6xl md:text-7xl',
     '6xl': 'text-6xl sm:text-7xl md:text-8xl',
     '7xl': 'text-7xl sm:text-8xl md:text-9xl'
-  }
-  const weightClasses = {}
+  };
+const weightClasses = {}
     thin: 'font-thin',
     light: 'font-light',
     normal: 'font-normal',
@@ -35,8 +34,8 @@ const ResponsiveText = (_{
     bold: 'font-bold',
     extrabold: 'font-extrabold',
     black: 'font-black'
-  }
-  const colorClasses = {}
+  };
+const colorClasses = {}
     white: 'text-white',
     gray: 'text-gray-300',
     cyan: 'text-cyan-400',
@@ -47,13 +46,14 @@ const ResponsiveText = (_{
     orange: 'text-orange-400',
     red: 'text-red-400',
     yellow: 'text-yellow-400'
-  }
-  const alignClasses = {}
+  };
+const alignClasses = {}
     left: 'text-left',
     center: 'text-center',
     right: 'text-right',
     justify: 'text-justify'
-  }
+  };
+const Component = () => {
   return ()
     <Component
       className={cn()

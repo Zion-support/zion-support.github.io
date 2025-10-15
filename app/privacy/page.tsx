@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const PrivacyPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const PrivacyPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default PrivacyPage;

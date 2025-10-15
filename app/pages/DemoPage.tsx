@@ -126,7 +126,7 @@ const DemoPage: React.FC = () => {
   ];
 
   const selectedDemoData = demos.find(demo => demo.id === selectedDemo);
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -351,5 +351,6 @@ const DemoPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default DemoPage;

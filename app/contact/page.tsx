@@ -73,7 +73,7 @@ const ContactPage: React.FC = () => {
     "CRM Assistant",
     "Financial Analytics"
   ];
-
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -254,5 +254,6 @@ const ContactPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default ContactPage;

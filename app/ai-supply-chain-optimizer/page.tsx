@@ -99,7 +99,7 @@ export default function AISupplyChainOptimizer() {
       description: "Decrease in excess inventory while maintaining service levels"
     }
   ];
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -376,5 +376,6 @@ export default function AISupplyChainOptimizer() {
     </>
   );
 };
+}
 
 export default AiSupplyChainOptimizerPage;

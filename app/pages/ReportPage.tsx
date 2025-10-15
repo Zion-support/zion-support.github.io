@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Bug } from 'lucide-react';const ReportPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -44,5 +45,6 @@ import { Bug } from 'lucide-react';const ReportPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default ReportPage;

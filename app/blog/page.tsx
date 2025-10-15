@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const BlogPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -17,5 +18,6 @@ const BlogPage: React.FC = () => {
       </div>    </>
   );
 };
+}
 
 export default BlogPage;

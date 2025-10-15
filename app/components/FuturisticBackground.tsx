@@ -37,14 +37,14 @@ const FuturisticBackground = (_{ children }: { children: React.ReactNode }) => {
         opacity: Math.random() * 0.8 + 0.2,
         color: colors[Math.floor(Math.random() * colors.length)]
       }
-    }
-    const initParticles = () => {}
+    };
+const initParticles = () => {}
 }particles = []
       for (let i = 0; i < 100; i++) {}
         particles.push(createParticle())
       }
-    }
-    const animate = () => {}
+    };
+const animate = () => {}
 }ctx.clearRect(0, 0, canvas.width, canvas.height)
       // Update and draw particles
       particles.forEach((particle, index) => {}
@@ -62,8 +62,9 @@ const FuturisticBackground = (_{ children }: { children: React.ReactNode }) => {
         ctx.fill()
         // Draw connections
         particles.forEach((otherParticle, otherIndex) => {}
-}if (index !== otherIndex) {}
-            const dx = particle.x - otherParticle.x
+}
+  if (index !== otherIndex) {};
+const dx = particle.x - otherParticle.x
             const dy = particle.y - otherParticle.y
             const distance = Math.sqrt(dx * dx + dy * dy)
             if (distance < 150) {}
@@ -95,8 +96,8 @@ const FuturisticBackground = (_{ children }: { children: React.ReactNode }) => {
         ctx.stroke()
       }
       // Draw animated circles
-      for (let i = 0; i < 5; i++) {}
-        const radius = 100 + Math.sin(time + i) * 50
+      for (let i = 0; i < 5; i++) {};
+const radius = 100 + Math.sin(time + i) * 50
         const x = canvas.width / 2 + Math.cos(time * 0.5 + i) * 200
         const y = canvas.height / 2 + Math.sin(time * 0.5 + i) * 200
         ctx.beginPath()
@@ -115,11 +116,13 @@ const FuturisticBackground = (_{ children }: { children: React.ReactNode }) => {
       initParticles()
     }
     window.addEventListener('resize', handleResize)
-    return () => {}
+const Component = () => {
+  return () => {}
 }window.removeEventListener('resize', handleResize)
       cancelAnimationFrame(animationId)
     }
   }, [])
+const Component = () => {
   return ()
     <div className="relative min-h-screen">
       <canvas

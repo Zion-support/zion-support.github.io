@@ -251,7 +251,7 @@ const ITSolutionsPage: React.FC = () => {
       popular: false
     }
   ];
-
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -503,5 +503,6 @@ const ITSolutionsPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default ItSolutionsPage;

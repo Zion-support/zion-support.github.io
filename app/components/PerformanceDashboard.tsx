@@ -4,10 +4,10 @@ interface PerformanceDashboardProps {}
   className?: string
   title?: string
   description?: string
-}
-
+};
 const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
   children, className = "", title, _description, _}) => {
+const Component = () => {
   return (
     <div className={`enhanced-component ${className}`}>
       {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>}

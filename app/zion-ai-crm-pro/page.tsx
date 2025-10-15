@@ -129,6 +129,7 @@ export default function ZionAiCrmPro() {
   ];
 
 const ZionAiCrmProPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -447,5 +448,7 @@ const ZionAiCrmProPage: React.FC = () => {
     </>
   );
 };
+}
+}
 
 export default ZionAiCrmProPage;

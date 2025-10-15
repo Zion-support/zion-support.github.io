@@ -114,7 +114,7 @@ import { Receipt, TrendingUp, Shield, Zap, BarChart3, Users, CheckCircle, ArrowR
     { number: "50%", label: "Error Reduction" },
     { number: "3x", label: "Faster Processing" }
   ];
-
+const Component = () => {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Smart Expense Categorizer | Zion Tech Group</title>
@@ -168,5 +168,6 @@ import { Receipt, TrendingUp, Shield, Zap, BarChart3, Users, CheckCircle, ArrowR
     </>
   );
 };
+}
 
 export default SmartExpenseCategorizerPage;

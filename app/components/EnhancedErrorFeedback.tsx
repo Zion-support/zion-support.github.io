@@ -58,7 +58,8 @@ export class GlobalErrorBoundary extends Component<Props, State> {}
     })
   }
   private handleRetry = () => {}
-}if (this.state.retryCount < this.maxRetries) {}
+}
+  if (this.state.retryCount < this.maxRetries) {}
       this.setState(prevState => ({}
         hasError: false,
         error: null,
@@ -74,12 +75,13 @@ export class GlobalErrorBoundary extends Component<Props, State> {}
 }window.location.reload()
   }
   render() {}
-    if (this.state.hasError) {}
+  if (this.state.hasError) {}
       // Use custom fallback if provided
       if (this.props.fallback) {}
         return this.props.fallback
-      }
-      return ()
+      };
+const Component = () => {
+  return ()
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-2xl mx-auto text-center">
             <div className="mb-8">
@@ -175,7 +177,8 @@ export const ErrorBoundary: React.FC<{
       }
     }
     window.addEventListener('error', handleError)
-    return () => window.removeEventListener('error', handleError)
+const Component = () => {
+  return () => window.removeEventListener('error', handleError)
   }, [onError])
   if (hasError) {}
     return fallback || ()

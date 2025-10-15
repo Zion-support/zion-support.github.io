@@ -140,6 +140,7 @@ export default function ZionAiCustomerInsights() {
   ];
 
 const ZionAiCustomerInsightsPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -446,5 +447,7 @@ const ZionAiCustomerInsightsPage: React.FC = () => {
     </>
   );
 };
+}
+}
 
 export default ZionAiCustomerInsightsPage;

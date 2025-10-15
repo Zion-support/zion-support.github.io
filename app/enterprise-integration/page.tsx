@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const EnterpriseIntegrationPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const EnterpriseIntegrationPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default EnterpriseIntegrationPage;

@@ -114,7 +114,7 @@ const TaskAutomationWorkflowPage = () => {
       icon: <BarChart3 className="w-6 h-6" />
     }
   ];
-
+const Component = () => {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Task Automation Workflow - Zion Tech Group | Workflow Automation & Process Management"
@@ -298,5 +298,6 @@ const TaskAutomationWorkflowPage = () => {
     </div>
   );
 };
+}
 
 export default TaskAutomationWorkflowPage;

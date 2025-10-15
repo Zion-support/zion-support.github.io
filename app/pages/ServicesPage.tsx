@@ -157,7 +157,7 @@ import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Datab
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face'
     }
   ];
-
+const Component = () => {
   return (<>
       <Helmet>
         <title>Our Services - Comprehensive AI & IT Solutions | Zion Tech Group</title>
@@ -391,5 +391,6 @@ import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Datab
     </>
   );
 };
+}
 
 export default ServicesPage;

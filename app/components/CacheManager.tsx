@@ -7,8 +7,7 @@ interface CacheStats {
   misses: number
   size: number
   maxSize: number
-}
-
+};
 const CacheManager = () => {
   const [stats, setStats] = useState<CacheStats>({
     hits: 0,
@@ -119,8 +118,8 @@ const CacheManager = () => {
 
     updateStats()
     const interval = setInterval(updateStats, 5000)
-
-    return () => clearInterval(interval)
+const Component = () => {
+  return () => clearInterval(interval)
   }, [])
 
   // Toggle visibility with keyboard shortcut (Ctrl+Shift+C)
@@ -133,7 +132,8 @@ const CacheManager = () => {
     }
 
     window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
+const Component = () => {
+  return () => window.removeEventListener('keydown', handleKeyDown)
   }, [])
 
   const clearCache = async () => {
@@ -144,20 +144,18 @@ const CacheManager = () => {
       )
       setStats(prev => ({ ...prev, size: 0 }))
     }
-  }
-
-  const formatBytes = (bytes: number) => {
+  };
+const formatBytes = (bytes: number) => {
     if (bytes === 0) return '0 Bytes'
     const k = 1024
     const sizes = ['Bytes', 'KB', 'MB', 'GB']
     const i = Math.floor(Math.log(bytes) / Math.log(k))
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]
   }
-
   if (!isVisible || process.env.NODE_ENV !== 'development') {
     return null
-  }
-
+  };
+const Component = () => {
   return (
     <div className="fixed bottom-4 left-4 bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-white text-sm font-mono max-w-sm z-50">
       <div className="flex items-center justify-between mb-3">

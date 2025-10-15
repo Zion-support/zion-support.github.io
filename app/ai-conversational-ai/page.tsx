@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const AiConversationalAiPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const AiConversationalAiPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default AiConversationalAiPage;

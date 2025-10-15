@@ -2,15 +2,18 @@ import React from 'react'
 interface StructuredDataProps {}
   type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'BreadcrumbList'
   data: Record<string, unknown>
-}
+};
 const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {}
-}const getStructuredData = () => {}
-}const baseData = {}
+};
+const getStructuredData = () => {}
+};
+const baseData = {}
       '@context': 'https://schema.org',
       '@type': type,
       ...data}
     return baseData
-  }
+  };
+const Component = () => {
   return ()
     <script
       type="application/ld+json"

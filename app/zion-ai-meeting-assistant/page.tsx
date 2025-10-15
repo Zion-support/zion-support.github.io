@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 
 const ZionAiMeetingAssistantPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const ZionAiMeetingAssistantPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default ZionAiMeetingAssistantPage;

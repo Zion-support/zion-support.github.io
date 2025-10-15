@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { ArrowRight } from "lucide-react"
 export default function EnhancedSkipLink() {}
-}return ()
+  return ()
     <div className="skip-link-container">
       <Link
         to="/contact"

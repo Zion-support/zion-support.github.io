@@ -15,7 +15,7 @@ interface EnhancedSEOOptimizerProps {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-}
+};
 const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({}
   title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 99.9% uptime SLA, 24/7 support.",
@@ -30,12 +30,14 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({}
   section = "Technology",
   tags = ["AI", "IT Services", "Technology", "Digital Transformation"]
 }) => {}
-}const location = useLocation()
+};
+const location = useLocation()
   const currentUrl = `https://ziontechgroup.com${location.pathname}`
   const finalCanonical = canonical || currentUrl
   // Generate enhanced structured data
   const generateEnhancedStructuredData = () => {}
-}const baseStructuredData = {}
+};
+const baseStructuredData = {}
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
@@ -215,7 +217,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({}
         }
       }
     }
-    if (path === '/about') {}
+  if (path === '/about') {}
       return {}
         ...baseStructuredData,
         "@type": "AboutPage",
@@ -229,7 +231,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({}
         }
       }
     }
-    if (path === '/contact') {}
+  if (path === '/contact') {}
       return {}
         ...baseStructuredData,
         "@type": "ContactPage",
@@ -246,7 +248,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({}
         }
       }
     }
-    if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-') || path.startsWith('/5g-')) {}
+  if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-') || path.startsWith('/5g-')) {}
       return {}
         ...baseStructuredData,
         "@type": "Service",
@@ -289,7 +291,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({}
   }
   // Generate FAQ structured data
   const generateFAQStructuredData = () => {}
-}const faqs = []
+};
+const faqs = []
       {}
         question: "What services does Zion Tech Group offer?",
         answer: "Zion Tech Group offers comprehensive AI solutions, IT services, micro SaaS products, and 5G implementation services. We specialize in digital transformation, cybersecurity, cloud computing, and business automation."
@@ -326,7 +329,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({}
   }
   // Generate breadcrumb structured data
   const generateBreadcrumbStructuredData = () => {}
-}const pathSegments = location.pathname.split('/').filter(Boolean)
+};
+const pathSegments = location.pathname.split('/').filter(Boolean)
     const breadcrumbs = []
       {}
         "@type": "ListItem",
@@ -354,8 +358,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({}
       "@type": "BreadcrumbList",
       "itemListElement": breadcrumbs
     }
-  }
-  const finalStructuredData = structuredData || generateEnhancedStructuredData()
+  };
+const finalStructuredData = structuredData || generateEnhancedStructuredData()
   const faqStructuredData = generateFAQStructuredData()
   const breadcrumbStructuredData = generateBreadcrumbStructuredData()
   // Track page views and SEO metrics
@@ -379,6 +383,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({}
       })
     }
   }, [title, currentUrl])
+const Component = () => {
   return ()
     <Helmet>
       {/* Basic Meta Tags */}

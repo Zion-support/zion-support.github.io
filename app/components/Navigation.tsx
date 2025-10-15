@@ -34,8 +34,7 @@ import {
 
 interface NavigationProps {
   onSidebarToggle?: () => void
-}
-
+};
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
@@ -142,7 +141,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   };
 
   const isActive = (path: string) => location.pathname === path
-
+const Component = () => {
   return (
     <nav className="bg-slate-900 border-b border-slate-700 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -299,12 +298,15 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     <item.icon className="w-5 h-5 mr-3" />
                     {item.name}
                   </Link>
+                )}
               </div>
             ))}
           </div>
+        </div>
       </div>
     </nav>
   )
+}
 }
 
 export default Navigation

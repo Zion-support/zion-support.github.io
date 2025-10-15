@@ -129,6 +129,7 @@ export default function ZionAiProjectManagerPro() {
   ];
 
 const ZionAiProjectManagerProPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <Helmet>
@@ -447,5 +448,7 @@ const ZionAiProjectManagerProPage: React.FC = () => {
     </>
   );
 };
+}
+}
 
 export default ZionAiProjectManagerProPage;

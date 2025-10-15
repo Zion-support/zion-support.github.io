@@ -2,6 +2,7 @@ import React from 'react';
 import { Cloud } from "lucide-react";
 
 const CloudSolutionsPage: React.FC = () => {
+const Component = () => {
   return (
     <>
       <SEOHead 
@@ -17,5 +18,6 @@ const CloudSolutionsPage: React.FC = () => {
     </>
   );
 };
+}
 
 export default CloudSolutionsPage;

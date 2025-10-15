@@ -9,9 +9,10 @@ interface FormData {
   company: string;
   message: string;
   service: string;
-}
+};
 const ContactForm: React.FC = () => {}
-}const [formData, setFormData] = useState<FormData>({}
+};
+const [formData, setFormData] = useState<FormData>({}
     name: "",
     email: "",
     phone: "",
@@ -54,8 +55,9 @@ const ContactForm: React.FC = () => {}
       setIsSubmitting(false);
     }
   }
-  if (isSubmitted) {}
-    return ()
+  if (isSubmitted) {};
+const Component = () => {
+  return ()
       <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center">
         <MessageSquare className="w-8 h-8 mx-auto mb-2" />
         <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
@@ -64,7 +66,8 @@ const ContactForm: React.FC = () => {}
         </p>
       </div>
     )
-  }
+  };
+const Component = () => {
   return ()
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
