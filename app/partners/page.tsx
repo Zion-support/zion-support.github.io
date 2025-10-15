@@ -1,18 +1,4 @@
-
-import { Helmet } from "react-helmet-async";
-
-const PartnersPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Partners</title>
-        <meta
-          name="description"
-          content="Professional partners solutions and services"
-        />
-        <meta name="keywords" content="partners" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import { Helmet } from "react-helmet-async"; const PartnersPage: React.FC = () => { return ( <> <Helmet> <title>Partners</title> <meta name="description" content="Professional partners solutions and services" /> <meta name="keywords" content="partners" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4 xlfont-bold text-white mb-8">Partners</h1>
@@ -49,8 +35,5 @@ const PartnersPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
+  ); };
 export default PartnersPage;
-

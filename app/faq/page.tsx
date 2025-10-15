@@ -1,18 +1,4 @@
-
-import { Helmet } from "react-helmet-async";
-
-const FaqPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Faq</title>
-        <meta
-          name="description"
-          content="Professional faq solutions and services"
-        />
-        <meta name="keywords" content="faq" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import { Helmet } from "react-helmet-async"; const FaqPage: React.FC = () => { return ( <> <Helmet> <title>Faq</title> <meta name="description" content="Professional faq solutions and services" /> <meta name="keywords" content="faq" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4 xlfont-bold text-white mb-8">Faq</h1>
@@ -49,8 +35,5 @@ const FaqPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
+  ); };
 export default FaqPage;
-

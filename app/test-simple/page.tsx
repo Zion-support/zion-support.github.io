@@ -1,18 +1,4 @@
-
-import { Helmet } from "react-helmet-async";
-
-const TestSimplePage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Test Simple</title>
-        <meta
-          name="description"
-          content="Professional test simple solutions and services"
-        />
-        <meta name="keywords" content="test, simple" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import { Helmet } from "react-helmet-async"; const TestSimplePage: React.FC = () => { return ( <> <Helmet> <title>Test Simple</title> <meta name="description" content="Professional test simple solutions and services" /> <meta name="keywords" content="test, simple" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">Test Simple</h1>
@@ -49,8 +35,5 @@ const TestSimplePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
+  ); };
 export default TestSimplePage;
-

@@ -1,27 +1,17 @@
-export const enhancedErrorHandler = {
-  handleError: (error: Error, context?: string) => {
+export const enhancedErrorHandler = { handleError: (error: Error, context?: string) => {
     console.error('Error occurred: ', error);
-    
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
         description: error.message,
-        context: context
-      });
+        context: context });
     }
-    
-    return {
-      message: 'Something went wrong. Please try again.',
-      code: 'GENERIC_ERROR'
-    };
+    return { message: 'Something went wrong. Please try again.',
+      code: 'GENERIC_ERROR' };
   },
-  
-  handleApiError: (error: unknown) => {
-    const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
+  handleApiError: (error: unknown) => { const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
     const status = errorWithResponse.response?.status;
     const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
-    
-    switch (status) {
-      case 400:
+    switch (status) { case 400:
         return { message: 'Invalid request', code: 'BAD_REQUEST' };
       case 401:
         return { message: 'Unauthorized', code: 'UNAUTHORIZED' };
@@ -35,21 +25,15 @@ export const enhancedErrorHandler = {
         return { message: message || 'An error occurred', code: 'UNKNOWN_ERROR' };
     }
   },
-  
-  handleNetworkError: (error: unknown) => {
-    console.error('Network error: ', error);
+  handleNetworkError: (error: unknown) => { console.error('Network error: ', error);
     return {
       message: 'Network error. Please check your connection.',
-      code: 'NETWORK_ERROR'
-    };
+      code: 'NETWORK_ERROR' };
   },
-  
-  handleValidationError: (errors: Record<string, string[]>) => {
-    const errorMessages = Object.values(errors).flat();
+  handleValidationError: (errors: Record<string, string[]>) => { const errorMessages = Object.values(errors).flat();
     return {
       message: errorMessages.join(', '),
       code: 'VALIDATION_ERROR',
-      details: errors
-    };
+      details: errors };
   }
 };
