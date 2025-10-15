@@ -39,6 +39,11 @@ import DigitalTransformationPage from './app/digital-transformation/page';
 import CaseStudiesPage from './app/case-studies/page';
 import CareersPage from './app/careers/page';
 
+// New AI Service Pages
+import AIAccountingAssistantPage from './app/ai-accounting-assistant/page';
+import AIClimatePredictionEnginePage from './app/ai-climate-prediction-engine/page';
+import AICybersecuritySuiteProPage from './app/ai-cybersecurity-suite-pro/page';
+
 // Additional Pages
 <<<<<<< HEAD
 import CybersecurityPage from './app/cybersecurity/page';
@@ -137,6 +142,11 @@ function App() {
                       <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                       <Route path="/case-studies" element={<CaseStudiesPage />} />
                       <Route path="/careers" element={<CareersPage />} />
+                      
+                      {/* New AI Service Pages */}
+                      <Route path="/ai-accounting-assistant" element={<AIAccountingAssistantPage />} />
+                      <Route path="/ai-climate-prediction-engine" element={<AIClimatePredictionEnginePage />} />
+                      <Route path="/ai-cybersecurity-suite-pro" element={<AICybersecuritySuiteProPage />} />
                       
                       {/* Additional Service Pages */}
                       <Route path="/cybersecurity" element={<CybersecurityPage />} />
