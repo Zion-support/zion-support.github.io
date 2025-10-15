@@ -84,23 +84,6 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
-<<<<<<< HEAD
-=======
-  const [, setShowPerformanceDashboard] = React.useState(false);
-
-  // Toggle performance dashboard with keyboard shortcut
-  React.useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
-        event.preventDefault();
-        setShowPerformanceDashboard(prev => !prev);
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9
 
   return (
     <LightweightErrorBoundary>
