@@ -35,8 +35,9 @@ const pricingPlans = [
         "Basic AI chatbot",
         "Email support",
         "5 team members",
-        "Basic analytics"]
-        "Standard integrations"]],
+        "Basic analytics",
+        "Standard integrations"
+      ],
       popular: false
     },
     {
@@ -51,8 +52,9 @@ const pricingPlans = [
         "25 team members",
         "Advanced analytics",
         "Custom integrations",
-        "Voice support"]
-        "Multi-language support"]],
+        "Voice support",
+        "Multi-language support"
+      ],
       popular: true
     },
     {
@@ -68,8 +70,9 @@ const pricingPlans = [
         "Custom analytics",
         "White-label options",
         "API access",
-        "Dedicated account manager"]
-        "Custom AI training"]],
+        "Dedicated account manager",
+        "Custom AI training"
+      ],
       popular: false
     }
   ];

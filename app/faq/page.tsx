@@ -25,8 +25,9 @@ const faqData = [
         },
         {
           question: "How can I get started?",
-          answer: "Getting started is easy! You can contact us through our contact form, schedule a free consultation, or explore our demo to see our solutions in action. Our team will work with you to identify the best solutions for your specific needs."]
-        }]]
+          answer: "Getting started is easy! You can contact us through our contact form, schedule a free consultation, or explore our demo to see our solutions in action. Our team will work with you to identify the best solutions for your specific needs."
+        }
+      ]
     },
     {
       category: "AI Services",
@@ -41,8 +42,9 @@ const faqData = [
         },
         {
           question: "Do you provide training for AI solutions?",
-          answer: "Yes! We provide comprehensive training for all our AI solutions, including user training, administrator training, and ongoing support. We also offer documentation and video tutorials to help your team get the most out of our solutions."]
-        }]]
+          answer: "Yes! We provide comprehensive training for all our AI solutions, including user training, administrator training, and ongoing support. We also offer documentation and video tutorials to help your team get the most out of our solutions."
+        }
+      ]
     },
     {
       category: "IT Services",
@@ -57,8 +59,9 @@ const faqData = [
         },
         {
           question: "What is your uptime guarantee?",
-          answer: "We provide a 99.9% uptime SLA for all our managed services and cloud solutions. This means your systems will be available 99.9% of the time, with minimal planned maintenance windows."]
-        }]]
+          answer: "We provide a 99.9% uptime SLA for all our managed services and cloud solutions. This means your systems will be available 99.9% of the time, with minimal planned maintenance windows."
+        }
+      ]
     },
     {
       category: "Micro SAAS",
@@ -73,8 +76,9 @@ const faqData = [
         },
         {
           question: "What is the pricing for micro SAAS solutions?",
-          answer: "Pricing varies by solution and features. Most micro SAAS solutions start at $99/month for basic plans, with enterprise plans available. We offer flexible pricing options including monthly, annual, and custom enterprise agreements."]
-        }]]
+          answer: "Pricing varies by solution and features. Most micro SAAS solutions start at $99/month for basic plans, with enterprise plans available. We offer flexible pricing options including monthly, annual, and custom enterprise agreements."
+        }
+      ]
     },
     {
       category: "5G Solutions",
@@ -89,8 +93,9 @@ const faqData = [
         },
         {
           question: "Do you provide 5G consulting?",
-          answer: "Yes, we offer comprehensive 5G consulting services including strategy development, technology assessment, implementation planning, and ongoing optimization. Our experts help you understand how 5G can transform your business."]
-        }]]
+          answer: "Yes, we offer comprehensive 5G consulting services including strategy development, technology assessment, implementation planning, and ongoing optimization. Our experts help you understand how 5G can transform your business."
+        }
+      ]
     },
     {
       category: "Support & Billing",

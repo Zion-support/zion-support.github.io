@@ -156,8 +156,9 @@ const featuredArticle = newsArticles.find(article => article.featured);
                         </div>
                       </div>
                       <a
-    const href = {featuredArticle.external ? featuredArticle.externalUrl : `/news/${featuredArticle.id}`}
-                        const target = {featuredArticle.external ? "_blank" : "_self"} rel={featuredArticle.external ? "noopener noreferrer" : ""}
+                        href={featuredArticle.external ? featuredArticle.externalUrl : `/news/${featuredArticle.id}`}
+                        target={featuredArticle.external ? "_blank" : "_self"} 
+                        rel={featuredArticle.external ? "noopener noreferrer" : ""}
                         className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         <span>Read More</span>
@@ -237,8 +238,9 @@ const featuredArticle = newsArticles.find(article => article.featured);
                         </div>
                       </div>
                       <a
-    const href = {article.external ? article.externalUrl : `/news/${article.id}`}
-                        const target = {article.external ? "_blank" : "_self"} rel={article.external ? "noopener noreferrer" : ""}
+                        href={article.external ? article.externalUrl : `/news/${article.id}`}
+                        target={article.external ? "_blank" : "_self"} 
+                        rel={article.external ? "noopener noreferrer" : ""}
                         className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         <span>Read</span>
