@@ -70,7 +70,7 @@ export default [
     },
   },
   {
-    files: ['**/*.cjs', '**/scripts/**/*.js'],
+    files: ['**/*.cjs', '**/scripts/**/*.js', '**/utils/logger.ts'],
     languageOptions: {
       globals: {
         ...globals.node,

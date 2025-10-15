@@ -6,7 +6,6 @@ import Footer from './app/components/Footer';
 import Hero from './app/components/Hero';
 import Services from './app/components/Services';
 import About from './app/components/About';
-import Contact from './app/components/Contact';
 import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Lazy load pages for better performance
@@ -52,7 +51,7 @@ const App: React.FC = () => {
               <Route path="*" element={
                 <div className="container mx-auto px-4 py-16 text-center">
                   <h1 className="text-4xl font-bold text-white mb-8">404 - Page Not Found</h1>
-                  <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
+                  <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
                   <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Go Home
                   </a>
