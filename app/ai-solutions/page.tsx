@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { TrendingUp } from "lucide-react";
 
-const AiSolutionsPage: React.FC = () => {
+export default function AiSolutionsPage() {
   const aiServices = [
     {
       id: 'ai-chatbot-enterprise',
