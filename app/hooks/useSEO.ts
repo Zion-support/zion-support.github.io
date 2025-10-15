@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 
 interface SEOConfig {
@@ -61,7 +61,7 @@ export const useSEO = (config: SEOConfig = {}) => {
     // Add page-specific structured data
     addPageStructuredData(location.pathname);
 
-  }, [config, location.pathname]);
+  }, [config, location.pathname, addPageStructuredData, updateOpenGraphTags, updateTwitterTags]);
 
   const updateMetaTag = (name: string, content: string) => {
     let meta = document.querySelector(`meta[name="${name}"]`);
@@ -83,7 +83,7 @@ export const useSEO = (config: SEOConfig = {}) => {
     canonical.setAttribute('href', url);
   };
 
-  const updateOpenGraphTags = (config: SEOConfig) => {
+  const updateOpenGraphTags = useCallback((config: SEOConfig) => {
     const ogTags = [
       { property: 'og:title', content: config.title },
       { property: 'og:description', content: config.description },
@@ -98,9 +98,9 @@ export const useSEO = (config: SEOConfig = {}) => {
         updateMetaTag(property, content);
       }
     });
-  };
+  }, []);
 
-  const updateTwitterTags = (config: SEOConfig) => {
+  const updateTwitterTags = useCallback((config: SEOConfig) => {
     const twitterTags = [
       { name: 'twitter:card', content: config.twitterCard || 'summary_large_image' },
       { name: 'twitter:title', content: config.title },
@@ -113,7 +113,7 @@ export const useSEO = (config: SEOConfig = {}) => {
         updateMetaTag(name, content);
       }
     });
-  };
+  }, []);
 
   const addStructuredData = (data: object) => {
     // Remove existing structured data
@@ -129,7 +129,7 @@ export const useSEO = (config: SEOConfig = {}) => {
     document.head.appendChild(script);
   };
 
-  const addPageStructuredData = (pathname: string) => {
+  const addPageStructuredData = useCallback((pathname: string) => {
     const baseStructuredData = {
       '@context': 'https://schema.org',
       '@type': 'Organization',
@@ -154,7 +154,7 @@ export const useSEO = (config: SEOConfig = {}) => {
     };
 
     // Add page-specific structured data
-    let pageStructuredData = baseStructuredData;
+    let pageStructuredData: any = baseStructuredData;
 
     if (pathname === '/contact') {
       pageStructuredData = {
@@ -162,21 +162,32 @@ export const useSEO = (config: SEOConfig = {}) => {
         '@type': 'ContactPage',
         'mainEntity': {
           '@type': 'Organization',
-          ...baseStructuredData
+          name: baseStructuredData.name,
+          url: baseStructuredData.url,
+          logo: baseStructuredData.logo,
+          description: baseStructuredData.description
         }
       };
     } else if (pathname.startsWith('/ai-') || pathname.startsWith('/zion-ai-')) {
       pageStructuredData = {
         ...baseStructuredData,
         '@type': 'Service',
-        'serviceType': 'AI Solutions',
+        'offers': {
+          '@type': 'Offer',
+          'name': 'AI Solutions',
+          'description': 'Advanced AI and machine learning solutions'
+        },
         'provider': baseStructuredData
       };
     } else if (pathname.startsWith('/it-') || pathname === '/services') {
       pageStructuredData = {
         ...baseStructuredData,
         '@type': 'Service',
-        'serviceType': 'IT Services',
+        'offers': {
+          '@type': 'Offer',
+          'name': 'IT Services',
+          'description': 'Comprehensive IT services and solutions'
+        },
         'provider': baseStructuredData
       };
     }

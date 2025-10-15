@@ -1,19 +1,13 @@
 'use client';
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-import { 
-  ShareIcon, 
-  ChartBarIcon, 
-  CogIcon, 
+import {
+  ShareIcon,
+  ChartBarIcon,
   CheckCircleIcon,
-  ArrowRightIcon,
   StarIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  ShieldCheckIcon,
   SparklesIcon,
   CpuChipIcon,
-  EyeIcon,
   CalendarIcon
 } from '@heroicons/react/24/outline';
 

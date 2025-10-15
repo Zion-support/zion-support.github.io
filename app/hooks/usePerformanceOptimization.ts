@@ -24,7 +24,6 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   const {
     enableLazyLoading = true,
     enablePreloading = true,
-    enableCodeSplitting = true,
     enableImageOptimization = true,
     enableBundleAnalysis = false
   } = options;

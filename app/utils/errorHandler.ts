@@ -14,8 +14,8 @@ export class CustomError extends Error {
   constructor(message: string, code?: string, statusCode?: number, details?: any) {
     super(message);
     this.name = 'CustomError';
-    this.code = code ?? undefined;
-    this.statusCode = statusCode ?? undefined;
+    if (code !== undefined) this.code = code;
+    if (statusCode !== undefined) this.statusCode = statusCode;
     this.details = details;
   }
 }

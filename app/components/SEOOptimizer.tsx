@@ -49,13 +49,15 @@ const SEOOptimizer: React.FC = () => {
     ];
 
     metaTags.forEach(tag => {
-      const selector = Object.keys(tag).map(key => `[${key}="${tag[key]}"]`).join('');
+      const selector = Object.keys(tag).map(key => `[${key}="${(tag as any)[key]}"]`).join('');
       const existingMeta = document.querySelector(`meta${selector}`);
       
       if (!existingMeta) {
         const meta = document.createElement('meta');
         Object.entries(tag).forEach(([key, value]) => {
-          meta.setAttribute(key, value);
+          if (typeof value === 'string') {
+            meta.setAttribute(key, value);
+          }
         });
         document.head.appendChild(meta);
       }

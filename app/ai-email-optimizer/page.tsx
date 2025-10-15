@@ -1,15 +1,10 @@
 'use client';
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-import { 
-  EnvelopeIcon, 
-  ChartBarIcon, 
-  CogIcon, 
+import {
+  ChartBarIcon,
   CheckCircleIcon,
-  ArrowRightIcon,
   StarIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
   ShieldCheckIcon,
   SparklesIcon,
   CpuChipIcon,

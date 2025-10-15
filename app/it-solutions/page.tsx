@@ -1,24 +1,16 @@
 'use client';
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-import { 
-  CogIcon, 
-  CloudIcon, 
-  ShieldCheckIcon, 
+import {
+  CloudIcon,
+  ShieldCheckIcon,
   CheckCircleIcon,
-  ArrowRightIcon,
   StarIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
   SparklesIcon,
-  CpuChipIcon,
-  EyeIcon,
   CodeBracketIcon,
   DevicePhoneMobileIcon,
   CircleStackIcon,
-  SignalIcon,
-  RocketLaunchIcon,
-  ChartBarIcon
+  SignalIcon
 } from '@heroicons/react/24/outline';
 
 const ITSolutionsPage: React.FC = () => {

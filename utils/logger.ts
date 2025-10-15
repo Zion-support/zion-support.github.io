@@ -42,7 +42,7 @@ class Logger {
       const entry: LogEntry = {
         level: 'debug',
         message,
-        context,
+        context: context || {},
         timestamp: Date.now(),
       };
       this.addLog(entry);
@@ -55,7 +55,7 @@ class Logger {
       const entry: LogEntry = {
         level: 'info',
         message,
-        context,
+        context: context || {},
         timestamp: Date.now(),
       };
       this.addLog(entry);
@@ -68,7 +68,7 @@ class Logger {
       const entry: LogEntry = {
         level: 'warn',
         message,
-        context,
+        context: context || {},
         timestamp: Date.now(),
       };
       this.addLog(entry);
@@ -80,9 +80,9 @@ class Logger {
     const entry: LogEntry = {
       level: 'error',
       message,
-      context,
+      context: context || {},
       timestamp: Date.now(),
-      stack: error?.stack,
+      ...(error?.stack && { stack: error.stack }),
     };
     this.addLog(entry);
     console.error(this.formatMessage('error', message, context), error);
