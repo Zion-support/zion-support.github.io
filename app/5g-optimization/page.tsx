@@ -125,7 +125,6 @@ const FiveGOptimizationPage: React.FC = () => {
   }
   )
 export default FiveG;; Optimization Page
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight } from 'lucide-react';

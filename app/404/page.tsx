@@ -20,7 +20,6 @@ const Page404Page: React.FC = () => {
   ];
 
   return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9170
     <>
       <div>
       <Helmet>

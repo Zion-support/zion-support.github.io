@@ -1,14 +1,45 @@
 import React, { useState } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone, Mail, ChevronDownIcon } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
+interface NavigationProps {
+  onSidebarToggle?: () => void;
+}
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    onSidebarToggle();
+    if (onSidebarToggle) onSidebarToggle();
   };
+
+  const toggleServicesMenu = () => {
+    setIsServicesOpen(!isServicesOpen);
+  };
+
+  const toggleSolutionsMenu = () => {
+    setIsSolutionsOpen(!isSolutionsOpen);
+  };
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
+
+  const navigation = [
+    { name: 'Home', href: '/', icon: Menu },
+    { name: 'Services', href: '/services', icon: Menu, submenu: [
+      { name: 'AI Solutions', href: '/ai-solutions' },
+      { name: '5G Services', href: '/5g-solutions' },
+      { name: 'Cloud Services', href: '/cloud-services' }
+    ]},
+    { name: 'About', href: '/about', icon: Menu },
+    { name: 'Careers', href: '/careers', icon: Menu },
+    { name: 'Contact', href: '/contact', icon: Menu }
+  ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-lg border-b border-white/10">
@@ -16,29 +47,29 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-2xl font-bold text-white">
+            <Link to="/" className="text-2xl font-bold text-white">
               Zion Tech
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a href="/" className="text-white hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              <Link to="/" className="text-white hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Home
-              </a>
-              <a href="/services" className="text-gray-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              </Link>
+              <Link to="/services" className="text-gray-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Services
-              </a>
-              <a href="/about" className="text-gray-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              </Link>
+              <Link to="/about" className="text-gray-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 About
-              </a>
-              <a href="/careers" className="text-gray-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              </Link>
+              <Link to="/careers" className="text-gray-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Careers
-              </a>
-              <a href="/contact" className="text-gray-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              </Link>
+              <Link to="/contact" className="text-gray-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -67,59 +98,61 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       </div>
 
       {/* Mobile Navigation */}
-      <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700">
-          {navigation.map((item) => (
-            <div key={item.name}>
-              {item.submenu ? (
-                <div>
-                  <button
-                    onClick={item.name === 'Services' ? toggleServicesMenu : toggleSolutionsMenu}
-                    className={`flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                      isActive(item.href) || (item.submenu && item.submenu.some(sub => isActive(sub.href)))
+      {isMenuOpen && (
+        <div className="lg:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700">
+            {navigation.map((item) => (
+              <div key={item.name}>
+                {item.submenu ? (
+                  <div>
+                    <button
+                      onClick={item.name === 'Services' ? toggleServicesMenu : toggleSolutionsMenu}
+                      className={`flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                        isActive(item.href) || (item.submenu && item.submenu.some(sub => isActive(sub.href)))
+                          ? 'text-white bg-slate-700'
+                          : 'text-gray-300 hover:text-white hover:bg-slate-700'
+                      }`}>
+                      <item.icon className="w-5 h-5 mr-3" />
+                      {item.name}
+                      <ChevronDownIcon className={`w-4 h-4 ml-auto transition-transform ${
+                        (item.name === 'Services' && isServicesOpen) || (item.name === 'Solutions' && isSolutionsOpen)
+                          ? 'rotate-180'
+                          : ''
+                      }`} />
+                    </button>
+                    <div className={`${(item.name === 'Services' && isServicesOpen) || (item.name === 'Solutions' && isSolutionsOpen) ? 'block' : 'hidden'} pl-6 space-y-1`}>
+                      {item.submenu.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.href}
+                          className={`block px-3 py-2 rounded-md text-sm transition-colors ${
+                            isActive(subItem.href)
+                              ? 'text-white bg-slate-600'
+                              : 'text-gray-300 hover:text-white hover:bg-slate-700'
+                          }`}
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                      isActive(item.href)
                         ? 'text-white bg-slate-700'
                         : 'text-gray-300 hover:text-white hover:bg-slate-700'
-                    }`}>
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     <item.icon className="w-5 h-5 mr-3" />
                     {item.name}
-                    <ChevronDownIcon className={`w-4 h-4 ml-auto transition-transform ${
-                      (item.name === 'Services' && isServicesOpen) || (item.name === 'Solutions' && isSolutionsOpen)
-                        ? 'rotate-180'
-                        : ''
-                    }`} />
-                  </button>
-                  <div className={`${(item.name === 'Services' && isServicesOpen) || (item.name === 'Solutions' && isSolutionsOpen) ? 'block' : 'hidden'} pl-6 space-y-1`}>
-                    {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.href}
-                        className={`block px-3 py-2 rounded-md text-sm transition-colors ${
-                          isActive(subItem.href)
-                            ? 'text-white bg-slate-600'
-                            : 'text-gray-300 hover:text-white hover:bg-slate-700'
-                        }`}
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                <Link
-                  to={item.href}
-                  className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                    isActive(item.href)
-                      ? 'text-white bg-slate-700'
-                      : 'text-gray-300 hover:text-white hover:bg-slate-700'
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  <item.icon className="w-5 h-5 mr-3" />
-                  {item.name}
-                </Link>
-              )}
-            </div>
+                  </Link>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       )}

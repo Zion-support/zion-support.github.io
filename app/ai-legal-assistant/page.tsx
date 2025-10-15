@@ -66,7 +66,6 @@ const AiLegalAssistantPage: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
-=======
             <h1 className="text-4xl font-bold text-white mb-8">Ai legal assistant</h1>
 <p className="text-xl text-gray-300 mb-8">Professional solutions and services</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">

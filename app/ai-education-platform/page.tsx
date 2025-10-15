@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -216,34 +215,10 @@ const AiEducationPlatformPage: React.FC = () => {
     { name: "Medicine", icon: "🏥" }
   ];
 
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
-const AiEducationPlatformPage: React.FC = () => {
-  const services = [
-    {
-      title: 'Expert Ai Education Platform Solutions',
-      description: 'Professional ai education platform services tailored to your needs.'
-    },
-    {
-      title: 'Custom Implementation',
-      description: 'Tailored ai education platform implementations for your specific requirements.'
-    },
-    {
-      title: '24/7 Support',
-      description: 'Round-the-clock support for all your ai education platform needs.'
-    }
-  ];
-
->>>>>>> main
   return (
     <>
       <div>
       <Helmet>
-<<<<<<< HEAD
         <title>AI Education Platform - Intelligent Learning Solutions | Zion Tech Group</title>
         <meta name="description" content="Transform education with our AI-powered platform. Personalized learning, virtual classrooms, and smart assessment for modern educational institutions." />
         <meta name="keywords" content="AI education platform, e-learning, virtual classrooms, personalized learning, educational technology, FERPA compliance" />
@@ -289,71 +264,6 @@ const AiEducationPlatformPage: React.FC = () => {
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
                   Revolutionize education with our AI-powered platform. 
                   Personalized learning, virtual classrooms, and intelligent assessment for modern educational institutions.
-=======
-        <title>Ai Education Platform - Zion Tech Group</title>
-        <meta name="description" content="Professional ai education platform solutions and services" />
-        <meta name="keywords" content="ai, education, platform" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Ai education platform</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional Ai education platform solutions and services
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
-              <div className="bg-blue-50 border border-blue-200rounded-lgp-6">
-                <h3 className="text-lg font-semiboldtext-blue-900mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-                </div>
-        </div>
-              <div className="bg-green-50 border border-green-200rounded-lgp-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-              </p><div className="bg-purple-50 border border-purple-200rounded-lgp-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">24/7 Support
-                </h3>
-                <p className="text-purple-700">Round-the-clock support for all your needs.
-              </p>
-              </div>
-        </div>
-            </div>
-            <div className="text-center mt-12">
-              <Link 
-                to="/contact"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
-=======
-            <h1 className="text-4xl font-bold text-white mb-8">Ai education platform</h1>
-<p className="text-xl text-gray-300 mb-8">Professional solutions and services</p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2  ">Expert Solutions
-                </h3>
-                <p className="text-blue-700   ">Our team of experts delivers cutting-edge solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2  ">Custom Implementation
-                </h3>
-                <p className="text-green-700   ">Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2  ">24/7 Support
-                </h3>
-                <p className="text-purple-700   ">Round-the-clock support for all your needs.
->>>>>>> main
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -372,7 +282,6 @@ const AiEducationPlatformPage: React.FC = () => {
                   </a>
                 </div>
               </div>
-<<<<<<< HEAD
             </div>
           </section>
 
@@ -614,20 +523,9 @@ const AiEducationPlatformPage: React.FC = () => {
             </div>
           </section>
         </main>
-=======
-          </div>
-      </div>
-    </div> 
-          
-        </div>
->>>>>>> main
       </div>
 </>
   );
 };
 
-<<<<<<< HEAD
 export default AiEducationPlatformPage;
-=======
-export default AiEducationPlatformPage;
->>>>>>> main

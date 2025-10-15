@@ -11,7 +11,6 @@ const FiveGPerformancePage: React.FC = () => {
           <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
             Professional services and solutions.
           </p>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight } from 'lucide-react';

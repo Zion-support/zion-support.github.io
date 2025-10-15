@@ -53,17 +53,6 @@ const Page5gMonitoringPage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-          ))}
-        <div className="text-center">
-          <Link 
-            to="/contact"
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
-            Get Started Today
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f4d
       </div>
     </>
   );

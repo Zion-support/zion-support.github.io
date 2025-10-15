@@ -18,8 +18,6 @@ const Page5gMigrationPage: React.FC = () => {
       description: 'Round-the-clock support for all your 5g migration needs.'
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3055
-=======
   return (
     <>
       <Helmet>

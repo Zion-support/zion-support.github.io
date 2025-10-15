@@ -2,7 +2,6 @@
 const ITSolutionsPage: React.FC = () => {
   return (
     <>
-=======
 
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
@@ -41,5 +40,4 @@ const ITSolutionsPage: React.FC = () => {
     </>
   );
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3055
 

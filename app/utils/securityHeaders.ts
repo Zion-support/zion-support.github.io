@@ -12,9 +12,7 @@ export constsecurityHeaders= {
     return Object.entries(securityHeaders.csp)
       .map(([key, values]) => `${key} ${values.join(' ')}`)
       .join('; ')
-=======
     'font-src': ["'self'", "data: "],
     'connect-src': ["'self'"]
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1dac
   }
 }

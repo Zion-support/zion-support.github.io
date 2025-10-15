@@ -15,8 +15,3 @@ export interface AnalyticsEvent {
   properties?: Record<string, unknown>;
   timestamp: number;
 }
-<<<<<<< HEAD
-=======
-
-export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e9f6

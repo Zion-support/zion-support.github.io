@@ -14,7 +14,6 @@ const Careers Page: React.FC = () => {
         <meta name="keywords" content="careers, jobs, A I engineer, cloud architect, cybersecurity, remote work, technology careers" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
-=======
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-5xlfont-bold text-whitemb-6">
@@ -116,7 +115,6 @@ const Careers Page: React.FC = () => {
               We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.';
             </p>
             <button className="bg-gradient-to-r from-rose-5 00 to-pink-5 00 text-white px-8 py-3rounded-lgfont-semiboldhover:from-rose-6 00hover:to-pink-6 0 0transition-all duration-300">
-=======
           <div className="bg-whit e/1 0backdrop-blur-smrounded-xlp-8borderborder-white/2 0max-w-2xlmx-auto">
             <h2 className="text-2xlfont-bold text-whitemb-4">Don't See Your Perfect Role?</h2>';
             <p className="text-gray-300mb-6">

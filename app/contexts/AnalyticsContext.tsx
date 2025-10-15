@@ -36,10 +36,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     trackEvent,
     trackPageView,
     identifyUser,
-<<<<<<< HEAD
     setUser
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dfcb
   };
 
   return (

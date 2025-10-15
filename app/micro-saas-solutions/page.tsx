@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e9f6
 
   return (
     <>
@@ -26,7 +25,6 @@
                     <h3 className="text-lg font-semibold text-white">
                       {service.title}
                     </h3>
-=======
       
       <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}

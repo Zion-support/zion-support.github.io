@@ -18,7 +18,6 @@ export constenhancedAnalytics= {
   },
   
   trackUserEngagement: (engagementType: string, value?: number) => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3e4e
       window.gtag('event', 'user_engagement', {
         engagement_type: engagementType,
         value: value;
@@ -27,9 +26,7 @@ export constenhancedAnalytics= {
   },
   
   trackPerformance: (metric: string, value: number) => {
-<<<<<<< HEAD
     if (typeof window !== 'undefined' && window.gtag) {
-=======
       window.gtag('event', 'performance_metric', {
         metric_name: metric,
         metric_value: value;

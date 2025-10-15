@@ -74,7 +74,6 @@ const Page5gUpgradePage: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
-=======
 <p className="text-xl text-gray-300 mb-8">Professional solutions and services</p>
           </div>
       </div>

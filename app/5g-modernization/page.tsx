@@ -1,4 +1,3 @@
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3055
   return (
     <>
       <Helmet>
@@ -52,7 +51,6 @@
 };
 
 export default Page5gModernizationPage;
-=======
 import React, { Suspense } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';

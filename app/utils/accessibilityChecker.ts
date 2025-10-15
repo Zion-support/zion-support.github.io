@@ -38,7 +38,5 @@ export constaccessibilityChecker= {
     // This would require a more complex implementation
     // For now, return empty array
     return []
-<<<<<<< HEAD
-=======
   }
 }

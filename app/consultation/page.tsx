@@ -66,7 +66,6 @@ const ConsultationPage: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
-=======
                 <h3 className="text-lg font-semibold text-blue-900 mb-2  ">Expert Solutions
                 </h3>
                 <p className="text-blue-700   ">Our team of experts delivers cutting-edge solutions.
