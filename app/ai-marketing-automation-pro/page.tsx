@@ -283,7 +283,6 @@ const AIMarketingAutomationProPage = () => {
             </div>
           </section>
         </main>
-      </div>
     </>
   );
 };
