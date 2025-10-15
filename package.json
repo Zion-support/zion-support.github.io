@@ -47,8 +47,13 @@
     "analyze:performance": "node scripts/performance-optimizer.js",
     "audit:accessibility": "echo \"Running accessibility audit...\"",
     "audit:seo": "echo \"Running SEO audit...\"",
+<<<<<<< HEAD
     "audit:all": "npm run type-check && npm run lint && npm run build && npm run lighthouse",
     "perf:monitor": "npm run dev -- --open",
+=======
+    "audit:all": "npm audit && npm audit --audit-level moderate",
+    "perf:monitor": "node scripts/performance-monitor.js",
+>>>>>>> cursor/analyze-improve-and-deploy-application-a84d
     "perf:analyze:full": "pnpm run build:analyze && pnpm run perf:monitor",
     "perf:optimize": "node scripts/advanced-performance-optimizer.cjs && pnpm run perf:monitor",
     "optimize:final": "node scripts/final-optimization.cjs",
@@ -101,7 +106,11 @@
     "optimize:performance-enhanced": "node scripts/performance-optimizer-enhanced.cjs",
     "optimize:seo-enhanced": "node scripts/seo-optimizer-enhanced.cjs",
     "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
+<<<<<<< HEAD
     "postbuild": "echo \"Build completed successfully\"",
+=======
+    "postbuild": "npm run generate:sitemap && npm run optimize:performance && node scripts/performance-monitor.cjs && echo \"Build completed successfully\"",
+>>>>>>> cursor/analyze-improve-and-deploy-application-a84d
     "analyze:full": "npm run build && npm run analyze:bundle",
     "debug:performance": "localStorage.setItem('debug-performance', 'true') && npm run dev",
     "perf:check": "npm run optimize:performance && npm run build:analyze",

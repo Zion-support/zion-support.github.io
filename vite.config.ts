@@ -26,7 +26,11 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
+<<<<<<< HEAD
     chunkSizeWarningLimit: 200, // Increased threshold to reduce warnings
+=======
+    chunkSizeWarningLimit: 500,
+>>>>>>> cursor/analyze-improve-and-deploy-application-a84d
     assetsInlineLimit: 4096, // Increased for better performance
     // Enable compression
     reportCompressedSize: true,
@@ -41,6 +45,7 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
+<<<<<<< HEAD
         pure_funcs: [
           "console.log",
           "console.info",
@@ -77,6 +82,24 @@ export default defineConfig({
       },
     },
     // Enhanced build optimizations
+=======
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
+      },
+    },
+    // Additional optimizations
+    cssMinify: true,
+    minifyInternalExports: true,
+    emptyOutDir: true,
+    // Advanced optimizations
+    assetsDir: 'assets',
+    copyPublicDir: true,
+    
+    
+>>>>>>> cursor/analyze-improve-and-deploy-application-a84d
     rollupOptions: {
       output: {
         manualChunks: (id: string) => {
