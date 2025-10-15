@@ -6,11 +6,8 @@ interface CacheItem {
 
 export const advancedCaching = {
   setCache: (key: string, value: unknown, ttl: number = 3600) => {
-<<<<<<< HEAD
     const item = {
-=======
     const item: CacheItem = {
->>>>>>> cursor/analyze-improve-and-merge-code-49c8
       value,
       timestamp: Date.now(),
       ttl: ttl * 1000
@@ -36,10 +33,7 @@ export const advancedCaching = {
       return null;
     }
   },
-<<<<<<< HEAD
-=======
   
->>>>>>> cursor/analyze-improve-and-merge-code-49c8
   clearCache: (pattern?: string) => {
     if (pattern) {
       const keys = Object.keys(localStorage);

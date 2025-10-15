@@ -8,11 +8,8 @@ declare global {
 export const analytics = {
   track: (event: string, properties: Record<string, unknown> = {}) => {
     if (typeof window !== 'undefined' && window.gtag) {
-<<<<<<< HEAD
       window.gtag('event', event, properties)
-=======
       window.gtag('event', event, properties);
->>>>>>> cursor/analyze-improve-and-merge-code-49c8
     }
   },
   
