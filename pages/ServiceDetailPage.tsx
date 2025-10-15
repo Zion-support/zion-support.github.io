@@ -6,7 +6,6 @@ import {
   Star, 
   Users, 
   Shield, 
-  Zap,
   ArrowRight,
   Phone,
   Mail,
@@ -16,7 +15,6 @@ import {
   BarChart3,
   Code,
   Cloud,
-  Database,
   Settings
 } from 'lucide-react';
 
