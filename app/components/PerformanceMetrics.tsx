@@ -24,11 +24,11 @@ const PerformanceMetrics: React.FC = memo(() => {
     };
 
     // Measure Core Web Vitals
-    getCLS((metric) => updateMetric('cls', metric.value));
-    getFID((metric) => updateMetric('fid', metric.value));
-    getFCP((metric) => updateMetric('fcp', metric.value));
-    getLCP((metric) => updateMetric('lcp', metric.value));
-    getTTFB((metric) => updateMetric('ttfb', metric.value));
+    onCLS((metric) => updateMetric('cls', metric.value));
+    onFID((metric) => updateMetric('fid', metric.value));
+    onFCP((metric) => updateMetric('fcp', metric.value));
+    onLCP((metric) => updateMetric('lcp', metric.value));
+    onTTFB((metric) => updateMetric('ttfb', metric.value));
 
     // Additional performance monitoring
     const observer = new PerformanceObserver((list) => {

@@ -24,7 +24,9 @@ export default defineConfig({
     minify: 'esbuild',
     target: 'es2020',
     cssCodeSplit: true,
+    cssMinify: true,
     rollupOptions: {
+      treeshake: true,
       output: {
         manualChunks: (id) => {
           if (id.includes('node_modules')) {
@@ -64,12 +66,26 @@ export default defineConfig({
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
+            return `assets/images/[name]-[hash].${ext}`;
+          }
+          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {
+            return `assets/fonts/[name]-[hash].${ext}`;
+          }
+          return `assets/[name]-[hash].${ext}`;
+        },
       },
     },
     // Optimize chunk size
     chunkSizeWarningLimit: 500,
     reportCompressedSize: false,
+    // Enable tree shaking
+    treeshake: {
+      moduleSideEffects: false,
+    },
   },
   server: {
     port: 3000,

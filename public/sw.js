@@ -2,55 +2,43 @@ const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_CACHE = 'static-v1';
 const DYNAMIC_CACHE = 'dynamic-v1';
 
-// Files to cache immediately
-const STATIC_FILES = [
+const STATIC_ASSETS = [
   '/',
   '/app/styles/futuristic.css',
-  '/manifest.json',
-  '/icon-192x192.png',
-  '/icon-512x512.png'
+  '/manifest.json'
 ];
 
-// Install event - cache static files
+// Install event - cache static assets
 self.addEventListener('install', (event) => {
   console.log('Service Worker installing...');
-  
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Caching static files');
-        return cache.addAll(STATIC_FILES);
+        console.log('Caching static assets');
+        return cache.addAll(STATIC_ASSETS);
       })
-      .then(() => {
-        console.log('Static files cached');
-        return self.skipWaiting();
-      })
-      .catch((error) => {
-        console.error('Failed to cache static files:', error);
-      })
+      .then(() => self.skipWaiting())
   );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   console.log('Service Worker activating...');
-  
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
-          cacheNames.map((cacheName) => {
-            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+          cacheNames
+            .filter((cacheName) => {
+              return cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE;
+            })
+            .map((cacheName) => {
               console.log('Deleting old cache:', cacheName);
               return caches.delete(cacheName);
-            }
-          })
+            })
         );
       })
-      .then(() => {
-        console.log('Service Worker activated');
-        return self.clients.claim();
-      })
+      .then(() => self.clients.claim())
   );
 });
 
@@ -74,14 +62,13 @@ self.addEventListener('fetch', (event) => {
       .then((cachedResponse) => {
         // Return cached version if available
         if (cachedResponse) {
-          console.log('Serving from cache:', request.url);
           return cachedResponse;
         }
 
         // Otherwise fetch from network
         return fetch(request)
           .then((response) => {
-            // Don't cache if not a valid response
+            // Don't cache non-successful responses
             if (!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             }
@@ -90,27 +77,18 @@ self.addEventListener('fetch', (event) => {
             const responseToCache = response.clone();
 
             // Cache dynamic content
-            if (url.pathname.startsWith('/api/') || url.pathname.includes('.')) {
-              caches.open(DYNAMIC_CACHE)
-                .then((cache) => {
-                  cache.put(request, responseToCache);
-                });
-            }
+            caches.open(DYNAMIC_CACHE)
+              .then((cache) => {
+                cache.put(request, responseToCache);
+              });
 
             return response;
           })
-          .catch((error) => {
-            console.error('Fetch failed:', error);
-            
+          .catch(() => {
             // Return offline page for navigation requests
             if (request.mode === 'navigate') {
-              return caches.match('/') || new Response('Offline', {
-                status: 503,
-                statusText: 'Service Unavailable'
-              });
+              return caches.match('/');
             }
-            
-            throw error;
           });
       })
   );
@@ -120,7 +98,7 @@ self.addEventListener('fetch', (event) => {
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
     console.log('Background sync triggered');
-    event.waitUntil(doBackgroundSync());
+    // Handle background sync tasks
   }
 });
 
@@ -131,16 +109,16 @@ self.addEventListener('push', (event) => {
     const options = {
       body: data.body,
       icon: '/icon-192x192.png',
-      badge: '/icon-192x192.png',
+      badge: '/badge-72x72.png',
       vibrate: [100, 50, 100],
       data: {
         dateOfArrival: Date.now(),
-        primaryKey: data.primaryKey
+        primaryKey: 1
       },
       actions: [
         {
           action: 'explore',
-          title: 'View Details',
+          title: 'Explore',
           icon: '/icon-192x192.png'
         },
         {
@@ -167,29 +145,3 @@ self.addEventListener('notificationclick', (event) => {
     );
   }
 });
-
-// Background sync function
-async function doBackgroundSync() {
-  try {
-    // Implement background sync logic here
-    console.log('Performing background sync...');
-  } catch (error) {
-    console.error('Background sync failed:', error);
-  }
-}
-
-// Periodic background sync
-self.addEventListener('periodicsync', (event) => {
-  if (event.tag === 'content-sync') {
-    event.waitUntil(doPeriodicSync());
-  }
-});
-
-async function doPeriodicSync() {
-  try {
-    console.log('Performing periodic sync...');
-    // Implement periodic sync logic here
-  } catch (error) {
-    console.error('Periodic sync failed:', error);
-  }
-}
