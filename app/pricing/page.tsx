@@ -9,29 +9,34 @@ const PricingPage: React.FC = () => {
     {
       name: "Starter",
       description: "Perfect for small businesses and startups",
-      monthlyPrice: 99,
-      annualPrice: 79,
+      monthlyPrice: 29,
+      annualPrice: 24,
+      marketPrice: 49,
       features: [
         "Up to 5 team members",
         "Basic AI tools access",
         "Email support",
         "Standard security",
         "Basic analytics",
-        "5GB storage"
+        "5GB storage",
+        "1 AI service included",
+        "Basic templates"
       ],
       limitations: [
-        "Limited AI requests",
+        "Limited AI requests (100/month)",
         "Basic customization",
-        "Standard templates"
+        "Standard templates only"
       ],
       popular: false,
-      cta: "Start Free Trial"
+      cta: "Start Free Trial",
+      savings: "Save 50% vs market"
     },
     {
       name: "Professional",
       description: "Ideal for growing businesses",
-      monthlyPrice: 299,
-      annualPrice: 239,
+      monthlyPrice: 99,
+      annualPrice: 79,
+      marketPrice: 199,
       features: [
         "Up to 25 team members",
         "Advanced AI tools",
@@ -40,20 +45,24 @@ const PricingPage: React.FC = () => {
         "Advanced analytics",
         "100GB storage",
         "API access",
-        "Custom integrations"
+        "Custom integrations",
+        "3 AI services included",
+        "Advanced customization"
       ],
       limitations: [
-        "Monthly AI limits",
+        "Monthly AI limits (1000/month)",
         "Standard SLA"
       ],
       popular: true,
-      cta: "Start Free Trial"
+      cta: "Start Free Trial",
+      savings: "Save 60% vs market"
     },
     {
       name: "Enterprise",
       description: "For large organizations with complex needs",
-      monthlyPrice: 999,
-      annualPrice: 799,
+      monthlyPrice: 299,
+      annualPrice: 239,
+      marketPrice: 599,
       features: [
         "Unlimited team members",
         "Full AI suite access",
@@ -65,11 +74,14 @@ const PricingPage: React.FC = () => {
         "Custom integrations",
         "Dedicated account manager",
         "SLA guarantee",
-        "Custom training"
+        "Custom training",
+        "All AI services included",
+        "Unlimited AI requests"
       ],
       limitations: [],
       popular: false,
-      cta: "Contact Sales"
+      cta: "Contact Sales",
+      savings: "Save 70% vs market"
     }
   ];
 

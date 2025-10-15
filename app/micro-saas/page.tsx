@@ -6,35 +6,83 @@ const MicroSaasPage: React.FC = () => {
   const saasProducts = [
     {
       name: "AI Content Writer Pro",
-      description: "Advanced AI-powered content creation tool that generates high-quality articles, blogs, and marketing copy.",
-      features: ["Natural language generation", "SEO optimization", "Multi-language support", "Brand voice customization"],
+      description: "Advanced AI-powered content creation tool that generates high-quality articles, blogs, and marketing copy with 99.9% accuracy.",
+      features: ["GPT-4 powered generation", "SEO optimization", "Multi-language support", "Brand voice customization", "Plagiarism detection", "Content scheduling"],
       price: "$29/month",
       popular: true,
-      icon: <Zap className="w-8 h-8" />
+      icon: <Zap className="w-8 h-8" />,
+      marketPrice: "$49-99/month",
+      benefits: "Save 20+ hours/week on content creation"
     },
     {
-      name: "Analytics Dashboard Pro",
-      description: "Comprehensive business intelligence dashboard with real-time data visualization and insights.",
-      features: ["Real-time analytics", "Custom reports", "Data export", "Team collaboration"],
+      name: "AI Analytics Dashboard Pro",
+      description: "Comprehensive business intelligence dashboard with real-time data visualization, predictive analytics, and automated insights.",
+      features: ["Real-time analytics", "Custom reports", "Data export", "Team collaboration", "Predictive modeling", "Custom KPIs"],
       price: "$49/month",
       popular: false,
-      icon: <BarChart3 className="w-8 h-8" />
+      icon: <BarChart3 className="w-8 h-8" />,
+      marketPrice: "$99-299/month",
+      benefits: "Increase decision speed by 300%"
     },
     {
-      name: "Security Shield",
-      description: "Enterprise-grade security monitoring and threat detection for your applications and data.",
-      features: ["24/7 monitoring", "Threat detection", "Compliance reporting", "Incident response"],
+      name: "AI Security Shield Pro",
+      description: "Enterprise-grade security monitoring and threat detection with AI-powered behavioral analysis and automated response.",
+      features: ["24/7 monitoring", "AI threat detection", "Compliance reporting", "Incident response", "Zero-trust architecture", "SOC 2 compliance"],
       price: "$79/month",
       popular: false,
-      icon: <Shield className="w-8 h-8" />
+      icon: <Shield className="w-8 h-8" />,
+      marketPrice: "$199-499/month",
+      benefits: "Reduce security incidents by 95%"
     },
     {
-      name: "Project Manager AI",
-      description: "Intelligent project management tool with AI-powered task optimization and team coordination.",
-      features: ["Smart scheduling", "Resource optimization", "Progress tracking", "Team communication"],
+      name: "AI Project Manager Pro",
+      description: "Intelligent project management tool with AI-powered task optimization, resource allocation, and predictive timeline management.",
+      features: ["Smart scheduling", "Resource optimization", "Progress tracking", "Team communication", "Risk prediction", "Budget forecasting"],
       price: "$39/month",
       popular: false,
-      icon: <Users className="w-8 h-8" />
+      icon: <Users className="w-8 h-8" />,
+      marketPrice: "$59-149/month",
+      benefits: "Complete projects 40% faster"
+    },
+    {
+      name: "AI Email Marketing Pro",
+      description: "Intelligent email marketing platform with AI-powered personalization, A/B testing, and automated campaign optimization.",
+      features: ["AI personalization", "Smart segmentation", "A/B testing", "Automated campaigns", "Performance analytics", "GDPR compliance"],
+      price: "$59/month",
+      popular: true,
+      icon: <Zap className="w-8 h-8" />,
+      marketPrice: "$99-299/month",
+      benefits: "Increase open rates by 150%"
+    },
+    {
+      name: "AI Customer Support Pro",
+      description: "Advanced AI chatbot and customer support automation with natural language processing and sentiment analysis.",
+      features: ["24/7 AI chatbot", "Multi-language support", "Sentiment analysis", "Ticket routing", "Knowledge base", "Live chat integration"],
+      price: "$89/month",
+      popular: false,
+      icon: <Users className="w-8 h-8" />,
+      marketPrice: "$199-599/month",
+      benefits: "Reduce support costs by 70%"
+    },
+    {
+      name: "AI Code Assistant Pro",
+      description: "AI-powered coding assistant with code generation, bug detection, documentation, and automated testing capabilities.",
+      features: ["Code generation", "Bug detection", "Auto-documentation", "Test generation", "Code review", "Refactoring suggestions"],
+      price: "$99/month",
+      popular: false,
+      icon: <Zap className="w-8 h-8" />,
+      marketPrice: "$199-499/month",
+      benefits: "Increase development speed by 200%"
+    },
+    {
+      name: "AI Financial Advisor Pro",
+      description: "Intelligent financial planning and investment analysis tool with market prediction and portfolio optimization.",
+      features: ["Portfolio analysis", "Market prediction", "Risk assessment", "Tax optimization", "Goal tracking", "Investment recommendations"],
+      price: "$149/month",
+      popular: false,
+      icon: <BarChart3 className="w-8 h-8" />,
+      marketPrice: "$299-999/month",
+      benefits: "Optimize returns by 25-40%"
     }
   ];
 
@@ -106,9 +154,9 @@ const MicroSaasPage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
               {saasProducts.map((product, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 relative ${product.popular ? 'ring-2 ring-cyan-500' : ''}`}>
+                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 relative group ${product.popular ? 'ring-2 ring-cyan-500' : ''}`}>
                   {product.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
@@ -118,27 +166,43 @@ const MicroSaasPage: React.FC = () => {
                     </div>
                   )}
                   
-                  <div className="text-cyan-400 mb-4">
+                  <div className="text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors">
                     {product.icon}
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-white mb-4">{product.name}</h3>
-                  <p className="text-gray-300 mb-6">{product.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors">{product.name}</h3>
+                  <p className="text-gray-300 mb-6 group-hover:text-gray-200 transition-colors">{product.description}</p>
+                  
+                  <div className="mb-6 p-4 bg-slate-800/50 rounded-lg">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm text-gray-400">Our Price:</span>
+                      <span className="text-2xl font-bold text-cyan-400">{product.price}</span>
+                    </div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm text-gray-400">Market Price:</span>
+                      <span className="text-lg text-gray-300 line-through">{product.marketPrice}</span>
+                    </div>
+                    <div className="text-sm text-green-400 font-semibold">
+                      {product.benefits}
+                    </div>
+                  </div>
                   
                   <ul className="space-y-3 mb-8">
                     {product.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                   
-                  <div className="flex items-center justify-between">
-                    <div className="text-3xl font-bold text-white">{product.price}</div>
-                    <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center">
-                      Get Started
-                      <ArrowRight className="w-4 h-4 ml-2" />
+                  <div className="flex flex-col space-y-4">
+                    <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">
+                      Start Free Trial
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                    <button className="w-full border border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                      Learn More
                     </button>
                   </div>
                 </div>

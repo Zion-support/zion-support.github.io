@@ -24,13 +24,26 @@ const Header: React.FC = memo(() => {
       dropdown: [
         { name: 'Micro SAAS Solutions', path: '/micro-saas' },
         { name: 'AI Services', path: '/ai-services' },
-        { name: 'IT Services', path: '/it-services' }
+        { name: 'IT Services', path: '/it-services' },
+        { name: '5G Solutions', path: '/5g-solutions' },
+        { name: 'Cloud Services', path: '/cloud-services' },
+        { name: 'Cybersecurity', path: '/cybersecurity-consulting' }
       ]
     },
     { name: 'About', path: '/about' },
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'Pricing', path: '/pricing' },
-    { name: 'News', path: '/news' },
+    { 
+      name: 'Resources', 
+      path: '#',
+      dropdown: [
+        { name: 'Documentation', path: '/docs' },
+        { name: 'API Reference', path: '/api-docs' },
+        { name: 'Help Center', path: '/help' },
+        { name: 'System Status', path: '/status' },
+        { name: 'News & Updates', path: '/news' }
+      ]
+    },
     { 
       name: 'Company', 
       path: '#',
@@ -38,10 +51,10 @@ const Header: React.FC = memo(() => {
         { name: 'About Us', path: '/about' },
         { name: 'Our Team', path: '/about#team' },
         { name: 'Careers', path: '/careers' },
-        { name: 'News & Updates', path: '/news' }
+        { name: 'Contact', path: '/contact' },
+        { name: 'Support', path: '/support' }
       ]
-    },
-    { name: 'Contact', path: '/contact' }
+    }
   ];
 
   const isActive = (path: string) => location.pathname === path;

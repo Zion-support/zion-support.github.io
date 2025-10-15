@@ -24,11 +24,13 @@ const Footer: React.FC = () => {
       title: 'Micro SAAS Solutions',
       services: [
         { name: 'AI Content Writer Pro', path: '/ai-content-generation-pro' },
-        { name: 'AI Project Manager', path: '/ai-project-manager' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing' },
+        { name: 'AI Project Manager Pro', path: '/ai-project-manager' },
+        { name: 'AI Email Marketing Pro', path: '/ai-email-marketing' },
         { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro' },
-        { name: 'AI Accounting Assistant', path: '/ai-accounting-assistant' },
-        { name: 'AI Healthcare Assistant', path: '/ai-healthcare-assistant' }
+        { name: 'AI Accounting Assistant Pro', path: '/ai-accounting-assistant' },
+        { name: 'AI Healthcare Assistant Pro', path: '/ai-healthcare-assistant' },
+        { name: 'AI Code Assistant Pro', path: '/ai-code-assistant-pro' },
+        { name: 'AI Financial Advisor Pro', path: '/ai-financial-advisor' }
       ]
     },
     {
@@ -39,7 +41,9 @@ const Footer: React.FC = () => {
         { name: 'Computer Vision', path: '/ai-computer-vision' },
         { name: 'Natural Language Processing', path: '/ai-services' },
         { name: 'Predictive Analytics', path: '/ai-analytics' },
-        { name: 'AI Security Solutions', path: '/ai-security-solutions' }
+        { name: 'AI Security Solutions', path: '/ai-security-solutions' },
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro' },
+        { name: 'AI Content Generation', path: '/ai-content-generation-pro' }
       ]
     },
     {
@@ -50,7 +54,9 @@ const Footer: React.FC = () => {
         { name: 'DevOps', path: '/devops-solutions' },
         { name: 'Mobile Development', path: '/mobile-development' },
         { name: 'Web Development', path: '/web-development' },
-        { name: 'Database Solutions', path: '/database-solutions' }
+        { name: 'Database Solutions', path: '/database-solutions' },
+        { name: 'API Management', path: '/ai-api-management' },
+        { name: 'Performance Monitoring', path: '/performance-monitoring' }
       ]
     },
     {
@@ -61,7 +67,9 @@ const Footer: React.FC = () => {
         { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
         { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
         { name: '5G Edge Computing', path: '/5g-edge-computing' },
-        { name: '5G Private Networks', path: '/5g-private-networks' }
+        { name: '5G Private Networks', path: '/5g-private-networks' },
+        { name: '5G Mobile Applications', path: '/5g-mobile-applications' },
+        { name: '5G Data Analytics', path: '/5g-data-analytics' }
       ]
     }
   ];
@@ -114,6 +122,18 @@ const Footer: React.FC = () => {
               Leading provider of AI-powered micro SAAS solutions, IT services, and innovative technology solutions. 
               We help businesses transform and scale with cutting-edge technology. Visit us at <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">ziontechgroup.com</a>
             </p>
+            
+            {/* Company Stats */}
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-cyan-400">500+</div>
+                <div className="text-sm text-gray-400">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-cyan-400">99.9%</div>
+                <div className="text-sm text-gray-400">Uptime Guarantee</div>
+              </div>
+            </div>
             
             {/* Contact Info */}
             <div className="space-y-3">

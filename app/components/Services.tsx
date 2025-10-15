@@ -17,14 +17,14 @@ const Services: React.FC = () => {
       color: 'from-cyan-500 to-blue-600',
       description: 'Revolutionary AI solutions for modern businesses',
       services: [
-        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', price: 'From $299/month', features: 'Real-time insights, Custom reports, Predictive analytics' },
-        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro', price: 'From $199/month', features: 'Multi-language support, SEO optimization, Brand voice' },
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', price: 'From $149/month', features: 'Auto-posting, Engagement tracking, Content scheduling' },
-        { name: 'AI Project Manager', href: '/ai-project-manager', price: 'From $99/month', features: 'Smart scheduling, Resource optimization, Progress tracking' },
-        { name: 'AI Customer Support', href: '/ai-customer-support', price: 'From $149/month', features: '24/7 chatbot, Multi-language, Ticket routing' },
-        { name: 'AI Email Marketing', href: '/ai-email-marketing', price: 'From $99/month', features: 'Personalization, A/B testing, Analytics' },
-        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro', price: 'From $199/month', features: 'Code generation, Bug detection, Documentation' },
-        { name: 'AI Business Intelligence', href: '/ai-business-intelligence-pro', price: 'From $399/month', features: 'Data visualization, Forecasting, KPI tracking' }
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', price: 'From $49/month', marketPrice: '$99-299/month', features: 'Real-time insights, Custom reports, Predictive analytics, ROI tracking' },
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro', price: 'From $29/month', marketPrice: '$49-99/month', features: 'GPT-4 powered, Multi-language, SEO optimization, Brand voice' },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', price: 'From $59/month', marketPrice: '$99-199/month', features: 'Auto-posting, Engagement tracking, Content scheduling, Analytics' },
+        { name: 'AI Project Manager Pro', href: '/ai-project-manager', price: 'From $39/month', marketPrice: '$59-149/month', features: 'Smart scheduling, Resource optimization, Risk prediction, Budget forecasting' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support', price: 'From $89/month', marketPrice: '$199-599/month', features: '24/7 chatbot, Multi-language, Sentiment analysis, Ticket routing' },
+        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing', price: 'From $59/month', marketPrice: '$99-299/month', features: 'AI personalization, A/B testing, Automated campaigns, GDPR compliance' },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro', price: 'From $99/month', marketPrice: '$199-499/month', features: 'Code generation, Bug detection, Auto-documentation, Test generation' },
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro', price: 'From $149/month', marketPrice: '$299-999/month', features: 'Data visualization, Forecasting, KPI tracking, Custom dashboards' }
       ]
     },
     {
@@ -33,14 +33,14 @@ const Services: React.FC = () => {
       color: 'from-purple-500 to-pink-600',
       description: 'Comprehensive IT solutions and cloud services',
       services: [
-        { name: 'Cloud Migration Services', href: '/cloud-migration-services', price: 'From $2,999', features: 'AWS/Azure/GCP migration, Zero downtime, Cost optimization' },
-        { name: 'Cybersecurity Consulting', href: '/cybersecurity-consulting', price: 'From $2,999', features: 'Security audit, Penetration testing, Compliance' },
-        { name: 'Database Solutions', href: '/database-solutions', price: 'From $1,999', features: 'Performance tuning, Backup & recovery, Scaling' },
-        { name: 'DevOps Solutions', href: '/devops-solutions', price: 'From $1,499', features: 'CI/CD pipelines, Infrastructure as code, Monitoring' },
-        { name: 'API Management', href: '/ai-api-management', price: 'From $999', features: 'API gateway, Rate limiting, Documentation' },
-        { name: 'Performance Monitoring', href: '/performance-monitoring', price: 'From $799', features: 'Real-time alerts, Performance metrics, Uptime monitoring' },
-        { name: 'Web Development', href: '/web-development', price: 'From $1,299', features: 'React/Next.js, Mobile-first, SEO optimized' },
-        { name: 'Mobile App Development', href: '/mobile-development', price: 'From $1,999', features: 'iOS/Android, Cross-platform, App store ready' }
+        { name: 'Cloud Migration Services', href: '/cloud-migration-services', price: 'From $2,999', marketPrice: '$5,999-15,999', features: 'AWS/Azure/GCP migration, Zero downtime, Cost optimization, 24/7 support' },
+        { name: 'Cybersecurity Consulting', href: '/cybersecurity-consulting', price: 'From $2,999', marketPrice: '$4,999-12,999', features: 'Security audit, Penetration testing, SOC 2 compliance, Incident response' },
+        { name: 'Database Solutions', href: '/database-solutions', price: 'From $1,999', marketPrice: '$3,999-9,999', features: 'Performance tuning, Backup & recovery, Auto-scaling, Data encryption' },
+        { name: 'DevOps Solutions', href: '/devops-solutions', price: 'From $1,499', marketPrice: '$2,999-7,999', features: 'CI/CD pipelines, Infrastructure as code, Kubernetes, Monitoring' },
+        { name: 'API Management', href: '/ai-api-management', price: 'From $999', marketPrice: '$1,999-4,999', features: 'API gateway, Rate limiting, Documentation, Analytics' },
+        { name: 'Performance Monitoring', href: '/performance-monitoring', price: 'From $799', marketPrice: '$1,499-3,999', features: 'Real-time alerts, Performance metrics, Uptime monitoring, Root cause analysis' },
+        { name: 'Web Development', href: '/web-development', price: 'From $1,299', marketPrice: '$2,999-8,999', features: 'React/Next.js, Mobile-first, SEO optimized, PWA support' },
+        { name: 'Mobile App Development', href: '/mobile-development', price: 'From $1,999', marketPrice: '$4,999-15,999', features: 'iOS/Android, Cross-platform, App store ready, Push notifications' }
       ]
     },
     {
@@ -49,14 +49,14 @@ const Services: React.FC = () => {
       color: 'from-green-500 to-teal-600',
       description: 'Next-generation 5G infrastructure and applications',
       services: [
-        { name: '5G Implementation', href: '/5g-implementation', price: 'From $5,999', features: 'Network planning, Equipment setup, Testing' },
-        { name: '5G Network Infrastructure', href: '/5g-network-infrastructure', price: 'From $4,999', features: 'Tower installation, Fiber optics, Coverage optimization' },
-        { name: '5G IoT Solutions', href: '/5g-iot-solutions', price: 'From $3,999', features: 'Device connectivity, Data analytics, Remote monitoring' },
-        { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions', price: 'From $7,999', features: 'Traffic management, Public safety, Energy efficiency' },
-        { name: '5G Edge Computing', href: '/5g-edge-computing', price: 'From $2,999', features: 'Low latency processing, Local data centers, Real-time analytics' },
-        { name: '5G Private Networks', href: '/5g-private-networks', price: 'From $6,999', features: 'Dedicated spectrum, Enhanced security, Custom configuration' },
-        { name: '5G Mobile Applications', href: '/5g-mobile-applications', price: 'From $3,499', features: 'AR/VR support, Ultra-low latency, High bandwidth' },
-        { name: '5G Data Analytics', href: '/5g-data-analytics', price: 'From $2,499', features: 'Real-time insights, Predictive analytics, Network optimization' }
+        { name: '5G Implementation', href: '/5g-implementation', price: 'From $5,999', marketPrice: '$12,999-49,999', features: 'Network planning, Equipment setup, Testing, Compliance certification' },
+        { name: '5G Network Infrastructure', href: '/5g-network-infrastructure', price: 'From $4,999', marketPrice: '$9,999-39,999', features: 'Tower installation, Fiber optics, Coverage optimization, Maintenance' },
+        { name: '5G IoT Solutions', href: '/5g-iot-solutions', price: 'From $3,999', marketPrice: '$7,999-29,999', features: 'Device connectivity, Data analytics, Remote monitoring, Edge computing' },
+        { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions', price: 'From $7,999', marketPrice: '$19,999-99,999', features: 'Traffic management, Public safety, Energy efficiency, Citizen services' },
+        { name: '5G Edge Computing', href: '/5g-edge-computing', price: 'From $2,999', marketPrice: '$5,999-19,999', features: 'Low latency processing, Local data centers, Real-time analytics, AI inference' },
+        { name: '5G Private Networks', href: '/5g-private-networks', price: 'From $6,999', marketPrice: '$14,999-59,999', features: 'Dedicated spectrum, Enhanced security, Custom configuration, SLA guarantees' },
+        { name: '5G Mobile Applications', href: '/5g-mobile-applications', price: 'From $3,499', marketPrice: '$6,999-24,999', features: 'AR/VR support, Ultra-low latency, High bandwidth, Real-time streaming' },
+        { name: '5G Data Analytics', href: '/5g-data-analytics', price: 'From $2,499', marketPrice: '$4,999-19,999', features: 'Real-time insights, Predictive analytics, Network optimization, AI-powered monitoring' }
       ]
     },
     {
@@ -65,14 +65,14 @@ const Services: React.FC = () => {
       color: 'from-orange-500 to-red-600',
       description: 'Ready-to-use software solutions for immediate deployment',
       services: [
-        { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant', price: 'From $49/month', features: 'Invoice processing, Expense tracking, Tax preparation' },
-        { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro', price: 'From $79/month', features: 'Real-time filtering, Multi-language, Custom rules' },
-        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro', price: 'From $129/month', features: 'Carbon tracking, Sustainability reports, Green recommendations' },
-        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro', price: 'From $199/month', features: 'Crop monitoring, Weather prediction, Yield optimization' },
-        { name: 'AI 3D Generation', href: '/ai-3d-generation', price: 'From $149/month', features: '3D modeling, Animation, Rendering' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', price: 'From $299/month', features: 'Smart contracts, DeFi integration, NFT marketplace' },
-        { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant', price: 'From $179/month', features: 'Patient monitoring, Diagnosis support, Treatment recommendations' },
-        { name: 'AI Financial Advisor', href: '/ai-financial-advisor', price: 'From $99/month', features: 'Portfolio management, Risk assessment, Investment advice' }
+        { name: 'AI Accounting Assistant Pro', href: '/ai-accounting-assistant', price: 'From $49/month', marketPrice: '$99-299/month', features: 'Invoice processing, Expense tracking, Tax preparation, Financial forecasting' },
+        { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro', price: 'From $79/month', marketPrice: '$149-499/month', features: 'Real-time filtering, Multi-language, Custom rules, Sentiment analysis' },
+        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro', price: 'From $129/month', marketPrice: '$249-799/month', features: 'Carbon tracking, Sustainability reports, Green recommendations, ESG compliance' },
+        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro', price: 'From $199/month', marketPrice: '$399-1,299/month', features: 'Crop monitoring, Weather prediction, Yield optimization, Pest detection' },
+        { name: 'AI 3D Generation Pro', href: '/ai-3d-generation', price: 'From $149/month', marketPrice: '$299-999/month', features: '3D modeling, Animation, Rendering, AR/VR integration' },
+        { name: 'AI Blockchain Solutions Pro', href: '/ai-blockchain-solutions', price: 'From $299/month', marketPrice: '$599-2,999/month', features: 'Smart contracts, DeFi integration, NFT marketplace, Token economics' },
+        { name: 'AI Healthcare Assistant Pro', href: '/ai-healthcare-assistant', price: 'From $179/month', marketPrice: '$399-1,499/month', features: 'Patient monitoring, Diagnosis support, Treatment recommendations, HIPAA compliance' },
+        { name: 'AI Financial Advisor Pro', href: '/ai-financial-advisor', price: 'From $99/month', marketPrice: '$199-799/month', features: 'Portfolio management, Risk assessment, Investment advice, Tax optimization' }
       ]
     }
   ];
@@ -128,13 +128,17 @@ const Services: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-1 group-hover:text-green-300 transition-colors" />
                         <span className="text-white font-medium text-sm group-hover:text-cyan-300 transition-colors">{service.name}</span>
                       </div>
-                      <div className="flex items-center space-x-2">
+                      <div className="flex flex-col items-end space-y-1">
                         <span className="text-cyan-400 text-xs font-semibold group-hover:text-cyan-300 transition-colors">{service.price}</span>
-                        <ArrowRight className="w-3 h-3 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-300" />
+                        <span className="text-gray-500 text-xs line-through">{service.marketPrice}</span>
                       </div>
                     </div>
-                    <div className="text-xs text-gray-400 ml-7 leading-relaxed group-hover:text-gray-300 transition-colors">
+                    <div className="text-xs text-gray-400 ml-7 leading-relaxed group-hover:text-gray-300 transition-colors mb-2">
                       {service.features}
+                    </div>
+                    <div className="flex items-center justify-between ml-7">
+                      <span className="text-xs text-green-400 font-semibold">Save up to 70%</span>
+                      <ArrowRight className="w-3 h-3 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-300" />
                     </div>
                   </Link>
                 ))}
