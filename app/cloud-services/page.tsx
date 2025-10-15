@@ -56,6 +56,7 @@ const CloudServicesPage: React.FC = () => {
               </ul>
             </div>
 
+<<<<<<< HEAD
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
               <h3 className="text-xl font-semibold mb-4 text-cyan-400">Cloud Security</h3>
               <p className="text-gray-300 mb-4">
@@ -76,6 +77,27 @@ const CloudServicesPage: React.FC = () => {
             </button>
           </div>
         </div>
+=======
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Move to the Cloud?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Let&apos;s discuss your cloud strategy and help you choose the best platform for your business needs.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                  Start Cloud Migration
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
+                  Get Free Assessment
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-5ae7
       </div>
     </>
   );

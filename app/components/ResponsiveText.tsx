@@ -9,16 +9,11 @@ interface ResponsiveTextProps {}
   align?: 'left' | 'center' | 'right' | 'justify'
   className?: string
 }
-const ResponsiveText = ({}
-  children,
-  as: Component = 'p',
-  size = 'base',
-  weight = 'normal',
-  color = 'white',
-  align = 'left',
-  className
-}: ResponsiveTextProps) => {}
-}const sizeClasses = {}
+
+const ResponsiveText = (_{ 
+  children, as: Component = 'p', size = 'base', weight = 'normal', color = 'white', align = 'left', className
+}: ResponsiveTextProps) => {
+  const sizeClasses = {
     xs: 'text-xs sm:text-sm',
     sm: 'text-sm sm:text-base',
     base: 'text-base sm:text-lg',

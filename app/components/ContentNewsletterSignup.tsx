@@ -1,27 +1,30 @@
-import React, { useState } from "react"
-import { Mail, CheckCircle } from "lucide-react"
-interface ContentNewsletterSignupProps {}
-  className?: string
+import React, { useState } from 'react';
+import React, { useState } from "react";
+import { Mail, CheckCircle } from "lucide-react";
+
+interface ContentNewsletterSignupProps {
+  className?: string;
 }
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({}
-  className = ""}) => {}
-}const [email, setEmail] = useState("")
-  const [isSubscribed, setIsSubscribed] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-  const handleSubmit = async (e: React.FormEvent) => {}
-}e.preventDefault()
-    setIsLoading(true)
-    try {}
-} catch (error) {}
-  console.error(error)
-}// Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-      setIsSubscribed(true)
-      setEmail("")
-    } catch (error) {}
-      console.error('Failed to subscribe to newsletter:', error)
-    } finally {}
-      setIsLoading(false)
+
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
+  className = "", }) => {
+  const [email, setEmail] = useState("");
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (_e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      setIsSubscribed(true);
+      setEmail("");
+
+    } catch (error) {
+      } finally {
+      setIsLoading(false);
     }
   }
   if (isSubscribed) {}
@@ -37,8 +40,8 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({}
       </div>
     )
   }
-  return ()
-    <div
+
+  return (<div
       className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`}
     >
       <div className="text-center mb-6">

@@ -1,19 +1,30 @@
 import React, { useEffect, useRef } from 'react';
 
+<<<<<<< HEAD
 interface FuturisticBackgroundProps {
   children?: React.ReactNode;
 }
 
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
+=======
+const FuturisticBackground = (_{ children }: { children: React.ReactNode }) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5ae7
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+<<<<<<< HEAD
     
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     
+=======
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-5ae7
     let animationId: number;
     let particles: Array<{
       x: number;

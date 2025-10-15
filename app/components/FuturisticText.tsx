@@ -1,31 +1,32 @@
-import React, { useState, useEffect } from 'react'
-import { cn } from '../lib/utils'
-interface FuturisticTextProps {}
-  text: string
-  delay?: number
-  speed?: number
-  className?: string
-  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div'
+import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { cn } from '../lib/utils';
+
+interface FuturisticTextProps {
+  text: string;
+  delay?: number;
+  speed?: number;
+  className?: string;
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
 }
-const FuturisticText = ({}
-  text,
-  delay = 0,
-  speed = 100,
-  className,
-  as: Component = 'span'
-}: FuturisticTextProps) => {}
-}const [displayedText, setDisplayedText] = useState('')
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isComplete, setIsComplete] = useState(false)
-  useEffect(() => {}
-}if (currentIndex < text.length) {}
-      const timeout = setTimeout(() => {}
-}setDisplayedText(prev => prev + text[currentIndex])
-        setCurrentIndex(prev => prev + 1)
-      }, speed)
-      return () => clearTimeout(timeout)
-    } else {}
-      setIsComplete(true)
+
+const FuturisticText = (_{ 
+  text, delay = 0, speed = 100, className, as: Component = 'span'
+}: FuturisticTextProps) => {
+  const [displayedText, setDisplayedText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isComplete, setIsComplete] = useState(false);
+
+  useEffect(() => {
+    if (currentIndex < text.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText(prev => prev + text[currentIndex]);
+        setCurrentIndex(prev => prev + 1);
+      }, speed);
+
+      return () => clearTimeout(timeout);
+    } else {
+      setIsComplete(true);
     }
   }, [currentIndex, text, speed])
   useEffect(() => {}

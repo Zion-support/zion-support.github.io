@@ -1,9 +1,11 @@
 // Monitoring utility functions
-export const Monitoring = {}
-  init: () => {}
-} },
-  process: (data: any) => {}
-}return data
+
+export const Monitoring = {
+  init: () => {
+    },
+
+  process: (data: unknown) => {
+    return data;
   },
   cleanup: () => {}
 } }}

@@ -39,19 +39,19 @@ export const usePerformanceMonitor = () => {}
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         // First Input Delay (FID)
-        const fidObserver = new PerformanceObserver((list) => {}
-}const entries = list.getEntries()
-          entries.forEach((entry: any) => {}
-}metricsRef.current.firstInputDelay = entry.processingStart - entry.startTime
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries()
+          entries.forEach((entry: unknown) => {
+            metricsRef.current.firstInputDelay = entry.processingStart - entry.startTime
           })
         })
         fidObserver.observe({ entryTypes: ['first-input'] })
         // Cumulative Layout Shift (CLS)
         let clsValue = 0
-        const clsObserver = new PerformanceObserver((list) => {}
-}const entries = list.getEntries()
-          entries.forEach((entry: any) => {}
-}if (!entry.hadRecentInput) {}
+        const clsObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries()
+          entries.forEach((entry: unknown) => {
+            if (!entry.hadRecentInput) {
               clsValue += entry.value
             }
           })

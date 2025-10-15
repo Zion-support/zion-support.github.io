@@ -1,9 +1,10 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
-interface Props {}
-  children: ReactNode
-  fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (_error: Error, errorInfo: ErrorInfo) => void;
 }
 interface State {}
   hasError: boolean
@@ -32,17 +33,18 @@ class AdvancedErrorBoundary extends Component<Props, State> {}
       this.props.onError(error, errorInfo)
     }
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {}
-      console.error('Error caught by boundary:', error, errorInfo)
-    }
+    if (process.env.NODE_ENV === 'development') {
+      }
+
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {}
       this.logErrorToService(error, errorInfo)
     }
   }
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {}
-}// You can integrate with services like Sentry, LogRocket, etc.
-    const errorData = {}
+
+  logErrorToService = (_error: Error, errorInfo: ErrorInfo) => {
+    // You can integrate with services like Sentry, LogRocket, etc.
+    const errorData = {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -51,7 +53,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {}
       userAgent: navigator.userAgent,
       url: window.location.href}
     // Log the error data for debugging
-    console.error('Error data:', errorData)
+
     // Example: Send to your error reporting service
     // You could send this to your backend:
     // fetch('/api/error-report', {}

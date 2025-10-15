@@ -70,40 +70,43 @@ export default function EnhancedPerformanceOptimizer() {}
         font-display: swap
         src: url('/fonts/inter-var.woff2') format('woff2')
       }
-    `
-    document.head.appendChild(style)
-  }, [])
-  const deferNonCriticalScripts = useCallback(() => {}
-}const scripts = document.querySelectorAll("script[data-defer]")
-    scripts.forEach((script) => {}
-}const newScript = document.createElement("script")
-      newScript.src = script.getAttribute("src") || ""
-      newScript.async = true
-      newScript.defer = true
-      script.parentNode?.replaceChild(newScript, script)
-    })
-  }, [])
-  const setupPerformanceMonitoring = useCallback(() => {}
-}// Monitor Core Web Vitals
-    import("web-vitals").then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {}
-}onCLS((metric: any) => {}
-}logger.info("CLS:", metric.value)
-      })
-      onINP((metric: any) => {}
-}logger.info("INP:", metric.value)
-      })
-      onFCP((metric: any) => {}
-}logger.info("FCP:", metric.value)
-      })
-      onLCP((metric: any) => {}
-}logger.info("LCP:", metric.value)
-      })
-      onTTFB((metric: any) => {}
-}logger.info("TTFB:", metric.value)
-      })
-    }).catch((error) => {}
-}logger.error("Failed to load web-vitals:", error)
-    })
+    `;
+    document.head.appendChild(style);
+  }, []);
+
+  const deferNonCriticalScripts = useCallback(() => {
+    const scripts = document.querySelectorAll("script[data-defer]");
+    scripts.forEach((script) => {
+      const newScript = document.createElement("script");
+      newScript.src = script.getAttribute("src") || "";
+      newScript.async = true;
+      newScript.defer = true;
+      script.parentNode?.replaceChild(newScript, script);
+    });
+  }, []);
+
+  const setupPerformanceMonitoring = useCallback(() => {
+    // Monitor Core Web Vitals
+    import("web-vitals").then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+      onCLS((metric: unknown) => {
+        logger.info("CLS:", metric.value);
+      });
+      onINP((metric: unknown) => {
+        logger.info("INP:", metric.value);
+      });
+      onFCP((metric: unknown) => {
+        logger.info("FCP:", metric.value);
+      });
+      onLCP((metric: unknown) => {
+        logger.info("LCP:", metric.value);
+      });
+      onTTFB((metric: unknown) => {
+        logger.info("TTFB:", metric.value);
+      });
+    }).catch((error) => {
+      logger.error("Failed to load web-vitals:", error);
+    });
+
     // Monitor resource loading
     if ("PerformanceObserver" in window) {}
       const observer = new PerformanceObserver((list) => {}
