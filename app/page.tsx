@@ -78,10 +78,10 @@ const HomePage: React.FC = () => {
                 <div className="absolute inset-0 rounded-full border-2 border-neon-blue animate-pulse"></div>
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+            <h1 className="responsive-heading font-bold text-white mb-6 neon-text">
               Welcome to Zion Tech Group
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto fade-in-up">
+            <p className="responsive-text text-gray-300 mb-8 max-w-3xl mx-auto fade-in-up">
               We provide cutting-edge AI and IT solutions to help your business thrive in the digital age.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center fade-in-up">
@@ -102,7 +102,7 @@ const HomePage: React.FC = () => {
               <h2 className="text-3xl font-bold text-white mb-4 neon-text-purple">Our Services</h2>
               <p className="text-lg text-gray-300">Comprehensive AI and IT solutions for modern businesses</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="responsive-grid">
               <div className="futuristic-card text-center p-8 slide-in-left">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 floating">
                   <span className="text-2xl">🤖</span>
@@ -138,7 +138,7 @@ const HomePage: React.FC = () => {
               <h2 className="text-3xl font-bold text-white mb-4 neon-text-green">Zion AI Products</h2>
               <p className="text-lg text-gray-300">Ready-to-use AI solutions for immediate business impact</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="responsive-grid">
               <div className="futuristic-card p-6 holographic">
                 <h3 className="text-lg font-semibold text-white mb-2">Content Moderator</h3>
                 <p className="text-gray-300 text-sm mb-4">Automated content moderation using advanced AI algorithms.</p>

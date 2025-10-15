@@ -48,6 +48,8 @@ const Navigation: React.FC = () => {
                     <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-blue hover:bg-gray-800 transition-colors">AI Services</Link>
                     <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-blue hover:bg-gray-800 transition-colors">IT Services</Link>
                     <Link to="/cloud-infrastructure" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-blue hover:bg-gray-800 transition-colors">Cloud Infrastructure</Link>
+                    <Link to="/blockchain-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-blue hover:bg-gray-800 transition-colors">Blockchain Solutions</Link>
+                    <Link to="/iot-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-blue hover:bg-gray-800 transition-colors">IoT Solutions</Link>
                     <Link to="/5g-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-neon-blue hover:bg-gray-800 transition-colors">5G Solutions</Link>
                   </div>
                 </div>
@@ -137,11 +139,13 @@ const Navigation: React.FC = () => {
             <div className="px-3 py-2">
               <div className="text-gray-700 text-base font-medium mb-2">Services</div>
               <div className="ml-4 space-y-1">
-                <Link to="/services" className="text-gray-600 hover:text-blue-600 block px-3 py-1 rounded-md text-sm">All Services</Link>
-                <Link to="/ai-services" className="text-gray-600 hover:text-blue-600 block px-3 py-1 rounded-md text-sm">AI Services</Link>
-                <Link to="/it-services" className="text-gray-600 hover:text-blue-600 block px-3 py-1 rounded-md text-sm">IT Services</Link>
-                <Link to="/cloud-infrastructure" className="text-gray-600 hover:text-blue-600 block px-3 py-1 rounded-md text-sm">Cloud Infrastructure</Link>
-                <Link to="/5g-solutions" className="text-gray-600 hover:text-blue-600 block px-3 py-1 rounded-md text-sm">5G Solutions</Link>
+                <Link to="/services" className="text-gray-300 hover:text-neon-blue block px-3 py-1 rounded-md text-sm transition-colors">All Services</Link>
+                <Link to="/ai-services" className="text-gray-300 hover:text-neon-blue block px-3 py-1 rounded-md text-sm transition-colors">AI Services</Link>
+                <Link to="/it-services" className="text-gray-300 hover:text-neon-blue block px-3 py-1 rounded-md text-sm transition-colors">IT Services</Link>
+                <Link to="/cloud-infrastructure" className="text-gray-300 hover:text-neon-blue block px-3 py-1 rounded-md text-sm transition-colors">Cloud Infrastructure</Link>
+                <Link to="/blockchain-solutions" className="text-gray-300 hover:text-neon-blue block px-3 py-1 rounded-md text-sm transition-colors">Blockchain Solutions</Link>
+                <Link to="/iot-solutions" className="text-gray-300 hover:text-neon-blue block px-3 py-1 rounded-md text-sm transition-colors">IoT Solutions</Link>
+                <Link to="/5g-solutions" className="text-gray-300 hover:text-neon-blue block px-3 py-1 rounded-md text-sm transition-colors">5G Solutions</Link>
               </div>
             </div>
             <div className="px-3 py-2">

@@ -56,6 +56,10 @@ const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-
 const AIChatbotBuilderPage = lazy(() => import('./app/ai-chatbot-builder/page'));
 const AIFormBuilderPage = lazy(() => import('./app/ai-form-builder/page'));
 
+// New IT Services
+const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
+const IoTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -164,6 +168,10 @@ export default function App() {
                   {/* New Micro SAAS Services */}
                   <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
                   <Route path="/ai-form-builder" element={<AIFormBuilderPage />} />
+                  
+                  {/* New IT Services */}
+                  <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
+                  <Route path="/iot-solutions" element={<IoTSolutionsPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={

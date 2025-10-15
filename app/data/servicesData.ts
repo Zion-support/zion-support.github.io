@@ -181,12 +181,247 @@ export const servicesData = {
         'Lead generation'
       ],
       marketPrice: '$99 - $999/month',
-        contactInfo: {
-          phone: '+1 302 464 0950',
-          email: 'kleber@ziontechgroup.com',
-          website: 'https://ziontechgroup.com/ai-customer-support',
-          address: '364 E Main St STE 1008 Middletown DE 19709'
-        }
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-customer-support',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-computer-vision',
+      title: 'AI Computer Vision Solutions',
+      description: 'Advanced computer vision services including image recognition, object detection, and video analysis using deep learning',
+      shortDescription: 'Extract insights from visual data with AI',
+      icon: '👁️',
+      features: [
+        'Image Classification',
+        'Object Detection',
+        'Facial Recognition',
+        'Video Analysis',
+        'OCR & Text Extraction',
+        'Medical Image Analysis',
+        'Quality Inspection',
+        'Surveillance Systems',
+        'Augmented Reality',
+        'Real-time Processing'
+      ],
+      pricing: {
+        basic: 8000,
+        pro: 25000,
+        enterprise: 80000
+      },
+      benefits: [
+        'Automated visual analysis',
+        'Improved accuracy',
+        'Real-time processing',
+        'Cost reduction',
+        'Enhanced security',
+        'Better decision making'
+      ],
+      useCases: [
+        'Medical diagnosis',
+        'Quality control',
+        'Security surveillance',
+        'Autonomous vehicles',
+        'Retail analytics',
+        'Document processing'
+      ],
+      marketPrice: '$8,000 - $80,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-computer-vision',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-nlp-processing',
+      title: 'AI Natural Language Processing',
+      description: 'Advanced NLP solutions including text analysis, sentiment analysis, language translation, and conversational AI',
+      shortDescription: 'Understand and process human language with AI',
+      icon: '💬',
+      features: [
+        'Text Classification',
+        'Sentiment Analysis',
+        'Language Translation',
+        'Named Entity Recognition',
+        'Text Summarization',
+        'Question Answering',
+        'Chatbot Development',
+        'Voice Recognition',
+        'Text Generation',
+        'Language Modeling'
+      ],
+      pricing: {
+        basic: 6000,
+        pro: 20000,
+        enterprise: 60000
+      },
+      benefits: [
+        'Automated text processing',
+        'Better customer insights',
+        'Multilingual support',
+        'Improved communication',
+        'Content optimization',
+        'Real-time analysis'
+      ],
+      useCases: [
+        'Customer service',
+        'Content moderation',
+        'Market research',
+        'Document analysis',
+        'Language translation',
+        'Voice assistants'
+      ],
+      marketPrice: '$6,000 - $60,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-nlp-processing',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-predictive-analytics',
+      title: 'AI Predictive Analytics',
+      description: 'Advanced predictive modeling and forecasting solutions using machine learning and statistical analysis',
+      shortDescription: 'Predict future trends and behaviors with AI',
+      icon: '📈',
+      features: [
+        'Demand Forecasting',
+        'Risk Assessment',
+        'Customer Behavior Prediction',
+        'Sales Forecasting',
+        'Market Trend Analysis',
+        'Anomaly Detection',
+        'Time Series Analysis',
+        'Regression Modeling',
+        'Classification Models',
+        'Real-time Predictions'
+      ],
+      pricing: {
+        basic: 7000,
+        pro: 25000,
+        enterprise: 75000
+      },
+      benefits: [
+        'Data-driven decisions',
+        'Risk mitigation',
+        'Improved planning',
+        'Competitive advantage',
+        'Cost optimization',
+        'Better resource allocation'
+      ],
+      useCases: [
+        'Financial forecasting',
+        'Inventory management',
+        'Customer churn prediction',
+        'Market analysis',
+        'Risk management',
+        'Operational planning'
+      ],
+      marketPrice: '$7,000 - $75,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-predictive-analytics',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-recommendation-engine',
+      title: 'AI Recommendation Engine',
+      description: 'Intelligent recommendation systems for personalized content, products, and services using collaborative filtering and content-based filtering',
+      shortDescription: 'Deliver personalized recommendations with AI',
+      icon: '🎯',
+      features: [
+        'Collaborative Filtering',
+        'Content-based Filtering',
+        'Hybrid Recommendation',
+        'Real-time Recommendations',
+        'A/B Testing Framework',
+        'Cold Start Solutions',
+        'Scalable Architecture',
+        'Multi-domain Support',
+        'Performance Optimization',
+        'Analytics Dashboard'
+      ],
+      pricing: {
+        basic: 5000,
+        pro: 18000,
+        enterprise: 55000
+      },
+      benefits: [
+        'Increased engagement',
+        'Higher conversion rates',
+        'Better user experience',
+        'Personalized content',
+        'Revenue growth',
+        'Customer satisfaction'
+      ],
+      useCases: [
+        'E-commerce recommendations',
+        'Content personalization',
+        'Product suggestions',
+        'Music and video streaming',
+        'News and articles',
+        'Social media feeds'
+      ],
+      marketPrice: '$5,000 - $55,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-recommendation-engine',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'ai-fraud-detection',
+      title: 'AI Fraud Detection System',
+      description: 'Advanced fraud detection and prevention system using machine learning algorithms to identify suspicious activities in real-time',
+      shortDescription: 'Protect your business from fraud with AI',
+      icon: '🛡️',
+      features: [
+        'Real-time Fraud Detection',
+        'Anomaly Detection',
+        'Pattern Recognition',
+        'Risk Scoring',
+        'Transaction Monitoring',
+        'Behavioral Analysis',
+        'Machine Learning Models',
+        'False Positive Reduction',
+        'Compliance Reporting',
+        'API Integration'
+      ],
+      pricing: {
+        basic: 10000,
+        pro: 35000,
+        enterprise: 100000
+      },
+      benefits: [
+        'Reduced fraud losses',
+        'Real-time protection',
+        'Lower false positives',
+        'Compliance assurance',
+        'Cost savings',
+        'Enhanced security'
+      ],
+      useCases: [
+        'Payment fraud detection',
+        'Identity theft prevention',
+        'Insurance fraud',
+        'Credit card fraud',
+        'Account takeover',
+        'Transaction monitoring'
+      ],
+      marketPrice: '$10,000 - $100,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-fraud-detection',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
     }
   ],
   microSaas: [
@@ -1223,6 +1458,241 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/database-management',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'blockchain-solutions',
+      title: 'Blockchain & Web3 Solutions',
+      description: 'Comprehensive blockchain development services including smart contracts, DeFi protocols, and Web3 applications',
+      shortDescription: 'Build the future with blockchain technology',
+      icon: '⛓️',
+      features: [
+        'Smart Contract Development',
+        'DeFi Protocol Design',
+        'NFT Marketplace Development',
+        'Web3 Application Development',
+        'Token Economics Design',
+        'Blockchain Integration',
+        'Security Audits',
+        'Cross-chain Solutions',
+        'DAO Development',
+        'Metaverse Integration'
+      ],
+      pricing: {
+        basic: 15000,
+        pro: 50000,
+        enterprise: 150000
+      },
+      benefits: [
+        'Decentralized solutions',
+        'Enhanced security',
+        'Transparent operations',
+        'Reduced intermediaries',
+        'Global accessibility',
+        'Future-proof technology'
+      ],
+      useCases: [
+        'DeFi applications',
+        'NFT marketplaces',
+        'Supply chain tracking',
+        'Digital identity',
+        'Tokenization',
+        'Decentralized governance'
+      ],
+      marketPrice: '$15,000 - $150,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/blockchain-solutions',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'iot-solutions',
+      title: 'IoT & Smart Device Solutions',
+      description: 'End-to-end IoT solutions including device development, connectivity, data management, and analytics',
+      shortDescription: 'Connect and manage smart devices with IoT',
+      icon: '🌐',
+      features: [
+        'IoT Device Development',
+        'Sensor Integration',
+        'Edge Computing',
+        'Real-time Data Processing',
+        'Device Management Platform',
+        'Predictive Maintenance',
+        'Remote Monitoring',
+        'Data Analytics',
+        'Security Implementation',
+        'Cloud Integration'
+      ],
+      pricing: {
+        basic: 10000,
+        pro: 35000,
+        enterprise: 100000
+      },
+      benefits: [
+        'Operational efficiency',
+        'Real-time insights',
+        'Predictive maintenance',
+        'Cost reduction',
+        'Improved safety',
+        'Data-driven decisions'
+      ],
+      useCases: [
+        'Smart manufacturing',
+        'Asset tracking',
+        'Environmental monitoring',
+        'Smart cities',
+        'Healthcare devices',
+        'Agriculture automation'
+      ],
+      marketPrice: '$10,000 - $100,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/iot-solutions',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'devops-automation',
+      title: 'DevOps & Automation Solutions',
+      description: 'Complete DevOps transformation with CI/CD pipelines, infrastructure automation, and monitoring solutions',
+      shortDescription: 'Streamline development and deployment processes',
+      icon: '⚙️',
+      features: [
+        'CI/CD Pipeline Setup',
+        'Infrastructure as Code',
+        'Container Orchestration',
+        'Automated Testing',
+        'Monitoring & Alerting',
+        'Security Scanning',
+        'Deployment Automation',
+        'Environment Management',
+        'Performance Optimization',
+        'Disaster Recovery'
+      ],
+      pricing: {
+        basic: 5000,
+        pro: 20000,
+        enterprise: 75000
+      },
+      benefits: [
+        'Faster deployments',
+        'Reduced errors',
+        'Improved reliability',
+        'Cost optimization',
+        'Better collaboration',
+        'Scalable operations'
+      ],
+      useCases: [
+        'Software development',
+        'Application deployment',
+        'Infrastructure management',
+        'Quality assurance',
+        'Release management',
+        'Operations automation'
+      ],
+      marketPrice: '$5,000 - $75,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/devops-automation',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'api-development',
+      title: 'API Development & Integration',
+      description: 'RESTful and GraphQL API development with comprehensive documentation, testing, and integration services',
+      shortDescription: 'Build robust APIs for seamless integration',
+      icon: '🔌',
+      features: [
+        'RESTful API Development',
+        'GraphQL Implementation',
+        'API Documentation',
+        'Authentication & Authorization',
+        'Rate Limiting',
+        'API Testing',
+        'Third-party Integrations',
+        'API Gateway Setup',
+        'Performance Optimization',
+        'Monitoring & Analytics'
+      ],
+      pricing: {
+        basic: 3000,
+        pro: 15000,
+        enterprise: 50000
+      },
+      benefits: [
+        'Seamless integration',
+        'Improved scalability',
+        'Better security',
+        'Reduced development time',
+        'Enhanced performance',
+        'Comprehensive documentation'
+      ],
+      useCases: [
+        'Microservices architecture',
+        'Third-party integrations',
+        'Mobile app backends',
+        'Data sharing',
+        'System integration',
+        'API monetization'
+      ],
+      marketPrice: '$3,000 - $50,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/api-development',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      id: 'quality-assurance',
+      title: 'Quality Assurance & Testing',
+      description: 'Comprehensive software testing services including automated testing, performance testing, and security testing',
+      shortDescription: 'Ensure software quality and reliability',
+      icon: '🧪',
+      features: [
+        'Automated Testing',
+        'Manual Testing',
+        'Performance Testing',
+        'Security Testing',
+        'Load Testing',
+        'User Acceptance Testing',
+        'Test Case Development',
+        'Bug Tracking',
+        'Regression Testing',
+        'Test Automation Framework'
+      ],
+      pricing: {
+        basic: 2000,
+        pro: 10000,
+        enterprise: 40000
+      },
+      benefits: [
+        'Higher quality software',
+        'Reduced bugs',
+        'Better user experience',
+        'Cost savings',
+        'Faster delivery',
+        'Risk mitigation'
+      ],
+      useCases: [
+        'Software validation',
+        'Performance optimization',
+        'Security compliance',
+        'User experience testing',
+        'Regression prevention',
+        'Quality assurance'
+      ],
+      marketPrice: '$2,000 - $40,000',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/quality-assurance',
         address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     }
