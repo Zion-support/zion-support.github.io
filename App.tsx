@@ -64,6 +64,12 @@ const ZionAIEmailOptimizerPage = lazy(() => import('./app/zion-ai-email-optimize
 const ZionAIWebsiteAnalyzerPage = lazy(() => import('./app/zion-ai-website-analyzer/page'));
 const ZionAIDataVisualizerPage = lazy(() => import('./app/zion-ai-data-visualizer/page'));
 
+// Latest AI Services
+const ZionAICodeReviewerPage = lazy(() => import('./app/zion-ai-code-reviewer/page'));
+const ZionAIVoiceClonerPage = lazy(() => import('./app/zion-ai-voice-cloner/page'));
+const ZionAIVideoGeneratorPage = lazy(() => import('./app/zion-ai-video-generator/page'));
+const ZionAITranslatorPage = lazy(() => import('./app/zion-ai-translator/page'));
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -174,6 +180,12 @@ export default function App() {
                   <Route path="/zion-ai-email-optimizer" element={<ZionAIEmailOptimizerPage />} />
                   <Route path="/zion-ai-website-analyzer" element={<ZionAIWebsiteAnalyzerPage />} />
                   <Route path="/zion-ai-data-visualizer" element={<ZionAIDataVisualizerPage />} />
+                  
+                  {/* Latest AI Services */}
+                  <Route path="/zion-ai-code-reviewer" element={<ZionAICodeReviewerPage />} />
+                  <Route path="/zion-ai-voice-cloner" element={<ZionAIVoiceClonerPage />} />
+                  <Route path="/zion-ai-video-generator" element={<ZionAIVideoGeneratorPage />} />
+                  <Route path="/zion-ai-translator" element={<ZionAITranslatorPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
