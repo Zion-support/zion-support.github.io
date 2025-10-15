@@ -1,23 +1,21 @@
-import React from 'react;''
-interface FuturisticCardProps {
-  children: React.ReactNode";""
-  className?: string;
-  variant?: 'default' | 'glow' | 'gradient'}''
-const FuturisticCard: React.FC<FuturisticCardProps> = ({
-  children, ''
-  className = ',''
-  variant = 'default';}''
-}) => {''
-  const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm;''
-  const variantClasses = {''
-    default: 'bg-white/10',''
-    glow: 'bg-white/10 shadow-lg shadow-blue-500/20',''
-    gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20';}''
-  };
+import React from 'react';;';";";";
+import SEOHead from './components/SEOHead';";";";
+;
+const ComponentsPage: React.FC = () => {
   return (
-    <div className="{`${baseClasses}" ${variantClasses[variant]} ${className}`}></div>
-      {children})
-    </div>)
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";";";
+        description="Professional components solutions for modern businesses";";";
+      />";";";";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";";
+        <div: className ="text-center">";";";
+          <h1: className ="text-4xl font-bold mb-4">Components</h1>";";";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+        </div>;
+      </div>;
+    </>;
   );
 };
-export default FuturisticCard;
+;
+export default ComponentsPage;'";'";

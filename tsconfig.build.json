@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/components/*": ["src/components/*"],
+      "@/pages/*": ["src/pages/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/types/*": ["src/types/*"],
+      "@/config/*": ["src/config/*"]
+    }
+  },
+  "include": [
+    "app/case-studies/**/*",
+    "app/guides/**/*",
+    "app/enterprise/**/*"
+  ],
+  "exclude": [
+    "src/pages/blog-disabled/**/*",
+    "app/blog/**/*",
+    "app/components/**/*",
+    "blog/**/*",
+    "components/**/*",
+    "src/components/**/*",
+    "src/pages/blog/**/*",
+    "**/*.disabled/**/*",
+    "**/backup*/**/*",
+    "**/corrupted*/**/*",
+    "**/temp*/**/*",
+    "**/disabled*/**/*"
+  ]
+}
