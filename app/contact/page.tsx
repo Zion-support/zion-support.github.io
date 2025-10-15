@@ -15,7 +15,7 @@ export default function Contact() {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (_e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -23,7 +23,7 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (_e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
     setIsSubmitted(true);
@@ -47,8 +47,7 @@ export default function Contact() {
       title: "Phone",
       details: ["+1 302 464 0950", "Mon-Fri 9AM-6PM EST"],
       action: "Call Now"
-    },
-    {
+    },    {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
       details: "kleber@ziontechgroup.com",
@@ -67,12 +66,11 @@ export default function Contact() {
       description: "Middletown DE 19709"
     },
     {
-
       icon: <Clock className="w-6 h-6" />,
       title: "Business Hours",
-
-    }
-  ];
+      details: ["Mon-Fri: 9AM-6PM EST", "Sat: 10AM-4PM EST"],
+      action: "Schedule Call"
+    }  ];
 
   const services = [
     "AI Business Intelligence",

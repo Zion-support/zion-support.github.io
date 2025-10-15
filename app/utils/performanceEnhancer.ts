@@ -4,7 +4,7 @@ export const Performanceenhancer = {
   init: () => {
     },
 
-  process: (_data: any) => {
+  process: (data: unknown) => {
     return data;
   },
 

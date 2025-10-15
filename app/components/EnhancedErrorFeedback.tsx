@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 
@@ -42,8 +43,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+      }
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -59,11 +59,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
   private logErrorToService = (_error: Error, errorInfo: ErrorInfo) => {
     // In a real app, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag
-    console.error('Production error:', {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
+    .toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href
     });

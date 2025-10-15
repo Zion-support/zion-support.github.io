@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useState, useEffect } from "react";
 
 export const useEnhancedPerformance = () => {
   const [data, setData] = useState<any>(null);
@@ -11,7 +12,7 @@ export const useEnhancedPerformance = () => {
     setLoading(false);
   }, []);
 
-  const processData = (_input: any) => {
+  const processData = (input: unknown) => {
     try {
       setLoading(true);
       // Process data logic here

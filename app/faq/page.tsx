@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-  const toggleItem = (_index: number) => {
+  const toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(item => item !== index)

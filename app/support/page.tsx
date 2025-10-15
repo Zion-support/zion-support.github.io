@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
-import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -44,7 +43,7 @@ const SupportPage: React.FC = () => {
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: <FileText className="w-8 h-8" />,
+      icon: BookOpen,
       title: 'Documentation',
       description: 'Browse our comprehensive guides',
       action: 'View Docs',
@@ -92,7 +91,7 @@ const SupportPage: React.FC = () => {
     }
   ];
 
-  const handleInputChange = (_e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -100,7 +99,7 @@ const SupportPage: React.FC = () => {
     }));
   };
 
-  const handleSubmit = async (_e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     

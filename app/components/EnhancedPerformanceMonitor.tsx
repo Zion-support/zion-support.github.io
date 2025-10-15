@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import React, { useEffect, useState } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
@@ -31,27 +32,27 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         const vitals: Partial<PerformanceMetrics> = {};
 
         // Get FCP
-        onFCP((metric: any) => {
+        onFCP((metric: unknown) => {
           vitals.firstContentfulPaint = metric.value;
         });
 
         // Get LCP
-        onLCP((metric: any) => {
+        onLCP((metric: unknown) => {
           vitals.largestContentfulPaint = metric.value;
         });
 
         // Get INP (replaces FID)
-        onINP((metric: any) => {
+        onINP((metric: unknown) => {
           vitals.firstInputDelay = metric.value;
         });
 
         // Get CLS
-        onCLS((metric: any) => {
+        onCLS((metric: unknown) => {
           vitals.cumulativeLayoutShift = metric.value;
         });
 
         // Get TTFB
-        onTTFB((metric: any) => {
+        onTTFB((metric: unknown) => {
           vitals.timeToFirstByte = metric.value;
         });
 
@@ -96,7 +97,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           });
         }
       } catch (error) {
-        console.error('Error measuring performance:', error);
         setIsLoading(false);
       }
     };

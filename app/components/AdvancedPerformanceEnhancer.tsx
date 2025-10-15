@@ -8,7 +8,10 @@ interface PerformanceEnhancerProps {
 }
 
 const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
-  enableImageOptimization = true, enablePreloading = true, enableCaching = true, enableCompression = true
+  enableImageOptimization = true,
+  enablePreloading = true,
+  enableCaching = true,
+  enableCompression = true
 }) => {
   // Image optimization
   const optimizeImages = useCallback(() => {
@@ -70,8 +73,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         return registration.update();
       })
       .catch((error) => {
-        console.error('Service worker registration failed:', error);
-      });
+        });
   }, [enableCaching]);
 
   // Implement compression for API responses
@@ -80,7 +82,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
 
     // Override fetch to add compression headers
     const originalFetch = window.fetch;
-    window.fetch = async (_input, init = {}) => {
+    window.fetch = async (input, init = {}) => {
       const headers = new Headers(init.headers);
       headers.set('Accept-Encoding', 'gzip, deflate, br');
       
@@ -151,24 +153,19 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   }, []);
 
   // Performance monitoring
-  const setupPerformanceMonitoring = useCallback() => {
+  const setupPerformanceMonitoring = useCallback(() => {
     // Monitor Core Web Vitals
-    import('web-vitals').then(({ onCLS, onINP, onFCP, _onLCP, _onTTFB }) => {
-      onCLS((metric: any) => {
-        console.log('CLS:', metric.value);
-      });
-      onINP((metric: any) => {
-        console.log('INP:', metric.value);
-      });
-      onFCP((metric: any) => {
-        console.log('FCP:', metric.value);
-      });
-      onLCP((metric: any) => {
-        console.log('LCP:', metric.value);
-      });
-      onTTFB((metric: any) => {
-        console.log('TTFB:', metric.value);
-      });
+    import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+      onCLS((metric: unknown) => {
+        });
+      onINP((metric: unknown) => {
+        });
+      onFCP((metric: unknown) => {
+        });
+      onLCP((metric: unknown) => {
+        });
+      onTTFB((metric: unknown) => {
+        });
     });
 
     // Monitor memory usage

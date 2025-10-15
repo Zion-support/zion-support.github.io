@@ -9,7 +9,7 @@ interface SEOEnhancerProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: object;
+  structuredData?: Record<string, unknown>;
   noIndex?: boolean;
   noFollow?: boolean;
 }

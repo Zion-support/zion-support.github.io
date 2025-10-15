@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import React, { useState } from "react";
 import { MessageSquare } from "lucide-react";
 
@@ -50,8 +51,7 @@ const ContactForm: React.FC = () => {
       });
 
     } catch (error) {
-      console.error('Failed to submit contact form:', error);
-    } finally {
+      } finally {
       setIsSubmitting(false);
     }
   };

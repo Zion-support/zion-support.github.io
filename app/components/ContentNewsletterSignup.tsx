@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import React, { useState } from "react";
 import { Mail, CheckCircle } from "lucide-react";
 
@@ -22,8 +23,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       setEmail("");
 
     } catch (error) {
-      console.error('Failed to subscribe to newsletter:', error);
-    } finally {
+      } finally {
       setIsLoading(false);
     }
   };

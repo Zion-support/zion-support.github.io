@@ -1,16 +1,9 @@
-import React, { useEffect, useState, useCallback } from 'react';
-
-interface AccessibilitySettings {
-  enableKeyboard: boolean;
-  enableScreenReader: boolean;
-  enableHighContrast: boolean;
-  enableFocusManagement: boolean;
-  enableLargeText: boolean;
-  enableReducedMotion: boolean;
-}
-
+import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 interface AccessibilityEnhancerProps {
-  children?: React.ReactNode;
+  isHighContrast?: boolean;
+  isReducedMotion?: boolean;
+  fontSize?: number;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
@@ -32,8 +25,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       try {
         setSettings(JSON.parse(savedSettings));
       } catch (error) {
-        console.error('Error loading accessibility settings:', error);
-      }
+        }
     }
   }, []);
 
@@ -89,7 +81,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   useEffect(() => {
     if (!settings.enableKeyboard) return;
 
-    const handleKeyDown = (_event: KeyboardEvent) => {
+    const handleKeyDown = (event: KeyboardEvent) => {
       // Skip link functionality
       if (event.key === 'Tab' && event.shiftKey) {
         const skipLink = document.querySelector('.skip-link');
@@ -119,7 +111,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       );
 
       // Add focus indicators
-      focusableElements.forEach((element) => {
+      focusableElements.forEach(element => {
         element.addEventListener('focus', () => {
           element.classList.add('focus-visible');
         });
@@ -133,7 +125,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     manageFocus();
   }, [settings.enableFocusManagement]);
 
-  const updateSetting = (_key: keyof AccessibilitySettings, value: boolean) => {
+  const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
     setSettings(prev => ({
       ...prev,
       [key]: value
@@ -152,7 +144,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     setSettings(defaultSettings);
   };
 
-  return (<>
+  return (
+    <>
       {children}
       
       {/* Accessibility Panel */}
@@ -177,7 +170,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
               <input
                 type="checkbox"
                 checked={settings.enableScreenReader}
-                onChange={(_e) => updateSetting('enableScreenReader', e.target.checked)}
+                onChange={(e) => updateSetting('enableScreenReader', e.target.checked)}
                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <span className="text-sm text-gray-700">Screen Reader Support</span>
@@ -187,7 +180,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
               <input
                 type="checkbox"
                 checked={settings.enableHighContrast}
-                onChange={(_e) => updateSetting('enableHighContrast', e.target.checked)}
+                onChange={(e) => updateSetting('enableHighContrast', e.target.checked)}
                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <span className="text-sm text-gray-700">High Contrast</span>
@@ -197,7 +190,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
               <input
                 type="checkbox"
                 checked={settings.enableFocusManagement}
-                onChange={(_e) => updateSetting('enableFocusManagement', e.target.checked)}
+                onChange={(e) => updateSetting('enableFocusManagement', e.target.checked)}
                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <span className="text-sm text-gray-700">Focus Management</span>
@@ -207,7 +200,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
               <input
                 type="checkbox"
                 checked={settings.enableLargeText}
-                onChange={(_e) => updateSetting('enableLargeText', e.target.checked)}
+                onChange={(e) => updateSetting('enableLargeText', e.target.checked)}
                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <span className="text-sm text-gray-700">Large Text</span>
@@ -217,7 +210,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
               <input
                 type="checkbox"
                 checked={settings.enableReducedMotion}
-                onChange={(_e) => updateSetting('enableReducedMotion', e.target.checked)}
+                onChange={(e) => updateSetting('enableReducedMotion', e.target.checked)}
                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <span className="text-sm text-gray-700">Reduced Motion</span>
@@ -305,7 +298,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         }
       `}</style>
     </>
-  );
-};
+  );};
 
 export default AccessibilityEnhancer;

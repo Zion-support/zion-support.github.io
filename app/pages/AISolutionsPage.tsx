@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Brain, Zap, Shield, BarChart, Users, Globe, Code, Smartphone, Mail, Phone, Target, MessageSquare, TrendingUp, Cpu } from 'lucide-react';
+import { CheckCircle, Brain, Shield, BarChart, Users, Globe, Code, Smartphone, Mail, Phone, Cpu, Target, MessageSquare, TrendingUp, Zap } from 'lucide-react';
 import { CheckCircle, Brain, Zap, Shield, BarChart, Users, Globe, Code, Smartphone, Mail, Phone, Target, MessageSquare, TrendingUp, Cpu } from 'lucide-react';
 
 const AISolutionsPage: React.FC = () => {
@@ -243,7 +243,8 @@ const AISolutionsPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (<div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-6 border border-slate-700 hover:border-cyan-400 transition-all duration-300">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-6 border border-slate-700 hover:border-cyan-400 transition-all duration-300">
                   <div className="mb-4">
                     {useCase.icon}
                   </div>

@@ -4,7 +4,7 @@ export const Accessibilityutils = {
   init: () => {
     },
 
-  process: (_data: any) => {
+  process: (data: unknown) => {
     return data;
   },
 

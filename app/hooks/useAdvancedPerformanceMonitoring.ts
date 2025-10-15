@@ -40,10 +40,12 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   const observerRef = useRef<PerformanceObserver | null>(null);
   const reportIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const reportMetric = useCallback(name: string, value: number, category = 'Performance', metadata?: Record<string, _unknown>) => {
+  const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {
     // Report to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (_window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', name, {
+      (window as any)['gtag']('event', name, {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', name, {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', name, {
         event_category: category,
         value: Math.round(value),
         non_interaction: true,
@@ -71,11 +73,10 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 
     // Log in development (commented out for production)
     // if (process.env.NODE_ENV === 'development') {
-    //   console.log(`Performance Metric - ${name}:`, value);
-    // }
+    //   // }
   }, []);
 
-  const reportMetrics = useCallback() => {
+  const reportMetrics = useCallback(() => {
     const metrics = metricsRef.current;
     
     Object.entries(metrics).forEach(([key, value]) => {
@@ -98,7 +99,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       try {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-
+            const metric = entry as PerformanceEntry & { startTime: number; value?: number; hadRecentInput?: boolean };
             const metric = entry as PerformanceEntry & { 
               startTime?: number; 
               duration?: number;
@@ -108,7 +109,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
               responseStart?: number;
               requestStart?: number;
             };
-
+            
             switch (entry.entryType) {
               case 'paint':
                 if (entry.name === 'first-contentful-paint') {
@@ -121,15 +122,22 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
                 break;
               
               case 'first-input':
-
+                metricsRef.current.fid = (metric as any).processingStart - metric.startTime;
+                break;
+              
+              case 'layout-shift':
+                if (!metric.hadRecentInput) {
+                  metricsRef.current.cls = (metricsRef.current.cls || 0) + (metric.value || 0);
                 if (!metric.hadRecentInput && metric.value !== undefined) {
                   metricsRef.current.cls = (metricsRef.current.cls || 0) + metric.value;
-
                 }
                 break;
               
               case 'navigation':
-
+                metricsRef.current.ttfb = (metric as any).responseStart - (metric as any).requestStart;
+                if (metric.responseStart !== undefined && metric.requestStart !== undefined) {
+                  metricsRef.current.ttfb = metric.responseStart - metric.requestStart;
+                }
                 break;
               
               case 'measure':
@@ -169,7 +177,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
         observer.observe({ entryTypes });
         observerRef.current = observer;
 
-      }
+      } catch {
+        // }
     };
 
     const setupMemoryMonitoring = () => {
@@ -177,7 +186,11 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 
       const checkMemory = () => {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-
+        if (memory) {
+          const usedMB = memory.usedJSHeapSize / 1048576;
+          const totalMB = memory.totalJSHeapSize / 1048576;
+          const limitMB = memory.jsHeapSizeLimit / 1048576;
+        if (!memory) return;
         const usedMB = memory.usedJSHeapSize / 1048576;
         const totalMB = memory.totalJSHeapSize / 1048576;
         const limitMB = memory.jsHeapSizeLimit / 1048576;
@@ -206,9 +219,12 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-
+          const metric = entry as PerformanceEntry & { value: number; hadRecentInput: boolean };
           if (!metric.hadRecentInput) {
-
+          const metric = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!metric.hadRecentInput && metric.value !== undefined) {
+          const metric = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!metric.hadRecentInput && metric.value !== undefined) {
             clsValue += metric.value;
             metricsRef.current.cls = clsValue;
           }
@@ -217,8 +233,8 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      }
+      } catch {
+        // }
 
       return () => clsObserver.disconnect();
     };
@@ -261,7 +277,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     reportInterval,
     memoryThreshold,
     longTaskThreshold,
-
+    reportMetrics,
     reportMetric,
   ]);
 

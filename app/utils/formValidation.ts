@@ -4,7 +4,7 @@ export const Formvalidation = {
   init: () => {
     },
 
-  process: (_data: any) => {
+  process: (data: unknown) => {
     return data;
   },
 

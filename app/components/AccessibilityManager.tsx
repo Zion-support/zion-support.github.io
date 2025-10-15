@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface AccessibilitySettings {
@@ -32,8 +33,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
       try {
         setSettings(JSON.parse(savedSettings));
       } catch (error) {
-        console.error('Error loading accessibility settings:', error);
-      }
+        }
     }
   }, []);
 

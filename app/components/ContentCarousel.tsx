@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Slide {
@@ -64,12 +65,12 @@ export default function ContentCarousel({
     return () => clearInterval(timer);
   }, [autoPlay, interval, slides.length]);
 
-  const goToSlide = (_index: number) => {
+  const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
 
   const goToPrevious = () => {
-    setCurrentSlide(prev) => (prev - 1 + slides.length) % slides.length);
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
   const goToNext = () => {
@@ -84,7 +85,8 @@ export default function ContentCarousel({
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
-          {slides.map((slide) => (<div key={slide.id} className="w-full flex-shrink-0">
+          {slides.map((slide) => (
+            <div key={slide.id} className="w-full flex-shrink-0">
               <div className="bg-gray-800 p-8 rounded-lg border border-gray-700">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
@@ -137,7 +139,8 @@ export default function ContentCarousel({
 
       {/* Dots Indicator */}
       <div className="flex justify-center mt-6 space-x-2">
-        {slides.map(( index) => (<button
+        {slides.map((_, index) => (
+          <button
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${

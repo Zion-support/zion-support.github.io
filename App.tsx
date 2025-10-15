@@ -10,7 +10,6 @@ import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
-import SEOHead from './app/components/SEOHead';
 
 // Page Components
 import HomePage from './app/page';
@@ -30,35 +29,20 @@ import AISolutionsPage from './app/ai-solutions/page';
 import ITSolutionsPage from './app/it-solutions/page';
 
 // Service Pages
-import AIServicesPage from './app/pages/AIServicesPage';
-import ITServicesPage from './app/pages/ITServicesPage';
-import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
-import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
-import CaseStudiesPage from './app/pages/CaseStudiesPage';
-import CareersPage from './app/pages/CareersPage';
-
-// New AI Services
-import AIEmailMarketingAutomationPage from './app/ai-email-marketing-automation/page';
-import AISocialMediaManagerPage from './app/ai-social-media-manager/page';
-import AICustomerSupportChatbotPage from './app/ai-customer-support-chatbot/page';
-import AIProjectManagementProPage from './app/ai-project-management-pro/page';
-import AIAnalyticsDashboardProPage from './app/ai-analytics-dashboard-pro/page';
+import AIServicesPage from './app/ai-services/page';
+import ITServicesPage from './app/it-services/page';
+import CloudInfrastructurePage from './app/cloud-infrastructure/page';
+import DigitalTransformationPage from './app/digital-transformation/page';
+import CaseStudiesPage from './app/case-studies/page';
+import CareersPage from './app/careers/page';
 
 // Additional Pages
-import CybersecurityPage from './app/pages/CybersecurityPage';
-import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
-import MicroSaaSPage from './app/pages/MicroSaaSPage';
+import CybersecurityPage from './app/cybersecurity/page';
+import CloudSolutionsPage from './app/cloud-services/page';
+import MicroSaaSPage from './app/micro-saas/page';
 import FiveGSolutionsPage from './app/5g-solutions/page';
-import TeamPage from './app/pages/TeamPage';
-import DocumentationPage from './app/pages/DocumentationPage';
-import PartnershipsPage from './app/pages/PartnershipsPage';
-import APIDocsPage from './app/pages/APIDocsPage';
-import HelpPage from './app/pages/HelpPage';
-import CommunityPage from './app/pages/CommunityPage';
-import ChatPage from './app/pages/ChatPage';
-import StatusPage from './app/pages/StatusPage';
-import ReportPage from './app/pages/ReportPage';
-import SoftwareDevelopmentPage from './app/pages/SoftwareDevelopmentPage';
+import TeamPage from './app/team/page';
+import DocumentationPage from './app/docs/page';
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -94,14 +78,13 @@ function App() {
     <ErrorBoundary>
       <HelmetProvider>
         <Router>
-          <SEOHead />
           <div className="min-h-screen bg-slate-900 flex">
             <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
             <div className="flex-1 flex flex-col">
               <Navigation onSidebarToggle={() => setSidebarOpen(true)} />
               <main className="relative z-10 flex-1" id="main-content" role="main">
                 <ErrorBoundary>
-                  <Suspense fallback={<LoadingSpinner size="lg" text="Loading page..." />}>
+                  <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
                     <Routes>
                       {/* Main Pages */}
                       <Route path="/" element={<HomePage />} />
@@ -128,13 +111,6 @@ function App() {
                       <Route path="/case-studies" element={<CaseStudiesPage />} />
                       <Route path="/careers" element={<CareersPage />} />
                       
-                      {/* New AI Services */}
-                      <Route path="/ai-email-marketing-automation" element={<AIEmailMarketingAutomationPage />} />
-                      <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
-                      <Route path="/ai-customer-support-chatbot" element={<AICustomerSupportChatbotPage />} />
-                      <Route path="/ai-project-management-pro" element={<AIProjectManagementProPage />} />
-                      <Route path="/ai-analytics-dashboard-pro" element={<AIAnalyticsDashboardProPage />} />
-                      
                       {/* Additional Service Pages */}
                       <Route path="/cybersecurity" element={<CybersecurityPage />} />
                       <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
@@ -144,14 +120,6 @@ function App() {
                       {/* Additional Pages */}
                       <Route path="/team" element={<TeamPage />} />
                       <Route path="/docs" element={<DocumentationPage />} />
-                      <Route path="/partnerships" element={<PartnershipsPage />} />
-                      <Route path="/api-docs" element={<APIDocsPage />} />
-                      <Route path="/help" element={<HelpPage />} />
-                      <Route path="/community" element={<CommunityPage />} />
-                      <Route path="/chat" element={<ChatPage />} />
-                      <Route path="/status" element={<StatusPage />} />
-                      <Route path="/report" element={<ReportPage />} />
-                      <Route path="/software-development" element={<SoftwareDevelopmentPage />} />
                       
                       {/* Catch all route */}
                       <Route path="*" element={

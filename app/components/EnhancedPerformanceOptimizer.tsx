@@ -37,7 +37,8 @@ export default function EnhancedPerformanceOptimizer() {
     
     if (images.length === 0) return;
 
-    const imageObserver = new IntersectionObserver((entries) => {
+    const imageObserver = new IntersectionObserver(
+      (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
@@ -97,22 +98,22 @@ export default function EnhancedPerformanceOptimizer() {
     });
   }, []);
 
-  const setupPerformanceMonitoring = useCallback() => {
+  const setupPerformanceMonitoring = useCallback(() => {
     // Monitor Core Web Vitals
-    import("web-vitals").then(({ onCLS, onINP, onFCP, _onLCP, _onTTFB }) => {
-      onCLS((metric: any) => {
+    import("web-vitals").then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+      onCLS((metric: unknown) => {
         logger.info("CLS:", metric.value);
       });
-      onINP((metric: any) => {
+      onINP((metric: unknown) => {
         logger.info("INP:", metric.value);
       });
-      onFCP((metric: any) => {
+      onFCP((metric: unknown) => {
         logger.info("FCP:", metric.value);
       });
-      onLCP((metric: any) => {
+      onLCP((metric: unknown) => {
         logger.info("LCP:", metric.value);
       });
-      onTTFB((metric: any) => {
+      onTTFB((metric: unknown) => {
         logger.info("TTFB:", metric.value);
       });
     }).catch((error) => {
@@ -161,7 +162,7 @@ export default function EnhancedPerformanceOptimizer() {
     }
   }, []);
 
-  useEffect() => {
+  useEffect(() => {
     // Run optimizations after DOM is ready
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", () => {
