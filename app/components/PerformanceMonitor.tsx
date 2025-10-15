@@ -1,153 +1,117 @@
-import React, { useEffect } from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
+  fcp: number | null;
   lcp: number | null;
   fid: number | null;
   cls: number | null;
-  fcp: number | null;
   ttfb: number | null;
 }
 
 const PerformanceMonitor: React.FC = () => {
-  useEffect(() => {
-    const metrics: PerformanceMetrics = {
-      lcp: null,
-      fid: null,
-      cls: null,
-      fcp: null,
-      ttfb: null
-    };
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null
+  });
 
-    // Measure Core Web Vitals
-    const measureWebVitals = () => {
-      // LCP - Largest Contentful Paint
+  useEffect(() => {
+    // Only run in production
+    if (process.env.NODE_ENV !== 'production') return;
+
+    const measurePerformance = () => {
+      // Measure First Contentful Paint
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            }
+          }
+        });
+        observer.observe({ entryTypes: ['paint'] });
+      }
+
+      // Measure Largest Contentful Paint
       if ('PerformanceObserver' in window) {
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          metrics.lcp = lastEntry.startTime;
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         });
-        
-        try {
-          lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-        } catch (e) {
-          console.warn('LCP observer not supported');
-        }
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      }
 
-        // FID - First Input Delay
+      // Measure First Input Delay
+      if ('PerformanceObserver' in window) {
         const fidObserver = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry: any) => {
-            metrics.fid = entry.processingStart - entry.startTime;
-          });
-        });
-        
-        try {
-          fidObserver.observe({ entryTypes: ['first-input'] });
-        } catch (e) {
-          console.warn('FID observer not supported');
-        }
-
-        // CLS - Cumulative Layout Shift
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
-            }
-          });
-          metrics.cls = clsValue;
-        });
-        
-        try {
-          clsObserver.observe({ entryTypes: ['layout-shift'] });
-        } catch (e) {
-          console.warn('CLS observer not supported');
-        }
-
-        // FCP - First Contentful Paint
-        const fcpObserver = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
-            if (entry.name === 'first-contentful-paint') {
-              metrics.fcp = entry.startTime;
-            }
-          });
-        });
-        
-        try {
-          fcpObserver.observe({ entryTypes: ['paint'] });
-        } catch (e) {
-          console.warn('FCP observer not supported');
-        }
-      }
-
-      // TTFB - Time to First Byte
-      if ('performance' in window && 'timing' in performance) {
-        const timing = performance.timing;
-        metrics.ttfb = timing.responseStart - timing.navigationStart;
-      }
-
-      // Send metrics to analytics after page load
-      window.addEventListener('load', () => {
-        setTimeout(() => {
-          // Send to Google Analytics if available
-          if (typeof window !== 'undefined' && (window as any).gtag) {
-            if (metrics.lcp !== null) {
-              (window as any).gtag('event', 'web_vitals', {
-                event_category: 'Performance',
-                event_label: 'LCP',
-                value: Math.round(metrics.lcp)
-              });
-            }
-            if (metrics.fid !== null) {
-              (window as any).gtag('event', 'web_vitals', {
-                event_category: 'Performance',
-                event_label: 'FID',
-                value: Math.round(metrics.fid)
-              });
-            }
-            if (metrics.cls !== null) {
-              (window as any).gtag('event', 'web_vitals', {
-                event_category: 'Performance',
-                event_label: 'CLS',
-                value: Math.round(metrics.cls * 1000) / 1000
-              });
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'first-input') {
+              setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
             }
           }
-
-          // Log metrics for debugging
-          console.log('Performance Metrics:', metrics);
-        }, 2000);
-      });
-    };
-
-    measureWebVitals();
-
-    // Monitor resource loading
-    const monitorResources = () => {
-      if ('PerformanceObserver' in window) {
-        const resourceObserver = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
-            if (entry.duration > 1000) { // Log slow resources
-              console.warn('Slow resource:', entry.name, entry.duration + 'ms');
-            }
-          });
         });
-        
-        try {
-          resourceObserver.observe({ entryTypes: ['resource'] });
-        } catch (e) {
-          console.warn('Resource observer not supported');
-        }
+        fidObserver.observe({ entryTypes: ['first-input'] });
+      }
+
+      // Measure Cumulative Layout Shift
+      if ('PerformanceObserver' in window) {
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+            }
+          }
+          setMetrics(prev => ({ ...prev, cls: clsValue }));
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      }
+
+      // Measure Time to First Byte
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+        setMetrics(prev => ({ 
+          ...prev, 
+          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+        }));
       }
     };
 
-    monitorResources();
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
+
+    // Send metrics to analytics (if available)
+    const sendMetrics = () => {
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        const gtag = (window as any).gtag;
+        
+        if (metrics.fcp) gtag('event', 'web_vitals', { name: 'FCP', value: Math.round(metrics.fcp) });
+        if (metrics.lcp) gtag('event', 'web_vitals', { name: 'LCP', value: Math.round(metrics.lcp) });
+        if (metrics.fid) gtag('event', 'web_vitals', { name: 'FID', value: Math.round(metrics.fid) });
+        if (metrics.cls) gtag('event', 'web_vitals', { name: 'CLS', value: Math.round(metrics.cls * 1000) });
+        if (metrics.ttfb) gtag('event', 'web_vitals', { name: 'TTFB', value: Math.round(metrics.ttfb) });
+      }
+    };
+
+    // Send metrics after a delay to ensure all are collected
+    const timeoutId = setTimeout(sendMetrics, 5000);
 
     return () => {
-      // Cleanup observers if needed
+      clearTimeout(timeoutId);
+      window.removeEventListener('load', measurePerformance);
     };
-  }, []);
+  }, [metrics]);
 
+  // Don't render anything visible
   return null;
 };
 
