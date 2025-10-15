@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
+<<<<<<< HEAD
 // import path from 'path';
+=======
+>>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
 import { glob } from 'glob';
 
 // Patterns to fix malformed object syntax

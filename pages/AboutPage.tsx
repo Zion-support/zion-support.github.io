@@ -5,9 +5,12 @@ import {
   CheckCircle, 
   Brain, 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   // Zap,
 >>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
+=======
+>>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
   Shield,
   Globe,
   Lightbulb,
