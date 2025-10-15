@@ -70,7 +70,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         setCurrentSrc(optimizedSrc);
       }
     });
-    return undefined;
   };
 
   useEffect(() => {

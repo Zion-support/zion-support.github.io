@@ -2,17 +2,12 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 import { 
-  CurrencyDollarIcon, 
   ChartBarIcon, 
-  CogIcon, 
   CheckCircleIcon,
-  ArrowRightIcon,
   StarIcon,
-  ClockIcon,
   ShieldCheckIcon,
   SparklesIcon,
   CpuChipIcon,
-  EyeIcon,
   ReceiptRefundIcon,
   BanknotesIcon
 } from '@heroicons/react/24/outline';

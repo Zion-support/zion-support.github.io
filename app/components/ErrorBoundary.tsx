@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -29,7 +29,7 @@ class ErrorBoundary extends Component<Props, State> {
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
@@ -45,7 +45,7 @@ class ErrorBoundary extends Component<Props, State> {
     // Send error to monitoring service in production
     if (process.env.NODE_ENV === 'production') {
       // Enhanced error reporting with more context
-      const errorReport = {
+      const _errorReport = {
         message: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
@@ -57,14 +57,14 @@ class ErrorBoundary extends Component<Props, State> {
       // Send to error monitoring service (e.g., Sentry, LogRocket, etc.)
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'exception', {
-          description: error.message,
-          fatal: false
+          event_category: 'error',
+          event_label: error.message
         });
       }
     }
   }
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;

@@ -14,8 +14,8 @@ export class CustomError extends Error {
   constructor(message: string, code?: string, statusCode?: number, details?: Record<string, unknown>) {
     super(message);
     this.name = 'CustomError';
-    this.code = code ?? undefined;
-    this.statusCode = statusCode ?? undefined;
+    this.code = code;
+    this.statusCode = statusCode;
     this.details = details;
   }
 }
@@ -24,8 +24,8 @@ export const handleError = (error: unknown): AppError => {
   if (error instanceof CustomError) {
     return {
       message: error.message,
-      code: error.code ?? undefined,
-      statusCode: error.statusCode ?? undefined,
+      code: error.code,
+      statusCode: error.statusCode,
       details: error.details,
     };
   }

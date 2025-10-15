@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import {
   Bars3Icon,
-  XMarkIcon,
   HomeIcon,
   InformationCircleIcon,
   PhoneIcon,
