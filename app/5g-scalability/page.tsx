@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const FiveGScalabilityPage = () => {
+const FiveGScalability: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,6 @@ const FiveGScalabilityPage = () => {
   );
 };
 
-export default FiveGScalabilityPage;
+export default __5gScalabilityPage;
+
 

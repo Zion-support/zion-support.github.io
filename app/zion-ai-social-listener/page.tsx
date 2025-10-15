@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiSocialListenerPage = () => {
+const ZionAiSocialListenerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiSocialListenerPage = () => {
   );
 };
 
-export default AiAiSocialListenerPage;
+export default ZionAiSocialListenerPage;
 

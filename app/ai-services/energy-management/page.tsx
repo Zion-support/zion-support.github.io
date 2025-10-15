@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiManagementPage = () => {
+const EnergyManagementPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiManagementPage = () => {
   );
 };
 
-export default AiManagementPage;
+export default EnergyManagementPage;
 

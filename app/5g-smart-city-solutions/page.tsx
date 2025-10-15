@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const FiveGSmartCitySolutionsPage = () => {
+const FiveGSmartCitySolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,6 @@ const FiveGSmartCitySolutionsPage = () => {
   );
 };
 
-export default FiveGSmartCitySolutionsPage;
+export default __5gSmartCitySolutionsPage;
+
 

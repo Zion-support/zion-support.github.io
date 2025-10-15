@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAutomationPage = () => {
+const ProcessAutomationPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAutomationPage = () => {
   );
 };
 
-export default AiAutomationPage;
+export default ProcessAutomationPage;
 

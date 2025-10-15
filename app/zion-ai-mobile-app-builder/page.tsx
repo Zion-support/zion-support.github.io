@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiMobileAppBuilderPage = () => {
+const ZionAiMobileAppBuilderPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiMobileAppBuilderPage = () => {
   );
 };
 
-export default AiAiMobileAppBuilderPage;
+export default ZionAiMobileAppBuilderPage;
 

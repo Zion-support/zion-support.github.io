@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const FiveGIotSolutionsPage = () => {
+const FiveGIotSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,6 @@ const FiveGIotSolutionsPage = () => {
   );
 };
 
-export default FiveGIotSolutionsPage;
+export default __5gIotSolutionsPage;
+
 

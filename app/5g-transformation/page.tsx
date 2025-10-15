@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const FiveGTransformationPage = () => {
+const FiveGTransformation: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,6 @@ const FiveGTransformationPage = () => {
   );
 };
 
-export default FiveGTransformationPage;
+export default __5gTransformationPage;
+
 

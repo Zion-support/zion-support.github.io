@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiTaskSchedulerPage = () => {
+const ZionAiTaskSchedulerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiTaskSchedulerPage = () => {
   );
 };
 
-export default AiAiTaskSchedulerPage;
+export default ZionAiTaskSchedulerPage;
 

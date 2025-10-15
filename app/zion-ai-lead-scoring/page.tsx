@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiLeadScoringPage = () => {
+const ZionAiLeadScoringPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiLeadScoringPage = () => {
   );
 };
 
-export default AiAiLeadScoringPage;
+export default ZionAiLeadScoringPage;
 

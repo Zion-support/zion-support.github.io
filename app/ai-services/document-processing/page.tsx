@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiProcessingPage = () => {
+const DocumentProcessingPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiProcessingPage = () => {
   );
 };
 
-export default AiProcessingPage;
+export default DocumentProcessingPage;
 

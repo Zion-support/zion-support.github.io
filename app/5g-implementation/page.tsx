@@ -1,27 +1,44 @@
-
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Wifi, 
+  Zap, 
+  Shield, 
   Globe, 
+  Brain, 
   CheckCircle, 
   ArrowRight, 
   Star,
   Phone,
   Mail,
+  MapPin,
+  Download,
   Play,
+  Pause,
+  RefreshCw,
+  Settings,
+  Eye,
+  Filter,
+  Calendar,
+  Target,
   Smartphone,
   Cloud,
+  Lock,
+  Users,
+  Award,
+  TrendingUp,
   Cpu,
+  Database,
   BarChart3,
-  Network,
-  Shield,
-  Settings,
   Activity,
-  Radio
+  Radio,
+  Antenna,
+  Router,
+  Server,
+  Network
 } from 'lucide-react';
 
-const FiveGImplementationPage = () => {
+const FiveGImplementationPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   // const [activeTab, setActiveTab] = useState('overview');
 
@@ -497,5 +514,6 @@ const FiveGImplementationPage = () => {
   );
 };
 
-export default FiveGImplementationPage;
+export default __5gImplementationPage;
+
 

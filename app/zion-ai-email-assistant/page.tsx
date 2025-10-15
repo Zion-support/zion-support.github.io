@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiEmailAssistantPage = () => {
+const ZionAiEmailAssistantPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiEmailAssistantPage = () => {
   );
 };
 
-export default AiAiEmailAssistantPage;
+export default ZionAiEmailAssistantPage;
 

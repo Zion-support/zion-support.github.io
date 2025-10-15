@@ -1,5 +1,4 @@
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
-
+import React, { Suspense, lazy } from 'react';
 
 // Loading component
 const PageLoader: React.FC = () => (
@@ -10,7 +9,8 @@ const PageLoader: React.FC = () => (
 
 // Dynamic page loader that loads pages on demand
 const DynamicPageLoader: React.FC<{ pagePath: string }> = ({ pagePath }) => {
-  
+  // const location = useLocation(); // Removed unused variable
+
   // Create a dynamic import based on the current path
   const PageComponent = React.useMemo(() => {
     try {

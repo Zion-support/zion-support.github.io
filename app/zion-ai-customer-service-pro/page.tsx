@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiCustomerServiceProPage = () => {
+const ZionAiCustomerServiceProPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiCustomerServiceProPage = () => {
   );
 };
 
-export default AiAiCustomerServiceProPage;
+export default ZionAiCustomerServiceProPage;
 

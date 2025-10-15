@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiInventoryManagerPage = () => {
+const ZionAiInventoryManagerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiInventoryManagerPage = () => {
   );
 };
 
-export default AiAiInventoryManagerPage;
+export default ZionAiInventoryManagerPage;
 

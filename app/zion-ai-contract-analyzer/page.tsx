@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiContractAnalyzerPage = () => {
+const ZionAiContractAnalyzerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiContractAnalyzerPage = () => {
   );
 };
 
-export default AiAiContractAnalyzerPage;
+export default ZionAiContractAnalyzerPage;
 

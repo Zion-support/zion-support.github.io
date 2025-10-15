@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const FiveGDeploymentPage = () => {
+const FiveGDeployment: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,6 @@ const FiveGDeploymentPage = () => {
   );
 };
 
-export default FiveGDeploymentPage;
+export default __5gDeploymentPage;
+
 

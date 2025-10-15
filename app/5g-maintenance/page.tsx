@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const FiveGMaintenancePage = () => {
+const FiveGMaintenance: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,6 @@ const FiveGMaintenancePage = () => {
   );
 };
 
-export default FiveGMaintenancePage;
+export default __5gMaintenancePage;
+
 

@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiVideoGeneratorPage = () => {
+const ZionAiVideoGeneratorPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiVideoGeneratorPage = () => {
   );
 };
 
-export default AiAiVideoGeneratorPage;
+export default ZionAiVideoGeneratorPage;
 

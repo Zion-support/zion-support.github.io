@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const FiveGDataAnalyticsPage = () => {
+const FiveGDataAnalytics: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,6 @@ const FiveGDataAnalyticsPage = () => {
   );
 };
 
-export default FiveGDataAnalyticsPage;
+export default __5gDataAnalyticsPage;
+
 

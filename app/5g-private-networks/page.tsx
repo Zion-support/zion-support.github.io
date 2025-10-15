@@ -1,8 +1,7 @@
-import { Network } from 'lucide-react';
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const FiveGPrivateNetworksPage = () => {
+const FiveGPrivateNetworksPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -55,5 +54,6 @@ const FiveGPrivateNetworksPage = () => {
   );
 };
 
-export default FiveGPrivateNetworksPage;
+export default __5gPrivateNetworksPage;
+
 

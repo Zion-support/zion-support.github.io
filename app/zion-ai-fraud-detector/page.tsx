@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiFraudDetectorPage = () => {
+const ZionAiFraudDetectorPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiFraudDetectorPage = () => {
   );
 };
 
-export default AiAiFraudDetectorPage;
+export default ZionAiFraudDetectorPage;
 

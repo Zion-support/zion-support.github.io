@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiSocialSchedulerProPage = () => {
+const ZionAiSocialSchedulerProPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiSocialSchedulerProPage = () => {
   );
 };
 
-export default AiAiSocialSchedulerProPage;
+export default ZionAiSocialSchedulerProPage;
 

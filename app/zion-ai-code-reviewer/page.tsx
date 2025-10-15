@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiCodeReviewerPage = () => {
+const ZionAiCodeReviewerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiCodeReviewerPage = () => {
   );
 };
 
-export default AiAiCodeReviewerPage;
+export default ZionAiCodeReviewerPage;
 

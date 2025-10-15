@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiEmailAnalyzerPage = () => {
+const ZionAiEmailAnalyzerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiEmailAnalyzerPage = () => {
   );
 };
 
-export default AiAiEmailAnalyzerPage;
+export default ZionAiEmailAnalyzerPage;
 

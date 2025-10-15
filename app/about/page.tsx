@@ -1,5 +1,6 @@
-import { Award, Brain, CheckCircle, Globe, Shield, Target, Users, Zap } from 'lucide-react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Brain, Shield, Users, Award, Zap, Globe, Target, CheckCircle } from 'lucide-react';
 
 // Company values
 const values = [
@@ -236,3 +237,4 @@ const AboutPage: React.FC = () => {
 };
 
 export default AboutPage;
+

@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const FiveGModernizationPage = () => {
+const FiveGModernization: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,6 @@ const FiveGModernizationPage = () => {
   );
 };
 
-export default FiveGModernizationPage;
+export default __5gModernizationPage;
+
 

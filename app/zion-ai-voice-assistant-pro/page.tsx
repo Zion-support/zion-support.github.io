@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiVoiceAssistantProPage = () => {
+const ZionAiVoiceAssistantProPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiVoiceAssistantProPage = () => {
   );
 };
 
-export default AiAiVoiceAssistantProPage;
+export default ZionAiVoiceAssistantProPage;
 

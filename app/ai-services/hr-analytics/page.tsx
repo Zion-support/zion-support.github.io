@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAnalyticsPage = () => {
+const HrAnalyticsPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -52,5 +52,5 @@ const AiAnalyticsPage = () => {
   );
 };
 
-export default AiAnalyticsPage;
+export default HrAnalyticsPage;
 

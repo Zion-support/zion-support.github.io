@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiNeuralInterfacePage = () => {
+const ZionAiNeuralInterfacePage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiNeuralInterfacePage = () => {
   );
 };
 
-export default AiAiNeuralInterfacePage;
+export default ZionAiNeuralInterfacePage;
 

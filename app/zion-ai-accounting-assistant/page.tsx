@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiAccountingAssistantPage = () => {
+const ZionAiAccountingAssistantPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiAccountingAssistantPage = () => {
   );
 };
 
-export default AiAiAccountingAssistantPage;
+export default ZionAiAccountingAssistantPage;
 

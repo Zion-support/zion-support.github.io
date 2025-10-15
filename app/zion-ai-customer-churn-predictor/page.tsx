@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiCustomerChurnPredictorPage = () => {
+const ZionAiCustomerChurnPredictorPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -55,5 +55,5 @@ const AiAiCustomerChurnPredictorPage = () => {
   );
 };
 
-export default AiAiCustomerChurnPredictorPage;
+export default ZionAiCustomerChurnPredictorPage;
 

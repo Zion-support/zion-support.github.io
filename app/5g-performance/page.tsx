@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const FiveGPerformancePage = () => {
+const FiveGPerformance: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,6 @@ const FiveGPerformancePage = () => {
   );
 };
 
-export default FiveGPerformancePage;
+export default __5gPerformancePage;
+
 

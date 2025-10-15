@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiProjectManagerProPage = () => {
+const ZionAiProjectManagerProPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiProjectManagerProPage = () => {
   );
 };
 
-export default AiAiProjectManagerProPage;
+export default ZionAiProjectManagerProPage;
 

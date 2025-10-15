@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiSurveyBuilderPage = () => {
+const ZionAiSurveyBuilderPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiSurveyBuilderPage = () => {
   );
 };
 
-export default AiAiSurveyBuilderPage;
+export default ZionAiSurveyBuilderPage;
 

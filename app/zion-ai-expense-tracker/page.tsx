@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiAiExpenseTrackerPage = () => {
+const ZionAiExpenseTrackerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -54,5 +54,5 @@ const AiAiExpenseTrackerPage = () => {
   );
 };
 
-export default AiAiExpenseTrackerPage;
+export default ZionAiExpenseTrackerPage;
 

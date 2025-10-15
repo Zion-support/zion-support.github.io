@@ -1,7 +1,7 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const AiChainPage = () => {
+const SupplyChainPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -52,5 +52,5 @@ const AiChainPage = () => {
   );
 };
 
-export default AiChainPage;
+export default SupplyChainPage;
 
