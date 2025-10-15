@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { organizationSchema, websiteSchema, serviceSchema } from './utils/structuredData';
 
 const HomePage: React.FC = () => {
   return (
@@ -7,6 +8,25 @@ const HomePage: React.FC = () => {
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation." />
+        <meta name="keywords" content="AI solutions, IT services, cloud infrastructure, digital transformation, artificial intelligence, business technology" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="og:description" content="Leading provider of AI and IT solutions for modern businesses." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta name="twitter:description" content="Leading provider of AI and IT solutions for modern businesses." />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(websiteSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">

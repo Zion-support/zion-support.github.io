@@ -6,22 +6,36 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    sourcemap: true,
+    sourcemap: process.env.NODE_ENV === 'development',
+    minify: 'terser',
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['@heroicons/react', 'framer-motion']
+          ui: ['@heroicons/react', 'framer-motion', 'lucide-react'],
+          utils: ['clsx', 'tailwind-merge']
         }
+      }
+    },
+    terserOptions: {
+      compress: {
+        drop_console: process.env.NODE_ENV === 'production',
+        drop_debugger: process.env.NODE_ENV === 'production'
       }
     }
   },
   server: {
     port: 3000,
-    open: true
+    open: true,
+    hmr: {
+      overlay: true
+    }
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom']
+    include: ['react', 'react-dom', 'react-router-dom', 'web-vitals']
+  },
+  define: {
+    __APP_VERSION__: JSON.stringify(process.env.npm_package_version)
   }
 })

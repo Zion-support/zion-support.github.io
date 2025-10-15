@@ -20,7 +20,13 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Global error caught:', error, errorInfo);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Global error caught:', error, errorInfo);
+    }
+    // In production, send error to monitoring service
+    if (process.env.NODE_ENV === 'production') {
+      // Error reporting service would go here
+    }
   }
 
   render() {
