@@ -34,6 +34,14 @@ const DatabaseManagementPage = lazy(() => import('./app/database-management/page
 const NetworkInfrastructurePage = lazy(() => import('./app/network-infrastructure/page'));
 const CookiesPage = lazy(() => import('./app/cookies/page'));
 
+// New Micro SAAS Services
+const AIChatbotBuilderPage = lazy(() => import('./app/ai-chatbot-builder/page'));
+const AIDocumentProcessorPage = lazy(() => import('./app/ai-document-processor/page'));
+const AIFormBuilderPage = lazy(() => import('./app/ai-form-builder/page'));
+const AIFraudDetectionPage = lazy(() => import('./app/ai-fraud-detection/page'));
+const AIImageRecognitionPage = lazy(() => import('./app/ai-image-recognition/page'));
+const APIDevelopmentPage = lazy(() => import('./app/api-development/page'));
+
 // AI Tools Pages
 const ZionAIContentModeratorPage = lazy(() => import('./app/zion-ai-content-moderator/page'));
 const ZionAICustomerChurnPredictorPage = lazy(() => import('./app/zion-ai-customer-churn-predictor/page'));
@@ -125,6 +133,14 @@ export default function App() {
                   <Route path="/privacy" element={<PrivacyPage />} />
                   <Route path="/terms" element={<TermsPage />} />
                   <Route path="/cookies" element={<CookiesPage />} />
+                  
+                  {/* New Micro SAAS Services */}
+                  <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                  <Route path="/ai-document-processor" element={<AIDocumentProcessorPage />} />
+                  <Route path="/ai-form-builder" element={<AIFormBuilderPage />} />
+                  <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
+                  <Route path="/ai-image-recognition" element={<AIImageRecognitionPage />} />
+                  <Route path="/api-development" element={<APIDevelopmentPage />} />
                   
                   {/* Additional Pages */}
                   <Route path="/pricing" element={<PricingPage />} />

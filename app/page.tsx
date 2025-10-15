@@ -12,16 +12,16 @@ const HomePage: React.FC = memo(() => {
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "Innovation City",
-      "addressRegion": "IC",
-      "postalCode": "12345",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
       "addressCountry": "US"
     },
     "sameAs": [
@@ -110,6 +110,33 @@ const HomePage: React.FC = memo(() => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Financial Forecaster</h3>
                 <p className="text-gray-600 text-sm mb-3">AI-powered financial predictions</p>
                 <Link to="/zion-ai-financial-forecaster" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              </div>
+            </div>
+            
+            {/* New Micro SAAS Services */}
+            <div className="mt-8">
+              <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">New Micro SAAS Services</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Chatbot Builder</h3>
+                  <p className="text-gray-600 text-sm mb-3">Build intelligent chatbots in minutes</p>
+                  <Link to="/ai-chatbot-builder" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Document Processor</h3>
+                  <p className="text-gray-600 text-sm mb-3">Automate document processing with AI</p>
+                  <Link to="/ai-document-processor" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Form Builder</h3>
+                  <p className="text-gray-600 text-sm mb-3">Create intelligent forms with AI</p>
+                  <Link to="/ai-form-builder" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Fraud Detection</h3>
+                  <p className="text-gray-600 text-sm mb-3">Protect your business with AI security</p>
+                  <Link to="/ai-fraud-detection" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Learn More →</Link>
+                </div>
               </div>
             </div>
             <div className="text-center mt-8">
