@@ -76,8 +76,4 @@ export default function handler(req, res) {
     console.error('Wallet operation error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-5ae7

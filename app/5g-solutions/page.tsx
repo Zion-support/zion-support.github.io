@@ -1,12 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3, Star } from 'lucide-react';
-=======
-import { Wifi, CheckCircle, Network, Cpu, Smartphone } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-5ae7
+import { Wifi, Shield, CheckCircle, Clock, Network, Cpu, Smartphone } from 'lucide-react';
 
-const G5gSolutionsPage: React.FC = () => {
+const FiveGSolutionsPage: React.FC = () => {
   const solutions = [
     {
       icon: <Wifi className="w-8 h-8" />,
@@ -16,7 +12,6 @@ const G5gSolutionsPage: React.FC = () => {
     {
       name: "5G Network Infrastructure",
       description: "Robust 5G infrastructure with advanced tower installation and fiber optic connectivity.",
-<<<<<<< HEAD
       features: ["Tower installation", "Fiber optics deployment", "Coverage optimization", "Signal boosting", "Maintenance contracts", "Performance monitoring"],
       price: "From $4,999",
       marketPrice: "$9,999-39,999",
@@ -69,68 +64,16 @@ const G5gSolutionsPage: React.FC = () => {
     }
   ];
 
-  return (
-    <>
-      <Helmet>
-        <title>5G Solutions - Zion Tech Group | Advanced 5G Network Services</title>
-        <meta
-          name="description"
-          content="Transform your business with our comprehensive 5G solutions. From network implementation to IoT connectivity, we deliver cutting-edge 5G technology."
-        />
-        <meta
-          name="keywords"
-          content="5G solutions, 5G network, 5G implementation, 5G IoT, smart city, 5G infrastructure, 5G consulting"
-        />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              5G Solutions
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your business with our comprehensive 5G solutions. From network implementation 
-              to IoT connectivity, we deliver cutting-edge 5G technology.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {solutions.map((solution, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                  {solution.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">{solution.name}</h3>
-                <p className="text-gray-300 mb-4">{solution.description}</p>
-                <p className="text-lg font-semibold text-green-400 mb-2">{solution.price}</p>
-                <p className="text-sm text-gray-400 mb-4">Market: {solution.marketPrice}</p>
-                <p className="text-sm text-cyan-300 mb-4">{solution.benefits}</p>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Features:</h4>
-                  <ul className="text-sm text-gray-400 space-y-1">
-                    {solution.features.map((feature, idx) => (
-                      <li key={idx}>• {feature}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-              Get Started with 5G Solutions
-            </button>
-          </div>
-        </div>
-=======
-      icon: <Network className="w-8 h-8" />
+  const additionalServices = [
+    {
+      name: "5G Network Optimization",
+      description: "Fine-tune your 5G network for maximum performance and efficiency.",
+      icon: <Wifi className="w-8 h-8" />
+    },
+    {
+      name: "5G Security Solutions",
+      description: "Comprehensive security solutions for 5G networks and connected devices.",
+      icon: <Shield className="w-8 h-8" />
     },
     {
       name: "5G Edge Computing",
@@ -152,11 +95,6 @@ const G5gSolutionsPage: React.FC = () => {
     "Performance optimization",
     "Future-proof solutions"
   ];
-
-  // const technologies = [
-  //   "5G NR", "Network Slicing", "Edge Computing", "IoT Protocols", 
-  //   "AI/ML Integration", "Cloud-Native", "SDN/NFV", "MEC"
-  // ];
 
   return (
     <>
@@ -181,14 +119,84 @@ const G5gSolutionsPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {solutions.map((solution, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-cyan-400 mb-4 flex justify-center">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+                  <div className="flex items-center mb-4">
                     {solution.icon}
+                    <h3 className="text-xl font-semibold ml-3 text-white">{solution.name}</h3>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{solution.name}</h3>
-                  <p className="text-gray-300 text-sm">{solution.description}</p>
+                  <p className="text-gray-300 mb-4">{solution.description}</p>
+                  {solution.features && (
+                    <ul className="text-sm text-gray-400 space-y-1 mb-4">
+                      {solution.features.map((feature, idx) => (
+                        <li key={idx}>• {feature}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {solution.price && (
+                    <div className="mb-4">
+                      <div className="text-2xl font-bold text-cyan-400">{solution.price}</div>
+                      <div className="text-sm text-gray-400 line-through">{solution.marketPrice}</div>
+                    </div>
+                  )}
+                  {solution.benefits && (
+                    <p className="text-sm text-green-400 font-medium">{solution.benefits}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                Get Started with 5G Solutions
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 bg-slate-800/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Why Choose 5G?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the next generation of connectivity with our comprehensive 5G solutions.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-cyan-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Additional Services Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Additional Services</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Complete your 5G transformation with our comprehensive service offerings.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {additionalServices.map((service, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    {service.icon}
+                    <h3 className="text-xl font-semibold ml-3 text-white">{service.name}</h3>
+                  </div>
+                  <p className="text-gray-300">{service.description}</p>
                 </div>
               ))}
             </div>
@@ -196,20 +204,20 @@ const G5gSolutionsPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-gray-800/30">
+        <section className="py-20 bg-slate-800/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our 5G Solutions?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">What You Get</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We combine cutting-edge 5G technology with deep industry expertise to deliver solutions that drive real business value.
+                Our 5G solutions come with everything you need for a successful deployment.
               </p>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-2 bg-gray-800/50 px-4 py-2 rounded-full">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-white">{feature}</span>
+                <div key={index} className="flex items-center">
+                  <CheckCircle className="w-6 h-6 text-green-400 mr-3" />
+                  <span className="text-gray-300">{feature}</span>
                 </div>
               ))}
             </div>
@@ -220,29 +228,24 @@ const G5gSolutionsPage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy 5G?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready for 5G?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Let's discuss how 5G can transform your business and give you a competitive advantage.
+                Let&apos;s discuss your 5G strategy and help you choose the best solutions for your business needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-                  Schedule Consultation
+                  Start 5G Implementation
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
-                  View Portfolio
+                  Get Free Assessment
                 </button>
               </div>
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-5ae7
       </div>
     </>
   );
 };
 
-<<<<<<< HEAD
 export default FiveGSolutionsPage;
-=======
-export default G5gSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5ae7

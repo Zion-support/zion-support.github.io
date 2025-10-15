@@ -56,7 +56,6 @@ const CloudServicesPage: React.FC = () => {
               </ul>
             </div>
 
-<<<<<<< HEAD
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
               <h3 className="text-xl font-semibold mb-4 text-cyan-400">Cloud Security</h3>
               <p className="text-gray-300 mb-4">
@@ -77,7 +76,7 @@ const CloudServicesPage: React.FC = () => {
             </button>
           </div>
         </div>
-=======
+
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -97,7 +96,6 @@ const CloudServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-5ae7
       </div>
     </>
   );
