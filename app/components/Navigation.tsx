@@ -39,9 +39,10 @@ const Navigation: React.FC = () => {
                 <div
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
-                  className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50"
+                  className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg z-50"
                 >
                   <div className="py-1">
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">Core Services</div>
                     <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       AI Services
                     </Link>
@@ -53,6 +54,23 @@ const Navigation: React.FC = () => {
                     </Link>
                     <Link to="/5g-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       5G Solutions
+                    </Link>
+                    <Link to="/digital-transformation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Digital Transformation
+                    </Link>
+                    <div className="border-t border-gray-100 my-1"></div>
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">AI Products</div>
+                    <Link to="/ai-content-generator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Content Generator
+                    </Link>
+                    <Link to="/zion-ai-customer-support-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Customer Support Pro
+                    </Link>
+                    <Link to="/zion-ai-workflow-automator-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Workflow Automator Pro
+                    </Link>
+                    <Link to="/zion-ai-email-marketing-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Email Marketing Pro
                     </Link>
                   </div>
                 </div>
@@ -93,7 +111,7 @@ const Navigation: React.FC = () => {
               About
             </Link>
             <div className="space-y-1">
-              <div className="text-gray-700 px-3 py-2 text-base font-medium">Services</div>
+              <div className="text-gray-700 px-3 py-2 text-base font-medium">Core Services</div>
               <Link to="/ai-services" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 AI Services
               </Link>
@@ -105,6 +123,19 @@ const Navigation: React.FC = () => {
               </Link>
               <Link to="/5g-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 5G Solutions
+              </Link>
+              <Link to="/digital-transformation" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Digital Transformation
+              </Link>
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">AI Products</div>
+              <Link to="/ai-content-generator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Content Generator
+              </Link>
+              <Link to="/zion-ai-customer-support-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Customer Support Pro
+              </Link>
+              <Link to="/zion-ai-workflow-automator-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Workflow Automator Pro
               </Link>
             </div>
             <Link to="/pricing" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
