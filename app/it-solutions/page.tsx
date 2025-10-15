@@ -1,3 +1,47 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { 
+  CpuChipIcon,
+  CloudIcon,
+  ShieldCheckIcon,
+  CogIcon,
+  ArrowRightIcon,
+  CheckCircleIcon,
+  ServerIcon,
+  DatabaseIcon,
+  GlobeAltIcon,
+  UserGroupIcon
+} from '@heroicons/react/24/outline';
+
+const ITSolutionsPage: React.FC = () => {
+  const itServices = [
+    {
+      title: "Cloud Infrastructure",
+      description: "Scalable and secure cloud solutions for modern businesses with 99.9% uptime guarantee.",
+      icon: CloudIcon,
+      features: [
+        "AWS, Azure, and GCP expertise",
+        "Auto-scaling infrastructure",
+        "Disaster recovery planning",
+        "Cost optimization",
+        "24/7 monitoring",
+        "Security compliance"
+      ],
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at $2,500/month",
+      benefits: ["99.9% uptime", "Auto-scaling", "Cost savings"],
+      useCases: ["Web applications", "Data storage", "Backup solutions"],
+      href: "/cloud-infrastructure"
+    },
+    {
+      title: "Cybersecurity Solutions",
+      description: "Comprehensive security solutions to protect your business from cyber threats and data breaches.",
+=======
+>>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -8,32 +52,56 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
       href: "/cloud-infrastructure" },
     { title: "Cybersecurity Solutions",
       description: "Comprehensive cybersecurity solutions to protect your digital assets and data.",
+>>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
       icon: ShieldCheckIcon,
       features: [
-        "Threat detection",
-        "Vulnerability assessment",
-        "Security monitoring",
-        "Incident response",
-        "Compliance management",
-        "Security training"
+        "Security assessment",
+        "Penetration testing",
+        "Firewall configuration",
+        "Intrusion detection",
+        "Security training",
+        "Compliance auditing"
       ],
       color: "from-red-500 to-pink-500",
-      price: "Starting at $2,200/month",
-      benefits: ["Enhanced security", "Risk mitigation", "Compliance"],
+      price: "Starting at $3,000/month",
+      benefits: ["Zero breaches", "Compliance ready", "24/7 monitoring"],
       useCases: ["Data protection", "Network security", "Compliance"],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      href: "/cybersecurity"
+    },
+    {
+      title: "Network Infrastructure",
+      description: "Robust network solutions designed for high performance, reliability, and scalability.",
+      icon: ServerIcon,
+=======
+>>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
       href: "/cybersecurity" },
     { title: "IT Consulting",
       description: "Strategic IT consulting to help you make informed technology decisions.",
       icon: LightBulbIcon,
+>>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
       features: [
-        "Technology assessment",
-        "Strategic planning",
-        "Vendor selection",
-        "Implementation guidance",
-        "Change management",
-        "Training and support"
+        "Network design & implementation",
+        "Wireless solutions",
+        "VPN setup",
+        "Load balancing",
+        "Network monitoring",
+        "Performance optimization"
       ],
       color: "from-green-500 to-emerald-500",
+<<<<<<< HEAD
+      price: "Starting at $2,000/month",
+      benefits: ["High performance", "Reliable connectivity", "Scalable design"],
+      useCases: ["Office networks", "Remote work", "Data centers"],
+      href: "/network-infrastructure"
+    },
+    {
+      title: "Database Management",
+      description: "Expert database administration and optimization services for maximum performance and reliability.",
+      icon: DatabaseIcon,
+=======
       price: "Starting at $1,200/month",
       benefits: ["Expert guidance", "Cost savings", "Risk reduction"],
       useCases: ["Technology planning", "Digital transformation", "System integration"],
@@ -41,16 +109,29 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
     { title: "Network Solutions",
       description: "Advanced networking solutions for reliable and secure connectivity.",
       icon: GlobeAltIcon,
+>>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
       features: [
-        "Network design",
-        "Security implementation",
-        "Performance optimization",
-        "Monitoring and maintenance",
-        "Disaster recovery",
-        "Remote access"
+        "Database design & optimization",
+        "Performance tuning",
+        "Backup & recovery",
+        "Data migration",
+        "Security hardening",
+        "Monitoring & maintenance"
       ],
       color: "from-purple-500 to-indigo-500",
       price: "Starting at $1,800/month",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      benefits: ["Optimized performance", "Data integrity", "Automated backups"],
+      useCases: ["Business applications", "Data analytics", "E-commerce"],
+      href: "/database-management"
+    },
+    {
+      title: "IT Support & Maintenance",
+      description: "Comprehensive IT support services to keep your systems running smoothly and efficiently.",
+=======
+>>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
       benefits: ["Reliable connectivity", "Enhanced security", "Performance"],
       useCases: ["Office networking", "Remote work", "Data centers"],
       href: "/network-solutions" },
@@ -72,15 +153,42 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
       href: "/data-management" },
     { title: "IT Support",
       description: "Comprehensive IT support services to keep your systems running smoothly.",
+>>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
       icon: UserGroupIcon,
       features: [
-        "24/7 support",
-        "Remote assistance",
+        "24/7 technical support",
         "System maintenance",
         "Software updates",
-        "Hardware support",
-        "User training"
+        "Hardware management",
+        "User training",
+        "Help desk services"
       ],
+<<<<<<< HEAD
+      color: "from-orange-500 to-yellow-500",
+      price: "Starting at $1,200/month",
+      benefits: ["24/7 support", "Proactive maintenance", "Fast response"],
+      useCases: ["System maintenance", "User support", "Troubleshooting"],
+      href: "/it-support"
+    },
+    {
+      title: "Digital Transformation",
+      description: "Complete digital transformation services to modernize your business processes and systems.",
+      icon: CogIcon,
+      features: [
+        "Process automation",
+        "Legacy system migration",
+        "Digital workflow design",
+        "Integration services",
+        "Change management",
+        "Training & support"
+      ],
+      color: "from-teal-500 to-cyan-500",
+      price: "Starting at $4,000/month",
+      benefits: ["Increased efficiency", "Modern systems", "Future-ready"],
+      useCases: ["Process automation", "System modernization", "Digital workflows"],
+      href: "/digital-transformation"
+    }
+=======
       color: "from-cyan-500 to-blue-500",
       price: "Starting at $1,000/month",
       benefits: ["Reduced downtime", "Expert support", "Cost efficiency"],
@@ -135,19 +243,41 @@ const ITSolutionsPage: React.FC = () => { const solutions = [
       description: 'Custom web applications and websites for your business needs.',
       features: ['Custom Development', 'Responsive Design', 'SEO Optimization', 'Maintenance'],
       pricing: 'Starting at $2,999/project' }
+<<<<<<< HEAD
+=======
+>>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
+>>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
   ];
   const benefits = [
-    'Expert IT professionals with years of experience',
-    '24/7 technical support and monitoring',
-    'Scalable solutions that grow with your business',
-    'Proactive maintenance and updates',
-    'Cost-effective solutions tailored to your budget',
-    'Compliance with industry standards and regulations'
+    "Expert IT professionals with years of experience",
+    "24/7 monitoring and support services",
+    "Scalable solutions that grow with your business",
+    "Proactive maintenance to prevent issues",
+    "Cost-effective solutions tailored to your needs",
+    "Latest technology and best practices"
   ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
+>>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, network management, and digital transformation services." />
+        <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, network management, database administration, digital transformation" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+=======
+>>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
         <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, and consulting services." />
         <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, IT consulting, network solutions" />
       </Helmet>
@@ -251,18 +381,25 @@ const ITSolutionsPage: React.FC = () => { const solutions = [
       </Helmet>
       { /* Hero Section */ }
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">
               IT Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive IT solutions to power your business infrastructure
+              Comprehensive IT services to power your business with reliable, secure, and scalable technology solutions
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              From infrastructure management to cybersecurity, our expert IT solutions 
-              ensure your technology infrastructure is secure, scalable, and optimized for performance.
+              From cloud infrastructure to cybersecurity, our expert IT team delivers solutions that keep your business running smoothly and securely.
             </p>
+<<<<<<< HEAD
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
+              >
+=======
           </div>
         </div>
       </section>
@@ -330,6 +467,10 @@ const ITSolutionsPage: React.FC = () => { const solutions = [
                       className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 font-semibold">
                       Get Started
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center">
+<<<<<<< HEAD
+=======
+>>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
+>>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
                 Get Started Today
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
               </Link>
@@ -343,7 +484,16 @@ const ITSolutionsPage: React.FC = () => { const solutions = [
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       { /* Solutions Grid */ }
+=======
+<<<<<<< HEAD
+
+      {/* IT Services Grid */}
+=======
+      { /* Solutions Grid */ }
+>>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
+>>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -355,25 +505,68 @@ const ITSolutionsPage: React.FC = () => { const solutions = [
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            {itServices.map((service, index) => {
+              const Icon = service.icon;
+=======
+>>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
             { solutions.map((solution, index) => {
               const Icon = solution.icon;
+>>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
               return (
                 <div key={index } className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">
+                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-4`}>
                       <Icon className="w-8 h-8 text-white" />
                     </div>
+<<<<<<< HEAD
                     <h3 className="text-xl font-semibold text-white">{ solution.title }</h3>
                   </div>
                   <p className="text-gray-300 mb-6">{ solution.description }</p>
                   <ul className="space-y-2 mb-6">
                     { solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex } className="text-sm text-gray-400 flex items-center">
+=======
+<<<<<<< HEAD
+                    <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                  </div>
+                  
+                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
+=======
+                    <h3 className="text-xl font-semibold text-white">{ solution.title }</h3>
+                  </div>
+                  <p className="text-gray-300 mb-6">{ solution.description }</p>
+                  <ul className="space-y-2 mb-6">
+                    { solution.features.map((feature, featureIndex) => (
+                      <li key={featureIndex } className="text-sm text-gray-400 flex items-center">
+>>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
+>>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
                         <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
                         { feature }
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  
+                  <div className="mb-6">
+                    <div className="text-blue-400 font-semibold mb-2">{service.price}</div>
+                    <div className="flex flex-wrap gap-2">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <span key={benefitIndex} className="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded">
+                          {benefit}
+                        </span>
+                      ))}
+                    </div>
+=======
+>>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
                   <div className="flex items-center justify-between">
                     <span className="text-blue-400 font-semibold">{ solution.pricing }</span>
                     <Link 
@@ -382,13 +575,48 @@ const ITSolutionsPage: React.FC = () => { const solutions = [
                       Learn More
                       <ArrowRightIcon className="w-4 h-4 ml-1" />
                     </Link>
+>>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
                   </div>
+                  
+                  <Link 
+                    to={service.href} 
+                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
+                  >
+                    Learn More
+                    <ArrowRightIcon className="w-4 h-4 ml-2" />
+                  </Link>
                 </div>
               );
             })}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-slate-800">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Why Choose Our <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">IT Solutions</span>?
+              </h2>
+              <p className="text-xl text-gray-300">
+                We deliver IT solutions that are reliable, secure, and designed to help your business thrive.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <CheckCircleIcon className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                  <span className="text-gray-300">{benefit}</span>
+                </div>
+              ))}
+=======
+>>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
       { /* Why Choose Our IT Solutions */ }
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
@@ -487,10 +715,21 @@ const ITSolutionsPage: React.FC = () => { const solutions = [
               <p className="text-gray-300">
                 We provide ongoing monitoring, maintenance, and support to keep your systems running optimally.
               </p>
+<<<<<<< HEAD
+=======
+>>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
+>>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+      {/* CTA Section */}
+=======
+>>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
       { /* CTA Section */ }
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
@@ -532,17 +771,36 @@ const ITSolutionsPage: React.FC = () => { const solutions = [
   );
 }
 export default ITSolutionsPage;
+<<<<<<< HEAD
+=======
+>>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
+>>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
       <section className="py-20 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Upgrade Your IT Infrastructure?
+            Ready to Transform Your IT Infrastructure?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our IT solutions can help improve your business operations and security.
+            Let&apos;s discuss how our IT solutions can help your business operate more efficiently and securely.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Start Your IT Journey
+              <ArrowRightIcon className="w-5 h-5 ml-2" />
+            </Link>
+            <Link
+              to="/case-studies"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+            >
+              View Case Studies
+=======
+>>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center">
               Start Your Project
               <ArrowRightIcon className="w-5 h-5 ml-2" />
@@ -551,6 +809,7 @@ export default ITSolutionsPage;
               to="/pricing"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center justify-center">
               View Pricing
+>>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
               <ArrowRightIcon className="w-5 h-5 ml-2" />
             </Link>
           </div>
@@ -559,4 +818,13 @@ export default ITSolutionsPage;
     </div>
   );
 };
+<<<<<<< HEAD
 export default ITSolutionsPage;
+=======
+<<<<<<< HEAD
+
+export default ITSolutionsPage;
+=======
+export default ITSolutionsPage;
+>>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
+>>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
