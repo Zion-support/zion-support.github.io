@@ -49,11 +49,6 @@ icon: Play,
       rating: 5
     }
   ];
-<<<<<<< HEAD
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 

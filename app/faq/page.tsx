@@ -117,9 +117,6 @@ const filteredData = faqData.map(category => ({
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
   })).filter(category => category.questions.length > 0);
-=======
-export default function FaqZionTechGroup() {
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
   return (
     <>
       <Helmet>

@@ -47,11 +47,7 @@ export default function Contact() {
       title: "Phone",
       details: ["+1 302 464 0950", "Mon-Fri 9AM-6PM EST"],
       action: "Call Now"
-<<<<<<< HEAD
-    },    {
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
-=======
+    },
     },
     {
 >>>>>>> cursor/fix-errors-and-merge-to-main-ec45

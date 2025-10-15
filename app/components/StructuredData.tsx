@@ -97,7 +97,6 @@ export const ServiceStructuredData: React.FC<{ service: Record<string, unknown> 
         url: 'https://ziontechgroup.com',
       },
       areaServed: 'Worldwide',
-<<<<<<< HEAD
       serviceType: service['category'],
       offers: service['price'] ? {
         '@type': 'Offer',

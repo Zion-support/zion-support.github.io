@@ -281,8 +281,6 @@ export default function Cybersecurity() {
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Don&apos;t wait for a security breach. Get comprehensive protection with our advanced cybersecurity solutions.
               </p>
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"

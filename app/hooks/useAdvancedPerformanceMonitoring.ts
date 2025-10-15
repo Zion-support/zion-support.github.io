@@ -43,11 +43,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {
     // Report to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       (window as any)['gtag']('event', name, {
-=======
       (window as unknown as { gtag: (event: string, name: string, options: Record<string, unknown>) => void }).gtag('event', name, {
 >>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
 =======
