@@ -3,11 +3,11 @@ export const usePerformanceMonitor  = () => {};
 }const [data, setData] = useState<any>(null)
   const [loading, setLoading] = useState(false)
 }setLoading(true)
-    // Initialize hook logic here;
+    /// Comment
 setLoading(false)
   console.error(error)
 }setLoading(true)
-      // Process data logic here;
+      /// Comment
 setData(input)
       setError(null)"";"
     } catch (err) {}";"

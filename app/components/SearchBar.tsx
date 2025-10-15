@@ -1,9 +1,14 @@
+import React from 'react';
 
-interface SearchBarProps {},
-
-interface $1 { [key: string]: any },;
-      children?: React.ReactNode;
+interface SearchBarProps {
   className?: string;
-  title?: string;
-},";"
-      
+}
+
+export default function SearchBar({ className }: SearchBarProps) {
+  return (
+    <div className={className}>
+      <h2>SearchBar<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}

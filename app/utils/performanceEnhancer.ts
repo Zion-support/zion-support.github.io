@@ -1,15 +1,6 @@
+/// Comment
 
-interface PerformanceEnhancerOptions {
-  });
-
-  // Add your hooks logic here;
-  useEffect(() => {
-    // Add your effect logic here;
-  }, [
-  ]);
-
-  return {
-    // Return your hook values here;
-  };
-};
-export default PerformanceEnhancer''"";"
+export function performanceEnhancer() {
+  /// Comment
+  return null;
+}

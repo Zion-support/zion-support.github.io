@@ -1,31 +1,23 @@
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void,
-  setUser: (userId: string, properties?: Record<string, any>) => void;
-  ] = useState(false)
-  const [];
-    userId, setUserId,]};
-  ] = useState<string | null>(null)};
-  useEffect(() => {};
-    // if analytics is enabled;};
-setIsEnabled(true)}, [
-  ])
-    // if analytics is enabled;
-import React from 'react';'
+import React, { createContext, useContext } from 'react';
 
-const Page = () => {
+interface AnalyticsContextContextType {
+  /// Comment
+}
+
+const AnalyticsContextContext = createContext<AnalyticsContextContextType | undefined>(undefined);
+
+export function AnalyticsContextProvider({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
-            Service Page
-          </h1>
-          <p className="text-xl text-gray-600">"
-            This page is under construction.
-          </p>
-        </div>
-      </div>
-    </div>
+    <AnalyticsContextContext.Provider value={{}}>
+      {children}
+    <// Comment
   );
+}
 
+export function useAnalyticsContext() {
+  const context = useContext(AnalyticsContextContext);
+  if (!context) {
+    throw new Error('useAnalyticsContext must be used within AnalyticsContextProvider');
+  }
+  return context;
+}

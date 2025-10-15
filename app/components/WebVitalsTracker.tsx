@@ -1,25 +1,14 @@
-          This page is under development.;
-        </p>
-      </div>
-    </div>
-  );}
+import React from 'react';
 
-interface WebVitalsData {},
-      name: string;
-value: number;
-delta: number;
-id: string;
-navigationType: string
-    // Track Core Web Vitals;
-onCLS(sendToAnalytics)
-    onINP(sendToAnalytics); // INP replaces FID in newer versions;
-onFCP(sendToAnalytics)
-  }, [
-  ])
-  return null";"
-},";";"
-      
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
+interface WebVitalsTrackerProps {
+  className?: string;
+}
 
-'"'""
+export default function WebVitalsTracker({ className }: WebVitalsTrackerProps) {
+  return (
+    <div className={className}>
+      <h2>WebVitalsTracker<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}

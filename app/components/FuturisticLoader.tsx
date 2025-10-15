@@ -1,17 +1,14 @@
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
-            Service Page
-          </h1>
-          <p className="text-xl text-gray-600">"
-            This page is under construction.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-import React from 'react';";";";";"
-import SEOHead from './components/SEOHead";"'
+import React from 'react';
 
+interface FuturisticLoaderProps {
+  className?: string;
+}
+
+export default function FuturisticLoader({ className }: FuturisticLoaderProps) {
+  return (
+    <div className={className}>
+      <h2>FuturisticLoader<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}

@@ -1,4 +1,6 @@
+/// Comment
 
-// Lazy loading helper function;
-  importFunc: () => Promise<{ default: ComponentType<T> }>;
-}'"'""
+export function lazyLoading() {
+  /// Comment
+  return null;
+}

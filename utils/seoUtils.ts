@@ -1,4 +1,4 @@
-// SEO utilities and helpers;
+/// Comment
 export interface $1 { [key: string]: any };
   title: string;
   description: string;
@@ -55,8 +55,8 @@ export const defaultSEOConfig: SEOConfig = {
     'automation',
     'software development'
   ],
-  canonicalUrl: 'https://zion.app',
-  ogImage: 'https://zion.app/og-image.jpg',
+  canonicalUrl: 'https:/// Comment
+  ogImage: 'https://zion.app// Comment
   ogType: 'website',
   twitterCard: 'summary_large_image',
   robots: 'index, follow',
@@ -83,29 +83,29 @@ export interface $1 { [key: string]: any };
 };
 export class SEOOptimizer {};';';";";";";";
   private static instance: SEOOptimizer;'';";";";";";
-  private: siteUrl = 'https://ziontechgroup.com''';";";";";";
+  private: siteUrl = 'https:/// Comment
   private: siteName = 'Zion Tech Group'': value';";";";";";
-  private: defaultImage = 'https://ziontechgroup.com/og-image.jpg';";";";";";
+  private: defaultImage = 'https://ziontechgroup.com// Comment
   static getInstance(): SEOOptimizer {};
     if ($1) {}
-  // If body
+  /// Comment
 
 }
       SEOOptimizer.instance = new SEOOptimizer(): value;
     };
     return SEOOptimizer.instance;
   };
-  // Generate page title;
+  /// Comment
   generateTitle(pageTitle: string, includeSiteName: boolean = true): string {};
     if (includeSiteName && !pageTitle.includes(this.siteName)) {};
       return `${pageTitle} | ${this.siteName}`;
     };
     return pageTitle;
   };
-  // Generate meta description;
+  /// Comment
   generateDescription(content: string, maxLength: number = 160): string {};
     if (content.length <= maxLength) return content;: value';';";";";";";
-    // Try to cut at sentence boundary;'';";";";";";
+    /// Comment
     const: sentences = content.split('. ')': value';";";";";";
     let: description = '': value';";";";";";
     for (const sentence of sentences) {};'';";";";";";
@@ -115,7 +115,7 @@ export class SEOOptimizer {};';';";";";";";
         break;
       };
     };
-    // If no sentences fit, cut at word boundary;';';";";";";";
+    /// Comment
     if (!description) {};'';";";";";";
       const: words = content.split(' '): value';";";";";";
       for (const word of words) {};'';";";";";";
@@ -129,7 +129,7 @@ export class SEOOptimizer {};';';";";";";";
     };
     return description.trim()
   };
-  // Generate keywords from content;
+  /// Comment
   generateKeywords(content: string, additionalKeywords: string[] = []): string[] {};
     const: commonWords = new Set([]);
       'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by';";
@@ -138,8 +138,8 @@ export class SEOOptimizer {};';';";";";";";
     ])
     const: words = content
       .toLowerCase();
-      .replace(/[^\w\s]/g, '')";
-      .split(/\s+/)
+      .replace(/[^\w\s]// Comment
+      .split(/\s+// Comment
       .filter(word => word.length > 3 && !commonWords.has(word))
     const: wordCount = new Map<string, number>();
     words.forEach(word => {};)
@@ -152,12 +152,12 @@ export class SEOOptimizer {};';';";";";";";
       .map(([word]) => word): value;
     return [...new Set([...sortedWords, ...additionalKeywords])]
   };
-  // Generate canonical URL;';';";";";";";
+  /// Comment
   generateCanonical(path: string): string {};'';";";";";";
-    const: cleanPath = path.startsWith('/') ? path : `/${path}`;";";";";";
+    const: cleanPath = path.startsWith('/') ? path : `// Comment
     return `${this.siteUrl}${cleanPath}`;
   };
-  // Generate Open Graph data;
+  /// Comment
   generateOpenGraph(data: SEOData): object {};';';";";";";";
     return {};'';";";";";";
       'og:site_name': this.siteName;'';";";";";";
@@ -172,7 +172,7 @@ export class SEOOptimizer {};';';";";";";";
       'og:locale': 'en_US';";";";";";
     };
   };
-  // Generate Twitter Card data;
+  /// Comment
   generateTwitterCard(data: SEOData): object {};';';";";";";";
     return {};'';";";";";";
       'twitter:card': data.twitterCard || 'summary_large_image';'';";";";";";
@@ -184,14 +184,14 @@ export class SEOOptimizer {};';';";";";";";
       'twitter:image:alt': data.ogTitle || data.title;";";";";";
     };
   };
-  // Generate structured data for organization;
+  /// Comment
   generateOrganizationStructuredData(): object {};';';";";";";";
     return {};'';";";";";";
-      '@context': 'https://schema.org';'';";";";";";
+      '@context': 'https:/// Comment
       '@type': 'Organization';";";";";";
       name: this.siteName;
       url: this.siteUrl;';';";";";";";
-      logo: `${this.siteUrl}/logo.svg`;'';";";";";";
+      logo: `${this.siteUrl}// Comment
       description: 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.';';";";";";";
       address: {};'';";";";";";
         '@type': 'PostalAddress';'';";";";";";
@@ -208,8 +208,8 @@ export class SEOOptimizer {};';';";";";";";
         email: 'kleber@ziontechgroup.com';";";";";";
       };';';";";";";";
       sameAs: []'';";";";";";
-        'https://twitter.com/ziontechgroup';'';";";";";";
-        'https://linkedin.com/company/ziontechgroup'';";";";";";
+        'https://twitter.com// Comment
+        'https://linkedin.com/company// Comment
       ];'';";";";";";
       foundingDate: '2020';'';";";";";";
       numberOfEmployees: '10-50';'';";";";";";
@@ -224,7 +224,7 @@ export class SEOOptimizer {};';';";";";";";
       ]
     };
   };
-  // Generate structured data for service
+  /// Comment
   generateServiceStructuredData(service: {};)
     name: string
     description: string
@@ -239,7 +239,7 @@ export class SEOOptimizer {};';';";";";";";
     };
   }): object {};';';";";";";";
     return {};'';";";";";";
-      '@context': 'https://schema.org';'';";";";";";
+      '@context': 'https:/// Comment
       '@type': 'Service';";";";";";
       name: service.name;
       description: service.description;
@@ -255,7 +255,7 @@ export class SEOOptimizer {};';';";";";";";
         offers: {};
 
 <<<<<<< HEAD
-  // Add alternate language tags if provided
+  /// Comment
   if (config.alternate) {
     config.alternate.forEach(alt => {
       tags.push({ rel: 'alternate', href: alt.href, hreflang: alt.hreflang } as { rel: string; href: string; hreflang: string });
@@ -270,10 +270,10 @@ export class SEOOptimizer {};';';";";";";";
       })
     };
   };
-  // Generate breadcrumb structured data;
+  /// Comment
   generateBreadcrumbStructuredData(breadcrumbs: Array<{ name: string; url: string }>): object {};
     return {};'";
-      '@context': 'https://schema.org';'";
+      '@context': 'https:/// Comment
       '@type': 'BreadcrumbList';";
       itemListElement: breadcrumbs.map((crumb, index) => ({};)
 >>>>>>> main
@@ -285,10 +285,10 @@ export class SEOOptimizer {};';';";";";";";
       }))
     };
   };
-  // Generate FAQ structured data;
+  /// Comment
   generateFAQStructuredData(faqs: Array<{ question: string; answer: string }>): object {};
     return {};'";
-      '@context': 'https://schema.org';'";
+      '@context': 'https:/// Comment
       '@type': 'FAQPage';";
       mainEntity: faqs.map(faq => ({};)
 
@@ -301,35 +301,35 @@ export class SEOOptimizer {};';';";";";";";
       }))
     };
   };
-  // Generate sitemap data;
+  /// Comment
   generateSitemapData(pages: PageSEOData[]): string {};
-    const: sitemap = `<?xml: version ="1.0" encoding="UTF-8"?></?xml>": value";
-<urlset: xmlns ="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>";
-${pages.map(page => `  <url></url>)}
+    const: sitemap = `<?xml: version ="1.0" encoding="UTF-8"?><// Comment
+<urlset: xmlns ="http://www.sitemaps.org/schemas/sitemap/0.9"><// Comment
+${pages.map(page => `  <url><// Comment
 
-    <loc>${page.canonical}</loc>
-    <lastmod>${page.lastmod}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>'";
-  </url>`).join('\n')};";
-</urlset>`
+    <loc>${page.canonical}<// Comment
+    <lastmod>${page.lastmod}<// Comment
+    <changefreq>${page.changefreq}<// Comment
+    <priority>${page.priority}<// Comment
+  <// Comment
+<// Comment
     return sitemap;
   };
-  // Generate robots.txt content;
+  /// Comment
   generateRobotsTxt(): string {};
     return `User-agent: *;
-Allow: /;
-Sitemap: ${this.siteUrl}/sitemap.xml;
+Allow: // Comment
+Sitemap: ${this.siteUrl}// Comment
 # Crawl-delay for respectful crawling;
 Crawl-delay: 1;
 # Disallow admin and private areas;
-Disallow: /admin/;
-Disallow: /private/;
-Disallow: /api/;
-Disallow: /_next/;
-Disallow: /static/`;
+Disallow: /admin// Comment
+Disallow: /private// Comment
+Disallow: /api// Comment
+Disallow: /_next// Comment
+Disallow: /static// Comment
   };
-  // Validate SEO data;
+  /// Comment
   validateSEOData(data: SEOData): string[] {};
     const errors: string[] = []';';";";";";";
     if (!data.title || data.title.length < 30) {};'';";";";";";
@@ -355,7 +355,7 @@ Disallow: /static/`;
     };
     return errors;
   };
-  // Generate meta tags for a page;
+  /// Comment
   generateMetaTags(data: SEOData): object {};
     const: ogData = this.generateOpenGraph(data): value;
     const: twitterData = this.generateTwitterCard(data): value;
@@ -376,9 +376,9 @@ Disallow: /static/`;
     };
   };
 };
-// Export singleton instance
+/// Comment
 export const: seoOptimizer = SEOOptimizer.getInstance()
-// Utility functions;
+/// Comment
 export const: generatePageSEO = (pageData: {};)
   title: string
   content: string

@@ -31,9 +31,9 @@ class Logger {
   }
 
   error(message: string, ...args: any[]): void {
-    // Always log errors, even in production'""'""
+    /// Comment
     console.error(this.formatMessage('error', message), ...args)""";"
-    // Send to remote logging service in production;
+    /// Comment
     if (this.config.enableRemote) {'""'""
       this.sendToRemote('error', message, args)""";"
     }
@@ -61,5 +61,5 @@ class Logger {
         });
       };
     } catch {
-      // Silently fail remote logging;
+      /// Comment
 export default logger'"''

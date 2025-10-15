@@ -1,18 +1,14 @@
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async',";"
-      import {CheckCircle, Star} from 'lucide-react';'
+interface ServicePageTemplateProps {
+  className?: string;
+}
 
-      interface ServicePageProps {"}";"
-  title: string,
-      description: string,
-      shortDescription: string,
-      features: string[],
-      benefits: string[],
-      pricing: {"}";"
-    starting: string,
-      market: string
-  technologies: string[],
-      icon: React.ReactNode,
-  )
-
-      
+export default function ServicePageTemplate({ className }: ServicePageTemplateProps) {
+  return (
+    <div className={className}>
+      <h2>ServicePageTemplate<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}

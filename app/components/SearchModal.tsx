@@ -1,9 +1,14 @@
+import React from 'react';
 
-interface SearchModalProps {},
-
-interface $1 { [key: string]: any },;
-      children?: React.ReactNode;
+interface SearchModalProps {
   className?: string;
-  title?: string;
-},";"
-      
+}
+
+export default function SearchModal({ className }: SearchModalProps) {
+  return (
+    <div className={className}>
+      <h2>SearchModal<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}

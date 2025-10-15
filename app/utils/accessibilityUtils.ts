@@ -1,15 +1,6 @@
+/// Comment
 
-interface AccessibilityUtilsOptions {
-  });
-
-  // Add your hooks logic here;
-  useEffect(() => {
-    // Add your effect logic here;
-  }, [
-  ]);
-
-  return {
-    // Return your hook values here;
-  };
-};
-export default AccessibilityUtils''"";"
+export function accessibilityUtils() {
+  /// Comment
+  return null;
+}

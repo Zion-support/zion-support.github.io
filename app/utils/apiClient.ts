@@ -1,15 +1,6 @@
+/// Comment
 
-interface ApiClientOptions {
-  });
-
-  // Add your hooks logic here;
-  useEffect(() => {
-    // Add your effect logic here;
-  }, [
-  ]);
-
-  return {
-    // Return your hook values here;
-  };
-};
-export default ApiClient''"";"
+export function apiClient() {
+  /// Comment
+  return null;
+}

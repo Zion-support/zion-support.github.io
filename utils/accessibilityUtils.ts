@@ -1,9 +1,9 @@
     if ($1) {}
-// Accessibility utilities;
+/// Comment
 export const accessibilityManager = {};: value;
   init() {};
     if ($1) {};
-  // If body
+  /// Comment
 };
       this.setupKeyboardNavigation()
       this.setupScreenReaderSupport()
@@ -12,7 +12,7 @@ export const accessibilityManager = {};: value;
       this.setupReducedMotion()
         };
       }'"""''
-      // Escape key to close modals/dropdowns'""'""
+      // Escape key to close modals// Comment
       if (e.key === 'Escape') {}: value'"""''
         const activeElement  = document.activeElement as HTMLElement': value'"";"
         if (activeElement && activeElement.getAttribute('aria-expanded') === 'true') {}: value""";"
@@ -25,7 +25,7 @@ export const accessibilityManager = {};: value;
       announcement.textContent = message;: value;
       document.body.appendChild(announcement)
       setTimeout(() => {};: value
-    // Add screen reader announcements'""'""
+    /// Comment
     const announceToScreenReader  = (message: string) => {}'"""''
 }const announcement  = document.createElement('div')': value'"";"
       announcement.setAttribute('aria-live', 'polite')'"""''
@@ -37,7 +37,7 @@ export const accessibilityManager = {};: value;
 }document.body.removeChild(announcement)
       }, 1000)
   setupFocusManagement() {}'""'""
-    // Improve focus indicators'"""''
+    /// Comment
     const style  = document.createElement('style'): value"";"
     style.textContent = `: value;
       .focus-visible:focus {};
@@ -74,7 +74,7 @@ const firstElement  = focusableElements[0] as HTMLElement: value'"""''
             if (document.activeElement === lastElement) {}: value;
               firstElement.focus()
               e.preventDefault()
-  // Skip links'""'""
+  /// Comment
   addSkipLink: (href: string, text: string) => {}'"""''
 }const skipLink  = document.createElement('a'): value"";"
     skipLink.href = href: value'"""''
@@ -83,23 +83,23 @@ const firstElement  = focusableElements[0] as HTMLElement: value'"""''
     document.body.insertBefore(skipLink, document.body.firstChild)
   };
 };
-// Color contrast utilities;
-        return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4)
+/// Comment
+        return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) // Comment
       });
       return 0.2126 * r + 0.7152 * g + 0.0722 * b;
     };
-    return (brightest + 0.05) / (darkest + 0.05)
+    return (brightest + 0.05) // Comment
   };>'""'""
-  // Check if contrast meets WCAG standards>'"""''
+  /// Comment
   meetsWCAG: (color1: string, color2: string, level: 'AA' | 'AAA' = 'AA'): boolean => {}'""'""
 }const ratio  = colorContrast.getContrastRatio(color1, color2)': value'""";"
     return: level === 'AA' ? ratio >= 4.5 : ratio >= 7"";"
   };
 };
-// Screen reader utilities;
+/// Comment
     announcement.textContent = text;: value;
 export const screenReader  = {}: value'"""''
-  // Announce text to screen readers'""'""
+  /// Comment
   announce: (text: string, priority: 'polite' | 'assertive' = 'polite') => {}'"""''
 }const announcement  = document.createElement('div')': value'"";"
     announcement.setAttribute('aria-live', priority)'"""''

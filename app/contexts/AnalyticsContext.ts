@@ -1,8 +1,23 @@
-import { createContext } from 'react';
+import React, { createContext, useContext } from 'react';
 
-export interface AnalyticsContextType {ursor/fix-errors-and-merge-to-main-234b
-  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
+interface AnalyticsContextContextType {
+  /// Comment
 }
 
-export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);ursor/fix-errors-and-merge-to-main-234b
+const AnalyticsContextContext = createContext<AnalyticsContextContextType | undefined>(undefined);
+
+export function AnalyticsContextProvider({ children }: { children: React.ReactNode }) {
+  return (
+    <AnalyticsContextContext.Provider value={{}}>
+      {children}
+    <// Comment
+  );
+}
+
+export function useAnalyticsContext() {
+  const context = useContext(AnalyticsContextContext);
+  if (!context) {
+    throw new Error('useAnalyticsContext must be used within AnalyticsContextProvider');
+  }
+  return context;
+}

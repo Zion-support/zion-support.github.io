@@ -1,15 +1,6 @@
+/// Comment
 
-interface SecurityManagerOptions {
-  });
-
-  // Add your hooks logic here;
-  useEffect(() => {
-    // Add your effect logic here;
-  }, [
-  ]);
-
-  return {
-    // Return your hook values here;
-  };
-};
-export default SecurityManager''"";"
+export function securityManager() {
+  /// Comment
+  return null;
+}

@@ -1,16 +1,14 @@
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async';'
+interface EnhancedSEOHeadProps {
+  className?: string;
+}
 
-interface SEOHeadProps {};
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: Record<string>
-  noindex?: boolean;
-    </Helmet>
-  )
-      
+export default function EnhancedSEOHead({ className }: EnhancedSEOHeadProps) {
+  return (
+    <div className={className}>
+      <h2>EnhancedSEOHead<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}

@@ -1,15 +1,6 @@
+/// Comment
 
-interface PerformanceMonitoringOptions {
-  });
-
-  // Add your hooks logic here;
-  useEffect(() => {
-    // Add your effect logic here;
-  }, [
-  ]);
-
-  return {
-    // Return your hook values here;
-  };
-};
-export default PerformanceMonitoring''"";"
+export function performanceMonitoring() {
+  /// Comment
+  return null;
+}

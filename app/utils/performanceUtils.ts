@@ -1,15 +1,6 @@
+/// Comment
 
-interface PerformanceUtilsOptions {
-  });
-
-  // Add your hooks logic here;
-  useEffect(() => {
-    // Add your effect logic here;
-  }, [
-  ]);
-
-  return {
-    // Return your hook values here;
-  };
-};
-export default PerformanceUtils''"";"
+export function performanceUtils() {
+  /// Comment
+  return null;
+}
