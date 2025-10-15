@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Award, BarChart3, Brain, Calendar, Cloud, Code, Globe, Mail, Monitor, Package, Phone, Receipt, Shield, Smartphone, Sparkles, Star, Target, Users, Video, Zap } from 'lucide-react';
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -89,50 +89,6 @@ const HomePage = () => {
   ];
 
   const microSaasHighlights = [
-    {
-      name: "Zion AI Video Generator",
-      description: "Create professional videos from text prompts using advanced AI. Generate engaging content 10x faster with voice synthesis, smart templates, and multiple formats.",
-      price: "From $29/month",
-      icon: <Video className="w-6 h-6" />,
-      link: "/zion-ai-video-generator",
-      featured: true,
-      category: "Video Creation",
-      marketPrice: "$99-200/month",
-      benefits: ["AI video generation", "Voice synthesis", "200+ templates", "Multi-format support"]
-    },
-    {
-      name: "Zion AI Invoice Generator",
-      description: "Generate professional invoices automatically with AI-powered data extraction and smart automation. Multi-currency support and automated follow-ups.",
-      price: "From $19/month",
-      icon: <Receipt className="w-6 h-6" />,
-      link: "/zion-ai-invoice-generator",
-      featured: true,
-      category: "Billing & Finance",
-      marketPrice: "$59-120/month",
-      benefits: ["Auto invoice generation", "Multi-currency", "Payment tracking", "Automated reminders"]
-    },
-    {
-      name: "Zion AI Customer Insights",
-      description: "Unlock deep customer insights with AI-powered analytics, sentiment analysis, and predictive modeling. Understand your customers like never before.",
-      price: "From $39/month",
-      icon: <Brain className="w-6 h-6" />,
-      link: "/zion-ai-customer-insights",
-      featured: true,
-      category: "Analytics",
-      marketPrice: "$150-300/month",
-      benefits: ["360° customer view", "Sentiment analysis", "Predictive analytics", "Real-time insights"]
-    },
-    {
-      name: "Zion AI Code Assistant",
-      description: "Supercharge your development with AI-powered code generation, intelligent review, and automated debugging. Support for 50+ programming languages.",
-      price: "From $29/month",
-      icon: <Code className="w-6 h-6" />,
-      link: "/ai-code-assistant",
-      featured: true,
-      category: "Development",
-      marketPrice: "$99-200/month",
-      benefits: ["AI code generation", "Intelligent review", "Bug detection", "50+ languages"]
-    },
     {
       name: "Zion AI Analytics Pro",
       description: "Advanced AI-powered business intelligence with real-time dashboards, predictive analytics, and automated insights. Features machine learning models for trend analysis and forecasting.",
@@ -266,66 +222,77 @@ const HomePage = () => {
       benefits: ["Smart categorization", "Auto responses", "Smart scheduling", "60% productivity boost"]
     },
     {
-      name: "Zion AI Social Media Manager",
-      description: "Comprehensive social media management with AI-powered content scheduling, hashtag optimization, and performance tracking across all platforms.",
-      price: "From $39/month",
+      name: "AI Social Media Manager",
+      description: "Revolutionary AI-powered social media management with automated content creation, multi-platform support, and advanced analytics. Increases engagement by 95%.",
+      price: "From $149/month",
       icon: <Globe className="w-6 h-6" />,
-      link: "/zion-ai-social-media-manager",
+      link: "/ai-social-media-manager",
       featured: true,
       category: "Social Media",
-      marketPrice: "$99-200/month",
-      benefits: ["Multi-platform scheduling", "Hashtag optimization", "Performance analytics", "Content calendar"]
+      marketPrice: "$200-400/month",
+      benefits: ["AI Content Generation", "Multi-platform Support", "Analytics Dashboard", "Automated Posting"]
     },
     {
-      name: "Zion AI Meeting Assistant",
-      description: "AI-powered meeting transcription, note-taking, and action item extraction with real-time collaboration and follow-up automation.",
-      price: "From $49/month",
+      name: "AI Project Manager",
+      description: "Intelligent project management with AI-powered automation, resource optimization, and analytics. Delivers projects 40% faster with better outcomes.",
+      price: "From $99/month",
       icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-meeting-assistant",
+      link: "/ai-project-manager",
       featured: true,
-      category: "Productivity",
-      marketPrice: "$129-250/month",
-      benefits: ["Live transcription", "Auto note-taking", "Action items", "Meeting summaries"]
+      category: "Project Management",
+      marketPrice: "$150-300/month",
+      benefits: ["AI Planning", "Resource Optimization", "Progress Tracking", "Team Collaboration"]
     },
     {
-      name: "Zion AI Website Analyzer",
-      description: "Comprehensive website analysis with AI-powered SEO optimization, performance monitoring, and conversion rate optimization.",
-      price: "From $39/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-ai-website-analyzer",
-      featured: true,
-      category: "Web Analytics",
-      marketPrice: "$99-200/month",
-      benefits: ["SEO analysis", "Performance monitoring", "Conversion optimization", "Competitor analysis"]
-    },
-    {
-      name: "Zion AI HR Assistant Pro",
-      description: "Streamlined HR management with AI-powered resume screening, employee onboarding, performance tracking, and compliance monitoring.",
-      price: "From $59/month",
+      name: "AI Customer Support",
+      description: "24/7 AI-powered customer support with natural language processing and omnichannel capabilities. Resolves 80% of issues automatically.",
+      price: "From $149/month",
       icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-hr-assistant",
-      featured: false,
-      category: "Human Resources",
-      marketPrice: "$149-300/month",
-      benefits: ["Resume screening", "Employee onboarding", "Performance tracking", "Compliance monitoring"]
+      link: "/ai-customer-support",
+      featured: true,
+      category: "Customer Service",
+      marketPrice: "$200-350/month",
+      benefits: ["24/7 Support", "Multi-language", "Omnichannel", "Sentiment Analysis"]
     },
     {
-      name: "Zion AI Backup Manager",
-      description: "Intelligent data backup and recovery with AI-powered scheduling, version control, and automated disaster recovery planning.",
-      price: "From $19/month",
+      name: "AI Email Marketing",
+      description: "AI-powered email marketing platform that increases open rates by 35%, clicks by 50%, and ROI by 300% with intelligent optimization.",
+      price: "From $99/month",
+      icon: <Mail className="w-6 h-6" />,
+      link: "/ai-email-marketing",
+      featured: true,
+      category: "Email Marketing",
+      marketPrice: "$150-250/month",
+      benefits: ["AI Content Generation", "Advanced Analytics", "A/B Testing", "Automation Workflows"]
+    },
+    {
+      name: "Cloud Migration Services",
+      description: "Expert cloud migration services with zero-downtime migration and 40% cost reduction guarantee. Supports all major cloud providers.",
+      price: "From $2,999",
+      icon: <Cloud className="w-6 h-6" />,
+      link: "/cloud-migration-services",
+      featured: true,
+      category: "Cloud Services",
+      marketPrice: "$5,000-15,000",
+      benefits: ["Zero Downtime", "Cost Optimization", "Multi-cloud Support", "24/7 Support"]
+    },
+    {
+      name: "Cybersecurity Consulting",
+      description: "Comprehensive cybersecurity services with 99.9% threat detection rate and 24/7 monitoring. Ensures compliance with all major standards.",
+      price: "From $2,999",
       icon: <Shield className="w-6 h-6" />,
-      link: "/zion-ai-backup-manager",
-      featured: false,
-      category: "Data Protection",
-      marketPrice: "$59-120/month",
-      benefits: ["Auto backup scheduling", "Version control", "Disaster recovery", "Data encryption"]
+      link: "/cybersecurity-consulting",
+      featured: true,
+      category: "Cybersecurity",
+      marketPrice: "$5,000-20,000",
+      benefits: ["Security Assessment", "Penetration Testing", "Compliance Management", "24/7 Monitoring"]
     }
   ];
 
   const stats = [
-    { number: "50,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "80+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "70+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
@@ -386,17 +353,19 @@ const HomePage = () => {
           ))}
         </div>
         
-        <ResponsiveContainer className="text-center relative z-10 hero-responsive">
+        <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-8 neon-border">
             <Sparkles className="w-5 h-5 text-cyan-400 mr-2 animate-pulse" />
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight holographic-text">
-            Welcome to Zion Tech Group
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <span className="holographic-text">
+              Welcome to Zion Tech Group
+            </span>
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center text-responsive">
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
             Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
             <span className="text-cyan-400 font-semibold"> Transform your operations with cutting-edge technology and innovative solutions.</span>
           </p>
@@ -494,7 +463,7 @@ const HomePage = () => {
               <span className="text-cyan-400 font-semibold"> Save up to 60% compared to enterprise solutions.</span>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 grid-responsive">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
@@ -586,7 +555,7 @@ const HomePage = () => {
               See what our clients say about working with Zion Tech Group
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
@@ -620,7 +589,7 @@ const HomePage = () => {
           </p>
           
           {/* Contact Information */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-8">
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Mail className="w-6 h-6 text-white" />

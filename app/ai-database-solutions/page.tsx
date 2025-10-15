@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Cloud, Database, Shield, Users, Zap } from 'lucide-react';
+import { BarChart3,
+  CheckCircle,
+  Cloud,
+  Cpu,
+  Database,
+  Shield,
+  Users,
+  Zap
+} from 'lucide-react';
 
 const AiDatabaseSolutionsPage = () => {
   const features = [

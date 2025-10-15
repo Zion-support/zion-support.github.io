@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
@@ -53,4 +52,4 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   return spinner;
 };
 
-
+export default LoadingSpinner;

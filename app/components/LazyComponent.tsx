@@ -14,7 +14,6 @@ const DefaultFallback = () => (
     </div>
   </div>
 );
-
 // Higher-order component for lazy loading with custom fallback
 export function withLazyLoading<P extends object>(
   importFunc: () => Promise<{ default: ComponentType<P> }>,
@@ -59,10 +58,10 @@ export function useLazyLoad(ref: React.RefObject<HTMLElement>, options?: Interse
 }
 
 // Component for lazy loading with intersection observer
-export const LazyComponent: React.FC<LazyComponentProps & { children: React.ReactNode }> = ({
+export const LazyComponent: React.FC<LazyComponentProps & { children: React.ReactNode }> = ({ 
   children,
   fallback = <DefaultFallback />,
-  delay = 0
+  delay = 0 
 }) => {
   const [shouldRender, setShouldRender] = React.useState(false);
   const ref = React.useRef<HTMLDivElement>(null);
@@ -85,5 +84,4 @@ export const LazyComponent: React.FC<LazyComponentProps & { children: React.Reac
     </div>
   );
 };
-
 export default LazyComponent;

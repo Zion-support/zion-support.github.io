@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { AlertTriangle, BarChart3, Brain, Camera, CheckCircle, FileText, Heart, Microscope, Pill, Shield, Star, Stethoscope, Syringe, Thermometer, Users, Video, X } from 'lucide-react';
-const AiHealthcarePlatformPage: React.FC = () => { const [isVisible, setIsVisible] = useState(false);
+import { AlertTriangle, Brain, Camera, CheckCircle, FileText, Heart, Microscope, Pill, Star, Stethoscope, Syringe, Thermometer, Users } from 'lucide-react';
+
+const AiHealthcarePlatformPage: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  
   useEffect(() => {
-    setIsVisible(true); }, []);
+    setIsVisible(true);
+  }, []);
   const features = [
     { icon: <Brain className="w-6 h-6" />,
       title: "AI Diagnosis Assistant",
@@ -11,7 +15,7 @@ const AiHealthcarePlatformPage: React.FC = () => { const [isVisible, setIsVisibl
       benefits: ["Symptom analysis", "Disease prediction", "Treatment recommendations", "Risk assessment"] },
     { icon: <Camera className="w-6 h-6" />,
       title: "Medical Imaging AI",
-      description: "AI-powered analysis of X-rays, MRIs, CT scans, and other medical images for faster and more accurate diagnosis.",
+      description: "AI-powered analysis of -rays, MRIs, CT scans, and other medical images for faster and more accurate diagnosis.",
       benefits: ["Image analysis", "Anomaly detection", "Pattern recognition", "Radiology assistance"] },
     { icon: <FileText className="w-6 h-6" />,
       title: "Electronic Health Records",
@@ -20,12 +24,12 @@ const AiHealthcarePlatformPage: React.FC = () => { const [isVisible, setIsVisibl
     { icon: <Stethoscope className="w-6 h-6" />,
       title: "Telemedicine Platform",
       description: "Secure video consultations, remote patient monitoring, and virtual care delivery with AI assistance.",
-      benefits: ["Video consultations", "Remote monitoring", "Virtual care", "Patient engagement"] },
-    { icon: <Shield className="w-6 h-6" />,
+      benefits: ["consultations", "Remote monitoring", "Virtual care", "Patient engagement"] },
+    { icon: <Star className="w-6 h-6" />,
       title: "HIPAA Compliance",
       description: "Enterprise-grade security and privacy protection with full HIPAA compliance and data encryption.",
       benefits: ["HIPAA compliance", "Data encryption", "Access controls", "Audit trails"] },
-    { icon: <BarChart3 className="w-6 h-6" />,
+    { icon: <Star className="w-6 h-6" />,
       title: "Healthcare Analytics",
       description: "Comprehensive analytics and reporting for population health, clinical outcomes, and operational efficiency.",
       benefits: ["Population health", "Clinical outcomes", "Operational metrics", "Predictive analytics"] }

@@ -1,5 +1,4 @@
-import { CheckCircle, ArrowRight, Filter, Award, TrendingUp, Clock, Users } from 'lucide-react';
-import React from 'react';
+import { CheckCircle, ArrowRight, Award, TrendingUp, Clock, Users } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const CaseStudiesPage: React.FC = () => {
@@ -224,7 +223,7 @@ const CaseStudiesPage: React.FC = () => {
           </section>
         )}
 
-        {/* Industry Filter */}
+        {/* Industry */}
         <section className="py-8 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Bug, CheckCircle, Cloud, Code, Cpu, Database, FileText, GitBranch, Globe, Star, Terminal } from 'lucide-react';
+import { Brain, Bug, CheckCircle, Code, FileText, GitBranch, Globe, Star, Terminal } from 'lucide-react';
 
 const AiCodeAssistantProPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,7 +13,7 @@ const AiCodeAssistantProPage = () => {
     { icon: <Code className="w-6 h-6" />,
       title: "Intelligent Code Generation",
       description: "Generate high-quality code in 50+ programming languages with AI-powered suggestions and completions.",
-      benefits: ["50+ Languages", "Context-aware suggestions", "Code completion", "Syntax optimization"] },
+      benefits: ["50+ ", "Context-aware suggestions", "Code completion", "Syntax optimization"] },
     { icon: <Bug className="w-6 h-6" />,
       title: "Advanced Bug Detection",
       description: "Automatically identify and fix bugs, security vulnerabilities, and performance issues in your code.",
@@ -26,7 +26,7 @@ const AiCodeAssistantProPage = () => {
       title: "Documentation Generation",
       description: "Automatically generate comprehensive documentation, comments, and API references for your code.",
       benefits: ["Auto-documentation", "API references", "Code comments", "README generation"] },
-    { icon: <Cpu className="w-6 h-6" />,
+    { icon: <Terminal className="w-6 h-6" />,
       title: "Performance Optimization",
       description: "Analyze and optimize your code for better performance, memory usage, and execution speed.",
       benefits: ["Performance analysis", "Memory optimization", "Algorithm suggestions", "Bottleneck detection"] },
@@ -126,11 +126,11 @@ const AiCodeAssistantProPage = () => {
       technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Xamarin"] },
     { title: "Data Science",
       description: "Develop machine learning models and data analysis scripts with AI assistance",
-      icon: <Database className="w-8 h-8" />,
+      icon: <Brain className="w-8 h-8" />,
       technologies: ["Python", "R", "TensorFlow", "PyTorch", "Pandas"] },
     { title: "DevOps & Cloud",
       description: "Automate infrastructure and deployment with intelligent DevOps code generation",
-      icon: <Cloud className="w-8 h-8" />,
+      icon: <Globe className="w-8 h-8" />,
       technologies: ["Docker", "Kubernetes", "AWS", "Azure", "Terraform"] }
   ];
 
@@ -218,11 +218,11 @@ const AiCodeAssistantProPage = () => {
           </div>
         </section>
 
-        { /* Supported Languages Section */ }
+        { /* Supported Section */ }
         <section className="relative py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">50+ Programming Languages</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">50+ Programming </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 From popular languages to emerging technologies
               </p>

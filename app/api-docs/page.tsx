@@ -1,6 +1,5 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Code, Database, Filter, Key, Shield, X, Zap } from 'lucide-react';
+import { ArrowRight, Code, Key, Star } from 'lucide-react';
 
 const ApiDocsPage: React.FC = () => {
   const apiEndpoints = [
@@ -13,7 +12,7 @@ const ApiDocsPage: React.FC = () => {
         { name: 'metrics', type: 'array', required: false, description: 'Specific metrics to include' }
       ],
       example: {
-        request: `curl -X GET "https://api.ziontechgroup.com/v1/analytics/dashboard?date_range=30d" \\
+        request: `curl -GET "https://api.ziontechgroup.com/v1/analytics/dashboard?date_range=30d" \\
   -H "Authorization: Bearer YOUR_API_KEY"`,
         response: `{
   "status": "success",
@@ -36,7 +35,7 @@ const ApiDocsPage: React.FC = () => {
         { name: 'tone', type: 'string', required: false, description: 'Content tone (professional, casual, etc.)' }
       ],
       example: {
-        request: `curl -X POST "https://api.ziontechgroup.com/v1/ai/content/generate" \\
+        request: `curl -POST "https://api.ziontechgroup.com/v1/ai/content/generate" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
@@ -59,11 +58,11 @@ const ApiDocsPage: React.FC = () => {
       path: '/api/v1/security/threats',
       description: 'Get security threat information',
       parameters: [
-        { name: 'severity', type: 'string', required: false, description: 'Filter by threat severity (low, medium, high, critical)' },
+        { name: 'severity', type: 'string', required: false, description: 'by threat severity (low, medium, high, critical)' },
         { name: 'limit', type: 'integer', required: false, description: 'Number of results to return (max 100)' }
       ],
       example: {
-        request: `curl -X GET "https://api.ziontechgroup.com/v1/security/threats?severity=high&limit=10" \\
+        request: `curl -GET "https://api.ziontechgroup.com/v1/security/threats?severity=high&limit=10" \\
   -H "Authorization: Bearer YOUR_API_KEY"`,
         response: `{
   "status": "success",
@@ -122,7 +121,7 @@ client.ai.content.generate({
     },
     {
       language: 'cURL',
-      code: `curl -X POST "https://api.ziontechgroup.com/v1/ai/content/generate" \\
+      code: `curl -POST "https://api.ziontechgroup.com/v1/ai/content/generate" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
@@ -130,7 +129,7 @@ client.ai.content.generate({
     "type": "blog",
     "tone": "professional"
   }'`,
-      icon: <Zap className="w-6 h-6" />
+      icon: <Star className="w-6 h-6" />
     }
   ];
 
@@ -141,17 +140,17 @@ client.ai.content.generate({
       description: 'Secure API key-based authentication with role-based access control'
     },
     {
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Star className="w-6 h-6" />,
       title: 'Rate Limiting',
       description: 'Intelligent rate limiting to ensure fair usage and optimal performance'
     },
     {
-      icon: <Database className="w-8 h-8" />,
+      icon: <Star className="w-6 h-6" />,
       title: 'Real-time Data',
       description: 'Access to real-time data and analytics through our RESTful API'
     },
     {
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Star className="w-6 h-6" />,
       title: 'Security',
       description: 'Enterprise-grade security with encryption and compliance standards'
     }
