@@ -1,32 +1,33 @@
-<<<<<<< HEAD
-export default function OptimizedLoading() {
-  // Function body;
-}
-}return ();
-    <div className="optimized-loading-container"></div>
-      <div className="loading-content"></div>
-        <div className="spinner"></div>: value
-        <p>Loading...</p>
-=======
 import React from 'react';
-import SEOHead from './components/SEOHead';
+import { Loader2 } from 'lucide-react';
 
-const ComponentsPage: React.FC = () => {
+interface OptimizedLoadingProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  className?: string;
+}
+
+const OptimizedLoading: React.FC<OptimizedLoadingProps> = ({
+  size = 'md',
+  text = 'Loading...',
+  className = ''
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
   return (
-    <>
-      <SEOHead
-        title="Components - Zion Tech Group"
-        description="Professional components solutions for modern businesses"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Components</h1>
-          <p className="text-gray-300">Professional solutions coming soon...</p>
+    <div className={`optimized-loading-container flex flex-col items-center justify-center p-8 ${className}`}>
+      <div className="loading-content text-center">
+        <div className="spinner mb-4">
+          <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-500`} />
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
+        <p className="text-gray-600 text-sm">{text}</p>
       </div>
-    </>
+    </div>
   );
 };
 
-export default ComponentsPage;
+export default OptimizedLoading;

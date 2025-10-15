@@ -1,20 +1,6 @@
 import React from 'react';
 import SEOHead from './components/SEOHead';
 
-<<<<<<< HEAD
-interface MicrosaasservicesProps {},
-      className?: string;
-},
-      const Microsaasservices: React.FC<MicrosaasservicesProps> = ({},
-      className = "", }) => {}: value,
-      return (
-    <div className={className}></div>: value
-      <h2>Microsaasservices</h2>
-    </div>
-  );
-},
-      export default Microsaasservices;"
-=======
 const MicroSaasServicesPage: React.FC = () => {
   return (
     <>
@@ -33,4 +19,3 @@ const MicroSaasServicesPage: React.FC = () => {
 };
 
 export default MicroSaasServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-7017

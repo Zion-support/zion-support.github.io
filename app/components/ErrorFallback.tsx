@@ -1,28 +1,44 @@
 import React from 'react';
-import SEOHead from './components/SEOHead';
+import { AlertTriangle, RefreshCw } from 'lucide-react';
 
-const ComponentsPage: React.FC = () => {
+interface ErrorFallbackProps {
+  error?: Error;
+  resetError?: () => void;
+}
+
+const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetError }) => {
   return (
-    <>
-      <SEOHead
-        title="Components - Zion Tech Group"
-        description="Professional components solutions for modern businesses"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Components</h1>
-          <p className="text-gray-300">Professional solutions coming soon...</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="text-center max-w-md mx-auto px-4">
+        <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-red-500/20 flex items-center justify-center">
+          <AlertTriangle className="w-12 h-12 text-red-400" />
         </div>
+        <h1 className="text-3xl font-bold text-white mb-4">Something went wrong</h1>
+        <p className="text-gray-300 mb-6">
+          We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
+        </p>
+        {error && (
+          <details className="mb-6 text-left">
+            <summary className="text-sm text-gray-400 cursor-pointer mb-2">
+              Error Details
+            </summary>
+            <pre className="text-xs text-red-400 bg-black/20 p-3 rounded overflow-auto">
+              {error.message}
+            </pre>
+          </details>
+        )}
+        {resetError && (
+          <button
+            onClick={resetError}
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto"
+          >
+            <RefreshCw className="w-4 h-4 mr-2" />
+            Try Again
+          </button>
+        )}
       </div>
-<<<<<<< HEAD
     </div>
-  );
-},
-      export default ErrorFallback;"'"'
-=======
-    </>
   );
 };
 
-export default ComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
+export default ErrorFallback;

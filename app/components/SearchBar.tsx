@@ -1,41 +1,61 @@
-import React from 'react';
-import SEOHead from './components/SEOHead';
+import React, { useState } from 'react';
+import { Search, X } from 'lucide-react';
 
-<<<<<<< HEAD
-interface SearchBarProps {},
-      children?: React.ReactNode;
+interface SearchBarProps {
+  placeholder?: string;
+  onSearch?: (query: string) => void;
   className?: string;
-  title?: string;
-  description?: string;
-},
-      const SearchBar: React.FC<SearchBarProps> = ({},
-      children, className = "", title, _description, _}) => {}: value,
-      return (
-    <div className={`enhanced-component ${className}`}></div>
-      {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>};
-      {description && <p className="text-gray-600 mb-4">{description}</p>};: value
-      {children};
-    </div>
-  );
-},
-      export default SearchBar;"
-=======
-const ComponentsPage: React.FC = () => {
+}
+
+const SearchBar: React.FC<SearchBarProps> = ({
+  placeholder = "Search...",
+  onSearch,
+  className = ""
+}) => {
+  const [query, setQuery] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (onSearch && query.trim()) {
+      onSearch(query.trim());
+    }
+  };
+
+  const handleClear = () => {
+    setQuery('');
+    if (onSearch) {
+      onSearch('');
+    }
+  };
+
   return (
-    <>
-      <SEOHead
-        title="Components - Zion Tech Group"
-        description="Professional components solutions for modern businesses"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Components</h1>
-          <p className="text-gray-300">Professional solutions coming soon...</p>
+    <div className={`search-bar-container ${className}`}>
+      <form onSubmit={handleSearch} className="relative">
+        <div className={`relative flex items-center ${isFocused ? 'ring-2 ring-blue-500' : ''}`}>
+          <Search className="absolute left-3 w-4 h-4 text-gray-400" />
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onFocus={() => setIsFocused(true)}
+            onBlur={() => setIsFocused(false)}
+            placeholder={placeholder}
+            className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
+          {query && (
+            <button
+              type="button"
+              onClick={handleClear}
+              className="absolute right-3 w-4 h-4 text-gray-400 hover:text-gray-600"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          )}
         </div>
-      </div>
-    </>
+      </form>
+    </div>
   );
 };
 
-export default ComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
+export default SearchBar;

@@ -1,6 +1,4 @@
 import { useEffect, useCallback, useRef } from 'react';
-<<<<<<< HEAD
-import { logger } from '../utils/logger';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -11,8 +9,6 @@ interface PerformanceMetrics {
   memoryUsage?: number;
 }
 
-
-export default ComponentName;
 interface UsePerformanceOptimizationOptions {
   enableMonitoring?: boolean;
   enablePreloading?: boolean;
@@ -29,14 +25,10 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     enableImageOptimization = true,
     enableBundleAnalysis = true,
   } = options;
-=======
->>>>>>> 8a706cc6720bc3c546c68f8f243fe5fc4236601c
 
-interface UsePerformanceOptimizationOptions {
-  // Add your options here
-}
+  const metricsRef = useRef<PerformanceMetrics | null>(null);
+  const observerRef = useRef<PerformanceObserver | null>(null);
 
-<<<<<<< HEAD
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
     if (!enablePreloading) return;
@@ -57,7 +49,7 @@ interface UsePerformanceOptimizationOptions {
       document.head.appendChild(link);
     });
 
-    logger.info('Critical resources preloaded');
+    console.log('Critical resources preloaded');
   }, [enablePreloading]);
 
   // Optimize images
@@ -88,7 +80,7 @@ interface UsePerformanceOptimizationOptions {
       htmlImg.setAttribute('data-optimized', 'true');
     });
 
-    logger.info(`Optimized ${images.length} images`);
+    console.log(`Optimized ${images.length} images`);
   }, [enableImageOptimization]);
 
   // Setup performance monitoring
@@ -132,7 +124,7 @@ interface UsePerformanceOptimizationOptions {
           entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift'] 
         });
       } catch (error) {
-        logger.error('Failed to setup performance monitoring', { error });
+        console.error('Failed to setup performance monitoring', error);
       }
     }
 
@@ -194,7 +186,7 @@ interface UsePerformanceOptimizationOptions {
       }
     });
 
-    logger.info('Bundle analysis', analysis);
+    console.log('Bundle analysis', analysis);
   }, [enableBundleAnalysis]);
 
   // Initialize optimizations
@@ -225,25 +217,7 @@ interface UsePerformanceOptimizationOptions {
     preloadCriticalResources,
     optimizeImages,
     analyzeBundle,
-=======
-interface UsePerformanceOptimizationState {
-  // Add your state here
-}
-
-export const UsePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {
-  const stateRef = useRef<UsePerformanceOptimizationState>({
-    // Initialize your state here
-  });
-
-  // Add your hooks logic here
-  useEffect(() => {
-    // Add your effect logic here
-  }, []);
-
-  return {
-    // Return your hook values here
->>>>>>> 8a706cc6720bc3c546c68f8f243fe5fc4236601c
   };
 };
 
-export default UsePerformanceOptimization;
+export default usePerformanceOptimization;
