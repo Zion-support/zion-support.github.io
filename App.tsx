@@ -7,7 +7,7 @@ import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
-import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
+// import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
@@ -18,7 +18,7 @@ import TutorialsPage from './app/pages/TutorialsPage';
 import DemoPage from './app/pages/DemoPage';
 import SupportPage from './app/pages/SupportPage';
 import PrivacyPage from './app/pages/PrivacyPage';
-import TermsPage from './app/pages/TermsPage';
+// import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
 import SolutionsPage from './app/pages/SolutionsPage';
 import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
@@ -38,7 +38,7 @@ import CareersPage from './app/careers/page';
 // Additional Pages
 import CybersecurityPage from './app/cybersecurity-solutions/page';
 import CloudSolutionsPage from './app/cloud-services/page';
-import MicroSaaSPage from './app/micro-saas/page';
+// import MicroSaaSPage from './app/micro-saas/page';
 import FiveGSolutionsPage from './app/5g-solutions/page';
 
 // Lazy load heavy components
@@ -51,7 +51,7 @@ const App: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <GlobalErrorBoundary>
+    <div>
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-slate-900 flex">
@@ -77,7 +77,7 @@ const App: React.FC = () => {
                         <Route path="/demo" element={<DemoPage />} />
                         <Route path="/support" element={<SupportPage />} />
                         <Route path="/privacy" element={<PrivacyPage />} />
-                        <Route path="/terms" element={<TermsPage />} />
+                        {/* <Route path="/terms" element={<TermsPage />} /> */}
                         <Route path="/pricing" element={<PricingPage />} />
                         <Route path="/solutions" element={<SolutionsPage />} />
                         
@@ -92,7 +92,7 @@ const App: React.FC = () => {
                         {/* Additional Service Pages */}
                         <Route path="/cybersecurity" element={<CybersecurityPage />} />
                         <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
-                        <Route path="/micro-saas" element={<MicroSaaSPage />} />
+                        {/* <Route path="/micro-saas" element={<MicroSaaSPage />} /> */}
                         <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
                         
                         {/* Additional Pages */}
@@ -122,7 +122,7 @@ const App: React.FC = () => {
           </div>
         </Router>
       </HelmetProvider>
-    </GlobalErrorBoundary>
+    </div>
   );
 };
 

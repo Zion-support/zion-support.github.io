@@ -1,41 +1,42 @@
-import React from 'react';
-import SEOHead from './components/SEOHead';
+import React, { useState } from 'react';
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 
-<<<<<<< HEAD
-interface SearchBarProps {},
-      children?: React.ReactNode;
+interface SearchBarProps {
+  placeholder?: string;
+  onSearch?: (query: string) => void;
   className?: string;
-  title?: string;
-  description?: string;
-},
-      const SearchBar: React.FC<SearchBarProps> = ({},
-      children, className = "", title, _description, _}) => {}: value,
-      return (
-    <div className={`enhanced-component ${className}`}></div>
-      {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>};
-      {description && <p className="text-gray-600 mb-4">{description}</p>};: value
-      {children};
-    </div>
-  );
-},
-      export default SearchBar;"
-=======
-const ComponentsPage: React.FC = () => {
+}
+
+const SearchBar: React.FC<SearchBarProps> = ({ 
+  placeholder = "Search...", 
+  onSearch,
+  className = "" 
+}) => {
+  const [query, setQuery] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (onSearch) {
+      onSearch(query);
+    }
+  };
+
   return (
-    <>
-      <SEOHead
-        title="Components - Zion Tech Group"
-        description="Professional components solutions for modern businesses"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Components</h1>
-          <p className="text-gray-300">Professional solutions coming soon...</p>
+    <form onSubmit={handleSubmit} className={`relative ${className}`}>
+      <div className="relative">
+        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <MagnifyingGlassIcon className="h-5 w-5 text-gray-400" />
         </div>
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder={placeholder}
+          className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+        />
       </div>
-    </>
+    </form>
   );
 };
 
-export default ComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
+export default SearchBar;
