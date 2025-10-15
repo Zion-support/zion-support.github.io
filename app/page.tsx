@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Heart, Package } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -8,6 +8,9 @@ import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
+import ResponsiveButton from "./components/ResponsiveButton";
+import ResponsiveCard from "./components/ResponsiveCard";
+import ResponsiveSection from "./components/ResponsiveSection";
 
 const HomePage = () => {
   const structuredData = {
@@ -90,52 +93,82 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
-      name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
-      price: "From $299/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro",
-      featured: true
+      name: "Zion AI Email Assistant",
+      description: "AI-powered email management with sentiment analysis, automation, and intelligent insights",
+      price: "From $29/month",
+      originalPrice: "$49/month",
+      savings: "40% OFF",
+      icon: <Mail className="w-6 h-6" />,
+      link: "/zion-ai-email-assistant",
+      featured: true,
+      category: "Productivity",
+      rating: 4.9,
+      users: "2,500+"
     },
     {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
+      name: "AI Financial Crime Detection Pro",
+      description: "Advanced fraud detection and money laundering prevention with 99.7% accuracy",
       price: "From $499/month",
+      originalPrice: "$799/month",
+      savings: "37% OFF",
       icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield",
-      featured: true
+      link: "/ai-financial-crime-detection-pro",
+      featured: true,
+      category: "Security",
+      rating: 4.8,
+      users: "500+"
     },
     {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
+      name: "AI Customer Sentiment Tracker",
+      description: "Real-time sentiment analysis across all channels with 97.5% accuracy",
       price: "From $99/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault",
-      featured: true
+      originalPrice: "$149/month",
+      savings: "33% OFF",
+      icon: <Heart className="w-6 h-6" />,
+      link: "/ai-customer-sentiment-tracker",
+      featured: true,
+      category: "Analytics",
+      rating: 4.9,
+      users: "1,200+"
+    },
+    {
+      name: "Zion Inventory Smart",
+      description: "AI-powered inventory optimization with 95.2% forecast accuracy",
+      price: "From $199/month",
+      originalPrice: "$299/month",
+      savings: "33% OFF",
+      icon: <Package className="w-6 h-6" />,
+      link: "/zion-inventory-smart",
+      featured: true,
+      category: "Operations",
+      rating: 4.7,
+      users: "800+"
     },
     {
       name: "Zion AI CRM Pro",
-      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
-      price: "From $199/month",
+      description: "Intelligent customer relationship management with AI-powered insights",
+      price: "From $49/month",
+      originalPrice: "$79/month",
+      savings: "38% OFF",
       icon: <Users className="w-6 h-6" />,
       link: "/zion-ai-crm-pro",
-      featured: true
+      featured: false,
+      category: "CRM",
+      rating: 4.8,
+      users: "3,200+"
     },
     {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
+      name: "Zion Content Studio",
+      description: "AI-powered content creation platform for blogs, social media, and marketing",
+      price: "From $29/month",
+      originalPrice: "$49/month",
+      savings: "41% OFF",
       icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
-      featured: true
+      link: "/zion-content-studio",
+      featured: false,
+      category: "Content",
+      rating: 4.9,
+      users: "4,100+"
     }
   ];
 
@@ -180,168 +213,294 @@ const HomePage = () => {
       />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <ResponsiveSection 
+        background="gradient" 
+        padding="xl" 
+        className="relative overflow-hidden"
+      >
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
-        <ResponsiveContainer className="text-center relative z-10">
+        <div className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <ResponsiveText
+            as="h1"
+            size="4xl"
+            responsiveSize={{ sm: "5xl", md: "6xl", lg: "7xl" }}
+            weight="bold"
+            color="text-white"
+            className="mb-6 leading-tight"
+          >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Welcome to Zion Tech Group
             </span>
-          </h1>
+          </ResponsiveText>
           
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
+          <ResponsiveText
+            size="lg"
+            responsiveSize={{ md: "xl", lg: "2xl" }}
+            color="text-gray-300"
+            className="mb-8 max-w-4xl mx-auto leading-relaxed text-center"
+          >
             Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
             Transform your operations with cutting-edge technology and innovative solutions.
-          </p>
+          </ResponsiveText>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <FuturisticButton
+            <ResponsiveButton
               href="/contact"
               variant="primary"
               size="lg"
               icon={<Sparkles className="w-5 h-5" />}
+              iconPosition="left"
+              className="hover:scale-105"
             >
               Get Started Today
-            </FuturisticButton>
-            <FuturisticButton
+            </ResponsiveButton>
+            <ResponsiveButton
               href="/demo"
               variant="outline"
               size="lg"
               icon={<Monitor className="w-5 h-5" />}
+              iconPosition="left"
+              className="hover:scale-105"
             >
               Watch Demo
-            </FuturisticButton>
+            </ResponsiveButton>
           </div>
           
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <ResponsiveGrid
+            cols={{ default: 2, md: 4 }}
+            gap="lg"
+            className="max-w-5xl mx-auto"
+          >
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
+                <ResponsiveText
+                  size="xl"
+                  responsiveSize={{ md: "2xl", lg: "3xl" }}
+                  weight="bold"
+                  color="text-white"
+                  className="mb-2"
+                >
+                  {stat.number}
+                </ResponsiveText>
+                <ResponsiveText
+                  size="xs"
+                  responsiveSize={{ md: "sm" }}
+                  color="text-gray-300"
+                >
+                  {stat.label}
+                </ResponsiveText>
               </div>
             ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
+          </ResponsiveGrid>
+        </div>
+      </ResponsiveSection>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our Core Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Comprehensive technology solutions designed to accelerate your business growth and digital transformation. 
-              From AI-powered analytics to enterprise security, we have everything you need.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
+      <ResponsiveSection padding="xl">
+        <div className="text-center mb-16">
+          <ResponsiveText
+            as="h2"
+            size="3xl"
+            responsiveSize={{ md: "4xl", lg: "5xl" }}
+            weight="bold"
+            color="text-white"
+            className="mb-6"
+          >
+            Our Core Services
+          </ResponsiveText>
+          <ResponsiveText
+            size="xl"
+            color="text-gray-300"
+            className="max-w-4xl mx-auto leading-relaxed"
+          >
+            Comprehensive technology solutions designed to accelerate your business growth and digital transformation. 
+            From AI-powered analytics to enterprise security, we have everything you need.
+          </ResponsiveText>
+        </div>
+        <ResponsiveGrid
+          cols={{ default: 1, sm: 2, lg: 4 }}
+          gap="md"
+        >
+          {features.map((feature, index) => (
+            <ResponsiveCard
+              key={index}
+              variant="default"
+              hover={true}
+              clickable={true}
+              className="group"
+            >
+              <Link
+                to={feature.link}
+                className="block"
+                aria-label={`Learn more about ${feature.title}`}
               >
-                <Link
-                  to={feature.link}
-                  className="block"
-                  aria-label={`Learn more about ${feature.title}`}
+                <div
+                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  aria-hidden="true"
                 >
-                  <div
-                    className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                    aria-hidden="true"
-                  >
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
-                    {feature.description}
-                  </p>
-                  <div className="text-center">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs md:text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
-                      {feature.stats}
-                    </span>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
+                  {feature.icon}
+                </div>
+                <ResponsiveText
+                  as="h3"
+                  size="lg"
+                  responsiveSize={{ md: "xl" }}
+                  weight="semibold"
+                  color="text-white"
+                  className="mb-3 text-center group-hover:text-cyan-400 transition-colors"
+                >
+                  {feature.title}
+                </ResponsiveText>
+                <ResponsiveText
+                  size="sm"
+                  responsiveSize={{ md: "base" }}
+                  color="text-gray-300"
+                  className="text-center mb-4 leading-relaxed"
+                >
+                  {feature.description}
+                </ResponsiveText>
+                <div className="text-center">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs md:text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
+                    {feature.stats}
+                  </span>
+                </div>
+              </Link>
+            </ResponsiveCard>
+          ))}
+        </ResponsiveGrid>
+      </ResponsiveSection>
 
       {/* Micro SAAS Highlights */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Featured Micro SAAS Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready-to-use software solutions that can transform your business operations immediately.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaasHighlights.map((saas, index) => (
+      <ResponsiveSection 
+        background="pattern" 
+        padding="xl"
+      >
+        <div className="text-center mb-16">
+          <ResponsiveText
+            as="h2"
+            size="3xl"
+            responsiveSize={{ md: "4xl" }}
+            weight="bold"
+            color="text-white"
+            className="mb-4"
+          >
+            Featured Micro SAAS Solutions
+          </ResponsiveText>
+          <ResponsiveText
+            size="xl"
+            color="text-gray-300"
+            className="max-w-3xl mx-auto"
+          >
+            Ready-to-use software solutions that can transform your business operations immediately.
+          </ResponsiveText>
+        </div>
+        <ResponsiveGrid
+          cols={{ default: 1, md: 2, lg: 3 }}
+          gap="lg"
+        >
+          {microSaasHighlights.map((saas, index) => (
+            <ResponsiveCard
+              key={index}
+              variant="default"
+              hover={true}
+              clickable={true}
+              className="group relative overflow-hidden"
+            >
               <Link
-                key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="block"
+                aria-label={`Learn more about ${saas.name}`}
               >
                 {saas.featured && (
-                  <div className="absolute top-4 right-4">
+                  <div className="absolute top-4 right-4 z-10">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                       Featured
                     </span>
                   </div>
                 )}
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                    {saas.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                      {saas.name}
-                    </h3>
-                    <p className="text-cyan-400 font-medium">{saas.price}</p>
+                
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
+                      {saas.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                        {saas.name}
+                      </h3>
+                      <div className="flex items-center space-x-2">
+                        <span className="text-cyan-400 font-medium">{saas.price}</span>
+                        {saas.originalPrice && (
+                          <span className="text-gray-400 text-sm line-through">{saas.originalPrice}</span>
+                        )}
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
                   {saas.description}
                 </p>
-                <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-2">
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className={`w-3 h-3 ${i < Math.floor(saas.rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} />
+                      ))}
+                    </div>
+                    <span className="text-gray-300 text-xs">{saas.rating}</span>
+                    <span className="text-gray-500 text-xs">•</span>
+                    <span className="text-gray-300 text-xs">{saas.users} users</span>
+                  </div>
+                  <span className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded-full">
+                    {saas.category}
+                  </span>
+                </div>
+                
+                {saas.savings && (
+                  <div className="mb-4">
+                    <span className="bg-green-500/20 text-green-400 px-2 py-1 rounded-full text-xs font-semibold">
+                      {saas.savings}
+                    </span>
+                  </div>
+                )}
+                
+                <div className="flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link
-              to="/micro-saas"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 group"
-            >
-              View All Micro SAAS Solutions
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
+            </ResponsiveCard>
+          ))}
+        </ResponsiveGrid>
+        
+        <div className="text-center mt-12">
+          <ResponsiveButton
+            href="/micro-saas"
+            variant="primary"
+            size="lg"
+            icon={<ArrowRight className="w-5 h-5" />}
+            iconPosition="right"
+            className="hover:scale-105"
+          >
+            View All Micro SAAS Solutions
+          </ResponsiveButton>
         </div>
-      </section>
+      </ResponsiveSection>
 
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -377,59 +536,114 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+      <ResponsiveSection 
+        background="gradient" 
+        padding="xl"
+        className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30"
+      >
+        <div className="text-center">
+          <ResponsiveText
+            as="h2"
+            size="3xl"
+            responsiveSize={{ md: "4xl", lg: "5xl" }}
+            weight="bold"
+            color="text-white"
+            className="mb-6"
+          >
             Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+          </ResponsiveText>
+          <ResponsiveText
+            size="xl"
+            color="text-gray-300"
+            className="mb-8 leading-relaxed"
+          >
             Join thousands of businesses already using our solutions to drive growth and innovation. 
             Start your digital transformation journey today.
-          </p>
+          </ResponsiveText>
+          
+          {/* Pricing Highlights */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/20">
+            <h3 className="text-xl font-bold text-white mb-4">Special Launch Pricing</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+              <div>
+                <div className="text-2xl font-bold text-cyan-400">Up to 41% OFF</div>
+                <div className="text-gray-300 text-sm">Micro SAAS Solutions</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-green-400">14-Day Free Trial</div>
+                <div className="text-gray-300 text-sm">All Services</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-purple-400">24/7 Support</div>
+                <div className="text-gray-300 text-sm">Expert Assistance</div>
+              </div>
+            </div>
+          </div>
           
           {/* Contact Information */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <ResponsiveGrid
+            cols={{ default: 1, md: 3 }}
+            gap="lg"
+            className="mb-8"
+          >
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-white font-semibold mb-2">Email</h3>
-              <p className="text-cyan-400">kleber@ziontechgroup.com</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                kleber@ziontechgroup.com
+              </a>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Smartphone className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-white font-semibold mb-2">Phone</h3>
-              <p className="text-cyan-400">+1 302 464 0950</p>
+              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                +1 302 464 0950
+              </a>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Globe className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-white font-semibold mb-2">Address</h3>
-              <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p className="text-cyan-400 text-sm">
+                364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </p>
             </div>
-          </div>
+          </ResponsiveGrid>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+            <ResponsiveButton
+              href="/contact"
+              variant="primary"
+              size="lg"
+              icon={<ArrowRight className="w-5 h-5" />}
+              iconPosition="right"
+              className="hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
             >
               Start Your Journey
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+            </ResponsiveButton>
+            <ResponsiveButton
+              href="/services"
+              variant="outline"
+              size="lg"
+              icon={<Sparkles className="w-5 h-5" />}
+              iconPosition="right"
+              className="hover:scale-105"
             >
               Explore Services
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-            </Link>
+            </ResponsiveButton>
+          </div>
+          
+          <div className="mt-8 text-sm text-gray-400">
+            <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime • ✓ 24/7 support</p>
           </div>
         </div>
-      </section>
+      </ResponsiveSection>
     </div>
   );
 };
