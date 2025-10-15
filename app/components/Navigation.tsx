@@ -78,6 +78,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
       icon: GlobeAltIcon,
       submenu: [
         { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
+        { name: 'Smart Analytics Dashboard', href: '/zion-smart-analytics-dashboard', icon: ChartBarIcon },
+        { name: 'Smart CRM Automation', href: '/zion-smart-crm-automation', icon: ChatBubbleLeftRightIcon },
+        { name: 'Smart Inventory Manager', href: '/zion-smart-inventory-manager', icon: CircleStackIcon },
+        { name: 'Smart Expense Tracker', href: '/zion-smart-expense-tracker', icon: CurrencyDollarIcon },
         { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
         { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
         { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
@@ -133,11 +137,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
       icon: DocumentTextIcon,
       submenu: [
         { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
-        { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
-        { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
         { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
         { name: 'API Documentation', href: '/api-docs', icon: CodeBracketIcon },
-        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }
+        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon },
+        { name: 'Accessibility', href: '/accessibility', icon: ShieldCheckIcon }
       ]
     },
     {
@@ -152,8 +155,25 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
         { name: 'Contact', href: '/contact', icon: PhoneIcon }
       ]
     },
+    {
+      name: 'Zion AI Tools',
+      href: '#',
+      icon: CpuChipIcon,
+      submenu: [
+        { name: 'AI Content Moderator', href: '/zion-ai-content-moderator', icon: ShieldCheckIcon },
+        { name: 'AI Customer Support Pro', href: '/zion-ai-customer-support-pro', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Workflow Automator Pro', href: '/zion-ai-workflow-automator-pro', icon: CogIcon },
+        { name: 'AI Email Marketing Pro', href: '/zion-ai-email-marketing-pro', icon: EnvelopeIcon },
+        { name: 'AI Sales Predictor', href: '/zion-ai-sales-predictor', icon: ChartBarIcon },
+        { name: 'AI Financial Forecaster', href: '/zion-ai-financial-forecaster', icon: CurrencyDollarIcon },
+        { name: 'AI Document Analyzer', href: '/zion-ai-document-analyzer', icon: DocumentTextIcon },
+        { name: 'AI Task Scheduler', href: '/zion-ai-task-scheduler', icon: CogIcon },
+        { name: 'AI Translation Service', href: '/zion-ai-translation-service', icon: GlobeAltIcon },
+        { name: 'AI Video Generator', href: '/zion-ai-video-generator', icon: EyeIcon }
+      ]
+    },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
+    { name: 'Support', href: '/help', icon: QuestionMarkCircleIcon }
   ];
 
   const isActive = (path: string) => {
