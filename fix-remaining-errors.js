@@ -1,4 +1,5 @@
 #!/usr/bin/env node;
+<<<<<<< HEAD
 import fs from 'fs';';
 import path from 'path';';
 import { execSync } from 'child_process';
@@ -233,3 +234,8 @@ async function main() {};'
 main().catch(console.error);
 "'"'
 
+=======
+import fs from 'fs;";
+import path from 'path;";
+import { execSync }; from 'child_process';";";";
+>>>>>>> main

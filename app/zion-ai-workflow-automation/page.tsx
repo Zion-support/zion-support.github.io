@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react""use client';
 export default function ZionAiWorkflowAutomationPage() {}
   return ()
@@ -11,6 +12,26 @@ export default function ZionAiWorkflowAutomationPage() {}
     </div>;
 
   );
+=======
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const ZionAiWorkflowAutomationPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Zion Ai Workflow Automation - Zion Tech Group"";
+        description="Professional zion ai workflow automation solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Zion Ai Workflow Automation</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+>>>>>>> main
 };
-
-export default ZionAiWorkflowAutomationPage;
+;
+export default ZionAiWorkflowAutomationPage;'";'";

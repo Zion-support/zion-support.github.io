@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async""use client';
 export default function Page() {}
@@ -51,6 +52,26 @@ export default function Page() {}
     </div>;
 
   );
+=======
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const AdManagementPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Ad Management - Zion Tech Group"";
+        description="Professional ad management solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Ad Management</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+>>>>>>> main
 };
-
-export default AdManagementPage;
+;
+export default AdManagementPage;'";'";

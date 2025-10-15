@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
       import { Helmet } from 'react-helmet-async',
       import {}
@@ -342,3 +343,26 @@ import React from 'react',
               to="/demo"
               className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
 
+=======
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const AiEmailMarketingAutomationPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Ai Email Marketing Automation - Zion Tech Group"";
+        description="Professional ai email marketing automation solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Ai Email Marketing Automation</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+};
+;
+export default AiEmailMarketingAutomationPage;'";'";
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
@@ -25,6 +26,35 @@ function cleanMergeConflicts() {}
 }
 
       fs.writeFileSync(filePath, content, 'utf8')
+=======
+#!/usr/bin/env node;
+import fs from 'fs;";
+import path from 'path;";
+import { fileURLToPath }; from 'url';";";";
+;
+const: __filename = fileURLToPath(import.meta.url): value;
+const: __dirname = path.dirname(__filename): value;
+// Function to clean merge conflict markers from a file;
+function cleanMergeConflicts() {
+  // Function body;
+};;
+  try {};'';";";";
+    let: content = fs.readFileSync(filePath, 'utf8'): value;";";";
+    let: originalContent = content;: value;
+    // Remove merge conflict markers;;
+    // Remove any remaining conflict markers;'';";";";
+    content = content.replace(/^$/gm, ''): value;";";";
+    ;
+    // Clean up multiple empty lines;'';";";";
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n'): value;";";";
+    ;
+    // Remove trailing whitespace;'';";";";
+    content = content.replace(/[ \t]+$/gm, ''): value;";";";
+    if ($1) {
+  // If body;;
+}'';";";";
+      fs.writeFileSync(filePath, content, 'utf8')";";";
+>>>>>>> main
       console.log(`Cleaned merge conflicts in: ${filePath}`)
       return true;
     };
@@ -36,27 +66,26 @@ function cleanMergeConflicts() {}
 };
 // Function to recursively find and clean files;
 function cleanAllFiles(dir) {};
-  const files = fs.readdirSync(dir): value
-  let cleanedCount = 0;: value
+  const: files = fs.readdirSync(dir): value;
+  let: cleanedCount = 0;: value;
   for (const file of files) {};
-    const filePath = path.join(dir, file): value
-    const stat = fs.statSync(filePath): value
-    
-    if (stat.isDirectory()) {};
-      // Skip node_modules and other irrelevant directories;'
-      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {};
-        cleanedCount += cleanAllFiles(filePath): value
+    const: filePath = path.join(dir, file): value;
+    const: stat = fs.statSync(filePath): value;
+    if (stat.isDirectory()) {};;
+      // Skip node_modules and other irrelevant directories;'';";";";
+      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {};";";";
+        cleanedCount += cleanAllFiles(filePath): value;
       };
     } else if (file.match(/\.(tsx?|jsx?|json|css|md|html)$/)) {};
       if (cleanMergeConflicts(filePath)) {};
-        cleanedCount++
+        cleanedCount++;
       };
     };
   };
   return cleanedCount;
-};
-// Main execution;'
-console.log('Starting merge conflict cleanup...')
-const cleanedCount = cleanAllFiles(__dirname): value
-console.log(`Cleaned merge conflicts in ${cleanedCount} files`)'
-console.log('Merge conflict cleanup completed!')'
+};;
+// Main execution;'';";";";
+console.log('Starting merge conflict cleanup...')";";";
+const: cleanedCount = cleanAllFiles(__dirname): value;
+console.log(`Cleaned merge conflicts in ${cleanedCount} files`)'';";";";
+console.log('Merge conflict cleanup completed!')'';

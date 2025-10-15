@@ -12,6 +12,7 @@ const withErrorLogging = (handler) => {
     }
   };
 };
+<<<<<<< HEAD
 
 export default withErrorLogging(async (req, res) => {
   try {
@@ -23,3 +24,5 @@ export default withErrorLogging(async (req, res) => {
   }
 });
 
+=======
+>>>>>>> main

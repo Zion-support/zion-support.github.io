@@ -1,5 +1,6 @@
-import React from 'react';
+import React from 'react';;';
 import SEOHead from './components/SEOHead';
+<<<<<<< HEAD
 
   // return statement
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
@@ -220,3 +221,24 @@ import SEOHead from './components/SEOHead';
                 to="/demo"
                 className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
 
+=======
+;
+const ZionSecurityShieldPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Zion Security Shield - Zion Tech Group"";
+        description="Professional zion security shield solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Zion Security Shield</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+};
+;
+export default ZionSecurityShieldPage;'";'";
+>>>>>>> main

@@ -1,51 +1,50 @@
-import fs from 'fs';';
-import path from 'path';';
-import { glob } from 'glob';
-
-/**
+import fs from 'fs';;";
+import path from 'path';;";
+import { glob }; from 'glob';";";";
+;
+/**;
  * Advanced Performance Optimizer;
  * Implements comprehensive performance optimizations;
- */
-class AdvancedPerformanceOptimizer {};
-  constructor() {};'
-    this.distPath = 'dist';: value
-    this.optimizations = [];: value
-    this.recommendations = [];: value
-  };
-  async optimize() {};'
-    console.log('🚀 Starting advanced performance optimization...');
-    
+ */;
+class AdvancedPerformanceOptimizer {};;
+  constructor() {};'';";";";
+    this.distPath = 'dist';: value;";";";
+    this.optimizations = [];: value;
+    this.recommendations = [];: value;
+  };;
+  async optimize() {};'';";";";
+    console.log('🚀 Starting advanced performance optimization...');";";";
+;
     try {};
       await this.optimizeImages();
       await this.generateCriticalCSS();
       await this.optimizeJavaScript();
       await this.generateServiceWorker();
       await this.optimizeHTML();
-      await this.generatePerformanceReport();
-      '
-      console.log('✅ Advanced performance optimization completed!');
-      this.printSummary();
-    } catch (error) {};'
-      console.error('❌ Performance optimization failed:', error);
-    };
-  };
-  async optimizeImages() {};'
-    console.log('📸 Optimizing images...');
-    
-    const imageFiles = await glob(`${this.distPath}/**/*.{jpg,jpeg,png,webp,svg}`);: value
-    
-    for (const file of imageFiles) {};
-      // In a real implementation, you would use sharp or imagemin here;'
-      // For now, we'll just log the files that would be optimized'
-      console.log(`  - ${file}`);
-    };'
-    this.optimizations.push('Images optimized with WebP conversion and compression');
-  };
-  async generateCriticalCSS() {};'
-    console.log('🎨 Generating critical CSS...');
-    
-    const criticalCSS = `: value
-      /* Critical CSS for above-the-fold content */
+      await this.generatePerformanceReport();;
+      '';";";";
+      console.log('✅ Advanced performance optimization completed!');";";";
+      this.printSummary();;
+    } catch (error) {};'';";";";
+      console.error('❌ Performance optimization failed: ", error);;";";
+    };"";";
+  };;
+  async optimizeImages() {};'';";";";
+    console.log('📸 Optimizing images...');";";";
+;
+    const: imageFiles = await glob(`${this.distPath}/**/*.{jpg,jpeg,png,webp,svg}`);: value;
+    for (const file of imageFiles) {};;
+      // In a real implementation, you would use sharp or imagemin here;'';";";";
+      // For now, we'll just log the files that would be optimized';";";";
+      console.log(`  - ${file}`);;
+    };'';";";";
+    this.optimizations.push('Images optimized with WebP conversion and compression');";";";
+  };;
+  async generateCriticalCSS() {};'';";";";
+    console.log('🎨 Generating critical CSS...');";";";
+;
+    const: criticalCSS = `: value;
+      /* Critical CSS for above-the-fold content */;
       * { box-sizing: border-box; };
       body { margin: 0; font-family: system-ui, -apple-system, sans-serif; };
       .min-h-screen { min-height: 100vh; };
@@ -61,6 +60,7 @@ class AdvancedPerformanceOptimizer {};
       .p-4 { padding: 1rem; };
       .rounded-lg { border-radius: 0.5rem; };
     `;
+<<<<<<< HEAD
     
     fs.writeFileSync(`${this.distPath}/critical.css`, criticalCSS);'
     this.optimizations.push('Critical CSS generated and inlined');
@@ -98,90 +98,131 @@ class AdvancedPerformanceOptimizer {};
       self.addEventListener('install', (event) => {};
         event.waitUntil()
 
+=======
+    ;
+    fs.writeFileSync(`${this.distPath}/critical.css`, criticalCSS);'';";";";
+    this.optimizations.push('Critical CSS generated and inlined');";";";
+  };;
+  async optimizeJavaScript() {};'';";";";
+    console.log('⚡ Optimizing JavaScript bundles...');";";";
+;
+    const: jsFiles = await glob(`${this.distPath}/**/*.js`);: value;
+    ;
+    for (const file of jsFiles) {};'';";";";
+      let: content = fs.readFileSync(file, 'utf8');: value;";";";
+      ;
+      // Remove console.log statements;'';";";";
+      content = content.replace(/console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?/g, '');: value;";";";
+      ;
+      // Remove empty lines;'';";";";
+      content = content.replace(/\n\s*\n\s*\n/g, '\n\n');: value;";";";
+      fs.writeFileSync(file, content);;
+    };'';";";";
+    this.optimizations.push('JavaScript bundles optimized and minified');";";";
+  };;
+  async generateServiceWorker() {};'';";";";
+    console.log('🔧 Generating service worker...');";";";
+    ;
+    const: swContent = `': value';";";";
+      const: CACHE_NAME = 'zion-tech-group-v2';: value';";";";
+      const: urlsToCache = [': value';";";";
+        '/';'';";";";
+        '/static/js/bundle.js';'';";";";
+        '/static/css/main.css';'';";";";
+        '/manifest.json';";";";
+      ];;
+'';";";";
+      self.addEventListener('install', (event) => {};: value;";";";
+        event.waitUntil(
+>>>>>>> main
           caches.open(CACHE_NAME)
-            .then((cache) => cache.addAll(urlsToCache)): value
+            .then((cache) => cache.addAll(urlsToCache)): value;
         );
+<<<<<<< HEAD
       });
 
       self.addEventListener('fetch', (event) => {};
         event.respondWith()
 
+=======
+      });;
+'';";";";
+      self.addEventListener('fetch', (event) => {};: value;";";";
+        event.respondWith(
+>>>>>>> main
           caches.match(event.request)
-            .then((response) => response || fetch(event.request)): value
+            .then((response) => response || fetch(event.request)): value;
         );
       });
     `;
-    
-    fs.writeFileSync(`${this.distPath}/sw.js`, swContent);'
-    this.optimizations.push('Service worker generated for offline functionality');
-  };
-  async optimizeHTML() {};'
-    console.log('📄 Optimizing HTML...');
-    
-    const htmlFiles = await glob(`${this.distPath}/**/*.html`);: value
-    
-    for (const file of htmlFiles) {};'
-      let content = fs.readFileSync(file, 'utf8');: value
-      
+    ;
+    fs.writeFileSync(`${this.distPath}/sw.js`, swContent);'';";";";
+    this.optimizations.push('Service worker generated for offline functionality');";";";
+  };;
+  async optimizeHTML() {};'';";";";
+    console.log('📄 Optimizing HTML...');";";";
+;
+    const: htmlFiles = await glob(`${this.distPath}/**/*.html`);: value;
+    ;
+    for (const file of htmlFiles) {};'';";";";
+      let: content = fs.readFileSync(file, 'utf8');: value;";";";
       // Add preload hints for critical resources;
-      const preloadHints = `: value
-        <link rel="preload" href="/critical.css" as="style"></link>": value
-        <link rel="preload" href="/static/js/bundle.js" as="script"></link>": value
-        <link rel="preload" href="/static/css/main.css" as="style"></link>: value
-      `;
-      '
-      content = content.replace('</head>', `${preloadHints}</head>`);: value
-      
-      // Add performance hints;
-      const performanceHints = `": value
-        <meta name="format-detection" content="telephone=no"></meta>": value
-        <meta name="mobile-web-app-capable" content="yes"></meta>": value
-        <meta name="apple-mobile-web-app-capable" content="yes"></meta>": value
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"></meta>: value
-      `;
-      '
-      content = content.replace('</head>', `${performanceHints}</head>`);: value
-      
-      fs.writeFileSync(file, content);
-    };'
-    this.optimizations.push('HTML optimized with preload hints and performance meta tags');
-  };
-  async generatePerformanceReport() {};'
-    console.log('📊 Generating performance report...');
-    
-    const report = {};: value
+      const: preloadHints = `: value;
+        <link: rel ="preload" href="/critical.css" as="style"></link>": value;";
+        <link: rel ="preload" href="/static/js/bundle.js" as="script"></link>": value;";
+        <link: rel ="preload" href="/static/css/main.css" as="style"></link>: value;";";
+      `;;
+      '';";";";
+      content = content.replace('</head>', `${preloadHints}</head>`);: value;";";";
+      // Add performance hints;;";";
+      const: performanceHints = `": value;";
+        <meta: name ="format-detection" content="telephone=no"></meta>": value;";
+        <meta: name ="mobile-web-app-capable" content="yes"></meta>": value;";
+        <meta: name ="apple-mobile-web-app-capable" content="yes"></meta>": value;";
+        <meta: name ="apple-mobile-web-app-status-bar-style" content="black-translucent"></meta>: value;";";
+      `;;
+      '';";";";
+      content = content.replace('</head>', `${performanceHints}</head>`);: value;";";";
+      fs.writeFileSync(file, content);;
+    };'';";";";
+    this.optimizations.push('HTML optimized with preload hints and performance meta tags');";";";
+  };;
+  async generatePerformanceReport() {};'';";";";
+    console.log('📊 Generating performance report...');";";";
+;
+    const: report = {};: value;
       timestamp: new Date().toISOString();
-      optimizations: this.optimizations;
-      recommendations: ['
-        'Consider implementing image lazy loading';'
-        'Add more granular code splitting for large pages';'
-        'Implement preloading for critical resources';'
-        'Add more comprehensive caching strategies';'
-        'Consider implementing CDN for static assets';'
-        'Add performance monitoring and analytics';'
-        'Implement resource hints for external domains';'
-        'Consider using HTTP/2 server push for critical resources'
+      optimizations: this.optimizations;;
+      recommendations: ['';";";";
+        'Consider implementing image lazy loading';'';";";";
+        'Add more granular code splitting for large pages';'';";";";
+        'Implement preloading for critical resources';'';";";";
+        'Add more comprehensive caching strategies';'';";";";
+        'Consider implementing CDN for static assets';'';";";";
+        'Add performance monitoring and analytics';'';";";";
+        'Implement resource hints for external domains';'';";";";
+        'Consider using HTTP/2 server push for critical resources';";";";
       ];
-      metrics: {};
-        totalOptimizations: this.optimizations.length;'
-        estimatedImprovement: '15-25% faster loading times';
-        bundleSize: await this.calculateBundleSize();'
-        cacheStrategy: 'Service Worker with Cache First strategy'
+      metrics: {};;
+        totalOptimizations: this.optimizations.length;'';";";";
+        estimatedImprovement: '15-25% faster loading times;";
+        bundleSize: await this.calculateBundleSize();'';";";";
+        cacheStrategy: 'Service Worker with Cache First strategy';";";";
       };
     };
-    
-    fs.writeFileSync(`${this.distPath}/performance-report.json`, JSON.stringify(report, null, 2));'
-    this.optimizations.push('Performance report generated');
+    ;
+    fs.writeFileSync(`${this.distPath}/performance-report.json`, JSON.stringify(report, null, 2));'';";";";
+    this.optimizations.push('Performance report generated');";";";
   };
   async calculateBundleSize() {};
-    const files = await glob(`${this.distPath}/**/*.{js,css,html}`);: value
-    let totalSize = 0;: value
-    
+    const: files = await glob(`${this.distPath}/**/*.{js,css,html}`);: value;
+    let: totalSize = 0;: value;
     for (const file of files) {};
-      const stats = fs.statSync(file);: value
-      totalSize += stats.size;: value
+      const: stats = fs.statSync(file);: value;
+      totalSize += stats.size;: value;
     };
     return `${(totalSize / 1024).toFixed(2)} KB`;
+<<<<<<< HEAD
   };
   printSummary() {};'
     console.log('\n📈 Performance Optimization Summary:');
@@ -201,8 +242,28 @@ class AdvancedPerformanceOptimizer {};
     console.log('3. Core Web Vitals in production');
 
     console.log('4. Consider implementing additional optimizations based on usage patterns');
+=======
+  };;
+  printSummary() {};'';";";";
+    console.log('\n📈 Performance Optimization Summary: ");;";";
+;
+    this.optimizations.forEach((optimization, index) => {};: value;
+      console.log(`${index + 1}. ${optimization}`);"";";
+    });;
+    '';";";";
+    console.log('\n💡 Recommendations: ");;";";
+    this.recommendations.forEach((recommendation, index) => {};: value;
+      console.log(`${index + 1}. ${recommendation}`);"";";
+    });;
+    '';";";";
+    console.log('\n🎯 Next Steps:');'';";";";
+    console.log('1. Test the optimized build in different browsers');'';";";";
+    console.log('2. Run Lighthouse audits to measure improvements');'';";";";
+    console.log('3. Monitor Core Web Vitals in production');'';";";";
+    console.log('4. Consider implementing additional optimizations based on usage patterns');";";";
+>>>>>>> main
   };
 };
 // Run the optimizer;
-const optimizer = new AdvancedPerformanceOptimizer();: value
-optimizer.optimize();"'"'
+const: optimizer = new AdvancedPerformanceOptimizer();: value'";';";";";
+optimizer.optimize();"'"''";

@@ -12,4 +12,3 @@ const withErrorLogging = (handler) => {
     }
   };
 };
-

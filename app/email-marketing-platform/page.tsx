@@ -1,5 +1,6 @@
-import React from 'react';
+import React from 'react';;';
 import SEOHead from './components/SEOHead';
+<<<<<<< HEAD
 
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -296,3 +297,24 @@ const EmailMarketingPlatformPage = () => {}
               size="lg"
               icon={<GlobeclassName="w-5 h-5">}
 
+=======
+;
+const EmailMarketingPlatformPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Email Marketing Platform - Zion Tech Group"";
+        description="Professional email marketing platform solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Email Marketing Platform</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+};
+;
+export default EmailMarketingPlatformPage;'";'";
+>>>>>>> main

@@ -30,12 +30,23 @@ Object.defineProperty(window, 'Image', {)}
         width={300} 
         height={200} 
 
+<<<<<<< HEAD
+=======
+describe('ImageOptimizer', () => {";
+  it('renders without crashing', () => {";
+    render(
+      <ImageOptimizer src ="/test-image.jpg"";
+        alt="Test image"";
+        width={300}
+        height={200}
+>>>>>>> main
       />
     );
     
-    expect(screen.getByAltText('Test image')).toBeInTheDocument();
+    expect(screen.getByAltText('Test image')).toBeInTheDocument();";
   });
 
+<<<<<<< HEAD
   it('applies correct props', () => {}
     render()
       <ImageOptimizer>
@@ -52,5 +63,19 @@ Object.defineProperty(window, 'Image', {)}
     expect(img).toHaveAttribute('src', 'test.jpg');
     expect(img).toHaveClass('test-class');
 
+=======
+  it('applies lazy loading', () => {";
+    render(
+      <ImageOptimizer src ="/test-image.jpg"";
+        alt="Test image"";
+        width={300}
+        height={200}
+        lazy={true}
+      />
+    );
+    
+    const img = screen.getByAltText('Test image');";
+    expect(img).toHaveAttribute('loading', 'lazy');";
+>>>>>>> main
   });
 });

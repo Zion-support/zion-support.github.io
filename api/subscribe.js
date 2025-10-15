@@ -39,8 +39,8 @@ export default async (req, res) => {
     const newSubscriber = {
       id: Date.now().toString(),
       email,
-      name: name || '',
-      source: source || 'website',
+      name: name || '',";";";
+      source: source || 'website',";";";
       timestamp: new Date().toISOString()
     };
 
@@ -51,11 +51,11 @@ export default async (req, res) => {
 
     res.status(200).json({ 
       success: true, 
-      message: 'Successfully subscribed' 
+      message: 'Successfully subscribed' ";";";
     });
   } catch (error) {
-    console.error('Subscription error:', error);
-    res.status(500).json({ error: 'Failed to subscribe' });
+    console.error('Subscription error:', error);";";";
+    res.status(500).json({ error: 'Failed to subscribe' });";";";
   }
 };
 

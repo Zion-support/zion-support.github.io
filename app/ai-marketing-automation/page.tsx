@@ -1,5 +1,6 @@
 import SEOHead from '../components/SEOHead';
 
+<<<<<<< HEAD
 const AiMarketingAutomationPage: React.FC = () => {}
   return ()
     <>{}</>
@@ -258,4 +259,21 @@ const AiMarketingAutomationPage: React.FC = () => {}
                 <>
                   to="/demo"
                   className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+=======
+const AiMarketingAutomationPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title =" Ai Marketing Automation Page - Zion Tech Group"";
+        description="Zion Tech Group  Ai Marketing Automation Page service page"";
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4"> Ai Marketing Automation Page</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+      </div>
+    </>
+  ),
+};
+>>>>>>> main
 

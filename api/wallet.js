@@ -47,12 +47,12 @@ export default async (req, res) => {
 
     res.status(200).json({ 
       success: true, 
-      message: 'Wallet operation completed successfully',
+      message: 'Wallet operation completed successfully',";";";
       operationId: walletOperation.id
     });
   } catch (error) {
-    console.error('Wallet operation error:', error);
-    res.status(500).json({ error: 'Failed to process wallet operation' });
+    console.error('Wallet operation error:', error);";";";
+    res.status(500).json({ error: 'Failed to process wallet operation' });";";";
   }
 };
 

@@ -1,5 +1,6 @@
 import SEOHead from '../components/SEOHead';
 
+<<<<<<< HEAD
 const AiPersonalizedLearningPage: React.FC = () => {}
   const features = [
     {};
@@ -296,4 +297,21 @@ const AiPersonalizedLearningPage: React.FC = () => {}
                   Start Free Trial
                 </button>
                 <buttonclassName="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
+=======
+const AiPersonalizedLearningPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title =" Ai Personalized Learning Page - Zion Tech Group"";
+        description="Zion Tech Group  Ai Personalized Learning Page service page"";
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4"> Ai Personalized Learning Page</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+      </div>
+    </>
+  ),
+};
+>>>>>>> main
 

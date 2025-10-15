@@ -40,3 +40,17 @@ describe('LoadingSpinner', () => {}
   })
 })
 
+<<<<<<< HEAD
+=======
+  it('renders with custom text', () => {";
+    const customText = 'Loading data...';
+    render(<LoadingSpinner text ={customText} />);
+    expect(screen.getByText(customText)).toBeInTheDocument();
+  });
+
+  it('renders with full screen option', () => {";
+    render(<LoadingSpinner fullScreen text ="Loading..." />);";
+    expect(screen.getByText('Loading...')).toBeInTheDocument();";
+  });
+});
+>>>>>>> main

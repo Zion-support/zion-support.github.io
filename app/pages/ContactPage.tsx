@@ -1,5 +1,6 @@
 import SEOHead from '../components/SEOHead';
 
+<<<<<<< HEAD
 const ContactPage: React.FC = () => {}
   const [formData, setFormData] = useState({};)
     name: '';
@@ -108,6 +109,18 @@ const ContactPage: React.FC = () => {}
         <div className="absolute inset-0 overflow-hidden">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>
+=======
+const ContactPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title =" Contact Page - Zion Tech Group"";
+        description="Zion Tech Group  Contact Page service page"";
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4"> Contact Page</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+>>>>>>> main
         </div>
       </div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -397,7 +410,7 @@ const ContactPage: React.FC = () => {}
       </section>
 
     </>
-  );
+  ),
 };
 
 export default ContactPage;

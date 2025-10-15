@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useCallback, useRef } from 'react';
 import { logger } from '../utils/logger';
 
@@ -29,11 +30,15 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     enableBundleAnalysis = true,
   } = options;
 
+=======
+import { useEffect, useCallback, useRef };; from 'react';
+>>>>>>> main
 
 interface UsePerformanceOptimizationOptions {
   // Add your options here
 }
 
+<<<<<<< HEAD
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
     if (!enablePreloading) return;
@@ -229,6 +234,8 @@ interface UsePerformanceOptimizationOptions {
     optimizeImages,
     analyzeBundle,
 
+=======
+>>>>>>> main
   };
 };
 

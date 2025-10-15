@@ -1,23 +1,30 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import React, { useState, useEffect } from "react";
 
 
+=======
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+>>>>>>> main
 const ComponentsPage: React.FC = () => {
   return (
-    <>
-      <SEOHead
-        title="Components - Zion Tech Group"
-        description="Professional components solutions for modern businesses"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Components</h1>
-          <p className="text-gray-300">Professional solutions coming soon...</p>
-        </div>
-      </div>
-    </>
-  );
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
 };
+<<<<<<< HEAD
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({};)
   end, duration = 2000, className = "", prefix = "", suffix = ""}) => {};
   const [count, setCount] = useState(0);
@@ -57,3 +64,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({};)
 },
       export default AnimatedCounter
 
+=======
+;
+export default ComponentsPage;'";'";
+>>>>>>> main
