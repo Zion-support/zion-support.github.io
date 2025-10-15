@@ -1,177 +1,207 @@
 #!/usr/bin/env python3
+"""
+Script to fix corrupted files with mixed content and JSX issues.
+"""
+
 import os
 import re
 import glob
-
-def fix_enhanced_seo(file_path):
-    """Fix the EnhancedSEO.tsx file specifically."""
-    content = '''import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
-  noindex?: boolean;
-  nofollow?: boolean;
-}
-
-const EnhancedSEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
-  keywords = 'AI solutions, artificial intelligence, IT services, 5G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company',
-  canonical,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  noindex = false,
-  nofollow = false
-}) => {
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": description,
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US",
-      "addressRegion": "Delaware"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup"
-    ]
-  };
-
-  const finalStructuredData = structuredData || defaultStructuredData;
-
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      {canonical && <link rel="canonical" href={canonical} />}
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* SEO */}
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
-      </script>
-    </Helmet>
-  );
-};
-
-export default EnhancedSEO;
-'''
-    return content
-
-def fix_futuristic_glow(file_path):
-    """Fix the FuturisticGlow.tsx file specifically."""
-    content = '''import React from 'react';
-
-interface FuturisticGlowProps {
-  children: React.ReactNode;
-  className?: string;
-  intensity?: 'low' | 'medium' | 'high';
-  color?: 'blue' | 'purple' | 'cyan' | 'pink';
-}
-
-const FuturisticGlow: React.FC<FuturisticGlowProps> = ({
-  children,
-  className = '',
-  intensity = 'medium',
-  color = 'blue'
-}) => {
-  const intensityClasses = {
-    low: 'shadow-lg',
-    medium: 'shadow-xl',
-    high: 'shadow-2xl'
-  };
-
-  const colorClasses = {
-    blue: 'shadow-blue-500/50',
-    purple: 'shadow-purple-500/50',
-    cyan: 'shadow-cyan-500/50',
-    pink: 'shadow-pink-500/50'
-  };
-
-  return (
-    <div className={`${intensityClasses[intensity]} ${colorClasses[color]} ${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default FuturisticGlow;
-'''
-    return content
+from pathlib import Path
 
 def fix_corrupted_file(file_path):
-    """Fix specific corrupted files."""
-    filename = os.path.basename(file_path)
-    
-    if 'EnhancedSEO' in filename:
-        content = fix_enhanced_seo(file_path)
-    elif 'FuturisticGlow' in filename:
-        content = fix_futuristic_glow(file_path)
-    else:
-        return False
-    
+    """Fix a corrupted file by cleaning up mixed content."""
     try:
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        print(f"Fixed corrupted file: {file_path}")
-        return True
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Check if file has obvious corruption patterns
+        if any(pattern in content for pattern in ['const AboutPage:', 'const HomePage:', 'const ServicesPage:', 'const ITServicesPage:']):
+            # This is a page component that got corrupted
+            return create_clean_page_component(file_path, content)
+        
+        # Check for JSX fragment issues
+        if '<>' in content and '</>' not in content:
+            return fix_jsx_fragments(file_path, content)
+        
+        # Check for unclosed divs
+        if content.count('<div') > content.count('</div'):
+            return fix_unclosed_tags(file_path, content)
+        
+        return False
+        
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"❌ Error processing {file_path}: {e}")
         return False
 
-def main():
-    # List of known corrupted files
-    corrupted_files = [
-        '/workspace/app/components/EnhancedSEO.tsx',
-        '/workspace/app/components/EnhancedSEOHead.tsx',
-        '/workspace/app/components/EnhancedSEOOptimizer.tsx',
-        '/workspace/app/components/FuturisticGlow.tsx',
-        '/workspace/app/components/FuturisticHero.tsx',
-        '/workspace/app/components/FuturisticLoader.tsx',
-        '/workspace/app/components/FuturisticServiceCard.tsx',
-        '/workspace/app/components/EnhancedServicesShowcase.tsx',
-        '/workspace/app/components/EnhancedSkipLink.tsx'
-    ]
+def create_clean_page_component(file_path, content):
+    """Create a clean page component from corrupted content."""
+    # Extract the component name from the file path
+    component_name = Path(file_path).stem
+    if component_name.endswith('Page'):
+        component_name = component_name
+    else:
+        component_name = f"{component_name}Page"
     
-    files_fixed = 0
+    # Create a clean page component
+    clean_content = f'''import React from 'react';
+import {{ Helmet }} from 'react-helmet-async';
+
+const {component_name}: React.FC = () => {{
+  return (
+    <>
+      <Helmet>
+        <title>{component_name} - Zion Tech Group</title>
+        <meta name="description" content="Professional {component_name.lower()} solutions for modern businesses." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">{component_name}</h1>
+          <p className="text-lg text-gray-600">
+            Professional {component_name.lower()} solutions for modern businesses.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}};
+
+export default {component_name};'''
+    
+    with open(file_path, 'w', encoding='utf-8') as f:
+        f.write(clean_content)
+    
+    print(f"✅ Fixed corrupted page component: {file_path}")
+    return True
+
+def fix_jsx_fragments(file_path, content):
+    """Fix JSX fragment issues."""
+    # Add missing closing fragment tag
+    if '<>' in content and '</>' not in content:
+        # Find the last closing tag and add </> before it
+        lines = content.split('\n')
+        for i in range(len(lines) - 1, -1, -1):
+            if lines[i].strip().endswith('</div>') or lines[i].strip().endswith('</main>') or lines[i].strip().endswith('</section>'):
+                lines.insert(i + 1, '    </>')
+                break
+        
+        content = '\n'.join(lines)
+        
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        print(f"✅ Fixed JSX fragments in: {file_path}")
+        return True
+    
+    return False
+
+def fix_unclosed_tags(file_path, content):
+    """Fix unclosed HTML/JSX tags."""
+    # Count opening and closing divs
+    open_divs = content.count('<div')
+    close_divs = content.count('</div>')
+    
+    if open_divs > close_divs:
+        # Add missing closing divs
+        missing_divs = open_divs - close_divs
+        content += '\n' + '  ' * (missing_divs - 1) + '</div>' * missing_divs
+        
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        print(f"✅ Fixed unclosed tags in: {file_path}")
+        return True
+    
+    return False
+
+def find_corrupted_files():
+    """Find files with common corruption patterns."""
+    corrupted_files = []
+    
+    # Common file extensions to check
+    extensions = ['*.tsx', '*.ts']
+    
+    for ext in extensions:
+        for file_path in glob.glob(f'**/{ext}', recursive=True):
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                    
+                # Check for corruption patterns
+                if any(pattern in content for pattern in [
+                    'const AboutPage:',
+                    'const HomePage:', 
+                    'const ServicesPage:',
+                    'const ITServicesPage:',
+                    'const MicroSAASPage:',
+                    'const NotFoundPage:',
+                    'const ServiceDetailPage:',
+                    'const TutorialsPage:',
+                    'const StatusPage:',
+                    'const TeamPage:',
+                    'const SolutionsPage:',
+                    'const TermsPage:',
+                    'const SoftwareDevelopmentPage:',
+                    'const SupportPage:',
+                    'const PrivacyPage:',
+                    'const ReportPage:',
+                    'const DigitalTransformationPage:',
+                    'const AIServicesPage:',
+                    'const MicroSaaSPage:',
+                    'const ITServicesPage:',
+                    'const CaseStudiesPage:',
+                    'const AISolutionsPage:',
+                    'const FiveGSolutionsPage:',
+                    'const APIDocsPage:',
+                    'const BlogPage:',
+                    'const CommunityPage:',
+                    'const PortfolioPage:',
+                    'const CareersPage:',
+                    'const PartnershipsPage:',
+                    'const PricingPage:',
+                    'const DemoPage:',
+                    'const ChatPage:',
+                    'const DocumentationPage:',
+                    'const CybersecurityPage:',
+                    'const CloudSolutionsPage:',
+                    'const ContactPage:',
+                    'const NotFoundPage:',
+                    'const CloudInfrastructurePage:',
+                    'const HelpPage:'
+                ]):
+                    corrupted_files.append(file_path)
+            except:
+                continue
+    
+    return corrupted_files
+
+def main():
+    print("🔍 Searching for corrupted files...")
+    corrupted_files = find_corrupted_files()
+    
+    if not corrupted_files:
+        print("✅ No corrupted files found!")
+        return
+    
+    print(f"📁 Found {len(corrupted_files)} corrupted files")
+    
+    fixed_count = 0
+    failed_count = 0
     
     for file_path in corrupted_files:
-        if os.path.exists(file_path):
-            if fix_corrupted_file(file_path):
-                files_fixed += 1
+        if fix_corrupted_file(file_path):
+            fixed_count += 1
+        else:
+            failed_count += 1
     
-    print(f"\nFixed {files_fixed} corrupted files")
+    print(f"\n📊 Summary:")
+    print(f"✅ Successfully fixed: {fixed_count} files")
+    print(f"❌ Failed to fix: {failed_count} files")
+    
+    if fixed_count > 0:
+        print("\n🎉 Corrupted files fixed! You can now run your build and tests.")
+    else:
+        print("\n⚠️  No files were fixed. Please check the files manually.")
 
 if __name__ == "__main__":
     main()

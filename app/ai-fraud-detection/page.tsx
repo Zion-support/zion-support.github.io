@@ -1,371 +1,259 @@
-<<<<<<< HEAD
-import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'react-helmet-async';';';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';';'
-;
-const PagePage: React.FC = () => {;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Brain,
-      title: 'AI-Powered Solutions','
-      description: 'Advanced AI technology to transform your business operations and improve efficiency''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Zap,
-      title: 'High Performance','
-      description: 'Lightning-fast processing and real-time analytics for optimal results''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Shield,
-      title: 'Enterprise Security','
-      description: 'Bank-level security with encryption and compliance standards''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Globe,
-      title: 'Global Reach','
-      description: 'Worldwide deployment and support for international businesses''
-    }
-  ];
-;
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Advanced AI technology integration','
-    'Real-time processing and analytics','
-    'Enterprise-grade security and compliance','
-    'Scalable and flexible solutions','
-    '24/7 technical support','
-    'Easy integration with existing systems','
-    'Cost-effective pricing plans','
-    'Proven track record of success''
-  ];
-
-export default function PagePage() {
-  return (
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Helmet>
-<title>Page | Zion Tech Group</title>
-<meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
-<meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" /></Helmet>"
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center">"
-<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
-<span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">"
-                Page
-              </span>
-<br />
-<span className="text-white">Solutions</span></h1>"
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-              Transform your business with our advanced page solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">"
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" /></button>"
-<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">"
-                Learn More
-              </button>;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Brain,
-      title: 'AI-Powered Intelligence','
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.','
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},'
-    {icon: BarChart,
-  },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    icon: BarChart,
-      title: 'Advanced Analytics','
-      description: 'Comprehensive analytics dashboard with real-time data visualization.','
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}];';
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Increase efficiency by up to 50%','
-    'Reduce costs by 30% with automation','
-    'Improve decision-making with AI insights','
-    'Scale operations without proportional staff increases','
-  ]
-return(<>)
-      <Helmet />
-<title>Ai Fraud Detection - Zion Tech Group</title>
-<meta name="description" content="AI-powered solution" />"
-<meta name="keywords" content="AI, artificial intelligence, business solutions" /></Helmet>"
-<Navigation />
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900"></div>"
-<section className="relative py-20 px-4 overflow-hidden"></section>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />'"
-<div className="relative max-w-7xl mx-auto text-center">"
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">"
-              Ai Fraud Detection
-              <p className="text-xl text-gray-300">Section description</p>"
->>>>>>> origin/main
-            </div></div>
-</section>
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>'"
-<div className="relative max-w-7xl mx-auto text-center"></div>"
-<h1>Ai Fraud Detection;</h1>
->>>>>>> origin/main
-            </h1>
-<p>Advanced AI-powered ai fraud detection solution for modern businesses.</p></p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
-              <button>Get Started;</button></button>
-<button>View Demo,</button></button>
-</div></div>
-</section>
-        {/* Features Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
-<h2>Key Features;</h2></h2>
-<p>Advanced AI technology that drives results;</p></p>
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,"
-              {features.map((feature, index) => (
-  // TODO: Add parameters
-)
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,"
-                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,"
-                    <feature />
-<h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>"
-<p className="text-gray-300 mb-4">{feature.description</p>}</p>"
-                  {feature.benefits && (;
-                    <ul>
-                      {feature.benefits.map((benefit, idx) => (} <li>
-<CheckCircle />
-
-                          {benefit} </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-
-            </div></div>
-</section>
-        {/* Benefits Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI technology that drives results"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
-              {features.map((feature, index) => (
-  // TODO: Add parameters
-)
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">"
-<div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">"
-<feature.icon className="w-8 h-8 text-white" />"
-<h3 className="text-xl font-bold text-white mb-4">{feature.title}"
-                  <p className="text-gray-300 mb-4">{feature.description}"
-                  {feature.benefits && (
-  // TODO: Add parameters
-)
-                    <ul className="space-y-2">"
-                      {feature.benefits.map((benefit, idx) => (
-  // TODO: Add parameters
-)
-                        <li key={idx} className="flex items-center text-sm text-gray-400">"
-<CheckCircle className="w-4 h-4 text-green-400 mr-2" />"
-                          {benefit}
-                      ))}
-          <div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
-<h2>Why Choose Our Solution?</h2></h2>
-<p>Proven results that drive business growth and efficiency;</p></p>
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,"
-              {benefits.map((benefit, index) => (
-  // TODO: Add parameters
-)
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,"
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,"
-                    <CheckCircle />
-<p className="text-lg text-white font-medium">{benefit</p>}</p></div>"
-              ))}
-            </div></div>
-</section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4"></section>"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-          ))
-        </section>
-<div className="max-w-4xl mx-auto text-center"></div>"
-<div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>"
-<h2>Ready to Get Started?</h2></h2>
-<p>Contact our experts to discuss your requirements and get started today.</p></p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
-                <button>Contact Us;</button></button>
-<button>Learn More;</button>
-                Ready to Get Started?
-              </h2>
-<p></p>
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>"
-<button></button>
-                  Contact Us
-                </button>
-<button></button>
-                  Learn More
->>>>>>> origin/main
-                </button></div>
-</div>
-          ))
-        </section></div>;
-export default PagePage;
->>>>>>> origin/main
-
-}}
->>>>>>> cursor/delete-records-a75eursor/fix-errors-and-merge-to-main-234b
-        </div>
-      </div>
-    </div>
-  );
-}
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-234b
-=======
-          </div>
-        </section>
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">""
-          <div className="max-w-7xl mx-auto">""
-            <div className="text-center mb-16">""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
-                Why Choose Our Page Services?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
-                We deliver exceptional results with cutting-edge technology and expert knowledge.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
-              {features.map((feature, index) => (
-                <div key={index} className="text-center">""
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
-                  <p className="text-gray-300">{feature.description}</p>""
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
-          <div className="max-w-4xl mx-auto text-center">""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">""
-              Let's discuss how our page services can help your business succeed.''
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <Link
-                to="/contact""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
-              >
-                Contact Us
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
-              </Link>
-              <Link
-                to="/services""
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
-              >
-                View All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  );
-};
-const page = React.lazy(() => import('./page'));''
-export default page;
-=======
+import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-const AiFraudDetectionPage: React.FC = () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        title="Page - Zion Tech Group"
-        description="Advanced page solutions powered by AI"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Page</h1>
-          <pclassName="text-gray-300">
-
-const AiFraudDetectionPage: React.FC = () => {
+const AIFraudDetectionPage: React.FC = () => {
   return (
     <>
-      <SEOHead title ="ai-fraud-detection - Zion Tech Group - Zion Tech Group"";
-        description="Zion Tech Group ai-fraud-detection service page"";
+      <SEOHead
+        title="AI Fraud Detection - Zion Tech Group"
+        description="Advanced AI-powered fraud detection system. Real-time monitoring, machine learning algorithms, and 99.9% accuracy."
+        keywords="AI fraud detection, fraud prevention, machine learning, real-time monitoring, security AI"
+        canonicalUrl="https://ziontechgroup.com/ai-fraud-detection"
       />
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">ai-fraud-detection - Zion Tech Group</h1>";
-          <p className ="text-gray-300">Coming soon...</p>";
+      
+      <div className="min-h-screen bg-gradient-to-br from-red-900 via-rose-900 to-pink-900">
+        {/* Hero Section */}
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-pink-600/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="text-center">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">
+                AI Fraud Detection
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Protect your business with advanced AI-powered fraud detection. Real-time monitoring, 
+                machine learning algorithms, and 99.9% accuracy in identifying fraudulent activities.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-red-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 text-lg font-semibold">
+                  Start Free Trial
+                </button>
+                <button className="border-2 border-red-400 text-red-400 px-8 py-4 rounded-lg hover:bg-red-400 hover:text-white transition-all duration-300 text-lg font-semibold">
+                  Request Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Features Section */}
+        <div className="py-20 bg-black/20 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-center text-white mb-16">Advanced Security Features</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Real-Time Monitoring</h3>
+                <p className="text-gray-300">Continuous monitoring of transactions and user behavior with instant fraud alerts and blocking.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Machine Learning Models</h3>
+                <p className="text-gray-300">Advanced ML algorithms that learn from patterns and adapt to new fraud techniques automatically.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Risk Scoring</h3>
+                <p className="text-gray-300">Comprehensive risk scoring system that evaluates multiple factors to determine fraud probability.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Instant Alerts</h3>
+                <p className="text-gray-300">Immediate notifications via email, SMS, and dashboard alerts when suspicious activity is detected.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">API Integration</h3>
+                <p className="text-gray-300">Easy integration with existing systems through RESTful APIs and webhooks for seamless operation.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Compliance Ready</h3>
+                <p className="text-gray-300">Built-in compliance features for PCI DSS, GDPR, and other regulatory requirements.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Pricing Section */}
+        <div className="py-20 bg-gradient-to-r from-gray-900 to-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-center text-white mb-16">Security-First Pricing</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
+                <div className="text-4xl font-bold text-red-400 mb-6">$149<span className="text-lg text-gray-400">/month</span></div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center text-gray-300">
+                    <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Up to 10,000 transactions/month
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Basic ML models
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Email alerts
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Standard support
+                  </li>
+                </ul>
+                <button className="w-full bg-gradient-to-r from-red-600 to-pink-600 text-white py-3 rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">
+                  Start Free Trial
+                </button>
+              </div>
+              
+              <div className="bg-gradient-to-r from-red-600 to-pink-600 p-8 rounded-xl relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
+                <div className="text-4xl font-bold text-white mb-6">$399<span className="text-lg text-red-200">/month</span></div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center text-red-100">
+                    <svg className="w-5 h-5 text-green-300 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Up to 100,000 transactions/month
+                  </li>
+                  <li className="flex items-center text-red-100">
+                    <svg className="w-5 h-5 text-green-300 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Advanced ML models
+                  </li>
+                  <li className="flex items-center text-red-100">
+                    <svg className="w-5 h-5 text-green-300 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Real-time alerts
+                  </li>
+                  <li className="flex items-center text-red-100">
+                    <svg className="w-5 h-5 text-green-300 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Analytics dashboard
+                  </li>
+                  <li className="flex items-center text-red-100">
+                    <svg className="w-5 h-5 text-green-300 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Priority support
+                  </li>
+                </ul>
+                <button className="w-full bg-white text-red-600 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Start Free Trial
+                </button>
+              </div>
+              
+              <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
+                <div className="text-4xl font-bold text-red-400 mb-6">$999<span className="text-lg text-gray-400">/month</span></div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center text-gray-300">
+                    <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Unlimited transactions
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Custom ML models
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Custom integrations
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Advanced analytics
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <svg className="w-5 h-5 text-green-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    24/7 dedicated support
+                  </li>
+                </ul>
+                <button className="w-full bg-gradient-to-r from-red-600 to-pink-600 text-white py-3 rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">
+                  Contact Sales
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="py-20 bg-gradient-to-r from-red-600 to-pink-600">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-white mb-6">Protect Your Business Today</h2>
+            <p className="text-xl text-red-100 mb-8">
+              Don't wait for fraud to happen. Our AI-powered detection system provides real-time protection 
+              with 99.9% accuracy and instant alerts.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-red-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 text-lg font-semibold">
+                Start Free Trial - No Setup Fees
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300 text-lg font-semibold">
+                Schedule Security Audit
+              </button>
+            </div>
+            <div className="mt-8 text-red-200">
+              <p>📞 Call us: <a href="tel:+13024640950" className="text-white hover:underline">+1 (302) 464-0950</a></p>
+              <p>✉️ Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:underline">kleber@ziontechgroup.com</a></p>
+            </div>
+          </div>
         </div>
       </div>
     </>
-  ),
+  );
 };
 
->>>>>>> main
->>>>>>> main
+export default AIFraudDetectionPage;

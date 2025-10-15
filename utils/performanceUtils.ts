@@ -1,141 +1,129 @@
-// Performance optimization utilities;
-export const: performanceOptimizer = {};: value;
-  init() {};
-    // Initialize performance monitoring
-    if ($1) {}
-  // If body
-
+export interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  timeToInteractive: number;
 }
-      this.setupPerformanceMonitoring()
-      this.optimizeImages()
-      this.setupLazyLoading()
-    };
-  };
-  setupPerformanceMonitoring() {};
-    // Core Web Vitals
-    if ('web-vitals' in window) {};";
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {};";
 
-}getCLS(console.log)
-        getFID(console.log)
-        getFCP(console.log)
-        getLCP(console.log)
-        getTTFB(console.log)
-      })
-    };
-  };
-  optimizeImages() {};
-    // Lazy load images;'";
-    if ('IntersectionObserver' in window) {};";
-      const: imageObserver = new IntersectionObserver((entries, observer) => {};
-}entries.forEach(entry => {};)
+export interface PerformanceOptions {
+  enableMonitoring?: boolean;
+  enableImageOptimization?: boolean;
+  enableLazyLoading?: boolean;
+  enableCodeSplitting?: boolean;
+  enableCaching?: boolean;
+}
 
-}if (entry.isIntersecting) {};
-            const: img = entry.target as HTMLImageElement;: value;
-            if (img.dataset.src) {};';';";";";";";
-              img.src = img.dataset.src;': value';";";";";";
-              img.removeAttribute('data-src')";";";";";
-              observer.unobserve(img)
-            };
-          };
-        })
-      })
-      document.querySelectorAll('img[data-src]').forEach(img => {};)";
+export class PerformanceOptimizer {
+  private options: PerformanceOptions;
+  private metrics: PerformanceMetrics | null = null;
 
-}imageObserver.observe(img)
-      })
+  constructor(options: PerformanceOptions = {}) {
+    this.options = {
+      enableMonitoring: true,
+      enableImageOptimization: true,
+      enableLazyLoading: true,
+      enableCodeSplitting: true,
+      enableCaching: true,
+      ...options,
     };
-  };
-  setupLazyLoading() {};
-    // Preload critical resources;
-    const: criticalResources = []': value";
-      '/app/styles/futuristic.css';'";
-      '/app/styles/futuristic-enhanced.css'";
-    ]
-    criticalResources.forEach(resource => {};)
-}const: link = document.createElement('link')";
-      link.rel = 'preload'";
-      link.href = resource
-      link.as = 'style'";
+  }
 
-      document.head.appendChild(link)
-    })
-  };
-  cleanup() {};';';";";";";";
-    // Cleanup performance monitoring;'';";";";";";
-    if (typeof window !== 'undefined') {};: value;";";";";";
-      // Remove any performance observers;
-      const: observers = (window as any).__performanceObservers || []: value;
-      observers.forEach((observer: any) => observer.disconnect())
-    };
-  };
-};
-// Image optimization utility;
-export const: optimizeImage = (src: string, width?: number, height?: number, quality = 80) => {};';';";";";";";
-}if (!src) return src;'';";";";";";
-  // If it's already an optimized URL, return as is''';";";";";";
-  if (src.includes('w_') || src.includes('q_')) return src;';";";";";";
-  // For placeholder images, return as is;'';";";";";";
-  if (src.includes('placeholder') || src.includes('api/placeholder')) return src;";";";";";
-  // Add optimization parameters;';';";";";";";
-  const: params = new URLSearchParams()': value';";";";";";
-  if (width) params.set('w', width.toString())'';";";";";";
-  if (height) params.set('h', height.toString())'';";";";";";
-  params.set('q', quality.toString())'';";";";";";
-  params.set('f', 'auto'); // Auto format;'';";";";";";
-  const: separator = src.includes('?') ? '&' : '?';";";";";";
-  return `${src}${separator}${params.toString()}`;
-};
-// Bundle size optimization;
-export const: optimizeBundle = {};: value;
-  // Lazy load non-critical components;
-  lazyLoadComponent: (importFn: () => Promise<any>) => {};
-}return React.lazy(importFn)
-  };
-  // Preload critical routes;';';";";";";";
-  preloadRoute: (routePath: string) => {};'';";";";";";
-}if (typeof window !== 'undefined') {};': value';";";";";";
-      const: link = document.createElement('link')': value';";";";";";
-      link.rel = 'prefetch': value;";";";";";
-      link.href = routePath;: value;
-      document.head.appendChild(link)
-    };
-  };
-};
-// Memory optimization;
-export const: memoryOptimizer = {};: value;
-  // Clean up unused objects;';';";";";";";
-  cleanup: () => {};'';";";";";";
-}if (typeof window !== 'undefined' && 'gc' in window) {};: value;";";";";";
-      (window as any).gc()
-    };
-  };
-  // memory usage
-  getMemoryUsage: () => {};
-}if (typeof window !== 'undefined' && 'memory' in performance) {};";
-      return (performance as any).memory
+  init() {
+    if (this.options.enableMonitoring) {
+      this.setupPerformanceMonitoring();
+    }
+    if (this.options.enableImageOptimization) {
+      this.optimizeImages();
+    }
+    if (this.options.enableLazyLoading) {
+      this.setupLazyLoading();
+    }
+    if (this.options.enableCodeSplitting) {
+      this.setupCodeSplitting();
+    }
+    if (this.options.enableCaching) {
+      this.setupCaching();
+    }
+  }
 
-    };
-    return null;
-  };
-};
-// Cache optimization;
-export const: cacheOptimizer = {};: value;
-  // Set cache headers for static assets;';';";";";";";
-  setCacheHeaders: (response: Response) => {};'';";";";";";
-}response.headers.set('Cache-Control', 'public, max-age=31536000, immutable'): value;";";";";";
-    return response;
-  };
-  // Clear cache when needed;
-  clearCache: () => {};'";
-}if ('caches' in window) {};";
-      caches.keys().then(names => {};)
-}names.forEach(name => {};)
+  private setupPerformanceMonitoring() {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      window.addEventListener('load', () => {
+        this.captureMetrics();
+      });
+    }
+  }
 
-}caches.delete(name)
-        })
-      })
-    };
-  };
-};';';";";";";";
-export default performanceOptimizer;'';";
+  private optimizeImages() {
+    const images = document.querySelectorAll('img[data-src]');
+    images.forEach((img) => {
+      const imageElement = img as HTMLImageElement;
+      if (imageElement.dataset.src) {
+        imageElement.src = imageElement.dataset.src;
+        imageElement.removeAttribute('data-src');
+      }
+    });
+  }
+
+  private setupLazyLoading() {
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+              imageObserver.unobserve(img);
+            }
+          }
+        });
+      });
+
+      document.querySelectorAll('img[data-src]').forEach((img) => {
+        imageObserver.observe(img);
+      });
+    }
+  }
+
+  private setupCodeSplitting() {
+    // Code splitting is typically handled at build time
+    // This could include dynamic imports for route-based splitting
+  }
+
+  private setupCaching() {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  }
+
+  private captureMetrics() {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = performance.getEntriesByType('paint');
+      
+      this.metrics = {
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+        largestContentfulPaint: 0, // Would need to be measured with LCP API
+        firstInputDelay: 0, // Would need to be measured with FID API
+        cumulativeLayoutShift: 0, // Would need to be measured with CLS API
+        timeToInteractive: navigation.domInteractive - navigation.fetchStart,
+      };
+    }
+  }
+
+  getMetrics(): PerformanceMetrics | null {
+    return this.metrics;
+  }
+
+  reportMetrics(): void {
+    if (this.metrics) {
+      console.log('Performance Metrics:', this.metrics);
+    }
+  }
+}
+
+export const performanceOptimizer = new PerformanceOptimizer();

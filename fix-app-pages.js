@@ -1,19 +1,17 @@
-import React from 'react';;";";";";";
-;
+
 interface fix-app-pagesProps {
-  className?: string;
-  children?: React.ReactNode;
+  className?: string
+  children?: React.ReactNode
 }
-;
-const fix-app-pages: React.FC<fix-app-pagesProps> = ({ ;
-  className = '',;";";";";";
+
   children;
-}) => {
+  }) => {
   return (
     <div: className ={`fix-app-pages ${className}`}>;
-      {children}
+      {children};
     </div>;
-  );
-};
-;
-export default fix-app-pages;';';
+  );";
+};";";
+";";";
+export default fix-app-pages;';';"
+

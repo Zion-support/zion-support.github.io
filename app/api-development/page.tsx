@@ -1,172 +1,145 @@
-<<<<<<< HEAD
-import React from 'react;'
-import { ArrowRight } from 'lucide-react;'
-import { CheckCircle } from 'lucide-react;'
-import { Star } from 'lucide-react;'
-import { Users } from 'lucide-react;'
-import { Clock } from 'lucide-react;'
-import { DollarSign } from 'lucide-react;'
-import { Shield } from 'lucide-react;'
-import { Code } from 'lucide-react;'
-import { Database } from 'lucide-react;'
-import { Mail } from 'lucide-react;'
-import { Settings } from 'lucide-react;'
-import { Target } from 'lucide-react;'
-import { TrendingUp } from 'lucide-react;'
-import { PieChart } from 'lucide-react;'
-import { MessageSquare } from 'lucide-react;'
-import { Heart } from 'lucide-react;'
-import { Globe } from 'lucide-react;'
-import { Smartphone } from 'lucide-react;'
-import { Network } from 'lucide-react;'
-import { Lock } from 'lucide-react;'
-import { Cpu } from 'lucide-react;'
-import { Wifi } from 'lucide-react;'
-import { Building2 } from 'lucide-react;'
-import { Briefcase } from 'lucide-react;'
-import { Lightbulb } from 'lucide-react;'
-import { Link } from 'react-router-dom;'
-import EnhancedSEO from '../components/EnhancedSEO;'
-const Page = () => {
-  const features = [
-    {
-      icon: <CheckCircle className="w-8 h-8" />,""
-      title: 'Advanced Features',''
-      description: 'Cutting-edge technology for maximum efficiency''
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,""
-      title: 'Secure & Reliable',''
-      description: 'Enterprise-grade security and 99.9% uptime''
-    },
-    {
-      icon: <Users className="w-8 h-8" />,""
-      title: 'Expert Support',''
-      description: '24/7 support from our team of specialists''
-    }
-  ];
+import React from 'react';
+import SEOHead from '../components/SEOHead';
+
+const APIDevelopmentPage: React.FC = () => {
   return (
     <>
-      <EnhancedSEO
-        title="Page - Zion Tech Group""
-        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""
-        keywords="page, business solutions, technology services, professional services""
+      <SEOHead
+        title="API Development Services - Zion Tech Group"
+        description="Professional API development and integration services. Build robust, scalable APIs with modern technologies, comprehensive documentation, and security best practices."
+        keywords="API development, REST API, GraphQL, API integration, microservices, API documentation, API security"
+        canonicalUrl="https://ziontechgroup.com/api-development"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
-          <div className="max-w-7xl mx-auto text-center">""
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
-              Page
-              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""
-                Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
-              Professional page services designed to help your business succeed and grow.
+      
+      <div className="min-h-screen bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">API Development Services</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional API development and integration services. Build robust, scalable APIs with modern technologies, comprehensive documentation, and enterprise-grade security.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <Link
-                to="/contact""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
-              </Link>
-              <Link
-                to="/demo""
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
-              >
-                View Demo
-              </Link>
-            </div>
           </div>
-        </section>
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">""
-          <div className="max-w-7xl mx-auto">""
-            <div className="text-center mb-16">""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
-                Why Choose Our Page Services?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
-                We deliver exceptional results with cutting-edge technology and expert knowledge.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
-              {features.map((feature, index) => (
-                <div key={index} className="text-center">""
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-                    {feature.icon}
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Development Services</h2>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
-                  <p className="text-gray-300">{feature.description}</p>""
+                  <div className="ml-3">
+                    <h3 className="text-lg font-semibold text-gray-900">REST API Development</h3>
+                    <p className="text-gray-600">Build scalable RESTful APIs with modern frameworks and best practices</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="ml-3">
+                    <h3 className="text-lg font-semibold text-gray-900">GraphQL APIs</h3>
+                    <p className="text-gray-600">Develop efficient GraphQL APIs with type safety and real-time subscriptions</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="ml-3">
+                    <h3 className="text-lg font-semibold text-gray-900">Microservices Architecture</h3>
+                    <p className="text-gray-600">Design and implement microservices-based API architectures</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="ml-3">
+                    <h3 className="text-lg font-semibold text-gray-900">API Integration</h3>
+                    <p className="text-gray-600">Integrate with third-party APIs and legacy systems seamlessly</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="ml-3">
+                    <h3 className="text-lg font-semibold text-gray-900">API Documentation</h3>
+                    <p className="text-gray-600">Comprehensive documentation with interactive examples and testing tools</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Pricing Plans</h3>
+              <div className="space-y-4">
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <h4 className="text-lg font-semibold text-gray-900">Basic API</h4>
+                  <p className="text-3xl font-bold text-blue-600">$2,999<span className="text-lg text-gray-600">/project</span></p>
+                  <ul className="mt-4 space-y-2 text-sm text-gray-600">
+                    <li>• Up to 10 endpoints</li>
+                    <li>• Basic authentication</li>
+                    <li>• Standard documentation</li>
+                    <li>• 2 weeks delivery</li>
+                    <li>• Email support</li>
+                  </ul>
                 </div>
-              ))}
+                <div className="border border-blue-500 rounded-lg p-4 bg-blue-50">
+                  <h4 className="text-lg font-semibold text-gray-900">Professional API</h4>
+                  <p className="text-3xl font-bold text-blue-600">$7,999<span className="text-lg text-gray-600">/project</span></p>
+                  <ul className="mt-4 space-y-2 text-sm text-gray-600">
+                    <li>• Up to 50 endpoints</li>
+                    <li>• Advanced security</li>
+                    <li>• Interactive documentation</li>
+                    <li>• Rate limiting</li>
+                    <li>• 4 weeks delivery</li>
+                    <li>• Priority support</li>
+                  </ul>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <h4 className="text-lg font-semibold text-gray-900">Enterprise API</h4>
+                  <p className="text-3xl font-bold text-blue-600">$19,999<span className="text-lg text-gray-600">/project</span></p>
+                  <ul className="mt-4 space-y-2 text-sm text-gray-600">
+                    <li>• Unlimited endpoints</li>
+                    <li>• Enterprise security</li>
+                    <li>• Custom integrations</li>
+                    <li>• Performance optimization</li>
+                    <li>• 8 weeks delivery</li>
+                    <li>• 24/7 support</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
-          <div className="max-w-4xl mx-auto text-center">""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">""
-              Let's discuss how our page services can help your business succeed.''
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <Link
-                to="/contact""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
-              >
-                Contact Us
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
-              </Link>
-              <Link
-                to="/services""
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
-              >
-                View All Services
-              </Link>
+
+          <div className="bg-blue-50 rounded-lg p-8 text-center">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Build Your API Today</h2>
+            <p className="text-gray-600 mb-6">Professional API development services for your business needs.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Get Quote
+              </a>
+              <a href="tel:+13024640950" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+                Call: +1 (302) 464-0950
+              </a>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </>
   );
 };
-const page = React.lazy(() => import('./page'));''
-export default page;
-=======
-import SEOHead from '../components/SEOHead';
 
-const PagePage: React.FC = () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        title="page - Zion Tech Group"
-        description="Zion Tech Group page service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">api-development</h1>
-          <pclassName="text-gray-300">
-
-const ApiDevelopmentPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead title ="api-development - Zion Tech Group - Zion Tech Group"";
-        description="Zion Tech Group api-development service page"";
-      />
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">api-development - Zion Tech Group</h1>";
-          <p className ="text-gray-300">Coming soon...</p>";
-        </div>
-      </div>
-    </>
-  ),
-};
-
->>>>>>> main
+export default APIDevelopmentPage;
