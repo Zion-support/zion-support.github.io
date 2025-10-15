@@ -3,6 +3,16 @@ const CACHE_NAME = 'zion-tech-v1';
 const STATIC_CACHE = 'zion-static-v1';
 const DYNAMIC_CACHE = 'zion-dynamic-v1';
 
+// Error handling for async operations
+self.addEventListener('error', (event) => {
+  console.error('Service Worker error:', event.error);
+});
+
+self.addEventListener('unhandledrejection', (event) => {
+  console.error('Service Worker unhandled rejection:', event.reason);
+  event.preventDefault();
+});
+
 // Assets to cache immediately
 const STATIC_ASSETS = [
   '/',
@@ -124,6 +134,18 @@ self.addEventListener('push', (event) => {
     event.waitUntil(
       self.registration.showNotification(data.title, options)
     );
+  }
+});
+
+// Message handling to prevent async response listener errors
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+  
+  // Always respond to messages to prevent async response listener errors
+  if (event.ports && event.ports[0]) {
+    event.ports[0].postMessage({ success: true });
   }
 });
 

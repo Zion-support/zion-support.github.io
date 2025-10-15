@@ -20,6 +20,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogImage,
   ogType = 'website',
   twitterCard = 'summary_large_image',
+  structuredData,
   noIndex = false
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;
