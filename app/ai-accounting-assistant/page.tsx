@@ -1,4 +1,4 @@
-import { ArrowRight, Calculator, FileText, Target, Zap, BarChart3, CheckCircle, Clock, DollarSign, Users, Settings, Globe, Shield } from "lucide-react";
+import { ArrowRight, Calculator, FileText, Target, BarChart3, CheckCircle, Clock, Globe, Shield } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 

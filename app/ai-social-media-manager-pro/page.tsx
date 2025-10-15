@@ -319,6 +319,7 @@ const AISocialMediaManagerProPage = () => {
             </div>
           </section>
         </main>
+      </div>
     </>
   );
 };
