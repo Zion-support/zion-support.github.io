@@ -30,6 +30,9 @@ const StatusPage = React.lazy(() => import('./app/status/page'));
 const SupportPage = React.lazy(() => import('./app/support/page'));
 const CareersPage = React.lazy(() => import('./app/careers/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
+const FiveGSolutionsPage = React.lazy(() => import('./app/5g-solutions/page'));
+const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'));
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'));
 
 const App: React.FC = () => {
   // Initialize performance monitoring
@@ -79,6 +82,9 @@ const App: React.FC = () => {
                 <Route path="/support" element={<SupportPage />} />
                 <Route path="/careers" element={<CareersPage />} />
                 <Route path="/sitemap" element={<SitemapPage />} />
+                <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                <Route path="/cloud-services" element={<CloudServicesPage />} />
+                <Route path="/cybersecurity" element={<CybersecurityPage />} />
                 <Route path="*" element={
                   <div className="container mx-auto px-4 py-16 text-center">
                     <h1 className="text-4xl font-bold text-white mb-8">404 - Page Not Found</h1>
