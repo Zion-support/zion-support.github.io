@@ -68,6 +68,7 @@ const Footer: React.FC = memo(() => {
           <div>
             <h4 className="text-md font-semibold mb-4">AI Services</h4>
             <ul className="space-y-2">
+              <li><Link to="/ai-solutions" className="text-gray-300 hover:text-white font-semibold">AI Solutions Overview</Link></li>
               <li><Link to="/ai-chatbot-builder" className="text-gray-300 hover:text-white">AI Chatbot Builder</Link></li>
               <li><Link to="/ai-document-processor" className="text-gray-300 hover:text-white">AI Document Processor</Link></li>
               <li><Link to="/ai-form-builder" className="text-gray-300 hover:text-white">AI Form Builder</Link></li>
@@ -81,8 +82,10 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/ai-crm-optimizer" className="text-gray-300 hover:text-white">AI CRM Optimizer</Link></li>
               <li><Link to="/ai-data-visualizer" className="text-gray-300 hover:text-white">AI Data Visualizer</Link></li>
               <li><Link to="/ai-email-optimizer" className="text-gray-300 hover:text-white">AI Email Optimizer</Link></li>
-              <li><Link to="/ai-website-analyzer" className="text-gray-300 hover:text-white">AI Website Analyzer</Link></li>
+              <li><Link to="/ai-content-generator" className="text-gray-300 hover:text-white">AI Content Generator</Link></li>
               <li><Link to="/ai-social-media-manager" className="text-gray-300 hover:text-white">AI Social Media Manager</Link></li>
+              <li><Link to="/ai-video-generator" className="text-gray-300 hover:text-white">AI Video Generator</Link></li>
+              <li><Link to="/ai-translator" className="text-gray-300 hover:text-white">AI Translator</Link></li>
               <li><Link to="/ai-legal-assistant" className="text-gray-300 hover:text-white">AI Legal Assistant</Link></li>
               <li><Link to="/ai-medical-assistant" className="text-gray-300 hover:text-white">AI Medical Assistant</Link></li>
               <li><Link to="/ai-education-tutor" className="text-gray-300 hover:text-white">AI Education Tutor</Link></li>
@@ -96,46 +99,46 @@ const Footer: React.FC = memo(() => {
           <div>
             <h4 className="text-md font-semibold mb-4">Micro SaaS Tools</h4>
             <ul className="space-y-2">
-              <li><Link to="/ai-code-assistant" className="text-gray-300 hover:text-white">AI Code Assistant</Link></li>
-              <li><Link to="/ai-translator" className="text-gray-300 hover:text-white">AI Translator</Link></li>
-              <li><Link to="/ai-video-generator" className="text-gray-300 hover:text-white">AI Video Generator</Link></li>
-              <li><Link to="/ai-audio-processor" className="text-gray-300 hover:text-white">AI Audio Processor</Link></li>
-              <li><Link to="/ai-content-generator" className="text-gray-300 hover:text-white">AI Content Generator</Link></li>
+              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white font-semibold">Micro SaaS Overview</Link></li>
               <li><Link to="/social-media-scheduler" className="text-gray-300 hover:text-white">Social Media Scheduler</Link></li>
               <li><Link to="/expense-tracker-pro" className="text-gray-300 hover:text-white">Expense Tracker Pro</Link></li>
               <li><Link to="/task-manager-pro" className="text-gray-300 hover:text-white">Task Manager Pro</Link></li>
-              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">All Micro SaaS</Link></li>
+              <li><Link to="/ai-content-generator" className="text-gray-300 hover:text-white">AI Content Generator</Link></li>
+              <li><Link to="/ai-translator" className="text-gray-300 hover:text-white">AI Translator</Link></li>
+              <li><Link to="/ai-video-generator" className="text-gray-300 hover:text-white">AI Video Generator</Link></li>
+              <li><Link to="/ai-audio-processor" className="text-gray-300 hover:text-white">AI Audio Processor</Link></li>
+              <li><Link to="/analytics-dashboard" className="text-gray-300 hover:text-white">Analytics Dashboard</Link></li>
+              <li><Link to="/customer-support-hub" className="text-gray-300 hover:text-white">Customer Support Hub</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Zion AI Tools</h4>
+            <h4 className="text-md font-semibold mb-4">Zion AI Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Content Moderator</Link></li>
-              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">Customer Support Pro</Link></li>
-              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">Workflow Automator Pro</Link></li>
-              <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-white">Email Marketing Pro</Link></li>
-              <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-white">Customer Churn Predictor</Link></li>
-              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">Sales Predictor</Link></li>
-              <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
-              <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
-              <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
-              <li><Link to="/zion-ai-translation-service" className="text-gray-300 hover:text-white">Translation Service</Link></li>
-              <li><Link to="/zion-ai-video-generator" className="text-gray-300 hover:text-white">Video Generator</Link></li>
+              <li><Link to="/zion-ai-chatbot-builder" className="text-gray-300 hover:text-white">Zion AI Chatbot Builder</Link></li>
+              <li><Link to="/zion-ai-code-assistant" className="text-gray-300 hover:text-white">Zion AI Code Assistant</Link></li>
+              <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Zion AI Content Moderator</Link></li>
+              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">Zion AI Customer Support Pro</Link></li>
+              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">Zion AI Workflow Automator Pro</Link></li>
+              <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-white">Zion AI Email Marketing Pro</Link></li>
+              <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Zion AI Financial Forecaster</Link></li>
+              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">Zion AI Sales Predictor</Link></li>
+              <li><Link to="/zion-ai-translation-service" className="text-gray-300 hover:text-white">Zion AI Translation Service</Link></li>
+              <li><Link to="/zion-ai-voice-synthesis" className="text-gray-300 hover:text-white">Zion AI Voice Synthesis</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Enterprise Solutions</h4>
+            <h4 className="text-md font-semibold mb-4">Advanced Solutions</h4>
             <ul className="space-y-2">
-              <li><Link to="/blockchain-solutions-pro" className="text-gray-300 hover:text-white">Blockchain Solutions Pro</Link></li>
-              <li><Link to="/iot-solutions-pro" className="text-gray-300 hover:text-white">IoT Solutions Pro</Link></li>
-              <li><Link to="/devops-automation-pro" className="text-gray-300 hover:text-white">DevOps Automation Pro</Link></li>
+              <li><Link to="/blockchain-solutions" className="text-gray-300 hover:text-white">Blockchain Solutions</Link></li>
+              <li><Link to="/iot-solutions" className="text-gray-300 hover:text-white">IoT Solutions</Link></li>
+              <li><Link to="/5g-solutions" className="text-gray-300 hover:text-white">5G Solutions</Link></li>
               <li><Link to="/quantum-computing-solutions" className="text-gray-300 hover:text-white">Quantum Computing</Link></li>
               <li><Link to="/edge-computing-solutions" className="text-gray-300 hover:text-white">Edge Computing</Link></li>
-              <li><Link to="/augmented-reality-solutions" className="text-gray-300 hover:text-white">AR Solutions</Link></li>
-              <li><Link to="/virtual-reality-solutions" className="text-gray-300 hover:text-white">VR Solutions</Link></li>
-              <li><Link to="/robotic-process-automation" className="text-gray-300 hover:text-white">RPA Solutions</Link></li>
+              <li><Link to="/augmented-reality-solutions" className="text-gray-300 hover:text-white">Augmented Reality</Link></li>
+              <li><Link to="/virtual-reality-solutions" className="text-gray-300 hover:text-white">Virtual Reality</Link></li>
+              <li><Link to="/robotic-process-automation" className="text-gray-300 hover:text-white">Robotic Process Automation</Link></li>
               <li><Link to="/low-code-platform" className="text-gray-300 hover:text-white">Low-Code Platform</Link></li>
               <li><Link to="/serverless-architecture" className="text-gray-300 hover:text-white">Serverless Architecture</Link></li>
               <li><Link to="/container-orchestration" className="text-gray-300 hover:text-white">Container Orchestration</Link></li>

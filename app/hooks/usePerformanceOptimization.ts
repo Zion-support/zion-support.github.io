@@ -208,7 +208,6 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     getMetrics: () => metricsRef.current,
     clearMetrics: () => {
       metricsRef.current = {};
-    },
-    preloadCriticalResources
+    }
   };
 };

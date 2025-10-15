@@ -11,12 +11,12 @@ export class CustomError extends Error {
   public statusCode?: number;
   public details?: Record<string, unknown>;
 
-  constructor(message: string, code?: string, statusCode?: number, details?: Record<string, unknown>) {
+  constructor(message: string, code: string = 'UNKNOWN_ERROR', statusCode: number = 500, details: Record<string, unknown> = {}) {
     super(message);
     this.name = 'CustomError';
-    if (code !== undefined) this.code = code;
-    if (statusCode !== undefined) this.statusCode = statusCode;
-    if (details !== undefined) this.details = details;
+    this.code = code;
+    this.statusCode = statusCode;
+    this.details = details;
   }
 }
 
