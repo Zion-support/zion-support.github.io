@@ -21,7 +21,6 @@ export function withLazyLoading<P extends object>(
   fallback?: React.ReactNode
 ) {
   const LazyComponent = lazy(importFunc);
-  
   return function WrappedComponent(props: P) {
     return (
       <Suspense fallback={fallback || <DefaultFallback />}>
@@ -34,10 +33,10 @@ export function withLazyLoading<P extends object>(
 // Hook for lazy loading with intersection observer
 export function useLazyLoad(ref: React.RefObject<HTMLElement>, options?: IntersectionObserverInit) {
   const [isVisible, setIsVisible] = React.useState(false);
-
+  
   React.useEffect(() => {
     if (!ref.current) return;
-
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -51,12 +50,11 @@ export function useLazyLoad(ref: React.RefObject<HTMLElement>, options?: Interse
         ...options
       }
     );
-
+    
     observer.observe(ref.current);
-
     return () => observer.disconnect();
   }, [ref, options]);
-
+  
   return isVisible;
 }
 
@@ -69,7 +67,7 @@ export const LazyComponent: React.FC<LazyComponentProps & { children: React.Reac
   const [shouldRender, setShouldRender] = React.useState(false);
   const ref = React.useRef<HTMLDivElement>(null);
   const isVisible = useLazyLoad(ref);
-
+  
   React.useEffect(() => {
     if (isVisible) {
       if (delay > 0) {
@@ -80,7 +78,7 @@ export const LazyComponent: React.FC<LazyComponentProps & { children: React.Reac
       }
     }
   }, [isVisible, delay]);
-
+  
   return (
     <div ref={ref}>
       {shouldRender ? children : fallback}

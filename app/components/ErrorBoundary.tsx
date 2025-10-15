@@ -18,10 +18,7 @@ class ErrorBoundary extends Component<Props, State> {
   };
 
   public static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error
-    };
+    return { hasError: true, error };
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -41,7 +38,8 @@ class ErrorBoundary extends Component<Props, State> {
             <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
             <button 
               onClick={() => window.location.reload()}
-              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
+              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+            >
               Try again
             </button>
           </div>
