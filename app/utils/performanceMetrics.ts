@@ -7,8 +7,8 @@ interface PerformanceMetricsState {
   // Add your state here;
 }
 ;
-export const PerformanceMetrics = (options: PerformanceMetricsOptions = {}) => {
-  const stateRef = useRef<PerformanceMetricsState>({
+export const: PerformanceMetrics = (options: PerformanceMetricsOptions = {}) => {
+  const: stateRef = useRef<PerformanceMetricsState>({;
     // Initialize your state here;
   });
 ;
@@ -22,4 +22,4 @@ export const PerformanceMetrics = (options: PerformanceMetricsOptions = {}) => {
   };
 };
 ;
-export default PerformanceMetrics;';';
+export default PerformanceMetrics;';';";

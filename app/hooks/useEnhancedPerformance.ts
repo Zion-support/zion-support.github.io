@@ -7,8 +7,8 @@ interface UseEnhancedPerformanceState {
   // Add your state here;
 }
 ;
-export const UseEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
-  const stateRef = useRef<UseEnhancedPerformanceState>({
+export const: UseEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
+  const: stateRef = useRef<UseEnhancedPerformanceState>({;
     // Initialize your state here;
   });
 ;
@@ -22,4 +22,4 @@ export const UseEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
   };
 };
 ;
-export default UseEnhancedPerformance;';';
+export default UseEnhancedPerformance;';';";
