@@ -38,41 +38,70 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     { 
-      name: 'Services', 
-      href: '/services', 
-      icon: BriefcaseIcon,
+      name: 'AI Solutions', 
+      href: '/ai-solutions', 
+      icon: CpuChipIcon,
       submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },
-        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+        { name: 'AI Chatbots', href: '/ai-chatbot-enterprise', icon: MessageSquare },
+        { name: 'Computer Vision', href: '/ai-computer-vision', icon: Eye },
+        { name: 'Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },
+        { name: 'Analytics Dashboard', href: '/ai-analytics-dashboard-pro', icon: ChartBarIcon },
+        { name: 'Automation Platform', href: '/ai-automation-platform', icon: CogIcon },
+        { name: 'Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Network }
       ]
     },
     { 
-      name: 'Solutions', 
-      href: '/solutions', 
-      icon: CogIcon,
+      name: 'IT Solutions', 
+      href: '/it-solutions', 
+      icon: ServerIcon,
       submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },
-        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon },
-        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: CloudIcon },
-        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: ShieldCheckIcon }
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
+        { name: 'Cybersecurity', href: '/cybersecurity-solutions', icon: ShieldCheckIcon },
+        { name: 'Web Development', href: '/web-development', icon: Code },
+        { name: 'Mobile Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
+        { name: 'Database Management', href: '/database-management', icon: Database },
+        { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Network }
+      ]
+    },
+    { 
+      name: 'Micro SaaS', 
+      href: '/micro-saas-solutions', 
+      icon: GlobeAltIcon,
+      submenu: [
+        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircle },
+        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
+        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: MessageSquare },
+        { name: 'Inventory Manager', href: '/inventory-manager', icon: Database },
+        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: GlobeAltIcon },
+        { name: 'Expense Tracker Pro', href: '/expense-tracker', icon: CurrencyDollarIcon }
+      ]
+    },
+    { 
+      name: '5G Solutions', 
+      href: '/5g-solutions', 
+      icon: SignalIcon,
+      submenu: [
+        { name: '5G Network Infrastructure', href: '/5g-network-infrastructure', icon: Network },
+        { name: '5G IoT Solutions', href: '/5g-iot-solutions', icon: CogIcon },
+        { name: '5G Edge Computing', href: '/5g-edge-computing', icon: CpuChipIcon },
+        { name: '5G Smart Cities', href: '/5g-smart-city-solutions', icon: GlobeAltIcon },
+        { name: '5G Mobile Apps', href: '/5g-mobile-applications', icon: DevicePhoneMobileIcon },
+        { name: '5G Data Analytics', href: '/5g-data-analytics', icon: ChartBarIcon }
       ]
     },
     { name: 'Resources', href: '#', icon: DocumentTextIcon, submenu: [
       { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
       { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
       { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
-      { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon }
+      { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
+      { name: 'API Documentation', href: '/api-docs', icon: Code },
+      { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }
     ]},
     { name: 'Company', href: '#', icon: UserGroupIcon, submenu: [
       { name: 'About Us', href: '/about', icon: InformationCircleIcon },
-      { name: 'Team', href: '/team', icon: UserGroupIcon },
+      { name: 'Our Team', href: '/team', icon: UserGroupIcon },
       { name: 'Careers', href: '/careers', icon: UserGroupIcon },
+      { name: 'Partnerships', href: '/partnerships', icon: UserGroupIcon },
       { name: 'Contact', href: '/contact', icon: PhoneIcon }
     ]},
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
@@ -107,58 +136,75 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   };
 
   return (
-    <nav className="bg-slate-900 border-b border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 relative overflow-hidden">
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-purple-500/5"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between h-16">
-          {/* Logo */}
+          {/* Enhanced Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
-              <div className="h-8 w-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
+            <Link to="/" className="flex-shrink-0 flex items-center group">
+              <div className="h-8 w-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/25">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
-              <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
+              <span className="ml-2 text-white font-bold text-xl group-hover:text-purple-300 transition-colors">
+                Zion Tech Group
+              </span>
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-8">
+          {/* Enhanced Desktop Navigation */}
+          <div className="hidden lg:flex lg:items-center lg:space-x-6">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
                   to={item.href}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:bg-slate-800/50 hover:shadow-lg hover:shadow-purple-500/10"
                   onMouseEnter={() => {
-                    if (item.name === 'Services') setIsServicesOpen(true);
-                    else if (item.name === 'Solutions') setIsSolutionsOpen(true);
+                    if (item.name === 'AI Solutions') setIsServicesOpen(true);
+                    else if (item.name === 'IT Solutions') setIsSolutionsOpen(true);
+                    else if (item.name === 'Micro SaaS') setIsResourcesOpen(true);
+                    else if (item.name === '5G Solutions') setIsCompanyOpen(true);
                     else if (item.name === 'Resources') setIsResourcesOpen(true);
                     else if (item.name === 'Company') setIsCompanyOpen(true);
                   }}
                   onMouseLeave={() => {
-                    if (item.name === 'Services') setIsServicesOpen(false);
-                    else if (item.name === 'Solutions') setIsSolutionsOpen(false);
+                    if (item.name === 'AI Solutions') setIsServicesOpen(false);
+                    else if (item.name === 'IT Solutions') setIsSolutionsOpen(false);
+                    else if (item.name === 'Micro SaaS') setIsResourcesOpen(false);
+                    else if (item.name === '5G Solutions') setIsCompanyOpen(false);
                     else if (item.name === 'Resources') setIsResourcesOpen(false);
                     else if (item.name === 'Company') setIsCompanyOpen(false);
                   }}
                 >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                  {item.submenu && <ChevronDownIcon className="w-4 h-4" />}
+                  <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                  <span className="group-hover:text-purple-300 transition-colors">{item.name}</span>
+                  {item.submenu && <ChevronDownIcon className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />}
                 </Link>
                 
-                {/* Dropdown Menu */}
+                {/* Enhanced Dropdown Menu */}
                 {item.submenu && (
-                  <div className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
-                    (item.name === 'Services' && isServicesOpen) ||
-                    (item.name === 'Solutions' && isSolutionsOpen) ||
+                  <div className={`absolute left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm rounded-lg shadow-xl py-2 z-50 border border-slate-700/50 ${
+                    (item.name === 'AI Solutions' && isServicesOpen) ||
+                    (item.name === 'IT Solutions' && isSolutionsOpen) ||
+                    (item.name === 'Micro SaaS' && isResourcesOpen) ||
+                    (item.name === '5G Solutions' && isCompanyOpen) ||
                     (item.name === 'Resources' && isResourcesOpen) ||
                     (item.name === 'Company' && isCompanyOpen)
                       ? 'block' : 'hidden'
                   }`}>
+                    <div className="px-3 py-2 border-b border-slate-700/50">
+                      <h3 className="text-xs font-semibold text-purple-400 uppercase tracking-wider">
+                        {item.name}
+                      </h3>
+                    </div>
                     {item.submenu.map((subItem) => (
                       <Link
                         key={subItem.name}
                         to={subItem.href}
-                        className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
+                        className="block px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-slate-700/50 transition-all duration-300 group/item"
                         onClick={() => {
                           setIsServicesOpen(false);
                           setIsSolutionsOpen(false);
@@ -167,8 +213,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                         }}
                       >
                         <div className="flex items-center">
-                          <subItem.icon className="w-4 h-4 mr-3" />
-                          {subItem.name}
+                          <subItem.icon className="w-4 h-4 mr-3 text-purple-400 group-hover/item:text-cyan-400 transition-colors" />
+                          <span className="group-hover/item:text-purple-300 transition-colors">{subItem.name}</span>
                         </div>
                       </Link>
                     ))}
@@ -193,9 +239,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Enhanced Mobile Navigation */}
         <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-sm border-t border-slate-700/50">
             {navigation.map((item) => (
               <div key={item.name}>
                 {item.submenu ? (

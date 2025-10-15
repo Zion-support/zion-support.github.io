@@ -209,10 +209,155 @@ const ITSolutionsPage: React.FC = () => {
       category: 'Networking',
       icon: <Network className="w-8 h-8 text-red-400" />,
       popular: false
+    },
+    {
+      id: 'devops-automation',
+      name: 'DevOps Automation',
+      price: 'From $4,000/mo',
+      originalPrice: 'From $6,500/mo',
+      description: 'Complete DevOps pipeline automation and CI/CD implementation',
+      longDescription: 'Streamline your development and deployment processes with our comprehensive DevOps automation services.',
+      features: [
+        'CI/CD Pipeline Setup',
+        'Infrastructure as Code',
+        'Container Orchestration',
+        'Automated Testing',
+        'Deployment Automation',
+        'Monitoring & Logging',
+        'Security Scanning',
+        'Performance Optimization',
+        'Disaster Recovery',
+        'Team Training'
+      ],
+      benefits: [
+        'Reduce deployment time by 80%',
+        'Improve code quality',
+        'Increase deployment frequency',
+        'Reduce manual errors'
+      ],
+      category: 'DevOps',
+      icon: <Settings className="w-8 h-8 text-indigo-400" />,
+      popular: true
+    },
+    {
+      id: 'data-warehousing',
+      name: 'Data Warehousing',
+      price: 'From $3,500/mo',
+      originalPrice: 'From $5,500/mo',
+      description: 'Enterprise data warehousing and business intelligence solutions',
+      longDescription: 'Build and maintain enterprise-grade data warehouses that enable advanced analytics and business intelligence.',
+      features: [
+        'Data Warehouse Design',
+        'ETL/ELT Processes',
+        'Data Modeling',
+        'Business Intelligence',
+        'Data Visualization',
+        'Real-time Analytics',
+        'Data Quality Management',
+        'Cloud Migration',
+        'Performance Tuning',
+        'Data Governance'
+      ],
+      benefits: [
+        'Improve data accessibility',
+        'Enable better decision making',
+        'Reduce data silos',
+        'Scale with business growth'
+      ],
+      category: 'Data',
+      icon: <Database className="w-8 h-8 text-emerald-400" />,
+      popular: false
+    },
+    {
+      id: 'api-development',
+      name: 'API Development',
+      price: 'From $2,500',
+      originalPrice: 'From $4,000',
+      description: 'Custom API development and integration services',
+      longDescription: 'Build robust, scalable APIs that connect your systems and enable seamless data exchange.',
+      features: [
+        'RESTful API Design',
+        'GraphQL Implementation',
+        'API Documentation',
+        'Authentication & Security',
+        'Rate Limiting',
+        'API Testing',
+        'Performance Optimization',
+        'Third-party Integrations',
+        'API Monitoring',
+        'Version Management'
+      ],
+      benefits: [
+        'Improve system integration',
+        'Enable third-party access',
+        'Reduce development time',
+        'Enhance scalability'
+      ],
+      category: 'Development',
+      icon: <Code className="w-8 h-8 text-amber-400" />,
+      popular: true
+    },
+    {
+      id: 'cloud-migration',
+      name: 'Cloud Migration',
+      price: 'From $5,000',
+      originalPrice: 'From $8,000',
+      description: 'Seamless migration to cloud platforms with zero downtime',
+      longDescription: 'Migrate your applications and data to the cloud with our proven migration strategies and minimal business disruption.',
+      features: [
+        'Migration Planning',
+        'Application Assessment',
+        'Data Migration',
+        'Infrastructure Setup',
+        'Security Configuration',
+        'Performance Optimization',
+        'Testing & Validation',
+        'Go-live Support',
+        'Training & Documentation',
+        'Post-migration Support'
+      ],
+      benefits: [
+        'Reduce infrastructure costs',
+        'Improve scalability',
+        'Enhance security',
+        'Enable remote access'
+      ],
+      category: 'Cloud',
+      icon: <Cloud className="w-8 h-8 text-cyan-400" />,
+      popular: false
+    },
+    {
+      id: 'it-consulting',
+      name: 'IT Consulting',
+      price: 'From $150/hr',
+      originalPrice: 'From $250/hr',
+      description: 'Strategic IT consulting and technology roadmap development',
+      longDescription: 'Get expert guidance on your IT strategy, technology selection, and digital transformation initiatives.',
+      features: [
+        'Technology Assessment',
+        'Strategic Planning',
+        'Architecture Design',
+        'Vendor Selection',
+        'Cost Optimization',
+        'Risk Assessment',
+        'Compliance Review',
+        'Training Programs',
+        'Change Management',
+        'Ongoing Support'
+      ],
+      benefits: [
+        'Align IT with business goals',
+        'Reduce technology risks',
+        'Optimize IT investments',
+        'Accelerate digital transformation'
+      ],
+      category: 'Consulting',
+      icon: <Lightbulb className="w-8 h-8 text-yellow-400" />,
+      popular: true
     }
   ];
 
-  const categories = ['All', 'Infrastructure', 'Security', 'Development', 'Mobile', 'Database', 'Networking'];
+  const categories = ['All', 'Infrastructure', 'Security', 'Development', 'Mobile', 'Database', 'Networking', 'DevOps', 'Data', 'Cloud', 'Consulting'];
 
   const useCases = [
     {

@@ -212,10 +212,155 @@ const AISolutionsPage: React.FC = () => {
       category: 'Blockchain',
       icon: <Network className="w-8 h-8 text-yellow-400" />,
       popular: false
+    },
+    {
+      id: 'ai-voice-assistant',
+      name: 'AI Voice Assistant Pro',
+      price: '$199/mo',
+      originalPrice: '$299/mo',
+      description: 'Advanced voice recognition and natural language processing for business applications',
+      longDescription: 'Integrate voice commands and natural language processing into your applications with our comprehensive voice AI platform.',
+      features: [
+        'Natural Language Understanding',
+        'Multi-language Support (100+ languages)',
+        'Voice Command Processing',
+        'Text-to-Speech Synthesis',
+        'Voice Biometrics',
+        'Real-time Translation',
+        'Custom Voice Training',
+        'API Integration',
+        'Mobile & Web Support',
+        'Analytics & Insights'
+      ],
+      benefits: [
+        'Improve accessibility by 80%',
+        'Reduce manual input by 70%',
+        'Enhance user experience',
+        'Support multiple languages'
+      ],
+      category: 'Voice AI',
+      icon: <MessageSquare className="w-8 h-8 text-violet-400" />,
+      popular: true
+    },
+    {
+      id: 'ai-predictive-analytics',
+      name: 'AI Predictive Analytics',
+      price: '$449/mo',
+      originalPrice: '$699/mo',
+      description: 'Advanced predictive modeling and forecasting for business intelligence',
+      longDescription: 'Leverage machine learning algorithms to predict future trends, customer behavior, and business outcomes with high accuracy.',
+      features: [
+        'Time Series Forecasting',
+        'Customer Behavior Prediction',
+        'Sales Forecasting',
+        'Risk Assessment Models',
+        'Churn Prediction',
+        'Demand Forecasting',
+        'Price Optimization',
+        'Anomaly Detection',
+        'Custom Model Training',
+        'Real-time Predictions'
+      ],
+      benefits: [
+        'Improve decision accuracy by 85%',
+        'Reduce business risks',
+        'Optimize resource allocation',
+        'Increase revenue by 25%'
+      ],
+      category: 'Analytics',
+      icon: <BarChart3 className="w-8 h-8 text-rose-400" />,
+      popular: false
+    },
+    {
+      id: 'ai-document-processing',
+      name: 'AI Document Processing',
+      price: '$299/mo',
+      originalPrice: '$499/mo',
+      description: 'Intelligent document analysis, extraction, and processing automation',
+      longDescription: 'Automate document processing workflows with our AI-powered platform that extracts, analyzes, and processes various document types.',
+      features: [
+        'OCR & Text Extraction',
+        'Document Classification',
+        'Data Extraction & Validation',
+        'Form Processing',
+        'Invoice Processing',
+        'Contract Analysis',
+        'Compliance Checking',
+        'Multi-format Support',
+        'Batch Processing',
+        'API Integration'
+      ],
+      benefits: [
+        'Reduce processing time by 90%',
+        'Improve accuracy by 95%',
+        'Eliminate manual data entry',
+        'Scale document processing'
+      ],
+      category: 'Document AI',
+      icon: <FileText className="w-8 h-8 text-sky-400" />,
+      popular: true
+    },
+    {
+      id: 'ai-recommendation-engine',
+      name: 'AI Recommendation Engine',
+      price: '$349/mo',
+      originalPrice: '$549/mo',
+      description: 'Personalized recommendation system for e-commerce and content platforms',
+      longDescription: 'Boost engagement and sales with our intelligent recommendation engine that personalizes content and product suggestions for each user.',
+      features: [
+        'Collaborative Filtering',
+        'Content-based Filtering',
+        'Hybrid Recommendation Models',
+        'Real-time Personalization',
+        'A/B Testing Framework',
+        'Multi-channel Support',
+        'Cold Start Solutions',
+        'Scalable Architecture',
+        'Analytics Dashboard',
+        'Custom Algorithm Training'
+      ],
+      benefits: [
+        'Increase conversion rates by 40%',
+        'Improve user engagement by 60%',
+        'Boost average order value by 30%',
+        'Reduce bounce rates by 50%'
+      ],
+      category: 'Recommendation',
+      icon: <Target className="w-8 h-8 text-lime-400" />,
+      popular: false
+    },
+    {
+      id: 'ai-fraud-detection',
+      name: 'AI Fraud Detection',
+      price: '$399/mo',
+      originalPrice: '$599/mo',
+      description: 'Advanced fraud detection and prevention using machine learning algorithms',
+      longDescription: 'Protect your business from fraudulent activities with our sophisticated AI-powered fraud detection system that learns and adapts to new threats.',
+      features: [
+        'Real-time Fraud Detection',
+        'Machine Learning Models',
+        'Behavioral Analysis',
+        'Transaction Monitoring',
+        'Risk Scoring',
+        'Pattern Recognition',
+        'Anomaly Detection',
+        'Multi-channel Protection',
+        'Custom Rule Engine',
+        'Compliance Reporting'
+      ],
+      benefits: [
+        'Reduce fraud losses by 80%',
+        'Minimize false positives by 70%',
+        'Real-time threat detection',
+        'Compliance with regulations'
+      ],
+      category: 'Security',
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      popular: true
     }
   ];
 
-  const categories = ['All', 'Conversational AI', 'Computer Vision', 'Content Creation', 'Analytics', 'Automation', 'Blockchain'];
+  const categories = ['All', 'Conversational AI', 'Computer Vision', 'Content Creation', 'Analytics', 'Automation', 'Blockchain', 'Voice AI', 'Document AI', 'Recommendation', 'Security'];
 
   const useCases = [
     {

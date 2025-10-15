@@ -193,10 +193,145 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       category: 'Finance',
       icon: <Target className="w-8 h-8 text-red-400" />,
       popular: true
+    },
+    {
+      id: 'email-marketing-automation',
+      name: 'Email Marketing Automation',
+      price: '$45/mo',
+      originalPrice: '$79/mo',
+      description: 'Advanced email marketing platform with AI-powered automation and personalization',
+      longDescription: 'Create, send, and track email campaigns with our intelligent automation platform that personalizes content for each subscriber.',
+      features: [
+        'AI-powered personalization',
+        'Advanced segmentation',
+        'A/B testing tools',
+        'Email templates library',
+        'Automated drip campaigns',
+        'Real-time analytics',
+        'Integration with CRM systems',
+        'Compliance management'
+      ],
+      benefits: [
+        'Increase open rates by 40%',
+        'Reduce unsubscribe rates by 60%',
+        'Save 15+ hours weekly',
+        'Improve conversion rates'
+      ],
+      category: 'Marketing',
+      icon: <MessageSquare className="w-8 h-8 text-pink-400" />,
+      popular: false
+    },
+    {
+      id: 'project-management-suite',
+      name: 'Project Management Suite',
+      price: '$39/mo',
+      originalPrice: '$69/mo',
+      description: 'Comprehensive project management with Gantt charts, time tracking, and team collaboration',
+      longDescription: 'Streamline project workflows with our all-in-one project management platform featuring advanced planning tools and team collaboration features.',
+      features: [
+        'Gantt chart visualization',
+        'Time tracking & reporting',
+        'Team collaboration tools',
+        'Resource management',
+        'Budget tracking',
+        'Risk assessment',
+        'Document management',
+        'Mobile app access'
+      ],
+      benefits: [
+        'Improve project delivery by 50%',
+        'Reduce project overruns by 70%',
+        'Enhance team productivity',
+        'Better resource utilization'
+      ],
+      category: 'Productivity',
+      icon: <Settings className="w-8 h-8 text-indigo-400" />,
+      popular: true
+    },
+    {
+      id: 'crm-customer-relationship',
+      name: 'CRM Customer Relationship',
+      price: '$59/mo',
+      originalPrice: '$99/mo',
+      description: 'Complete customer relationship management with sales pipeline and lead tracking',
+      longDescription: 'Manage your customer relationships effectively with our comprehensive CRM platform that tracks leads, manages sales pipelines, and automates follow-ups.',
+      features: [
+        'Lead management & tracking',
+        'Sales pipeline visualization',
+        'Contact management',
+        'Email integration',
+        'Task automation',
+        'Reporting & analytics',
+        'Mobile CRM access',
+        'API integrations'
+      ],
+      benefits: [
+        'Increase sales by 35%',
+        'Improve lead conversion by 50%',
+        'Reduce admin time by 60%',
+        'Better customer insights'
+      ],
+      category: 'Sales',
+      icon: <Users className="w-8 h-8 text-emerald-400" />,
+      popular: false
+    },
+    {
+      id: 'hr-management-system',
+      name: 'HR Management System',
+      price: '$79/mo',
+      originalPrice: '$129/mo',
+      description: 'Complete human resources management with employee records and payroll integration',
+      longDescription: 'Streamline HR processes with our comprehensive management system that handles employee records, time tracking, benefits, and payroll integration.',
+      features: [
+        'Employee database',
+        'Time & attendance tracking',
+        'Payroll integration',
+        'Benefits management',
+        'Performance reviews',
+        'Document management',
+        'Compliance reporting',
+        'Employee self-service portal'
+      ],
+      benefits: [
+        'Reduce HR admin time by 70%',
+        'Improve compliance accuracy',
+        'Streamline payroll processes',
+        'Better employee engagement'
+      ],
+      category: 'HR',
+      icon: <UserGroupIcon className="w-8 h-8 text-amber-400" />,
+      popular: false
+    },
+    {
+      id: 'inventory-optimization',
+      name: 'Inventory Optimization Pro',
+      price: '$89/mo',
+      originalPrice: '$149/mo',
+      description: 'Advanced inventory management with demand forecasting and automated reordering',
+      longDescription: 'Optimize your inventory levels with our intelligent system that predicts demand, prevents stockouts, and automates reordering processes.',
+      features: [
+        'AI demand forecasting',
+        'Automated reorder points',
+        'Multi-location tracking',
+        'Supplier management',
+        'Cost optimization',
+        'Seasonal adjustments',
+        'Integration with POS systems',
+        'Advanced analytics'
+      ],
+      benefits: [
+        'Reduce inventory costs by 40%',
+        'Eliminate stockouts by 85%',
+        'Improve cash flow',
+        'Optimize supplier relationships'
+      ],
+      category: 'Inventory',
+      icon: <Database className="w-8 h-8 text-teal-400" />,
+      popular: true
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Analytics', 'Customer Service', 'Inventory', 'Marketing', 'Finance'];
+  const categories = ['All', 'Productivity', 'Analytics', 'Customer Service', 'Inventory', 'Marketing', 'Finance', 'Sales', 'HR'];
 
   const pricingTiers = [
     {
