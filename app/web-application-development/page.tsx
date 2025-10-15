@@ -1,86 +1,86 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Smartphone, Code, Zap, CheckCircle, ArrowRight, Clock, Target, Users, Settings, BarChart3, Globe, Database, Server, Wifi, Lock, RefreshCw, AlertTriangle, TrendingUp, Building, Home, Car, Heart, Briefcase, Calendar, Bell, Eye, Search, Filter, Download, Upload, Share2, Edit, Trash2, Plus, Minus, X, Check } from 'lucide-react';
+import { Code, Globe, Zap, CheckCircle, ArrowRight, Clock, Target, Users, Settings, BarChart3, Database, Server, Wifi, Lock, RefreshCw, AlertTriangle, TrendingUp, Building, Home, Car, Heart, Briefcase, Calendar, Bell, Eye, Search, Filter, Download, Upload, Share2, Edit, Trash2, Plus, Minus, X, Check } from 'lucide-react';
 
-const MobileAppDevelopmentPage: React.FC = () => {
+const WebApplicationDevelopmentPage: React.FC = () => {
   const services = [
     {
-      icon: <Smartphone className="w-8 h-8" />,
-      title: "iOS App Development",
-      description: "Native iOS applications built with Swift and SwiftUI for optimal performance",
-      features: ["Swift & SwiftUI", "Core Data", "Push notifications", "App Store optimization", "In-app purchases", "Offline functionality"],
-      price: "Starting at $8,000"
-    },
-    {
-      icon: <Smartphone className="w-8 h-8" />,
-      title: "Android App Development",
-      description: "Native Android applications built with Kotlin and Jetpack Compose",
-      features: ["Kotlin & Jetpack Compose", "Room database", "Material Design", "Google Play optimization", "In-app billing", "Background services"],
-      price: "Starting at $7,500"
-    },
-    {
       icon: <Code className="w-8 h-8" />,
-      title: "Cross-Platform Development",
-      description: "React Native and Flutter apps for both iOS and Android platforms",
-      features: ["React Native", "Flutter", "Single codebase", "Native performance", "Hot reload", "Third-party integrations"],
-      price: "Starting at $6,000"
+      title: "Custom Web Applications",
+      description: "Tailored web applications built with modern technologies and best practices",
+      features: ["React/Next.js", "TypeScript", "Responsive design", "API integration", "Database design", "Performance optimization"],
+      price: "Starting at $5,000"
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: "E-commerce Solutions",
+      description: "Complete e-commerce platforms with payment processing and inventory management",
+      features: ["Shopping cart", "Payment gateway", "Inventory management", "Order tracking", "Admin dashboard", "Mobile responsive"],
+      price: "Starting at $8,000"
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Progressive Web Apps",
       description: "Web applications that work like native apps with offline capabilities",
       features: ["Service workers", "Offline functionality", "Push notifications", "App-like experience", "Cross-platform", "Easy deployment"],
-      price: "Starting at $4,000"
+      price: "Starting at $6,000"
+    },
+    {
+      icon: <Database className="w-8 h-8" />,
+      title: "Database-Driven Applications",
+      description: "Complex web applications with robust database architecture and data management",
+      features: ["Database design", "Data modeling", "Query optimization", "Data security", "Backup systems", "Scalability"],
+      price: "Starting at $7,000"
     },
     {
       icon: <Settings className="w-8 h-8" />,
-      title: "App Maintenance & Support",
-      description: "Ongoing maintenance, updates, and support for your mobile applications",
-      features: ["Bug fixes", "Feature updates", "Performance optimization", "Security patches", "App store updates", "24/7 support"],
-      price: "Starting at $500/month"
+      title: "API Development",
+      description: "RESTful and GraphQL APIs for web and mobile applications",
+      features: ["RESTful APIs", "GraphQL", "Authentication", "Rate limiting", "Documentation", "Testing"],
+      price: "Starting at $3,000"
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: "App Analytics & Optimization",
-      description: "Comprehensive analytics and optimization services for better app performance",
-      features: ["User analytics", "Performance monitoring", "A/B testing", "Crash reporting", "User feedback", "Conversion optimization"],
-      price: "Starting at $1,000/month"
+      title: "Analytics & Reporting",
+      description: "Web applications with comprehensive analytics and reporting capabilities",
+      features: ["Real-time analytics", "Custom dashboards", "Data visualization", "Export functionality", "Scheduled reports", "User insights"],
+      price: "Starting at $4,000"
     }
   ];
 
   const processSteps = [
     {
       step: "01",
-      title: "Discovery & Planning",
-      description: "Understand your requirements and create a detailed project plan"
+      title: "Requirements Analysis",
+      description: "Understand your business needs and technical requirements"
     },
     {
       step: "02",
-      title: "Design & Prototyping",
-      description: "Create wireframes, mockups, and interactive prototypes"
+      title: "Design & Architecture",
+      description: "Create wireframes, mockups, and technical architecture"
     },
     {
       step: "03",
       title: "Development & Testing",
-      description: "Build your app with rigorous testing at every stage"
+      description: "Build your application with rigorous testing at every stage"
     },
     {
       step: "04",
-      title: "Deployment & Launch",
-      description: "Deploy to app stores and provide ongoing support"
+      title: "Deployment & Support",
+      description: "Deploy to production and provide ongoing maintenance"
     }
   ];
 
   const benefits = [
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "Faster Time to Market",
-      description: "Get your app to market quickly with our efficient development process"
+      title: "Faster Development",
+      description: "Rapid development with modern frameworks and tools"
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "User-Centered Design",
-      description: "Apps designed with your users in mind for maximum engagement"
+      title: "User-Focused Design",
+      description: "Intuitive user interfaces designed for optimal user experience"
     },
     {
       icon: <Shield className="w-6 h-6" />,
@@ -90,23 +90,23 @@ const MobileAppDevelopmentPage: React.FC = () => {
     {
       icon: <TrendingUp className="w-6 h-6" />,
       title: "Performance Optimized",
-      description: "Optimized for speed, battery life, and smooth user experience"
+      description: "Optimized for speed, SEO, and search engine visibility"
     }
   ];
 
   const technologies = [
-    "React Native", "Flutter", "Swift", "Kotlin", "SwiftUI", "Jetpack Compose", 
-    "Firebase", "AWS", "Google Cloud", "MongoDB", "PostgreSQL", "Redis", "Docker"
+    "React", "Next.js", "Vue.js", "Angular", "Node.js", "TypeScript", 
+    "MongoDB", "PostgreSQL", "Redis", "AWS", "Docker", "Kubernetes"
   ];
 
   return (
     <>
       <Helmet>
-        <title>Mobile App Development - Zion Tech Group | iOS, Android, React Native, Flutter</title>
-        <meta name="description" content="Expert mobile app development for iOS, Android, and cross-platform solutions. Native and React Native/Flutter apps with modern UI/UX design." />
-        <meta name="keywords" content="mobile app development, ios app, android app, react native, flutter, cross-platform, app design" />
-        <meta property="og:title" content="Mobile App Development - Zion Tech Group" />
-        <meta property="og:description" content="Expert mobile app development for all platforms" />
+        <title>Web Application Development - Zion Tech Group | Custom Web Apps, E-commerce, PWA</title>
+        <meta name="description" content="Expert web application development services. Custom web apps, e-commerce solutions, PWAs, and database-driven applications built with modern technologies." />
+        <meta name="keywords" content="web application development, custom web apps, e-commerce, progressive web apps, react, next.js, web development" />
+        <meta property="og:title" content="Web Application Development - Zion Tech Group" />
+        <meta property="og:description" content="Expert web application development for modern businesses" />
         <meta property="og:type" content="website" />
       </Helmet>
       
@@ -116,11 +116,11 @@ const MobileAppDevelopmentPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Mobile App <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Development</span>
+                Web Application <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Development</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Expert mobile app development for iOS, Android, and cross-platform solutions. 
-                Create engaging, high-performance mobile applications that your users will love.
+                Expert web application development services. Custom web apps, e-commerce solutions, 
+                and progressive web applications built with modern technologies.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
@@ -138,9 +138,9 @@ const MobileAppDevelopmentPage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Our Mobile Development Services</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Our Web Development Services</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive mobile app development solutions for all platforms
+                Comprehensive web application development solutions for all business needs
               </p>
             </div>
             
@@ -182,7 +182,7 @@ const MobileAppDevelopmentPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Our Development Process</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                A proven methodology for successful mobile app development
+                A proven methodology for successful web application development
               </p>
             </div>
             
@@ -206,7 +206,7 @@ const MobileAppDevelopmentPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Technologies We Use</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We use the latest technologies and frameworks to build cutting-edge mobile apps
+                We use the latest technologies and frameworks to build cutting-edge web applications
               </p>
             </div>
             
@@ -224,9 +224,9 @@ const MobileAppDevelopmentPage: React.FC = () => {
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Mobile Development?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Web Development?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Partner with us for exceptional mobile app development services
+                Partner with us for exceptional web application development services
               </p>
             </div>
             
@@ -248,9 +248,9 @@ const MobileAppDevelopmentPage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your Mobile App?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your Web Application?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today for a free consultation and let's bring your mobile app idea to life.
+                Contact us today for a free consultation and let's bring your web application idea to life.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
@@ -268,4 +268,4 @@ const MobileAppDevelopmentPage: React.FC = () => {
   );
 };
 
-export default MobileAppDevelopmentPage;
+export default WebApplicationDevelopmentPage;
