@@ -1,10 +1,9 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-
-export default function LoadingOptimizer() {
-  return (
-    <>
+import { Helmet } from "react-helmet-async"
+import { Link } from "react-router-dom"
+import { ArrowRight } from "lucide-react"
+export default function LoadingOptimizer() {}
+}return ()
+    <div>
       <Helmet>
         <title>Loading Optimizer - Zion Tech Group</title>
       </Helmet>
@@ -20,6 +19,6 @@ export default function LoadingOptimizer() {
           <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
       </div>
-    </>
-  );
+</div>
+  )
 }

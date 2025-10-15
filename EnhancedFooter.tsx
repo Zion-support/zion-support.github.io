@@ -1,9 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
-
-const EnhancedFooter: React.FC = () => {
-  return (
+import React from "react"
+import { Link } from "react-router-dom"
+import { ArrowRight, Mail, Phone, MapPin } from "lucide-react"
+const EnhancedFooter: React.FC = () => {}
+}return ()
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
@@ -22,7 +21,6 @@ const EnhancedFooter: React.FC = () => {
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
-
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2">
@@ -124,7 +122,6 @@ const EnhancedFooter: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
-};
-
-export default EnhancedFooter;
+  )
+}
+export default EnhancedFooter
