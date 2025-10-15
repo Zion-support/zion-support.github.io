@@ -13,6 +13,7 @@ interface SEOHeadProps {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
+<<<<<<< HEAD
   canonical?: string;
   ogTitle?: string;
   ogDescription?: string;
@@ -24,12 +25,19 @@ interface SEOHeadProps {
   structuredData?: object;
   noindex?: boolean;
   nofollow?: boolean;
+=======
+>>>>>>> cursor/analyze-improve-and-merge-code-9079
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
+<<<<<<< HEAD
   description = 'Leading provider of AI-powered micro SAAS solutions, IT services, and innovative technology solutions. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com',
   keywords = 'AI solutions, micro SAAS, IT services, software development, cloud computing, cybersecurity, data analytics, automation',
+=======
+  description = 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
+  keywords = 'AI solutions, IT services, digital transformation, business automation, technology consulting',
+>>>>>>> cursor/analyze-improve-and-merge-code-9079
   image = 'https://ziontechgroup.com/og-image.jpg',
   url = 'https://ziontechgroup.com',
   type = 'website',
@@ -37,6 +45,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   publishedTime,
   modifiedTime,
   section,
+<<<<<<< HEAD
   tags = [],
   canonical,
   ogTitle,
@@ -62,11 +71,17 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ].join(', ');
 
   const defaultStructuredData = {
+=======
+  tags = []
+}) => {
+  const structuredData = {
+>>>>>>> cursor/analyze-improve-and-merge-code-9079
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
+<<<<<<< HEAD
     description: 'Leading provider of AI-powered micro SAAS solutions, IT services, and innovative technology solutions',
     address: {
       '@type': 'PostalAddress',
@@ -88,10 +103,24 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       'https://github.com/ziontechgroup'
     ]
   };
+=======
+    description: 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US'
+    },
+    sameAs: [
+      'https://twitter.com/ziontechgroup',
+      'https://linkedin.com/company/ziontechgroup',
+      'https://github.com/ziontechgroup'
+    ]
+  };
+
+>>>>>>> cursor/analyze-improve-and-merge-code-9079
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
@@ -140,7 +169,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Structured Data */}
       <script type="application/ld+json">
+<<<<<<< HEAD
         {JSON.stringify(structuredData || defaultStructuredData)}
+=======
+        {JSON.stringify(structuredData)}
+>>>>>>> cursor/analyze-improve-and-merge-code-9079
       </script>
     </Helmet>
   );
