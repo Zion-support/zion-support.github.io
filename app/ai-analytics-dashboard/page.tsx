@@ -1,4 +1,5 @@
 import React from 'react';
+import { BarChart3, TrendingUp, Database, Eye, Zap, Shield, CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
