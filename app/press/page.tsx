@@ -1,69 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, Globe, Users, Award, TrendingUp } from 'lucide-react';
-
-export default function Press() {
-  const pressReleases = [
-    {
-      title: "Zion Tech Group Launches Advanced AI Analytics Platform",
-      date: "2024-01-15",
-      summary: "Revolutionary AI-powered analytics platform transforms business intelligence with real-time insights and predictive modeling.",
-      category: "Product Launch"
-    },
-    {
-      title: "Zion Tech Group Partners with Leading Cloud Providers",
-      date: "2024-01-10",
-      summary: "Strategic partnerships with AWS, Microsoft Azure, and Google Cloud expand our global reach and capabilities.",
-      category: "Partnership"
-    },
-    {
-      title: "Zion Tech Group Recognized as Top AI Solutions Provider",
-      date: "2024-01-05",
-      summary: "Industry recognition for excellence in AI innovation and customer satisfaction across multiple sectors.",
-      category: "Award"
-    }
-  ];
-
-  const mediaCoverage = [
-    {
-      title: "TechCrunch: Zion Tech Group's AI Revolution",
-      date: "2024-01-12",
-      summary: "How Zion Tech Group is transforming enterprise AI with cutting-edge solutions.",
-      source: "TechCrunch",
-      url: "#"
-    },
-    {
-      title: "Forbes: The Future of AI in Business",
-      date: "2024-01-08",
-      summary: "Zion Tech Group featured in Forbes' comprehensive look at AI's impact on modern business.",
-      source: "Forbes",
-      url: "#"
-    }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>Press & Media - Zion Tech Group | Latest News & Updates</title>
-        <meta
-          name="description"
-          content="Stay updated with the latest news, press releases, and media coverage from Zion Tech Group. Discover our innovations in AI and technology."
-        />
-        <meta
-          name="keywords"
-          content="press releases, media coverage, news, AI technology, Zion Tech Group, announcements"
-        />
-=======
-import SEOHead from '../components/SEOHead';
-
-  return (<>
-      <Helmet>
-        <title>Press - Zion Tech Group | Media Center & News</title>
-        <meta name="description" content="Latest press releases, media kit, and news from Zion Tech Group. Stay updated with our latest announcements and achievements." />
-        <meta name="keywords" content="press, _media, _news, _press releases, _Zion Tech Group, _AI company, technology news" />
->>>>>>> cursor/fix-errors-and-merge-to-main-08b8
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -72,14 +7,6 @@ import SEOHead from '../components/SEOHead';
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Press & Media
             </h1>
-<<<<<<< HEAD
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Stay updated with the latest news, press releases, and media coverage from Zion Tech Group.
-=======
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Latest news, _press releases, and media resources from Zion Tech Group. 
-              Stay updated with our latest announcements and achievements.
->>>>>>> cursor/fix-errors-and-merge-to-main-08b8
             </p>
           </div>
 

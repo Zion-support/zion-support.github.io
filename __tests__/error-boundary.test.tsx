@@ -14,14 +14,15 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
 describe('ErrorBoundary', () => {
   beforeEach(() => {
     // Suppress console.error for these tests
-    jest.spyOn(console, 'error').mockImplementation(() => {}
-})
+    jest.spyOn(console, 'error').mockImplementation(() => {})
   })
-  afterEach(() => {}
-}jest.restoreAllMocks()
+  
+  afterEach(() => {
+    jest.restoreAllMocks()
   })
-  it('renders children when there is no error', () => {}
-}render()
+  
+  it('renders children when there is no error', () => {
+    render()
       <BrowserRouter>
         <ErrorBoundary>
           <ThrowError shouldThrow={false} />

@@ -52,7 +52,7 @@ const AiPoweredEmailAnalyzerPage: React.FC = () => {
             </div>
           </motion.div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
