@@ -10,14 +10,6 @@ const DocsPage: React.FC = () => {
     {
       id: 'getting-started',
       title: 'Getting Started',
-      description: 'Learn how to get started with our AI solutions',
-      content: 'Comprehensive guide to implementing AI in your business'
-    }
-  ];
-  
-  const features = [
-    {
-      title: 'Getting Started',
       icon: <Zap className="w-6 h-6" />,
       description: 'Quick start guides and setup instructions',
       articles: [
@@ -75,11 +67,11 @@ const DocsPage: React.FC = () => {
 
   const filteredSections = documentationSections.map(section => ({
     ...section,
-    articles: section.articles.filter(article =>
+    articles: (section.articles || []).filter((article: any) =>
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  })).filter(section => section.articles.length > 0);
+  })).filter(section => (section.articles || []).length > 0);
 
   return (
     <>
@@ -173,7 +165,7 @@ const DocsPage: React.FC = () => {
                   >
                     <div className="flex items-center">
                       <div className="text-cyan-400 mr-4">
-                        {section.icon}
+                        {section.icon || <Book className="w-6 h-6" />}
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-white">{section.title}</h3>

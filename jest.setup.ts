@@ -13,14 +13,15 @@ beforeEach(() => {
 
 // Polyfill TextEncoder and TextDecoder for JSDOM environment
 import { TextEncoder, TextDecoder } from 'util';
+// @ts-expect-error - Node's TextEncoder might not perfectly match DOM's, but it's usually sufficient for tests
 global.TextEncoder = TextEncoder;
 // @ts-expect-error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests
 global.TextDecoder = TextDecoder;
 
 // Set up a mock for Vite environment variables accessed via import.meta.env
-process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup';
-process.env.NEXT_PUBLIC_SUPABASE_URL = 'http://localhost:54321';
-process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test_anon_key';
+process.env['VITE_REOWN_PROJECT_ID'] = 'test_project_id_from_jest_setup';
+process.env['NEXT_PUBLIC_SUPABASE_URL'] = 'http://localhost:54321';
+process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY'] = 'test_anon_key';
 
 // Mock window.matchMedia for Jest
 Object.defineProperty(window, 'matchMedia', {
@@ -63,18 +64,18 @@ if (typeof window.IntersectionObserver === 'undefined') {
     disconnect() {}
     takeRecords() { return []; }
   }
-  // @ts-ignore
+  // @ts-expect-error - Mock implementation for testing
   window.IntersectionObserver = MockIntersectionObserver;
-  // @ts-ignore
+  // @ts-expect-error - Mock implementation for testing
   global.IntersectionObserver = MockIntersectionObserver;
 }
 
 // Polyfill performance.getEntriesByType for JSDOM (used in productionLogger)
 if (typeof performance.getEntriesByType !== 'function') {
-  // @ts-ignore
+  // @ts-expect-error - Mock implementation for testing
   performance.getEntriesByType = () => [];
 }
 
 // Ensure all code paths use the mock implementation
-// @ts-ignore
+// @ts-expect-error - Mock implementation for testing
 global.fetch = fetchMock;

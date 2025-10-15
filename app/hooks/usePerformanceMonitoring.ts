@@ -36,15 +36,19 @@ export const usePerformanceMonitoring = () => {
             reportMetric('LCP', metric.startTime);
             break;
           case 'first-input':
-            reportMetric('FID', metric.processingStart - metric.startTime);
+            if (metric.processingStart !== undefined) {
+              reportMetric('FID', metric.processingStart - metric.startTime);
+            }
             break;
           case 'layout-shift':
-            if (!metric.hadRecentInput) {
+            if (!metric.hadRecentInput && metric.value !== undefined) {
               reportMetric('CLS', metric.value);
             }
             break;
           case 'navigation':
-            reportMetric('TTFB', metric.responseStart - metric.requestStart);
+            if (metric.responseStart !== undefined && metric.requestStart !== undefined) {
+              reportMetric('TTFB', metric.responseStart - metric.requestStart);
+            }
             break;
         }
       }

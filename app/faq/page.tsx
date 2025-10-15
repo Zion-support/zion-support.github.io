@@ -4,6 +4,15 @@ import { Search, HelpCircle, ChevronUp, ChevronDown } from 'lucide-react';
 
 const FAQPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [openItems, setOpenItems] = useState<number[]>([]);
+
+  const toggleItem = (index: number) => {
+    setOpenItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(item => item !== index)
+        : [...prev, index]
+    );
+  };
 
 const faqData = [
     {
@@ -99,14 +108,8 @@ const faqData = [
         },
         {
           question: "Do you offer refunds?",
-<<<<<<< HEAD
           answer: "We offer a 30-day money-back guarantee for most of our services. If you're not satisfied with our solution within the first 30 days, we'll provide a full refund. Some custom development projects may have different terms."
         }]
-=======
-          answer: "We offer a 30-day money-back guarantee for most of our services. If you&apos;re not satisfied with our solution within the first 30 days, we&apos;ll provide a full refund. Some custom development projects may have different terms."
-        }
-      ]
->>>>>>> cursor/analyze-improve-and-merge-code-0023
     }
   ];
 
