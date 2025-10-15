@@ -877,6 +877,236 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-customer-support'
       }
+    },
+    {
+      id: 'ai-code-assistant',
+      title: 'Zion AI Code Assistant Pro',
+      description: 'Advanced AI-powered coding assistant that helps developers write better code, debug issues, and optimize performance',
+      shortDescription: 'Enhance your coding with AI-powered assistance',
+      icon: '💻',
+      features: [
+        'Code Generation',
+        'Bug Detection',
+        'Performance Optimization',
+        'Code Review',
+        'Documentation Generation',
+        'Test Case Creation',
+        'Refactoring Suggestions',
+        'Multi-language Support',
+        'IDE Integration',
+        'Learning Recommendations'
+      ],
+      pricing: {
+        basic: 79,
+        pro: 199,
+        enterprise: 599
+      },
+      benefits: [
+        'Faster development',
+        'Better code quality',
+        'Reduced bugs',
+        'Improved performance',
+        'Learning acceleration',
+        'Time savings'
+      ],
+      useCases: [
+        'Software development',
+        'Code optimization',
+        'Bug fixing',
+        'Code review',
+        'Documentation',
+        'Learning programming'
+      ],
+      marketPrice: '$79 - $599/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-code-assistant'
+      }
+    },
+    {
+      id: 'ai-translator-pro',
+      title: 'Zion AI Translator Pro',
+      description: 'Advanced AI translation platform with real-time translation, context awareness, and industry-specific terminology',
+      shortDescription: 'Break language barriers with AI-powered translation',
+      icon: '🌍',
+      features: [
+        'Real-time Translation',
+        'Context Awareness',
+        'Industry Terminology',
+        'Multi-language Support',
+        'Voice Translation',
+        'Document Translation',
+        'Website Translation',
+        'API Integration',
+        'Custom Dictionaries',
+        'Quality Assurance'
+      ],
+      pricing: {
+        basic: 49,
+        pro: 149,
+        enterprise: 399
+      },
+      benefits: [
+        'Accurate translations',
+        'Real-time communication',
+        'Global reach',
+        'Cost savings',
+        'Professional quality',
+        'Scalable solution'
+      ],
+      useCases: [
+        'International business',
+        'Content localization',
+        'Customer support',
+        'Document translation',
+        'Website localization',
+        'Multilingual communication'
+      ],
+      marketPrice: '$49 - $399/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-translator-pro'
+      }
+    },
+    {
+      id: 'ai-video-generator',
+      title: 'Zion AI Video Generator Pro',
+      description: 'AI-powered video creation platform that generates professional videos from text, images, and audio',
+      shortDescription: 'Create professional videos with AI automation',
+      icon: '🎬',
+      features: [
+        'Text-to-Video',
+        'Image-to-Video',
+        'Voice Synthesis',
+        'Auto-editing',
+        'Template Library',
+        'Brand Customization',
+        'Multi-format Export',
+        'Cloud Rendering',
+        'Collaboration Tools',
+        'Analytics Dashboard'
+      ],
+      pricing: {
+        basic: 99,
+        pro: 299,
+        enterprise: 799
+      },
+      benefits: [
+        'Faster video creation',
+        'Professional quality',
+        'Cost reduction',
+        'Scalable production',
+        'Creative automation',
+        'Time savings'
+      ],
+      useCases: [
+        'Marketing videos',
+        'Training content',
+        'Social media content',
+        'Product demos',
+        'Educational videos',
+        'Brand storytelling'
+      ],
+      marketPrice: '$99 - $799/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-video-generator'
+      }
+    },
+    {
+      id: 'ai-voice-cloner',
+      title: 'Zion AI Voice Cloner Pro',
+      description: 'Advanced voice cloning technology that creates realistic voice replicas for various applications',
+      shortDescription: 'Create realistic voice clones with AI technology',
+      icon: '🎤',
+      features: [
+        'Voice Cloning',
+        'Emotion Control',
+        'Language Adaptation',
+        'Real-time Synthesis',
+        'Voice Training',
+        'Quality Enhancement',
+        'API Integration',
+        'Custom Voices',
+        'Batch Processing',
+        'Security Features'
+      ],
+      pricing: {
+        basic: 199,
+        pro: 599,
+        enterprise: 1499
+      },
+      benefits: [
+        'Realistic voice synthesis',
+        'Custom voice creation',
+        'Multilingual support',
+        'High-quality output',
+        'Scalable solution',
+        'Professional applications'
+      ],
+      useCases: [
+        'Voice assistants',
+        'Audiobook creation',
+        'Podcast production',
+        'Accessibility tools',
+        'Entertainment industry',
+        'Educational content'
+      ],
+      marketPrice: '$199 - $1,499/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-voice-cloner'
+      }
+    },
+    {
+      id: 'ai-design-assistant',
+      title: 'Zion AI Design Assistant Pro',
+      description: 'AI-powered design platform that creates logos, graphics, and visual content with professional quality',
+      shortDescription: 'Create stunning designs with AI-powered creativity',
+      icon: '🎨',
+      features: [
+        'Logo Generation',
+        'Graphic Design',
+        'Color Palette Creation',
+        'Layout Optimization',
+        'Brand Consistency',
+        'Template Library',
+        'Custom Styles',
+        'Export Options',
+        'Collaboration Tools',
+        'Version Control'
+      ],
+      pricing: {
+        basic: 59,
+        pro: 149,
+        enterprise: 399
+      },
+      benefits: [
+        'Professional designs',
+        'Faster creation',
+        'Brand consistency',
+        'Cost savings',
+        'Creative inspiration',
+        'Scalable production'
+      ],
+      useCases: [
+        'Brand identity',
+        'Marketing materials',
+        'Social media graphics',
+        'Web design',
+        'Print materials',
+        'Creative projects'
+      ],
+      marketPrice: '$59 - $399/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-design-assistant'
+      }
     }
   ],
   microSaas: [
@@ -925,6 +1155,236 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/task-manager'
+      }
+    },
+    {
+      id: 'ai-crm-optimizer',
+      title: 'Zion AI CRM Optimizer Pro',
+      description: 'AI-powered CRM optimization platform that automatically improves lead scoring, sales forecasting, and customer engagement',
+      shortDescription: 'Optimize your CRM with AI-powered insights and automation',
+      icon: '🎯',
+      features: [
+        'AI Lead Scoring',
+        'Sales Forecasting',
+        'Customer Segmentation',
+        'Automated Follow-ups',
+        'Email Optimization',
+        'Pipeline Analysis',
+        'Churn Prediction',
+        'Revenue Optimization',
+        'Integration APIs',
+        'Real-time Analytics'
+      ],
+      pricing: {
+        basic: 99,
+        pro: 299,
+        enterprise: 799
+      },
+      benefits: [
+        'Higher conversion rates',
+        'Better lead quality',
+        'Automated processes',
+        'Improved sales performance',
+        'Data-driven insights',
+        'ROI optimization'
+      ],
+      useCases: [
+        'Sales optimization',
+        'Lead management',
+        'Customer retention',
+        'Revenue growth',
+        'Pipeline management',
+        'Marketing automation'
+      ],
+      marketPrice: '$99 - $799/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-crm-optimizer'
+      }
+    },
+    {
+      id: 'ai-data-visualizer',
+      title: 'Zion AI Data Visualizer Pro',
+      description: 'Advanced data visualization platform with AI-powered chart recommendations and interactive dashboards',
+      shortDescription: 'Transform data into stunning visualizations with AI',
+      icon: '📊',
+      features: [
+        'AI Chart Recommendations',
+        'Interactive Dashboards',
+        'Real-time Data',
+        'Custom Visualizations',
+        'Automated Insights',
+        'Multi-source Integration',
+        'Export Capabilities',
+        'Collaboration Tools',
+        'Mobile Responsive',
+        'API Integration'
+      ],
+      pricing: {
+        basic: 79,
+        pro: 199,
+        enterprise: 599
+      },
+      benefits: [
+        'Better data understanding',
+        'Faster insights',
+        'Automated visualization',
+        'Improved decision making',
+        'Team collaboration',
+        'Professional presentations'
+      ],
+      useCases: [
+        'Business intelligence',
+        'Data analysis',
+        'Performance monitoring',
+        'Client reporting',
+        'Research visualization',
+        'Executive dashboards'
+      ],
+      marketPrice: '$79 - $599/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-data-visualizer'
+      }
+    },
+    {
+      id: 'ai-email-optimizer',
+      title: 'Zion AI Email Optimizer Pro',
+      description: 'AI-powered email optimization platform that improves open rates, click-through rates, and conversions',
+      shortDescription: 'Optimize email campaigns with AI-powered insights',
+      icon: '📧',
+      features: [
+        'Subject Line Optimization',
+        'Content Analysis',
+        'Send Time Optimization',
+        'A/B Testing',
+        'Personalization Engine',
+        'Spam Score Analysis',
+        'Performance Tracking',
+        'Template Library',
+        'Integration APIs',
+        'Analytics Dashboard'
+      ],
+      pricing: {
+        basic: 49,
+        pro: 149,
+        enterprise: 399
+      },
+      benefits: [
+        'Higher open rates',
+        'Better engagement',
+        'Improved conversions',
+        'Automated optimization',
+        'Time savings',
+        'ROI improvement'
+      ],
+      useCases: [
+        'Email marketing',
+        'Newsletter optimization',
+        'Lead nurturing',
+        'Customer retention',
+        'Sales automation',
+        'Campaign optimization'
+      ],
+      marketPrice: '$49 - $399/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-email-optimizer'
+      }
+    },
+    {
+      id: 'ai-website-analyzer',
+      title: 'Zion AI Website Analyzer Pro',
+      description: 'Comprehensive website analysis platform with AI-powered recommendations for SEO, performance, and user experience',
+      shortDescription: 'Analyze and optimize your website with AI insights',
+      icon: '🔍',
+      features: [
+        'SEO Analysis',
+        'Performance Monitoring',
+        'User Experience Audit',
+        'Content Optimization',
+        'Technical SEO',
+        'Mobile Optimization',
+        'Speed Analysis',
+        'Competitor Analysis',
+        'Automated Reports',
+        'Action Recommendations'
+      ],
+      pricing: {
+        basic: 39,
+        pro: 99,
+        enterprise: 299
+      },
+      benefits: [
+        'Better search rankings',
+        'Improved performance',
+        'Enhanced user experience',
+        'Automated analysis',
+        'Competitive advantage',
+        'ROI optimization'
+      ],
+      useCases: [
+        'Website optimization',
+        'SEO improvement',
+        'Performance monitoring',
+        'User experience enhancement',
+        'Competitive analysis',
+        'Technical audits'
+      ],
+      marketPrice: '$39 - $299/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-website-analyzer'
+      }
+    },
+    {
+      id: 'ai-social-media-manager',
+      title: 'Zion AI Social Media Manager Pro',
+      description: 'AI-powered social media management platform with content optimization, scheduling, and analytics',
+      shortDescription: 'Manage social media with AI-powered automation',
+      icon: '📱',
+      features: [
+        'Content Generation',
+        'Optimal Timing',
+        'Hashtag Research',
+        'Engagement Analysis',
+        'Multi-platform Management',
+        'Brand Monitoring',
+        'Influencer Tracking',
+        'Competitor Analysis',
+        'Automated Posting',
+        'Performance Analytics'
+      ],
+      pricing: {
+        basic: 59,
+        pro: 149,
+        enterprise: 399
+      },
+      benefits: [
+        'Increased engagement',
+        'Time savings',
+        'Better content performance',
+        'Automated management',
+        'Data-driven insights',
+        'Brand growth'
+      ],
+      useCases: [
+        'Social media marketing',
+        'Brand management',
+        'Content strategy',
+        'Community building',
+        'Influencer marketing',
+        'Social commerce'
+      ],
+      marketPrice: '$59 - $399/month',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/ai-social-media-manager'
       }
     },
     {
