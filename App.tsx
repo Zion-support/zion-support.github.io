@@ -118,6 +118,7 @@ function App() {
                   {/* Additional Pages */}
                   <Route path="/team" element={<TeamPage />} />
                   <Route path="/docs" element={<DocumentationPage />} />
+                  
                   {/* Catch all route */}
                   <Route path="*" element={
                     <div className="min-h-screen flex items-center justify-center bg-slate-900">

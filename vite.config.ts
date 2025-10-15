@@ -90,9 +90,9 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: [
-      'react', 
-      'react-dom', 
-      'react-router-dom', 
+      'react',
+      'react-dom',
+      'react-router-dom',
       'react-helmet-async',
       '@heroicons/react/24/outline',
       'lucide-react',

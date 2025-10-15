@@ -1,168 +1,54 @@
 import React, { useEffect } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
+export default function AccessibilityEnhancer() {
   useEffect(() => {
-    // Skip to main content functionality
-    const addSkipLink = () => {
+    // Add accessibility enhancements
+    const enhanceAccessibility = () => {
+      // Add skip links
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50';
-      skipLink.style.zIndex = '9999';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
       document.body.insertBefore(skipLink, document.body.firstChild);
-    };
 
-// Focus management for keyboard navigation
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
-    };
-
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    };
-
-    // Add focus indicators for keyboard navigation
-    const addFocusStyles = () => {
+      // Add focus indicators
       const style = document.createElement('style');
       style.textContent = `
-        .keyboard-navigation *:focus {
-          outline: 2px solid #8b5cf6 !important;
-          outline-offset: 2px !important;
+        *:focus {
+          outline: 2px solid #3b82f6;
+          outline-offset: 2px;
         }
-        
-        .keyboard-navigation button:focus,
-        .keyboard-navigation a:focus,
-        .keyboard-navigation input:focus,
-        .keyboard-navigation textarea:focus,
-        .keyboard-navigation select:focus {
-          box-shadow: 0 0 0 2px #8b5cf6 !important;
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
         }
       `;
       document.head.appendChild(style);
-    };
 
-    // Add ARIA landmarks
-    const addAriaLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
-
-<<<<<<< HEAD
-    // Reduced motion mode
-    if (isReducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-
-    // Font size adjustment
-    root.style.setProperty('--font-size-multiplier', 
-      fontSize === 'large' ? '1.2' : 
-      fontSize === 'extra-large' ? '1.4' : 
-      fontSize === 'small' ? '0.9' : '1'
-    );
-  }, [isHighContrast, isReducedMotion, fontSize]);
-
-  // Keyboard navigation enhancement
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
-        e.preventDefault();
-        const mainContent = document.getElementById('main-content');
-        if (mainContent) {
-          mainContent.focus();
+      // Add ARIA labels to interactive elements
+      const buttons = document.querySelectorAll('button:not([aria-label])');
+      buttons.forEach((button) => {
+        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
+          button.setAttribute('aria-label', 'Button');
         }
-      }
+      });
 
-      // Escape key to close modals/dropdowns
-      if (e.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  // Focus management
-  useEffect(() => {
-    const handleFocusIn = (e: FocusEvent) => {
-      const target = e.target as HTMLElement;
-      if (target) {
-        target.classList.add('focus-visible');
-      }
-    };
-
-    const handleFocusOut = (e: FocusEvent) => {
-      const target = e.target as HTMLElement;
-      if (target) {
-        target.classList.remove('focus-visible');
-      }
-    };
-
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-
-<<<<<<< HEAD
-    return () => {
-<<<<<<< HEAD
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
-      const nav = document.querySelector('nav');
-=======
-const nav = document.querySelector('nav');
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-    };
-
-    // Add alt text to images without alt attributes
-    const addAltText = () => {
+      // Add alt text to images
       const images = document.querySelectorAll('img:not([alt])');
-      images.forEach((img, index) => {
-        if (!img.getAttribute('alt')) {
-          img.setAttribute('alt', `Image ${index + 1}`);
-        }
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+      images.forEach((img) => {
+        img.setAttribute('alt', 'Image');
       });
     };
 
-    // Initialize accessibility enhancements
-    addSkipLink();
-    addFocusStyles();
-    addAriaLandmarks();
-    addAltText();
-
-    // Add event listeners
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
-    // Cleanup
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    };
+    enhanceAccessibility();
   }, []);
 
-return null;
-};
-
-export default AccessibilityEnhancer;
+  return null;
+}

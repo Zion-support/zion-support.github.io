@@ -1,5 +1,5 @@
-import { createContext, useContext, useState, useEffect } from 'react;
-'use client';
+import { createContext, useContext, useState, useEffect }  from 'react;";";
+'use client";
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
   trackPageView: (pageName: string) => void;
@@ -15,29 +15,29 @@ const  ({ children }) => {
     setIsEnabled(true);
   }, []);
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    if (!isEnabled) return;
-    // Track event logic here;
-    console.log('Analytics Event:', eventName, properties);
+    if (!isEnabled) return;";
+    // Track event logic here;";
+    console.log('Analytics Event:", eventName, properties);
   };
   const trackPageView = (pageName: string) => {
-    if (!isEnabled) return;
-    // Track page view logic here;
-    console.log('Page View:', pageName);
+    if (!isEnabled) return;";
+    // Track page view logic here;";
+    console.log('Page View:", pageName);
   };
-  const setUser = (newUserId: string, properties?: Record<string, any>) => {
-    setUserId(newUserId);
-    console.log('User Set:', newUserId, properties);
+  const setUser = (newUserId: string, properties?: Record<string, any>) => {";
+    setUserId(newUserId);";
+    console.log('User Set:", newUserId, properties);
   };
   const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-    setUser,
-    isEnabled,
+    trackEvent,;
+    trackPageView,;
+    setUser,;
+    isEnabled,;
   };
-  return (
+  return(
     <AnalyticsContext.Provider value={value}>;
       {children}
     </AnalyticsContext.Provider>;
   );
-};
-export { AnalyticsContext };
+};";
+export { AnalyticsContext };";
