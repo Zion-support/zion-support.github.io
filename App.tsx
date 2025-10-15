@@ -38,12 +38,6 @@ import CareersPage from './app/pages/CareersPage';
 // import CybersecurityPage from './app/pages/CybersecurityPage'; // Page doesn't exist
 // import CloudSolutionsPage from './app/pages/CloudSolutionsPage'; // Page doesn't exist
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
-<<<<<<< HEAD
-import PrivacyPage from './app/pages/PrivacyPage';
-import TermsPage from './app/pages/TermsPage';
-import PricingPage from './app/pages/PricingPage';
-import { Cloud } from 'lucide-react';
-=======
 // import FiveGSolutionsPage from './app/pages/5GSolutionsPage'; // Page doesn't exist
 // import TeamPage from './app/pages/TeamPage'; // Page doesn't exist
 // import DocumentationPage from './app/pages/DocumentationPage'; // Page doesn't exist
@@ -74,7 +68,6 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
     </div>
   </div>
 );
->>>>>>> f80dbd4bfb26cbb4c2a8054d396efe4c53526fb4
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
