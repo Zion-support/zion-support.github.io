@@ -1,13 +1,21 @@
-import { Suspense, lazy, useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { ErrorBoundary } from 'react-error-boundary'
 
 // Import pages
 import HomePage from './app/pages/HomePage';
 import AboutPage from './app/pages/AboutPage';
 import ServicesPage from './app/pages/ServicesPage';
 import ContactPage from './app/pages/ContactPage';
-import NotFoundPage from './app/pages/NotFoundPage';
+
+// Import components
+import Navigation from './app/components/Navigation';
+import Sidebar from './app/components/Sidebar';
+import Footer from './app/components/Footer';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import LoadingFallback from './app/components/LoadingFallback';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -23,6 +31,13 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
       </button>
     </div>
   </div>
+);
+
+// Global Error Boundary wrapper
+const GlobalErrorBoundary = ({ children }: { children: React.ReactNode }) => (
+  <ErrorBoundary FallbackComponent={ErrorFallback}>
+    {children}
+  </ErrorBoundary>
 );
 
 function App() {
@@ -49,7 +64,7 @@ function App() {
             <Sidebar />
             
             <main className="flex-1">
-              <ErrorBoundary>
+              <ErrorBoundary fallbackRender={ErrorFallback}>
                 <PerformanceMonitor />
                 <AccessibilityEnhancer />
                 
@@ -60,40 +75,6 @@ function App() {
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/pricing" element={<PricingPage />} />
-                    <Route path="/case-studies" element={<CaseStudiesPage />} />
-                    <Route path="/blog" element={<BlogPage />} />
-                    <Route path="/team" element={<TeamPage />} />
-                    <Route path="/careers" element={<CareersPage />} />
-                    <Route path="/privacy" element={<PrivacyPage />} />
-                    <Route path="/terms" element={<TermsPage />} />
-                    <Route path="/cookies" element={<CookiesPage />} />
-                    
-                    {/* AI Services */}
-                    <Route path="/ai-services" element={<AIServicesPage />} />
-                    <Route path="/ai-solutions" element={<AISolutionsPage />} />
-                    
-                    {/* IT Services */}
-                    <Route path="/it-services" element={<ITServicesPage />} />
-                    <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-                    <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-                    
-                    {/* 5G Solutions */}
-                    <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                    
-                    {/* Micro SaaS Solutions */}
-                    <Route path="/micro-saas-solutions" element={<MicroSAASSolutionsPage />} />
-                    <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
-                    
-                    {/* Service-specific Pages */}
-                    <Route path="/data-analytics" element={<DataAnalyticsPage />} />
-                    <Route path="/web-development" element={<WebDevelopmentPage />} />
-                    <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
-                    <Route path="/database-management" element={<DatabaseManagementPage />} />
-                    <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
-                    <Route path="/partnerships" element={<PartnershipsPage />} />
-                    <Route path="/help" element={<HelpPage />} />
-                    <Route path="/api-docs" element={<APIDocsPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">

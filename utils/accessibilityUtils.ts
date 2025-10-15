@@ -1,116 +1,142 @@
-    if ($1) {}
-/// Comment
-export const accessibilityManager = {};: value;
-  init() {};
-    if ($1) {};
-  /// Comment
-};
-      this.setupKeyboardNavigation()
-      this.setupScreenReaderSupport()
-      this.setupHighContrastMode()
-      this.setupFocusManagement()
-      this.setupReducedMotion()
-        };
-      }'"""''
-      // Escape key to close modals// Comment
-      if (e.key === 'Escape') {}: value'"""''
-        const activeElement  = document.activeElement as HTMLElement': value'"";"
-        if (activeElement && activeElement.getAttribute('aria-expanded') === 'true') {}: value""";"
-          activeElement.click()
-        };
-      };
-    })
-  };
-  setupScreenReaderSupport() {};
-      announcement.textContent = message;: value;
-      document.body.appendChild(announcement)
-      setTimeout(() => {};: value
-    /// Comment
-    const announceToScreenReader  = (message: string) => {}'"""''
-}const announcement  = document.createElement('div')': value'"";"
-      announcement.setAttribute('aria-live', 'polite')'"""''
-      announcement.setAttribute('aria-atomic', 'true')'""'""
-      announcement.className = 'sr-only': value""";"
-      announcement.textContent = message: value;
-      document.body.appendChild(announcement)
-      setTimeout(() => {}: value;
-}document.body.removeChild(announcement)
-      }, 1000)
-  setupFocusManagement() {}'""'""
-    /// Comment
-    const style  = document.createElement('style'): value"";"
-    style.textContent = `: value;
-      .focus-visible:focus {};
+// Accessibility utilities for the Zion Tech Group website
+export const accessibilityManager = {
+  init(): void {
+    this.setupKeyboardNavigation();
+    this.setupScreenReaderSupport();
+    this.setupHighContrastMode();
+    this.setupFocusManagement();
+    this.setupReducedMotion();
+  },
+
+  setupKeyboardNavigation(): void {
+    // Escape key to close modals
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const activeElement = document.activeElement as HTMLElement;
+        if (activeElement && activeElement.getAttribute('aria-expanded') === 'true') {
+          activeElement.click();
+        }
+      }
+    });
+  },
+
+  setupScreenReaderSupport(): void {
+    const announceToScreenReader = (message: string) => {
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.setAttribute('aria-atomic', 'true');
+      announcement.className = 'sr-only';
+      announcement.textContent = message;
+      document.body.appendChild(announcement);
+      setTimeout(() => {
+        if (document.body.contains(announcement)) {
+          document.body.removeChild(announcement);
+        }
+      }, 1000);
+    };
+
+    // Make announceToScreenReader available globally
+    (window as any).announceToScreenReader = announceToScreenReader;
+  },
+
+  setupFocusManagement(): void {
+    const style = document.createElement('style');
+    style.textContent = `
+      .focus-visible:focus {
         outline: 2px solid #00ffff;
         outline-offset: 2px;
-      };
-      .sr-only {};
+      }
+      .sr-only {
         position: absolute;
         width: 1px;
         height: 1px;
         padding: 0;
         margin: -1px;
         overflow: hidden;
-        clip: rect(0, 0, 0, 0)
+        clip: rect(0, 0, 0, 0);
         white-space: nowrap;
         border: 0;
-          if (e.shiftKey) {};
-            if (document.activeElement === firstElement) {};: value;
-              lastElement.focus()
-              e.preventDefault()
-            }
-          } else {}
-            if (document.activeElement === lastElement) {};: value;
-const firstElement  = focusableElements[0] as HTMLElement: value'"""''
-      const lastElement  = focusableElements[focusableElements.length - 1] as HTMLElement': value'"";"
-      element.addEventListener('keydown', (e) => {}': value'""";"
-}if (e.key === 'Tab') {}: value"";"
-          if (e.shiftKey) {};
-            if (document.activeElement === firstElement) {}: value;
-              lastElement.focus()
-              e.preventDefault()
-            };
-          } else {};
-            if (document.activeElement === lastElement) {}: value;
-              firstElement.focus()
-              e.preventDefault()
-  /// Comment
-  addSkipLink: (href: string, text: string) => {}'"""''
-}const skipLink  = document.createElement('a'): value"";"
-    skipLink.href = href: value'"""''
-    skipLink.textContent = text': value'"";"
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded z-50'""";"
-    document.body.insertBefore(skipLink, document.body.firstChild)
-  };
-};
-/// Comment
-        return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) // Comment
-      });
-      return 0.2126 * r + 0.7152 * g + 0.0722 * b;
-    };
-    return (brightest + 0.05) // Comment
-  };>'""'""
-  /// Comment
-  meetsWCAG: (color1: string, color2: string, level: 'AA' | 'AAA' = 'AA'): boolean => {}'""'""
-}const ratio  = colorContrast.getContrastRatio(color1, color2)': value'""";"
-    return: level === 'AA' ? ratio >= 4.5 : ratio >= 7"";"
-  };
-};
-/// Comment
-    announcement.textContent = text;: value;
-export const screenReader  = {}: value'"""''
-  /// Comment
-  announce: (text: string, priority: 'polite' | 'assertive' = 'polite') => {}'"""''
-}const announcement  = document.createElement('div')': value'"";"
-    announcement.setAttribute('aria-live', priority)'"""''
-    announcement.setAttribute('aria-atomic', 'true')'""'""
-    announcement.className = 'sr-only': value""";"
-    announcement.textContent = text: value;
-    document.body.appendChild(announcement)
-    setTimeout(() => {}: value;
-}if (document.body.contains(announcement)) {};
-        document.body.removeChild(announcement)
       }
-    }, 1000)
-}'"'""";"
-export default accessibilityManager"'"'";"
+    `;
+    document.head.appendChild(style);
+  },
+
+  setupHighContrastMode(): void {
+    // Check for high contrast mode preference
+    if (window.matchMedia('(prefers-contrast: high)').matches) {
+      document.body.classList.add('high-contrast');
+    }
+  },
+
+  setupReducedMotion(): void {
+    // Respect reduced motion preference
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.body.classList.add('reduced-motion');
+    }
+  },
+
+  addSkipLink(href: string, text: string): void {
+    const skipLink = document.createElement('a');
+    skipLink.href = href;
+    skipLink.textContent = text;
+    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded z-50';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+  }
+};
+
+// Color contrast utilities
+export const colorContrast = {
+  getLuminance(r: number, g: number, b: number): number {
+    const [rs, gs, bs] = [r, g, b].map(c => {
+      c = c / 255;
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+  },
+
+  getContrastRatio(color1: string, color2: string): number {
+    const getRGB = (color: string): [number, number, number] => {
+      const hex = color.replace('#', '');
+      return [
+        parseInt(hex.substr(0, 2), 16),
+        parseInt(hex.substr(2, 2), 16),
+        parseInt(hex.substr(4, 2), 16)
+      ];
+    };
+
+    const [r1, g1, b1] = getRGB(color1);
+    const [r2, g2, b2] = getRGB(color2);
+    
+    const l1 = this.getLuminance(r1, g1, b1);
+    const l2 = this.getLuminance(r2, g2, b2);
+    
+    const brightest = Math.max(l1, l2);
+    const darkest = Math.min(l1, l2);
+    
+    return (brightest + 0.05) / (darkest + 0.05);
+  },
+
+  meetsWCAG(color1: string, color2: string, level: 'AA' | 'AAA' = 'AA'): boolean {
+    const ratio = this.getContrastRatio(color1, color2);
+    return level === 'AA' ? ratio >= 4.5 : ratio >= 7;
+  }
+};
+
+// Screen reader utilities
+export const screenReader = {
+  announce(text: string, priority: 'polite' | 'assertive' = 'polite'): void {
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', priority);
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = text;
+    document.body.appendChild(announcement);
+    setTimeout(() => {
+      if (document.body.contains(announcement)) {
+        document.body.removeChild(announcement);
+      }
+    }, 1000);
+  }
+};
+
+export default accessibilityManager;

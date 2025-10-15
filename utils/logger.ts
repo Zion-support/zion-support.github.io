@@ -1,52 +1,92 @@
-export const logger = {
-  info: (message: string, ...args: any[]): void => {
-    console.log(`[INFO] ${message}`, ...args);
-  },
+// Logger utility for the Zion Tech Group website
+type LogLevel = 'info' | 'warn' | 'error' | 'debug';
 
-  log(message: string, ...args: any[]): void {
-    if (this.shouldLog()) {'""'""
-      console.log(this.formatMessage('log', message), ...args)""";"
+interface LoggerConfig {
+  enableConsole: boolean;
+  enableRemote: boolean;
+  remoteEndpoint?: string;
+  logLevel: LogLevel;
+}
+
+class Logger {
+  private config: LoggerConfig = {
+    enableConsole: true,
+    enableRemote: false,
+    logLevel: 'info'
+  };
+
+  constructor(config?: Partial<LoggerConfig>) {
+    if (config) {
+      this.config = { ...this.config, ...config };
     }
   }
 
-  error: (message: string, ...args: any[]): void => {
-    console.error(`[ERROR] ${message}`, ...args);
-  },
+  private shouldLog(level: LogLevel): boolean {
+    const levels: LogLevel[] = ['debug', 'info', 'warn', 'error'];
+    return levels.indexOf(level) >= levels.indexOf(this.config.logLevel);
+  }
 
-  debug: (message: string, ...args: any[]): void => {
-    console.debug(`[DEBUG] ${message}`, ...args);
+  private formatMessage(level: LogLevel, message: string): string {
+    const timestamp = new Date().toISOString();
+    return `[${timestamp}] [${level.toUpperCase()}] ${message}`;
+  }
+
+  info(message: string, ...args: any[]): void {
+    if (this.shouldLog('info')) {
+      console.log(this.formatMessage('info', message), ...args);
+    }
+  }
+
+  warn(message: string, ...args: any[]): void {
+    if (this.shouldLog('warn')) {
+      console.warn(this.formatMessage('warn', message), ...args);
+    }
   }
 
   error(message: string, ...args: any[]): void {
-    /// Comment
-    console.error(this.formatMessage('error', message), ...args)""";"
-    /// Comment
-    if (this.config.enableRemote) {'""'""
-      this.sendToRemote('error', message, args)""";"
+    if (this.shouldLog('error')) {
+      console.error(this.formatMessage('error', message), ...args);
+    }
+    
+    if (this.config.enableRemote) {
+      this.sendToRemote('error', message, args);
     }
   }
 
   debug(message: string, ...args: any[]): void {
-    if (this.shouldLog()) {'""'""
-      console.debug(this.formatMessage('debug', message), ...args)""";"
+    if (this.shouldLog('debug')) {
+      console.debug(this.formatMessage('debug', message), ...args);
     }
   }
 
   private async sendToRemote(level: LogLevel, message: string, args: any[]): Promise<void> {
     try {
       if (this.config.remoteEndpoint) {
-          },;
+        await fetch(this.config.remoteEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
           body: JSON.stringify({
-            level,;
-            message,;
-            args,;
-            timestamp: new Date().toISOString(),;
-            url: window.location.href,;
-            userAgent: navigator.userAgent;
-  
-  })
+            level,
+            message,
+            args,
+            timestamp: new Date().toISOString(),
+            url: window.location.href,
+            userAgent: navigator.userAgent
+          })
         });
-      };
-    } catch {
-      /// Comment
-export default logger'"''
+      }
+    } catch (error) {
+      console.error('Failed to send log to remote endpoint:', error);
+    }
+  }
+}
+
+// Create default logger instance
+export const logger = new Logger();
+
+// Export the Logger class for custom instances
+export type { LogLevel, LoggerConfig };
+export { Logger };
+export default logger;
