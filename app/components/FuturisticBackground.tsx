@@ -51,11 +51,6 @@ const FuturisticBackground = () => {
         <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-transparent via-cyan-500 to-transparent opacity-60"></div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
 export default FuturisticBackground;
-=======
-  )}
-export default FuturisticBackground
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

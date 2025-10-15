@@ -6,14 +6,9 @@ export default function ZionAiWorkflowAutomationPage() {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-8">Zion Ai Workflow Automation</h1>
         <p className="text-gray-300 text-lg">
-<<<<<<< HEAD
           This page is under development.;
         </p>
       </div>
     </div>
   );
 }
-=======
-          This page is under development.</p></div></div>
-  )}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

@@ -14,7 +14,6 @@ import {
   RocketLaunchIcon,
   SparklesIcon,
   BoltIcon
-<<<<<<< HEAD
 } from '@heroicons/react/24/outline';
 import FuturisticBackground from '../components/FuturisticBackground';
 import NeonButton from '../components/NeonButton';
@@ -23,16 +22,7 @@ import { services } from '../data/servicesData';
 
 export default function HomePage()  {
 
-  const structuredData = {    "@context": "https://schema.org",
-=======
-} from '@heroicons/react/24/outline'
-import FuturisticBackground from '../components/FuturisticBackground'
-import NeonButton from '../components/NeonButton'
-import AnimatedCard from '../components/AnimatedCard'
-import { services } from '../data/servicesData'
-    "@context": "https://schema.org",
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-    "@type": "WebSite",
+  const structuredData = {    "@context": "https://schema.org",    "@type": "WebSite",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "description": "Advanced AI and IT solutions provider specializing in cybersecurity, cloud infrastructure, and digital transformation.",

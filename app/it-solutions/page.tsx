@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -136,6 +132,24 @@ const ITSolutionsPage: React.FC = () => {
       benefits: ["Reduced downtime", "Expert support", "Cost efficiency"],
       useCases: ["Help desk", "System maintenance", "User support"],
       href: "/it-support"
+    },
+    {
+      title: "Cloud Migration",
+      description: "Professional cloud migration services for seamless transition to AWS, Azure, or GCP with zero downtime and enhanced security.",
+      icon: CloudIcon,
+      features: [
+        "Zero-downtime migration",
+        "Automated migration tools",
+        "Data integrity verification",
+        "Performance optimization",
+        "Security compliance",
+        "Cost optimization"
+      ],
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at $5,000",
+      benefits: ["Reduce costs by 40%", "Enhanced security", "Better scalability"],
+      useCases: ["AWS migration", "Azure migration", "GCP migration"],
+      href: "/it-services/cloud-migration"
     }
   ];
 
@@ -161,11 +175,6 @@ const ITSolutionsPage: React.FC = () => {
       icon: ShieldCheckIcon
     }
   ];
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 
   return (
     <>
@@ -280,11 +289,6 @@ import { Helmet } from 'react-helmet-async';
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-export default ITSolutionsPage;
-=======
 };
 
 export default ITSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

@@ -44,6 +44,16 @@ import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
 import TeamPage from './app/pages/TeamPage';
 import DocumentationPage from './app/pages/DocumentationPage';
 
+// Micro SaaS Services
+import AIAccountingAssistantPage from './app/micro-saas/ai-accounting-assistant/page';
+import AICRMAssistantPage from './app/micro-saas/ai-crm-assistant/page';
+
+// AI Services
+import AIContentGenerationProPage from './app/ai-services/ai-content-generation-pro/page';
+
+// IT Services
+import CloudMigrationPage from './app/it-services/cloud-migration/page';
+
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -120,6 +130,16 @@ function App() {
                       {/* Additional Pages */}
                       <Route path="/team" element={<TeamPage />} />
                       <Route path="/docs" element={<DocumentationPage />} />
+                      
+                      {/* Micro SaaS Services */}
+                      <Route path="/micro-saas/ai-accounting-assistant" element={<AIAccountingAssistantPage />} />
+                      <Route path="/micro-saas/ai-crm-assistant" element={<AICRMAssistantPage />} />
+                      
+                      {/* AI Services */}
+                      <Route path="/ai-services/ai-content-generation-pro" element={<AIContentGenerationProPage />} />
+                      
+                      {/* IT Services */}
+                      <Route path="/it-services/cloud-migration" element={<CloudMigrationPage />} />
                       
                       {/* Catch all route */}
                       <Route path="*" element={

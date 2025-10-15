@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-'use client';'use client';
-=======
 'use client';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -137,6 +132,42 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       benefits: ["Time savings", "Better tracking", "Tax compliance"],
       useCases: ["Expense management", "Financial tracking", "Tax preparation"],
       href: "/micro-saas/ai-expense-tracker"
+    },
+    {
+      title: "AI Accounting Assistant",
+      description: "Revolutionary AI-powered accounting assistant that automates bookkeeping, expense tracking, and financial reporting.",
+      icon: DocumentTextIcon,
+      features: [
+        "Automated invoice processing",
+        "Expense categorization",
+        "Tax preparation assistance",
+        "Financial reporting",
+        "Receipt scanning and OCR",
+        "Multi-currency support"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $99/month",
+      benefits: ["Save 80% time", "Reduce errors by 95%", "Real-time insights"],
+      useCases: ["Bookkeeping", "Tax preparation", "Financial management"],
+      href: "/micro-saas/ai-accounting-assistant"
+    },
+    {
+      title: "AI CRM Assistant",
+      description: "Intelligent CRM assistant powered by AI that automates sales processes, improves lead management, and boosts customer relationships.",
+      icon: UserGroupIcon,
+      features: [
+        "AI-powered lead scoring",
+        "Automated follow-up sequences",
+        "Predictive analytics",
+        "Customer sentiment analysis",
+        "Sales forecasting",
+        "Email automation"
+      ],
+      color: "from-blue-500 to-indigo-500",
+      price: "Starting at $79/month",
+      benefits: ["Increase sales by 35%", "Reduce manual work by 60%", "Better lead qualification"],
+      useCases: ["Sales automation", "Lead management", "Customer relationships"],
+      href: "/micro-saas/ai-crm-assistant"
     }
   ];
 
@@ -162,11 +193,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       icon: UserGroupIcon
     }
   ];
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 
   return (
     <>
@@ -281,11 +307,6 @@ import { Helmet } from 'react-helmet-async';
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-export default MicroSaaSSolutionsPage;
-=======
 };
 
 export default MicroSaaSSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

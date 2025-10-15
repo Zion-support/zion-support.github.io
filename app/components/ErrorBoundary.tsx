@@ -9,13 +9,8 @@ interface Props {
 
 interface State {
   hasError: boolean;
-<<<<<<< HEAD
 error: Error | null;
-  errorInfo: ErrorInfo | null;  error: Error | null;
-=======
-  error: Error | null;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-  errorInfo: ErrorInfo | null;
+  errorInfo: ErrorInfo | null;  error: Error | null;  errorInfo: ErrorInfo | null;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -37,7 +32,6 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
     if (this.props.onError) {
@@ -45,17 +39,7 @@ class ErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
-// Log error to console in development    if (process.env.NODE_ENV === 'development') {
-=======
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+// Log error to console in development    if (process.env.NODE_ENV === 'development') {      console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
     // In production, you might want to log this to an error reporting service
@@ -68,13 +52,7 @@ class ErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null
     });
-<<<<<<< HEAD
-  }
-=======
-  };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-  render() {
+  }  render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
@@ -83,7 +61,6 @@ class ErrorBoundary extends Component<Props, State> {
 
       // Default error UI
       return (
-<<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
           <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
             <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
@@ -142,22 +119,7 @@ className="flex items-center justify-center gap-2 border-2 border-purple-400 tex
                 If this problem persists, please{' '}
                 <Link to="/contact" className="text-purple-400 hover:text-purple-300">
                   contact our support team
-                </Link>
-=======
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
-              <AlertTriangle className="w-6 h-6 text-red-600" />
-            </div>
-            
-            <div className="text-center">
-              <h1 className="text-lg font-medium text-gray-900 mb-2">
-                Something went wrong
-              </h1>
-              <p className="text-sm text-gray-500 mb-6">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-              </p>
+                </Link>              </p>
               
               {process.env.NODE_ENV === 'development' && this.state.error && (
                 <details className="mb-4 text-left">
