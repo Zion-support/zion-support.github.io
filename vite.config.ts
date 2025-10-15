@@ -2,50 +2,21 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 export default defineConfig({
-  plugins: [
-    react({
-      // Enable React Fast Refresh
-      fastRefresh: true,
-      // Optimize JSX runtime
-      jsxRuntime: 'automatic',
-    })
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './'),
-      '@app': path.resolve(__dirname, './app'),
-      '@components': path.resolve(__dirname, './app/components'),
-      '@utils': path.resolve(__dirname, './utils'),
-    },
+      '@': path.resolve(__dirname, './src'),
+      '@app': path.resolve(__dirname, './app')
+    }
   },
   build: {
-    outDir: 'dist',
-    target: 'esnext',
-    minify: 'esbuild',
-    sourcemap: process.env.NODE_ENV === 'development',
-    cssCodeSplit: true,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
-            }
-            if (id.includes('react-router')) {
-              return 'vendor-router';
-            }
-            if (id.includes('@heroicons') || id.includes('lucide-react')) {
-              return 'vendor-icons';
-            }
-            if (id.includes('framer-motion')) {
-              return 'vendor-motion';
-            }
-            if (id.includes('react-helmet')) {
-              return 'vendor-helmet';
-            }
-            return 'vendor-other';
+            return 'vendor';
           }
+<<<<<<< HEAD
 
           // Page chunks for better code splitting
           if (id.includes('/app/pages/')) {
@@ -112,4 +83,11 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
+=======
+          return undefined;
+        }
+      }
+    }
+  }
+>>>>>>> 12ad1f6b6cfd812b560a1dd10f09dfa9de4eb0ce
 });

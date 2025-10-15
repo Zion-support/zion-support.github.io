@@ -1,11 +1,19 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet   } from 'react-helmet-async';
 interface SEOProps {;
   title: "string;
+=======
+import { Helmet } from 'react-helmet-async';
+
+interface EnhancedSEOProps {
+  title: string;
+>>>>>>> 12ad1f6b6cfd812b560a1dd10f09dfa9de4eb0ce
   description: string;
   keywords?: string;
   canonicalUrl?: string;
   ogImage?: string;
+<<<<<<< HEAD
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
@@ -78,4 +86,37 @@ const mergedStructuredData = structuredData || defaultStructuredData;
 }
 export default EnhancedSEO;
 };
+=======
+}
+
+const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
+  title,
+  description,
+  keywords,
+  canonicalUrl,
+  ogImage
+}) => {
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content="website" />
+      {ogImage && <meta property="og:image" content={ogImage} />}
+      
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      {ogImage && <meta name="twitter:image" content={ogImage} />}
+    </Helmet>
+  );
+};
+
+>>>>>>> 12ad1f6b6cfd812b560a1dd10f09dfa9de4eb0ce
 export default EnhancedSEO;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet   } from 'react-helmet-async';
 import { Server, Cloud, Shield, Wrench, Monitor, Database   } from 'lucide-react';
@@ -65,3 +66,7 @@ const ITServicesPage: React.FC = () => {
         <div className="text-center>;<div className="bg-white/10" backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto>;<h2 className="text-2xl" font-bold text-white mb-4>Need Reliable IT Support?</h2><p className="text-gray-300" mb-6">Our IT experts are ready to help you maintain, secure, and optimize your technology infrastructure.</><div className="flex flex-col sm: "flex-row gap-4 justify-center>;<button className="bg-gradient-to-r" from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">Get Support</><button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300>Request Quote</></div></div></div></div>",;</div>,  ),;
 }
 export default ITServicesPage;
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+>>>>>>> 12ad1f6b6cfd812b560a1dd10f09dfa9de4eb0ce

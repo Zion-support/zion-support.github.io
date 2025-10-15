@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet  } from 'react-helmet-async';
 import { Brain, Bot, BarChart3, Shield, Zap, Target  } from 'lucide-react';
@@ -180,3 +181,7 @@ const AIServicesPage: React.FC = () => {
   );
 };
 export default AIServicesPage;
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+>>>>>>> 12ad1f6b6cfd812b560a1dd10f09dfa9de4eb0ce

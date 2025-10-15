@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet   } from 'react-helmet-async';
 import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle   } from 'lucide-react';
@@ -64,3 +65,7 @@ const DigitalTransformationPage: React.FC = () => {
         <div className="text-center>;<div className="bg-white/10" backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto>;<h2 className="text-2xl" font-bold text-white mb-4>Ready to Transform Your Business?</h2><p className="text-gray-300" mb-6">Our digital transformation experts can help you modernize your operations and stay competitive.</><div className="flex flex-col sm: "flex-row gap-4 justify-center>;<button className="bg-gradient-to-r" from-emerald-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300">Start Transformation</><button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300>Get Assessment</></div></div></div></div>",;</div>,  ),;
 }
 export default DigitalTransformationPage;
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+>>>>>>> 12ad1f6b6cfd812b560a1dd10f09dfa9de4eb0ce

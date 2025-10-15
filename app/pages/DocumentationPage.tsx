@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link   } from 'react-router-dom';
 import SEO from '../components/SEO';
@@ -121,3 +122,7 @@ console.log(response.data);`}</code></pre></div><div className="grid md: "grid-c
               >Get In Touch;</Link></div></div></div></section></>",;
   )}
 ;
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+>>>>>>> 12ad1f6b6cfd812b560a1dd10f09dfa9de4eb0ce

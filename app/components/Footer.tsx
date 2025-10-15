@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link   } from 'react-router-dom';
 import { CpuChipIcon,
@@ -145,3 +146,6 @@ const Footer: React.FC = () => {
   );
 };
 export default Footer;
+=======
+import React from 'react'
+>>>>>>> 12ad1f6b6cfd812b560a1dd10f09dfa9de4eb0ce

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const ServicesPage: React.FC = () => {
@@ -83,3 +84,7 @@ const ServicesPage: React.FC = () => {
   );
 };
 export default ServicesPage;
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+>>>>>>> 12ad1f6b6cfd812b560a1dd10f09dfa9de4eb0ce

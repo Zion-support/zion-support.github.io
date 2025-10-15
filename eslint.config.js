@@ -4,6 +4,7 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+<<<<<<< HEAD
 export default [;
   js.configs.recommended,;
   {;
@@ -117,4 +118,69 @@ export default [;
       }
     }
   }
+=======
+
+export default [
+  js.configs.recommended,
+  {
+    files: ['**/*.{ts,tsx,js,jsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        console: 'readonly',
+        PerformanceObserver: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        expect: 'readonly',
+        jest: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+      },
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      react,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+    },
+    rules: {
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      'no-undef': 'off',
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
+  {
+    ignores: [
+      'dist/**',
+      'node_modules/**',
+      '*.config.js',
+      '*.config.mjs',
+      '*.config.cjs',
+    ],
+  },
+>>>>>>> 12ad1f6b6cfd812b560a1dd10f09dfa9de4eb0ce
 ];

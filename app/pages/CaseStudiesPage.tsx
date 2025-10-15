@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet   } from 'react-helmet-async';
 import { ArrowRight, TrendingUp, Users, Clock, DollarSign   } from 'lucide-react';
@@ -87,3 +88,7 @@ const CaseStudiesPage: React.FC = () => {
                 <ArrowRight className="w-5" h-5 ml-2" />;</button><button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300>View More Cases</></div></div></div></div>",;</div>,  ),;
 }
 export default CaseStudiesPage;
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+>>>>>>> 12ad1f6b6cfd812b560a1dd10f09dfa9de4eb0ce

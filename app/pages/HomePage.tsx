@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link   } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
@@ -83,3 +84,7 @@ export default function HomePage()  {;
                 <ArrowRightIcon className="w-5" h-5 ml-2" />;</NeonButton></div></div></div></section></>",;
 )}
 ;
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+>>>>>>> 12ad1f6b6cfd812b560a1dd10f09dfa9de4eb0ce

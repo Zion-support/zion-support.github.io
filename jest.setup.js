@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import '@testing-library/jest-dom;
 import React from 'react';
 // Mock react-router-dom;
@@ -31,3 +32,11 @@ beforeAll(() => {;
 afterAll(() => {;
   console.error = originalError;
 });
+=======
+require('@testing-library/jest-dom');
+
+// Polyfill for TextEncoder/TextDecoder
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+>>>>>>> 12ad1f6b6cfd812b560a1dd10f09dfa9de4eb0ce

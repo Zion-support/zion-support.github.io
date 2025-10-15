@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet   } from 'react-helmet-async';
 import { Cloud, Server, Database, Shield, Zap, Globe   } from 'lucide-react';
@@ -64,3 +65,7 @@ const CloudInfrastructurePage: React.FC = () => {
         <div className="text-center>;<div className="bg-white/10" backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto>;<h2 className="text-2xl" font-bold text-white mb-4>Ready to Scale Your Infrastructure?</h2><p className="text-gray-300" mb-6">Our cloud experts can help you design, implement, and optimize your cloud infrastructure for success.</><div className="flex flex-col sm: "flex-row gap-4 justify-center>;<button className="bg-gradient-to-r" from-indigo-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300">Start Migration</><button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300>Get Assessment</></div></div></div></div>",;</div>,  ),;
 }
 export default CloudInfrastructurePage;
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+>>>>>>> 12ad1f6b6cfd812b560a1dd10f09dfa9de4eb0ce
