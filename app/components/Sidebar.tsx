@@ -18,7 +18,10 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  MessageSquare,
+  FileText,
+  Cog
 } from 'lucide-react'
 
 interface SidebarProps {
@@ -79,7 +82,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Home', path: '/', icon: <Home className="w-4 h-4" /> },
     { name: 'About', path: '/about', icon: <Users className="w-4 h-4" /> },
     { name: 'Services', path: '/services', icon: <Settings className="w-4 h-4" /> },
-    { name: 'Micro SAAS', path: '/micro-saas-services', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Solutions', path: '/solutions', icon: <Cog className="w-4 h-4" /> },
     { name: 'Pricing', path: '/pricing', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Case Studies', path: '/case-studies', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Blog', path: '/blog', icon: <Brain className="w-4 h-4" /> },
@@ -259,6 +262,77 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     </div>
                   </Link>
                 ))}
+              </div>
+            )}
+          </div>
+
+          {/* Support & Resources */}
+          <div className="mb-6">
+            <button
+              onClick={() => toggleSection('support')}
+              className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 font-medium text-left"
+            >
+              <div className="flex items-center space-x-3">
+                <Phone className="w-4 h-4" />
+                <span>Support & Resources</span>
+              </div>
+              {expandedSections.has('support') ? (
+                <ChevronDown className="w-4 h-4" />
+              ) : (
+                <ChevronRight className="w-4 h-4" />
+              )}
+            </button>
+            
+            {expandedSections.has('support') && (
+              <div className="ml-6 mt-2 space-y-1">
+                <Link
+                  to="/support"
+                  className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    isActive('/support')
+                      ? 'bg-green-500/10 text-green-400'
+                      : 'text-gray-400 hover:text-green-400 hover:bg-green-500/5'
+                  }`}
+                  onClick={onClose}
+                >
+                  <Phone className="w-4 h-4" />
+                  <span className="text-sm">Support Center</span>
+                </Link>
+                <Link
+                  to="/chat"
+                  className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    isActive('/chat')
+                      ? 'bg-green-500/10 text-green-400'
+                      : 'text-gray-400 hover:text-green-400 hover:bg-green-500/5'
+                  }`}
+                  onClick={onClose}
+                >
+                  <MessageSquare className="w-4 h-4" />
+                  <span className="text-sm">Live Chat</span>
+                </Link>
+                <Link
+                  to="/help"
+                  className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    isActive('/help')
+                      ? 'bg-green-500/10 text-green-400'
+                      : 'text-gray-400 hover:text-green-400 hover:bg-green-500/5'
+                  }`}
+                  onClick={onClose}
+                >
+                  <FileText className="w-4 h-4" />
+                  <span className="text-sm">Help Center</span>
+                </Link>
+                <Link
+                  to="/report"
+                  className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    isActive('/report')
+                      ? 'bg-green-500/10 text-green-400'
+                      : 'text-gray-400 hover:text-green-400 hover:bg-green-500/5'
+                  }`}
+                  onClick={onClose}
+                >
+                  <Settings className="w-4 h-4" />
+                  <span className="text-sm">Report Issue</span>
+                </Link>
               </div>
             )}
           </div>

@@ -49,7 +49,8 @@ const Footer: React.FC = () => {
     { name: 'Live Chat', href: '/chat' },
     { name: 'Schedule Demo', href: '/demo' },
     { name: 'System Status', href: '/status' },
-    { name: 'Report Issue', href: '/report' }
+    { name: 'Report Issue', href: '/report' },
+    { name: 'Help Center', href: '/help' }
   ];
 
   const legal = [

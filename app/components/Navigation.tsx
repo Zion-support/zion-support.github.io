@@ -67,12 +67,15 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
       { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
       { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
-      { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon }
+      { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
+      { name: 'API Reference', href: '/api-docs', icon: DocumentTextIcon },
+      { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }
     ]},
     { name: 'Company', href: '#', icon: UserGroupIcon, submenu: [
       { name: 'About Us', href: '/about', icon: InformationCircleIcon },
       { name: 'Team', href: '/team', icon: UserGroupIcon },
       { name: 'Careers', href: '/careers', icon: UserGroupIcon },
+      { name: 'Partnerships', href: '/partnerships', icon: UserGroupIcon },
       { name: 'Contact', href: '/contact', icon: PhoneIcon }
     ]},
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
