@@ -122,18 +122,32 @@ const HomePage: React.FC = () => {
         {/* Hero Section */}
         <section className="relative overflow-hidden min-h-screen flex items-center">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-slate-900 to-cyan-900/30"></div>
-          <div className="absolute inset-0 cyber-grid opacity-20"></div>
+          <div className="absolute inset-0 cyber-grid-enhanced opacity-20"></div>
           
-          {/* Floating Particles */}
-          <div className="floating-particles">
-            {[...Array(30)].map((_, i) => (
-              <div key={i} className="particle" style={{
+          {/* Quantum Particles */}
+          <div className="quantum-particles">
+            {[...Array(50)].map((_, i) => (
+              <div key={i} className="quantum-particle" style={{
                 left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 15}s`,
-                animationDuration: `${15 + Math.random() * 10}s`
+                animationDelay: `${Math.random() * 20}s`,
+                animationDuration: `${20 + Math.random() * 10}s`
               }}></div>
             ))}
           </div>
+          
+          {/* Matrix Rain Effect */}
+          <div className="matrix-rain">
+            {[...Array(20)].map((_, i) => (
+              <div key={i} className="matrix-column" style={{
+                left: `${i * 5}%`,
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${3 + Math.random() * 2}s`
+              }}></div>
+            ))}
+          </div>
+          
+          {/* Scan Lines */}
+          <div className="scan-lines"></div>
           
           {/* Animated Background Elements */}
           <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse floating"></div>
@@ -143,17 +157,17 @@ const HomePage: React.FC = () => {
           {/* Holographic Overlay */}
           <div className="absolute inset-0 holographic-card opacity-10"></div>
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
-            <div className="text-center">
-              <div className="relative inline-block mb-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold holographic leading-tight neon-text">
-                  Zion Tech Group
-                </h1>
-                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-lg blur opacity-30 animate-pulse"></div>
-                <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 rounded-lg blur opacity-20 animate-pulse delay-1000"></div>
-              </div>
-              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
-                Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services that drive innovation and growth.
-              </p>
+              <div className="text-center">
+                <div className="relative inline-block mb-6">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold holographic leading-tight neon-text">
+                    Zion Tech Group
+                  </h1>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-lg blur opacity-30 animate-pulse"></div>
+                  <div className="absolute -inset-2 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 rounded-lg blur opacity-20 animate-pulse delay-1000"></div>
+                </div>
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed px-4">
+                  Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services that drive innovation and growth.
+                </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 lg:mb-16 px-4">
                 <Link to="/contact"
                   className="relative group cyber-button px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
@@ -171,18 +185,18 @@ const HomePage: React.FC = () => {
               </div>
               
               {/* Stats */}
-              <div className="grid grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto px-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6 lg:gap-8 max-w-6xl mx-auto px-4">
                 {stats.map((stat, index) => (
                   <div key={index} 
-                    className="text-center p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm hover:bg-slate-700/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group"
+                    className="text-center p-3 sm:p-4 bg-slate-800/30 rounded-lg backdrop-blur-sm hover:bg-slate-700/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10 group"
                     style={{
                       animationDelay: `${index * 100}ms`
                     }}
                   >
-                    <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-purple-400 mb-1 lg:mb-2 group-hover:text-purple-300 transition-colors">
+                    <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-purple-400 mb-1 lg:mb-2 group-hover:text-purple-300 transition-colors">
                       {stat.number}
                     </div>
-                    <div className="text-gray-300 text-xs sm:text-sm lg:text-base group-hover:text-white transition-colors">
+                    <div className="text-gray-300 text-xs sm:text-sm md:text-base group-hover:text-white transition-colors">
                       {stat.label}
                     </div>
                   </div>
@@ -204,11 +218,11 @@ const HomePage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               {services.map((service, index) => (
                 <Link key={index}
                   to={service.href}
-                  className="group relative bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden"
+                  className="group relative bg-slate-800/50 p-4 sm:p-6 lg:p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden"
                   style={{
                     animationDelay: `${index * 100}ms`
                   }}
@@ -242,17 +256,20 @@ const HomePage: React.FC = () => {
 
         {/* Micro SAAS Showcase Section */}
         <section className="py-16 sm:py-20 bg-slate-800/30 relative overflow-hidden">
-          {/* Animated Background */}
-          <div className="absolute inset-0 cyber-grid opacity-20"></div>
-          <div className="floating-particles">
-            {[...Array(20)].map((_, i) => (
-              <div key={i} className="particle" style={{
+          {/* Enhanced Animated Background */}
+          <div className="absolute inset-0 cyber-grid-enhanced opacity-20"></div>
+          <div className="quantum-particles">
+            {[...Array(30)].map((_, i) => (
+              <div key={i} className="quantum-particle" style={{
                 left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 15}s`,
-                animationDuration: `${15 + Math.random() * 10}s`
+                animationDelay: `${Math.random() * 20}s`,
+                animationDuration: `${20 + Math.random() * 10}s`
               }}></div>
             ))}
           </div>
+          
+          {/* Quantum Tunnel Effect */}
+          <div className="absolute inset-0 quantum-tunnel"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12 sm:mb-16">
@@ -264,9 +281,9 @@ const HomePage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* AI Content Generator */}
-              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+              {/* AI Content Generator Pro */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 cyber-circuit">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
                     <SparklesIcon className="w-6 h-6 text-white" />
@@ -277,7 +294,7 @@ const HomePage: React.FC = () => {
                   AI Content Generator Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Generate high-quality content for blogs, social media, and marketing materials using advanced AI with 95% accuracy.
+                  Generate high-quality content for blogs, social media, and marketing materials using advanced GPT-4 with 95% accuracy and real-time optimization.
                 </p>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-cyan-400 neon-text">$199/mo</span>
@@ -290,11 +307,15 @@ const HomePage: React.FC = () => {
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>SEO optimization</span>
+                    <span>SEO optimization & keyword research</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Multi-language support</span>
+                    <span>50+ languages supported</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Brand voice customization</span>
                   </div>
                 </div>
                 <Link to="/ai-content-generator"
@@ -383,7 +404,7 @@ const HomePage: React.FC = () => {
               </div>
 
               {/* Social Media Scheduler */}
-              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/20">
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/20 cyber-circuit">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
                     <ShareIcon className="w-6 h-6 text-white" />
@@ -391,10 +412,10 @@ const HomePage: React.FC = () => {
                   <span className="text-sm text-pink-400 font-medium neon-text">Social</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-pink-300 transition-colors">
-                  Social Media Scheduler
+                  Social Media Scheduler Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Streamline your social media with AI-powered scheduling, content optimization, and multi-platform management.
+                  Streamline your social media with AI-powered scheduling, content optimization, and multi-platform management across 12+ platforms.
                 </p>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-pink-400 neon-text">$49/mo</span>
@@ -403,7 +424,7 @@ const HomePage: React.FC = () => {
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>8+ platforms supported</span>
+                    <span>12+ platforms supported</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
@@ -413,8 +434,184 @@ const HomePage: React.FC = () => {
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
                     <span>40% higher engagement</span>
                   </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Analytics & insights</span>
+                  </div>
                 </div>
                 <Link to="/social-media-scheduler"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Code Assistant Pro */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/20 cyber-circuit">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <CodeBracketIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-green-400 font-medium neon-text">AI Code</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
+                  AI Code Assistant Pro
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Advanced AI-powered coding assistant with real-time code generation, debugging, and optimization for 50+ programming languages.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-green-400 neon-text">$299/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$499/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>50+ programming languages</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Real-time code generation</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>AI debugging & optimization</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Code review & documentation</span>
+                  </div>
+                </div>
+                <Link to="/zion-ai-code-assistant"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Financial Forecaster */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/20 cyber-circuit">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <ChartBarIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-yellow-400 font-medium neon-text">Finance AI</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
+                  AI Financial Forecaster Pro
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Advanced financial forecasting with AI-powered predictions, risk analysis, and investment recommendations using machine learning.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-yellow-400 neon-text">$399/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$699/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>95% accuracy predictions</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Real-time market analysis</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Risk assessment & alerts</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Portfolio optimization</span>
+                  </div>
+                </div>
+                <Link to="/zion-ai-financial-forecaster"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Video Generator */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20 cyber-circuit">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <EyeIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-purple-400 font-medium neon-text">AI Video</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                  AI Video Generator Pro
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Create professional videos with AI-powered generation, editing, and optimization. Generate videos from text, images, or scripts.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-purple-400 neon-text">$199/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$399/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Text-to-video generation</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>AI voice synthesis</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Auto-editing & optimization</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Multiple export formats</span>
+                  </div>
+                </div>
+                <Link to="/zion-ai-video-generator"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Translation Service */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 cyber-circuit">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <GlobeAltIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-blue-400 font-medium neon-text">AI Translate</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                  AI Translation Service Pro
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Advanced AI-powered translation service supporting 100+ languages with context-aware translations and real-time processing.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-blue-400 neon-text">$99/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$199/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>100+ languages supported</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Context-aware translations</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Real-time processing</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>API integration</span>
+                  </div>
+                </div>
+                <Link to="/zion-ai-translation-service"
                   className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
@@ -436,19 +633,19 @@ const HomePage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
               {features.map((feature, index) => (
                 <div key={index} 
-                  className="flex items-center space-x-4 p-4 sm:p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-all duration-300 group hover:scale-105 hover:shadow-lg hover:shadow-green-500/10"
+                  className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 lg:p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-all duration-300 group hover:scale-105 hover:shadow-lg hover:shadow-green-500/10"
                   style={{
                     animationDelay: `${index * 50}ms`
                   }}
                 >
-                  <div className="relative">
-                    <CheckCircleIcon className="w-5 h-5 sm:w-6 sm:h-6 text-green-400 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                  <div className="relative flex-shrink-0">
+                    <CheckCircleIcon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-green-400 group-hover:scale-110 transition-transform" />
                     <div className="absolute inset-0 bg-green-400 rounded-full blur opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
                   </div>
-                  <span className="text-gray-300 font-medium text-sm sm:text-base group-hover:text-white transition-colors">{feature}</span>
+                  <span className="text-gray-300 font-medium text-xs sm:text-sm lg:text-base group-hover:text-white transition-colors">{feature}</span>
                 </div>
               ))}
             </div>

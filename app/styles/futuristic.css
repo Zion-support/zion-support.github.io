@@ -334,6 +334,234 @@ body {
   100% { background-position: 20px 20px; }
 }
 
+/* Enhanced Cyber Grid with Multiple Layers */
+.cyber-grid-enhanced {
+  position: relative;
+  background: 
+    linear-gradient(90deg, transparent 98%, rgba(0, 245, 255, 0.15) 100%),
+    linear-gradient(0deg, transparent 98%, rgba(0, 245, 255, 0.15) 100%),
+    linear-gradient(45deg, transparent 98%, rgba(191, 0, 255, 0.05) 100%),
+    linear-gradient(-45deg, transparent 98%, rgba(255, 0, 128, 0.05) 100%);
+  background-size: 20px 20px, 20px 20px, 40px 40px, 40px 40px;
+  animation: cyberGridMoveEnhanced 15s linear infinite;
+}
+
+@keyframes cyberGridMoveEnhanced {
+  0% { background-position: 0 0, 0 0, 0 0, 0 0; }
+  100% { background-position: 20px 20px, -20px -20px, 40px 40px, -40px -40px; }
+}
+
+/* Quantum Particle System */
+.quantum-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.quantum-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: radial-gradient(circle, var(--neon-blue) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: quantumFloat 20s linear infinite;
+  box-shadow: 0 0 10px var(--neon-blue);
+}
+
+.quantum-particle:nth-child(2n) {
+  background: radial-gradient(circle, var(--neon-purple) 0%, transparent 70%);
+  box-shadow: 0 0 10px var(--neon-purple);
+  animation-delay: -5s;
+}
+
+.quantum-particle:nth-child(3n) {
+  background: radial-gradient(circle, var(--neon-pink) 0%, transparent 70%);
+  box-shadow: 0 0 10px var(--neon-pink);
+  animation-delay: -10s;
+}
+
+.quantum-particle:nth-child(4n) {
+  background: radial-gradient(circle, var(--neon-green) 0%, transparent 70%);
+  box-shadow: 0 0 10px var(--neon-green);
+  animation-delay: -15s;
+}
+
+@keyframes quantumFloat {
+  0% {
+    transform: translateY(100vh) translateX(0) scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1) rotate(90deg);
+  }
+  50% {
+    transform: translateY(50vh) translateX(50vw) scale(1.5) rotate(180deg);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1) rotate(270deg);
+  }
+  100% {
+    transform: translateY(-100px) translateX(100px) scale(0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Holographic Matrix Effect */
+.matrix-rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.1;
+}
+
+.matrix-column {
+  position: absolute;
+  top: -100%;
+  width: 2px;
+  height: 200%;
+  background: linear-gradient(to bottom, transparent, var(--neon-green), transparent);
+  animation: matrixFall 3s linear infinite;
+}
+
+@keyframes matrixFall {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+
+/* Cyber Glitch Effect */
+.cyber-glitch {
+  position: relative;
+  animation: cyberGlitch 0.3s infinite;
+}
+
+@keyframes cyberGlitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+/* Neon Scan Line Effect */
+.scan-lines {
+  position: relative;
+  overflow: hidden;
+}
+
+.scan-lines::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    transparent 50%,
+    rgba(0, 245, 255, 0.03) 50%,
+    rgba(0, 245, 255, 0.05) 51%,
+    transparent 52%
+  );
+  background-size: 100% 4px;
+  animation: scanMove 2s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scanMove {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Quantum Tunnel Effect */
+.quantum-tunnel {
+  position: relative;
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 245, 255, 0.1) 50%, transparent 100%);
+  animation: quantumTunnel 4s ease-in-out infinite;
+}
+
+@keyframes quantumTunnel {
+  0%, 100% { 
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 245, 255, 0.1) 50%, transparent 100%);
+  }
+  50% { 
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(191, 0, 255, 0.15) 30%, transparent 100%);
+  }
+}
+
+/* Enhanced Neon Glow with Multiple Colors */
+.neon-glow-multi {
+  box-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor,
+    0 0 35px currentColor,
+    0 0 40px currentColor;
+  animation: neonPulseMulti 3s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulseMulti {
+  from { 
+    box-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      0 0 20px currentColor,
+      0 0 35px currentColor,
+      0 0 40px currentColor;
+  }
+  to { 
+    box-shadow: 
+      0 0 10px currentColor,
+      0 0 20px currentColor,
+      0 0 30px currentColor,
+      0 0 40px currentColor,
+      0 0 50px currentColor,
+      0 0 60px currentColor;
+  }
+}
+
+/* Cyber Circuit Pattern */
+.cyber-circuit {
+  position: relative;
+  background-image: 
+    linear-gradient(90deg, transparent 98%, rgba(0, 245, 255, 0.1) 100%),
+    linear-gradient(0deg, transparent 98%, rgba(0, 245, 255, 0.1) 100%);
+  background-size: 20px 20px;
+  animation: circuitPulse 2s ease-in-out infinite;
+}
+
+.cyber-circuit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(0, 245, 255, 0.2) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(191, 0, 255, 0.2) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: circuitNodes 3s linear infinite;
+}
+
+@keyframes circuitPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes circuitNodes {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(20px, 20px); }
+}
+
 .neon-text {
   color: var(--neon-blue);
   text-shadow: 
@@ -546,6 +774,7 @@ body {
 @media (max-width: 1024px) {
   .holographic-card {
     background-size: 200% 200%;
+    padding: 1rem;
   }
   
   .cyber-button {
@@ -560,6 +789,18 @@ body {
   .floating-particles {
     display: none; /* Hide particles on tablets for better performance */
   }
+  
+  .quantum-particles {
+    display: none; /* Hide quantum particles on tablets for better performance */
+  }
+  
+  .matrix-rain {
+    display: none; /* Hide matrix rain on tablets for better performance */
+  }
+  
+  .cyber-grid-enhanced {
+    background-size: 15px 15px, 15px 15px, 30px 30px, 30px 30px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -567,9 +808,14 @@ body {
     background-size: 15px 15px;
   }
   
+  .cyber-grid-enhanced {
+    background-size: 10px 10px, 10px 10px, 20px 20px, 20px 20px;
+  }
+  
   .holographic-card {
     background-size: 150% 150%;
     padding: 1rem;
+    margin: 0.5rem;
   }
   
   .cyber-button {
@@ -578,6 +824,11 @@ body {
   }
   
   .particle {
+    width: 1px;
+    height: 1px;
+  }
+  
+  .quantum-particle {
     width: 1px;
     height: 1px;
   }
@@ -603,21 +854,74 @@ body {
   .cyber-scrollbar::-webkit-scrollbar {
     width: 4px; /* Thinner scrollbar on mobile */
   }
+  
+  /* Hide complex animations on mobile for better performance */
+  .quantum-particles,
+  .matrix-rain,
+  .scan-lines {
+    display: none;
+  }
+  
+  /* Optimize text sizes for mobile */
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-5xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-6xl {
+    font-size: 3rem;
+  }
+  
+  .text-7xl {
+    font-size: 3.5rem;
+  }
+  
+  /* Improve button spacing on mobile */
+  .cyber-button {
+    min-height: 44px; /* iOS touch target size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Optimize grid layouts for mobile */
+  .grid-cols-1 {
+    gap: 1rem;
+  }
+  
+  .grid-cols-2 {
+    gap: 0.75rem;
+  }
+  
+  .grid-cols-3 {
+    gap: 0.5rem;
+  }
 }
 
 @media (max-width: 480px) {
   .cyber-grid {
     background-size: 10px 10px;
+    opacity: 0.1; /* Reduce grid opacity on very small screens */
+  }
+  
+  .cyber-grid-enhanced {
+    background-size: 8px 8px, 8px 8px, 16px 16px, 16px 16px;
+    opacity: 0.05;
   }
   
   .holographic-card {
     padding: 0.75rem;
     margin: 0.25rem;
+    background-size: 100% 100%; /* Simplify background on very small screens */
   }
   
   .cyber-button {
     padding: 6px 16px;
     font-size: 11px;
+    min-height: 40px;
   }
   
   .neon-text {
@@ -637,12 +941,57 @@ body {
     animation-duration: 6s;
   }
   
-  .floating-particles {
+  .floating-particles,
+  .quantum-particles,
+  .matrix-rain,
+  .scan-lines {
     display: none;
   }
   
-  .cyber-grid {
-    opacity: 0.1; /* Reduce grid opacity on very small screens */
+  /* Further reduce text sizes for very small screens */
+  .text-4xl {
+    font-size: 1.75rem;
+  }
+  
+  .text-5xl {
+    font-size: 2rem;
+  }
+  
+  .text-6xl {
+    font-size: 2.25rem;
+  }
+  
+  .text-7xl {
+    font-size: 2.5rem;
+  }
+  
+  /* Optimize spacing for very small screens */
+  .py-16 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .py-20 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  
+  .mb-12 {
+    margin-bottom: 2rem;
+  }
+  
+  .mb-16 {
+    margin-bottom: 2.5rem;
+  }
+  
+  /* Simplify animations on very small screens */
+  .neon-glow,
+  .neon-glow-multi {
+    animation: none;
+  }
+  
+  .cyber-glitch {
+    animation: none;
   }
 }
 
@@ -650,15 +999,55 @@ body {
 @media (max-width: 768px) and (orientation: landscape) {
   .holographic-card {
     padding: 0.5rem;
+    margin: 0.25rem;
   }
   
   .cyber-button {
     padding: 6px 12px;
     font-size: 10px;
+    min-height: 36px;
   }
   
   .neon-text {
     font-size: 0.6em;
+  }
+  
+  /* Reduce vertical spacing in landscape */
+  .py-16 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .py-20 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .mb-12 {
+    margin-bottom: 1rem;
+  }
+  
+  .mb-16 {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Hide complex animations in landscape for better performance */
+  .quantum-particles,
+  .matrix-rain,
+  .scan-lines,
+  .floating-particles {
+    display: none;
+  }
+  
+  /* Optimize grid layouts for landscape */
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.25rem;
   }
 }
 
