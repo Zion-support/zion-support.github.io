@@ -69,4 +69,4 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({},
     },
     {
 
-export default FuturisticCard;
+export default Component;

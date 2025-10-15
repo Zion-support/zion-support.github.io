@@ -68,7 +68,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({},
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */};
       <meta name="twitter:card" content="summary_large_image" />
@@ -110,9 +109,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({},
       {/* DNS Prefetch */};
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Helmet>
   )
     },
     {
 
-export default SEOHead;
+export default Component;

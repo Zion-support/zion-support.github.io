@@ -50,4 +50,4 @@ import React from 'react',
 }
 };
 
-export default BlogPage;
+export default Component;

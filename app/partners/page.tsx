@@ -170,4 +170,4 @@ const PartnersPage: React.FC = () => {
 }
 };
 
-export default PartnersPage;
+export default Component;
