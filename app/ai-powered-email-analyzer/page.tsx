@@ -1,124 +1,24 @@
 import React from 'react';
 <<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  CheckCircle,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe
-} from 'lucide-react';
-
-const AIPoweredEmailAnalyzerPage = () => {
-  const features = [
-    {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Sentiment Analysis",
-      description: "Advanced machine learning algorithms analyze email tone, sentiment, and emotional context to help you craft perfect responses."
-    },
-    {
-      icon: <Target className="w-8 h-8 text-purple-400" />,
-      title: "Smart Response Suggestions",
-      description: "Get intelligent, context-aware response suggestions that match your communication style and business objectives."
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      title: "Email Performance Analytics",
-      description: "Track open rates, response times, and engagement metrics with detailed analytics and actionable insights."
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security with GDPR compliance, data encryption, and secure cloud storage for all email data."
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      title: "Real-time Processing",
-      description: "Instant analysis and suggestions as you type, with lightning-fast processing powered by advanced AI models."
-    },
-    {
-      icon: <Users className="w-8 h-8 text-blue-400" />,
-      title: "Team Collaboration",
-      description: "Share insights across teams, set up approval workflows, and maintain consistent communication standards."
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "/month",
-      description: "Perfect for small teams and individuals",
-      features: [
-        "Up to 1,000 emails/month",
-        "Basic sentiment analysis",
-        "Response suggestions",
-        "Email templates",
-        "Basic analytics",
-        "Email support"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$79",
-      period: "/month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 10,000 emails/month",
-        "Advanced AI analysis",
-        "Custom response templates",
-        "Team collaboration",
-        "Advanced analytics",
-        "Priority support",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$199",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited emails",
-        "Custom AI models",
-        "White-label solution",
-        "Advanced security",
-        "Custom integrations",
-        "Dedicated support",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
-  ];
-
-  const stats = [
-    { number: "95%", label: "Accuracy Rate" },
-    { number: "2.5x", label: "Faster Response Time" },
-    { number: "40%", label: "Increase in Engagement" },
-    { number: "10k+", label: "Happy Customers" }
-  ];
-=======
 import SEOHead from '../components/SEOHead';
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
+=======
+import SEOHead from './components/SEOHead';
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
 
 const AiPoweredEmailAnalyzerPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="ai-powered-email-analyzer - Zion Tech Group"
-        description="Zion Tech Group ai-powered-email-analyzer service page"
+        title="AI-Powered Email Analyzer - Zion Tech Group"
+<<<<<<< HEAD
+        description="Advanced AI email analysis for sentiment, intent, and response optimization with automated insights."
+=======
+        description="Revolutionize your email communication with our AI-powered email analyzer. Get sentiment analysis, smart suggestions, and performance insights."
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
       />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">ai-powered-email-analyzer</h1>
+          <h1 className="text-4xl font-bold mb-4">AI-Powered Email Analyzer</h1>
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>

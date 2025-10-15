@@ -1,17 +1,17 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from './components/SEOHead';
 
 const IntelligentEmailInfrastructurePage: React.FC = () => {
   return (
     <>
-      <SEOHead 
-        title="intelligent-email-infrastructure - Zion Tech Group"
-        description="Zion Tech Group intelligent-email-infrastructure service page"
+      <SEOHead
+        title="Intelligent Email Infrastructure - Zion Tech Group"
+        description="Professional intelligent email infrastructure solutions for modern businesses"
       />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">intelligent-email-infrastructure</h1>
-          <p className="text-gray-300">Coming soon...</p>
+          <h1 className="text-4xl font-bold mb-4">Intelligent Email Infrastructure</h1>
+          <p className="text-gray-300">Professional solutions coming soon...</p>
         </div>
       </div>
     </>

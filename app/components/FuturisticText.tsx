@@ -1,57 +1,106 @@
-import React, { useState, useEffect } from 'react'
-import { cn } from '../lib/utils'
-interface FuturisticTextProps {}
-  text: string
-  delay?: number
-  speed?: number
-  className?: string
-  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div'
-}
-const FuturisticText = ({}
-  text,
-  delay = 0,
-  speed = 100,
-  className,
-  as: Component = 'span'
-}: FuturisticTextProps) => {}
-}const [displayedText, setDisplayedText] = useState('')
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isComplete, setIsComplete] = useState(false)
-  useEffect(() => {}
-}if (currentIndex < text.length) {}
-      const timeout = setTimeout(() => {}
-}setDisplayedText(prev => prev + text[currentIndex])
-        setCurrentIndex(prev => prev + 1)
-      }, speed)
-      return () => clearTimeout(timeout)
-    } else {}
-      setIsComplete(true)
-    }
-  }, [currentIndex, text, speed])
-  useEffect(() => {}
-}if (delay > 0) {}
-      const timeout = setTimeout(() => {}
-}setCurrentIndex(0)
-        setDisplayedText('')
-        setIsComplete(false)
-      }, delay)
-      return () => clearTimeout(timeout)
-    }
-  }, [delay])
-  return ()
-    <Component
-      className={cn()
-        'relative inline-block',
-        'before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300',
-        'after:absolute after:inset-0 after:bg-gradient-to-r after:from-transparent after:via-cyan-500/20 after:to-transparent after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300',
-        className
-      )}
-    >
-      {displayedText}
-      {!isComplete && ()
-        <span className="animate-pulse text-cyan-400">|</span>
-      )}
-    </Component>
-  )
-}
-export default FuturisticText
+import React from 'react';
+import SEOHead from './components/SEOHead';
+
+<<<<<<< HEAD
+interface FuturisticTextProps {},
+      children: React.ReactNode,
+      variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'gradient' | 'neon','
+      size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl',
+      className?: string,
+      glow?: boolean,
+      animate?: boolean;
+    },
+    {
+const FuturisticText: React.FC<FuturisticTextProps> = ({},
+      children,'
+      variant = 'body',': value
+      size = 'base',': value
+      className = '': value,
+      glow = false: value,
+      animate = false;: value
+}) => {}: value,
+      const getVariantClasses = () => {}: value,
+      switch (variant) {},'
+      case 'heading':'
+        return 'font-bold text-white','
+      case 'subheading':'
+        return 'font-semibold text-gray-200','
+      case 'body':'
+        return 'font-normal text-gray-300','
+      case 'caption':'
+        return 'font-medium text-gray-400','
+      case 'gradient':'
+        return 'font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent','
+      case 'neon':'
+        return 'font-bold text-cyan-400',
+      default:'
+        return 'font-normal text-gray-300'
+    },
+    {
+  },
+      const getSizeClasses = () => {}: value,
+      switch (size) {},'
+      case 'xs':'
+        return 'text-xs','
+      case 'sm':'
+        return 'text-sm','
+      case 'base':'
+        return 'text-base','
+      case 'lg':'
+        return 'text-lg','
+      case 'xl':'
+        return 'text-xl','
+      case '2xl':'
+        return 'text-2xl','
+      case '3xl':'
+        return 'text-3xl','
+      case '4xl':'
+        return 'text-4xl','
+      case '5xl':'
+        return 'text-5xl','
+      case '6xl':'
+        return 'text-6xl','
+      case '7xl':'
+        return 'text-7xl',
+      default:'
+        return 'text-base'
+    },
+    {
+  },
+      const getGlowClasses = () => {},': value
+      if (!glow) return '',
+      switch (variant) {},'
+      case 'neon':'
+        return 'drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]','
+      case 'gradient':'
+        return 'drop-shadow-[0_0_20px_rgba(168,85,247,0.3)]',
+      default:'
+        return 'drop-shadow-[0_0_10px_rgba(34,211,238,0.3)]'
+    },
+    {
+  },
+      const getAnimateClasses = () => {},': value
+      if (!animate) return '','
+      return 'animate-pulse'
+    },;
+    {
+=======
+const ComponentsPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead
+        title="Components - Zion Tech Group"
+        description="Professional components solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Components</h1>
+          <p className="text-gray-300">Professional solutions coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
+
+export default ComponentsPage;

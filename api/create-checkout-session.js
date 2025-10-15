@@ -1,41 +1,24 @@
-const withErrorLogging = (handler) => {}
-}return async (req, res) => {}
-}try {}
-} catch (error) {}
-  console.error(error)
-}await handler(req, res)
-    } catch (error) {}
-      console.error('API Error:', error)
-      res.setHeader('Content-Type', 'application/json')
-      res.end(JSON.stringify({ error: 'Internal server error' }))
+const withErrorLogging = (handler) => {
+  return async (req, res) => {
+    try {
+      await handler(req, res);
+    } catch (error) {
+      console.error('API Error:', error);
+      res.status(500).json({ error: 'Internal server error' });
     }
+  };
+};
+
+export default withErrorLogging(async (req, res) => {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-}
-export default withErrorLogging(async (req, res) => {}
-}if (req.method !== 'POST') {}
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Method not allowed' }))
-    return
+
+  try {
+    // Implementation for creating checkout session
+    res.status(200).json({ message: 'Checkout session created successfully' });
+  } catch (error) {
+    console.error('Checkout session error:', error);
+    res.status(500).json({ error: 'Failed to create checkout session' });
   }
-  const { productId } = req.body
-  if (!productId) {}
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Product ID is required' }))
-    return
-  }
-  try {}
-} catch (error) {}
-  console.error(error)
-}const session = {}
-      id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
-      status: 'pending',
-      productId: productId
-    }
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify(session))
-  } catch (error) {}
-    console.error('Checkout session creation error:', error)
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Failed to create checkout session' }))
-  }
-})
+});

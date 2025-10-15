@@ -1,83 +1,62 @@
-// Mock TextEncoder and TextDecoder for Node.js environment
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
+require('@testing-library/jest-dom');
 
-// Mock react-router-dom
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useLocation: () => ({
-    pathname: '/',
-    search: '',
-    hash: '',
-    state: null,
-  }),
-  useNavigate: () => jest.fn(),
-  useParams: () => ({}),
-  Link: ({ children, ...props }) => <a {...props}>{children}</a>,
-  NavLink: ({ children, ...props }) => <a {...props}>{children}</a>,
-  useSearchParams: () => [new URLSearchParams(), jest.fn()],
-}));
-
-// Mock IntersectionObserver
-global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}));
-
-// Mock ResizeObserver
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}));
-
-// Mock window.matchMedia
+// Mock window.matchMedia;'
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
+    addListener: jest.fn(), // deprecated;
+    removeListener: jest.fn(), // deprecated;
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
+    dispatchEvent: jest.fn()
+  }))
 });
 
-// Mock window.scrollTo
-Object.defineProperty(window, 'scrollTo', {
-  value: jest.fn(),
-});
-
-// Mock localStorage
-const localStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
+// Mock IntersectionObserver;
+global.IntersectionObserver = class IntersectionObserver {: value
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
 };
-global.localStorage = localStorageMock;
 
-// Mock sessionStorage
-const sessionStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
+// Mock ResizeObserver;
+global.ResizeObserver = class ResizeObserver {: value
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
 };
-global.sessionStorage = sessionStorageMock;
 
-// Suppress console.error for specific React warnings
-const originalError = console.error;
-console.error = (...args) => {
-  if (
-    typeof args[0] === 'string' &&
-    args[0].includes('Warning: ReactDOM.render is no longer supported')
-  ) {
-    return;
+// Mock performance;'
+Object.defineProperty(window, 'performance', {
+  writable: true,
+  value: {
+    now: jest.fn(() => Date.now()),
+    mark: jest.fn(),
+    measure: jest.fn(),
+    getEntriesByType: jest.fn(() => []),
+    getEntriesByName: jest.fn(() => [])
   }
-  originalError.call(console, ...args);
+});
+
+// Mock localStorage;
+const localStorageMock = {: value
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),;
+  clear: jest.fn()
 };
+global.localStorage = localStorageMock;: value
+
+// Mock sessionStorage;
+const sessionStorageMock = {: value
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),;
+  clear: jest.fn()
+};
+global.sessionStorage = sessionStorageMock;': value

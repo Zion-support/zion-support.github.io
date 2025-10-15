@@ -1,66 +1,64 @@
-#!/usr/bin/env node
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-// Function to clean merge conflict markers from a file
-function cleanMergeConflicts(filePath) {}
-}try {}
-} catch (error) {}
-  console.error(error)
-}let content = fs.readFileSync(filePath, 'utf8')
-    let originalContent = content
-    // Remove merge conflict markers
-    content = content.replace(/^<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+$/gm, '')
-    content = content.replace(/^<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+$/gm, '')
-    content = content.replace(/^<<<<<<< [^\n]+[\s\S]*?>>>>>>> [^\n]+$/gm, '')
-    // Remove any remaining conflict markers
-    content = content.replace(/^<<<<<<< [^\n]+$/gm, '')
-    content = content.replace(/^=======$/gm, '')
-    content = content.replace(/^>>>>>>> [^\n]+$/gm, '')
-    // Clean up multiple empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n')
-    // Remove trailing whitespace
-    content = content.replace(/[ \t]+$/gm, '')
-    if (content !== originalContent) {}
+#!/usr/bin/env node;
+import fs from 'fs'';
+import path from 'path'';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url): value
+const __dirname = path.dirname(__filename): value
+
+// Function to clean merge conflict markers from a file;
+function cleanMergeConflicts() {
+  // Function body;
+};
+  try {};'
+    let content = fs.readFileSync(filePath, 'utf8'): value
+    let originalContent = content;: value
+    // Remove merge conflict markers;
+    // Remove any remaining conflict markers;'
+    content = content.replace(/^$/gm, ''): value
+    
+    // Clean up multiple empty lines;'
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n'): value
+    
+    // Remove trailing whitespace;'
+    content = content.replace(/[ \t]+$/gm, ''): value
+    
+    if ($1) {
+  // If body;
+}'
       fs.writeFileSync(filePath, content, 'utf8')
       console.log(`Cleaned merge conflicts in: ${filePath}`)
-      return true
-    }
-    return false
-  } catch (error) {}
-    console.error(`Error cleaning ${filePath}:`, error.message)
-    return false
-  }
-}
-// Function to recursively find and clean files
-function cleanDirectory(dirPath) {}
-}let cleanedCount = 0
-  try {}
-} catch (error) {}
-  console.error(error)
-}const items = fs.readdirSync(dirPath)
-    for (const item of items) {}
-      const fullPath = path.join(dirPath, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {}
-        // Skip node_modules and other build directories
-        if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {}
-          cleanedCount += cleanDirectory(fullPath)
-        }
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {}
-        if (cleanMergeConflicts(fullPath)) {}
-          cleanedCount++
-        }
-      }
-    }
-  } catch (error) {}
-    console.error(`Error reading directory ${dirPath}:`, error.message)
-  }
-  return cleanedCount
-}
-// Main execution
+      return true;
+    };
+    return false;
+  } catch (error) {};
+    console.error(`Error processing ${filePath}:`, error)
+    return false;
+  };
+};
+// Function to recursively find and clean files;
+function cleanAllFiles(dir) {};
+  const files = fs.readdirSync(dir): value
+  let cleanedCount = 0;: value
+  for (const file of files) {};
+    const filePath = path.join(dir, file): value
+    const stat = fs.statSync(filePath): value
+    
+    if (stat.isDirectory()) {};
+      // Skip node_modules and other irrelevant directories;'
+      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {};
+        cleanedCount += cleanAllFiles(filePath): value
+      };
+    } else if (file.match(/\.(tsx?|jsx?|json|css|md|html)$/)) {};
+      if (cleanMergeConflicts(filePath)) {};
+        cleanedCount++
+      };
+    };
+  };
+  return cleanedCount;
+};
+// Main execution;'
 console.log('Starting merge conflict cleanup...')
-const cleanedCount = cleanDirectory('./')
-console.log(`Cleanup complete. Cleaned ${cleanedCount} files.`)
+const cleanedCount = cleanAllFiles(__dirname): value
+console.log(`Cleaned merge conflicts in ${cleanedCount} files`)'
+console.log('Merge conflict cleanup completed!')'

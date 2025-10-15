@@ -1,17 +1,17 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from './components/SEOHead';
 
 const DataAnalyticsPage: React.FC = () => {
   return (
     <>
-      <SEOHead 
-        title="data-analytics - Zion Tech Group"
-        description="Zion Tech Group data-analytics service page"
+      <SEOHead
+        title="Data Analytics - Zion Tech Group"
+        description="Professional data analytics solutions for modern businesses"
       />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">data-analytics</h1>
-          <p className="text-gray-300">Coming soon...</p>
+          <h1 className="text-4xl font-bold mb-4">Data Analytics</h1>
+          <p className="text-gray-300">Professional solutions coming soon...</p>
         </div>
       </div>
     </>

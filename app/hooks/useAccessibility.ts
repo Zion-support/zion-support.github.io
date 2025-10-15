@@ -13,8 +13,21 @@ interface AccessibilityState {
   isReducedMotion: boolean;
   isKeyboardUser: boolean;
   currentFocus: HTMLElement | null;
+<<<<<<< HEAD
+  focusHistory: HTMLElement[]
+};
+export const useAccessibility = (options: AccessibilityOptions = {}) => {};
+  const {};
+    enableKeyboardNavigation = true;: value
+    enableScreenReaderSupport = true;: value
+    enableHighContrast = true;: value
+    enableFocusManagement = true;: value
+    enableReducedMotion = true;: value
+  } = options;: value
+=======
   focusHistory: HTMLElement[];
 }
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
 
 export const useAccessibility = (options: AccessibilityOptions = {}) => {
   const {
@@ -128,7 +141,6 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     if (stateRef.current.focusHistory.length > 10) {
       stateRef.current.focusHistory.shift();
     }
-
     // Update current focus
     stateRef.current.currentFocus = element;
     element.focus();
@@ -257,30 +269,47 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
         overflow: hidden;
         clip: rect(0, 0, 0, 0);
         white-space: nowrap;
+<<<<<<< HEAD
+        border: 0
+      };
+      .focus-visible {};
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px
+      };
+      .keyboard-user *:focus {};
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px
+      };
+      .high-contrast {};
+        filter: contrast(1.2)
+      };
+      .reduced-motion * {};
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important
+      };
+      .skip-link {};
+=======
         border: 0;
       }
-
       .focus-visible {
         outline: 2px solid #3b82f6;
         outline-offset: 2px;
       }
-
       .keyboard-user *:focus {
         outline: 2px solid #3b82f6;
         outline-offset: 2px;
       }
-
       .high-contrast {
         filter: contrast(1.2);
       }
-
       .reduced-motion * {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
       }
-
       .skip-link {
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
         position: absolute;
         top: -40px;
         left: 6px;
@@ -289,12 +318,19 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
         padding: 8px;
         text-decoration: none;
         z-index: 1000;
+<<<<<<< HEAD
+        border-radius: 4px
+      };
+      .skip-link:focus {};
+        top: 6px
+      };
+=======
         border-radius: 4px;
       }
-
       .skip-link:focus {
         top: 6px;
       }
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
     `;
     document.head.appendChild(style);
 
@@ -303,21 +339,17 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
       const cleanup = checkHighContrast();
       if (cleanup) cleanupFunctions.push(cleanup);
     }
-
     if (enableReducedMotion) {
       const cleanup = checkReducedMotion();
       if (cleanup) cleanupFunctions.push(cleanup);
     }
-
     if (enableKeyboardNavigation) {
       const cleanup = detectKeyboardUsage();
       cleanupFunctions.push(cleanup);
     }
-
     if (enableFocusManagement) {
       updateFocusableElements();
     }
-
     // Add skip link
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';

@@ -4,14 +4,14 @@ import SEOHead from '../components/SEOHead';
 const DocumentProcessorPage: React.FC = () => {
   return (
     <>
-      <SEOHead 
-        title="document-processor - Zion Tech Group"
-        description="Zion Tech Group document-processor service page"
+      <SEOHead
+        title="Document Processor - Zion Tech Group"
+        description="Professional document processor solutions for modern businesses"
       />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">document-processor</h1>
-          <p className="text-gray-300">Coming soon...</p>
+          <h1 className="text-4xl font-bold mb-4">Document Processor</h1>
+          <p className="text-gray-300">Professional solutions coming soon...</p>
         </div>
       </div>
     </>

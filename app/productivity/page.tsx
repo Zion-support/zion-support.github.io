@@ -1,17 +1,17 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from './components/SEOHead';
 
 const ProductivityPage: React.FC = () => {
   return (
     <>
-      <SEOHead 
-        title="productivity - Zion Tech Group"
-        description="Zion Tech Group productivity service page"
+      <SEOHead
+        title="Productivity - Zion Tech Group"
+        description="Professional productivity solutions for modern businesses"
       />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">productivity</h1>
-          <p className="text-gray-300">Coming soon...</p>
+          <h1 className="text-4xl font-bold mb-4">Productivity</h1>
+          <p className="text-gray-300">Professional solutions coming soon...</p>
         </div>
       </div>
     </>

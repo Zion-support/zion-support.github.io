@@ -1,39 +1,26 @@
-const isValidEmail = (email) => {}
-}const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  return emailRegex.test(email)
-}
-export default async function handler(req, res) {}
-}if (req.method !== 'POST') {}
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Method not allowed' }))
-    return
+const isValidEmail = (email) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+
+export default function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-const { email } = req.body
-  if (!email) {}
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Email is required' }))
-    return
-  }
-  if (!isValidEmail(email)) {}
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Invalid email format' }))
-    return
-  }
-  try {}
-} catch (error) {}
-  console.error(error)
-}console.log('Newsletter subscription:', email)
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({}
-      success: true,
-      message: 'Successfully subscribed to newsletter'
-    }))
-  } catch (error) {}
-console.error('Newsletter subscription error:', error)
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({}
-      error: 'Failed to subscribe to newsletter',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
-    }))
+
+  try {
+    const { email } = req.body;
+
+    if (!email || !isValidEmail(email)) {
+      return res.status(400).json({ error: 'Valid email is required' });
+    }
+
+    // Here you would typically save to database or send to email service
+    console.log('Newsletter subscription:', email);
+
+    res.status(200).json({ message: 'Successfully subscribed to newsletter' });
+  } catch (error) {
+    console.error('Newsletter subscription error:', error);
+    res.status(500).json({ error: 'Failed to subscribe to newsletter' });
   }
 }

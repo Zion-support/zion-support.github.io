@@ -10,21 +10,12 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, "utf8");
 
     // Check if file has merge conflicts
-    if (!content.includes("<<<<<<< HEAD")) {
-      return false;
-    }
-
-    console.log(`Fixing merge conflicts in: ${filePath}`);
-
-    // Remove all merge conflict markers and keep the HEAD version
-    content = content.replace(
-      /<<<<<<< HEAD\n([\s\S]*?)=======([\s\S]*?)>>>>>>> [^\n]+\n/g,
+    if (!content.includes("([\s\S]*?)>>>>>>> [^\n]+\n/g,
       "$1",
     );
 
     // Remove any remaining merge conflict markers
-    content = content.replace(/<<<<<<< HEAD\n/g, "");
-    content = content.replace(/=======\n/g, "");
+    content = content.replace(/\n/g, "");
     content = content.replace(/>>>>>>> [^\n]+\n/g, "");
 
     // Clean up any double newlines
@@ -44,7 +35,7 @@ function fixMergeConflicts(filePath) {
 function findFilesWithConflicts() {
   try {
     const result = execSync(
-      'grep -r "<<<<<<< HEAD" --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" . | cut -d: -f1 | sort -u',
+      'grep -r "" --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" . | cut -d: -f1 | sort -u',
       {
         encoding: "utf8",
         cwd: process.cwd(),

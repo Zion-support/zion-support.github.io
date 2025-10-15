@@ -1,21 +1,29 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from './components/SEOHead';
 
 const CompliancePage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="compliance - Zion Tech Group"
-        description="Zion Tech Group compliance service page"
+        title="Compliance - Zion Tech Group"
+        description="Comprehensive compliance solutions for regulatory requirements and industry standards."
       />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">compliance</h1>
+          <h1 className="text-4xl font-bold mb-4">Compliance</h1>
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </>
+<<<<<<< HEAD
+  )
+    },;
+    {
+export default CompliancePage;
+"'"'
+=======
   );
 };
 
 export default CompliancePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017

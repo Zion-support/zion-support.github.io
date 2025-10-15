@@ -1,16 +1,23 @@
-export default function handler(req, res)   {}
-}if (req.method !== 'POST') {}
-    return res.status(405).json({ error: 'Method not allowed' })
+export default function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-  try {}
-} catch (error) {}
-  console.error(error)
-}const { error, stack, url, userAgent } = req.body
-    console.error('Client Error Report:', { error, stack, url, userAgent })
-    console.log('Error report received:', new Date().toISOString())
-    res.status(200).json({ success: true, message: 'Error report received' })
-  } catch (error) {}
-    console.error('Error processing error report:', error)
-    res.status(500).json({ error: 'Failed to process error report' })
+
+  try {
+    const { error, stack, userAgent, url } = req.body;
+    
+    // Log the error
+    console.error('Client Error:', {
+      error,
+      stack,
+      userAgent,
+      url,
+      timestamp: new Date().toISOString()
+    });
+
+    res.status(200).json({ message: 'Error reported successfully' });
+  } catch (error) {
+    console.error('Error reporting failed:', error);
+    res.status(500).json({ error: 'Failed to report error' });
   }
 }

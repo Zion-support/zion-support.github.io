@@ -10,8 +10,7 @@ fix_conflicts() {
     
     # Remove merge conflict markers and keep the HEAD version
     sed -i '//!d' "$file"
-    sed -i '/<<<<<<< HEAD/d' "$file"
-    sed -i '/=======/d' "$file"
+    sed -i '//d' "$file"
     sed -i '/
 }
 
