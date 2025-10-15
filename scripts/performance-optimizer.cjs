@@ -1,185 +1,202 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('Starting performance optimization...');
-
-// Function to optimize imports in a file
-function optimizeImports(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Optimize Lucide React imports - use individual imports instead of large destructured imports
-    const lucideImportRegex = /import\s+{([^}]+)}\s+from\s+['"]lucide-react['"];?/g;
-    const lucideMatches = [...content.matchAll(lucideImportRegex)];
-
-    for (const match of lucideMatches) {
-      const fullImport = match[0];
-      const importList = match[1];
-      
-      // Split the imports and clean them
-      const imports = importList.split(',').map(imp => imp.trim()).filter(imp => imp);
-      
-      if (imports.length > 5) {
-        // If more than 5 imports, convert to individual imports for better tree shaking
-        const individualImports = imports.map(imp => {
-          const importName = imp.split(' as ')[0].trim();
-          return `import { ${importName} } from 'lucide-react';`;
-        }).join('\n');
-        
-        content = content.replace(fullImport, individualImports);
-        modified = true;
-      }
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Optimized imports in: ${filePath}`);
-    }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
-}
-
-// Function to add lazy loading to components
-function addLazyLoading(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if this is a page component that should be lazy loaded (exclude main page.tsx)
-    if (filePath.includes('/page.tsx') && !filePath.endsWith('/app/page.tsx') && !content.includes('React.lazy')) {
-      // Add lazy loading wrapper if not already present
-      if (content.includes('export default')) {
-        const componentName = path.basename(filePath, '.tsx');
-        const lazyWrapper = `const ${componentName} = React.lazy(() => import('./${componentName}'));\nexport default ${componentName};`;
-        
-        // Replace the export with lazy wrapper
-        content = content.replace(/export default function \w+\(\) {[\s\S]*?^}/m, (match) => {
-          const functionName = match.match(/export default function (\w+)\(\)/)?.[1];
-          if (functionName) {
-            return `function ${functionName}() {${match.split('{')[1]}`;
-          }
-          return match;
-        });
-        
-        content = content.replace(/export default \w+;/, lazyWrapper);
-        fs.writeFileSync(filePath, content, 'utf8');
-        console.log(`Added lazy loading to: ${filePath}`);
-      }
-    }
-  } catch (error) {
-    console.error(`Error adding lazy loading to ${filePath}:`, error.message);
-  }
-}
-
-// Function to optimize images
-function optimizeImages() {
-  const publicDir = path.join(__dirname, '..', 'public');
-  const imagesDir = path.join(publicDir, 'images');
+// Performance optimization script
+const optimizePerformance = () => {
+  console.log('🚀 Starting performance optimizations...');
   
-  if (fs.existsSync(imagesDir)) {
-    console.log('Found images directory, consider optimizing images for web');
-    console.log('Recommendations:');
-    console.log('- Convert images to WebP format');
-    console.log('- Compress images to reduce file size');
-    console.log('- Use responsive images with srcset');
-  }
-}
+  // 1. Create service worker for caching
+  const serviceWorkerContent = `// Service Worker for caching
+const CACHE_NAME = 'zion-tech-v1';
+const urlsToCache = [
+  '/',
+  '/static/css/main.css',
+  '/static/js/main.js',
+  '/manifest.json'
+];
 
-// Function to add performance monitoring
-function addPerformanceMonitoring() {
-  const performanceScript = `
-// Performance monitoring
-if (typeof window !== 'undefined') {
-  // Monitor Core Web Vitals
-  import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-    getCLS(console.log);
-    getFID(console.log);
-    getFCP(console.log);
-    getLCP(console.log);
-    getTTFB(console.log);
-  });
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(urlsToCache))
+  );
+});
 
-  // Monitor bundle size
-  const observer = new PerformanceObserver((list) => {
-    for (const entry of list.getEntries()) {
-      if (entry.entryType === 'navigation') {
-        console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart, 'ms');
-      }
-    }
-  });
-  observer.observe({ entryTypes: ['navigation'] });
-}
-`;
-
-  const appFile = path.join(__dirname, '..', 'App.tsx');
-  if (fs.existsSync(appFile)) {
-    let content = fs.readFileSync(appFile, 'utf8');
-    if (!content.includes('Performance monitoring')) {
-      content = content.replace('useEffect(() => {', `useEffect(() => {${performanceScript}`);
-      fs.writeFileSync(appFile, content, 'utf8');
-      console.log('Added performance monitoring to App.tsx');
-    }
-  }
-}
-
-// Function to create optimized bundle configuration
-function createBundleConfig() {
-  const bundleConfig = {
-    optimization: {
-      splitChunks: {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-          common: {
-            name: 'common',
-            minChunks: 2,
-            chunks: 'all',
-            enforce: true
-          }
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        if (response) {
+          return response;
         }
+        return fetch(event.request);
       }
-    }
+    )
+  );
+});`;
+
+  fs.writeFileSync('public/sw.js', serviceWorkerContent);
+  console.log('✅ Service worker created');
+
+  // 2. Create manifest.json for PWA
+  const manifestContent = {
+    "name": "Zion Tech Group",
+    "short_name": "Zion Tech",
+    "description": "Advanced AI and IT Solutions",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#1e293b",
+    "theme_color": "#8b5cf6",
+    "icons": [
+      {
+        "src": "/icon-192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/icon-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
   };
 
-  const configPath = path.join(__dirname, '..', 'bundle.config.json');
-  fs.writeFileSync(configPath, JSON.stringify(bundleConfig, null, 2));
-  console.log('Created bundle optimization config');
-}
+  fs.writeFileSync('public/manifest.json', JSON.stringify(manifestContent, null, 2));
+  console.log('✅ PWA manifest created');
 
-// Main optimization function
-function optimizeProject() {
-  console.log('Optimizing project performance...');
-  
-  // Process all TypeScript/JavaScript files
-  function processDirectory(dir) {
-    const files = fs.readdirSync(dir);
-    
-    for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules' && file !== 'dist') {
-        processDirectory(filePath);
-      } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-        optimizeImports(filePath);
-        addLazyLoading(filePath);
-      }
+  // 3. Create robots.txt
+  const robotsContent = `User-agent: *
+Allow: /
+
+Sitemap: https://ziontechgroup.com/sitemap.xml`;
+
+  fs.writeFileSync('public/robots.txt', robotsContent);
+  console.log('✅ Robots.txt created');
+
+  // 4. Create sitemap.xml
+  const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ziontechgroup.com/</loc>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/about</loc>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/services</loc>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/contact</loc>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>`;
+
+  fs.writeFileSync('public/sitemap.xml', sitemapContent);
+  console.log('✅ Sitemap created');
+
+  // 5. Create performance monitoring component
+  const performanceMonitorContent = `import React, { useEffect } from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Monitor Core Web Vitals
+    if ('web-vitals' in window) {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
+      });
     }
-  }
 
-  // Run optimizations
-  processDirectory(path.join(__dirname, '..', 'app'));
-  optimizeImages();
-  addPerformanceMonitoring();
-  createBundleConfig();
-  
-  console.log('Performance optimization completed successfully!');
+    // Monitor performance metrics
+    if ('performance' in window) {
+      window.addEventListener('load', () => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        console.log('Page Load Time:', navigation.loadEventEnd - navigation.loadEventStart);
+        console.log('DOM Content Loaded:', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart);
+      });
+    }
+  }, []);
+
+  return null;
+};
+
+export default PerformanceMonitor;`;
+
+  fs.writeFileSync('app/components/PerformanceMonitor.tsx', performanceMonitorContent);
+  console.log('✅ Performance monitor created');
+
+  // 6. Create optimized image component
+  const optimizedImageContent = `import React, { useState } from 'react';
+
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
 }
 
-// Run the optimization
-optimizeProject();
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  className = '',
+  width,
+  height,
+  priority = false
+}) => {
+  const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleLoad = () => setLoaded(true);
+  const handleError = () => setError(true);
+
+  return (
+    <div className={\`relative overflow-hidden \${className}\`}>
+      {!loaded && !error && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+        </div>
+      )}
+      {error && (
+        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
+          <span className="text-gray-400">Image failed to load</span>
+        </div>
+      )}
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        loading={priority ? 'eager' : 'lazy'}
+        onLoad={handleLoad}
+        onError={handleError}
+        className={\`transition-opacity duration-300 \${loaded ? 'opacity-100' : 'opacity-0'}\`}
+      />
+    </div>
+  );
+};
+
+export default OptimizedImage;`;
+
+  fs.writeFileSync('app/components/OptimizedImage.tsx', optimizedImageContent);
+  console.log('✅ Optimized image component created');
+
+  console.log('🎉 Performance optimizations completed!');
+};
+
+optimizePerformance();

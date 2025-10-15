@@ -1,58 +1,50 @@
+import { ArrowRight } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
 
 const Page5gConsultingPage: React.FC = () => {
-  const services = [
-    {
-      title: 'Expert 5g Consulting Solutions',
-      description: 'Professional 5g consulting services tailored to your needs.'
-    },
-    {
-      title: 'Custom Implementation',
-      description: 'Tailored 5g consulting implementations for your specific requirements.'
-    },
-    {
-      title: '24/7 Support',
-      description: 'Round-the-clock support for all your 5g consulting needs.'
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gray-50">
-      <EnhancedSEO 
-        title="5G Consulting Services - Zion Tech Group"
-        description="Expert 5G consulting services to help your business leverage next-generation wireless technology."
-      />
+    <>
+      <Helmet>
+        <title>5G Consulting Services - Zion Tech Group</title>
+        <meta name="description" content="Expert 5G consulting services to help your business leverage next-generation wireless technology." />
+        <meta name="keywords" content="5G consulting, 5G strategy, network architecture, wireless technology" />
+      </Helmet>
       
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            5G Consulting Services
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Expert guidance for your 5G transformation journey
-          </p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              5G Consulting Services
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Expert guidance for your 5G transformation journey with cutting-edge wireless technology solutions.
+            </p>
           </div>
-        </div>
-        <div className="grid md:grid-cols-3 gap-8 mb-16">;
-          {services.map((service, index) => (
-            <div key={index} className="bg-whiterounded-lgshadow-lgp-6">
-              <h3 className="text-xl font-semibold text-gray-900mb-4">
-                {service.title}
-              </h3>
-              <p className="text-gray-600mb-4">
-                {service.description}
-              </p>
-              <Link 
-                to="/contact"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {services.map((service, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 hover:border-cyan-500/50 transition-all duration-300">
+                <div className="mb-4">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 mb-6">
+                  {service.description}
+                </p>
+                <Link 
+                  to="/contact"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300"
+                >
+                  Get Started Today
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </div>

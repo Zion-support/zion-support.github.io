@@ -1,84 +1,55 @@
-import React, { Suspense } from 'react';
-
-const FiveGTestingPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            5gTesting Services
-          </h1>
+import { ArrowRight } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
 
-const Page5gTestingPage: React.FC = () => {
-  const services = [
-    {
-      title: 'Expert 5g Testing Solutions',
-      description: 'Professional 5g testing services tailored to your needs.'
-    },
-    {
-      title: 'Custom Implementation',
-      description: 'Tailored 5g testing implementations for your specific requirements.'
-    },
-    {
-      title: '24/7 Support',
-      description: 'Round-the-clock support for all your 5g testing needs.'
-    }
-  ];
-
+const PageFiveGTestingPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>5g Testing - Zion Tech Group</title>
-        <meta name="description" content="Professional 5g testing solutions and services" />
-        <meta name="keywords" content="5g, testing" />
+        <title>5G Testing - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G testing services to validate performance, security, and compliance standards." />
+        <meta name="keywords" content="5G testing, network testing, performance validation, 5G compliance" />
       </Helmet>
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">5g Testing</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional 5g testing solutions and services
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              5G Testing
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional 5G testing services to validate performance, security, and compliance standards.
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-white">
-                      {service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-300 mb-6">
-                    {service.description}
-                  </p>
-                  <Link 
-                    to="/contact" 
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-12">
-              <Link 
-                to="/contact"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
-<p className="text-xl text-gray-300 mb-8">Professional solutions and services</p>
           </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {services.map((service, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 hover:border-cyan-500/50 transition-all duration-300">
+                <div className="mb-4">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 mb-6">
+                  {service.description}
+                </p>
+                <Link 
+                  to="/contact"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300"
+                >
+                  Get Started Today
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
 };
 
-export default Page5gTestingPage;
+export default PageFiveGTestingPage;

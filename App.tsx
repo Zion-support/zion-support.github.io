@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import Header from './app/components/Header';
 import Footer from './app/components/Footer';
 import Navigation from './app/components/Navigation';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import ErrorBoundary from './app/components/ErrorBoundary';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
 
 // Pages
 import HomePage from './app/page';
@@ -42,6 +42,7 @@ const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <HelmetProvider>
+        <PerformanceMonitor />
         <PerformanceOptimizer>
           <AccessibilityEnhancer>
             <Router>

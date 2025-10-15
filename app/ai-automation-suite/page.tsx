@@ -1,100 +1,72 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle, ArrowRight, Brain, Zap, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const AiAutomationSuitePage: React.FC = () => {
+const PageAiAutomationSuitePage: React.FC = () => {
   const services = [
     {
-      title: 'Expert Ai Automation Suite Solutions',
-      description: 'Professional ai automation suite services tailored to your needs.'
+      title: 'AI Automation Suite Strategy & Planning',
+      description: 'Comprehensive ai automation suite strategy development and implementation planning tailored to your business needs.',
+      icon: <Brain className="w-8 h-8 text-cyan-400" />
     },
     {
       title: 'Custom Implementation',
-      description: 'Tailored ai automation suite implementations for your specific requirements.'
+      description: 'Tailored ai automation suite implementations for your specific requirements and use cases.',
+      icon: <Zap className="w-8 h-8 text-purple-400" />
     },
     {
-      title: '24/7 Support',
-      description: 'Round-the-clock support for all your ai automation suite needs.'
+      title: '24/7 Support & Maintenance',
+      description: 'Round-the-clock support and maintenance for all your ai automation suite needs.',
+      icon: <Shield className="w-8 h-8 text-green-400" />
     }
   ];
 
   return (
     <>
-      <div>
       <Helmet>
-        <title>Ai Automation Suite - Zion Tech Group</title>
-        <meta name="description" content="Professional ai automation suite solutions and services" />
-        <meta name="keywords" content="ai, automation, suite" />
+        <title>AI Automation Suite - Zion Tech Group</title>
+        <meta name="description" content="Complete AI automation suite with tools for process optimization and intelligent workflows." />
+        <meta name="keywords" content="AI automation suite, process optimization, intelligent workflows, automation tools" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900">
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Ai automation suite</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional Ai automation suite solutions and services
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Automation Suite
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Complete AI automation suite with tools for process optimization and intelligent workflows.
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
-              <div className="bg-blue-50 border border-blue-200rounded-lgp-6">
-                <h3 className="text-lg font-semiboldtext-blue-900mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-                </div>
-        </div>
-              <div className="bg-green-50 border border-green-200rounded-lgp-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-              </p><div className="bg-purple-50 border border-purple-200rounded-lgp-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">24/7 Support
-                </h3>
-                <p className="text-purple-700">Round-the-clock support for all your needs.
-              </p>
-              </div>
-        </div>
-            </div>
-            <div className="text-center mt-12">
-              <Link 
-                to="/contact"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
-            <h1 className="text-4xl font-bold text-white mb-8">Ai automation suite</h1>
-<p className="text-xl text-gray-300 mb-8">Professional solutions and services</p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2  ">Expert Solutions
-                </h3>
-                <p className="text-blue-700   ">Our team of experts delivers cutting-edge solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2  ">Custom Implementation
-                </h3>
-                <p className="text-green-700   ">Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2  ">24/7 Support
-                </h3>
-                <p className="text-purple-700   ">Round-the-clock support for all your needs.
-                </p>
-              </div>
           </div>
-      </div>
-    </div> 
           
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {services.map((service, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 hover:border-cyan-500/50 transition-all duration-300">
+                <div className="mb-4">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 mb-6">
+                  {service.description}
+                </p>
+                <Link 
+                  to="/contact"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300"
+                >
+                  Get Started Today
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-</>
+    </>
   );
 };
 
-export default AiAutomationSuitePage;
+export default PageAiAutomationSuitePage;

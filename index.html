@@ -4,11 +4,59 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
     <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+    <meta name="title" content="Zion Tech Group - Advanced AI and IT Solutions" />
     <meta name="description" content="Leading provider of AI solutions, cloud infrastructure, and digital transformation services. Empowering businesses with cutting-edge technology." />
+    <meta name="keywords" content="AI solutions, 5G technology, cloud infrastructure, digital transformation, cybersecurity, IT consulting" />
+    <meta name="author" content="Zion Tech Group" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ziontechgroup.com/" />
+    <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+    <meta property="og:description" content="Leading provider of AI solutions, cloud infrastructure, and digital transformation services." />
+    <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ziontechgroup.com/" />
+    <meta property="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+    <meta property="twitter:description" content="Leading provider of AI solutions, cloud infrastructure, and digital transformation services." />
+    <meta property="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#8b5cf6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/main.tsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
