@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { onCLS, onFID, onFCP, onLCP, onTTFB } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -42,10 +42,6 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
     // Set up Web Vitals monitoring
     onCLS((metric) => {
       setMetrics(prev => ({ ...prev, cls: metric.value }));
-    });
-
-    onFID((metric) => {
-      setMetrics(prev => ({ ...prev, fid: metric.value }));
     });
 
     onFCP((metric) => {
@@ -120,8 +116,8 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
         
         <div className="flex justify-between">
           <span>FID:</span>
-          <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>
-            {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}
+          <span className="text-gray-400">
+            N/A
           </span>
         </div>
         
