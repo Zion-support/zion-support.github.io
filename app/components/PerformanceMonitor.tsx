@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface PerformanceMonitorProps {
@@ -194,4 +195,6 @@ const ComponentsPage: React.FC = () => {
 export default ComponentsPage;'";'";
 
 >>>>>>> main
+>>>>>>> main
+=======
 >>>>>>> main
