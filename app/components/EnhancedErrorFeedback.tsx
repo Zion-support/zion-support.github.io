@@ -1,9 +1,11 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react'
-interface Props {}
-  children: ReactNode
-  fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
+import React, { useState } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (_error: Error, errorInfo: ErrorInfo) => void;
 }
 interface State {}
   hasError: boolean
@@ -34,9 +36,9 @@ export class GlobalErrorBoundary extends Component<Props, State> {}
       errorInfo
     })
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {}
-      console.error('Error caught by boundary:', error, errorInfo)
-    }
+    if (process.env.NODE_ENV === 'development') {
+      }
+
     // Call custom error handler if provided
     if (this.props.onError) {}
       this.props.onError(error, errorInfo)
@@ -46,14 +48,11 @@ export class GlobalErrorBoundary extends Component<Props, State> {}
       this.logErrorToService(error, errorInfo)
     }
   }
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {}
-}// In a real app, you would send this to an error reporting service
+
+  private logErrorToService = (_error: Error, errorInfo: ErrorInfo) => {
+    // In a real app, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag
-    console.error('Production error:', {}
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
+    .toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href
     })
@@ -159,19 +158,20 @@ export class GlobalErrorBoundary extends Component<Props, State> {}
   }
 }
 // Functional error boundary for specific components
-export const ErrorBoundary: React.FC<{}
-  children: ReactNode
-  fallback?: ReactNode
-  onError?: (error: Error) => void
-}> = ({ children, fallback, onError }) => {}
-}const [hasError, setHasError] = React.useState(false)
-  const [error, setError] = React.useState<Error | null>(null)
-  React.useEffect(() => {}
-}const handleError = (event: ErrorEvent) => {}
-}setHasError(true)
-      setError(new Error(event.message))
-      if (onError) {}
-        onError(new Error(event.message))
+export const ErrorBoundary: React.FC<{
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (_error: Error) => void;
+}> = ({ children, fallback, _onError }) => {
+  const [hasError, setHasError] = React.useState(false);
+  const [error, setError] = React.useState<Error | null>(null);
+
+  React.useEffect(() => {
+    const handleError = (_event: ErrorEvent) => {
+      setHasError(true);
+      setError(new Error(event.message));
+      if (onError) {
+        onError(new Error(event.message));
       }
     }
     window.addEventListener('error', handleError)

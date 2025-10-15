@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import logger from '../../utils/logger'
-interface AccessibilitySettings {}
-  highContrast: boolean
-  largeText: boolean
-  reducedMotion: boolean
-  screenReader: boolean
+import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import logger from '../../utils/logger';
+
+interface AccessibilitySettings {
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  screenReader: boolean;
 }
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {}
 }const [settings, setSettings] = useState<AccessibilitySettings>({}
@@ -30,8 +32,31 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       reducedMotion: mediaQueries.reducedMotion.matches,
       screenReader: screenReaderDetected})
     // Listen for changes in system preferences
-    const handleHighContrastChange = (e: MediaQueryListEvent) => {}
-}setSettings(prev => ({ ...prev, highContrast: e.matches }))
+    const handleHighContrastChange = (_e: MediaQueryListEvent) => {
+      setSettings(prev => ({ ...prev, highContrast: e.matches }));
+    };
+
+    const handleReducedMotionChange = (_e: MediaQueryListEvent) => {
+      setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
+    };
+
+    mediaQueries.highContrast.addEventListener('change', handleHighContrastChange);
+    mediaQueries.reducedMotion.addEventListener('change', handleReducedMotionChange);
+
+    return () => {
+      mediaQueries.highContrast.removeEventListener('change', handleHighContrastChange);
+      mediaQueries.reducedMotion.removeEventListener('change', handleReducedMotionChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Apply accessibility settings to document
+    const body = document.body;
+    
+    if (settings.highContrast) {
+      body.classList.add('high-contrast');
+    } else {
+      body.classList.remove('high-contrast');
     }
     const handleReducedMotionChange = (e: MediaQueryListEvent) => {}
 }setSettings(prev => ({ ...prev, reducedMotion: e.matches }))
@@ -129,13 +154,13 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     }
   }, [])
   // Add keyboard navigation support
-  useEffect(() => {}
-}const handleKeyDown = (event: KeyboardEvent) => {}
-}// Escape key to close modals/dropdowns
-      if (event.key === 'Escape') {}
-        const activeElement = document.activeElement as HTMLElement
-        if (activeElement && activeElement.blur) {}
-          activeElement.blur()
+  useEffect(() => {
+    const handleKeyDown = (_event: KeyboardEvent) => {
+      // Escape key to close modals/dropdowns
+      if (event.key === 'Escape') {
+        const activeElement = document.activeElement as HTMLElement;
+        if (activeElement && activeElement.blur) {
+          activeElement.blur();
         }
       }
       // Tab navigation improvements

@@ -1,6 +1,6 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode
@@ -8,19 +8,27 @@ interface Props {
 }
 
 interface State {
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props)
-    this.state = { hasError: false }
+    super(props);
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null
+    };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return {
+      hasError: true,
+      error,
+      errorInfo: null
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -28,11 +36,29 @@ class ErrorBoundary extends Component<Props, State> {
     this.setState({
       error,
       errorInfo
-    })
+    });
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      }
+
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would typically send the error to an error reporting service
+      }
   }
+
+  handleRetry = () => {
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null
+    });
+  };
 
   render() {
     if (this.state.hasError) {
+      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback
       }
@@ -83,6 +109,29 @@ class ErrorBoundary extends Component<Props, State> {
                 Go Home
               </Link>
             </div>
+
+            <div className="mt-6 pt-4 border-t border-slate-700">
+              <p className="text-sm text-gray-400">
+                If this problem continues, please{' '}
+                <Link to="/contact" className="text-blue-400 hover:text-blue-300 underline">
+                  contact our support team
+                </Link>
+              </p>
+            </div>
+            
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-6 text-left">
+                <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
+                  Error Details (Development)
+                </summary>
+                <div className="mt-2 p-4 bg-slate-800/50 rounded text-xs text-gray-300 overflow-auto">
+                  <pre>{this.state.error.toString()}</pre>
+                  {this.state.errorInfo && (
+                    <pre className="mt-2">{this.state.errorInfo.componentStack}</pre>
+                  )}
+                </div>
+              </details>
+            )}
           </div>
         </div>
       )
@@ -92,4 +141,4 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default ErrorBoundary
+export default ErrorBoundary;

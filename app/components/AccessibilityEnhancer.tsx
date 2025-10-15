@@ -1,13 +1,85 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+interface AccessibilityEnhancerProps {
+  isHighContrast?: boolean;
+  isReducedMotion?: boolean;
+  fontSize?: number;
+}
 
-const AccessibilityEnhancer: React.FC = () => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    enableKeyboard: true,
+    enableScreenReader: true,
+    enableHighContrast: false,
+    enableFocusManagement: true,
+    enableLargeText: false,
+    enableReducedMotion: false
+  });
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Load settings from localStorage
   useEffect(() => {
-    // Skip to main content functionality
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-    document.body.insertBefore(skipLink, document.body.firstChild);
+    const savedSettings = localStorage.getItem('accessibility-settings');
+    if (savedSettings) {
+      try {
+        setSettings(JSON.parse(savedSettings));
+      } catch (error) {
+        }
+    }
+  }, []);
+
+  // Apply accessibility settings
+  const applyAccessibilitySettings = useCallback((newSettings: AccessibilitySettings) => {
+    const root = document.documentElement;
+    
+    // High contrast mode
+    if (newSettings.enableHighContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
+
+    // Large text mode
+    if (newSettings.enableLargeText) {
+      root.classList.add('large-text');
+    } else {
+      root.classList.remove('large-text');
+    }
+
+    // Reduced motion
+    if (newSettings.enableReducedMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
+    }
+
+    // Focus management
+    if (newSettings.enableFocusManagement) {
+      root.classList.add('focus-visible');
+    } else {
+      root.classList.remove('focus-visible');
+    }
+
+    // Keyboard navigation
+    if (newSettings.enableKeyboard) {
+      root.classList.add('keyboard-navigation');
+    } else {
+      root.classList.remove('keyboard-navigation');
+    }
+
+    // Save to localStorage
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+  }, []);
+
+  // Apply settings when they change
+  useEffect(() => {
+    applyAccessibilitySettings(settings);
+  }, [settings, applyAccessibilitySettings]);
+
+  // Keyboard navigation enhancement
+  useEffect(() => {
+    if (!settings.enableKeyboard) return;
 
     // Focus management for modals and dropdowns
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -96,7 +168,73 @@ const AccessibilityEnhancer: React.FC = () => {
     };
   }, []);
 
-  return null;
+      {/* Accessibility Styles */}
+      <style jsx global>{`
+        /* High Contrast Mode */
+        .high-contrast {
+          filter: contrast(150%) brightness(1.2);
+        }
+
+        .high-contrast * {
+          border-color: currentColor !important;
+        }
+
+        /* Large Text Mode */
+        .large-text {
+          font-size: 1.2em;
+        }
+
+        .large-text h1 { font-size: 2.5em; }
+        .large-text h2 { font-size: 2em; }
+        .large-text h3 { font-size: 1.75em; }
+        .large-text h4 { font-size: 1.5em; }
+        .large-text h5 { font-size: 1.25em; }
+        .large-text h6 { font-size: 1.1em; }
+
+        /* Reduced Motion */
+        .reduced-motion *,
+        .reduced-motion *::before,
+        .reduced-motion *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+
+        /* Focus Visible */
+        .focus-visible {
+          outline: 2px solid #3b82f6;
+          outline-offset: 2px;
+        }
+
+        /* Keyboard Navigation */
+        .keyboard-navigation button:focus,
+        .keyboard-navigation a:focus,
+        .keyboard-navigation input:focus,
+        .keyboard-navigation select:focus,
+        .keyboard-navigation textarea:focus {
+          outline: 2px solid #3b82f6;
+          outline-offset: 2px;
+        }
+
+        /* Skip Link */
+        .skip-link {
+          position: absolute;
+          top: -40px;
+          left: 6px;
+          background: #000;
+          color: #fff;
+          padding: 8px;
+          text-decoration: none;
+          z-index: 1000;
+        }
+
+        .skip-link:focus {
+          top: 6px;
+        }
+      `}</style>
+    </>
+  );
 };
 
 export default AccessibilityEnhancer;

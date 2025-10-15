@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-interface Slide {}
-  id: number
-  title: string
-  description: string
-  image: string
-  features: string[]
+import React, { useState } from 'react';
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+interface Slide {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  features: string[];
 }
 interface ContentCarouselProps {}
   slides?: Slide[]

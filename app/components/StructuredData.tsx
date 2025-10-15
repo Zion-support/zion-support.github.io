@@ -80,6 +80,10 @@ export const ServiceStructuredData: React.FC<{ service: Record<string, unknown> 
         name: 'Zion Tech Group',
         url: 'https://ziontechgroup.com'},
       areaServed: 'Worldwide',
+      serviceType: service['category'] as string,
+      offers: service['price'] ? {
+        '@type': 'Offer',
+        price: service['price'] as number,
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock'} : undefined}}
   />
