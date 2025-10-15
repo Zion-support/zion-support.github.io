@@ -19,7 +19,12 @@
     "targetExponentialFactor": 10,
     "autonomousEnabled": true
   },
-  "specializations": ["ci-cd", "infrastructure", "monitoring", "rollback-strategies"],
+  "specializations": [
+    "ci-cd",
+    "infrastructure",
+    "monitoring",
+    "rollback-strategies"
+  ],
   "autonomousCapabilities": {
     "selfReplication": true,
     "intelligentEvolution": true,

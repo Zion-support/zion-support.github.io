@@ -8,7 +8,7 @@ resolve_conflicts() {
     echo "🔍 Resolving conflicts in: $file"
     
     # Check if file exists and has conflict markers
-    if [ -f "$file" ] && grep -q "<<<<<<< HEAD" "$file"; then
+    if [ -f "$file" ] && grep -q "" "$file"; then
         echo "  ⚠️  Found conflicts in $file"
         
         # Create backup

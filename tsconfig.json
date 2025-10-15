@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "bundler",
@@ -14,44 +10,26 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "jsxImportSource": "react",
-    "strict": false,
-    "strictNullChecks": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": false,
+    "strict": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./app/*"
-      ],
-      "@/components/*": [
-        "./app/components/*"
-      ],
-      "@/pages/*": [
-        "./app/*"
-      ],
-      "@/utils/*": [
-        "./utils/*"
-      ],
-      "@/types/*": [
-        "./types/*"
-      ],
-      "@/hooks/*": [
-        "./hooks/*"
-      ],
-      "@/config/*": [
-        "./config/*"
-      ],
-      "@/data/*": [
-        "./data/*"
-      ],
-      "@/content/*": [
-        "./content/*"
-      ]
+      "@/*": ["./app/*"],
+      "@/components/*": ["./app/components/*"],
+      "@/pages/*": ["./app/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/types/*": ["./types/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/config/*": ["./config/*"],
+      "@/data/*": ["./data/*"],
+      "@/content/*": ["./content/*"]
     },
     "incremental": true,
     "plugins": [

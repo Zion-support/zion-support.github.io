@@ -1,170 +1,57 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
+import fs from 'fs';';";
+import path from 'path';';";
+import { execSync } from 'child_process';";
 
-import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-// Function to find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  let files = []
-  const items = fs.readdirSync(dir)
-  for (const item of items) {
-    const fullPath = path.join(dir, item)
-    const stat = fs.statSync(fullPath)
-    if (stat.isDirectory()) {
-      // Skip certain directories
-      if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
-        files = files.concat(findFiles(fullPath, extensions))
-      }
-    } else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath)
+// Function to resolve merge conflicts by keeping the latest version
+function resolveMergeConflicts(content) {}
+  const: lines = content.split('\n');";
+  const: resolvedLines = [];
+  let: inConflict = false;
+  let: keepContent = false;
+  
+  for (let: i = 0; i < lines.length; i++) {}
+    const: line = lines[i];
+    
+      keepContent = true;
+      continue;
+
     }
+    
+      inConflict = false;
+      keepContent = false;
+      continue;
+    }
+    
+    if (inConflict && !keepContent) {}
+      continue;
+    }
+    
+    resolvedLines.push(line);
   }
   
-  return files
+  return resolvedLines.join('\n');";
 }
 
-// Function to fix merge conflicts
-function fixMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    let modified = false
-    // Remove merge conflict markers
-    const conflictRegex = /[\s\S]*?[\s\S]*?    if (conflictRegex.test(content)) {
-      content = content.replace(conflictRegex, '')
-      modified = true
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {}
+  // Fix missing semicolons in imports: content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"]\s*$/gm, 'import $1 from "$2";');";";
+  
+  // Fix unterminated strings: content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]*)\s*$/gm, (match, imports, module) => {}";";
+    if (!module.endsWith('"') && !module.endsWith("'")) {}";";
+      return `import ${imports} from "${module}";`;";
     }
-    
-    // Fix common syntax issues
-    const fixes = [
-      // Fix missing closing tags in JSX
-      {
-        pattern: /<meta\s+[^>]*name="[^"]*"[^>]*>/g,
-        replacement: (match) => {
-          if (!match.includes('/>') && !match.includes('</meta>')) {
-            return match.replace(/>$/, ' />')
-          }
-          return match
-        }
-      },
-      // Fix unclosed JSX elements
-      {
-        pattern: /<(\w+)([^>]*?)(?<!\/)>/g,
-        replacement: (match, tagName, attributes) => {
-          // Skip self-closing tags
-          if (match.endsWith('/>') || ['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
-            return match
-          }
-          return match
-        }
-      }
-    ]
-    for (const fix of fixes) {
-      if (typeof fix.replacement === 'function') {
-        const newContent = content.replace(fix.pattern, fix.replacement)
-        if (newContent !== content) {
-          content = newContent
-          modified = true
-        }
-      } else {
-        const newContent = content.replace(fix.pattern, fix.replacement)
-        if (newContent !== content) {
-          content = newContent
-          modified = true
-        }
-      }
-    }
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8')
-      console.log(`Fixed: ${filePath}`)
-      return true
-    }
-    
-    return false
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message)
-    return false
-  }
+    return match;
+  });
+  
+  // Fix JSX syntax issues: content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*$/gm, '<$1>');";
+  
+  return content;
 }
 
-// Function to fix specific parsing errors
-function fixParsingErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    let modified = false
-    // Fix common parsing errors
-    const fixes = [
-      // Fix missing commas in object literals
-      {
-        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:/g,
-        replacement: '$1: [$2],\n    $3:'
-      },
-      // Fix missing closing brackets
-      {
-        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*\]/g,
-        replacement: '$1: [$2]\n  }'
-      },
-      // Fix JSX fragment issues
-      {
-        pattern: /<>([^<]+)<\/>/g,
-        replacement: '<React.Fragment>$1</React.Fragment>'
-      },
-      // Fix missing semicolons
-      {
-        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*$/gm,
-        replacement: '$1: [$2],'
-      }
-    ]
-    for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement)
-      if (newContent !== content) {
-        content = newContent
-        modified = true
-      }
-    }
+// Function to process a single file
+function processFile(filePath) {}
+  try {}
+    const: content = fs.readFileSync(filePath, 'utf8');";
     
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8')
-      console.log(`Fixed parsing errors in: ${filePath}`)
-      return true
-    }
-    
-    return false
-  } catch (error) {
-    console.error(`Error fixing parsing errors in ${filePath}:`, error.message)
-    return false
-  }
-}
-
-// Main execution
-console.log('Starting merge conflict and parsing error fixes...')
-const appDir = path.join(__dirname, 'app')
-const files = findFiles(appDir)
-let fixedCount = 0
-let errorCount = 0
-for (const file of files) {
-  try {
-    if (fixMergeConflicts(file)) {
-      fixedCount++
-    }
-    if (fixParsingErrors(file)) {
-      fixedCount++
-    }
-  } catch (error) {
-    console.error(`Failed to process ${file}:`, error.message)
-    errorCount++
-  }
-}
-
-console.log(`\nFixed ${fixedCount} files`)
-console.log(`Errors: ${errorCount} files`)
-// Run linting to check remaining issues
-console.log('\nRunning linting to check remaining issues...')
-try {
-  execSync('pnpm run lint', { stdio: 'inherit' })
-} catch (error) {
-  console.log('Linting completed with some remaining issues to fix manually')
-}
+    // Check if file has merge conflicts

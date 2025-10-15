@@ -1,180 +1,89 @@
-    const features = [
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Comprehensive security solutions designed for large-scale enterprise environments.',
-  },
-    {
-    icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions that grow with your business needs.',
-      benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization'],
-  },
-    {
-    icon: Brain,
-      title: 'AI Integration',
-      description: 'Enterprise-grade AI solutions for automation and intelligent decision making.',
-      benefits: ['Machine learning', 'Predictive analytics', 'Process automation', 'Intelligent insights'],
-  },
-    {
-    icon: Database,
-      title: 'Data Management',
-      description: 'Advanced data management and analytics for enterprise-scale operations.',
-      benefits: ['Big data processing', 'Real-time analytics', 'Data governance', 'Business intelligence'],
-  },
-    {
-    icon: Users,
-      title: 'User Management',
-      description: 'Comprehensive user and access management for large organizations.',
-      benefits: ['Single sign-on', 'Role-based access', 'User provisioning', 'Audit trails'],
-  },
-    {
-    icon: Settings,
-      title: 'System Integration',
-      description: 'Seamless integration with existing enterprise systems and workflows.',
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'],
-  }
-    ]
-const solutions = [
-    {title: 'Enterprise Resource Planning',
-      description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
-      icon: Building,
-    {
-    title: 'Enterprise Resource Planning',
-      description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
-      icon: Building,
-      benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management'],
-  },
-    {
-    title: 'Customer Relationship Management',
-      description: 'Advanced CRM systems for managing customer relationships and sales processes.',
-      icon: Users,
-  ];
-      benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation'],
-  },
-    {
-    title: 'Business Intelligence',
-      description: 'Powerful BI solutions for data-driven decision making and strategic planning.',
-      icon: BarChart,
-      benefits: ['Data visualization', 'Predictive analytics', 'Reporting', 'Performance monitoring'],
-  },
-    {
-    title: 'Workflow Automation',
-      description: 'Automate complex business processes to improve efficiency and reduce errors.',
-      icon: Zap,
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management'],
-  }
-  ]
-const benefits = [
-    'Reduce operational costs by 30%',
-    'Improve productivity by 50%',
-    'Enhance security and compliance',
-    'Streamline business processes',
-
-    'Enable data-driven decisions',
-
-    'Scale with business growth',
-
-    'Integrate with existing systems',
-
-    { number: '500+', label: 'Enterprise Clients', icon: Building },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
-    { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
-    { number: '24/7', label: 'Support Available', icon: Clock }
-  ]
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <SEOOptimizer>
-              <p className="text-xl text-gray-300">Section description</p>
+<<<<<<< HEAD
+import React from 'react;'
+import { Helmet } from 'react-helmet-async;'
+'use client;''
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-white">""
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />""
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">;""
+        <div className="text-center">;""
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">;""
+            Page;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">;""
+            Professional page solutions tailored to your business needs.;
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;""
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;""
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">;""
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">;""
+                Our team of experts delivers cutting-edge page solutions.;
+              </p>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;""
+              <h3 className="text-lg font-semibold text-green-900 mb-2">;""
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">;""
+                Tailored page implementations for your specific requirements.;
+              </p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">;""
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">;""
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">;""
+                Round-the-clock support for all your page needs.;
+              </p>
             </div>
           </div>
-        </section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
-        <div className="relative max-w-7xl mx-auto text-center"></div>
-          <h1>
-            Enterprise</h1>
+          <div className="mt-12">;""
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;""
+              Get Started Today;
             </button>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  );}
+}''
+=======
+import SEOHead from '../components/SEOHead';
 
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-            ))}
+const PagePage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="page - Zion Tech Group"
+        description="Zion Tech Group page service page"
 
-          </div>
-        </div>
-      </section>
-      <SEOOptimizer
-        title="Enterprise Solutions - Zion Tech Group"
-        description="Comprehensive enterprise-grade solutions for large-scale business operations."
-        keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
+const EnterprisePage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title ="enterprise - Zion Tech Group - Zion Tech Group"";
+        description="Zion Tech Group enterprise service page"";
+
       />
-      <Navigation />
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-              Built for scale, security, and performance to meet the demands of large organizations.
-            </p>
-          </div>
-                </div>
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">enterprise - Zion Tech Group</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+      </div>
+    </>
 
-                      {benefit} </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-              End-to-end enterprise solutions that address every aspect of your business operations.
-            </p>
-          </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-              Contact Enterprise Sales
-              </button><ArrowRight>
-            </button>
-              Learn More
-            </button>
-          </div>
-        </div>
-      </section>
-      <Footer /></Footer>
+  )
+    },
+    {}
+export default PagePage;
+
   ),
-}
-export default EnterprisePage
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Enterprise?
-          <p className="text-xl text-gray-300 mb-8">
-            Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Contact Enterprise Sales
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More
-      <Footer />
+};
+
+>>>>>>> main

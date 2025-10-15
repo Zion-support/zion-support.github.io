@@ -1,77 +1,50 @@
-const fs = require('fs')
-const path = require('path')
-const dir = path.join(process.cwd(), 'data')
-const file = path.join(dir, 'wallets.json')
+// API endpoint for wallet operations
+<<<<<<< HEAD
 export default function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.statusCode = 405
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Method not allowed' }))
-    return
+  if (req.method !== 'POST') {'
+    return res.status(405).json({ error: 'Method not allowed' });'
   }
-
-  const { address, type, name, userId } = req.body || {}
-  if (!address || !type) {
-    res.statusCode = 400
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Address and type are required' }))
-    return
+export default function handler(req, res) {
+  res.status(200).json({ message: 'API endpoint working' });'ursor/fix-errors-and-merge-to-main-d2b1
   }
-
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true })
-  }
-
-  let existing = []
-  try {
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8')
-      existing = JSON.parse(data)
-      if (!Array.isArray(existing)) existing = []
-    }
-  } catch (error) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error reading existing wallets:', error)
-    }
-    existing = []
-  }
-
-  // Check if wallet address already exists
-  const existingWallet = existing.find(wallet => wallet.address === address)
-  if (existingWallet) {
-    res.statusCode = 400
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Wallet address already exists' }))
-    return
-  }
-
   const newWallet = {
     id: Date.now().toString(),
     address,
     type,
-    name: name || '',
-    userId: userId || '',
-    timestamp: new Date().toISOString(),
-    status: 'active'
+    name: name || ','
+    userId: userId || ','
+    status: 'active','
+    createdAt: new Date().toISOString()
   }
-  existing.push(newWallet)
   try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2))
-    res.statusCode = 200
+    wallets.push(newWallet)
+    fs.writeFileSync(file, JSON.stringify(wallets, null, 2))
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Wallet added successfully',
-      id: newWallet.id
+      success: true,
+      message: 'Wallet added successfully' 
     }))
   } catch (error) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error saving wallet:', error)
-    }
-    res.statusCode = 500
+    console.error('Error:', error)
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ error: 'Failed to save wallet' }))
+=======
+    name: name || '',}
+    userId: userId || '',}
+    status: 'active',}
+    createdAt: new Date().toISOString()}
+  };
+  try {
+    wallets.push(newWallet);
+    fs.writeFileSync(file, JSON.stringify(wallets, null, 2));
+    res.setHeader('Content-Type', 'application/json');'
+    res.end(JSON.stringify({
+      success: true,
+      message: 'Wallet added successfully' '
+    }));
+  } catch (error) {
+    console.error('Error:', error);'
+    res.setHeader('Content-Type', 'application/json');'
+    res.end(JSON.stringify({ error: 'Failed to save wallet' }));'
   }
 }

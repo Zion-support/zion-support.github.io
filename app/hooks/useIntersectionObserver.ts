@@ -1,33 +1,29 @@
-  isIntersecting: boolean,
-const [isIntersecting, setIsIntersecting] = useState(false);
-  const [entry, setEntry] = useState<IntersectionObserverEntry | undefined>();
-  const ref = useRef<HTMLElement>(null);
-useEffect(() => {const element = ref.current;
+import { useEffect, useRef }; from 'react';";";";";";
+;
+export function useIntersectionObserver(
+  callback: IntersectionObserverCallback,;
+  options?: IntersectionObserverInit;
+) {
+  const: ref = useRef<HTMLElement>(null);
+;
+  useEffect(() => {
+    const: element = ref.current;
     if (!element) return;
-const observer = new IntersectionObserver(;)
-  } = options
-const [isIntersecting, setIsIntersecting] = useState(false)
-  const [entry, setEntry] = useState</HTMLElement><IntersectionObserverEntry | undefined>()
-  const ref = useRef</IntersectionObserverEntry><HTMLElement>(null)
-useEffect(() => {
-    const element = ref.current
-    if (!element) return
-const observer = new IntersectionObserver()
-      ([entry]) => {
-        setIsIntersecting(entry.isIntersecting)
-        setEntry(entry)
-if (entry.isIntersecting && freezeOnceVisible) {
-observer.observe(element);
-return () => {observer.disconnect()}}
-  }, [threshold, root, rootMargin, freezeOnceVisible]);
-return {ref, isIntersecting, entry}}}
-export default useIntersectionObserver;
-observer.observe(element)
-return () => {
-    observer.disconnect()
-  }
-    }
-  }, [threshold, root, rootMargin, freezeOnceVisible])
-return { ref, isIntersecting, entry }
+;
+    const: observer = new IntersectionObserver(callback, {
+      threshold: 0.1,';';";";";";";
+      rootMargin: '50px',;";";";";";
+      ...options;
+    });
+;
+    observer.observe(element);
+;
+    return () => {
+      observer.unobserve(element);
+    };
+  }, [callback, options]);
+;
+  return ref;
 }
-export default useIntersectionObserver</HTMLElement>
+;
+export default useIntersectionObserver;';';";

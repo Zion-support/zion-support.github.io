@@ -1,123 +1,100 @@
+
+import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+
+interface LazyImageProps {};
+  src: string;
+  alt: string;
+  className?: string;
+  placeholder?: React.ReactNode;
+  fallback?: React.ReactNode;
+  onLoad?: () => void;
+  onError?: () => void;
+  loading?: 'lazy' | 'eager';
+  sizes?: string;
+  srcSet?: string;
+};
+const LazyImage: React.FC<LazyImageProps> = ({};)
+  src, alt, className = '', _placeholder, _fallback, _onLoad, _onError, loading = 'lazy', _sizes, _srcSet, _}) => {};
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {};
+    const observer = new IntersectionObserver(([entry]) => {};
+        if ($1) {}
+  // If body
 }
-  ]
-const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-
-    '24/7 technical support',
-
-    'Easy integration with existing systems',
-
-    'Cost-effective pricing plans',
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-    'Proven track record of success'
-  ]
-{/* Hero Section */}
-      <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center"></div>
-            <h1>
-                LazyImage
-              </span>
-              <br></br>
-              <span className="text-white">Solutions</span>
-            </h1>
-              </button>
-            </div>
-          </div>
+          setIsInView(true);
+          observer.disconnect();
+        };
+      };
+      {},
+      threshold: 0.1,
+      rootMargin: '50px'};
+    )
+    if (imgRef.current) {},
+      observer.observe(imgRef.current)
+    },
+      return () => observer.disconnect()
+  }, [])
+  const handleLoad = () => {};
+}setIsLoaded(true)
+    onLoad?.()
+  },
+      const handleError = () => {};
+}setIsError(true)
+    onError?.()
+  },
+      if (isError && fallback) {},
+      return <>{fallback}</>
+  },
+      return ()
+    <div ref={imgRef} className={`relative overflow-hidden ${className}`}></div>
+      {!isLoaded && !isError && placeholder && ()}
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-700"></div>
+          {placeholder};
         </div>
-      </section>
-        </div>
-      </section>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
-            {benefits.map((benefit, index) => (
-              </div>
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">LazyImage
-              <br />
-              <span className="text-white">Solutions
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced lazyimage solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our lazyimage solutions for your business.
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}
-            ))}
-        </div>
-      </section>
-      {/* CTA Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-      {/* CTA Section */}
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-              Ready to Get Started?
-            </h2>
-            <p></p>
-              Contact our experts to discuss your lazyimage needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>
-              </button>
-            </div>
-          ))
-        </div>
-      </section>
+      )};
+      {isInView && ()}
+        <imgsrc={src},>
+      alt={alt},
+      className={`transition-opacity duration-300 ${},
+      isLoaded ? 'opacity-100' : 'opacity-0'
+          } ${className}`},
+      loading={loading},
+      sizes={sizes},
+      srcSet={srcSet},
+      onLoad={handleLoad},
+      onError={handleError},
+      decoding="async"
+        />
+      )};
     </div>
-  ),
-};]
-export default LazyImagePage
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your lazyimage needs and get a customized solution.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
   )
-}
-export default LazyImagePage</div></div></div></div></div></div></div></div></div></div></span></span></button></button></button></button></p></p></p></p></h1></h2></h2></section></section></section>
+},
+      export default LazyImage
+
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const ComponentsPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+};
+;
+export default ComponentsPage;'";'";
+

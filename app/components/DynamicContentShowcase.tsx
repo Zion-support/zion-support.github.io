@@ -1,122 +1,159 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';
 
-const DynamicContentShowcase: React.FC = () => {
-  const [currentFeature, setCurrentFeature] = useState(0);
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced machine learning algorithms that adapt and learn from your data',
-      benefits: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'Deep Learning']
+import React, { useState } from 'react',
+      import React, { useState, useEffect } from "react",
+      interface ContentItem {},
+      id: string,
+      title: string,
+      description: string,
+      image: string,
+      category: string,
+      featured?: boolean
     },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment with local support and compliance',
-      benefits: ['Multi-region Deployment', 'Local Support', 'Compliance Ready', 'Scalable Infrastructure']
+    {}
+interface DynamicContentShowcaseProps {},
+      items?: ContentItem[]
+  autoPlay?: boolean
+  interval?: number
+  className?: string
+},
+      const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({},)
+      items = [
+    {},
+      id: "1", title: "AI-Powered Solutions", _description:
+        "Transform your business with cutting-edge artificial intelligence technology.", _image: "/api/placeholder/400/300", _category: "AI Solutions", _featured: true, _}, _{},
+      id: "2", _title: "Cloud Migration", _description:
+        "Seamlessly migrate your infrastructure to the cloud with our expert services.", _image: "/api/placeholder/400/300", _category: "Cloud Services", _}, _{},
+      id: "3", _title: "Data Analytics", _description:
+        "Unlock insights from your data with advanced analytics and visualization.", _image: "/api/placeholder/400/300", _category: "Data Services", _}, _], autoPlay = true, interval = 5000, className = "", _}) => {},
+      const [currentIndex, setCurrentIndex] = useState(0),
+      const [isPlaying, setIsPlaying] = useState(autoPlay),
+      useEffect(() => {},
+      if (!isPlaying) return,
+      const timer = setInterval(() => {},
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+    }, interval),
+      return () => clearInterval(timer);
+  }, [isPlaying, interval, items.length]),
+      const goToPrevious = () => {},
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length;
+    )
     },
-    {
-      icon: Star,
-      title: 'Premium Quality',
-      description: 'Enterprise-grade solutions with 99.9% uptime guarantee',
-      benefits: ['High Availability', 'Enterprise Security', '24/7 Support', 'SLA Guarantee']
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [features.length]);
-
-  return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Dynamic Content Showcase
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience our cutting-edge solutions through interactive demonstrations and real-world examples.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className={`p-6 rounded-xl transition-all duration-500 ${
-                  index === currentFeature
-                    ? 'bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-400/50'
-                    : 'bg-white/5 border border-white/10'
-                }`}
-              >
-                <div className="flex items-start space-x-4">
-                  <div className={`flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center ${
-                    index === currentFeature
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600'
-                      : 'bg-white/10'
-                  }`}>
-                    <feature.icon className={`${index === currentFeature ? 'text-white' : 'text-gray-400'}`} size={24} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className={`text-xl font-semibold mb-2 ${
-                      index === currentFeature ? 'text-white' : 'text-gray-300'
-                    }`}>
-                      {feature.title}
-                    </h3>
-                    <p className={`mb-4 ${
-                      index === currentFeature ? 'text-gray-200' : 'text-gray-400'
-                    }`}>
-                      {feature.description}
-                    </p>
-                    <div className="grid grid-cols-2 gap-2">
-                      {feature.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center text-sm">
-                          <CheckCircle className={`mr-2 flex-shrink-0 ${
-                            index === currentFeature ? 'text-green-400' : 'text-gray-500'
-                          }`} size={16} />
-                          <span className={index === currentFeature ? 'text-gray-300' : 'text-gray-500'}>
-                            {benefit}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+    {}
+  const goToNext = () => {},
+      setCurrentIndex(prevIndex) => (prevIndex + 1) % items.length)
+    },
+    {}
+  const togglePlayPause = () => {},
+      setIsPlaying(!isPlaying)
+    },
+    {}
+  const goToSlide = (_index: number) => {},
+      setCurrentIndex(index)
+    },
+    {}
+  const currentItem = items[currentIndex],
+      return ()
+    <div className={`relative ${className}`}></div>
+      <div className="relative overflow-hidden rounded-lg bg-gray-900"></div>
+        <div className="flex transition-transform duration-500 ease-in-out"></div>
+          <div className="w-full flex-shrink-0"></div>
+            <div className="grid md:grid-cols-2 gap-8 p-8"></div>
+              <div className="space-y-6"></div>
+                <div></div>
+                  <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium mb-4"></span>
+                    {currentItem.category};
+                  </span>
+                  <h2 className="text-3xl font-bold text-white mb-4"></h2>
+                    {currentItem.title};
+                  </h2>
+                  <p className="text-gray-300 text-lg"></p>
+                    {currentItem.description};
+                  </p>
+                </div>
+                <div className="flex space-x-4"></div>
+                  <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"></button>
+                    Learn More
+                  </button>
+                  <button className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button>
+                    Get Started
+                  </button>
                 </div>
               </div>
-            ))}
-          </div>
-          
-          <div className="relative">
-            <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 text-center">
-              <div className="w-32 h-32 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Brain className="text-white" size={64} />
+              <div className="relative"></div>
+                <imgsrc={currentItem.image},>
+      alt={currentItem.title},
+      className="w-full h-64 object-cover rounded-lg"
+                />
+                {currentItem.featured && ()}
+                  <div className="absolute top-4 right-4 bg-yellow-500 text-yellow-900 px-2 py-1 rounded text-sm font-semibold"></div>
+                    Featured
+                  </div>
+                )};
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">
-                {features[currentFeature].title}
-              </h3>
-              <p className="text-gray-200 mb-6">
-                {features[currentFeature].description}
-              </p>
-              <a
-                href="/contact"
-                className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-              >
-                Learn More
-                <ArrowRight className="ml-2" size={20} />
-              </a>
             </div>
           </div>
         </div>
       </div>
+      {/* Controls */};
+      <div className="flex items-center justify-between mt-6"></div>
+        <div className="flex space-x-2"></div>
+          <buttononClick={goToPrevious},>
+      className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
+          ></button
+>
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <buttononClick={togglePlayPause},>
+      className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
+          ></button
+>
+            {isPlaying ? ()}
+              <Pause className="w-5 h-5" />
+            ) : ()
+              <Play className="w-5 h-5" />
+            )};
+          </button>
+          <buttononClick={goToNext},>
+      className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
+          ></button
+>
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
+        {/* Dots indicator */};
+        <div className="flex space-x-2"></div>
+          {items.map(( index) => (<buttonkey={index},>)
+      onClick={() => goToSlide(index)},
+      className={`w-3 h-3 rounded-full transition-colors ${},
+      index === currentIndex ? "bg-cyan-500" : "bg-gray-600"
+              }`} />
+          ))};
+        </div>
+      </div>
     </div>
-  );
-};
+  )
+},
+      export default DynamicContentShowcase
 
-export default DynamicContentShowcase;
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const ComponentsPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+};
+;
+export default ComponentsPage;'";'";
+

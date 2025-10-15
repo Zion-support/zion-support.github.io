@@ -1,185 +1,174 @@
-    const features = [
+<<<<<<< HEAD
+import React from 'react;'
+import { ArrowRight } from 'lucide-react;'
+import { CheckCircle } from 'lucide-react;'
+import { Star } from 'lucide-react;'
+import { Users } from 'lucide-react;'
+import { Clock } from 'lucide-react;'
+import { DollarSign } from 'lucide-react;'
+import { Shield } from 'lucide-react;'
+import { Code } from 'lucide-react;'
+import { Database } from 'lucide-react;'
+import { Mail } from 'lucide-react;'
+import { Settings } from 'lucide-react;'
+import { Target } from 'lucide-react;'
+import { TrendingUp } from 'lucide-react;'
+import { PieChart } from 'lucide-react;'
+import { MessageSquare } from 'lucide-react;'
+import { Heart } from 'lucide-react;'
+import { Globe } from 'lucide-react;'
+import { Smartphone } from 'lucide-react;'
+import { Network } from 'lucide-react;'
+import { Lock } from 'lucide-react;'
+import { Cpu } from 'lucide-react;'
+import { Wifi } from 'lucide-react;'
+import { Building2 } from 'lucide-react;'
+import { Briefcase } from 'lucide-react;'
+import { Lightbulb } from 'lucide-react;'
+import { Link } from 'react-router-dom;'
+import EnhancedSEO from '../components/EnhancedSEO;'
+const Page = () => {
+  const features = [
     {
-      icon: BarChart,
-      title: 'Real-time Analytics',
-const benefits = [
-  ]
-  const benefits = [
-    'Real-time data visualization and reporting',
-    'AI-powered predictive analytics',
-
-    'Customizable dashboard widgets',
-
-    'Automated report generation',
-
-    'Multi-platform data integration',
-
-    { label: 'Data Sources', value: '50+', icon: BarChart },
-    { label: 'Update Frequency', value: 'Real-time', icon: Clock },
-    { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
-    { label: 'User Satisfaction', value: '4.9/5', icon: Star }
-  ]
-return (
+      icon: <CheckCircle className="w-8 h-8" />,""
+      title: 'Advanced Features',''
+      description: 'Cutting-edge technology for maximum efficiency''
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,""
+      title: 'Secure & Reliable',''
+      description: 'Enterprise-grade security and 99.9% uptime''
+    },
+    {
+      icon: <Users className="w-8 h-8" />,""
+      title: 'Expert Support',''
+      description: '24/7 support from our team of specialists''
+    }
+  ];
+  return (
     <>
-        <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
-        </Helmet><title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-        <link>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        {/* Hero Section */}</div>
-        <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+      <EnhancedSEO
+        title="Page - Zion Tech Group""
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""
+        keywords="page, business solutions, technology services, professional services""
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto text-center">""
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
+              Page
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
+              Professional page services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/demo""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View Demo
+              </Link>
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
-                <BarChart>
-                </BarChart><span>AI Analytics Dashboard</span>
-              </div>
-              <h1>
-                Real-time Business </h1>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Intelligence</span>
-              </h1>
-                Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>
-                  </button><span>Start Free Trial</span>
-                  <ArrowRight>
-                </button>
-                <button>View Demo,</button>
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
-              <p>Everything you need to make data-driven decisions with confidence;</p>
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
-              {features.map((feature, index) => (</div>} <div key={index}className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover: border-cyan-400/50 transition-all group"></div>,
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover: scale-110 transition-transform"></div>,
-                    <feature />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description</p>}</p>
-                </div>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                <BarChart className="w-4 h-4" />
-                <span>AI Analytics Dashboard
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">
-                Real-time Business
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Intelligence
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your data into actionable insights with our AI-powered analytics dashboard. 
-                Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
-                  <span>Start Free Trial
-                  <ArrowRight className="w-5 h-5" />
-                <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">View Demo
         {/* Features Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Everything you need to make data-driven decisions with confidence
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
-                  <p className="text-gray-300">{feature.description}
-              ))}
-        {/* Metrics Section */}
-        <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          <div className="max-w-7xl mx-auto" / /></div>
-            <div className="text-center mb-16" / /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Platform Performance</h2>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Platform Performance
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Built for scale and reliability
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {metrics.map((metric, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <metric.icon className="w-8 h-8 text-white" />
-                  <div className="text-3xl font-bold text-white mb-2">{metric.value}
-                  <div className="text-gray-300">{metric.label}
-              ))}
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          <div className="max-w-7xl mx-auto" / /></div>
-            <div className="text-center mb-16" / /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Dashboard</h2>
-                  </div>
-                ))}
-              </div>
-              <div className="bg-gradient-to-br from-green-600/20 to-cyan-600/20 rounded-lg p-8 border border-green-500/30" / /></div>
-                <h3 className="text-2xl font-bold text-white mb-4">Success Stories</h3>
-                <div className="space-y-4"></div>
-                  <div className="flex items-center space-x-3"></div>
-                    <Star>
-                    </Star><span className="text-gray-300">"Increased revenue by 40% with better insights"</span>
-                  </div>
-                  <div className="flex items-center space-x-3"></div>
-                    <Star>
-                    </Star><span className="text-gray-300">"Reduced reporting time by 80%"</span>
-                  </div>
-                  <div className="flex items-center space-x-3"></div>
-                    <Star>
-                    </Star><span className="text-gray-300">"Improved decision making speed by 3x"</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-                to make smarter, data-driven decisions.
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>
-                  </button><span>Start Free Trial</span>
-                  <ArrowRight>
-                </button>
-                  Schedule Demo
-                </button>
-              </li>
-            </li>
-          </li>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">""
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
+                  <p className="text-gray-300">{feature.description}</p>""
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+          <div className="max-w-4xl mx-auto text-center">""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">""
+              Let's discuss how our page services can help your business succeed.''
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/services""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+const page = React.lazy(() => import('./page'));''
+export default page;
+=======
+import SEOHead from '../components/SEOHead';
+
+const PagePage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="page - Zion Tech Group"
+        description="Zion Tech Group page service page"
+
+const AnalyticsDashboardPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title ="analytics-dashboard - Zion Tech Group - Zion Tech Group"";
+        description="Zion Tech Group analytics-dashboard service page"";
+
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">analytics-dashboard - Zion Tech Group</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+      </div>
+    </>
+
+  )
+    },
+    {}
+export default PagePage;
+
+  ),
+};
+
+>>>>>>> main

@@ -1,14 +1,21 @@
-import React from 'react'
-
-const SkipLink: React.FC = () => {
+import React from 'react';;';";
+import SEOHead from './components/SEOHead';";
+;
+const ComponentsPage: React.FC = () => {
   return (
-    <a
-      href="#main-content"
-      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
-    >
-      Skip to main content
-    </a>
-  )
-}
-
-export default SkipLink
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";";
+        description="Professional components solutions for modern businesses";";
+      />";";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
+        <div: className ="text-center">";";
+          <h1: className ="text-4xl font-bold mb-4">Components</h1>";";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+        </div>;
+      </div>;
+    </>;
+  ),
+};
+;
+export default ComponentsPage;'";'";";";

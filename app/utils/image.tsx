@@ -1,70 +1,54 @@
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number,
-  src: string,
-  alt: string,
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number
-  _placeholder?: 'blur' | 'empty'
-    ,
-  src
-  alt,
-  width,
-  height,
-  className,
-  priority = false,
-  quality = 75,
-  placeholder = 'empty',
-  blurDataURL,
-  fill = false,
-  sizes,
-  style,
-  onLoad,
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-    })
-  }
-  if (hasError) {</ImageProps>
-    return (</ImageProps>)}if (hasError) {}return (<div)}
-  if (hasError) {}return (<div)}
-'use client';
-  const,
-  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */,}})
-  }
-      >)</div>
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      style={imageStyle}
-      sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
-      onLoad={handleLoad}
-        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>)
-      </div>),
-    ),
-        {...props}
-      ></div>
-        <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: </span>Failed to load image</span>
+
+import { Helmet } from "react-helmet-async";
+export default function UtilsPage() {}
+  // Function body
+}
+}return ()
+    <div></div>
+      <Helmet></Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <metaname="description">
+          content="Professional utils services by Zion Tech Group. Transform your business with our expert solutions."
+        />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
+          <h1 className="text-4xl font-bold text-white mb-6">Utils</h1>
+          <p className="text-lg text-gray-300 mb-8"></p>
+            Professional utils services coming soon.
+          </p>
+          <>
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          ></>
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </>
+
+        </div>
       </div>
-    ),
-  }
-  return ()
-    >)</img>
-}</img>
-export default Image</img>
-      loading={priority ? 'eager' : 'lazy'})
-      onLoad={handleLoad})
-      onError={handleError})
-      {...props})
-    />)
+    </>
+  );
+
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const UtilsPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Utils - Zion Tech Group"";
+        description="Professional utils solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Utils</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+
+};
+;
+export default UtilsPage;'";'";

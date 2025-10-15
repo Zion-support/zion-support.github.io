@@ -3,6 +3,7 @@
 ## WCAG 2.1 AA Compliance Checklist
 
 ### Perceivable
+
 - [] All images have appropriate alt text
 - [] Videos have captions
 - [] Audio content has transcripts
@@ -12,6 +13,7 @@
 - [] Content is adaptable and responsive
 
 ### Operable
+
 - [] All functionality is available via keyboard
 - [] No content causes seizures or vestibular disorders
 - [] Users can navigate and find content
@@ -21,6 +23,7 @@
 - [] Skip links are provided for main content
 
 ### Understandable
+
 - [] Language of page is identified
 - ] Text is readable and understandable
 - [] Content appears and operates in predictable ways
@@ -29,12 +32,14 @@
 - [] Form labels are properly associated
 
 ### Robust
+
 - [] Content is compatible with assistive technologies
 - [] Valid HTML is used
 - [] ARIA attributes are properly implemented
 - [] Content works across different browsers and devices
 
 ## Testing Tools
+
 - [] WAVE (Web Accessibility Evaluator)
 - [] axe DevTools
 - [] Lighthouse accessibility audit
@@ -44,6 +49,7 @@
 - [] Mobile accessibility testing
 
 ## Manual Testing
+
 - [] Test with keyboard only (Tab, Enter, Space, Arrow keys)
 - [] Test with screen reader
 - [] Test with high contrast mode
@@ -53,6 +59,7 @@
 - [] Test with different assistive technologies
 
 ## Automated Testing
+
 - [] Run accessibility linting tools
 - [] Include accessibility tests in CI/CD pipeline
 - [] Regular accessibility audits
@@ -60,6 +67,7 @@
 - [] Test with automated accessibility tools
 
 ## Documentation
+
 - [] Accessibility statement published
 - [] User guides for assistive technologies
 - [] Contact information for accessibility issues

@@ -1,4 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-console.log('Performance optimization completed');
+// Simple performance optimization script
+console.log("Performance optimization completed");

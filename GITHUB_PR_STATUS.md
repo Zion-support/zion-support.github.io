@@ -67,7 +67,7 @@ Once the automatic process completes:
 
 ## 🚀 Regarding Multiple Open PRs
 
-Based on the branch name patterns seen earlier (there were hundreds of `cursor/` branches), there may be multiple open PRs in the repository. 
+Based on the branch name patterns seen earlier (there were hundreds of `cursor/` branches), there may be multiple open PRs in the repository.
 
 ### Recommendations:
 

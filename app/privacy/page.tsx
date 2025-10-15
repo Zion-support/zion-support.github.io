@@ -1,142 +1,171 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Shield, Lock, Eye, Database } from 'lucide-react';
-
+<<<<<<< HEAD
+import React from 'react;'
+import { Helmet } from 'react-helmet-async;'
 const PrivacyPage: React.FC = () => {
-  const dataTypes = [
-    {
-      icon: Database,
-      category: 'Personal Information',
-      description: 'Name, email address, phone number, and other contact details you provide to us.'
-    },
-    {
-      icon: Eye,
-      category: 'Usage Data',
-      description: 'Information about how you use our website and services, including pages visited and time spent.'
-    },
-    {
-      icon: Lock,
-      category: 'Technical Data',
-      description: 'IP address, browser type, device information, and other technical details collected automatically.'
-    },
-    {
-      icon: Shield,
-      category: 'Security Data',
-      description: 'Information related to security, authentication, and fraud prevention.'
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main className="pt-20">
+    <></>
+      <EnhancedSEO
+        title="Page - Zion Tech Group""
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""
+        keywords="page, business solutions, technology services, professional services""
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Privacy Policy
+        <section className="relative py-20 px-4">;""
+          <div className="max-w-7xl mx-auto text-center">;""
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">;""
+              Privacy;
+              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;""
+                Policy;
+              </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Your privacy is important to us. Learn how we collect, use, and protect your personal information.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;""
+              Your privacy is important to us. Learn how we collect, use, and protect your information.;
             </p>
           </div>
         </section>
+        {/* Content Section */}
+        <section className="py-20 px-4">;""
+          <div className="max-w-4xl mx-auto">;""
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">;""
+              <div className="prose prose-invert max-w-none">;""
+                <h2 className="text-2xl font-semibold text-white mb-4">Information We Collect</h2>;""
+                <p className="text-gray-300 mb-6">;""
+                  We collect information you provide directly to us, such as when you create an account,
+                  contact us, or use our services. This may include your name, email address, phone number,
+                  and other information you choose to provide.;
+                </p>
+                <h2 className="text-2xl font-semibold text-white mb-4">How We Use Your Information</h2>;""
+                <p className="text-gray-300 mb-6">;""
+                  We use the information we collect to provide, maintain, and improve our services,
+                  communicate with you, and ensure the security of our platform.;
+                </p>
+                <h2 className="text-2xl font-semibold text-white mb-4">Information Sharing</h2>;""
+                <p className="text-gray-300 mb-6">;""
+                  We do not sell, trade, or otherwise transfer your personal information to third parties;
+                  without your consent, except as described in this privacy policy.;
+                </p>
+                <h2 className="text-2xl font-semibold text-white mb-4">Data </h2>;""
+                <p className="text-gray-300 mb-6">;""
+                  We implement appropriate security measures to protect your personal information against;
+                  unauthorized access, alteration, disclosure, or destruction.;
+                </p>
+                <h2 className="text-2xl font-semibold text-white mb-4">Your Rights</h2>;""
+                <p className="text-gray-300 mb-6">;""
+                  You have the right to access, update, or delete your personal information. You may also;
+                  opt out of certain communications from us.;
+                </p>
+                <h2 className="text-2xl font-semibold text-white mb-4">Contact Us</h2>;""
+                <p className="text-gray-300 mb-6">;""
+                  If you have any questions about this privacy policy, please contact us at;
+                  <a href="mailto:privacy@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">;""
+                    privacy@ziontechgroup.com;
+                  </a>.;
+                </p>
+                <p className="text-gray-400 text-sm mt-8">;""
+                  Last updated: {new Date().toLocaleDateString()}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+=======
+import SEOHead from '../components/SEOHead';
 
-        {/* Data Types Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Types of Data We Collect</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {dataTypes.map((type, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto mb-4">
-                    <type.icon className="text-white" size={32} />
+const PagePage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="page - Zion Tech Group"
+        description="Zion Tech Group page service page"
+
+const PrivacyPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title ="privacy - Zion Tech Group - Zion Tech Group"";
+        description="Zion Tech Group privacy service page"";
+
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">privacy - Zion Tech Group</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+>>>>>>> main
+      </div>
+    </>
+
+  )
+    },
+    {}
+export default PagePage;
+
+  ),
+};
+<<<<<<< HEAD
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">""
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
+                    {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{type.category}</h3>
-                  <p className="text-gray-300">{type.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
+                  <p className="text-gray-300">{feature.description}</p>""
                 </div>
               ))}
             </div>
           </div>
         </section>
-
-        {/* Privacy Content */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">How We Use Your Data</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li>• To provide and improve our services</li>
-                  <li>• To communicate with you about our products and services</li>
-                  <li>• To process transactions and provide customer support</li>
-                  <li>• To analyze usage patterns and optimize our website</li>
-                  <li>• To comply with legal obligations and protect our rights</li>
-                </ul>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">Data Protection</h3>
-                <p className="text-gray-300 mb-4">
-                  We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction.
-                </p>
-                <ul className="space-y-3 text-gray-300">
-                  <li>• Encryption of data in transit and at rest</li>
-                  <li>• Regular security audits and assessments</li>
-                  <li>• Access controls and authentication mechanisms</li>
-                  <li>• Employee training on data protection practices</li>
-                </ul>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">Your Rights</h3>
-                <p className="text-gray-300 mb-4">
-                  You have certain rights regarding your personal data, including:
-                </p>
-                <ul className="space-y-3 text-gray-300">
-                  <li>• The right to access your personal data</li>
-                  <li>• The right to correct inaccurate data</li>
-                  <li>• The right to delete your data</li>
-                  <li>• The right to restrict processing</li>
-                  <li>• The right to data portability</li>
-                  <li>• The right to object to processing</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Questions About Privacy?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              If you have any questions about our privacy practices or want to exercise your rights, please contact us.
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+          <div className="max-w-4xl mx-auto text-center">""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">""
+              Let's discuss how our page services can help your business succeed.''
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
               >
                 Contact Us
-              </a>
-              <a
-                href="mailto:privacy@ziontechgroup.com"
-                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/services""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
               >
-                privacy@ziontechgroup.com
-              </a>
+                View All Services
+              </Link>
             </div>
           </div>
         </section>
-      </main>
-      
-      <Footer />
-    </div>
-  );
-};
+      </div>
+    </>
+        <div className="container mx-auto px-4 py-20"></div>
+          <h1>Privacy</h1>
+          <p className="text-xl text-gray-600"></p>
+            This page is under development. Please check back soon for more information about our privacy services.
+          </p>;
+        </div>;
+      </div>;
+    </div>;
+  )};
+const page = React.lazy(() => import('./page'));''
+export default page;
+=======
 
-export default PrivacyPage;
+>>>>>>> main

@@ -1,194 +1,172 @@
+<<<<<<< HEAD
+import React from 'react;'
+import { ArrowRight } from 'lucide-react;'
+import { CheckCircle } from 'lucide-react;'
+import { Star } from 'lucide-react;'
+import { Users } from 'lucide-react;'
+import { Clock } from 'lucide-react;'
+import { DollarSign } from 'lucide-react;'
+import { Shield } from 'lucide-react;'
+import { Code } from 'lucide-react;'
+import { Database } from 'lucide-react;'
+import { Mail } from 'lucide-react;'
+import { Settings } from 'lucide-react;'
+import { Target } from 'lucide-react;'
+import { TrendingUp } from 'lucide-react;'
+import { PieChart } from 'lucide-react;'
+import { MessageSquare } from 'lucide-react;'
+import { Heart } from 'lucide-react;'
+import { Globe } from 'lucide-react;'
+import { Smartphone } from 'lucide-react;'
+import { Network } from 'lucide-react;'
+import { Lock } from 'lucide-react;'
+import { Cpu } from 'lucide-react;'
+import { Wifi } from 'lucide-react;'
+import { Building2 } from 'lucide-react;'
+import { Briefcase } from 'lucide-react;'
+import { Lightbulb } from 'lucide-react;'
+import { Link } from 'react-router-dom;'
+import EnhancedSEO from '../components/EnhancedSEO;'
+const Page = () => {
   const features = [
-    {icon: Rocket,
-      title: 'Mission Trajectory Optimization',
-      description: 'AI-powered trajectory planning for optimal fuel efficiency and mission success',
+    {
+      icon: <CheckCircle className="w-8 h-8" />,""
+      title: 'Advanced Features',''
+      description: 'Cutting-edge technology for maximum efficiency''
     },
     {
-      icon: Target,
-      title: 'Payload Optimization',
-      description: 'Intelligent payload configuration and resource allocation for maximum mission value',
-      benefits: ['Optimal payload distribution', 'Resource efficiency', 'Mission success maximization'],
+      icon: <Shield className="w-8 h-8" />,""
+      title: 'Secure & Reliable',''
+      description: 'Enterprise-grade security and 99.9% uptime''
     },
     {
-      icon: BarChart,
-      title: 'Risk Assessment & Mitigation',
-      description: 'Advanced risk analysis and mitigation strategies for space missions',
-      benefits: ['Comprehensive risk analysis', 'Mitigation strategies', 'Success probability optimization'],
-    },
-    {
-      icon: Globe,
-      title: 'Multi-Planetary Mission Planning',
-      description: 'Complex mission planning for interplanetary and deep space exploration',
-      benefits: ['Multi-planetary coordination', 'Deep space navigation', 'Mission timeline optimization'],
+      icon: <Users className="w-8 h-8" />,""
+      title: 'Expert Support',''
+      description: '24/7 support from our team of specialists''
     }
-  ]
-  const pricingPlans = [
-    {name: 'Explorer',
-      price: '$4,999',
-      period: '/month',
-      description: 'Perfect for small satellite missions and research projects',
-      features: [,
-        'Basic trajectory optimization',
-        'Single mission planning',
-        'Standard risk assessment',
-        'Email support',
-        'Mission reports',
-        'Basic analytics'
-      ],
-      popular: false;,},
-    {name: 'Mission Control',
-      price: '$12,999',
-      period: '/month',
-      description: 'Ideal for commercial space missions and satellite constellations',
-      features: [,
-        'Advanced trajectory optimization',
-        'Multi-mission coordination',
-        'Comprehensive risk analysis',
-        'Priority support',
-        'Real-time monitoring',
-        'Advanced analytics',
-        'Mission simulation',
-        'API integration'
-      ],
-      popular: true;,},
-    {name: 'Space Agency',
-      price: '$49,999',
-      period: '/month',
-      description: 'For large-scale space programs and interplanetary missions',
-      features: [,
-        'Full mission optimization suite',
-        'Interplanetary mission planning',
-        'Advanced AI algorithms',
-        '24/7 dedicated support',
-        'Custom mission protocols',
-        'White-label solutions',
-        'On-site deployment',
-        'Research collaboration',
-        'Training programs'
-      ],
-  const useCases = [
-    {title: 'Satellite Constellation Management',
-      description: 'Optimize satellite constellation deployment and maintenance operations',
-      icon: Globe,
-      results: '40% reduction in operational costs',},
-    {title: 'Mars Mission Planning',
-      description: 'Comprehensive mission planning for Mars exploration and colonization',
-      icon: Rocket,
-      results: 'Optimized Mars mission trajectories',},
-    {title: 'Space Station Operations',
-      description: 'Optimize space station operations and supply missions',
-      icon: Target,
-      results: '25% improvement in efficiency',},
-    {title: 'Deep Space Exploration',
-      description: 'Mission planning for deep space exploration and scientific missions',
-      icon: Eye,
-        <title>AI Space Mission Optimizer - Advanced Space Mission Planning | Zion Tech Group</title>
-        </Helmet><title>AI Space Mission Optimizer - Advanced Space Mission Planning | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered space mission optimization for trajectory planning, payload optimization, and risk assessment. Advanced space mission planning solutions." />
-        <meta name="keywords" content="space mission optimization, trajectory planning, satellite management, space exploration, mission planning, space AI, aerospace technology" />
-        <meta property="og: title" content="AI Space Mission Optimizer - Advanced Space Mission Planning" />,
-        <meta property="og:description" content="Revolutionary AI-powered space mission optimization for trajectory planning, payload optimization, and risk assessment." />
-        <meta property="og: type" content="website" />,
-        <meta property="og: url" content="https://ziontechgroup.com/ai-space-mission-optimizer" />,
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-space-mission-optimizer" />,
-      </Helmet>
-
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent"></div>
-          
-          <div className="max-w-7xl mx-auto relative z-10">
-            </div><div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              </div><div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full px-6 py-3 mb-8 border border-blue-500/30">
-                </div><Rocket className="w-5 h-5 text-blue-400" />
-                <span className="text-blue-400 font-semibold">Space Technology</span>
-              </div>
-              
-                Revolutionary AI-powered space mission optimization for trajectory planning, 
-                payload optimization, and comprehensive risk assessment for space exploration.
-              </p>
-              
-                  <span className="font-semibold">30% Fuel Savings</span>
-                </div>
-                <div className="flex items-center space-x-2 text-cyan-400">
-                  </div><Target className="w-5 h-5" />
-                  <span className="font-semibold">Optimal Planning</span>
-                </div>
-                <div className="flex items-center space-x-2 text-purple-400">
-                  </div><Shield className="w-5 h-5" />
-                  <span className="font-semibold">Risk Mitigation</span>
-                </div>
-              </div>
-              
-                </a>
-              </div>
+  ];
+  return (
+    <>
+      <EnhancedSEO
+        title="Page - Zion Tech Group""
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""
+        keywords="page, business solutions, technology services, professional services""
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto text-center">""
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
+              Page
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
+              Professional page services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/demo""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View Demo
+              </Link>
             </div>
           </div>
         </section>
-
-                for trajectory planning, payload optimization, and risk assessment.
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
               {features.map((feature, index) => (
-                >
-                  </div><div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
-                    </div><feature.icon className="w-8 h-8 text-white" />
+                <div key={index} className="text-center">""
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
+                    {feature.icon}
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
-                  <p className="text-gray-300 mb-6">{feature.description</p>}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                    ))}
-                  </ul>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
+                  <p className="text-gray-300">{feature.description}</p>""
                 </div>
               ))}
             </div>
           </div>
         </section>
-
-                and commercial space companies for mission-critical operations.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
-              {useCases.map((useCase, index) => (
-                >
-                  </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
-                    </div><useCase.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 text-white">{useCase.title}</h3>
-                  <p className="text-gray-300 mb-4">{useCase.description</p>}</p>
-                  <div className="text-blue-400 font-semibold text-sm">{useCase.results</div>} </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-                All plans include our advanced AI algorithms and mission planning tools.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,</div>
-              {pricingPlans.map((plan, index) => (
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-              </a>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+          <div className="max-w-4xl mx-auto text-center">""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">""
+              Let's discuss how our page services can help your business succeed.''
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/services""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View All Services
+              </Link>
             </div>
           </div>
         </section>
       </div>
     </>
-  )
-}
-export default AISpaceMissionOptimizer
+  );
+};
+const page = React.lazy(() => import('./page'));''
+export default page;
+=======
+import SEOHead from '../components/SEOHead';
+
+const AiSpaceMissionOptimizerPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="Page - Zion Tech Group"
+        description="Advanced page solutions powered by AI"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Page</h1>
+          <pclassName="text-gray-300">
+
+const AiSpaceMissionOptimizerPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title ="ai-space-mission-optimizer - Zion Tech Group - Zion Tech Group"";
+        description="Zion Tech Group ai-space-mission-optimizer service page"";
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">ai-space-mission-optimizer - Zion Tech Group</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+      </div>
+    </>
+  ),
+};
+
+>>>>>>> main

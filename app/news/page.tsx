@@ -1,123 +1,89 @@
-    const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',},
-    {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',},
-    {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',},
-    {icon: Globe,
-      title: 'Global Reach',
-const benefits = [
-  ]
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-
-    '24/7 technical support',
-
-    'Easy integration with existing systems',
-
-    'Cost-effective pricing plans',
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-    'Proven track record of success'
-  ]
-{/* Hero Section */}
-      <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+<<<<<<< HEAD
+import React from 'react;'
+import { Helmet } from 'react-helmet-async;'
+'use client;''
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-white">""
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />""
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">;""
+        <div className="text-center">;""
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">;""
+            Page;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">;""
+            Professional page solutions tailored to your business needs.;
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;""
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;""
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">;""
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">;""
+                Our team of experts delivers cutting-edge page solutions.;
+              </p>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;""
+              <h3 className="text-lg font-semibold text-green-900 mb-2">;""
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">;""
+                Tailored page implementations for your specific requirements.;
+              </p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">;""
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">;""
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">;""
+                Round-the-clock support for all your page needs.;
+              </p>
             </div>
           </div>
-        </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center"></div>
-            <h1>
-                Page
-              </span>
-              <br></br>
-              <span className="text-white">Solutions</span>
-            </h1>
-              </button>
-            </div>
+          <div className="mt-12">;""
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;""
+              Get Started Today;
+            </button>
           </div>
         </div>
-      </section>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
-            {benefits.map((benefit, index) => (
-              </div>
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}
-            ))}
-        </div>
-      </section>
-      {/* CTA Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-      {/* CTA Section */}
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-              Ready to Get Started?
-            </h2>
-            <p></p>
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>
-              </button>
-            </div>
-          ))
-        </div>
-      </section>
+      </div>
     </div>
-  ),
-}
-export default PagePage
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
+  );}
+}''
+=======
+import SEOHead from '../components/SEOHead';
+
+const PagePage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="page - Zion Tech Group"
+        description="Zion Tech Group page service page"
+
+const NewsPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title ="news - Zion Tech Group - Zion Tech Group"";
+        description="Zion Tech Group news service page"";
+
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">news - Zion Tech Group</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+      </div>
+    </>
+
   )
-}
-export default PagePage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></button></button></button></button></p></p></p></p></p></p></h1></h2></h2></h2></h3></section></section></section></section>
+    },
+    {}
+export default PagePage;
+
+  ),
+};
+
+>>>>>>> main

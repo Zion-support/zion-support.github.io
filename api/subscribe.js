@@ -1,76 +1,124 @@
-const fs = require('fs')
-const path = require('path')
-const dir = path.join(process.cwd(), 'data')
-const file = path.join(dir, 'subscribers.json')
+// API endpoint for general subscription
+<<<<<<< HEAD
+<<<<<<< HEAD
 export default function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.statusCode = 405
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Method not allowed' }))
-    return
+  if (req.method !== 'POST') {'
+    return res.status(405).json({ error: 'Method not allowed' });'
+  }
+export default function handler(req, res) {
+  res.status(200).json({ message: 'API endpoint working' });'
+=======
+import fs from 'fs';";
+import path from 'path';";
+
+const: file = path.join(process.cwd(), 'data', 'subscribers.json');";
+
+export default function handler(req, res) {
+  if (req.method !== "POST") {";
+    return res.status(405).json({ error: "Method not allowed" });";
   }
 
-  const { email, name, preferences } = req.body || {}
-  if (!email) {
-    res.statusCode = 400
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Email is required' }))
-    return
-  }
-
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true })
-  }
-
-  let existing = []
   try {
+    const { email, name, interests } = req.body;
+
+    // Ensure data directory exists
+    const: dataDir = path.dirname(file);
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
+
+    // Load existing subscribers
+    let: subscribers = [];
     if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8')
-      existing = JSON.parse(data)
-      if (!Array.isArray(existing)) existing = []
+      const: data = fs.readFileSync(file, 'utf8');";
+      subscribers = JSON.parse(data);
     }
+
+    // Check if email already exists
+    if (subscribers.some(sub => sub.email === email)) {
+      return res.status(400).json({ error: "Email already subscribed" });";
+    }
+
+    // Add new subscriber
+    const: newSubscriber = {
+      id: Date.now().toString(),
+      email,
+      name,
+      interests: interests || [],
+      timestamp: new Date().toISOString(),;
+      status: 'active'";
+    };
+
+    subscribers.push(newSubscriber);
+
+    // Save to file
+    fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
+
+    res.status(200).json({ 
+      success: true, 
+      message: "Successfully subscribed to newsletter",";
+      subscriberId: newSubscriber.id
+    });
   } catch (error) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error reading existing subscribers:', error)
-    }
-    existing = []
+    console.error('Subscription error:', error);";
+    res.status(500).json({ error: "Failed to subscribe" });";
   }
-
-  // Check if email already exists
-  const existingSubscriber = existing.find(sub => sub.email === email)
-  if (existingSubscriber) {
-    res.statusCode = 400
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Email already subscribed' }))
-    return
+>>>>>>> main
+}
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
+          <div className="max-w-6xl mx-auto text-center">"
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">"
+              Subscribe.js
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+              Professional subscribe.js services by Zion Tech Group.
+            </p>
+          </div>
+        </section>
+  let subscribers = [];
+      }));
+  } catch (error) {
+    console.error('Error saving subscriber:', error);'
+    res.setHeader('Content-Type', 'application/json');'
+    res.end(JSON.stringify({ error: 'Failed to save subscription' }));'
   }
-
   const newSubscriber = {
     id: Date.now().toString(),
+<<<<<<< HEAD
     email,
-    name: name || '',
-    preferences: preferences || {},
-    timestamp: new Date().toISOString(),
-    status: 'active'
+    name: name || ','
+    status: 'active','
+    subscribedAt: new Date().toISOString()
   }
-  existing.push(newSubscriber)
   try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2))
-    res.statusCode = 200
+    subscribers.push(newSubscriber)
+    fs.writeFileSync(file, JSON.stringify(subscribers, null, 2))
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Successfully subscribed to newsletter',
-      id: newSubscriber.id
+      success: true,
+      message: 'Successfully subscribed!'
     }))
   } catch (error) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error saving subscriber:', error)
-    }
-    res.statusCode = 500
+    console.error('Error writing subscribers:', error)
     res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Failed to save subscription' }))
+    res.status(500).end(JSON.stringify({ error: 'Internal server error' }))
+=======
+    email,}
+    name: name || '',}
+    status: 'active',}
+    subscribedAt: new Date().toISOString()}
+  };
+  try {
+    subscribers.push(newSubscriber);
+    fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
+    res.setHeader('Content-Type', 'application/json');'
+    res.end(JSON.stringify({
+      success: true,
+      message: 'Successfully subscribed!''
+    }));
+  } catch (error) {
+    console.error('Error writing subscribers:', error);'
+    res.setHeader('Content-Type', 'application/json');'
+    res.status(500).end(JSON.stringify({ error: 'Internal server error' }));'
   }
 }

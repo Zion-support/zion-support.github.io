@@ -1,63 +1,134 @@
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-    },
-  ]
+<<<<<<< HEAD
+import React from 'react;'
+import { Helmet } from 'react-helmet-async;'
+'use client;''
+export default function Page() {
   return (
-        <title>Global Error - Zion Tech Group</title>
-    <React.Fragment>
-      </React><Helmet>
-        </Helmet><title>Global Error - Zion Tech Group</title>
-        <meta name="description" content="Global error page." />
-        <meta name="keywords" content="global error, AI solutions, IT services, business transformation" />
-      <Navigation />
-                  Learn More,
-  
-              </div>
-            </div>
-          </div>
-        </section>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
-                Our Services,
-  </
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our solutions can help transform your business.</p>
-        {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Services,
-  
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto" /></p>
-                Discover how our solutions can help transform your business.
+    <div className="min-h-screen bg-white">""
+      <Helmet>
+        <title>Global error - Zion Tech Group</title>
+        <meta name="description" content="Professional global error services by Zion Tech Group." />""
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">""
+        <div className="text-center">""
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">""
+            Global error;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">""
+            Professional global error solutions tailored to your business needs.</p>
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">""
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">""
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">""
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">;""
+                Our team of experts delivers cutting-edge global error solutions.;
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
-              {features.map((feature, index) => (
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{feature.description</p>}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                    ))}
-              ))}
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;""
+              <h3 className="text-lg font-semibold text-green-900 mb-2">;""
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">;""
+                Tailored global error implementations for your specific requirements.;
+              </p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">;""
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">;""
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">;""
+                Round-the-clock support for all your global error needs.;
+              </p>
+            </div>
           </div>
-        </section>
-      </main>
-      <Footer /></Footer>
-    </>
+          <div className="mt-12">;""
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;""
+              Get Started Today;
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );}
+}''
+=======
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
+export default function Page() {}
+  return ()
+    <div className="min-h-screen bg-white">;
+      <Helmet>;
+        <title>Global error - Zion Tech Group</title>;
+        <meta name="description" content="Professional global error services by Zion Tech Group." />;
+      </Helmet>;
+      <div className="container mx-auto px-4 py-16">;
+        <div className="text-center">;
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">;
+            Global error;
+          </h1>;
+          <p className="text-xl text-gray-600 mb-8">;
+            Professional global error solutions tailored to your business needs.;
+          </p>;
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">;
+                Expert Solutions;
+              </h3>;
+              <p className="text-blue-700">;
+                Our team of experts delivers cutting-edge global error solutions.;
+              </p>;
+            </div>;
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;
+              <h3 className="text-lg font-semibold text-green-900 mb-2">;
+                Custom Implementation;
+              </h3>;
+              <p className="text-green-700">;
+                Tailored global error implementations for your specific requirements.;
+              </p>;
+            </div>;
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">;
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">;
+                24/7 Support;
+              </h3>;
+              <p className="text-purple-700">;
+                Round-the-clock support for all your global error needs.;
+              </p>;
+            </div>;
+          </div>;
+          <div className="mt-12">;
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
+              Get Started Today;
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+
+  );
+
+import React from 'react';;';
+import SEOHead from '../../components/SEOHead';
+;
+const AppPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="App - Zion Tech Group"";
+        description="Professional app solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">App</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
   ),
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+};
+;
+export default AppPage;'";'";
+>>>>>>> main

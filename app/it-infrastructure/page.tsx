@@ -1,79 +1,48 @@
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',},
-    {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',},
-    {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',},
-    {icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',}}
-  ]
-const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-
-    '24/7 technical support',
-
-    'Easy integration with existing systems',
-
-    'Cost-effective pricing plans',
-
-        <title>Page | Zion Tech Group</title>
-    'Proven track record of success'
-  ]
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        </Helmet><title>Page | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
-            </div>
-          </div>
-        </div>
-      </section>
-              </div>
+<<<<<<< HEAD
+import React from 'react;'
+'use client;''
+export default function ItInfrastructurePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page | Zion Tech Group
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-            ))}
-            ))}
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-              Ready to Get Started?
-            </h2>
-            <p></p>
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="min-h-screen bg-gray-900 text-white py-20">""
+      <div className="container mx-auto px-4">;""
+        <h1 className="text-4xl font-bold mb-8">It Infrastructure</h1>;""
+        <p className="text-gray-300 text-lg">;""
+          This page is under development.;
+        </p>
+      </div>
     </div>
+  );}
+}
+''
+=======
+import SEOHead from '../components/SEOHead';
+
+const ItInfrastructurePage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="Page - Zion Tech Group"
+        description="Professional page solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Page</h1>
+          <pclassName="text-gray-300">
+
+const ItInfrastructurePage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title ="it-infrastructure - Zion Tech Group - Zion Tech Group"";
+        description="Zion Tech Group it-infrastructure service page"";
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">it-infrastructure - Zion Tech Group</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+      </div>
+    </>
   ),
-}
-export default PagePage
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-  )
-}
-export default PagePage</div></div></div></div></button></button></p></h2></section>
+};
+
+>>>>>>> main

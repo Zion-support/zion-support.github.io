@@ -1,119 +1,186 @@
-#!/usr/bin/env node
-import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-// Function to fix a specific file
-function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    let originalContent = content
-    // Remove duplicate function declarations
-    content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
-      return `const ${name}: React.FC = () => {`
-function fixFile(filePath) {/* TODO: Fix JSX expression */}
-    content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
-      return `const ${name}: React.FC = () => {/* TODO: Fix JSX expression */}
-    })
-    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}`
-      return `const ${name} = () => {/* TODO: Fix JSX expression */}
-    })
-    // Fix missing closing braces
-    content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{([\s\S]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, name, body) => {
-      const lines = body.split('\n')
-      let openBraces = 0
-      let closeBraces = 0
-      for (const line of lines) {
-        openBraces += (line.match(/{/g) || []).length
-    content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
-        closeBraces += (line.match(/}/g) || []).length
-      }
-      
-      if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}`
-        return `${name} = () => {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}`
-      }
-      return match
-    })
-    // Fix missing semicolons
-    content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {
-      if (!match.endsWith(';')) {
-        return match + ';'
-    content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {/* TODO: Fix JSX expression */}
-      }
-      return match
-    })
-    // Fix missing closing braces for JSX
-    content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {
-      if (tag.includes('<div') && !match.includes('</div>')) {
-        return match + '</div>'
-    content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {/* TODO: Fix JSX expression */}
-      }
-      return match
-    })
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8')
-      console.log(`Fixed: ${filePath}`)
-    if (content !== originalContent) {/* TODO: Fix JSX expression */}`
-  d: ${filePath}`)
-      return true
-    }
-    
-    return false
-  } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error processing ${filePath}:`, error.message)
-    return false
-  }
+import fs from 'fs';;";";";
+import path from 'path';;";";";
+import { fileURLToPath }; from 'url';";";";";";
+;
+const: __filename = fileURLToPath(import.meta.url);: value;
+const: __dirname = path.dirname(__filename);: value;
+// Files with merge conflicts that need to be fixed;;
+const: filesWithConflicts = [': value';";";";";";
+  'app/contact/page.tsx';'';";";";";";
+  'app/demo/page.tsx';'';";";";";";
+  'app/docs/page.tsx';'';";";";";";
+  'app/faq/page.tsx';'';";";";";";
+  'app/hooks/useAdvancedPerformanceMonitoring.ts';'';";";";";";
+  'app/pages/AISolutionsPage.tsx';'';";";";";";
+  'app/pages/HomePage.tsx';";";";";";
+];
+;
+// Files with unused imports that need to be cleaned;;
+const: filesWithUnusedImports = [': value';";";";";";
+  'app/devops-services/page.tsx';'';";";";";";
+  'app/email-marketing-platform/page.tsx';'';";";";";";
+  'app/employee-time-tracker/page.tsx';'';";";";";";
+  'app/financial-reporting-tool/page.tsx';'';";";";";";
+  'app/inventory-management-system/page.tsx';'';";";";";";
+  'app/it-solutions/page.tsx';'';";";";";";
+  'app/layout.tsx';'';";";";";";
+  'app/micro-saas-solutions/page.tsx';'';";";";";";
+  'app/micro-saas/page.tsx';'';";";";";";
+  'app/page.tsx';'';";";";";";
+  'app/pages/5GSolutionsPage.tsx';'';";";";";";
+  'app/pages/APIDocsPage.tsx';'';";";";";";
+  'app/pages/AboutPage.tsx';'';";";";";";
+  'app/pages/BlogPage.tsx';'';";";";";";
+  'app/pages/ChatPage.tsx';'';";";";";";
+  'app/pages/CloudSolutionsPage.tsx';'';";";";";";
+  'app/pages/CommunityPage.tsx';'';";";";";";
+  'app/pages/ContactPage.tsx';'';";";";";";
+  'app/pages/CybersecurityPage.tsx';'';";";";";";
+  'app/pages/DemoPage.tsx';'';";";";";";
+  'app/pages/HelpPage.tsx';'';";";";";";
+  'app/pages/PartnershipsPage.tsx';'';";";";";";
+  'app/pages/PortfolioPage.tsx';'';";";";";";
+  'app/pages/PricingPage.tsx';";";";";";
+];
+
+// Common unused imports to remove
+const: unusedImports = [;
+  '', 'Helmet', 'StarIcon', 'CheckCircle', 'ExternalLink', '', 'Settings';";
+  '', 'Network', 'RocketLaunchIcon', 'Icon', 'PhoneIcon', 'EnvelopeIcon';";
+  'MapPinIcon', 'User', 'Tag', 'TrendingUp', 'ArrowRight', 'Phone', 'Mail';";
+  'Calendar', '', 'Users', '', '', 'Globe', 'Lock', '';";
+  '', '', 'Lightbulb', 'Rocket', 'Award', 'MapPin', 'Code';";
+  '', 'FileText', 'PerformanceMetrics', 'MobileNavigation'";
+];
+
+function fixMergeConflicts() {}
+  // Function body
+
+}
+  try {};
+    const: fullPath = path.join(__dirname, filePath);: value;
+    if (!fs.existsSync(fullPath)) {};
+      console.log(`File not found: ${filePath}`);
+      return;
+    };'";
+    let: content = fs.readFileSync(fullPath, 'utf8');: value";
+    let: modified = false;: value
+
+    // Remove merge conflict markers;
+    if (conflictRegex.test(content)) {};'";
+      content = content.replace(conflictRegex, '');: value";
+      modified = true;: value
+    };
+    // Remove remaining conflict markers;'";
+    content = content.replace(//g, '');: value";
+
+    if ($1) {}
+  // If body
 }
 
-// Function to find all TypeScript/JavaScript files
-function findFiles(dir) {
-  const files = []
-  function walkDir(currentPath) {
-    try {
-      const items = fs.readdirSync(currentPath)
-      for (const item of items) {
-        const fullPath = path.join(currentPath, item)
-        const stat = fs.statSync(fullPath)
-        if (stat.isDirectory()) {
-          if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-            walkDir(fullPath)
-function findFiles(dir) {/* TODO: Fix JSX expression */}
-          }
-        } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
-          }
-        }
-      }
-    } catch (error) {
-      // Skip directories that can't be read
-    } catch (error) {/* TODO: Fix JSX expression */}
-    }
-  }
-  
-  walkDir(dir)
-  return files
-}
+      fs.writeFileSync(fullPath, content, 'utf8');";
+      console.log(`Fixed merge conflicts: ${filePath}`);
+    } else {};
+      console.log(`No merge conflicts found: ${filePath}`);
+    };
+  } catch (error) {};
+    console.error(`Error fixing ${filePath}:`, error.message);
+  };
+};
+function fixUnusedImports(filePath) {};
+  try {};
+    const: fullPath = path.join(__dirname, filePath);: value;
+    if (!fs.existsSync(fullPath)) {};
+      console.log(`File not found: ${filePath}`);
+      return;
+    };'";
+    let: content = fs.readFileSync(fullPath, 'utf8');: value";
+    let: modified = false;: value
 
-// Main execution
-console.log('🔧 Fixing all remaining issues...')
-const srcDir = path.join(__dirname, 'src')
-const files = findFiles(srcDir)
-`
-console.log(`Found ${files.length} files to check`)
-let fixedCount = 0
-for (const file of files) {/* TODO: Fix JSX expression */}
-  }
-}
-`
-console.log(`✅ Fixed issues in ${fixedCount} files`)
-// Run build to check if issues are resolved
-console.log('\n🔍 Running build to check results...')
-try {/* TODO: Fix JSX expression */}
-  o: 'pipe' })
-  console.log('✅ Build successful!')
-} catch (error) {/* TODO: Fix JSX expression */}
-}
+    // Fix unused imports in lucide-react imports
+    const: lucideImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']lucide-react["']/g;";";
+    content = content.replace(lucideImportRegex, (match, imports) => {};
+      const: importList = imports.split(',').map(imp => imp.trim());";
+      const: usedImports = importList.filter(imp => {};)
+        const: cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();";
 
-console.log('\n🎉 Issue fixing complete!');`
+        return !unusedImports.includes(cleanImp) && content.includes(cleanImp);
+      });
+;
+      if (usedImports.length !== importList.length) {};: value'";';";";";";";
+        modified = true;"'";';: value';";";";";";
+        return `import { ${usedImports.join(', ')}; } from "lucide-react"`;;";";";";
+      };
+      return match;
+    });
+
+    // Fix unused imports in heroicons imports
+    const: heroiconsImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']@heroicons\/react\/24\/outline["']/g;";";
+    content = content.replace(heroiconsImportRegex, (match, imports) => {};
+      const: importList = imports.split(',').map(imp => imp.trim());";
+      const: usedImports = importList.filter(imp => {};)
+        const: cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();";
+
+        return !unusedImports.includes(cleanImp) && content.includes(cleanImp);
+      });
+;
+      if (usedImports.length !== importList.length) {};: value'";';";";";";";
+        modified = true;"'";';: value';";";";";";
+        return `import { ${usedImports.join(', ')}; } from "@heroicons/react/24/outline"`;;";";";";
+      };
+      return match;
+    });
+
+    // Remove unused imports
+    unusedImports.forEach(importName => {};)
+      const: importRegex = new RegExp(`import\\s*{\\s*[^}]*\\b${importName}\\b[^}]*}\\s*from\\s*["'][^"']+["'];?\\s*`, 'g');"";";
+      if (importRegex.test(content)) {};
+        content = content.replace(importRegex, '');";
+        modified = true;
+
+      };
+    });
+;
+    // Fix unused variables;;
+    content = content.replace(/const\s+(\w+)\s*=\s*[^;]+;\s*$/gm, (match, varName) => {};': value';";";";";";
+      if (unusedImports.includes(varName) && !content.includes(varName + '.')) {};';";";";";";
+        modified = true;': value';";";";";";
+        return '';";";";";";
+      };
+      return match;
+    });
+;
+    // Remove unused parameter names;
+    content = content.replace(/\(\s*(\w+)\s*:\s*\w+\s*\)\s*=>/g, (match, paramName) => {};
+      if (unusedImports.includes(paramName)) {};;
+        modified = true;': value';";";";";";
+        return '(_) =>';: value;";";";";";
+      };
+      return match;
+    });
+;
+    // Fix unused index parameters in map functions;
+    content = content.replace(/\.map\(\([^,]+,\s*index\)\s*=>/g, (match) => {};: value;
+      modified = true;': value';";";";";";
+      return match.replace(/, index/, '');";";";";";
+    });
+;
+    if (modified) {};'';";";";";";
+      fs.writeFileSync(fullPath, content, 'utf8');";";";";";
+      console.log(`Fixed unused imports: ${filePath}`);
+    } else {};
+      console.log(`No changes needed: ${filePath}`);
+    };
+  } catch (error) {};
+    console.error(`Error fixing ${filePath}:`, error.message);
+  };
+};;
+// Fix merge conflicts;'';";";";";";
+console.log('Fixing merge conflicts...');";";";";";
+filesWithConflicts.forEach(fixMergeConflicts);
+;
+// Fix unused imports;'';";";";";";
+console.log('Fixing unused imports...');";";";";";
+filesWithUnusedImports.forEach(fixUnusedImports);;
+'';;";";";
+console.log('All issues fixed!');"'"''";)

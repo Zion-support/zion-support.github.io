@@ -1,51 +1,54 @@
-  const features = [
-    {
-      icon: BarChart,
-      title: 'Real-time Analytics',
-      description: 'Track sales, conversions, and customer behavior in real-time with advanced analytics dashboards.'},
-    {icon: TrendingUp,
-      title: 'Revenue Optimization',
-      description: 'Identify trends and opportunities to maximize revenue and improve profit margins.',},
-    {icon: Users,
-      title: 'Customer Insights',
-      description: 'Understand customer segments, preferences, and purchasing patterns for targeted marketing.'},
-    {icon: ShoppingCart,
-      title: 'Inventory Management',
-      description: 'Optimize stock levels and predict demand with AI-powered inventory analytics.',},
-    {icon: DollarSign,
-      title: 'Pricing Intelligence',
-      description: 'Dynamic pricing recommendations based on market conditions and competitor analysis.',},
-    {icon: Target,
-      title: 'Conversion Tracking',
-        <title>E-commerce Analytics Pro | Zion Tech Group - Advanced E-commerce Intelligence</title>
-    <React.Fragment>
-      </React><Helmet>
-        </Helmet><title>E-commerce Analytics Pro | Zion Tech Group - Advanced E-commerce Intelligence</title>
-        <meta name="description" content="Transform your e-commerce business with AI-powered analytics. Track sales, optimize inventory, and maximize revenue with our comprehensive analytics platform." />
-        <meta name="keywords" content="e-commerce analytics, sales tracking, inventory optimization, revenue analytics, customer insights, e-commerce intelligence" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description</p>}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+<<<<<<< HEAD
+import React from 'react;''
+export default function EcommerceAnalyticsProPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">""
+      <div className="container mx-auto px-4">;""
+        <h1 className="text-4xl font-bold mb-8">Ecommerce Analytics Pro</h1>;""
+        <p className="text-gray-300 text-lg">;""
+          This page is under development.;
+        </p>
       </div>
-    </>
-  )
+    </div>
+  );}
 }
-export default EcommerceAnalyticsProPage
-  </h1>
-                <$2 />
-                  key={index}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}
-                  <p className="text-gray-300">{feature.description}
-              ))}
-  )
-}
-export default EcommerceAnalyticsProPage</div></div></div></div></div></p></p></h1></h3></section>
+''
+=======
+
+import React from 'react';
+export default function EcommerceAnalyticsProPage() {}
+  return ()
+    <div className="min-h-screen bg-gray-900 text-white py-20">;
+      <div className="container mx-auto px-4">;
+        <h1 className="text-4xl font-bold mb-8">Ecommerce Analytics Pro</h1>;
+        <p className="text-gray-300 text-lg">;
+          This page is under development.;
+        </p>;
+      </div>;
+    </div>;
+
+  );
+
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const EcommerceAnalyticsProPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Ecommerce Analytics Pro - Zion Tech Group"";
+        description="Professional ecommerce analytics pro solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Ecommerce Analytics Pro</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+
+};
+;
+export default EcommerceAnalyticsProPage;'";'";
+>>>>>>> main

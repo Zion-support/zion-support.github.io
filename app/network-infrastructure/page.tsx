@@ -1,75 +1,105 @@
-    const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',},
-    {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',},
-    {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',},
-    {icon: Globe,
-      title: 'Global Reach',
-const benefits = [
-  ]
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-
-    '24/7 technical support',
-
-    'Easy integration with existing systems',
-
-    'Cost-effective pricing plans',
-
-        <title>Page | Zion Tech Group</title>
-    'Proven track record of success'
-  ]
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+<<<<<<< HEAD
+import React from 'react;'
+import { Helmet } from 'react-helmet-async;'
+'use client;''
+export default function NetworkInfrastructure() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
       <Helmet>
-        </Helmet><title>Page | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <title>Network Infrastructure | Zion Tech Group</title>
+        <meta name="description" content="Professional Network Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />""
       </Helmet>
-            </h1>
-              Powered by cutting-edge AI technology and industry expertise.
+      <div className="container mx-auto px-4 py-16">;""
+        <div className="text-center mb-16">;""
+          <h1 className="text-5xl font-bold text-white mb-6">;""
+            Network Infrastructure <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>;""
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;""
+            Build robust, scalable network infrastructure with our expert solutions designed for modern businesses.;
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;""
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">;""
+            <h3 className="text-xl font-semibold text-white mb-4">Network Design</h3>;""
+            <p className="text-gray-300 mb-4">;""
+              Custom network architecture designed for your specific business requirements.;
             </p>
-            </h2>
-            <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
-            </p>
+            <ul className="text-sm text-gray-400 space-y-2">;""
+              <li>• Scalable architecture</li>
+              <li>• High availability</li>
+              <li>• -first design</li>
+            </ul>
           </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">;""
+            <h3 className="text-xl font-semibold text-white mb-4">Network </h3>;""
+            <p className="text-gray-300 mb-4">;""
+              Comprehensive security solutions to protect your network infrastructure.;
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">;""
+              <li>• Firewall configuration</li>
+              <li>• Intrusion detection</li>
+              <li>• VPN solutions</li>
+            </ul>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">;""
+            <h3 className="text-xl font-semibold text-white mb-4">Network Monitoring</h3>;""
+            <p className="text-gray-300 mb-4">;""
+              24/7 monitoring and management of your network infrastructure.;
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">;""
+              <li>• Real-time monitoring</li>
+              <li>• Performance optimization</li>
+              <li>• Proactive maintenance</li>
+            </ul>
           </div>
         </div>
-      </section>
-            </h2>
-              Ready to Get Started?
-            </h2>
-            <p>Contact our experts to discuss your page needs and get a customized solution.</p>
+        <div className="text-center">;""
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">;""
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Build Your Network?</h2>;""
+            <p className="text-gray-300 mb-6">;""
+              Our network infrastructure experts are ready to help you build a robust, secure, and scalable network.;
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>
-              </button>
-            </div>
+            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">;""
+              Get Started Today;
+            </button>
           </div>
         </div>
-      </section>
+      </div>
     </div>
-  ),
+  );}
 }
-export default PagePage
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
+''
+=======
+import SEOHead from '../components/SEOHead';
+
+const PagePage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="page - Zion Tech Group"
+        description="Zion Tech Group page service page"
+
+const NetworkInfrastructurePage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title ="network-infrastructure - Zion Tech Group - Zion Tech Group"";
+        description="Zion Tech Group network-infrastructure service page"";
+
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">network-infrastructure - Zion Tech Group</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+      </div>
+    </>
+
   )
-}
-export default PagePage</div></div></button></button></p></p></p></p>
+    },
+    {}
+export default PagePage;
+
+  ),
+};
+
+>>>>>>> main

@@ -1,41 +1,54 @@
-  const features = [
-        <title>Online Learning Platform | Zion Tech Group - AI-Powered Education Platform</title>
-    <React.Fragment>
-      </React><Helmet>
-        </Helmet><title>Online Learning Platform | Zion Tech Group - AI-Powered Education Platform</title>
-        <meta name="description" content="Create engaging online learning experiences with AI-powered education platform. Course management, student analytics, and personalized learning." />
-        <meta name="keywords" content="online learning platform, e-learning, education technology, course management, student analytics, AI tutoring" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create engaging online learning experiences with AI-powered education platform.</p>
-            </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>
-              {features.map((feature, index) => (
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description</p>}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+<<<<<<< HEAD
+import React from 'react;''
+export default function OnlineLearningPlatformPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">""
+      <div className="container mx-auto px-4">;""
+        <h1 className="text-4xl font-bold mb-8">Online Learning Platform</h1>;""
+        <p className="text-gray-300 text-lg">;""
+          This page is under development.;
+        </p>
       </div>
-    </>
-  )
+    </div>
+  );}
 }
-export default OnlineLearningPlatformPage
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Online Learning Platform
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create engaging online learning experiences with AI-powered education platform.
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}
-                  <p className="text-gray-300">{feature.description}
-              ))}
-  )
-}
-export default OnlineLearningPlatformPage</div></div></div></div></div></div></p></p></h1></h3></section>
+''
+=======
+
+import React from 'react';
+export default function OnlineLearningPlatformPage() {}
+  return ()
+    <div className="min-h-screen bg-gray-900 text-white py-20">;
+      <div className="container mx-auto px-4">;
+        <h1 className="text-4xl font-bold mb-8">Online Learning Platform</h1>;
+        <p className="text-gray-300 text-lg">;
+          This page is under development.;
+        </p>;
+      </div>;
+    </div>;
+
+  );
+
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const OnlineLearningPlatformPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Online Learning Platform - Zion Tech Group"";
+        description="Professional online learning platform solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Online Learning Platform</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+
+};
+;
+export default OnlineLearningPlatformPage;'";'";
+>>>>>>> main

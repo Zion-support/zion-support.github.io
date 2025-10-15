@@ -1,194 +1,172 @@
+<<<<<<< HEAD
+import React from 'react;'
+import { ArrowRight } from 'lucide-react;'
+import { CheckCircle } from 'lucide-react;'
+import { Star } from 'lucide-react;'
+import { Users } from 'lucide-react;'
+import { Clock } from 'lucide-react;'
+import { DollarSign } from 'lucide-react;'
+import { Shield } from 'lucide-react;'
+import { Code } from 'lucide-react;'
+import { Database } from 'lucide-react;'
+import { Mail } from 'lucide-react;'
+import { Settings } from 'lucide-react;'
+import { Target } from 'lucide-react;'
+import { TrendingUp } from 'lucide-react;'
+import { PieChart } from 'lucide-react;'
+import { MessageSquare } from 'lucide-react;'
+import { Heart } from 'lucide-react;'
+import { Globe } from 'lucide-react;'
+import { Smartphone } from 'lucide-react;'
+import { Network } from 'lucide-react;'
+import { Lock } from 'lucide-react;'
+import { Cpu } from 'lucide-react;'
+import { Wifi } from 'lucide-react;'
+import { Building2 } from 'lucide-react;'
+import { Briefcase } from 'lucide-react;'
+import { Lightbulb } from 'lucide-react;'
+import { Link } from 'react-router-dom;'
+import EnhancedSEO from '../components/EnhancedSEO;'
+const Page = () => {
   const features = [
-    {icon: Brain,
-      title: 'Neural Signal Processing',
-      description: 'Advanced AI algorithms for real-time neural signal interpretation and processing',
+    {
+      icon: <CheckCircle className="w-8 h-8" />,""
+      title: 'Advanced Features',''
+      description: 'Cutting-edge technology for maximum efficiency''
     },
     {
-      icon: Eye,
-      title: 'Visual Cortex Interface',
-      description: 'Direct interface with visual cortex for enhanced vision and augmented reality',
-      benefits: ['Enhanced visual processing', 'AR/VR integration', 'Visual pattern recognition'],
+      icon: <Shield className="w-8 h-8" />,""
+      title: 'Secure & Reliable',''
+      description: 'Enterprise-grade security and 99.9% uptime''
     },
     {
-      icon: Mic,
-      title: 'Auditory Neural Interface',
-      description: 'Neural interface for auditory processing and enhanced hearing capabilities',
-      benefits: ['Enhanced hearing', 'Noise filtering', 'Audio pattern recognition'],
-    },
-    {
-      icon: Target,
-      title: 'Motor Control Interface',
-      description: 'Precise motor control interface for prosthetics and assistive devices',
-      benefits: ['Precise motor control', 'Prosthetic integration', 'Assistive technology'],
+      icon: <Users className="w-8 h-8" />,""
+      title: 'Expert Support',''
+      description: '24/7 support from our team of specialists''
     }
-  ]
-  const pricingPlans = [
-    {name: 'Research',
-      price: '$2,999',
-      period: '/month',
-      description: 'Perfect for academic research and medical studies',
-      features: [,
-        'Basic neural signal processing',
-        'Standard interface protocols',
-        'Research data export',
-        'Email support',
-        'Basic visualization',
-        'Documentation access'
-      ],
-      popular: false;,},
-    {name: 'Medical',
-      price: '$7,999',
-      period: '/month',
-      description: 'Ideal for medical applications and clinical trials',
-      features: [,
-        'Advanced neural processing',
-        'Medical-grade interfaces',
-        'Real-time monitoring',
-        'Priority support',
-        'Clinical data analytics',
-        'FDA compliance tools',
-        'Patient management',
-        'Integration APIs'
-      ],
-      popular: true;,},
-    {name: 'Enterprise',
-      price: '$19,999',
-      period: '/month',
-      description: 'For large-scale neural interface deployments',
-      features: [,
-        'Full neural interface suite',
-        'Custom interface development',
-        '24/7 dedicated support',
-        'White-label solutions',
-        'On-site deployment',
-        'Custom integrations',
-        'Advanced analytics',
-        'Research collaboration',
-        'Training programs'
-      ],
-  const useCases = [
-    {title: 'Medical Rehabilitation',
-      description: 'Neural interfaces for stroke recovery and motor function restoration',
-      icon: Brain,
-      results: '85% improvement in motor function',},
-    {title: 'Prosthetic Control',
-      description: 'Advanced prosthetic control using neural signals for natural movement',
-      icon: Target,
-      results: 'Natural prosthetic control',},
-    {title: 'Cognitive Enhancement',
-      description: 'Neural interfaces for memory enhancement and cognitive augmentation',
-      icon: Zap,
-      results: '40% cognitive improvement',},
-    {title: 'Communication Aid',
-      description: 'Neural interfaces for communication assistance in locked-in syndrome',
-      icon: MessageSquare,
-        <title>AI Neural Interface - Advanced Brain-Computer Interface | Zion Tech Group</title>
-        </Helmet><title>AI Neural Interface - Advanced Brain-Computer Interface | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered neural interface technology for medical rehabilitation, prosthetic control, and cognitive enhancement. Advanced brain-computer interface solutions." />
-        <meta name="keywords" content="neural interface, brain-computer interface, BCI, neural signal processing, prosthetic control, medical AI, cognitive enhancement" />
-        <meta property="og: title" content="AI Neural Interface - Advanced Brain-Computer Interface" />,
-        <meta property="og:description" content="Revolutionary AI-powered neural interface technology for medical rehabilitation, prosthetic control, and cognitive enhancement." />
-        <meta property="og: type" content="website" />,
-        <meta property="og: url" content="https://ziontechgroup.com/ai-neural-interface" />,
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-neural-interface" />,
-      </Helmet>
-
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent"></div>
-          
-          <div className="max-w-7xl mx-auto relative z-10">
-            </div><div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              </div><div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-6 py-3 mb-8 border border-cyan-500/30">
-                </div><Brain className="w-5 h-5 text-cyan-400" />
-                <span className="text-cyan-400 font-semibold">Neural Technology</span>
-              </div>
-              
-                Revolutionary AI-powered neural interface technology for medical rehabilitation, 
-                prosthetic control, and cognitive enhancement through advanced brain-computer interfaces.
-              </p>
-              
-                  <span className="font-semibold">Real-time Processing</span>
-                </div>
-                <div className="flex items-center space-x-2 text-purple-400">
-                  </div><Shield className="w-5 h-5" />
-                  <span className="font-semibold">Medical Grade</span>
-                </div>
-                <div className="flex items-center space-x-2 text-pink-400">
-                  </div><Target className="w-5 h-5" />
-                  <span className="font-semibold">Precise Control</span>
-                </div>
-              </div>
-              
-                </a>
-              </div>
+  ];
+  return (
+    <>
+      <EnhancedSEO
+        title="Page - Zion Tech Group""
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""
+        keywords="page, business solutions, technology services, professional services""
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto text-center">""
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
+              Page
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
+              Professional page services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/demo""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View Demo
+              </Link>
             </div>
           </div>
         </section>
-
-                for medical rehabilitation, prosthetic control, and cognitive enhancement.
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
               {features.map((feature, index) => (
-                >
-                  </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
-                    </div><feature.icon className="w-8 h-8 text-white" />
+                <div key={index} className="text-center">""
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
+                    {feature.icon}
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
-                  <p className="text-gray-300 mb-6">{feature.description</p>}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                    ))}
-                  </ul>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
+                  <p className="text-gray-300">{feature.description}</p>""
                 </div>
               ))}
             </div>
           </div>
         </section>
-
-                and research across various applications and use cases.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
-              {useCases.map((useCase, index) => (
-                >
-                  </div><div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
-                    </div><useCase.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 text-white">{useCase.title}</h3>
-                  <p className="text-gray-300 mb-4">{useCase.description</p>}</p>
-                  <div className="text-cyan-400 font-semibold text-sm">{useCase.results</div>} </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-                All plans include our advanced AI processing and medical-grade interfaces.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,</div>
-              {pricingPlans.map((plan, index) => (
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-              </a>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+          <div className="max-w-4xl mx-auto text-center">""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">""
+              Let's discuss how our page services can help your business succeed.''
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/services""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View All Services
+              </Link>
             </div>
           </div>
         </section>
       </div>
     </>
-  )
-}
-export default AINeuralInterface
+  );
+};
+const page = React.lazy(() => import('./page'));''
+export default page;
+=======
+import SEOHead from '../components/SEOHead';
+
+const AiNeuralInterfacePage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="Page - Zion Tech Group"
+        description="Advanced page solutions powered by AI"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Page</h1>
+          <pclassName="text-gray-300">
+
+const AiNeuralInterfacePage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title ="ai-neural-interface - Zion Tech Group - Zion Tech Group"";
+        description="Zion Tech Group ai-neural-interface service page"";
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">ai-neural-interface - Zion Tech Group</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+      </div>
+    </>
+  ),
+};
+
+>>>>>>> main

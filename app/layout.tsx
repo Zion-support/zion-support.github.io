@@ -1,149 +1,387 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+<<<<<<< HEAD
 
-const LayoutPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
+=======
+import React from 'react';;';
+import SEOHead from '../../components/SEOHead';
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+,
+      import { HelmetProvider } from "react-helmet-async",
+      import { AnalyticsProvider } from "./components/AnalyticsProvider";
+// import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import";"
+import { ErrorBoundary } from "react-error-boundary",
+      import ErrorFallback from "./components/ErrorFallback",
+      import MobileNavigation from "./components/MobileNavigation",
+      import EnhancedNavigation from "./components/EnhancedNavigation";
+,
+      interface LayoutProps {"}
+        "
+  children: React.ReactNode
+    },
+    {}
+const Layout: React.FC<LayoutProps> = ({ children }) => {};
+}return ()
+    <ErrorBoundary FallbackComponent={ErrorFallback}>",
+        "
+      <HelmetProvider>",
+        "
+        <>",
+        "
+          <AnalyticsProvider>",
+        "
+            <EnhancedPerformanceMonitor showInProduction={false} />",
+        "
+            <Helmet>",
+        "
+              <title>Zion Tech Group - Advanced AI and IT Solutions</title>",
+        "
+              <meta";">
+                name="description",
+      content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />",
+        "
+              <meta",>
+        "
+                name="keywords",
+      content="AI solutions, IT services, digital transformation, business automation, technology consulting" />",
+        "
+            </Helmet>",
+        "
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">";"
+              {/* Animated Background */};
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>";"
+              <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>",
+        "
+              <EnhancedNavigation />",
+        "
+              <main>{children}</main>";"
+              <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-16 relative z-10">";"
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">";"
+                    {/* Company Info */};
+                    <div className="lg:col-span-2 space-y-6">";"
+                      <h3 className="text-2xl font-bold text-white">";"
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">",
+        "
+                          Zion Tech Group",
+        "
+                        </span>",
+        "
+                      </h3>",
+        "
+                      <p className="text-gray-300 text-sm leading-relaxed max-w-md">";"
+                        Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology at <span className="text-cyan-400">ziontechgroup.com</span>.",
+        "
+                      </p>",
+        "
+                      <div className="flex space-x-4">";"
+                        <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">";"
+                          <span className="text-white text-sm font-bold">Z</span>",
+        "
+                        </div>",
+        "
+                        <div className="flex flex-col justify-center">";"
+                          <span className="text-white text-sm font-semibold">Trusted by 10,000+</span>";"
+                          <span className="text-gray-400 text-xs">Businesses Worldwide</span>",
+        "
+                        </div>",
+        "
+                      </div>",
+        "
+                    </div>",
+        "
+                    {/* AI Services */};
+                    <div className="space-y-4">";"
+                      <h4 className="text-lg font-semibold text-white">AI Services</h4>";"
+                      <div className="space-y-3">";"
+                        <to="/ai-business-intelligence" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Business Intelligence",
+        "
+                        </>";"
+                        <to="/ai-customer-support" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Customer Support",
+        "
+                        </>";"
+                        <to="/ai-content-generation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Content Generation",
+        "
+                        </>";"
+                        <to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Cybersecurity",
+        "
+                        </>";"
+                        <to="/ai-voice-assistant-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Voice AI Assistant",
+        "
+                        </>";"
+                        <to="/ai-image-recognition-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Image Recognition",
+        "
+                        </>";"
+                        <to="/ai-fraud-detection-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Fraud Detection",
+        "
+                        </>";"
+                        <to="/ai-services" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">",
+        "
+                          View All AI Services →",
+        "
+                        </>",
+        "
+                      </div>",
+        "
+                    </div>";"
+                    {/* IT Services */};
+                    <div className="space-y-4">";"
+                      <h4 className="text-lg font-semibold text-white">IT Services</h4>";"
+                      <div className="space-y-2">";"
+                        <to="/cloud-infrastructure" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Cloud Infrastructure",
+        "
+                        </>";"
+                        <to="/blockchain-development" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Blockchain Development",
+        "
+                        </>";"
+                        <to="/iot-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          IoT Solutions",
+        "
+                        </>";"
+                        <to="/ar-vr-development" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          AR/VR Development",
+        "
+                        </>";"
+                        <to="/devops-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          DevOps Solutions",
+        "
+                        </>";"
+                        <to="/mobile-development" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Mobile Development",
+        "
+                        </>";"
+                        <to="/services" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">",
+        "
+                          View All IT Services →",
+        "
+                        </>",
+        "
+                      </div>",
+        "
+                    </div>";"
+                    {/* Micro SAAS */};
+                    <div className="space-y-4">";"
+                      <h4 className="text-lg font-semibold text-white">Micro SAAS</h4>";"
+                      <div className="space-y-3">";"
+                        <to="/zion-analytics-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Zion Analytics Pro",
+        "
+                        </>";"
+                        <to="/zion-security-shield" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Zion Security ",
+        "
+                        </>";"
+                        <to="/zion-inventory-manager-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Inventory Manager",
+        "
+                        </>";"
+                        <to="/zion-hr-management-suite" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          HR Management Suite",
+        "
+                        </>";"
+                        <to="/zion-ecommerce-optimizer" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          E-commerce Optimizer",
+        "
+                        </>";"
+                        <to="/zion-ai-chatbot-builder" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          AI Chatbot Builder",
+        "
+                        </>";"
+                        <to="/micro-saas" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">",
+        "
+                          View All Micro SAAS →",
+        "
+                        </>",
+        "
+                      </div>",
+        "
+                    </div>";"
+                    {/* Company & Resources */};
+                    <div className="space-y-4">";"
+                      <h4 className="text-lg font-semibold text-white">Company</h4>";"
+                      <div className="space-y-3">";"
+                        <to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          About Us",
+        "
+                        </>";"
+                        <to="/team" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Our Team",
+        "
+                        </>";"
+                        <to="/careers" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Careers",
+        "
+                        </>";"
+                        <to="/case-studies" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Case Studies",
+        "
+                        </>";"
+                        <to="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Blog",
+        "
+                        </>";"
+                        <to="/contact" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">",
+        "
+                          Contact Us →",
+        "
+                        </>",
+        "
+                      </div>",
+        "
+                    </div>",
+        "
+                  </div>",
+        "
+                  {/* Contact Information */};
+                  <div className="border-t border-white/10 pt-8 mb-8">";"
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">";"
+                      <div className="flex items-center space-x-3">";"
+                        <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">";"
+                          <span className="text-white text-sm">@</span>",
+        "
+                        </div>",
+        "
+                        <div>";"
+                          <p className="text-white text-sm font-medium">Email</p>";"
+                          <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors">kleber@ziontechgroup.com</a>",
+        "
+                        </div>",
+        "
+                      </div>";"
+                      <div className="flex items-center space-x-3">";"
+                        <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">";"
+                          <span className="text-white text-sm">📞</span>",
+        "
+                        </div>",
+        "
+                        <div>";"
+                          <p className="text-white text-sm font-medium">Phone</p>";"
+                          <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors">+1 302 464 0950</a>",
+        "
+                        </div>",
+        "
+                      </div>";"
+                      <div className="flex items-start space-x-3">";"
+                        <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mt-0.5">";"
+                          <span className="text-white text-sm">📍</span>",
+        "
+                        </div>",
+        "
+                        <div>";"
+                          <p className="text-white text-sm font-medium">Address</p>";"
+                          <p className="text-gray-300 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>",
+        "
+                        </div>",
+        "
+                      </div>",
+        "
+                    </div>",
+        "
+                  </div>";"
+                  {/* Bottom Bar */};
+                  <div className="border-t border-white/10 pt-8">";"
+                    <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">";"
+                      <p className="text-gray-300 text-sm">",
+        "
+                        © 2024 Zion Tech Group. All rights reserved.",
+        "
+                      </p>";"
+                      <div className="flex flex-wrap gap-6">";"
+                        <to="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Privacy Policy",
+        "
+                        </>";"
+                        <to="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Terms of Service",
+        "
+                        </>";"
+                        <to="/cookies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Cookie Policy",
+        "
+                        </>";"
+                        <to="/sitemap" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">",
+        "
+                          Sitemap",
+        "
+                        </>",
+        "
+                      </div>",
+        "
+                    </div>",
+        "
+                  </div>",
+        "
+                </div>",
+        "
+              </footer>",
+        "
+            </div>",
+        "
+          </AnalyticsProvider>",
+        "
+        </>",
+        "
+      </HelmetProvider>",
+        "
+    </ErrorBoundary>",
+        "
+  )
+},
+      export default Layout",
+        "
 
+;
+const AppPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Layout | Zion Tech Group</title>
-        <meta name="description" content="Advanced layout solutions powered by cutting-edge AI technology" />
-        <meta name="keywords" content="layout, AI, technology, solutions, Zion Tech Group" />
-      </Helmet>
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              <span>Layout</span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced layout solutions powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2" size={20} />
-              </button>
-              <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Layout?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our layout solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="text-white" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our layout solutions for your business.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="text-green-400 mt-1 flex-shrink-0" size={20} />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-              Contact our experts to discuss your layout needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2" size={20} />
-                Call Now
-              </button>
-              <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2" size={20} />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+    <>;
+      <SEOHead;
+        title="App - Zion Tech Group"";
+        description="Professional app solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">App</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
 };
+;
+export default AppPage;'";'";
 
-export default LayoutPage;
-
+>>>>>>> main

@@ -1,80 +1,207 @@
-const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
 
-    '24/7 technical support',
-
-    'Easy integration with existing systems',
-
-    'Cost-effective pricing plans',
-
-        <title>FuturisticServiceCard | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+import { Helmet } from "react-helmet-async";
+interface FuturisticServiceCardProps {},
+      title: string
+  description: string
+  icon: React.ComponentType<any></any>
+  features: string[]
+  benefits: string[]
+  pricing?: string
+  category: "AI" | "IT" | "MicroSAAS" | "Emerging"
+},
+      const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({},)
+      title, description, _icon: Icon, _features, _benefits, _pricing, _category, _}) => {},
+      const categoryColors = {},
+      AI: "from-purple-500 to-pink-600",
+      IT: "from-blue-500 to-cyan-600",
+      MicroSAAS: "from-green-500 to-emerald-600",
+      Emerging: "from-orange-500 to-red-600"},
+      const categoryColor =
+    categoryColors[category] || "from-cyan-500 to-purple-600"
+  return ()
+    <div></div>
+      <Helmet></Helmet>
+        <title>{title} | Zion Tech Group</title>
+        <meta name="description" content={description} />
+        <metaname="keywords">
+          content={`${title.toLowerCase()}, AI solutions, IT services, ${category.toLowerCase()}`} />
       </Helmet>
-      {/* Hero Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-    'Proven track record of success'
-  ]
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        </Helmet><title>FuturisticServiceCard | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
-      {/* Hero Section */}
-      <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></main>
+          {/* Hero Section */};
+          <section className="text-center py-16"></section>
+            <div className="flex justify-center mb-8"></div>
+              <divclassName={`p-4 rounded-full bg-gradient-to-r ${categoryColor} shadow-lg`};>
+              ></div
+>
+                <Icon className="w-12 h-12 text-white" />
+              </div>
             </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center"></div>
-            <h1>
-              </span>
-              <br>
-              <span className="text-white">Solutions</span>
-            </h1>
-              </button>
-              <button>Learn More;</button>
-              </button>
+            <h1 className="text-5xl font-bold text-white mb-6">{title}</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+              {description};
+            </p>
+            {pricing && ()}
+              <div className="text-2xl font-semibold text-cyan-400 mb-8"></div>
+                Starting at {pricing};
+              </div>
+            )};
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <aclassName="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105">
+                href="/contact"
+              ></a
+>
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
+              <aclassName="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group">
+                href="tel:+13024640950"
+              ></a
+>
+                <Phone className="w-5 h-5 mr-2" />
+                Call (302) 464-0950
+              </a>
             </div>
-          </div>
-        </div>
-  ),
-}
-export default FuturisticServiceCardPage
+          </section>
+          {/* Features Section */};
+          <section className="py-16"></section>
+            <div className="text-center mb-12"></div>
+              <h2 className="text-3xl font-bold text-white mb-4"></h2>
+                Key Features
+              </h2>
+              <p className="text-lg text-gray-300"></p>
+                Comprehensive {title.toLowerCase()} solutions designed to drive
+                your business forward
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+              {features.map((feature, index) => ()}
+                <divkey={index},>
+      className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
+                ></div
+>
+                  <div className="flex items-center mb-4"></div>
+                    <CheckCircle className="w-6 h-6 text-cyan-400 mr-3" />
+                    <h3 className="text-lg font-semibold text-white"></h3>
+                      {feature};
+                    </h3>
+                  </div>
+                </div>
+              ))};
+            </div>
+          </section>
+          {/* Benefits Section */};
+          <section className="py-16"></section>
+            <div className="text-center mb-12"></div>
+              <h2 className="text-3xl font-bold text-white mb-4"></h2>
+                Why Choose Our {title}?
+              </h2>
+              <p className="text-lg text-gray-300"></p>
+                Experience the difference with our proven expertise and
+                cutting-edge technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+              {benefits.map((benefit, index) => ()}
+                <div key={index} className="flex items-start space-x-4"></div>
+                  <div className="flex-shrink-0"></div>
+                    <Star className="w-6 h-6 text-yellow-400" />
+                  </div>
+                  <div></div>
+                    <h3 className="text-lg font-semibold text-white mb-2"></h3>
+                      {benefit};
+                    </h3>
+                    <p className="text-gray-300"></p>
+                      Leverage our expertise to maximize your business potential
+                      with {title.toLowerCase()};
+                    </p>
+                  </div>
+                </div>
+              ))};
+            </div>
+          </section>
+          {/* Stats Section */};
+          <section className="py-16"></section>
+            <div className="text-center mb-12"></div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+                <div className="text-center"></div>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2"></div>
+                    500+
+                  </div>
+                  <div className="text-gray-300">Happy Clients</div>
+                </div>
+                <div className="text-center"></div>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2"></div>
+                    99%
+                  </div>
+                  <div className="text-gray-300">Success Rate</div>
+                </div>
+                <div className="text-center"></div>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2"></div>
+                    24/7
+                  </div>
+                  <div className="text-gray-300">Support</div>
+                </div>
+                <div className="text-center"></div>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2"></div>
+                    10+
+                  </div>
+                  <div className="text-gray-300">Years Experience</div>
+                </div>
+              </div>
+            </div>
+          </section>
+          {/* CTA Section */};
+          <section className="py-16 text-center"></section>
+            <h2 className="text-3xl font-bold text-white mb-4"></h2>
+              Ready to Get Started?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+              Join hundreds of companies that trust Zion Tech Group for their{" "};
+              {title.toLowerCase()} needs. Get a free consultation today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <aclassName="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105">
+                href="/contact"
+              ></a
+>
+                Get Free Consultation
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
+              <aclassName="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group">
+                href="mailto:kleber@ziontechgroup.com"
+              ></a
+>
+                <Mail className="w-5 h-5 mr-2" />
+                Email Us
+              </a>
+            </div>
+          </section>
+        </main>
+
+      </div>
+    </>
+  );
+
+;
+const ComponentsPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>FuturisticServiceCard | Zion Tech Group
-        <meta name="description" content="Professional FuturisticServiceCard services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="FuturisticServiceCard, AI solutions, IT services, Zion Tech Group, futuristicservicecard" />
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">FuturisticServiceCard
-              <br />
-              <span className="text-white">Solutions
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced futuristicservicecard solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More
-  )
-}
-export default FuturisticServiceCardPage</div></div></div></div></span></span></button></button></p></h1></section>
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+
+};
+;
+export default ComponentsPage;'";'";

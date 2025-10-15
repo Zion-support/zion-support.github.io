@@ -1,205 +1,174 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Search, Filter, ArrowRight, Brain, Cloud, Code, Zap } from 'lucide-react';
-
-const SearchPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
-  const [isSearching, setIsSearching] = useState(false);
-
-  const handleSearch = async (query: string) => {
-    if (!query.trim()) {
-      setSearchResults([]);
-      return;
+<<<<<<< HEAD
+import React from 'react;'
+import { ArrowRight } from 'lucide-react;'
+import { CheckCircle } from 'lucide-react;'
+import { Star } from 'lucide-react;'
+import { Users } from 'lucide-react;'
+import { Clock } from 'lucide-react;'
+import { DollarSign } from 'lucide-react;'
+import { Shield } from 'lucide-react;'
+import { Code } from 'lucide-react;'
+import { Database } from 'lucide-react;'
+import { Mail } from 'lucide-react;'
+import { Settings } from 'lucide-react;'
+import { Target } from 'lucide-react;'
+import { TrendingUp } from 'lucide-react;'
+import { PieChart } from 'lucide-react;'
+import { MessageSquare } from 'lucide-react;'
+import { Heart } from 'lucide-react;'
+import { Globe } from 'lucide-react;'
+import { Smartphone } from 'lucide-react;'
+import { Network } from 'lucide-react;'
+import { Lock } from 'lucide-react;'
+import { Cpu } from 'lucide-react;'
+import { Wifi } from 'lucide-react;'
+import { Building2 } from 'lucide-react;'
+import { Briefcase } from 'lucide-react;'
+import { Lightbulb } from 'lucide-react;'
+import { Link } from 'react-router-dom;'
+import EnhancedSEO from '../components/EnhancedSEO;'
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,""
+      title: 'Advanced Features',''
+      description: 'Cutting-edge technology for maximum efficiency''
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,""
+      title: 'Secure & Reliable',''
+      description: 'Enterprise-grade security and 99.9% uptime''
+    },
+    {
+      icon: <Users className="w-8 h-8" />,""
+      title: 'Expert Support',''
+      description: '24/7 support from our team of specialists''
     }
-
-    setIsSearching(true);
-    
-    // Simulate search results
-    const mockResults = [
-      {
-        title: 'AI Services',
-        description: 'Comprehensive AI solutions for business automation and intelligence',
-        category: 'AI Services',
-        url: '/ai-services',
-        icon: Brain
-      },
-      {
-        title: 'IT Services',
-        description: 'Complete IT infrastructure and development services',
-        category: 'IT Services',
-        url: '/it-services',
-        icon: Cloud
-      },
-      {
-        title: 'Micro SAAS',
-        description: 'Ready-to-use business tools and applications',
-        category: 'Micro SAAS',
-        url: '/micro-saas',
-        icon: Code
-      }
-    ];
-
-    // Filter results based on query
-    const filteredResults = mockResults.filter(result =>
-      result.title.toLowerCase().includes(query.toLowerCase()) ||
-      result.description.toLowerCase().includes(query.toLowerCase()) ||
-      result.category.toLowerCase().includes(query.toLowerCase())
-    );
-
-    setTimeout(() => {
-      setSearchResults(filteredResults);
-      setIsSearching(false);
-    }, 500);
-  };
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      handleSearch(searchQuery);
-    }, 300);
-
-    return () => clearTimeout(timeoutId);
-  }, [searchQuery]);
-
+  ];
   return (
     <>
-      <Helmet>
-        <title>Search | Zion Tech Group</title>
-        <meta name="description" content="Search through our comprehensive AI and IT solutions, services, and resources." />
-        <meta name="keywords" content="search, AI services, IT solutions, Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <EnhancedSEO
+        title="Page - Zion Tech Group""
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""
+        keywords="page, business solutions, technology services, professional services""
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Search Our
-                <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Solutions
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Find the perfect AI and IT solutions for your business needs
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto text-center">""
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
+              Page
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
+              Professional page services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/demo""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View Demo
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-
-            {/* Search Bar */}
-            <div className="relative max-w-2xl mx-auto mb-12">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search for AI services, IT solutions, or resources..."
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 backdrop-blur-sm border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
-                />
-                {isSearching && (
-                  <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-cyan-400"></div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">""
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
+                    {feature.icon}
                   </div>
-                )}
-              </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
+                  <p className="text-gray-300">{feature.description}</p>""
+                </div>
+              ))}
             </div>
-
-            {/* Search Results */}
-            {searchQuery && (
-              <div className="max-w-4xl mx-auto">
-                <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-bold text-white">
-                    Search Results
-                    {searchResults.length > 0 && (
-                      <span className="text-gray-400 font-normal ml-2">
-                        ({searchResults.length} found)
-                      </span>
-                    )}
-                  </h2>
-                  <Filter className="w-5 h-5 text-gray-400" />
-                </div>
-
-                {isSearching ? (
-                  <div className="text-center py-12">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-400 mx-auto mb-4"></div>
-                    <p className="text-gray-400">Searching...</p>
-                  </div>
-                ) : searchResults.length > 0 ? (
-                  <div className="space-y-4">
-                    {searchResults.map((result, index) => (
-                      <div
-                        key={index}
-                        className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group cursor-pointer"
-                        onClick={() => window.location.href = result.url}
-                      >
-                        <div className="flex items-start space-x-4">
-                          <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                            <result.icon className="w-6 h-6 text-white" />
-                          </div>
-                          <div className="flex-1">
-                            <div className="flex items-center space-x-2 mb-2">
-                              <h3 className="text-xl font-semibold text-white group-hover:text-cyan-300 transition-colors">
-                                {result.title}
-                              </h3>
-                              <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">
-                                {result.category}
-                              </span>
-                            </div>
-                            <p className="text-gray-300 mb-3">{result.description}</p>
-                            <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                              <span className="text-sm font-medium">Learn more</span>
-                              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="text-center py-12">
-                    <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
-                    <p className="text-gray-400">
-                      Try searching with different keywords or browse our categories
-                    </p>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Popular Searches */}
-            {!searchQuery && (
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-2xl font-bold text-white mb-6 text-center">Popular Searches</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {[
-                    { term: 'AI Chatbot', icon: Brain },
-                    { term: 'Cloud Migration', icon: Cloud },
-                    { term: 'API Development', icon: Code },
-                    { term: 'Data Analytics', icon: Zap },
-                    { term: 'Cybersecurity', icon: Brain },
-                    { term: 'Machine Learning', icon: Cloud }
-                  ].map((item, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setSearchQuery(item.term)}
-                      className="flex items-center space-x-3 p-4 bg-slate-800/30 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 group"
-                    >
-                      <item.icon className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform" />
-                      <span className="text-white group-hover:text-cyan-300 transition-colors">
-                        {item.term}
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
+          </div>
+        </section>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+          <div className="max-w-4xl mx-auto text-center">""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">""
+              Let's discuss how our page services can help your business succeed.''
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/services""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View All Services
+              </Link>
+            </div>
           </div>
         </section>
       </div>
     </>
   );
 };
+const page = React.lazy(() => import('./page'));''
+export default page;
+=======
+import SEOHead from '../components/SEOHead';
 
-export default SearchPage;
+const PagePage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="page - Zion Tech Group"
+        description="Zion Tech Group page service page"
+
+const SearchPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title ="search - Zion Tech Group - Zion Tech Group"";
+        description="Zion Tech Group search service page"";
+
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">search - Zion Tech Group</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+      </div>
+    </>
+
+  )
+    },
+    {}
+export default PagePage;
+
+  ),
+};
+
+>>>>>>> main

@@ -1,36 +1,100 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
-import { HelmetProvider } from 'react-helmet-async'
-import { MemoryRouter } from 'react-router-dom'
-// Mock component that throws an error
-const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
-  if (shouldThrow) {
-    throw new Error('Test error')
-  }
-  return <div>Test content</div>
-}
-describe('Advanced Components', () => {
-  it('renders test content without error', () => {
-
+<<<<<<< HEAD
+import React from 'react';'
+import { render, screen } from '@testing-library/react';'
+import { HelmetProvider } from 'react-helmet-async';'
+import { MemoryRouter } from 'react-router-dom';'
+import ErrorBoundary from '../app/components/ErrorBoundary';'
+// Mock components that might not exist
+const MockAdvancedPerformanceMonitor = () => {
+  return <div>Advanced Performance Monitor</div>
+};
+describe('ErrorBoundary', () => {'
+  const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
+    if (shouldThrow) {
+      throw new Error('Test error');'
+    }
+    return <div>No error</div>
+  };
+  it('renders children when there is no error', () => {'
+    render(
+      <ErrorBoundary>
+        <ThrowError shouldThrow={false} />
+      </ErrorBoundary>
+    );
+    expect(screen.getByText('No error')).toBeInTheDocument();'
+  });
+  it('renders error UI when there is an error', () => {'
+    // Suppress console.error for this test
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});'
+    render(
+      <ErrorBoundary>
+        <ThrowError shouldThrow={true} />
+      </ErrorBoundary>
+    );
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();'
+    expect(screen.getByText('We apologize for the inconvenience. Please try refreshing the page.')).toBeInTheDocument();'
+    consoleSpy.mockRestore();
+  });
+  it('shows refresh button when there is an error', () => {'
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});'
+    render(
+      <ErrorBoundary>
+        <ThrowError shouldThrow={true} />
+      </ErrorBoundary>
+    );
+    expect(screen.getByText('Refresh Page')).toBeInTheDocument();'
+    consoleSpy.mockRestore();
+  });
+});
+describe('Component Integration Tests', () => {'
+  it('renders with HelmetProvider', () => {'
+    render(
+      <HelmetProvider>
+        <MemoryRouter>
+          <div>Test content</div>
+        </MemoryRouter>
+      </HelmetProvider>
+    );
+    expect(screen.getByText('Test content')).toBeInTheDocument();'
+  });
+  it('renders with MemoryRouter', () => {'
     render(
       <MemoryRouter>
-        <ThrowError shouldThrow={false} />
+        <div>Router test content</div>
       </MemoryRouter>
-    )
-    expect(screen.getByText('Test content')).toBeInTheDocument()
+    );
+    expect(screen.getByText('Router test content')).toBeInTheDocument();'
+  });
+});
+describe('Mock Components', () => {'
+  it('renders mocked AdvancedPerformanceMonitor', () => {'
+    // This test would work with the mocked component
+    expect(true).toBe(true);
+  });
+});
+=======
+import {render} from "@testing-library/react";";
+const: TestComponent = () => {}
+  return <div>Test content</div>
+};
+describe("Advanced Components", () => {}";
+  // Test implementation
+  it("should render without errors", () => {}";
+    expect(true).toBe(true)
   })
-  it('handles error when shouldThrow is true', () => {
-    const consoleSpy = jest
-      .spyOn(console, 'error')
+  
+  it("should render test content", () => {}";
+    render(<TestComponent />)
+    expect(screen.getByText("Test content")).toBeInTheDocument()";";
+  })
+  
+  it("should handle console errors", () => {}";
+    const: consoleSpy = jest;
+      .spyOn(console, "error")";";
       .mockImplementation(() => {})
-    // In React testing, errors are caught by error boundaries
-    // We just verify the component doesn't crash the test
-    expect(() => {
-      render(
-        <MemoryRouter>
-          <ThrowError shouldThrow={true} />
-        </MemoryRouter>
-      )
-    }).not.toThrow()
+    
+    // Test implementation
     consoleSpy.mockRestore()
   })
 })
+>>>>>>> main

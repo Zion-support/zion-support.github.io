@@ -1,57 +1,47 @@
-    document.head.appendChild(script)
-// Initialize gtag;
-    (window as any).dataLayer = (window as any).dataLayer || [],
-    function gtag(...args: any[]) {,
-    ) => {
-  )
-  }
-            trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));}
-          } else if (entry.entryType === 'first-input') {
-    const fid = (entry as any).processingStart - entry.startTime
-            trackEvent('web_vitals', 'FID', Math.round(fid))
-  }
-          } else if (entry.entryType === 'layout-shift') {
-    if (!(entry as any).hadRecentInput) {
-              trackEvent('web_vitals', 'CLS', (entry as any).value)
-  }
-            }
-          }
-        }
-      })
-        if (navigation) {
-          trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart))}}
-      })
-    }
-  }
-          type: (event.target as any).tagName,
-          src: (event.target as any).src || (event.target as any).href,
-          error: event.type;,}})
-      }
-    }, true)
-  }
-          button_text: target.textContent?.trim(),
-          button_class: target.className;,}})
-      }
-    })
-      })
-    }
-  }
-return null
-}
-    </>
-  );
-// Extend Window interface for gtag
-declare global {
-    interface Window {
 
-    dataLayer: any[],
-    gtag: (...args: any[]) => void
-  }
-  }
+import React, { useEffect } from "react",
+      declare global {},
+      interface Window {},
+      gtag: (_...args: unknown[]) => void
+    },
+    {}
+},
+      const Analytics: React.FC = () => {};
+}useEffect(() => {};
+}const initAnalytics = () => {};
+}if ($1) {}
+  // If body
 }
-export default Analytics
-// Analytics Provider for context
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    return ()
-  )
-}
+        window.gtag("config", "GA_MEASUREMENT_ID", {};)
+          page_title: document.title;
+          page_location: window.location.href})
+      };
+    };
+    initAnalytics()
+  }, [])
+  return null; // Analytics component doesn't render anything'
+},
+      export default Analytics
+
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const ComponentsPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+};
+;
+export default ComponentsPage;'";'";
+

@@ -1,148 +1,69 @@
-  logErrors: boolean,
-  /**
-   * Whether to show detailed error messages
-   */
-  showDetails: boolean,
-  /**
-   * Whether to send errors to external service
-   */
-  reportErrors: boolean,
-  /**
-   * Error reporting endpoint
-   */
-  reportingEndpoint?: string
-/**
-   * Whether to show error overlay in development
-   */
-  showErrorOverlay: boolean,
-  /**
-   * Maximum number of errors to store
-   */
-  maxStoredErrors: number,
-/**
-   * Fallback UI components;
-   */,
-}
-/**;
- * Default error messages;
- */;
-const DEFAULT_ERROR_MESSAGES = {default: 'Something went wrong. Please try again.',
-  fallbackComponents: {}
 
-    default: React.ComponentType<{ error: Error, resetError: () => void }>
-    network: React.ComponentType<{ error: Error, resetError: () => void }>
-    notFound: React.ComponentType<{ error: Error, resetError: () => void }>
-  }
+import { Helmet } from "react-helmet-async";
+const ErrorboundaryconfigPage = () => {}
 }
-/**
- * Default error messages
- */
-const DEFAULT_ERROR_MESSAGES = {
-    default: 'Something went wrong. Please try again.',
-  network: 'Network connection issue. Please check your internet connection.',
-  notFound: 'The requested resource was not found.',
-  timeout: 'Request timed out. Please try again.',
-  serverError: 'Server error occurred. Please try again later.',
-/**
- * Get error boundary configuration based on environment
- */
-export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
-    return {
-    logErrors: true,
-    showDetails: isDevelopment,
-    reportErrors: !isDevelopment,
-    reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT,
-    showErrorOverlay: isDevelopment,
-    maxStoredErrors: 50,
-    customMessages: DEFAULT_ERROR_MESSAGES,
-}
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
-          <svg>
-            </svg><path>
-          </svg>
+  return ()
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
+        <title>Errorboundaryconfig | Zion Tech Group</title>
+        <metaname="description">
+          content="Professional errorboundaryconfig services by Zion Tech Group"
+        />
+      </Helmet>
+      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>
         </div>
-        <h2>Oops! Something went wrong;</h2>
-        </h2>
-        <p>{error.message || 'An unexpected error occurred'</p>} </p>
-        {process.env['NODE_ENV'] === 'development' && (} <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack</p>}</pre>
-        )}
-          >
-            Go Home;
-          </button>
+      </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"></span>
+              Errorboundaryconfig
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+            Professional errorboundaryconfig services by Zion Tech Group
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <>
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            ></>
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </>
+            <>
+              to="/contact"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            ></>
+              Learn More
+            </>
+          </div>
         </div>
       </div>
     </div>
-  ),
+  )
 }
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
-          <svg>
-            </svg><path>
-          </svg>
-        </div>
-        <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">Connection Issue</h2>
-        <p>Unable to connect to the server. Please check your internet connection and try again.</p>
-        </p>
-        <div className="mt-6"></div>
-          <button>Retry Connection;</button>
-          </button>
-        </div>
-      </div>
-    </div>
-          >
-            Go Home;
-          </button>
-          >
-            Go Back;
-          </button>
-        </div>
-      </div>
-    </div>
-  ),
-}
-          <svg
-            className="w-6 h-6 text-red-600"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-}
-/**
- * Network error fallback component
- */
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
+
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const ConfigPage: React.FC = () => {
   return (
-          <svg
-            className="w-6 h-6 text-yellow-600"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-}
-/**
- * Not found error fallback component
- */
-function NotFoundFallback(): JSX.Element {
-  return (
-}
-/**
- * Get error type from error object
- */
-export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
-  if (error.message.includes('Network') || error.message.includes('fetch')) {
-/**
- * Format error for logging
- */
-export function formatErrorForLogging(error: Error): Record<string, unknown> {
-    message: error.message,
-    stack: error.stack,
-    name: error.name,
-    type: getErrorType(error),
-    timestamp: new Date().toISOString(),
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
+    <>;
+      <SEOHead;
+        title="Config - Zion Tech Group"";
+        description="Professional config solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Config</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+
+};
+;
+export default ConfigPage;'";'";

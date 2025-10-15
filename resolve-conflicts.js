@@ -1,46 +1,94 @@
+<<<<<<< HEAD
+import { execSync    } from "child_process";";"
+import { readFileSync, writeFileSync, existsSync    } from "fs";";"
+// Get list of conflicted files;
+const conflictedFiles = execSync('git status --porcelain | grep "^DU\\|^UD\\|^AU\\|^UA"', { encoding: 'utf8' })'"'";'"
+  .split('\n')';'
+  .filter(line => line.trim());
+  .map(line => line.split(' ').pop())';'
+  .filter(file => file);
+console.log('Conflicted files:', conflictedFiles.length);';'
+// For modify/delete conflicts, remove the files that were deleted in main;
+for (const file of conflictedFiles) {
+  if (existsSync(file)) {
+    console.log(`Removing conflicted file: ${file}`);"``"`;"
+    execSync(`git rm "${file}"`);``"`;"
+  }
+}
+// Add and commit the resolution;
+execSync('git add .');"'";'"
+execSync('git commit -m "Resolve merge conflicts by accepting main branch deletions"');"'";'"
+console.log('Merge conflicts resolved successfully');"'";
+=======
 #!/usr/bin/env node
-import { readFileSync, writeFileSync } from 'fs'
-console.log('🔧 Resolving merge conflicts in app/page.tsx...')
+
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+
+// Function to resolve merge conflicts by keeping our version (HEAD)
+function resolveConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has merge conflicts
+    if (!content.includes('<<<<<<< HEAD')) {
+      return false;
+    }
+    
+    // Replace merge conflict markers with HEAD version (our changes)
+    content = content.replace(
+      /<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [a-f0-9]+\n?/gs,
+      '$1'
+    );
+    
+    // Clean up any remaining conflict markers
+    content = content.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [a-f0-9]+\n?/gs, '');
+    
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`✅ Resolved conflicts in: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to find all files with merge conflicts
+function findConflictedFiles() {
+  try {
+    const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(file => file.length > 0);
+  } catch (error) {
+    console.error('Error finding conflicted files:', error.message);
+    return [];
+  }
+}
+
+console.log('🔧 Resolving merge conflicts...');
+
+// Find all files with conflicts
+const conflictedFiles = findConflictedFiles();
+console.log(`Found ${conflictedFiles.length} files with conflicts`);
+
+let resolvedCount = 0;
+conflictedFiles.forEach(filePath => {
+  if (fs.existsSync(filePath)) {
+    if (resolveConflicts(filePath)) {
+      resolvedCount++;
+    }
+  } else {
+    console.log(`⚠️  File not found: ${filePath}`);
+  }
+});
+
+console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
+
+// Add all resolved files
 try {
-    // Read the file
-  const content = readFileSync('/workspace/app/page.tsx', 'utf8')
-  // Split by conflict markers and keep our version (after )
-  const lines = content.split('\n')
-  const resolvedLines = []
-  let skipUntilNextMarker = false
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i]
-    if (line.includes('')) {
-      skipUntilNextMarker = true
-      continue
-  }
-    
-    if (line.includes('')) {
-    skipUntilNextMarker = false
-      continue
-  }
-    
-    if(line.includes('      continue;)
-    })
-    )
-    if (!skipUntilNextMarker) {
-    resolvedLines.push(line)
-  }
-  }
-  
-  // Write the resolved content
-  writeFileSync('/workspace/app/page.tsx', resolvedLines.join('\n'))
-  console.log('✅ Merge conflicts resolved successfully!')
-  // Also clean up duplicate imports
-  const finalContent = readFileSync('/workspace/app/page.tsx', 'utf8')
-  const importLines = finalContent.split('\n').filter(line => line.startsWith('import'))
-  const uniqueImports = [...new Set(importLines)]
-  // Remove duplicate imports
-  const nonImportLines = finalContent.split('\n').filter(line => !line.startsWith('import'))
-  const cleanedContent = [...uniqueImports, ...nonImportLines].join('\n')
-  writeFileSync('/workspace/app/page.tsx', cleanedContent)
-  console.log('✅ Duplicate imports cleaned up!')
+  execSync('git add .', { stdio: 'inherit' });
+  console.log('✅ Added all resolved files to staging');
 } catch (error) {
-    console.error('❌ Error resolving conflicts:', error.message)
-  process.exit(1)
-  }
+  console.error('❌ Error adding files:', error.message);
+}
+>>>>>>> main

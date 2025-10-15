@@ -1,156 +1,73 @@
-'use client';
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Zap } from 'lucide-react';
-
-const MicroSaasPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-
-  const products = [
-    {
-      id: 1,
-      name: 'AI Content Writer',
-      description: 'Generate high-quality content with AI-powered writing assistance',
-      price: '$29/month',
-      category: 'AI Tools',
-      features: ['Content Generation', 'SEO Optimization', 'Multiple Languages', 'Tone Customization']
-    },
-    {
-      id: 2,
-      name: 'Analytics Dashboard',
-      description: 'Comprehensive analytics and reporting for your business',
-      price: '$49/month',
-      category: 'Analytics',
-      features: ['Real-time Data', 'Custom Reports', 'Data Visualization', 'Export Options']
-    },
-    {
-      id: 3,
-      name: 'Email Marketing Pro',
-      description: 'Advanced email marketing automation and campaign management',
-      price: '$39/month',
-      category: 'Marketing',
-      features: ['Automation', 'A/B Testing', 'Segmentation', 'Analytics']
-    },
-    {
-      id: 4,
-      name: 'Task Manager Plus',
-      description: 'Streamline your workflow with intelligent task management',
-      price: '$19/month',
-      category: 'Productivity',
-      features: ['Smart Scheduling', 'Team Collaboration', 'Progress Tracking', 'Integrations']
-    }
-  ];
-
-  const categories = ['All', 'AI Tools', 'Analytics', 'Marketing', 'Productivity'];
-
-  const filteredProducts = selectedCategory === 'All' 
-    ? products 
-    : products.filter(product => product.category === selectedCategory);
-
+<<<<<<< HEAD
+import React from 'react;'
+import { Helmet } from 'react-helmet-async;'
+'use client;''
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Micro SaaS Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Powerful, focused tools designed to solve specific business challenges. Choose from our range of micro SaaS products.
-            </p>
-          </div>
-        </section>
-
-        {/* Category Filter */}
-        <section className="py-10 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
-                    selectedCategory === category
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
+    <div className="min-h-screen bg-white">""
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />""
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">;""
+        <div className="text-center">;""
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">;""
+            Page;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">;""
+            Professional page solutions tailored to your business needs.;
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;""
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;""
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">;""
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">;""
+                Our team of experts delivers cutting-edge page solutions.;
+              </p>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;""
+              <h3 className="text-lg font-semibold text-green-900 mb-2">;""
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">;""
+                Tailored page implementations for your specific requirements.;
+              </p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">;""
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">;""
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">;""
+                Round-the-clock support for all your page needs.;
+              </p>
             </div>
           </div>
-        </section>
-
-        {/* Products Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {filteredProducts.map((product) => (
-                <div
-                  key={product.id}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
-                >
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4 group-hover:scale-110 transition-transform">
-                    <Zap className="text-white" size={32} />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{product.name}</h3>
-                  <p className="text-gray-300 mb-4">{product.description}</p>
-                  <div className="text-2xl font-bold text-cyan-400 mb-4">{product.price}</div>
-                  <ul className="space-y-2 mb-6">
-                    {product.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="text-green-400 mr-2 flex-shrink-0" size={16} />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href="/contact"
-                    className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:translate-y-1"
-                  >
-                    Get Started
-                    <ArrowRight className="ml-2" size={16} />
-                  </a>
-                </div>
-              ))}
-            </div>
+          <div className="mt-12">;""
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;""
+              Get Started Today;
+            </button>
           </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Need a Custom Solution?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              We can create a custom micro SaaS solution tailored to your specific business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Request Custom Solution
-                <ArrowRight className="ml-2" size={20} />
-              </a>
-              <a
-                href="/services"
-                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
-                View All Services
-              </a>
-            </div>
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
+        </div>
+      </div>
     </div>
   );
 };
-
 export default MicroSaasPage;
+=======
+import React from 'react';";
+import SEOHead from '../components/SEOHead';";
+
+  ];
+;
+  const: stats = [";"";";";
+    { number: '10,000+', label: 'Active Users' },";"";";";";";";
+    { number: '99.9%', label: 'Uptime Guarantee' },";"";";";";";";
+    { number: '24/7', label: 'Support Available' },";"";";";";";";
+    { number: '30-day', label: 'Free Trial' };";";";";";
+  ];
+  );
+};
+
+export default MicroSaas;
+>>>>>>> main
