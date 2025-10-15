@@ -22,7 +22,10 @@ import SupportPage from './app/pages/SupportPage';
 import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
+import SolutionsPage from './app/pages/SolutionsPage';
+import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
 import AISolutionsPage from './app/ai-solutions/page';
+import ITSolutionsPage from './app/it-solutions/page';
 
 // Service Pages
 import AIServicesPage from './app/pages/AIServicesPage';
@@ -33,7 +36,12 @@ import CaseStudiesPage from './app/pages/CaseStudiesPage';
 import CareersPage from './app/pages/CareersPage';
 
 // Additional Pages
+import CybersecurityPage from './app/pages/CybersecurityPage';
+import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
+import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
+import TeamPage from './app/pages/TeamPage';
+import DocumentationPage from './app/pages/DocumentationPage';
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -81,7 +89,9 @@ function App() {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
                   <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                  <Route path="/it-solutions" element={<ITSolutionsPage />} />
                   <Route path="/blog" element={<BlogPage />} />
                   <Route path="/tutorials" element={<TutorialsPage />} />
                   <Route path="/demo" element={<DemoPage />} />
@@ -89,6 +99,7 @@ function App() {
                   <Route path="/privacy" element={<PrivacyPage />} />
                   <Route path="/terms" element={<TermsPage />} />
                   <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/solutions" element={<SolutionsPage />} />
                   
                   {/* Service Pages */}
                   <Route path="/ai-services" element={<AIServicesPage />} />
@@ -99,8 +110,14 @@ function App() {
                   <Route path="/careers" element={<CareersPage />} />
                   
                   {/* Additional Service Pages */}
+                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                  <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
                   <Route path="/micro-saas" element={<MicroSaaSPage />} />
+                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
                   
+                  {/* Additional Pages */}
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/docs" element={<DocumentationPage />} />
                   {/* Catch all route */}
                   <Route path="*" element={
                     <div className="min-h-screen flex items-center justify-center bg-slate-900">
