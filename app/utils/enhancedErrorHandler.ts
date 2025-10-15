@@ -1,7 +1,7 @@
-export const enhancedErrorHandler = { handleError: (error: Error, context?: string) => {
+export const enhancedErrorHandler = { handleError: (_error: Error, context?: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-        description: error.message,
+        description: _error.message,
         context: context });
     }
     return { message: 'Something went wrong. Please try again.',

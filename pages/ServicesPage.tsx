@@ -17,11 +17,7 @@ import {
   Globe,
   Target,
   Rocket,
-  Users,
-  Settings,
-  Mail,
-  Phone,
-  MapPin
+  Settings
 } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {

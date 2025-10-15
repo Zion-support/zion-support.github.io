@@ -11,8 +11,6 @@ import {
   Users,
   Shield,
   Zap,
-  MessageCircle,
-  Calendar,
   Globe
 } from 'lucide-react';
 

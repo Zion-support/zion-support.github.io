@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Clock, Shield, Headphones, CheckCircle, AlertCircle, Mail, Phone } from 'lucide-react';
+import { Clock, Shield, Headphones, CheckCircle, Mail, Phone } from 'lucide-react';
 
 const SlaPage: React.FC = () => {
   const slaMetrics = [

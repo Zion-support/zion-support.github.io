@@ -13,13 +13,9 @@ import {
   CheckCircle,
   Star,
   ArrowRight,
-  Target,
   Rocket,
-  Users,
   Clock,
-  DollarSign,
-  Globe,
-  Smartphone
+  Globe
 } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {
@@ -170,7 +166,6 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
-  const categories = ['All', 'Infrastructure', 'Security', 'DevOps', 'Database', 'Networking', 'Consulting'];
 
   const stats = [
     { number: '500+', label: 'Infrastructure Projects', icon: Server },

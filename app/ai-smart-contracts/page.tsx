@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Zap, CheckCircle, ArrowRight, Star, Clock, Users, Award, DollarSign, Lock } from 'lucide-react';
+import { Shield, Zap, CheckCircle, ArrowRight, Star, Users, Award, DollarSign, Lock } from 'lucide-react';
 
 const AiSmartContractsPage: React.FC = () => {
   const features = [
