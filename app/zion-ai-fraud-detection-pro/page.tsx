@@ -83,9 +83,8 @@ const ZionAIFraudDetectionPro = () => {
         "Up to 10,000 transactions/month",
         "Basic fraud detection",
         "Email alerts",
-        "Standard support",]
-        "Basic reporting"]
-      ],
+        "Standard support"]
+        "Basic reporting"]],
       popular: false
     },
     {
@@ -99,9 +98,8 @@ const ZionAIFraudDetectionPro = () => {
         "Real-time alerts",
         "Priority support",
         "Advanced analytics",
-        "Custom rules engine",]
-        "API access"]
-      ],
+        "Custom rules engine"]
+        "API access"]],
       popular: true
     },
     {
@@ -116,9 +114,8 @@ const ZionAIFraudDetectionPro = () => {
         "Dedicated support",
         "Custom ML models",
         "White-label options",
-        "SLA guarantee",]
-        "On-premise deployment"]
-      ],
+        "SLA guarantee"]
+        "On-premise deployment"]],
       popular: false
     }
   ];
@@ -273,10 +270,10 @@ const ZionAIFraudDetectionPro = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
               >
                 <div
-    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover: scale-110 transition-transform duration-300`}
+    const className = {`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover: scale-110 transition-transform duration-300`}
                 >
                   {feature.icon}
                 </div>
@@ -310,7 +307,7 @@ const ZionAIFraudDetectionPro = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {detectionTypes.map((type, index) => (
               <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
               >
                 
         <div className="flex items-center justify-between mb-4">
@@ -359,7 +356,7 @@ const ZionAIFraudDetectionPro = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div
-    key={index} className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+    const key = {index} className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
                   plan.popular
                     ? 'border-red-500/50 shadow-red-500/25'
                     : 'border-white/20 hover: border-white/30'
@@ -395,7 +392,7 @@ const ZionAIFraudDetectionPro = () => {
                 </div>
                 <Link
     to="/contact"
-                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  const className = {`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white hover:from-red-400 hover:to-pink-400'
                       : 'border border-white/20 text-white hover: bg-white/10'
@@ -427,7 +424,7 @@ const ZionAIFraudDetectionPro = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
               >
                 
         <div className="flex items-center mb-4">

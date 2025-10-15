@@ -13,8 +13,7 @@ const AiCustomerSupportPage: React.FC = () => {
     "Live chat handoff to human agents",
     "Voice support with speech recognition",
     "Omnichannel support across all platforms",
-    "Advanced analytics and performance insights"
-  ];
+    "Advanced analytics and performance insights"];
 
 const channels = [
     { name: "Live Chat", icon: <MessageSquare className="w-6 h-6" />, color: "text-blue-600" },
@@ -36,9 +35,8 @@ const pricingPlans = [
         "Basic AI chatbot",
         "Email support",
         "5 team members",
-        "Basic analytics",]
-        "Standard integrations"]
-      ],
+        "Basic analytics"]
+        "Standard integrations"]],
       popular: false
     },
     {
@@ -53,9 +51,8 @@ const pricingPlans = [
         "25 team members",
         "Advanced analytics",
         "Custom integrations",
-        "Voice support",]
-        "Multi-language support"]
-      ],
+        "Voice support"]
+        "Multi-language support"]],
       popular: true
     },
     {
@@ -71,9 +68,8 @@ const pricingPlans = [
         "Custom analytics",
         "White-label options",
         "API access",
-        "Dedicated account manager",]
-        "Custom AI training"]
-      ],
+        "Dedicated account manager"]
+        "Custom AI training"]],
       popular: false
     }
   ];

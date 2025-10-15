@@ -67,9 +67,8 @@ export default function AIBlockchainAnalytics() {
         "Basic analytics",
         "Email support",
         "1 user account",
-        "Standard data feeds",]
-        "Basic risk assessment"]
-      ],
+        "Standard data feeds"]
+        "Basic risk assessment"]],
       popular: false
     },
     {
@@ -84,9 +83,8 @@ export default function AIBlockchainAnalytics() {
         "Up to 10 user accounts",
         "Premium data feeds",
         "Advanced risk assessment",
-        "Smart contract analysis",]
-        "API access"]
-      ],
+        "Smart contract analysis"]
+        "API access"]],
       popular: true
     },
     {
@@ -101,9 +99,8 @@ export default function AIBlockchainAnalytics() {
         "Unlimited users",
         "Custom data feeds",
         "White-label solution",
-        "Custom integrations",]
-        "SSO integration"]
-      ],
+        "Custom integrations"]
+        "SSO integration"]],
       popular: false
     }
   ];
@@ -238,7 +235,7 @@ export default function AIBlockchainAnalytics() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/10 relative overflow-hidden"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/10 relative overflow-hidden"
                 >
                   
         <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -286,7 +283,7 @@ export default function AIBlockchainAnalytics() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
-    key={index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
+    const key = {index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
                     plan.popular 
                       ? 'border-amber-500/50 bg-gradient-to-br from-amber-500/10 to-yellow-500/10' 
                       : 'border-white/20 hover: border-amber-500/30'
@@ -322,7 +319,7 @@ export default function AIBlockchainAnalytics() {
                   </ul>
                   <RouterLink
     to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
+                    const className = {`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
                       plan.popular
                         ? 'bg-gradient-to-r from-amber-500 to-yellow-600 text-white hover:from-amber-600 hover:to-yellow-700 shadow-lg hover:shadow-amber-500/25'
                         : 'border border-amber-400 text-amber-400 hover: bg-amber-400 hover:text-slate-900'
@@ -353,7 +350,7 @@ export default function AIBlockchainAnalytics() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/10 relative overflow-hidden"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/10 relative overflow-hidden"
                 >
                   
         <div className="flex items-center mb-4">

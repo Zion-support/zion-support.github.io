@@ -68,9 +68,8 @@ export default function AiProjectManagementProPage() {
         'Up to 10 team members',
         'Basic AI task automation',
         'Project templates',
-        'Email support',]
-        'Basic analytics']
-      ],
+        'Email support']
+        'Basic analytics']],
       popular: false
     },
     {
@@ -83,9 +82,8 @@ export default function AiProjectManagementProPage() {
         'Advanced AI features',
         'Predictive analytics',
         'Custom integrations',
-        'Priority support',]
-        'Advanced reporting']
-      ],
+        'Priority support']
+        'Advanced reporting']],
       popular: true
     },
     {
@@ -98,9 +96,8 @@ export default function AiProjectManagementProPage() {
         'Full AI suite',
         'Custom AI models',
         'White-label options',
-        'Dedicated support',]
-        'Advanced security']
-      ],
+        'Dedicated support']
+        'Advanced security']],
       popular: false
     }
   ];
@@ -137,7 +134,7 @@ export default function AiProjectManagementProPage() {
         <meta name="keywords" content="AI project management, task automation, predictive analytics, team management, project planning, business software" />
         <script
     type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          const dangerouslySetInnerHTML = {{ __html: JSON.stringify(structuredData) }}
         />
       </Helmet>
       {/* Hero Section */}
@@ -292,7 +289,7 @@ export default function AiProjectManagementProPage() {
                 </ul>
                 <Link
     to="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                  const className = {`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-600 to-purple-600 text-white hover:from-cyan-700 hover:to-purple-700'
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900'

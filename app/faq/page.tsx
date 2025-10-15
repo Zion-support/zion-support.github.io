@@ -26,8 +26,7 @@ const faqData = [
         {
           question: "How can I get started?",
           answer: "Getting started is easy! You can contact us through our contact form, schedule a free consultation, or explore our demo to see our solutions in action. Our team will work with you to identify the best solutions for your specific needs."]
-        }]
-      ]
+        }]]
     },
     {
       category: "AI Services",
@@ -43,8 +42,7 @@ const faqData = [
         {
           question: "Do you provide training for AI solutions?",
           answer: "Yes! We provide comprehensive training for all our AI solutions, including user training, administrator training, and ongoing support. We also offer documentation and video tutorials to help your team get the most out of our solutions."]
-        }]
-      ]
+        }]]
     },
     {
       category: "IT Services",
@@ -60,8 +58,7 @@ const faqData = [
         {
           question: "What is your uptime guarantee?",
           answer: "We provide a 99.9% uptime SLA for all our managed services and cloud solutions. This means your systems will be available 99.9% of the time, with minimal planned maintenance windows."]
-        }]
-      ]
+        }]]
     },
     {
       category: "Micro SAAS",
@@ -77,8 +74,7 @@ const faqData = [
         {
           question: "What is the pricing for micro SAAS solutions?",
           answer: "Pricing varies by solution and features. Most micro SAAS solutions start at $99/month for basic plans, with enterprise plans available. We offer flexible pricing options including monthly, annual, and custom enterprise agreements."]
-        }]
-      ]
+        }]]
     },
     {
       category: "5G Solutions",
@@ -94,8 +90,7 @@ const faqData = [
         {
           question: "Do you provide 5G consulting?",
           answer: "Yes, we offer comprehensive 5G consulting services including strategy development, technology assessment, implementation planning, and ongoing optimization. Our experts help you understand how 5G can transform your business."]
-        }]
-      ]
+        }]]
     },
     {
       category: "Support & Billing",
@@ -111,8 +106,7 @@ const faqData = [
         {
           question: "Do you offer refunds?",
           answer: "We offer a 30-day money-back guarantee for most of our services. If you're not satisfied with our solution within the first 30 days, we'll provide a full refund. Some custom development projects may have different terms."]
-        }]
-      ]
+        }]]
     }
   ];
 
@@ -156,7 +150,7 @@ const filteredData = faqData.map(category => ({
                 <input
     type="text"
                   placeholder="Search FAQ..."
-                  value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}
+                  const value = {searchTerm} onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
@@ -183,10 +177,10 @@ const filteredData = faqData.map(category => ({
 const isOpen = openItems.includes(globalIndex);
   return (
                         <div
-    key={questionIndex} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden hover:bg-white/15 transition-all duration-300"
+    const key = {questionIndex} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden hover:bg-white/15 transition-all duration-300"
                         >
                           <button
-    onClick={() => toggleItem(globalIndex)} className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
+    const onClick = {() => toggleItem(globalIndex)} className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
                           >
                             <span className="text-lg font-semibold text-white pr-4">
                               {item.question}
@@ -214,7 +208,7 @@ const isOpen = openItems.includes(globalIndex);
                     })}
                   </div>
                 </div>
-              ))}
+              ))},
               {filteredData.length === 0 && (
                 
         <div className="text-center py-12">

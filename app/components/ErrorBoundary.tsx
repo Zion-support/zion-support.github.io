@@ -1,6 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+/* global console */
 
 interface Props {
   children: ReactNode;
@@ -90,7 +91,7 @@ class ErrorBoundary extends Component<Props State> {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <button
-    onClick={this.handleRetry} className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+    const onClick = {this.handleRetry} className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
               >
                 <RefreshCw className="w-4 h-4" />
                 Try Again

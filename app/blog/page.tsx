@@ -14,8 +14,7 @@ const BlogPage: React.FC = () => {
       category: 'AI & Technology',
       readTime: '5 min read',
       image: '/api/placeholder/400/250',
-      featured: true,
-    },
+      featured: true},
     {
       id: 2,
       title: 'Cybersecurity Best Practices for Modern Enterprises',
@@ -25,8 +24,7 @@ const BlogPage: React.FC = () => {
       category: 'Cybersecurity',
       readTime: '7 min read',
       image: '/api/placeholder/400/250',
-      featured: false,
-    },
+      featured: false},
     {
       id: 3,
       title: '5G Technology: Revolutionizing Connectivity and IoT',
@@ -36,8 +34,7 @@ const BlogPage: React.FC = () => {
       category: '5G & IoT',
       readTime: '6 min read',
       image: '/api/placeholder/400/250',
-      featured: false,
-    },
+      featured: false},
     {
       id: 4,
       title: 'Micro SAAS: Building Scalable Business Solutions',
@@ -47,9 +44,7 @@ const BlogPage: React.FC = () => {
       category: 'Business Solutions',
       readTime: '8 min read',
       image: '/api/placeholder/400/250',
-      featured: false,
-    },
-  ];
+      featured: false}];
 
 const categories = ['All', 'AI & Technology', 'Cybersecurity', '5G & IoT', 'Business Solutions'];
   return (
@@ -112,7 +107,7 @@ const categories = ['All', 'AI & Technology', 'Cybersecurity', '5G & IoT', 'Busi
                   
         <div className="md:w-1/2">
                       <img
-    src={post.image} alt={post.title}
+    const src = {post.image} alt={post.title}
                         className="w-full h-64 md:h-full object-cover"
                     />
                   </div>
@@ -144,7 +139,7 @@ const categories = ['All', 'AI & Technology', 'Cybersecurity', '5G & IoT', 'Busi
                         </div>
                       </div>
                       <Link
-    to={`/blog/${post.id}`}
+    const to = {`/blog/${post.id}`}
                         className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         <span>Read More</span>
@@ -167,7 +162,7 @@ const categories = ['All', 'AI & Technology', 'Cybersecurity', '5G & IoT', 'Busi
               {blogPosts.filter(post => !post.featured).map((post) => (
                 <article key={post.id} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 group">
                   <img
-    src={post.image} alt={post.title}
+    const src = {post.image} alt={post.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   
@@ -200,7 +195,7 @@ const categories = ['All', 'AI & Technology', 'Cybersecurity', '5G & IoT', 'Busi
                         </div>
                       </div>
                       <Link
-    to={`/blog/${post.id}`}
+    const to = {`/blog/${post.id}`}
                         className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         <span>Read</span>

@@ -39,7 +39,7 @@ const ServicesPage: React.FC = () => { const services = [ { icon: <Zap className
                     { service.description }
                   </p>
                     <Link
-    to={service.link} className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+    const to = {service.link} className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
                     >
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />

@@ -69,8 +69,7 @@ const contactInfo = [
     '5G Solutions',
     'Digital Transformation',
     'Custom Development',
-    'Consulting'
-  ];
+    'Consulting'];
   if (isSubmitted) {
     return (
     <>
@@ -141,7 +140,7 @@ const contactInfo = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-    onClick={() => setIsSubmitted(false)} className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+    const onClick = {() => setIsSubmitted(false)} className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >
                 Send Another Message
               </button>
@@ -239,7 +238,7 @@ const contactInfo = [
     type="text"
                       id="name"
                       name="name"
-                      value={formData.name} onChange={handleInputChange}
+                      const value = {formData.name} onChange={handleInputChange}
                       required
                           className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       placeholder="Your full name"
@@ -253,7 +252,7 @@ const contactInfo = [
     type="email"
                       id="email"
                       name="email"
-                      value={formData.email} onChange={handleInputChange}
+                      const value = {formData.email} onChange={handleInputChange}
                       required
                           className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       placeholder="your@email.com"
@@ -270,7 +269,7 @@ const contactInfo = [
     type="text"
                       id="company"
                       name="company"
-                      value={formData.company} onChange={handleInputChange}
+                      const value = {formData.company} onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       placeholder="Your company name"
                     />
@@ -283,7 +282,7 @@ const contactInfo = [
     type="tel"
                       id="phone"
                       name="phone"
-                      value={formData.phone} onChange={handleInputChange}
+                      const value = {formData.phone} onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       placeholder="+1 (555) 123-4567"
                     />
@@ -296,7 +295,7 @@ const contactInfo = [
                   <select
     id="service"
                     name="service"
-                    value={formData.service} onChange={handleInputChange}
+                    const value = {formData.service} onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
@@ -312,15 +311,15 @@ const contactInfo = [
                   <textarea
     id="message"
                     name="message"
-                    value={formData.message} onChange={handleInputChange}
+                    const value = {formData.message} onChange={handleInputChange}
                     required
-                          rows={6} className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+                          const rows = {6} className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
                     placeholder="Tell us about your project and how we can help..."
                   />
                 </div>
                 <button
     type="submit"
-                  disabled={isSubmitting} className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
+                  const disabled = {isSubmitting} className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
                 >
                   {isSubmitting ? (
                     <>

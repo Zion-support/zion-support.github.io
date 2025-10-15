@@ -55,9 +55,8 @@ const pricingPlans = [
         "10 custom dashboards",
         "Real-time analytics",
         "Basic AI insights",
-        "Email support",]
-        "5GB data storage"]
-      ],
+        "Email support"]
+        "5GB data storage"]],
       popular: false },
     { name: "Professional",
       price: "$599",
@@ -70,9 +69,8 @@ const pricingPlans = [
         "Custom integrations",
         "Priority support",
         "50GB data storage",
-        "API access",]
-        "White-label options"]
-      ],
+        "API access"]
+        "White-label options"]],
       popular: true },
     { name: "Enterprise",
       price: "$999",
@@ -85,9 +83,8 @@ const pricingPlans = [
         "Custom development",
         "24/7 dedicated support",
         "Unlimited data storage",
-        "Advanced security",]
-        "On-premise deployment"]
-      ],
+        "Advanced security"]
+        "On-premise deployment"]],
       popular: false }
   ];
 
@@ -197,7 +194,7 @@ const testimonials = [
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 { features.map((feature, index) => (
                   <div
-    key={index } className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 neon-card">
+    const key = {index } className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 neon-card">
                     
         <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       
@@ -244,7 +241,7 @@ const testimonials = [
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 { pricingPlans.map((plan, index) => (
                   <div
-    key={index } className={ `relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl ${
+    const key = {index } className={ `relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl ${
                       plan.popular 
                         ? 'border-cyan-400/40 shadow-cyan-500/10' 
                         : 'border-cyan-500/20 hover: border-cyan-400/40' }`}
@@ -280,7 +277,7 @@ const testimonials = [
                     </div>
                     <a
     href="tel:+13024640950"
-                      className={ `w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+                      const className = { `w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
                         plan.popular
                           ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                           : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900' }`}
@@ -313,7 +310,7 @@ const testimonials = [
         <div className="grid md:grid-cols-3 gap-8">
                 { testimonials.map((testimonial, index) => (
                   <div
-    key={index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300">
+    const key = {index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300">
                     
         <div className="flex items-center mb-4">
                       { [...Array(testimonial.rating)].map((_, i) => (

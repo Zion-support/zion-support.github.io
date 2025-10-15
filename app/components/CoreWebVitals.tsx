@@ -13,8 +13,7 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
         (window as, any).gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
           event_label: 'CLS',
-          value: Math.round(metric.value * 1000),
-        });
+          value: Math.round(metric.value * 1000)});
       }
     });
     onINP((metric) => {
@@ -23,8 +22,7 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
         (window as, any).gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
           event_label: 'INP',
-          value: Math.round(metric.value),
-        });
+          value: Math.round(metric.value)});
       }
     });
     onFCP((metric) => {
@@ -33,8 +31,7 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
         (window as, any).gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
           event_label: 'FCP',
-          value: Math.round(metric.value),
-        });
+          value: Math.round(metric.value)});
       }
     });
     onLCP((metric) => {
@@ -43,8 +40,7 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
         (window as, any).gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
           event_label: 'LCP',
-          value: Math.round(metric.value),
-        });
+          value: Math.round(metric.value)});
       }
     });
     onTTFB((metric) => {
@@ -53,8 +49,7 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
         (window as, any).gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
           event_label: 'TTFB',
-          value: Math.round(metric.value),
-        });
+          value: Math.round(metric.value)});
       }
     });
   }, []);

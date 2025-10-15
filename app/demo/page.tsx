@@ -135,7 +135,7 @@ const demoOptions = [
                       <input
     type="text"
                         name="name"
-                        value={formData.name} onChange={handleInputChange}
+                        const value = {formData.name} onChange={handleInputChange}
                         required
                           className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                         placeholder="Your full name"
@@ -146,7 +146,7 @@ const demoOptions = [
                       <input
     type="email"
                         name="email"
-                        value={formData.email} onChange={handleInputChange}
+                        const value = {formData.email} onChange={handleInputChange}
                         required
                           className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                         placeholder="your.email@company.com"
@@ -160,7 +160,7 @@ const demoOptions = [
                       <input
     type="text"
                         name="company"
-                        value={formData.company} onChange={handleInputChange}
+                        const value = {formData.company} onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                         placeholder="Your company name"
                       />
@@ -170,7 +170,7 @@ const demoOptions = [
                       <input
     type="tel"
                         name="phone"
-                        value={formData.phone} onChange={handleInputChange}
+                        const value = {formData.phone} onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                         placeholder="+1 (555) 123-4567"
                       />
@@ -180,7 +180,7 @@ const demoOptions = [
                     <label className="block text-white text-sm font-medium mb-2">Service Interest</label>
                     <select
     name="service"
-                      value={formData.service} onChange={handleInputChange}
+                      const value = {formData.service} onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                     >
                       <option value="">Select a service</option>
@@ -195,8 +195,8 @@ const demoOptions = [
                     <label className="block text-white text-sm font-medium mb-2">Message</label>
                     <textarea
     name="message"
-                      value={formData.message} onChange={handleInputChange}
-                      rows={4} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                      const value = {formData.message} onChange={handleInputChange}
+                      const rows = {4} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                       placeholder="Tell us about your specific needs and what you'd like to see in the demo..."
                     />
                   </div>
@@ -204,7 +204,7 @@ const demoOptions = [
         <div className="text-center">
                     <button
     type="submit"
-                      disabled={isSubmitting} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center mx-auto"
+                      const disabled = {isSubmitting} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center mx-auto"
                     >
                       {isSubmitting ? (
                         <>

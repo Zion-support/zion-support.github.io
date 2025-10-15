@@ -33,9 +33,8 @@ const AICodeAssistantPage = () => {
         "Basic code review",
         "5 programming languages",
         "Standard documentation",
-        "Email support",]
-        "Git integration"]
-      ],
+        "Email support"]
+        "Git integration"]],
       popular: false
     },
     {
@@ -50,9 +49,8 @@ const AICodeAssistantPage = () => {
         "AI-powered debugging",
         "Team collaboration",
         "Priority support",
-        "API access",]
-        "Custom models"]
-      ],
+        "API access"]
+        "Custom models"]],
       popular: true
     },
     {
@@ -69,9 +67,8 @@ const AICodeAssistantPage = () => {
         "24/7 support",
         "On-premise deployment",
         "Custom integrations",
-        "Dedicated support",]
-        "SLA guarantee"]
-      ],
+        "Dedicated support"]
+        "SLA guarantee"]],
       popular: false
     }
   ];
@@ -205,16 +202,16 @@ const AICodeAssistantPage = () => {
           
         <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <FuturisticButton
-    onClick={() => window.open("https: //zion.app/contact", "_blank")} variant="primary"
+    const onClick = {() => window.open("https: //zion.app/contact", "_blank")} variant="primary"
               size="lg"
-              icon={<Code className="w-5 h-5" />}
+              const icon = {<Code className="w-5 h-5" />}
             >
               Start Coding with AI
             </FuturisticButton>
             <FuturisticButton
-    onClick={() => window.open("https: //zion.app/contact", "_blank")} variant="secondary"
+    const onClick = {() => window.open("https: //zion.app/contact", "_blank")} variant="secondary"
               size="lg"
-              icon={<Terminal className="w-5 h-5" />}
+              const icon = {<Terminal className="w-5 h-5" />}
             >
               Try Live Demo
             </FuturisticButton>
@@ -479,9 +476,9 @@ const AICodeAssistantPage = () => {
                   ))}
                 </div>
                 <FuturisticButton
-    onClick={() => window.open("https: //zion.app/contact", "_blank")} variant={plan.popular ? "primary" : "outline"}
+    const onClick = {() => window.open("https: //zion.app/contact", "_blank")} variant={plan.popular ? "primary" : "outline"}
                   className="w-full"
-                  icon={<ArrowRight className="w-4 h-4" />}
+                  const icon = {<ArrowRight className="w-4 h-4" />}
                 >
                   Get Started
                 </FuturisticButton>
@@ -549,16 +546,16 @@ const AICodeAssistantPage = () => {
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
-    onClick={() => window.open("https: //zion.app/contact", "_blank")} variant="primary"
+    const onClick = {() => window.open("https: //zion.app/contact", "_blank")} variant="primary"
               size="lg"
-              icon={<Code className="w-5 h-5" />}
+              const icon = {<Code className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
             <FuturisticButton
-    onClick={() => window.open("https: //zion.app/contact", "_blank")} variant="secondary"
+    const onClick = {() => window.open("https: //zion.app/contact", "_blank")} variant="secondary"
               size="lg"
-              icon={<Terminal className="w-5 h-5" />}
+              const icon = {<Terminal className="w-5 h-5" />}
             >
               Try Live Demo
             </FuturisticButton>

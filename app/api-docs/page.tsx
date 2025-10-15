@@ -38,7 +38,7 @@ const ApiDocsPage: React.FC = () => {
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{]
-    "model_name": "custom-classifier",]
+    "model_name": "custom-classifier"]
     "training_data": [...],
     "model_type": "classification"
   }'`
@@ -98,8 +98,7 @@ const ApiDocsPage: React.FC = () => {
           description: 'Refresh access token',
           example: `curl -X POST "https://api.ziontechgroup.com/v1/auth/refresh" \\
   -H "Authorization: Bearer YOUR_REFRESH_TOKEN"`]
-        }]
-      ]
+        }]]
     }
   ];
 

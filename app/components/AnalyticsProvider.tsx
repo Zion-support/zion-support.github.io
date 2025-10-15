@@ -48,8 +48,7 @@ const trackPageView = () => {
 
 const value: AnalyticsContextType = {
     trackEvent,
-    trackPageView,
-  };
+    trackPageView};
   return (
     <AnalyticsContext.Provider value={value}>
       {children}

@@ -77,9 +77,9 @@ const optimizedSrc = getOptimizedSrc(src);
   if (hasError) {
     return (
       <div
-    className={`flex items-center justify-center bg-gray-200 dark: bg-gray-700 ${className}`}
-        style={{ width, height }}
-        ref={imgRef}
+    const className = {`flex items-center justify-center bg-gray-200 dark: bg-gray-700 ${className}`}
+        const style = {{ width, height }}
+        const ref = {imgRef}
       >
         
         <div className="text-center text-gray-500">
@@ -91,35 +91,35 @@ const optimizedSrc = getOptimizedSrc(src);
   }
   return (
     <div
-    className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
-      ref={imgRef}
+    const className = {`relative overflow-hidden ${className}`}
+      const style = {{ width, height }}
+      const ref = {imgRef}
     >
-      {/* Blur placeholder */}
+      {/* Blur placeholder */},
       {placeholder === 'blur' && blurDataURL && !isLoaded && (
         <div
     className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
-          style={{ backgroundImage: `url(${blurDataURL})` }}
+          const style = {{ backgroundImage: `url(${blurDataURL})` }}
         />
-      )}
-      {/* Loading spinner */}
+      )},
+      {/* Loading spinner */},
       {!isLoaded && !hasError && (
         
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
           <Loader2 className="w-6 h-6 animate-spin text-gray-400" />
         </div>
-      )}
-      {/* Actual image */}
+      )},
+      {/* Actual image */},
       {isInView && (
         <img
-    src={optimizedSrc} alt={alt}
-          width={width} height={height}
-          sizes={sizes} loading={loading}
-          onLoad={handleLoad} onError={handleError}
-          className={`transition-opacity duration-300 ${
+    const src = {optimizedSrc} alt={alt}
+          const width = {width} height={height}
+          const sizes = {sizes} loading={loading}
+          const onLoad = {handleLoad} onError={handleError}
+          const className = {`transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
-          style={{
+          const style = {{
             width: '100%',
             height: '100%',
             objectFit: 'cover'

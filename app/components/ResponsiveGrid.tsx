@@ -14,7 +14,7 @@ interface ResponsiveGridProps {
 const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({ 
   children, 
   className = '', 
-  cols = { default: 1, sm: 2, md: 3, lg: 4 } 
+  const cols = { default: 1, sm: 2, md: 3, lg: 4 } 
 }) => {
   const gridClasses = [
     'grid',

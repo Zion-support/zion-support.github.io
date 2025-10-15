@@ -62,7 +62,7 @@ const ItServicesPage: React.FC = () => { const itServices = [ { icon: <Cloud cla
                     ))}
                   </div>
                   <Link
-    to={ service.href } className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all">
+    const to = { service.href } className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all">
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>

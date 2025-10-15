@@ -15,9 +15,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         "40% increase in conversion rates",
         "25% reduction in cart abandonment",
-        "60% improvement in customer engagement",]
-        "$2M increase in annual revenue"]
-      ],
+        "60% improvement in customer engagement"]
+        "$2M increase in annual revenue"]],
       image: "/api/placeholder/400/300"
     },
     {
@@ -30,9 +29,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         "50% reduction in reporting time",
         "30% improvement in patient outcomes",
-        "80% increase in data accuracy",]
-        "Compliance with HIPAA regulations"]
-      ],
+        "80% increase in data accuracy"]
+        "Compliance with HIPAA regulations"]],
       image: "/api/placeholder/400/300"
     },
     {
@@ -45,9 +43,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         "35% reduction in defects",
         "20% increase in production efficiency",
-        "50% reduction in quality control costs",]
-        "Real-time production monitoring"]
-      ],
+        "50% reduction in quality control costs"]
+        "Real-time production monitoring"]],
       image: "/api/placeholder/400/300"
     },
     {
@@ -60,9 +57,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         "99.9% uptime achieved",
         "40% reduction in operational costs",
-        "Enhanced security compliance",]
-        "Improved scalability and performance"]
-      ],
+        "Enhanced security compliance"]
+        "Improved scalability and performance"]],
       image: "/api/placeholder/400/300"
     },
     {
@@ -75,9 +71,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         "70% increase in student engagement",
         "45% improvement in course completion rates",
-        "Mobile app with 95% user satisfaction",]
-        "Integration with existing university systems"]
-      ],
+        "Mobile app with 95% user satisfaction"]
+        "Integration with existing university systems"]],
       image: "/api/placeholder/400/300"
     },
     {
@@ -90,9 +85,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         "25% reduction in fuel costs",
         "30% improvement in delivery times",
-        "40% increase in driver efficiency",]
-        "Real-time tracking and monitoring"]
-      ],
+        "40% increase in driver efficiency"]
+        "Real-time tracking and monitoring"]],
       image: "/api/placeholder/400/300"
     }
   ];

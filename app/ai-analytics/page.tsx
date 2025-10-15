@@ -45,8 +45,7 @@ const capabilities = [
     "Automated alerting and notifications",
     "Mobile-responsive dashboard design",
     "API integration and customization",
-    "Real-time collaboration features"
-  ];
+    "Real-time collaboration features"];
 
 const useCases = [
     {

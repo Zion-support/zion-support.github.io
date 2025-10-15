@@ -37,8 +37,7 @@ export const generateSitemap = (urls: SitemapUrl[]): string => {
   { loc: '/support', priority: 0.6, changefreq: 'weekly' },
   { loc: '/pricing', priority: 0.8, changefreq: 'monthly' },
   { loc: '/privacy', priority: 0.3, changefreq: 'yearly' },
-  { loc: '/terms', priority: 0.3, changefreq: 'yearly' },
-];
+  { loc: '/terms', priority: 0.3, changefreq: 'yearly' }];
 
 // Generate robots.txt content,
     export const generateRobotsTxt = (): string => {

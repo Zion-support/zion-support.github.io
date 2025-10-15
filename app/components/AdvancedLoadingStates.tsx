@@ -72,7 +72,7 @@ const timeout = setTimeout(simulateLoading, 1000);
         <div className="w-full bg-gray-700 rounded-full h-2">
               <div
     className="bg-gradient-to-r from-cyan-400 to-purple-400 h-2 rounded-full transition-all duration-300 ease-out"
-                style={{ width: `${loadingState.progress}%` }}
+                const style = {{ width: `${loadingState.progress}%` }}
               ></div>
             </div>
             
