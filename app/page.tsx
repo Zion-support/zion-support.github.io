@@ -1,6 +1,9 @@
 import React, { memo, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from './components/SEOHead';
+import FuturisticBackground from './components/FuturisticBackground';
+import FuturisticNavigation from './components/FuturisticNavigation';
+import FuturisticFooter from './components/FuturisticFooter';
 
 const HomePage: React.FC = memo(() => {
   const structuredData = useMemo(() => ({
@@ -12,16 +15,16 @@ const HomePage: React.FC = memo(() => {
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "Innovation City",
-      "addressRegion": "IC",
-      "postalCode": "12345",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
       "addressCountry": "US"
     },
     "sameAs": [
@@ -40,83 +43,219 @@ const HomePage: React.FC = memo(() => {
         structuredData={structuredData}
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Welcome to Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              We provide cutting-edge AI and IT solutions to help your business thrive in the digital age.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
-                Get Started
+      <FuturisticBackground />
+      <FuturisticNavigation />
+      
+      <div className="relative z-10 min-h-screen">
+        {/* Hero Section */}
+        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="mb-8">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse">
+                  Welcome to Zion Tech Group
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+                Empowering businesses with cutting-edge AI and IT solutions that drive innovation, 
+                efficiency, and competitive advantage in the digital age.
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+              <Link 
+                to="/contact" 
+                className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 hover:scale-105"
+              >
+                <span className="relative z-10">Get Started</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               </Link>
-              <Link to="/about" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors text-center">
+              <Link 
+                to="/about" 
+                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 hover:scale-105"
+              >
                 Learn More
               </Link>
             </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+              <div className="glass-effect rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
+                <div className="text-gray-300">Projects Completed</div>
+              </div>
+              <div className="glass-effect rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
+                <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
+                <div className="text-gray-300">AI Services</div>
+              </div>
+              <div className="glass-effect rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
+                <div className="text-4xl font-bold text-pink-400 mb-2">99%</div>
+                <div className="text-gray-300">Client Satisfaction</div>
+              </div>
+            </div>
           </div>
-          
-          {/* Services Preview */}
-          <div className="mt-20">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Services</h2>
+        </section>
+        
+        {/* Services Preview */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                  Our Services
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive AI and IT solutions designed to transform your business and drive innovation
+              </p>
+            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Services</h3>
-                <p className="text-gray-600 mb-4">
+              <div className="group glass-effect rounded-2xl p-8 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20">
+                <div className="text-4xl mb-4">🤖</div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">AI Services</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                 </p>
-                <Link to="/ai-services" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+                <Link 
+                  to="/ai-services" 
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-2 transition-all duration-300"
+                >
+                  Learn More 
+                  <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Infrastructure</h3>
-                <p className="text-gray-600 mb-4">
+              
+              <div className="group glass-effect rounded-2xl p-8 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20">
+                <div className="text-4xl mb-4">☁️</div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">Cloud Infrastructure</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
                   Scalable cloud solutions that provide reliability, security, and performance for your business applications.
                 </p>
-                <Link to="/cloud-infrastructure" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+                <Link 
+                  to="/cloud-infrastructure" 
+                  className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium group-hover:translate-x-2 transition-all duration-300"
+                >
+                  Learn More 
+                  <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
-                <p className="text-gray-600 mb-4">
+              
+              <div className="group glass-effect rounded-2xl p-8 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/20">
+                <div className="text-4xl mb-4">🚀</div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-pink-400 transition-colors">Digital Transformation</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
                   Complete digital transformation services to modernize your business processes and systems.
                 </p>
-                <Link to="/digital-transformation" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+                <Link 
+                  to="/digital-transformation" 
+                  className="inline-flex items-center text-pink-400 hover:text-pink-300 font-medium group-hover:translate-x-2 transition-all duration-300"
+                >
+                  Learn More 
+                  <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>
-          
-          {/* AI Tools Preview */}
-          <div className="mt-20">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI-Powered Tools</h2>
+        </section>
+        
+        {/* AI Tools Preview */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-pink-400 to-cyan-500 bg-clip-text text-transparent">
+                  AI-Powered Tools
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Cutting-edge AI tools designed to automate, optimize, and enhance your business operations
+              </p>
+            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Content Moderator</h3>
-                <p className="text-gray-600 text-sm mb-3">Automated content moderation using AI</p>
-                <Link to="/zion-ai-content-moderator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              <div className="group glass-effect rounded-xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20">
+                <div className="text-3xl mb-3">🛡️</div>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Content Moderator</h3>
+                <p className="text-gray-300 text-sm mb-4">Automated content moderation using AI</p>
+                <Link 
+                  to="/zion-ai-content-moderator" 
+                  className="text-cyan-400 hover:text-cyan-300 text-sm font-medium group-hover:translate-x-1 transition-all duration-300 inline-flex items-center"
+                >
+                  Try Now 
+                  <svg className="ml-1 w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Sales Predictor</h3>
-                <p className="text-gray-600 text-sm mb-3">Predict sales trends with AI</p>
-                <Link to="/zion-ai-sales-predictor" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              
+              <div className="group glass-effect rounded-xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+                <div className="text-3xl mb-3">📈</div>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Sales Predictor</h3>
+                <p className="text-gray-300 text-sm mb-4">Predict sales trends with AI</p>
+                <Link 
+                  to="/zion-ai-sales-predictor" 
+                  className="text-purple-400 hover:text-purple-300 text-sm font-medium group-hover:translate-x-1 transition-all duration-300 inline-flex items-center"
+                >
+                  Try Now 
+                  <svg className="ml-1 w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Workflow Automator</h3>
-                <p className="text-gray-600 text-sm mb-3">Automate business workflows</p>
-                <Link to="/zion-ai-workflow-automator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              
+              <div className="group glass-effect rounded-xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20">
+                <div className="text-3xl mb-3">⚡</div>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">Workflow Automator</h3>
+                <p className="text-gray-300 text-sm mb-4">Automate business workflows</p>
+                <Link 
+                  to="/zion-ai-workflow-automator" 
+                  className="text-pink-400 hover:text-pink-300 text-sm font-medium group-hover:translate-x-1 transition-all duration-300 inline-flex items-center"
+                >
+                  Try Now 
+                  <svg className="ml-1 w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Financial Forecaster</h3>
-                <p className="text-gray-600 text-sm mb-3">AI-powered financial predictions</p>
-                <Link to="/zion-ai-financial-forecaster" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              
+              <div className="group glass-effect rounded-xl p-6 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/20">
+                <div className="text-3xl mb-3">💰</div>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-green-400 transition-colors">Financial Forecaster</h3>
+                <p className="text-gray-300 text-sm mb-4">AI-powered financial predictions</p>
+                <Link 
+                  to="/zion-ai-financial-forecaster" 
+                  className="text-green-400 hover:text-green-300 text-sm font-medium group-hover:translate-x-1 transition-all duration-300 inline-flex items-center"
+                >
+                  Try Now 
+                  <svg className="ml-1 w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
             </div>
-            <div className="text-center mt-8">
-              <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium">View All Services →</Link>
+            
+            <div className="text-center mt-12">
+              <Link 
+                to="/services" 
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-full font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+              >
+                View All Services 
+                <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
           </div>
-        </div>
+        </section>
+        
+        <FuturisticFooter />
       </div>
     </>
   );
