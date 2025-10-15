@@ -1,17 +1,42 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-const LoadingSpinner: React.FC = () => {
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = memo(({ 
+  size = 'md', 
+  text = 'Loading...', 
+  className = '' 
+}) => {
+  const sizeClasses = {
+    sm: 'w-8 h-8',
+    md: 'w-16 h-16',
+    lg: 'w-24 h-24'
+  };
+
   return (
-    <div className="flex items-center justify-center min-h-screen" role="status" aria-live="polite">
+    <div className={`flex flex-col items-center justify-center min-h-screen ${className}`} role="status" aria-live="polite">
       <div className="relative">
-        <div className="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin" aria-hidden="true"></div>
-        <div className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
-          <div className="w-8 h-8 border-2 border-transparent border-t-purple-600 rounded-full animate-spin"></div>
-        </div>
+        <div className={`${sizeClasses[size]} border-4 border-cyan-500/20 border-t-cyan-500 rounded-full animate-spin`} aria-hidden="true"></div>
+        <div 
+          className={`absolute inset-0 ${sizeClasses[size]} border-4 border-transparent border-t-purple-500 rounded-full animate-spin`} 
+          style={{ animationDirection: 'reverse', animationDuration: '0.8s' }}
+          aria-hidden="true"
+        ></div>
       </div>
+      {text && (
+        <p className="mt-4 text-cyan-400 text-sm font-medium animate-pulse">
+          {text}
+        </p>
+      )}
       <span className="sr-only">Loading content, please wait...</span>
     </div>
   );
-};
+});
+
+LoadingSpinner.displayName = 'LoadingSpinner';
 
 export default LoadingSpinner;

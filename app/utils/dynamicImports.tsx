@@ -1,5 +1,5 @@
 // Dynamic import utilities for better code splitting
-import { ComponentType } from 'react';
+import React, { ComponentType } from 'react';
 
 // Lazy load components with better error handling
 export const lazyLoadComponent = <T extends ComponentType<any>>(
@@ -60,6 +60,3 @@ export const importWithRetry = async <T>(
   
   throw lastError!;
 };
-
-// Import React for the lazy component
-import React from 'react';

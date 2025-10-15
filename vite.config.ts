@@ -49,6 +49,9 @@ export default defineConfig({
             if (id.includes('react-helmet-async')) {
               return 'seo';
             }
+            if (id.includes('recharts')) {
+              return 'charts';
+            }
             return 'vendor';
           }
           
@@ -59,6 +62,9 @@ export default defineConfig({
             }
             if (id.includes('ErrorBoundary') || id.includes('LoadingSpinner')) {
               return 'core';
+            }
+            if (id.includes('SEO') || id.includes('OptimizedImage')) {
+              return 'seo-components';
             }
             return 'components';
           }
@@ -75,9 +81,34 @@ export default defineConfig({
             return 'data';
           }
           
-          // Split pages by category
-          if (id.includes('/app/ai-') || id.includes('/app/zion-ai-')) {
-            return 'ai-pages';
+          // Split AI pages into smaller chunks
+          if (id.includes('/app/ai-chatbot') || id.includes('/app/ai-document') || id.includes('/app/ai-form')) {
+            return 'ai-basic';
+          }
+          if (id.includes('/app/ai-voice') || id.includes('/app/ai-fraud') || id.includes('/app/ai-image')) {
+            return 'ai-advanced';
+          }
+          if (id.includes('/app/ai-lead') || id.includes('/app/ai-predictive') || id.includes('/app/ai-price')) {
+            return 'ai-analytics';
+          }
+          if (id.includes('/app/ai-crm') || id.includes('/app/ai-data') || id.includes('/app/ai-email')) {
+            return 'ai-business';
+          }
+          // Split Zion AI into smaller chunks
+          if (id.includes('/app/zion-ai-chatbot') || id.includes('/app/zion-ai-code') || id.includes('/app/zion-ai-content')) {
+            return 'zion-ai-basic';
+          }
+          if (id.includes('/app/zion-ai-customer') || id.includes('/app/zion-ai-workflow') || id.includes('/app/zion-ai-email')) {
+            return 'zion-ai-business';
+          }
+          if (id.includes('/app/zion-ai-fraud') || id.includes('/app/zion-ai-image') || id.includes('/app/zion-ai-lead')) {
+            return 'zion-ai-advanced';
+          }
+          if (id.includes('/app/zion-ai-predictive') || id.includes('/app/zion-ai-price') || id.includes('/app/zion-ai-voice')) {
+            return 'zion-ai-analytics';
+          }
+          if (id.includes('/app/zion-ai-')) {
+            return 'zion-ai-other';
           }
           
           if (id.includes('/app/it-') || id.includes('/app/cloud-') || id.includes('/app/digital-')) {

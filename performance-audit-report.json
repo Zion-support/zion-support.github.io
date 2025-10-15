@@ -1,81 +1,128 @@
 {
-  "timestamp": "2025-10-13T02:18:36.334Z",
-  "issues": [
+  "timestamp": "2025-10-15T18:42:18.753Z",
+  "totalSize": 1241088,
+  "totalSizeFormatted": "1.18 MB",
+  "bundles": [
     {
-      "type": "Potentially Unused Import",
-      "file": "app/components/AdvancedErrorBoundary.tsx",
-      "line": 2,
-      "import": "Bug",
-      "severity": "low"
+      "name": "pages-Dy-cSdm0.js",
+      "size": 307,
+      "sizeFormatted": "307.13 KB"
+    },
+    {
+      "name": "react-CaWekMXi.js",
+      "size": 212,
+      "sizeFormatted": "211.56 KB"
+    },
+    {
+      "name": "data-70e17VPU.js",
+      "size": 91,
+      "sizeFormatted": "90.56 KB"
+    },
+    {
+      "name": "ai-advanced-C-AXSGj9.js",
+      "size": 76,
+      "sizeFormatted": "76.12 KB"
+    },
+    {
+      "name": "ai-analytics-CKgWIDAb.js",
+      "size": 68,
+      "sizeFormatted": "67.71 KB"
+    },
+    {
+      "name": "zion-ai-advanced-DMHuBdSD.js",
+      "size": 68,
+      "sizeFormatted": "68.15 KB"
+    },
+    {
+      "name": "zion-ai-other-wJ_CxA6E.js",
+      "size": 65,
+      "sizeFormatted": "64.9 KB"
+    },
+    {
+      "name": "zion-ai-analytics-Cw_Wg0oY.js",
+      "size": 63,
+      "sizeFormatted": "63.41 KB"
+    },
+    {
+      "name": "ai-business-C6DHbc3b.js",
+      "size": 50,
+      "sizeFormatted": "49.67 KB"
+    },
+    {
+      "name": "ai-basic-D3iBTmqV.js",
+      "size": 39,
+      "sizeFormatted": "38.86 KB"
+    },
+    {
+      "name": "index-sqFrhRZJ.css",
+      "size": 34,
+      "sizeFormatted": "34.11 KB"
+    },
+    {
+      "name": "components-UF33dKyY.js",
+      "size": 33,
+      "sizeFormatted": "32.92 KB"
+    },
+    {
+      "name": "zion-ai-business-Be9NcPwT.js",
+      "size": 29,
+      "sizeFormatted": "28.61 KB"
+    },
+    {
+      "name": "index-CJJKVozK.js",
+      "size": 21,
+      "sizeFormatted": "20.98 KB"
+    },
+    {
+      "name": "zion-ai-basic-CToIGkFh.js",
+      "size": 18,
+      "sizeFormatted": "18.4 KB"
+    },
+    {
+      "name": "it-pages-C0_Rxq9p.js",
+      "size": 10,
+      "sizeFormatted": "10.11 KB"
+    },
+    {
+      "name": "monitoring-CJPOQN-L.js",
+      "size": 7,
+      "sizeFormatted": "7.33 KB"
+    },
+    {
+      "name": "analytics-B3y21I-e.js",
+      "size": 6,
+      "sizeFormatted": "5.99 KB"
+    },
+    {
+      "name": "core-B27cCu43.js",
+      "size": 5,
+      "sizeFormatted": "5.09 KB"
+    },
+    {
+      "name": "vendor-C1rI_nKN.js",
+      "size": 5,
+      "sizeFormatted": "4.88 KB"
+    },
+    {
+      "name": "seo-components-DpKn-ik-.js",
+      "size": 4,
+      "sizeFormatted": "3.5 KB"
+    },
+    {
+      "name": "hooks-B-cpoKVP.js",
+      "size": 1,
+      "sizeFormatted": "803 Bytes"
     }
   ],
-  "recommendations": [
-    {
-      "type": "Lazy Loading",
-      "file": "app/components/ContentCarousel.tsx",
-      "suggestion": "Consider using React.lazy() for this large component"
-    },
-    {
-      "type": "Memoization",
-      "file": "app/components/AccessibilityEnhancer.tsx",
-      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
-    },
-    {
-      "type": "Memoization",
-      "file": "app/components/AdvancedPerformanceMonitor.tsx",
-      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
-    },
-    {
-      "type": "Memoization",
-      "file": "app/components/AnimatedCounter.tsx",
-      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
-    },
-    {
-      "type": "Memoization",
-      "file": "app/components/AnimatedText.tsx",
-      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
-    },
-    {
-      "type": "Memoization",
-      "file": "app/components/ContentCarousel.tsx",
-      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
-    },
-    {
-      "type": "Memoization",
-      "file": "app/components/CookieConsent.tsx",
-      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
-    },
-    {
-      "type": "Memoization",
-      "file": "app/components/DynamicContentShowcase.tsx",
-      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
-    },
-    {
-      "type": "Memoization",
-      "file": "app/components/EnhancedPerformanceMonitor.tsx",
-      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
-    },
-    {
-      "type": "Memoization",
-      "file": "app/components/PerformanceMonitor.tsx",
-      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
-    },
-    {
-      "type": "Memoization",
-      "file": "app/components/Sidebar.tsx",
-      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
-    },
-    {
-      "type": "Memoization",
-      "file": "app/hooks/useEnhancedPerformance.ts",
-      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
-    }
-  ],
-  "summary": {
-    "totalIssues": 1,
-    "highSeverity": 0,
-    "mediumSeverity": 0,
-    "lowSeverity": 1,
-    "totalRecommendations": 12
+  "performanceScore": 80,
+  "recommendations": {
+    "largeBundles": [
+      "pages-Dy-cSdm0.js",
+      "react-CaWekMXi.js"
+    ],
+    "veryLargeBundles": [],
+    "imageOptimization": false,
+    "cssOptimization": false,
+    "jsOptimization": true
   }
 }

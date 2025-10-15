@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from './components/SEOHead';
+import OptimizedImage from './components/OptimizedImage';
 import { servicesDataOptimized } from './data/servicesDataOptimized';
 import { 
   CpuChipIcon, 

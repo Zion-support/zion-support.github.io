@@ -151,8 +151,15 @@ export const usePerformanceMonitoring = (options: UsePerformanceMonitoringOption
     if (intervalRef.current) return;
 
     intervalRef.current = setInterval(() => {
-      const memoryData = checkMemoryUsage();
-      const navigationTiming = getNavigationTiming();
+      // Only check memory usage if enabled and supported
+      if (enableMemoryMonitoring && 'memory' in performance) {
+        checkMemoryUsage();
+      }
+      
+      // Only get navigation timing if enabled and supported
+      if (enableNavigationTiming && isSupported) {
+        getNavigationTiming();
+      }
 
       if (onMetricsUpdate) {
         onMetricsUpdate({
@@ -163,7 +170,7 @@ export const usePerformanceMonitoring = (options: UsePerformanceMonitoringOption
         });
       }
     }, reportInterval);
-  }, [checkMemoryUsage, getNavigationTiming, onMetricsUpdate, reportInterval]);
+  }, [enableMemoryMonitoring, enableNavigationTiming, isSupported, checkMemoryUsage, getNavigationTiming, onMetricsUpdate, reportInterval]);
 
   // Initialize all monitoring
   useEffect(() => {

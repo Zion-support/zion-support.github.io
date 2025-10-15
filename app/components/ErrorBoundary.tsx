@@ -40,12 +40,39 @@ class ErrorBoundary extends Component<Props, State> {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
-    // In production, you might want to send this to an error reporting service
+    // Report error in production
     if (process.env.NODE_ENV === 'production') {
-      // Example: Send to error reporting service
-      // errorReportingService.captureException(error, { extra: errorInfo });
+      this.reportError(error, errorInfo);
     }
   }
+
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    try {
+      fetch('/api/error-report', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          error: {
+            message: error.message,
+            stack: error.stack,
+            name: error.name,
+          },
+          errorInfo: {
+            componentStack: errorInfo.componentStack,
+          },
+          timestamp: new Date().toISOString(),
+          userAgent: navigator.userAgent,
+          url: window.location.href,
+        }),
+      }).catch(() => {
+        // Silently fail if error reporting fails
+      });
+    } catch {
+      // Silently fail if error reporting fails
+    }
+  };
 
   render() {
     if (this.state.hasError) {
