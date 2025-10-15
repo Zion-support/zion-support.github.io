@@ -98,12 +98,12 @@ const testimonials = [
     { name: "Robert Chen",
       company: "Manufacturing Corp",
       role: "CTO",
-      content: "The 5G implementation has transformed our manufacturing operations. We've seen a 60% increase in efficiency and reduced downtime by 80%.",
+      content: "The 5G implementation has transformed our manufacturing operations. We&apos;ve seen a 60% increase in efficiency and reduced downtime by 80%.",
       rating: 5 },
     { name: "Maria Garcia",
       company: "Smart City Initiative",
       role: "Project Director",
-      content: "Zion Tech Group's 5G solution has enabled us to build a truly connected city. The performance and reliability exceed our expectations.",
+      content: "Zion Tech Group&apos;s 5G solution has enabled us to build a truly connected city. The performance and reliability exceed our expectations.",
       rating: 5 },
     { name: "Dr. James Wilson",
       company: "Regional Hospital",
@@ -301,7 +301,7 @@ const testimonials = [
               <h2 className="text-4xl font-bold text-white mb-6">Client Success Stories</h2>
               
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how 5G has transformed our clients' businesses
+                See how 5G has transformed our clients&apos; businesses
               </p>
             </div>
             

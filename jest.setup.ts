@@ -63,18 +63,18 @@ if (typeof window.IntersectionObserver === 'undefined') {
     disconnect() {}
     takeRecords() { return []; }
   }
-  // @ts-ignore
+  // @ts-expect-error - Mock implementation for testing environment
   window.IntersectionObserver = MockIntersectionObserver;
-  // @ts-ignore
+  // @ts-expect-error - Mock implementation for testing environment
   global.IntersectionObserver = MockIntersectionObserver;
 }
 
 // Polyfill performance.getEntriesByType for JSDOM (used in productionLogger)
 if (typeof performance.getEntriesByType !== 'function') {
-  // @ts-ignore
+  // @ts-expect-error - Mock implementation for JSDOM environment
   performance.getEntriesByType = () => [];
 }
 
 // Ensure all code paths use the mock implementation
-// @ts-ignore
+// @ts-expect-error - Mock implementation for testing environment
 global.fetch = fetchMock;

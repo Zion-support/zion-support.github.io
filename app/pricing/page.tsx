@@ -126,7 +126,7 @@ const PricingPage: React.FC = () => {
   const faqs = [
     {
       question: "Can I change my plan anytime?",
-      answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing differences."
+      answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we&apos;ll prorate any billing differences."
     },
     {
       question: "Is there a free trial available?",
@@ -142,7 +142,7 @@ const PricingPage: React.FC = () => {
     },
     {
       question: "What happens if I exceed my plan limits?",
-      answer: "We'll notify you when you're approaching your limits. You can upgrade your plan or purchase additional resources as needed."
+      answer: "We&apos;ll notify you when you&apos;re approaching your limits. You can upgrade your plan or purchase additional resources as needed."
     }
   ];
 
@@ -223,7 +223,7 @@ const PricingPage: React.FC = () => {
                   </div>
                   
                   <div className="mb-8">
-                    <h4 className="text-lg font-semibold text-white mb-4">What's included:</h4>
+                    <h4 className="text-lg font-semibold text-white mb-4">What&apos;s included:</h4>
                     <ul className="space-y-3">
                       {plan.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">

@@ -57,16 +57,20 @@ class Logger {
     // Console logging
     switch (level) {
       case 'error':
+        // eslint-disable-next-line no-console
         console.error(formattedMessage);
         break;
       case 'warn':
+        // eslint-disable-next-line no-console
         console.warn(formattedMessage);
         break;
       case 'info':
+        // eslint-disable-next-line no-console
         console.info(formattedMessage);
         break;
       case 'debug':
         if (this.isDevelopment) {
+          // eslint-disable-next-line no-console
           console.debug(formattedMessage);
         }
         break;
