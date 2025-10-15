@@ -397,81 +397,72 @@ const HomePage: React.FC = () => {
               </div>
 
               {/* Task Manager */}
-              <div className ="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover: border-green-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20">";
-                <div className ="flex items-center justify-between mb-4">";
-                  <div className ="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">";
-                    <CheckCircleIcon className ="w-6 h-6 text-white" />";
+              <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <CheckCircleIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className ="text-sm text-green-400 font-medium">Productivity</span>";
+                  <span className="text-sm text-green-400 font-medium">Productivity</span>
                 </div>
-                <h3 className ="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">";
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
                   Task Manager Pro
                 </h3>
-                <p className ="text-gray-400 mb-4 text-sm">";
+                <p className="text-gray-400 mb-4 text-sm">
                   Advanced task management with AI-powered prioritization and team collaboration features.
                 </p>
-                <div className ="flex items-center justify-between mb-4">";
-                  <span className ="text-2xl font-bold text-green-400">$29/mo</span>";
-                  <span className ="text-sm text-gray-400 line-through">$49/mo</span>";
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-green-400">$29/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$49/mo</span>
                 </div>
-                <div className ="space-y-2 mb-6">";
-                  <div className ="flex items-center text-sm text-gray-300">";
-                    <CheckCircleIcon className ="w-4 h-4 text-green-400 mr-2" />";
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
                     <span>AI task prioritization</span>
                   </div>
-                  <div className ="flex items-center text-sm text-gray-300">";
-                    <CheckCircleIcon className ="w-4 h-4 text-green-400 mr-2" />";
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
                     <span>Team collaboration</span>
                   </div>
-                  <div className ="flex items-center text-sm text-gray-300">";
-                    <CheckCircleIcon className ="w-4 h-4 text-green-400 mr-2" />";
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
                     <span>Time tracking</span>
                   </div>
                 </div>
-                <Link to ="/task-manager"";
-                  className="block w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"",
+                <Link to="/task-manager"
+                  className="block w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
                 </Link>
->>>>>>> main
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-      </div>
-    </>
-  )};
-};
-
-export default HomePage;
-=======
 
         {/* Features Section */}
-        <section className ="py-16 sm: py-20">";
-          <div className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
-            <div className ="text-center mb-12 sm:mb-16">";
-              <h2 className ="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">";
-                Why Choose <span className ="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Zion Tech Group</span>?";
+        <section className="py-16 sm:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                Why Choose <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Zion Tech Group</span>?
               </h2>
-              <p className ="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">";
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
                 We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
               </p>
             </div>
             
-            <div className ="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">",
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {features.map((feature, index) => (
-                <div key ={index} 
-                  className="flex items-center space-x-4 p-4 sm: p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-all duration-300 group hover:scale-105 hover:shadow-lg hover:shadow-green-500/10"",
+                <div key={index} 
+                  className="flex items-center space-x-4 p-4 sm:p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-all duration-300 group hover:scale-105 hover:shadow-lg hover:shadow-green-500/10"
                   style={{
-                    animationDelay `${index * 50}ms`
+                    animationDelay: `${index * 50}ms`
                   }}
                 >
-                  <div className ="relative">";
-                    <CheckCircleIcon className ="w-5 h-5 sm: w-6 sm:h-6 text-green-400 flex-shrink-0 group-hover:scale-110 transition-transform" />";
-                    <div className ="absolute inset-0 bg-green-400 rounded-full blur opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>",
+                  <div className="relative">
+                    <CheckCircleIcon className="w-5 h-5 sm:w-6 sm:h-6 text-green-400 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                    <div className="absolute inset-0 bg-green-400 rounded-full blur opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
                   </div>
-                  <span className ="text-gray-300 font-medium text-sm sm:text-base group-hover:text-white transition-colors">{feature}</span>";
+                  <span className="text-gray-300 font-medium text-sm sm:text-base group-hover:text-white transition-colors">{feature}</span>
                 </div>
               ))}
             </div>
@@ -479,30 +470,30 @@ export default HomePage;
         </section>
 
         {/* CTA Section */}
-        <section className ="relative py-16 sm: py-20 bg-gradient-to-r from-purple-900/40 via-slate-900 to-cyan-900/40 overflow-hidden">",
+        <section className="relative py-16 sm:py-20 bg-gradient-to-r from-purple-900/40 via-slate-900 to-cyan-900/40 overflow-hidden">
           {/* Animated Background Elements */}
-          <div className ="absolute top-10 left-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>";
-          <div className ="absolute bottom-10 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>";
+          <div className="absolute top-10 left-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
           
-          <div className ="max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8 relative z-10">";
-            <h2 className ="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">";
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Ready to Transform Your Business?
             </h2>
-            <p className ="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">";
-              Let's discuss how our solutions can accelerate your digital transformation and drive growth.";
+            <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">
+              Let's discuss how our solutions can accelerate your digital transformation and drive growth.
             </p>
-            <div className ="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link to ="/contact"";
-                className="relative group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base shadow-lg shadow-purple-500/25"";
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact"
+                className="relative group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base shadow-lg shadow-purple-500/25"
               >
-                <span className ="relative z-10 flex items-center">";
+                <span className="relative z-10 flex items-center">
                   Get Started Today
-                  <ArrowRightIcon className ="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />";
+                  <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </span>
-                <div className ="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>";
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </Link>
-              <Link to ="/demo"";
-                className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base hover:shadow-lg hover:shadow-white/25"";
+              <Link to="/demo"
+                className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base hover:shadow-lg hover:shadow-white/25"
               >
                 Schedule Demo
               </Link>
@@ -511,9 +502,7 @@ export default HomePage;
         </section>
       </div>
     </>
-  ),
+  );
 };
 
 export default HomePage;
-
->>>>>>> main
