@@ -17,6 +17,9 @@ const PricingPage = React.lazy(() => import('./app/pricing/page'));
 const PortfolioPage = React.lazy(() => import('./app/portfolio/page'));
 const NewsPage = React.lazy(() => import('./app/news/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
+const PrivacyPolicyPage = React.lazy(() => import('./app/privacy-policy/page'));
+const TermsPage = React.lazy(() => import('./app/terms/page'));
+const SlaPage = React.lazy(() => import('./app/sla/page'));
 
 const App: React.FC = () => {
   return (
@@ -50,6 +53,9 @@ const App: React.FC = () => {
               <Route path="/portfolio" element={<PortfolioPage />} />
               <Route path="/news" element={<NewsPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+              <Route path="/terms" element={<TermsPage />} />
+              <Route path="/sla" element={<SlaPage />} />
               <Route path="*" element={
                 <div className="container mx-auto px-4 py-16 text-center">
                   <h1 className="text-4xl font-bold text-white mb-8">404 - Page Not Found</h1>
