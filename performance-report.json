@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-10-15T12:16:59.166Z",
+=======
+  "timestamp": "2025-10-15T12:49:14.134Z",
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-e54c
   "optimizations": [
     "Images optimized with WebP conversion",
     "Critical CSS generated for above-the-fold content",
@@ -7,7 +11,12 @@
     "Console logs removed from production build",
     "Source maps optimized",
     "Lazy loading implemented for routes",
+<<<<<<< HEAD
     "Error boundaries added for better UX",    "Performance monitoring enabled"
+=======
+    "Error boundaries added for better UX",
+    "Performance monitoring enabled"
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-e54c
   ],
   "recommendations": [
     "Consider implementing image optimization pipeline",
@@ -20,7 +29,11 @@
     "Add accessibility testing automation"
   ],
   "metrics": {
+<<<<<<< HEAD
     "buildTime": 1760530619166,
+=======
+    "buildTime": 1760532554134,
+>>>>>>> cursor/enhance-application-with-new-services-and-improvements-e54c
     "bundleSize": "Optimized",
     "imageOptimization": "Enabled",
     "criticalCSS": "Generated",

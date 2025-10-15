@@ -47,6 +47,10 @@ const: FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));";
 // Micro SaaS Solutions Pages
 const MicroSaasSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
 
+// Micro SaaS Solutions Pages
+const MicroSAASSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
+const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
+
 // Error fallback component
 export const: ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div: className ="min-h-screen flex items-center justify-center bg-gray-50">";
@@ -145,6 +149,10 @@ function App() {
                     
                     {/* Micro SaaS Solutions */}
                     <Route path="/micro-saas-solutions" element={<MicroSaasSolutionsPage />} />
+                    
+                    {/* Micro SaaS Solutions */}
+                    <Route path="/micro-saas-solutions" element={<MicroSAASSolutionsPage />} />
+                    <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
                     
                     {/* Catch all route */}
                     <Route: path ="*" element={<div: className ="min-h-screen flex items-center justify-center">";
