@@ -1,27 +1,23 @@
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
-
-interface Props {
+interface Props {}
   children: ReactNode
   fallback?: ReactNode
 }
-
-interface State {
+interface State {}
   hasError: boolean
   error: Error | null
   errorInfo: ErrorInfo | null
 }
-
-class ErrorHandler extends Component<Props, State> {
-  constructor(props: Props) {
+class ErrorHandler extends Component<Props, State> {}
+  constructor(props: Props) {}
     super(props)
-    this.state = {
+    this.state = {}
       hasError: false,
       error: null,
       errorInfo: null
     }
-  }
   }
   static getDerivedStateFromError(error: Error): State {}
     return {}
@@ -36,9 +32,9 @@ class ErrorHandler extends Component<Props, State> {
       errorInfo
     })
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      }
-
+    if (process.env.NODE_ENV === 'development') {}
+      console.error('Error caught by handler:', error, errorInfo)
+    }
     // Send error to monitoring service in production
     if (process.env.NODE_ENV === 'production') {}
       // You can integrate with services like Sentry, LogRocket, etc.
@@ -56,12 +52,14 @@ class ErrorHandler extends Component<Props, State> {
         stack: error.stack,
         componentStack: errorInfo.componentStack,
         timestamp: new Date().toISOString()
-      };
+      }
+      console.log('Error logged:', errorData)
       // Send to your error reporting service here
 
-      } catch (reportingError) {
-      } catch (reportingError) {
-      }
+      console.log('Error data prepared for reporting:', errorData);
+    } catch (reportingError) {
+      console.error('Failed to prepare error data for reporting:', reportingError);
+    }
   }
   handleRetry = () => {}
 }this.setState({}
