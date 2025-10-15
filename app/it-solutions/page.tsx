@@ -843,10 +843,289 @@ const ITSolutionsPage: React.FC = () => {
       icon: <FileText className="w-8 h-8 text-amber-400" />,
       popular: false,
       link: 'https://ziontechgroup.com/it-audit-compliance'
+    },
+    {
+      id: 'iot-solutions',
+      name: 'IoT Solutions & Integration',
+      price: '$449/mo',
+      originalPrice: '$899/mo',
+      description: 'Comprehensive IoT solutions and device management',
+      longDescription: 'Connect and manage IoT devices with our comprehensive platform that provides device management, data analytics, and integration services.',
+      features: [
+        'Device Management',
+        'Data Collection & Analytics',
+        'Real-time Monitoring',
+        'Edge Computing',
+        'Protocol Integration',
+        'Security Management',
+        'Scalable Infrastructure',
+        'Custom Dashboards',
+        'API Development',
+        'Maintenance Support'
+      ],
+      benefits: [
+        'Connect any IoT device',
+        'Real-time data insights',
+        'Reduce operational costs',
+        'Improve efficiency',
+        'Scale IoT deployments'
+      ],
+      category: 'IoT',
+      icon: <Wifi className="w-8 h-8 text-cyan-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/iot-solutions'
+    },
+    {
+      id: 'edge-computing',
+      name: 'Edge Computing Solutions',
+      price: '$599/mo',
+      originalPrice: '$1199/mo',
+      description: 'Edge computing infrastructure and deployment',
+      longDescription: 'Deploy edge computing solutions that bring processing closer to data sources for improved performance and reduced latency.',
+      features: [
+        'Edge Infrastructure Setup',
+        'Data Processing at Edge',
+        'Low Latency Applications',
+        'Distributed Computing',
+        'Edge Security',
+        'Bandwidth Optimization',
+        'Real-time Analytics',
+        'Offline Capabilities',
+        'Scalable Deployment',
+        'Monitoring & Management'
+      ],
+      benefits: [
+        'Reduce latency by 80%',
+        'Improve application performance',
+        'Reduce bandwidth costs',
+        'Enable offline operations',
+        'Better data privacy'
+      ],
+      category: 'Edge Computing',
+      icon: <Server className="w-8 h-8 text-purple-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/edge-computing'
+    },
+    {
+      id: 'microservices-architecture',
+      name: 'Microservices Architecture',
+      price: '$399/mo',
+      originalPrice: '$799/mo',
+      description: 'Design and implement microservices architecture',
+      longDescription: 'Transform monolithic applications into scalable microservices architecture with our comprehensive design and implementation services.',
+      features: [
+        'Architecture Design',
+        'Service Decomposition',
+        'API Gateway Setup',
+        'Service Discovery',
+        'Load Balancing',
+        'Container Orchestration',
+        'Monitoring & Logging',
+        'Security Implementation',
+        'Testing Strategies',
+        'Migration Services'
+      ],
+      benefits: [
+        'Improve scalability',
+        'Faster development cycles',
+        'Better fault isolation',
+        'Technology flexibility',
+        'Easier maintenance'
+      ],
+      category: 'Architecture',
+      icon: <Network className="w-8 h-8 text-blue-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/microservices-architecture'
+    },
+    {
+      id: 'api-development',
+      name: 'API Development & Integration',
+      price: '$249/mo',
+      originalPrice: '$499/mo',
+      description: 'Custom API development and third-party integrations',
+      longDescription: 'Build robust APIs and integrate with third-party services to connect your applications and streamline data flow.',
+      features: [
+        'RESTful API Development',
+        'GraphQL APIs',
+        'API Documentation',
+        'Authentication & Authorization',
+        'Rate Limiting',
+        'Third-party Integrations',
+        'API Testing',
+        'Performance Optimization',
+        'Version Management',
+        'Monitoring & Analytics'
+      ],
+      benefits: [
+        'Connect disparate systems',
+        'Improve data flow',
+        'Enable third-party access',
+        'Reduce development time',
+        'Better system integration'
+      ],
+      category: 'Development',
+      icon: <Code className="w-8 h-8 text-green-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/api-development'
+    },
+    {
+      id: 'devops-automation',
+      name: 'DevOps Automation & CI/CD',
+      price: '$349/mo',
+      originalPrice: '$699/mo',
+      description: 'Complete DevOps automation and continuous integration',
+      longDescription: 'Automate your development and deployment processes with our comprehensive DevOps platform featuring CI/CD pipelines and infrastructure automation.',
+      features: [
+        'CI/CD Pipeline Setup',
+        'Automated Testing',
+        'Infrastructure as Code',
+        'Container Orchestration',
+        'Monitoring & Alerting',
+        'Security Scanning',
+        'Deployment Automation',
+        'Environment Management',
+        'Performance Optimization',
+        'Team Collaboration Tools'
+      ],
+      benefits: [
+        'Faster deployments',
+        'Reduce manual errors',
+        'Improve code quality',
+        'Better team collaboration',
+        'Scale development processes'
+      ],
+      category: 'DevOps',
+      icon: <Settings className="w-8 h-8 text-orange-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/devops-automation'
+    },
+    {
+      id: 'data-warehousing',
+      name: 'Data Warehousing & ETL',
+      price: '$499/mo',
+      originalPrice: '$999/mo',
+      description: 'Enterprise data warehousing and ETL solutions',
+      longDescription: 'Build comprehensive data warehouses and ETL pipelines to centralize and process your business data for analytics and reporting.',
+      features: [
+        'Data Warehouse Design',
+        'ETL Pipeline Development',
+        'Data Integration',
+        'Data Quality Management',
+        'Real-time Processing',
+        'Data Modeling',
+        'Performance Optimization',
+        'Backup & Recovery',
+        'Security Implementation',
+        'Analytics Integration'
+      ],
+      benefits: [
+        'Centralize data sources',
+        'Improve data quality',
+        'Enable better analytics',
+        'Reduce data silos',
+        'Faster reporting'
+      ],
+      category: 'Data Management',
+      icon: <Database className="w-8 h-8 text-indigo-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/data-warehousing'
+    },
+    {
+      id: 'business-continuity',
+      name: 'Business Continuity Planning',
+      price: '$199/mo',
+      originalPrice: '$399/mo',
+      description: 'Comprehensive business continuity and disaster recovery',
+      longDescription: 'Ensure your business can continue operations during disruptions with our comprehensive business continuity planning and disaster recovery services.',
+      features: [
+        'Risk Assessment',
+        'Business Impact Analysis',
+        'Recovery Planning',
+        'Disaster Recovery Testing',
+        'Backup Strategies',
+        'Communication Plans',
+        'Vendor Management',
+        'Compliance Requirements',
+        'Training Programs',
+        'Ongoing Monitoring'
+      ],
+      benefits: [
+        'Minimize downtime',
+        'Protect critical data',
+        'Ensure compliance',
+        'Reduce business risks',
+        'Maintain customer trust'
+      ],
+      category: 'Business Continuity',
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/business-continuity'
+    },
+    {
+      id: 'it-transformation',
+      name: 'Digital IT Transformation',
+      price: '$799/mo',
+      originalPrice: '$1599/mo',
+      description: 'Complete digital transformation of IT infrastructure',
+      longDescription: 'Transform your entire IT infrastructure with our comprehensive digital transformation services that modernize technology and processes.',
+      features: [
+        'Technology Assessment',
+        'Transformation Roadmap',
+        'Legacy System Migration',
+        'Cloud Migration',
+        'Process Optimization',
+        'Change Management',
+        'Training & Support',
+        'Performance Monitoring',
+        'Cost Optimization',
+        'Future Planning'
+      ],
+      benefits: [
+        'Modernize technology stack',
+        'Improve operational efficiency',
+        'Reduce costs',
+        'Enhance security',
+        'Future-proof infrastructure'
+      ],
+      category: 'Transformation',
+      icon: <Rocket className="w-8 h-8 text-purple-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/it-transformation'
+    },
+    {
+      id: 'managed-it-services',
+      name: 'Managed IT Services',
+      price: '$299/mo',
+      originalPrice: '$599/mo',
+      description: 'Comprehensive managed IT services and support',
+      longDescription: 'Outsource your IT operations to our expert team with comprehensive managed services including monitoring, maintenance, and support.',
+      features: [
+        '24/7 IT Monitoring',
+        'Proactive Maintenance',
+        'Help Desk Support',
+        'Security Management',
+        'Backup & Recovery',
+        'Software Updates',
+        'Hardware Management',
+        'Performance Optimization',
+        'Vendor Management',
+        'Regular Reporting'
+      ],
+      benefits: [
+        'Reduce IT costs',
+        'Improve system reliability',
+        'Access to expertise',
+        'Focus on core business',
+        'Predictable IT expenses'
+      ],
+      category: 'Managed Services',
+      icon: <Headphones className="w-8 h-8 text-cyan-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/managed-it-services'
     }
   ];
 
-  const categories = ['All', 'Cloud Computing', 'Security', 'Networking', 'Data Center', 'Support', 'Development', 'Database', 'Consulting', 'Backup', 'Mobile', 'Virtualization', 'Compliance'];
+  const categories = ['All', 'Cloud Computing', 'Security', 'Networking', 'Data Center', 'Support', 'Development', 'Database', 'Consulting', 'Backup', 'Mobile', 'Virtualization', 'Compliance', 'IoT', 'Edge Computing', 'Architecture', 'DevOps', 'Data Management', 'Business Continuity', 'Transformation', 'Managed Services'];
 
   const features = [
     '24/7 Expert Support',

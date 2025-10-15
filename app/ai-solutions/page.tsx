@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -29,7 +29,12 @@ import {
   Cpu,
   Network,
   FileText,
-  Settings
+  Settings,
+  Package,
+  Home,
+  BookOpen,
+  Cog,
+  ShoppingCart
 } from 'lucide-react';
 
 const AISolutionsPage: React.FC = () => {
@@ -62,7 +67,8 @@ const AISolutionsPage: React.FC = () => {
       ],
       category: 'Conversational AI',
       icon: <MessageSquare className="w-8 h-8 text-cyan-400" />,
-      popular: true
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-chatbot-enterprise'
     },
     {
       id: 'ai-computer-vision',
@@ -92,7 +98,8 @@ const AISolutionsPage: React.FC = () => {
       ],
       category: 'Computer Vision',
       icon: <Eye className="w-8 h-8 text-green-400" />,
-      popular: false
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-computer-vision'
     },
     {
       id: 'ai-content-generation-pro',
@@ -122,7 +129,8 @@ const AISolutionsPage: React.FC = () => {
       ],
       category: 'Content Creation',
       icon: <FileText className="w-8 h-8 text-purple-400" />,
-      popular: true
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-content-generation-pro'
     },
     {
       id: 'ai-analytics-dashboard-pro',
@@ -152,7 +160,8 @@ const AISolutionsPage: React.FC = () => {
       ],
       category: 'Analytics',
       icon: <BarChart3 className="w-8 h-8 text-blue-400" />,
-      popular: false
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-analytics-dashboard-pro'
     },
     {
       id: 'ai-automation-platform',
@@ -182,7 +191,8 @@ const AISolutionsPage: React.FC = () => {
       ],
       category: 'Automation',
       icon: <Settings className="w-8 h-8 text-orange-400" />,
-      popular: true
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-automation-platform'
     },
     {
       id: 'ai-blockchain-solutions',
@@ -212,11 +222,291 @@ const AISolutionsPage: React.FC = () => {
       ],
       category: 'Blockchain',
       icon: <Network className="w-8 h-8 text-yellow-400" />,
-      popular: false
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-blockchain-solutions'
+    },
+    {
+      id: 'ai-medical-diagnosis',
+      name: 'AI Medical Diagnosis Assistant',
+      price: '$799/mo',
+      originalPrice: '$1599/mo',
+      description: 'AI-powered medical diagnosis and health monitoring',
+      longDescription: 'Revolutionize healthcare with our AI medical diagnosis platform that assists doctors in diagnosis, treatment planning, and patient monitoring.',
+      features: [
+        'Medical Image Analysis',
+        'Symptom Assessment',
+        'Treatment Recommendations',
+        'Drug Interaction Checking',
+        'Patient Risk Stratification',
+        'Clinical Decision Support',
+        'Electronic Health Records',
+        'Telemedicine Integration',
+        'Compliance Management',
+        'Research Analytics'
+      ],
+      benefits: [
+        'Improve diagnostic accuracy by 40%',
+        'Reduce misdiagnosis rates',
+        'Faster treatment decisions',
+        'Better patient outcomes',
+        'Streamline clinical workflows'
+      ],
+      category: 'Healthcare',
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-medical-diagnosis'
+    },
+    {
+      id: 'ai-legal-assistant',
+      name: 'AI Legal Assistant Pro',
+      price: '$499/mo',
+      originalPrice: '$999/mo',
+      description: 'Intelligent legal research and document analysis',
+      longDescription: 'Enhance legal practice with our AI-powered assistant that provides legal research, document analysis, contract review, and case law insights.',
+      features: [
+        'Legal Document Analysis',
+        'Contract Review & Risk Assessment',
+        'Case Law Research',
+        'Legal Writing Assistance',
+        'Compliance Checking',
+        'Due Diligence Automation',
+        'Legal Research Database',
+        'Document Generation',
+        'Client Communication',
+        'Billing & Time Tracking'
+      ],
+      benefits: [
+        'Reduce research time by 60%',
+        'Improve document accuracy',
+        'Faster contract reviews',
+        'Better case preparation',
+        'Increase billable hours'
+      ],
+      category: 'Legal',
+      icon: <FileText className="w-8 h-8 text-indigo-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-legal-assistant'
+    },
+    {
+      id: 'ai-supply-chain-optimization',
+      name: 'AI Supply Chain Optimization',
+      price: '$699/mo',
+      originalPrice: '$1399/mo',
+      description: 'Optimize supply chain operations with AI',
+      longDescription: 'Transform your supply chain with our AI-powered optimization platform that predicts demand, optimizes inventory, and streamlines logistics.',
+      features: [
+        'Demand Forecasting',
+        'Inventory Optimization',
+        'Supplier Risk Assessment',
+        'Route Optimization',
+        'Quality Control',
+        'Cost Analysis',
+        'Sustainability Tracking',
+        'Real-time Monitoring',
+        'Predictive Maintenance',
+        'Integration APIs'
+      ],
+      benefits: [
+        'Reduce inventory costs by 30%',
+        'Improve delivery times',
+        'Minimize supply disruptions',
+        'Optimize resource allocation',
+        'Enhance sustainability'
+      ],
+      category: 'Supply Chain',
+      icon: <Package className="w-8 h-8 text-green-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-supply-chain-optimization'
+    },
+    {
+      id: 'ai-financial-trading',
+      name: 'AI Financial Trading Platform',
+      price: '$999/mo',
+      originalPrice: '$1999/mo',
+      description: 'AI-powered algorithmic trading and investment management',
+      longDescription: 'Maximize investment returns with our sophisticated AI trading platform that analyzes markets, executes trades, and manages portfolios automatically.',
+      features: [
+        'Algorithmic Trading',
+        'Market Analysis',
+        'Risk Management',
+        'Portfolio Optimization',
+        'Real-time Monitoring',
+        'Backtesting Engine',
+        'Multi-asset Support',
+        'Regulatory Compliance',
+        'Performance Analytics',
+        'Custom Strategies'
+      ],
+      benefits: [
+        'Increase trading returns by 25%',
+        'Reduce emotional trading',
+        '24/7 market monitoring',
+        'Better risk management',
+        'Automated execution'
+      ],
+      category: 'Finance',
+      icon: <TrendingUp className="w-8 h-8 text-green-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-financial-trading'
+    },
+    {
+      id: 'ai-hr-recruitment',
+      name: 'AI HR & Recruitment Platform',
+      price: '$299/mo',
+      originalPrice: '$599/mo',
+      description: 'Intelligent human resources and talent acquisition',
+      longDescription: 'Revolutionize HR processes with our AI-powered platform that streamlines recruitment, employee management, and workforce analytics.',
+      features: [
+        'Resume Screening',
+        'Candidate Matching',
+        'Interview Scheduling',
+        'Skills Assessment',
+        'Employee Analytics',
+        'Performance Tracking',
+        'Retention Prediction',
+        'Diversity & Inclusion',
+        'Training Recommendations',
+        'Compliance Management'
+      ],
+      benefits: [
+        'Reduce hiring time by 50%',
+        'Improve candidate quality',
+        'Reduce bias in hiring',
+        'Better employee retention',
+        'Streamline HR processes'
+      ],
+      category: 'HR',
+      icon: <Users className="w-8 h-8 text-purple-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-hr-recruitment'
+    },
+    {
+      id: 'ai-real-estate',
+      name: 'AI Real Estate Intelligence',
+      price: '$399/mo',
+      originalPrice: '$799/mo',
+      description: 'AI-powered real estate analysis and property management',
+      longDescription: 'Optimize real estate investments with our AI platform that provides property valuation, market analysis, and investment recommendations.',
+      features: [
+        'Property Valuation',
+        'Market Analysis',
+        'Investment Recommendations',
+        'Rent Optimization',
+        'Tenant Screening',
+        'Maintenance Prediction',
+        'Energy Efficiency Analysis',
+        'Neighborhood Insights',
+        'Portfolio Management',
+        'Risk Assessment'
+      ],
+      benefits: [
+        'Improve investment decisions',
+        'Maximize rental income',
+        'Reduce vacancy rates',
+        'Optimize property values',
+        'Streamline management'
+      ],
+      category: 'Real Estate',
+      icon: <Home className="w-8 h-8 text-blue-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-real-estate'
+    },
+    {
+      id: 'ai-education-personalized',
+      name: 'AI Personalized Education Platform',
+      price: '$199/mo',
+      originalPrice: '$399/mo',
+      description: 'Personalized learning and educational content generation',
+      longDescription: 'Transform education with our AI-powered platform that creates personalized learning experiences, generates educational content, and tracks student progress.',
+      features: [
+        'Personalized Learning Paths',
+        'Content Generation',
+        'Adaptive Assessments',
+        'Progress Tracking',
+        'Learning Analytics',
+        'Tutoring Assistant',
+        'Multi-language Support',
+        'Accessibility Features',
+        'Parent Dashboard',
+        'Integration APIs'
+      ],
+      benefits: [
+        'Improve learning outcomes',
+        'Personalize education',
+        'Reduce teaching workload',
+        'Better student engagement',
+        'Data-driven insights'
+      ],
+      category: 'Education',
+      icon: <BookOpen className="w-8 h-8 text-orange-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-education-personalized'
+    },
+    {
+      id: 'ai-manufacturing-optimization',
+      name: 'AI Manufacturing Optimization',
+      price: '$599/mo',
+      originalPrice: '$1199/mo',
+      description: 'Optimize manufacturing processes with AI',
+      longDescription: 'Enhance manufacturing efficiency with our AI platform that optimizes production, predicts maintenance needs, and improves quality control.',
+      features: [
+        'Production Optimization',
+        'Predictive Maintenance',
+        'Quality Control',
+        'Supply Chain Integration',
+        'Energy Management',
+        'Safety Monitoring',
+        'Performance Analytics',
+        'IoT Integration',
+        'Custom Workflows',
+        'Real-time Dashboards'
+      ],
+      benefits: [
+        'Increase production by 20%',
+        'Reduce downtime by 40%',
+        'Improve product quality',
+        'Lower operational costs',
+        'Enhance safety'
+      ],
+      category: 'Manufacturing',
+      icon: <Cog className="w-8 h-8 text-gray-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-manufacturing-optimization'
+    },
+    {
+      id: 'ai-retail-optimization',
+      name: 'AI Retail Optimization Platform',
+      price: '$349/mo',
+      originalPrice: '$699/mo',
+      description: 'Optimize retail operations and customer experience',
+      longDescription: 'Transform retail with our AI platform that optimizes pricing, inventory, customer experience, and sales forecasting.',
+      features: [
+        'Dynamic Pricing',
+        'Inventory Optimization',
+        'Customer Behavior Analysis',
+        'Sales Forecasting',
+        'Personalized Recommendations',
+        'Store Layout Optimization',
+        'Staff Scheduling',
+        'Loss Prevention',
+        'Customer Service AI',
+        'Analytics Dashboard'
+      ],
+      benefits: [
+        'Increase sales by 25%',
+        'Reduce inventory costs',
+        'Improve customer satisfaction',
+        'Optimize pricing strategies',
+        'Enhance operational efficiency'
+      ],
+      category: 'Retail',
+      icon: <ShoppingCart className="w-8 h-8 text-pink-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-retail-optimization'
     }
   ];
 
-  const categories = ['All', 'Conversational AI', 'Computer Vision', 'Content Creation', 'Analytics', 'Automation', 'Blockchain'];
+  const categories = ['All', 'Conversational AI', 'Computer Vision', 'Content Creation', 'Analytics', 'Automation', 'Blockchain', 'Healthcare', 'Legal', 'Supply Chain', 'Finance', 'HR', 'Real Estate', 'Education', 'Manufacturing', 'Retail'];
 
   const useCases = [
     {
@@ -306,32 +596,6 @@ const AISolutionsPage: React.FC = () => {
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-=======
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-
-import { Link } from "react-router-dom";
-
-export default function GDataAnalyticsZionTechGroupPage() {
-  return (
-    <>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Ai Solutions</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional ai solutions services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -463,12 +727,14 @@ export default function GDataAnalyticsZionTechGroupPage() {
                 </ul>
 
                 <div className="space-y-4">
-                  <Link
-                    to={`/${service.id}`}
+                  <a
+                    href={service.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                   >
                     Learn More
-                  </Link>
+                  </a>
                   <Link
                     to="/contact"
                     className="block w-full border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white text-center py-3 rounded-lg font-semibold transition-all duration-300"
@@ -562,12 +828,9 @@ export default function GDataAnalyticsZionTechGroupPage() {
             </Link>
           </div>
         </div>
-      </section>    </>
+      </section>
+    </>
   );
-<<<<<<< HEAD
 };
 
 export default AISolutionsPage;
-=======
-}
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56

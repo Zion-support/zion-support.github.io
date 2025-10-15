@@ -30,21 +30,7 @@ import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
 import AISolutionsPage from './app/ai-solutions/page';
 import ITSolutionsPage from './app/it-solutions/page';
 
-// Service Pages
-import AIServicesPage from './app/pages/AIServicesPage';
-import ITServicesPage from './app/pages/ITServicesPage';
-import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
-import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
-import CaseStudiesPage from './app/pages/CaseStudiesPage';
-import CareersPage from './app/pages/CareersPage';
-
-// Additional Pages
-import CybersecurityPage from './app/pages/CybersecurityPage';
-import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
-import MicroSaaSPage from './app/pages/MicroSaaSPage';
-import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
-import TeamPage from './app/pages/TeamPage';
-import DocumentationPage from './app/pages/DocumentationPage';
+// Service Pages - These will be handled by the main solution pages
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -106,23 +92,9 @@ function App() {
                       <Route path="/pricing" element={<PricingPage />} />
                       <Route path="/solutions" element={<SolutionsPage />} />
                       
-                      {/* Service Pages */}
-                      <Route path="/ai-services" element={<AIServicesPage />} />
-                      <Route path="/it-services" element={<ITServicesPage />} />
-                      <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-                      <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-                      <Route path="/case-studies" element={<CaseStudiesPage />} />
-                      <Route path="/careers" element={<CareersPage />} />
-                      
-                      {/* Additional Service Pages */}
-                      <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                      <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
-                      <Route path="/micro-saas" element={<MicroSaaSPage />} />
-                      <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                      
                       {/* Additional Pages */}
-                      <Route path="/team" element={<TeamPage />} />
-                      <Route path="/docs" element={<DocumentationPage />} />
+                      <Route path="/team" element={<div className="min-h-screen flex items-center justify-center bg-slate-900"><div className="text-center"><h1 className="text-4xl font-bold text-white mb-4">Our Team</h1><p className="text-gray-300 mb-8">Meet our expert team coming soon.</p><Link to="/contact" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">Contact Us</Link></div></div>} />
+                      <Route path="/docs" element={<div className="min-h-screen flex items-center justify-center bg-slate-900"><div className="text-center"><h1 className="text-4xl font-bold text-white mb-4">Documentation</h1><p className="text-gray-300 mb-8">Comprehensive documentation coming soon.</p><Link to="/contact" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">Contact Us</Link></div></div>} />
                       
                       {/* Catch all route */}
                       <Route path="*" element={

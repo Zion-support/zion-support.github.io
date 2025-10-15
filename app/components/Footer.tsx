@@ -19,10 +19,12 @@ const Footer: React.FC = () => {
     { name: 'IT Solutions', href: '/it-solutions' },
     { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Cloud Solutions', href: '/cloud-solutions' },
+    { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
     { name: '5G Solutions', href: '/5g-solutions' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Software Development', href: '/software-development' }
+    { name: 'IoT Solutions', href: '/iot-solutions' },
+    { name: 'Edge Computing', href: '/edge-computing' },
+    { name: 'DevOps Automation', href: '/devops-automation' }
   ];
 
   const company = [
@@ -46,10 +48,10 @@ const Footer: React.FC = () => {
   const support = [
     { name: 'Contact Us', href: '/contact' },
     { name: 'Support Center', href: '/support' },
-    { name: 'Live Chat', href: '/chat' },
     { name: 'Schedule Demo', href: '/demo' },
-    { name: 'System Status', href: '/status' },
-    { name: 'Report Issue', href: '/report' }
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api-docs' },
+    { name: 'System Status', href: '/status' }
   ];
 
   const legal = [
