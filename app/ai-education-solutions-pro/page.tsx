@@ -1,11 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Award, Award as AwardIcon, AwardIcon, Book, BookOpen, Brain, Briefcase, CheckCircle, Download, Download as DownloadIcon, DownloadIcon, GraduationCap, Mail, Monitor, Phone, Play, Shield, Star, Target, Target as TargetIcon, TargetIcon, Users, Users as UsersIcon, UsersIcon } from 'lucide-react';
+import { ArrowRight, CheckCircle, Mail, Phone, Play, Star } from 'lucide-react';
 
 const AIEducationSolutionsProPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const features = [
+    {
+      title: "AI-Powered Learning Analytics",
+      description: "Advanced analytics to track student progress and identify learning patterns."
+    },
+    {
+      title: "Personalized Learning Paths",
+      description: "Custom learning experiences tailored to individual student needs."
+    },
+    {
+      title: "Interactive Content Creation",
+      description: "AI-generated interactive content for enhanced engagement."
+    }
+  ];
+
   return (
     <>
-      { /* Animated Background */ }
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        { /* Animated Background */ }
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
