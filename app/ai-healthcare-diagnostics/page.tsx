@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 import React from 'react';
 import SEOHead from '../components/SEOHead';
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
 
 const AiHealthcareDiagnosticsPage: React.FC = () => {
   return (
     <>
+<<<<<<< HEAD
       <SEOHead 
         title="AI Healthcare Diagnostics - Zion Tech Group"
         description="Revolutionary AI-powered medical diagnostics with image analysis, symptom assessment, and treatment recommendations."
@@ -13,6 +17,8 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {
           <h1 className="text-4xl font-bold mb-4">AI Healthcare Diagnostics</h1>
           <p className="text-gray-300">Coming soon...</p>
         </div>
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
       </div>
     </>
   );
