@@ -22,4 +22,4 @@ export const: SitemapGenerator = (options: SitemapGeneratorOptions = {}) => {
   };
 };
 ;
-export default SitemapGenerator;';';";
+export default SitemapGenerator;';';";";";

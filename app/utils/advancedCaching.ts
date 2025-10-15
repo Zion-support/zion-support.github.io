@@ -22,4 +22,4 @@ export const: AdvancedCaching = (options: AdvancedCachingOptions = {}) => {
   };
 };
 ;
-export default AdvancedCaching;';';";
+export default AdvancedCaching;';';";";";

@@ -1,4 +1,4 @@
-import React from 'react';;";";";";";
+import React from 'react';;";";";";";";";
 ;
 interface fix-all-corrupted-filesProps {
   className?: string;
@@ -6,7 +6,7 @@ interface fix-all-corrupted-filesProps {
 }
 ;
 const fix-all-corrupted-files: React.FC<fix-all-corrupted-filesProps> = ({ ;
-  className = '',;";";";";";
+  className = '',;";";";";";";";
   children;
 }) => {
   return (

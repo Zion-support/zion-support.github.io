@@ -22,4 +22,4 @@ export const: Monitoring = (options: MonitoringOptions = {}) => {
   };
 };
 ;
-export default Monitoring;';';";
+export default Monitoring;';';";";";

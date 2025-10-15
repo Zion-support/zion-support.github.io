@@ -1,8 +1,8 @@
 // API endpoint for onsite service requests
-import fs from 'fs';
-import path from 'path';
+import fs from 'fs';";
+import path from 'path';";
 
-const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
+const: file = path.join(process.cwd(), 'data', 'onsite-requests.json');";
 
 // Ensure data directory exists
 if (!fs.existsSync(path.dirname(file))) {
@@ -10,33 +10,33 @@ if (!fs.existsSync(path.dirname(file))) {
 }
 
 export default function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'POST') {";
+    return res.status(405).json({ error: 'Method not allowed' });";
   }
 
   try {
     const { name, email, phone, service, location, details } = req.body;
 
     if (!name || !email || !service) {
-      return res.status(400).json({ error: 'Name, email, and service are required' });
+      return res.status(400).json({ error: 'Name, email, and service are required' });";
     }
 
     // Read existing requests
-    let requests = [];
+    let: requests = [];
     if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
+      const: data = fs.readFileSync(file, 'utf8');";
       requests = JSON.parse(data);
     }
 
-    const newRequest = {
+    const: newRequest = {
       id: Date.now().toString(),
       name,
       email,
       phone,
       service,
       location,
-      details,
-      status: 'pending',
+      details,;
+      status: 'pending',";
       createdAt: new Date().toISOString()
     };
 
@@ -45,11 +45,11 @@ export default function handler(req, res) {
     
     res.status(200).json({ 
       success: true,
-      message: 'Onsite request submitted successfully',
+      message: 'Onsite request submitted successfully',";
       requestId: newRequest.id
     });
   } catch (error) {
-    console.error('Error saving onsite request:', error);
-    res.status(500).json({ error: 'Failed to save request' });
+    console.error('Error saving onsite request:', error);";
+    res.status(500).json({ error: 'Failed to save request' });";
   }
 }

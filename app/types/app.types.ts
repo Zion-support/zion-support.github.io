@@ -17,9 +17,9 @@ export interface PerformanceMetrics {;
  * Performance Report Interface;
  */;
 export interface PerformanceReport {
-  webVitals: "Partial<PerformanceMetrics>;""
+  webVitals: "Partial<PerformanceMetrics>;""";
   resources: ResourceStats;
-  memor",""
+  memor",""";
     y: MemoryStats | null;
   timestam,
     p: number;
@@ -28,10 +28,10 @@ export interface PerformanceReport {
  * Resource Statistics Interface;
  */;
 export interface ResourceStats {
-  total: "number;""
+  total: "number;""";
   scripts: number;
   styles: number;
-  image",""
+  image",""";
     s: number;
   font,
     s: number;
@@ -40,8 +40,8 @@ export interface ResourceStats {
  * Memory Statistics Interface;
  */;
 export interface MemoryStats {
-  usedJSHeapSize: "number;""
-  totalJSHeapSiz",""
+  usedJSHeapSize: "number;""";
+  totalJSHeapSiz",""";
     e: number;
   jsHeapSizeLimi,
     t: number;
@@ -57,9 +57,9 @@ export interface LayoutShift extends PerformanceEntry {}
  * Performance with Memory Interface;
  */;
 export interface PerformanceWithMemory extends Performance {
-  memory: "{""
+  memory: "{""";
     usedJSHeapSize: number;
-    totalJSHeapSiz",""
+    totalJSHeapSiz",""";
     e: number;
     jsHeapSizeLimi,
     t: number;
@@ -69,14 +69,14 @@ export interface PerformanceWithMemory extends Performance {
  * Service Configuration Interface;
  */;
 export interface ServiceConfig {
-  id: "string;""
+  id: "string;""";
   name: string;
   description: string;
   icon: string;
   category: string;
   features: string[];
   pricing?: {
-    startin",""
+    startin",""";
     g: number;
     currenc,
     y: string;
@@ -86,7 +86,7 @@ export interface ServiceConfig {
  * Blog Post Interface;
  */;
 export interface BlogPost {
-  id: "string;""
+  id: "string;""";
   title: string;
   slug: string;
   excerpt: string;
@@ -100,7 +100,7 @@ export interface BlogPost {
   readingTime: number;
   seo: {
     title: string;
-    descriptio",""
+    descriptio",""";
     n: string;
     keyword,
     s: string[];
@@ -110,12 +110,12 @@ export interface BlogPost {
  * Contact Form Interface;
  */;
 export interface ContactForm {
-  name: "string;""
+  name: "string;""";
   email: string;
   company?: string;
   phone?: string;
   service: string;
-  messag",""
+  messag",""";
     e: string;
   budget?: string;
   timeline?: string;
@@ -136,8 +136,8 @@ export interface ApiResponse<T = any> {
  * SEO Metadata Interface;
  */;
 export interface SEOMetadata {
-  title: "string;""
-  descriptio",""
+  title: "string;""";
+  descriptio",""";
     n: string;
   keyword,
     s: string[];
@@ -164,12 +164,12 @@ export interface NavigationItem {
  * Testimonial Interface;
  */;
 export interface Testimonial {
-  id: "string;""
+  id: "string;""";
   name: string;
   company: string;
   position: string;
   content: string;
-  ratin",""
+  ratin",""";
     g: number;
   avatar?: string;
   feature,
@@ -179,7 +179,7 @@ export interface Testimonial {
  * Case Study Interface;
  */;
 export interface CaseStudy {
-  id: "string;""
+  id: "string;""";
   title: string;
   slug: string;
   client: string;
@@ -188,16 +188,16 @@ export interface CaseStudy {
   solution: string;
   results: {
     metric: string;
-    valu",""
+    valu",""";
     e: string;
     improvemen,
     t: string;
   }[];
-  technologies: "string[];""
+  technologies: "string[];""";
   duration: string;
   teamSize: number;
   featured: boolean;
-  image",""
+  image",""";
     s: string[];
   publishedA,
     t: string;
@@ -206,11 +206,11 @@ export interface CaseStudy {
  * Team Member Interface;
  */;
 export interface TeamMember {
-  id: "string;""
+  id: "string;""";
   name: string;
   position: string;
   bio: string;
-  avata",""
+  avata",""";
     r: string;
   socia,
     l: {
@@ -226,10 +226,10 @@ export interface TeamMember {
  * FAQ Item Interface;
  */;
 export interface FAQItem {
-  id: "string;""
+  id: "string;""";
   question: string;
   answer: string;
-  categor",""
+  categor",""";
     y: string;
   orde,
     r: number;
@@ -238,10 +238,10 @@ export interface FAQItem {
  * Newsletter Subscription Interface;
  */;
 export interface NewsletterSubscription {
-  email: "string;""
+  email: "string;""";
   name?: string;
   interests: string[];
-  subscribedA",""
+  subscribedA",""";
     t: string;
   activ,
     e: boolean;
@@ -266,11 +266,11 @@ export interface ErrorBoundaryState {
  * Theme Configuration Interface;
  */;
 export interface ThemeConfig {
-  mode: "'light' | 'dark' | 'system;"'"'"'"
+  mode: "'light' | 'dark' | 'system;"'"'"'"";";
   primaryColor: string;
   secondaryColor: string;
   accentColor: string;
-  fontFamil",""
+  fontFamil",""";
     y: string;
   borderRadiu,
     s: number;
@@ -290,18 +290,18 @@ export interface AnalyticsEvent {
  * User Preferences Interface;
  */;
 export interface UserPreferences {
-  theme: "ThemeConfig;""
+  theme: "ThemeConfig;""";
   language: string;
   notifications: {
     email: boolean;
-    pus",""
+    pus",""";
     h: boolean;
     sm,
     s: boolean;
   };
-  privacy: "{""
+  privacy: "{""";
     analytics: boolean;
-    marketin",""
+    marketin",""";
     g: boolean;
     functiona,
     l: boolean;
@@ -327,31 +327,31 @@ export type DeepPartial<T> = {
 /**;
  * API Endpoint Types;
  */;
-export type ApiEndpoint =;
-  | '/api/contact;''
-  | '/api/newsletter;''
-  | '/api/analytics;''
-  | '/api/performance;''
-  | '/api/health;''
+export type: ApiEndpoint =;
+  | '/api/contact;''";
+  | '/api/newsletter;''";
+  | '/api/analytics;''";
+  | '/api/performance;''";
+  | '/api/health;''";
 /**;
  * HTTP Method Types;
  */;
-export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH;''
+export type: HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH;''";
 /**;
  * Environment Types;
  */;
-export type Environment = 'development' | 'staging' | 'production;''
+export type: Environment = 'development' | 'staging' | 'production;''";
 /**;
  * Build Configuration Interface;
  */;
 export interface BuildConfig {
-  environment: "Environment;""
+  environment: "Environment;""";
   version: string;
   buildTime: string;
   features: {
     analytics: boolean;
     performanceMonitoring: boolean;
-    errorReportin",""
+    errorReportin",""";
     g: boolean;
     pw,
     a: boolean;

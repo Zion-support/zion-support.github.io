@@ -22,4 +22,4 @@ export const: ApiCache = (options: ApiCacheOptions = {}) => {
   };
 };
 ;
-export default ApiCache;';';";
+export default ApiCache;';';";";";
