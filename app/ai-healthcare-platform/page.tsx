@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { AlertTriangle, Brain, Camera, CheckCircle, Heart, Microscope, Pill, Star, Stethoscope, Syringe, Thermometer } from 'lucide-react';
+import { AlertTriangle, Brain, Camera, CheckCircle, FileText, Heart, Microscope, Pill, Star, Stethoscope, Syringe, Thermometer } from 'lucide-react';;
 
 const AiHealthcarePlatformPage: React.FC = () => {
   useEffect(() => {

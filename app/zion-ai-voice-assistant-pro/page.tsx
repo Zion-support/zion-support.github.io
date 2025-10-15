@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
-import { Settings, Zap, Users, Mail } from 'lucide-react';
+import { ArrowRight, Calendar, CheckCircle, Globe, Headphones, Heart, Mail, Phone, Play, Settings, Target, Users, Zap } from 'lucide-react';;
 import { Cloud } from 'lucide-react';
 const ZionAIVoiceAssistantPro = () => {
   return;

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
-import { Users, FileText } from 'lucide-react';
+import { ArrowRight, Award, CheckCircle, Clock, FileText, Play, Star, TrendingUp, Users } from 'lucide-react';;
 import { Clock } from 'lucide-react';
 const ZionAIVideoGeneratorPage = () => {
   return;

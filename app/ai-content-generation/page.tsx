@@ -185,34 +185,24 @@ const contentTypes = [
         <section className="py-20 bg-white/5 backdrop-blur-sm">
           
         <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Content Types We Generate</h2>
+              <p className="text-xl text-gray-300">
+                From blog posts to social media content, we can create any type of content you need
+              </p>
+            </div>
             
-        <div className="max-w-4xl mx-auto">
-              
-        <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-6">Content Types We Generate</h2>
-                
-          <p className="text-xl text-gray-300">
-                  From blog posts to social media content, we can create any type of content you need
-                </p>
-              </div>
-              
-        <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
                 {contentTypes.map((type, index) => (
                   <div key={index} className="flex items-center space-x-3 bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-4 rounded-lg border border-cyan-500/20">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">{type}</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx}>• {benefit}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
+        </div>
         </section>
 
         {/* Process Section */}

@@ -309,7 +309,7 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
               </a>
             </div>
           </div>
-        </div>
+        </section>
         <Footer />
       </div>
     </>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Target, CheckCircle, Star, ArrowRight, TrendingUp, AlertTriangle, MessageSquare } from 'lucide-react';
+import { AlertTriangle, ArrowRight, BarChart3, Calendar, CheckCircle, Clock, FileText, MessageSquare, Shield, Star, Target, TrendingUp, Users, Zap } from 'lucide-react';;
 
 const AiProjectManagerPage: React.FC = () => {
   const features = [
