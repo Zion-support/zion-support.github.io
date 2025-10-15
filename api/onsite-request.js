@@ -1,73 +1,56 @@
-const withErrorLogging = (handler) => {
-  return async (req, res) => {
-    try {
-      return await handler(req, res);
-    } catch (error) {
-      console.error('API Error:', error);
-      res.status(500).json({
-        error: 'Internal server error',
-        message: error.message
-      });
-    }
-  };
-};
+import fs from 'fs';
+import path from 'path';
 
-export default withErrorLogging(async (req, res) => {
+const dir = path.join(process.cwd(), 'data');
+const file = path.join(dir, 'onsite-requests.json');
+
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
   }
 
   try {
-    const { 
-      companyName, 
-      contactName, 
-      email, 
-      phone, 
-      projectType, 
-      description, 
-      timeline,
-      budget 
-    } = req.body;
+    const { name, email, company, phone, service, message } = req.body;
 
-    if (!companyName || !contactName || !email) {
-      return res.status(400).json({
-        error: 'Missing required fields: companyName, contactName, email'
-      });
+    if (!name || !email || !service) {
+      res.status(400).json({ error: 'Name, email, and service are required' });
+      return;
     }
 
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return res.status(400).json({
-        error: 'Invalid email format'
-      });
+    // Ensure data directory exists
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
     }
 
-    // Here you would integrate with your CRM or project management system
-    // For now, we'll just log the request
-    console.log('Onsite request received:', {
-      companyName,
-      contactName,
+    // Load existing requests
+    let requests = [];
+    if (fs.existsSync(file)) {
+      const data = fs.readFileSync(file, 'utf8');
+      requests = JSON.parse(data);
+    }
+
+    // Add new request
+    const newRequest = {
+      id: Date.now().toString(),
+      name,
       email,
+      company,
       phone,
-      projectType,
-      description,
-      timeline,
-      budget,
+      service,
+      message,
       timestamp: new Date().toISOString()
-    });
+    };
 
-    res.status(200).json({
-      success: true,
-      message: 'Onsite request submitted successfully',
-      requestId: 'req_' + Math.random().toString(36).substr(2, 9)
-    });
+    requests.push(newRequest);
 
+    // Save to file
+    fs.writeFileSync(file, JSON.stringify(requests, null, 2));
+
+    res.status(200).json({ success: true, message: 'Request submitted successfully' });
   } catch (error) {
     console.error('Onsite request error:', error);
-    res.status(500).json({
-      error: 'Failed to submit onsite request',
-      message: error.message
-    });
+    res.status(500).json({ error: 'Failed to submit request' });
   }
-});
+}
