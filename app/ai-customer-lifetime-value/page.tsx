@@ -1,33 +1,33 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  MessageSquare, 
-  Headphones, 
-  Users, 
-  BarChart3, 
+  DollarSign, 
   Zap, 
+  BarChart3, 
   CheckCircle, 
   Star,
   ArrowRight,
   Clock,
   Target,
   Phone,
+  Mail,
   TrendingUp,
   Shield,
   Globe,
-  Bot
+  Bot,
+  Users
 } from 'lucide-react';
 
-const AiCustomerSupportChatbotPage: React.FC = () => {
+const AiCustomerLifetimeValuePage: React.FC = () => {
   const features = [
-    "24/7 multilingual customer support in 50+ languages",
-    "Advanced NLP and sentiment analysis for better understanding",
-    "Seamless handoff to human agents when needed",
-    "Integration with CRM, ticketing, and helpdesk systems",
-    "Real-time analytics and performance monitoring",
-    "Custom knowledge base training and optimization",
-    "Voice and text support across all channels",
-    "GDPR compliant and enterprise-grade security"
+    "AI-powered customer lifetime value prediction",
+    "Real-time customer segmentation and analysis",
+    "Intelligent retention and upsell recommendations",
+    "Integration with 100+ CRM and analytics platforms",
+    "Advanced reporting and performance tracking",
+    "Custom prediction models and algorithms",
+    "Automated customer journey optimization",
+    "Mobile app for on-the-go customer insights"
   ];
 
   const pricingPlans = [
@@ -37,11 +37,11 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic chatbot builder",
+        "Basic CLV prediction",
+        "Standard analytics",
         "Email support",
         "Standard integrations",
-        "Basic analytics"
+        "Basic reporting"
       ],
       popular: false
     },
@@ -51,11 +51,11 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced AI training",
+        "Advanced CLV prediction",
+        "AI-powered analytics",
         "Priority support",
         "Advanced integrations",
-        "Detailed analytics"
+        "Detailed reporting"
       ],
       popular: true
     },
@@ -65,29 +65,29 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited conversations",
-        "Custom AI training",
+        "Custom prediction models",
         "White-label solution",
         "Dedicated support",
-        "Advanced security"
+        "Advanced security",
+        "Compliance tools"
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: "85%", label: "Query Resolution", icon: <Target className="w-6 h-6" /> },
-    { number: "60%", label: "Cost Reduction", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "24/7", label: "Availability", icon: <Clock className="w-6 h-6" /> },
-    { number: "50+", label: "Languages", icon: <Globe className="w-6 h-6" /> }
+    { number: "95%", label: "Prediction Accuracy", icon: <Target className="w-6 h-6" /> },
+    { number: "80%", label: "Faster Insights", icon: <Clock className="w-6 h-6" /> },
+    { number: "85%", label: "Revenue Increase", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "24/7", label: "AI Analysis", icon: <Bot className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Customer Support Chatbot - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI customer support chatbot. Resolve 85% of queries automatically, reduce costs by 60%, and provide 24/7 multilingual support across all channels." />
-        <meta name="keywords" content="AI chatbot, customer support, conversational AI, NLP, multilingual support, automation" />
+        <title>AI Customer Lifetime Value - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI customer lifetime value platform. Achieve 95% prediction accuracy, get 80% faster insights, and increase revenue by 85% with intelligent CLV analysis." />
+        <meta name="keywords" content="AI customer lifetime value, CLV prediction, customer analytics, customer segmentation, revenue optimization" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -97,22 +97,22 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
-                <Bot className="w-4 h-4 mr-2" />
-                AI-Powered Customer Support
+                <DollarSign className="w-4 h-4 mr-2" />
+                AI-Powered Customer Lifetime Value
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  AI Customer Support
+                  AI Customer Lifetime
                 </span>
                 <br />
-                <span className="text-white">Chatbot Pro</span>
+                <span className="text-white">Value Pro</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Transform your customer support with AI-powered chatbots that resolve 85% of queries 
-                automatically. Reduce costs by 60% while providing 24/7 multilingual support 
-                across all channels.
+                Transform your customer analytics with AI-powered lifetime value prediction, 
+                intelligent segmentation, and automated optimization. Achieve 95% accuracy 
+                and increase revenue by 85% with our cutting-edge platform.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -127,7 +127,7 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
                   href="mailto:kleber@ziontechgroup.com"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                 >
-                  <MessageSquare className="w-5 h-5 mr-2" />
+                  <Mail className="w-5 h-5 mr-2" />
                   Get Demo
                 </a>
               </div>
@@ -158,7 +158,7 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to provide exceptional customer support with AI-powered automation.
+                Everything you need to optimize customer lifetime value with AI-powered intelligence and automation.
               </p>
             </div>
             
@@ -185,7 +185,7 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your customer support needs. All plans include our AI-powered features.
+                Choose the perfect plan for your customer lifetime value needs. All plans include our AI-powered features.
               </p>
             </div>
             
@@ -239,10 +239,10 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
         <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Support?
+              Ready to Transform Your Customer Analytics?
             </h2>
             <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses already using AI to revolutionize their customer support. 
+              Join thousands of businesses already using AI to revolutionize their customer lifetime value analysis. 
               Start your free trial today and see results in 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -268,4 +268,4 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
   );
 };
 
-export default AiCustomerSupportChatbotPage;
+export default AiCustomerLifetimeValuePage;

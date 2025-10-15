@@ -1,58 +1,270 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { 
+  TrendingUp, 
+  Zap, 
+  BarChart3, 
+  CheckCircle, 
+  Star,
+  ArrowRight,
+  Clock,
+  Target,
+  Phone,
+  Mail,
+  Shield,
+  Globe,
+  Bot,
+  PieChart
+} from 'lucide-react';
 
-import { Helmet } from "react-helmet-async";
+const AiPredictiveAnalyticsPage: React.FC = () => {
+  const features = [
+    "AI-powered predictive modeling and forecasting",
+    "Advanced machine learning algorithms and optimization",
+    "Real-time data processing and analysis",
+    "Integration with 100+ data sources and platforms",
+    "Automated model training and deployment",
+    "Advanced reporting and business intelligence",
+    "Custom model development and training",
+    "Mobile app for on-the-go analytics"
+  ];
 
-const AiPredictiveAnalyticsPage = () => {
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$99",
+      period: "/month",
+      description: "Perfect for small businesses",
+      features: [
+        "Up to 10 models",
+        "Basic predictions",
+        "Email support",
+        "Standard integrations",
+        "Basic analytics"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$299",
+      period: "/month",
+      description: "Ideal for growing businesses",
+      features: [
+        "Up to 100 models",
+        "Advanced AI features",
+        "Priority support",
+        "Advanced integrations",
+        "Detailed analytics"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$799",
+      period: "/month",
+      description: "For large organizations",
+      features: [
+        "Unlimited models",
+        "Custom AI training",
+        "White-label solution",
+        "Dedicated support",
+        "Advanced security"
+      ],
+      popular: false
+    }
+  ];
+
+  const stats = [
+    { number: "95%", label: "Prediction Accuracy", icon: <Target className="w-6 h-6" /> },
+    { number: "80%", label: "Faster Insights", icon: <Clock className="w-6 h-6" /> },
+    { number: "70%", label: "Better Decisions", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "24/7", label: "AI Processing", icon: <Bot className="w-6 h-6" /> }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>Ai Predictive Analytics</title>
-        <meta
-          name="description"
-          content="Professional ai predictive analytics solutions and services"
-        />
-        <meta name="keywords" content="ai, predictive, analytics" />
+        <title>AI Predictive Analytics - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI predictive analytics platform. Achieve 95% prediction accuracy, get 80% faster insights, and make 70% better decisions with intelligent forecasting." />
+        <meta name="keywords" content="AI predictive analytics, machine learning, forecasting, predictive modeling, business intelligence" />
       </Helmet>
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">
-              Ai Predictive Analytics
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional ai predictive analytics solutions and services
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
+        {/* Hero Section */}
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
+                <TrendingUp className="w-4 h-4 mr-2" />
+                AI-Powered Predictive Analytics
               </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
+              
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  AI Predictive
+                </span>
+                <br />
+                <span className="text-white">Analytics Pro</span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+                Transform your business with AI-powered predictive analytics, 
+                intelligent forecasting, and automated insights. Achieve 95% accuracy 
+                and get 80% faster insights with our cutting-edge platform.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a
+                  href="tel:+13024640950"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
+                >
+                  <Zap className="w-5 h-5 mr-2" />
+                  Start Free Trial
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
+                  Get Demo
+                </a>
               </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
+              
+              {/* Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-center group">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                      <div className="text-cyan-400">{stat.icon}</div>
+                    </div>
+                    <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
+                    <div className="text-gray-400 text-sm">{stat.label}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 bg-slate-800/50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  Powerful Features
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to predict the future with AI-powered intelligence and automation.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  Simple Pricing
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the perfect plan for your predictive analytics needs. All plans include our AI-powered features.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className={`relative bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${
+                  plan.popular 
+                    ? 'border-cyan-500 shadow-2xl shadow-cyan-500/25' 
+                    : 'border-cyan-500/20 hover:border-cyan-400/40'
+                }`}>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </div>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <p className="text-gray-400 mb-4">{plan.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
+                      <span className="text-gray-400 ml-2">{plan.period}</span>
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                      : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                  }`}>
+                    {plan.popular ? 'Start Free Trial' : 'Get Started'}
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Predict the Future?
+            </h2>
+            <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
+              Join thousands of businesses already using AI to revolutionize their predictive analytics. 
+              Start your free trial today and see results in 24 hours.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-50 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call +1 302 464 0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300 flex items-center justify-center"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Get Custom Quote
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
 };
 
 export default AiPredictiveAnalyticsPage;
-
