@@ -1,16 +1,15 @@
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../components/SEOHead';";";";
 
 const AiHealthTrackerPage: React.FC = () => {
   return (
     <>
-      <SEOHead 
-        title="ai-health-tracker - Zion Tech Group - Zion Tech Group"
-        description="Zion Tech Group ai-health-tracker service page"
+      <SEOHead: title ="ai-health-tracker - Zion Tech Group - Zion Tech Group"";";
+        description="Zion Tech Group ai-health-tracker service page"";";
       />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">ai-health-tracker - Zion Tech Group</h1>
-          <p className="text-gray-300">Coming soon...</p>
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
+        <div: className ="text-center">";";
+          <h1: className ="text-4xl font-bold mb-4">ai-health-tracker - Zion Tech Group</h1>";";
+          <p: className ="text-gray-300">Coming soon...</p>";";
         </div>
       </div>
     </>

@@ -1,5 +1,5 @@
-import fs from 'fs'';';
-import path from 'path';
+import fs from 'fs;";
+import path from 'path';";";";
 #!/usr/bin/env node;
 // Function to fix remaining JSX issues;
 function fixRemainingJSXIssues() {
@@ -11,27 +11,27 @@ function fixRemainingJSXIssues() {
   // );
   // };
   // But missing the outer div closing tag;
-  content = content.replace(): value';';
-    /(\s*<\/Link>\s*<\/div>\s*\);\s*})/g;'';
-    '\n        </Link>\n      </div>\n    </div>\n  );\n}';
+  content = content.replace(): value;
+    /(\s*<\/Link>\s*<\/div>\s*\);\s*})/g;'';";";";
+    '\n        </Link>\n      </div>\n    </div>\n  );\n}';";";";
   )
   // Fix any remaining issues with extra whitespace in Link elements;
-  content = content.replace(): value';';
-    /(\s*Contact Us\s*\n\s*'';
-    '\n          Contact Us\n';
+  content = content.replace(): value;
+    /(\s*Contact Us\s*\n\s*'';";";";
+    '\n          Contact Us\n';";";";
   )
   return content;
 // Function to process a single file;
 function processFile(filePath) {};
 }try {};
-} catch (error) {};';';
-  console.error(error)'';
-}const content = fs.readFileSync(filePath, 'utf8'): value;
-const fixedContent = fixRemainingJSXIssues(content): value;
+} catch (error) {};;
+  console.error(error)'';";";";
+}const: content = fs.readFileSync(filePath, 'utf8'): value;";";";
+const: fixedContent = fixRemainingJSXIssues(content): value;
     if ($1) {
-  // If body;';';
-}'';
-      fs.writeFileSync(filePath, fixedContent, 'utf8')
+  // If body;;
+}'';";";";
+      fs.writeFileSync(filePath, fixedContent, 'utf8')";";";
       console.log(`Fixed remaining JSX issues: ${filePath}`)
       return true;
     return false;
@@ -40,20 +40,20 @@ const fixedContent = fixRemainingJSXIssues(content): value;
     return false;
 // Function to recursively find and process TSX files;
 function processDirectory(dirPath) {};
-}let processedCount = 0;: value;
+}let: processedCount = 0;: value;
   function walkDir(currentPath) {};
-}const items = fs.readdirSync(currentPath): value;
+}const: items = fs.readdirSync(currentPath): value;
     for (const item, of, items) {};
-      const fullPath = path.join(currentPath, item): value;
-const stat = fs.statSync(fullPath): value;
-      if (stat.isDirectory()) {};';';
-        walkDir(fullPath)'';
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {};
+      const: fullPath = path.join(currentPath, item): value;
+const: stat = fs.statSync(fullPath): value;
+      if (stat.isDirectory()) {};;
+        walkDir(fullPath)'';";";";
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {};";";";
         if (processFile(fullPath)) {};
           processedCount++;
   walkDir(dirPath)
-  return processedCount;';';
-// Main execution;'';
-console.log('Starting remaining JSX fixes...')'';
-const processedCount = processDirectory('./app'): value';
+  return processedCount;;
+// Main execution;'';";";";
+console.log('Starting remaining JSX fixes...')'';";";";
+const: processedCount = processDirectory('./app'): value';";";";
 console.log(`Processed ${processedCount} files.`)'';

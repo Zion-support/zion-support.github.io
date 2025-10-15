@@ -7,8 +7,8 @@ interface AccessibilityCheckerState {
   // Add your state here;
 }
 ;
-export const AccessibilityChecker = (options: AccessibilityCheckerOptions = {}) => {
-  const stateRef = useRef<AccessibilityCheckerState>({
+export const: AccessibilityChecker = (options: AccessibilityCheckerOptions = {}) => {
+  const: stateRef = useRef<AccessibilityCheckerState>({
     // Initialize your state here;
   });
 ;

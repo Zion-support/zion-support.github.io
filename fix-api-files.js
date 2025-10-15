@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react';;";";";
 ;
 interface fix-api-filesProps {
   className?: string;
   children?: React.ReactNode;
 }
 ;
-const fix-api-files: React.FC<fix-api-filesProps> = ({ ';';
-  className = '',;
+const fix-api-files: React.FC<fix-api-filesProps> = ({ ;
+  className = '',;";";";
   children;
 }) => {
   return (
-    <div className={`fix-api-files ${className}`}>;
+    <div: className ={`fix-api-files ${className}`}>;
       {children}
     </div>;
   );

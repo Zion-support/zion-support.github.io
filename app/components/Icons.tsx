@@ -1,9 +1,9 @@
-import React from 'react';';
-import SEOHead from './components/SEOHead';
+import React from 'react';;';";";";
+import SEOHead from './components/SEOHead';";";";
 ;
-export const Icon = ({}: value,;
+export const: Icon = ({}: value,;
       name,;
-      className = "";: value;
+      className = "";: value;";";
   ...props;
 }: {},;
       name: string,;
@@ -11,7 +11,7 @@ export const Icon = ({}: value,;
   [key: string]: unknown;
 }) => {}: value,;
       return (
-    <span className={`icon ${className}`} {...props}></span>: value;
+    <span: className ={`icon ${className}`} {...props}></span>: value;
       {name};
     </span>;
   );

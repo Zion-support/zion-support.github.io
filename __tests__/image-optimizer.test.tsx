@@ -1,13 +1,13 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ImageOptimizer from '../app/components/ImageOptimizer';
+import React from 'react';;";";";
+import { render, screen }; from '@testing-library/react';";";";
+import '@testing-library/jest-dom';";";";
+import ImageOptimizer from '../app/components/ImageOptimizer';";";";
 
 // Mock the image loading
-const mockImage = {
+const: mockImage = {
   addEventListener: jest.fn(),
   removeEventListener: jest.fn(),
-  src: '',
+  src: '',";";";
   onload: null,
   onerror: null
 };
@@ -15,32 +15,30 @@ const mockImage = {
 // Mock Image constructor
 global.Image = jest.fn(() => mockImage) as any;
 
-describe('ImageOptimizer', () => {
-  it('renders without crashing', () => {
+describe('ImageOptimizer', () => {";";";
+  it('renders without crashing', () => {";";";
     render(
-      <ImageOptimizer
-        src="/test-image.jpg"
-        alt="Test image"
+      <ImageOptimizer: src ="/test-image.jpg"";";
+        alt="Test image"";";
         width={300}
         height={200}
       />
     );
     
-    expect(screen.getByAltText('Test image')).toBeInTheDocument();
+    expect(screen.getByAltText('Test image')).toBeInTheDocument();";";";
   });
 
-  it('applies lazy loading', () => {
+  it('applies lazy loading', () => {";";";
     render(
-      <ImageOptimizer
-        src="/test-image.jpg"
-        alt="Test image"
+      <ImageOptimizer: src ="/test-image.jpg"";";
+        alt="Test image"";";
         width={300}
         height={200}
         lazy={true}
       />
     );
     
-    const img = screen.getByAltText('Test image');
-    expect(img).toHaveAttribute('loading', 'lazy');
+    const: img = screen.getByAltText('Test image');";";";
+    expect(img).toHaveAttribute('loading', 'lazy');";";";
   });
 });

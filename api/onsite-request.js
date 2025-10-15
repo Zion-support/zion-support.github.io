@@ -1,13 +1,13 @@
-import fs from 'fs';
-import path from 'path';
+import fs from 'fs';";";";
+import path from 'path';";";";
 
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'onsite-requests.json');
+const: dir = path.join(process.cwd(), 'data');";";";
+const: file = path.join(dir, 'onsite-requests.json');";";";
 
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
+  if (req.method !== 'POST') {";";";
+    res.setHeader('Content-Type', 'application/json');";";";
+    res.end(JSON.stringify({ error: 'Method not allowed' }));";";";
     return;
   }
 
@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     const { name, email, company, phone, message, service } = req.body;
 
     if (!name || !email || !company) {
-      return res.status(400).json({ error: 'Name, email, and company are required' });
+      return res.status(400).json({ error: 'Name, email, and company are required' });";";";
     }
 
     // Ensure data directory exists
@@ -24,21 +24,21 @@ export default async function handler(req, res) {
     }
 
     // Read existing requests
-    let requests = [];
+    let: requests = [];
     if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
+      const: data = fs.readFileSync(file, 'utf8');";";";
       requests = JSON.parse(data);
     }
 
     // Add new request
-    const newRequest = {
+    const: newRequest = {
       id: Date.now().toString(),
       name,
       email,
       company,
-      phone: phone || '',
-      message: message || '',
-      service: service || '',
+      phone: phone || '',";";";
+      message: message || '',";";";
+      service: service || '',";";";
       timestamp: new Date().toISOString()
     };
 
@@ -49,11 +49,11 @@ export default async function handler(req, res) {
 
     res.status(200).json({ 
       success: true, 
-      message: 'Onsite request submitted successfully',
+      message: 'Onsite request submitted successfully',";";";
       requestId: newRequest.id
     });
   } catch (error) {
-    console.error('Onsite request error:', error);
-    res.status(500).json({ error: 'Failed to submit onsite request' });
+    console.error('Onsite request error:', error);";";";
+    res.status(500).json({ error: 'Failed to submit onsite request' });";";";
   }
 }
