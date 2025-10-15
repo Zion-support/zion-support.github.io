@@ -33,5 +33,10 @@ const AiLanguageTranslationPage: React.FC = () => {
   ),
 >>>>>>> main
 };
+<<<<<<< HEAD
 ;
 export default AiLanguageTranslationPage;'";'";
+=======
+
+export default AiLanguageTranslationPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

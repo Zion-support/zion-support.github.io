@@ -33,5 +33,10 @@ const SupplyChainOptimizerPage: React.FC = () => {
   ),
 >>>>>>> main
 };
+<<<<<<< HEAD
 ;
 export default SupplyChainOptimizerPage;'";'";
+=======
+
+export default SupplyChainOptimizerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

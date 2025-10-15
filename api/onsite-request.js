@@ -12,18 +12,14 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, company, phone, message, service } = req.body;
-
-    if (!name || !email || !company) {
-      return res.status(400).json({ error: 'Name, email, and company are required' });
-    }
+    const { name, email, company, phone, message, serviceType, preferredDate } = req.body;
 
     // Ensure data directory exists
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
 
-    // Read existing requests
+    // Load existing requests
     let requests = [];
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
@@ -36,10 +32,12 @@ export default async function handler(req, res) {
       name,
       email,
       company,
-      phone: phone || '',
-      message: message || '',
-      service: service || '',
-      timestamp: new Date().toISOString()
+      phone,
+      message,
+      serviceType,
+      preferredDate,
+      timestamp: new Date().toISOString(),
+      status: 'pending'
     };
 
     requests.push(newRequest);
@@ -47,13 +45,17 @@ export default async function handler(req, res) {
     // Save to file
     fs.writeFileSync(file, JSON.stringify(requests, null, 2));
 
-    res.status(200).json({
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
       success: true, 
       message: 'Onsite request submitted successfully',
       requestId: newRequest.id
-    });
+    }));
   } catch (error) {
     console.error('Onsite request error:', error);
-    res.status(500).json({ error: 'Failed to submit onsite request' });
+    res.setHeader('Content-Type', 'application/json');
+    res.status(500).end(JSON.stringify({ 
+      error: 'Failed to submit onsite request' 
+    }));
   }
 }

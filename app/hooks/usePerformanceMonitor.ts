@@ -165,5 +165,10 @@ export const usePerformanceMonitor = () => {
 ;
   return metricsRef.current;
 };
+<<<<<<< HEAD
 ;
 export default usePerformanceMonitor;';';
+=======
+
+export default usePerformanceMonitor;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

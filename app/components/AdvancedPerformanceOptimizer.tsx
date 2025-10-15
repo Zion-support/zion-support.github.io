@@ -143,5 +143,10 @@ const ComponentsPage: React.FC = () => {
   ),
 >>>>>>> main
 };
+<<<<<<< HEAD
 ;
 export default ComponentsPage;'";'";
+=======
+
+export default ComponentsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

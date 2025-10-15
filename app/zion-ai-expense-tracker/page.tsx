@@ -33,5 +33,10 @@ const ZionAiExpenseTrackerPage: React.FC = () => {
   ),
 >>>>>>> main
 };
+<<<<<<< HEAD
 ;
 export default ZionAiExpenseTrackerPage;'";'";
+=======
+
+export default ZionAiExpenseTrackerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

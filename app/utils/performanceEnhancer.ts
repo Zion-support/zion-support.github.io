@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;
 interface PerformanceEnhancerOptions {
   // Add your options here;
@@ -23,3 +24,12 @@ export const PerformanceEnhancer = (options: PerformanceEnhancerOptions = {}) =>
 };
 ;
 export default PerformanceEnhancer;';';
+=======
+// Utility functions
+export const utility = () => {
+  // Add utility functions here
+  return {};
+};
+
+export default utility;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

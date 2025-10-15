@@ -2,7 +2,6 @@ import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './app/styles/futuristic.css';
-
 // Components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -61,7 +60,6 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
     </div>
   </div>
 );
-
 // Loading component
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center">
@@ -90,7 +88,6 @@ function App() {
 
     preloadCriticalResources();
   }, []);
-
   return (
     <GlobalErrorBoundary>
       <HelmetProvider>
@@ -145,8 +142,7 @@ function App() {
               </ErrorBoundary>
             </main>
             
-            <Footer />
-          </div>
+            <Footer />          </div>
         </Router>
       </HelmetProvider>
     </GlobalErrorBoundary>

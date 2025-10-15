@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-import {clsx} from "clsx"
-import { twMerge } from "tailwind-merge";
-export function cn() {}
-  // Function body
-}
-}return twMerge(clsx(inputs))
-};
-
-=======
 import { clsx }; from "clsx";";";";
 import { twMerge }; from "tailwind-merge";";";
 ;
 export function cn(...inputs: (string | undefined | null | boolean)[]) {
   return twMerge(clsx(inputs));
+<<<<<<< HEAD
 }";";
->>>>>>> main
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

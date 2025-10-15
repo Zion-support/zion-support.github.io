@@ -73,5 +73,10 @@ const AiFintechSolutionsPage: React.FC = () => {
   ),
 >>>>>>> main
 };
+<<<<<<< HEAD
 ;
 export default AiFintechSolutionsPage;'";'";
+=======
+
+export default AiFintechSolutionsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

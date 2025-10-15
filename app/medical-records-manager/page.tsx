@@ -33,5 +33,10 @@ const MedicalRecordsManagerPage: React.FC = () => {
   ),
 >>>>>>> main
 };
+<<<<<<< HEAD
 ;
 export default MedicalRecordsManagerPage;'";'";
+=======
+
+export default MedicalRecordsManagerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

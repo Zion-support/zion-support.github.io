@@ -1,17 +1,4 @@
 <<<<<<< HEAD
-// ing utility functions
-
-export const ing = {};
-  init: () => {};
-    };
-  process: (data: unknown) => {};
-    return data;
-  };
-  cleanup: () => {};
-} }};
-export default ing
-
-=======
 ;
 interface MonitoringOptions {
   // Add your options here;
@@ -21,8 +8,8 @@ interface MonitoringState {
   // Add your state here;
 }
 ;
-export const Monitoring = (options: MonitoringOptions = {}) => {
-  const stateRef = useRef<MonitoringState>({
+export const: Monitoring = (options: MonitoringOptions = {}) => {
+  const: stateRef = useRef<MonitoringState>({
     // Initialize your state here;
   });
 ;
@@ -37,4 +24,12 @@ export const Monitoring = (options: MonitoringOptions = {}) => {
 };
 ;
 export default Monitoring;';';
->>>>>>> main
+=======
+// Utility functions
+export const utility = () => {
+  // Add utility functions here
+  return {};
+};
+
+export default utility;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

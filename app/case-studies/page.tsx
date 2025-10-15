@@ -200,5 +200,10 @@ const CaseStudiesPage: React.FC = () => {
   ),
 >>>>>>> main
 };
+<<<<<<< HEAD
 ;
 export default CaseStudiesPage;'";'";
+=======
+
+export default CaseStudiesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

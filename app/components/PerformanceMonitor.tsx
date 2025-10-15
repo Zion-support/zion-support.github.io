@@ -206,4 +206,5 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 
-export default PerformanceMonitor;
+export default PerformanceMonitor;ursor/fix-errors-and-merge-to-main-f57f
+>>>>>>> 07e3eeb536281b5e1208cbb05946039babd4b2dc
