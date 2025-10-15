@@ -1,71 +1,31 @@
-import React, { useEffect, useRef } from 'react';
-import { FuturisticBackgroundProps, HTMLCanvasElement } from 'lucide-react';
-interface FuturisticBackgroundProps {
-  children: React.ReactNode;
-  className?: string;
-}
-const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, className = '' }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+import React from "react";
+import { Helmet } from 'react-helmet-async';
 
-const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-const resizeCanvas = () => {
-  return;
-};
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-    // Particle system
-    const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-      color: string;
-    }> = [];
-
-const colors = ['#8b5cf6', '#06b6d4', '#10b981', '#f59e0b'];
-    // Create particles
-    for (let i = 0; i < 50; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 2 + 1,
-        opacity: Math.random() * 0.5 + 0.1,
-        color: colors[Math.floor(Math.random() * colors.length)]
-      });
-    }
-    const animate = () => {
-  return;
-}
-        });
-      });
-      requestAnimationFrame(animate);
-    };
-    animate();
-  return () => {
-      window.removeEventListener('resize', resizeCanvas);
-    };
-  }, []);
+const FuturisticBackgroundPage: React.FC = () => {
   return (
-    <div className={`relative overflow-hidden ${className}`}>
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: 1 }}
-      />
-      
-        <div className="relative z-10">
-        {children}
+    <>
+      <Helmet>
+        <title>FuturisticBackground - Zion Tech Group</title>
+        <meta name="description" content="Professional futuristicbackground services and solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">FuturisticBackground</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional futuristicbackground services and solutions.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"><h3 className="text-xl font-semibold text-white mb-4">Professional Services</h3><p className="text-gray-300">Expert consulting and implementation services.</p></div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"><h3 className="text-xl font-semibold text-white mb-4">Technical Excellence</h3><p className="text-gray-300">Cutting-edge technology solutions and expertise.</p></div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"><h3 className="text-xl font-semibold text-white mb-4">Business Growth</h3><p className="text-gray-300">Solutions designed to drive your business forward.</p></div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
-export default FuturisticBackground;
+
+export default FuturisticBackgroundPage;

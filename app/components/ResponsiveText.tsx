@@ -1,29 +1,21 @@
 import React from 'react';
-import { ResponsiveTextProps } from 'lucide-react';
-interface ResponsiveTextProps {
-  children: React.ReactNode;
-  className?: string;
-  size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl';
-  weight?: 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold';
-  color?: string;
-}
-const ResponsiveText: React.FC<ResponsiveTextProps> = ({ 
-  children, 
-  className = '', 
-  size = 'base',
-  weight = 'normal',
-  color = 'text-gray-300'
-}) => {
-  const textClasses = [
-    `text-${size}`,
-    `font-${weight}`,
-    color,
-    className
-  ].filter(Boolean).join(' ');
+import { Helmet } from 'react-helmet-async';
+
+const ResponsiveTextPage: React.FC = () => {
   return (
-    <p className={textClasses}>
-      {children}
-    </p>
+    <>
+      <Helmet>
+        <title>ResponsiveText | Zion Tech Group</title>
+        <meta name="description" content="Professional responsivetext services and solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white mb-8">ResponsiveText</h1>
+          <p className="text-xl text-gray-300">Professional responsivetext services and solutions.</p>
+        </div>
+      </div>
+    </>
   );
 };
-export default ResponsiveText;
+
+export default ResponsiveTextPage;

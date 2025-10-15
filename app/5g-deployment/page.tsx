@@ -1,53 +1,36 @@
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 
-const FiveGDeployment: React.FC = () => { return (
-    <> <Helmet> <title>5G Deployment</title> <meta name="description" content="Professional 5G deployment services and solutions." /> <meta name="keywords" content="5G, deployment, services, solutions" /> </Helmet> 
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        
+const FiveGDeploymentPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>5G Deployment Services - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G network deployment and implementation services." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
-          
-        <div className="text-center">
-            
-          <h1 className="text-4xl font-bold text-white mb-8">
-              5G Deployment
-            </h1>
-            
-          <p className="text-xl text-gray-300 mb-8">
-              Professional 5G deployment services and solutions.
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">5G Deployment Services</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Complete 5G network deployment solutions from planning to implementation.
             </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Site Survey</h3>
+              <p className="text-gray-300">Comprehensive site analysis for optimal 5G deployment.</p>
+            </div>
             
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                
-          <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-              </div>
-              
-        <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                
-          <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              
-        <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                
-          <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Equipment Installation</h3>
+              <p className="text-gray-300">Professional installation of 5G infrastructure and equipment.</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Testing & Validation</h3>
+              <p className="text-gray-300">Thorough testing and validation of 5G network performance.</p>
             </div>
           </div>
         </div>
@@ -55,4 +38,5 @@ const FiveGDeployment: React.FC = () => { return (
     </>
   );
 };
-export default FiveGDeployment;
+
+export default FiveGDeploymentPage;

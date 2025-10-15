@@ -1,7 +1,7 @@
-export const cacheManager = { cache: new Map<string, { data: unknown; timestamp: number; ttl: number }>(),
+export const cacheManager = { cache: new Map<string, { data: unknown; timestamp: number; ttl: number }></string></string>(),
   set: (key: string, data: unknown, ttl: number = 300000) => { cacheManager.cache.set(key, {
       data,
-      timestamp: Date.now(),
+      timestamp: Date.now(),}
       ttl });
   },
   get: (key: string) => { const item = cacheManager.cache.get(key);
@@ -9,7 +9,7 @@ export const cacheManager = { cache: new Map<string, { data: unknown; timestamp:
 
 const now = Date.now();
     if (now - item.timestamp > item.ttl) {
-      cacheManager.cache.delete(key);
+      cacheManager.cache.delete(key);}
   return null; }
     return item.data;
   },
