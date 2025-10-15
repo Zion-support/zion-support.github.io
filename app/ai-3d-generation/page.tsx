@@ -1,4 +1,4 @@
-import { ArrowRight, Cube, Zap, Target, BarChart3, CheckCircle, Clock, DollarSign, Users, Settings, Globe, FileText, Sparkles } from "lucide-react";
+import { ArrowRight, Box, Zap, Target, BarChart3, CheckCircle, Clock, DollarSign, Users, Settings, Globe, FileText, Sparkles } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -7,7 +7,7 @@ export default function AI3DGeneration() {
     {
       title: "AI-Powered 3D Modeling",
       description: "Generate high-quality 3D models from text descriptions, images, or sketches using advanced AI algorithms",
-      icon: <Cube className="w-6 h-6" />,
+      icon: <Box className="w-6 h-6" />,
       included: true
     },
     {
@@ -95,7 +95,7 @@ export default function AI3DGeneration() {
   ];
 
   const generationStats = [
-    { number: "10x", label: "Faster 3D Creation", icon: <Cube className="w-6 h-6" /> },
+    { number: "10x", label: "Faster 3D Creation", icon: <Box className="w-6 h-6" /> },
     { number: "95%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
     { number: "50+", label: "Export Formats", icon: <Globe className="w-6 h-6" /> },
     { number: "24/7", label: "AI Generation", icon: <Sparkles className="w-6 h-6" /> }
@@ -151,7 +151,7 @@ export default function AI3DGeneration() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
-              <Cube className="w-4 h-4 text-purple-400 mr-2" />
+              <Box className="w-4 h-4 text-purple-400 mr-2" />
               <span className="text-purple-400 text-sm font-medium">#1 AI 3D Generation Platform 2024</span>
             </div>
             
@@ -327,7 +327,7 @@ export default function AI3DGeneration() {
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Cube key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Box key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>

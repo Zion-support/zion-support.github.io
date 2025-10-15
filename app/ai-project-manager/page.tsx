@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async"; const AiProjectManagerPage = () => { return ( <> <Helmet> <title>Ai Project Manager</title> <meta name="description" content="Professional ai project manager solutions and services" /> <meta name="keywords" content="ai, project, manager" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">
-              Ai Project Manager
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional ai project manager solutions and services
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -48,16 +29,16 @@ const AiProjectManagerPage: React.FC = () => {
     "Team collaboration and communication tools",
     "Budget tracking and cost optimization",
     "Integration with 50+ popular tools",
-    "Predictive project completion forecasting"
+    "Predictive analytics and insights"
   ];
 
   const integrations = [
+    { name: "Jira", icon: <Target className="w-6 h-6" />, color: "text-blue-600" },
+    { name: "Asana", icon: <Calendar className="w-6 h-6" />, color: "text-red-600" },
     { name: "Slack", icon: <MessageSquare className="w-6 h-6" />, color: "text-purple-600" },
-    { name: "Microsoft Teams", icon: <Users className="w-6 h-6" />, color: "text-blue-600" },
-    { name: "Jira", icon: <Target className="w-6 h-6" />, color: "text-blue-500" },
-    { name: "Asana", icon: <CheckCircle className="w-6 h-6" />, color: "text-red-600" },
-    { name: "Trello", icon: <FileText className="w-6 h-6" />, color: "text-blue-400" },
-    { name: "GitHub", icon: <Settings className="w-6 h-6" />, color: "text-gray-600" }
+    { name: "Trello", icon: <BarChart3 className="w-6 h-6" />, color: "text-green-600" },
+    { name: "GitHub", icon: <FileText className="w-6 h-6" />, color: "text-gray-600" },
+    { name: "Microsoft Teams", icon: <Users className="w-6 h-6" />, color: "text-indigo-600" }
   ];
 
   const pricingPlans = [
@@ -65,14 +46,14 @@ const AiProjectManagerPage: React.FC = () => {
       name: "Starter",
       price: "$29",
       period: "month",
-      description: "Perfect for small teams and freelancers",
+      description: "Perfect for small teams and startups",
       features: [
         "Up to 5 projects",
-        "10 team members",
-        "Basic AI insights",
+        "Basic AI features",
+        "Team collaboration",
+        "Basic analytics",
         "Email support",
-        "Mobile app access",
-        "Basic reporting"
+        "5 team members"
       ],
       popular: false
     },
@@ -80,16 +61,16 @@ const AiProjectManagerPage: React.FC = () => {
       name: "Professional",
       price: "$99",
       period: "month",
-      description: "Ideal for growing businesses",
+      description: "Ideal for growing teams",
       features: [
         "Unlimited projects",
-        "50 team members",
-        "Advanced AI analytics",
+        "Advanced AI features",
+        "Advanced analytics",
         "Priority support",
+        "25 team members",
         "Custom integrations",
         "Advanced reporting",
-        "Time tracking",
-        "Resource management"
+        "API access"
       ],
       popular: true
     },
@@ -99,47 +80,46 @@ const AiProjectManagerPage: React.FC = () => {
       period: "month",
       description: "For large organizations",
       features: [
-        "Unlimited everything",
-        "Unlimited team members",
-        "Full AI suite",
-        "24/7 phone support",
-        "Custom AI training",
+        "Everything in Professional",
         "White-label options",
-        "API access",
-        "Advanced security",
-        "Dedicated account manager"
+        "Custom analytics",
+        "24/7 phone support",
+        "Unlimited team members",
+        "Advanced automation",
+        "Dedicated account manager",
+        "Custom training"
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: "10K+", label: "Projects Managed", icon: <Target className="w-6 h-6" /> },
-    { number: "50K+", label: "Team Members", icon: <Users className="w-6 h-6" /> },
-    { number: "40%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
-    { number: "95%", label: "On-Time Delivery", icon: <CheckCircle className="w-6 h-6" /> }
+    { number: "50%", label: "Faster Project Delivery", icon: <Clock className="w-6 h-6" /> },
+    { number: "35%", label: "Cost Reduction", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "90%", label: "Risk Mitigation", icon: <AlertTriangle className="w-6 h-6" /> },
+    { number: "25%", label: "Team Productivity", icon: <Users className="w-6 h-6" /> }
   ];
 
   const benefits = [
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "40% Faster Project Delivery",
-      description: "AI-powered optimization reduces project timelines and improves efficiency"
+      icon: <Zap className="w-8 h-8" />,
+      title: "50% Faster Delivery",
+      description: "AI-powered automation accelerates project completion significantly"
     },
     {
-      icon: <AlertTriangle className="w-8 h-8" />,
-      title: "Proactive Risk Management",
-      description: "Predict and prevent project risks before they impact your timeline"
+      icon: <Target className="w-8 h-8" />,
+      title: "Smart Resource Allocation",
+      description: "Intelligent optimization of team resources and budget allocation"
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: "Data-Driven Insights",
-      description: "Make informed decisions with comprehensive analytics and reporting"
+      title: "Real-time Analytics",
+      description: "Comprehensive insights and predictive analytics for better decisions"
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "Enhanced Team Collaboration",
-      description: "Streamline communication and improve team productivity"
+      icon: <Shield className="w-8 h-8" />,
+      title: "Risk Management",
+      description: "Proactive risk identification and automated mitigation strategies"
     }
   ];
 
@@ -147,10 +127,10 @@ const AiProjectManagerPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Project Manager - Zion Tech Group | Intelligent Project Management Platform</title>
-        <meta name="description" content="Revolutionary AI-powered project management platform. Automate planning, optimize resources, track progress, and deliver projects 40% faster. Start your free trial today!" />
-        <meta name="keywords" content="AI project management, project planning, team collaboration, project analytics, resource optimization, project automation" />
+        <meta name="description" content="Revolutionary AI-powered project management platform. Increase delivery speed by 50%, reduce costs by 35%, and boost team productivity by 25%. Start your free trial today!" />
+        <meta name="keywords" content="AI project management, project automation, team collaboration, resource optimization, project analytics, project planning" />
         <meta property="og:title" content="AI Project Manager - Zion Tech Group" />
-        <meta property="og:description" content="Transform your project management with AI-powered automation and insights." />
+        <meta property="og:description" content="Transform your project management with AI-powered automation and optimization." />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -167,7 +147,6 @@ const AiProjectManagerPage: React.FC = () => {
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                 <Star className="w-4 h-4 mr-2" />
                 #1 AI Project Management Platform
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-df60
               </div>
               
               <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
@@ -180,8 +159,8 @@ const AiProjectManagerPage: React.FC = () => {
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
                 Revolutionize your project management with AI-powered automation. 
-                Plan smarter, execute faster, and deliver projects 40% more efficiently 
-                with intelligent insights and automated workflows.
+                Increase delivery speed by 50%, reduce costs by 35%, and boost 
+                team productivity by 25% with intelligent project optimization.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -221,7 +200,7 @@ const AiProjectManagerPage: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Transform your project management with AI-powered automation and intelligent insights
+                Transform your project management with AI-powered automation and optimization
               </p>
             </div>
             
@@ -245,7 +224,7 @@ const AiProjectManagerPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Powerful Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to manage projects efficiently with AI assistance
+                Everything you need to manage projects efficiently and effectively
               </p>
             </div>
             
@@ -272,7 +251,7 @@ const AiProjectManagerPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Seamless Integrations</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Connect with your favorite tools and streamline your workflow
+                Connect with your favorite project management and collaboration tools
               </p>
             </div>
             
@@ -368,11 +347,7 @@ const AiProjectManagerPage: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-  ); };
-=======
   );
 };
 
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-df60
 export default AiProjectManagerPage;

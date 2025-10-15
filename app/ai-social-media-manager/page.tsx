@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async"; const AiSocialMediaManagerPage = () => { return ( <> <Helmet> <title>Ai Social Media Manager</title> <meta name="description" content="Professional ai social media manager solutions and services" /> <meta name="keywords" content="ai, social, media, manager" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">
-              Ai Social Media Manager
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional ai social media manager solutions and services
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -49,83 +30,109 @@ const AiSocialMediaManagerPage: React.FC = () => {
     "Brand voice consistency monitoring",
     "Influencer collaboration management",
     "Crisis management and response",
-    "ROI tracking and reporting"
+    "ROI tracking and attribution modeling"
   ];
 
-  const platforms = [
+  const integrations = [
     { name: "Facebook", icon: <Globe className="w-6 h-6" />, color: "text-blue-600" },
     { name: "Instagram", icon: <Image className="w-6 h-6" />, color: "text-pink-600" },
-    { name: "Twitter", icon: <Hash className="w-6 h-6" />, color: "text-blue-400" },
+    { name: "Twitter", icon: <Hash className="w-6 h-6" />, color: "text-cyan-600" },
     { name: "LinkedIn", icon: <Users className="w-6 h-6" />, color: "text-blue-700" },
-    { name: "TikTok", icon: <Video className="w-6 h-6" />, color: "text-black" },
-    { name: "YouTube", icon: <Video className="w-6 h-6" />, color: "text-red-600" }
+    { name: "YouTube", icon: <Video className="w-6 h-6" />, color: "text-red-600" },
+    { name: "TikTok", icon: <TrendingUp className="w-6 h-6" />, color: "text-black" }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$49",
+      price: "$29",
       period: "month",
-      description: "Perfect for small businesses and startups",
+      description: "Perfect for small businesses and influencers",
       features: [
         "3 social media accounts",
-        "50 posts per month",
+        "Basic AI features",
+        "Content scheduling",
         "Basic analytics",
         "Email support",
-        "Content calendar"
+        "1 user account"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$149",
+      price: "$99",
       period: "month",
       description: "Ideal for growing businesses",
       features: [
         "10 social media accounts",
-        "200 posts per month",
+        "Advanced AI features",
         "Advanced analytics",
         "Priority support",
-        "AI content generation",
+        "5 user accounts",
         "Hashtag research",
-        "Competitor analysis"
+        "Competitor analysis",
+        "Influencer outreach"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$299",
       period: "month",
-      description: "For large organizations and agencies",
+      description: "For large organizations",
       features: [
-        "Unlimited social media accounts",
-        "Unlimited posts",
-        "Full analytics suite",
-        "24/7 phone support",
-        "Custom AI training",
+        "Unlimited accounts",
+        "Full AI suite",
         "White-label options",
+        "Custom analytics",
+        "24/7 phone support",
+        "Unlimited users",
+        "Advanced automation",
         "API access",
-        "Team collaboration tools"
+        "Dedicated account manager"
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
-    { number: "2M+", label: "Posts Managed", icon: <Share2 className="w-6 h-6" /> },
-    { number: "95%", label: "Engagement Increase", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Monitoring", icon: <Clock className="w-6 h-6" /> }
+    { number: "300%", label: "Engagement Increase", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "50%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
+    { number: "200%", label: "Follower Growth", icon: <Users className="w-6 h-6" /> },
+    { number: "150%", label: "ROI Improvement", icon: <BarChart3 className="w-6 h-6" /> }
+  ];
+
+  const benefits = [
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "300% Engagement Increase",
+      description: "AI-powered content optimization dramatically boosts engagement rates"
+    },
+    {
+      icon: <Target className="w-8 h-8" />,
+      title: "Smart Content Strategy",
+      description: "Data-driven content planning and optimization for maximum impact"
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive insights and performance tracking across all platforms"
+    },
+    {
+      icon: <MessageSquare className="w-8 h-8" />,
+      title: "Community Management",
+      description: "Automated responses and intelligent community engagement"
+    }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Social Media Manager - Zion Tech Group | Automated Social Media Management</title>
-        <meta name="description" content="Revolutionary AI-powered social media management platform. Automate content creation, scheduling, analytics, and engagement across all major platforms. Start your free trial today!" />
-        <meta name="keywords" content="AI social media manager, automated social media, content generation, social media analytics, social media automation, AI marketing" />
+        <title>AI Social Media Manager - Zion Tech Group | Intelligent Social Media Platform</title>
+        <meta name="description" content="Revolutionary AI-powered social media management platform. Increase engagement by 300%, save 50% time, and grow followers by 200%. Start your free trial today!" />
+        <meta name="keywords" content="AI social media, social media automation, content optimization, engagement analytics, social media management, influencer marketing" />
         <meta property="og:title" content="AI Social Media Manager - Zion Tech Group" />
-        <meta property="og:description" content="Transform your social media presence with AI-powered automation and analytics." />
+        <meta property="og:description" content="Transform your social media presence with AI-powered automation and optimization." />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -141,8 +148,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
             <div className="text-center max-w-6xl mx-auto">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                 <Star className="w-4 h-4 mr-2" />
-                #1 AI Social Media Management Platform
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-df60
+                #1 AI Social Media Platform
               </div>
               
               <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
@@ -154,9 +160,9 @@ const AiSocialMediaManagerPage: React.FC = () => {
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                Revolutionize your social media presence with our AI-powered platform. 
-                Automate content creation, optimize posting schedules, and boost engagement 
-                across all major social platforms.
+                Revolutionize your social media presence with AI-powered automation. 
+                Increase engagement by 300%, save 50% time, and grow followers by 200% 
+                with intelligent content optimization and scheduling.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -165,8 +171,8 @@ const AiSocialMediaManagerPage: React.FC = () => {
                   Start Free Trial
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center">
-                  <MessageSquare className="w-5 h-5 mr-2" />
-                  Watch Demo
+                  <BarChart3 className="w-5 h-5 mr-2" />
+                  View Demo
                 </button>
               </div>
               
@@ -186,17 +192,41 @@ const AiSocialMediaManagerPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Benefits Section */}
         <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  Powerful Features
+                  Why Choose AI Social Media Manager?
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Everything you need to dominate social media with AI-powered automation and insights
+                Transform your social media presence with AI-powered automation and optimization
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center group">
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-white">{benefit.icon}</div>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Powerful Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to manage and grow your social media presence
               </p>
             </div>
             
@@ -217,23 +247,23 @@ const AiSocialMediaManagerPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Platform Support */}
-        <section className="py-20">
+        {/* Integrations Section */}
+        <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Supported Platforms</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Seamless Integrations</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Manage all your social media accounts from one powerful dashboard
+                Connect with all your favorite social media platforms
               </p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-              {platforms.map((platform, index) => (
+              {integrations.map((integration, index) => (
                 <div key={index} className="text-center group">
                   <div className="w-20 h-20 bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 border border-cyan-500/20 group-hover:border-cyan-400/40">
-                    <div className={platform.color}>{platform.icon}</div>
+                    <div className={integration.color}>{integration.icon}</div>
                   </div>
-                  <h3 className="text-lg font-semibold text-white">{platform.name}</h3>
+                  <h3 className="text-lg font-semibold text-white">{integration.name}</h3>
                 </div>
               ))}
             </div>
@@ -241,12 +271,12 @@ const AiSocialMediaManagerPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Simple, Transparent Pricing</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your business needs. All plans include our core AI features.
+                Choose the plan that fits your social media needs
               </p>
             </div>
             
@@ -319,11 +349,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-  ); };
-=======
   );
 };
 
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-df60
 export default AiSocialMediaManagerPage;
