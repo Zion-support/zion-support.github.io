@@ -1,21 +1,15 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import SEOHead from '../components/SEOHead';
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9
 
 const BlogPage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
+      <Helmet>
         <title>Blog - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />
       </Helmet>
 
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 py-20">
           <div className="text-center">
@@ -32,9 +26,7 @@ const BlogPage: React.FC = () => {
         </div>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9
   );
-}
 };
 
 export default BlogPage;

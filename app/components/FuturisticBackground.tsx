@@ -1,7 +1,6 @@
 
-<<<<<<< HEAD
-;
-=======
+import React from 'react';
+
 const FuturisticBackground: React.FC = () => {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -131,4 +130,3 @@ const FuturisticBackground: React.FC = () => {
 };
 
 export default FuturisticBackground;
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9
