@@ -142,11 +142,11 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
               
               case 'resource':
                 if (enableResourceTiming && metric.duration > 1000) {
-                  reportMetric('SLOW_RESOURCE', metric.duration, 'Performance', {
+                  reportMetric('SLOW_RESOURCE', metric.duration, JSON.stringify({
                     name: metric.name,
                     type: metric.initiatorType,
                     size: metric.transferSize,
-                  });
+                  }));
                 }
                 break;
             }
