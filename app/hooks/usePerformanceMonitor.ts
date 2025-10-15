@@ -1,31 +1,9 @@
-import { useState, useEffect } from "react";
+// usePerformanceMonitor utility function
 export const usePerformanceMonitor = () => {
-  return;
-});
-
-const trackMetric = () => {
-  return;
-}));
+  // Placeholder implementation
+  return {
+    // Add implementation here
   };
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        if (entries.length > 0) {
-          setMetrics((prev: Record<string, number>) => ({
-            ...prev,
-            [entries[0].name]: entries[0].startTime
-          }));
-        }
-      });
-      observer.observe({ entryTypes: ['measure', 'navigation'] });
-  return () => {
-        observer.disconnect();
-      };
-    }
-    return undefined;
-  }, []);
-  return { metrics, trackMetric };
 };
 
-export default NotFoundPage;
+export default usePerformanceMonitor;

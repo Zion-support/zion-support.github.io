@@ -1,12 +1,9 @@
+// registerServiceWorker utility function
 export const registerServiceWorker = () => {
-  return;
-}
-        })
-        .catch((registrationError) => { if (process.env.NODE_ENV === 'development') {
-            }
-        });
-    });
-  }
+  // Placeholder implementation
+  return {
+    // Add implementation here
+  };
 };
 
-export default NotFoundPage;
+export default registerServiceWorker;

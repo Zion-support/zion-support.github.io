@@ -1,5 +1,9 @@
-import { useEffect } from "react"; interface UseSEOProps { title: string; description: string; keywords?: string; } export const useSEO = () => {
-  return;
-} if (metaKeywords && keywords) { metaKeywords.setAttribute('content', keywords); } document.title = title; } }, [title, description, keywords]); };
+// useSEO utility function
+export const useSEO = () => {
+  // Placeholder implementation
+  return {
+    // Add implementation here
+  };
+};
 
-export default NotFoundPage;
+export default useSEO;
