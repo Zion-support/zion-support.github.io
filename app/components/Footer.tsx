@@ -4,7 +4,7 @@ import {
   PhoneIcon, 
   EnvelopeIcon, 
   MapPinIcon,
-  ArrowRightIcon,
+  
   HeartIcon
 } from '@heroicons/react/24/outline';
 
