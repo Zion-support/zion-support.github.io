@@ -1,85 +1,29 @@
+import { Helmet } from 'react-helmet-async';
 
-import { 
-
-  ChatBubbleLeftRightIcon, 
-  CheckCircleIcon,
-  ClockIcon,
-  UserGroupIcon,
-
-      ],
-      popular: false
-    },
-    {
-
-      ],
-      popular: true
-    },
-    {
-
-      ],
-      popular: false
-
-  ]
+export default function CustomerSupportHubPage() {
   return (
     <>
-
-                  View Demo
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-
-                Everything you need to provide world-class customer support.
+      <Helmet>
+        <title>Customer Support Hub</title>
+        <meta name="description" content="Professional Customer Support Hub solutions for modern businesses" />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Customer Support Hub
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional Customer Support Hub solutions for modern businesses
+            </p>
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <p className="text-gray-700">
+                This page is currently under development. Please check back later for more content.
               </p>
             </div>
-            
-
-                </div>
-              ))}
-            </div>
           </div>
-        </section>
-
-        {/* Pricing Section */}
-
-                Flexible pricing options to fit your support needs.
-              </p>
-            </div>
-            
-
-              {pricingPlans.map((plan, index) => (
-                <div  key ={index}>
-                  className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
-                    plan.popular 
-
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <button  className ={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${>
-                    plan.popular
-
-
-                  }`}>
-                    Get Started
-                  </button>
-                </div>
-
-
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </>
-
+  );
+}
