@@ -1,627 +1,381 @@
-import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Package } from "lucide-react";
-import EnhancedSEO from "./components/EnhancedSEO";
-import FuturisticBackground from "./components/FuturisticBackground";
-import FuturisticCard from "./components/FuturisticCard";
-import FuturisticButton from "./components/FuturisticButton";
-import FuturisticText from "./components/FuturisticText";
-import ResponsiveContainer from "./components/ResponsiveContainer";
-import ResponsiveGrid from "./components/ResponsiveGrid";
-import ResponsiveText from "./components/ResponsiveText";
+'use client';
 
-const HomePage = () => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.svg",
-    "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
-    ],
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "AI Solutions",
-        "description": "Artificial intelligence and machine learning services"
-      },
-      {
-        "@type": "Offer", 
-        "name": "Cybersecurity",
-        "description": "Advanced cybersecurity solutions and protection"
-      },
-      {
-        "@type": "Offer",
-        "name": "Cloud Infrastructure", 
-        "description": "Cloud computing and infrastructure services"
-      }
-    ]
-  };
-  const features = [
-    {
-      title: "AI-Powered Solutions",
-      description: "Cutting-edge artificial intelligence to transform your business operations with machine learning, natural language processing, and predictive analytics",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-      stats: "40% efficiency boost",
-      link: "/ai-services"
-    },
-    {
-      title: "IT Services",
-      description: "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and digital transformation for modern businesses",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      stats: "99.9% uptime SLA",
-      link: "/services"
-    },
-    {
-      title: "Micro SAAS",
-      description: "Ready-to-use software solutions for immediate deployment including analytics, security, and productivity tools",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
-      stats: "50+ solutions",
-      link: "/micro-saas"
-    },
-    {
-      title: "5G Solutions",
-      description: "Next-generation connectivity and infrastructure services for IoT, edge computing, and smart city implementations",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500",
-      stats: "10x faster speeds",
-      link: "/5g-solutions"
-    },
-  ];
+import React, { useState, useEffect, useCallback, lazy, memo, Suspense } from 'react';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import ErrorBoundary from './components/ErrorBoundary';
+import LoadingSpinner from './components/LoadingSpinner';
 
-  const microSaasHighlights = [
-    {
-      name: "Zion AI Analytics Pro",
-      description: "Advanced AI-powered business intelligence with real-time dashboards, predictive analytics, and automated insights. Features machine learning models for trend analysis and forecasting.",
-      price: "From $299/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-ai-analytics-pro",
-      featured: true,
-      category: "Analytics",
-      marketPrice: "$500-800/month",
-      benefits: ["Real-time insights", "Predictive forecasting", "Custom dashboards", "API integration"]
-    },
-    {
-      name: "Zion AI Security Suite",
-      description: "Comprehensive cybersecurity platform with AI-powered threat detection, automated incident response, and compliance monitoring. Includes vulnerability scanning and security training.",
-      price: "From $499/month",
-      icon: <Shield className="w-6 h-6" />,
-      link: "/zion-ai-security-suite",
-      featured: true,
-      category: "Security",
-      marketPrice: "$800-1200/month",
-      benefits: ["24/7 monitoring", "Automated response", "Compliance reports", "Security training"]
-    },
-    {
-      name: "Zion Cloud Infrastructure Pro",
-      description: "Enterprise-grade cloud infrastructure with auto-scaling, load balancing, and disaster recovery. Includes managed services and 99.9% uptime SLA.",
-      price: "From $199/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-infrastructure-pro",
-      featured: true,
-      category: "Infrastructure",
-      marketPrice: "$400-700/month",
-      benefits: ["Auto-scaling", "Load balancing", "Disaster recovery", "24/7 support"]
-    },
-    {
-      name: "Zion AI CRM Enterprise",
-      description: "Intelligent customer relationship management with AI-powered lead scoring, automated follow-ups, and advanced analytics. Integrates with 100+ business tools.",
-      price: "From $199/month",
-      icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-crm-enterprise",
-      featured: true,
-      category: "CRM",
-      marketPrice: "$300-500/month",
-      benefits: ["AI lead scoring", "Automated workflows", "Advanced analytics", "100+ integrations"]
-    },
-    {
-      name: "Zion AI Marketing Automation",
-      description: "Complete marketing automation platform with AI-driven campaign optimization, multi-channel orchestration, and advanced segmentation. Includes A/B testing and ROI tracking.",
-      price: "From $149/month",
-      icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation",
-      featured: true,
-      category: "Marketing",
-      marketPrice: "$250-400/month",
-      benefits: ["Multi-channel campaigns", "AI optimization", "Advanced segmentation", "ROI tracking"]
-    },
-    {
-      name: "Zion AI Project Management Pro",
-      description: "AI-powered project management with intelligent task prioritization, resource allocation, and risk assessment. Features team collaboration tools and progress tracking.",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-management-pro",
-      featured: true,
-      category: "Project Management",
-      marketPrice: "$150-300/month",
-      benefits: ["AI task prioritization", "Resource optimization", "Risk assessment", "Team collaboration"]
-    },
-    {
-      name: "Zion AI Content Studio",
-      description: "AI-powered content creation platform with automated writing, image generation, and video editing. Supports multiple languages and content formats.",
-      price: "From $79/month",
-      icon: <Mail className="w-6 h-6" />,
-      link: "/zion-ai-content-studio",
-      featured: false,
-      category: "Content Creation",
-      marketPrice: "$120-200/month",
-      benefits: ["AI writing assistant", "Image generation", "Video editing", "Multi-language support"]
-    },
-    {
-      name: "Zion AI Financial Analytics",
-      description: "Advanced financial analytics with AI-powered forecasting, expense tracking, and investment analysis. Includes tax preparation and compliance monitoring.",
-      price: "From $129/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-ai-financial-analytics",
-      featured: false,
-      category: "Finance",
-      marketPrice: "$200-350/month",
-      benefits: ["AI forecasting", "Expense tracking", "Tax preparation", "Compliance monitoring"]
-    },
-    {
-      name: "Zion AI Inventory Optimizer",
-      description: "Smart inventory management with AI-powered demand forecasting, automated reordering, and supply chain optimization. Reduces costs by up to 30%.",
-      price: "From $89/month",
-      icon: <Package className="w-6 h-6" />,
-      link: "/zion-ai-inventory-optimizer",
-      featured: false,
-      category: "Inventory",
-      marketPrice: "$150-250/month",
-      benefits: ["Demand forecasting", "Automated reordering", "Cost reduction", "Supply chain optimization"]
-    },
-    {
-      name: "Zion AI Customer Support Pro",
-      description: "AI-powered customer support platform with intelligent chatbots, sentiment analysis, and automated ticket routing. Improves response time by 80%.",
-      price: "From $119/month",
-      icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-customer-support-pro",
-      featured: false,
-      category: "Customer Support",
-      marketPrice: "$180-300/month",
-      benefits: ["AI chatbots", "Sentiment analysis", "Auto ticket routing", "80% faster response"]
-    },
-    {
-      name: "Zion AI Data Cleaner Pro",
-      description: "Advanced data cleaning and validation platform with AI-powered duplicate detection, data quality scoring, and automated data enrichment.",
-      price: "From $69/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-ai-data-cleaner-pro",
-      featured: false,
-      category: "Data Management",
-      marketPrice: "$100-180/month",
-      benefits: ["Duplicate detection", "Data quality scoring", "Auto enrichment", "Data validation"]
-    },
-    {
-      name: "Zion AI Email Assistant Pro",
-      description: "Intelligent email management with AI-powered categorization, automated responses, and smart scheduling. Increases productivity by 60%.",
-      price: "From $49/month",
-      icon: <Mail className="w-6 h-6" />,
-      link: "/zion-ai-email-assistant-pro",
-      featured: false,
-      category: "Productivity",
-      marketPrice: "$80-150/month",
-      benefits: ["Smart categorization", "Auto responses", "Smart scheduling", "60% productivity boost"]
-    },
-    {
-      name: "Zion AI Social Media Manager",
-      description: "Comprehensive social media management with AI-powered content scheduling, hashtag optimization, and performance tracking across all platforms.",
-      price: "From $39/month",
-      icon: <Globe className="w-6 h-6" />,
-      link: "/zion-ai-social-media-manager",
-      featured: true,
-      category: "Social Media",
-      marketPrice: "$99-200/month",
-      benefits: ["Multi-platform scheduling", "Hashtag optimization", "Performance analytics", "Content calendar"]
-    },
-    {
-      name: "Zion AI Meeting Assistant",
-      description: "AI-powered meeting transcription, note-taking, and action item extraction with real-time collaboration and follow-up automation.",
-      price: "From $49/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-meeting-assistant",
-      featured: true,
-      category: "Productivity",
-      marketPrice: "$129-250/month",
-      benefits: ["Live transcription", "Auto note-taking", "Action items", "Meeting summaries"]
-    },
-    {
-      name: "Zion AI Website Analyzer",
-      description: "Comprehensive website analysis with AI-powered SEO optimization, performance monitoring, and conversion rate optimization.",
-      price: "From $39/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-ai-website-analyzer",
-      featured: true,
-      category: "Web Analytics",
-      marketPrice: "$99-200/month",
-      benefits: ["SEO analysis", "Performance monitoring", "Conversion optimization", "Competitor analysis"]
-    },
-    {
-      name: "Zion AI HR Assistant Pro",
-      description: "Streamlined HR management with AI-powered resume screening, employee onboarding, performance tracking, and compliance monitoring.",
-      price: "From $59/month",
-      icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-hr-assistant",
-      featured: false,
-      category: "Human Resources",
-      marketPrice: "$149-300/month",
-      benefits: ["Resume screening", "Employee onboarding", "Performance tracking", "Compliance monitoring"]
-    },
-    {
-      name: "Zion AI Backup Manager",
-      description: "Intelligent data backup and recovery with AI-powered scheduling, version control, and automated disaster recovery planning.",
-      price: "From $19/month",
-      icon: <Shield className="w-6 h-6" />,
-      link: "/zion-ai-backup-manager",
-      featured: false,
-      category: "Data Protection",
-      marketPrice: "$59-120/month",
-      benefits: ["Auto backup scheduling", "Version control", "Disaster recovery", "Data encryption"]
-    }
-  ];
+// Dynamically import heavy components for better performance
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
-  const stats = [
-    { number: "50,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "80+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion Tech Group transformed our entire technology stack. The AI solutions increased our productivity by 60% in just 3 months.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Solutions",
-      role: "CTO",
-      content: "The micro SAAS solutions are incredibly powerful and easy to implement. We've saved thousands of hours with their automation tools.",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Digital Marketing Agency",
-      role: "Operations Director",
-      content: "Outstanding support and cutting-edge technology. Zion Tech Group is our trusted partner for all digital transformation needs.",
-      rating: 5
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <EnhancedSEO
-        title="Zion Tech Group - Advanced AI & IT Solutions | Transform Your Business"
-        description="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation. Expert technology consulting for modern businesses. Get started today!"
-        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, micro SAAS, 5G technology, IT services, machine learning"
-        canonical="https://ziontechgroup.com"
-      />
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden cyber-grid-enhanced quantum-dots">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
-        </div>
-        
-        {/* Particle System */}
-        <div className="particle-container absolute inset-0">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="particle"
-              style={{
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 6}s`,
-                animationDuration: `${6 + Math.random() * 4}s`
-              }}
-            />
-          ))}
-        </div>
-        
-        <ResponsiveContainer className="text-center relative z-10 hero-responsive">
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-8 neon-border">
-            <Sparkles className="w-5 h-5 text-cyan-400 mr-2 animate-pulse" />
-            <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight holographic-text">
-            Welcome to Zion Tech Group
-          </h1>
-          
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center text-responsive">
-            Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
-            <span className="text-cyan-400 font-semibold"> Transform your operations with cutting-edge technology and innovative solutions.</span>
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <a href="/contact">
-              <FuturisticButton
-                variant="primary"
-                size="lg"
-              >
-                <Sparkles className="w-5 h-5 mr-2" />
-                Get Started Today
-              </FuturisticButton>
-            </a>
-            <a href="/demo">
-              <FuturisticButton
-                variant="secondary"
-                size="lg"
-              >
-                <Monitor className="w-5 h-5 mr-2" />
-                Watch Demo
-              </FuturisticButton>
-            </a>
-          </div>
-          
-          {/* Enhanced Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group data-stream">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 neon-border">
-                  {stat.icon}
-                </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 holographic-text">{stat.number}</div>
-                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our Core Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Comprehensive technology solutions designed to accelerate your business growth and digital transformation. 
-              From AI-powered analytics to enterprise security, we have everything you need.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
-              >
-                <Link
-                  to={feature.link}
-                  className="block"
-                  aria-label={`Learn more about ${feature.title}`}
-                >
-                  <div
-                    className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                    aria-hidden="true"
-                  >
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
-                    {feature.description}
-                  </p>
-                  <div className="text-center">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs md:text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
-                      {feature.stats}
-                    </span>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Micro SAAS Highlights */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 cyber-grid-enhanced">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 holographic-text">
-              Featured Micro SAAS Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready-to-use software solutions that can transform your business operations immediately. 
-              <span className="text-cyan-400 font-semibold"> Save up to 60% compared to enterprise solutions.</span>
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 grid-responsive">
-            {microSaasHighlights.map((saas, index) => (
-              <Link
-                key={index}
-                to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden neon-border"
-              >
-                {saas.featured && (
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center space-x-1">
-                      <Star className="w-3 h-3" />
-                      <span>Featured</span>
-                    </span>
-                  </div>
-                )}
-                
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                    {saas.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                      {saas.name}
-                    </h3>
-                    <div className="flex items-center space-x-2">
-                      <p className="text-cyan-400 font-medium">{saas.price}</p>
-                      <span className="text-xs text-gray-400">vs {saas.marketPrice}</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="mb-3">
-                  <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">
-                    {saas.category}
-                  </span>
-                </div>
-                
-                <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                  {saas.description}
-                </p>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Key Benefits:</h4>
-                  <div className="flex flex-wrap gap-1">
-                    {saas.benefits.slice(0, 3).map((benefit, idx) => (
-                      <span key={idx} className="px-2 py-1 bg-cyan-500/10 text-cyan-300 text-xs rounded">
-                        {benefit}
-                      </span>
-                    ))}
-                    {saas.benefits.length > 3 && (
-                      <span className="px-2 py-1 bg-gray-500/10 text-gray-400 text-xs rounded">
-                        +{saas.benefits.length - 3} more
-                      </span>
-                    )}
-                  </div>
-                </div>
-                
-                <div className="mt-4 flex items-center justify-between">
-                  <div className="flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                  <div className="text-xs text-green-400 font-semibold">
-                    Free Trial Available
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link
-              to="/micro-saas"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 group cyber-button"
-            >
-              View All Micro SAAS Solutions
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Industry Leaders
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our clients say about working with Zion Tech Group
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses already using our solutions to drive growth and innovation. 
-            Start your digital transformation journey today.
-          </p>
-          
-          {/* Contact Information */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <Mail className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-white font-semibold mb-2">Email</h3>
-              <p className="text-cyan-400">kleber@ziontechgroup.com</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <Smartphone className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-white font-semibold mb-2">Phone</h3>
-              <p className="text-cyan-400">+1 302 464 0950</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <Globe className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-white font-semibold mb-2">Address</h3>
-              <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-            >
-              Start Your Journey
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-            >
-              Explore Services
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+// Preload critical components
+const preloadComponents = () => {
+  if (typeof window !== 'undefined') {
+    // Preload critical components after initial render
+    setTimeout(() => {
+      import('./components/ContentPromotionBanner');
+      import('./components/ContentCarousel');
+    }, 100);
+  }
 };
 
-export default HomePage;
+// Loading skeleton component
+const ServiceCardSkeleton: React.FC = memo(() => (
+  <div className="quantum-card p-4 sm:p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-8 bg-gray-700 rounded mb-4 w-3/4"></div>
+    <div className="h-4 bg-gray-700 rounded mb-2"></div>
+    <div className="h-4 bg-gray-700 rounded w-5/6"></div>
+  </div>
+));
+
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+
+export default function HomePage() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+    // Trigger visibility animation
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    // Preload components
+    preloadComponents();
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Analytics tracking for phone clicks - optimized
+  const handlePhoneClick = useCallback(() => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'phone_click', {
+        event_category: 'engagement',
+        event_label: 'main_phone_number',
+      });
+    }
+  }, []);
+
+  if (!isLoaded) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-white text-xl">Loading...</div>
+      </div>
+    );
+  }
+
+  return (
+    <ErrorBoundary>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+        {/* Navigation */}
+        <Navigation />
+      
+      {/* Skip to main content for accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
+      >
+        Skip to main content
+      </a>
+
+      <main className="relative z-10">
+        {/* Hero Section */}
+        <section 
+          className="relative py-20 px-4 text-center overflow-hidden"
+          aria-labelledby="hero-heading"
+        >
+          <div className="max-w-6xl mx-auto">
+            <h1 
+              id="hero-heading" 
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text"
+            >
+              Zion Tech Group
+            </h1>
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow" role="doc-subtitle">
+              Advanced AI and IT Solutions
+            </p>
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+              Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
+              Transform your business with our cutting-edge technology and achieve unprecedented growth.
+            </p>
+            
+            {/* Key Benefits */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-12">
+              <div className="cyber-card hologram-card p-4 sm:p-6">
+                <div className="text-2xl sm:text-3xl mb-3">🚀</div>
+                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
+              </div>
+              <div className="cyber-card hologram-card p-4 sm:p-6">
+                <div className="text-2xl sm:text-3xl mb-3">⚡</div>
+                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
+              </div>
+              <div className="cyber-card hologram-card p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
+                <div className="text-2xl sm:text-3xl mb-3">🔒</div>
+                <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
+              </div>
+            </div>
+            
+            {/* CTA Buttons */}
+            <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="tel:+13024640950"
+                onClick={handlePhoneClick}
+                className="cyber-button w-full sm:w-auto text-center"
+                aria-label="Call us at (302) 464-0950"
+              >
+                Call: (302) 464-0950
+              </a>
+              <a 
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300 w-full sm:w-auto text-center"
+              >
+                Get Free Consultation
+              </a>
+            </div>
+          </div>
+        {/* Services Section */}
+        <section className="mb-16" aria-labelledby="services-heading">
+          <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            Our Services
+          </h2>
+          <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+            Comprehensive AI and IT solutions designed to transform your business operations
+          </p>
+          
+          {/* Primary Services Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Services</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $1,500/month</div>
+                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📢</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Marketing</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Revolutionary AI-powered marketing automation, ad optimization, and content generation.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2 neon-text">Starting at $199/month</div>
+                  <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚙️</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Automation</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Intelligent automation of business processes with decision-making capabilities and exception handling.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">Starting at $399/month</div>
+                  <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+          </div>
+
+          {/* Secondary Services Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Healthcare</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">Starting at $1,999/month</div>
+                  <a href="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Fintech</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Revolutionary AI-powered financial services including trading, fraud detection, and risk management.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">Starting at $1,499/month</div>
+                  <a href="/ai-fintech" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚛️</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Quantum Computing</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Next-generation quantum computing capabilities for complex problem solving and optimization.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">Custom Pricing</div>
+                  <a href="/quantum-computing" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+          </div>
+
+          {/* Micro SAAS Services Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💻</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Micro SAAS Solutions</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2">Starting at $79/month</div>
+                  <a href="/micro-saas" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">✍️</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Content Generation</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Revolutionary AI-powered content creation for blogs, social media, emails, and marketing materials.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2">Starting at $199/month</div>
+                  <a href="/ai-content-generation" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">☁️</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">IT Infrastructure</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Enterprise-grade IT infrastructure with 99.9% uptime guarantee and 24/7 expert support.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">Starting at $999/month</div>
+                  <a href="/it-infrastructure" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+          </div>
+
+          {/* Additional Services Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <article className="cyber-card hologram-card p-4 sm:p-6">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
+              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Solutions</h3>
+              <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                Harness the power of artificial intelligence to drive innovation and efficiency in
+                your organization.
+              </p>
+              <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
+                <li>• Machine Learning Models</li>
+                <li>• Natural Language Processing</li>
+                <li>• Computer Vision</li>
+                <li>• Predictive Analytics</li>
+              </ul>
+            </article>
+
+            <article className="cyber-card hologram-card p-4 sm:p-6">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔄</div>
+              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Digital Transformation</h3>
+              <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                Transform your business processes with cutting-edge technology and expert
+                consultation.
+              </p>
+              <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
+                <li>• Process Automation</li>
+                <li>• Legacy System Modernization</li>
+                <li>• Workflow Optimization</li>
+                <li>• Change Management</li>
+              </ul>
+            </article>
+
+            <article className="cyber-card hologram-card p-4 sm:p-6">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</div>
+              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cloud Services</h3>
+              <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                Scale your infrastructure with secure, reliable, and efficient cloud solutions.
+              </p>
+              <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
+                <li>• Cloud Migration</li>
+                <li>• Infrastructure as Code</li>
+                <li>• Auto-scaling</li>
+                <li>• Disaster Recovery</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        {/* Statistics Section */}
+        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
+          <ContentStatistics />
+        </Suspense>
+
+        {/* Content Carousel */}
+        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>
+          <ContentCarousel />
+        </Suspense>
+
+        {/* Dynamic Content Showcase */}
+        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
+          <DynamicContentShowcase />
+        </Suspense>
+
+        {/* Newsletter Signup */}
+        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
+          <ContentNewsletterSignup />
+        </Suspense>
+      </main>
+
+        {/* Footer */}
+        <Footer />
+        
+        {/* Scroll to Top Button */}
+        <ScrollToTop />
+      </div>
+    </ErrorBoundary>
+  );
+}
