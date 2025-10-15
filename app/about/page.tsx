@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Users, Award, Zap, Globe, Target } from 'lucide-react';
-// Company values,
-    const values = [
+// Company values
+const values = [
   { icon: <Brain className="w-8 h-8" />,
     title: "Innovation First",
     description: "We constantly push the boundaries of what's possible with cutting-edge technology and creative solutions." },
@@ -16,15 +16,15 @@ import { Brain, Shield, Users, Award, Zap, Globe, Target } from 'lucide-react';
     title: "Excellence",
     description: "We maintain the highest standards of quality in everything we do, from code to customer service." }
 ];
-// Company stats,
-    const stats = [
+// Company stats
+const stats = [
   { number: "500+", label: "Projects Completed" },
   { number: "150+", label: "Happy Clients" },
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "24/7", label: "Support Available" }
 ];
-// Team members,
-    const team = [
+// Team members
+const team = [
   { name: "Sarah Johnson",
     role: "CEO & Founder",
     description: "Visionary leader with 15+ years in tech innovation",
@@ -42,8 +42,8 @@ import { Brain, Shield, Users, Award, Zap, Globe, Target } from 'lucide-react';
     description: "Full-stack developer with expertise in modern web technologies",
     image: "/api/placeholder/300/300" }
 ];
-// Services we offer,
-    const services = [
+// Services we offer
+const services = [
   { icon: <Zap className="w-6 h-6" />,
     title: "AI Solutions",
     description: "Custom AI implementations for business automation and intelligence" },
@@ -58,7 +58,8 @@ import { Brain, Shield, Users, Award, Zap, Globe, Target } from 'lucide-react';
     description: "Comprehensive security solutions to protect your business" }
 ];
 
-const AboutPage: React.FC = () => { return (
+const AboutPage: React.FC = () => {
+  return (
     <>
       <Helmet>
         <title>About Us - Zion Tech Group | Leading Technology Solutions</title>
@@ -69,21 +70,17 @@ const AboutPage: React.FC = () => { return (
         <meta property="og:type" content="website" />
       </Helmet>
       
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */ }
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
         <section className="py-20">
-          
-        <div className="container mx-auto px-4">
-            
-        <div className="text-center max-w-4xl mx-auto">
-              
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 About <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Zion Tech Group</span>
               </h1>
-              
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                We are a leading technology company dedicated to transforming businesses,
-    through innovative AI solutions, cutting-edge web development, and comprehensive digital transformation.
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+                We are a leading technology company dedicated to transforming businesses
+                through innovative AI solutions, cutting-edge web development, and comprehensive digital transformation.
               </p>
             </div>
           </div>
