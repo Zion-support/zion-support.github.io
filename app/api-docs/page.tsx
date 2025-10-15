@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Code, Key, Zap, Shield, Copy, Check, ExternalLink, ChevronDown, ChevronRight } from 'lucide-react';
+import { Code, Key, Zap, Shield, Copy, Check, ChevronDown, ChevronRight } from 'lucide-react';
 
 const ApiDocsPage: React.FC = () => {
   const [activeEndpoint, setActiveEndpoint] = useState<string | null>(null);

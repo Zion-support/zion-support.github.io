@@ -18,4 +18,4 @@ const ITSolutionsPage: React.FC = () => {
   );
 };
 
-export default Page;
+export default ITSolutionsPage;

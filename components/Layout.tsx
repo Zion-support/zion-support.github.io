@@ -14,15 +14,6 @@ import {
   Brain,
   Server,
   Zap,
-  Shield,
-  Code,
-  Database,
-  Cloud,
-  Smartphone,
-  Globe,
-  BarChart3,
-  Target,
-  Rocket,
   CheckCircle,
   Star
 } from 'lucide-react';

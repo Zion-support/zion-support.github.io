@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { 
   Zap, 
   BarChart3, 
-  Settings, 
   Target, 
   Rocket, 
   Shield, 
@@ -14,9 +13,6 @@ import {
   Star,
   ArrowRight,
   DollarSign,
-  Globe,
-  Smartphone,
-  Database,
   Code,
   Mail,
   FileText

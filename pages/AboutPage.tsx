@@ -2,15 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Users, 
-  Target, 
-  Award, 
   CheckCircle, 
   Brain, 
-  Server, 
-  Zap,
   Shield,
   Globe,
-  Heart,
   Lightbulb,
   Rocket
 } from 'lucide-react';

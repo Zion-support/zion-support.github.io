@@ -20,7 +20,7 @@ export const enhancedErrorHandler = { handleError: (error: Error, context?: stri
       default: return { message: message || 'An error occurred', code: 'UNKNOWN_ERROR' };
     }
   },
-  handleNetworkError: (error: unknown) => { return {
+  handleNetworkError: (_error: unknown) => { return {
 
     message: 'Network error. Please check your connection.',
       code: 'NETWORK_ERROR' };
