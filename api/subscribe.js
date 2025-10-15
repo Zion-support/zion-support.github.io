@@ -1,59 +1,56 @@
-const withErrorLogging = (handler) => {
-  return async (req, res) => {
-    try {
-      return await handler(req, res);
-    } catch (error) {
-      console.error('API Error:', error);
-      res.status(500).json({
-        error: 'Internal server error',
-        message: error.message
-      });
-    }
-  };
-};
+// API endpoint for general subscription
+import fs from 'fs';
+import path from 'path';
 
-export default withErrorLogging(async (req, res) => {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+const file = path.join(process.cwd(), 'data', 'subscribers.json');
+
+export default function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
-    const { email, name, interests = [] } = req.body;
+    const { email, name, source } = req.body;
 
     if (!email) {
-      return res.status(400).json({
-        error: 'Missing required field: email'
-      });
+      return res.status(400).json({ error: 'Email is required' });
     }
 
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return res.status(400).json({
-        error: 'Invalid email format'
-      });
+    // Ensure data directory exists
+    const dataDir = path.dirname(file);
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
     }
 
-    // Here you would integrate with your email service provider
-    // For now, we'll just log the subscription
-    console.log('Subscription received:', {
+    // Read existing subscribers
+    let subscribers = [];
+    if (fs.existsSync(file)) {
+      const data = fs.readFileSync(file, 'utf8');
+      subscribers = JSON.parse(data);
+    }
+
+    // Check if email already exists
+    if (subscribers.some(sub => sub.email === email)) {
+      return res.status(400).json({ error: 'Email already subscribed' });
+    }
+
+    // Add new subscriber
+    const newSubscriber = {
+      id: Date.now().toString(),
       email,
-      name,
-      interests,
+      name: name || '',
+      source: source || 'website',
       timestamp: new Date().toISOString()
-    });
+    };
 
-    res.status(200).json({
-      success: true,
-      message: 'Successfully subscribed',
-      subscriptionId: 'sub_' + Math.random().toString(36).substr(2, 9)
-    });
+    subscribers.push(newSubscriber);
 
+    // Save to file
+    fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
+
+    res.status(200).json({ message: 'Successfully subscribed' });
   } catch (error) {
     console.error('Subscription error:', error);
-    res.status(500).json({
-      error: 'Failed to process subscription',
-      message: error.message
-    });
+    res.status(500).json({ error: 'Failed to subscribe' });
   }
-});
+}

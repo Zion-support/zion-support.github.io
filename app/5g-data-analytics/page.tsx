@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { BarChart3, TrendingUp, Database, Cpu, Zap, Shield } from 'lucide-react';
 
@@ -35,9 +36,13 @@ const FiveGDataAnalyticsPage: React.FC = () => {
       description: "Monitor and analyze security threats across your 5G network infrastructure."
     }
   ];
+=======
+import SEOHead from './components/SEOHead';
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
 
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced 5G data analytics solutions for network optimization, performance monitoring, and predictive insights. Transform your 5G data into actionable intelligence." />
@@ -93,10 +98,24 @@ const FiveGDataAnalyticsPage: React.FC = () => {
               Start Analytics Today
             </button>
           </div>
+=======
+      <SEOHead
+        title="5G Data Analytics - Zion Tech Group"
+        description="Advanced 5G data analytics solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">5G Data Analytics</h1>
+          <p className="text-gray-300">Advanced solutions coming soon...</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
         </div>
       </div>
     </>
   );
 };
 
+<<<<<<< HEAD
 export default FiveGDataAnalyticsPage;
+=======
+export default G5gDataAnalyticsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017

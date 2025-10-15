@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Heart, ArrowRight } from 'lucide-react';
@@ -61,3 +62,25 @@ const AiCustomerSentimentTrackerPage: React.FC = () => {
 };
 
 export default AiCustomerSentimentTrackerPage;
+=======
+import SEOHead from './components/SEOHead';
+
+const AiCustomerSentimentTrackerPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead
+        title="Ai Customer Sentiment Tracker - Zion Tech Group"
+        description="Professional ai customer sentiment tracker solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Ai Customer Sentiment Tracker</h1>
+          <p className="text-gray-300">Professional solutions coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default AiCustomerSentimentTrackerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017

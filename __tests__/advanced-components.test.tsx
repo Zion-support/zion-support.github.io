@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { render, screen } from "@testing-library/react"
+=======
+import {render} from "@testing-library/react"
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
 
 const TestComponent = () => {
   return <div>Test content</div>
@@ -18,8 +22,14 @@ describe("Advanced Components", () => {
   it("should handle console errors", () => {
     const consoleSpy = jest
       .spyOn(console, "error")
-      .mockImplementation(() => {})
+      .mockImplementation(() => {});
     // Test implementation
+<<<<<<< HEAD
     consoleSpy.mockRestore()
   })
 })
+=======
+    consoleSpy.mockRestore();
+  });
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017

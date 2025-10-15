@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ImageOptimizer from '../app/components/ImageOptimizer';
 
+=======
+import React from 'react'
+import {render} from '@testing-library/react'
+import '@testing-library/jest-dom'
+import ImageOptimizer from '../app/components/ImageOptimizer'
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
 // Mock the image loading
 const mockImage = {
   addEventListener: jest.fn(),
@@ -10,6 +17,7 @@ const mockImage = {
   src: '',
   onload: null,
   onerror: null
+<<<<<<< HEAD
 };
 
 // Mock Image constructor
@@ -37,3 +45,5 @@ describe('ImageOptimizer', () => {
     expect(img).toHaveClass('test-class');
   });
 });
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017

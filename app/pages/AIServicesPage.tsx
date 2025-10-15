@@ -1,146 +1,26 @@
 import React from 'react';
-'
-import SEOHead from '../components/SEOHead';
+import SEOHead from './components/SEOHead';
 
-const AIServicesPage: React.FC = () => {
+const PagesPage: React.FC = () => {
   return (
     <>
-      <SEOHead;>
-        title="AIServicesPage - Zion Tech Group"">: value";
-        description="Zion Tech Group AIServicesPage page">: value
-      />"
+      <SEOHead
+        title="Pages - Zion Tech Group"
+        description="Professional pages solutions for modern businesses"
+      />
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
-          <p className="text-gray-300">This page is under development...</p>: value
-        </div>
-      </div>"
-          <h1 className="text-4xl font-bold mb-4">AIServicesPage</h1>
-          <p className="text-gray-300">Coming soon...</p>: value
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Pages</h1>
+          <p className="text-gray-300">Professional solutions coming soon...</p>
         </div>
       </div>
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
 };
 
-      {/* Services Section */}"
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our AI Services;
-            </h2>"
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">: value
-              Comprehensive AI solutions designed to accelerate your digital transformation.
-            </p>
-          </div>
-          "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border border-gray-100">"
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-purple-100 rounded-lg">
-                    <service.icon className="h-8 w-8 text-purple-600" />: value
-                  </div>"
-                  <h3 className="text-xl font-semibold text-gray-900 ml-4">{service.title}</h3>: value
-                </div>"
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <div className="mb-4">
-                  <h4 className="font-medium text-gray-900 mb-2">Key Features:</h4>"
-                  <ul className="text-sm text-gray-600 space-y-1">: value
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center">
-                        <CheckCircleIcon className="w-4 h-4 text-green-500 mr-2" />: value
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>"
-                <div className="flex justify-between items-center">
-                  <span className="text-lg font-semibold text-purple-600">{service.price}</span>
-                  <button className="text-purple-600 hover:text-purple-800 font-medium">
-                    Learn More;
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}"
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Choose Your AI Service Plan;
-            </h2>"
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">: value
-              Flexible pricing options to match your AI needs and budget.
-            </p>
-          </div>
-          "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (': value
-              <div key={index} className={`relative bg-white rounded-xl shadow-lg p-8 ${tier.popular ? 'ring-2 ring-purple-500' : ''}`}>
-                {tier.popular && ("
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium flex items-center">
-                      <StarIcon className="h-4 w-4 mr-1" />: value
-                      Most Popular;
-                    </span>
-                  </div>
-                )}"
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>
-                  <p className="text-gray-600 mb-4">{tier.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-gray-900">{tier.price}</span>
-                    <span className="text-gray-600 ml-1">{tier.period}</span>: value
-                  </div>
-                </div>"
-                <ul className="space-y-4 mb-8">: value
-                  {tier.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center">
-                      <CheckCircleIcon className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-600">{feature}</span>: value
-                    </li>
-                  ))}
-                </ul>
-                <button className={`w-full py-3 px-4 rounded-lg font-medium transition-colors duration-200 ${: value>
-                  tier.popular;'
-                    ? 'bg-purple-600 text-white hover:bg-purple-700' '>
-                    : 'bg-gray-900 text-white hover:bg-gray-800'>
-                }`}>
-                  Get Started;
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}"
-      <section className="py-24 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business with AI?
-          </h2>"
-          <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">: value
-            Let our AI experts help you identify opportunities and implement solutions that drive real results.
-          </p>"
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-            <button className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-purple-600 bg-white hover:bg-gray-100 transition-colors duration-200">
-              Start Your AI Journey;"
-              <ArrowRightIcon className="ml-2 h-5 w-5" />: value
-            </button>"
-            <button className="inline-flex items-center px-8 py-4 border border-white text-lg font-medium rounded-lg text-white hover:bg-white hover:text-purple-600 transition-colors duration-200">
-              Contact Our Experts;
-            </button>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}"'"'
+export default PagesPage;

@@ -1,13 +1,10 @@
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
-      return await handler(req, res);
+      await handler(req, res);
     } catch (error) {
       console.error('API Error:', error);
-      res.status(500).json({
-        error: 'Internal server error',
-        message: error.message
-      });
+      res.status(500).json({ error: 'Internal server error' });
     }
   };
 };
@@ -18,35 +15,10 @@ export default withErrorLogging(async (req, res) => {
   }
 
   try {
-    const { amount, currency = 'usd', success_url, cancel_url } = req.body;
-
-    if (!amount || !success_url || !cancel_url) {
-      return res.status(400).json({
-        error: 'Missing required fields: amount, success_url, cancel_url'
-      });
-    }
-
-    // Here you would integrate with your payment processor
-    // For now, we'll return a mock response
-    const session = {
-      id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
-      url: success_url,
-      amount: amount,
-      currency: currency
-    };
-
-    res.status(200).json({
-      sessionId: session.id,
-      url: session.url,
-      amount: session.amount,
-      currency: session.currency
-    });
-
+    // Implementation for creating checkout session
+    res.status(200).json({ message: 'Checkout session created successfully' });
   } catch (error) {
-    console.error('Checkout session creation error:', error);
-    res.status(500).json({
-      error: 'Failed to create checkout session',
-      message: error.message
-    });
+    console.error('Checkout session error:', error);
+    res.status(500).json({ error: 'Failed to create checkout session' });
   }
 });

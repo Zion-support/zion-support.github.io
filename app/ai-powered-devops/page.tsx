@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import SEOHead from '../components/SEOHead';
+=======
+import SEOHead from './components/SEOHead';
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
 
 const AiPoweredDevopsPage: React.FC = () => {
   return (

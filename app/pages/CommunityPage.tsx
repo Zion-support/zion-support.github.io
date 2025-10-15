@@ -1,153 +1,21 @@
+import React from 'react';
+import SEOHead from './components/SEOHead';
 
-import {MessageSquare, BookOpen} from "lucide-react";
-,"
-      const CommunityPage: React.FC = () => {","
-        ""
-  const communityFeatures = [",";
-        ""
-    {";""
-      icon: <MessageSquare className="w-8 h-8 text-blue-400" />,","
-        ""
-      title: 'Discussion Forums',","
-        "'"'
-      description: 'Connect with other developers and share knowledge';"
-    },","
-        ""
-    {","
-        ""
-      icon: <Code className="w-8 h-8 text-green-400" />,","
-        ""'
-      title: 'Code Sharing',","
-        "'"'
-      description: 'Share code snippets and collaborate on projects';"
-    },","
-        ""
-    {","
-        ""
-      icon: <BookOpen className="w-8 h-8 text-purple-400" />,","
-        ""'
-      title: 'Learning Resources',","
-        "'"'
-      description: 'Access tutorials, guides, and best practices';"
-    },","
-        ""
-    {","
-        ""
-      icon: <Award className="w-8 h-8 text-yellow-400" />,","
-        ""'
-      title: 'Recognition',","
-        "'"'
-      description: 'Get recognized for your contributions and expertise'
-    },
-    {
-  ];
-,"
-      return (","
-        ""
-    <>","
-        ""
-      <Helmet>","
-        ""
-        <title>Community - Zion Tech Group | Developer Community</title>","
-        ""'
-        <meta name="description" content="Join our vibrant developer community. Connect, learn, and collaborate with other developers using Zion Tech Group's solutions." />";""';: value";
-        <meta name="keywords" content="community, developer community, forums, code sharing, learning resources" />";"
-        <link rel="canonical" href="https://ziontechgroup.com/community" />","
-        ""
-      </Helmet>","
-        ""
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">";"
-        <div className="absolute inset-0 overflow-hidden">";"
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>";"
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>",";
-        ""
-        </div>","
-        ""
-        <div className="container mx-auto px-4 relative z-10">";"
-          <div className="text-center max-w-4xl mx-auto">";"
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">","
-        ""
-              Developer","
-        ""
-              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">",";
-        ""'
-                {' '}Community","
-        ""
-              </span>","
-        ""
-            </h1>","
-        ""
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">",";
-        ""
-              Join our vibrant community of developers, share knowledge, and collaborate on innovative projects.","
-        ""
-            </p>";""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">","
-        ""
-              <Link",">
-        ""
-                to="/contact",">: value";
-      className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center";>"
-              >","
-        ""
-                Join Community","
-        ""
-                <ArrowRight className="w-5 h-5 ml-2" />",";
-        ""
-              </Link>","
-        ""
-            </div>","
-        ""
-          </div>","
-        ""
-        </div>","
-        ""
-      </section>","
-        ""
-      <section className="py-20 bg-slate-800">";"
-        <div className="container mx-auto px-4">";"
-          <div className="text-center mb-16">";"
-            <h2 className="text-4xl font-bold text-white mb-4">Community Features</h2>";"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">",";
-        ""
-              Connect, learn, and grow with our developer community.","
-        ""
-            </p>","
-        ""
-          </div>","
-        ""
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">","
-        ""
-            {communityFeatures.map((feature) => (",";
-        ""
-              <div key={index} className="text-center group">";"
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">","
-        "
-                  {feature.icon};"
-                </div>","
-        ""
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">","
-        "
-                  {feature.title};"
-                </h3>","
-        ""
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors">","
-        "
-                  {feature.description};"
-                </p>","
-        ""
-              </div>","
-        "
-            ))};"
-          </div>","
-        ""
-        </div>","
-        ""
-      </section>","
-        ""
-    </>";"
-  )
-    },
-    {
-,
-      export default CommunityPage;"'"'
+const PagesPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead
+        title="Pages - Zion Tech Group"
+        description="Professional pages solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Pages</h1>
+          <p className="text-gray-300">Professional solutions coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default PagesPage;
