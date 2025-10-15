@@ -135,6 +135,7 @@ const ZionAIPriceOptimizerPage = lazy(() => import('./app/zion-ai-price-optimize
 const ZionAISalesPredictorPage = lazy(() => import('./app/zion-ai-sales-predictor/page'));
 const ZionAISchedulingAssistantPage = lazy(() => import('./app/zion-ai-scheduling-assistant/page'));
 const ZionAISocialMediaManagerPage = lazy(() => import('./app/zion-ai-social-media-manager/page'));
+const ZionTaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
 const ZionAISocialSchedulerProPage = lazy(() => import('./app/zion-ai-social-scheduler-pro/page'));
 const ZionAITaskSchedulerPage = lazy(() => import('./app/zion-ai-task-scheduler/page'));
 const ZionAITranslationServicePage = lazy(() => import('./app/zion-ai-translation-service/page'));
@@ -290,9 +291,9 @@ function App() {
                     <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
                     <Route path="/ai-crm-optimizer" element={<AICRMOptimizerPage />} />
                     <Route path="/ai-email-optimizer" element={<AIEmailOptimizerPage />} />
-                    <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
-                    <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
-                    <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
+                    <Route path="/ai-social-media-manager" element={<ZionAISocialMediaManagerPage />} />
+                    <Route path="/task-manager-pro" element={<ZionTaskManagerProPage />} />
+                    <Route path="/analytics-dashboard" element={<ZionSmartAnalyticsDashboardPage />} />
                     <Route path="/data-analytics" element={<DataAnalyticsPage />} />
                     <Route path="/web-development" element={<WebDevelopmentPage />} />
                     <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
@@ -311,8 +312,8 @@ function App() {
                     
                     
                     {/* Micro SaaS pages */}
-                    <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
-                    <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
+                    <Route path="/task-manager-pro" element={<ZionTaskManagerProPage />} />
+                    <Route path="/analytics-dashboard" element={<ZionSmartAnalyticsDashboardPage />} />
                     <Route path="/customer-support-hub" element={<CustomerSupportHubPage />} />
                     <Route path="/inventory-manager" element={<InventoryManagerPage />} />
                     <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
@@ -323,8 +324,8 @@ function App() {
                     <Route path="/support" element={<SupportPage />} />
                     <Route path="/tutorials" element={<TutorialsPage />} />
                     <Route path="/docs" element={<DocsPage />} />
-                    <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
-                    <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
+                    <Route path="/task-manager-pro" element={<ZionTaskManagerProPage />} />
+                    <Route path="/analytics-dashboard" element={<ZionSmartAnalyticsDashboardPage />} />
                     <Route path="/customer-support-hub" element={<CustomerSupportHubPage />} />
                     <Route path="/inventory-manager" element={<InventoryManagerPage />} />
                     <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
@@ -340,7 +341,7 @@ function App() {
                     <Route path="/ai-lead-scoring-pro" element={<AILeadScoringProPage />} />
                     <Route path="/ai-predictive-maintenance-pro" element={<AIPredictiveMaintenanceProPage />} />
                     <Route path="/ai-price-optimizer-pro" element={<AIPriceOptimizerProPage />} />
-                    <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
+                    <Route path="/ai-social-media-manager" element={<ZionAISocialMediaManagerPage />} />
                     <Route path="/ai-voice-assistant-pro" element={<AIVoiceAssistantProPage />} />
                     <Route path="/ai-website-analyzer" element={<AIWebsiteAnalyzerPage />} />
                     <Route path="/blockchain-solutions-pro" element={<BlockchainSolutionsProPage />} />
