@@ -45,9 +45,8 @@ const navigationItems = [
         { name: 'AI Data Analytics', href: '/ai-data-analytics' },
         { name: 'AI Marketing Automation', href: '/ai-marketing-automation' },
         { name: 'AI Predictive Analytics', href: '/ai-predictive-analytics' },
-        { name: 'AI Voice Assistant', href: '/ai-voice-assistant' },]
-        { name: 'AI Workflow Automation', href: '/ai-workflow-automation' }]
-      ]
+        { name: 'AI Voice Assistant', href: '/ai-voice-assistant' }]
+        { name: 'AI Workflow Automation', href: '/ai-workflow-automation' }]]
     },
     {
       name: 'IT Services',
@@ -59,9 +58,8 @@ const navigationItems = [
         { name: 'IT Consulting', href: '/it-consulting' },
         { name: 'Network Security', href: '/network-security' },
         { name: 'Software Development', href: '/software-development' },
-        { name: 'System Integration', href: '/system-integration' },]
-        { name: 'Web Development', href: '/web-development' }]
-      ]
+        { name: 'System Integration', href: '/system-integration' }]
+        { name: 'Web Development', href: '/web-development' }]]
     },
     {
       name: '5G Solutions',
@@ -74,9 +72,8 @@ const navigationItems = [
         { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
         { name: '5G Edge Computing', href: '/5g-edge-computing' },
         { name: '5G Private Networks', href: '/5g-private-networks' },
-        { name: '5G Mobile Applications', href: '/5g-mobile-applications' },]
-        { name: '5G Data Analytics', href: '/5g-data-analytics' }]
-      ]
+        { name: '5G Mobile Applications', href: '/5g-mobile-applications' }]
+        { name: '5G Data Analytics', href: '/5g-data-analytics' }]]
     },
     {
       name: 'Micro SAAS',
@@ -87,9 +84,8 @@ const navigationItems = [
         { name: 'Zion AI CRM Pro', href: '/zion-ai-crm-pro' },
         { name: 'Zion Inventory Smart', href: '/zion-inventory-smart' },
         { name: 'AI Financial Analytics Pro', href: '/ai-financial-analytics-pro' },
-        { name: 'Zion Performance Monitor', href: '/zion-performance-monitor' },]
-        { name: 'Zion AI Marketing Automation', href: '/zion-ai-marketing-automation' }]
-      ]
+        { name: 'Zion Performance Monitor', href: '/zion-performance-monitor' }]
+        { name: 'Zion AI Marketing Automation', href: '/zion-ai-marketing-automation' }]]
     },
     {
       name: 'Resources',
@@ -100,9 +96,8 @@ const navigationItems = [
         { name: 'Case Studies', href: '/case-studies' },
         { name: 'Tutorials', href: '/tutorials' },
         { name: 'Documentation', href: '/docs' },
-        { name: 'Support', href: '/support' },]
-        { name: 'FAQ', href: '/faq' }]
-      ]
+        { name: 'Support', href: '/support' }]
+        { name: 'FAQ', href: '/faq' }]]
     },
     {
       name: 'Contact',
@@ -175,18 +170,18 @@ const isActive = (href: string) => location.pathname === href;
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
                   <Link
-    to={item.href} className={`flex items-center space-x-1 px-4 py-2 rounded-lg transition-all duration-300 ${
+    const to = {item.href} className={`flex items-center space-x-1 px-4 py-2 rounded-lg transition-all duration-300 ${
                       isActive(item.href)
                         ? 'bg-cyan-600 text-white shadow-lg shadow-cyan-500/25'
                         : 'text-gray-300 hover: text-white hover:bg-slate-800/50'
                     }`}
-                    onMouseEnter={() => setActiveDropdown(item.dropdown ? item.name : null)} onMouseLeave={() => setActiveDropdown(null)}
+                    const onMouseEnter = {() => setActiveDropdown(item.dropdown ? item.name : null)} onMouseLeave={() => setActiveDropdown(null)}
                   >
                     {item.icon}
                     <span className="font-medium">{item.name}</span>
                     {item.dropdown && <ChevronDown className="w-4 h-4" />}
                   </Link>
-                  {/* Dropdown Menu */}
+                  {/* Dropdown Menu */},
                   {item.dropdown && (
                     <div className={`absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-2xl transition-all duration-300 ${
                       activeDropdown === item.name 
@@ -197,7 +192,7 @@ const isActive = (href: string) => location.pathname === href;
         <div className="py-2">
                         {item.dropdown.map((dropdownItem) => (
                           <Link
-    key={dropdownItem.name} to={dropdownItem.href}
+    const key = {dropdownItem.name} to={dropdownItem.href}
                             className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200"
                           >
                             
@@ -216,11 +211,11 @@ const isActive = (href: string) => location.pathname === href;
         <div className="hidden lg:flex items-center space-x-4">
               {/* Search Button */}
               <button
-    onClick={() => setShowSearch(!showSearch)} className="p-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
+    const onClick = {() => setShowSearch(!showSearch)} className="p-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
               >
                 <Search className="w-5 h-5" />
               </button>
-              {/* Search Bar */}
+              {/* Search Bar */},
               {showSearch && (
                 
         <div className="absolute top-full right-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-2xl z-50">
@@ -229,7 +224,7 @@ const isActive = (href: string) => location.pathname === href;
                     <input
     type="text"
                       placeholder="Search services, pages..."
-                      value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
+                      const value = {searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
                       className="w-full px-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       autoFocus
                     />
@@ -246,7 +241,7 @@ const isActive = (href: string) => location.pathname === href;
             </div>
             {/* Mobile Menu Button */}
             <button
-    onClick={() => setIsMenuOpen(!isMenuOpen)} className="xl:hidden p-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
+    const onClick = {() => setIsMenuOpen(!isMenuOpen)} className="xl:hidden p-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -263,12 +258,12 @@ const isActive = (href: string) => location.pathname === href;
               {navigationItems.map((item) => (
                 <div key={item.name}>
                   <Link
-    to={item.href} className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
+    const to = {item.href} className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
                       isActive(item.href)
                         ? 'bg-cyan-600 text-white'
                         : 'text-gray-300 hover: text-white hover:bg-slate-700/50'
                     }`}
-                    onClick={() => setIsMenuOpen(false)}
+                    const onClick = {() => setIsMenuOpen(false)}
                   >
                     {item.icon}
                     <span className="font-medium">{item.name}</span>
@@ -278,9 +273,9 @@ const isActive = (href: string) => location.pathname === href;
         <div className="ml-8 space-y-1">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
-    key={dropdownItem.name} to={dropdownItem.href}
+    const key = {dropdownItem.name} to={dropdownItem.href}
                           className="flex items-center space-x-3 px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/30 rounded-lg transition-colors"
-                          onClick={() => setIsMenuOpen(false)}
+                          const onClick = {() => setIsMenuOpen(false)}
                         >
                           
         <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full"></div>

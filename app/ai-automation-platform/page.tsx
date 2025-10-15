@@ -45,8 +45,7 @@ const automationTypes = [
     "Marketing campaign automation",
     "Data entry and validation",
     "Report generation and distribution",
-    "IT operations and monitoring"
-  ];
+    "IT operations and monitoring"];
   return (
     <>
       <Helmet>

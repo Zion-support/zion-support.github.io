@@ -71,7 +71,7 @@ const ContactPage: React.FC = () => { return (
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
                     <textarea
-    rows={ 4 } className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-purple-500"
+    const rows = { 4 } className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-purple-500"
                       placeholder="Your message..."
                     />
                   </div>

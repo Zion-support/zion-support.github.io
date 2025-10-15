@@ -66,9 +66,8 @@ export default function ZionSocialScheduler() {
         "Up to 30 posts/month",
         "Basic scheduling",
         "Email support",
-        "Basic analytics",]
-        "Standard templates"]
-      ],
+        "Basic analytics"]
+        "Standard templates"]],
       popular: false
     },
     {
@@ -83,9 +82,8 @@ export default function ZionSocialScheduler() {
         "Priority support",
         "Advanced analytics",
         "Premium templates",
-        "Team collaboration",]
-        "API access"]
-      ],
+        "Team collaboration"]
+        "API access"]],
       popular: true
     },
     {
@@ -100,9 +98,8 @@ export default function ZionSocialScheduler() {
         "Dedicated support",
         "Custom analytics",
         "White-label solution",
-        "Custom integrations",]
-        "SSO integration"]
-      ],
+        "Custom integrations"]
+        "SSO integration"]],
       popular: false
     }
   ];
@@ -237,7 +234,7 @@ export default function ZionSocialScheduler() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10 relative overflow-hidden"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10 relative overflow-hidden"
                 >
                   
         <div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-rose-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -285,7 +282,7 @@ export default function ZionSocialScheduler() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
-    key={index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
+    const key = {index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
                     plan.popular 
                       ? 'border-pink-500/50 bg-gradient-to-br from-pink-500/10 to-rose-500/10' 
                       : 'border-white/20 hover: border-pink-500/30'
@@ -321,7 +318,7 @@ export default function ZionSocialScheduler() {
                   </ul>
                   <Link
     to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
+                    const className = {`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
                       plan.popular
                         ? 'bg-gradient-to-r from-pink-500 to-rose-600 text-white hover:from-pink-600 hover:to-rose-700 shadow-lg hover:shadow-pink-500/25'
                         : 'border border-pink-400 text-pink-400 hover: bg-pink-400 hover:text-slate-900'
@@ -352,7 +349,7 @@ export default function ZionSocialScheduler() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10 relative overflow-hidden"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10 relative overflow-hidden"
                 >
                   
         <div className="flex items-center mb-4">

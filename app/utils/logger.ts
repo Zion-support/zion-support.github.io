@@ -1,3 +1,4 @@
+/* global console */
 interface LogLevel { ERROR: 'error';,
     WARN: 'warn';,
     INFO: 'info';,

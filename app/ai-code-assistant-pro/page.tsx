@@ -59,9 +59,8 @@ const pricingPlans = [
         "Basic code generation",
         "Bug detection & fixes",
         "Documentation generation",
-        "Email support",]
-        "10 projects max"]
-      ],
+        "Email support"]
+        "10 projects max"]],
       popular: false },
     { name: "Team",
       price: "$399",
@@ -74,9 +73,8 @@ const pricingPlans = [
         "Performance optimization",
         "Priority support",
         "Unlimited projects",
-        "Team collaboration",]
-        "Custom integrations"]
-      ],
+        "Team collaboration"]
+        "Custom integrations"]],
       popular: true },
     { name: "Enterprise",
       price: "$799",
@@ -89,9 +87,8 @@ const pricingPlans = [
         "Advanced security",
         "24/7 dedicated support",
         "Custom training",
-        "API access",]
-        "White-label options"]
-      ],
+        "API access"]
+        "White-label options"]],
       popular: false }
   ];
 

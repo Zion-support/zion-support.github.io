@@ -13,8 +13,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
     "Brand voice consistency monitoring",
     "Influencer collaboration management",
     "Crisis management and response",
-    "ROI tracking and attribution modeling"
-  ];
+    "ROI tracking and attribution modeling"];
 
   const integrations = [
     { name: "Facebook", icon: <Globe className="w-6 h-6" />, color: "text-blue-600" },
@@ -36,9 +35,8 @@ const pricingPlans = [
         "Basic AI features",
         "Content scheduling",
         "Basic analytics",
-        "Email support",]
-        "1 user account"]
-      ],
+        "Email support"]
+        "1 user account"]],
       popular: false
     },
     {
@@ -53,9 +51,8 @@ const pricingPlans = [
         "Priority support",
         "5 user accounts",
         "Hashtag research",
-        "Competitor analysis",]
-        "Influencer outreach"]
-      ],
+        "Competitor analysis"]
+        "Influencer outreach"]],
       popular: true
     },
     {
@@ -71,9 +68,8 @@ const pricingPlans = [
         "24/7 phone support",
         "Unlimited users",
         "Advanced automation",
-        "API access",]
-        "Dedicated account manager"]
-      ],
+        "API access"]
+        "Dedicated account manager"]],
       popular: false
     }
   ];

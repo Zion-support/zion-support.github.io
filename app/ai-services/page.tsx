@@ -15,15 +15,13 @@ const AIServicesPage: React.FC = () => {
         'Technology Assessment',
         'Implementation Roadmap',
         'Change Management',
-        'ROI Analysis',]
-        'Executive Training']
-      ],
+        'ROI Analysis']
+        'Executive Training']],
       benefits: [
         'Accelerate AI adoption by 300%',
         'Reduce implementation risks by 60%',
-        'Achieve 400% ROI within 12 months',]
-        'Future-proof your technology stack']
-      ],
+        'Achieve 400% ROI within 12 months']
+        'Future-proof your technology stack']],
       marketPrice: '$5,000-10,000/month',
       category: 'Consulting',
       technologies: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Cloud AI', 'Edge Computing'],
@@ -39,15 +37,13 @@ const AIServicesPage: React.FC = () => {
         'Data Preprocessing & Cleaning',
         'Model Training & Optimization',
         'Real-time Inference',
-        'Model Monitoring & Maintenance',]
-        'A/B Testing Framework']
-      ],
+        'Model Monitoring & Maintenance']
+        'A/B Testing Framework']],
       benefits: [
         'Improve accuracy by 40-80%',
         'Reduce manual work by 70%',
-        'Enable real-time predictions',]
-        'Scale with your business growth']
-      ],
+        'Enable real-time predictions']
+        'Scale with your business growth']],
       marketPrice: '$3,000-6,000/month',
       category: 'Machine Learning',
       technologies: ['Python', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy'],
@@ -63,15 +59,13 @@ const AIServicesPage: React.FC = () => {
         'Sentiment Analysis',
         'Language Translation',
         'Named Entity Recognition',
-        'Text Summarization',]
-        'Chatbot Development']
-      ],
+        'Text Summarization']
+        'Chatbot Development']],
       benefits: [
         'Process 10,000+ documents/hour',
         'Improve customer satisfaction by 50%',
-        'Reduce response time by 80%',]
-        'Enable multilingual operations']
-      ],
+        'Reduce response time by 80%']
+        'Enable multilingual operations']],
       marketPrice: '$2,500-5,000/month',
       category: 'NLP',
       technologies: ['OpenAI GPT', 'BERT', 'Transformers', 'spaCy', 'NLTK', 'Hugging Face'],
@@ -87,15 +81,13 @@ const AIServicesPage: React.FC = () => {
         'Facial Recognition Systems',
         'Image Classification',
         'Video Analysis',
-        'Quality Control Automation',]
-        'Real-time Processing']
-      ],
+        'Quality Control Automation']
+        'Real-time Processing']],
       benefits: [
         'Reduce inspection time by 90%',
         'Improve accuracy to 99.5%',
-        'Enable 24/7 monitoring',]
-        'Reduce human error by 95%']
-      ],
+        'Enable 24/7 monitoring']
+        'Reduce human error by 95%']],
       marketPrice: '$3,500-7,000/month',
       category: 'Computer Vision',
       technologies: ['OpenCV', 'YOLO', 'ResNet', 'TensorFlow', 'PyTorch', 'CUDA'],
@@ -111,15 +103,13 @@ const AIServicesPage: React.FC = () => {
         'Risk Assessment Models',
         'Customer Lifetime Value',
         'Churn Prediction',
-        'Sales Forecasting',]
-        'Anomaly Detection']
-      ],
+        'Sales Forecasting']
+        'Anomaly Detection']],
       benefits: [
         'Improve forecast accuracy by 60%',
         'Reduce inventory costs by 25%',
-        'Increase revenue by 30%',]
-        'Minimize business risks']
-      ],
+        'Increase revenue by 30%']
+        'Minimize business risks']],
       marketPrice: '$3,000-6,000/month',
       category: 'Analytics',
       technologies: ['Python', 'R', 'Apache Spark', 'Tableau', 'Power BI', 'Jupyter'],
@@ -135,15 +125,13 @@ const AIServicesPage: React.FC = () => {
         'RPA Implementation',
         'Workflow Optimization',
         'Decision Automation',
-        'Exception Handling',]
-        'Performance Monitoring']
-      ],
+        'Exception Handling']
+        'Performance Monitoring']],
       benefits: [
         'Automate 80% of repetitive tasks',
         'Reduce processing time by 70%',
-        'Improve accuracy to 99.9%',]
-        'Free up staff for strategic work']
-      ],
+        'Improve accuracy to 99.9%']
+        'Free up staff for strategic work']],
       marketPrice: '$2,500-5,000/month',
       category: 'Automation',
       technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Python', 'APIs', 'Workflow Engines'],
@@ -159,15 +147,13 @@ const AIServicesPage: React.FC = () => {
         'Intent Recognition',
         'Context Management',
         'Human Handoff',
-        'Analytics & Reporting',]
-        'Custom Integrations']
-      ],
+        'Analytics & Reporting']
+        'Custom Integrations']],
       benefits: [
         'Handle 80% of customer queries',
         'Reduce response time to seconds',
-        'Available 24/7/365',]
-        'Improve customer satisfaction']
-      ],
+        'Available 24/7/365']
+        'Improve customer satisfaction']],
       marketPrice: '$1,500-3,000/month',
       category: 'Conversational AI',
       technologies: ['Dialogflow', 'Microsoft Bot Framework', 'Rasa', 'OpenAI GPT', 'Webhooks', 'APIs'],
@@ -183,15 +169,13 @@ const AIServicesPage: React.FC = () => {
         'Data Quality Management',
         'Real-time Streaming',
         'Data Transformation',
-        'Schema Evolution',]
-        'Data Lineage Tracking']
-      ],
+        'Schema Evolution']
+        'Data Lineage Tracking']],
       benefits: [
         'Process 1M+ records/hour',
         'Improve data quality by 95%',
-        'Reduce processing time by 80%',]
-        'Enable real-time analytics']
-      ],
+        'Reduce processing time by 80%']
+        'Enable real-time analytics']],
       marketPrice: '$2,000-4,000/month',
       category: 'Data Engineering',
       technologies: ['Apache Kafka', 'Apache Airflow', 'Apache Spark', 'Python', 'SQL', 'Cloud Storage'],
@@ -207,15 +191,13 @@ const AIServicesPage: React.FC = () => {
         'Fraud Prevention',
         'Anomaly Detection',
         'Risk Scoring',
-        'Real-time Monitoring',]
-        'Incident Response']
-      ],
+        'Real-time Monitoring']
+        'Incident Response']],
       benefits: [
         'Detect 99.9% of threats',
         'Reduce false positives by 80%',
-        'Prevent fraud losses by 90%',]
-        'Enable proactive security']
-      ],
+        'Prevent fraud losses by 90%']
+        'Enable proactive security']],
       marketPrice: '$4,000-8,000/month',
       category: 'Security',
       technologies: ['Machine Learning', 'Deep Learning', 'SIEM', 'Log Analysis', 'Behavioral Analytics', 'Threat Intelligence'],
@@ -231,15 +213,13 @@ const AIServicesPage: React.FC = () => {
         'Content-based Filtering',
         'Hybrid Approaches',
         'Real-time Recommendations',
-        'A/B Testing',]
-        'Performance Analytics']
-      ],
+        'A/B Testing']
+        'Performance Analytics']],
       benefits: [
         'Increase sales by 25%',
         'Improve user engagement by 40%',
-        'Reduce bounce rate by 30%',]
-        'Personalize user experience']
-      ],
+        'Reduce bounce rate by 30%']
+        'Personalize user experience']],
       marketPrice: '$2,500-5,000/month',
       category: 'Recommendation Systems',
       technologies: ['Python', 'Apache Spark', 'TensorFlow', 'Redis', 'PostgreSQL', 'Machine Learning'],
@@ -255,15 +235,13 @@ const AIServicesPage: React.FC = () => {
         'Text-to-Speech',
         'Voice Analytics',
         'Speaker Identification',
-        'Emotion Detection',]
-        'Multi-language Support']
-      ],
+        'Emotion Detection']
+        'Multi-language Support']],
       benefits: [
         'Improve accessibility by 100%',
         'Reduce call handling time by 50%',
-        'Enable voice automation',]
-        'Enhance customer experience']
-      ],
+        'Enable voice automation']
+        'Enhance customer experience']],
       marketPrice: '$2,000-4,000/month',
       category: 'Speech AI',
       technologies: ['Google Speech API', 'Amazon Polly', 'Azure Cognitive Services', 'OpenAI Whisper', 'WebRTC', 'Voice SDKs'],
@@ -279,15 +257,13 @@ const AIServicesPage: React.FC = () => {
         'Real-time Inference',
         'Offline Capabilities',
         'Model Optimization',
-        'Edge Analytics',]
-        'Device Management']
-      ],
+        'Edge Analytics']
+        'Device Management']],
       benefits: [
         'Reduce latency by 90%',
         'Enable offline operations',
-        'Reduce bandwidth costs by 70%',]
-        'Improve data privacy']
-      ],
+        'Reduce bandwidth costs by 70%']
+        'Improve data privacy']],
       marketPrice: '$3,000-6,000/month',
       category: 'Edge AI',
       technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing'],
@@ -630,24 +606,19 @@ const benefits = [
     {
       title: 'Increased Efficiency',
       description: 'Automate repetitive tasks and focus on strategic initiatives.',
-      icon: Zap,
-    },
+      icon: Zap},
     {
       title: 'Better Insights',
       description: 'Gain deeper understanding of your data and customer behavior.',
-      icon: BarChart3,
-    },
+      icon: BarChart3},
     {
       title: 'Cost Savings',
       description: 'Reduce operational costs through intelligent automation.',
-      icon: Award,
-    },
+      icon: Award},
     {
       title: 'Scalability',
       description: 'Scale your operations without proportional cost increases.',
-      icon: Globe,
-    },
-  ];
+      icon: Globe}];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -726,7 +697,7 @@ const benefits = [
                 const IconComponent = service.icon;
   return (
                   <div
-    key={service.id} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${
+    const key = {service.id} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${
                       service.popular 
                         ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
                         : 'border-cyan-500/20'
@@ -775,7 +746,7 @@ const benefits = [
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span className="text-sm">{feature}</span>
                         </li>
-                      ))}
+                      ))},
                       {service.features.length > 4 && (
                         <li className="text-sm text-cyan-400">
                           +{service.features.length - 4} more features
@@ -804,14 +775,14 @@ const benefits = [
                     
         <div className="space-y-2">
                       <Link
-    to={`/${service.id}`}
+    const to = {`/${service.id}`}
                         className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105"
                       >
                         <span>Get Started</span>
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                       <a
-    href={service.link} target="_blank"
+    const href = {service.link} target="_blank"
                         rel="noopener noreferrer"
                         className="w-full border border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 font-semibold py-2 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-sm"
                       >
@@ -893,7 +864,7 @@ const benefits = [
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
-                    ))}
+                    ))},
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
                         +{service.features.length - 4} more features
@@ -927,7 +898,7 @@ const benefits = [
 
                 <div className="text-center">
                   <a
-    href={`mailto: kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
+    const href = {`mailto: kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
                     Get Started Now

@@ -48,13 +48,13 @@ export class EnhancedErrorBoundary extends Component<Props State> {
             
         <div className="space-y-3">
               <button
-    onClick={this.handleRetry} className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
+    const onClick = {this.handleRetry} className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
               >
                 <RefreshCw className="w-4 h-4" />
                 <span>Try Again</span>
               </button>
               <button
-    onClick={() => window.location.href = '/'} className="w-full bg-slate-700 hover:bg-slate-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
+    const onClick = {() => window.location.href = '/'} className="w-full bg-slate-700 hover:bg-slate-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
               >
                 <Home className="w-4 h-4" />
                 <span>Go Home</span>

@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
               {services.map((service) => (
                 <li key={service.name}>
                     <Link
-    to={service.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
+    const to = {service.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
                     >
                     <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
               {company.map((item) => (
                 <li key={item.name}>
                     <Link
-    to={item.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
+    const to = {item.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
                     >
                     <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
               {resources.map((resource) => (
                 <li key={resource.name}>
                     <Link
-    to={resource.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
+    const to = {resource.href} className="text-gray-300 hover:text-white transition-colors flex items-center group"
                     >
                     <ArrowRight className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {resource.name}

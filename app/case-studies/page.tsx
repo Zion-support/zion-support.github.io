@@ -13,9 +13,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         '40% increase in conversion rates',
         '60% improvement in customer engagement',
-        '35% increase in average order value',]
-        '99.9% uptime achieved']
-      ],
+        '35% increase in average order value']
+        '99.9% uptime achieved']],
       duration: '6 months',
       team: '8 members',
       image: '/api/placeholder/600/400',
@@ -31,9 +30,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         '50% reduction in administrative time',
         '90% patient satisfaction rate',
-        '100% HIPAA compliance',]
-        'Real-time patient monitoring']
-      ],
+        '100% HIPAA compliance']
+        'Real-time patient monitoring']],
       duration: '8 months',
       team: '12 members',
       image: '/api/placeholder/600/400',
@@ -49,9 +47,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         '30% energy savings',
         '25% traffic reduction',
-        'Real-time insights dashboard',]
-        'Improved citizen services']
-      ],
+        'Real-time insights dashboard']
+        'Improved citizen services']],
       duration: '12 months',
       team: '15 members',
       image: '/api/placeholder/600/400',
@@ -67,9 +64,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         '35% better predictions',
         '20% risk reduction',
-        'Automated reporting',]
-        'Real-time financial insights']
-      ],
+        'Automated reporting']
+        'Real-time financial insights']],
       duration: '4 months',
       team: '6 members',
       image: '/api/placeholder/600/400',
@@ -85,9 +81,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         '45% improvement in learning outcomes',
         '80% student engagement rate',
-        'Scalable platform for 100k+ students',]
-        'Personalized learning paths']
-      ],
+        'Scalable platform for 100k+ students']
+        'Personalized learning paths']],
       duration: '7 months',
       team: '10 members',
       image: '/api/placeholder/600/400',
@@ -103,9 +98,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         '25% cost reduction',
         '40% efficiency improvement',
-        'Automated processes',]
-        'Real-time tracking']
-      ],
+        'Automated processes']
+        'Real-time tracking']],
       duration: '9 months',
       team: '14 members',
       image: '/api/placeholder/600/400',
@@ -170,7 +164,7 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
             </div>
           </div>
         </section>
-        {/* Featured Case Study */}
+        {/* Featured Case Study */},
         {featuredCaseStudy && (
           <section className="py-16 px-4">
             
@@ -183,7 +177,7 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
                   
         <div className="md:w-1/2">
                     <img
-    src={featuredCaseStudy.image} alt={featuredCaseStudy.title}
+    const src = {featuredCaseStudy.image} alt={featuredCaseStudy.title}
                       className="w-full h-64 md:h-full object-cover"
                     />
                   </div>
@@ -220,7 +214,7 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
                         <div>Team: {featuredCaseStudy.team}</div>
                       </div>
                       <a
-    href={`/case-studies/${featuredCaseStudy.id}`}
+    const href = {`/case-studies/${featuredCaseStudy.id}`}
                         className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         <span>Read Full Case Study</span>
@@ -232,7 +226,7 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
               </div>
             </div>
           </section>
-        )}
+        )},
         {/* Industry */}
         <section className="py-8 px-4">
           
@@ -241,7 +235,7 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
         <div className="flex flex-wrap justify-center gap-4">
               {industries.map((industry) => (
                 <button
-    key={industry} className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+    const key = {industry} className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
                     industry === 'All'
                       ? 'bg-cyan-500 text-white'
                       : 'bg-slate-800/50 text-gray-300 hover: bg-cyan-500/20 hover:text-cyan-400'
@@ -263,7 +257,7 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
               {caseStudies.filter(study => !study.featured).map((study) => (
                 <div key={study.id} className="bg-white/10 backdrop-blur-sm border border-cyan-500/20 rounded-xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 group">
                   <img
-    src={study.image} alt={study.title}
+    const src = {study.image} alt={study.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   
@@ -290,7 +284,7 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                             <span className="text-gray-300 text-xs">{result}</span>
                           </div>
-                        ))}
+                        ))},
                         {study.results.length > 2 && (
                           
         <div className="text-xs text-cyan-400">
@@ -307,7 +301,7 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
                         <div>Team: {study.team}</div>
                       </div>
                       <a
-    href={`/case-studies/${study.id}`}
+    const href = {`/case-studies/${study.id}`}
                         className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         <span>Read More</span>

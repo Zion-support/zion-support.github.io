@@ -12,8 +12,7 @@ const WebDevelopmentPage: React.FC = () => {
       icon: Smartphone,
       features: ['Mobile-First Design', 'Cross-Browser Compatibility', 'Fast Loading', 'SEO Optimized'],
       price: 'Starting at $2,999',
-      popular: true,
-    },
+      popular: true},
     {
       id: 'e-commerce-solutions',
       title: 'E-commerce Solutions',
@@ -21,8 +20,7 @@ const WebDevelopmentPage: React.FC = () => {
       icon: Globe,
       features: ['Payment Integration', 'Inventory Management', 'Order Tracking', 'Admin Dashboard'],
       price: 'Starting at $4,999',
-      popular: false,
-    },
+      popular: false},
     {
       id: 'web-applications',
       title: 'Web Applications',
@@ -30,8 +28,7 @@ const WebDevelopmentPage: React.FC = () => {
       icon: Code,
       features: ['Custom Development', 'API Integration', 'Database Design', 'User Authentication'],
       price: 'Starting at $7,999',
-      popular: false,
-    },
+      popular: false},
     {
       id: 'cms-development',
       title: 'CMS Development',
@@ -39,8 +36,7 @@ const WebDevelopmentPage: React.FC = () => {
       icon: Settings,
       features: ['Easy Content Updates', 'User Management', 'SEO Tools', 'Multi-language Support'],
       price: 'Starting at $3,999',
-      popular: false,
-    },
+      popular: false},
     {
       id: 'progressive-web-apps',
       title: 'Progressive Web Apps',
@@ -48,8 +44,7 @@ const WebDevelopmentPage: React.FC = () => {
       icon: Zap,
       features: ['Offline Functionality', 'Push Notifications', 'App-like Experience', 'Installable'],
       price: 'Starting at $5,999',
-      popular: false,
-    },
+      popular: false},
     {
       id: 'web-maintenance',
       title: 'Web Maintenance',
@@ -57,9 +52,7 @@ const WebDevelopmentPage: React.FC = () => {
       icon: Shield,
       features: ['Security Updates', 'Performance Optimization', 'Backup & Recovery', '24/7 Monitoring'],
       price: 'Starting at $299/month',
-      popular: false,
-    },
-  ];
+      popular: false}];
 
 const technologies = [
     { name: 'React', icon: '⚛️' },
@@ -69,31 +62,25 @@ const technologies = [
     { name: 'MongoDB', icon: '🍃' },
     { name: 'PostgreSQL', icon: '🐘' },
     { name: 'AWS', icon: '☁️' },
-    { name: 'Docker', icon: '🐳' },
-  ];
+    { name: 'Docker', icon: '🐳' }];
 
 const benefits = [
     {
       title: 'Modern Technologies',
       description: 'We use the latest technologies and best practices for optimal performance.',
-      icon: Code,
-    },
+      icon: Code},
     {
       title: 'Mobile-First Approach',
       description: 'All our websites are designed mobile-first for the best user experience.',
-      icon: Smartphone,
-    },
+      icon: Smartphone},
     {
       title: 'SEO Optimized',
       description: 'Built-in SEO features to help your website rank higher in search results.',
-      icon: BarChart3,
-    },
+      icon: BarChart3},
     {
       title: 'Fast & Secure',
       description: 'Optimized for speed and security to protect your business and users.',
-      icon: Shield,
-    },
-  ];
+      icon: Shield}];
   return (
     <>
       <Helmet>
@@ -194,7 +181,7 @@ const benefits = [
                 const IconComponent = service.icon;
   return (
                   <div
-    key={service.id} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 ${
+    const key = {service.id} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 ${
                       service.popular 
                         ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
                         : 'border-cyan-500/20'

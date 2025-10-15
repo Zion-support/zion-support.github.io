@@ -83,9 +83,8 @@ const ZionAIImageRecognitionPro = () => {
         "Up to 10,000 images/month",
         "Basic object detection",
         "Standard OCR",
-        "Email support",]
-        "Basic analytics"]
-      ],
+        "Email support"]
+        "Basic analytics"]],
       popular: false
     },
     {
@@ -99,9 +98,8 @@ const ZionAIImageRecognitionPro = () => {
         "Advanced analytics",
         "Priority support",
         "Custom models",
-        "API access",]
-        "Real-time processing"]
-      ],
+        "API access"]
+        "Real-time processing"]],
       popular: true
     },
     {
@@ -115,9 +113,8 @@ const ZionAIImageRecognitionPro = () => {
         "Custom model training",
         "24/7 support",
         "White-label options",
-        "On-premise deployment",]
-        "SLA guarantee"]
-      ],
+        "On-premise deployment"]
+        "SLA guarantee"]],
       popular: false
     }
   ];
@@ -272,10 +269,10 @@ const ZionAIImageRecognitionPro = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
               >
                 <div
-    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover: scale-110 transition-transform duration-300`}
+    const className = {`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover: scale-110 transition-transform duration-300`}
                 >
                   {feature.icon}
                 </div>
@@ -309,7 +306,7 @@ const ZionAIImageRecognitionPro = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
               >
                 
         <div className="flex items-center mb-4">
@@ -357,7 +354,7 @@ const ZionAIImageRecognitionPro = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div
-    key={index} className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+    const key = {index} className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
                   plan.popular
                     ? 'border-blue-500/50 shadow-blue-500/25'
                     : 'border-white/20 hover: border-white/30'
@@ -393,7 +390,7 @@ const ZionAIImageRecognitionPro = () => {
                 </div>
                 <Link
     to="/contact"
-                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  const className = {`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-400 hover:to-cyan-400'
                       : 'border border-white/20 text-white hover: bg-white/10'
@@ -425,7 +422,7 @@ const ZionAIImageRecognitionPro = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
               >
                 
         <div className="flex items-center mb-4">

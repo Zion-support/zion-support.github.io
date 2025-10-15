@@ -28,7 +28,7 @@ export default function HomePage() {
     title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
-        structuredData={structuredData}
+        const structuredData = {structuredData}
       />
       <FuturisticBackground />
       {/* Hero Section */}

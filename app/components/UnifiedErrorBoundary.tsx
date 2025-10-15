@@ -27,21 +27,18 @@ constructor(props: Props) {
       error: null,
       errorInfo: null,
       retryCount: 0,
-      isRetrying: false,
-    };
+      isRetrying: false};
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
-      error,
-    };
+      error};
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     logger.error('Error caught by UnifiedErrorBoundary: ', error, errorInfo);
     this.setState({
       error,
-      errorInfo,
-    });
+      errorInfo});
     if (this.props.onError) {
       this.props.onError( errorInfo);
     }
@@ -52,9 +49,7 @@ constructor(props: Props) {
         fatal: false,
         custom_map: {,
     error_stack: error.stack,
-          component_stack: errorInfo.componentStack,
-        },
-      });
+          component_stack: errorInfo.componentStack}});
     }
   }
   handleRetry = () => {
@@ -74,8 +69,7 @@ constructor(props: Props) {
         error: null,
         errorInfo: null,
         retryCount: this.state.retryCount + 1,
-        isRetrying: false,
-      });
+        isRetrying: false});
     }, 1000);
   };
   handleReset = () => {
@@ -84,8 +78,7 @@ constructor(props: Props) {
       error: null,
       errorInfo: null,
       retryCount: 0,
-      isRetrying: false,
-    });
+      isRetrying: false});
   };
   get canRetry(): boolean {
     return this.state.retryCount < this.maxRetries;
@@ -132,7 +125,7 @@ const { showDetails = process.env.NODE_ENV === 'development' } = this.props;
           <p className="text-gray-300 mb-6 leading-relaxed">
                   We're sorry, but something unexpected happened. Our team has been notified and we're working to fix it.
                 </p>
-                {/* Error Details (Development, only) */}
+                {/* Error Details (Development, only) */},
                 {showDetails && error && (
                   
         <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left">
@@ -148,20 +141,20 @@ const { showDetails = process.env.NODE_ENV === 'development' } = this.props;
                       </details>
                     )}
                   </div>
-                )}
-                {/* Retry Count */}
+                )},
+                {/* Retry Count */},
                 {retryCount > 0 && (
                   
           <p className="text-yellow-400 text-sm mb-4">
                     Retry attempt {retryCount} of {this.maxRetries}
                   </p>
-                )}
+                )},
                 {/* Action Buttons */}
                 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   {this.canRetry && (
                     <button
-    onClick={this.handleRetry} disabled={isRetrying}
+    const onClick = {this.handleRetry} disabled={isRetrying}
                       className="bg-cyan-500 hover:bg-cyan-600 disabled:bg-cyan-500/50 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center gap-2"
                     >
                       {isRetrying ? (
@@ -176,12 +169,12 @@ const { showDetails = process.env.NODE_ENV === 'development' } = this.props;
                     </button>
                   )}
                   <button
-    onClick={this.handleReset} className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200"
+    const onClick = {this.handleReset} className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200"
                   >
                     Reset
                   </button>
                   <button
-    onClick={() => window.location.href = '/'} className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-6 py-3 rounded-lg font-semibold transition-all duration-200"
+    const onClick = {() => window.location.href = '/'} className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-6 py-3 rounded-lg font-semibold transition-all duration-200"
                   >
                     Go Home
                   </button>

@@ -21,8 +21,7 @@ const getBreadcrumbName = () => {
       'terms': 'Terms of Service',
       'support': 'Support',
       'demo': 'Demo',
-      'tutorials': 'Tutorials',
-    };
+      'tutorials': 'Tutorials'};
   return breadcrumbMap[path] || path.charAt(0).toUpperCase() + path.slice(1);
   };
   if (pathnames.length === 0) {
@@ -54,7 +53,7 @@ const isLast = index === pathnames.length - 1;
                   </span>
                 ) : (
                   <Link
-    to={routeTo} className="text-gray-300 hover:text-cyan-400 transition-colors"
+    const to = {routeTo} className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     {getBreadcrumbName(path)}
                   </Link>

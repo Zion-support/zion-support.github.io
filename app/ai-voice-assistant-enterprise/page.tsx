@@ -108,9 +108,8 @@ const pricingPlans = [
         "5 languages supported",
         "Basic voice recognition",
         "Email support",
-        "Standard integration",]
-        "1 voice personality"]
-      ],
+        "Standard integration"]
+        "1 voice personality"]],
       popular: false
     },
     {
@@ -125,9 +124,8 @@ const pricingPlans = [
         "Priority support",
         "Custom integrations",
         "5 voice personalities",
-        "Analytics dashboard",]
-        "API access"]
-      ],
+        "Analytics dashboard"]
+        "API access"]],
       popular: true
     },
     {
@@ -142,9 +140,8 @@ const pricingPlans = [
         "24/7 dedicated support",
         "Custom development",
         "Unlimited personalities",
-        "Advanced analytics",]
-        "On-premise deployment"]
-      ],
+        "Advanced analytics"]
+        "On-premise deployment"]],
       popular: false
     }
   ];

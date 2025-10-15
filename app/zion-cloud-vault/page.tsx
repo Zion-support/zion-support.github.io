@@ -66,9 +66,8 @@ export default function ZionCloudVault() {
         "5 devices",
         "Basic sharing",
         "Email support",
-        "30-day version history",]
-        "Standard encryption"]
-      ],
+        "30-day version history"]
+        "Standard encryption"]],
       popular: false
     },
     {
@@ -83,9 +82,8 @@ export default function ZionCloudVault() {
         "Priority support",
         "1-year version history",
         "Advanced encryption",
-        "Team collaboration",]
-        "API access"]
-      ],
+        "Team collaboration"]
+        "API access"]],
       popular: true
     },
     {
@@ -101,9 +99,8 @@ export default function ZionCloudVault() {
         "Unlimited version history",
         "Military-grade encryption",
         "Advanced admin controls",
-        "SSO integration",]
-        "Compliance reporting"]
-      ],
+        "SSO integration"]
+        "Compliance reporting"]],
       popular: false
     }
   ];
@@ -238,7 +235,7 @@ export default function ZionCloudVault() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden"
                 >
                   
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -286,7 +283,7 @@ export default function ZionCloudVault() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
-    key={index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
+    const key = {index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
                     plan.popular 
                       ? 'border-blue-500/50 bg-gradient-to-br from-blue-500/10 to-cyan-500/10' 
                       : 'border-white/20 hover: border-blue-500/30'
@@ -322,7 +319,7 @@ export default function ZionCloudVault() {
                   </ul>
                   <Link
     to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
+                    const className = {`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
                       plan.popular
                         ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700 shadow-lg hover:shadow-blue-500/25'
                         : 'border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-slate-900'
@@ -353,7 +350,7 @@ export default function ZionCloudVault() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden"
                 >
                   
         <div className="flex items-center mb-4">

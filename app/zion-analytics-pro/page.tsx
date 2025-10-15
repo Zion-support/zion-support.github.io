@@ -65,9 +65,8 @@ export default function ZionAnalyticsPro() {
         "Up to 5 data sources",
         "Basic dashboards",
         "Email support",
-        "1 user account",]
-        "30-day data retention"]
-      ],
+        "1 user account"]
+        "30-day data retention"]],
       popular: false
     },
     {
@@ -81,9 +80,8 @@ export default function ZionAnalyticsPro() {
         "Custom reports",
         "Priority support",
         "Up to 5 user accounts",
-        "1-year data retention",]
-        "API access"]
-      ],
+        "1-year data retention"]
+        "API access"]],
       popular: true
     },
     {
@@ -97,9 +95,8 @@ export default function ZionAnalyticsPro() {
         "Custom integrations",
         "Dedicated support",
         "Unlimited users",
-        "Unlimited data retention",]
-        "Advanced security features"]
-      ],
+        "Unlimited data retention"]
+        "Advanced security features"]],
       popular: false
     }
   ];
@@ -243,7 +240,7 @@ export default function ZionAnalyticsPro() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
                   
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -291,7 +288,7 @@ export default function ZionAnalyticsPro() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
-    key={index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
+    const key = {index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
                     plan.popular 
                       ? 'border-cyan-500/50 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
                       : 'border-white/20 hover: border-cyan-500/30'
@@ -327,7 +324,7 @@ export default function ZionAnalyticsPro() {
                   </ul>
                   <Link
     to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
+                    const className = {`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25'
                         : 'border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900'
@@ -358,7 +355,7 @@ export default function ZionAnalyticsPro() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
-    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+    const key = {index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
                   
         <div className="flex items-center mb-4">

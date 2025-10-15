@@ -13,8 +13,7 @@ const AiProjectManagerPage: React.FC = () => {
     "Team collaboration and communication tools",
     "Budget tracking and cost optimization",
     "Integration with 50+ popular tools",
-    "Predictive analytics and insights"
-  ];
+    "Predictive analytics and insights"];
 
 const integrations = [
     { name: "Jira", icon: <Target className="w-6 h-6" />, color: "text-blue-600" },
@@ -36,9 +35,8 @@ const pricingPlans = [
         "Basic AI features",
         "Team collaboration",
         "Basic analytics",
-        "Email support",]
-        "5 team members"]
-      ],
+        "Email support"]
+        "5 team members"]],
       popular: false
     },
     {
@@ -53,9 +51,8 @@ const pricingPlans = [
         "Priority support",
         "25 team members",
         "Custom integrations",
-        "Advanced reporting",]
-        "API access"]
-      ],
+        "Advanced reporting"]
+        "API access"]],
       popular: true
     },
     {
@@ -70,9 +67,8 @@ const pricingPlans = [
         "24/7 phone support",
         "Unlimited team members",
         "Advanced automation",
-        "Dedicated account manager",]
-        "Custom training"]
-      ],
+        "Dedicated account manager"]
+        "Custom training"]],
       popular: false
     }
   ];

@@ -184,7 +184,7 @@ const enterpriseServices = [
                 
         <div className="space-y-3">
                   <Link
-    to={service.link} className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
+    const to = {service.link} className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
                   >
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -244,7 +244,7 @@ const enterpriseServices = [
                     ))}
                   </ul>
                   <Link
-    to={service.link} className="text-purple-400 hover:text-purple-300 font-semibold flex items-center group"
+    const to = {service.link} className="text-purple-400 hover:text-purple-300 font-semibold flex items-center group"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

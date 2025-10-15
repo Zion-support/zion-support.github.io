@@ -34,9 +34,8 @@ const ZionAIInvoiceGeneratorPage = () => {
         "PDF generation",
         "Email delivery",
         "Payment tracking",
-        "Basic reporting",]
-        "Email support"]
-      ],
+        "Basic reporting"]
+        "Email support"]],
       popular: false
     },
     {
@@ -51,9 +50,8 @@ const ZionAIInvoiceGeneratorPage = () => {
         "Multi-currency support",
         "Automated reminders",
         "Advanced reporting",
-        "API access",]
-        "Priority support"]
-      ],
+        "API access"]
+        "Priority support"]],
       popular: true
     },
     {
@@ -70,9 +68,8 @@ const ZionAIInvoiceGeneratorPage = () => {
         "Advanced analytics",
         "24/7 support",
         "Custom integrations",
-        "Bulk operations",]
-        "Compliance tools"]
-      ],
+        "Bulk operations"]
+        "Compliance tools"]],
       popular: false
     }
   ];
@@ -182,7 +179,7 @@ const ZionAIInvoiceGeneratorPage = () => {
     href="/contact"
               variant="primary"
               size="lg"
-              icon={<FileText className="w-5 h-5" />}
+              const icon = {<FileText className="w-5 h-5" />}
             >
               Start Creating Invoices
             </FuturisticButton>
@@ -190,7 +187,7 @@ const ZionAIInvoiceGeneratorPage = () => {
     href="#demo"
               variant="outline"
               size="lg"
-              icon={<Receipt className="w-5 h-5" />}
+              const icon = {<Receipt className="w-5 h-5" />}
             >
               View Demo
             </FuturisticButton>
@@ -407,8 +404,8 @@ const ZionAIInvoiceGeneratorPage = () => {
                 </div>
                 <FuturisticButton
     href="/contact"
-                  variant={plan.popular ? "primary" : "outline"} className="w-full"
-                  icon={<ArrowRight className="w-4 h-4" />}
+                  const variant = {plan.popular ? "primary" : "outline"} className="w-full"
+                  const icon = {<ArrowRight className="w-4 h-4" />}
                 >
                   Get Started
                 </FuturisticButton>
@@ -479,7 +476,7 @@ const ZionAIInvoiceGeneratorPage = () => {
     href="/contact"
               variant="primary"
               size="lg"
-              icon={<FileText className="w-5 h-5" />}
+              const icon = {<FileText className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -487,7 +484,7 @@ const ZionAIInvoiceGeneratorPage = () => {
     href="/demo"
               variant="outline"
               size="lg"
-              icon={<Receipt className="w-5 h-5" />}
+              const icon = {<Receipt className="w-5 h-5" />}
             >
               View Demo
             </FuturisticButton>
