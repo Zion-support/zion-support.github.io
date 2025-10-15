@@ -1,260 +1,80 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
 
 const CybersecurityPage: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
-        <title>Cybersecurity Services - Zion Tech Group | Advanced Security Solutions</title>
+        <title>Cybersecurity - Zion Tech Group | Advanced Security Solutions</title>
         <meta
           name="description"
-          content="Comprehensive cybersecurity services including AI-powered threat detection, security monitoring, network security, and security automation. Protect your business with advanced security solutions."
+          content="Protect your business with our comprehensive cybersecurity solutions. Advanced threat detection, security audits, and compliance management from Zion Tech Group."
         />
         <meta
           name="keywords"
-          content="cybersecurity, security services, threat detection, security monitoring, network security, security automation, AI security, penetration testing, vulnerability assessment"
+          content="cybersecurity, security solutions, threat detection, security audit, compliance, data protection, network security"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.3),transparent_50%)]"></div>
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-block">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-purple-400 to-pink-400 animate-pulse">
-                  Cybersecurity
-                </span>
-                <div className="absolute -inset-1 bg-gradient-to-r from-red-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
-              </h1>
-            </div>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced cybersecurity solutions designed to protect your business from evolving threats. 
-              From AI-powered threat detection to comprehensive security monitoring, we provide enterprise-grade protection.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+              Cybersecurity
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Protect your business with our comprehensive cybersecurity solutions. Advanced threat detection, 
+              security audits, and compliance management.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="group bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-red-500/25 hover:scale-105"
-              >
-                Get Protected
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/consultation"
-                className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
-              >
-                Security Assessment
-              </Link>
-            </div>
           </div>
-        </section>
 
-        {/* Services Grid */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-purple-400">
-                  Security Solutions
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover our comprehensive suite of cybersecurity services designed to protect your business from all types of threats.
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-red-500/20">
+              <h3 className="text-xl font-semibold mb-4 text-red-400">Threat Detection</h3>
+              <p className="text-gray-300 mb-4">
+                Advanced AI-powered threat detection and response systems to protect your infrastructure.
               </p>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• Real-time monitoring</li>
+                <li>• AI threat analysis</li>
+                <li>• Automated response</li>
+                <li>• 24/7 surveillance</li>
+              </ul>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 relative overflow-hidden"
-                >
-                  {/* Animated background effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
-                  <div className="relative z-10">
-                    <div
-                      className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
-                    >
-                      {service.icon}
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-red-300 transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-300 text-center mb-4 leading-relaxed">
-                      {service.description}
-                    </p>
-                    
-                    {/* Price and Features */}
-                    <div className="space-y-3">
-                      <div className="text-center">
-                        <span className="text-red-400 font-bold text-lg">{service.price}</span>
-                      </div>
-                      <div className="flex flex-wrap gap-2 justify-center">
-                        {service.features.map((feature, idx) => (
-                          <span
-                            key={idx}
-                            className="text-xs bg-red-500/20 text-red-300 px-2 py-1 rounded-full border border-red-500/30"
-                          >
-                            {feature}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    
-                    <div className="mt-4 text-center">
-                      <Link
-                        to={service.path}
-                        className="inline-flex items-center text-red-400 hover:text-red-300 font-medium group-hover:translate-x-1 transition-all duration-300"
-                      >
-                        Learn More
-                        <ArrowRight className="w-4 h-4 ml-1" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Contact Information Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Secure Your Business Today
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Don't wait for a security breach. Join thousands of businesses already using our cybersecurity solutions to protect their valuable data and assets.
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-red-500/20">
+              <h3 className="text-xl font-semibold mb-4 text-red-400">Security Audit</h3>
+              <p className="text-gray-300 mb-4">
+                Comprehensive security assessments to identify vulnerabilities and strengthen your defenses.
               </p>
-              
-              {/* Contact Details */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2">Email</h3>
-                  <p className="text-red-400">kleber@ziontechgroup.com</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Smartphone className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2">Phone</h3>
-                  <p className="text-red-400">+1 302 464 0950</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Globe className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2">Address</h3>
-                  <p className="text-red-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-12">
-                <div className="space-y-8">
-                  <div className="flex items-start space-x-4">
-                    <Shield className="w-8 h-8 text-cyan-400 flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-2">Expert Security Team</h3>
-                      <p className="text-gray-300">Certified security professionals with years of experience in threat detection and incident response.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <Zap className="w-8 h-8 text-cyan-400 flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-2">Advanced Technology</h3>
-                      <p className="text-gray-300">AI-powered threat detection and automated response systems for real-time protection.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <Lock className="w-8 h-8 text-cyan-400 flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-2">24/7 Monitoring</h3>
-                      <p className="text-gray-300">Round-the-clock security monitoring and incident response to keep your systems protected.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="space-y-8">
-                  <div className="flex items-start space-x-4">
-                    <Eye className="w-8 h-8 text-cyan-400 flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-2">Compliance Ready</h3>
-                      <p className="text-gray-300">Help you meet SOC 2, ISO 27001, GDPR, and other regulatory requirements.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <AlertTriangle className="w-8 h-8 text-cyan-400 flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-2">Proactive Approach</h3>
-                      <p className="text-gray-300">Identify and address security vulnerabilities before they become threats.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <CheckCircle className="w-8 h-8 text-cyan-400 flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-2">Proven Track Record</h3>
-                      <p className="text-gray-300">Zero successful breaches for our clients with comprehensive security measures.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• Vulnerability scanning</li>
+                <li>• Penetration testing</li>
+                <li>• Compliance checks</li>
+                <li>• Security recommendations</li>
+              </ul>
             </div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Secure Your Business Today</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Don&apos;t wait for a security breach. Get comprehensive protection with our advanced cybersecurity solutions.
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-red-500/20">
+              <h3 className="text-xl font-semibold mb-4 text-red-400">Data Protection</h3>
+              <p className="text-gray-300 mb-4">
+                Advanced encryption and data protection solutions to safeguard your sensitive information.
               </p>
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="group bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-red-500/25 hover:scale-105"
-                >
-                  Get Security Assessment
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
-                  to="/consultation"
-                  className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
-                >
-                  Free Consultation
-                </Link>
-              </div>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li>• End-to-end encryption</li>
+                <li>• Data backup solutions</li>
+                <li>• Access controls</li>
+                <li>• Privacy compliance</li>
+              </ul>
             </div>
           </div>
-        </section>
-=======
-      <SEOHead 
-        title="cybersecurity - Zion Tech Group"
-        description="Zion Tech Group cybersecurity service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">cybersecurity</h1>
-          <p className="text-gray-300">Coming soon...</p>
+
+          <div className="text-center">
+            <button className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-orange-700 transition-all duration-300">
+              Get Started with Cybersecurity
+            </button>
+          </div>
         </div>
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
       </div>
     </>
   );
