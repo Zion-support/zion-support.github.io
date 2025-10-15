@@ -1,170 +1,224 @@
-import React from 'react;'
-import { ArrowRight, CheckCircle, Image, Scan } from 'lucide-react;'
-import EnhancedSEO from '../components/EnhancedSEO;'
-import ResponsiveContainer from '../components/ResponsiveContainer;'
-import FuturisticCard from '../components/FuturisticCard;'
-import FuturisticButton from '../components/FuturisticButton;'
-const AIImageRecognitionPro = () => {
-  const features = [
-    {
-      title: "Object Detection",""
-      description: "Identify and classify objects in images with high accuracy",""
-      icon: <Eye className="w-6 h-6" />,""
-      color: "from-blue-500 to-cyan-500""
-    },
-    {
-      title: "Facial Recognition",""
-      description: "Advanced facial recognition and analysis capabilities",""
-      icon: <Users className="w-6 h-6" />,""
-      color: "from-green-500 to-emerald-500""
-    },
-    {
-      title: "Text Extraction",""
-      description: "Extract text from images using OCR technology",""
-      icon: <Scan className="w-6 h-6" />,""
-      color: "from-purple-500 to-pink-500""
-    },
-    {
-      title: "Scene Analysis",""
-      description: "Understand and analyze complex scenes and contexts",""
-      icon: <Image className="w-6 h-6" />,""
-      color: "from-orange-500 to-red-500""
-    }
-  ];
+import React from 'react';
+import SEOHead from '../components/SEOHead';
+
+const AIImageRecognitionProPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">""
-      <EnhancedSEO
-        title="AI Image Recognition Pro - Advanced Computer Vision | Zion Tech Group""
-        description="Transform images into actionable insights with AI-powered recognition. Object detection, facial recognition, and text extraction for modern applications.""
-        keywords="AI image recognition, computer vision, object detection, facial recognition, OCR, image analysis""
-        canonical="https://ziontechgroup.com/ai-image-recognition-pro""
+    <>
+      <SEOHead
+        title="Zion AI Image Recognition Pro - Advanced Computer Vision Solutions"
+        description="Transform your business with our advanced AI image recognition platform. Object detection, facial recognition, and automated image analysis capabilities."
+        keywords="AI image recognition, computer vision, object detection, facial recognition, OCR, image analysis, AI vision"
+        canonicalUrl="https://ziontechgroup.com/ai-image-recognition-pro"
       />
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">""
-        <div className="absolute inset-0 overflow-hidden">""
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>""
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>""
-        </div>
-        <ResponsiveContainer className="text-center relative z-10">""
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">""
-            <Camera className="w-4 h-4 text-cyan-400 mr-2" />""
-            <span className="text-cyan-400 text-sm font-medium">Computer Vision AI</span>""
-          </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">""
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">""
-              AI Image Recognition Pro
-            </span>
-          </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">""
-            Transform images into actionable insights with AI-powered recognition.
-            Object detection, facial recognition, and text extraction for modern applications.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">""
-            <FuturisticButton
-              href="/contact""
-              variant="primary""
-              size="lg""
-              icon={<ArrowRight className="w-5 h-5" />}""
-            >
-              Get Started Today
-            </FuturisticButton>
-            <FuturisticButton
-              href="/demo""
-              variant="outline""
-              size="lg""
-              icon={<Camera className="w-5 h-5" />}""
-            >
-              Try Demo
-            </FuturisticButton>
-          </div>
-        </ResponsiveContainer>
-      </section>
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""
-        <ResponsiveContainer>
-          <div className="text-center mb-16">""
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">""
-              Advanced Vision Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">""
-              Everything you need to build intelligent image recognition systems.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">""
-            {features.map((feature, index) => (
-              <FuturisticCard
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10""
-              >
-                <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+      
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Zion AI Image Recognition Pro</h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Advanced computer vision platform with object detection, facial recognition, and automated image analysis capabilities
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="#features" 
+                  className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  {feature.icon}
-                </div>
-                <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">""
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">""
-                  {feature.description}
-                </p>)
-              </FuturisticCard>)
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">""
-        <ResponsiveContainer>
-          <div className="text-center mb-16">""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
-              Why Choose AI Image Recognition Pro?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">""
-              Experience the power of computer vision that delivers accurate results.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">""
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />""
-                <span className="text-white font-medium">{benefit}</span>""
+                  Explore Features
+                </a>
+                <a 
+                  href="/contact?service=ai-image-recognition-pro" 
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                >
+                  Get Started
+                </a>
               </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""
-        <ResponsiveContainer>
-          <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">""
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">""
-              Ready to See with AI?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">""
-              Join leading companies using AI Image Recognition Pro to build intelligent vision systems.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <FuturisticButton
-                href="/contact""
-                variant="primary""
-                size="lg""
-                icon={<ArrowRight className="w-5 h-5" />}""
-              >
-                Start Your Free Trial
-              </FuturisticButton>
-              <FuturisticButton
-                href="/pricing""
-                variant="outline""
-                size="lg""
-                icon={<Target className="w-5 h-5" />}""
-              >
-                View Pricing
-              </FuturisticButton>
             </div>
           </div>
-        </ResponsiveContainer>
-      </section>
-    </div>
+        </div>
+
+        {/* Features Section */}
+        <div id="features" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Computer Vision Features</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our AI image recognition platform combines cutting-edge computer vision with machine learning for accurate and fast image analysis
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Object Detection</h3>
+              <p className="text-gray-600">Identify and locate objects in images with high accuracy using state-of-the-art detection algorithms</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">👤</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Facial Recognition</h3>
+              <p className="text-gray-600">Advanced facial recognition with emotion detection, age estimation, and identity verification</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">📝</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">OCR Text Extraction</h3>
+              <p className="text-gray-600">Extract text from images, documents, and handwritten notes with high accuracy OCR technology</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">🏷️</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Image Classification</h3>
+              <p className="text-gray-600">Automatically categorize and tag images based on content, style, and context</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">⭐</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Quality Assessment</h3>
+              <p className="text-gray-600">Analyze image quality, resolution, and composition to ensure optimal visual content</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Real-time Processing</h3>
+              <p className="text-gray-600">Process images in real-time with ultra-low latency for live applications and video streams</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Pricing Section */}
+        <div className="bg-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>
+              <p className="text-lg text-gray-600">Choose the plan that fits your image processing needs</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-gray-50 p-8 rounded-xl">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Basic</h3>
+                <div className="text-4xl font-bold text-green-600 mb-4">$199<span className="text-lg text-gray-500">/month</span></div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Up to 10,000 images/month</li>
+                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Basic object detection</li>
+                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> OCR text extraction</li>
+                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Email support</li>
+                </ul>
+                <a href="/contact?service=ai-image-recognition-pro&plan=basic" className="w-full bg-green-600 text-white text-center py-3 px-4 rounded-lg hover:bg-green-700 transition-colors">
+                  Get Started
+                </a>
+              </div>
+
+              <div className="bg-green-600 text-white p-8 rounded-xl relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-yellow-400 text-green-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Pro</h3>
+                <div className="text-4xl font-bold mb-4">$599<span className="text-lg opacity-75">/month</span></div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Up to 100,000 images/month</li>
+                  <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Advanced object detection</li>
+                  <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Facial recognition</li>
+                  <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Image classification</li>
+                  <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Quality assessment</li>
+                  <li className="flex items-center"><span className="text-green-400 mr-2">✓</span> Priority support</li>
+                </ul>
+                <a href="/contact?service=ai-image-recognition-pro&plan=pro" className="w-full bg-white text-green-600 text-center py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+                  Get Started
+                </a>
+              </div>
+
+              <div className="bg-gray-50 p-8 rounded-xl">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
+                <div className="text-4xl font-bold text-green-600 mb-4">$1,499<span className="text-lg text-gray-500">/month</span></div>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Unlimited images</li>
+                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> All features included</li>
+                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Custom model training</li>
+                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Real-time processing</li>
+                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Advanced analytics</li>
+                  <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> 24/7 dedicated support</li>
+                </ul>
+                <a href="/contact?service=ai-image-recognition-pro&plan=enterprise" className="w-full bg-green-600 text-white text-center py-3 px-4 rounded-lg hover:bg-green-700 transition-colors">
+                  Contact Sales
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Use Cases Section */}
+        <div className="bg-gray-50 py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Use Cases</h2>
+              <p className="text-lg text-gray-600">See how our AI image recognition can transform your business</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Quality Control</h3>
+                <p className="text-gray-600">Automatically inspect products for defects, measure dimensions, and ensure quality standards in manufacturing.</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Security Monitoring</h3>
+                <p className="text-gray-600">Enhance security with facial recognition, object detection, and automated threat identification in surveillance systems.</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Content Moderation</h3>
+                <p className="text-gray-600">Automatically detect and filter inappropriate content, ensuring safe and compliant user-generated content.</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Medical Imaging</h3>
+                <p className="text-gray-600">Assist medical professionals with image analysis, diagnosis support, and automated medical image processing.</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">E-commerce Automation</h3>
+                <p className="text-gray-600">Automatically categorize products, extract product information, and optimize product listings with image analysis.</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Document Processing</h3>
+                <p className="text-gray-600">Extract text and data from documents, forms, and handwritten notes with high accuracy OCR technology.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business with AI Vision?</h2>
+            <p className="text-xl mb-8">
+              Join thousands of businesses already using our AI image recognition to automate processes and gain valuable insights.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/contact?service=ai-image-recognition-pro" 
+                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Start Free Trial
+              </a>
+              <a 
+                href="tel:+13024640950" 
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+              >
+                Call +1 302 464 0950
+              </a>
+            </div>
+            <div className="mt-8 text-sm">
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
-export default AIImageRecognitionPro;
+
+export default AIImageRecognitionProPage;

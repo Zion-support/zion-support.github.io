@@ -1,134 +1,372 @@
-<<<<<<< HEAD
-import React from 'react;'
-import { ArrowRight } from 'lucide-react;'
-import { CheckCircle } from 'lucide-react;'
-import { Star } from 'lucide-react;'
-import { Users } from 'lucide-react;'
-import { Clock } from 'lucide-react;'
-import { DollarSign } from 'lucide-react;'
-import { Shield } from 'lucide-react;'
-import { Code } from 'lucide-react;'
-import { Database } from 'lucide-react;'
-import { Mail } from 'lucide-react;'
-import { Settings } from 'lucide-react;'
-import { Target } from 'lucide-react;'
-import { TrendingUp } from 'lucide-react;'
-import { PieChart } from 'lucide-react;'
-import { MessageSquare } from 'lucide-react;'
-import { Heart } from 'lucide-react;'
-import { Globe } from 'lucide-react;'
-import { Smartphone } from 'lucide-react;'
-import { Network } from 'lucide-react;'
-import { Lock } from 'lucide-react;'
-import { Cpu } from 'lucide-react;'
-import { Wifi } from 'lucide-react;'
-import { Building2 } from 'lucide-react;'
-import { Briefcase } from 'lucide-react;'
-import { Lightbulb } from 'lucide-react;'
-import { Link } from 'react-router-dom;'
-import EnhancedSEO from '../components/EnhancedSEO;'
-const Page = () => {
+'use client';
+import React from 'react';
+import SEOHead from '../components/SEOHead';
+import { 
+  ShareIcon, 
+  ChartBarIcon, 
+  CogIcon, 
+  CheckCircleIcon,
+  ArrowRightIcon,
+  StarIcon,
+  CurrencyDollarIcon,
+  ClockIcon,
+  ShieldCheckIcon,
+  SparklesIcon,
+  CpuChipIcon,
+  EyeIcon,
+  CalendarIcon
+} from '@heroicons/react/24/outline';
+
+const SocialMediaSchedulerPage: React.FC = () => {
   const features = [
     {
-      icon: <CheckCircle className="w-8 h-8" />,""
-      title: 'Advanced Features',''
-      description: 'Cutting-edge technology for maximum efficiency''
+      icon: CalendarIcon,
+      title: 'Smart Scheduling',
+      description: 'AI-powered scheduling that determines optimal posting times for maximum engagement across all platforms.',
+      benefits: ['40% higher engagement', 'Optimal timing analysis', 'Multi-platform sync', 'Timezone optimization']
     },
     {
-      icon: <Shield className="w-8 h-8" />,""
-      title: 'Secure & Reliable',''
-      description: 'Enterprise-grade security and 99.9% uptime''
+      icon: CpuChipIcon,
+      title: 'Content Optimization',
+      description: 'AI analyzes your content and suggests improvements for better performance and engagement.',
+      benefits: ['25% higher reach', 'Hashtag optimization', 'Content suggestions', 'Performance prediction']
     },
     {
-      icon: <Users className="w-8 h-8" />,""
-      title: 'Expert Support',''
-      description: '24/7 support from our team of specialists''
+      icon: ChartBarIcon,
+      title: 'Analytics Dashboard',
+      description: 'Comprehensive analytics and reporting to track performance across all your social media platforms.',
+      benefits: ['Real-time analytics', 'ROI tracking', 'Audience insights', 'Competitor analysis']
+    },
+    {
+      icon: ShareIcon,
+      title: 'Multi-Platform Management',
+      description: 'Manage all your social media accounts from one dashboard with platform-specific optimizations.',
+      benefits: ['8+ platforms supported', 'Bulk posting', 'Content recycling', 'Cross-platform analytics']
     }
   ];
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$19',
+      period: '/month',
+      description: 'Perfect for individuals',
+      features: [
+        'Up to 3 social accounts',
+        '30 posts per month',
+        'Basic scheduling',
+        'Email support',
+        'Basic analytics'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$49',
+      period: '/month',
+      description: 'Ideal for small businesses',
+      features: [
+        'Up to 10 social accounts',
+        'Unlimited posts',
+        'AI optimization',
+        'Priority support',
+        'Advanced analytics',
+        'Content calendar',
+        'Team collaboration'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$149',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited accounts',
+        'White-label solution',
+        'Custom integrations',
+        'Dedicated support',
+        'Advanced reporting',
+        'API access',
+        'Custom training'
+      ],
+      popular: false
+    }
+  ];
+
+  const platforms = [
+    { name: 'Facebook', description: 'Posts, stories, and ads management' },
+    { name: 'Instagram', description: 'Feed posts, stories, and reels' },
+    { name: 'Twitter', description: 'Tweets, threads, and replies' },
+    { name: 'LinkedIn', description: 'Posts, articles, and company updates' },
+    { name: 'TikTok', description: 'Videos and trending content' },
+    { name: 'YouTube', description: 'Video uploads and community posts' },
+    { name: 'Pinterest', description: 'Pins and boards management' },
+    { name: 'Tumblr', description: 'Posts and reblogs' }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'Digital Marketing Co.',
+      role: 'Social Media Manager',
+      content: 'Social Media Scheduler has transformed our social media strategy. The AI optimization increased our engagement by 40% and saved us 10 hours per week.',
+      rating: 5
+    },
+    {
+      name: 'Mike Chen',
+      company: 'E-commerce Solutions',
+      role: 'Marketing Director',
+      content: 'The multi-platform management is incredible. We can now manage all our social accounts from one place, and the analytics are incredibly detailed.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      company: 'Creative Agency',
+      role: 'Content Manager',
+      content: 'The content optimization suggestions are spot-on. Our posts are performing much better, and the scheduling feature is a game-changer.',
+      rating: 5
+    }
+  ];
+
   return (
     <>
-      <EnhancedSEO
-        title="Page - Zion Tech Group""
-        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""
-        keywords="page, business solutions, technology services, professional services""
+      <SEOHead 
+        title="Social Media Scheduler - AI-Powered Social Media Management | Zion Tech Group"
+        description="Streamline your social media with AI-powered scheduling and optimization. Increase engagement by 40% and save 10 hours per week."
+        keywords="social media scheduler, social media management, content scheduling, social media automation, AI optimization"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
+      
+      <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
-          <div className="max-w-7xl mx-auto text-center">""
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
-              Page
-              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""
-                Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
-              Professional page services designed to help your business succeed and grow.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <Link
-                to="/contact""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
-              </Link>
-              <Link
-                to="/demo""
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
-              >
-                View Demo
-              </Link>
+        <section className="relative overflow-hidden py-20 lg:py-32">
+          <div className="absolute inset-0 bg-gradient-to-br from-pink-900/30 via-slate-900 to-orange-900/30"></div>
+          <div className="absolute inset-0 opacity-30" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          }}></div>
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-pink-500/10 border border-pink-500/20 mb-6">
+                <SparklesIcon className="w-5 h-5 text-pink-400 mr-2" />
+                <span className="text-pink-300 text-sm font-medium">AI-Powered Social Media</span>
+              </div>
+              
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-pink-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
+                  Social Media Scheduler
+                </span>
+              </h1>
+              
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Streamline your social media strategy with AI-powered scheduling, content optimization, and multi-platform management.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <button className="bg-gradient-to-r from-pink-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-pink-500/25">
+                  Start Free Trial
+                </button>
+                <button className="border-2 border-pink-400 text-pink-300 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-white transition-all duration-300">
+                  View Demo
+                </button>
+              </div>
+              
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-pink-400 mb-2">40%</div>
+                  <div className="text-gray-300 text-sm">Higher Engagement</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-orange-400 mb-2">8+</div>
+                  <div className="text-gray-300 text-sm">Platforms</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-yellow-400 mb-2">10h</div>
+                  <div className="text-gray-300 text-sm">Time Saved/Week</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">AI</div>
+                  <div className="text-gray-300 text-sm">Optimization</div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
+
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">""
-          <div className="max-w-7xl mx-auto">""
-            <div className="text-center mb-16">""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
-                Why Choose Our Page Services?
+        <section className="py-20 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+                Powerful <span className="bg-gradient-to-r from-pink-400 to-orange-400 bg-clip-text text-transparent">Features</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
-                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to manage and optimize your social media presence across all platforms.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {features.map((feature, index) => (
-                <div key={index} className="text-center">""
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-                    {feature.icon}
+                <div key={index} className="group bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-pink-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/20">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <feature.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-pink-300 transition-colors">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-400 mb-4">
+                        {feature.description}
+                      </p>
+                      <ul className="space-y-2">
+                        {feature.benefits.map((benefit, benefitIndex) => (
+                          <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                            <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                            <span>{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
-                  <p className="text-gray-300">{feature.description}</p>""
                 </div>
               ))}
             </div>
           </div>
         </section>
+
+        {/* Platforms Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-pink-400 to-orange-400 bg-clip-text text-transparent">Supported Platforms</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Manage all your social media accounts from one powerful dashboard.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {platforms.map((platform, index) => (
+                <div key={index} className="group bg-slate-800/50 p-6 rounded-lg border border-slate-700 hover:border-pink-500 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/20">
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-pink-300 transition-colors">
+                    {platform.name}
+                  </h3>
+                  <p className="text-gray-400 text-sm">
+                    {platform.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+                Simple <span className="bg-gradient-to-r from-pink-400 to-orange-400 bg-clip-text text-transparent">Pricing</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the perfect plan for your social media management needs.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+                  plan.popular 
+                    ? 'border-pink-500 shadow-pink-500/20' 
+                    : 'border-slate-700 hover:border-pink-500 hover:shadow-pink-500/20'
+                }`}>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-pink-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <p className="text-gray-400 mb-4">{plan.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-pink-400">{plan.price}</span>
+                      <span className="text-gray-400 ml-1">{plan.period}</span>
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-pink-600 to-orange-600 text-white hover:from-pink-700 hover:to-orange-700'
+                      : 'border-2 border-pink-400 text-pink-300 hover:bg-pink-400 hover:text-white'
+                  }`}>
+                    {plan.popular ? 'Get Started' : 'Choose Plan'}
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+                What Our <span className="bg-gradient-to-r from-pink-400 to-orange-400 bg-clip-text text-transparent">Customers Say</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Join thousands of social media managers who trust our platform.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-pink-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/20">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <StarIcon key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                  <div>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
-          <div className="max-w-4xl mx-auto text-center">""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
-              Ready to Get Started?
+        <section className="py-20 bg-gradient-to-r from-pink-900/40 via-slate-900 to-orange-900/40">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-orange-400 bg-clip-text text-transparent">
+              Ready to Transform Your Social Media?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">""
-              Let's discuss how our page services can help your business succeed.''
+            <p className="text-xl text-gray-300 mb-8">
+              Start your free trial today and see how AI can revolutionize your social media strategy.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <Link
-                to="/contact""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
-              >
-                Contact Us
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
-              </Link>
-              <Link
-                to="/services""
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
-              >
-                View All Services
-              </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-pink-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-pink-500/25">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
+                Contact Sales
+              </button>
             </div>
           </div>
         </section>
@@ -136,749 +374,5 @@ const Page = () => {
     </>
   );
 };
-const page = React.lazy(() => import('./page'));''
-export default page;
-=======
-import React from 'react';;
-import { Link } from 'react-router-dom';
-import { Globe, Calendar, BarChart3, CheckCircle, ArrowRight, Target, Zap, Users, Image } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import EnhancedSEO from '../components/EnhancedSEO';
-
-import FuturisticCard from '../components/FuturisticCard',
-      import FuturisticButton from '../components/FuturisticButton',
-      import ResponsiveContainer from '../components/ResponsiveContainer',
-      import EnhancedSEO from '../components/EnhancedSEO';
-,
-      const SocialMediaSchedulerPage = () => {"}
-        "
-  const features = [",
-        "
-    {""}
-      title: "Multi-Platform Scheduling",""
-      description: "Schedule posts across all major social media platforms from one dashboard",""
-      icon: <Globe className="w-8 h-8" />,""
-      benefits: ["Facebook", "Twitter", "Instagram", "edIn", "TikTok", "YouTube"]
-    },",
-        "
-    {"}
-        "
-      title: "Content Calendar",""
-      description: "Visual content calendar to plan and organize your social media strategy",""
-      icon: <Calendar className="w-8 h-8" />,""
-      benefits: ["Drag & drop scheduling", "Bulk upload", "Content templates", "Holiday planning"]
-    },",
-        "
-    {"}
-        "
-      title: "Analytics & Insights",""
-      description: "Comprehensive analytics to track performance and optimize your strategy",""
-      icon: <className="w-8 h-8" />,""
-      benefits: ["Engagement metrics", "Reach analysis", "Best time posting", "ROI tracking"]
-    },",
-        "
-    {"}
-        "
-      title: "Content Creation Tools",""
-      description: "Built-in tools for creating engaging visual content and captions",""
-      icon: <Image className="w-8 h-8" />,""
-      benefits: ["Image editor", "Video creator", "Caption generator", "Hashtag suggestions"]
-    },",
-        "
-    {"}
-        "
-      title: "Team Collaboration",""
-      description: "Collaborate with your team on content creation and approval workflows",""
-      icon: <Users className="w-8 h-8" />,""
-      benefits: ["Team management", "Approval workflows", "Content review", "Role permissions"]
-    },",
-        "
-    {"}
-        "
-      title: "Automation & AI",""
-      description: "AI-powered features to automate content creation and optimization",""
-      icon: <className="w-8 h-8" />,""
-      benefits: ["Auto-posting", "Content suggestions", "Optimal timing", "Trend analysis"]
-    };
-  ];
-,
-      const pricing = [",
-        "
-    {"}
-        "
-      name: "Starter",""
-      price: "$29",""
-      period: "per month",""
-      description: "Perfect for small businesses and individuals",",
-        "
-      features: [",
-        "
-        "Up to 3 social accounts",""
-        "30 posts per month",""
-        "Basic analytics",""
-        "Email support",""
-        "Mobile app access";
-      ],",
-        "
-      popular: false",
-        "
-    },",
-        "
-    {"}
-        "
-      name: "Professional",""
-      price: "$79",""
-      period: "per month",""
-      description: "Ideal for growing businesses and agencies",",
-        "
-      features: [",
-        "
-        "Up to 10 social accounts",""
-        "Unlimited posts",""
-        "Advanced analytics",""
-        "Team collaboration",""
-        "Priority support",""
-        "Content creation tools";
-      ],",
-        "
-      popular: true",
-        "
-    },",
-        "
-    {"}
-        "
-      name: "Enterprise",""
-      price: "$199",""
-      period: "per month",""
-      description: "For large organizations with advanced needs",",
-        "
-      features: [",
-        "
-        "Unlimited social accounts",""
-        "White-label solution",""
-        "Custom integrations",""
-        "Dedicated support",""
-        "Advanced security",""
-        "Custom development";
-      ],",
-        "
-      popular: false",
-        "
-    };
-  ];
-,
-      const benefits = [",
-        "
-    {"}
-        "
-      title: "Save Time",""
-      description: "Reduce social media management time by up to 70% with automation",""
-      icon: <className="w-6 h-6" />",
-        "
-    },",
-        "
-    {""}
-      title: "Increase Engagement",""
-      description: "Boost engagement rates by 40% with optimized posting times",""
-      icon: <Target className="w-6 h-6" />",
-        "
-    },",
-        "
-    {""}
-      title: "Better Planning",""
-      description: "Plan your content strategy with visual calendar and analytics",""
-      icon: <Calendar className="w-6 h-6" />",
-        "
-    },",
-        "
-    {""}
-      title: "Team Efficiency",""
-      description: "Improve team collaboration and content approval workflows",""
-      icon: <Users className="w-6 h-6" />""
-    };
-
-const SocialMediaSchedulerPage = () => {
-  const features = [
-    {
-      title: "Multi-Platform Scheduling",";
-      description: "Schedule posts across all major social media platforms from one dashboard",";
-      icon: <Globe className ="w-8 h-8" />,";
-      benefits: ["Facebook", "Twitter", "Instagram", "LinkedIn", "TikTok", "YouTube"]";
-    },
-    {
-      title: "Content Calendar",";
-      description: "Visual content calendar to plan and organize your social media strategy",";
-      icon: <Calendar className ="w-8 h-8" />,";
-      benefits: ["Drag & drop scheduling", "Bulk upload", "Content templates", "Holiday planning"]";
-    },
-    {
-      title: "Analytics & Insights",";
-      description: "Comprehensive analytics to track performance and optimize your strategy",";
-      icon: <BarChart3 className ="w-8 h-8" />,";
-      benefits: ["Engagement metrics", "Reach analysis", "Best time posting", "ROI tracking"]";
-    },
-    {
-      title: "Content Creation Tools",";
-      description: "Built-in tools for creating engaging visual content and captions",";
-      icon: <Image className ="w-8 h-8" />,";
-      benefits: ["Image editor", "Video creator", "Caption generator", "Hashtag suggestions"]";
-    },
-    {
-      title: "Team Collaboration",";
-      description: "Collaborate with your team on content creation and approval workflows",";
-      icon: <Users className ="w-8 h-8" />,";
-      benefits: ["Team management", "Approval workflows", "Content review", "Role permissions"]";
-    },
-    {
-      title: "Automation & AI",";
-      description: "AI-powered features to automate content creation and optimization",";
-      icon: <Zap className ="w-8 h-8" />,";
-      benefits: ["Auto-posting", "Content suggestions", "Optimal timing", "Trend analysis"]";
-    }
-  ];
-
-  const pricing = [
-    {
-      name: "Starter",";
-      price: "$29",";
-      period: "per month",";
-      description: "Perfect for small businesses and individuals",";
-      features: [
-        "Up to 3 social accounts",";
-        "30 posts per month",";
-        "Basic analytics",";
-        "Email support",";
-        "Mobile app access"";
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",";
-      price: "$79",";
-      period: "per month",";
-      description: "Ideal for growing businesses and agencies",";
-      features: [
-        "Up to 10 social accounts",";
-        "Unlimited posts",";
-        "Advanced analytics",";
-        "Team collaboration",";
-        "Priority support",";
-        "Content creation tools"";
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",";
-      price: "$199",";
-      period: "per month",";
-      description: "For large organizations with advanced needs",";
-      features: [
-        "Unlimited social accounts",";
-        "White-label solution",";
-        "Custom integrations",";
-        "Dedicated support",";
-        "Advanced security",";
-        "Custom development"";
-      ],
-      popular: false
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "Save Time",";
-      description: "Reduce social media management time by up to 70% with automation",";
-      icon: <Zap className ="w-6 h-6" />",
-    },
-    {
-      title: "Increase Engagement",";
-      description: "Boost engagement rates by 40% with optimized posting times",";
-      icon: <Target className ="w-6 h-6" />",
-    },
-    {
-      title: "Better Planning",";
-      description: "Plan your content strategy with visual calendar and analytics",";
-      icon: <Calendar className ="w-6 h-6" />",
-    },
-    {
-      title: "Team Efficiency",";
-      description: "Improve team collaboration and content approval workflows",";
-      icon: <Users className ="w-6 h-6" />",
-    }
-
-  ];
-,
-      return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">",)
-        "
-      <EnhancedSEO",>
-        "
-        title="Social Media Scheduler - Zion Tech Group | Multi-Platform Social Media Management",
-      description="Advanced social media scheduler with multi-platform posting, content calendar, _analytics, and team collaboration. Streamline your social media management.",
-      keywords="social media scheduler, _social media management, _content calendar, _social media analytics, _team collaboration, social media automation",
-      canonical="https://ziontechgroup.com/social-media-scheduler" />""
-      {/* Hero Section */};
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">""
-        <ResponsiveContainer className="text-center">""
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">",
-        "
-              Social Media Scheduler",
-        "
-            </span>",
-        "
-          </h1>",
-        "
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">",
-        "
-            Streamline your social media management with our comprehensive scheduler.",
-        "
-            Plan, _schedule, and analyze your content across all platforms from one dashboard.",
-        "
-          </p>",
-        "
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">",
-        "
-            <FuturisticButton",>
-        "
-              href="/contact",
-      variant="primary",
-      size="lg",
-      icon={<ArrowRight className="w-5 h-5" />};
-            >",
-        "
-              Start Free Trial",
-        "
-            </FuturisticButton>",
-        "
-            <FuturisticButton",>
-        "
-              href="/demo",
-      variant="outline",
-      size="lg",
-      icon={<Globe className="w-5 h-5" />};
-            >",
-        "
-              Watch Demo",
-        "
-            </FuturisticButton>",
-        "
-          </div>",
-        "
-        </ResponsiveContainer>",
-        "
-      </section>",
-        "
-      {/* Features Section */};
-      <section className="py-20 px-4 sm:px-6 lg:px-8">",
-        "
-        <ResponsiveContainer>",
-        "
-          <div className="text-center mb-16">""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">",
-        "
-              Powerful Social Media Features",
-        "
-            </h2>""
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">",
-        "
-              Everything you need to manage your social media presence effectively.",
-        "
-            </p>",
-        "
-          </div>",
-        "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
-            {features.map((feature, index) => (<FuturisticCard key={index} className="h-full">"")
-                <div className="text-center mb-6">""
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">",
-        "
-                    {feature.icon};
-                  </div>",
-        "
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
-                  <p className="text-gray-300 mb-4">{feature.description}</p>",
-        "
-                </div>",
-        "
-                <ul className="space-y-2">",
-        "
-                  {feature.benefits.map((benefit, benefitIndex) => (",)}
-        "
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">""
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />",
-        "
-                      {benefit};
-                    </li>",
-        "
-                  ))};
-                </ul>",
-        "
-              </FuturisticCard>",
-        "
-            ))};
-          </div>",
-        "
-        </ResponsiveContainer>",
-        "
-      </section>""
-      {/* Pricing Section */};
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">",
-        "
-        <ResponsiveContainer>",
-        "
-          <div className="text-center mb-16">""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">",
-        "
-              Simple, Transparent Pricing",
-        "
-            </h2>""
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">",
-        "
-              Choose the plan that fits your social media needs. No hidden fees, no surprises.",
-        "
-            </p>",
-        "
-          </div>",
-        "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">",
-        "
-            {pricing.map((plan, index) => (",)}
-        "
-              <FuturisticCard key={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>",
-        "
-                {plan.popular && (",)}
-        "
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">",
-        "
-                      Most Popular",
-        "
-                    </span>",
-        "
-                  </div>",
-        "
-                )};
-                <div className="text-center mb-6">""
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">""
-                    {plan.price};
-                    <span className="text-lg text-gray-400">{plan.period}</span>",
-        "
-                  </div>",
-        "
-                  <p className="text-gray-300 text-sm">{plan.description}</p>",
-        "
-                </div>",
-        "
-                <ul className="space-y-3 mb-8">",
-        "
-                  {plan.features.map((feature, featureIndex) => (",)}
-        "
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">""
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />",
-        "
-                      {feature};
-                    </li>",
-        "
-                  ))};
-                </ul>",
-        "
-                <FuturisticButton",>
-        "
-                  href="/contact",
-      variant={plan.popular ? "primary" : "outline"},
-      size="sm",
-      className="w-full";
-                >",
-        "
-                  Get Started",
-        "
-                </FuturisticButton>",
-        "
-              </FuturisticCard>",
-        "
-            ))};
-          </div>",
-        "
-        </ResponsiveContainer>",
-        "
-      </section>""
-      {/* Benefits Section */};
-      <section className="py-20 px-4 sm:px-6 lg:px-8">",
-        "
-        <ResponsiveContainer>",
-        "
-          <div className="text-center mb-16">""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">",
-        "
-              Why Choose Our Social Media Scheduler?",
-        "
-            </h2>""
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">",
-        "
-              Join thousands of businesses who have streamlined their social media management with our scheduler.",
-        "
-            </p>",
-        "
-          </div>",
-        "
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">",
-        "
-            {benefits.map((benefit, index) => (",)}
-        "
-              <div key={index} className="text-center">""
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">",
-        "
-                  {benefit.icon};
-                </div>",
-        "
-                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>""
-                <p className="text-gray-300 text-sm">{benefit.description}</p>",
-        "
-              </div>",
-        "
-            ))};
-          </div>",
-        "
-        </ResponsiveContainer>",
-        "
-      </section>""
-      {/* CTA Section */};
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">""
-        <ResponsiveContainer className="text-center">""
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">",
-        "
-            Ready to Streamline Your Social Media?",
-        "
-          </h2>""
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">",
-        "
-            Start your free trial today and see how our social media scheduler can transform your content strategy.",
-        "
-          </p>""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">",
-        "
-            <FuturisticButton",>
-        "
-              href="/contact",
-      variant="primary",
-      size="lg",
-      icon={<ArrowRight className="w-5 h-5" />};
-            >",
-        "
-              Start Free Trial",
-        "
-            </FuturisticButton>",
-        "
-            <FuturisticButton",>
-        "
-              href="/demo",
-      variant="outline",
-      size="lg",
-      icon={<Globe className="w-5 h-5" />};
-            >",
-        "
-              Watch Demo",
-        "
-            </FuturisticButton>",
-        "
-          </div>",
-        "
-        </ResponsiveContainer>",
-        "
-      </section>",
-        "
-    </div>""
-  )
-    },
-    {}
-,
-      export default SocialMediaSchedulerPage;
-;
-
-const ComponentName = () => {
-  return (
-    <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";
-      <EnhancedSEO title ="Social Media Scheduler - Zion Tech Group | Multi-Platform Social Media Management"";
-        description="Advanced social media scheduler with multi-platform posting, content calendar, _analytics, and team collaboration. Streamline your social media management."";
-        keywords="social media scheduler, _social media management, _content calendar, _social media analytics, _team collaboration, social media automation"";
-        canonical="https: //ziontechgroup.com/social-media-scheduler"",
-      />
-
-      {/* Hero Section */}
-      <section className ="pt-20 pb-16 px-4 sm: px-6 lg:px-8">";
-        <ResponsiveContainer className ="text-center">";
-          <h1 className ="text-4xl md:text-6xl font-bold text-white mb-6">";
-            <span className ="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">";
-              Social Media Scheduler
-            </span>
-          </h1>
-          <p className ="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">",
-            Streamline your social media management with our comprehensive scheduler. 
-            Plan, _schedule, and analyze your content across all platforms from one dashboard.
-          </p>
-          <div className ="flex flex-col sm: flex-row gap-4 justify-center">";
-            <FuturisticButton href ="/contact"";
-              variant="primary"";
-              size="lg"",
-              icon={<ArrowRight className ="w-5 h-5" />}";
-            >
-              Start Free Trial
-            </FuturisticButton>
-            <FuturisticButton href ="/demo"";
-              variant="outline"";
-              size="lg"";
-              icon={<Globe className ="w-5 h-5" />}";
-            >
-              Watch Demo
-            </FuturisticButton>
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Features Section */}
-      <section className ="py-20 px-4 sm: px-6 lg:px-8">";
-        <ResponsiveContainer>
-          <div className ="text-center mb-16">";
-            <h2 className ="text-3xl md:text-4xl font-bold text-white mb-6">";
-              Powerful Social Media Features
-            </h2>
-            <p className ="text-xl text-gray-300 max-w-4xl mx-auto">";
-              Everything you need to manage your social media presence effectively.
-            </p>
-          </div>
-          <div className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
-            {features.map((feature, index) => (<FuturisticCard key ={index} className="h-full">";
-                <div className ="text-center mb-6">";
-                  <div className ="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">";
-                    {feature.icon}
-                  </div>
-                  <h3 className ="text-xl font-semibold text-white mb-3">{feature.title}</h3>";
-                  <p className ="text-gray-300 mb-4">{feature.description}</p>";
-                </div>
-                <ul className ="space-y-2">";
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key ={benefitIndex} className="flex items-center text-sm text-gray-300">";
-                      <CheckCircle className ="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />";
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </FuturisticCard>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Pricing Section */}
-      <section className ="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">";
-        <ResponsiveContainer>
-          <div className ="text-center mb-16">";
-            <h2 className ="text-3xl md:text-4xl font-bold text-white mb-6">",
-              Simple, Transparent Pricing
-            </h2>
-            <p className ="text-xl text-gray-300 max-w-4xl mx-auto">";
-              Choose the plan that fits your social media needs. No hidden fees, no surprises.
-            </p>
-          </div>
-          <div className ="grid grid-cols-1 md: grid-cols-3 gap-8">",
-            {pricing.map((plan, index) => (
-              <FuturisticCard key ={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400'  ''}`}>";
-                {plan.popular && (
-                  <div className ="absolute -top-4 left-1/2 transform -translate-x-1/2">";
-                    <span className ="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">";
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className ="text-center mb-6">";
-                  <h3 className ="text-2xl font-bold text-white mb-2">{plan.name}</h3>";
-                  <div className ="text-4xl font-bold text-cyan-400 mb-2">";
-                    {plan.price}
-                    <span className ="text-lg text-gray-400">{plan.period}</span>";
-                  </div>
-                  <p className ="text-gray-300 text-sm">{plan.description}</p>";
-                </div>
-                <ul className ="space-y-3 mb-8">";
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key ={featureIndex} className="flex items-center text-sm text-gray-300">";
-                      <CheckCircle className ="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />";
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <FuturisticButton href ="/contact"";
-                  variant={plan.popular ? "primary"  "outline"}";
-                  size="sm"";
-                  className="w-full"";
-                >
-                  Get Started
-                </FuturisticButton>
-              </FuturisticCard>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Benefits Section */}
-      <section className ="py-20 px-4 sm: px-6 lg:px-8">";
-        <ResponsiveContainer>
-          <div className ="text-center mb-16">";
-            <h2 className ="text-3xl md:text-4xl font-bold text-white mb-6">";
-              Why Choose Our Social Media Scheduler?
-            </h2>
-            <p className ="text-xl text-gray-300 max-w-4xl mx-auto">";
-              Join thousands of businesses who have streamlined their social media management with our scheduler.
-            </p>
-          </div>
-          <div className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">",
-            {benefits.map((benefit, index) => (
-              <div key ={index} className="text-center">";
-                <div className ="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">";
-                  {benefit.icon}
-                </div>
-                <h3 className ="text-lg font-semibold text-white mb-2">{benefit.title}</h3>";
-                <p className ="text-gray-300 text-sm">{benefit.description}</p>";
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* CTA Section */}
-      <section className ="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">";
-        <ResponsiveContainer className ="text-center">";
-          <h2 className ="text-3xl md:text-4xl font-bold text-white mb-6">";
-            Ready to Streamline Your Social Media?
-          </h2>
-          <p className ="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">";
-            Start your free trial today and see how our social media scheduler can transform your content strategy.
-          </p>
-          <div className ="flex flex-col sm:flex-row gap-4 justify-center">";
-            <FuturisticButton href ="/contact"";
-              variant="primary"";
-              size="lg"",
-              icon={<ArrowRight className ="w-5 h-5" />}";
-            >
-              Start Free Trial
-            </FuturisticButton>
-            <FuturisticButton href ="/demo"";
-              variant="outline"";
-              size="lg"";
-              icon={<Globe className ="w-5 h-5" />}";
-            >
-              Watch Demo
-            </FuturisticButton>
-          </div>
-        </ResponsiveContainer>
-      </section>
-    </div>
-  );
-};
 
 export default SocialMediaSchedulerPage;
-
-}
-
->>>>>>> main

@@ -1,174 +1,142 @@
-<<<<<<< HEAD
-import React from 'react;'
-import { ArrowRight } from 'lucide-react;'
-import { CheckCircle } from 'lucide-react;'
-import { Star } from 'lucide-react;'
-import { Users } from 'lucide-react;'
-import { Clock } from 'lucide-react;'
-import { DollarSign } from 'lucide-react;'
-import { Shield } from 'lucide-react;'
-import { Code } from 'lucide-react;'
-import { Database } from 'lucide-react;'
-import { Mail } from 'lucide-react;'
-import { Settings } from 'lucide-react;'
-import { Target } from 'lucide-react;'
-import { TrendingUp } from 'lucide-react;'
-import { PieChart } from 'lucide-react;'
-import { MessageSquare } from 'lucide-react;'
-import { Heart } from 'lucide-react;'
-import { Globe } from 'lucide-react;'
-import { Smartphone } from 'lucide-react;'
-import { Network } from 'lucide-react;'
-import { Lock } from 'lucide-react;'
-import { Cpu } from 'lucide-react;'
-import { Wifi } from 'lucide-react;'
-import { Building2 } from 'lucide-react;'
-import { Briefcase } from 'lucide-react;'
-import { Lightbulb } from 'lucide-react;'
-import { Link } from 'react-router-dom;'
-import EnhancedSEO from '../components/EnhancedSEO;'
-const Page = () => {
-  const features = [
-    {
-      icon: <CheckCircle className="w-8 h-8" />,""
-      title: 'Advanced Features',''
-      description: 'Cutting-edge technology for maximum efficiency''
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,""
-      title: 'Secure & Reliable',''
-      description: 'Enterprise-grade security and 99.9% uptime''
-    },
-    {
-      icon: <Users className="w-8 h-8" />,""
-      title: 'Expert Support',''
-      description: '24/7 support from our team of specialists''
-    }
-  ];
+import React from 'react';
+import SEOHead from '../components/SEOHead';
+
+const IoTSolutionsPage: React.FC = () => {
   return (
     <>
-      <EnhancedSEO
-        title="Page - Zion Tech Group""
-        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""
-        keywords="page, business solutions, technology services, professional services""
+      <SEOHead
+        title="IoT Solutions - Zion Tech Group"
+        description="Comprehensive IoT solutions and development services. Build connected devices, sensor networks, and smart systems with our IoT platform and development expertise."
+        keywords="IoT solutions, Internet of Things, connected devices, sensor networks, smart systems, IoT platform, embedded systems"
+        canonicalUrl="https://ziontechgroup.com/iot-solutions"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
-          <div className="max-w-7xl mx-auto text-center">""
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
-              Page
-              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""
-                Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
-              Professional page services designed to help your business succeed and grow.
+      
+      <div className="min-h-screen bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">IoT Solutions</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive IoT solutions and development services. Build connected devices, sensor networks, and smart systems with our IoT platform and development expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <Link
-                to="/contact""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
-              </Link>
-              <Link
-                to="/demo""
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
-              >
-                View Demo
-              </Link>
-            </div>
           </div>
-        </section>
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">""
-          <div className="max-w-7xl mx-auto">""
-            <div className="text-center mb-16">""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
-                Why Choose Our Page Services?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
-                We deliver exceptional results with cutting-edge technology and expert knowledge.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
-              {features.map((feature, index) => (
-                <div key={index} className="text-center">""
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-                    {feature.icon}
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">IoT Services</h2>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-3 h-3 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
-                  <p className="text-gray-300">{feature.description}</p>""
+                  <div className="ml-3">
+                    <h3 className="text-lg font-semibold text-gray-900">Device Development</h3>
+                    <p className="text-gray-600">Design and develop custom IoT devices and embedded systems</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-3 h-3 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="ml-3">
+                    <h3 className="text-lg font-semibold text-gray-900">Sensor Networks</h3>
+                    <p className="text-gray-600">Build wireless sensor networks for data collection and monitoring</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-3 h-3 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="ml-3">
+                    <h3 className="text-lg font-semibold text-gray-900">IoT Platform</h3>
+                    <p className="text-gray-600">Develop scalable IoT platforms for device management and data processing</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-3 h-3 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="ml-3">
+                    <h3 className="text-lg font-semibold text-gray-900">Data Analytics</h3>
+                    <p className="text-gray-600">Process and analyze IoT data for insights and decision making</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-3 h-3 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="ml-3">
+                    <h3 className="text-lg font-semibold text-gray-900">Smart Systems</h3>
+                    <p className="text-gray-600">Create intelligent systems that respond to environmental changes</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-50 p-8 rounded-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Pricing Plans</h3>
+              <div className="space-y-4">
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <h4 className="text-lg font-semibold text-gray-900">Basic IoT</h4>
+                  <p className="text-3xl font-bold text-orange-600">$7,999<span className="text-lg text-gray-600">/project</span></p>
+                  <ul className="mt-4 space-y-2 text-sm text-gray-600">
+                    <li>• Simple IoT device</li>
+                    <li>• Basic connectivity</li>
+                    <li>• 4 weeks delivery</li>
+                    <li>• Email support</li>
+                  </ul>
                 </div>
-              ))}
+                <div className="border border-orange-500 rounded-lg p-4 bg-orange-50">
+                  <h4 className="text-lg font-semibold text-gray-900">Smart System</h4>
+                  <p className="text-3xl font-bold text-orange-600">$24,999<span className="text-lg text-gray-600">/project</span></p>
+                  <ul className="mt-4 space-y-2 text-sm text-gray-600">
+                    <li>• Complete IoT solution</li>
+                    <li>• Sensor network</li>
+                    <li>• Data analytics</li>
+                    <li>• 8 weeks delivery</li>
+                    <li>• Priority support</li>
+                  </ul>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <h4 className="text-lg font-semibold text-gray-900">Enterprise IoT</h4>
+                  <p className="text-3xl font-bold text-orange-600">$79,999<span className="text-lg text-gray-600">/project</span></p>
+                  <ul className="mt-4 space-y-2 text-sm text-gray-600">
+                    <li>• Full IoT platform</li>
+                    <li>• Multiple devices</li>
+                    <li>• Advanced analytics</li>
+                    <li>• 16 weeks delivery</li>
+                    <li>• 24/7 support</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
-          <div className="max-w-4xl mx-auto text-center">""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">""
-              Let's discuss how our page services can help your business succeed.''
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <Link
-                to="/contact""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
-              >
-                Contact Us
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
-              </Link>
-              <Link
-                to="/services""
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
-              >
-                View All Services
-              </Link>
+
+          <div className="bg-orange-50 rounded-lg p-8 text-center">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Build Your IoT Solution</h2>
+            <p className="text-gray-600 mb-6">Professional IoT development services for connected devices and smart systems.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/contact" className="bg-orange-600 text-white px-8 py-3 rounded-lg hover:bg-orange-700 transition-colors">
+                Get IoT Consultation
+              </a>
+              <a href="tel:+13024640950" className="border border-orange-600 text-orange-600 px-8 py-3 rounded-lg hover:bg-orange-50 transition-colors">
+                Call: +1 (302) 464-0950
+              </a>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </>
   );
 };
-const page = React.lazy(() => import('./page'));''
-export default page;
-=======
-import SEOHead from '../components/SEOHead';
 
-const PagePage: React.FC = () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        title="page - Zion Tech Group"
-        description="Zion Tech Group page service page"
-
-const IotSolutionsPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead title ="iot-solutions - Zion Tech Group - Zion Tech Group"";
-        description="Zion Tech Group iot-solutions service page"";
-
-      />
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">iot-solutions - Zion Tech Group</h1>";
-          <p className ="text-gray-300">Coming soon...</p>";
-        </div>
-      </div>
-    </>
-
-  )
-    },
-    {}
-export default PagePage;
-
-  ),
-};
-
->>>>>>> main
+export default IoTSolutionsPage;

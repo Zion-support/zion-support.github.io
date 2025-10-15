@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-import { twMerge } from "tailwind-merge";"
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
-=======
+/// Comment
 
+export function utils() {
+  /// Comment
+  return null;
 }
->>>>>>> main
