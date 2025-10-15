@@ -26,6 +26,8 @@ const Footer: React.FC = () => {
               <li><Link to="/digital-transformation" className="text-gray-300 hover:text-white">Digital Transformation</Link></li>
               <li><Link to="/data-analytics" className="text-gray-300 hover:text-white">Data Analytics</Link></li>
               <li><Link to="/web-development" className="text-gray-300 hover:text-white">Web Development</Link></li>
+              <li><Link to="/mobile-development" className="text-gray-300 hover:text-white">Mobile Development</Link></li>
+              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Solutions</Link></li>
             </ul>
           </div>
           
@@ -37,6 +39,8 @@ const Footer: React.FC = () => {
               <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">Sales Predictor</Link></li>
               <li><Link to="/zion-ai-workflow-automator" className="text-gray-300 hover:text-white">Workflow Automator</Link></li>
               <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
+              <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
+              <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
             </ul>
           </div>
           
