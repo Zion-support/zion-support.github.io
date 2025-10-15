@@ -1,113 +1,53 @@
 #!/usr/bin/env python3
 """
-Comprehensive merge conflict resolution script for Zion Tech Group website.
-This script will systematically resolve merge conflicts by choosing the appropriate version.
+Script to clean up merge conflicts in servicesData.ts file
 """
 
-import os
 import re
-import glob
-from pathlib import Path
 
-def resolve_merge_conflict(content, file_path):
-    """
-    Resolve merge conflicts in file content.
-    Strategy: Keep the HEAD version (current branch) and remove conflict markers.
-    """
-    lines = content.split('\n')
-    resolved_lines = []
-    in_conflict = False
-    conflict_type = None
+def clean_merge_conflicts(file_path):
+    """Clean up merge conflict markers from a file"""
+    with open(file_path, 'r', encoding='utf-8') as f:
+        content = f.read()
     
-    for i, line in enumerate(lines):
-        if line.strip() == '<<<<<<< HEAD':
-            in_conflict = True
-            conflict_type = 'head'
-            continue
-        elif line.strip() == '=======':
-            conflict_type = 'separator'
-            continue
-        elif line.strip().startswith('>>>>>>> '):
-            in_conflict = False
-            conflict_type = None
-            continue
-        elif line.strip().startswith('<<<<<<< ') and not line.strip().startswith('<<<<<<< HEAD'):
-            in_conflict = True
-            conflict_type = 'other'
-            continue
+    # Remove merge conflict markers and keep the content between them
+    # Pattern to match merge conflict blocks
+    pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n'
+    
+    def resolve_conflict(match):
+        # Get both sides of the conflict
+        head_content = match.group(1).strip()
+        incoming_content = match.group(2).strip()
         
-        if not in_conflict or conflict_type == 'head':
-            resolved_lines.append(line)
-    
-    return '\n'.join(resolved_lines)
-
-def clean_file(file_path):
-    """Clean a single file of merge conflicts."""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+        # If both sides are similar, keep the first one
+        if head_content == incoming_content:
+            return head_content + '\n'
         
-        if '<<<<<<< HEAD' not in content:
-            return False
+        # If one side is empty, keep the non-empty one
+        if not head_content:
+            return incoming_content + '\n'
+        if not incoming_content:
+            return head_content + '\n'
         
-        print(f"Cleaning: {file_path}")
-        resolved_content = resolve_merge_conflict(content, file_path)
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(resolved_content)
-        
-        return True
-    except Exception as e:
-        print(f"Error cleaning {file_path}: {e}")
-        return False
-
-def find_files_with_conflicts():
-    """Find all files with merge conflicts."""
-    patterns = ['**/*.tsx', '**/*.ts', '**/*.js', '**/*.jsx']
-    files_with_conflicts = []
+        # For different content, prefer the more complete one (longer)
+        if len(head_content) > len(incoming_content):
+            return head_content + '\n'
+        else:
+            return incoming_content + '\n'
     
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            if 'node_modules' in file_path or '.git' in file_path:
-                continue
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    if '<<<<<<< HEAD' in f.read():
-                        files_with_conflicts.append(file_path)
-            except:
-                continue
+    # Clean up merge conflicts
+    cleaned_content = re.sub(pattern, resolve_conflict, content, flags=re.DOTALL)
     
-    return files_with_conflicts
-
-def main():
-    """Main function to resolve all merge conflicts."""
-    print("Starting merge conflict resolution...")
+    # Remove any remaining merge conflict markers
+    cleaned_content = re.sub(r'^[<>=]{7}.*$', '', cleaned_content, flags=re.MULTILINE)
     
-    # Change to workspace directory
-    os.chdir('/workspace')
+    # Clean up extra whitespace
+    cleaned_content = re.sub(r'\n\s*\n\s*\n', '\n\n', cleaned_content)
     
-    # Find all files with conflicts
-    files_with_conflicts = find_files_with_conflicts()
-    print(f"Found {len(files_with_conflicts)} files with merge conflicts")
+    with open(file_path, 'w', encoding='utf-8') as f:
+        f.write(cleaned_content)
     
-    # Clean each file
-    cleaned_count = 0
-    for file_path in files_with_conflicts:
-        if clean_file(file_path):
-            cleaned_count += 1
-    
-    print(f"Successfully cleaned {cleaned_count} files")
-    
-    # Verify no more conflicts
-    remaining_conflicts = find_files_with_conflicts()
-    if remaining_conflicts:
-        print(f"Warning: {len(remaining_conflicts)} files still have conflicts:")
-        for file_path in remaining_conflicts[:10]:  # Show first 10
-            print(f"  - {file_path}")
-        if len(remaining_conflicts) > 10:
-            print(f"  ... and {len(remaining_conflicts) - 10} more")
-    else:
-        print("All merge conflicts resolved successfully!")
+    print(f"Cleaned merge conflicts from {file_path}")
 
 if __name__ == "__main__":
-    main()
+    clean_merge_conflicts('/workspace/app/data/servicesData.ts')
