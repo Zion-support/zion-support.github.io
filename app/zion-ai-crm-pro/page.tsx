@@ -17,10 +17,5 @@ const ZionAiCrmProPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default ZionAiCrmProPage;'";'";
-=======
-
-export default ZionAiCrmProPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

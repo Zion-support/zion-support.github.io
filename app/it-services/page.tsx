@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client',
       import { Helmet } from 'react-helmet-async',
       import {},
@@ -29,11 +28,6 @@
 } from 'lucide-react';
 
 
-=======
-import React from 'react';;';
-import SEOHead from './components/SEOHead';
-;
->>>>>>> main
 const ItServicesPage: React.FC = () => {
   return (
     <>;
@@ -50,10 +44,5 @@ const ItServicesPage: React.FC = () => {
     </>;
   ),
 };
-<<<<<<< HEAD
 ;
 export default ItServicesPage;'";'";
-=======
-
-export default ItServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

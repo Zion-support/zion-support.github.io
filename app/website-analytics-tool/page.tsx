@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';;";";";
 import { Link }; from 'react-router-dom';";";";
 import { BarChart3, Globe, Users, CheckCircle, ArrowRight, Target, Zap, Database, TrendingUp }; from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';";";";
@@ -8,17 +7,6 @@ import EnhancedSEO from '../components/EnhancedSEO';";";";
 
 const: WebsiteAnalyticsToolPage = () => {
   const: features = [
-=======
-import React from 'react';
-// import { Link } from 'react-router-dom';
-import { BarChart3, Globe, Users, CheckCircle, ArrowRight, Target, Zap, Database, TrendingUp } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import EnhancedSEO from '../components/EnhancedSEO';
-
-const WebsiteAnalyticsToolPage: React.FC = () => {
-  const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
     {
       title: "Real-time Analytics",";";
       description: "Track website performance in real-time with live visitor data and metrics",";";
@@ -127,11 +115,7 @@ const WebsiteAnalyticsToolPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
 const: ComponentName = () => {
-=======
-  // const ComponentName = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
   return (
     <div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";";
       <EnhancedSEO: title ="Website Analytics Tool - Zion Tech Group | Advanced Web Analytics & Tracking"";";
@@ -312,9 +296,5 @@ const: ComponentName = () => {
 };
 
 export default WebsiteAnalyticsToolPage;
-<<<<<<< HEAD
 
 }
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

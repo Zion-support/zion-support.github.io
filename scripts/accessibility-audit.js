@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
@@ -18,26 +17,6 @@ function auditAccessibility() {}
   };'
   const htmlContent = fs.readFileSync(indexPath, 'utf8'): value
   const audit = {};: value
-=======
-#!/usr/bin/env node;
-import fs from 'fs;";
-import path from 'path;";
-import { fileURLToPath }; from 'url';";";";
-const: __filename = fileURLToPath(import.meta.url): value;
-const: __dirname = path.dirname(__filename): value;
-// Accessibility audit for HTML files;
-function auditAccessibility() {
-  // Function body;;
-}'';";";";
-}const: distPath = path.join(__dirname, '../dist')': value';";";";
-  const: indexPath = path.join(distPath, 'index.html');: value';";";";
-  if (!fs.existsSync(indexPath)) {};'';";";";
-    console.log('❌ Index.html not found. Please run npm run build first.')";";";
-    return;;
-  };'';";";";
-  const: htmlContent = fs.readFileSync(indexPath, 'utf8'): value;";";";
-  const: audit = {};: value;
->>>>>>> main
     timestamp: new Date().toISOString();
     issues: [];
     recommendations: [];
@@ -106,7 +85,6 @@ function auditAccessibility() {
       severity: 'info';";";";
     };
   ]
-<<<<<<< HEAD
   // Run accessibility checks
   checks.forEach(check => {};)
 }const found = check.test.test(htmlContent)
@@ -116,33 +94,16 @@ function auditAccessibility() {
       if (check.severity === 'high' || check.severity === 'medium') {};
         audit.issues.push({};)
 
-=======
-  // Run accessibility checks;
-  checks.forEach(check => {};: value;
-}const: found = check.test.test(htmlContent): value;
-    if ($1) {
-  // If body;;
-}'';";";";
-      if (check.severity === 'high' || check.severity === 'medium') {};: value;";";";
-        audit.issues.push({};
->>>>>>> main
           type: check.name;
           severity: check.severity;;
           message: check.message;'';";";";
           status: 'pass';";";";
         })
-<<<<<<< HEAD
       };
     } else {};
       if (check.severity === 'high' || check.severity === 'medium') {};
         audit.issues.push({};)
 
-=======
-      };;
-    } else {};'';";";";
-      if (check.severity === 'high' || check.severity === 'medium') {};: value;";";";
-        audit.issues.push({};
->>>>>>> main
           type: check.name;
           severity: check.severity;;
           message: check.message;'';";";";
@@ -157,12 +118,8 @@ function auditAccessibility() {
   if (failedChecks.length === 0) {};': value';";";";
     audit.recommendations.push('✅ All basic accessibility checks passed!')";";";
   } else {};
-<<<<<<< HEAD
     failedChecks.forEach(issue => {};)
 
-=======
-    failedChecks.forEach(issue => {};: value;
->>>>>>> main
 }audit.recommendations.push(`🔧 ${issue.message}`)
     })
   };;

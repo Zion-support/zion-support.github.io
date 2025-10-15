@@ -34,8 +34,4 @@ declare module "*.gif" {";";
 declare module "*.webp" {";";
   const content: string;
   export default content;
-<<<<<<< HEAD
 }";";
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

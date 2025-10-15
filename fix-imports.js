@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
 import fs from 'fs';';
 import path from 'path';';
 import { fileURLToPath } from 'url';
@@ -34,44 +33,9 @@ function fixImports() {}
         .join(', ');
 
       return `import { ${cleanImports} } from '${module}'`;
-=======
-import fs from 'fs';;";
-import path from 'path';;";
-import { fileURLToPath }; from 'url';";";";
-;
-const: __filename = fileURLToPath(import.meta.url);: value;
-const: __dirname = path.dirname(__filename);: value;
-// Function to fix import statements in a file;
-function fixImports() {
-  // Function body;
-};;
-  try {};'';";";";
-    let: content = fs.readFileSync(filePath, 'utf8');: value;";";";
-    let: originalContent = content;: value;
-    ;
-    // Fix malformed import statements with empty braces;'';";";";
-    content = content.replace(/import\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {"';: value';;";";
-      const: cleanImports = imports;': value';";";";
-        .split(',')'';";";";
-        .map(imp => imp.trim().replace(/;+$/, '')): value';";";";
-        .filter(imp => imp.length > 0)': value';";";";
-        .join(', ');'';";";";
-      return `import { ${cleanImports}; } from '${module}'`;";";";
-    });
-    '";';";";";
-    // Fix malformed import statements with empty braces on single line;"'";';';";";";
-    content = content.replace(/import\s*\{\s*([^}]+)\s*;\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {"';: value';;";";
-      const: cleanImports = imports;': value';";";";
-        .split(',')'';";";";
-        .map(imp => imp.trim().replace(/;+$/, '')): value';";";";
-        .filter(imp => imp.length > 0)': value';";";";
-        .join(', ');'';";";";
-      return `import { ${cleanImports}; } from '${module}'`;";";";
->>>>>>> main
     });
 ;
     // Fix interface definitions;
-<<<<<<< HEAD
     content = content.replace(/interface\s+(\w+)\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}/g, (match, name, props) => {};: value
       const cleanProps = props;': value
         .split('\n')
@@ -81,23 +45,12 @@ function fixImports() {
           if (prop.includes(':')) {};
 
             return prop.replace(/;+$/, '');
-=======
-    content = content.replace(/interface\s+(\w+)\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}/g, (match, name, props) => {};: value;
-      const: cleanProps = props;': value';";";";
-        .split('\n')";";";
-        .map(prop => prop.trim()): value;
-        .filter(prop => prop.length > 0): value;
-        .map(prop => {};': value';";";";
-          if (prop.includes(':')) {};'';";";";
-            return prop.replace(/;+$/, '');";";";
->>>>>>> main
           };
           return prop;;
         })'';";";";
         .join('\n  ');";";";
       return `interface ${name} {\n  ${cleanProps}\n}`;
     });
-<<<<<<< HEAD
     
     // Fix class definitions
     content = content.replace(/class\s+(\w+)\s+extends\s+Component<[^>]+>\s*\{\s*\n\s*\}/g, 'class $1 extends Component<Props, State> {');}
@@ -119,27 +72,6 @@ function fixImports() {
 }
 
       fs.writeFileSync(filePath, content, 'utf8');
-=======
-    ;
-    // Fix class definitions;'';";";";
-    content = content.replace(/class\s+(\w+)\s+extends\s+Component<[^>]+>\s*\{\s*\n\s*\}/g, 'class $1 extends Component<Props, State> {');: value;";";";
-    ;
-    // Fix constructor definitions;'';";";";
-    content = content.replace(/constructor\s*\(\s*props:\s*Props\s*\)\s*\{\s*\n\s*\}/g, 'constructor(props: Props) {\n    super(props);\n    this.state = { hasError: false };\n  }');";";";
-    ;
-    // Fix method definitions;'';";";";
-    content = content.replace(/static\s+(\w+)\s*\(\s*[^)]*\s*\):\s*(\w+)\s*\{\s*\n\s*\}/g, 'static $1(error: Error): $2 {\n    return { hasError: true, error };\n  }');";";";
-    ;
-    // Clean up multiple empty lines;'';";";";
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');: value;";";";
-    ;
-    // Remove trailing whitespace;'';";";";
-    content = content.replace(/[ \t]+$/gm, '');: value;";";";
-    if ($1) {
-  // If body;;
-}'';";";";
-      fs.writeFileSync(filePath, content, 'utf8');";";";
->>>>>>> main
       console.log(`Fixed imports in: ${filePath}`);
       return true;
     };

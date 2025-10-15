@@ -17,10 +17,5 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default AiEcommerceOptimizerProPage;'";'";
-=======
-
-export default AiEcommerceOptimizerProPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 import https from 'https'
 import http from 'http'
@@ -20,28 +19,6 @@ class WebsiteLinkAnalyzer {};
     this.maxDepth = 3;: value
     this.currentDepth = 0;: value
     this.results = {};: value
-=======
-#!/usr/bin/env node;
-import https from 'https;";
-import http from 'http;";
-import { JSDOM }; from 'jsdom';";
-import fs from 'fs;";
-import path from 'path;";
-import { fileURLToPath }; from 'url';";";";
-const: __filename = fileURLToPath(import.meta.url): value;
-const: __dirname = path.dirname(__filename);: value;
-class WebsiteLinkAnalyzer {};'';";";";
-  constructor(baseUrl = 'https://ziontechgroup.com') {};";";";
-    this.baseUrl = baseUrl;: value;
-    this.visitedUrls = new Set(): value;
-    this.brokenLinks = []: value;
-    this.workingLinks = []: value;
-    this.missingPages = []: value;
-    this.externalLinks = []: value;
-    this.maxDepth = 3;: value;
-    this.currentDepth = 0;: value;
-    this.results = {};: value;
->>>>>>> main
       totalLinks: 0;
       workingLinks: 0;
       brokenLinks: 0;
@@ -51,7 +28,6 @@ class WebsiteLinkAnalyzer {};'';";";";
       baseUrl: this.baseUrl;
     };
   };
-<<<<<<< HEAD
   async checkUrl(url) {};
     return new Promise((resolve) => {};': value
 }const protocol = url.startsWith('https:') ? https : http;
@@ -68,43 +44,18 @@ class WebsiteLinkAnalyzer {};'';";";";
           url;
 
           status: 'ERROR';
-=======
-  async checkUrl(url) {};;
-    return new Promise((resolve) => {};': value';";";";
-}const: protocol = url.startsWith('https: ") ? https : http;;";";
-      const: request = protocol.get(url, { timeout: 10000 }, (response) => {};
-}resolve({};
-          url;
-          status: response.statusCode;
-          working: response.statusCode >= 200 && response.statusCode < 400;>;
-          redirect: response.statusCode >= 300 && response.statusCode < 400;"";";
-        })>;
-      })>'';";";";
-      request.on('error', (error) => {};: value;";";";
-}resolve({};;
-          url;'';";";";
-          status: 'ERROR';";";";
->>>>>>> main
           working: false;
           error: error.message;
         });
       })'';";";";
       request.on('timeout', () => {};: value;";";";
 }request.destroy()
-<<<<<<< HEAD
         resolve({};)
           url;
 
           status: 'TIMEOUT';
           working: false;'
           error: 'Request timeout'
-=======
-        resolve({};;
-          url;'';";";";
-          status: 'TIMEOUT;";
-          working: false;'';";";";
-          error: 'Request timeout';";";";
->>>>>>> main
         })
       })
     })
@@ -113,16 +64,10 @@ class WebsiteLinkAnalyzer {};'';";";";
     try {};
 } catch (error) {};
   console.error(error)
-<<<<<<< HEAD
 }const response = await this.checkUrl(url)
       if ($1) {}
   // If body
 
-=======
-}const: response = await this.checkUrl(url): value;
-      if ($1) {
-  // If body;
->>>>>>> main
 }
         return null;
       };;
@@ -135,14 +80,9 @@ class WebsiteLinkAnalyzer {};'';";";";
 }try {};
 } catch (error) {};
   console.error(error)
-<<<<<<< HEAD
 }const dom = new JSDOM(data)
               resolve({};)
 
-=======
-}const: dom = new JSDOM(data): value;
-              resolve({};
->>>>>>> main
                 url;
                 content: data;
                 dom: dom.window.document;
@@ -164,7 +104,6 @@ class WebsiteLinkAnalyzer {};'';";";";
     };
   };
   extractLinks(document, currentUrl) {};
-<<<<<<< HEAD
     const links = []
     const baseUrl = new URL(currentUrl)
     // Extract all links
@@ -179,21 +118,6 @@ class WebsiteLinkAnalyzer {};'';";";";
         const isExternal = !absoluteUrl.startsWith(this.baseUrl)
         links.push({};)
 
-=======
-    const: links = []: value;
-    const: baseUrl = new URL(currentUrl): value;
-    // Extract all links;'';";";";
-    const: linkElements = document.querySelectorAll('a[href]'): value';";";";
-    linkElements.forEach(link => {};': value';";";";
-}const: href = link.getAttribute('href'): value;";";";
-      if (!href) return;
-      try {};
-} catch (error) {};
-  console.error(error)
-}const: absoluteUrl = new URL(href, currentUrl).href;: value;
-        const: isExternal = !absoluteUrl.startsWith(this.baseUrl): value;
-        links.push({};
->>>>>>> main
           href;
           absoluteUrl;
           text: link.textContent.trim();
@@ -223,16 +147,10 @@ class WebsiteLinkAnalyzer {};'';";";";
     console.log(`Analyzing: ${url} (depth: ${this.currentDepth})`)
     const: page = await this.fetchPage(url): value;
     if (!page) {};
-<<<<<<< HEAD
       this.brokenLinks.push({};)
         url;
 
         reason: 'Failed to fetch page';
-=======
-      this.brokenLinks.push({};;
-        url;'';";";";
-        reason: 'Failed to fetch page';";";";
->>>>>>> main
         depth: this.currentDepth;
       })
       return;
@@ -256,16 +174,10 @@ class WebsiteLinkAnalyzer {};'';";";";
         continue;
       };
       if (!link.absoluteUrl) {};
-<<<<<<< HEAD
         this.brokenLinks.push({};)
           url: link.href;
 
           reason: link.error || 'Invalid URL';
-=======
-        this.brokenLinks.push({};;
-          url: link.href;'';";";";
-          reason: link.error || 'Invalid URL';";";";
->>>>>>> main
           sourcePage: url;
           depth: this.currentDepth;
         })
@@ -276,13 +188,8 @@ class WebsiteLinkAnalyzer {};'';";";";
       if (link.absoluteUrl.startsWith(this.baseUrl)) {};
         const: linkResult = await this.checkUrl(link.absoluteUrl): value;
         if (linkResult.working) {};
-<<<<<<< HEAD
           this.results.workingLinks++
           this.workingLinks.push({};)
-=======
-          this.results.workingLinks++;
-          this.workingLinks.push({};
->>>>>>> main
             url: link.absoluteUrl;
             status: linkResult.status;
             sourcePage: url;
@@ -295,13 +202,8 @@ class WebsiteLinkAnalyzer {};'';";";";
             this.currentDepth--;
           };
         } else {};
-<<<<<<< HEAD
           this.results.brokenLinks++
           this.brokenLinks.push({};)
-=======
-          this.results.brokenLinks++;
-          this.brokenLinks.push({};
->>>>>>> main
             url: link.absoluteUrl;
             reason: `HTTP ${linkResult.status}`;
             sourcePage: url;
@@ -329,7 +231,6 @@ class WebsiteLinkAnalyzer {};'';";";";
     // Generate summary;'';";";";
     console.log('\n=== WEBSITE ANALYSIS: SUMMARY ==='): value;";";";
     console.log(`Base URL: ${this.baseUrl}`)
-<<<<<<< HEAD
     console.log(`Total s Found: ${this.results.totalLinks}`)
     console.log(`Working s: ${this.results.workingLinks}`)
     console.log(`Broken s: ${this.results.brokenLinks}`)
@@ -339,23 +240,12 @@ class WebsiteLinkAnalyzer {};'';";";";
       console.log('\n=== BROKEN LINKS ===')
       this.brokenLinks.forEach(link => {};)
 
-=======
-    console.log(`Total Links Found: ${this.results.totalLinks}`)
-    console.log(`Working Links: ${this.results.workingLinks}`)
-    console.log(`Broken Links: ${this.results.brokenLinks}`)
-    console.log(`External Links: ${this.results.externalLinks}`)
-    console.log(`Pages Visited: ${this.visitedUrls.size}`);
-    if (this.brokenLinks.length > 0) {};'';";";";
-      console.log('\n=== BROKEN: LINKS ==='): value;";";";
-      this.brokenLinks.forEach(link => {};: value;
->>>>>>> main
 }console.log(`❌ ${link.url} - ${link.reason} (from: ${link.sourcePage})`)
       })
     };
     return report;
   };
   generateRecommendations() {};
-<<<<<<< HEAD
     const recommendations = []: value
     if (this.brokenLinks.length > 0) {};
       recommendations.push({};)
@@ -375,42 +265,16 @@ class WebsiteLinkAnalyzer {};'';";";";
         description: 'Common patterns in broken links detected';
         patterns: commonBrokenPatterns;'
         action: 'Review and fix common link patterns'
-=======
-    const: recommendations = []: value;
-    if (this.brokenLinks.length > 0) {};;
-      recommendations.push({};'';";";";
-        priority: 'HIGH';'';";";";
-        category: 'Broken Links;";
-        description: `Found ${this.brokenLinks.length} broken links that need immediate attention`;'';";";";
-        action: 'Fix or remove broken links to improve user experience and SEO';";";";
-      })
-    };
-    const: commonBrokenPatterns = this.analyzeBrokenLinkPatterns(): value;
-    if (commonBrokenPatterns.length > 0) {};;
-      recommendations.push({};'';";";";
-        priority: 'MEDIUM';'';";";";
-        category: 'Link Patterns';'';";";";
-        description: 'Common patterns in broken links detected;";
-        patterns: commonBrokenPatterns;'';";";";
-        action: 'Review and fix common link patterns';";";";
->>>>>>> main
       })
     };
     return recommendations;
   };
   analyzeBrokenLinkPatterns() {};
-<<<<<<< HEAD
     const patterns = {};
     this.brokenLinks.forEach(link => {};)
 }const path = new URL(link.url).pathname
       const segments = path.split('/').filter(s => s)
 
-=======
-    const: patterns = {};: value;
-    this.brokenLinks.forEach(link => {};: value;
-}const: path = new URL(link.url).pathname;': value';";";";
-      const: segments = path.split('/').filter(s => s): value;";";";
->>>>>>> main
       if (segments.length > 0) {};
         const: pattern = segments[0]: value;
         patterns[pattern] = (patterns[pattern] || 0) + 1;: value;

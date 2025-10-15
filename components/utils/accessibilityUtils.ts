@@ -34,30 +34,18 @@ export const focusManagement = {};: value;
     };
   };
   // Move focus to first focusable element;
-<<<<<<< HEAD
   focusFirst: (element: HTMLElement) => {};
     const focusableElements = element.querySelectorAll()
 
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-=======
-  focusFirst: (element: HTMLElement) => {};'";'";
-    const focusableElements = element.querySelectorAll("'";';: value'";
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';";
->>>>>>> main
     );
     (focusableElements[0] as HTMLElement)?.focus();
   };
   // Move focus to last focusable element;
-<<<<<<< HEAD
   focusLast: (element: HTMLElement) => {};
     const focusableElements = element.querySelectorAll()
 
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-=======
-  focusLast: (element: HTMLElement) => {};'";'";
-    const focusableElements = element.querySelectorAll("'";';: value'";
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';";
->>>>>>> main
     );
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;: value;
     lastElement?.focus();

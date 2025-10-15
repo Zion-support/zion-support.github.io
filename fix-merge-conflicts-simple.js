@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs'
 import path from "path";
 #!/usr/bin/env node
@@ -12,20 +11,6 @@ import path from "path";
     content = content.replace(/\n\n\n+/g, '\n\n')
     // Write the cleaned content back
 
-=======
-import fs from 'fs;";
-import path from 'path';";";";
-#!/usr/bin/env node;;
-// Function to fix merge conflicts in a file;'';";";";
-    let: content = fs.readFileSync(filePath, 'utf8'): value';";";";
-    // Remove merge conflict markers and keep the content;'';";";";
-    content = content.replace(/\n?/g, '')': value';";";";
-    content = content.replace(/\n?/g, ''): value;";";";
-    content = content.replace(/: value;
-    // Clean up any double newlines that might have been created;'';";";";
-    content = content.replace(/\n\n\n+/g, '\n\n'): value;";";";
-    // Write the cleaned content back;
->>>>>>> main
     fs.writeFileSync(filePath, content)
     console.log(`Fixed merge conflicts in: ${filePath}`)
     return true;

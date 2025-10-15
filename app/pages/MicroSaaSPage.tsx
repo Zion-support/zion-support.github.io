@@ -1,6 +1,5 @@
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
 const MicroSaaSPage: React.FC = () => {}
   return ()
     <>{}</>
@@ -8,13 +7,6 @@ const MicroSaaSPage: React.FC = () => {}
         title="MicroSaaSPage - Zion Tech Group"
 
         description="Zion Tech Group MicroSaaSPage page"
-=======
-const MicroSaaSPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead title ="MicroSaaSPage - Zion Tech Group - Zion Tech Group"";
-        description="Zion Tech Group MicroSaaSPage page"";
->>>>>>> main
       />
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
         <div className ="text-center">";

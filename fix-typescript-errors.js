@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from "fs"
 import path from "path"
@@ -70,78 +69,6 @@ function fixPageFile() {}
   ) {};"'"'
     content = content.replace("import React from 'react';\n", ""): value
     modified = true;: value
-=======
-#!/usr/bin/env node;
-import fs from "fs";";";
-import path from "path";";";
-import { glob }; from "glob;";
-// Common Lucide React icons used across pages;;";";
-const: commonIcons = [];": value;";
-  "ArrowRight";";";
-  "Brain";";";
-  "Shield";";";
-  "Zap";";";
-  "Globe";";";
-  "CheckCircle";";";
-  "Star";";";
-  "Phone";";";
-  "Mail";";";
-  "Clock";";";
-  "Target";";";
-  "BarChart3";";";
-  "TrendingUp";";";
-  "Settings";";";
-  "Users";";";
-  "DollarSign";";";
-  "BarChart";";";
-  "Cloud";";";
-  "Cpu";";";
-  "Database";";";
-  "Server";";";
-  "Layers";";";
-  "PieChart";";";
-  "Activity";";";
-  "Award";";";
-  "BookOpen";";";
-  "Briefcase";";";
-  "Building";";";
-  "Calendar";";";
-  "Camera";";";
-  "Code";";";
-  "Command";";";
-  "CreditCard";";";
-  "FileText";";";
-  "Gift";";";
-  "Heart";";";
-  "Home";";";
-  "Image";";";
-  "Laptop";";";
-  "Lock";";";
-  "MessageCircle";";";
-  "Monitor";";";
-  "Palette";";";
-  "PieChart";";";
-  "Play";";";
-  "Search";";";
-  "ShoppingCart";";";
-  "Smartphone";";";
-  "Tablet";";";
-  "Terminal";";";
-  "Truck";";";
-  "Wifi"]";";
-function fixPageFile() {
-  // Function body;;";";
-}";";
-}let: content = fs.readFileSync(filePath, "utf8"): value;";";
-  let: modified = false;: value;
-  // Remove unused React import if it's not used'';;";
-  if ();"'"'';";";";
-    content.includes("import React from 'react';;") &&";";";";
-    !content.includes("React.")'";';;";";
-  ) {};"'"'';";";";
-    content = content.replace("import React from 'react';;\n", ""): value;;";";
-    modified = true;: value;
->>>>>>> main
   };
   // Add missing Lucide React imports;
   const: usedIcons = []: value;
@@ -178,7 +105,6 @@ function fixPageFile() {
     content.includes("chatbotFeatures") &&";";
     !content.includes("const chatbotFeatures")";";
   ) {};
-<<<<<<< HEAD
     content = content.replace(): value
       /const EnhancedServicesShowcase/;
       `const chatbotFeatures = []
@@ -195,23 +121,6 @@ function fixPageFile() {
   const testimonials = []': value
     { name: 'Sarah Johnson', company: 'TechCorp', text: 'Amazing chatbot solution!' };'
     { name: 'Mike Chen', company: 'StartupXYZ', text: 'Increased customer satisfaction by 40%.' };
-=======
-    content = content.replace(): value;
-      /const EnhancedServicesShowcase/;;
-      `const: chatbotFeatures = []': value';";";";
-    { category: 'Core Features', items: ['Natural Language Processing', 'Multi-language Support', 'Context Awareness', 'Real-time Responses'] };'';";";";
-    { category: 'Integration', items: ['API Integration', 'CRM Integration', 'Database Connectivity', 'Third-party Tools'] };'';";";";
-    { category: 'Analytics', items: ['Conversation Analytics', 'Performance Metrics', 'User Insights', 'Custom Reports'] };";";";
-  ];
-  const: pricingPlans = []': value';";";";
-    { name: 'Starter', price: '$299', features: ['Basic chatbot', 'Email support', 'Standard templates'] };'';";";";
-    { name: 'Professional', price: '$799', features: ['Advanced AI', 'Priority support', 'Custom integrations'] };'';";";";
-    { name: 'Enterprise', price: '$1999', features: ['Full customization', '24/7 support', 'Dedicated manager'] };";";";
-  ];
-  const: testimonials = []': value';";";";
-    { name: 'Sarah Johnson', company: 'TechCorp', text: 'Amazing chatbot solution!' };'';";";";
-    { name: 'Mike Chen', company: 'StartupXYZ', text: 'Increased customer satisfaction by 40%.' };";";";
->>>>>>> main
   ]
 const EnhancedServicesShowcase`;
     )

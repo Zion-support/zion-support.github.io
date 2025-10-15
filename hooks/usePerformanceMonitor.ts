@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 export const usePerformanceMonitor = () => {};
 }const [data, setData] = useState<any>(null)
@@ -6,14 +5,6 @@ export const usePerformanceMonitor = () => {};
   const [error, setError] = useState<string | null>(null)
   useEffect(() => {};
 
-=======
-import { useState, useEffect }; from "react";";";
-export const: usePerformanceMonitor = () => {};: value;
-}const [data, setData] = useState<any>(null): value;
-  const [loading, setLoading] = useState(false): value;
-  const [error, setError] = useState<string | null>(null): value;
-  useEffect(() => {};: value;
->>>>>>> main
 }setLoading(true)
     // Initialize hook logic here;
     setLoading(false)

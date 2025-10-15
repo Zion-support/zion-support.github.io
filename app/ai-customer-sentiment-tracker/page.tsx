@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';;";";";
 import { Helmet }; from 'react-helmet-async';";";";
 import { motion }; from 'framer-motion';";";";
 import { Heart, ArrowRight }; from 'lucide-react';";";";
-=======
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Heart, ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 
 const: AiCustomerSentimentTrackerPage = () => {
   return (

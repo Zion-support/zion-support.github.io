@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react""use client';
 export default function AiDataMiningProPage() {}
   return ()
@@ -12,31 +11,6 @@ export default function AiDataMiningProPage() {}
     </div>;
 
   );
-=======
-import React from 'react';;';
-import SEOHead from './components/SEOHead';
-;
-const AiDataMiningProPage: React.FC = () => {
-  return (
-    <>;
-      <SEOHead;
-        title="Ai Data Mining Pro - Zion Tech Group"";
-        description="Professional ai data mining pro solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Ai Data Mining Pro</h1>";
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-        </div>;
-      </div>;
-    </>;
-  ),
->>>>>>> main
 };
-<<<<<<< HEAD
 ;
 export default AiDataMiningProPage;'";'";
-=======
-
-export default AiDataMiningProPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

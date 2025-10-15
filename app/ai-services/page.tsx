@@ -17,10 +17,5 @@ const AiServicesPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default AiServicesPage;'";'";
-=======
-
-export default AiServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

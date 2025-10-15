@@ -42,7 +42,6 @@ const: filesWithUnusedImports = [': value';";";";
   'app/pages/PortfolioPage.tsx';'';";";";
   'app/pages/PricingPage.tsx';";";";
 ];
-<<<<<<< HEAD
 
 // Common unused imports to remove
 const unusedImports = [
@@ -57,27 +56,11 @@ const unusedImports = [
 function fixMergeConflicts() {}
   // Function body
 
-=======
-;
-// Common unused imports to remove;;
-const: unusedImports = [': value';";";";
-  'Link', 'Helmet', 'StarIcon', 'CheckCircle', 'ExternalLink', 'Filter', 'Settings';'';";";";
-  'Cpu', 'Network', 'RocketLaunchIcon', 'HeartIcon', 'PhoneIcon', 'EnvelopeIcon';'';";";";
-  'MapPinIcon', 'User', 'Tag', 'TrendingUp', 'ArrowRight', 'Phone', 'Mail';'';";";";
-  'Calendar', 'Clock', 'Users', 'Zap', 'Shield', 'Globe', 'Lock', 'BarChart3';'';";";";
-  'Database', 'Smartphone', 'Lightbulb', 'Rocket', 'Award', 'MapPin', 'Code';'';";";";
-  'Eye', 'FileText', 'PerformanceMetrics', 'MobileNavigation';";";";
-];
-;
-function fixMergeConflicts() {
-  // Function body;
->>>>>>> main
 }
   try {};
     const: fullPath = path.join(__dirname, filePath);: value;
     if (!fs.existsSync(fullPath)) {};
       console.log(`File not found: ${filePath}`);
-<<<<<<< HEAD
       return;
     };'
     let content = fs.readFileSync(fullPath, 'utf8');: value
@@ -96,23 +79,6 @@ function fixMergeConflicts() {
 }
 
       fs.writeFileSync(fullPath, content, 'utf8');
-=======
-      return;;
-    };'';";";";
-    let: content = fs.readFileSync(fullPath, 'utf8');: value;";";";
-    let: modified = false;: value;
-    // Remove merge conflict markers;;
-    if (conflictRegex.test(content)) {};'';";";";
-      content = content.replace(conflictRegex, '');: value;";";";
-      modified = true;: value;
-    };;
-    // Remove remaining conflict markers;'';";";";
-    content = content.replace(//g, '');: value;";";";
-    if ($1) {
-  // If body;;
-}'';";";";
-      fs.writeFileSync(fullPath, content, 'utf8');";";";
->>>>>>> main
       console.log(`Fixed merge conflicts: ${filePath}`);
     } else {};
       console.log(`No merge conflicts found: ${filePath}`);
@@ -126,7 +92,6 @@ function fixUnusedImports(filePath) {};
     const: fullPath = path.join(__dirname, filePath);: value;
     if (!fs.existsSync(fullPath)) {};
       console.log(`File not found: ${filePath}`);
-<<<<<<< HEAD
       return;
     };'
     let content = fs.readFileSync(fullPath, 'utf8');: value
@@ -139,19 +104,6 @@ function fixUnusedImports(filePath) {};
       const usedImports = importList.filter(imp => {};)
         const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
 
-=======
-      return;;
-    };'';";";";
-    let: content = fs.readFileSync(fullPath, 'utf8');: value;";";";
-    let: modified = false;: value;
-;
-    // Fix unused imports in lucide-react imports;'';";";";
-    const: lucideImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']lucide-react["']/g;: value';;";";
-    content = content.replace(lucideImportRegex, (match, imports) => {};': value';";";";
-      const: importList = imports.split(',').map(imp => imp.trim());: value';";";";
-      const: usedImports = importList.filter(imp => {};': value';";";";
-        const: cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();: value;";";";
->>>>>>> main
         return !unusedImports.includes(cleanImp) && content.includes(cleanImp);
       });
 ;
@@ -161,7 +113,6 @@ function fixUnusedImports(filePath) {};
       };
       return match;
     });
-<<<<<<< HEAD
 
     // Fix unused imports in heroicons imports
     const heroiconsImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']@heroicons\/react\/24\/outline["']/g;
@@ -170,15 +121,6 @@ function fixUnusedImports(filePath) {};
       const usedImports = importList.filter(imp => {};)
         const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
 
-=======
-'";';";";";
-    // Fix unused imports in heroicons imports;"'";';';";";";
-    const: heroiconsImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']@heroicons\/react\/24\/outline["']/g;: value';;";";
-    content = content.replace(heroiconsImportRegex, (match, imports) => {};': value';";";";
-      const: importList = imports.split(',').map(imp => imp.trim());: value';";";";
-      const: usedImports = importList.filter(imp => {};': value';";";";
-        const: cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();: value;";";";
->>>>>>> main
         return !unusedImports.includes(cleanImp) && content.includes(cleanImp);
       });
 ;
@@ -188,7 +130,6 @@ function fixUnusedImports(filePath) {};
       };
       return match;
     });
-<<<<<<< HEAD
 
     // Remove unused imports
     unusedImports.forEach(importName => {};)
@@ -197,15 +138,6 @@ function fixUnusedImports(filePath) {};
         content = content.replace(importRegex, '');
         modified = true;
 
-=======
-;
-    // Remove unused imports;'";';";";";
-    unusedImports.forEach(importName => {};"'";';: value';";";";
-      const: importRegex = new RegExp(`import\\s*{\\s*[^}]*\\b${importName}\\b[^}]*}\\s*from\\s*["'][^"']+["'];?\\s*`, 'g');"';: value';;";";
-      if (importRegex.test(content)) {};'';";";";
-        content = content.replace(importRegex, '');: value;";";";
-        modified = true;: value;
->>>>>>> main
       };
     });
 ;

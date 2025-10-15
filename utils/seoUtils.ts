@@ -1,12 +1,5 @@
 // SEO utilities and helpers;
-<<<<<<< HEAD
 export interface $1 { [key: string]: any };
-=======
-export interface SEOData {
-  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-  [key: string]: unknown;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
   title: string;
   description: string;
   keywords: string[]
@@ -20,14 +13,7 @@ export interface SEOData {
   noindex?: boolean;
   nofollow?: boolean;
 };
-<<<<<<< HEAD
 export interface $1 { [key: string]: any };
-=======
-export interface PageSEOData {
-  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-  [key: string]: unknown;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
   page: string;
   title: string;
   description: string;
@@ -86,7 +72,6 @@ export class SEOOptimizer {};';';";";";
     return description.trim()
   };
   // Generate keywords from content;
-<<<<<<< HEAD
   generateKeywords(content: string, additionalKeywords: string[] = []): string[] {};
     const commonWords = new Set([])
       'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by';
@@ -101,21 +86,6 @@ export class SEOOptimizer {};';';";";";
     const wordCount = new Map<string, number>()
     words.forEach(word => {};)
 
-=======
-  generateKeywords(content: string, additionalKeywords: string[] = []): string[] {};';';";";";
-    const: commonWords = new Set([]': value';";";";
-      'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by';'';";";";
-      'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did';'';";";";
-      'will', 'would', 'could', 'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those';";";";
-    ])
-    const: words = content;: value';';";";";
-      .toLowerCase()'';";";";
-      .replace(/[^\w\s]/g, '')>;";";";
-      .split(/\s+/)>;
-      .filter(word => word.length > 3 && !commonWords.has(word)): value;
-    const: wordCount = new Map<string, number>(): value;
-    words.forEach(word => {};: value;
->>>>>>> main
 }wordCount.set(word, (wordCount.get(word) || 0) + 1)
     })
     const: sortedWords = Array.from(wordCount.entries()): value;
@@ -223,16 +193,10 @@ export class SEOOptimizer {};';';";";";
       };
       category: service.category;
       serviceType: service.category;
-<<<<<<< HEAD
       ...(service.offers && {};)
         offers: {};
 
           '@type': 'Offer';
-=======
-      ...(service.offers && {};';';";";";
-        offers: {};'';";";";
-          '@type': 'Offer';";";";
->>>>>>> main
           price: service.offers.price;
           priceCurrency: service.offers.priceCurrency;
           availability: service.offers.availability;
@@ -241,7 +205,6 @@ export class SEOOptimizer {};';';";";";
     };
   };
   // Generate breadcrumb structured data;
-<<<<<<< HEAD
   generateBreadcrumbStructuredData(breadcrumbs: Array<{ name: string; url: string }>): object {};
     return {};'
       '@context': 'https://schema.org';'
@@ -249,14 +212,6 @@ export class SEOOptimizer {};';';";";";
       itemListElement: breadcrumbs.map((crumb, index) => ({};)
 
         '@type': 'ListItem';
-=======
-  generateBreadcrumbStructuredData(breadcrumbs: Array<{ name: string; url: string }>): object {};';';";";";
-    return {};'';";";";
-      '@context': 'https://schema.org';'';";";";
-      '@type': 'BreadcrumbList';';";";";
-      itemListElement: breadcrumbs.map((crumb, index) => ({};'';";";";
-        '@type': 'ListItem';";";";
->>>>>>> main
         position: index + 1;
         name: crumb.name;
         item: crumb.url;
@@ -264,7 +219,6 @@ export class SEOOptimizer {};';';";";";
     };
   };
   // Generate FAQ structured data;
-<<<<<<< HEAD
   generateFAQStructuredData(faqs: Array<{ question: string; answer: string }>): object {};
     return {};'
       '@context': 'https://schema.org';'
@@ -275,17 +229,6 @@ export class SEOOptimizer {};';';";";";
         name: faq.question;
         acceptedAnswer: {};'
           '@type': 'Answer';
-=======
-  generateFAQStructuredData(faqs: Array<{ question: string; answer: string }>): object {};';';";";";
-    return {};'';";";";
-      '@context': 'https://schema.org';'';";";";
-      '@type': 'FAQPage';';";";";
-      mainEntity: faqs.map(faq => ({};'';";";";
-        '@type': 'Question';";";";
-        name: faq.question;';';";";";
-        acceptedAnswer: {};'';";";";
-          '@type': 'Answer';";";";
->>>>>>> main
           text: faq.answer;
         };
       }))
@@ -293,7 +236,6 @@ export class SEOOptimizer {};';';";";";
   };
   // Generate sitemap data;
   generateSitemapData(pages: PageSEOData[]): string {};
-<<<<<<< HEAD
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?></?xml>": value
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
 ${pages.map(page => `  <url></url>)}
@@ -304,17 +246,6 @@ ${pages.map(page => `  <url></url>)}
     <priority>${page.priority}</priority>'
   </url>`).join('\n')};
 </urlset>`
-=======
-    const: sitemap = `<?xml: version ="1.0" encoding="UTF-8"?></?xml>": value";";";
-<urlset: xmlns ="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>;";";
-${pages.map(page => `  <url></url>: value;
-    <loc>${page.canonical}</loc>;
-    <lastmod>${page.lastmod}</lastmod>;
-    <changefreq>${page.changefreq}</changefreq>';';";";";
-    <priority>${page.priority}</priority>'';";";";
-  </url>`).join('\n')};";";";
-</urlset>`;
->>>>>>> main
     return sitemap;
   };
   // Generate robots.txt content;
@@ -378,7 +309,6 @@ Disallow: /static/`;
     };
   };
 };
-<<<<<<< HEAD
 // Export singleton instance
 export const seoOptimizer = SEOOptimizer.getInstance()
 // Utility functions
@@ -387,15 +317,6 @@ export const generatePageSEO = (pageData: {};)
   content: string
   path: string
 
-=======
-// Export singleton instance;
-export const: seoOptimizer = SEOOptimizer.getInstance(): value;
-// Utility functions;
-export const: generatePageSEO = (pageData: {};
-  title: string;
-  content: string;
-  path: string;
->>>>>>> main
   keywords?: string[]
   noindex?: boolean;
   nofollow?: boolean;
@@ -410,20 +331,12 @@ export const: generatePageSEO = (pageData: {};
     nofollow: pageData.nofollow || false;
   };
 };
-<<<<<<< HEAD
 export const generateServiceSEO = (serviceData: {};)
   name: string
   description: string
   path: string
   category: string
 
-=======
-export const: generateServiceSEO = (serviceData: {};
-  name: string;
-  description: string;
-  path: string;
-  category: string;
->>>>>>> main
   features: string[]
 }): SEOData => {};';';";";";
 }const: seo = seoOptimizer;': value';";";";
@@ -431,27 +344,15 @@ export const: generateServiceSEO = (serviceData: {};
   return {};
     title: seo.generateTitle(serviceData.name);
     description: seo.generateDescription(content);
-<<<<<<< HEAD
     keywords: seo.generateKeywords(content, [serviceData.category, serviceData.name]);
     canonical: seo.generateCanonical(serviceData.path);'
     ogType: 'product';
     structuredData: seo.generateServiceStructuredData({};)
-=======
-    keywords: seo.generateKeywords(content, [serviceData.category, serviceData.name]);';';";";";
-    canonical: seo.generateCanonical(serviceData.path);'';";";";
-    ogType: 'product';";";";
-    structuredData: seo.generateServiceStructuredData({};
->>>>>>> main
       name: serviceData.name;
       description: serviceData.description;';';";";";
       url: seo.generateCanonical(serviceData.path);'';";";";
       provider: 'Zion Tech Group';";";";
       category: serviceData.category;
     })
-<<<<<<< HEAD
   };'";'";";";";";
 };"'"''";
-=======
-  };
-};"'"'
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

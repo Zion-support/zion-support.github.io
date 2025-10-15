@@ -17,10 +17,5 @@ const AiSmartSchedulerPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default AiSmartSchedulerPage;'";'";
-=======
-
-export default AiSmartSchedulerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

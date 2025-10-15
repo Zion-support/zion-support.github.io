@@ -17,10 +17,5 @@ const CloudInfrastructureManagementPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default CloudInfrastructureManagementPage;'";'";
-=======
-
-export default CloudInfrastructureManagementPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

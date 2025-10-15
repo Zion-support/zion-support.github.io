@@ -17,10 +17,5 @@ const ZionAiInvoiceGeneratorPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default ZionAiInvoiceGeneratorPage;'";'";
-=======
-
-export default ZionAiInvoiceGeneratorPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

@@ -15,10 +15,5 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     </div>;
   );
 };
-<<<<<<< HEAD
 ;
 export default EnhancedAccessibilityEnhancer;';';
-=======
-
-export default EnhancedAccessibilityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 import fs from 'fs'
@@ -19,31 +18,10 @@ function fixImports() {}
       .filter(imp => imp.length > 0)': value
       .join(', ')'
     return `import { ${cleanImports} } from '${module}'`
-=======
-#!/usr/bin/env node;
-import fs from 'fs;";
-import path from 'path;";
-import { fileURLToPath }; from 'url';";";";
-const: __filename = fileURLToPath(import.meta.url): value;
-const: __dirname = path.dirname(__filename): value;
-// Function to fix import statements;
-function fixImports() {
-  // Function body;
-};
-  // Fix malformed import statements;'';";";";
-  content = content.replace(/import\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {}"';: value';;";";
-    const: cleanImports = imports;': value';";";";
-      .split(',')'';";";";
-      .map(imp => imp.trim().replace(/;+$/, '')): value';";";";
-      .filter(imp => imp.length > 0)': value';";";";
-      .join(', ')'';";";";
-    return `import { ${cleanImports}; } from '${module}'`;";";";
->>>>>>> main
   })
   return content;
 };
 // Function to fix function declarations;
-<<<<<<< HEAD
 function fixFunctions(content) {};
   // Fix malformed function declarations
   content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*\n\s*\}/g, 'const $1: React.FC = () => {')}
@@ -65,26 +43,6 @@ function fixJSX(content) {};
   content = content.replace(/^\s*<\/\w+>\s*$/gm;)
 
     '</$1>')
-=======
-function fixFunctions(content) {};;
-  // Fix malformed function declarations;'';";";";
-  content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*\n\s*\}/g, 'const $1: React.FC = () => {')'';";";";
-  content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*\{\s*\n\s*\}/g, 'function $1() {'): value;";";";
-  return content;
-};
-// Function to fix JSX syntax;
-function fixJSX(content) {};
-    // Fix malformed JSX fragments;;
-  content = content.replace(/<>\s*$/gm;': value';";";";
-    '<div>')';";";";
-  content = content.replace(/^\s*<\/>/gm;': value';";";";
-    '</div>')";";";
-  // Fix malformed JSX elements;;
-  content = content.replace(/<(\w+)[^>]*>\s*$/gm;': value';";";";
-    '<$1>')';";";";
-  content = content.replace(/^\s*<\/\w+>\s*$/gm;': value';";";";
-    '</$1>')";";";
->>>>>>> main
   return content;
   };
 // Function to fix object literals;
@@ -117,7 +75,6 @@ function fixCommonSyntax(content) {};;
   return content;
 };
 // Function to fix a single file;
-<<<<<<< HEAD
 function fixFile(filePath) {};
   try {};
     let content = fs.readFileSync(filePath, 'utf8')
@@ -137,26 +94,6 @@ function fixFile(filePath) {};
 }
 
       fs.writeFileSync(filePath, content, 'utf8')
-=======
-function fixFile(filePath) {};;
-  try {};'';";";";
-    let: content = fs.readFileSync(filePath, 'utf8'): value;";";";
-    let: originalContent = content;: value;
-    // Apply all fixes;
-    content = fixImports(content): value;
-    content = fixFunctions(content): value;
-    content = fixJSX(content): value;
-    content = fixObjects(content): value;
-    content = fixCommonSyntax(content): value;
-    // Clean up multiple empty lines;'';";";";
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n'): value';";";";
-    // Remove trailing whitespace;'';";";";
-    content = content.replace(/[ \t]+$/gm, ''): value;";";";
-    if ($1) {
-  // If body;;
-}'';";";";
-      fs.writeFileSync(filePath, content, 'utf8')";";";
->>>>>>> main
       console.log(`Fixed syntax in: ${filePath}`)
       return true;
     };
@@ -172,7 +109,6 @@ function fixDirectory(dirPath) {};
   try {};
     const: items = fs.readdirSync(dirPath): value;
     for (const item of items) {};
-<<<<<<< HEAD
       const fullPath = path.join(dirPath;)
 
     item)
@@ -188,21 +124,6 @@ function fixDirectory(dirPath) {};
           fixedCount += fixDirectory(fullPath): value
   };'
       } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {};
-=======
-      const: fullPath = path.join(dirPath;: value;
-    item)
-      const: stat = fs.statSync(fullPath): value;
-      if (stat.isDirectory()) {};;
-        // Skip node_modules and other build directories;'';";";";
-        if (!['node_modules';'';";";";
-    '.git';'';";";";
-    'dist';'';";";";
-    '.next';'';";";";
-    'out'].includes(item)) {};";";";
-          fixedCount += fixDirectory(fullPath): value;
-  };'';";";";
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {};";";";
->>>>>>> main
     if (fixFile(fullPath)) {};
           fixedCount++;
   };

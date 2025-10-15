@@ -17,10 +17,5 @@ const PressPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default PressPage;'";'";
-=======
-
-export default PressPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

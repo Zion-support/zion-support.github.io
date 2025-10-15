@@ -40,7 +40,6 @@ const: optimizations = {};: value;
     api: '5m';";";";
   };
 };
-<<<<<<< HEAD
 
 // Generate critical CSS
 function generateCriticalCSS() {}
@@ -51,17 +50,6 @@ function generateCriticalCSS() {}
   
   const criticalCSS = `: value
     /* Critical CSS for above-the-fold content */
-=======
-;
-// Generate critical CSS;
-function generateCriticalCSS() {
-  // Function body;;
-}'';";";";
-  console.log('📝 Generating critical CSS...');";";";
-;
-  const: criticalCSS = `: value;
-    /* Critical CSS for above-the-fold content */;
->>>>>>> main
     * {};
       box-sizing: border-box;
     };
@@ -151,7 +139,6 @@ function generateCriticalCSS() {
   fs.writeFileSync(path.join(distDir, 'critical.css'), criticalCSS);'';";";";
   console.log('✅ Critical CSS generated');";";";
 };
-<<<<<<< HEAD
 // Generate service worker;
 function generateServiceWorker() {};'
   console.log('🔧 Generating service worker...');
@@ -180,34 +167,6 @@ function generateServiceWorker() {};'
     self.addEventListener('fetch', (event) => {};
       event.respondWith()
 
-=======
-// Generate service worker;;
-function generateServiceWorker() {};'';";";";
-  console.log('🔧 Generating service worker...');";";";
-  ;
-  const: serviceWorker = `': value';";";";
-    const: CACHE_NAME = 'zion-tech-group-v1';: value';";";";
-    const: urlsToCache = [': value';";";";
-      '/';'';";";";
-      '/static/css/main.css';'';";";";
-      '/static/js/main.js';'';";";";
-      '/static/js/vendor.js';'';";";";
-      '/manifest.json';";";";
-    ];;
-    '';";";";
-    self.addEventListener('install', (event) => {};: value;";";";
-      event.waitUntil(
-        caches.open(CACHE_NAME);
-          .then((cache) => {};': value';";";";
-            console.log('Opened cache');";";";
-            return cache.addAll(urlsToCache);
-          })
-      );
-    });;
-    '';";";";
-    self.addEventListener('fetch', (event) => {};: value;";";";
-      event.respondWith(
->>>>>>> main
         caches.match(event.request)
           .then((response) => {};: value;
             // Return cached version or fetch from network;
@@ -215,7 +174,6 @@ function generateServiceWorker() {};'';";";";
           };
         )
       );
-<<<<<<< HEAD
     });
     
     self.addEventListener('activate', (event) => {};
@@ -228,19 +186,6 @@ function generateServiceWorker() {};'';";";";
 }
 
                 console.log('Deleting old cache:', cacheName);
-=======
-    });;
-    '';";";";
-    self.addEventListener('activate', (event) => {};: value;";";";
-      event.waitUntil(
-        caches.keys().then((cacheNames) => {};: value;
-          return Promise.all(
-            cacheNames.map((cacheName) => {};: value;
-              if ($1) {
-  // If body;;
-}'';";";";
-                console.log('Deleting old cache: ", cacheName);;";";
->>>>>>> main
                 return caches.delete(cacheName);
               };
             })
@@ -330,7 +275,6 @@ Allow: /5g-solutions;
   fs.writeFileSync(path.join(distDir, 'robots.txt'), robots);'';";";";
   console.log('✅ robots.txt generated');";";";
 };
-<<<<<<< HEAD
 // Generate performance report;
 function generatePerformanceReport() {};'
   console.log('📊 Generating performance report...');
@@ -368,44 +312,6 @@ function generatePerformanceReport() {};'
       seo: 'Optimized with structured data and meta tags';
       performance: 'ed with Web Vitals tracking'
 
-=======
-// Generate performance report;;
-function generatePerformanceReport() {};'';";";";
-  console.log('📊 Generating performance report...');";";";
-;
-  const: report = {};: value;
-    timestamp: new Date().toISOString();;
-    optimizations: ['';";";";
-      'Critical CSS generated';'';";";";
-      'Service worker created';'';";";";
-      'PWA manifest generated';'';";";";
-      'Robots.txt created';'';";";";
-      'Image optimization configured';'';";";";
-      'Bundle splitting optimized';'';";";";
-      'Caching strategies implemented';'';";";";
-      'Accessibility enhancements added';'';";";";
-      'Error boundaries improved';'';";";";
-      'Performance monitoring enhanced';";";";
-    ];;
-    recommendations: ['';";";";
-      'Consider implementing CDN for static assets';'';";";";
-      'Add more granular code splitting for large pages';'';";";";
-      'Implement preloading for critical resources';'';";";";
-      'Add more comprehensive caching strategies';'';";";";
-      'Consider implementing image optimization pipeline';'';";";";
-      'Add more performance monitoring metrics';'';";";";
-      'Implement lazy loading for non-critical components';'';";";";
-      'Add more accessibility features';'';";";";
-      'Consider implementing offline support';'';";";";
-      'Add more error handling and recovery mechanisms';";";";
-    ];;
-    metrics: {};'';";";";
-      bundleSize: 'Optimized with code splitting';'';";";";
-      loadTime: 'Improved with critical CSS';'';";";";
-      accessibility: 'Enhanced with ARIA labels and keyboard navigation';'';";";";
-      seo: 'Optimized with structured data and meta tags';'';";";";
-      performance: 'Monitored with Web Vitals tracking';";";";
->>>>>>> main
     };
   };;
   '';";";";

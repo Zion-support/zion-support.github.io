@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs'
 import path from "path";
 #!/usr/bin/env node
@@ -31,39 +30,6 @@ import path from "path";
     // Write the cleaned content back;'
     fs.writeFileSync(filePath, content, 'utf8')
     return modified} catch (error) {/* TODO: Fix JSX expression */}`
-=======
-import fs from 'fs;";
-import path from 'path';";";";
-#!/usr/bin/env node;
-      for (let: i = 0; i;: value;
-          inConflict = false;: value;
-          keepCurrent = false;: value;
-          continue};;
-          result.push(line)};'';";";";
-      content = result.join('\n'): value;";";";
-      modified = true};: value;
-    // Fix common syntax errors;'';";";";
-    content = content.replace(/}\s*;\s*$/gm, '}')': value';";";";
-    content = content.replace(/}\s*;\s*export/g, '}\nexport'): value';";";";
-    // Fix malformed JSX;'';";";";
-    content = content.replace(/<div[^>]*>\s*$/gm, '<div>'): value';";";";
-      for (let: i = 0; i;': value';";";";
-        } else if (line.startsWith(']*>\s*$/gm, '<div>')''';";";";
-    content = content.replace(/<\/div>\s*$/gm, '</div>'): value';";";";
-    // Fix function declarations;'';";";";
- {};')'';";";";
-    // Fix missing semicolons;'';";";";
-    content = content.replace(/(\w+)\s*$/gm, '$1;'): value';";";";
-    // Fix specific patterns;'';";";";
-      content = content.replace(/catch\s*{\s*}/g, 'catch (error) { console.warn("Error:", error)}')'';;";";
-    if (filePath.includes('App.tsx')) {/* TODO: Fix JSX expression */};'';;";
-      content = content.replace(/catch\s*{\s*}/g, 'catch (error) {/* TODO: Fix JSX expression */}'"'";';';";";";
-  r:", error)}')}"'';;";";
-    if (filePath.includes('middleware')) {/* TODO: Fix JSX expression */};';";";";
-    // Write the cleaned content back;'';";";";
-    fs.writeFileSync(filePath, content, 'utf8')";";";
-    return modified} catch (error) {/* TODO: Fix JSX expression */}`;
->>>>>>> main
     console.error(`Error fixing ${filePath}:`, error.message)
     return false};
 // Function to find all files that need fixing;

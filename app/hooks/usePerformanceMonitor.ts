@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {useEffect} from "react";
 interface PerformanceMetrics {};
   loadTime: number
@@ -25,17 +24,6 @@ export const usePerformanceMonitor = () => {};
       if ($1) {}
   // If body
 
-=======
-import { useEffect, useRef } from 'react';
-;
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  timeToInteractive: number,
->>>>>>> main
 }
 ;
 export const usePerformanceMonitor = () => {
@@ -112,7 +100,6 @@ export const usePerformanceMonitor = () => {
           ttiObserver.disconnect();
         }, 10000);
       };
-<<<<<<< HEAD
 
       // Log performance metrics
       const logMetrics = () => {};
@@ -126,20 +113,6 @@ export const usePerformanceMonitor = () => {
             cumulative_layout_shift: metricsRef.current.cumulativeLayoutShift;
 
             time_to_interactive: metricsRef.current.timeToInteractive
-=======
-;
-      // Log performance metrics;
-      const logMetrics = () => {
-        // Send to analytics service';';
-        if (typeof window !== 'undefined' && (window as any).gtag) {';
-          (window as any).gtag('event', 'performance_metrics', {";
-            load_time: metricsRef.current.loadTime,;
-            first_contentful_paint: metricsRef.current.firstContentfulPaint,;
-            largest_contentful_paint: metricsRef.current.largestContentfulPaint,;
-            first_input_delay: metricsRef.current.firstInputDelay,;
-            cumulative_layout_shift: metricsRef.current.cumulativeLayoutShift,;
-            time_to_interactive: metricsRef.current.timeToInteractive,
->>>>>>> main
           });
         }
       };
@@ -165,10 +138,5 @@ export const usePerformanceMonitor = () => {
 ;
   return metricsRef.current;
 };
-<<<<<<< HEAD
 ;
 export default usePerformanceMonitor;';';
-=======
-
-export default usePerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
