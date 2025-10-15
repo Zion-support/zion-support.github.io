@@ -1,123 +1,85 @@
 import React, { useEffect, useState } from 'react';
+import { Activity, Zap, Clock, Database } from 'lucide-react';
 
 interface PerformanceMetrics {
-  loadTime: number | null;
-  renderTime: number | null;
-  memoryUsage: number | null;
-  networkLatency: number | null;
+  loadTime: number;
+  memoryUsage: number;
+  renderTime: number;
+  networkLatency: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
+interface PerformanceMonitorProps {
+  children: React.ReactNode;
+  showDetails?: boolean;
+}
+
+export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
+  children, 
+  showDetails = false 
+}) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: null,
-    renderTime: null,
-    memoryUsage: null,
-    networkLatency: null,
+    loadTime: 0,
+    memoryUsage: 0,
+    renderTime: 0,
+    networkLatency: 0,
   });
 
-  const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
-    // Only run in development mode
-    if (process.env.NODE_ENV !== 'development') {
-      return;
-    }
-
+    const startTime = performance.now();
+    
     const measurePerformance = () => {
-      if (typeof window !== 'undefined' && window.performance) {
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = window.performance.getEntriesByType('paint');
-        
-        const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-        const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-        
-        // Memory usage (if available)
-        const memoryUsage = (window as any).performance?.memory?.usedJSHeapSize || 0;
-        
-        // Network latency (simplified)
-        const networkLatency = navigation ? navigation.responseEnd - navigation.requestStart : 0;
-
-        setMetrics({
-          loadTime: Math.round(loadTime),
-          renderTime: Math.round(renderTime),
-          memoryUsage: Math.round(memoryUsage / 1024 / 1024), // Convert to MB
-          networkLatency: Math.round(networkLatency),
-        });
-      }
+      const loadTime = performance.now() - startTime;
+      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
+      const renderTime = performance.now() - startTime;
+      
+      setMetrics({
+        loadTime,
+        memoryUsage: memoryUsage / 1024 / 1024, // Convert to MB
+        renderTime,
+        networkLatency: 0, // This would be measured from actual network requests
+      });
     };
 
-    // Measure after initial load
-    const timer = setTimeout(measurePerformance, 1000);
-
-    return () => clearTimeout(timer);
+    // Measure after component mount
+    const timeoutId = setTimeout(measurePerformance, 100);
+    
+    return () => clearTimeout(timeoutId);
   }, []);
 
-  // Toggle visibility with keyboard shortcut
-  useEffect(() => {
-    const handleKeyPress = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
-        setIsVisible(!isVisible);
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [isVisible]);
-
-  // Don't render in production
-  if (process.env.NODE_ENV === 'production') {
-    return null;
-  }
-
-  if (!isVisible) {
-    return null;
+  if (!showDetails) {
+    return <>{children}</>;
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/95 backdrop-blur-sm border border-slate-700 rounded-lg p-4 shadow-lg z-50 max-w-xs">
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-semibold text-white">Performance Monitor</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white text-xs"
-        >
-          ✕
-        </button>
-      </div>
+    <div className="relative">
+      {children}
       
-      <div className="space-y-2 text-xs">
-        <div className="flex justify-between">
-          <span className="text-gray-400">Load Time:</span>
-          <span className={`font-mono ${(metrics.loadTime || 0) > 1000 ? 'text-red-400' : 'text-green-400'}`}>
-            {metrics.loadTime ? `${metrics.loadTime}ms` : 'Loading...'}
-          </span>
+      {/* Performance Overlay - Only in development */}
+      {process.env.NODE_ENV === 'development' && (
+        <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4 text-xs text-white z-50">
+          <div className="flex items-center space-x-2 mb-2">
+            <Activity className="w-4 h-4 text-cyan-400" />
+            <span className="font-semibold">Performance Monitor</span>
+          </div>
+          
+          <div className="space-y-1">
+            <div className="flex items-center space-x-2">
+              <Clock className="w-3 h-3 text-green-400" />
+              <span>Load: {metrics.loadTime.toFixed(2)}ms</span>
+            </div>
+            
+            <div className="flex items-center space-x-2">
+              <Database className="w-3 h-3 text-blue-400" />
+              <span>Memory: {metrics.memoryUsage.toFixed(2)}MB</span>
+            </div>
+            
+            <div className="flex items-center space-x-2">
+              <Zap className="w-3 h-3 text-yellow-400" />
+              <span>Render: {metrics.renderTime.toFixed(2)}ms</span>
+            </div>
+          </div>
         </div>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-400">Render Time:</span>
-          <span className={`font-mono ${(metrics.renderTime || 0) > 100 ? 'text-red-400' : 'text-green-400'}`}>
-            {metrics.renderTime ? `${metrics.renderTime}ms` : 'Loading...'}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-400">Memory:</span>
-          <span className={`font-mono ${(metrics.memoryUsage || 0) > 50 ? 'text-red-400' : 'text-green-400'}`}>
-            {metrics.memoryUsage ? `${metrics.memoryUsage}MB` : 'Loading...'}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-400">Network:</span>
-          <span className={`font-mono ${(metrics.networkLatency || 0) > 500 ? 'text-red-400' : 'text-green-400'}`}>
-            {metrics.networkLatency ? `${metrics.networkLatency}ms` : 'Loading...'}
-          </span>
-        </div>
-      </div>
-      
-      <div className="mt-3 pt-2 border-t border-slate-700 text-xs text-gray-500">
-        Press Ctrl+Shift+P to toggle
-      </div>
+      )}
     </div>
   );
 };
