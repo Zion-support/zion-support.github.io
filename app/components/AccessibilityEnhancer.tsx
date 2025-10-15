@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-=======
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface AccessibilitySettings {
@@ -11,8 +8,6 @@ interface AccessibilitySettings {
   enableLargeText: boolean;
   enableReducedMotion: boolean;
 }
-
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 interface AccessibilityEnhancerProps {
   isHighContrast?: boolean;
   isReducedMotion?: boolean;

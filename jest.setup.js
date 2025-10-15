@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-import '@testing-library/jest-dom';
-import React from 'react';
-import { TextEncoder, TextDecoder } from 'util';
-
-// Polyfill for TextEncoder/TextDecoder
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
-
-// Mock TextEncoder and TextDecoder
-import { TextEncoder, TextDecoder } from 'util';
-=======
 require("@testing-library/jest-dom");
 // Polyfill for TextEncoder/TextDecoder
 const { TextEncoder, TextDecoder } = require("util");
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 // Mock window.matchMedia
@@ -30,27 +17,13 @@ Object.defineProperty(window, "matchMedia", {
     dispatchEvent: jest.fn(),
   })),
 });
-<<<<<<< HEAD
 
-// Mock scrollTo
-Object.defineProperty(window, 'scrollTo', {
-  writable: true,
-  value: jest.fn(),
-});
-// Mock localStorage
-const localStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
-=======
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 };
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {

@@ -645,16 +645,6 @@ export default function AIServices() {
       featured: false
     },
     {
-<<<<<<< HEAD
-      name: "AI Blockchain Solutions",
-      description: "Intelligent blockchain applications with AI-powered smart contracts and analytics.",
-      features: ["Smart contracts", "DeFi analytics", "NFT generation", "Blockchain monitoring", "Cryptocurrency analysis", "Risk assessment"],
-      icon: <Shield className="w-8 h-8" />,
-      applications: ["DeFi platforms", "NFT marketplaces", "Cryptocurrency trading", "Supply chain tracking"],
-      price: "Starting at $3,999/month",
-      benefits: ["Automated smart contracts", "Real-time blockchain analysis", "Fraud detection", "Optimized transactions"]
-    }  ];
-=======
       id: "ai-time-series-forecasting",
       name: "AI Time Series Forecasting",
       description: "Advanced time series analysis with forecasting, trend detection, and seasonal pattern recognition",
@@ -713,7 +703,6 @@ export default function AIServices() {
       featured: false
     }
   ];
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
   const categories = [
     { name: "All", count: aiServices.length, active: true },

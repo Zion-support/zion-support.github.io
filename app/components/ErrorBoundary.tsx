@@ -1,9 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
 interface Props {
   children: ReactNode;
@@ -12,39 +9,18 @@ interface Props {
 
 interface State {
   hasError: boolean;
-<<<<<<< HEAD
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-=======
   error?: Error;
   errorInfo?: ErrorInfo;
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-<<<<<<< HEAD
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorInfo: null
-    };
-=======
     this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -60,7 +36,6 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-<<<<<<< HEAD
       // Here you would typically send the error to an error reporting service
       console.error('Production error:', error, errorInfo);
     }
@@ -69,18 +44,11 @@ class ErrorBoundary extends Component<Props, State> {
   handleRetry = () => {
     this.setState({
       hasError: false,
-      error: null,
-      errorInfo: null
+      error: undefined,
+      errorInfo: undefined
     });
   };
 
-=======
-      // Here you would typically send the error to a logging service
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-  }
-
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -89,19 +57,10 @@ class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-<<<<<<< HEAD
         <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-lg p-6 text-center">
             <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full">
               <AlertTriangle className="w-8 h-8 text-red-500" />
-=======
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20">
-            <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
-              <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-2">
@@ -109,7 +68,6 @@ class ErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
               We're sorry, but something unexpected happened. Please try refreshing the page or contact support if the problem persists.
             </p>
 
@@ -151,17 +109,6 @@ class ErrorBoundary extends Component<Props, State> {
                   contact our support team
                 </Link>
               </p>
-=======
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            
-            <div className="space-y-4">
-              <button
-                onClick={() => window.location.reload()}
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-              >
-                Refresh Page
-              </button>
               
               <button
                 onClick={() => window.location.href = '/'}
@@ -169,7 +116,6 @@ class ErrorBoundary extends Component<Props, State> {
               >
                 Go Home
               </button>
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
             </div>
             
             {process.env.NODE_ENV === 'development' && this.state.error && (
