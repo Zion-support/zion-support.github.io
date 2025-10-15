@@ -1,7 +1,14 @@
 import React, { useEffect } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+
 interface CoreWebVitalsProps {
   children: React.ReactNode;
+}
+
+declare global {
+  interface Window {
+    gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
+  }
 }
 export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
   useEffect(() => {
