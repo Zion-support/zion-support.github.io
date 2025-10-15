@@ -1,5 +1,6 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
+import { Brain } from 'lucide-react';
 
 const AiPersonalizedLearningPage: React.FC = () => {
   const features = [

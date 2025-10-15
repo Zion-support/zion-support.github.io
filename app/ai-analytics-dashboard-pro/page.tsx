@@ -7,12 +7,7 @@ import {
   BarChart3, 
   TrendingUp, 
   Target, 
-  Database,
-  Zap,
-  Eye,
-  MessageSquare,
-  Users,
-  RefreshCw
+  Database
 } from 'lucide-react';
 
 const AIAnalyticsDashboardProPage: React.FC = () => {
