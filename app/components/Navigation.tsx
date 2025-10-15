@@ -41,7 +41,7 @@ const Navigation: React.FC = () => {
                   onMouseLeave={() => setServicesOpen(false)}
                   className="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg z-50"
                 >
-                  <div className="py-1">
+                  <div className="py-1 max-h-96 overflow-y-auto">
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100">AI & Machine Learning</div>
                     <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       AI Services
@@ -56,7 +56,7 @@ const Navigation: React.FC = () => {
                       Data Analytics
                     </Link>
                     
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">IT Services</div>
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">IT Services & Solutions</div>
                     <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       IT Services
                     </Link>
@@ -73,7 +73,7 @@ const Navigation: React.FC = () => {
                       Network Infrastructure
                     </Link>
                     
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Infrastructure</div>
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Infrastructure & Cloud</div>
                     <Link to="/cloud-infrastructure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Cloud Infrastructure
                     </Link>
@@ -89,7 +89,7 @@ const Navigation: React.FC = () => {
                       Micro SaaS Solutions
                     </Link>
                     
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">AI Tools</div>
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">AI Tools & Platforms</div>
                     <Link to="/zion-ai-content-moderator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       AI Content Moderator
                     </Link>
@@ -110,6 +110,15 @@ const Navigation: React.FC = () => {
                     </Link>
                     <Link to="/zion-ai-workflow-automator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Workflow Automator
+                    </Link>
+                    <Link to="/zion-ai-customer-support-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Customer Support Pro
+                    </Link>
+                    <Link to="/zion-ai-email-marketing-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Email Marketing Pro
+                    </Link>
+                    <Link to="/zion-ai-social-scheduler-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Social Scheduler Pro
                     </Link>
                   </div>
                 </div>
