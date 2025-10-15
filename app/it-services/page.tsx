@@ -5,7 +5,15 @@ import { ArrowRight, CheckCircle, Cloud, Database, Monitor, Server, Settings, Sh
 
 const ItServicesPage: React.FC = () => { const itServices = [ { icon: <Cloud className="w-8 h-8" />, title: "Cloud Infrastructure", description: "Scalable and secure cloud infrastructure solutions for modern businesses.", href: "/ai-cloud-infrastructure", features: ["Cloud Migration", "Multi-Cloud Management", "Serverless Architecture", "Cost Optimization"] }, { icon: <Shield className="w-8 h-8" />, title: "Advanced Security Suite", description: "Comprehensive cybersecurity solutions to protect your digital assets.", href: "/advanced-security-suite", features: ["Threat Detection", "Data Encryption", "Compliance Management", "Security Auditing"] }, { icon: <Database className="w-8 h-8" />, title: "Database Solutions", description: "Robust database management and optimization services for data-driven businesses.", href: "/database-solutions", features: ["Database Design", "Performance Optimization", "Data Migration", "Backup & Recovery"] }, { icon: <Monitor className="w-8 h-8" />, title: "Performance Monitoring", description: "Real-time monitoring and optimization of your IT infrastructure and applications.", href: "/performance-monitoring", features: ["Real-time Monitoring", "Performance Analytics", "Alert Management", "Capacity Planning"] }, { icon: <Settings className="w-8 h-8" />, title: "DevOps Solutions", description: "Streamlined development and deployment processes with modern DevOps practices.", href: "/devops-solutions", features: ["CI/CD Pipelines", "Infrastructure as Code", "Container Orchestration", "Automated Testing"] }, { icon: <Server className="w-8 h-8" />, title: "API Management", description: "Comprehensive API management and integration solutions for seamless connectivity.", href: "/ai-api-management", features: ["API Gateway", "Rate Limiting", "Authentication", "Analytics & Monitoring"] } ];
   return (
-    <> <Helmet> <title>IT Services - Zion Tech Group | Information Technology Solutions</title> <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, database solutions, performance monitoring, DevOps, and API management." /> <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, database solutions, DevOps, API management, performance monitoring" /> <meta property="og:title" content="IT Services - Zion Tech Group" /> <meta property="og:description" content="Transform your IT infrastructure with our comprehensive technology solutions." /> <meta property="og:type" content="website" /> </Helmet> 
+    <>
+      <Helmet>
+        <title>IT Services - Zion Tech Group | Information Technology Solutions</title>
+        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, database solutions, performance monitoring, DevOps, and API management." />
+        <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, database solutions, DevOps, API management, performance monitoring" />
+        <meta property="og:title" content="IT Services - Zion Tech Group" />
+        <meta property="og:description" content="Transform your IT infrastructure with our comprehensive technology solutions." />
+        <meta property="og:type" content="website" />
+      </Helmet> 
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         { /* Hero Section */ }
         <section className="py-20">
@@ -95,10 +103,9 @@ const ItServicesPage: React.FC = () => { const itServices = [ { icon: <Cloud cla
                   Schedule Demo
                 </Link>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
@@ -131,6 +138,7 @@ const ItServicesPage: React.FC = () => { const itServices = [ { icon: <Cloud cla
 
       <Footer />
     </div>
+    </>
   );
 };
 

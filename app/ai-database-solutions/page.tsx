@@ -1,9 +1,9 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Database } from 'lucide-react';
+import { CheckCircle, Database, Shield, Zap, Users } from 'lucide-react';
 
 const AiDatabaseSolutionsPage = () => {
-  return;
-},
+  const features = [
     { icon: <Shield className="w-8 h-8" />,
       title: "Advanced Security & Compliance",
       description: "Enterprise-grade security with automated threat detection, encryption, and compliance management for sensitive data." },

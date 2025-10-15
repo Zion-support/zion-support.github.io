@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 export default function ZionInvoiceGenius() {
-  return;
-},
+  const features = [
     {
       title: "Automated Billing",
       description: "Set up recurring invoices, payment reminders, and automated follow-ups for overdue payments",

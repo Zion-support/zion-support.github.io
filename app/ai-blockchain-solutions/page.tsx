@@ -1,9 +1,10 @@
-import { ArrowRight, Link, Target, CheckCircle, Globe, Coins } from 'lucide-react';
+import React from 'react';
+import { ArrowRight, Link, Target, CheckCircle, Globe, Coins, Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
+
 export default function AIBlockchainSolutions() {
-  return;
-},
+  const features = [
     {
       title: "Decentralized AI Networks",
       description: "Build and deploy AI models on blockchain networks with decentralized computing and data sharing",

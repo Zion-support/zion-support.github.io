@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Brain, Camera, CheckCircle, Phone, Play, Star } from 'lucide-react';
 
@@ -5,15 +6,15 @@ const AISocialMediaManagerProPage = () => {
   const features = [
     {
       icon: <Brain className="w-8 h-8" />,
-      title: &quot;AI Content Creation&quot;,
-      description: &quot;Intelligent content generation for all social media platforms.&quot;,
-      benefits: [&quot;Auto-generated posts&quot;, &quot;Trend analysis&quot;, &quot;Content optimization&quot;]
+      title: "AI Content Creation",
+      description: "Intelligent content generation for all social media platforms.",
+      benefits: ["Auto-generated posts", "Trend analysis", "Content optimization"]
     },
     {
       icon: <Camera className="w-8 h-8" />,
-      title: &quot;Visual Content&quot;,
-      description: &quot;AI-powered image and video creation tools.&quot;,
-      benefits: [&quot;Auto-generated visuals&quot;, &quot;Brand consistency&quot;, &quot;Template library&quot;]
+      title: "Visual Content",
+      description: "AI-powered image and video creation tools.",
+      benefits: ["Auto-generated visuals", "Brand consistency", "Template library"]
     }
   ];
 
@@ -31,14 +32,14 @@ const AISocialMediaManagerProPage = () => {
   ];
 
   const pricingPlans = [
-    { name: &quot;Starter&quot;, price: &quot;$39&quot;, features: [&quot;Basic posting&quot;, &quot;1 platform&quot;], description: &quot;Perfect for individuals&quot;, period: &quot;per month&quot;, popular: false },
-    { name: &quot;Professional&quot;, price: &quot;$99&quot;, features: [&quot;All platforms&quot;, &quot;AI content&quot;], description: &quot;Ideal for businesses&quot;, period: &quot;per month&quot;, popular: true },
-    { name: &quot;Enterprise&quot;, price: &quot;Custom&quot;, features: [&quot;Custom solutions&quot;, &quot;Dedicated support&quot;], description: &quot;Tailored for agencies&quot;, period: &quot;contact us&quot;, popular: false }
+    { name: "Starter", price: "$39", features: ["Basic posting", "1 platform"], description: "Perfect for individuals", period: "per month", popular: false },
+    { name: "Professional", price: "$99", features: ["All platforms", "AI content"], description: "Ideal for businesses", period: "per month", popular: true },
+    { name: "Enterprise", price: "Custom", features: ["Custom solutions", "Dedicated support"], description: "Tailored for agencies", period: "contact us", popular: false }
   ];
 
   const testimonials = [
-    { name: &quot;Jennifer Lee&quot;, role: &quot;Social Media Manager&quot;, content: &quot;Increased our engagement by 300%!&quot;, rating: 5, company: &quot;Digital Marketing Co.&quot; },
-    { name: &quot;David Kim&quot;, role: &quot;Marketing Director&quot;, content: &quot;Best social media management tool!&quot;, rating: 5, company: &quot;Brand Solutions&quot; }
+    { name: "Jennifer Lee", role: "Social Media Manager", content: "Increased our engagement by 300%!", rating: 5, company: "Digital Marketing Co." },
+    { name: "David Kim", role: "Marketing Director", content: "Best social media management tool!", rating: 5, company: "Brand Solutions" }
   ];
 
   return (
@@ -320,7 +321,7 @@ const AISocialMediaManagerProPage = () => {
                     </div>
                     
           <p className="text-gray-300 mb-6 leading-relaxed">
-                      &ldquo;{ testimonial.content }&rdquo;
+                      "{ testimonial.content }"
                     </p>
                     <div>
                       

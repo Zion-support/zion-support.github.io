@@ -1,9 +1,9 @@
-import { ArrowRight, Target, CheckCircle, Globe, Bot } from 'lucide-react';
+import React from 'react';
+import {  ArrowRight, Target, CheckCircle, Globe, Bot  } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
 export default function AIChatbotEnterprise() {
-  return;
-},
+  const features = [
     {
       title: "Advanced Natural Language Processing",
       description: "State-of-the-art NLP that understands complex queries, context, and enterprise terminology",

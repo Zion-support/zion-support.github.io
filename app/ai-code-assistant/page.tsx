@@ -1,11 +1,11 @@
+import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
-import {Zap, Users, FileText} from 'lucide-react';
-import { Shield } from 'lucide-react';
+import {Zap, Users, FileText, Shield, Bug} from 'lucide-react';
+
 const AICodeAssistantPage = () => {
-  return;
-},
+  const features = [
     {
       title: "Intelligent Code Review",
       description: "Automated code review with security analysis, performance optimization suggestions, and best practice recommendations.",

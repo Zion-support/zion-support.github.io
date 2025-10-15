@@ -1,9 +1,9 @@
-import { ArrowRight, Target, CheckCircle, Globe, Leaf } from 'lucide-react';
+import React from 'react';
+import {  ArrowRight, Target, CheckCircle, Globe, Leaf  } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
 export default function AIClimateSolutionsPro() {
-  return;
-},
+  const features = [
     {
       title: "Carbon Footprint Analysis",
       description: "Advanced AI algorithms that analyze and optimize carbon footprints across organizations and supply chains",

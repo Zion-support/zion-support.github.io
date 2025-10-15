@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 export default function ZionLeadMagnet() {
-  return;
-},
+  const features = [
     {
       title: "Email Automation",
       description: "Automated email sequences that nurture leads from first contact to conversion",

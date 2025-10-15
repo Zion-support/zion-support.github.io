@@ -103,7 +103,7 @@ const toggleFAQ = () => {
         <div className="text-center">
                 
         <div className="text-3xl font-bold text-white mb-2">
-                  <2min
+                  2min
                 </div>
                 
         <div className="text-gray-400">Average Response Time</div>

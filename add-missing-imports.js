@@ -112,32 +112,32 @@ const addMissingImports = (filePath) => {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Added missing imports to: ${filePath}`);
+      // console.log(`Added missing imports to: ${filePath}`);
     }
     
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
   }
 };
 
 // Main execution
-console.log('Adding missing imports...');
+// console.log('Adding missing imports...');
 
 const files = getAllFiles('./app');
-let fixedCount = 0;
+// let fixedCount = 0;
 
 files.forEach(file => {
   try {
     addMissingImports(file);
-    fixedCount++;
+    // fixedCount++;
   } catch (error) {
-    console.error(`Error with file ${file}:`, error.message);
+    // console.error(`Error with file ${file}:`, error.message);
   }
 });
 
-console.log(`Processed ${fixedCount} files`);
+// console.log(`Processed ${fixedCount} files`);
 
 // Also fix the main App.tsx
 addMissingImports('./App.tsx');
 
-console.log('Missing imports fix completed!');
+// console.log('Missing imports fix completed!');

@@ -163,7 +163,7 @@ const stats = [
                   Contact Us
                 </a>
               </div>
-            ))}
+            </div>
           </div>
         </section>
         {/* Stats Section */}
@@ -325,10 +325,9 @@ const stats = [
                   Email Us
                 </a>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -356,6 +355,7 @@ const stats = [
         </div>
       </section>
     </div>
+    </>
   );
 };
 export default CareersPage;

@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 export default function ZionPerformanceMonitor() {
-  return;
-},
+  const features = [
     {
       title: "AI-Powered Analytics",
       description: "Advanced AI analytics that predict issues before they occur and provide actionable insights",

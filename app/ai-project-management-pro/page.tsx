@@ -13,8 +13,7 @@ import {
   CloudIcon} from '@heroicons/react/24/outline';
 
 export default function AiProjectManagementProPage() {
-  return;
-},
+  const features = [
     {
       icon: ChartBarIcon,
       title: 'Predictive Analytics',

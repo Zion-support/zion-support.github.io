@@ -216,7 +216,7 @@ const testimonials = [ { name: "Jennifer Martinez", company: "Content Marketing 
                     </div>
                     
           <p className="text-gray-300 mb-6 leading-relaxed">
-                      &ldquo;{ testimonial.content }&rdquo;
+                      "{ testimonial.content }"
                     </p>
                     <div>
                       

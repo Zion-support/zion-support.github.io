@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Wifi, Cloud, Smartphone, Shield, BarChart3, Settings, Cpu, Globe, Activity, CheckCircle, Star } from 'lucide-react';
 
 const FiveGImplementationPage: React.FC = () => {
   const features = [
@@ -315,7 +316,7 @@ const testimonials = [
                     ))}
                   </div>
                   
-          <p className="text-gray-300 mb-4 italic">&ldquo;{ testimonial.content }&rdquo;</p>
+          <p className="text-gray-300 mb-4 italic">"{ testimonial.content }"</p>
                   <div>
                     
         <div className="font-semibold text-white">{ testimonial.name }</div>

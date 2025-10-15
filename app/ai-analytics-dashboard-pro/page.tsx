@@ -1,5 +1,6 @@
+import React, { useEffect } from 'react';
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, CheckCircle, Globe, Phone, Play, Star, Target } from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Globe, Phone, Play, Star, Target, BarChart3, Shield, Zap, Mail } from 'lucide-react';
 
 const AiAnalyticsDashboardProPage = () => {
   useEffect(() => {
@@ -325,7 +326,7 @@ const testimonials = [
                     </div>
                     
           <p className="text-gray-300 mb-6 leading-relaxed">
-                      &ldquo;{ testimonial.content }&rdquo;
+                      "{ testimonial.content }"
                     </p>
                     <div>
                       
