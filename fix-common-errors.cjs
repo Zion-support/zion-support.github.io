@@ -1,66 +1,199 @@
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+#!/usr/bin/env node
 
-// Find all TypeScript/JSX files in the app directory
-const files = glob.sync('app/**/*.{ts,tsx}', { cwd: __dirname });
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
 
-console.log(`Found ${files.length} files to process`);
-
-let fixedCount = 0;
-
-files.forEach(file => {
-  const filePath = path.join(__dirname, file);
-  
+// Function to fix common parsing errors
+function fixCommonErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
-    
-    // Fix common patterns
-    const fixes = [
-      // Fix misplaced code inside JSX return
-      {
-        pattern: /return\s*\(\s*<div[^>]*>\s*const\s+/g,
-        replacement: 'const '
-      },
-      // Fix missing closing braces in object literals
-      {
-        pattern: /(\w+):\s*"([^"]*)"\s*,?\s*$/gm,
-        replacement: (match, key, value) => {
-          if (!match.includes('}')) {
-            return `${key}: "${value}",`;
-          }
-          return match;
+
+    // Fix 1: Add missing opening brace for function definitions
+    if (content.match(/const \w+Page: React\.FC = \(\) =>\s*$/m)) {
+      content = content.replace(
+        /const (\w+Page: React\.FC = \(\) =>)\s*$/m,
+        "const $1 {",
+      );
+      modified = true;
+    }
+
+    // Fix 2: Fix malformed object literals that are missing opening braces
+    // Pattern: lines that start with just a property name and colon
+    const malformedObjectPattern = /^(\s+)(\w+):\s*\[([^\]]*)\]\s*,\s*$/gm;
+    content = content.replace(
+      malformedObjectPattern,
+      (match, indent, propName, arrayContent) => {
+        // Check if this should be an object property
+        const lines = content.split("\n");
+        const currentLineIndex =
+          content.substring(0, content.indexOf(match)).split("\n").length - 1;
+        const prevLine = lines[currentLineIndex - 1] || "";
+
+        // If previous line doesn't have an opening brace, this should be an object property
+        if (
+          !prevLine.includes("{") &&
+          !prevLine.includes("const") &&
+          !prevLine.includes("=")
+        ) {
+          return `${indent}  ${propName}: [${arrayContent}],`;
         }
+        return match;
       },
-      // Fix unclosed JSX elements by adding proper structure
-      {
-        pattern: /<section[^>]*>(?![\s\S]*<\/section>)/g,
-        replacement: (match) => {
-          // This needs more sophisticated parsing, so we'll handle it case by case
-          return match;
-        }
+    );
+
+    // Fix 3: Fix missing opening braces for arrays that should be objects
+    content = content.replace(
+      /^(\s+)(\w+):\s*\[\s*$/gm,
+      (match, indent, propName) => {
+        return `${indent}  ${propName}: [`;
+      },
+    );
+
+    // Fix 4: Fix malformed function calls that are missing opening braces
+    content = content.replace(
+      /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*(\w+):\s*\[/gm,
+      "const $1 = () => {\n  $2: [",
+    );
+
+    // Fix 5: Fix missing closing braces and brackets
+    const lines = content.split("\n");
+    let braceCount = 0;
+    let bracketCount = 0;
+    let inFunction = false;
+    let functionStartLine = -1;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+
+      if (
+        line.includes("const ") &&
+        line.includes("Page: React.FC = () => {")
+      ) {
+        inFunction = true;
+        functionStartLine = i;
       }
-    ];
-    
-    // Apply basic fixes
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
+
+      if (inFunction) {
+        braceCount += (line.match(/\{/g) || []).length;
+        braceCount -= (line.match(/\}/g) || []).length;
+        bracketCount += (line.match(/\[/g) || []).length;
+        bracketCount -= (line.match(/\]/g) || []).length;
+      }
+    }
+
+    // Add missing closing braces and brackets
+    if (inFunction && (braceCount > 0 || bracketCount > 0)) {
+      let missingClosures = "";
+      if (bracketCount > 0) {
+        missingClosures += "]".repeat(bracketCount);
+      }
+      if (braceCount > 0) {
+        missingClosures += "}".repeat(braceCount);
+      }
+
+      if (missingClosures) {
+        content += "\n" + missingClosures;
         modified = true;
       }
-    });
-    
-    // Write back if modified
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${file}`);
-      fixedCount++;
     }
+
+    // Fix 6: Fix malformed imports with extra semicolons
+    content = content.replace(/import\s+([^;]+);\s*,/g, "import $1,");
+    content = content.replace(
+      /import\s+([^,]+),\s*\{([^}]+)\}\s*from/g,
+      "import $1, {$2} from",
+    );
+
+    // Fix 7: Fix missing return statement
+    if (
+      content.includes("const ") &&
+      content.includes("Page: React.FC = () => {") &&
+      !content.includes("return (")
+    ) {
+      // Find the last closing brace and add return statement before it
+      const lastBraceIndex = content.lastIndexOf("}");
+      if (lastBraceIndex > 0) {
+        const beforeLastBrace = content.substring(0, lastBraceIndex);
+        const afterLastBrace = content.substring(lastBraceIndex);
+
+        if (!beforeLastBrace.includes("return (")) {
+          content =
+            beforeLastBrace +
+            "\n  return (\n    <div>Page content</div>\n  );\n" +
+            afterLastBrace;
+          modified = true;
+        }
+      }
+    }
+
+    // Fix 8: Fix malformed object properties that are missing opening braces
+    content = content.replace(
+      /^(\s+)(\w+):\s*\[([^\]]*)\]\s*,\s*$/gm,
+      (match, indent, propName, arrayContent) => {
+        // Check if this line is part of an object that's missing opening braces
+        const lines = content.split("\n");
+        const currentLineIndex =
+          content.substring(0, content.indexOf(match)).split("\n").length - 1;
+        const prevLine = lines[currentLineIndex - 1] || "";
+
+        if (
+          !prevLine.includes("{") &&
+          !prevLine.includes("const") &&
+          !prevLine.includes("=")
+        ) {
+          return `${indent}  ${propName}: [${arrayContent}],`;
+        }
+        return match;
+      },
+    );
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, "utf8");
+      return true;
+    }
+
+    return false;
   } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Get all TypeScript files with parsing errors
+function getFilesWithErrors() {
+  try {
+    const output = execSync(
+      'pnpm run lint 2>&1 | grep -B1 "Parsing error" | grep "\\.tsx"',
+      {
+        encoding: "utf8",
+        cwd: "/workspace",
+      },
+    );
+    return output
+      .trim()
+      .split("\n")
+      .filter((line) => line.includes(".tsx"))
+      .map((line) => line.trim());
+  } catch (error) {
+    console.error("Error getting files with errors:", error.message);
+    return [];
+  }
+}
+
+// Main execution
+console.log("Finding files with parsing errors...");
+const filesWithErrors = getFilesWithErrors();
+
+console.log(`Found ${filesWithErrors.length} files with parsing errors`);
+
+let fixedCount = 0;
+filesWithErrors.forEach((file) => {
+  if (fixCommonErrors(file)) {
+    fixedCount++;
+    console.log(`Fixed: ${file}`);
   }
 });
 
-console.log(`Fixed ${fixedCount} files`);
+console.log(`Fixed ${fixedCount} files.`);

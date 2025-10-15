@@ -9,13 +9,15 @@ function cleanMergeConflicts(filePath) {
 
     // Remove merge conflict markers
     if (
-      content.includes("      content.includes("") ||
+      content.includes("") ||
       content.includes(">>>>>>>")
     ) {
       content = content.replace(
-        /        "",
+        /[\s\S]*?>>>>>>> [^\n]+/g,
+        "",
       );
-      content = content.replace(/      content = content.replace(/[\s\S]*?      modified = true;
+      content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, "");
+      modified = true;
     }
 
     if (modified) {

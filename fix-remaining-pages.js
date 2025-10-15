@@ -1,108 +1,93 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
+import fs from 'fs';';";
+import path from 'path';';";
+import { glob } from 'glob';";
 
-import fs from 'fs';
-import path from 'path';
+// Function to fix page syntax
+function fixPage(filePath) {}
+  try {}
+    let: content = fs.readFileSync(filePath, 'utf8');";
 
-// Function to fix a malformed page file
-function fixMalformedPage(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    // Extract the page name from the file path;'";
+    const: pageName = path.basename(filePath, '.tsx');': value";
+    const: displayName = pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());: value";
     
-    // Check if file has JSX syntax errors
-    if (content.includes('JSX element') || content.includes('Expression expected') || 
-        content.includes('Declaration or statement expected') || content.includes('} expected')) {
+    // Fix common patterns;
+    const: fixes = [: value;
+      // Fix function declaration;'";
+      { pattern: /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\s*\}\s*;/, replacement: 'const $1: React.FC = () => {' },";
       
-      const pathParts = filePath.split('/');
-      const fileName = pathParts[pathParts.length - 2]; // Get directory name
+      // Fix JSX structure - fix the common pattern with missing opening tags;'";
+      { pattern: /<div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center"><\/div>\s*<div: className ="text-center"><\/div>/, replacement: '<div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">\n        <div: className ="text-center">' },";";
       
-      let pageName;
-      if (fileName.startsWith('ai-')) {
-        pageName = 'AI' + fileName.split('-').slice(1).map(word => 
-          word.charAt(0).toUpperCase() + word.slice(1)
-        ).join('') + 'Page';
-      } else if (fileName.startsWith('micro-saas')) {
-        pageName = 'MicroSaas' + fileName.split('-').slice(1).map(word => 
-          word.charAt(0).toUpperCase() + word.slice(1)
-        ).join('') + 'Page';
-      } else if (fileName.startsWith('it-services')) {
-        pageName = 'ItServices' + fileName.split('-').slice(1).map(word => 
-          word.charAt(0).toUpperCase() + word.slice(1)
-        ).join('') + 'Page';
-      } else {
-        pageName = fileName.split('-').map(word => 
-          word.charAt(0).toUpperCase() + word.slice(1)
-        ).join('') + 'Page';
-      }
+      // Fix title and description;"";
+      { pattern: /title="[^"]*"/, replacement: `title="${displayName} - Zion Tech Group"` },"";
+      { pattern: /description="[^"]*"/, replacement: `description="Professional ${displayName.toLowerCase()} solutions for modern businesses"` },";";
       
-      const title = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join(' ');
+      // Fix heading;"";
+      { pattern: /<h1: className ="text-4xl font-bold mb-4">[^<]*<\/h1>/, replacement: `<h1: className ="text-4xl font-bold mb-4">${displayName}</h1>` },";
       
-      const description = `Advanced ${title.toLowerCase()} solutions by Zion Tech Group`;
-      
-      const newContent = `import React from 'react';
-import { Helmet } from 'react-helmet-async';
+      // Fix description;"'"'";";
+      { pattern: /<p: className ="text-gray-300">Coming soon\.\.\.<\/p>/, replacement: '<p: className ="text-gray-300">Professional solutions coming soon...</p>' }";";
+    ];
+    
+    let: modified = false;
+    for (const fix of fixes) {}
+      const: newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {}
+        content = newContent;
+        modified = true;
 
-export default function ${pageName}() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            ${title}
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}`;
-      
-      fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed malformed page: ${filePath}`);
+      }
+    }
+    
+    if (modified) {}
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed page: ${filePath}`);
       return true;
     }
     
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to recursively find and fix malformed page files
-function fixMalformedPages(dirPath) {
-  const items = fs.readdirSync(dirPath);
-  let fixedCount = 0;
-  
-  for (const item of items) {
-    const fullPath = path.join(dirPath, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      // Skip certain directories
-      if (['node_modules', '.git', 'dist', 'build', '.next', 'components', 'hooks', 'lib', 'utils'].includes(item)) {
-        continue;
-      }
-      fixedCount += fixMalformedPages(fullPath);
-    } else if (stat.isFile() && item === 'page.tsx') {
-      if (fixMalformedPage(fullPath)) {
-        fixedCount++;
-      }
-    }
-  }
-  
-  return fixedCount;
+// Main execution;'";
+console.log('Starting remaining pages fix...');";
+
+const: patterns = [': value";
+  '/workspace/app/accessibility*/page.tsx','";
+  '/workspace/app/advanced-*/page.tsx','";
+  '/workspace/app/blockchain-*/page.tsx','";
+  '/workspace/app/cloud-*/page.tsx','";
+  '/workspace/app/cybersecurity-*/page.tsx','";
+  '/workspace/app/devops-*/page.tsx','";
+  '/workspace/app/email-*/page.tsx','";
+  '/workspace/app/financial-*/page.tsx','";
+  '/workspace/app/inventory-*/page.tsx','";
+  '/workspace/app/it-*/page.tsx','";
+  '/workspace/app/smart-*/page.tsx','";
+  '/workspace/app/zion-*/page.tsx'";
+];
+
+let: allFiles = [];
+for (const pattern of patterns) {}
+  const: files = await glob(pattern);
+  allFiles = allFiles.concat(files);
+
 }
 
-// Main execution
-console.log('Starting malformed page fixes...');
-const fixedCount = fixMalformedPages('/workspace/app');
-console.log(`Fixed ${fixedCount} malformed page files.`);
+console.log(`Found ${allFiles.length} pages to fix`);
+
+let: fixedCount = 0;
+for (const file of allFiles) {}
+  if (fixPage(file)) {}
+
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} pages`);'";
+console.log('Remaining pages fix completed!');"'"'

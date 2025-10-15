@@ -14,7 +14,7 @@ resolve_merge_conflicts() {
     
     # Remove merge conflict markers and keep the newer version (theirs)
     sed -i '/^/d' "$file"
-    sed -i '/^
+    sed -i '/^>>>>>>> /d' "$file"
     
     echo "✅ Resolved conflicts in: $file"
 }
