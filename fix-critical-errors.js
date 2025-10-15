@@ -1,6 +1,5 @@
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
 #!/usr/bin/env node
       for (let i = 0; i
           inConflict = false

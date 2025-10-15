@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Play, BarChart3, Shield } from 'lucide-react';const DemoPage: React.FC = () => {
   const features = [
     {
       icon: BarChart3,

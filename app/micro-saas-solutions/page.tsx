@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { 
   CheckCircle, 
   ArrowRight, 
@@ -111,6 +111,9 @@ import {
   CloudSunWind,
   Package
 } from 'lucide-react';
+=======
+import {CheckCircle, BarChart3, Database, Globe, Target, MessageSquare} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 const MicroSaaSSolutionsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');

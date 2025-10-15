@@ -1,6 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
 import { Globe, Calendar, BarChart3, CheckCircle, ArrowRight, Target, Zap, Users, Image } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';

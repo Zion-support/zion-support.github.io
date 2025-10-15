@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+import React from 'react''
+=======
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-  return (<>
+export default function AiEmailAssistantPage() {
+  return (
+    <>
       <Helmet>
         <title>AI Email Assistant - Zion Tech Group</title>
         <meta
@@ -194,6 +200,5 @@ import SEOHead from '../components/SEOHead';
       </div>
     </>
   );
-};
-
-export default AiEmailAssistantPage;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7

@@ -1,5 +1,8 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import {Link} from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 import { Helmet } from 'react-helmet-async';
 import { 
   CheckCircle, 

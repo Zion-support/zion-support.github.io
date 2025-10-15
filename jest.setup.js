@@ -1,21 +1,9 @@
+require('@testing-library/jest-dom');
 
-import '@testing-library/jest-dom';
-import React from 'react';
-import { TextEncoder, TextDecoder } from 'util';
-
-// Polyfill for TextEncoder/TextDecoder
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
-
-// Mock TextEncoder and TextDecoder
-import { TextEncoder, TextDecoder } from 'util';
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
 // Mock window.matchMedia
-Object.defineProperty(window, "matchMedia", {
+Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: jest.fn().mockImplementation((query) => ({}
-ursor/fix-errors-and-merge-to-main-5ae7
+  value: jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
     onchange: null,
@@ -27,12 +15,34 @@ ursor/fix-errors-and-merge-to-main-5ae7
   })),
 });
 
-// Mock window.scrollTo
-Object.defineProperty(window, 'scrollTo', {
-  value: jest.fn(),
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock performance
+Object.defineProperty(window, 'performance', {
+  writable: true,
+  value: {
+    now: jest.fn(() => Date.now()),
+    mark: jest.fn(),
+    measure: jest.fn(),
+    getEntriesByType: jest.fn(() => []),
+    getEntriesByName: jest.fn(() => []),
+  },
 });
 
-ursor/fix-errors-and-merge-to-main-5ae7
 // Mock localStorage
 const localStorageMock = {
   getItem: jest.fn(),
@@ -40,16 +50,13 @@ const localStorageMock = {
   removeItem: jest.fn(),
   clear: jest.fn(),
 };
+global.localStorage = localStorageMock;
 
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {}
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-}
-// Mock window.gtag
-global.gtag = jest.fn()
-// Mock window.dataLayer
-global.dataLayer = []
-ursor/fix-errors-and-merge-to-main-5ae7
+// Mock sessionStorage
+const sessionStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn(),
+};
+global.sessionStorage = sessionStorageMock;

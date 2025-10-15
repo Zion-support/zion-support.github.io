@@ -1,7 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+=======
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Star, Clock, Users, Shield } from 'lucide-react';
+import {CheckCircle, Star} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 interface ServicePageProps {
   title: string;

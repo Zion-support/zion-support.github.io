@@ -1,8 +1,11 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Code, Database, Users, DollarSign, Globe, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Eye, Heart, Award, Mic, Video, Image, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
+=======
+import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, Database, Settings, TrendingUp, Cpu, Monitor, MessageSquare, Eye, Layers, Award, Video } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 export default function AIServices() {
   const aiServices = [

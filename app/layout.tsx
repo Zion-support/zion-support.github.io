@@ -2,13 +2,15 @@ import React from "react"
 import { BrowserRouter } from "react-router-dom"
 import { HelmetProvider } from "react-helmet-async"
 import { AnalyticsProvider } from "./components/AnalyticsProvider"
-import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor"
 // import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "./components/ErrorFallback";
+<<<<<<< HEAD
 import {  } from "lucide-react";
+=======
 import MobileNavigation from "./components/MobileNavigation";
 import EnhancedNavigation from "./components/EnhancedNavigation";
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 interface LayoutProps {
   children: React.ReactNode;

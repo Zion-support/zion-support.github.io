@@ -1,6 +1,4 @@
 import React from 'react';
-import { Cloud } from "lucide-react";
-
 const CloudSolutionsPage: React.FC = () => {
   return (
     <>

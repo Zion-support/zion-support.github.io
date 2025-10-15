@@ -1,5 +1,8 @@
-import { ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, MessageSquare, Phone, Mail, TrendingUp, Globe, Clock, Play, Heart, Star as StarIcon, Moon, Sun, Heart as HeartIcon, Zap as ZapIcon, Space, Sun as SunIcon, Moon as MoonIcon, Star as StarIcon2, Space as SpaceIcon, Revenue, State, Address, State, Street, Road, Avenue, Boulevard, Lane, Drive, Court, Circle, Square, Plaza, Mall, Center, Complex, Building, Tower, Skyscraper, House, Home, Apartment, Condo, Townhouse, Villa, Mansion, Palace, Castle, Fort, Tower, Bridge, Tunnel, Highway, Freeway, Expressway, Parkway, Street, Road, Avenue, Boulevard, Lane, Drive, Court, Circle, Square, Plaza, Mall, Center, Complex, Building, Tower, Skyscraper, House, Home, Apartment, Condo, Townhouse, Villa, Mansion, Palace, Castle, Fort, Tower, Bridge, Tunnel, Highway, Freeway, Expressway, Parkway } from 'lucide-react';import { Helmet } from "react-helmet-async";
+<<<<<<< HEAD
+=======
+import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, MessageSquare, Phone, Mail, TrendingUp, Globe, Clock, Play, Star, Zap, Star} from 'lucide-react';import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 export default function ZionAiCrmPro() {
   const features = [

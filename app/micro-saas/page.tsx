@@ -1,8 +1,7 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import SEOHead from '../components/SEOHead';
 import { 
   BarChart3, 
   Shield, 
@@ -35,8 +34,17 @@ import {
   Code,
   Key
 } from 'lucide-react';
+=======
+import React from "react";
+import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Video, Calculator, Package, Receipt, ClipboardList, Workflow} from "lucide-react";
+import SEOOptimizer from "../components/SEOOptimizer";
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
+<<<<<<< HEAD
 const MicroSaaSPage: React.FC = () => {
+=======
+const MicroSaasPage: React.FC = () => {
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
   const microSaasServices = [
     {
       id: 'zion-analytics-pro',
@@ -337,6 +345,36 @@ const MicroSaaSPage: React.FC = () => {
     { number: '30-day', label: 'Free Trial' }
   ];
 
+<<<<<<< HEAD
+=======
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "TechStart Inc.",
+      role: "CEO",
+      content: "Zion Analytics Pro transformed our data insights. We increased revenue by 30% in just 2 months with their predictive analytics.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      company: "E-commerce Solutions",
+      role: "CTO",
+      content: "The micro SAAS solutions are incredibly powerful and easy to implement. We've saved thousands of hours with their automation tools.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      company: "Digital Marketing Agency",
+      role: "Operations Director",
+      content: "Zion Security Shield gives us peace of mind. Our security incidents dropped by 95% since implementation.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
   return (
     <>
       <SEOHead 

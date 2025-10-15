@@ -1,9 +1,11 @@
 import React, { Suspense } from 'react'
-interface LazyWrapperProps {}
+
+interface LazyWrapperProps {
   fallback?: React.ReactNode
   children: React.ReactNode
 }
-const DefaultFallback = () => ()
+
+const DefaultFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-slate-900">
     <div className="flex flex-col items-center space-y-4">
       <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
@@ -11,11 +13,12 @@ const DefaultFallback = () => ()
     </div>
   </div>
 )
-export const LazyWrapper: React.FC<LazyWrapperProps> = ({}
+
+export const LazyWrapper: React.FC<LazyWrapperProps> = ({
   fallback = <DefaultFallback />,
   children
-}) => {}
-}return ()
+}) => {
+  return (
     <Suspense fallback={fallback}>
       {children}
     </Suspense>

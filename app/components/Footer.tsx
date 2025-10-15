@@ -1,15 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon,
-  ArrowRightIcon
-} from '@heroicons/react/24/outline';
-import { Facebook, Twitter, Linkedin, Github } from 'lucide-react';import { 
+  ArrowRightIcon,
   HeartIcon
 } from '@heroicons/react/24/outline'
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react'
+<<<<<<< HEAD
+=======
+import {Twitter, Linkedin, Github} from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()

@@ -1,6 +1,9 @@
 import React from "react"
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from "lucide-react"
+<<<<<<< HEAD
+=======
+import {ArrowRight, CheckCircle} from "lucide-react"
 import { Link } from "react-router-dom"
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 interface EnhancedHeroProps {}
   title?: string
   subtitle?: string

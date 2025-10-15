@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Book, Code, Shield, Zap, Search, ChevronDown, ChevronRight, ExternalLink } from "lucide-react";
+<<<<<<< HEAD
+=======
+import {Book, Code, Shield, Zap, Search, ChevronDown, ChevronRight, ExternalLink} from "lucide-react";
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');

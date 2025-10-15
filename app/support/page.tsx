@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';import { MessageSquare, Phone, Mail, CheckCircle, Send, AlertCircle, FileText, Video } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 const SupportPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',

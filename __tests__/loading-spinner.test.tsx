@@ -1,5 +1,7 @@
+<<<<<<< HEAD
+=======
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import {render} from '@testing-library/react'
 import '@testing-library/jest-dom'
 import LoadingSpinner from '../app/components/LoadingSpinner'
 
@@ -40,3 +42,4 @@ describe('LoadingSpinner', () => {
     expect(container).toHaveClass('custom-class')
   })
 })
+>>>>>>> cursor/fix-errors-and-merge-to-main-74b7
