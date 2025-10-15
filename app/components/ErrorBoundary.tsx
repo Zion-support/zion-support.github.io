@@ -15,36 +15,6 @@ interface State {
 }
 
 class ErrorBoundary extends Component<Props, State> {
-<<<<<<< HEAD
-  public state: State = {
-    hasError: false
-  };
-
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-        
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-  }
-
-  public render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
-            <button 
-              onClick={() => window.location.reload()}
-              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
-            >
-              Try again
-            </button>
-=======
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -166,7 +136,7 @@ class ErrorBoundary extends Component<Props, State> {
 
             {/* Error Message */}
             <p className="text-gray-300 mb-6 text-lg">
-              We encountered an unexpected error. Don't worry, our team has been notified and is working to fix it.
+              We encountered an unexpected error. Don&apos;t worry, our team has been notified and is working to fix it.
             </p>
 
             {/* Error ID */}
@@ -233,7 +203,6 @@ class ErrorBoundary extends Component<Props, State> {
                 </div>
               </details>
             )}
->>>>>>> cursor/analyze-improve-and-deploy-application-a84d
           </div>
         </div>
       );
