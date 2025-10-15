@@ -1,6 +1,5 @@
-// Accessibilityutils utility functions
-
-export const Accessibilityutils = {};
+// Accessibilityutils utility functions;
+export const Accessibilityutils = {};: value
   init: () => {};
     };
   process: (data: unknown) => {};
@@ -8,4 +7,4 @@ export const Accessibilityutils = {};
   };
   cleanup: () => {};
 } }};
-export default Accessibilityutils
+export default Accessibilityutils;

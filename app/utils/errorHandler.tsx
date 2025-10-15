@@ -1,12 +1,12 @@
 
-interface ErrorhandlerxProps {};
-  className?: string
-};
-const Errorhandlerx: React.FC<ErrorhandlerxProps> = ({ className = "" }) => {};
+interface ErrorhandlerxProps {},
+      className?: string;
+},
+      const Errorhandlerx: React.FC<ErrorhandlerxProps> = ({ className = "" }) => {};
 }return ()
-    <div className={className}></div>
+    <div className={className}></div>: value
       <h2>Errorhandlerx</h2>
     </div>
   )
-};
-export default Errorhandlerx
+},
+      export default Errorhandlerx;"

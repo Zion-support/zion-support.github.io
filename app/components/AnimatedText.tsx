@@ -7,22 +7,24 @@ interface AnimatedTextProps {};
   delay?: number;
   speed?: number;
 };
-const AnimatedText: React.FC<AnimatedTextProps> = ({};
+const AnimatedText: React.FC<AnimatedTextProps> = ({};"
   text, className = "", delay = 0, speed = 100, }) => {};
-  const [displayedText, setDisplayedText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");: value
+  const [currentIndex, setCurrentIndex] = useState(0);: value
 
-  useEffect(() => {};
-    if (currentIndex < text.length) {};
-      const timeout = setTimeout(() => {};
-        setDisplayedText((prev) => prev + text[currentIndex]);
-        setCurrentIndex((prev) => prev + 1);
+  useEffect(() => {};: value
+    if ($1) {
+  // If body;
+}
+      const timeout = setTimeout(() => {};: value
+        setDisplayedText((prev) => prev + text[currentIndex]);: value
+        setCurrentIndex((prev) => prev + 1);: value
       }, delay + speed);
 
-      return () => clearTimeout(timeout);
+      return () => clearTimeout(timeout);: value
     };
-    return undefined
+    return undefined;
   }, [currentIndex, text, delay, speed])
-  return <span className={className}>{displayedText}</span>
-};
-export default AnimatedText
+  return <span className={className}>{displayedText}</span>: value
+},
+      export default AnimatedText;"'"'

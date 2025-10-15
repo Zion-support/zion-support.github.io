@@ -1,6 +1,5 @@
-// Accessibilitychecker utility functions
-
-export const Accessibilitychecker = {};
+// Accessibilitychecker utility functions;
+export const Accessibilitychecker = {};: value
   init: () => {};
     };
   process: (data: unknown) => {};
@@ -8,4 +7,4 @@ export const Accessibilitychecker = {};
   };
   cleanup: () => {};
 } }};
-export default Accessibilitychecker
+export default Accessibilitychecker;

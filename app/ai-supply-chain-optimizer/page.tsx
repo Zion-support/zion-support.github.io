@@ -1,217 +1,215 @@
-import { TrendingUp } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { TrendingUp } from "lucide-react";";";
+import { Helmet } from "react-helmet-async";";";
 import { Link } from "react-router-dom";
 
-export default function AISupplyChainOptimizer() {};
-  const features = [
-    {};
-      title: "Demand Forecasting";
+export default function AISupplyChainOptimizer() {
+  // Function body;
+}
+  const features = [: value
+    {};"
+      title: "Demand Forecasting";"
       description: "AI-powered demand prediction with 95% accuracy using machine learning and market analysis";
-      icon: <BarChart3 className="w-6 h-6" />;
+      icon: <BarChart3>"
       benefits: ["95% Forecast Accuracy", "Seasonal Pattern Recognition", "Market Trend Analysis", "Inventory Optimization"]
     };
-    {};
-      title: "Route Optimization";
+    {};"
+      title: "Route Optimization";"
       description: "Intelligent logistics planning with real-time traffic, weather, and cost optimization";
-      icon: <Globe className="w-6 h-6" />;
+      icon: <Globe>"
       benefits: ["30% Cost Reduction", "Faster Delivery Times", "Fuel Efficiency", "Carbon Footprint Reduction"]
     };
-    {};
-      title: "Supplier Management";
-      description: "Automated supplier evaluation, risk assessment, and performance monitoring";
-      icon: <Target className="w-6 h-6" />;
+    {},"
+      title: "Supplier Management","
+      description: "Automated supplier evaluation, risk assessment, and performance monitoring","
+      icon: <Target className="w-6 h-6" />,"
       benefits: ["Risk Mitigation", "Performance Tracking", "Cost Analysis", "Quality Control"]
     };
-    {};
-      title: "Inventory Intelligence";
-      description: "Smart inventory management with automated reordering and waste reduction";
-      icon: <Zap className="w-6 h-6" />;
+    {},"
+      title: "Inventory Intelligence","
+      description: "Smart inventory management with automated reordering and waste reduction","
+      icon: <Zap className="w-6 h-6" />,"
       benefits: ["25% Inventory Reduction", "Zero Stockouts", "Waste Elimination", "Cash Flow Optimization"]
     };
-  ];
-
-  const industries = [
-    {};
-      title: "Manufacturing";
-      description: "Optimize production schedules, raw material procurement, and distribution networks";
+  ],
+      const industries = [: value
+    {},"
+      title: "Manufacturing","
+      description: "Optimize production schedules, raw material procurement, and distribution networks","
       impact: "40% cost reduction, 50% faster delivery"
     };
-    {};
-      title: "Retail & E-commerce";
-      description: "Streamline inventory management, last-mile delivery, and customer fulfillment";
+    {},"
+      title: "Retail & E-commerce","
+      description: "Streamline inventory management, last-mile delivery, and customer fulfillment","
       impact: "35% inventory reduction, 60% faster fulfillment"
     };
-    {};
-      title: "Food & Beverage";
-      description: "Manage perishable goods, cold chain logistics, and demand fluctuations";
+    {},"
+      title: "Food & Beverage","
+      description: "Manage perishable goods, cold chain logistics, and demand fluctuations","
       impact: "45% waste reduction, 30% cost savings"
     };
-    {};
-      title: "Healthcare & Pharma";
-      description: "Ensure critical supply availability, compliance, and temperature-controlled logistics";
+    {},"
+      title: "Healthcare & Pharma","
+      description: "Ensure critical supply availability, compliance, and temperature-controlled logistics","
       impact: "99.9% availability, 100% compliance"
     };
-  ];
-
-  const pricing = [
-    {};
-      plan: "Starter";
-      price: "$279/month";
-      description: "Perfect for small to medium businesses";
-      features: ["Up to 100 SKUs", "Basic forecasting", "Route optimization", "Email support"];
-      popular: false
+  ],
+      const pricing = [: value
+    {},"
+      plan: "Starter","
+      price: "$279/month","
+      description: "Perfect for small to medium businesses","
+      features: ["Up to 100 SKUs", "Basic forecasting", "Route optimization", "Email support"],
+      popular: false;
     };
-    {};
-      plan: "Professional";
-      price: "$559/month";
-      description: "Ideal for growing enterprises";
-      features: ["Up to 1,000 SKUs", "Advanced analytics", "Supplier management", "API integration", "Priority support"];
-      popular: true
+    {},"
+      plan: "Professional","
+      price: "$559/month","
+      description: "Ideal for growing enterprises","
+      features: ["Up to 1,000 SKUs", "Advanced analytics", "Supplier management", "API integration", "Priority support"],
+      popular: true;
     };
-    {};
-      plan: "Enterprise";
-      price: "Custom Pricing";
-      description: "Comprehensive solution for large organizations";
-      features: ["Unlimited SKUs", "Full AI suite", "Custom integrations", "Dedicated support", "Training & consultation"];
-      popular: false
+    {},"
+      plan: "Enterprise","
+      price: "Custom Pricing","
+      description: "Comprehensive solution for large organizations","
+      features: ["Unlimited SKUs", "Full AI suite", "Custom integrations", "Dedicated support", "Training & consultation"],
+      popular: false;
     };
-  ];
-
-  const benefits = [
-    {};
-      metric: "30%";
-      label: "Cost Reduction";
+  ],
+      const benefits = [: value
+    {},"
+      metric: "30%","
+      label: "Cost Reduction","
       description: "Average cost savings across all supply chain operations"
     };
-    {};
-      metric: "50%";
-      label: "Faster Delivery";
+    {},"
+      metric: "50%","
+      label: "Faster Delivery","
       description: "Improvement in delivery times through optimized routing"
     };
-    {};
-      metric: "95%";
-      label: "Forecast Accuracy";
+    {},"
+      metric: "95%","
+      label: "Forecast Accuracy","
       description: "AI-powered demand prediction accuracy rate"
     };
-    {};
-      metric: "25%";
-      label: "Inventory Reduction";
+    {},"
+      metric: "25%","
+      label: "Inventory Reduction","
       description: "Decrease in excess inventory while maintaining service levels"
     };
-  ];
-
-  return (
+  ],
+      return (
     <>
       <Helmet></Helmet>
         <title>AI Supply Chain Optimizer - Zion Tech Group | Intelligent Logistics Solutions</title>
-        <meta
-          name="description"
-          content="Revolutionary AI-powered supply chain optimization with demand forecasting, route planning, and inventory management. Reduce costs by 30% and improve efficiency by 50%."
+        <meta;">
+          name="description"">: value";
+          content="Revolutionary AI-powered supply chain optimization with demand forecasting, route planning, and inventory management. Reduce costs by 30% and improve efficiency by 50%.">: value
         />
-        <meta
-          name="keywords"
-          content="AI supply chain, logistics optimization, demand forecasting, route optimization, inventory management, supplier management, supply chain AI"
-        />
+        <meta;">
+          name="keywords"">: value";
+          content="AI supply chain, logistics optimization, demand forecasting, route optimization, inventory management, supplier management, supply chain AI">: value
+        />"
         <link rel="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimizer" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
-        {/* Animated Background Elements */};
+"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>: value
+        {/* Animated Background Elements */};"
         <div className="absolute inset-0 overflow-hidden"></div>
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-slate-500/20 to-gray-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-gray-500/20 to-slate-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-gray-500/20 to-slate-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>: value
         </div>
 
-        {/* Hero Section */};
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
+        {/* Hero Section */};"
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>"
           <div className="max-w-7xl mx-auto text-center"></div>
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-slate-500/20 to-gray-500/20 border border-slate-500/30 mb-6"></div>
               <Sparkles className="w-4 h-4 text-slate-400 mr-2" />
-              <span className="text-slate-400 text-sm font-medium">30% Cost Reduction Guaranteed</span>
+              <span className="text-slate-400 text-sm font-medium">30% Cost Reduction Guaranteed</span>: value
             </div>
-            
+            "
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"></h1>
-              AI Supply Chain
+              AI Supply Chain;"
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 via-gray-400 to-slate-400 animate-pulse"></span>
-                {" "}Optimizer
+                {" "}Optimizer;
               </span>
             </h1>
-            
+            "
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"></p>
-              Transform your supply chain with AI-powered optimization. Intelligent demand forecasting;
-              route planning, and inventory management that reduces costs and improves efficiency.
+              Transform your supply chain with AI-powered optimization. Intelligent demand forecasting,
+      route planning, and inventory management that reduces costs and improves efficiency.
             </p>
-            
+            "
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16"></div>
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-slate-500 to-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-slate-600 hover:to-gray-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-slate-500/25 hover:scale-105"
-              ></Link
+              <Link;">
+                to="/contact"">: value";
+                className="bg-gradient-to-r from-slate-500 to-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-slate-600 hover:to-gray-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-slate-500/25 hover:scale-105">
+              ></Link>
 >
-                Get Started
+                Get Started;"
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
-                to="/demo"
-                className="border border-slate-400 text-slate-400 px-8 py-4 rounded-lg font-semibold hover:bg-slate-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-              ></Link
+              <Link;">
+                to="/demo"">: value";
+                className="border border-slate-400 text-slate-400 px-8 py-4 rounded-lg font-semibold hover:bg-slate-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105">
+              ></Link>
 >
-                Watch Demo
+                Watch Demo;"
                 <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
 
-            {/* Benefits Stats */};
+            {/* Benefits Stats */};"
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto"></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center group"></div>
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-slate-500/20 to-gray-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
-                    <TrendingUp className="w-6 h-6" />
-                  </div>
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-2">{benefit.metric}</div>
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-slate-500/20 to-gray-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>"
+                    <TrendingUp className="w-6 h-6" />: value
+                  </div>"
+                  <div className="text-2xl md:text-3xl font-bold text-white mb-2">{benefit.metric}</div>"
                   <div className="text-gray-300 text-sm font-medium mb-1">{benefit.label}</div>
-                  <div className="text-gray-400 text-xs">{benefit.description}</div>
+                  <div className="text-gray-400 text-xs">{benefit.description}</div>: value
                 </div>
               ))};
             </div>
           </div>
         </section>
 
-        {/* Features Section */};
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10"></section>
+        {/* Features Section */};"
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10"></section>"
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"></h2>
-                AI-Powered Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>
-                Our AI supply chain optimizer combines machine learning, predictive analytics, and real-time optimization 
+                AI-Powered Features;
+              </h2>"
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>: value
+                Our AI supply chain optimizer combines machine learning, predictive analytics, and real-time optimization;
                 to deliver unprecedented efficiency and cost savings.
               </p>
             </div>
-            
+            "
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-              {features.map((feature, index) => (
-                <div
-                  key={index};
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden"
-                ></div
->
+              {features.map((feature, index) => (: value
+                <div;>
+                  key={index},">: value";
+      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden">
+                ></div>
+>"
                   <div className="flex items-start space-x-4"></div>
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-slate-500 to-gray-500 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg"></div>
                       {feature.icon};
-                    </div>
+                    </div>"
                     <div className="flex-1"></div>
                       <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-slate-300 transition-colors"></h3>
                         {feature.title};
-                      </h3>
-                      <p className="text-gray-300 mb-4 leading-relaxed"></p>
+                      </h3>"
+                      <p className="text-gray-300 mb-4 leading-relaxed"></p>: value
                         {feature.description};
-                      </p>
-                      <div className="space-y-2"></div>
+                      </p>"
+                      <div className="space-y-2"></div>: value
                         {feature.benefits.map((benefit, idx) => (
                           <div key={idx} className="flex items-center text-sm text-gray-300"></div>
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />: value
                             <span>{benefit}</span>
                           </div>
                         ))};
@@ -224,32 +222,32 @@ export default function AISupplyChainOptimizer() {};
           </div>
         </section>
 
-        {/* Industries Section */};
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
+        {/* Industries Section */};"
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>"
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
-                Industry Solutions
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+                Industry Solutions;
+              </h2>"
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>: value
                 Tailored supply chain optimization solutions for different industries and business models.
               </p>
             </div>
-            
+            "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {industries.map((industry, index) => (
-                <div
-                  key={index};
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden"
-                ></div
->
+              {industries.map((industry, index) => (: value
+                <div;>
+                  key={index},">: value";
+      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden">
+                ></div>
+>"
                   <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-slate-300 transition-colors"></h3>
                     {industry.title};
-                  </h3>
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed"></p>
+                  </h3>"
+                  <p className="text-gray-300 text-sm mb-4 leading-relaxed"></p>: value
                     {industry.description};
-                  </p>
-                  <div className="text-slate-400 text-sm font-medium"></div>
+                  </p>"
+                  <div className="text-slate-400 text-sm font-medium"></div>: value
                     {industry.impact};
                   </div>
                 </div>
@@ -258,62 +256,62 @@ export default function AISupplyChainOptimizer() {};
           </div>
         </section>
 
-        {/* Pricing Section */};
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10"></section>
+        {/* Pricing Section */};"
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10"></section>"
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
-                Flexible Pricing Plans
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+                Flexible Pricing Plans;
+              </h2>"
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>: value
                 Choose the plan that fits your organization's size and supply chain complexity.'
               </p>
             </div>
-            
+            "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-              {pricing.map((plan, index) => (
-                <div
-                  key={index};
-                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden ${};
-                    plan.popular 
-                      ? 'border-slate-500/50 bg-gradient-to-br from-slate-500/10 to-gray-500/10' 
-                      : 'border-white/20 hover:bg-white/20'
-                  }`};
-                ></div
+              {pricing.map((plan, index) => (: value
+                <div;>
+                  key={index}: value,
+      className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden ${},
+      plan.popular;'
+                      ? 'border-slate-500/50 bg-gradient-to-br from-slate-500/10 to-gray-500/10' '
+                      : 'border-white/20 hover:bg-white/20'>
+                  }`};>
+                ></div>
 >
-                  {plan.popular && (
+                  {plan.popular && ("
                     <div className="absolute top-4 right-4"></div>
-                      <span className="bg-gradient-to-r from-slate-400 to-gray-500 text-white text-xs font-bold px-2 py-1 rounded-full"></span>
-                        POPULAR
+                      <span className="bg-gradient-to-r from-slate-400 to-gray-500 text-white text-xs font-bold px-2 py-1 rounded-full"></span>: value
+                        POPULAR;
                       </span>
                     </div>
-                  )};
+                  )};"
                   <div className="text-center mb-6"></div>
                     <h3 className="text-xl font-semibold text-white mb-2">{plan.plan}</h3>
                     <div className="text-3xl font-bold text-slate-400 mb-2">{plan.price}</div>
-                    <p className="text-gray-300 text-sm">{plan.description}</p>
+                    <p className="text-gray-300 text-sm">{plan.description}</p>: value
                   </div>
-                  
-                  <div className="space-y-3 mb-6"></div>
+                  "
+                  <div className="space-y-3 mb-6"></div>: value
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-300"></div>
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />: value
                         <span>{feature}</span>
                       </div>
                     ))};
                   </div>
-                  
-                  <div className="text-center"></div>
-                    <Link
-                      to="/contact"
-                      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 group ${};
-                        plan.popular
-                          ? 'bg-gradient-to-r from-slate-500 to-gray-600 text-white hover:from-slate-600 hover:to-gray-700 shadow-lg hover:shadow-slate-500/25'
-                          : 'border border-slate-400 text-slate-400 hover:bg-slate-400 hover:text-slate-900'
-                      }`};
-                    ></Link
+                  "
+                  <div className="text-center"></div>: value
+                    <Link;">
+                      to="/contact";
+                      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 group ${}: value,
+      plan.popular;'
+                          ? 'bg-gradient-to-r from-slate-500 to-gray-600 text-white hover:from-slate-600 hover:to-gray-700 shadow-lg hover:shadow-slate-500/25''
+                          : 'border border-slate-400 text-slate-400 hover:bg-slate-400 hover:text-slate-900'>
+                      }`};>
+                    ></Link>
 >
-                      Get Started
+                      Get Started;"
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
@@ -323,65 +321,56 @@ export default function AISupplyChainOptimizer() {};
           </div>
         </section>
 
-        {/* CTA Section */};
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-900/30 to-gray-900/30"></section>
+        {/* CTA Section */};"
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-900/30 to-gray-900/30"></section>"
           <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"></h2>
               Ready to Optimize Your Supply Chain?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
-              Join leading companies using our AI supply chain optimizer to reduce costs, improve efficiency;
-              and gain competitive advantage. Start your transformation today.
+            </h2>"
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>: value
+              Join leading companies using our AI supply chain optimizer to reduce costs, improve efficiency,
+      and gain competitive advantage. Start your transformation today.
             </p>
             
-            {/* Contact Information */};
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
+            {/* Contact Information */};"
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>"
               <div className="text-center"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-slate-500 to-gray-600 rounded-lg flex items-center justify-center mx-auto mb-3"></div>
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
+                  <Mail className="w-6 h-6 text-white" />: value
+                </div>"
                 <h3 className="text-white font-semibold mb-2">Email</h3>
-                <p className="text-slate-400">kleber@ziontechgroup.com</p>
-              </div>
+                <p className="text-slate-400">kleber@ziontechgroup.com</p>: value
+              </div>"
               <div className="text-center"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-slate-500 to-gray-600 rounded-lg flex items-center justify-center mx-auto mb-3"></div>
-                  <Smartphone className="w-6 h-6 text-white" />
-                </div>
+                  <Smartphone className="w-6 h-6 text-white" />: value
+                </div>"
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
-                <p className="text-slate-400">+1 302 464 0950</p>
-              </div>
+                <p className="text-slate-400">+1 302 464 0950</p>: value
+              </div>"
               <div className="text-center"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-slate-500 to-gray-600 rounded-lg flex items-center justify-center mx-auto mb-3"></div>
-                  <Globe className="w-6 h-6 text-white" />
-                </div>
+                  <Globe className="w-6 h-6 text-white" />: value
+                </div>"
                 <h3 className="text-white font-semibold mb-2">Address</h3>
-                <p className="text-slate-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <p className="text-slate-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>: value
               </div>
             </div>
-            
+            "
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-slate-500 to-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-slate-600 hover:to-gray-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-slate-500/25 hover:scale-105"
-              ></Link
+              <Link;">
+                to="/contact"">: value";
+                className="bg-gradient-to-r from-slate-500 to-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-slate-600 hover:to-gray-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-slate-500/25 hover:scale-105">
+              ></Link>
 >
-                Get Started
+                Get Started;"
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
-                to="/demo"
-                className="border border-slate-400 text-slate-400 px-8 py-4 rounded-lg font-semibold hover:bg-slate-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-              ></Link
+              <Link;">
+                to="/demo"">: value";
+                className="border border-slate-400 text-slate-400 px-8 py-4 rounded-lg font-semibold hover:bg-slate-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105">
+              ></Link>
 >
-                Watch Demo
-                <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
-
-export default AiSupplyChainOptimizerPage;
+                Watch Demo;"
+                <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform">
+>"'"'

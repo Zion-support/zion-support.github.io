@@ -1,6 +1,5 @@
-// Securitymanager utility functions
-
-export const Securitymanager = {};
+// Securitymanager utility functions;
+export const Securitymanager = {};: value
   init: () => {};
     };
   process: (data: unknown) => {};
@@ -8,4 +7,4 @@ export const Securitymanager = {};
   };
   cleanup: () => {};
 } }};
-export default Securitymanager
+export default Securitymanager;
