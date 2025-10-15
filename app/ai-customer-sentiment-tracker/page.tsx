@@ -1,7 +1,11 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
 import SEOHead from '../components/SEOHead';
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+export default function AICustomerSentimentTracker() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Customer Sentiment Tracker | Zion Tech Group</title>
         <meta name="description" content="Monitor and analyze customer sentiment across all channels with AI-powered insights and real-time alerts." />
@@ -50,9 +54,7 @@ import SEOHead from '../components/SEOHead';
             </div>
           </motion.div>
         </div>
-      </div>
-    </>
+      </section>
+    </div>
   );
-};
-
-export default AiCustomerSentimentTrackerPage;
+}

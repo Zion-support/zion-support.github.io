@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { TrendingUp, DollarSign } from "lucide-react";
 
-export default function CaseStudies() {
+export default function CaseStudiesPage() {
   const caseStudies = [
     {
       id: 1,
@@ -198,6 +198,4 @@ export default function CaseStudies() {
       </div>
     </>
   );
-};
-
-export default CaseStudiesPage;
+}

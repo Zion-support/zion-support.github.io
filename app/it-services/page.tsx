@@ -1,7 +1,10 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import SEOHead from '../components/SEOHead';
 
-  return (<>
+export default function ItServicesPage() {
+  return (
+    <>
       <Helmet>
         <title>IT Services - Zion Tech Group | Professional IT Solutions</title>
         <meta
@@ -125,6 +128,4 @@ import SEOHead from '../components/SEOHead';
       </div>
     </>
   );
-};
-
-export default ItServicesPage;
+  }
