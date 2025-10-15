@@ -22,7 +22,8 @@ export default function AIBusinessIntelligencePro() {
     </div>
   );
 }
-  const features = [
+
+const features = [
     {
       title: "Real-time Dashboards",
       description: "Interactive dashboards that update in real-time with AI-powered insights and predictive analytics",

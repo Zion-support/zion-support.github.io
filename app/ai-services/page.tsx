@@ -15,13 +15,15 @@ const AIServicesPage: React.FC = () => {
         'Technology Assessment',
         'Implementation Roadmap',
         'Change Management',
-        'ROI Analysis']
-        'Executive Training']],
+        'ROI Analysis',
+        'Executive Training'
+      ]],
       benefits: [
         'Accelerate AI adoption by 300%',
         'Reduce implementation risks by 60%',
-        'Achieve 400% ROI within 12 months']
-        'Future-proof your technology stack']],
+        'Achieve 400% ROI within 12 months',
+        'Future-proof your technology stack'
+      ]],
       marketPrice: '$5,000-10,000/month',
       category: 'Consulting',
       technologies: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Cloud AI', 'Edge Computing'],

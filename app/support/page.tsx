@@ -212,11 +212,12 @@ const toggleFAQ = () => {
         <div className="flex flex-wrap justify-center gap-4 mb-8">
                 { categories.map((category) => (
                   <button
-    const key = {category } onClick={ () => setSelectedCategory(category) }
-                    const className = { `px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    key={category} 
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       selectedCategory === category
                         ? "bg-gradient-to-r from-purple-500 to-blue-500 text-white"
-                        : "bg-white/10 text-gray-300 hover: bg-white/20" }`}
+                        : "bg-white/10 text-gray-300 hover:bg-white/20"}`}
                   >
                     { category === "all"
                       ? "All Questions"

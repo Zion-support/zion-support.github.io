@@ -59,8 +59,9 @@ const pricingPlans = [
         "Basic code generation",
         "Bug detection & fixes",
         "Documentation generation",
-        "Email support"]
-        "10 projects max"]],
+        "Email support",
+        "10 projects max"
+      ]],
       popular: false },
     { name: "Team",
       price: "$399",

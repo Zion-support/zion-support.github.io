@@ -22,7 +22,8 @@ export default function AIChatbotBuilder() {
     </div>
   );
 }
-  const features = [
+
+const features = [
     {
       title: "Natural Language Processing",
       description: "Advanced NLP that understands context, sentiment, and intent to provide human-like conversations",

@@ -55,8 +55,9 @@ const pricingPlans = [
         "10 custom dashboards",
         "Real-time analytics",
         "Basic AI insights",
-        "Email support"]
-        "5GB data storage"]],
+        "Email support",
+        "5GB data storage"
+      ]],
       popular: false },
     { name: "Professional",
       price: "$599",

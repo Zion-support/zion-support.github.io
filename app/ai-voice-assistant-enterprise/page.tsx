@@ -108,8 +108,9 @@ const pricingPlans = [
         "5 languages supported",
         "Basic voice recognition",
         "Email support",
-        "Standard integration"]
-        "1 voice personality"]],
+        "Standard integration",
+        "1 voice personality"
+      ]],
       popular: false
     },
     {

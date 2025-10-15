@@ -22,7 +22,8 @@ export default function AIClimatePredictionEngine() {
     </div>
   );
 }
-  const features = [
+
+const features = [
     {
       title: "Predictive Weather Analytics",
       description: "Long-term weather predictions with climate change impact analysis and extreme weather event forecasting",

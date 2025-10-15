@@ -22,7 +22,8 @@ export default function AIChatbotEnterprise() {
     </div>
   );
 }
-  const features = [
+
+const features = [
     {
       title: "Advanced Natural Language Processing",
       description: "State-of-the-art NLP that understands complex queries, context, and enterprise terminology",

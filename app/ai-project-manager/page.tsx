@@ -35,8 +35,9 @@ const pricingPlans = [
         "Basic AI features",
         "Team collaboration",
         "Basic analytics",
-        "Email support"]
-        "5 team members"]],
+        "Email support",
+        "5 team members"
+      ]],
       popular: false
     },
     {

@@ -23,7 +23,8 @@ export default function AIBlockchainAnalytics() {
     </div>
   );
 }
-  const features = [
+
+const features = [
     {
       title: "Smart Contract Intelligence",
       description: "Intelligent analysis of smart contracts with vulnerability detection and optimization suggestions",

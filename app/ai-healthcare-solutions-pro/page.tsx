@@ -1,6 +1,5 @@
-import { ArrowRight, Brain, CheckCircle, Heart, Phone, Play, Star, Shield, ShieldIcon, Mail } from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Heart, Phone, Play, Star, Shield, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Heart, Shield, Star, Phone, Play, CheckCircle, ArrowRight, Mail } from 'lucide-react';
 
 const ShieldIcon = Shield;
 
@@ -133,7 +132,8 @@ const testimonials = [
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 { features.map((feature, index) => (
                   <div
-    const key = {index } className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 neon-card">
+                    key={index} 
+                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 neon-card">
                     
         <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       
@@ -180,7 +180,8 @@ const testimonials = [
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 { useCases.map((useCase, index) => (
                   <div
-    const key = {index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105">
+                    key={index} 
+                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105">
                     
         <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
                       
@@ -223,7 +224,8 @@ const testimonials = [
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
                 { compliance.map((item, index) => (
                   <div
-    const key = {index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105">
+                    key={index} 
+                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105">
                     
         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <Shield className="w-6 h-6 text-white" />
@@ -257,7 +259,8 @@ const testimonials = [
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 { pricingPlans.map((plan, index) => (
                   <div
-    const key = {index } className={ `relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl ${
+                    key={index} 
+                    className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl ${
                       plan.popular 
                         ? 'border-cyan-400/40 shadow-cyan-500/10' 
                         : 'border-cyan-500/20 hover: border-cyan-400/40' }`}
@@ -326,7 +329,8 @@ const testimonials = [
         <div className="grid md:grid-cols-3 gap-8">
                 { testimonials.map((testimonial, index) => (
                   <div
-    const key = {index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300">
+                    key={index} 
+                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300">
                     
         <div className="flex items-center mb-4">
                       { [...Array(testimonial.rating)].map((_, i) => (

@@ -23,7 +23,8 @@ export default function AIAutonomousSystems() {
     </div>
   );
 }
-  const features = [
+
+const features = [
     {
       title: "Self-Learning Systems",
       description: "Systems that continuously learn and adapt from their environment and performance data",

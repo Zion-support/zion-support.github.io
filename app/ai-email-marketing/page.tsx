@@ -35,8 +35,9 @@ const pricingPlans = [
         "Basic AI features",
         "Email templates",
         "Basic analytics",
-        "Email support"]
-        "1 user account"]],
+        "Email support",
+        "1 user account"
+      ]],
       popular: false
     },
     {

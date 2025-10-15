@@ -36,8 +36,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
-    const key = {item.name} to={item.href}
-                const className = {`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                key={item.name} 
+                to={item.href}
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive(item.href)
                     ? 'bg-purple-600 text-white'
                     : 'text-gray-300 hover:bg-slate-700 hover:text-white'
@@ -51,7 +52,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
-    const onClick = {onSidebarToggle} className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              onClick={onSidebarToggle} 
+              className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             >
               <Bars3Icon className="h-6 w-6" />
             </button>

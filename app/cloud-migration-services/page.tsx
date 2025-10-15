@@ -35,8 +35,9 @@ const pricingPlans = [
         "Security assessment",
         "Cost analysis",
         "Migration roadmap",
-        "Risk assessment"]
-        "Timeline estimation"]],
+        "Risk assessment",
+        "Timeline estimation"
+      ]],
       popular: false
     },
     {

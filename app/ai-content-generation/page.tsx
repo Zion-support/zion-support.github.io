@@ -15,13 +15,15 @@ const AIContentGenerationPage: React.FC = () => {
         'Research integration',
         'Brand voice consistency',
         'Multi-language support',
-        'Content calendar automation']
-        'Performance analytics']],
+        'Content calendar automation',
+        'Performance analytics'
+      ]],
       benefits: [
         'Create 10x more content',
         'Improve SEO rankings by 150%',
-        'Save 40+ hours per week']
-        'Increase organic traffic by 200%']],
+        'Save 40+ hours per week',
+        'Increase organic traffic by 200%'
+      ]],
       marketPrice: '$500-1000/month',
       technologies: ['OpenAI GPT-4', 'Claude', 'Custom Fine-tuned Models', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'

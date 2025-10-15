@@ -33,8 +33,9 @@ const AICodeAssistantPage = () => {
         "Basic code review",
         "5 programming languages",
         "Standard documentation",
-        "Email support"]
-        "Git integration"]],
+        "Email support",
+        "Git integration"
+      ]],
       popular: false
     },
     {

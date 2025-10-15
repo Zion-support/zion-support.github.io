@@ -23,7 +23,8 @@ export default function AIBlockchainSolutions() {
     </div>
   );
 }
-  const features = [
+
+const features = [
     {
       title: "Decentralized AI Networks",
       description: "Build and deploy AI models on blockchain networks with decentralized computing and data sharing",

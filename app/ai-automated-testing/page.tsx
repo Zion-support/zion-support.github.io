@@ -22,7 +22,8 @@ export default function AIAutomatedTesting() {
     </div>
   );
 }
-  const features = [
+
+const features = [
     {
       title: "Intelligent Test Execution",
       description: "Smart test execution with parallel processing, intelligent retry logic, and automatic test prioritization",

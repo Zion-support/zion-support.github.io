@@ -13,8 +13,9 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         '40% increase in conversion rates',
         '60% improvement in customer engagement',
-        '35% increase in average order value']
-        '99.9% uptime achieved']],
+        '35% increase in average order value',
+        '99.9% uptime achieved'
+      ]],
       duration: '6 months',
       team: '8 members',
       image: '/api/placeholder/600/400',

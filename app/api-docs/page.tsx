@@ -97,8 +97,8 @@ const ApiDocsPage: React.FC = () => {
           path: '/api/v1/auth/refresh',
           description: 'Refresh access token',
           example: `curl -X POST "https://api.ziontechgroup.com/v1/auth/refresh" \\
-  -H "Authorization: Bearer YOUR_REFRESH_TOKEN"`]
-        }]]
+  -H "Authorization: Bearer YOUR_REFRESH_TOKEN"`}
+        }]
     }
   ];
 

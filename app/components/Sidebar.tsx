@@ -52,8 +52,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         <nav className="p-4 space-y-2">
           {navigationItems.map((item) => (
             <Link
-    const key = {item.name} to={item.href}
-              const onClick = {onClose} className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 rounded-lg transition-colors duration-200"
+              key={item.name} 
+              to={item.href}
+              onClick={onClose} 
+              className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 rounded-lg transition-colors duration-200"
             >
               <item.icon className="w-5 h-5" />
               <span>{item.name}</span>

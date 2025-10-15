@@ -51,7 +51,7 @@ const DynamicPageLoader = () => {
         "Advanced features",
         "Priority support",
         "Up to 5 user accounts",
-        "Custom templates"]
+        "Custom templates",
         "API access"]],
       popular: true
     },

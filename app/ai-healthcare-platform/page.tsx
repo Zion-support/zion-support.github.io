@@ -86,8 +86,9 @@ const pricingPlans = [
         "EHR system",
         "Telemedicine",
         "Email support",
-        "Basic analytics"]
-        "HIPAA compliance"]],
+        "Basic analytics",
+        "HIPAA compliance"
+      ]],
       popular: false },
     { name: "Hospital",
       price: "$899",

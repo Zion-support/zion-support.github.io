@@ -22,7 +22,8 @@ export default function AIClimateSolutionsPro() {
     </div>
   );
 }
-  const features = [
+
+const features = [
     {
       title: "Carbon Footprint Analysis",
       description: "Advanced AI algorithms that analyze and optimize carbon footprints across organizations and supply chains",

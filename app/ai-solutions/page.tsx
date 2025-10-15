@@ -13,8 +13,9 @@ const AISolutionsPage: React.FC = () => {
         "Real-time model training",
         "A/B testing framework",
         "Model performance monitoring",
-        "Automated retraining"]
-        "Edge deployment"]],
+        "Automated retraining",
+        "Edge deployment"
+      ]],
       color: "from-purple-500 to-pink-500",
       price: "Starting at $3,500/month",
       benefits: ["95% accuracy", "Real-time processing", "Custom algorithms"],

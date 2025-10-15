@@ -35,8 +35,9 @@ const pricingPlans = [
         "Basic AI chatbot",
         "Email support",
         "5 team members",
-        "Basic analytics"]
-        "Standard integrations"]],
+        "Basic analytics",
+        "Standard integrations"
+      ]],
       popular: false
     },
     {
