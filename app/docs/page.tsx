@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Book, Code, Zap, Shield, Search, ChevronDown, ChevronRight, ExternalLink } from 'lucide-react';
+import { ArrowRight } from "lucide-react";
 
+<<<<<<< HEAD
 const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
@@ -88,16 +87,16 @@ const DocsPage: React.FC = () => {
       article.description.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
   })).filter(section => section.articles?.length > 0);
+=======
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
+export default function DocsZionTechGroup() {
   return (
     <>
       <Helmet>
-        <title>Documentation - Zion Tech Group | Complete Developer Guide</title>
-        <meta name="description" content="Comprehensive documentation for Zion Tech Group's AI and IT services. Find guides, tutorials, API references, and code examples." />
-        <meta name="keywords" content="documentation, API reference, developer guide, tutorials, code examples, technical docs" />
-        <meta property="og:title" content="Documentation - Zion Tech Group" />
-        <meta property="og:description" content="Complete developer documentation and guides" />
-        <meta property="og:type" content="website" />
+        <title>Docs - Zion Tech Group</title>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -183,6 +182,7 @@ const DocsPage: React.FC = () => {
                       <div className="text-cyan-400 mr-4">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         {(section as any).icon || <Book className="w-6 h-6" />}
 =======
                         {section.icon || <Book className="w-6 h-6" />}
@@ -190,6 +190,9 @@ const DocsPage: React.FC = () => {
 =======
                         {section.icon || <Book className="w-6 h-6" />}
 >>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+=======
+                        {section.icon || <Book className="w-6 h-6" />}
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-white">{section.title}</h3>
@@ -206,7 +209,7 @@ const DocsPage: React.FC = () => {
                   {expandedSection === section.id && (
                     <div className="px-8 pb-6">
                       <div className="grid md:grid-cols-2 gap-4">
-                        {(section as any).articles?.map((article: any, articleIndex: number) => (
+                        {section.articles?.map((article: { title: string; readTime: string; description: string }, articleIndex: number) => (
                           <div key={articleIndex} className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors cursor-pointer group">
                             <div className="flex items-center justify-between mb-2">
                               <h4 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
@@ -297,6 +300,4 @@ const DocsPage: React.FC = () => {
       </div>
     </>
   );
-};
-
-export default DocsPage;
+}

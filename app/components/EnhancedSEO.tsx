@@ -1,10 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
+interface EnhancedSEOProps {
+  title: string;
+  description: string;
+  keywords?: string;
   canonical?: string;
   ogTitle?: string;
   ogDescription?: string;
@@ -16,18 +16,20 @@ interface SEOProps {
   twitterDescription?: string;
   twitterImage?: string;
   structuredData?: object;
+  noIndex?: boolean;
+  lang?: string;
   noindex?: boolean;
   nofollow?: boolean;
 }
 
-const EnhancedSEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of cutting-edge AI, IT, and 5G solutions. Transform your business through innovative technology and intelligent automation.',
-  keywords = ['AI solutions', 'IT services', '5G technology', 'cloud computing', 'cybersecurity', 'digital transformation'],
+const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
+  title,
+  description,
+  keywords,
   canonical,
   ogTitle,
   ogDescription,
-  ogImage = '/og-image.jpg',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
   ogUrl,
   ogType = 'website',
   twitterCard = 'summary_large_image',
@@ -35,102 +37,105 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   twitterDescription,
   twitterImage,
   structuredData,
+  noIndex = false,
   noindex = false,
   nofollow = false,
+  lang = 'en'
 }) => {
-  const siteUrl = process.env['REACT_APP_SITE_URL'] || 'https://ziontechgroup.com';
-  const fullCanonical = canonical ? `${siteUrl}${canonical}` : undefined;
+  const siteName = 'Zion Tech Group';
+  const siteUrl = 'https://ziontechgroup.com';
+  const defaultImage = 'https://ziontechgroup.com/og-image.jpg';
+  
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullCanonical = canonical ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`) : undefined;
   const fullOgUrl = ogUrl || fullCanonical || siteUrl;
-  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
-  const fullTwitterImage = twitterImage ? (twitterImage.startsWith('http') ? twitterImage : `${siteUrl}${twitterImage}`) : fullOgImage;
+  const fullOgImage = ogImage || defaultImage;
+  const fullTwitterImage = twitterImage || fullOgImage;
+  
+  const defaultKeywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, Zion Tech Group';
+  const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
 
   const defaultStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: siteUrl,
-    logo: `${siteUrl}/logo.png`,
-    description: description,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '364 E Main St STE 1008',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      postalCode: '19709',
-      addressCountry: 'US'
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": siteName,
+    "url": siteUrl,
+    "logo": `${siteUrl}/logo.svg`,
+    "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
     },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com'
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
     },
-    sameAs: [
-      'https://www.linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://github.com/ziontechgroup'
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup"
     ]
   };
 
-  const pageStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: title,
-    description: description,
-    url: fullCanonical || fullOgUrl,
-    isPartOf: {
-      '@type': 'WebSite',
-      name: 'Zion Tech Group',
-      url: siteUrl
-    }
-  };
+  const mergedStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
+      <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="keywords" content={finalKeywords} />
+      <meta name="author" content={siteName} />
+      <meta name="robots" content={`${noIndex || noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name="language" content={lang} />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="rating" content="general" />
       
       {/* Canonical URL */}
       {fullCanonical && <link rel="canonical" href={fullCanonical} />}
       
-      {/* Robots */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={ogTitle || title} />
+      {/* Open Graph Meta Tags */}
+      <meta property="og:type" content={ogType} />
+      <meta property="og:title" content={ogTitle || fullTitle} />
       <meta property="og:description" content={ogDescription || description} />
       <meta property="og:image" content={fullOgImage} />
       <meta property="og:url" content={fullOgUrl} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:site_name" content={siteName} />
+      <meta property="og:locale" content={lang === 'en' ? 'en_US' : lang} />
       
-      {/* Twitter Card */}
+      {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={twitterTitle || ogTitle || title} />
+      <meta name="twitter:title" content={twitterTitle || ogTitle || fullTitle} />
       <meta name="twitter:description" content={twitterDescription || ogDescription || description} />
       <meta name="twitter:image" content={fullTwitterImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
       
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#8b5cf6" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="theme-color" content="#00ffff" />
       <meta name="msapplication-TileColor" content="#8b5cf6" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      
-      {/* Language */}
-      <meta httpEquiv="content-language" content="en-US" />
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
+        {JSON.stringify(mergedStructuredData)}
       </script>
       
-      {/* Page-specific structured data */}
-      <script type="application/ld+json">
-        {JSON.stringify(pageStructuredData)}
-      </script>
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      
+      {/* Favicon and Icons */}
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/manifest.json" />
     </Helmet>
   );
 };

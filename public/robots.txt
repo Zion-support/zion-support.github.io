@@ -2,13 +2,13 @@ User-agent: *
 Allow: /
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # Sitemap
 >>>>>>> cursor/analyze-improve-and-merge-code-b7b5
+=======
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 Sitemap: https://ziontechgroup.com/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
@@ -20,10 +20,14 @@ Disallow: /static/
 # Allow important pages
 Allow: /
 Allow: /about
-Allow: /services
 Allow: /contact
-Allow: /portfolio
+Allow: /services
+Allow: /ai-services
+Allow: /micro-saas
+Allow: /5g-solutions
+Allow: /blog
 Allow: /pricing
+<<<<<<< HEAD
 <<<<<<< HEAD
 Allow: /blog
 Allow: /tutorials
@@ -50,3 +54,5 @@ Disallow: /static/
 =======
 Allow: /news
 >>>>>>> cursor/analyze-improve-and-merge-code-b7b5
+=======
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56

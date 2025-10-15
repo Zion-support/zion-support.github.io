@@ -1,21 +1,51 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+"use client";
 
-const Breadcrumb: React.FC = () => {
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import { ChevronRight, Home } from "lucide-react";
+
+export default function Breadcrumb() {
+  const location = useLocation();
+  const pathnames = location.pathname.split("/").filter((x) => x);
+
+  if (pathnames.length === 0) {
+    return null;
+  }
+
   return (
-    <>
-      <Helmet>
-        <title>Breadcrumb - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">Breadcrumb</h1>
-          <p className="text-gray-300 text-center">Coming soon...</p>
-        </div>
-      </div>
-    </>
-  );
-};
+    <nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
+      <Link
+        to="/"
+        className="flex items-center hover:text-white transition-colors"
+      >
+        <Home className="w-4 h-4 mr-1" />
+        Home
+      </Link>
 
-export default Breadcrumb;
+      {pathnames.map((name, index) => {
+        const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
+        const isLast = index === pathnames.length - 1;
+        const displayName = name
+          .split("-")
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" ");
+
+        return (
+          <React.Fragment key={name}>
+            <ChevronRight className="w-4 h-4" />
+            {isLast ? (
+              <span className="text-white font-medium">{displayName}</span>
+            ) : (
+              <Link
+                to={routeTo}
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                {displayName}
+              </Link>
+            )}
+          </React.Fragment>
+        );
+      })}
+    </nav>
+  );
+}

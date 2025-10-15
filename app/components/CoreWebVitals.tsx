@@ -1,65 +1,62 @@
-import React, { useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import React, { useEffect, useCallback } from 'react';
 
-interface CoreWebVitalsProps {
-  children: React.ReactNode;
+interface WebVitalsData {
+  name: string;
+  value: number;
+  delta: number;
+  id: string;
+  navigationType: string;
 }
 
-export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
-  useEffect(() => {
-    // Track Core Web Vitals
-    onCLS((metric) => {
-      // CLS metric logged for performance monitoring
-      // Send to analytics service
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'web_vitals', {
-          event_category: 'Web Vitals',
-          event_label: 'CLS',
-          value: Math.round(metric.value * 1000),
-        });
-      }
-    });
-    onINP((metric) => {
-      // INP metric logged for performance monitoring
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'web_vitals', {
-          event_category: 'Web Vitals',
-          event_label: 'INP',
-          value: Math.round(metric.value),
-        });
-      }
-    });
-    onFCP((metric) => {
-      // FCP metric logged for performance monitoring
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'web_vitals', {
-          event_category: 'Web Vitals',
-          event_label: 'FCP',
-          value: Math.round(metric.value),
-        });
-      }
-    });
-    onLCP((metric) => {
-      // LCP metric logged for performance monitoring
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'web_vitals', {
-          event_category: 'Web Vitals',
-          event_label: 'LCP',
-          value: Math.round(metric.value),
-        });
-      }
-    });
-    onTTFB((metric) => {
-      // TTFB metric logged for performance monitoring
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'web_vitals', {
-          event_category: 'Web Vitals',
-          event_label: 'TTFB',
-          value: Math.round(metric.value),
-        });
-      }
-    });
+const CoreWebVitals: React.FC = () => {
+  const reportWebVitals = useCallback((data: WebVitalsData) => {
+    // Send to Google Analytics if available
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'web_vitals', {
+        metric_name: data.name,
+        metric_value: Math.round(data.value),
+        metric_delta: Math.round(data.delta),
+        metric_id: data.id,
+        metric_navigation_type: data.navigationType
+      });
+    }
+
+    // Send to custom analytics
+    if (typeof window !== 'undefined' && (window as any).analytics) {
+      (window as any).analytics.track('Web Vitals', {
+        metric: data.name,
+        value: data.value,
+        delta: data.delta,
+        id: data.id
+      });
+    }
+
+    // Log in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Web Vital:', data.name, data.value);
+    }
   }, []);
-  return <>{children}</>;
+
+  useEffect(() => {
+    const measureWebVitals = async () => {
+      try {
+        const { onCLS, onFID, onFCP, onLCP, onTTFB, onINP } = await import('web-vitals');
+
+        onCLS(reportWebVitals);
+        onFID(reportWebVitals);
+        onFCP(reportWebVitals);
+        onLCP(reportWebVitals);
+        onTTFB(reportWebVitals);
+        onINP(reportWebVitals);
+      } catch (error) {
+        console.warn('Failed to load web-vitals:', error);
+      }
+    };
+
+    measureWebVitals();
+  }, [reportWebVitals]);
+
+  return null; // This component doesn't render anything
 };
+
 export default CoreWebVitals;

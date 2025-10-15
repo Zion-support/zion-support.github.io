@@ -28,6 +28,7 @@ export const LazyWrapper: React.FC<LazyWrapperProps> = ({
 LazyWrapper.displayName = 'LazyWrapper';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Lazy loading helper function
 <<<<<<< HEAD
 export const createLazyComponent = <P extends Record<string, unknown>>(
@@ -56,5 +57,9 @@ export const createLazyComponent = <T extends Record<string, unknown>>(
 // Re-export from utils
 export { createLazyComponent } from '../utils/lazyLoading';
 >>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
+=======
+// Re-export the utility function
+export { createLazyComponent } from '../utils/lazyLoading';
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
 export default LazyWrapper;

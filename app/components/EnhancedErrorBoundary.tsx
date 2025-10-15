@@ -1,48 +1,45 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Bug, Mail } from 'lucide-react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  showDetails?: boolean;
 }
 
 interface State {
   hasError: boolean;
-  error: Error | undefined;
-  errorInfo: ErrorInfo | undefined;
-  errorId?: string;
-  retryCount: number;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  errorId: string;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  private maxRetries = 3;
-
   constructor(props: Props) {
     super(props);
-    this.state = { 
-      hasError: false, 
-      error: undefined,
-      errorInfo: undefined,
-      retryCount: 0 
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''
     };
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
-    return { 
-      hasError: true, 
+    return {
+      hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
 
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Log error to console (commented out for production)
     // console.error('Error caught by boundary:', error, errorInfo);
@@ -58,20 +55,25 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Call custom error handler
     this.props.onError?.(error, errorInfo);
+=======
+    // Log error to monitoring service
+    this.logErrorToService(error, errorInfo);
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
   }
 
-  private reportError = async (error: Error, errorInfo: ErrorInfo) => {
-    const errorReport = {
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+    const errorData = {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
       errorId: this.state.errorId,
       timestamp: new Date().toISOString(),
-      url: window.location.href,
       userAgent: navigator.userAgent,
-      retryCount: this.state.retryCount,
+      url: window.location.href,
+      userId: this.getUserId()
     };
 
+<<<<<<< HEAD
     // Report to external service in production
     if (process.env.NODE_ENV === 'production') {
       try {
@@ -93,17 +95,22 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 >>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
       }
     }
+=======
+    // Send to error monitoring service (Sentry, LogRocket, etc.)
+    console.error('Error caught by boundary:', errorData);
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
-    // Store error locally for debugging
-    const errors = JSON.parse(localStorage.getItem('app-errors') || '[]');
-    errors.push(errorReport);
-    if (errors.length > 10) {
-      errors.shift(); // Keep only last 10 errors
-    }
-    localStorage.setItem('app-errors', JSON.stringify(errors));
+    // You can integrate with services like Sentry here
+    // Sentry.captureException(error, { extra: errorData });
+  };
+
+  getUserId = () => {
+    // Get user ID from your auth context or localStorage
+    return localStorage.getItem('userId') || 'anonymous';
   };
 
   handleRetry = () => {
+<<<<<<< HEAD
     if (this.state.retryCount < this.maxRetries) {
       this.setState(prevState => ({
         hasError: false,
@@ -129,86 +136,66 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   handleReset = () => {
+=======
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
     this.setState({
       hasError: false,
-      error: undefined as Error | undefined,
-      errorInfo: undefined as ErrorInfo | undefined,
-      retryCount: 0
+      error: null,
+      errorInfo: null,
+      errorId: ''
     });
   };
 
-  handleReportBug = () => {
-    const errorDetails = {
-      error: this.state.error?.toString(),
-      stack: this.state.error?.stack,
-      componentStack: this.state.errorInfo?.componentStack,
-      errorId: this.state.errorId,
-      url: window.location.href,
-    };
-
-    const subject = `Bug Report - Error ID: ${this.state.errorId}`;
-    const body = `Please describe what you were doing when this error occurred:\n\n\n\nError Details:\n${JSON.stringify(errorDetails, null, 2)}`;
-    
-    const mailtoLink = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(mailtoLink);
+  handleReload = () => {
+    window.location.reload();
   };
 
-  override render() {
+  render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
-      const canRetry = this.state.retryCount < this.maxRetries;
-      const isDevelopment = process.env.NODE_ENV === 'development';
-
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-10 h-10 text-red-400" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
-            
-            <h1 className="text-3xl font-bold text-white mb-4">
+
+            <h1 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
+<<<<<<< HEAD
             
             <p className="text-gray-300 mb-6 text-lg">
               We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+=======
+
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
             </p>
 
-            {this.state.errorId && (
-              <div className="bg-slate-800/50 rounded-lg p-4 mb-6">
-                <p className="text-sm text-gray-400 mb-2">Error ID:</p>
-                <code className="text-cyan-400 font-mono text-sm">{this.state.errorId}</code>
-              </div>
-            )}
-
-            {isDevelopment && this.state.error && (
-              <details className="mb-6 text-left bg-slate-800/50 rounded-lg p-4">
-                <summary className="cursor-pointer text-sm text-gray-400 mb-4 font-semibold">
-                  <Bug className="w-4 h-4 inline mr-2" />
-                  Error Details (Development Mode)
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mb-6 text-left">
+                <summary className="text-cyan-400 cursor-pointer mb-2">
+                  Error Details (Development)
                 </summary>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="text-sm font-semibold text-red-400 mb-2">Error Message:</h4>
-                    <pre className="bg-slate-900 p-3 rounded text-xs text-red-300 overflow-auto">
-                      {this.state.error.toString()}
+                <div className="bg-gray-800/50 rounded p-4 text-sm text-gray-300 overflow-auto max-h-40">
+                  <div className="mb-2">
+                    <strong>Error:</strong> {this.state.error.message}
+                  </div>
+                  <div className="mb-2">
+                    <strong>Stack:</strong>
+                    <pre className="whitespace-pre-wrap text-xs mt-1">
+                      {this.state.error.stack}
                     </pre>
                   </div>
-                  {this.state.error.stack && (
+                  {this.state.errorInfo && (
                     <div>
-                      <h4 className="text-sm font-semibold text-red-400 mb-2">Stack Trace:</h4>
-                      <pre className="bg-slate-900 p-3 rounded text-xs text-red-300 overflow-auto">
-                        {this.state.error.stack}
-                      </pre>
-                    </div>
-                  )}
-                  {this.state.errorInfo?.componentStack && (
-                    <div>
-                      <h4 className="text-sm font-semibold text-red-400 mb-2">Component Stack:</h4>
-                      <pre className="bg-slate-900 p-3 rounded text-xs text-red-300 overflow-auto">
+                      <strong>Component Stack:</strong>
+                      <pre className="whitespace-pre-wrap text-xs mt-1">
                         {this.state.errorInfo.componentStack}
                       </pre>
                     </div>
@@ -217,39 +204,43 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </details>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              {canRetry && (
-                <button
-                  onClick={this.handleRetry}
-                  className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-semibold"
-                >
-                  <RefreshCw className="w-4 h-4 mr-2" />
-                  Try Again ({this.maxRetries - this.state.retryCount} attempts left)
-                </button>
-              )}
-              
+            <div className="space-y-3">
               <button
-                onClick={this.handleReset}
-                className="flex items-center justify-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors font-semibold"
+                onClick={this.handleRetry}
+                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
-                <Home className="w-4 h-4 mr-2" />
-                Start Fresh
+                <RefreshCw className="w-5 h-5 mr-2" />
+                Try Again
               </button>
-              
+
               <button
-                onClick={this.handleReportBug}
-                className="flex items-center justify-center px-6 py-3 border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white rounded-lg transition-colors font-semibold"
+                onClick={this.handleReload}
+                className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
               >
-                <Mail className="w-4 h-4 mr-2" />
-                Report Bug
+                <RefreshCw className="w-5 h-5 mr-2" />
+                Reload Page
               </button>
+
+              <Link
+                to="/"
+                className="w-full border border-gray-400 text-gray-400 px-6 py-3 rounded-lg font-semibold hover:bg-gray-400 hover:text-white transition-all duration-300 flex items-center justify-center"
+              >
+                <Home className="w-5 h-5 mr-2" />
+                Go Home
+              </Link>
             </div>
 
-            <div className="mt-8 text-sm text-gray-400">
-              <p>If this problem persists, please contact our support team with the Error ID above.</p>
-              <p className="mt-2">
-                Email: <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a>
+            <div className="mt-6 pt-6 border-t border-white/20">
+              <p className="text-sm text-gray-400 mb-2">
+                Still having trouble? Contact our support team.
               </p>
+              <a
+                href="mailto:support@ziontechgroup.com"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm"
+              >
+                <Mail className="w-4 h-4 mr-1" />
+                support@ziontechgroup.com
+              </a>
             </div>
           </div>
         </div>

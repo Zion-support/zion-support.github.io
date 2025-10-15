@@ -1,20 +1,31 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Loader2 } from 'lucide-react';
 
-const LoadingSpinner: React.FC = () => {
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  text?: string;
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  text,
+  className = '' 
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
+    xl: 'w-12 h-12'
+  };
+
   return (
-    <>
-      <Helmet>
-        <title>LoadingSpinner - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">LoadingSpinner</h1>
-          <p className="text-gray-300 text-center">Coming soon...</p>
-        </div>
-      </div>
-    </>
+    <div className={`flex flex-col items-center justify-center space-y-2 ${className}`}>
+      <Loader2 data-testid="loading-spinner" className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
+      {text && (
+        <p className="text-gray-300 text-sm animate-pulse">{text}</p>
+      )}
+    </div>
   );
 };
 export default LoadingSpinner;

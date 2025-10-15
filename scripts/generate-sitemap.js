@@ -1,26 +1,32 @@
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
-
+import fs from 'fs';
+import path from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-const pages = [
-  { url: "/", changefreq: "daily", priority: 1.0 },
-  { url: "/about", changefreq: "monthly", priority: 0.8 },
-  { url: "/services", changefreq: "monthly", priority: 0.9 },
-  { url: "/contact", changefreq: "monthly", priority: 0.7 },
-  { url: "/blog", changefreq: "weekly", priority: 0.8 },
-  { url: "/portfolio", changefreq: "monthly", priority: 0.8 },
-  { url: "/pricing", changefreq: "monthly", priority: 0.8 },
-  { url: "/careers", changefreq: "monthly", priority: 0.6 },
-  { url: "/privacy", changefreq: "yearly", priority: 0.3 },
-  { url: "/terms", changefreq: "yearly", priority: 0.3 },
-];
-
-const generateSitemap = () => {
-  const baseUrl = "https://zion.app";
+// Get all page routes;
+function getAllRoutes() {
+  const routes = []
+  const appDir = path.join(__dirname, '../app')
+  function scanDirectory(dir, basePath = '') {
+    const items = fs.readdirSync(dir)
+    for (const item, of, items) {
+      const fullPath = path.join(dir, item)
+      const stat = fs.statSync(fullPath)
+      if (stat.isDirectory()) {;
+        // Skip node_modules and other non-page directories;
+        if (!['node_modules', '.git', 'components', 'utils', 'types'].includes(item)) {
+          scanDirectory(fullPath, basePath + '/' + item)
+      } else if (item = == 'page.tsx') {;
+        // Found a page;
+        const route = basePath || '/'
+        routes.push(route)
+  scanDirectory(appDir);
+  return routes;
+// Generate sitemap;
+function generateSitemap() {
+  const routes = getAllRoutes()
+  const baseUrl = 'https://ziontechgroup.com'
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages
   .map(
@@ -30,13 +36,28 @@ ${pages
   </url>`,
   )
   .join("\n")}
+=======
+ `
+    <loc>${baseUrl}${route}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('')}
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 </urlset>`;
-
-  const publicDir = path.join(__dirname, "..", "public");
+  // Write to public directory;
+const publicDir = path.join(__dirname, '../public')
   if (!fs.existsSync(publicDir)) {
+<<<<<<< HEAD
     fs.mkdirSync(publicDir, { recursive: true });
   }
   fs.writeFileSync(path.join(publicDir, "sitemap.xml"), sitemap);
 };
 
+=======
+    fs.mkdirSync(publicDir, { recursive: true })
+  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap)
+  // console.log('Sitemap generated successfully!')
+  // console.log(`Found ${routes.length} routes`);
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 generateSitemap();

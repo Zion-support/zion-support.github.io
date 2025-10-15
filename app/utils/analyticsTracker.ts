@@ -1,9 +1,15 @@
-// analytics utility function
-export const analytics = () => {
-  // Placeholder implementation
-  return {
-    // Add implementation here
-  };
+// Analyticstracker utility functions
+
+export const Analyticstracker = {
+  init: () => {
+    },
+
+  process: (data: any) => {
+    return data;
+  },
+
+  cleanup: () => {
+    },
 };
 
-export default analytics;
+export default Analyticstracker;

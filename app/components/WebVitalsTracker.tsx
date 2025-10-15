@@ -1,21 +1,84 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { useEffect } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+
+interface WebVitalsData {
+  name: string;
+  value: number;
+  delta: number;
+  id: string;
+  navigationType: string;
+}
 
 const WebVitalsTracker: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>WebVitalsTracker - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">WebVitalsTracker</h1>
-          <p className="text-gray-300 text-center">Coming soon...</p>
-        </div>
-      </div>
-    </>
-  );
+  useEffect(() => {
+    const sendToAnalytics = (metric: WebVitalsData) => {
+      // Send to Google Analytics or other analytics service
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          event_label: metric.id,
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          non_interaction: true,
+        });
+      }
+
+      // Send to custom analytics endpoint
+      if (process.env.NODE_ENV === 'production') {
+        fetch('/api/analytics/web-vitals', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(metric),
+        }).catch(console.error);
+      }
+
+      // Log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Web Vital:', metric);
+      }
+    };
+
+    // Track Core Web Vitals
+    onCLS(sendToAnalytics);
+    onINP(sendToAnalytics); // INP replaces FID in newer versions
+    onFCP(sendToAnalytics);
+    onLCP(sendToAnalytics);
+    onTTFB(sendToAnalytics);
+
+    // Track additional performance metrics
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Track page load time
+      window.addEventListener('load', () => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+          sendToAnalytics({
+            name: 'LOAD_TIME',
+            value: loadTime,
+            delta: loadTime,
+            id: 'load-time',
+            navigationType: navigation.type,
+          });
+        }
+      });
+
+      // Track memory usage (if available)
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+        sendToAnalytics({
+          name: 'MEMORY_USAGE',
+          value: memoryUsage,
+          delta: memoryUsage,
+          id: 'memory-usage',
+          navigationType: 'reload',
+        });
+      }
+    }
+  }, []);
+
+  return null;
 };
 
 export default WebVitalsTracker;

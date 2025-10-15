@@ -1,22 +1,9 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./app/globals.css";
 
-// Ensure scheduler is properly initialized
-if (typeof window !== 'undefined') {
-  // Fix for scheduler unstable_now error
-  if (!window.performance || !window.performance.now) {
-    window.performance = window.performance || {};
-    window.performance.now = window.performance.now || (() => Date.now());
-  }
-}
-
-const root = createRoot(
-  document.getElementById('root') as HTMLElement
-);
-
-root.render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
@@ -28,18 +15,10 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker
       .register("/sw.js")
       .then((registration) => {
-        // Service Worker registered successfully
-        if (process.env.NODE_ENV === 'development') {
-          // eslint-disable-next-line no-console
-          console.log("Service Worker registered successfully:", registration.scope);
-        }
+        console.log("SW registered: ", registration);
       })
       .catch((registrationError) => {
-        // Service Worker registration failed
-        if (process.env.NODE_ENV === 'development') {
-          // eslint-disable-next-line no-console
-          console.log("Service Worker registration failed:", registrationError);
-        }
+        console.log("SW registration failed: ", registrationError);
       });
   });
 }

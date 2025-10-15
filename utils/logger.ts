@@ -1,88 +1,95 @@
 /**
- * Production-safe logging utility
- * Automatically disables console statements in production builds
+ * Production-safe logger utility
+ * Only logs in development environment
  */
 
 type LogLevel = 'log' | 'warn' | 'error' | 'info' | 'debug';
 
 interface LoggerConfig {
-  enabled: boolean;
-  level: LogLevel;
-  prefix?: string;
+  enableConsole: boolean;
+  enableRemote: boolean;
+  remoteEndpoint?: string;
 }
 
 class Logger {
   private config: LoggerConfig;
 
-  constructor(config: LoggerConfig = { enabled: true, level: 'log' }) {
-    this.config = {
-      enabled: process.env.NODE_ENV !== 'production' && config.enabled,
-      level: config.level,
-      prefix: config.prefix || '[Zion Tech]',
-    };
+  constructor(config: LoggerConfig = { enableConsole: true, enableRemote: false }) {
+    this.config = config;
   }
 
-  private shouldLog(level: LogLevel): boolean {
-    if (!this.config.enabled) return false;
-    
-    const levels: Record<LogLevel, number> = {
-      debug: 0,
-      log: 1,
-      info: 2,
-      warn: 3,
-      error: 4,
-    };
-    
-    return levels[level] >= levels[this.config.level];
+  private shouldLog(): boolean {
+    return process.env.NODE_ENV === 'development' || this.config.enableConsole;
   }
 
-  private formatMessage(level: LogLevel, message: string, ...args: unknown[]): [string, ...unknown[]] {
+  private formatMessage(level: LogLevel, message: string): string {
     const timestamp = new Date().toISOString();
-    const prefix = `${this.config.prefix} [${timestamp}] [${level.toUpperCase()}]`;
-    return [`${prefix} ${message}`, ...args];
+    return `[${timestamp}] [${level.toUpperCase()}] ${message}`;
   }
 
-  log(message: string, ...args: unknown[]): void {
-    if (this.shouldLog('log')) {
-      // eslint-disable-next-line no-console
-      console.log(...this.formatMessage('log', message, ...args));
+  log(message: string, ...args: any[]): void {
+    if (this.shouldLog()) {
+      console.log(this.formatMessage('log', message), ...args);
     }
   }
 
-  info(message: string, ...args: unknown[]): void {
-    if (this.shouldLog('info')) {
-      // eslint-disable-next-line no-console
-      console.info(...this.formatMessage('info', message, ...args));
+  info(message: string, ...args: any[]): void {
+    if (this.shouldLog()) {
+      console.info(this.formatMessage('info', message), ...args);
     }
   }
 
-  warn(message: string, ...args: unknown[]): void {
-    if (this.shouldLog('warn')) {
-      // eslint-disable-next-line no-console
-      console.warn(...this.formatMessage('warn', message, ...args));
+  warn(message: string, ...args: any[]): void {
+    if (this.shouldLog()) {
+      console.warn(this.formatMessage('warn', message), ...args);
     }
   }
 
-  error(message: string, ...args: unknown[]): void {
-    if (this.shouldLog('error')) {
-      // eslint-disable-next-line no-console
-      console.error(...this.formatMessage('error', message, ...args));
+  error(message: string, ...args: any[]): void {
+    // Always log errors, even in production
+    console.error(this.formatMessage('error', message), ...args);
+    
+    // Send to remote logging service in production
+    if (process.env.NODE_ENV === 'production' && this.config.enableRemote && this.config.remoteEndpoint) {
+      this.sendToRemote('error', message, args);
     }
   }
 
-  debug(message: string, ...args: unknown[]): void {
-    if (this.shouldLog('debug')) {
-      // eslint-disable-next-line no-console
-      console.debug(...this.formatMessage('debug', message, ...args));
+  debug(message: string, ...args: any[]): void {
+    if (this.shouldLog()) {
+      console.debug(this.formatMessage('debug', message), ...args);
+    }
+  }
+
+  private async sendToRemote(level: LogLevel, message: string, args: any[]): Promise<void> {
+    try {
+      if (this.config.remoteEndpoint) {
+        await fetch(this.config.remoteEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            level,
+            message,
+            args,
+            timestamp: new Date().toISOString(),
+            url: window.location.href,
+            userAgent: navigator.userAgent,
+          }),
+        });
+      }
+    } catch {
+      // Silently fail remote logging
     }
   }
 }
 
 // Create singleton instance
-export const logger = new Logger({
-  enabled: true,
-  level: process.env.NODE_ENV === 'development' ? 'debug' : 'warn',
+const logger = new Logger({
+  enableConsole: process.env.NODE_ENV === 'development',
+  enableRemote: process.env.NODE_ENV === 'production',
+  remoteEndpoint: process.env.REACT_APP_LOGGING_ENDPOINT,
 });
 
-// Export for direct use
 export default logger;

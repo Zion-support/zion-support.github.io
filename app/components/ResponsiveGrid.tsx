@@ -1,20 +1,54 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { cn } from '../lib/utils';
 
-const ResponsiveGrid: React.FC = () => {
+interface ResponsiveGridProps {
+  children: React.ReactNode;
+  className?: string;
+  cols?: {
+    default: number;
+    sm?: number;
+    md?: number;
+    lg?: number;
+    xl?: number;
+  };
+  gap?: 'sm' | 'md' | 'lg' | 'xl';
+}
+
+const ResponsiveGrid = ({ 
+  children, 
+  className,
+  cols = { default: 1, sm: 2, md: 3, lg: 4 },
+  gap = 'md'
+}: ResponsiveGridProps) => {
+  const gapClasses = {
+    sm: 'gap-2',
+    md: 'gap-4',
+    lg: 'gap-6',
+    xl: 'gap-8'
+  };
+
+  const gridColsClasses = {
+    1: 'grid-cols-1',
+    2: 'grid-cols-2',
+    3: 'grid-cols-3',
+    4: 'grid-cols-4',
+    5: 'grid-cols-5',
+    6: 'grid-cols-6'
+  };
+
+  const responsiveClasses = [
+    `grid ${gridColsClasses[cols.default]}`,
+    cols.sm && `sm:${gridColsClasses[cols.sm]}`,
+    cols.md && `md:${gridColsClasses[cols.md]}`,
+    cols.lg && `lg:${gridColsClasses[cols.lg]}`,
+    cols.xl && `xl:${gridColsClasses[cols.xl]}`,
+    gapClasses[gap]
+  ].filter(Boolean).join(' ');
+
   return (
-    <>
-      <Helmet>
-        <title>ResponsiveGrid - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">ResponsiveGrid</h1>
-          <p className="text-gray-300 text-center">Coming soon...</p>
-        </div>
-      </div>
-    </>
+    <div className={cn(responsiveClasses, className)}>
+      {children}
+    </div>
   );
 };
 

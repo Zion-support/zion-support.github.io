@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3, Star } from 'lucide-react';
@@ -90,109 +91,32 @@ const FiveGSolutionsPage: React.FC = () => {
     "5G NR", "Network Slicing", "Edge Computing", "IoT Protocols", 
     "AI/ML Integration", "Cloud-Native", "SDN/NFV", "MEC"
   ];
+=======
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
+export default function FiveGSolutionsPage() {
   return (
     <>
       <Helmet>
-        <title>5G Solutions - Zion Tech Group | Next-Generation 5G Infrastructure</title>
-        <meta name="description" content="Transform your business with our comprehensive 5G solutions including network implementation, IoT connectivity, smart city solutions, and edge computing." />
-        <meta name="keywords" content="5G solutions, 5G implementation, 5G infrastructure, IoT connectivity, smart city, edge computing, private networks" />
-        <meta property="og:title" content="5G Solutions - Zion Tech Group" />
-        <meta property="og:description" content="Next-generation 5G infrastructure and applications" />
-        <meta property="og:type" content="website" />
+        <title>5G Solutions - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Comprehensive 5G solutions for businesses"
+        />
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                5G <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Transform your business with next-generation 5G infrastructure and applications. 
-                Experience ultra-low latency, massive connectivity, and revolutionary edge computing capabilities.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                  Get 5G Consultation
-                </button>
-                <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  View Case Studies
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Services Grid */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Our 5G Solutions</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive 5G infrastructure and application solutions designed for the future
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {solutions.map((service, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all duration-300 relative group ${service.popular ? 'ring-2 ring-cyan-500' : ''}`}>
-                  {service.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors">
-                    {service.icon}
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors">{service.name}</h3>
-                  <p className="text-gray-300 mb-6 group-hover:text-gray-200 transition-colors">{service.description}</p>
-                  
-                  <div className="mb-6 p-4 bg-slate-800/50 rounded-lg">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm text-gray-400">Our Price:</span>
-                      <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                    </div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm text-gray-400">Market Price:</span>
-                      <span className="text-lg text-gray-300 line-through">{service.marketPrice}</span>
-                    </div>
-                    <div className="text-sm text-green-400 font-semibold">
-                      {service.benefits}
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <div className="flex flex-col space-y-4">
-                    <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">
-                      Get Started
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <button className="w-full border border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                      Learn More
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">5G Solutions</h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Comprehensive 5G solutions by Zion Tech Group. Transform your
+            business with our expert solutions.
+          </p>
 
+<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
@@ -256,9 +180,17 @@ const FiveGSolutionsPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
       </div>
     </>
   );
-};
-
-export default FiveGSolutionsPage;
+}

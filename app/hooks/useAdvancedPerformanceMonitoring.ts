@@ -40,9 +40,10 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   const observerRef = useRef<PerformanceObserver | null>(null);
   const reportIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: any) => {
+  const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {
     // Report to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       (window as any)['gtag']('event', name, {
@@ -52,6 +53,9 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 =======
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', name, {
 >>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+=======
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', name, {
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
         event_category: category,
         value: Math.round(value),
         non_interaction: true,
@@ -108,11 +112,14 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
           for (const entry of list.getEntries()) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             const metric = entry as PerformanceEntry & { startTime: number; value?: number; hadRecentInput?: boolean };
 =======
             const metric = entry as PerformanceEntry & { startTime?: number; value?: number };
 >>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
 =======
+=======
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
             const metric = entry as PerformanceEntry & { 
               startTime?: number; 
               duration?: number;
@@ -122,7 +129,10 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
               responseStart?: number;
               requestStart?: number;
             };
+<<<<<<< HEAD
 >>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+=======
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
             
             switch (entry.entryType) {
               case 'paint':
@@ -137,6 +147,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
               
               case 'first-input':
 <<<<<<< HEAD
+<<<<<<< HEAD
                 metricsRef.current.fid = (metric as any).processingStart - metric.startTime;
                 break;
               
@@ -150,6 +161,14 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
                 break;
               
               case 'layout-shift':
+=======
+                if (metric.processingStart !== undefined && metric.startTime !== undefined) {
+                  metricsRef.current.fid = metric.processingStart - metric.startTime;
+                }
+                break;
+              
+              case 'layout-shift':
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
                 if (!metric.hadRecentInput && metric.value !== undefined) {
                   metricsRef.current.cls = (metricsRef.current.cls || 0) + metric.value;
 >>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
@@ -158,12 +177,18 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
               
               case 'navigation':
 <<<<<<< HEAD
+<<<<<<< HEAD
                 metricsRef.current.ttfb = (metric as any).responseStart - (metric as any).requestStart;
 =======
                 if (metric.responseStart !== undefined && metric.requestStart !== undefined) {
                   metricsRef.current.ttfb = metric.responseStart - metric.requestStart;
                 }
 >>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+=======
+                if (metric.responseStart !== undefined && metric.requestStart !== undefined) {
+                  metricsRef.current.ttfb = metric.responseStart - metric.requestStart;
+                }
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
                 break;
               
               case 'measure':
@@ -211,7 +236,10 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
         if (process.env.NODE_ENV === 'development') {
           console.warn('Performance Observer setup failed:', error);
         }
+<<<<<<< HEAD
 >>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+=======
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
       }
     };
 
@@ -222,6 +250,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (memory) {
           const usedMB = memory.usedJSHeapSize / 1048576;
           const totalMB = memory.totalJSHeapSize / 1048576;
@@ -230,6 +259,9 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 =======
         if (!memory) return;
 >>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+=======
+        if (!memory) return;
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
         const usedMB = memory.usedJSHeapSize / 1048576;
         const totalMB = memory.totalJSHeapSize / 1048576;
         const limitMB = memory.jsHeapSizeLimit / 1048576;
@@ -261,6 +293,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
         for (const entry of list.getEntries()) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           const metric = entry as PerformanceEntry & { value: number; hadRecentInput: boolean };
 =======
           const metric = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
@@ -270,6 +303,10 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
           const metric = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
           if (!metric.hadRecentInput && metric.value !== undefined) {
 >>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+=======
+          const metric = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!metric.hadRecentInput && metric.value !== undefined) {
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
             clsValue += metric.value;
             metricsRef.current.cls = clsValue;
           }
@@ -286,7 +323,10 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
         if (process.env.NODE_ENV === 'development') {
           console.warn('Layout shift monitoring not supported:', error);
         }
+<<<<<<< HEAD
 >>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+=======
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
       }
 
       return () => clsObserver.disconnect();
@@ -334,9 +374,12 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 =======
     reportMetrics,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
 =======
 >>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
+=======
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
     reportMetric,
   ]);
 

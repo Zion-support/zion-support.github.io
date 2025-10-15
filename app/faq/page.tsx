@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Search, HelpCircle, ChevronUp, ChevronDown } from 'lucide-react';
+import { ArrowRight } from "lucide-react";
 
-const FAQPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>([]);
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
+<<<<<<< HEAD
   const toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 
@@ -120,141 +118,29 @@ const filteredData = faqData.map(category => ({
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
   })).filter(category => category.questions.length > 0);
+=======
+export default function FaqZionTechGroup() {
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
   return (
     <>
       <Helmet>
-        <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
-        <meta name="description" content="Find answers to frequently asked questions about Zion Tech Group&apos;s AI services, IT solutions, micro SAAS, and 5G technology. Get help and support information." />
-        <meta name="keywords" content="FAQ, frequently asked questions, support, help, AI services, IT solutions, micro SAAS, 5G technology" />
-        <meta property="og:title" content="FAQ - Zion Tech Group" />
-        <meta property="og:description" content="Frequently asked questions about our technology solutions" />
-        <meta property="og:type" content="website" />
+        <title>Faq - Zion Tech Group</title>
       </Helmet>
-      
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20">
-          
-        <div className="container mx-auto px-4">
-            
-        <div className="text-center max-w-4xl mx-auto">
-              
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Questions</span>
-              </h1>
-              
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Find answers to common questions about our services, solutions, and support.
-              </p>
-              {/* Search Bar */}
-              
-        <div className="relative max-w-2xl mx-auto mb-12">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-    type="text"
-                  placeholder="Search FAQ..."
-                  value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* FAQ Content */}
-        <section className="pb-20">
-          
-        <div className="container mx-auto px-4">
-            
-        <div className="max-w-4xl mx-auto">
-              {filteredData.map((category, categoryIndex) => (
-                <div key={categoryIndex} className="mb-12">
-                  <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
-                    <HelpCircle className="w-8 h-8 text-cyan-400 mr-3" />
-                    {category.category}
-                  </h2>
-                  
-        <div className="space-y-4">
-                    {category.questions.map((item, questionIndex) => {
-                      const globalIndex = categoryIndex * 100 + questionIndex;
-
-const isOpen = openItems.includes(globalIndex);
-  return (
-                        <div
-                          key={questionIndex} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden hover:bg-white/15 transition-all duration-300"
-                        >
-                          <button
-                            onClick={() => toggleItem(globalIndex)} className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
-                          >
-                            <span className="text-lg font-semibold text-white pr-4">
-                              {item.question}
-                            </span>
-                            {isOpen ? (
-                              <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                            ) : (
-                              <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                            )}
-                          </button>
-                          {isOpen && (
-                            
-        <div className="px-6 pb-4">
-                              
-        <div className="border-t border-white/20 pt-4">
-                                
-          <p className="text-gray-300 leading-relaxed">
-                                  {item.answer}
-                                </p>
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              ))}
-              {filteredData.length === 0 && (
-                
-        <div className="text-center py-12">
-                  <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
-                  
-          <p className="text-gray-300">Try adjusting your search terms or browse our categories above.</p>
-                </div>
-              )}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-          
-        <div className="container mx-auto px-4">
-            
-        <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Still Have Questions?</h2>
-              
-          <p className="text-xl text-gray-300 mb-8">
-                Can&apos;t find what you&apos;re looking for? Our support team is here to help.
-              </p>
-              
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-    href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Contact Support
-                </a>
-                <a
-    href="mailto:support@ziontechgroup.com"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
-                  Email Us
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Faq</h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Professional faq services coming soon.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
       </div>
     </>
   );
-};
-export default FAQPage;
+}

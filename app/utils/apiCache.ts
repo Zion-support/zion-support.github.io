@@ -1,35 +1,15 @@
-interface CacheItem {
-  data: unknown;
-  timestamp: number;
-  ttl: number;
-}
+// Apicache utility functions
 
-export const apiCache = {
-  cache: new Map<string, CacheItem>(),
-  set: (key: string, data: unknown, ttl: number = 300000) => {
-    apiCache.cache.set(key, {
-      data,
-      timestamp: Date.now(),
-      ttl
-    });
-  },
-  get: (key: string): unknown | null => {
-    const item = apiCache.cache.get(key);
-    if (!item) return null;
+export const Apicache = {
+  init: () => {
+    },
 
-    const now = Date.now();
-    if (now - item.timestamp > item.ttl) {
-      apiCache.cache.delete(key);
-      return null;
-    }
-    return item.data;
+  process: (data: any) => {
+    return data;
   },
-  clear: () => {
-    apiCache.cache.clear();
-  },
-  delete: (key: string) => {
-    apiCache.cache.delete(key);
-  }
+
+  cleanup: () => {
+    },
 };
 
-export default apiCache;
+export default Apicache;
