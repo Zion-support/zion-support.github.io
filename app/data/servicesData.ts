@@ -506,7 +506,6 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-workflow-automator-pro'
       }
->>>>>>> 4a1e2c58a256 (Fix TypeScript errors: Remove duplicate link properties in servicesData and fix JSX structure in micro-saas-solutions page)
     },
     {
       id: 'ai-consulting',
@@ -553,9 +552,6 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-consulting'
-<<<<<<< HEAD
-      },
-=======
       }
     },
     {
@@ -787,7 +783,6 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-customer-satisfaction-monitor'
       }
->>>>>>> 4a1e2c58a256 (Fix TypeScript errors: Remove duplicate link properties in servicesData and fix JSX structure in micro-saas-solutions page)
     },
     {
       id: 'ai-content-generator',
@@ -834,11 +829,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-content-generator'
-<<<<<<< HEAD
-      },
-=======
       }
->>>>>>> 4a1e2c58a256 (Fix TypeScript errors: Remove duplicate link properties in servicesData and fix JSX structure in micro-saas-solutions page)
     },
     {
       id: 'ai-customer-support',
@@ -885,11 +876,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-customer-support'
-<<<<<<< HEAD
-      },
-=======
       }
->>>>>>> 4a1e2c58a256 (Fix TypeScript errors: Remove duplicate link properties in servicesData and fix JSX structure in micro-saas-solutions page)
     }
   ],
   microSaas: [
@@ -938,9 +925,6 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/task-manager'
-<<<<<<< HEAD
-      },
-=======
       }
     },
     {
@@ -1632,7 +1616,6 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/security-scanner-pro'
       }
->>>>>>> 4a1e2c58a256 (Fix TypeScript errors: Remove duplicate link properties in servicesData and fix JSX structure in micro-saas-solutions page)
     },
     {
       id: 'expense-tracker',
@@ -1679,11 +1662,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/expense-tracker'
-<<<<<<< HEAD
-      },
-=======
       }
->>>>>>> 4a1e2c58a256 (Fix TypeScript errors: Remove duplicate link properties in servicesData and fix JSX structure in micro-saas-solutions page)
     },
     {
       id: 'email-marketing',
@@ -1730,11 +1709,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/email-marketing'
-<<<<<<< HEAD
-      },
-=======
       }
->>>>>>> 4a1e2c58a256 (Fix TypeScript errors: Remove duplicate link properties in servicesData and fix JSX structure in micro-saas-solutions page)
     },
     {
       id: 'social-scheduler',
@@ -1781,11 +1756,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/social-scheduler'
-<<<<<<< HEAD
-      },
-=======
       }
->>>>>>> 4a1e2c58a256 (Fix TypeScript errors: Remove duplicate link properties in servicesData and fix JSX structure in micro-saas-solutions page)
     },
     {
       id: 'inventory-optimizer',
@@ -1832,11 +1803,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/inventory-optimizer'
-<<<<<<< HEAD
-      },
-=======
       }
->>>>>>> 4a1e2c58a256 (Fix TypeScript errors: Remove duplicate link properties in servicesData and fix JSX structure in micro-saas-solutions page)
     },
     {
       id: 'workflow-automator',
@@ -1883,11 +1850,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/workflow-automator'
-<<<<<<< HEAD
-      },
-=======
       }
->>>>>>> 4a1e2c58a256 (Fix TypeScript errors: Remove duplicate link properties in servicesData and fix JSX structure in micro-saas-solutions page)
     }
   ],
   itSolutions: [
@@ -1936,9 +1899,6 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/cloud-infrastructure'
-<<<<<<< HEAD
-      },
-=======
       }
     },
     {
@@ -2492,7 +2452,6 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/digital-transformation'
       }
->>>>>>> 4a1e2c58a256 (Fix TypeScript errors: Remove duplicate link properties in servicesData and fix JSX structure in micro-saas-solutions page)
     },
     {
       id: 'cybersecurity',
@@ -2539,11 +2498,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/cybersecurity'
-<<<<<<< HEAD
-      },
-=======
       }
->>>>>>> 4a1e2c58a256 (Fix TypeScript errors: Remove duplicate link properties in servicesData and fix JSX structure in micro-saas-solutions page)
     },
     {
       id: 'data-analytics',
@@ -2590,11 +2545,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/data-analytics'
-<<<<<<< HEAD
-      },
-=======
       }
->>>>>>> 4a1e2c58a256 (Fix TypeScript errors: Remove duplicate link properties in servicesData and fix JSX structure in micro-saas-solutions page)
     },
     {
       id: 'mobile-development',
@@ -2641,11 +2592,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/mobile-development'
-<<<<<<< HEAD
-      },
-=======
       }
->>>>>>> 4a1e2c58a256 (Fix TypeScript errors: Remove duplicate link properties in servicesData and fix JSX structure in micro-saas-solutions page)
     },
     {
       id: 'web-development',
@@ -2692,11 +2639,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/web-development'
-<<<<<<< HEAD
-      },
-=======
       }
->>>>>>> 4a1e2c58a256 (Fix TypeScript errors: Remove duplicate link properties in servicesData and fix JSX structure in micro-saas-solutions page)
     },
     {
       id: 'database-management',
@@ -2743,11 +2686,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/database-management'
-<<<<<<< HEAD
-      },
-=======
       }
->>>>>>> 4a1e2c58a256 (Fix TypeScript errors: Remove duplicate link properties in servicesData and fix JSX structure in micro-saas-solutions page)
     }
   ]
 };
