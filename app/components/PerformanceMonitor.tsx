@@ -1,66 +1,4 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-
-interface PerformanceMetrics {
-  cls: number | null;
-  inp: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
-  loadTime: number | null;
-}
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    inp: null,
-    fcp: null,
-    lcp: null,
-<<<<<<< HEAD
-    ttfb: null
-  });
-
-  useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
-
-    const handleMetric = (metric: any) => {
-      setMetrics(prev => ({
-        ...prev,
-        [metric.name]: metric.value
-      }));
-
-      // Send to analytics service
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          value: Math.round(metric.value),
-          event_label: metric.id,
-          non_interaction: true,
-        });
-      }
-    };
-
-    onCLS(handleMetric);
-    onINP(handleMetric);
-    onFCP(handleMetric);
-    onLCP(handleMetric);
-    onTTFB(handleMetric);
-  }, []);
-
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1">
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
-=======
 
 interface PerformanceMetrics {
   fcp?: number;
@@ -152,7 +90,6 @@ const PerformanceMonitor: React.FC = () => {
         >
           ✕
         </button>
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       </div>
       
       <div className="space-y-2 text-xs">
@@ -193,10 +130,6 @@ const PerformanceMonitor: React.FC = () => {
           <div>Good: Green | Needs Improvement: Yellow | Poor: Red</div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     </div>
   );
 };
