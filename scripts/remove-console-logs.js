@@ -8,17 +8,15 @@ import { glob } from 'glob';
  */
 function removeConsoleLogs(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
+    const content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove console.log, console.warn, console.error, console.info, console.debug
-    content = content.replace(/console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?/g, '');
+    // Remove console.log, console.info, console.debug statements
+    const cleanedContent = content
+      .replace(/console\.(log|info|debug)\([^)]*\);?\s*/g, '')
+      .replace(/console\.(log|info|debug)\([^)]*\)\s*/g, '');
     
-    // Remove empty lines left behind
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (content !== cleanedContent) {
+      fs.writeFileSync(filePath, cleanedContent, 'utf8');
       console.log(`Removed console logs from: ${filePath}`);
     }
   } catch (error) {
@@ -28,17 +26,26 @@ function removeConsoleLogs(filePath) {
 
 async function main() {
   try {
-    console.log('Removing console logs from production build...');
+    const distPath = path.join(process.cwd(), 'dist');
     
-    // Find all JavaScript files in dist directory
-    const files = await glob('dist/**/*.js');
-    
-    for (const file of files) {
-      removeConsoleLogs(file);
+    if (!fs.existsSync(distPath)) {
+      console.log('Dist directory not found, skipping console log removal');
+      return;
     }
+    
+    // Find all JavaScript files in dist
+    const jsFiles = await glob('**/*.js', { cwd: distPath });
+    
+    console.log(`Found ${jsFiles.length} JavaScript files to process`);
+    
+    for (const file of jsFiles) {
+      const fullPath = path.join(distPath, file);
+      removeConsoleLogs(fullPath);
+    }
+    
     console.log('Console log removal completed!');
   } catch (error) {
-    console.error('Error removing console logs:', error);
+    console.error('Error during console log removal:', error);
   }
 }
 
