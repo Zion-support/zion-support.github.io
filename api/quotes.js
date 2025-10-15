@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -14,36 +13,25 @@ export default function handler(req, res) {
     // Process the quote request
     const quote = {
       id: `quote_${Date.now()}`,
-      projectType,
-      description,
-      budget: budget || 'To be determined',
-      timeline: timeline || 'To be determined',
-      companyName,
-      contactName,
+      name,
       email,
-      phone,
-      details,
+      phone: phone || 'Not provided',
+      details: details || 'No details provided',
       country: country || 'Not specified',
       service: service || 'General inquiry',
-      status: 'pending',
-      estimatedCost: 'Contact for pricing',
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
+      status: 'pending'
     };
 
-    // Here you would typically save the quote to a database
-    console.log('Quote request processed:', quote.id);
+    // Here you would typically save to a database
+    console.log('Quote request received:', quote);
     
     res.status(200).json({ 
-      success: true,
-      message: 'Quote request received. We will provide a detailed quote within 48 hours.',
-      quote: quote
+      message: 'Quote request submitted successfully',
+      quoteId: quote.id 
     });
   } catch (error) {
-    console.error('Quote submission error:', error);
+    console.error('Quote request error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 }
-=======
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
