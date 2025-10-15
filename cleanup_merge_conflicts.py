@@ -1,59 +1,81 @@
 #!/usr/bin/env python3
+"""
+Script to clean up merge conflict markers from files
+"""
 import os
 import re
 import glob
 
 def clean_merge_conflicts(file_path):
-    """Clean merge conflicts from a file"""
+    """Clean merge conflict markers from a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Remove merge conflict markers and keep the HEAD version
-        # Pattern to match merge conflicts and keep the content between <<<<<<< HEAD and =======
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======.*?>>>>>>> [^\n]+\n'
+        # Remove merge conflict markers and their content
+        # Pattern to match <<<<<<< HEAD ... ======= ... >>>>>>> branch
+        pattern = r'<<<<<<<.*?\n(.*?)\n=======\n(.*?)\n>>>>>>>.*?\n'
+        
+        # For now, let's keep the first version (HEAD) and remove the conflict markers
+        # This is a simple approach - in a real scenario you'd want more sophisticated resolution
         cleaned_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
         
-        # Remove any remaining merge conflict markers
-        cleaned_content = re.sub(r'<<<<<<< HEAD\n?', '', cleaned_content)
-        cleaned_content = re.sub(r'=======\n?', '', cleaned_content)
-        cleaned_content = re.sub(r'>>>>>>> [^\n]+\n?', '', cleaned_content)
+        # Also remove standalone conflict markers
+        cleaned_content = re.sub(r'^<<<<<<<.*?\n', '', cleaned_content, flags=re.MULTILINE)
+        cleaned_content = re.sub(r'^=======\n', '', cleaned_content, flags=re.MULTILINE)
+        cleaned_content = re.sub(r'^>>>>>>>.*?\n', '', cleaned_content, flags=re.MULTILINE)
         
-        # Clean up multiple empty lines
-        cleaned_content = re.sub(r'\n\s*\n\s*\n', '\n\n', cleaned_content)
+        # Clean up any double newlines that might have been created
+        cleaned_content = re.sub(r'\n\n\n+', '\n\n', cleaned_content)
         
-        if content != cleaned_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(cleaned_content)
-            print(f"Cleaned merge conflicts in: {file_path}")
-            return True
-        return False
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(cleaned_content)
+        
+        print(f"Cleaned merge conflicts from: {file_path}")
+        return True
+        
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+        print(f"Error cleaning {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript and JavaScript files
+    """Main function to clean all files with merge conflicts"""
+    # Get all files with merge conflict markers
+    files_to_clean = []
+    
+    # Search for common file extensions
     patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        '*.tsx',
-        '*.ts',
-        '*.js'
+        '**/*.tsx',
+        '**/*.ts', 
+        '**/*.jsx',
+        '**/*.js',
+        '**/*.test.tsx',
+        '**/*.test.ts'
     ]
     
-    files_processed = 0
-    files_cleaned = 0
-    
     for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            if os.path.isfile(file_path) and not file_path.startswith('node_modules'):
-                files_processed += 1
-                if clean_merge_conflicts(file_path):
-                    files_cleaned += 1
+        files_to_clean.extend(glob.glob(pattern, recursive=True))
     
-    print(f"\nProcessed {files_processed} files")
-    print(f"Cleaned merge conflicts in {files_cleaned} files")
+    # Filter files that actually contain merge conflict markers
+    files_with_conflicts = []
+    for file_path in files_to_clean:
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+                if '<<<<<<<' in content or '=======' in content or '>>>>>>>' in content:
+                    files_with_conflicts.append(file_path)
+        except:
+            continue
+    
+    print(f"Found {len(files_with_conflicts)} files with merge conflicts")
+    
+    # Clean each file
+    cleaned_count = 0
+    for file_path in files_with_conflicts:
+        if clean_merge_conflicts(file_path):
+            cleaned_count += 1
+    
+    print(f"Successfully cleaned {cleaned_count} files")
 
 if __name__ == "__main__":
     main()

@@ -1,299 +1,541 @@
-'use client';
-import React, { useState } from 'react';
-import React, { useState, useEffect, useCallback } from 'react';
-import { Search, Eye } from 'lucide-react';
+<<<<<<< HEAD
+import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
+interface SEOData {}
+  title: string
+  description: string
+  keywords: string[]
+  canonicalUrl: string
+  ogTitle?: string
+  ogDescription?: string
+  ogImage?: string
+  ogUrl?: string
+  twitterCard?: string
+  twitterTitle?: string
+  twitterDescription?: string
+  twitterImage?: string
+  structuredData?: any
+  robots?: string
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
+  tags?: string[]
+}
 
-interface SEOSettings {
-  metaTags: boolean;
-  structuredData: boolean;
-  sitemap: boolean;
-  robotsTxt: boolean;
-  canonicalUrls: boolean;
-  altTexts: boolean;
+interface AdvancedSEOOptimizerProps {}
+  seoData: SEOData
+  enableStructuredData?: boolean
+  enableSocialMeta?: boolean
+  enableAdvancedFeatures?: boolean
 }
-interface SEOMetrics {}
-  titleLength: number | null
-  descriptionLength: number | null
-  headingStructure: string | null
-  imageAltTexts: number | null
-  internalLinks: number | null
-  externalLinks: number | null
-}
-const AdvancedSEOOptimizer: React.FC = () => {}
-}const [settings, setSettings] = useState<SEOSettings>({}
-    metaTags: false,
-    structuredData: false,
-    sitemap: false,
-    robotsTxt: false,
-    canonicalUrls: false,
-    altTexts: false
-  })
-  const [metrics, setMetrics] = useState<SEOMetrics>({}
-    titleLength: null,
-    descriptionLength: null,
-    headingStructure: null,
-    imageAltTexts: null,
-    internalLinks: null,
-    externalLinks: null
-  })
-  const [isVisible, setIsVisible] = useState(false)
-  const [isOptimizing, setIsOptimizing] = useState(false)
-  const analyzeSEO = useCallback(() => {}
-}if (typeof window === 'undefined') return
-    // Analyze title length
-    const title = document.title
-    setMetrics(prev => ({ ...prev, titleLength: title.length }))
-    // Analyze meta description
-    const metaDescription = document.querySelector('meta[name="description"]')
-    const descriptionLength = metaDescription ? metaDescription.getAttribute('content')?.length || 0 : 0
-    setMetrics(prev => ({ ...prev, descriptionLength }))
-    // Analyze heading structure
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
-    const headingStructure = Array.from(headings).map(h => h.tagName).join(' > ')
-    setMetrics(prev => ({ ...prev, headingStructure }))
-    // Count images with alt text
-    const images = document.querySelectorAll('img')
-    const imagesWithAlt = Array.from(images).filter(img => img.getAttribute('alt'))
-    setMetrics(prev => ({ ...prev, imageAltTexts: imagesWithAlt.length }))
-    // Count internal and external links
-    const links = document.querySelectorAll('a[href]')
-    let internalLinks = 0
-    let externalLinks = 0
-    links.forEach(link => {}
-}const href = link.getAttribute('href')
-      if (href) {}
-        if (href.startsWith('/') || href.includes(window.location.hostname)) {}
-          internalLinks++
-        } else if (href.startsWith('http')) {}
-          externalLinks++
+
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
+=======
+<<<<<<< HEAD
+import React, { useEffect } from 'react";";";";
+import { Helmet } from 'react-helmet-async";
+interface SEOData {};
+=======
+
+import React, { useEffect } from 'react';";
+import { Helmet } from 'react-helmet-async';";
+
+interface SEOData {}
+>>>>>>> main
+  title: string;
+  description: string;
+  keywords: string[];
+  canonicalUrl: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogUrl?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: any;
+  robots?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+};
+interface AdvancedSEOOptimizerProps {};
+  seoData: SEOData;
+  enableStructuredData?: boolean;
+  enableSocialMeta?: boolean;
+  enableAdvancedFeatures?: boolean;
+};
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps>  =  ({)};
+>>>>>>> main
+  seoData,
+  enableStructuredData = true,
+  enableSocialMeta = true,
+  enableAdvancedFeatures = true
+<<<<<<< HEAD
+}) => {};
+  useEffect(() => {};";
+    // Generate structured data";";
+    if (enableStructuredData && seoData.structuredData) {};";";";
+      const script = document.createElement('script");";";";
+      script.type = 'application/ld+json";
+=======
+}) => {}
+  useEffect(() => {}
+    // Generate structured data
+    if (enableStructuredData && seoData.structuredData) {}
+<<<<<<< HEAD
+      const  script = document.createElement('script');"
+      script.type = 'application/ld+json'
+      script.text = JSON.stringify(seoData.structuredData)
+      document.head.appendChild(script)
+    }
+
+=======
+      const: script = document.createElement('script');";
+      script.type = 'application/ld+json';";
+>>>>>>> main
+      script.text = JSON.stringify(seoData.structuredData);
+      document.head.appendChild(script);
+    };
+>>>>>>> main
+    // Set up meta tags for social media
+<<<<<<< HEAD
+    if (enableSocialMeta) {};";
+      // Open Graph tags";";
+      if (seoData.ogTitle) {}";";";
+        const ogTitle = document.querySelector('meta[property="og:title"]");";";
+        if (ogTitle) {}";";";
+          ogTitle.setAttribute('content", seoData.ogTitle);";";
+        } else {}";";";
+          const meta = document.createElement('meta");";";";
+          meta.setAttribute('property', 'og:title");";";";
+          meta.setAttribute('content", seoData.ogTitle);
+          document.head.appendChild(meta);";
+        };";";
+      }";";";
+      if (seoData.ogDescription) {}"
+        const ogDescription = document.querySelector('meta[property="og:description"]");";";
+        if (ogDescription) {}";";";
+          ogDescription.setAttribute('content", seoData.ogDescription);";";
+        } else {}";";";
+          const meta = document.createElement('meta");";";";
+          meta.setAttribute('property', 'og:description");";";";
+          meta.setAttribute('content", seoData.ogDescription);
+          document.head.appendChild(meta);";
+        };";";
+      }";";";
+      if (seoData.ogImage) {}"
+        const ogImage = document.querySelector('meta[property="og:image"]");";";
+        if (ogImage) {}";";";
+          ogImage.setAttribute('content", seoData.ogImage);";";
+        } else {}";";";
+          const meta = document.createElement('meta");";";";
+          meta.setAttribute('property', 'og:image");";";";
+          meta.setAttribute('content", seoData.ogImage);
+          document.head.appendChild(meta);";
+        };";";
+      }";";";
+      if (seoData.ogUrl) {}"
+        const ogUrl = document.querySelector('meta[property="og:url"]");";";
+        if (ogUrl) {}";";";
+          ogUrl.setAttribute('content", seoData.ogUrl);";";
+        } else {}";";";
+          const meta = document.createElement('meta");";";";
+          meta.setAttribute('property', 'og:url");";";";
+          meta.setAttribute('content", seoData.ogUrl);
+          document.head.appendChild(meta);
+        };";
+      };";";
+      // Twitter Card tags";";";
+      if (seoData.twitterCard) {}"
+        const twitterCard = document.querySelector('meta[name="twitter:card"]");";";
+        if (twitterCard) {}";";";
+          twitterCard.setAttribute('content", seoData.twitterCard);";";
+        } else {}";";";
+          const meta = document.createElement('meta");";";";
+          meta.setAttribute('name', 'twitter:card");";";";
+          meta.setAttribute('content", seoData.twitterCard);
+          document.head.appendChild(meta);";
+        };";";
+      }";";";
+      if (seoData.twitterTitle) {}"
+        const twitterTitle = document.querySelector('meta[name="twitter:title"]");";";
+        if (twitterTitle) {}";";";
+          twitterTitle.setAttribute('content", seoData.twitterTitle);";";
+        } else {}";";";
+          const meta = document.createElement('meta");";";";
+          meta.setAttribute('name', 'twitter:title");";";";
+          meta.setAttribute('content", seoData.twitterTitle);
+          document.head.appendChild(meta);";
+        };";";
+      }";";";
+      if (seoData.twitterDescription) {}"
+        const twitterDescription = document.querySelector('meta[name="twitter:description"]");";";
+        if (twitterDescription) {}";";";
+          twitterDescription.setAttribute('content", seoData.twitterDescription);";";
+        } else {}";";";
+          const meta = document.createElement('meta");";";";
+          meta.setAttribute('name', 'twitter:description");";";";
+          meta.setAttribute('content", seoData.twitterDescription);
+          document.head.appendChild(meta);";
+        };";";
+      }";";";
+      if (seoData.twitterImage) {}"
+        const twitterImage = document.querySelector('meta[name="twitter:image"]");";";
+        if (twitterImage) {}";";";
+          twitterImage.setAttribute('content", seoData.twitterImage);";";
+        } else {}";";";
+          const meta = document.createElement('meta");";";";
+          meta.setAttribute('name', 'twitter:image");";";";
+          meta.setAttribute('content", seoData.twitterImage);
+          document.head.appendChild(meta);
+        };
+      };
+    };";
+    // Advanced SEO features";";
+    if (enableAdvancedFeatures) {}";";";
+      // Set canonical URL"
+      let canonical = document.querySelector('link[rel="canonical"]");";";
+      if (canonical) {}";";";
+        canonical.setAttribute('href", seoData.canonicalUrl);";";
+      } else {}";";";
+        canonical = document.createElement('link");";";";
+        canonical.setAttribute('rel', 'canonical");";";";
+        canonical.setAttribute('href", seoData.canonicalUrl);
+        document.head.appendChild(canonical);";
+      };";";
+      // Set robots meta tag";";";
+      if (seoData.robots) {}"
+        let robots = document.querySelector('meta[name="robots"]");";";
+        if (robots) {}";";";
+          robots.setAttribute('content", seoData.robots);";";
+        } else {}";";";
+          robots = document.createElement('meta");";";";
+          robots.setAttribute('name', 'robots");";";";
+          robots.setAttribute('content", seoData.robots);
+          document.head.appendChild(robots);
+        };";
+      };";";
+      // Set author meta tag";";";
+      if (seoData.author) {}"
+        let author = document.querySelector('meta[name="author"]");";";
+        if (author) {}";";";
+          author.setAttribute('content", seoData.author);";";
+        } else {}";";";
+          author = document.createElement('meta");";";";
+          author.setAttribute('name', 'author");";";";
+          author.setAttribute('content", seoData.author);
+          document.head.appendChild(author);
+        };";
+      };";";
+      // Set published time";";";
+      if (seoData.publishedTime) {}"
+        let publishedTime = document.querySelector('meta[property="article:published_time"]");";";
+        if (publishedTime) {}";";";
+          publishedTime.setAttribute('content", seoData.publishedTime);";";
+        } else {}";";";
+          publishedTime = document.createElement('meta");";";";
+          publishedTime.setAttribute('property', 'article:published_time");";";";
+          publishedTime.setAttribute('content", seoData.publishedTime);
+          document.head.appendChild(publishedTime);
+        };";
+      };";";
+      // Set modified time";";";
+      if (seoData.modifiedTime) {}"
+        let modifiedTime = document.querySelector('meta[property="article:modified_time"]");";";
+        if (modifiedTime) {}";";";
+          modifiedTime.setAttribute('content", seoData.modifiedTime);";";
+        } else {}";";";
+          modifiedTime = document.createElement('meta");";";";
+          modifiedTime.setAttribute('property', 'article:modified_time");";";";
+          modifiedTime.setAttribute('content", seoData.modifiedTime);
+          document.head.appendChild(modifiedTime);
+        };";
+      };";";
+      // Set section";";";
+      if (seoData.section) {}"
+        let section = document.querySelector('meta[property="article:section"]");";";
+        if (section) {}";";";
+          section.setAttribute('content", seoData.section);";";
+        } else {}";";";
+          section = document.createElement('meta");";";";
+          section.setAttribute('property', 'article:section");";";";
+          section.setAttribute('content", seoData.section);
+          document.head.appendChild(section);
+        };
+      };
+      // Set tags";
+      if (seoData.tags && seoData.tags.length > 0) {};";";
+        seoData.tags.forEach((tag) => {}";";";
+          const tagMeta = document.createElement('meta");";";";
+          tagMeta.setAttribute('property', 'article:tag");";";";
+          tagMeta.setAttribute('content", tag);
+=======
+    if (enableSocialMeta) {}
+      // Open Graph tags
+      if (seoData.ogTitle) {}
+        const  ogTitle = document.querySelector('meta[property="og:title"]');"
+        if (ogTitle) {}
+          ogTitle.setAttribute('content', seoData.ogTitle);"
+        } else {}
+          const  meta = document.createElement('meta');"
+          meta.setAttribute('property', 'og:title');"
+          meta.setAttribute('content', seoData.ogTitle);"
+          document.head.appendChild(meta)
         }
       }
-    });
-    
-    setMetrics(prev => ({ 
-      ...prev, 
-      internalLinks, 
-      externalLinks 
-    }));
-  }, []);
 
-  useEffect(() => {
-    analyzeSEO();
-  }, [analyzeSEO]);
+      if (seoData.ogDescription) {}
+        const  ogDescription = document.querySelector('meta[property="og:description"]');"
+        if (ogDescription) {}
+          ogDescription.setAttribute('content', seoData.ogDescription);"
+        } else {}
+          const  meta = document.createElement('meta');"
+          meta.setAttribute('property', 'og:description');"
+          meta.setAttribute('content', seoData.ogDescription);"
+          document.head.appendChild(meta)
+        }
+      }
 
-  const optimizeSEO = useCallback(_async () => {
-    setIsOptimizing(true);
-    
-    // Simulate optimization process
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    // Apply optimizations based on settings
-    if (settings.metaTags) {}
-      // Optimizing meta tags...
-    }
-    if (settings.structuredData) {}
-      // Adding structured data...
-    }
-    if (settings.sitemap) {}
-      // Generating sitemap...
-    }
-    if (settings.robotsTxt) {}
-      // Updating robots.txt...
-    }
-    if (settings.canonicalUrls) {}
-      // Setting canonical URLs...
-    }
-    if (settings.altTexts) {}
-      // Adding alt texts to images...
-    }
-    setIsOptimizing(false)
-    // Re-analyze SEO after optimization
-    setTimeout(analyzeSEO, 1000);
-  }, [settings, analyzeSEO]);
+      if (seoData.ogImage) {}
+        const  ogImage = document.querySelector('meta[property="og:image"]');"
+        if (ogImage) {}
+          ogImage.setAttribute('content', seoData.ogImage);"
+        } else {}
+          const  meta = document.createElement('meta');"
+          meta.setAttribute('property', 'og:image');"
+          meta.setAttribute('content', seoData.ogImage);"
+          document.head.appendChild(meta)
+        }
+      }
 
-  const toggleSetting = (_key: keyof SEOSettings) => {
-    setSettings(prev => ({
-      ...prev,
-      [key]: !prev[key]
-    }))
-  }
-  const seoFeatures = []
-    {}
-      key: 'metaTags' as keyof SEOSettings,
-      title: 'Meta Tags',
-      description: 'Optimize title, description, and other meta tags',
-      impact: 'High'
-    },
-    {}
-      key: 'structuredData' as keyof SEOSettings,
-      title: 'Structured Data',
-      description: 'Add JSON-LD structured data for better search results',
-      impact: 'High'
-    },
-    {}
-      key: 'sitemap' as keyof SEOSettings,
-      title: 'Sitemap',
-      description: 'Generate and submit XML sitemap to search engines',
-      impact: 'Medium'
-    },
-    {}
-      key: 'robotsTxt' as keyof SEOSettings,
-      title: 'Robots.txt',
-      description: 'Create robots.txt file for search engine crawlers',
-      impact: 'Medium'
-    },
-    {}
-      key: 'canonicalUrls' as keyof SEOSettings,
-      title: 'Canonical URLs',
-      description: 'Set canonical URLs to prevent duplicate content issues',
-      impact: 'High'
-    },
-    {}
-      key: 'altTexts' as keyof SEOSettings,
-      title: 'Alt Texts',
-      description: 'Add descriptive alt texts to all images',
-      impact: 'Medium'
+      if (seoData.ogUrl) {}
+        const  ogUrl = document.querySelector('meta[property="og:url"]');"
+        if (ogUrl) {}
+          ogUrl.setAttribute('content', seoData.ogUrl);"
+        } else {}
+          const  meta = document.createElement('meta');"
+          meta.setAttribute('property', 'og:url');"
+          meta.setAttribute('content', seoData.ogUrl);"
+          document.head.appendChild(meta)
+        }
+      }
+
+      // Twitter Card tags
+      if (seoData.twitterCard) {}
+        const  twitterCard = document.querySelector('meta[name="twitter:card"]');"
+        if (twitterCard) {}
+          twitterCard.setAttribute('content', seoData.twitterCard);"
+        } else {}
+          const  meta = document.createElement('meta');"
+          meta.setAttribute('name', 'twitter:card');"
+          meta.setAttribute('content', seoData.twitterCard);"
+          document.head.appendChild(meta)
+        }
+      }
+
+      if (seoData.twitterTitle) {}
+        const  twitterTitle = document.querySelector('meta[name="twitter:title"]');"
+        if (twitterTitle) {}
+          twitterTitle.setAttribute('content', seoData.twitterTitle);"
+        } else {}
+          const  meta = document.createElement('meta');"
+          meta.setAttribute('name', 'twitter:title');"
+          meta.setAttribute('content', seoData.twitterTitle);"
+          document.head.appendChild(meta)
+        }
+      }
+
+      if (seoData.twitterDescription) {}
+        const  twitterDescription = document.querySelector('meta[name="twitter:description"]');"
+        if (twitterDescription) {}
+          twitterDescription.setAttribute('content', seoData.twitterDescription);"
+        } else {}
+          const  meta = document.createElement('meta');"
+          meta.setAttribute('name', 'twitter:description');"
+          meta.setAttribute('content', seoData.twitterDescription);"
+          document.head.appendChild(meta)
+        }
+      }
+
+      if (seoData.twitterImage) {}
+        const  twitterImage = document.querySelector('meta[name="twitter:image"]');"
+        if (twitterImage) {}
+          twitterImage.setAttribute('content', seoData.twitterImage);"
+        } else {}
+          const  meta = document.createElement('meta');"
+          meta.setAttribute('name', 'twitter:image');"
+          meta.setAttribute('content', seoData.twitterImage);"
+          document.head.appendChild(meta)
+        }
+      }
     }
-  ];
 
-  const getImpactColor = (_impact: string) => {
-    switch (impact) {
-      case 'High': return 'text-red-400';
-      case 'Medium': return 'text-yellow-400';
-      case 'Low': return 'text-green-400';
-      default: return 'text-gray-400';
+    // Advanced SEO features
+    if (enableAdvancedFeatures) {}
+      // Set canonical URL
+      let  canonical = document.querySelector('link[rel="canonical"]');"
+      if (canonical) {}
+        canonical.setAttribute('href', seoData.canonicalUrl);"
+      } else {}
+        canonical = document.createElement('link');"
+        canonical.setAttribute('rel', 'canonical');"
+        canonical.setAttribute('href', seoData.canonicalUrl);"
+        document.head.appendChild(canonical)
+      }
+
+      // Set robots meta tag
+      if (seoData.robots) {}
+        let  robots = document.querySelector('meta[name="robots"]');"
+        if (robots) {}
+          robots.setAttribute('content', seoData.robots);"
+        } else {}
+          robots = document.createElement('meta');"
+          robots.setAttribute('name', 'robots');"
+          robots.setAttribute('content', seoData.robots);"
+          document.head.appendChild(robots)
+        }
+      }
+
+      // Set author meta tag
+      if (seoData.author) {}
+        let  author = document.querySelector('meta[name="author"]');"
+        if (author) {}
+          author.setAttribute('content', seoData.author);"
+        } else {}
+          author = document.createElement('meta');"
+          author.setAttribute('name', 'author');"
+          author.setAttribute('content', seoData.author);"
+          document.head.appendChild(author)
+        }
+      }
+
+      // Set published time
+      if (seoData.publishedTime) {}
+        let  publishedTime = document.querySelector('meta[property="article:published_time"]');"
+        if (publishedTime) {}
+          publishedTime.setAttribute('content', seoData.publishedTime);"
+        } else {}
+          publishedTime = document.createElement('meta');"
+          publishedTime.setAttribute('property', 'article:published_time');"
+          publishedTime.setAttribute('content', seoData.publishedTime);"
+          document.head.appendChild(publishedTime)
+        }
+      }
+
+      // Set modified time
+      if (seoData.modifiedTime) {}
+        let  modifiedTime = document.querySelector('meta[property="article:modified_time"]');"
+        if (modifiedTime) {}
+          modifiedTime.setAttribute('content', seoData.modifiedTime);"
+        } else {}
+          modifiedTime = document.createElement('meta');"
+          modifiedTime.setAttribute('property', 'article:modified_time');"
+          modifiedTime.setAttribute('content', seoData.modifiedTime);"
+          document.head.appendChild(modifiedTime)
+        }
+      }
+
+      // Set section
+      if (seoData.section) {}
+        let  section = document.querySelector('meta[property="article:section"]');"
+        if (section) {}
+          section.setAttribute('content', seoData.section);"
+        } else {}
+          section = document.createElement('meta');"
+          section.setAttribute('property', 'article:section');"
+          section.setAttribute('content', seoData.section);"
+          document.head.appendChild(section)
+        }
+      }
+
+      // Set tags
+      if (seoData.tags && seoData.tags.length > 0) {}
+        seoData.tags.forEach((tag) => {}
+<<<<<<< HEAD
+          const  tagMeta = document.createElement('meta');"
+          tagMeta.setAttribute('property', 'article:tag');"
+          tagMeta.setAttribute('content', tag);"
+          document.head.appendChild(tagMeta)
+        })
+      }
     }
-  };
+  }, [seoData, enableStructuredData, enableSocialMeta, enableAdvancedFeatures])
+=======
+          const: tagMeta = document.createElement('meta');";
+          tagMeta.setAttribute('property', 'article:tag');";
+          tagMeta.setAttribute('content', tag);";
+>>>>>>> main
+          document.head.appendChild(tagMeta);
+        });
+      };
+    };
+  }, [
+    seoData, enableStructuredData, enableSocialMeta, enableAdvancedFeatures
+  
+  ]);";
+  return ()";";
+    <Helmet>";";";
+      <title>{seoData.title}</title>"
+      <meta name="description" content={seoData.description} />"
+      <meta name="keywords" content={seoData.keywords.join(', ")} />";
+    </Helmet>";";
+  );";";";
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
 
-  const getScoreColor = (_value: number | null, thresholds: { good: number; poor: number }) => {
-    if (value === null) return 'text-gray-400';
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.poor) return 'text-yellow-400';
-    return 'text-red-400';
-  };
+<<<<<<< HEAD
+const ComponentsPage: React.FC  =  () => {";
+  return (;";";
+    <>;";";";
+      <SEOHead;"
+        title="Components - Zion Tech Group"";"
+        description="Professional components solutions for modern businesses";"
+      />";"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Components</$1>"
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+=======
+>>>>>>> main
+  return ()
+    <Helmet>
+      <title>{seoData.title}</title>
+      <meta: name ="description" content={seoData.description} />"
+      <meta: name ="keywords" content={seoData.keywords.join(', ')} />"
+    </Helmet>
 
-  if (!isVisible) {
-    return (<button
-        onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
-        aria-label="Open SEO optimizer"
-      >
-        <Search className="w-6 h-6" />
-      </button>
-    )
-  }
-
-  return (<div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6 w-80 z-50">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">
-          <Search className="w-5 h-5 mr-2" />
-          SEO Optimizer
-        </h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
-          aria-label="Close SEO optimizer"
-        >
-          ×
-        </button>
-      </div>
-      {/* SEO Metrics */}
-      <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-        <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-          <Eye className="w-4 h-4 mr-2" />
-          SEO Analysis
-        </h4>
-        <div className="space-y-2 text-xs">
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">Title Length:</span>
-            <span className={getScoreColor(metrics.titleLength, { good: 60, poor: 70 })}>
-              {metrics.titleLength ? `${metrics.titleLength}/60` : 'N/A'}
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">Description Length:</span>
-            <span className={getScoreColor(metrics.descriptionLength, { good: 160, poor: 200 })}>
-              {metrics.descriptionLength ? `${metrics.descriptionLength}/160` : 'N/A'}
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">Images with Alt:</span>
-            <span className="text-gray-900 dark:text-white">
-              {metrics.imageAltTexts || 'N/A'}
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">Internal Links:</span>
-            <span className="text-gray-900 dark:text-white">
-              {metrics.internalLinks || 'N/A'}
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">External Links:</span>
-            <span className="text-gray-900 dark:text-white">
-              {metrics.externalLinks || 'N/A'}
-            </span>
-          </div>
-        </div>
-      </div>
-      {/* SEO Settings */}
-      <div className="space-y-4">
-        <h4 className="text-sm font-semibold text-gray-900 dark:text-white">
-          SEO Features
-        </h4>
-        {seoFeatures.map((feature) => ()
-          <div key={feature.key} className="flex items-center justify-between">
-            <div className="flex-1">
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-gray-900 dark:text-white">
-                  {feature.title}
-                </span>
-                <span className={`text-xs ${getImpactColor(feature.impact)}`}>
-                  {feature.impact} Impact
-                </span>
-              </div>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                {feature.description}
-              </p>
-            </div>
-            <button
-              onClick={() => toggleSetting(feature.key)}
-              className={`ml-3 relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${}
-                settings[feature.key]
-                  ? 'bg-green-600'
-                  : 'bg-gray-200 dark:bg-gray-700'
-              }`}
-              aria-label={`Toggle ${feature.title}`}
-            >
-              <span
-                className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${}
-                  settings[feature.key] ? 'translate-x-5' : 'translate-x-1'
-                }`}
-              />
-            </button>
-          </div>
-        ))}
-      </div>
-      {/* Optimize Button */}
-      <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-        <button
-          onClick={optimizeSEO}
-          disabled={isOptimizing}
-          className="w-full bg-gradient-to-r from-green-500 to-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-        >
-          {isOptimizing ? ()
-            <div>
-              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-              Optimizing...
-</div>
-          ) : ()
-            <div>
-              <Search className="w-4 h-4 mr-2" />
-              Optimize SEO
-</div>
-          )}
-        </button>
-      </div>
-    </div>
+<<<<<<< HEAD
   )
 }
-export default AdvancedSEOOptimizer
+
+=======
+  );
+
+import React from 'react';;';";
+import SEOHead from './components/SEOHead';";
+;
+const ComponentsPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";";
+        description="Professional components solutions for modern businesses";";
+      />";";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
+        <div: className ="text-center">";";
+          <h1: className ="text-4xl font-bold mb-4">Components</h1>";";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+>>>>>>> main
+        </div>;
+      </div>;
+    </>;,";
+  ),";";
+};";";";
+;"
+>>>>>>> main
+export default ComponentsPage;'";'";"

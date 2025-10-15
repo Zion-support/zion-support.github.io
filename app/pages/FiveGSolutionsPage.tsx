@@ -1,21 +1,69 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
+<<<<<<< HEAD
+import SEOHead from '../components/SEOHead'
+=======
+<<<<<<< HEAD
+import SEOHead from '../components/SEOHead";
+const FiveGSolutionsPage: React.FC  =  () => {};
+  return ()";
+    <>{}</>";";
+      <SEOHead>";";";
+        title="FiveGSolutionsPage - Zion Tech Group"
+        description="Zion Tech Group FiveGSolutionsPage page"
+const FiveGSolutionsPage: React.FC = () => {";
+  ";";
+  return (";";";
+    <>";";";";
+      <SEOHead title ="FiveGSolutionsPage - Zion Tech Group - Zion Tech Group"";"
+        description="Zion Tech Group FiveGSolutionsPage page"";";";";
+      />"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">FiveGSolutionsPage - Zion Tech Group</$1>"
+          <p className ="text-gray-300">Coming soon...</$1>
+=======
+import SEOHead from '../components/SEOHead';";
+
+>>>>>>> main
+const FiveGSolutionsPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+<<<<<<< HEAD
+        title="FiveGSolutionsPage - Zion Tech Group""
+        description="Zion Tech Group FiveGSolutionsPage page""
+      />
+      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
+        <div  className ="text-center">"
+          <h1  className ="text-4xl font-bold mb-4">FiveGSolutionsPage - Zion Tech Group</h1>"
+          <p  className ="text-gray-300">Coming soon...</p>"
+=======
+        title="FiveGSolutionsPage - Zion Tech Group"";
+
+        description="Zion Tech Group FiveGSolutionsPage page"";
 
 const FiveGSolutionsPage: React.FC = () => {
   return (
     <>
-      <SEOHead 
-        title="FiveGSolutionsPage - Zion Tech Group"
-        description="Zion Tech Group FiveGSolutionsPage page"
+      <SEOHead: title ="FiveGSolutionsPage - Zion Tech Group - Zion Tech Group"";";
+        description="Zion Tech Group FiveGSolutionsPage page"";";
+
       />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">FiveGSolutionsPage</h1>
-          <p className="text-gray-300">Coming soon...</p>
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";
+        <div: className ="text-center">";";
+          <h1: className ="text-4xl font-bold mb-4">FiveGSolutionsPage - Zion Tech Group</h1>";";
+          <p: className ="text-gray-300">Coming soon...</p>";";
+>>>>>>> main
+>>>>>>> main
         </div>
       </div>
-    </>
-  );
-};
-
-export default FiveGSolutionsPage;
+    </>,
+  ),
+<<<<<<< HEAD
+}
+export default FiveGSolutionsPage
+=======
+";
+};";";
+";";";
+export default FiveGSolutionsPage;"
+>>>>>>> main

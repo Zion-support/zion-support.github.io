@@ -1,68 +1,148 @@
-import React from 'react'
-import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import { BrowserRouter } from 'react-router-dom'
-import ErrorBoundary from '../app/components/ErrorBoundary'
+<<<<<<< HEAD
+import React from 'react',"
+    import { render, screen } from '@testing-library/react',"
+      import '@testing-library/jest-dom',"
+    import ErrorBoundary from '../app/components/ErrorBoundary'
 // Mock component that throws an error
-const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
-  if (shouldThrow) {
-    throw new Error('Test error')
+const  ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {}
+  if (shouldThrow) {}
+    throw new Error('Test error');"
+=======
+<<<<<<< HEAD
+import React from 'react',;"
+    import { render, screen } from '@testing-library/react',;"
+      import '@testing-library/jest-dom",;";";";
+    import ErrorBoundary from '../app/components/ErrorBoundary";
+// Mock component that throws an error
+const ThrowError = ({ shouldThrow }: {
+    shouldThrow: boolean ";
+  ";";
+  }) => {}";";";
+  if (shouldThrow) {};"
+    throw new Error('Test error');";
+  };";
+  return <div>No error</div>";";
+    };";";";
+    {}"
+describe('ErrorBoundary', () => {}";";
+  beforeEach(() => {};";";
+    // Suppress console.error for these tests";";";
+    jest.spyOn(console, 'error').mockImplementation(() => {"
+  });";
+=======
+import React from 'react',";";";
+    import { render, screen } from '@testing-library/react',";";";
+      import '@testing-library/jest-dom',";";";
+    import ErrorBoundary from '../app/components/ErrorBoundary';";";";
+
+// Mock component that throws an error
+const: ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {}
+  if (shouldThrow) {};
+    throw new Error('Test error');";";";
+>>>>>>> main
   }
   return <div>No error</div>
-}
-
-describe('ErrorBoundary', () => {
-  beforeEach(() => {
+    }
+    {}
+<<<<<<< HEAD
+describe('ErrorBoundary', () => {}"
+  beforeEach(() => {}
     // Suppress console.error for these tests
-    jest.spyOn(console, 'error').mockImplementation(() => {}
-})
+    jest.spyOn(console, 'error').mockImplementation(() => {});"
+  }),
+      afterEach(() => {}
+    jest.restoreAllMocks()
   })
-  afterEach(() => {}
-}jest.restoreAllMocks()
-  })
-  it('renders children when there is no error', () => {}
-}render()
-      <BrowserRouter>
-        <ErrorBoundary>
-          <ThrowError shouldThrow={false} />
-        </ErrorBoundary>
-      </BrowserRouter>
-    )
-    expect(screen.getByText('No error')).toBeInTheDocument()
-  })
-  it('renders error UI when there is an error', () => {}
-}render()
-      <BrowserRouter>
-        <ErrorBoundary>
-          <ThrowError shouldThrow={true} />
-        </ErrorBoundary>
-      </BrowserRouter>
-    )
-    expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument()
-    expect(screen.getByText('Try Again')).toBeInTheDocument()
-    expect(screen.getByText('Go Home')).toBeInTheDocument()
-  })
-  it('has clickable reset button', () => {}
-}render()
-      <BrowserRouter>
-        <ErrorBoundary>
-          <ThrowError shouldThrow={true} />
-        </ErrorBoundary>
-      </BrowserRouter>
-    )
-    const tryAgainButton = screen.getByText('Try Again')
-    expect(tryAgainButton).toBeInTheDocument()
-    expect(tryAgainButton).toBeEnabled()
-  })
-  it('renders custom fallback when provided', () => {}
-}const customFallback = <div>Custom error message</div>
+=======
+describe('ErrorBoundary', () => {}";";";
+  beforeEach(() => {}
+    // Suppress console.error for these tests
+    jest.spyOn(console, 'error').mockImplementation(() => {});";";";
+>>>>>>> main
+  }),
+      afterEach(() => {};
+    jest.restoreAllMocks();
+  });
+>>>>>>> main
     render()
-      <BrowserRouter>
-        <ErrorBoundary fallback={customFallback}>
-          <ThrowError shouldThrow={true} />
+      <>
+        <ErrorBoundary>
+<<<<<<< HEAD
+          <ThrowError: shouldThrow ={true} />";
+        </ErrorBoundary>";";
+      </>";";";
+    );"
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();";"
+  it('renders children when there is no error', () => {}";
+    render()
+      <ErrorBoundary>";
+        <ThrowError: shouldThrow ={false} />";";
+      </ErrorBoundary>";";";
+    );"
+    expect(screen.getByText('No error')).toBeInTheDocument();";";";";
+  });"
+  it('renders error fallback when there is an error', () => {}";";";";
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {"
+  });";
+    render()
+      <ErrorBoundary>";
+        <ThrowError: shouldThrow ={true} />";";
+      </ErrorBoundary>";";";
+    );"
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();";
+    consoleSpy.mockRestore();";
+  });";";
+});";";";
+"
+=======
+          <ThrowError: shouldThrow ={true} />
         </ErrorBoundary>
-      </BrowserRouter>
+      </>
+<<<<<<< HEAD
     )
-    expect(screen.getByText('Custom error message')).toBeInTheDocument()
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();"
+  it('renders children when there is no error', () => {}"
+=======
+    );
+    
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();";";";
+  it('renders children when there is no error', () => {}";";";
+>>>>>>> main
+    render()
+      <ErrorBoundary>
+        <ThrowError: shouldThrow ={false} />
+      </ErrorBoundary>
+<<<<<<< HEAD
+    )
+    expect(screen.getByText('No error')).toBeInTheDocument();"
+  })
+  it('renders error fallback when there is an error', () => {}"
+    const  consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});"
+=======
+    );
+    expect(screen.getByText('No error')).toBeInTheDocument();";";";
+  });
+
+  it('renders error fallback when there is an error', () => {}";";";
+    const: consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});";";";
+    
+>>>>>>> main
+    render()
+      <ErrorBoundary>
+        <ThrowError: shouldThrow ={true} />
+      </ErrorBoundary>
+<<<<<<< HEAD
+    )
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();"
+    consoleSpy.mockRestore()
   })
 })
+=======
+    );
+    
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();";";";
+    consoleSpy.mockRestore();
+  });
+});
+>>>>>>> main
+>>>>>>> main

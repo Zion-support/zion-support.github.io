@@ -1,7 +1,9 @@
-import React from "react";
-import { DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Video, Calculator, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow } from "lucide-react";
-import SEOOptimizer from "../components/SEOOptimizer";
+<<<<<<< HEAD
+import React from 'react'
+import SEOHead from '../components/SEOHead'
+  ]
 
+<<<<<<< HEAD
 const MicroSaasPage: React.FC = () => {
   const microSaasServices = [
     {
@@ -1557,456 +1559,100 @@ const MicroSaasPage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Our most popular micro SAAS solutions trusted by thousands of businesses worldwide
+=======
+  const  stats = ["";"
+    { number: '10,000+', label: 'Active Users' },"";";"
+    { number: '99.9%', label: 'Uptime Guarantee' },"";";"
+    { number: '24/7', label: 'Support Available' },"";";"
+    { number: '30-day', label: 'Free Trial' };";";"
+  ]
+  )
+}
+export default MicroSaas
+=======
+<<<<<<< HEAD
+import React from 'react";";";";
+import SEOHead from '../components/SEOHead";";
+  ];";";
+";";";
+  const stats = [";"";";";"
+    { number: '10,000+', label: 'Active Users' },";"";";";";";";"
+    { number: '99.9%', label: 'Uptime Guarantee' },";"";";";";";";"
+    { number: '24/7', label: 'Support Available' },";"";";";";";";"
+    { number: '30-day', label: 'Free Trial' };";";";";";
+=======
+<<<<<<< HEAD
+import React from 'react;'";
+import { Helmet } from 'react-helmet-async;'";
+'use client;''";
+export default function Page() {
+  return (
+    <div: className ="min-h-screen bg-white">""";
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta: name ="description" content="Professional page services by Zion Tech Group." />""";
+      </Helmet>
+      <div: className ="container mx-auto px-4 py-16">;""";
+        <div: className ="text-center">;""";
+          <h1: className ="text-4xl font-bold text-gray-900 mb-8">;""";
+            Page;
+          </h1>
+          <p: className ="text-xl text-gray-600 mb-8">;""";
+            Professional page solutions tailored to your business needs.;
+          </p>
+          <div: className ="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;""";
+            <div: className ="bg-blue-50 border border-blue-200 rounded-lg p-6">;""";
+              <h3: className ="text-lg font-semibold text-blue-900 mb-2">;""";
+                Expert Solutions;
+              </h3>
+              <p: className ="text-blue-700">;""";
+                Our team of experts delivers cutting-edge page solutions.;
+>>>>>>> main
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasServices.filter(service => service.featured).map((service) => (
-                <div
-                  key={service.id}
-                  className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl"
-                >
-                  {service.discount && (
-                    <div className="absolute -top-3 -right-3 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                      {service.discount}
-                    </div>
-                  )}
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${service.color}`}>
-                      <div className="text-white">{service.icon}</div>
-                    </div>
-                    <div className="flex items-center text-yellow-400">
-                      <Star className="w-4 h-4 fill-current" />
-                      <span className="ml-1 text-sm font-medium">{service.rating}</span>
-                      <span className="ml-1 text-xs text-gray-400">({service.reviews})</span>
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                  <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-
-                  <div className="flex items-center mb-4">
-                    <span className="text-2xl font-bold text-white">{service.price}</span>
-                    {service.originalPrice && (
-                      <span className="ml-2 text-sm text-gray-400 line-through">{service.originalPrice}</span>
-                    )}
-                  </div>
-
-                  <div className="space-y-2 mb-6">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
-                    {service.features.length > 4 && (
-                      <div className="text-sm text-gray-400">
-                        +{service.features.length - 4} more features
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="space-y-3">
-                    <Link
-                      to={service.link}
-                      className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105"
-                    >
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 border border-white/20 text-white font-medium rounded-lg hover:bg-white/10 transition-all duration-300"
-                    >
-                      Start Free Trial
-                    </Link>
-                  </div>
-                </div>
-              ))}
+            <div: className ="bg-green-50 border border-green-200 rounded-lg p-6">;""";
+              <h3: className ="text-lg font-semibold text-green-900 mb-2">;""";
+                Custom Implementation;
+              </h3>
+              <p: className ="text-green-700">;""";
+                Tailored page implementations for your specific requirements.;
+              </p>
             </div>
+            <div: className ="bg-purple-50 border border-purple-200 rounded-lg p-6">;""";
+              <h3: className ="text-lg font-semibold text-purple-900 mb-2">;""";
+                24/7 Support;
+              </h3>
+              <p: className ="text-purple-700">;""";
+                Round-the-clock support for all your page needs.;
+              </p>
+            </div>
+          </div>
+          <div: className ="mt-12">;""";
+            <button: className ="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;""";
+              Get Started Today;
+            </button>
           </div>
         </div>
-
-        {/* All Services Grid */}
-        <div className="py-16 bg-black/10 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  All Solutions
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Browse our complete collection of micro SAAS solutions
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {microSaasServices.map((service) => (
-                <div
-                  key={service.id}
-                  className="group relative bg-gradient-to-br from-slate-800/30 to-slate-900/30 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  {service.discount && (
-                    <div className="absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                      {service.discount}
-                    </div>
-                  )}
-                  
-                  <div className="flex items-center justify-between mb-3">
-                    <div className={`p-2 rounded-lg bg-gradient-to-r ${service.color}`}>
-                      <div className="text-white">{service.icon}</div>
-                    </div>
-                    <div className="flex items-center text-yellow-400">
-                      <Star className="w-3 h-3 fill-current" />
-                      <span className="ml-1 text-xs font-medium">{service.rating}</span>
-                    </div>
-                  </div>
-
-                  <h3 className="text-lg font-bold text-white mb-2">{service.name}</h3>
-                  <p className="text-gray-300 mb-3 text-sm line-clamp-2">{service.description}</p>
-
-                  <div className="flex items-center mb-3">
-                    <span className="text-lg font-bold text-white">{service.price}</span>
-                    {service.originalPrice && (
-                      <span className="ml-2 text-xs text-gray-400 line-through">{service.originalPrice}</span>
-                    )}
-                  </div>
-
-                  <div className="space-y-1 mb-4">
-                    {service.features.slice(0, 3).map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-xs text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        <span className="truncate">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <Link
-                    to={service.link}
-                    className="w-full inline-flex items-center justify-center px-3 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300"
-                  >
-                    View Details
-                    <ArrowRight className="ml-1 h-3 w-3" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Testimonials */}
-        <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  What Our Customers Say
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Join thousands of satisfied customers who trust our micro SAAS solutions
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial) => (
-                <div
-                  key={index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
-                      {testimonial.avatar}
-                    </div>
-                    <div className="ml-4">
-                      <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  
-                  <p className="text-gray-300 italic">"{testimonial.content}"</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="py-16 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Start your free 14-day trial today. No credit card required. Cancel anytime.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/pricing"
-                className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
-              >
-                <DollarSign className="mr-2 h-5 w-5" />
-                View Pricing
-              </Link>
-            </div>
-
-            <div className="mt-8 text-sm text-gray-400">
-              <p>Questions? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
-            </div>
-          </div>
-        </div>
-
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">50+ Ready-to-Use Solutions</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Micro
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}SAAS
-              </span>
-              <br />
-              Solutions
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Ready-to-use business software solutions that can transform your operations immediately. 
-              From analytics to security, CRM to marketing automation - everything you need to grow your business.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-              >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-              >
-                Watch Demo
-                <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-              </Link>
-            </div>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              {stats.map((stat) => (
-                <div key={index} className="text-center group">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {stat.icon}
-                  </div>
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300 text-sm">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Services Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Our Micro SAAS Solutions
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Choose from our comprehensive suite of business software solutions. Each tool is designed to solve specific business challenges with powerful features and intuitive interfaces.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasServices.map((service) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
-                >
-                  {service.popular && (
-                    <div className="absolute top-4 right-4">
-                      <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full">
-                        POPULAR
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="relative z-10">
-                    <div
-                      className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
-                    >
-                      {service.icon}
-                    </div>
-                    
-                    <div className="text-center mb-4">
-                      <span className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full border border-cyan-500/30">
-                        {service.category}
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
-                      {service.title}
-                    </h3>
-                    
-                    <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm">
-                      {service.description}
-                    </p>
-                    
-                    {/* Pricing */}
-                    <div className="text-center mb-4">
-                      <div className="flex items-center justify-center space-x-2">
-                        <span className="text-cyan-400 font-bold text-lg">{service.price}</span>
-                        <span className="text-gray-500 line-through text-sm">{service.originalPrice}</span>
-                      </div>
-                    </div>
-                    
-                    {/* Features */}
-                    <div className="space-y-2 mb-6">
-                      {service.features.slice(0, 3).map((feature, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                      {service.features.length > 3 && (
-                        <div className="text-xs text-cyan-400">
-                          +{service.features.length - 3} more features
-                        </div>
-                      )}
-                    </div>
-                    
-                    <div className="text-center">
-                      <Link
-                        to={service.link}
-                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-all duration-300"
-                      >
-                        Learn More
-                        <ArrowRight className="w-4 h-4 ml-1" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industry Leaders
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our clients say about our micro SAAS solutions
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
-                >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                      {testimonial.avatar}
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses already using our micro SAAS solutions to drive growth and efficiency. 
-              Start your free trial today - no credit card required.
-            </p>
-            
-            {/* Contact Information */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-white font-semibold mb-2">Email</h3>
-                <p className="text-cyan-400">kleber@ziontechgroup.com</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Smartphone className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-white font-semibold mb-2">Phone</h3>
-                <p className="text-cyan-400">+1 302 464 0950</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Globe className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-white font-semibold mb-2">Address</h3>
-                <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-              >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/services"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-              >
-                View All Services
-                <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-              </Link>
-            </div>
-          </div>
-        </section>
       </div>
-    </>
+    </div>
   );
 };
-
 export default MicroSaasPage;
+=======
+import React from 'react';";";";
+import SEOHead from '../components/SEOHead';";";";
+
+  ];
+;
+  const: stats = [";"";";";";
+    { number: '10,000+', label: 'Active Users' },";"";";";";";";";";
+    { number: '99.9%', label: 'Uptime Guarantee' },";"";";";";";";";";
+    { number: '24/7', label: 'Support Available' },";"";";";";";";";";
+    { number: '30-day', label: 'Free Trial' };";";";";";";";
+>>>>>>> main
+  ];
+  );";
+};";";
+export default MicroSaas;";";";
+"
+>>>>>>> main

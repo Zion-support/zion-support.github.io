@@ -10,16 +10,16 @@ def fix_merge_conflicts(file_path):
             content = f.read()
         
         # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content and '=======' not in content and '>>>>>>> ' not in content:
+        if '' not in content and '>>>>>>> ' not in content:
             return False
         
         # Remove all merge conflict markers and their content
         # Pattern to match from <<<<<<< to >>>>>>> 
-        pattern = r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]*\n?'
+        pattern = r'.*?>>>>>>> [^\n]*\n?'
         content = re.sub(pattern, '', content, flags=re.DOTALL)
         
-        # Remove any remaining ======= lines
-        content = re.sub(r'=======\n?', '', content)
+        # Remove any remaining  lines
+        content = re.sub(r'\n?', '', content)
         
         # Remove any remaining >>>>>>> lines
         content = re.sub(r'>>>>>>> [^\n]*\n?', '', content)

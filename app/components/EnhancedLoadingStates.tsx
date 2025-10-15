@@ -1,103 +1,162 @@
-import React from 'react'
-import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react'
-interface LoadingPageProps {}
-  message?: string
-  showProgress?: boolean
-  progress?: number
-}
+<<<<<<< HEAD
+import React from 'react';;';";"
+import SEOHead from './components/SEOHead';";"
 
-export const LoadingPage: React.FC<LoadingPageProps> = ({ 
-  message = "Loading...", showProgress = false, progress = 0 
-}) => {
+const ComponentsPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <div className="relative mb-8">
-          <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center animate-pulse">
-            <Loader2 className="w-12 h-12 text-white animate-spin" />
-          </div>
-          <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full animate-bounce"></div>
+    <>
+      <SEOHead
+        title="Components - Zion Tech Group"";"
+        description="Professional components solutions for modern businesses";"
+      />";";"
+      <div  className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div  className ="text-center">";"
+          <h1  className ="text-4xl font-bold mb-4">Components</h1>";"
+          <p  className ="text-gray-300">Professional solutions coming soon...</p>;";"
         </div>
-        <h2 className="text-2xl font-bold text-white mb-4">{message}</h2>
-        {showProgress && ()
-          <div className="w-64 mx-auto mb-4">
-            <div className="bg-gray-700 rounded-full h-2">
-              <div
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 h-2 rounded-full transition-all duration-300"
-                style={{ width: `${progress}%` }}
-              ></div>
-            </div>
-            <p className="text-sm text-gray-300 mt-2">{progress}% complete</p>
-          </div>
-        )}
-        <div className="flex justify-center space-x-2">
-          <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
-          <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-          <div className="w-2 h-2 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+      </div>
+    </>
+  )
+}
+
+export const LoadingPage: React.FC<LoadingPageProps> = ({};";";"
+  message = "Loading...", showProgress = false, progress = 0;: value;";"
+}) => {};: value";";"
+  return ("";"
+    <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+        <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>";";"
+      </div>"";"
+        <div  className ="relative mb-8">";"
+        <div  className ="relative mb-8">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>";";"
+      </div>"";"
+            <Loader2: className ="w-12 h-12 text-white animate-spin" />: value";"
+          </div>"";"
+          <div  className ="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full animate-bounce"></div> value";"
+        </div>"";"
+        <h2  className ="text-2xl font-bold text-white mb-4">{message}</h2> value";"
+        {showProgress && ()"";"
+          <div  className ="w-64 mx-auto mb-4">";"
+        <div  className ="w-64 mx-auto mb-4">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>
+      </div>";";"
+              <div;">";"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 h-2 rounded-full transition-all duration-300">: value;";"
+                style={{ width: `${progress}%` }};>
+              ></div>";";"
+            </div>"";"
+            <p  className ="text-sm text-gray-300 mt-2">{progress}% complete</p> value;";"
+          </div>";";"
+        )};"";"
+        <div  className ="flex justify-center space-x-2">";"
+        <div  className ="flex justify-center space-x-2">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>'";'";";";"
+      </div>"'"''";";";"
+          <div  className ="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}>"'";';'";";";"
+        <div  className ="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}>"";";";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>
+      </div>
         </div>
       </div>
     </div>
   )
 }
+}
 
-export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ 
-  serviceType, message 
-}) => {
-  const getServiceIcon = () => {
-    switch (serviceType) {
-      case 'ai':
-        return <Brain className="w-16 h-16 text-cyan-400" />
-      case 'it':
-        return <Shield className="w-16 h-16 text-green-400" />
-      case 'saas':
-        return <Zap className="w-16 h-16 text-purple-400" />
-      case '5g':
-        return <Globe className="w-16 h-16 text-orange-400" />
-      default:
-        return <Loader2 className="w-16 h-16 text-white" />
+export const ServiceLoading: React.FC<ServiceLoadingProps> = ({}
+  serviceType, message
+}) => {};: value
+  const  getServiceIcon = () => {: value';';";"
+    switch (serviceType) {};''";";";"
+      case 'ai':"'";";";"
+        return <Brain: className ="w-16 h-16 text-cyan-400" />': value'";";";"
+      case 'it':"'";";";"
+        return <Shield= className ="w-16 h-16 text-green-400" />': value'";";";"
+      case 'saas':"'";";";"
+        return <Zap: className ="w-16 h-16 text-purple-400" />': value'";";";"
+      case '5g':"";";";"
+        return <Globe: className ="w-16 h-16 text-orange-400" />: value";"
+      default:"";"
+        return <Loader2: className ="w-16 h-16 text-white" />: value;";"
     }
   }
-  const getServiceMessage = () => {}
-}if (message) return message
-    switch (serviceType) {}
-      case 'ai':
-        return "Initializing AI Solutions..."
-      case 'it':
-        return "Loading IT Services..."
-      case 'saas':
-        return "Preparing Micro SaaS..."
-      case '5g':
-        return "Connecting to 5G Network..."
-      default:
-        return "Loading..."
+  const  getServiceMessage = () => {: value
+}if (message) return message;';';";"
+    switch (serviceType) {},''";";";"
+      case 'ai':"'";";";"
+        return "Initializing AI Solutions..."''";";";"
+      case 'it':"'";";";"
+        return "Loading IT Services..."''";";";"
+      case 'saas':"'";";";"
+        return "Preparing Micro SaaS..."''";";";"
+      case '5g':"";";";"
+        return "Connecting to 5G Network..."";"
+      default:"";"
+        return "Loading...";"
     }
-  }
-  return ()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <div className="relative mb-8">
-          <div className="w-32 h-32 mx-auto rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
-            <div className="animate-spin">
+    },
+    {";";"
+  return ()"";"
+    <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+        <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>";";"
+      </div>"";"
+        <div  className ="relative mb-8">";"
+        <div  className ="relative mb-8">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>";";"
+      </div>"";"
+            <div  className ="animate-spin"></div> value;";"
               {getServiceIcon()}
-            </div>
-          </div>
-          <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-cyan-400 animate-spin"></div>
-        </div>
-        <h2 className="text-3xl font-bold text-white mb-4">{getServiceMessage()}</h2>
-        <div className="max-w-md mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-                <span className="text-gray-300">Optimizing performance...</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                <span className="text-gray-300">Loading components...</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
-                <span className="text-gray-300">Preparing interface...</span>
+            </div>";";"
+          </div>"";"
+          <div  className ="absolute inset-0 rounded-full border-2 border-transparent border-t-cyan-400 animate-spin"></div> value";"
+        </div>"";"
+        <h2  className ="text-3xl font-bold text-white mb-4">{getServiceMessage()}</h2>";"
+        <div  className ="max-w-md mx-auto">";"
+        <div  className ="max-w-md mx-auto">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>";";"
+      </div>"";"
+            <div  className ="space-y-3">";"
+        <div  className ="space-y-3">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>";";"
+      </div>"";"
+                <div  className ="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>";"
+                <span  className ="text-gray-300">Optimizing performance...</span> value";"
+              </div>"";"
+              <div  className ="flex items-center space-x-3">";"
+        <div  className ="flex items-center space-x-3">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>";";"
+      </div>"";"
+                <span  className ="text-gray-300">Loading components...</span> value";"
+              </div>"";"
+              <div  className ="flex items-center space-x-3">";"
+        <div  className ="flex items-center space-x-3">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>";";"
+      </div>"";"
+                <span  className ="text-gray-300">Preparing interface...</span> value;";"
               </div>
             </div>
           </div>
@@ -106,84 +165,120 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({
     </div>
   )
 }
+}
 
-export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({ 
-  type, count = 1 
-}) => {
-  const renderSkeleton = () => {
-    switch (type) {
-      case 'card':
-        return ()
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
-            <div className="w-16 h-16 bg-gray-600 rounded-lg mb-4"></div>
-            <div className="h-6 bg-gray-600 rounded mb-3"></div>
-            <div className="h-4 bg-gray-600 rounded mb-2"></div>
-            <div className="h-4 bg-gray-600 rounded w-3/4"></div>
-          </div>
-        )
-      case 'list':
-        return ()
-          <div className="space-y-4">
-            {Array.from({ length: count }).map(( index) => (
-              <div key={index} className="flex items-center space-x-4 animate-pulse">
-                <div className="w-12 h-12 bg-gray-600 rounded-full"></div>
-                <div className="flex-1 space-y-2">
-                  <div className="h-4 bg-gray-600 rounded w-3/4"></div>
-                  <div className="h-3 bg-gray-600 rounded w-1/2"></div>
+export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({}
+  type, count = 1;: value
+}) => {};: value
+  const  renderSkeleton = () => {: value';';";"
+    switch (type) {};'';";"
+      case 'card':";";";"
+        return ()"";"
+          <div  className ="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">";"
+        <div  className ="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>";";"
+      </div>"";"
+            <div  className ="h-6 bg-gray-600 rounded mb-3">";"
+        <div  className ="h-6 bg-gray-600 rounded mb-3">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>";";"
+      </div>"";"
+            <div  className ="h-4 bg-gray-600 rounded w-3/4"></div> value;";"
+          </div>';';";"
+        )'';";"
+      case 'list':";";";"
+        return ()"";"
+          <div  className ="space-y-4"></div> value";"
+            {Array.from({ length: count }).map(( index) => ("";"
+              <div  key ={index} className="flex items-center space-x-4 animate-pulse">";"
+        <div  key ={index} className="flex items-center space-x-4 animate-pulse">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>";";"
+      </div>"";"
+                <div  className ="flex-1 space-y-2">";"
+        <div  className ="flex-1 space-y-2">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>";";"
+      </div>"";"
+                  <div  className ="h-3 bg-gray-600 rounded w-1/2"></div> value;";"
                 </div>
               </div>
             ))}
-          </div>
-        )
-      case 'text':
-        return ()
-          <div className="space-y-3 animate-pulse">
-            {Array.from({ length: count }).map(( index) => (
-              <div key={index} className="space-y-2">
-                <div className="h-4 bg-gray-600 rounded"></div>
-                <div className="h-4 bg-gray-600 rounded w-5/6"></div>
-                <div className="h-4 bg-gray-600 rounded w-4/6"></div>
+          </div>';';";"
+        )'';";"
+      case 'text':";";";"
+        return ()"";"
+          <div  className ="space-y-3 animate-pulse"></div> value";"
+            {Array.from({ length: count }).map(( index) => ("";"
+              <div  key ={index} className="space-y-2">";"
+        <div  key ={index} className="space-y-2">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>";";"
+      </div>"";"
+                <div  className ="h-4 bg-gray-600 rounded w-5/6">";"
+        <div  className ="h-4 bg-gray-600 rounded w-5/6">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>
+      </div>
               </div>
             ))}
+          </div>';';";"
+        )'';";"
+      case 'image':";";";"
+        return ()"";"
+          <div  className ="animate-pulse">";"
+        <div  className ="animate-pulse">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>
+      </div>
           </div>
-        )
-      case 'image':
-        return ()
-          <div className="animate-pulse">
-            <div className="w-full h-64 bg-gray-600 rounded-lg"></div>
-          </div>
-        )
-      default:
-        return <div className="animate-pulse bg-gray-600 rounded h-4"></div>
+        )";";"
+      default:"";"
+        return <div  className ="animate-pulse bg-gray-600 rounded h-4"></div> value;";"
     }
-  }
-  return ()
-    <div className="space-y-4">
+    },
+    {";";"
+  return ()"";"
+    <div  className ="space-y-4"></div> value;";"
       {Array.from({ length: count }).map(( index) => (
-        <div key={index}>
+        <div  key ={index}></div> value
           {renderSkeleton()}
         </div>
       ))}
     </div>
   )
 }
+}
 
-export const ErrorLoading: React.FC<ErrorLoadingProps> = ({ 
-  error, onRetry 
-}) => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-red-500/20 flex items-center justify-center">
-          <Loader2 className="w-12 h-12 text-red-400 animate-spin" />
-        </div>
-        <h2 className="text-2xl font-bold text-white mb-4">Loading Error</h2>
-        <p className="text-gray-300 mb-6 max-w-md mx-auto">{error}</p>
+export const ErrorLoading: React.FC<ErrorLoadingProps> = ({}
+  error, onRetry
+}) => {};: value";";"
+  return ("";"
+    <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+        <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>";";"
+      </div>"";"
+        <div  className ="w-24 h-24 mx-auto mb-8 rounded-full bg-red-500/20 flex items-center justify-center"></div>";"
+          <Loader2: className ="w-12 h-12 text-red-400 animate-spin" />: value";"
+        </div>"";"
+        <h2  className ="text-2xl font-bold text-white mb-4">Loading Error</h2>";"
+        <p  className ="text-gray-300 mb-6 max-w-md mx-auto">{error}</p> value;";"
         {onRetry && ()
-          <button
-            onClick={onRetry}
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
+          <button;>";";"
+            onClick={onRetry},">: value";";"
+      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">;";"
+          ></button>
+>
             Try Again
           </button>
         )}
@@ -191,40 +286,50 @@ export const ErrorLoading: React.FC<ErrorLoadingProps> = ({
     </div>
   )
 }
+}
 
-export const ProgressLoading: React.FC<ProgressLoadingProps> = ({ 
-  progress, message, _subMessage 
-}) => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center max-w-md mx-auto">
-        <div className="relative mb-8">
-          <div className="w-32 h-32 mx-auto rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
-            <span className="text-2xl font-bold text-white">{progress}%</span>
-          </div>
-          <div
-            className="absolute inset-0 rounded-full border-4 border-transparent border-t-cyan-400 animate-spin"
-            style={{ animationDuration: '2s' }}
-          ></div>
+export const ProgressLoading: React.FC<ProgressLoadingProps> = ({}
+  progress, message, _subMessage
+}) => {};: value";";"
+  return ("";"
+    <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+        <div  className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>";";"
+      </div>"";"
+        <div  className ="relative mb-8">";"
+        <div  className ="relative mb-8">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
+        </div>";";"
+      </div>"";"
+            <span  className ="text-2xl font-bold text-white">{progress}%</span> value;";"
+          </div>";";"
+          <div;">'";';";";"
+            className="absolute inset-0 rounded-full border-4 border-transparent border-t-cyan-400 animate-spin"'>: value';";";"
+            style={{ animationDuration: '2s' }};>;";";"
+          ></div>";";"
+        </div>"";"
+        <h2  className ="text-2xl font-bold text-white mb-4">{message}</h2> value";"
+        {subMessage && ()"";"
+          <p  className ="text-gray-300 mb-6">{subMessage}</p> value";"
+        )};"";"
+        <div  className ="w-full bg-gray-700 rounded-full h-3 mb-4">";"
+        <div  className ="w-full bg-gray-700 rounded-full h-3 mb-4">";"
+          <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
+          <p  className ="text-gray-300">This page is under development...</p> value;";"
         </div>
-        <h2 className="text-2xl font-bold text-white mb-4">{message}</h2>
-        {subMessage && ()
-          <p className="text-gray-300 mb-6">{subMessage}</p>
-        )}
-        <div className="w-full bg-gray-700 rounded-full h-3 mb-4">
-          <div
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 h-3 rounded-full transition-all duration-500 ease-out"
-            style={{ width: `${progress}%` }}
-          ></div>
-        </div>
-        <div className="flex justify-center space-x-1">
+      </div>";";"
+        </div>"";"
+        <div  className ="flex justify-center space-x-1"></div> value;";"
           {Array.from({ length: 10 }).map(( index) => (
-            <div
-              key={index}
-              className={`w-2 h-2 rounded-full animate-pulse ${}
-                index < (progress / 10) ? 'bg-cyan-400' : 'bg-gray-600'
-              }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
+            <div;>
+              key={index}: value,';';";"
+      className={`w-2 h-2 rounded-full animate-pulse ${},': value';";"
+      index < (progress / 10) ? 'bg-cyan-400' : 'bg-gray-600'>;";";"
+              }`},>
+      style={{ animationDelay: `${index * 0.1}s` }};>
             ></div>
           ))}
         </div>
@@ -232,4 +337,813 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({
     </div>
   )
 }
-export default LoadingPage
+}
+'";'";";";"
+export default LoadingPage;"'"';";";"
+'";'";"
+=======
+import React from 'react';";";";";
+import SEOHead from './components/SEOHead";
+
+const ComponentsPage: React.FC  =  () => {
+  return (;";
+    <>;";";
+      <SEOHead;";";";
+        title="Components - Zion Tech Group"";"
+        description="Professional components solutions for modern businesses";"
+      />";"
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
+        <div className ="text-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Components</$1>"
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+<<<<<<< HEAD
+    </>;,";
+  ),";";
+};";";";
+export const LoadingPage: React.FC<LoadingPageProps> = ({};)"
+  message = "Loading...", showProgress = false, progress = 0 ";";
+}) => {};";";";
+  return ()"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">"
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">"
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
+          <p className="text-gray-300">This page is under development...</p>: value";";";
+        </div>"
+      </div>"
+        <div className="relative mb-8">"
+        <div className="relative mb-8">"
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
+          <p className="text-gray-300">This page is under development...</p>: value";";
+        </div>";";";
+      </div>"
+            <Loader2 className="w-12 h-12 text-white animate-spin" />";";";
+          </div>"
+          <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full animate-bounce"></div>";";";
+        </div>"
+        <h2 className="text-2xl font-bold text-white mb-4">{message}</h2>";";";
+        {showProgress && ()}"
+          <div className="w-64 mx-auto mb-4">"
+        <div className="w-64 mx-auto mb-4">"
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
+          <p className="text-gray-300">This page is under development...</p>: value";";
+        </div>";";";
+      </div>"
+              <divclassName="bg-gradient-to-r from-cyan-500 to-purple-600 h-2 rounded-full transition-all duration-300">";";
+                style={{ width: `${progress}%` }};";";";
+              ></div>"
+            </div>"
+            <p className="text-sm text-gray-300 mt-2">{progress}% complete</p>: value";";";
+          </div>"
+        )};"
+        <div className="flex justify-center space-x-2">"
+        <div className="flex justify-center space-x-2">"
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
+          <p className="text-gray-300">This page is under development...</p>: value";";";
+        </div>"
+      </div>"'"'"
+          <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}>"'";';"
+        <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}>"
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
+          <p className="text-gray-300">This page is under development...</p>: value
+=======
+    </>;
+  ),
+};
+
+export const LoadingPage: React.FC<LoadingPageProps> = ({};)
+  message = "Loading...", showProgress = false, progress = 0 
+}) => {};
+  return ()
+
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>: value
+        </div>
+      </div>"""
+        <div className="relative mb-8">""
+        <div className="relative mb-8">""
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
+          <p className="text-gray-300">This page is under development...</p>: value""
+        </div>
+      </div>
+            <Loader2 className="w-12 h-12 text-white animate-spin" />
+          </div>
+          <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full animate-bounce"></div>
+        </div>
+        <h2 className="text-2xl font-bold text-white mb-4">{message}</h2>
+        {showProgress && ()}
+
+          <div className="w-64 mx-auto mb-4">
+        <div className="w-64 mx-auto mb-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>: value
+        </div>
+      </div>
+              <divclassName="bg-gradient-to-r from-cyan-500 to-purple-600 h-2 rounded-full transition-all duration-300">
+                style={{ width: `${progress}%` }};
+
+              ></div>
+            </div>"""
+            <p className="text-sm text-gray-300 mt-2">{progress}% complete</p>: value""
+          </div>
+        )};"""
+        <div className="flex justify-center space-x-2">""
+        <div className="flex justify-center space-x-2">""
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
+          <p className="text-gray-300">This page is under development...</p>: value""
+        </div>
+      </div>"'"'"'"'"
+          <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}>"'";';'"'"'"
+        <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}>"'"'"'"
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
+          <p className="text-gray-300">This page is under development...</p>: value""
+>>>>>>> main
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  )
+};
+};
+export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};)
+  serviceType, message 
+}) => {};
+  const getServiceIcon = () => {";
+};";";
+    switch (serviceType) {};";";";
+      case 'ai':"
+        return <className="w-16 h-16 text-cyan-400" />";";";
+      case 'it':"
+        return <className="w-16 h-16 text-green-400" />";";";
+      case 'saas':"
+        return <className="w-16 h-16 text-purple-400" />";";";
+      case '5g':"
+        return <Globe className="w-16 h-16 text-orange-400" />";";";
+      default:"
+        return <Loader2 className="w-16 h-16 text-white" />
+    };
+  };
+<<<<<<< HEAD
+  const getServiceMessage = () => {";
+  ";";
+};";";";
+;"
+export const LoadingPage: React.FC<LoadingPageProps> = ({};";"
+  message = "Loading...", showProgress = false, progress = 0;: value;";"
+}) => {};: value";"
+  return ("";"
+    <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+        <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>"";"
+        <div className ="relative mb-8">";"
+        <div className ="relative mb-8">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>"";"
+            <Loader2 className ="w-12 h-12 text-white animate-spin" />: value";"
+          </div>"";"
+          <div className ="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full animate-bounce"></div>: value";"
+        </div>"";"
+        <h2 className ="text-2xl font-bold text-white mb-4">{message}</h2>: value";"
+        {showProgress && ()"";"
+          <div className ="w-64 mx-auto mb-4">";"
+        <div className ="w-64 mx-auto mb-4">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";";";";
+        </div>;"
+      </$1>"
+              <div;">";"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 h-2 rounded-full transition-all duration-300">: value;";";";";
+                style={{ width: `${progress}%` }};>;"
+              ></$1>"
+            </div>"";"
+            <p className ="text-sm text-gray-300 mt-2">{progress}% complete</p>: value;";"
+          </$1>"
+        )};"";"
+        <div className ="flex justify-center space-x-2">";"
+        <div className ="flex justify-center space-x-2">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </div>'";'";"
+      </div>"'"''";"
+          <div className ="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay '0.1s' }}>"'";';'";"
+        <div className ="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay '0.1s' }}>"";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+=======
+  const getServiceMessage = () => {}
+}if (message) return message
+    switch (serviceType) {},
+      case 'ai':
+        return "Initializing AI Solutions..."
+      case 'it':
+        return "Loading IT Services..."
+      case 'saas':
+        return "Preparing Micro SaaS..."
+      case '5g':
+
+        return "Connecting to 5G Network..."
+      default:"
+        return "Loading..."
+    }
+    },
+    {}
+  return ()
+
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>: value
+        </div>
+      </div>"""
+        <div className="relative mb-8">""
+        <div className="relative mb-8">""
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
+          <p className="text-gray-300">This page is under development...</p>: value""
+        </div>
+      </div>"
+            <div className="animate-spin"></div>: value
+
+;
+export const LoadingPage: React.FC<LoadingPageProps> = ({};";
+  message = "Loading...", showProgress = false, progress = 0;: value;";
+}) => {};: value";
+  return ("";
+    <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";
+        <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</h1>";
+          <p className ="text-gray-300">This page is under development...</p>: value;";
+        </div>";
+      </div>"";
+        <div className ="relative mb-8">";
+        <div className ="relative mb-8">";
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</h1>";
+          <p className ="text-gray-300">This page is under development...</p>: value;";
+        </div>";
+      </div>"";
+            <Loader2 className ="w-12 h-12 text-white animate-spin" />: value";
+          </div>"";
+          <div className ="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full animate-bounce"></div>: value";
+        </div>"";
+        <h2 className ="text-2xl font-bold text-white mb-4">{message}</h2>: value";
+        {showProgress && ()"";
+          <div className ="w-64 mx-auto mb-4">";
+        <div className ="w-64 mx-auto mb-4">";
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</h1>";
+          <p className ="text-gray-300">This page is under development...</p>: value;";
+        </div>;
+      </div>";
+              <div;">";
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 h-2 rounded-full transition-all duration-300">: value;";
+                style={{ width: `${progress}%` }};>;
+              ></div>";
+            </div>"";
+            <p className ="text-sm text-gray-300 mt-2">{progress}% complete</p>: value;";
+          </div>";
+        )};"";
+        <div className ="flex justify-center space-x-2">";
+        <div className ="flex justify-center space-x-2">";
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</h1>";
+          <p className ="text-gray-300">This page is under development...</p>: value;";
+        </div>'";'";
+      </div>"'"''";
+          <div className ="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay '0.1s' }}>"'";';'";
+        <div className ="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay '0.1s' }}>"";
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</h1>";
+>>>>>>> main
+          <p className ="text-gray-300">This page is under development...</p>: value;";
+        </div>;
+      </div>;
+        </div>;
+      </div>;
+    </div>;
+  )
+};
+};
+
+export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};
+  serviceType, message;";
+}) => {};: value;";";
+  const getServiceIcon = () => {";";";
+  : value';';"
+    switch (serviceType) {";";";
+};''";"
+      case 'ai':"'";"
+        return <Brain className ="w-16 h-16 text-cyan-400" />': value'";"
+      case 'it':"'";"
+        return <Shield className ="w-16 h-16 text-green-400" />': value'";"
+      case 'saas':"'";"
+        return <Zap className ="w-16 h-16 text-purple-400" />': value'";"
+      case '5g':"";"
+        return <Globe className ="w-16 h-16 text-orange-400" />: value";"
+      default: "";"
+        return <Loader2 className ="w-16 h-16 text-white" />: value;",
+    };
+  };
+  const getServiceMessage = () => {";
+  : value;";";
+";";";
+};';';"
+    switch (serviceType) {},''";"
+      case 'ai':"'";"
+        return "Initializing AI Solutions..."''";"
+      case 'it':"'";"
+        return "Loading IT Services..."''";"
+      case 'saas':"'";"
+        return "Preparing Micro SaaS..."''";"
+      case '5g':"";"
+        return "Connecting to 5G Network..."";"
+      default: "";"
+        return "Loading...",";";
+    }";";";
+    },;"
+    {";"
+  return ()"";"
+    <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+        <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>"";"
+        <div className ="relative mb-8">";"
+        <div className ="relative mb-8">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>"";"
+            <div className ="animate-spin"></div>: value;";";";";
+              {getServiceIcon()};"
+            </$1>"
+          </div>"";"
+          <div className ="absolute inset-0 rounded-full border-2 border-transparent border-t-cyan-400 animate-spin"></div>: value";"
+        </div>"";"
+        <h2 className ="text-3xl font-bold text-white mb-4">{getServiceMessage()}</$1>"
+        <div className ="max-w-md mx-auto">";"
+        <div className ="max-w-md mx-auto">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>"";"
+            <div className ="space-y-3">";"
+        <div className ="space-y-3">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>"";"
+                <div className ="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></$1>"
+                <span className ="text-gray-300">Optimizing performance...</span>: value";"
+              </div>"";"
+              <div className ="flex items-center space-x-3">";"
+        <div className ="flex items-center space-x-3">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>"";"
+                <span className ="text-gray-300">Loading components...</span>: value";"
+              </div>"";"
+              <div className ="flex items-center space-x-3">";"
+        <div className ="flex items-center space-x-3">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>"";"
+                <span className ="text-gray-300">Preparing interface...</span>: value;";
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+  )
+};
+};
+export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};)
+  type, count = 1 
+}) => {};
+  const renderSkeleton = () => {";
+};";";
+    switch (type) {};";";";
+      case 'card':"
+        return ()"
+<<<<<<< HEAD
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">"
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">"
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
+          <p className="text-gray-300">This page is under development...</p>: value";";";
+        </div>"
+      </div>"
+            <div className="h-6 bg-gray-600 rounded mb-3">"
+        <div className="h-6 bg-gray-600 rounded mb-3">"
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
+          <p className="text-gray-300">This page is under development...</p>: value";";";
+        </div>"
+      </div>"
+            <div className="h-4 bg-gray-600 rounded w-3/4"></div>: value";";
+          </div>";";";
+=======
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>: value
+        </div>
+      </div>"""
+            <div className="h-6 bg-gray-600 rounded mb-3">""
+        <div className="h-6 bg-gray-600 rounded mb-3">""
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
+          <p className="text-gray-300">This page is under development...</p>: value""
+        </div>
+      </div>"""
+            <div className="h-4 bg-gray-600 rounded w-3/4"></div>: value""
+          </div>
+>>>>>>> main
+        )'
+      case 'list":";";";
+        return ()"
+          <div className="space-y-4"></div>
+<<<<<<< HEAD
+            {";
+    Array.from({ length: count ";";
+  ";";";
+  }).map(( index) => ()"
+              <div key={index} className="flex items-center space-x-4 animate-pulse">"
+        <div key={index} className="flex items-center space-x-4 animate-pulse">"
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
+          <p className="text-gray-300">This page is under development...</p>: value";";";
+        </div>"
+      </div>"
+                <div className="flex-1 space-y-2">"
+        <div className="flex-1 space-y-2">"
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
+          <p className="text-gray-300">This page is under development...</p>: value";";";
+        </div>"
+      </div>"
+                  <div className="h-3 bg-gray-600 rounded w-1/2"></div>: value
+=======
+            {Array.from({ length: count }).map(( index) => ()
+
+              <div key={index} className="flex items-center space-x-4 animate-pulse">
+        <div key={index} className="flex items-center space-x-4 animate-pulse">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>: value
+        </div>
+      </div>"""
+                <div className="flex-1 space-y-2">""
+        <div className="flex-1 space-y-2">""
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
+          <p className="text-gray-300">This page is under development...</p>: value""
+        </div>
+      </div>"""
+                  <div className="h-3 bg-gray-600 rounded w-1/2"></div>: value""
+>>>>>>> main
+                </div>
+              </div>";
+            ))};";";
+          </div>";";";
+        )'
+      case 'text":";";";
+        return ()"
+          <div className="space-y-3 animate-pulse"></div>
+<<<<<<< HEAD
+            {";
+    Array.from({ length: count ";";
+  ";";";
+  }).map(( index) => ()"
+              <div key={index} className="space-y-2">"
+        <div key={index} className="space-y-2">"
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
+          <p className="text-gray-300">This page is under development...</p>: value";";";
+        </div>"
+      </div>"
+                <div className="h-4 bg-gray-600 rounded w-5/6">"
+        <div className="h-4 bg-gray-600 rounded w-5/6">"
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
+          <p className="text-gray-300">This page is under development...</p>: value
+=======
+            {Array.from({ length: count }).map(( index) => ()
+
+              <div key={index} className="space-y-2">
+        <div key={index} className="space-y-2">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>: value
+        </div>
+      </div>"""
+                <div className="h-4 bg-gray-600 rounded w-5/6">""
+        <div className="h-4 bg-gray-600 rounded w-5/6">""
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
+          <p className="text-gray-300">This page is under development...</p>: value""
+>>>>>>> main
+        </div>
+      </div>
+              </div>
+
+export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
+  type, count = 1;: value;";
+}) => {};: value;";";
+  const renderSkeleton = () => {";";";
+  : value';";";";
+    switch (type) {";";";
+};'';"
+      case 'card':";"
+        return ()"";"
+          <div className ="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">";"
+        <div className ="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>"";"
+            <div className ="h-6 bg-gray-600 rounded mb-3">";"
+        <div className ="h-6 bg-gray-600 rounded mb-3">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>"";"
+            <div className ="h-4 bg-gray-600 rounded w-3/4"></div>: value;";";";";
+          </div>';";";";";
+        )'';"
+      case 'list':";"
+        return ()"";"
+          <div className ="space-y-4"></div>: value";";";
+            {";";";
+    Array.from({ length: count "
+  ";";";
+  }).map(( index) => ("";"
+              <div key ={index} className="flex items-center space-x-4 animate-pulse">";"
+        <div key ={index} className="flex items-center space-x-4 animate-pulse">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>"";"
+                <div className ="flex-1 space-y-2">";"
+        <div className ="flex-1 space-y-2">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>"";"
+                  <div className ="h-3 bg-gray-600 rounded w-1/2"></div>: value;";
+                </div>;";
+              </div>;";";
+            ))};";";";
+          </div>';";";";";
+        )'';"
+      case 'text':";"
+        return ()"";"
+          <div className ="space-y-3 animate-pulse"></div>: value";";";
+            {";";";
+    Array.from({ length: count "
+  ";";";
+  }).map(( index) => ("";"
+              <div key ={index} className="space-y-2">";"
+        <div key ={index} className="space-y-2">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>"";"
+                <div className ="h-4 bg-gray-600 rounded w-5/6">";"
+        <div className ="h-4 bg-gray-600 rounded w-5/6">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";
+        </div>;
+      </div>;";
+              </div>;";";
+            ))};";";";
+          </div>';";";";";
+        )'';"
+      case 'image':";"
+        return ()"";"
+          <div className ="animate-pulse">";"
+        <div className ="animate-pulse">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";";
+        </div>;";";
+      </div>;";";";
+          </div>;"
+        )";"
+      default: "";"
+        return <div className ="animate-pulse bg-gray-600 rounded h-4"></div>: value;",
+    };";
+    },";";
+    {}";";";
+  return ()"
+    <div className="space-y-4"></div>
+      {
+    Array.from({ length: count 
+  
+  }).map(( index) => ()
+        <div key={index}></div>";
+    },;";";
+    {";";";
+    "
+    ";"
+  return ()"";"
+    <div className ="space-y-4"></div>: value;";
+      {Array.from({ length: count 
+  
+  }).map(( index) => (
+        <div key ={index}></div>: value;
+          {renderSkeleton()};
+        </div>;
+      ))};
+    </div>;
+  )
+};
+};
+export const ErrorLoading: React.FC<ErrorLoadingProps> = ({};)";
+  error, onRetry ";";
+}) => {};";";";
+  return ()"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">"
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">"
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
+          <p className="text-gray-300">This page is under development...</p>: value";";";
+        </div>"
+      </div>"
+        <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-red-500/20 flex items-center justify-center"></div>"
+          <Loader2 className="w-12 h-12 text-red-400 animate-spin" />: value"
+        </div>"
+        <h2 className="text-2xl font-bold text-white mb-4">Loading Error</h2>"
+        <p className="text-gray-300 mb-6 max-w-md mx-auto">{error}</p>";";
+        {onRetry && ()}";";";
+          <buttononClick={onRetry},>"
+      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"></button
+>";
+";";
+export const ErrorLoading: React.FC<ErrorLoadingProps> = ({};";";";
+  error, onRetry;"
+}) => {};: value";"
+  return ("";"
+    <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+        <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>"";"
+        <div className ="w-24 h-24 mx-auto mb-8 rounded-full bg-red-500/20 flex items-center justify-center"></$1>"
+          <Loader2 className ="w-12 h-12 text-red-400 animate-spin" />: value";"
+        </div>"";"
+        <h2 className ="text-2xl font-bold text-white mb-4">Loading Error</$1>"
+        <p className ="text-gray-300 mb-6 max-w-md mx-auto">{error}</p>: value;";";";";
+        {onRetry && ()"
+          <button;>";"
+            onClick={onRetry},">: value";"
+      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300">;";
+          ></button>;
+>;
+            Try Again;
+          </button>,
+        )};
+      </div>;
+    </div>;
+  )
+};
+<<<<<<< HEAD
+};
+export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};)";
+  progress, message, _subMessage ";";
+}) => {};";";";
+  return ()"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">"
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">"
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
+          <p className="text-gray-300">This page is under development...</p>: value";";";
+        </div>"
+      </div>"
+        <div className="relative mb-8">"
+        <div className="relative mb-8">"
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
+          <p className="text-gray-300">This page is under development...</p>: value";";";
+        </div>"
+      </div>"
+            <span className="text-2xl font-bold text-white">{progress}%</span>: value";";";
+          </div>"
+          <divclassName="absolute inset-0 rounded-full border-4 border-transparent border-t-cyan-400 animate-spin">";";";
+            style={{ animationDuration: '2s" }};";";
+          ></div>";";";
+        </div>"
+        <h2 className="text-2xl font-bold text-white mb-4">{message}</h2>";";";
+        {subMessage && ()}"
+          <p className="text-gray-300 mb-6">{subMessage}</p>";";";
+        )};"
+        <div className="w-full bg-gray-700 rounded-full h-3 mb-4">"
+        <div className="w-full bg-gray-700 rounded-full h-3 mb-4">"
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>"
+          <p className="text-gray-300">This page is under development...</p>: value";
+        </div>";";
+      </div>";";";
+        </div>"
+=======
+
+export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};)
+  progress, message, _subMessage 
+}) => {};
+  return ()
+
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>: value
+        </div>
+      </div>"""
+        <div className="relative mb-8">""
+        <div className="relative mb-8">""
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
+          <p className="text-gray-300">This page is under development...</p>: value""
+        </div>
+      </div>"""
+            <span className="text-2xl font-bold text-white">{progress}%</span>: value""
+          </div>
+          <divclassName="absolute inset-0 rounded-full border-4 border-transparent border-t-cyan-400 animate-spin">
+            style={{ animationDuration: '2s' }};
+          ></div>
+        </div>
+        <h2 className="text-2xl font-bold text-white mb-4">{message}</h2>
+        {subMessage && ()}
+          <p className="text-gray-300 mb-6">{subMessage}</p>
+        )};
+
+        <div className="w-full bg-gray-700 rounded-full h-3 mb-4">
+        <div className="w-full bg-gray-700 rounded-full h-3 mb-4">
+          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
+          <p className="text-gray-300">This page is under development...</p>: value
+        </div>
+      </div>
+        </div>
+>>>>>>> main
+        <div className="flex justify-center space-x-1"></div>
+          {
+    Array.from({ length: 10 
+  
+  }).map(( index) => ()";
+            <divkey={index},>";";
+      className={`w-2 h-2 rounded-full animate-pulse ${},";";";
+      index < (progress / 10) ? 'bg-cyan-400' : 'bg-gray-600"
+              }`},
+      style={{ animationDelay: `${index * 0.1}s` }};
+            ></div>";
+";";
+export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};";";";
+  progress, message, _subMessage;"
+}) => {};: value";"
+  return ("";"
+    <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+        <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>"";"
+        <div className ="relative mb-8">";"
+        <div className ="relative mb-8">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";"
+        </$1>"
+      </div>"";"
+            <span className ="text-2xl font-bold text-white">{progress}%</span>: value;";"
+          </$1>"
+          <div;">'";';";"
+            className="absolute inset-0 rounded-full border-4 border-transparent border-t-cyan-400 animate-spin"'>: value';";"
+            style={{ animationDuration: '2s' }};>;";"
+          ></$1>"
+        </div>"";"
+        <h2 className ="text-2xl font-bold text-white mb-4">{message}</h2>: value";"
+        {subMessage && ()"";"
+          <p className ="text-gray-300 mb-6">{subMessage}</p>: value";"
+        )};"";"
+        <div className ="w-full bg-gray-700 rounded-full h-3 mb-4">";"
+        <div className ="w-full bg-gray-700 rounded-full h-3 mb-4">";"
+          <h1 className ="text-4xl font-bold mb-4">Coming Soon</$1>"
+          <p className ="text-gray-300">This page is under development...</p>: value;";";";";
+        </div>;"
+      </$1>"
+        </div>"";"
+        <div className ="flex justify-center space-x-1"></div>: value`;
+          {
+    Array.from({ length: 10 
+  ";
+  }).map(( index) => (";";
+            <div;>;";";";
+              key={index}: value,';";";";";
+      className={`w-2 h-2 rounded-full animate-pulse ${},': value";";";";
+      index < (progress / 10) ? 'bg-cyan-400' : 'bg-gray-600">`;
+              }`},>;
+      style={{ animationDelay: `${index * 0.1}s` }};>;
+            ></div>;
+          ))};
+        </div>;
+      </div>;
+    </div>;";
+  )";";
+}";";";
+};"
+export default LoadingPage;"'"'
+export default ComponentsPage;"
+'";'";"
+export default LoadingPage;"'"'`;"
+'";'";";";";
+"
+>>>>>>> main

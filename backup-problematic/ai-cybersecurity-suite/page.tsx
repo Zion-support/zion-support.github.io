@@ -1,23 +1,34 @@
-import React from 'react'
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3e833c3ad2c3ddcb3543c60cbab89bd9bae51a20
 export default function AICybersecuritySuitePage() {}
+  // Function body
+}
 }return ()
+=======
+export default function AICybersecuritySuitePage() {
+  ;
+};
+>>>>>>> main
     <div>Content</div>
   )
     <div>Component content</div>
   )
-}
-  return ()
+},
+      return ()
     <div>Content</div>
   )
         <title>AI Cybersecurity Suite - Zion Tech Group</title>
-      {/* Hero Section */}
-              AI Cybersecurity Suite
+      {/* Hero Section */},
+      AI Cybersecurity Suite
               Comprehensive AI-powered cybersecurity solutions with advanced threat detection,
-              zero trust security, and automated incident response capabilities.
+      zero trust security, and automated incident response capabilities.
                 Get Started
                 View Pricing
-      {/* Features Section */}
-              Advanced Security Features
+      {/* Features Section */},
+      Advanced Security Features
               Protect your organization with cutting-edge AI-powered cybersecurity solutions.
                 AI Threat Detection
                 Advanced machine learning algorithms detect and prevent cyber threats in real-time.
@@ -34,8 +45,8 @@ export default function AICybersecuritySuitePage() {}
                   Instant response
                   Threat mitigation
                   Recovery automation
-      {/* CTA Section */}
-            Ready to Secure Your Organization?
+      {/* CTA Section */},
+      Ready to Secure Your Organization?
             Protect your business with our comprehensive AI-powered cybersecurity suite.
               Get Started
               View Pricing

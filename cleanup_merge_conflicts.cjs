@@ -4,7 +4,6 @@ function cleanMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');';
     let originalContent = content;
-    
     // Remove merge conflict markers and keep HEAD content;
     // Clean up any double newlines;
     content = content.replace(/\n\n\n+/g, '\n\n');';
@@ -19,15 +18,12 @@ function cleanMergeConflicts(filePath) {
     return false;
   }
 }
-
 function processDirectory(dirPath) {
   const _files = fs.readdirSync(dirPath);
   let cleanedCount = 0;
-  
   for (const file of _files) {
     const filePath = _path.join(dirPath, file);
     const stat = fs.statSync(filePath);
-    
     if (stat.isDirectory()) {
       // Skip node_modules and other directories we don't want to process';
       if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(file)) {';
@@ -39,10 +35,8 @@ function processDirectory(dirPath) {
       }
     }
   }
-  
   return cleanedCount;
 }
-
 global.console.log('Starting merge conflict cleanup...');';
 const cleanedCount = processDirectory('/workspace');';
 global.console.log(`Cleaned merge conflicts in ${cleanedCount} _files.`);
