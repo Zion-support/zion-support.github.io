@@ -162,7 +162,7 @@ function optimizeJavaScriptBundles() {
   try {
     const distDir = path.join(process.cwd(), 'dist');
     if (fs.existsSync(distDir)) {
-      const jsFiles = fs.readdirSync(distDir, { recursive: true });
+      const jsFiles = fs.readdirSync(distDir, { recursive: true })
         .filter(file => file.toString().endsWith('.js'));
       
       console.log(`Found ${jsFiles.length} JavaScript files to optimize`);
