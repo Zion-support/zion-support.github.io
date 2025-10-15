@@ -5,31 +5,40 @@ const DataAnalyticsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Transform your data into actionable insights with our advanced analytics solutions." />
+        <title>Data Analytics Solutions - Zion Tech Group | Business Intelligence</title>
+        <meta name="description" content="Transform your data into actionable business insights with our data analytics solutions." />
       </Helmet>
       
-      <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Data Analytics</h1>
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Data Analytics Solutions
+            </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform your data into actionable insights
+              Transform your data into actionable business insights with our data analytics solutions.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Data Visualization</h3>
-              <p className="text-gray-600">
-                Create interactive dashboards and visualizations to understand your data better.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Predictive Analytics</h3>
-              <p className="text-gray-600">
-                Use machine learning to predict future trends and make data-driven decisions.
-              </p>
+
+          <div className="bg-white rounded-lg shadow-lg p-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Coming Soon</h2>
+            <p className="text-xl text-gray-600 mb-8">
+              We're working on creating an amazing data analytics experience for you. 
+              In the meantime, please contact us for a free consultation about your data analytics needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/contact" 
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              >
+                Get Free Consultation
+              </a>
+              <a 
+                href="tel:+13024640950" 
+                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors font-medium"
+              >
+                Call +1 302 464 0950
+              </a>
             </div>
           </div>
         </div>

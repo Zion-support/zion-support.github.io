@@ -1,63 +1,44 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionAIWorkflowAutomatorProPage: React.FC = () => {
+const AIWorkflowAutomatorProPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Workflow Automator Pro - Zion Tech Group</title>
-        <meta name="description" content="Automate complex business workflows with our advanced AI-powered workflow automation solution. Streamline processes and boost productivity." />
+        <title>AI Workflow Automator Pro - Zion Tech Group | No-Code Automation</title>
+        <meta name="description" content="Automate repetitive tasks and streamline business processes with our no-code workflow automation platform." />
       </Helmet>
       
-      <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Workflow Automator Pro</h1>
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              AI Workflow Automator Pro
+            </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Automate complex business workflows with advanced AI technology. Streamline processes, reduce errors, and boost productivity.
+              Automate repetitive tasks and streamline business processes with our no-code workflow automation platform.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Intelligent Automation</h3>
-              <p className="text-gray-600">
-                AI-powered workflow automation that learns from your business processes and optimizes them automatically.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Process Optimization</h3>
-              <p className="text-gray-600">
-                Analyze and optimize your existing workflows to eliminate bottlenecks and improve efficiency.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Real-time Monitoring</h3>
-              <p className="text-gray-600">
-                Monitor workflow performance in real-time with detailed analytics and insights.
-              </p>
-            </div>
-          </div>
-          
-          <div className="bg-gray-50 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Key Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Visual Workflow Builder</h3>
-                <p className="text-gray-600">Create complex workflows using our intuitive drag-and-drop interface.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI-Powered Decision Making</h3>
-                <p className="text-gray-600">Let AI make intelligent decisions based on data patterns and business rules.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Integration Capabilities</h3>
-                <p className="text-gray-600">Seamlessly integrate with your existing tools and systems.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Scalable Architecture</h3>
-                <p className="text-gray-600">Scale your automation as your business grows without performance issues.</p>
-              </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Coming Soon</h2>
+            <p className="text-xl text-gray-600 mb-8">
+              We're working on creating an amazing workflow automation experience for you. 
+              In the meantime, please contact us for a free consultation about your automation needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/contact" 
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              >
+                Get Free Consultation
+              </a>
+              <a 
+                href="tel:+13024640950" 
+                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors font-medium"
+              >
+                Call +1 302 464 0950
+              </a>
             </div>
           </div>
         </div>
@@ -66,4 +47,4 @@ const ZionAIWorkflowAutomatorProPage: React.FC = () => {
   );
 };
 
-export default ZionAIWorkflowAutomatorProPage;
+export default AIWorkflowAutomatorProPage;
