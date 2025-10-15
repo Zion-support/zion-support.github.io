@@ -74,6 +74,9 @@ const APIDocsPage = lazy(() => import('./app/api-docs/page'));
 const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
 
 // Additional missing pages
+const DemoPage = lazy(() => import('./app/demo/page'));
+const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
+const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
 const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
 const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
 const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
@@ -279,6 +282,9 @@ function App() {
                     <Route path="/partnerships" element={<PartnershipsPage />} />
                     
                     {/* Additional missing pages */}
+                    <Route path="/demo" element={<DemoPage />} />
+                    <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                    <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
                     <Route path="/accessibility-page" element={<AccessibilityPagePage />} />
                     <Route path="/ai-crm-optimizer" element={<AICRMOptimizerPage />} />
                     <Route path="/ai-data-visualizer" element={<AIDataVisualizerPage />} />

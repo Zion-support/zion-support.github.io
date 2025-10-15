@@ -27,7 +27,8 @@ import {
   CodeBracketIcon,
   DevicePhoneMobileIcon,
   UserPlusIcon,
-  CheckCircleIcon
+  CheckCircleIcon,
+  PlayIcon
 } from '@heroicons/react/24/outline';
 
 interface NavigationProps {
@@ -47,11 +48,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     {
       name: 'AI Services',
-      href: '/ai-solutions',
+      href: '/ai-services',
       icon: CpuChipIcon,
       submenu: [
-        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
+        { name: 'AI Services Overview', href: '/ai-services', icon: CpuChipIcon },
+        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
         { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: ChatBubbleLeftRightIcon },
         { name: 'AI Document Processor', href: '/ai-document-processor', icon: DocumentTextIcon },
         { name: 'AI Form Builder', href: '/ai-form-builder', icon: DocumentTextIcon },
@@ -101,11 +102,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     },
     {
       name: 'IT Solutions',
-      href: '/it-solutions',
+      href: '/it-services',
       icon: CogIcon,
       submenu: [
-        { name: 'IT Solutions Overview', href: '/it-solutions', icon: CogIcon },
+        { name: 'IT Services Overview', href: '/it-services', icon: CogIcon },
+        { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
+        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: CloudIcon },
         { name: 'Web Development', href: '/web-development', icon: CodeBracketIcon },
         { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
         { name: 'Database Management', href: '/database-management', icon: CircleStackIcon },
@@ -118,16 +121,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Data Engineering', href: '/data-engineering', icon: CircleStackIcon },
         { name: 'API Development', href: '/api-development', icon: CodeBracketIcon },
         { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon },
-        { name: 'Quantum Computing', href: '/quantum-computing-solutions', icon: CpuChipIcon },
-        { name: 'Edge Computing', href: '/edge-computing-solutions', icon: CloudIcon },
-        { name: 'AR Solutions', href: '/augmented-reality-solutions', icon: EyeIcon },
-        { name: 'VR Solutions', href: '/virtual-reality-solutions', icon: EyeIcon },
-        { name: 'RPA Solutions', href: '/robotic-process-automation', icon: CogIcon },
-        { name: 'Low-Code Platform', href: '/low-code-platform', icon: CodeBracketIcon },
-        { name: 'Serverless Architecture', href: '/serverless-architecture', icon: CloudIcon },
-        { name: 'Container Orchestration', href: '/container-orchestration', icon: CircleStackIcon },
-        { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: CpuChipIcon },
-        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: CircleStackIcon }
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon }
       ]
     },
     {
@@ -139,7 +133,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
         { name: 'API Documentation', href: '/api-docs', icon: CodeBracketIcon },
         { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon },
-        { name: 'Accessibility', href: '/accessibility', icon: ShieldCheckIcon }
+        { name: 'Accessibility', href: '/accessibility', icon: ShieldCheckIcon },
+        { name: 'Demo', href: '/demo', icon: PlayIcon }
       ]
     },
     {
