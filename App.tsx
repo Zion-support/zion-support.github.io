@@ -7,6 +7,16 @@ import HomePage from './app/page';
 import AboutPage from './app/about/page';
 import ServicesPage from './app/services/page';
 import ContactPage from './app/contact/page';
+import AIServicesPage from './app/ai-services/page';
+import ITServicesPage from './app/it-services/page';
+import CloudInfrastructurePage from './app/cloud-infrastructure/page';
+import FiveGSolutionsPage from './app/5g-solutions/page';
+import TeamPage from './app/team/page';
+import CareersPage from './app/careers/page';
+import HelpPage from './app/help/page';
+import PrivacyPage from './app/privacy/page';
+import TermsPage from './app/terms/page';
+import CookiesPage from './app/cookies/page';
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -57,6 +67,22 @@ export default function App() {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+                  
+                  {/* Service Pages */}
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                  
+                  {/* Company Pages */}
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  
+                  {/* Support Pages */}
+                  <Route path="/help" element={<HelpPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/cookies" element={<CookiesPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">

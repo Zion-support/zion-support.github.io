@@ -1,25 +1,55 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Sidebar: React.FC = () => {
   return (
     <div className="hidden lg:block lg:w-64 lg:flex-shrink-0">
       <div className="h-full flex flex-col bg-gray-50 border-r border-gray-200">
         <div className="p-4">
-          <h2 className="text-lg font-semibold text-gray-900">Quick Links</h2>
+          <h2 className="text-lg font-semibold text-gray-900">Quick Navigation</h2>
         </div>
         <nav className="flex-1 px-4 pb-4 space-y-1">
-          <a href="/ai-services" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-            AI Services
-          </a>
-          <a href="/it-services" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-            IT Services
-          </a>
-          <a href="/cloud-infrastructure" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-            Cloud Infrastructure
-          </a>
-          <a href="/5g-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-            5G Solutions
-          </a>
+          <div className="mb-4">
+            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Services</h3>
+            <Link to="/services" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              All Services
+            </Link>
+            <Link to="/ai-services" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Services
+            </Link>
+            <Link to="/it-services" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              IT Services
+            </Link>
+            <Link to="/cloud-infrastructure" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Cloud Infrastructure
+            </Link>
+            <Link to="/5g-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              5G Solutions
+            </Link>
+          </div>
+          
+          <div className="mb-4">
+            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Company</h3>
+            <Link to="/about" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              About Us
+            </Link>
+            <Link to="/team" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Our Team
+            </Link>
+            <Link to="/careers" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Careers
+            </Link>
+          </div>
+          
+          <div>
+            <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Support</h3>
+            <Link to="/contact" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Contact
+            </Link>
+            <Link to="/help" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Help Center
+            </Link>
+          </div>
         </nav>
       </div>
     </div>
