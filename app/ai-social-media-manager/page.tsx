@@ -3,6 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import { 
   CheckCircle, 
   ArrowRight, 
+<<<<<<< HEAD
+=======
+  Users, 
+>>>>>>> cursor/fix-errors-and-merge-to-main-c92c
   TrendingUp,
   Instagram,
   Twitter,

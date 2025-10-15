@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 <<<<<<< HEAD
+=======
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c92c
 import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
 

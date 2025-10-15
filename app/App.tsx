@@ -22,12 +22,16 @@ const TermsPage = lazy(() => import("./terms/page"))
 const CookiesPage = lazy(() => import("./cookies/page"))
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // 5G Solutions Pages
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c92c
 function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
+<<<<<<< HEAD
         <ErrorBoundary>
           <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
             <Routes>
@@ -101,8 +105,37 @@ function App() {
         </PerformanceMonitor>
       </HelmetProvider>
     </ErrorBoundary>
+=======
+        <div className="min-h-screen bg-slate-900">
+          <ErrorBoundary>
+            <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/pricing" element={<PricingPage />} />
+                <Route path="/case-studies" element={<CaseStudiesPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/team" element={<TeamPage />} />
+                <Route path="/careers" element={<CareersPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/cookies" element={<CookiesPage />} />
+              </Routes>
+            </Suspense>
+          </ErrorBoundary>
+          <PerformanceMonitor />
+          <AccessibilityEnhancer />
+        </div>
+      </BrowserRouter>
+    </HelmetProvider>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c92c
   )
 }
 
 export default App
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-13a9
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c92c

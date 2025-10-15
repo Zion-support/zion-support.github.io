@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
   const pricingPlans = [";"
@@ -55,6 +56,8 @@
       </section>";"
     </>";"
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c92c
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 

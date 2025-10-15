@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const AiPoweredDevopsPage: React.FC = () => {";"
   return (";"
@@ -15,6 +16,8 @@ const AiPoweredDevopsPage: React.FC = () => {";"
       </div>";"
     </>";"
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c92c
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 

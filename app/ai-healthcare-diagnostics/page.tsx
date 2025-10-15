@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const AiHealthcareDiagnosticsPage: React.FC = () => {";"
   return (";"
@@ -6,6 +7,8 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {";"
       </div>";"
     </>";"
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c92c
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 

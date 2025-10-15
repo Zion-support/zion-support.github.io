@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import SEOHead from '../components/SEOHead';
 ;
 const Ai3DGenerationPage: React.FC = () => {";"
@@ -38,6 +39,8 @@ const Ai3DGenerationPage: React.FC = () => {";"
 export default Ai3DGenerationPage;
 ;
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c92c
 const Ai3DGenerationPage: React.FC = () => {
   return (
     <>
@@ -72,4 +75,7 @@ const Ai3DGenerationPage: React.FC = () => {
 };
 
 export default Ai3DGenerationPage;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-13a9
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c92c

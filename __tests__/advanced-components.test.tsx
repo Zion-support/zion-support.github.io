@@ -18,9 +18,15 @@ describe("Advanced Components", () => {
   it("should handle console errors", () => {
     const consoleSpy = jest
       .spyOn(console, "error")
-      .mockImplementation(() => {}
-})
+      .mockImplementation(() => {});
+    
     // Test implementation
+<<<<<<< HEAD
     consoleSpy.mockRestore()
   })
 })
+=======
+    consoleSpy.mockRestore();
+  });
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-c92c
