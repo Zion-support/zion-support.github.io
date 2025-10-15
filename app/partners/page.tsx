@@ -12,8 +12,9 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "Access to Azure AI services",
         "Joint go-to-market initiatives",
-        "Technical support and training"]
-        "Co-marketing opportunities"]]
+        "Technical support and training",
+        "Co-marketing opportunities"
+      ]
     },
     {
       name: "Amazon Web Services",
@@ -23,8 +24,9 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "AWS certified solutions",
         "Cost optimization services",
-        "Migration expertise"]
-        "24/7 cloud support"]]
+        "Migration expertise",
+        "24/7 cloud support"
+      ]
     },
     {
       name: "Google Cloud",
@@ -34,8 +36,9 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "Google AI/ML services",
         "Data analytics solutions",
-        "Machine learning expertise"]
-        "Scalable infrastructure"]]
+        "Machine learning expertise",
+        "Scalable infrastructure"
+      ]
     },
     {
       name: "Salesforce",
@@ -45,8 +48,9 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "Salesforce certified experts",
         "Custom development",
-        "Integration services"]
-        "Training and support"]]
+        "Integration services",
+        "Training and support"
+      ]
     },
     {
       name: "IBM",
@@ -56,8 +60,9 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "IBM Watson AI services",
         "Enterprise security solutions",
-        "Legacy system modernization"]
-        "Consulting services"]]
+        "Legacy system modernization",
+        "Consulting services"
+      ]
     },
     {
       name: "Oracle",
@@ -67,8 +72,9 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "Oracle database expertise",
         "Cloud migration services",
-        "Performance optimization"]
-        "Security and compliance"]]
+        "Performance optimization",
+        "Security and compliance"
+      ]
     }
   ];
 
@@ -80,8 +86,9 @@ const partnershipTypes = [
       benefits: [
         "Access to cutting-edge technology",
         "Joint product development",
-        "Technical support and training"]
-        "Co-marketing opportunities"]]
+        "Technical support and training",
+        "Co-marketing opportunities"
+      ]
     },
     {
       icon: <Globe className="w-8 h-8" />,
@@ -90,8 +97,9 @@ const partnershipTypes = [
       benefits: [
         "Competitive pricing and margins",
         "Marketing support and materials",
-        "Sales training and certification"]
-        "Dedicated partner support"]]
+        "Sales training and certification",
+        "Dedicated partner support"
+      ]
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -100,8 +108,9 @@ const partnershipTypes = [
       benefits: [
         "Joint solution development",
         "Technical integration support",
-        "Customer success collaboration"]
-        "Revenue sharing opportunities"]]
+        "Customer success collaboration",
+        "Revenue sharing opportunities"
+      ]
     },
     {
       icon: <Award className="w-8 h-8" />,
@@ -110,8 +119,9 @@ const partnershipTypes = [
       benefits: [
         "Joint R&D initiatives",
         "Market expansion support",
-        "Exclusive partnership benefits"]
-        "Strategic planning collaboration"]]
+        "Exclusive partnership benefits",
+        "Strategic planning collaboration"
+      ]
     }
   ];
 

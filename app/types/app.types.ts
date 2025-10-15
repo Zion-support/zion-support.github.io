@@ -8,36 +8,46 @@ export interface Service { id: string
   category: string,
   features: string[],
   pricing: {
-    },
     starter: number,
     professional: number,
-    enterprise: number }
+    enterprise: number
+  },
   icon: string
 }
-export interface AnalyticsEvent { action: string,
-  category: string
-  label?: string
-  value?: number }
-export interface ContactForm { name: string,
+export interface AnalyticsEvent {
+  action: string,
+  category: string,
+  label?: string,
+  value?: number
+}
+export interface ContactForm {
+  name: string,
   email: string,
   company: string,
-  message: string
-  phone?: string }
-export interface BlogPost { id: string
-  title: string
-  content: string
+  message: string,
+  phone?: string
+}
+export interface BlogPost {
+  id: string,
+  title: string,
+  content: string,
   excerpt: string,
   author: string,
   publishedAt: string,
   tags: string[],
-  slug: string }
-export interface Testimonial { id: string,
+  slug: string
+}
+export interface Testimonial {
+  id: string,
   name: string,
   company: string,
-  content: string
+  content: string,
   avatar?: string,
-  rating: number }
-export interface FAQ { id: string,
+  rating: number
+}
+export interface FAQ {
+  id: string,
   question: string,
   answer: string,
-  category: string }
+  category: string
+}

@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 interface PromotionBanner {
-  id: string;,
-    title: string;,
-    subtitle: string;,
-    ctaText: string;,
-    ctaLink: string;,
-    backgroundColor: string;,
-    textColor: string;,
-    icon: string;
+  id: string;
+  title: string;
+  subtitle: string;
+  ctaText: string;
+  ctaLink: string;
+  backgroundColor: string;
+  textColor: string;
+  icon: string;
   stats?: {
-    value: string;,
+    value: string;
     label: string;
   }[];
 }
@@ -32,8 +32,9 @@ const ContentPromotionBanner: React.FC = () => {
       icon: '💰',
       stats: [
         { value: '$50M+', label: 'Annual Savings' },
-        { value: '95%', label: 'Process Automation' }]
-        { value: '300%', label: 'ROI' }]]
+        { value: '95%', label: 'Process Automation' },
+        { value: '300%', label: 'ROI' }
+      ]
     },
     {
       id: 'ai-trends-2026',
@@ -46,8 +47,9 @@ const ContentPromotionBanner: React.FC = () => {
       icon: '🚀',
       stats: [
         { value: '$100B+', label: 'Market Value' },
-        { value: '95%', label: 'Process Automation' }]
-        { value: '10x', label: 'Efficiency Gains' }]]
+        { value: '95%', label: 'Process Automation' },
+        { value: '10x', label: 'Efficiency Gains' }
+      ]
     },
     {
       id: 'autonomous-architecture',
@@ -60,15 +62,16 @@ const ContentPromotionBanner: React.FC = () => {
       icon: '🏗️',
       stats: [
         { value: '99.9%', label: 'Uptime' },
-        { value: '90%', label: 'Cost Reduction' }]
-        { value: 'Real-time', label: 'Optimization' }]]
+        { value: '90%', label: 'Cost Reduction' },
+        { value: 'Real-time', label: 'Optimization' }
+      ]
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 8000); // Change banner every 8 seconds,
+    }, 8000); // Change banner every 8 seconds
     return () => clearInterval(interval);
   }, [banners.length]);
 

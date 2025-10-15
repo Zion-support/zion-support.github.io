@@ -9,7 +9,7 @@ const ServicesOverviewPage: React.FC = () => {
       icon: <Brain className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-600",
       description: "Revolutionary AI-powered solutions for modern businesses",
-      services: []
+      services: [
         { name: "AI Analytics Dashboard Pro", price: "$299/month", features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards"] },
         { name: "AI Content Generation Pro", price: "$199/month", features: ["AI Writing", "Content Optimization", "Multi-language Support"] },
         { name: "AI Automation Suite", price: "$399/month", features: ["Workflow Automation", "Process Optimization", "Integration APIs"] },
@@ -27,7 +27,7 @@ const ServicesOverviewPage: React.FC = () => {
       icon: <Code className="w-8 h-8" />,
       color: "from-purple-500 to-pink-600",
       description: "Comprehensive IT solutions and infrastructure services",
-      services: []
+      services: [
         { name: "Cloud Infrastructure", price: "$499/month", features: ["Auto-scaling", "AI Monitoring", "Cost Optimization"] },
         { name: "API Management", price: "$199/month", features: ["API Gateway", "Rate Limiting", "Analytics"] },
         { name: "Database Solutions", price: "$299/month", features: ["Database Design", "Performance Tuning", "Backup & Recovery"] },
@@ -43,7 +43,7 @@ const ServicesOverviewPage: React.FC = () => {
       icon: <Wifi className="w-8 h-8" />,
       color: "from-green-500 to-emerald-600",
       description: "Next-generation 5G technology and IoT solutions",
-      services: []
+      services: [
         { name: "5G Implementation", price: "$999/month", features: ["5G Network Setup", "IoT Integration", "Edge Computing"] },
         { name: "5G Network Infrastructure", price: "$1,499/month", features: ["Network Design", "Hardware Installation", "Optimization"] },
         { name: "5G IoT Solutions", price: "$799/month", features: ["IoT Platform", "Device Management", "Data Analytics"] },
@@ -57,7 +57,7 @@ const ServicesOverviewPage: React.FC = () => {
       icon: <Cloud className="w-8 h-8" />,
       color: "from-orange-500 to-red-600",
       description: "Specialized micro SAAS solutions for specific business needs",
-      services: []
+      services: [
         { name: "AI Accounting Assistant", price: "$79/month", features: ["Automated Bookkeeping", "Tax Preparation", "Financial Reports"] },
         { name: "AI Content Moderation Pro", price: "$199/month", features: ["AI Moderation", "Content Filtering", "Compliance Monitoring"] },
         { name: "AI Climate Solutions Pro", price: "$299/month", features: ["Climate Analytics", "Carbon Tracking", "Sustainability Reports"] },
