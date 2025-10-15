@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3, Cloud, Sparkles } from 'lucide-react'
-const EnhancedNavigation = () => {}
-}const [isOpen, setIsOpen] = useState(false)
+
+const EnhancedNavigation = () => {
+  const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-  const navigationItems = []
-    {}
+  const navigationItems = [
+    {
       label: 'AI Services',
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
-      dropdown: []
+      dropdown: [
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
         { label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' },
         { label: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },

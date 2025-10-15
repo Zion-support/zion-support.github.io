@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
@@ -38,13 +37,3 @@ export default {
     'node_modules/(?!(.*\\.mjs$|@testing-library|@heroicons|framer-motion))',
   ],
 };
-=======
-export default {}
-  },
-  transform: {}
-    "^.+\\.(ts|tsx)$": "ts-jest",
-    "^.+\\.(js|jsx)$": "babel-jest"},
-  testMatch: []
-  transformIgnorePatterns: []
-}
->>>>>>> 4322005aab0ef7243ec1380fa17dedddf01c149e
