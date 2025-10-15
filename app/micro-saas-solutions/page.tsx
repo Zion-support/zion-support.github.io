@@ -9,22 +9,11 @@ import {
   UserGroupIcon,
   CurrencyDollarIcon,
   CogIcon,
-  ShieldCheckIcon,
-  GlobeAltIcon,
-  DocumentTextIcon,
-  EyeIcon,
-  ChatBubbleLeftRightIcon,
   AcademicCapIcon,
   HomeIcon,
   TruckIcon,
   HeartIcon,
-  ScaleIcon,
-  CodeBracketIcon,
-  DevicePhoneMobileIcon,
-  CloudIcon,
-  SignalIcon,
-  BoltIcon,
-  StarIcon
+  ScaleIcon
 } from '@heroicons/react/24/outline';
 
 const MicroSAASSolutionsPage: React.FC = () => {

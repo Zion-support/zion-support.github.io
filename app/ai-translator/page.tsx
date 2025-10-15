@@ -6,13 +6,11 @@ import {
   CheckCircleIcon, 
   ArrowRightIcon,
   CpuChipIcon,
-  SparklesIcon,
-  ClockIcon,
   ShieldCheckIcon,
   DocumentTextIcon,
-  ChatBubbleLeftRightIcon,
   MicrophoneIcon,
-  CameraIcon
+  CameraIcon,
+  ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline';
 
 const AITranslatorPage: React.FC = () => {

@@ -37,7 +37,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const { preloadImages } = usePerformanceOptimization();
 
   // Generate optimized image URL (you can integrate with your image optimization service)
-  const getOptimizedSrc = (originalSrc: string, _w?: number, _h?: number, _q: number = quality) => {
+  const getOptimizedSrc = (originalSrc: string, _w?: number, _h?: number, _q: number = quality): string => {
     // For now, return original src. In production, integrate with services like:
     // - Cloudinary: `https://res.cloudinary.com/your-cloud/image/fetch/w_${w},h_${h},q_${q},f_auto/${originalSrc}`
     // - Next.js Image Optimization: `/api/image?url=${encodeURIComponent(originalSrc)}&w=${w}&h=${h}&q=${q}`
@@ -87,6 +87,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     } else if (priority) {
       setCurrentSrc(optimizedSrc);
     }
+    
+    return undefined;
   }, [loading, priority, optimizedSrc, isLoaded, hasError]);
 
   if (hasError) {

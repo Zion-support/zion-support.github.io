@@ -16,52 +16,6 @@ interface SEOConfig {
 export const useSEO = (config: SEOConfig = {}) => {
   const location = useLocation();
 
-  useEffect(() => {
-    // Update document title
-    if (config.title) {
-      const fullTitle = config.title.includes('Zion Tech Group') 
-        ? config.title 
-        : `${config.title} - Zion Tech Group`;
-      document.title = fullTitle;
-    }
-
-    // Update meta description
-    if (config.description) {
-      updateMetaTag('description', config.description);
-    }
-
-    // Update meta keywords
-    if (config.keywords) {
-      updateMetaTag('keywords', config.keywords);
-    }
-
-    // Update canonical URL
-    if (config.canonicalUrl) {
-      updateCanonicalUrl(config.canonicalUrl);
-    } else {
-      updateCanonicalUrl(window.location.href);
-    }
-
-    // Update Open Graph tags
-    updateOpenGraphTags(config);
-
-    // Update Twitter tags
-    updateTwitterTags(config);
-
-    // Update robots meta
-    if (config.noIndex !== undefined) {
-      updateMetaTag('robots', config.noIndex ? 'noindex,nofollow' : 'index,follow');
-    }
-
-    // Add structured data
-    if (config.structuredData) {
-      addStructuredData(config.structuredData);
-    }
-
-    // Add page-specific structured data
-    addPageStructuredData(location.pathname);
-
-  }, [config, location.pathname, addPageStructuredData, updateOpenGraphTags, updateTwitterTags, addStructuredData]);
 
   const updateMetaTag = (name: string, content: string) => {
     let meta = document.querySelector(`meta[name="${name}"]`);
@@ -160,10 +114,7 @@ export const useSEO = (config: SEOConfig = {}) => {
       pageStructuredData = {
         '@context': 'https://schema.org',
         '@type': 'ContactPage',
-        mainEntity: {
-          '@type': 'Organization',
-          ...baseStructuredData
-        }
+        mainEntity: baseStructuredData
       } as any;
     } else if (pathname.startsWith('/ai-') || pathname.startsWith('/zion-ai-')) {
       pageStructuredData = {
@@ -183,6 +134,53 @@ export const useSEO = (config: SEOConfig = {}) => {
 
     addStructuredData(pageStructuredData);
   }, [addStructuredData]);
+
+  useEffect(() => {
+    // Update document title
+    if (config.title) {
+      const fullTitle = config.title.includes('Zion Tech Group') 
+        ? config.title 
+        : `${config.title} - Zion Tech Group`;
+      document.title = fullTitle;
+    }
+
+    // Update meta description
+    if (config.description) {
+      updateMetaTag('description', config.description);
+    }
+
+    // Update meta keywords
+    if (config.keywords) {
+      updateMetaTag('keywords', config.keywords);
+    }
+
+    // Update canonical URL
+    if (config.canonicalUrl) {
+      updateCanonicalUrl(config.canonicalUrl);
+    } else {
+      updateCanonicalUrl(window.location.href);
+    }
+
+    // Update Open Graph tags
+    updateOpenGraphTags(config);
+
+    // Update Twitter tags
+    updateTwitterTags(config);
+
+    // Update robots meta
+    if (config.noIndex !== undefined) {
+      updateMetaTag('robots', config.noIndex ? 'noindex,nofollow' : 'index,follow');
+    }
+
+    // Add structured data
+    if (config.structuredData) {
+      addStructuredData(config.structuredData);
+    }
+
+    // Add page-specific structured data
+    addPageStructuredData(location.pathname);
+
+  }, [config, location.pathname, addPageStructuredData, updateOpenGraphTags, updateTwitterTags, addStructuredData]);
 
   return {
     updateMetaTag,

@@ -5,7 +5,6 @@ import {
   ChartBarIcon, 
   CheckCircleIcon,
   StarIcon,
-  ShieldCheckIcon,
   SparklesIcon,
   CpuChipIcon,
   ReceiptRefundIcon,

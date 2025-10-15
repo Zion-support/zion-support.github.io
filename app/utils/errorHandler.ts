@@ -14,20 +14,21 @@ export class CustomError extends Error {
   constructor(message: string, code?: string, statusCode?: number, details?: Record<string, unknown>) {
     super(message);
     this.name = 'CustomError';
-    this.code = code;
-    this.statusCode = statusCode;
-    this.details = details;
+    if (code !== undefined) this.code = code;
+    if (statusCode !== undefined) this.statusCode = statusCode;
+    if (details !== undefined) this.details = details;
   }
 }
 
 export const handleError = (error: unknown): AppError => {
   if (error instanceof CustomError) {
-    return {
+    const appError: AppError = {
       message: error.message,
-      code: error.code,
-      statusCode: error.statusCode,
-      details: error.details,
     };
+    if (error.code !== undefined) appError.code = error.code;
+    if (error.statusCode !== undefined) appError.statusCode = error.statusCode;
+    if (error.details !== undefined) appError.details = error.details;
+    return appError;
   }
 
   if (error instanceof Error) {

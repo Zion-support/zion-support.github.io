@@ -6,11 +6,8 @@ import {
   CheckCircleIcon, 
   ArrowRightIcon,
   CpuChipIcon,
-  SparklesIcon,
-  ClockIcon,
   ShieldCheckIcon,
   DocumentTextIcon,
-  ChatBubbleLeftRightIcon,
   SpeakerWaveIcon,
   MusicalNoteIcon
 } from '@heroicons/react/24/outline';

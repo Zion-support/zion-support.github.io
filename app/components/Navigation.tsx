@@ -18,6 +18,7 @@ import {
   SignalIcon,
   UserGroupIcon,
   EnvelopeIcon,
+  MicrophoneIcon,
   ShareIcon,
   ChatBubbleLeftRightIcon,
   ChartBarIcon,
@@ -34,7 +35,6 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-  const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);

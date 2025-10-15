@@ -6,13 +6,11 @@ import {
   CheckCircleIcon, 
   ArrowRightIcon,
   CpuChipIcon,
-  SparklesIcon,
-  ClockIcon,
   ShieldCheckIcon,
   DocumentTextIcon,
-  ChatBubbleLeftRightIcon,
   MicrophoneIcon,
-  PhotoIcon
+  PhotoIcon,
+  SparklesIcon
 } from '@heroicons/react/24/outline';
 
 const AIVideoGeneratorPage: React.FC = () => {

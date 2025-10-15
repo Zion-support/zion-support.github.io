@@ -44,16 +44,6 @@ class ErrorBoundary extends Component<Props, State> {
     
     // Send error to monitoring service in production
     if (process.env.NODE_ENV === 'production') {
-      // Enhanced error reporting with more context
-      const _errorReport = {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
-      };
-      
       // Send to error monitoring service (e.g., Sentry, LogRocket, etc.)
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'exception', {
