@@ -1,12 +1,12 @@
-import { Suspense, useEffect } from 'react'
+import { Suspense, useEffect, lazy } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-// Import pages
-import HomePage from './app/page';
-import AboutPage from './app/about/page';
-import ServicesPage from './app/services/page';
-import ContactPage from './app/contact/page';
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./app/page'));
+const AboutPage = lazy(() => import('./app/about/page'));
+const ServicesPage = lazy(() => import('./app/services/page'));
+const ContactPage = lazy(() => import('./app/contact/page'));
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -16,10 +16,13 @@ import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
-// Loading component
+// Enhanced loading component
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+      <p className="text-gray-600 animate-pulse">Loading...</p>
+    </div>
   </div>
 )
 
@@ -59,13 +62,37 @@ export default function App() {
                   <Route path="/services" element={<ServicesPage />} />
                   
                   {/* Catch all route */}
-                  <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
-                    <div className="text-center">
-                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>
-                      <p className="text-gray-600 mb-8">Page not found</p>
-                      <a href="/" className="text-blue-600 hover:text-blue-800">Go back home</a>
+                  <Route path="*" element={
+                    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+                      <div className="text-center max-w-md mx-auto px-4">
+                        <div className="mb-8">
+                          <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
+                          <h2 className="text-2xl font-semibold text-gray-700 mb-4">Page Not Found</h2>
+                          <p className="text-gray-600 mb-8">
+                            Sorry, we couldn't find the page you're looking for. 
+                            It might have been moved, deleted, or doesn't exist.
+                          </p>
+                        </div>
+                        <div className="space-y-4">
+                          <a 
+                            href="/" 
+                            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                          >
+                            Go Back Home
+                          </a>
+                          <div className="text-sm text-gray-500">
+                            <a href="/contact" className="text-blue-600 hover:text-blue-800">
+                              Contact Support
+                            </a>
+                            {' • '}
+                            <a href="/services" className="text-blue-600 hover:text-blue-800">
+                              Browse Services
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>} />
+                  } />
                 </Routes>
               </Suspense>
             </main>
