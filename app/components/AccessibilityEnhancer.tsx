@@ -1,120 +1,119 @@
-import React, { useEffect, memo } from 'react';
+import React, { useEffect } from 'react';
 
-const AccessibilityEnhancer: React.FC = memo(() => {
+const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
-    // Add keyboard navigation support
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const mainContent = document.querySelector('main');
-        if (mainContent) {
-          (mainContent as HTMLElement).focus();
-        }
-      }
-    };
-
-    // Add focus management for modals and dropdowns
-    const handleFocusIn = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      
-      // Add focus ring for keyboard users
-      if (target.matches('button, a, input, textarea, select, [tabindex]')) {
-        target.classList.add('keyboard-focus');
-      }
-    };
-
-    const handleFocusOut = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      target.classList.remove('keyboard-focus');
-    };
-
-    // Add ARIA live region for announcements
-    const addLiveRegion = () => {
-      const existingLiveRegion = document.getElementById('aria-live-region');
-      if (!existingLiveRegion) {
-        const liveRegion = document.createElement('div');
-        liveRegion.id = 'aria-live-region';
-        liveRegion.setAttribute('aria-live', 'polite');
-        liveRegion.setAttribute('aria-atomic', 'true');
-        liveRegion.className = 'sr-only';
-        document.body.appendChild(liveRegion);
-      }
-    };
-
-    // Add skip link
+    // Skip to main content functionality
     const addSkipLink = () => {
-      const existingSkipLink = document.getElementById('skip-link');
-      if (!existingSkipLink) {
-        const skipLink = document.createElement('a');
-        skipLink.id = 'skip-link';
-        skipLink.href = '#main-content';
-        skipLink.textContent = 'Skip to main content';
-        skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-        document.body.insertBefore(skipLink, document.body.firstChild);
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      skipLink.style.position = 'absolute';
+      skipLink.style.left = '-9999px';
+      skipLink.style.top = 'auto';
+      skipLink.style.width = '1px';
+      skipLink.style.height = '1px';
+      skipLink.style.overflow = 'hidden';
+      
+      skipLink.addEventListener('focus', () => {
+        skipLink.style.left = '16px';
+        skipLink.style.top = '16px';
+        skipLink.style.width = 'auto';
+        skipLink.style.height = 'auto';
+        skipLink.style.overflow = 'visible';
+      });
+      
+      skipLink.addEventListener('blur', () => {
+        skipLink.style.left = '-9999px';
+        skipLink.style.top = 'auto';
+        skipLink.style.width = '1px';
+        skipLink.style.height = '1px';
+        skipLink.style.overflow = 'hidden';
+      });
+      
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    };
+
+    // Add focus indicators for keyboard navigation
+    const addFocusStyles = () => {
+      const style = document.createElement('style');
+      style.textContent = `
+        .focus-visible:focus {
+          outline: 2px solid #2563eb;
+          outline-offset: 2px;
+        }
+        
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+        
+        .focus\:not-sr-only:focus {
+          position: static;
+          width: auto;
+          height: auto;
+          padding: inherit;
+          margin: inherit;
+          overflow: visible;
+          clip: auto;
+          white-space: normal;
+        }
+      `;
+      document.head.appendChild(style);
+    };
+
+    // Add ARIA landmarks
+    const addLandmarks = () => {
+      const main = document.querySelector('main');
+      if (main && !main.id) {
+        main.id = 'main-content';
+        main.setAttribute('role', 'main');
+      }
+
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('aria-label')) {
+        nav.setAttribute('aria-label', 'Main navigation');
+      }
+
+      const footer = document.querySelector('footer');
+      if (footer) {
+        footer.setAttribute('role', 'contentinfo');
       }
     };
 
-    // Add main content ID
-    const addMainContentId = () => {
-      const mainContent = document.querySelector('main');
-      if (mainContent && !mainContent.id) {
-        mainContent.id = 'main-content';
-      }
+    // Announce page changes to screen readers
+    const announcePageChange = () => {
+      const announcer = document.createElement('div');
+      announcer.setAttribute('aria-live', 'polite');
+      announcer.setAttribute('aria-atomic', 'true');
+      announcer.className = 'sr-only';
+      announcer.id = 'page-announcer';
+      document.body.appendChild(announcer);
     };
 
-    // Initialize accessibility features
-    addLiveRegion();
+    // Initialize accessibility enhancements
     addSkipLink();
-    addMainContentId();
+    addFocusStyles();
+    addLandmarks();
+    announcePageChange();
 
-    // Add event listeners
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
-
-    // Add CSS for keyboard focus
-    const style = document.createElement('style');
-    style.textContent = `
-      .keyboard-focus {
-        outline: 2px solid #3b82f6 !important;
-        outline-offset: 2px !important;
-      }
-      
-      .sr-only {
-        position: absolute !important;
-        width: 1px !important;
-        height: 1px !important;
-        padding: 0 !important;
-        margin: -1px !important;
-        overflow: hidden !important;
-        clip: rect(0, 0, 0, 0) !important;
-        white-space: nowrap !important;
-        border: 0 !important;
-      }
-      
-      .focus\\:not-sr-only:focus {
-        position: static !important;
-        width: auto !important;
-        height: auto !important;
-        padding: 0.5rem 1rem !important;
-        margin: 0 !important;
-        overflow: visible !important;
-        clip: auto !important;
-        white-space: normal !important;
-      }
-    `;
-    document.head.appendChild(style);
-
+    // Cleanup
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('focusin', handleFocusIn);
-      document.removeEventListener('focusout', handleFocusOut);
+      const skipLink = document.querySelector('a[href="#main-content"]');
+      if (skipLink) {
+        skipLink.remove();
+      }
     };
   }, []);
 
   return null;
-});
-
-AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
+};
 
 export default AccessibilityEnhancer;
