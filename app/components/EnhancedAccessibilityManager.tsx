@@ -1,11 +1,13 @@
-import React, { useEffect, useState, useCallback } from 'react'
-interface AccessibilityManagerProps {}
-  enableKeyboardNavigation?: boolean
-  enableScreenReader?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
-  enableVoiceNavigation?: boolean
-  enableReducedMotion?: boolean
+import React, { useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
+
+interface AccessibilityManagerProps {
+  enableKeyboardNavigation?: boolean;
+  enableScreenReader?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+  enableVoiceNavigation?: boolean;
+  enableReducedMotion?: boolean;
 }
 const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({}
   enableKeyboardNavigation = true,
@@ -50,16 +52,21 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({}
 }if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {}
       return
     }
-    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition
-    const recognition = new SpeechRecognition()
-    recognition.continuous = true
-    recognition.interimResults = false
-    recognition.lang = 'en-US'
-    recognition.onstart = () => {}
-}// Voice navigation started
-    }
-    recognition.onresult = (event: any) => {}
-}const command = event.results[event.results.length - 1][0].transcript.toLowerCase().trim()
+
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+    
+    recognition.continuous = true;
+    recognition.interimResults = false;
+    recognition.lang = 'en-US';
+
+    recognition.onstart = () => {
+      // Voice navigation started
+    };
+
+    recognition.onresult = (event: unknown) => {
+      const command = event.results[event.results.length - 1][0].transcript.toLowerCase().trim();
+      
       // Navigation commands
       if (command.includes('go to') || command.includes('navigate to')) {}
         const target = command.replace(/go to|navigate to/g, '').trim()
@@ -81,6 +88,20 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({}
           window.scrollBy(0, 100)
         }
       }
+    };
+
+    recognition.onerror = (event: unknown) => {
+      // Speech recognition error handled silently
+    };
+
+    recognition.start();
+    (window as any).voiceRecognition = recognition;
+  }, []);
+
+  const stopVoiceNavigation = useCallback(() => {
+    if ((window as any).voiceRecognition) {
+      (window as any).voiceRecognition.stop();
+      (window as any).voiceRecognition = null;
     }
     recognition.onerror = (event: any) => {}
 }// Speech recognition error handled silently

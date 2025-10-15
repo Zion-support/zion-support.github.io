@@ -1,7 +1,7 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Wifi } from "lucide-react";
 
-const 5GSolutionsPage: React.FC = () => {
+const FiveGSolutionsPage: React.FC = () => {
   return (
     <>
       <SEOHead 

@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from "react"
-import { Cookie, Settings } from "lucide-react"
-const CookieConsent: React.FC = () => {}
-}const [isVisible, setIsVisible] = useState(false)
-  const [showSettings, setShowSettings] = useState(false)
-  useEffect(() => {}
-}const consent = localStorage.getItem("cookie-consent")
-    if (!consent) {}
-      setIsVisible(true)
+import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
+import { Cookie, Settings } from "lucide-react";
+
+const CookieConsent: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+
+  useEffect(() => {
+    const consent = localStorage.getItem("cookie-consent");
+    if (!consent) {
+      setIsVisible(true);
     }
   }, [])
   const handleAccept = () => {}

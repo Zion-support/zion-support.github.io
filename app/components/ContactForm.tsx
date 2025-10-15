@@ -1,12 +1,14 @@
-import React, { useState } from "react"
-import { MessageSquare } from "lucide-react"
-interface FormData {}
-  name: string
-  email: string
-  phone: string
-  company: string
-  message: string
-  service: string
+import React, { useState } from 'react';
+import React, { useState } from "react";
+import { MessageSquare } from "lucide-react";
+
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  message: string;
+  service: string;
 }
 const ContactForm: React.FC = () => {}
 }const [formData, setFormData] = useState<FormData>({}
@@ -15,39 +17,41 @@ const ContactForm: React.FC = () => {}
     phone: "",
     company: "",
     message: "",
-    service: ""})
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const handleChange = ()
-    e: React.ChangeEvent<
+    service: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleChange = (_e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
-  ) => {}
-}const { name, value } = e.target
-    setFormData((prev) => ({}
+    >, ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
       ...prev,
-      [name]: value}))
-  }
-  const handleSubmit = async (e: React.FormEvent) => {}
-}e.preventDefault()
-    setIsSubmitting(true)
-    try {}
-} catch (error) {}
-  console.error(error)
-}// Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-      setIsSubmitted(true)
-      setFormData({}
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (_e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      setIsSubmitted(true);
+      setFormData({
         name: "",
         email: "",
         phone: "",
         company: "",
         message: "",
-        service: ""})
-    } catch (error) {}
-      console.error('Failed to submit contact form:', error)
-    } finally {}
-      setIsSubmitting(false)
+        service: "",
+      });
+
+    } catch (error) {
+      } finally {
+      setIsSubmitting(false);
     }
   }
   if (isSubmitted) {}

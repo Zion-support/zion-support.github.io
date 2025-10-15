@@ -1,9 +1,11 @@
-"use client"
-import React, { createContext, useContext, useEffect } from "react"
-interface AnalyticsContextType {}
-  track: (event: string, properties?: Record<string, unknown>) => void
-  identify: (userId: string, traits?: Record<string, unknown>) => void
-  page: (name: string, properties?: Record<string, unknown>) => void
+"use client";
+
+import React, { createContext, useContext, useEffect } from "react";
+
+interface AnalyticsContextType {
+  track: (_event: string, properties?: Record<string, _unknown>) => void;
+  identify: (_userId: string, traits?: Record<string, _unknown>) => void;
+  page: (_name: string, properties?: Record<string, _unknown>) => void;
 }
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>()
   undefined,
@@ -15,14 +17,12 @@ export const useAnalytics = () => {}
   }
   return context
 }
-interface AnalyticsProviderProps {}
-  children: React.ReactNode
-}
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({}
-  children}) => {}
-}useEffect(() => {}
-}// Initialize analytics
-    if (typeof window !== "undefined") {}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+  children, }) => {
+  useEffect(() => {
+    // Initialize analytics
+    if (typeof window !== "undefined") {
       // Google Analytics
       if (process.env.NODE_ENV === "production") {}
         const script = document.createElement("script")
@@ -38,12 +38,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({}
         gtag("config", process.env.REACT_APP_GA_ID)
       }
     }
-  }, [])
-  const track = (event: string, properties?: Record<string, unknown>) => {}
-}if (typeof window !== "undefined") {}
+  }, []);
+
+  const track = (_event: string, properties?: Record<string, _unknown>) => {
+    if (typeof window !== "undefined") {
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {}
-        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag()
+      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
+        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
           "event",
           event,
           properties,
@@ -51,12 +52,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({}
       }
       // Custom analytics
       }
-  }
-  const identify = (userId: string, traits?: Record<string, unknown>) => {}
-}if (typeof window !== "undefined") {}
+  };
+
+  const identify = (_userId: string, traits?: Record<string, _unknown>) => {
+    if (typeof window !== "undefined") {
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {}
-        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag()
+      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
+        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
           "config",
           process.env.REACT_APP_GA_ID,
           {}
@@ -66,12 +68,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({}
       }
       // Custom analytics
       }
-  }
-  const page = (name: string, properties?: Record<string, unknown>) => {}
-}if (typeof window !== "undefined") {}
+  };
+
+  const page = (_name: string, properties?: Record<string, _unknown>) => {
+    if (typeof window !== "undefined") {
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {}
-        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag()
+      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
+        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
           "event",
           "page_view",
           {}
@@ -91,7 +94,15 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({}
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-  )
+  );
+};
+
+// Extend Window interface for TypeScript
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+    gtag: (_...args: unknown[]) => void;
+  }
 }
 // Extend Window interface for TypeScript
 declare global {}

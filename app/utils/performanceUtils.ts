@@ -1,9 +1,11 @@
 // Performanceutils utility functions
-export const Performanceutils = {}
-  init: () => {}
-} },
-  process: (data: any) => {}
-}return data
+
+export const Performanceutils = {
+  init: () => {
+    },
+
+  process: (data: unknown) => {
+    return data;
   },
   cleanup: () => {}
 } }}

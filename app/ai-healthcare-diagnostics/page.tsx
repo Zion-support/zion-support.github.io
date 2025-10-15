@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Sparkles, Mail, Smartphone, Globe } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -77,10 +76,6 @@ export default function AIHealthcareDiagnostics() {
       popular: false
     }
   ];
-=======
-import React from 'react';
-import SEOHead from '../components/SEOHead';
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
 
 const AiHealthcareDiagnosticsPage: React.FC = () => {
   return (

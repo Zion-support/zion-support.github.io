@@ -1,11 +1,13 @@
-import React, { useEffect, useState, useCallback } from 'react'
-interface AccessibilitySettings {}
-  highContrast: boolean
-  largeText: boolean
-  reducedMotion: boolean
-  screenReader: boolean
-  focusVisible: boolean
-  keyboardNavigation: boolean
+import React, { useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
+
+interface AccessibilitySettings {
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  screenReader: boolean;
+  focusVisible: boolean;
+  keyboardNavigation: boolean;
 }
 interface AccessibilityManagerProps {}
   children: React.ReactNode
@@ -21,16 +23,13 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
   })
   const [isVisible, setIsVisible] = useState(false)
   // Load settings from localStorage
-  useEffect(() => {}
-}const savedSettings = localStorage.getItem('accessibility-settings')
-    if (savedSettings) {}
-      try {}
-} catch (error) {}
-  console.error(error)
-}setSettings(JSON.parse(savedSettings))
-      } catch (error) {}
-        console.error('Error loading accessibility settings:', error)
-      }
+  useEffect(() => {
+    const savedSettings = localStorage.getItem('accessibility-settings');
+    if (savedSettings) {
+      try {
+        setSettings(JSON.parse(savedSettings));
+      } catch (error) {
+        }
     }
   }, [])
   // Apply accessibility settings
@@ -80,12 +79,12 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
 }applySettings(settings)
   }, [settings, applySettings])
   // Keyboard shortcuts
-  useEffect(() => {}
-}const handleKeyDown = (event: KeyboardEvent) => {}
-}// Alt + A to toggle accessibility panel
-      if (event.altKey && event.key === 'a') {}
-        event.preventDefault()
-        setIsVisible(!isVisible)
+  useEffect(() => {
+    const handleKeyDown = (_event: KeyboardEvent) => {
+      // Alt + A to toggle accessibility panel
+      if (event.altKey && event.key === 'a') {
+        event.preventDefault();
+        setIsVisible(!isVisible);
       }
       // Alt + 1-6 for quick settings
       if (event.altKey && event.key >= '1' && event.key <= '6') {}
@@ -99,12 +98,14 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
           }))
         }
       }
-    }
-    document.addEventListener('keydown', handleKeyDown)
-    return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [isVisible, settings])
-  const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {}
-}setSettings(prev => ({}
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isVisible, settings]);
+
+  const updateSetting = (_key: keyof AccessibilitySettings, value: boolean) => {
+    setSettings(prev => ({
       ...prev,
       [key]: value
     }))
@@ -117,11 +118,11 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
       screenReader: false,
       focusVisible: true,
       keyboardNavigation: true
-    }
-    setSettings(defaultSettings)
-  }
-  return ()
-    <div>
+    };
+    setSettings(defaultSettings);
+  };
+
+  return (<>
       {children}
       {/* Accessibility Panel */}
       {isVisible && ()
@@ -143,7 +144,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
               <input
                 type="checkbox"
                 checked={settings.largeText}
-                onChange={(e) => updateSetting('largeText', e.target.checked)}
+                onChange={(_e) => updateSetting('largeText', e.target.checked)}
                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <span className="text-sm text-gray-700">Large Text</span>
@@ -152,7 +153,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
               <input
                 type="checkbox"
                 checked={settings.reducedMotion}
-                onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
+                onChange={(_e) => updateSetting('reducedMotion', e.target.checked)}
                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <span className="text-sm text-gray-700">Reduced Motion</span>
@@ -161,7 +162,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
               <input
                 type="checkbox"
                 checked={settings.screenReader}
-                onChange={(e) => updateSetting('screenReader', e.target.checked)}
+                onChange={(_e) => updateSetting('screenReader', e.target.checked)}
                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <span className="text-sm text-gray-700">Screen Reader Optimized</span>
@@ -170,7 +171,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
               <input
                 type="checkbox"
                 checked={settings.focusVisible}
-                onChange={(e) => updateSetting('focusVisible', e.target.checked)}
+                onChange={(_e) => updateSetting('focusVisible', e.target.checked)}
                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <span className="text-sm text-gray-700">Focus Indicators</span>
@@ -179,7 +180,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
               <input
                 type="checkbox"
                 checked={settings.keyboardNavigation}
-                onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)}
+                onChange={(_e) => updateSetting('keyboardNavigation', e.target.checked)}
                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <span className="text-sm text-gray-700">Keyboard Navigation</span>

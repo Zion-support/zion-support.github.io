@@ -1,9 +1,11 @@
 // Datavalidator utility functions
-export const Datavalidator = {}
-  init: () => {}
-} },
-  process: (data: any) => {}
-}return data
+
+export const Datavalidator = {
+  init: () => {
+    },
+
+  process: (data: unknown) => {
+    return data;
   },
   cleanup: () => {}
 } }}

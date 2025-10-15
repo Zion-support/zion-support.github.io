@@ -1,28 +1,34 @@
-import React, { useEffect, useRef } from 'react'
-const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {}
-}const canvasRef = useRef<HTMLCanvasElement>(null)
-  useEffect(() => {}
-}const canvas = canvasRef.current
-    if (!canvas) return
-    const ctx = canvas.getContext('2d')
-    if (!ctx) return
-    let animationId: number
-    let particles: Array<{}
-      x: number
-      y: number
-      vx: number
-      vy: number
-      size: number
-      opacity: number
-      color: string
-    }> = []
-    const resizeCanvas = () => {}
-}canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-    }
-    const createParticle = () => {}
-}const colors = ['#00f5ff', '#ff00ff', '#00ff00', '#ffff00', '#ff4500']
-      return {}
+import React, { useEffect, useRef } from 'react';
+
+const FuturisticBackground = (_{ children }: { children: React.ReactNode }) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let animationId: number;
+    let particles: Array<{
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+      color: string;
+    }> = [];
+
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    const createParticle = () => {
+      const colors = ['#00f5ff', '#ff00ff', '#00ff00', '#ffff00', '#ff4500'];
+      return {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 2,

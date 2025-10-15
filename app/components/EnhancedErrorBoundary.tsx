@@ -1,47 +1,56 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
-import { Link } from 'react-router-dom'
-interface Props {}
-  children: ReactNode
-  fallback?: ReactNode
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
 }
-interface State {}
-  hasError: boolean
-  error: Error | null
-  errorInfo: ErrorInfo | null
-  errorId: string
+
+interface State {
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  errorId: string;
 }
-class EnhancedErrorBoundary extends Component<Props, State> {}
-  constructor(props: Props) {}
-    super(props)
-    this.state = {}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
       errorId: ''
-    }
+    };
   }
-  static getDerivedStateFromError(error: Error): Partial<State> {}
-    return {}
+
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    }
+    };
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
-    this.setState({}
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
       error,
       errorInfo
-    })
-    // Report error to monitoring service
-    this.reportError(error, errorInfo)
+    });
+
+    // Log error to console (commented out for production)
+    // // Report error to monitoring service
+    this.reportError(error, errorInfo);
+
     // Call custom error handler
-    this.props.onError?.(error, errorInfo)
+    this.props.onError?.(error, errorInfo);
     // Log error to monitoring service
-    this.logErrorToService(error, errorInfo)
+    this.logErrorToService(error, errorInfo);
   }
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {}
-}const errorData = {}
+
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+    const errorData = {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -50,52 +59,81 @@ class EnhancedErrorBoundary extends Component<Props, State> {}
       userAgent: navigator.userAgent,
       url: window.location.href,
       userId: this.getUserId()
-    }
-      }
+    };
+
+    // Report to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      try {
+        await fetch('/api/errors', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(errorReport),
+        });
+      } catch {
+        // }
     }
     // Send to error monitoring service (Sentry, LogRocket, etc.)
-    console.error('Error caught by boundary:', errorData)
     // You can integrate with services like Sentry here
-    // Sentry.captureException(error, { extra: errorData })
-  }
-  getUserId = () => {}
-}// Get user ID from your auth context or localStorage
-    return localStorage.getItem('userId') || 'anonymous'
-  }
-  handleRetry = () => {}
-}error: undefined,
+    // Sentry.captureException(error, { extra: errorData });
+  };
+
+  getUserId = () => {
+    // Get user ID from your auth context or localStorage
+    return localStorage.getItem('userId') || 'anonymous';
+  };
+
+  handleRetry = () => {
+    if (this.state.retryCount < this.maxRetries) {
+      this.setState(prevState => ({
+        hasError: false,
+        error: undefined as Error | undefined,
+        errorInfo: undefined as ErrorInfo | undefined,
+        retryCount: prevState.retryCount + 1
+      }));
+        error: undefined,
         errorInfo: undefined,
         retryCount: prevState.retryCount + 1
-      }))
+      }));
     }
-  }
-  handleReset = () => {}
-}this.setState({}
+  };
+
+  handleReset = () => {
+    this.setState({
       hasError: false,
       error: null,
       errorInfo: null,
       errorId: ''
-    })
-  }
-  handleReload = () => {}
-}window.location.reload()
-  }
-  render() {}
-    if (this.state.hasError) {}
-      if (this.props.fallback) {}
-        return this.props.fallback
+    });
+  };
+
+  handleReload = () => {
+    window.location.reload();
+  };
+
+  render() {
+    if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
       }
-      return ()
+
+      return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
           <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
+
             <h1 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
+            
+            <p className="text-gray-300 mb-6 text-lg">
+              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
-            {process.env.NODE_ENV === 'development' && this.state.error && ()
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-cyan-400 cursor-pointer mb-2">
                   Error Details (Development)
@@ -110,7 +148,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {}
                       {this.state.error.stack}
                     </pre>
                   </div>
-                  {this.state.errorInfo && ()
+                  {this.state.errorInfo && (
                     <div>
                       <strong>Component Stack:</strong>
                       <pre className="whitespace-pre-wrap text-xs mt-1">
@@ -121,6 +159,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {}
                 </div>
               </details>
             )}
+
             <div className="space-y-3">
               <button
                 onClick={this.handleRetry}
@@ -129,6 +168,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {}
                 <RefreshCw className="w-5 h-5 mr-2" />
                 Try Again
               </button>
+
               <button
                 onClick={this.handleReload}
                 className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
@@ -136,6 +176,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {}
                 <RefreshCw className="w-5 h-5 mr-2" />
                 Reload Page
               </button>
+
               <Link
                 to="/"
                 className="w-full border border-gray-400 text-gray-400 px-6 py-3 rounded-lg font-semibold hover:bg-gray-400 hover:text-white transition-all duration-300 flex items-center justify-center"
@@ -144,6 +185,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {}
                 Go Home
               </Link>
             </div>
+
             <div className="mt-6 pt-6 border-t border-white/20">
               <p className="text-sm text-gray-400 mb-2">
                 Still having trouble? Contact our support team.
@@ -158,9 +200,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {}
             </div>
           </div>
         </div>
-      )
+      );
     }
-    return this.props.children
+
+    return this.props.children;
   }
 }
-export default EnhancedErrorBoundary
+
+export default EnhancedErrorBoundary;

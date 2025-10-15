@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
@@ -105,9 +104,6 @@ const AIPoweredEmailAnalyzerPage = () => {
     { number: "40%", label: "Increase in Engagement" },
     { number: "10k+", label: "Happy Customers" }
   ];
-=======
-import SEOHead from '../components/SEOHead';
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
 
 const AiPoweredEmailAnalyzerPage: React.FC = () => {
   return (

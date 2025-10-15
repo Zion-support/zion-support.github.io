@@ -62,10 +62,10 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({}
 }// Service worker registered successfully
         return registration.update()
       })
-      .catch((error) => {}
-}console.error('Service worker registration failed:', error)
-      })
-  }, [enableCaching])
+      .catch((error) => {
+        });
+  }, [enableCaching]);
+
   // Implement compression for API responses
   const setupCompression = useCallback(() => {}
 }if (!enableCompression) return
@@ -132,25 +132,21 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({}
     })
   }, [])
   // Performance monitoring
-  const setupPerformanceMonitoring = useCallback(() => {}
-}// Monitor Core Web Vitals
-    import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {}
-}onCLS((metric: any) => {}
-}console.log('CLS:', metric.value)
-      })
-      onINP((metric: any) => {}
-}console.log('INP:', metric.value)
-      })
-      onFCP((metric: any) => {}
-}console.log('FCP:', metric.value)
-      })
-      onLCP((metric: any) => {}
-}console.log('LCP:', metric.value)
-      })
-      onTTFB((metric: any) => {}
-}console.log('TTFB:', metric.value)
-      })
-    })
+  const setupPerformanceMonitoring = useCallback(() => {
+    // Monitor Core Web Vitals
+    import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+      onCLS((metric: unknown) => {
+        });
+      onINP((metric: unknown) => {
+        });
+      onFCP((metric: unknown) => {
+        });
+      onLCP((metric: unknown) => {
+        });
+      onTTFB((metric: unknown) => {
+        });
+    });
+
     // Monitor memory usage
     if ('memory' in performance) {}
       const checkMemory = () => {}

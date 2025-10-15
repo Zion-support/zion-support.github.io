@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import {  } from "lucide-react";
 
 const CybersecurityPage: React.FC = () => {
   return (

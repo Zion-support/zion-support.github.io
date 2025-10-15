@@ -4,7 +4,6 @@ import SEOHead from '../components/SEOHead';
 const CloudServicesPage: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>Cloud Services - Zion Tech Group | Cloud Migration & Infrastructure</title>
         <meta
@@ -101,42 +100,24 @@ const CloudServicesPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business with Cloud?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let our cloud experts help you migrate, optimize, and manage your cloud infrastructure for maximum efficiency and growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Start Your Cloud Journey
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/consultation"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
-                Schedule Consultation
-              </Link>
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Move to the Cloud?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Let&apos;s discuss your cloud strategy and help you choose the best platform for your business needs.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                  Start Cloud Migration
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
+                  Get Free Assessment
+                </button>
+              </div>
             </div>
           </div>
         </section>
-=======
-      <SEOHead 
-        title="cloud-services - Zion Tech Group"
-        description="Zion Tech Group cloud-services service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">cloud-services</h1>
-          <p className="text-gray-300">Coming soon...</p>
-        </div>
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
       </div>
     </>
   );

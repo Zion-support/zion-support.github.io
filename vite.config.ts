@@ -183,26 +183,18 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
-    host: true,
-    // Enable HMR
-    hmr: {
-      overlay: true,
-    },
   },
   preview: {
     port: 4173,
     open: true,
-    host: true,
   },
-  // Optimize dependencies
   optimizeDeps: {
     include: [
-      "react",
-      "react-dom",
-      "react-router-dom",
-      "react-helmet-async",
-      "framer-motion",
-      "lucide-react",
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'lucide-react',
+      'framer-motion',
     ],
   },
   // CSS optimization

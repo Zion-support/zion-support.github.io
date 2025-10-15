@@ -339,12 +339,6 @@ export default function Services() {
     }
   ];
 
-=======
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
-const ServicesPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
   return (
     <>
       <SEOHead 

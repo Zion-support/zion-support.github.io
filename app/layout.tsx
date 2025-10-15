@@ -4,15 +4,14 @@ import { HelmetProvider } from "react-helmet-async"
 import { AnalyticsProvider } from "./components/AnalyticsProvider"
 import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor"
 // import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import
-import { ErrorBoundary } from "react-error-boundary"
-import ErrorFallback from "./components/ErrorFallback"
-import { Helmet } from "react-helmet-async"
-import { Link } from "react-router-dom"
-import { ArrowRight } from "lucide-react"
-import MobileNavigation from "./components/MobileNavigation"
-import EnhancedNavigation from "./components/EnhancedNavigation"
-interface LayoutProps {}
-  children: React.ReactNode
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorFallback from "./components/ErrorFallback";
+import {  } from "lucide-react";
+import MobileNavigation from "./components/MobileNavigation";
+import EnhancedNavigation from "./components/EnhancedNavigation";
+
+interface LayoutProps {
+  children: React.ReactNode;
 }
 const Layout: React.FC<LayoutProps> = ({ children }) => {}
 }return ()
