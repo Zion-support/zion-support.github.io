@@ -11,7 +11,12 @@ const Footer: React.FC = memo(() => {
             <p className="text-gray-300 mb-4">
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
-            <div className="flex space-x-4">
+            <div className="space-y-2 text-sm text-gray-300">
+              <p>📞 <strong>Phone:</strong> +1 302 464 0950</p>
+              <p>✉️ <strong>Email:</strong> kleber@ziontechgroup.com</p>
+              <p>📍 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
+            </div>
+            <div className="flex space-x-4 mt-4">
               <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
                 <span className="sr-only">Website</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -34,21 +39,21 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/database-management" className="text-gray-300 hover:text-white">Database Management</Link></li>
               <li><Link to="/network-infrastructure" className="text-gray-300 hover:text-white">Network Infrastructure</Link></li>
               <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Solutions</Link></li>
+              <li><Link to="/specialized-services" className="text-gray-300 hover:text-white">Specialized Services</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-md font-semibold mb-4">AI Tools</h4>
             <ul className="space-y-2">
-              <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Content Moderator</Link></li>
-              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">Customer Support Pro</Link></li>
-              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">Workflow Automator Pro</Link></li>
-              <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-white">Email Marketing Pro</Link></li>
-              <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-white">Customer Churn Predictor</Link></li>
-              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">Sales Predictor</Link></li>
-              <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
-              <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
-              <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
+              <li><Link to="/zion-ai-meeting-assistant" className="text-gray-300 hover:text-white">AI Meeting Assistant</Link></li>
+              <li><Link to="/zion-ai-code-assistant" className="text-gray-300 hover:text-white">AI Code Assistant</Link></li>
+              <li><Link to="/zion-ai-translator-pro" className="text-gray-300 hover:text-white">AI Translator Pro</Link></li>
+              <li><Link to="/zion-ai-video-generator" className="text-gray-300 hover:text-white">AI Video Generator</Link></li>
+              <li><Link to="/zion-ai-data-scientist" className="text-gray-300 hover:text-white">AI Data Scientist</Link></li>
+              <li><Link to="/zion-ai-legal-assistant" className="text-gray-300 hover:text-white">AI Legal Assistant</Link></li>
+              <li><Link to="/zion-ai-healthcare-assistant" className="text-gray-300 hover:text-white">AI Healthcare Assistant</Link></li>
+              <li><Link to="/zion-ai-customer-insights" className="text-gray-300 hover:text-white">AI Customer Insights</Link></li>
               <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
             </ul>
           </div>

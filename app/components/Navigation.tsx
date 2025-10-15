@@ -55,6 +55,9 @@ const Navigation: React.FC = () => {
                     <Link to="/data-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Data Analytics
                     </Link>
+                    <Link to="/ai-tools" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Tools
+                    </Link>
                     
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">IT Services</div>
                     <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
@@ -87,6 +90,9 @@ const Navigation: React.FC = () => {
                     </Link>
                     <Link to="/micro-saas-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Micro SaaS Solutions
+                    </Link>
+                    <Link to="/specialized-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Specialized Services
                     </Link>
                     
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">AI Tools</div>
@@ -163,6 +169,9 @@ const Navigation: React.FC = () => {
               <Link to="/ai-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 AI Solutions
               </Link>
+              <Link to="/ai-tools" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Tools
+              </Link>
               <Link to="/ai-content-generator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 AI Content Generator
               </Link>
@@ -201,6 +210,9 @@ const Navigation: React.FC = () => {
               </Link>
               <Link to="/micro-saas-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Micro SaaS Solutions
+              </Link>
+              <Link to="/specialized-services" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Specialized Services
               </Link>
               
               <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">AI Tools</div>

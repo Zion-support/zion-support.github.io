@@ -32,6 +32,8 @@ const WebDevelopmentPage = lazy(() => import('./app/web-development/page'));
 const MobileDevelopmentPage = lazy(() => import('./app/mobile-development/page'));
 const DatabaseManagementPage = lazy(() => import('./app/database-management/page'));
 const NetworkInfrastructurePage = lazy(() => import('./app/network-infrastructure/page'));
+const SpecializedServicesPage = lazy(() => import('./app/specialized-services/page'));
+const AIToolsPage = lazy(() => import('./app/ai-tools/page'));
 const CookiesPage = lazy(() => import('./app/cookies/page'));
 
 // AI Tools Pages
@@ -115,6 +117,8 @@ export default function App() {
                   <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
                   <Route path="/database-management" element={<DatabaseManagementPage />} />
                   <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                  <Route path="/specialized-services" element={<SpecializedServicesPage />} />
+                  <Route path="/ai-tools" element={<AIToolsPage />} />
                   
                   {/* Company Pages */}
                   <Route path="/team" element={<TeamPage />} />

@@ -55,22 +55,38 @@ const ContactPage: React.FC = memo(() => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">Get in Touch</h2>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                  <p className="text-gray-600">contact@ziontechgroup.com</p>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="text-2xl">📧</div>
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900">Email</h3>
+                    <p className="text-gray-600">kleber@ziontechgroup.com</p>
+                    <p className="text-sm text-gray-500">We respond within 24 hours</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                <div className="flex items-start space-x-4">
+                  <div className="text-2xl">📞</div>
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900">Phone</h3>
+                    <p className="text-gray-600">+1 302 464 0950</p>
+                    <p className="text-sm text-gray-500">Mon-Fri 9AM-6PM EST</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Address</h3>
-                  <p className="text-gray-600">123 Tech Street, Innovation City, IC 12345</p>
+                <div className="flex items-start space-x-4">
+                  <div className="text-2xl">📍</div>
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900">Address</h3>
+                    <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                    <p className="text-sm text-gray-500">United States</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Website</h3>
-                  <p className="text-gray-600">https://ziontechgroup.com</p>
+                <div className="flex items-start space-x-4">
+                  <div className="text-2xl">🌐</div>
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900">Website</h3>
+                    <p className="text-gray-600">https://ziontechgroup.com</p>
+                    <p className="text-sm text-gray-500">Visit our online platform</p>
+                  </div>
                 </div>
               </div>
             </div>
