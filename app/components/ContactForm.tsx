@@ -10,8 +10,8 @@ interface FormData {
   message: string;
   service: string;
 }
-const ContactForm: React.FC = () => {}}
-}const [formData, setFormData] = useState<FormData>({}}
+const ContactForm: React.FC = () => {}}}
+}const [formData, setFormData] = useState<FormData>({}}}
     name: "",
     email: "",
     phone: "",
@@ -54,7 +54,7 @@ const ContactForm: React.FC = () => {}}
       setIsSubmitting(false);
     }
   }
-  if (isSubmitted) {}}
+  if (isSubmitted) {}}}
     return ()
       <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center">
         <MessageSquare className="w-8 h-8 mx-auto mb-2" />

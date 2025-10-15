@@ -1,42 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Mail, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  Target, 
-  TrendingUp,
-  Clock,
-  Shield,
-  Smartphone,
-  Globe,
-  MessageSquare,
-  FileText,
-  Settings,
-  Star,
-  Award,
-  Phone,
-  MapPin,
-  Envelope
-} from 'lucide-react';
 
-const AIEmailMarketingAutomationPage: React.FC = () => {
-  const features = [
-    'AI-powered email content generation',
-    'Advanced segmentation & targeting',
-    'Automated drip campaigns',
-    'A/B testing with AI optimization',
-    'Real-time personalization',
-    'Multi-channel campaign management',
-    'Advanced analytics & reporting',
-    'Integration with 100+ platforms',
-    'Compliance & deliverability tools',
-    '24/7 customer support'
-  ];
+
+import { Link } from 'react-router-dom';
+
+
+
 
   const benefits = [
     'Increase email open rates by 65%',

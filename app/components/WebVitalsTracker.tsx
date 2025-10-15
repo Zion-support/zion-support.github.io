@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'
-interface WebVitalsData {}}
+interface WebVitalsData {}}}
   name: string
   value: number
   delta: number
@@ -20,10 +20,10 @@ const WebVitalsTracker: React.FC = () => {
           non_interaction: true})
       }
       // Send to custom analytics endpoint
-      if (process.env.NODE_ENV === 'production') {}}
-        fetch('/api/analytics/web-vitals', {}}
+      if (process.env.NODE_ENV === 'production') {}}}
+        fetch('/api/analytics/web-vitals', {}}}
           method: 'POST',
-          headers: {}}
+          headers: {}}}
             'Content-Type': 'application/json'},
           body: JSON.stringify(metric)}).catch(console.error)
       }
@@ -39,13 +39,13 @@ const WebVitalsTracker: React.FC = () => {
     onLCP(sendToAnalytics)
     onTTFB(sendToAnalytics)
     // Track additional performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {}}
+    if (typeof window !== 'undefined' && 'performance' in window) {}}}
       // Track page load time
-      window.addEventListener('load', () => {}}
+      window.addEventListener('load', () => {}}}
 }const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        if (navigation) {}}
+        if (navigation) {}}}
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart
-          sendToAnalytics({}}
+          sendToAnalytics({}}}
             name: 'LOAD_TIME',
             value: loadTime,
             delta: loadTime,
@@ -54,10 +54,10 @@ const WebVitalsTracker: React.FC = () => {
         }
       })
       // Track memory usage (if available)
-      if ('memory' in performance) {}}
+      if ('memory' in performance) {}}}
         const memory = (performance as any).memory
         const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-        sendToAnalytics({}}
+        sendToAnalytics({}}}
           name: 'MEMORY_USAGE',
           value: memoryUsage,
           delta: memoryUsage,

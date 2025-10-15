@@ -76,7 +76,7 @@ import { Helmet } from "react-helmet-async";
   })).filter(section => section.articles?.length > 0);
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Docs - Zion Tech Group</title>
       </Helmet>
@@ -268,8 +268,9 @@ import { Helmet } from "react-helmet-async";
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 
 export default DocsPage;
+}

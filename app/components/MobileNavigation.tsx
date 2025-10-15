@@ -15,7 +15,7 @@ const MobileNavigation: React.FC = () => {
   };
 
   return (
-    <>
+    <div>
       {/* Mobile menu button */}
       <button
         onClick={toggleMenu}

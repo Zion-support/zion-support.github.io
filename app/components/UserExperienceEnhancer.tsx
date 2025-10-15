@@ -1,5 +1,5 @@
 import React from "react"
-interface UserExperienceEnhancerProps {}}
+interface UserExperienceEnhancerProps {}}}
   children?: React.ReactNode
   className?: string
   title?: string

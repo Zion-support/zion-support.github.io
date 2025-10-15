@@ -79,7 +79,7 @@ import { TrendingUp } from "lucide-react";
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Solutions - Advanced Artificial Intelligence Services | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive AI solutions including chatbots, computer vision, content generation, analytics, and automation. Transform your business with cutting-edge AI technology." />
@@ -326,8 +326,10 @@ import { TrendingUp } from "lucide-react";
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
 export default AiSolutionsPage;
+
+}

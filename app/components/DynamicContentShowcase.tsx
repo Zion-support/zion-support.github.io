@@ -10,7 +10,7 @@ interface ContentItem {
   category: string;
   featured?: boolean;
 }
-interface DynamicContentShowcaseProps {}}
+interface DynamicContentShowcaseProps {}}}
   items?: ContentItem[]
   autoPlay?: boolean
   interval?: number
@@ -132,7 +132,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
           {items.map(( index) => (<button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${}}
+              className={`w-3 h-3 rounded-full transition-colors ${}}}
                 index === currentIndex ? "bg-cyan-500" : "bg-gray-600"
               }`}
             />

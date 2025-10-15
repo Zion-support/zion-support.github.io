@@ -1,5 +1,5 @@
 import React from "react"
-import {}}
+import {}}}
   Brain,
   Shield,
   Zap,
@@ -7,9 +7,9 @@ import {}}
   CheckCircle,
   ArrowRight} from "lucide-react"
 import { Link } from "react-router-dom"
-const EnhancedServicesShowcase: React.FC = () => {}}
+const EnhancedServicesShowcase: React.FC = () => {}}}
 }const services = []
-    {}}
+    {}}}
       icon: Brain,
       title: "AI Solutions",
       description:
@@ -19,7 +19,7 @@ const EnhancedServicesShowcase: React.FC = () => {}}
         "Natural Language Processing",
         "Computer Vision",
         "Predictive Analytics"]},
-    {}}
+    {}}}
       icon: Shield,
       title: "Cybersecurity",
       description:
@@ -29,7 +29,7 @@ const EnhancedServicesShowcase: React.FC = () => {}}
         "Threat Detection",
         "Data Protection",
         "Compliance Management"]},
-    {}}
+    {}}}
       icon: Zap,
       title: "Cloud Infrastructure",
       description:
@@ -39,7 +39,7 @@ const EnhancedServicesShowcase: React.FC = () => {}}
         "Infrastructure as Code",
         "Auto-scaling",
         "Disaster Recovery"]},
-    {}}
+    {}}}
       icon: Globe,
       title: "Digital Transformation",
       description:

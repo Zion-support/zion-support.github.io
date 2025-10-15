@@ -18,3 +18,4 @@ export default BlogPage;
 }
 
 </div></div>
+}

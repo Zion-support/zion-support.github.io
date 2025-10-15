@@ -1,5 +1,5 @@
 import React from "react"
-interface SkeletonProps {}}
+interface SkeletonProps {}}}
   width?: string | number
   height?: string | number
   className?: string

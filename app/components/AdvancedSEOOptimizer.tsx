@@ -11,7 +11,7 @@ interface SEOSettings {
   canonicalUrls: boolean;
   altTexts: boolean;
 }
-interface SEOMetrics {}}
+interface SEOMetrics {}}}
   titleLength: number | null
   descriptionLength: number | null
   headingStructure: string | null
@@ -19,8 +19,8 @@ interface SEOMetrics {}}
   internalLinks: number | null
   externalLinks: number | null
 }
-const AdvancedSEOOptimizer: React.FC = () => {}}
-}const [settings, setSettings] = useState<SEOSettings>({}}
+const AdvancedSEOOptimizer: React.FC = () => {}}}
+}const [settings, setSettings] = useState<SEOSettings>({}}}
     metaTags: false,
     structuredData: false,
     sitemap: false,
@@ -28,7 +28,7 @@ const AdvancedSEOOptimizer: React.FC = () => {}}
     canonicalUrls: false,
     altTexts: false
   })
-  const [metrics, setMetrics] = useState<SEOMetrics>({}}
+  const [metrics, setMetrics] = useState<SEOMetrics>({}}}
     titleLength: null,
     descriptionLength: null,
     headingStructure: null,
@@ -38,7 +38,7 @@ const AdvancedSEOOptimizer: React.FC = () => {}}
   })
   const [isVisible, setIsVisible] = useState(false)
   const [isOptimizing, setIsOptimizing] = useState(false)
-  const analyzeSEO = useCallback(() => {}}
+  const analyzeSEO = useCallback(() => {}}}
 }if (typeof window === 'undefined') return
     // Analyze title length
     const title = document.title
@@ -59,12 +59,12 @@ const AdvancedSEOOptimizer: React.FC = () => {}}
     const links = document.querySelectorAll('a[href]')
     let internalLinks = 0
     let externalLinks = 0
-    links.forEach(link => {}}
+    links.forEach(link => {}}}
 }const href = link.getAttribute('href')
-      if (href) {}}
-        if (href.startsWith('/') || href.includes(window.location.hostname)) {}}
+      if (href) {}}}
+        if (href.startsWith('/') || href.includes(window.location.hostname)) {}}}
           internalLinks++
-        } else if (href.startsWith('http')) {}}
+        } else if (href.startsWith('http')) {}}}
           externalLinks++
         }
       }
@@ -87,22 +87,22 @@ const AdvancedSEOOptimizer: React.FC = () => {}}
     // Simulate optimization process
     await new Promise(resolve => setTimeout(resolve, 2000))
     // Apply optimizations based on settings
-    if (settings.metaTags) {}}
+    if (settings.metaTags) {}}}
       // Optimizing meta tags...
     }
-    if (settings.structuredData) {}}
+    if (settings.structuredData) {}}}
       // Adding structured data...
     }
-    if (settings.sitemap) {}}
+    if (settings.sitemap) {}}}
       // Generating sitemap...
     }
-    if (settings.robotsTxt) {}}
+    if (settings.robotsTxt) {}}}
       // Updating robots.txt...
     }
-    if (settings.canonicalUrls) {}}
+    if (settings.canonicalUrls) {}}}
       // Setting canonical URLs...
     }
-    if (settings.altTexts) {}}
+    if (settings.altTexts) {}}}
       // Adding alt texts to images...
     }
     setIsOptimizing(false)
@@ -117,37 +117,37 @@ const AdvancedSEOOptimizer: React.FC = () => {}}
     }))
   }
   const seoFeatures = []
-    {}}
+    {}}}
       key: 'metaTags' as keyof SEOSettings,
       title: 'Meta Tags',
       description: 'Optimize title, description, and other meta tags',
       impact: 'High'
     },
-    {}}
+    {}}}
       key: 'structuredData' as keyof SEOSettings,
       title: 'Structured Data',
       description: 'Add JSON-LD structured data for better search results',
       impact: 'High'
     },
-    {}}
+    {}}}
       key: 'sitemap' as keyof SEOSettings,
       title: 'Sitemap',
       description: 'Generate and submit XML sitemap to search engines',
       impact: 'Medium'
     },
-    {}}
+    {}}}
       key: 'robotsTxt' as keyof SEOSettings,
       title: 'Robots.txt',
       description: 'Create robots.txt file for search engine crawlers',
       impact: 'Medium'
     },
-    {}}
+    {}}}
       key: 'canonicalUrls' as keyof SEOSettings,
       title: 'Canonical URLs',
       description: 'Set canonical URLs to prevent duplicate content issues',
       impact: 'High'
     },
-    {}}
+    {}}}
       key: 'altTexts' as keyof SEOSettings,
       title: 'Alt Texts',
       description: 'Add descriptive alt texts to all images',
@@ -257,7 +257,7 @@ const AdvancedSEOOptimizer: React.FC = () => {}}
             </div>
             <button
               onClick={() => toggleSetting(feature.key)}
-              className={`ml-3 relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${}}
+              className={`ml-3 relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${}}}
                 settings[feature.key]
                   ? 'bg-green-600'
                   : 'bg-gray-200 dark:bg-gray-700'
@@ -265,7 +265,7 @@ const AdvancedSEOOptimizer: React.FC = () => {}}
               aria-label={`Toggle ${feature.title}`}
             >
               <span
-                className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${}}
+                className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${}}}
                   settings[feature.key] ? 'translate-x-5' : 'translate-x-1'
                 }`}
               />

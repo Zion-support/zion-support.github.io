@@ -28,25 +28,25 @@ const LazyImage: React.FC<LazyImageProps> = ({
           observer.disconnect();
         }
       },
-      {}}
+      {}}}
         threshold: 0.1,
         rootMargin: '50px'}
     )
-    if (imgRef.current) {}}
+    if (imgRef.current) {}}}
       observer.observe(imgRef.current)
     }
     return () => observer.disconnect()
   }, [])
-  const handleLoad = () => {}}
+  const handleLoad = () => {}}}
 }setIsLoaded(true)
     onLoad?.()
   }
-  const handleError = () => {}}
+  const handleError = () => {}}}
 }setIsError(true)
     onError?.()
   }
-  if (isError && fallback) {}}
-    return <>{fallback}</>
+  if (isError && fallback) {}}}
+    return <div>{fallback}</div>
   }
   return ()
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
@@ -59,7 +59,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
         <img
           src={src}
           alt={alt}
-          className={`transition-opacity duration-300 ${}}
+          className={`transition-opacity duration-300 ${}}}
             isLoaded ? 'opacity-100' : 'opacity-0'
           } ${className}`}
           loading={loading}

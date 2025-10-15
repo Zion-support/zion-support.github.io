@@ -6,30 +6,30 @@ interface Props {
   fallback?: ReactNode;
   onError?: (_error: Error, errorInfo: ErrorInfo) => void;
 }
-interface State {}}
+interface State {}}}
   hasError: boolean
   error?: Error
   errorInfo?: ErrorInfo
   errorId?: string
 }
-class AdvancedErrorBoundary extends Component<Props, State> {}}
-  constructor(props: Props) {}}
+class AdvancedErrorBoundary extends Component<Props, State> {}}}
+  constructor(props: Props) {}}}
     super(props)
     this.state = { hasError: false }
   }
-  static getDerivedStateFromError(error: Error): State {}}
-    return {}}
+  static getDerivedStateFromError(error: Error): State {}}}
+    return {}}}
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}}
-    this.setState({}}
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}}}
+    this.setState({}}}
       error,
       errorInfo})
     // Call custom error handler if provided
-    if (this.props.onError) {}}
+    if (this.props.onError) {}}}
       this.props.onError(error, errorInfo)
     }
     // Log error to console in development
@@ -37,7 +37,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {}}
       }
 
     // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {}}
+    if (process.env.NODE_ENV === 'production') {}}}
       this.logErrorToService(error, errorInfo)
     }
   }
@@ -56,7 +56,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {}}
 
     // Example: Send to your error reporting service
     // You could send this to your backend:
-    // fetch('/api/error-report', {}}
+    // fetch('/api/error-report', {}}}
     //   method: 'POST',
     //   headers: { 'Content-Type': 'application/json' },
     //   body: JSON.stringify(errorData)
@@ -64,24 +64,24 @@ class AdvancedErrorBoundary extends Component<Props, State> {}}
     // For now, just log to console
     // Error data logged
   }
-  handleReset = () => {}}
-}this.setState({}}
+  handleReset = () => {}}}
+}this.setState({}}}
       hasError: false,
       error: undefined,
       errorInfo: undefined,
       errorId: undefined
     })
   }
-  handleReportError = () => {}}
+  handleReportError = () => {}}}
 }const { error, errorId } = this.state
     const subject = `Error Report - ${errorId}`
     const body = `Error: ${error?.message}\n\nStack: ${error?.stack}\n\nPlease describe what you were doing when this error occurred:`
     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     window.open(mailtoLink)
   }
-  render() {}}
-    if (this.state.hasError) {}}
-      if (this.props.fallback) {}}
+  render() {}}}
+    if (this.state.hasError) {}}}
+      if (this.props.fallback) {}}}
         return this.props.fallback
       }
       return ()

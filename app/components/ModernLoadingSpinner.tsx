@@ -1,5 +1,5 @@
 import React from 'react'
-interface LoadingSpinnerProps {}}
+interface LoadingSpinnerProps {}}}
   size?: 'sm' | 'md' | 'lg' | 'xl'
   color?: 'primary' | 'secondary' | 'white'
   text?: string
@@ -13,7 +13,7 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
     xl: 'w-16 h-16'}
-  const colorClasses = {}}
+  const colorClasses = {}}}
     primary: 'text-cyan-500',
     secondary: 'text-purple-500',
     white: 'text-white'}
@@ -23,13 +23,13 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         {/* Outer ring */}
         <div
           className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-t-current`}
-          style={{}}
+          style={{}}}
             animation: 'spin 1s linear infinite'}}
         />
         {/* Inner ring */}
         <div
           className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-b-current`}
-          style={{}}
+          style={{}}}
             animation: 'spin 1.5s linear infinite reverse'}}
         />
       </div>
@@ -42,7 +42,7 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       )}
     </div>
   )
-  if (fullScreen) {}}
+  if (fullScreen) {}}}
     return ()
       <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center z-50">
         <div className="text-center">

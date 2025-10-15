@@ -1,11 +1,11 @@
 import React from 'react'
-interface StructuredDataProps {}}
+interface StructuredDataProps {}}}
   type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'BreadcrumbList'
   data: Record<string, unknown>
 }
-const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {}}
-}const getStructuredData = () => {}}
-}const baseData = {}}
+const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {}}}
+}const getStructuredData = () => {}}}
+}const baseData = {}}}
       '@context': 'https://schema.org',
       '@type': type,
       ...data}
@@ -14,7 +14,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {}}
   return ()
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{}}
+      dangerouslySetInnerHTML={{}}}
         __html: JSON.stringify(getStructuredData(), null, 2)}}
     />
   )
@@ -23,19 +23,19 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {}}
 export const OrganizationStructuredData: React.FC = () => ()
   <StructuredData
     type="Organization"
-    data={{}}
+    data={{}}}
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
       logo: 'https://ziontechgroup.com/logo.png',
       description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.',
-      address: {}}
+      address: {}}}
         '@type': 'PostalAddress',
         streetAddress: '364 E Main St STE 1008',
         addressLocality: 'Middletown',
         addressRegion: 'DE',
         postalCode: '19709',
         addressCountry: 'US'},
-      contactPoint: {}}
+      contactPoint: {}}}
         '@type': 'ContactPoint',
         telephone: '+1-302-464-0950',
         contactType: 'customer service',
@@ -59,11 +59,11 @@ export const OrganizationStructuredData: React.FC = () => ()
 export const WebSiteStructuredData: React.FC = () => ()
   <StructuredData
     type="WebSite"
-    data={{}}
+    data={{}}}
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
       description: 'Advanced AI and IT Solutions for Modern Businesses',
-      potentialAction: {}}
+      potentialAction: {}}}
         '@type': 'SearchAction',
         target: 'https://ziontechgroup.com/search?q={search_term_string}',
         'query-input': 'required name=search_term_string'}}}
@@ -72,8 +72,8 @@ export const WebSiteStructuredData: React.FC = () => ()
 export const ServiceStructuredData: React.FC<{ service: Record<string, unknown> }> = ({ service }) => ()
   <StructuredData
     type="Service"
-data={{}}
-      provider: {}}ursor/analyze-improve-and-merge-code-4a9f
+data={{}}}
+      provider: {}}}ursor/analyze-improve-and-merge-code-4a9f
         '@type': 'Organization',
         name: 'Zion Tech Group',
         url: 'https://ziontechgroup.com'},
@@ -85,8 +85,8 @@ data={{}}
 export const BreadcrumbStructuredData: React.FC<{ items: Array<{ name: string; url: string }> }> = ({ items }) => ()
   <StructuredData
     type="BreadcrumbList"
-    data={{}}
-      itemListElement: items.map((item, index) => ({}}
+    data={{}}}
+      itemListElement: items.map((item, index) => ({}}}
         '@type': 'ListItem',
         position: index + 1,
         name: item.name,

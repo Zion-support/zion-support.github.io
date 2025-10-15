@@ -1,6 +1,6 @@
 import { useEffect, useCallback, useRef } from 'react'
 import { logger } from '../utils/logger'
-interface PerformanceMetrics {}
+interface PerformanceMetrics {}}
   renderTime: number
   componentName: string
   timestamp: number
@@ -8,17 +8,17 @@ interface PerformanceMetrics {}
 /**
  * Hook for performance monitoring and optimization
  */
-export function usePerformance(componentName: string) {}
+export function usePerformance(componentName: string) {}}
 }const renderStartTime = useRef<number>(0)
   const renderCount = useRef<number>(0)
   // Track render performance
-  useEffect(() => {}
+  useEffect(() => {}}
 }renderStartTime.current = performance.now()
     renderCount.current += 1
-    return () => {}
+    return () => {}}
 }const renderTime = performance.now() - renderStartTime.current
       if (renderTime > 16) { // More than one frame (16ms)
-        logger.warn(`Slow render detected in ${componentName}`, {}
+        logger.warn(`Slow render detected in ${componentName}`, {}}
           renderTime,
           renderCount: renderCount.current,
           componentName
@@ -84,7 +84,7 @@ export function usePerformance(componentName: string) {}
     },
     [componentName]
   )
-  return {}
+  return {}}
     debounce,
     throttle,
     memoize,
@@ -95,17 +95,17 @@ export function usePerformance(componentName: string) {}
 /**
  * Hook for memory usage monitoring
  */
-export function useMemoryMonitor(componentName: string) {}
-}useEffect(() => {}
-}if (process.env.NODE_ENV === 'development' && 'memory' in performance) {}
-      const checkMemory = () => {}
+export function useMemoryMonitor(componentName: string) {}}
+}useEffect(() => {}}
+}if (process.env.NODE_ENV === 'development' && 'memory' in performance) {}}
+      const checkMemory = () => {}}
 }const memory = (performance as any).memory
-        if (memory) {}
+        if (memory) {}}
           const used = memory.usedJSHeapSize / 1024 / 1024; // MB
           const total = memory.totalJSHeapSize / 1024 / 1024; // MB
           const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
-          if (used > limit * 0.8) {}
-            logger.warn(`High memory usage detected in ${componentName}`, {}
+          if (used > limit * 0.8) {}}
+            logger.warn(`High memory usage detected in ${componentName}`, {}}
               used: `${used.toFixed(2)}MB`,
               total: `${total.toFixed(2)}MB`,
               limit: `${limit.toFixed(2)}MB`,
@@ -120,3 +120,4 @@ export function useMemoryMonitor(componentName: string) {}
   }, [componentName])
 }
 export default usePerformance
+}

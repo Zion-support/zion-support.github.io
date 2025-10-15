@@ -16,7 +16,7 @@ interface AccessibilityState {
   focusHistory: HTMLElement[];
 }
 
-export const useAccessibility = (options: AccessibilityOptions = {}) => {
+export const useAccessibility = (options: AccessibilityOptions = {}}) => {
   const {
     enableKeyboardNavigation = true,
     enableScreenReaderSupport = true,
@@ -348,3 +348,4 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
 };
 
 export default useAccessibility;
+}

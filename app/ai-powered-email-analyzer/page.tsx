@@ -3,7 +3,7 @@ import SEOHead from '../components/SEOHead';
 
 const AiPoweredEmailAnalyzerPage: React.FC = () => {
   return (
-    <>
+    <div>
       <SEOHead 
         title="AI-Powered Email Analyzer - Zion Tech Group"
         description="Revolutionize your email communication with our AI-powered email analyzer. Get sentiment analysis, smart suggestions, and performance insights."
@@ -14,8 +14,11 @@ const AiPoweredEmailAnalyzerPage: React.FC = () => {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
 export default AiPoweredEmailAnalyzerPage;
+}
+</div>
+}

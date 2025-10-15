@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet-async"
-interface LoadingProps {}}
+interface LoadingProps {}}}
   message?: string
 }
-export default function Loading({ message = "Loading..." }: LoadingProps) {}}
+export default function Loading({ message = "Loading..." }: LoadingProps) {}}}
 }return ()
     <div>
       <Helmet>

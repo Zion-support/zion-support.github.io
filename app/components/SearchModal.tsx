@@ -1,5 +1,5 @@
 import React from "react"
-interface SearchModalProps {}}
+interface SearchModalProps {}}}
   children?: React.ReactNode
   className?: string
   title?: string

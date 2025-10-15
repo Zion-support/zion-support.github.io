@@ -1,6 +1,6 @@
 import React from 'react'
 import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react'
-interface LoadingPageProps {}}
+interface LoadingPageProps {}}}
   message?: string
   showProgress?: boolean
   progress?: number
@@ -57,9 +57,9 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({
         return <Loader2 className="w-16 h-16 text-white" />
     }
   }
-  const getServiceMessage = () => {}}
+  const getServiceMessage = () => {}}}
 }if (message) return message
-    switch (serviceType) {}}
+    switch (serviceType) {}}}
       case 'ai':
         return "Initializing AI Solutions..."
       case 'it':
@@ -221,7 +221,7 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({
           {Array.from({ length: 10 }).map(( index) => (
             <div
               key={index}
-              className={`w-2 h-2 rounded-full animate-pulse ${}}
+              className={`w-2 h-2 rounded-full animate-pulse ${}}}
                 index < (progress / 10) ? 'bg-cyan-400' : 'bg-gray-600'
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-interface PerformanceMetrics {}
+interface PerformanceMetrics {}}
   loadTime: number
   firstContentfulPaint: number
   largestContentfulPaint: number
@@ -7,8 +7,8 @@ interface PerformanceMetrics {}
   cumulativeLayoutShift: number
   timeToInteractive: number
 }
-export const usePerformanceMonitor = () => {}
-}const metricsRef = useRef<PerformanceMetrics>({}
+export const usePerformanceMonitor = () => {}}
+}const metricsRef = useRef<PerformanceMetrics>({}}
     loadTime: 0,
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
@@ -16,23 +16,23 @@ export const usePerformanceMonitor = () => {}
     cumulativeLayoutShift: 0,
     timeToInteractive: 0
   })
-  useEffect(() => {}
-}const measurePerformance = () => {}
+  useEffect(() => {}}
+}const measurePerformance = () => {}}
 }if (typeof window === 'undefined' || !window.performance) return
       // Measure page load time
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      if (navigation) {}
+      if (navigation) {}}
         metricsRef.current.loadTime = navigation.loadEventEnd - navigation.loadEventStart
       }
       // Measure Core Web Vitals
-      const measureWebVitals = () => {}
+      const measureWebVitals = () => {}}
 }// First Contentful Paint (FCP)
         const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0]
-        if (fcpEntry) {}
+        if (fcpEntry) {}}
           metricsRef.current.firstContentfulPaint = fcpEntry.startTime
         }
         // Largest Contentful Paint (LCP)
-        const lcpObserver = new PerformanceObserver((list) => {}
+        const lcpObserver = new PerformanceObserver((list) => {}}
 }const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1]
           metricsRef.current.largestContentfulPaint = lastEntry.startTime
@@ -59,14 +59,14 @@ export const usePerformanceMonitor = () => {}
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
         // Time to Interactive (TTI) - approximation
-        const ttiObserver = new PerformanceObserver((list) => {}
+        const ttiObserver = new PerformanceObserver((list) => {}}
 }const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1]
           metricsRef.current.timeToInteractive = lastEntry.startTime
         })
         ttiObserver.observe({ entryTypes: ['measure'] })
         // Cleanup observers after 10 seconds
-        setTimeout(() => {}
+        setTimeout(() => {}}
 }lcpObserver.disconnect()
           fidObserver.disconnect()
           clsObserver.disconnect()
@@ -74,10 +74,10 @@ export const usePerformanceMonitor = () => {}
         }, 10000)
       }
       // Log performance metrics
-      const logMetrics = () => {}
+      const logMetrics = () => {}}
 }// Send to analytics service
-        if (typeof window !== 'undefined' && (window as any).gtag) {}
-          (window as any).gtag('event', 'performance_metrics', {}
+        if (typeof window !== 'undefined' && (window as any).gtag) {}}
+          (window as any).gtag('event', 'performance_metrics', {}}
             load_time: metricsRef.current.loadTime,
             first_contentful_paint: metricsRef.current.firstContentfulPaint,
             largest_contentful_paint: metricsRef.current.largestContentfulPaint,
@@ -88,9 +88,9 @@ export const usePerformanceMonitor = () => {}
         }
       }
       // Start measuring after page load
-      if (document.readyState === 'complete') {}
+      if (document.readyState === 'complete') {}}
         measureWebVitals()
-      } else {}
+      } else {}}
         window.addEventListener('load', measureWebVitals)
       }
       // Log metrics after 5 seconds
@@ -98,10 +98,11 @@ export const usePerformanceMonitor = () => {}
     }
     measurePerformance()
     // Cleanup
-    return () => {}
+    return () => {}}
 }// Cleanup is handled by the setTimeout in measureWebVitals
     }
   }, [])
   return metricsRef.current
 }
 export default usePerformanceMonitor
+}

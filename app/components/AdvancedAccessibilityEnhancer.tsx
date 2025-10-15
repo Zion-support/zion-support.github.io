@@ -11,8 +11,8 @@ interface AccessibilitySettings {
   reducedMotion: boolean;
   focusIndicator: boolean;
 }
-const AdvancedAccessibilityEnhancer: React.FC = () => {}}
-}const [settings, setSettings] = useState<AccessibilitySettings>({}}
+const AdvancedAccessibilityEnhancer: React.FC = () => {}}}
+}const [settings, setSettings] = useState<AccessibilitySettings>({}}}
     highContrast: false,
     largeText: false,
     screenReader: false,
@@ -21,14 +21,14 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {}}
     focusIndicator: false
   })
   const [isVisible, setIsVisible] = useState(false)
-  useEffect(() => {}}
+  useEffect(() => {}}}
 }// Load saved settings from localStorage
     const savedSettings = localStorage.getItem('accessibilitySettings')
-    if (savedSettings) {}}
+    if (savedSettings) {}}}
       setSettings(JSON.parse(savedSettings))
     }
   }, [])
-  useEffect(() => {}}
+  useEffect(() => {}}}
 }// Apply accessibility settings
     applyAccessibilitySettings(settings)
     // Save settings to localStorage
@@ -43,19 +43,19 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {}}
     } else {
       root.classList.remove('high-contrast');
     }
-    if (newSettings.largeText) {}}
+    if (newSettings.largeText) {}}}
       root.classList.add('large-text')
-    } else {}}
+    } else {}}}
       root.classList.remove('large-text')
     }
-    if (newSettings.reducedMotion) {}}
+    if (newSettings.reducedMotion) {}}}
       root.classList.add('reduced-motion')
-    } else {}}
+    } else {}}}
       root.classList.remove('reduced-motion')
     }
-    if (newSettings.focusIndicator) {}}
+    if (newSettings.focusIndicator) {}}}
       root.classList.add('enhanced-focus')
-    } else {}}
+    } else {}}}
       root.classList.remove('enhanced-focus')
     }
   };
@@ -67,37 +67,37 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {}}
     }))
   }
   const accessibilityFeatures = []
-    {}}
+    {}}}
       key: 'highContrast' as keyof AccessibilitySettings,
       icon: Contrast,
       title: 'High Contrast',
       description: 'Increase color contrast for better visibility'
     },
-    {}}
+    {}}}
       key: 'largeText' as keyof AccessibilitySettings,
       icon: ZoomIn,
       title: 'Large Text',
       description: 'Increase text size for better readability'
     },
-    {}}
+    {}}}
       key: 'screenReader' as keyof AccessibilitySettings,
       icon: Volume2,
       title: 'Screen Reader',
       description: 'Optimize content for screen readers'
     },
-    {}}
+    {}}}
       key: 'keyboardNavigation' as keyof AccessibilitySettings,
       icon: Keyboard,
       title: 'Keyboard Navigation',
       description: 'Enable full keyboard navigation support'
     },
-    {}}
+    {}}}
       key: 'reducedMotion' as keyof AccessibilitySettings,
       icon: Eye,
       title: 'Reduced Motion',
       description: 'Reduce animations and motion effects'
     },
-    {}}
+    {}}}
       key: 'focusIndicator' as keyof AccessibilitySettings,
       icon: MousePointer,
       title: 'Focus Indicator',
@@ -146,7 +146,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {}}
               </div>
               <button
                 onClick={() => toggleSetting(feature.key)}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${}}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${}}}
                   settings[feature.key]
                     ? 'bg-blue-600'
                     : 'bg-gray-200 dark:bg-gray-700'
@@ -154,7 +154,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {}}
                 aria-label={`Toggle ${feature.title}`}
               >
                 <span
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${}}
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${}}}
                     settings[feature.key] ? 'translate-x-6' : 'translate-x-1'
                   }`}
                 />
@@ -165,8 +165,8 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {}}
       </div>
       <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
         <button
-          onClick={() => {}}
-}setSettings({}}
+          onClick={() => {}}}
+}setSettings({}}}
               highContrast: false,
               largeText: false,
               screenReader: false,

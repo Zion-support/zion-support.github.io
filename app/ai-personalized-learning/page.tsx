@@ -80,7 +80,7 @@
     "Languages", "Soft Skills", "Certification Prep", "Technical Skills"
   ];
 
-  return (<>
+  return (<div>
       <Helmet>
         <title>AI Personalized Learning - Zion Tech Group | Adaptive Education Platform</title>
         <meta name="description" content="Revolutionary AI-powered personalized learning platform with adaptive curriculum, multi-modal content, and intelligent progress tracking for individuals and organizations." />
@@ -260,8 +260,10 @@
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 
 export default AiPersonalizedLearningPage;
+
+}

@@ -5,11 +5,11 @@ declare global {
     gtag: (_...args: unknown[]) => void;
   }
 }
-const Analytics: React.FC = () => {}}
-}useEffect(() => {}}
-}const initAnalytics = () => {}}
-}if (typeof window !== "undefined" && window.gtag) {}}
-        window.gtag("config", "GA_MEASUREMENT_ID", {}}
+const Analytics: React.FC = () => {}}}
+}useEffect(() => {}}}
+}const initAnalytics = () => {}}}
+}if (typeof window !== "undefined" && window.gtag) {}}}
+        window.gtag("config", "GA_MEASUREMENT_ID", {}}}
           page_title: document.title,
           page_location: window.location.href})
       }

@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback } from 'react'
 import { useLocation } from 'react-router-dom'
-interface PerformanceOptimizerProps {}}
+interface PerformanceOptimizerProps {}}}
   enableImageOptimization?: boolean
   enablePreloading?: boolean
   enableCaching?: boolean
@@ -12,31 +12,31 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   const location = useLocation();
 
   // Image optimization
-  const optimizeImages = useCallback(() => {}}
+  const optimizeImages = useCallback(() => {}}}
 }if (!enableImageOptimization) return
     const images = document.querySelectorAll('img')
-    images.forEach((img) => {}}
+    images.forEach((img) => {}}}
 }// Add loading="lazy" to images below the fold
-      if (img.getBoundingClientRect().top > window.innerHeight) {}}
+      if (img.getBoundingClientRect().top > window.innerHeight) {}}}
         img.setAttribute('loading', 'lazy')
       }
       // Add decoding="async" for better performance
       img.setAttribute('decoding', 'async')
       // Add fetchpriority="high" for above-the-fold images
-      if (img.getBoundingClientRect().top <= window.innerHeight) {}}
+      if (img.getBoundingClientRect().top <= window.innerHeight) {}}}
         img.setAttribute('fetchpriority', 'high')
       }
     })
   }, [enableImageOptimization])
   // Preload critical resources
-  const preloadCriticalResources = useCallback(() => {}}
+  const preloadCriticalResources = useCallback(() => {}}}
 }if (!enablePreloading) return
     // Preload critical CSS
     const criticalCSS = document.createElement('link')
     criticalCSS.rel = 'preload'
     criticalCSS.href = '/assets/index-Dq8n7JAm.css'
     criticalCSS.as = 'style'
-    criticalCSS.onload = () => {}}
+    criticalCSS.onload = () => {}}}
 }criticalCSS.rel = 'stylesheet'
     }
     document.head.appendChild(criticalCSS)
@@ -48,7 +48,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     document.head.appendChild(fontPreload)
     // Preload next likely page based on current route
     const nextPage = getNextLikelyPage(location.pathname)
-    if (nextPage) {}}
+    if (nextPage) {}}}
       const prefetchLink = document.createElement('link')
       prefetchLink.rel = 'prefetch'
       prefetchLink.href = nextPage
@@ -56,10 +56,10 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
   }, [enablePreloading, location.pathname])
   // Enhanced caching strategies
-  const setupCaching = useCallback(() => {}}
+  const setupCaching = useCallback(() => {}}}
 }if (!enableCaching) return
     // Service Worker registration for caching
-    if ('serviceWorker' in navigator) {}}
+    if ('serviceWorker' in navigator) {}}}
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
           if (process.env.NODE_ENV === 'development') {
@@ -72,8 +72,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
     // Set up cache headers for static assets
     const staticAssets = document.querySelectorAll('link[rel="stylesheet"], script[src]')
-    staticAssets.forEach((asset) => {}}
-}if (asset instanceof HTMLLinkElement && asset.href) {}}
+    staticAssets.forEach((asset) => {}}}
+}if (asset instanceof HTMLLinkElement && asset.href) {}}}
         // Add cache control headers via meta tags
         const cacheMeta = document.createElement('meta')
         cacheMeta.setAttribute('http-equiv', 'Cache-Control')
@@ -83,7 +83,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     })
   }, [enableCaching])
   // Compression optimization
-  const setupCompression = useCallback(() => {}}
+  const setupCompression = useCallback(() => {}}}
 }if (!enableCompression) return
     // Enable gzip compression hints
     const compressionMeta = document.createElement('meta')
@@ -92,20 +92,20 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     document.head.appendChild(compressionMeta)
     // Optimize resource loading
     const scripts = document.querySelectorAll('script[src]')
-    scripts.forEach((script) => {}}
-}if (script instanceof HTMLScriptElement) {}}
+    scripts.forEach((script) => {}}}
+}if (script instanceof HTMLScriptElement) {}}}
         script.setAttribute('defer', '')
         script.setAttribute('async', '')
       }
     })
   }, [enableCompression])
   // Memory management
-  const optimizeMemory = useCallback(() => {}}
+  const optimizeMemory = useCallback(() => {}}}
 }// Clean up unused event listeners
-    const cleanup = () => {}}
+    const cleanup = () => {}}}
 }// Remove old event listeners that might be causing memory leaks
       const oldListeners = document.querySelectorAll('[data-listener-cleanup]')
-      oldListeners.forEach((element) => {}}
+      oldListeners.forEach((element) => {}}}
 }element.removeAttribute('data-listener-cleanup')
       })
     }
@@ -114,15 +114,15 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     return () => clearInterval(cleanupInterval)
   }, [])
   // Bundle splitting optimization
-  const optimizeBundleSplitting = useCallback(() => {}}
+  const optimizeBundleSplitting = useCallback(() => {}}}
 }// Dynamically import non-critical components
-    const lazyLoadComponents = () => {}}
-}const observer = new IntersectionObserver((entries) => {}}
-}entries.forEach((entry) => {}}
-}if (entry.isIntersecting) {}}
+    const lazyLoadComponents = () => {}}}
+}const observer = new IntersectionObserver((entries) => {}}}
+}entries.forEach((entry) => {}}}
+}if (entry.isIntersecting) {}}}
             const target = entry.target as HTMLElement
             const componentName = target.dataset.lazyComponent
-            if (componentName) {}}
+            if (componentName) {}}}
               // Mark component as loaded
               target.classList.add('loaded')
               observer.unobserve(target)
@@ -135,20 +135,20 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       lazyElements.forEach((element) => observer.observe(element))
     }
     // Start lazy loading after initial page load
-    if (document.readyState === 'complete') {}}
+    if (document.readyState === 'complete') {}}}
       lazyLoadComponents()
-    } else {}}
+    } else {}}}
       window.addEventListener('load', lazyLoadComponents)
     }
   }, [])
   // Performance monitoring
-  const setupPerformanceMonitoring = useCallback(() => {}}
+  const setupPerformanceMonitoring = useCallback(() => {}}}
 }// Monitor Core Web Vitals
-    const observer = new PerformanceObserver((list) => {}}
-}list.getEntries().forEach((entry) => {}}
-}if (entry.entryType === 'largest-contentful-paint') {}}
+    const observer = new PerformanceObserver((list) => {}}}
+}list.getEntries().forEach((entry) => {}}}
+}if (entry.entryType === 'largest-contentful-paint') {}}}
           const lcp = entry as PerformanceEntry & { startTime: number }
-          if (lcp.startTime > 2500) {}}
+          if (lcp.startTime > 2500) {}}}
             // LCP is too slow, trigger optimization
             optimizeImages()
           }
@@ -157,13 +157,13 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     })
     observer.observe({ entryTypes: ['largest-contentful-paint'] })
     // Monitor memory usage
-    if ('memory' in performance) {}}
-      const checkMemory = () => {}}
+    if ('memory' in performance) {}}}
+      const checkMemory = () => {}}}
 }const memory = (performance as any).memory
         const usedMemory = memory.usedJSHeapSize / memory.jsHeapSizeLimit
-        if (usedMemory > 0.8) {}}
+        if (usedMemory > 0.8) {}}}
           // Memory usage is high, trigger garbage collection
-          if (window.gc) {}}
+          if (window.gc) {}}}
             window.gc()
           }
         }
@@ -172,10 +172,10 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
   }, [optimizeImages])
   // Initialize all optimizations
-  useEffect(() => {}}
+  useEffect(() => {}}}
 }const cleanup = optimizeMemory()
     // Run optimizations after a short delay to not block initial render
-    const timeoutId = setTimeout(() => {}}
+    const timeoutId = setTimeout(() => {}}}
 }optimizeImages()
       preloadCriticalResources()
       setupCaching()
@@ -183,7 +183,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       optimizeBundleSplitting()
       setupPerformanceMonitoring()
     }, 100)
-    return () => {}}
+    return () => {}}}
 }clearTimeout(timeoutId)
       cleanup()
     }
@@ -196,8 +196,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     optimizeBundleSplitting,
     setupPerformanceMonitoring])
   // Re-run optimizations on route change
-  useEffect(() => {}}
-}const timeoutId = setTimeout(() => {}}
+  useEffect(() => {}}}
+}const timeoutId = setTimeout(() => {}}}
 }optimizeImages()
       preloadCriticalResources()
     }, 200)
@@ -206,8 +206,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   return null; // This component doesn't render anything
 }
 // Helper function to determine next likely page
-const getNextLikelyPage = (currentPath: string): string | null => {}}
-}const likelyPages: Record<string, string> = {}}
+const getNextLikelyPage = (currentPath: string): string | null => {}}}
+}const likelyPages: Record<string, string> = {}}}
     '/': '/about',
     '/about': '/services',
     '/services': '/contact',

@@ -130,7 +130,6 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
     { number: '45%', label: 'Higher Satisfaction' }
   ];
 
-const AiCustomerSupportChatbotPage: React.FC = () => {
   return (
     <div>
       <Helmet>
@@ -399,3 +398,4 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
 };
 
 export default AiCustomerSupportChatbotPage;
+}

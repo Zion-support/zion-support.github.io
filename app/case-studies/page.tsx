@@ -13,7 +13,7 @@ import { Helmet } from 'react-helmet-async';
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Case Studies - Zion Tech Group | Success Stories</title>
         <meta name="description" content="Explore our successful projects and case studies showcasing our expertise in AI, cloud, and cybersecurity solutions." />
@@ -146,6 +146,8 @@ import { Helmet } from 'react-helmet-async';
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
   };
+
+}

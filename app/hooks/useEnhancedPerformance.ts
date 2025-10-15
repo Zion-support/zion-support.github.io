@@ -18,16 +18,17 @@ export const useEnhancedPerformance = () => {
       // Process data logic here
       setData(input)
       setError(null)
-    } catch (err) {}
+    } catch (err) {}}
       setError(err instanceof Error ? err.message : "An error occurred")
-    } finally {}
+    } finally {}}
       setLoading(false)
     }
   }
-  return {}
+  return {}}
     data,
     loading,
     error,
     processData}
 }
 export default useEnhancedPerformance
+}

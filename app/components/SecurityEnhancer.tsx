@@ -1,5 +1,5 @@
 import React from "react"
-interface SecurityEnhancerProps {}}
+interface SecurityEnhancerProps {}}}
   children?: React.ReactNode
   className?: string
   title?: string

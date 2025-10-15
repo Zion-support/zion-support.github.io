@@ -10,9 +10,9 @@ interface AnalyticsContextType {
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>()
   undefined,
 )
-export const useAnalytics = () => {}}
+export const useAnalytics = () => {}}}
 }const context = useContext(AnalyticsContext)
-  if (!context) {}}
+  if (!context) {}}}
     throw new Error("useAnalytics must be used within an AnalyticsProvider")
   }
   return context
@@ -24,14 +24,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     // Initialize analytics
     if (typeof window !== "undefined") {
       // Google Analytics
-      if (process.env.NODE_ENV === "production") {}}
+      if (process.env.NODE_ENV === "production") {}}}
         const script = document.createElement("script")
         script.async = true
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`
         document.head.appendChild(script)
         (window as unknown as { dataLayer: unknown[] }).dataLayer =
           (window as unknown as { dataLayer: unknown[] }).dataLayer || []
-        function gtag(...args: unknown[]) {}}
+        function gtag(...args: unknown[]) {}}}
 }(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
         }
         gtag("js", new Date())
@@ -61,7 +61,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
           "config",
           process.env.REACT_APP_GA_ID,
-          {}}
+          {}}}
             user_id: userId,
             custom_map: traits},
         )
@@ -77,7 +77,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
           "event",
           "page_view",
-          {}}
+          {}}}
             page_title: name,
             page_location: window.location.href,
             ...properties},
@@ -86,7 +86,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       // Custom analytics
       }
   }
-  const value: AnalyticsContextType = {}}
+  const value: AnalyticsContextType = {}}}
     track,
     identify,
     page}
@@ -105,8 +105,8 @@ declare global {
   }
 }
 // Extend Window interface for TypeScript
-declare global {}}
-  interface Window {}}
+declare global {}}}
+  interface Window {}}}
     dataLayer: unknown[]
     gtag: (...args: unknown[]) => void
   }

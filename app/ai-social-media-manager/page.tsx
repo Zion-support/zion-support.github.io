@@ -1,48 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Share2, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  Target, 
-  TrendingUp,
-  Clock,
-  Shield,
-  Smartphone,
-  Globe,
-  MessageSquare,
-  FileText,
-  Settings,
-  Star,
-  Award,
-  Phone,
-  MapPin,
-  Envelope,
-  Instagram,
-  Twitter,
-  Facebook,
-  Linkedin,
-  Youtube,
-  Music
-} from 'lucide-react';
 
-const AISocialMediaManagerPage: React.FC = () => {
-  const features = [
-    'AI-powered content generation for all platforms',
-    'Automated posting across 8+ social networks',
-    'Smart hashtag optimization and suggestions',
-    'Real-time engagement monitoring',
-    'Advanced analytics and performance insights',
-    'Content calendar and scheduling',
-    'Brand voice consistency across platforms',
-    'Competitor analysis and benchmarking',
-    'Influencer collaboration tools',
-    'Crisis management and response automation'
-  ];
+
+import { Link } from 'react-router-dom';
+
+
+
 
   const benefits = [
     'Increase social media engagement by 85%',

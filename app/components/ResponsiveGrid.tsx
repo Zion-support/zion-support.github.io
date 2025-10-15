@@ -1,9 +1,9 @@
 import React from 'react'
 import { cn } from '../lib/utils'
-interface ResponsiveGridProps {}}
+interface ResponsiveGridProps {}}}
   children: React.ReactNode
   className?: string
-  cols?: {}}
+  cols?: {}}}
     default: number
     sm?: number
     md?: number
@@ -22,7 +22,7 @@ const ResponsiveGrid = (_{
     lg: 'gap-6',
     xl: 'gap-8'
   }
-  const gridColsClasses = {}}
+  const gridColsClasses = {}}}
     1: 'grid-cols-1',
     2: 'grid-cols-2',
     3: 'grid-cols-3',

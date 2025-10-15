@@ -12,7 +12,7 @@ export default function NewsletterSignup() {
     // Handle newsletter signup
     };
 
-  return (<>
+  return (<div>
       <Helmet>
         <title>Newsletter Signup - Zion Tech Group</title>
       </Helmet>

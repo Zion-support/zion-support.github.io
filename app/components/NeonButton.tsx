@@ -1,6 +1,6 @@
 import React from "react"
 import { ArrowRight } from "lucide-react"
-interface NeonButtonProps {}}
+interface NeonButtonProps {}}}
   children?: React.ReactNode
   className?: string
   title?: string
@@ -22,7 +22,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
     sm: "px-4 py-2 text-sm",
     md: "px-6 py-3 text-base",
     lg: "px-8 py-4 text-lg"}
-  const variantClasses = {}}
+  const variantClasses = {}}}
     primary:
       "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-blue-500/25 hover:shadow-2xl",
     secondary:
@@ -39,7 +39,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
       {!icon && <ArrowRight className="w-5 h-5 ml-2" />}
 </div>
   )
-  if (href) {}}
+  if (href) {}}}
     return ()
       <a href={href} className={buttonClasses}>
         {content}
