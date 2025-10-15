@@ -57,10 +57,4 @@ const Page5gInfrastructurePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Page5gInfrastructurePage;
-=======
-export default FiveGinfrastructurePage;
-
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

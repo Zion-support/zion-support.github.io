@@ -1,24 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-=======
-import { 
-  BarChart3, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Phone,
-  Mail,
-  Play,
-  Target
-} from 'lucide-react';
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
 
 const AiAnalyticsDashboardProPage: React.FC = () => {
   const services = [

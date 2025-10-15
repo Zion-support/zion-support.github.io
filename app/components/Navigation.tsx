@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, Phone, Mail, ChevronDownIcon } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-<<<<<<< HEAD
-=======
-import { Menu, X, Zap, Phone, Mail } from 'lucide-react';
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
 
 interface NavigationProps {
   onSidebarToggle?: () => void;

@@ -49,12 +49,5 @@ const Ai2025Sept30OperationalTrustScorecardsV3Page: React.FC = () => {
       </div>
 </>
   );
-<<<<<<< HEAD
 }
 export default Ai2025Sept30OperationalTrustScorecardsV 3 Page;
-=======
-};
-
-export default Ai2025Sept30OperationalTrustScorecardsV3Page;
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

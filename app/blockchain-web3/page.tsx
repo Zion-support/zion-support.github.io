@@ -80,12 +80,5 @@ const BlockchainWeb 3 Page: React.FC = () => {
       </div>
 </>
   );
-<<<<<<< HEAD
 }
 export default BlockchainWeb 3 Page;
-=======
-};
-
-export default BlockchainWeb3Page;
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

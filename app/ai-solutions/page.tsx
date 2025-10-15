@@ -87,7 +87,3 @@ const AiSolutionsPage: React.FC = () => {
 };
 
 export default AiSolutionsPage;
-<<<<<<< HEAD
-=======
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

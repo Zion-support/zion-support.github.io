@@ -1,28 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-=======
-import { 
-  Code, 
-  Globe, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Phone,
-  Mail,
-  Play,
-  Terminal,
-  GitBranch,
-  Bug,
-  FileText,
-  Cpu,
-  Database,
-  Cloud
-} from 'lucide-react';
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
 
 const AiCodeAssistantProPage: React.FC = () => {
   const services = [

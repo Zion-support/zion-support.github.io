@@ -9,11 +9,7 @@ const PageLoader: React.FC = () => (
 
 // Dynamic page loader that loads pages on demand
 const DynamicPageLoader: React.FC<{ pagePath: string }> = ({ pagePath }) => {
-<<<<<<< HEAD
   // const location = useLocation(); // Removed unused variable
-=======
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
   
   // Create a dynamic import based on the current path
   const PageComponent = React.useMemo(() => {

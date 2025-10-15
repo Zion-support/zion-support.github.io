@@ -1,27 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-=======
-import { 
-  Wifi, 
-  Shield, 
-  Globe, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Phone,
-  Mail,
-  Play,
-  Settings,
-  Smartphone,
-  Cloud,
-  Cpu,
-  BarChart3,
-  Activity
-} from 'lucide-react';
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
 
 const Page5gImplementationPage: React.FC = () => {
   const services = [
@@ -77,10 +57,4 @@ const Page5gImplementationPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Page5gImplementationPage;
-=======
-export default FiveGimplementationPage;
-
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

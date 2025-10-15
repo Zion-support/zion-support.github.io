@@ -81,10 +81,4 @@ const Page5gSupportPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Page5gSupportPage;
-=======
-export default FiveGsupportPage;
-
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

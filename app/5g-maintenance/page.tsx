@@ -70,10 +70,4 @@ const Page5gMaintenancePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Page5gMaintenancePage;
-=======
-export default FiveGmaintenancePage;
-
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

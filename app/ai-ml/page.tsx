@@ -98,7 +98,3 @@ const AiMlPage: React.FC = () => {
 };
 
 export default AiMlPage;
-<<<<<<< HEAD
-=======
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

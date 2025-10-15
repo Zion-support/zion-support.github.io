@@ -49,12 +49,5 @@ const AiEnterpriseTransformation2025Page: React.FC = () => {
       </div>
 </>
   );
-<<<<<<< HEAD
 }
 export default AiEnterpriseTransformation20 2 5 Page;
-=======
-};
-
-export default AiEnterpriseTransformation2025Page;
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

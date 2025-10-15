@@ -66,7 +66,6 @@ const SupportPage: React.FC = () => {
       name:'Phone Support',
       description:'Speak directly with our technical experts',
       icon: Phone,
-<<<<<<< HEAD
       contact:'+1 (555) 123-4567',
       availability:'24/7 Available',
       color:'text-blue-400'
@@ -80,23 +79,6 @@ const SupportPage: React.FC = () => {
     },{
       name:'Live Chat',
       description:'Instant help when you need it most',
-=======
-      contact: "+1 302 464 0950",
-      availability: "24/7 Available",
-      color: "text-blue-400",
-    },
-    {
-      name: "Email Support",
-      description: "Get detailed responses to your questions",
-      icon: Mail,
-      contact: "kleber@ziontechgroup.com",
-      availability: "Response within 2 hours",
-      color: "text-green-400",
-    },
-    {
-      name: "Live Chat",
-      description: "Instant help when you need it most",
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
       icon: MessageCircle,
       contact:'Available on website',
       availability:'Mon-Fri 9AM-6PM EST',
@@ -105,17 +87,10 @@ const SupportPage: React.FC = () => {
       name:'Emergency Support',
       description:'Critical issues resolved quickly',
       icon: Zap,
-<<<<<<< HEAD
       contact:'+1 (555) 911-TECH',
       availability:'24/7 Critical Support',
       color:'text-red-400'
     }
-=======
-      contact: "+1 302 464 0950",
-      availability: "24/7 Critical Support",
-      color: "text-red-400",
-    },
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
   ];
 
   const categories = ['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];
@@ -297,7 +272,3 @@ const SupportPage: React.FC = () => {
 };
 
 export default SupportPage;
-<<<<<<< HEAD
-=======
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

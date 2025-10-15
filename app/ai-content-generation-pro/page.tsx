@@ -98,7 +98,3 @@ const AiContentGenerationProPage: React.FC = () => {
 };
 
 export default AiContentGenerationProPage;
-<<<<<<< HEAD
-=======
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

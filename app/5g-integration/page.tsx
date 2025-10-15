@@ -70,10 +70,4 @@ const Page5gIntegrationPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Page5gIntegrationPage;
-=======
-export default FiveGintegrationPage;
-
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

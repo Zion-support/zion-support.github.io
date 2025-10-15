@@ -58,10 +58,4 @@ const Page5gMonitoringPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Page5gMonitoringPage;
-=======
-export default FiveGmonitoringPage;
-
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

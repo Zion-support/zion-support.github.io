@@ -207,10 +207,6 @@ import React from 'react'; import { Helmet } from 'react-helmet-async'; const Ab
       </div>
 </>
   );
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
 
 export default AboutPage;

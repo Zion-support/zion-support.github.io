@@ -70,10 +70,4 @@ const Page5gMigrationPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Page5gMigrationPage;
-=======
-export default FiveGmigrationPage;
-
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

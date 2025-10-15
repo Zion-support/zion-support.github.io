@@ -98,7 +98,3 @@ const MarketingAutomationPage: React.FC = () => {
 };
 
 export default MarketingAutomationPage;
-<<<<<<< HEAD
-=======
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

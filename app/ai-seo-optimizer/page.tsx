@@ -98,7 +98,3 @@ const AiSeoOptimizerPage: React.FC = () => {
 };
 
 export default AiSeoOptimizerPage;
-<<<<<<< HEAD
-=======
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

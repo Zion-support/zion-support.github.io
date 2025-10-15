@@ -94,7 +94,3 @@ const TermsPage: React.FC = () => {
 };
 
 export default TermsPage;
-<<<<<<< HEAD
-=======
-
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59

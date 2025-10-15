@@ -528,8 +528,4 @@ const AiEducationPlatformPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AiEducationPlatformPage;
-=======
-export default AiEducationPlatformPage;
->>>>>>> e147079fabc5ed4c39aa0de061f6683aa394ec59
