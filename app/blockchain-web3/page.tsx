@@ -78,8 +78,10 @@ import SEOHead from '../components/SEOHead';
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
 export default BlockchainWeb3Page;
+
+}

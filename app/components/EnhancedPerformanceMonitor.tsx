@@ -11,7 +11,7 @@ interface PerformanceMetrics {
   timeToFirstByte: number;
   totalBlockingTime: number;
 }
-interface PerformanceMonitorProps {}
+interface PerformanceMonitorProps {}}
   showInProduction?: boolean
 }
 
@@ -28,7 +28,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const measurePerformance = async () => {
       try {
         // Measure Core Web Vitals
-        const vitals: Partial<PerformanceMetrics> = {};
+        const vitals: Partial<PerformanceMetrics> = {}};
 
         // Get FCP
         onFCP((metric: unknown) => {
@@ -61,10 +61,10 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')
         // Calculate Total Blocking Time
         const longTasks = performance.getEntriesByType('longtask')
-        const totalBlockingTime = longTasks.reduce((total, task) => {}
+        const totalBlockingTime = longTasks.reduce((total, task) => {}}
 }return total + (task.duration - 50); // 50ms is the threshold
         }, 0)
-        const finalMetrics: PerformanceMetrics = {}
+        const finalMetrics: PerformanceMetrics = {}}
           loadTime: navigation.loadEventEnd - navigation.loadEventStart,
           firstContentfulPaint: fcp ? fcp.startTime : vitals.firstContentfulPaint || 0,
           largestContentfulPaint: vitals.largestContentfulPaint || 0,
@@ -76,12 +76,12 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         setMetrics(finalMetrics)
         setIsLoading(false)
         // Send metrics to analytics (if available)
-        if (typeof window !== 'undefined' && window.gtag) {}
-          window.gtag('event', 'web_vitals', {}
+        if (typeof window !== 'undefined' && window.gtag) {}}
+          window.gtag('event', 'web_vitals', {}}
             event_category: 'Performance',
             event_label: 'Core Web Vitals',
             value: Math.round(finalMetrics.largestContentfulPaint),
-            custom_map: {}
+            custom_map: {}}
               'metric_1': finalMetrics.firstContentfulPaint,
               'metric_2': finalMetrics.largestContentfulPaint,
               'metric_3': finalMetrics.firstInputDelay,
@@ -95,17 +95,17 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }
     }
     // Measure after page load
-    if (document.readyState === 'complete') {}
+    if (document.readyState === 'complete') {}}
       measurePerformance()
-    } else {}
+    } else {}}
       window.addEventListener('load', measurePerformance)
     }
-    return () => {}
+    return () => {}}
 }window.removeEventListener('load', measurePerformance)
     }
   }, [])
   // Only show in development or if explicitly enabled
-  if ((process.env.NODE_ENV !== 'development' && !showInProduction) || !metrics) {}
+  if ((process.env.NODE_ENV !== 'development' && !showInProduction) || !metrics) {}}
     return null
   }
 
@@ -219,3 +219,4 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   )
 }
 export default EnhancedPerformanceMonitor
+}

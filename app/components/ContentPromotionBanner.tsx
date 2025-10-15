@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { ArrowRight, Star, Zap } from "lucide-react"
-interface ContentPromotionBannerProps {}
+interface ContentPromotionBannerProps {}}
   title?: string
   description?: string
   ctaText?: string
@@ -24,8 +24,8 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
         return "bg-gradient-to-r from-cyan-500 to-purple-600"
     }
   }
-  const getIcon = () => {}
-}switch (variant) {}
+  const getIcon = () => {}}
+}switch (variant) {}}
       case "primary":
         return <Zap className="w-6 h-6" />
       case "secondary":
@@ -63,3 +63,4 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
   )
 }
 export default ContentPromotionBanner
+}

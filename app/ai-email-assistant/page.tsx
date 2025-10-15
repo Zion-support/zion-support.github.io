@@ -1,7 +1,7 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-  return (<>
+  return (<div>
       <Helmet>
         <title>AI Email Assistant - Zion Tech Group</title>
         <meta
@@ -192,8 +192,10 @@ import SEOHead from '../components/SEOHead';
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
 export default AiEmailAssistantPage;
+
+}

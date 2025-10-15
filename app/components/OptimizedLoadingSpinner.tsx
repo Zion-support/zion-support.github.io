@@ -2,7 +2,7 @@ import React, { memo, useMemo } from "react"
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
 import { ArrowRight } from "lucide-react"
-interface OptimizedLoadingSpinnerProps {}
+interface OptimizedLoadingSpinnerProps {}}
   size?: "xs" | "sm" | "md" | "lg" | "xl"
   variant?: "dots" | "pulse" | "spinner" | "skeleton" | "bars"
   text?: string
@@ -39,15 +39,15 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({
         purple: "text-purple-500"}),
       [],
     )
-    const renderSpinner = () => {}
-}switch (variant) {}
+    const renderSpinner = () => {}}
+}switch (variant) {}}
         case "dots":
           return (<div className="flex space-x-1">
               {[0, 1, _2].map((i) => (
                 <div
                   key={i}
                   className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`}
-                  style={{}
+                  style={{}}
                     animationDelay: `${i * 0.2}s`,
                     animationDuration: "1s"}}
                 />
@@ -79,7 +79,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({
                 <div
                   key={i}
                   className={`w-1 ${colorClasses[color]} animate-pulse`}
-                  style={{}
+                  style={{}}
                     height: `${8 + i * 4}px`,
                     animationDelay: `${i * 0.1}s`,
                     animationDuration: "0.8s"}}
@@ -126,3 +126,4 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({
 )
 OptimizedLoadingSpinner.displayName = "OptimizedLoadingSpinner"
 export default OptimizedLoadingSpinner
+}

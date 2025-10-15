@@ -1,12 +1,12 @@
 import React from "react"
 import { TrendingUp, Users, Award, Zap } from "lucide-react"
-interface StatItem {}
+interface StatItem {}}
   value: string
   label: string
   icon: React.ReactNode
   color: string
 }
-interface ContentStatisticsProps {}
+interface ContentStatisticsProps {}}
   stats?: StatItem[]
   className?: string
 }
@@ -46,3 +46,4 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
   )
 }
 export default ContentStatistics
+}

@@ -1,55 +1,11 @@
-import React from 'react';
+
 import {  } from "lucide-react";
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const DevOpsServicesPage = () => {
-  const services = [
-    {
-      title: "CI/CD Pipeline Setup",
-      description: "Automated continuous integration and deployment pipelines for faster, more reliable software delivery",
-      icon: <Zap className="w-8 h-8" />,
-      features: ["Automated testing", "Deployment automation", "Rollback capabilities", "Multi-environment support"],
-      price: "From $2,500/month"
-    },
-    {
-      title: "Infrastructure as Code",
-      description: "Manage and provision infrastructure using code for consistency and scalability",
-      icon: <Code className="w-8 h-8" />,
-      features: ["Terraform/CloudFormation", "Version control", "Environment consistency", "Cost optimization"],
-      price: "From $1,800/month"
-    },
-    {
-      title: "Container Orchestration",
-      description: "Kubernetes and Docker container management for scalable applications",
-      icon: <Cloud className="w-8 h-8" />,
-      features: ["Kubernetes setup", "Docker optimization", "Auto-scaling", "Service mesh"],
-      price: "From $3,200/month"
-    },
-    {
-      title: "Monitoring & Observability",
-      description: "Comprehensive monitoring solutions for application and infrastructure health",
-      icon: <BarChart3 className="w-8 h-8" />,
-      features: ["Real-time monitoring", "Alerting systems", "Performance metrics", "Log aggregation"],
-      price: "From $1,500/month"
-    },
-    {
-      title: "Security Automation",
-      description: "Automated security scanning and compliance checks in your CI/CD pipeline",
-      icon: <Shield className="w-8 h-8" />,
-      features: ["Vulnerability scanning", "Compliance checks", "Security testing", "Policy enforcement"],
-      price: "From $2,000/month"
-    },
-    {
-      title: "Cloud Migration",
-      description: "Seamless migration to cloud platforms with zero downtime",
-      icon: <Globe className="w-8 h-8" />,
-      features: ["AWS/Azure/GCP migration", "Data migration", "Application modernization", "Cost optimization"],
-      price: "From $5,000/month"
-    }
-  ];
+
 
   const benefits = [
     {

@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet-async"
 import { ArrowRight, Phone, Mail, CheckCircle, Star } from "lucide-react"
-interface GenericServicePageProps {}
+interface GenericServicePageProps {}}
   title: string
   description: string
   icon: React.ComponentType<any>
@@ -187,3 +187,4 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
   )
 }
 export default GenericServicePage
+}

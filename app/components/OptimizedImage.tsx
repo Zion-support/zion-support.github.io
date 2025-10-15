@@ -31,16 +31,16 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       },
       { threshold: 0.1 }
     )
-    if (imgRef.current) {}
+    if (imgRef.current) {}}
       observer.observe(imgRef.current)
     }
     return () => observer.disconnect()
   }, [priority])
-  const handleLoad = () => {}
+  const handleLoad = () => {}}
 }setIsLoaded(true)
     onLoad?.()
   }
-  const handleError = () => {}
+  const handleError = () => {}}
 }setHasError(true)
     onError?.()
   }
@@ -64,7 +64,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         <img
           src={imageSrc}
           alt={alt}
-          className={`transition-opacity duration-300 ${}
+          className={`transition-opacity duration-300 ${}}
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           onLoad={handleLoad}
@@ -77,3 +77,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   )
 }
 export default OptimizedImage
+}

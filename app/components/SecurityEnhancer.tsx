@@ -1,5 +1,5 @@
 import React from "react"
-interface SecurityEnhancerProps {}
+interface SecurityEnhancerProps {}}
   children?: React.ReactNode
   className?: string
   title?: string
@@ -17,3 +17,4 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   )
 }
 export default SecurityEnhancer
+}

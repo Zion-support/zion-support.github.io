@@ -1,15 +1,15 @@
 import React from "react"
 import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from "lucide-react"
 import { Link } from "react-router-dom"
-interface EnhancedHeroProps {}
+interface EnhancedHeroProps {}}
   title?: string
   subtitle?: string
   description?: string
-  primaryCta?: {}
+  primaryCta?: {}}
     text: string
     href: string
   }
-  secondaryCta?: {}
+  secondaryCta?: {}}
     text: string
     href: string
   }
@@ -29,12 +29,12 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
       title: "Call Us",
       details: "+1 (555) 123-4567",
       description: "Mon-Fri 9 AM-6 PM PST"},
-    {}
+    {}}
       icon: Mail,
       title: "Email Us",
       details: "info@ziontechgroup.com",
       description: "We respond within 24 hours"},
-    {}
+    {}}
       icon: MapPin,
       title: "Visit Us",
       details: "123 Tech Street, San Francisco, CA",
@@ -137,3 +137,4 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
   )
 }
 export default EnhancedHero
+}

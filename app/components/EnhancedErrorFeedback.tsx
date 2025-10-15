@@ -7,31 +7,31 @@ interface Props {
   fallback?: ReactNode;
   onError?: (_error: Error, errorInfo: ErrorInfo) => void;
 }
-interface State {}
+interface State {}}
   hasError: boolean
   error: Error | null
   errorInfo: ErrorInfo | null
   retryCount: number
 }
-export class GlobalErrorBoundary extends Component<Props, State> {}
+export class GlobalErrorBoundary extends Component<Props, State> {}}
   private maxRetries = 3
-  constructor(props: Props) {}
+  constructor(props: Props) {}}
     super(props)
-    this.state = {}
+    this.state = {}}
       hasError: false,
       error: null,
       errorInfo: null,
       retryCount: 0
     }
   }
-  static getDerivedStateFromError(error: Error): Partial<State> {}
-    return {}
+  static getDerivedStateFromError(error: Error): Partial<State> {}}
+    return {}}
       hasError: true,
       error
     }
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
-    this.setState({}
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}}
+    this.setState({}}
       error,
       errorInfo
     })
@@ -40,11 +40,11 @@ export class GlobalErrorBoundary extends Component<Props, State> {}
       }
 
     // Call custom error handler if provided
-    if (this.props.onError) {}
+    if (this.props.onError) {}}
       this.props.onError(error, errorInfo)
     }
     // Log to external service in production
-    if (process.env.NODE_ENV === 'production') {}
+    if (process.env.NODE_ENV === 'production') {}}
       this.logErrorToService(error, errorInfo)
     }
   }
@@ -57,9 +57,9 @@ export class GlobalErrorBoundary extends Component<Props, State> {}
       url: window.location.href
     })
   }
-  private handleRetry = () => {}
-}if (this.state.retryCount < this.maxRetries) {}
-      this.setState(prevState => ({}
+  private handleRetry = () => {}}
+}if (this.state.retryCount < this.maxRetries) {}}
+      this.setState(prevState => ({}}
         hasError: false,
         error: null,
         errorInfo: null,
@@ -67,16 +67,16 @@ export class GlobalErrorBoundary extends Component<Props, State> {}
       }))
     }
   }
-  private handleGoHome = () => {}
+  private handleGoHome = () => {}}
 }window.location.href = '/'
   }
-  private handleReload = () => {}
+  private handleReload = () => {}}
 }window.location.reload()
   }
-  render() {}
-    if (this.state.hasError) {}
+  render() {}}
+    if (this.state.hasError) {}}
       // Use custom fallback if provided
-      if (this.props.fallback) {}
+      if (this.props.fallback) {}}
         return this.props.fallback
       }
       return ()
@@ -177,7 +177,7 @@ export const ErrorBoundary: React.FC<{
     window.addEventListener('error', handleError)
     return () => window.removeEventListener('error', handleError)
   }, [onError])
-  if (hasError) {}
+  if (hasError) {}}
     return fallback || ()
       <div className="p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
         <p className="text-red-300">Something went wrong: {error?.message}</p>
@@ -187,3 +187,4 @@ export const ErrorBoundary: React.FC<{
   return <>{children}</>
 }
 export default GlobalErrorBoundary
+}

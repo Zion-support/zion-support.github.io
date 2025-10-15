@@ -148,7 +148,7 @@ const AIProjectManagementProPage: React.FC = () => {
 
 const AiProjectManagementProPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Project Management Pro - Intelligent Project Management | Zion Tech Group</title>
         <meta name="description" content="Transform your project management with AI-powered automation. Increase completion rates by 40%, reduce delays by 60%, and save 15+ hours weekly with our intelligent project management platform." />
@@ -410,8 +410,9 @@ const AiProjectManagementProPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
 export default AIProjectManagementProPage;
+}

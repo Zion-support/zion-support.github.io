@@ -1,7 +1,7 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-  return (<>
+  return (<div>
       <Helmet>
         <title>AI Expense Tracker - Zion Tech Group</title>
         <meta
@@ -194,8 +194,10 @@ import SEOHead from '../components/SEOHead';
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
 export default AiExpenseTrackerPage;
+
+}

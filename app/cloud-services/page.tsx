@@ -3,7 +3,7 @@ import SEOHead from '../components/SEOHead';
 
 const CloudServicesPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Cloud Services - Zion Tech Group | Cloud Migration & Infrastructure</title>
         <meta
@@ -99,3 +99,7 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </section>
 
+
+</div>
+}
+</div>

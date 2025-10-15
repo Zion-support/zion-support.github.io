@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { ArrowRight } from "lucide-react"
-export default function OptimizedLoading() {}
+export default function OptimizedLoading() {}}
 }return ()
     <div className="optimized-loading-container">
       <div className="loading-content">

@@ -12,15 +12,15 @@ const CookieConsent: React.FC = () => {
       setIsVisible(true);
     }
   }, [])
-  const handleAccept = () => {}
+  const handleAccept = () => {}}
 }localStorage.setItem("cookie-consent", "accepted")
     setIsVisible(false)
   }
-  const handleReject = () => {}
+  const handleReject = () => {}}
 }localStorage.setItem("cookie-consent", "rejected")
     setIsVisible(false)
   }
-  const handleSettings = () => {}
+  const handleSettings = () => {}}
 }setShowSettings(!showSettings)
   }
   if (!isVisible) return null
@@ -98,3 +98,4 @@ const CookieConsent: React.FC = () => {
   )
 }
 export default CookieConsent
+}

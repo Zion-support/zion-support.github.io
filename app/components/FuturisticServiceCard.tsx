@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Star, CheckCircle } from 'lucide-react';
+
+
 import FuturisticCard from './FuturisticCard';
 import FuturisticButton from './FuturisticButton';
 import FuturisticText from './FuturisticText';

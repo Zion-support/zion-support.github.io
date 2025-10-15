@@ -1,5 +1,5 @@
 import React from "react"
-interface ServiceWorkerProps {}
+interface ServiceWorkerProps {}}
   children?: React.ReactNode
   className?: string
 }
@@ -10,3 +10,5 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({
 };
 
 export default ServiceWorker;
+
+}

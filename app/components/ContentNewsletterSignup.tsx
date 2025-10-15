@@ -27,7 +27,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       setIsLoading(false);
     }
   }
-  if (isSubscribed) {}
+  if (isSubscribed) {}}
     return ()
       <div
         className={`bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg text-center ${className}`}
@@ -77,3 +77,4 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   )
 }
 export default ContentNewsletterSignup
+}

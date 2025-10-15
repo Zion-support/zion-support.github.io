@@ -1,6 +1,6 @@
 import React from 'react'
 import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react'
-interface LoadingPageProps {}
+interface LoadingPageProps {}}
   message?: string
   showIcon?: boolean
 }
@@ -99,13 +99,13 @@ export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = 
     </div>
   )
 }
-export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {}
+export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {}}
 }return ()
     <div className="animate-pulse">
       {Array.from({ length: lines }).map(( index) => (
         <div
           key={index}
-          className={`h-4 bg-gray-700 rounded mb-2 ${}
+          className={`h-4 bg-gray-700 rounded mb-2 ${}}
             index === lines - 1 ? 'w-3/4' : 'w-full'
           }`}
         />
@@ -113,7 +113,7 @@ export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
     </div>
   )
 }
-export const CardSkeleton: React.FC = () => {}
+export const CardSkeleton: React.FC = () => {}}
 }return ()
     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
       <div className="w-16 h-16 bg-gray-700 rounded-lg mb-4"></div>
@@ -127,3 +127,4 @@ export const CardSkeleton: React.FC = () => {}
   )
 }
 export default LoadingPage
+}

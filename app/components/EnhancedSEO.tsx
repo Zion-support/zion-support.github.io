@@ -45,13 +45,13 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     "url": siteUrl,
     "logo": `${siteUrl}/logo.svg`,
     "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
-    "contactPoint": {}
+    "contactPoint": {}}
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
     },
-    "address": {}
+    "address": {}}
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
@@ -114,3 +114,4 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   )
 }
 export default EnhancedSEO
+}

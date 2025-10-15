@@ -20,10 +20,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   const finalCanonical = canonical || currentUrl;
 
   // Generate breadcrumb structured data
-  const generateBreadcrumbData = () => {}
+  const generateBreadcrumbData = () => {}}
 }const pathSegments = location.pathname.split('/').filter(Boolean)
     const breadcrumbs = []
-      {}
+      {}}
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
@@ -31,27 +31,27 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       }
     ]
     let currentPath = ''
-    pathSegments.forEach((segment, index) => {}
+    pathSegments.forEach((segment, index) => {}}
 }currentPath += `/${segment}`
       const name = segment
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ')
-      breadcrumbs.push({}
+      breadcrumbs.push({}}
         "@type": "ListItem",
         "position": index + 2,
         "name": name,
         "item": `https://ziontechgroup.com${currentPath}`
       })
     })
-    return {}
+    return {}}
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": breadcrumbs
     }
   }
   // Default structured data
-  const defaultStructuredData = {}
+  const defaultStructuredData = {}}
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -59,7 +59,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     "logo": "https://ziontechgroup.com/logo.png",
     "description": description,
     "foundingDate": "2020",
-    "address": {}
+    "address": {}}
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
@@ -67,7 +67,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       "postalCode": "19709",
       "addressCountry": "US"
     },
-    "contactPoint": {}
+    "contactPoint": {}}
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
@@ -81,22 +81,22 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       "https://github.com/ziontechgroup"
     ],
     "service": []
-      {}
+      {}}
         "@type": "Service",
         "name": "AI Solutions",
         "description": "Cutting-edge artificial intelligence solutions for business automation and optimization"
       },
-      {}
+      {}}
         "@type": "Service",
         "name": "IT Services",
         "description": "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and custom development"
       },
-      {}
+      {}}
         "@type": "Service",
         "name": "5G Implementation",
         "description": "Next-generation connectivity and infrastructure services for modern businesses"
       },
-      {}
+      {}}
         "@type": "Service",
         "name": "Micro SaaS Solutions",
         "description": "Ready-to-use software solutions for immediate deployment and business growth"
@@ -104,48 +104,48 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     ]
   }
   // Page-specific structured data
-  const getPageStructuredData = () => {}
+  const getPageStructuredData = () => {}}
 }const path = location.pathname
-    if (path === '/') {}
-      return {}
+    if (path === '/') {}}
+      return {}}
         ...defaultStructuredData,
         "@type": "WebSite",
-        "potentialAction": {}
+        "potentialAction": {}}
           "@type": "SearchAction",
           "target": "https://ziontechgroup.com/search?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       }
     }
-    if (path === '/about') {}
-      return {}
+    if (path === '/about') {}}
+      return {}}
         ...defaultStructuredData,
         "@type": "AboutPage"
       }
     }
-    if (path === '/contact') {}
-      return {}
+    if (path === '/contact') {}}
+      return {}}
         ...defaultStructuredData,
         "@type": "ContactPage"
       }
     }
-    if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-')) {}
-      return {}
+    if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-')) {}}
+      return {}}
         ...defaultStructuredData,
         "@type": "Service",
         "name": title,
         "description": description,
-        "provider": {}
+        "provider": {}}
           "@type": "Organization",
           "name": "Zion Tech Group"
         },
-        "offers": {}
+        "offers": {}}
           "@type": "Offer",
           "availability": "https://schema.org/InStock",
           "priceCurrency": "USD",
           "category": "Technology Services"
         },
-        "areaServed": {}
+        "areaServed": {}}
           "@type": "Country",
           "name": "United States"
         },
@@ -157,10 +157,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   const finalStructuredData = structuredData || getPageStructuredData()
   const breadcrumbData = generateBreadcrumbData()
   // Track page views
-  useEffect(() => {}
+  useEffect(() => {}}
 }// Track page view in analytics
-    if (typeof window !== 'undefined' && window.gtag) {}
-      window.gtag('config', 'GA_MEASUREMENT_ID', {}
+    if (typeof window !== 'undefined' && window.gtag) {}}
+      window.gtag('config', 'GA_MEASUREMENT_ID', {}}
         page_title: title,
         page_location: currentUrl})
     }
@@ -249,3 +249,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   )
 }
 export default SEOOptimizer
+}

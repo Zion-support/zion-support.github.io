@@ -12,12 +12,9 @@ function cleanMergeConflicts(filePath) {
     const originalContent = content;
     
     // Remove all merge conflict markers and keep the latest version
-    content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
     
     // Clean up any remaining conflict markers
     content = content.replace(//g, '');
-    content = content.replace(/>>>>>>> [^\n]+/g, '');
     
     // Clean up multiple empty lines
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');

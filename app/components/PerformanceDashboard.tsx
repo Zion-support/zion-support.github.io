@@ -1,5 +1,5 @@
 import React from "react"
-interface PerformanceDashboardProps {}
+interface PerformanceDashboardProps {}}
   children?: React.ReactNode
   className?: string
   title?: string
@@ -17,3 +17,4 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
   )
 }
 export default PerformanceDashboard
+}

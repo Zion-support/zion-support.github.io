@@ -1,29 +1,7 @@
-import React from 'react';
-import SEOHead from '../components/SEOHead';
 
-const AiPersonalizedLearningPage: React.FC = () => {
-  const features = [
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Adaptive Learning Paths",
-      description: "AI creates personalized learning journeys based on individual strengths and weaknesses"
-    },
-    {
-      icon: <BookOpen className="w-6 h-6" />,
-      title: "Multi-Modal Content",
-      description: "Interactive videos, simulations, quizzes, and hands-on projects for comprehensive learning"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Social Learning",
-      description: "Collaborative features with peer learning, group projects, and expert mentorship"
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Progress Tracking",
-      description: "Real-time analytics and insights to track learning progress and achievements"
-    }
-  ];
+
+
+
 
   const pricingPlans = [
     {

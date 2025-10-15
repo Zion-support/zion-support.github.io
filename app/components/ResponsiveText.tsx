@@ -1,6 +1,6 @@
 import React from 'react'
 import { cn } from '../lib/utils'
-interface ResponsiveTextProps {}
+interface ResponsiveTextProps {}}
   children: React.ReactNode
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div'
   size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl'
@@ -26,7 +26,7 @@ const ResponsiveText = (_{
     '6xl': 'text-6xl sm:text-7xl md:text-8xl',
     '7xl': 'text-7xl sm:text-8xl md:text-9xl'
   }
-  const weightClasses = {}
+  const weightClasses = {}}
     thin: 'font-thin',
     light: 'font-light',
     normal: 'font-normal',
@@ -36,7 +36,7 @@ const ResponsiveText = (_{
     extrabold: 'font-extrabold',
     black: 'font-black'
   }
-  const colorClasses = {}
+  const colorClasses = {}}
     white: 'text-white',
     gray: 'text-gray-300',
     cyan: 'text-cyan-400',
@@ -48,7 +48,7 @@ const ResponsiveText = (_{
     red: 'text-red-400',
     yellow: 'text-yellow-400'
   }
-  const alignClasses = {}
+  const alignClasses = {}}
     left: 'text-left',
     center: 'text-center',
     right: 'text-right',
@@ -69,3 +69,4 @@ const ResponsiveText = (_{
   )
 }
 export default ResponsiveText
+}

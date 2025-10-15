@@ -12,3 +12,4 @@ export const Icon = (_{
   )
 }
 export default Icon
+}

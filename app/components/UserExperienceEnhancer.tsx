@@ -1,5 +1,5 @@
 import React from "react"
-interface UserExperienceEnhancerProps {}
+interface UserExperienceEnhancerProps {}}
   children?: React.ReactNode
   className?: string
   title?: string
@@ -17,3 +17,4 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   )
 }
 export default UserExperienceEnhancer
+}

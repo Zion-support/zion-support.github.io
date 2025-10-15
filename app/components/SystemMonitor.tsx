@@ -1,5 +1,5 @@
 import React from "react"
-interface SystemMonitorProps {}
+interface SystemMonitorProps {}}
   children?: React.ReactNode
   className?: string
   title?: string
@@ -17,3 +17,4 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   )
 }
 export default SystemMonitor
+}

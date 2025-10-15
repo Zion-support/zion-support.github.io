@@ -1,15 +1,15 @@
 import React, { useEffect, useCallback } from 'react'
-interface PerformanceOptimizerProps {}
+interface PerformanceOptimizerProps {}}
   children: React.ReactNode
 }
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {}
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {}}
 }// Preload critical resources
-  const preloadCriticalResources = useCallback(() => {}
+  const preloadCriticalResources = useCallback(() => {}}
 }// Preload critical fonts
     const fontLinks = []
       'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
     ]
-    fontLinks.forEach(href => {}
+    fontLinks.forEach(href => {}}
 }const link = document.createElement('link')
       link.rel = 'preload'
       link.href = href
@@ -23,7 +23,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       '/images/logo.svg',
       '/images/og-image.jpg'
     ]
-    criticalImages.forEach(src => {}
+    criticalImages.forEach(src => {}}
 }const link = document.createElement('link')
       link.rel = 'preload'
       link.href = src
@@ -32,25 +32,25 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     })
   }, [])
   // Optimize images
-  const optimizeImages = useCallback(() => {}
+  const optimizeImages = useCallback(() => {}}
 }const images = document.querySelectorAll('img')
-    images.forEach(img => {}
+    images.forEach(img => {}}
 }// Add loading="lazy" to non-critical images
-      if (!img.hasAttribute('loading')) {}
+      if (!img.hasAttribute('loading')) {}}
         img.setAttribute('loading', 'lazy')
       }
       // Add decoding="async" for better performance
-      if (!img.hasAttribute('decoding')) {}
+      if (!img.hasAttribute('decoding')) {}}
         img.setAttribute('decoding', 'async')
       }
     })
   }, [])
   // Optimize third-party scripts
-  const optimizeThirdPartyScripts = useCallback(() => {}
+  const optimizeThirdPartyScripts = useCallback(() => {}}
 }// Defer non-critical scripts
     const scripts = document.querySelectorAll('script[src]')
-    scripts.forEach(script => {}
-}if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {}
+    scripts.forEach(script => {}}
+}if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {}}
         script.setAttribute('defer', 'true')
       }
     })
@@ -81,12 +81,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     }
   }, [])
   // Optimize scroll performance
-  const optimizeScrollPerformance = useCallback(() => {}
+  const optimizeScrollPerformance = useCallback(() => {}}
 }let ticking = false
-    const updateScrollPosition = () => {}
+    const updateScrollPosition = () => {}}
 }// Throttle scroll events for better performance
-      if (!ticking) {}
-        requestAnimationFrame(() => {}
+      if (!ticking) {}}
+        requestAnimationFrame(() => {}}
 }// Add scroll-based optimizations here
           ticking = false
         })
@@ -94,22 +94,22 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       }
     }
     window.addEventListener('scroll', updateScrollPosition, { passive: true })
-    return () => {}
+    return () => {}}
 }window.removeEventListener('scroll', updateScrollPosition)
     }
   }, [])
   // Add intersection observer for lazy loading
-  const addIntersectionObserver = useCallback(() => {}
-}if ('IntersectionObserver' in window) {}
-      const observer = new IntersectionObserver((entries) => {}
-}entries.forEach(entry => {}
-}if (entry.isIntersecting) {}
+  const addIntersectionObserver = useCallback(() => {}}
+}if ('IntersectionObserver' in window) {}}
+      const observer = new IntersectionObserver((entries) => {}}
+}entries.forEach(entry => {}}
+}if (entry.isIntersecting) {}}
             const element = entry.target as HTMLElement
             element.classList.add('animate-in')
             observer.unobserve(element)
           }
         })
-      }, {}
+      }, {}}
         rootMargin: '50px 0px',
         threshold: 0.1
       })
@@ -119,7 +119,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       return () => observer.disconnect()
     }
   }, [])
-  useEffect(() => {}
+  useEffect(() => {}}
 }// Run optimizations after component mounts
     preloadCriticalResources()
     optimizeImages()
@@ -127,7 +127,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     addPerformanceMonitoring()
     const scrollCleanup = optimizeScrollPerformance()
     const observerCleanup = addIntersectionObserver()
-    return () => {}
+    return () => {}}
 }scrollCleanup?.()
       observerCleanup?.()
     }
@@ -140,46 +140,47 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     addIntersectionObserver
   ])
   // Add performance CSS
-  useEffect(() => {}
+  useEffect(() => {}}
 }const style = document.createElement('style')
     style.textContent = `
       /* Performance optimizations */
-      * {}
+      * {}}
         box-sizing: border-box
       }
-      img {}
+      img {}}
         max-width: 100%
         height: auto
       }
-      .lazy-load {}
+      .lazy-load {}}
         opacity: 0
         transform: translateY(20px)
         transition: opacity 0.6s ease, transform 0.6s ease
       }
-      .lazy-load.animate-in {}
+      .lazy-load.animate-in {}}
         opacity: 1
         transform: translateY(0)
       }
       /* Reduce motion for users who prefer it */
-      @media (prefers-reduced-motion: reduce) {}
-        * {}
+      @media (prefers-reduced-motion: reduce) {}}
+        * {}}
           animation-duration: 0.01ms !important
           animation-iteration-count: 1 !important
           transition-duration: 0.01ms !important
         }
       }
       /* Optimize for mobile */
-      @media (max-width: 768px) {}
-        .lazy-load {}
+      @media (max-width: 768px) {}}
+        .lazy-load {}}
           transform: translateY(10px)
         }
       }
     `
     document.head.appendChild(style)
-    return () => {}
+    return () => {}}
 }document.head.removeChild(style)
     }
   }, [])
   return <>{children}</>
 }
 export default PerformanceOptimizer
+}

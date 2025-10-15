@@ -1,7 +1,7 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-  return (<>
+  return (<div>
       <Helmet>
         <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
         <meta
@@ -200,7 +200,7 @@ import SEOHead from '../components/SEOHead';
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -3,7 +3,7 @@ import SEOHead from '../components/SEOHead';
 
 const BlogPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Blog - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />
@@ -14,3 +14,7 @@ const BlogPage: React.FC = () => {
 };
 
 export default BlogPage;
+
+}
+
+</div></div>

@@ -1,29 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import {
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-  ArrowRightIcon
-} from '@heroicons/react/24/outline';
-import { Facebook, Twitter, Linkedin, Github } from 'lucide-react';import { 
+import { 
   HeartIcon
 } from '@heroicons/react/24/outline'
-import { ArrowRight, Twitter, Linkedin, Github } from 'lucide-react'
 
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear()
-  
-  const services = [
-    { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing-automation' },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
-    { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot' },
-    { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
-    { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
-    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
-    { name: 'IT Solutions', href: '/it-solutions' }
-  ];
 
   const company = [
     { name: 'About Us', href: '/about' },
@@ -44,26 +23,14 @@ const Footer: React.FC = () => {
     { name: 'Community', href: '/community' }
   ];
 
-  const support = [
-    { name: 'Contact Us', href: '/contact' },
-    { name: 'Support Center', href: '/support' },
-    { name: 'Live Chat', href: '/chat' },
-    { name: 'Schedule Demo', href: '/demo' },
-    { name: 'System Status', href: '/status' },
-    { name: 'Report Issue', href: '/report' }
-  ];
+  
 
   const legal = [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' }
   ];
 
-  const socialLinks = [
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: 'facebook' },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' }
-  ];
+  
 
   return (<footer className="bg-slate-900 border-t border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

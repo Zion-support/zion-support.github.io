@@ -1,5 +1,5 @@
 import React from "react"
-interface SearchBarProps {}
+interface SearchBarProps {}}
   children?: React.ReactNode
   className?: string
   title?: string
@@ -17,3 +17,4 @@ const SearchBar: React.FC<SearchBarProps> = ({
   )
 }
 export default SearchBar
+}

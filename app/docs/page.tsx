@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Book, Code, Shield, Zap, Search, ChevronDown, ChevronRight, ExternalLink } from "lucide-react";
 
-const DocsPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+import { Helmet } from "react-helmet-async";
+
+
+
+
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
   const documentationSections = [

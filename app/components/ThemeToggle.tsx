@@ -1,5 +1,5 @@
 import React from "react"
-interface ThemeToggleProps {}
+interface ThemeToggleProps {}}
   children?: React.ReactNode
   className?: string
   title?: string
@@ -17,3 +17,4 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({
   )
 }
 export default ThemeToggle
+}

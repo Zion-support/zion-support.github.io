@@ -1,7 +1,7 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-  return (<>
+  return (<div>
       <Helmet>
         <title>Community - Zion Tech Group | Tech Community & Events</title>
         <meta
@@ -142,8 +142,10 @@ import SEOHead from '../components/SEOHead';
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 
 export default CommunityPage;
+
+}

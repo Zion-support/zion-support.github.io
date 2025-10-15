@@ -1,5 +1,5 @@
 import React from 'react'
-interface EnhancedLoadingProps {}
+interface EnhancedLoadingProps {}}
   message?: string
   showProgress?: boolean
   progress?: number
@@ -44,7 +44,7 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
             <div
               key={i}
               className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-bounce"
-              style={{}
+              style={{}}
                 animationDelay: `${i * 0.1}s`,
                 animationDuration: '1s'
               }}
@@ -60,3 +60,4 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
   )
 }
 export default EnhancedLoading
+}

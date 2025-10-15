@@ -1,53 +1,53 @@
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
-interface Props {}
+interface Props {}}
   children: ReactNode
   fallback?: ReactNode
 }
-interface State {}
+interface State {}}
   hasError: boolean
   error: Error | null
   errorInfo: ErrorInfo | null
 }
-class ErrorHandler extends Component<Props, State> {}
-  constructor(props: Props) {}
+class ErrorHandler extends Component<Props, State> {}}
+  constructor(props: Props) {}}
     super(props)
-    this.state = {}
+    this.state = {}}
       hasError: false,
       error: null,
       errorInfo: null
     }
   }
-  static getDerivedStateFromError(error: Error): State {}
-    return {}
+  static getDerivedStateFromError(error: Error): State {}}
+    return {}}
       hasError: true,
       error,
       errorInfo: null
     }
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
-    this.setState({}
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}}
+    this.setState({}}
       error,
       errorInfo
     })
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {}
+    if (process.env.NODE_ENV === 'development') {}}
       console.error('Error caught by handler:', error, errorInfo)
     }
     // Send error to monitoring service in production
-    if (process.env.NODE_ENV === 'production') {}
+    if (process.env.NODE_ENV === 'production') {}}
       // You can integrate with services like Sentry, LogRocket, etc.
       this.logErrorToService(error, errorInfo)
     }
   }
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {}
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {}}
 }// Example: Send to monitoring service
-    try {}
-} catch (error) {}
+    try {}}
+} catch (error) {}}
   console.error(error)
 }// Replace with your actual error reporting service
-      const errorData = {}
+      const errorData = {}}
         message: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
@@ -61,19 +61,19 @@ class ErrorHandler extends Component<Props, State> {}
       console.error('Failed to prepare error data for reporting:', reportingError);
     }
   }
-  handleRetry = () => {}
-}this.setState({}
+  handleRetry = () => {}}
+}this.setState({}}
       hasError: false,
       error: null,
       errorInfo: null
     })
   }
-  handleGoHome = () => {}
+  handleGoHome = () => {}}
 }window.location.href = '/'
   }
-  render() {}
-    if (this.state.hasError) {}
-      if (this.props.fallback) {}
+  render() {}}
+    if (this.state.hasError) {}}
+      if (this.props.fallback) {}}
         return this.props.fallback
       }
       return ()
@@ -136,3 +136,4 @@ class ErrorHandler extends Component<Props, State> {}
   }
 }
 export default ErrorHandler
+}

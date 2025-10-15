@@ -1,5 +1,5 @@
 import React from "react"
-interface SearchModalProps {}
+interface SearchModalProps {}}
   children?: React.ReactNode
   className?: string
   title?: string
@@ -17,3 +17,4 @@ const SearchModal: React.FC<SearchModalProps> = ({
   )
 }
 export default SearchModal
+}

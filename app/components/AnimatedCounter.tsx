@@ -29,8 +29,8 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       }
     }
     animationFrame = requestAnimationFrame(animate)
-    return () => {}
-}if (animationFrame) {}
+    return () => {}}
+}if (animationFrame) {}}
         cancelAnimationFrame(animationFrame)
       }
     }
@@ -44,3 +44,4 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   )
 }
 export default AnimatedCounter
+}

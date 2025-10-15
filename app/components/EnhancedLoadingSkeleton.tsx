@@ -1,5 +1,5 @@
 import React from "react"
-interface SkeletonProps {}
+interface SkeletonProps {}}
   width?: string | number
   height?: string | number
   className?: string
@@ -84,3 +84,4 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
   )
 }
 export default EnhancedLoadingSkeleton
+}

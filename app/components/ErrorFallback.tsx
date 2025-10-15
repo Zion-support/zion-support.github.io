@@ -1,6 +1,6 @@
 import React from "react"
 import { AlertTriangle, RefreshCw } from "lucide-react"
-interface ErrorFallbackProps {}
+interface ErrorFallbackProps {}}
   error: Error
   resetErrorBoundary: () => void
 }
@@ -37,3 +37,4 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
   )
 }
 export default ErrorFallback
+}

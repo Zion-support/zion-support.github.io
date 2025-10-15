@@ -24,7 +24,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.svg",
     "description": description,
-    "address": {}
+    "address": {}}
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
@@ -32,7 +32,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "postalCode": "19709",
       "addressCountry": "US"
     },
-    "contactPoint": {}
+    "contactPoint": {}}
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
@@ -43,17 +43,17 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "https://linkedin.com/company/ziontechgroup"
     ],
     "offers": []
-      {}
+      {}}
         "@type": "Offer",
         "name": "AI Solutions",
         "description": "Artificial intelligence and machine learning services"
       },
-      {}
+      {}}
         "@type": "Offer",
         "name": "Cybersecurity",
         "description": "Advanced cybersecurity solutions and protection"
       },
-      {}
+      {}}
         "@type": "Offer",
         "name": "Cloud Infrastructure",
         "description": "Cloud computing and infrastructure services"
@@ -127,3 +127,4 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   )
 }
 export default SEOEnhancer
+}

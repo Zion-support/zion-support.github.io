@@ -5,29 +5,14 @@ import {
   CheckCircle, 
   ArrowRight, 
   MessageSquare, 
-  BarChart3, 
   Users, 
-  Zap, 
   Target, 
   TrendingUp,
-  Clock,
-  Shield,
-  Smartphone,
   Globe,
-  FileText,
-  Settings,
-  Star,
-  Award,
-  Phone,
-  MapPin,
-  Envelope,
-  Bot,
-  Headphones,
-  ThumbsUp,
-  RefreshCw
+  Headphones
 } from 'lucide-react';
 
-const AICustomerSupportChatbotPage: React.FC = () => {
+const AiCustomerSupportChatbotPage: React.FC = () => {
   const features = [
     'Natural Language Processing (NLP)',
     'Multi-language support (50+ languages)',
@@ -147,7 +132,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
 
 const AiCustomerSupportChatbotPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Customer Support Chatbot - Intelligent Customer Service | Zion Tech Group</title>
         <meta name="description" content="Transform your customer support with AI-powered chatbots. Reduce costs by 60%, improve response time by 90%, and handle 1000+ conversations simultaneously with our intelligent support solution." />
@@ -409,8 +394,8 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
-export default AICustomerSupportChatbotPage;
+export default AiCustomerSupportChatbotPage;

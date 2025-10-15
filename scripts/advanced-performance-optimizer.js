@@ -196,7 +196,6 @@ class AdvancedPerformanceOptimizer {
 
   printSummary() {
     console.log('\n📈 Performance Optimization Summary:');
-    console.log('=====================================');
     
     this.optimizations.forEach((optimization, index) => {
       console.log(`${index + 1}. ${optimization}`);

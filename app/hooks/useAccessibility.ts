@@ -25,13 +25,7 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     enableReducedMotion = true
   } = options;
 
-  const stateRef = useRef<AccessibilityState>({
-    isHighContrast: false,
-    isReducedMotion: false,
-    isKeyboardUser: false,
-    currentFocus: null,
-    focusHistory: []
-  });
+  
 
   const focusableElements = useRef<HTMLElement[]>([]);
 
@@ -74,19 +68,15 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
   }, []);
 
   // Detect keyboard usage
-  const detectKeyboardUsage = useCallback(() => {
-    let isKeyboardUser = false;
+  
 
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        isKeyboardUser = true;
+    
         stateRef.current.isKeyboardUser = true;
         document.body.classList.add('keyboard-user');
       }
     };
 
-    const handleMouseDown = () => {
-      isKeyboardUser = false;
+    
       stateRef.current.isKeyboardUser = false;
       document.body.classList.remove('keyboard-user');
     };

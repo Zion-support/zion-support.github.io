@@ -49,7 +49,7 @@ import { Play, BarChart3, Shield } from 'lucide-react';const DemoPage: React.FC 
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Demo - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="See our AI and IT solutions in action with live demos." />
@@ -60,13 +60,13 @@ import { Play, BarChart3, Shield } from 'lucide-react';const DemoPage: React.FC 
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
 export default DemoPage;
   return (
-    <>
+    <div>
       <SEOHead 
         title="demo - Zion Tech Group"
         description="Zion Tech Group demo service page"
@@ -77,8 +77,10 @@ export default DemoPage;
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
 export default DemoPage;
+
+}

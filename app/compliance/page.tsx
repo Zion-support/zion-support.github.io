@@ -1,7 +1,7 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-  return (<>
+  return (<div>
       <Helmet>
         <title>Compliance Services - Zion Tech Group | Regulatory Compliance & Security</title>
         <meta
@@ -143,8 +143,10 @@ import SEOHead from '../components/SEOHead';
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 
 export default CompliancePage;
+
+}

@@ -1,59 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { TrendingUp, DollarSign, CheckCircle, Users, ArrowRight } from "lucide-react";
 
-const CaseStudiesPage: React.FC = () => {
-  const caseStudies = [
-    {
-      id: 1,
-      title: "AI-Powered E-commerce Transformation",
-      client: "TechRetail Inc.",
-      industry: "E-commerce",
-      challenge: "Low conversion rates and poor customer experience",
-      solution: "Implemented AI-powered recommendation engine and chatbot",
-      results: [
-        "40% increase in conversion rates",
-        "60% reduction in customer service tickets",
-        "25% increase in average order value"
-      ],
-      image: "/images/case-studies/ecommerce-ai.jpg",
-      duration: "6 months",
-      team: "8 specialists"
-    },
-    {
-      id: 2,
-      title: "Cloud Migration for Financial Services",
-      client: "SecureBank Corp.",
-      industry: "Financial Services",
-      challenge: "Legacy systems causing performance issues and security concerns",
-      solution: "Complete cloud migration with enhanced security measures",
-      results: [
-        "99.9% uptime achieved",
-        "50% reduction in infrastructure costs",
-        "Enhanced security compliance"
-      ],
-      image: "/images/case-studies/cloud-migration.jpg",
-      duration: "4 months",
-      team: "12 specialists"
-    },
-    {
-      id: 3,
-      title: "Cybersecurity Implementation",
-      client: "HealthCare Plus",
-      industry: "Healthcare",
-      challenge: "Vulnerable to cyber attacks and data breaches",
-      solution: "Comprehensive cybersecurity framework and training",
-      results: [
-        "Zero security incidents",
-        "100% compliance with HIPAA",
-        "50% reduction in security vulnerabilities"
-      ],
-      image: "/images/case-studies/cybersecurity.jpg",
-      duration: "3 months",
-      team: "6 specialists"
-    }
-  ];
+import { Helmet } from 'react-helmet-async';
+
+
+
+
 
   const stats = [
     { label: "Projects Completed", value: "150+", icon: <CheckCircle className="w-6 h-6" /> },
