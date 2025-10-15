@@ -55,6 +55,11 @@ import AiInventoryManagementProPage from './app/ai-inventory-management-pro/page
 import AiHrAssistantProPage from './app/ai-hr-assistant-pro/page';
 import AiSalesOptimizerProPage from './app/ai-sales-optimizer-pro/page';
 import MicroSaasPage from './app/micro-saas/page';
+import AiLeadGenerationProPage from './app/ai-lead-generation-pro/page';
+import AiCrmEnterprisePage from './app/ai-crm-enterprise/page';
+import AiSchedulingAssistantProPage from './app/ai-scheduling-assistant-pro/page';
+import AiDocumentProcessorProPage from './app/ai-document-processor-pro/page';
+import CookiesPage from './app/cookies/page';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -140,6 +145,15 @@ const App: React.FC = () => {
                   <Route path="/ai-inventory-management-pro" element={<AiInventoryManagementProPage />} />
                   <Route path="/ai-hr-assistant-pro" element={<AiHrAssistantProPage />} />
                   <Route path="/ai-sales-optimizer-pro" element={<AiSalesOptimizerProPage />} />
+                  
+                  {/* Additional Micro SAAS Routes */}
+                  <Route path="/ai-lead-generation-pro" element={<AiLeadGenerationProPage />} />
+                  <Route path="/ai-crm-enterprise" element={<AiCrmEnterprisePage />} />
+                  <Route path="/ai-scheduling-assistant-pro" element={<AiSchedulingAssistantProPage />} />
+                  <Route path="/ai-document-processor-pro" element={<AiDocumentProcessorProPage />} />
+                  
+                  {/* Legal Pages */}
+                  <Route path="/cookies" element={<CookiesPage />} />
                 </Routes>
               </Suspense>
             </main>
