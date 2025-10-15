@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, memo } from 'react';
+import React, { Suspense, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Lazy load pages for better performance
@@ -23,13 +23,7 @@ const StatusPage = React.lazy(() => import('./app/status/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 
-// Components
-import Navigation from './app/components/Navigation';
-import Sidebar from './app/components/Sidebar';
-import Footer from './app/components/Footer';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+// Components - ErrorBoundary is defined locally below
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -40,6 +34,7 @@ const UnifiedContentPromotion = memo(() => (
     </div>
   </div>
 ));
+UnifiedContentPromotion.displayName = 'UnifiedContentPromotion';
 
 const InteractiveAIROICalculator = memo(() => (
   <div className="bg-gray-50 py-16">
@@ -49,6 +44,7 @@ const InteractiveAIROICalculator = memo(() => (
     </div>
   </div>
 ));
+InteractiveAIROICalculator.displayName = 'InteractiveAIROICalculator';
 
 const ContentShowcase = memo(() => (
   <div className="py-16">
@@ -58,6 +54,7 @@ const ContentShowcase = memo(() => (
     </div>
   </div>
 ));
+ContentShowcase.displayName = 'ContentShowcase';
 
 const InteractiveContentShowcase2026 = memo(() => (
   <div className="bg-blue-50 py-16">
@@ -67,6 +64,7 @@ const InteractiveContentShowcase2026 = memo(() => (
     </div>
   </div>
 ));
+InteractiveContentShowcase2026.displayName = 'InteractiveContentShowcase2026';
 
 // Loading component
 const LoadingSpinner = memo(() => (
@@ -74,6 +72,7 @@ const LoadingSpinner = memo(() => (
     <div className="text-gray-500">Loading...</div>
   </div>
 ));
+LoadingSpinner.displayName = 'LoadingSpinner';
 
 // Error Boundary Component
 interface ErrorBoundaryState {
@@ -98,6 +97,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     // Log error for debugging
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.error('Error caught by boundary:', error, errorInfo);
     }
   }
