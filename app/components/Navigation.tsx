@@ -303,8 +303,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     else if (item.name === 'IT Solutions') toggleResourcesMenu();
                     else if (item.name === 'Resources') toggleResourcesMenu();
                     else if (item.name === 'Company') toggleCompanyMenu();
-                    else if (item.name === 'Enterprise Solutions') toggleEnterpriseMenu();
-                    else if (item.name === 'Zion AI Tools') toggleZionAIMenu();
+                    else if (item.name === 'Zion AI Tools') toggleCompanyMenu();
                   }}
                   className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 border-b-2 group hover:scale-105 ${
                     isActive(item.href)
@@ -325,8 +324,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       (item.name === 'IT Solutions' && isResourcesOpen) ||
                       (item.name === 'Resources' && isResourcesOpen) ||
                       (item.name === 'Company' && isCompanyOpen) ||
-                      (item.name === 'Enterprise Solutions' && isEnterpriseOpen) ||
-                      (item.name === 'Zion AI Tools' && isZionAIOpen)
+                      (item.name === 'Zion AI Tools' && isCompanyOpen)
                         ? 'block' : 'hidden'
                     }`}
                     role="menu"
