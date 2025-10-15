@@ -1,382 +1,412 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
+import { services, getPricingTiers } from '../data/services';
+import { 
+  CheckCircleIcon,
+  XMarkIcon,
+  CurrencyDollarIcon,
+  StarIcon,
+  FireIcon,
+  RocketLaunchIcon,
+  ShieldCheckIcon,
+  ClockIcon,
+  UserGroupIcon,
+  CogIcon,
+  ArrowRightIcon,
+  SparklesIcon,
+  BoltIcon
+} from '@heroicons/react/24/outline';
 
 const PricingPage: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const pricingTiers = getPricingTiers();
+
+  const enterpriseFeatures = [
+    'Unlimited API Calls',
+    'Priority Support',
+    'Custom Integrations',
+    'Dedicated Account Manager',
+    'SLA Guarantee',
+    'Custom Training',
+    'On-premise Deployment',
+    'Advanced Analytics',
+    'White-label Solutions',
+    '24/7 Phone Support'
+  ];
+
+  const basicFeatures = [
+    'Standard API Access',
+    'Email Support',
+    'Basic Documentation',
+    'Community Forum',
+    'Monthly Updates'
+  ];
+
+  const proFeatures = [
+    'Enhanced API Access',
+    'Priority Email Support',
+    'Advanced Documentation',
+    'Phone Support',
+    'Weekly Updates',
+    'Custom Integrations',
+    'Advanced Analytics',
+    'SLA Support'
+  ];
+
+  const getServicePricing = (service: any) => {
+    const discount = billingCycle === 'yearly' ? 0.2 : 0;
+    return {
+      basic: Math.round(service.pricing.basic * (1 - discount)),
+      pro: Math.round(service.pricing.pro * (1 - discount)),
+      enterprise: Math.round(service.pricing.enterprise * (1 - discount))
+    };
+  };
+
+  const popularServices = services.slice(0, 6);
+
   return (
-    <>
-      <Helmet>
-        <title>Pricing - Zion Tech Group | Transparent AI & IT Solutions Pricing</title>
-        <meta name="description" content="Transparent pricing for our AI and IT services. Choose the perfect plan for your business needs with flexible options and no hidden fees." />
-        <meta name="keywords" content="AI pricing, IT services pricing, cloud pricing, AI tools pricing, business solutions pricing" />
-        <link rel="canonical" href="https://ziontechgroup.com/pricing" />
-      </Helmet>
+    <div className="min-h-screen">
+      <SEOHead 
+        title="Pricing - Transparent AI & IT Solutions | Zion Tech Group"
+        description="Transparent pricing for all our AI services, IT solutions, and enterprise software. Choose the plan that fits your business needs."
+        keywords="pricing, AI services pricing, IT solutions cost, enterprise pricing, transparent pricing"
+      />
       
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Transparent Pricing</h1>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              Choose the perfect plan for your business needs. All plans include our core AI and IT services 
-              with no hidden fees or long-term contracts.
+      {/* Enhanced Animated Background */}
+      <div className="futuristic-bg"></div>
+      <div className="cyber-grid-enhanced"></div>
+      <div className="quantum-particles">
+        {[...Array(25)].map((_, i) => (
+          <div key={i} className="quantum-particle" style={{
+            left: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 20}s`,
+            animationDuration: `${20 + Math.random() * 10}s`
+          }}></div>
+        ))}
+      </div>
+      <div className="scan-lines"></div>
+
+      {/* Header Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 holographic-text cyber-glitch" data-text="Transparent Pricing">
+              Transparent Pricing
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Choose the perfect plan for your business. All our services come with transparent pricing, 
+              no hidden fees, and flexible billing options.
             </p>
-          </div>
-          
-          {/* Main Pricing Plans */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-2">$299<span className="text-lg text-gray-500">/month</span></div>
-              <p className="text-gray-600 mb-6">Perfect for small businesses getting started with AI</p>
-              <ul className="space-y-3 text-gray-600 mb-8">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Up to 3 AI tools
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Basic AI consultation
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Email support
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Monthly reports
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Basic analytics
-                </li>
-              </ul>
-              <Link to="/contact" className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors text-center block font-semibold">
-                Get Started
-              </Link>
-            </div>
             
-            <div className="bg-white p-8 rounded-2xl shadow-xl border-2 border-blue-500 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold">Most Popular</span>
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Professional</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-2">$799<span className="text-lg text-gray-500">/month</span></div>
-              <p className="text-gray-600 mb-6">Ideal for growing businesses with advanced AI needs</p>
-              <ul className="space-y-3 text-gray-600 mb-8">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Up to 10 AI tools
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Advanced AI solutions
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Priority support
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Weekly reports
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Custom integrations
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Advanced analytics
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  API access
-                </li>
-              </ul>
-              <Link to="/contact" className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors text-center block font-semibold">
-                Get Started
-              </Link>
+            {/* Billing Toggle */}
+            <div className="flex items-center justify-center gap-4 mb-12">
+              <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
+                Monthly
+              </span>
+              <button
+                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+                className="relative w-16 h-8 bg-gray-700 rounded-full transition-colors"
+              >
+                <div className={`absolute top-1 w-6 h-6 bg-cyan-400 rounded-full transition-transform ${
+                  billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
+                }`} />
+              </button>
+              <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
+                Yearly
+              </span>
+              {billingCycle === 'yearly' && (
+                <span className="px-3 py-1 bg-green-500/20 text-green-400 text-sm rounded-full border border-green-500/30">
+                  Save 20%
+                </span>
+              )}
             </div>
-            
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Enterprise</h3>
-              <div className="text-4xl font-bold text-gray-900 mb-2">Custom<span className="text-lg text-gray-500">/month</span></div>
-              <p className="text-gray-600 mb-6">Tailored solutions for large organizations</p>
-              <ul className="space-y-3 text-gray-600 mb-8">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Unlimited AI tools
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Full AI transformation
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  24/7 support
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Real-time monitoring
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Dedicated team
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  White-label solutions
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  SLA guarantee
-                </li>
-              </ul>
-              <Link to="/contact" className="w-full bg-gray-900 text-white py-3 rounded-lg hover:bg-gray-800 transition-colors text-center block font-semibold">
-                Contact Sales
-              </Link>
-            </div>
-          </div>
 
-          {/* AI Services Pricing */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">AI Services Pricing</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Chatbot Builder Pro</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$199<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Advanced conversational AI with natural language understanding</p>
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              <div className="glass-card px-6 py-3 text-cyan-400">
+                <CheckCircleIcon className="h-5 w-5 inline mr-2" />
+                No Setup Fees
               </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Document Analyzer Pro</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$149<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Intelligent document processing and analysis</p>
+              <div className="glass-card px-6 py-3 text-green-400">
+                <ClockIcon className="h-5 w-5 inline mr-2" />
+                Cancel Anytime
               </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Sales Predictor Pro</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$299<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Advanced sales forecasting and lead scoring</p>
+              <div className="glass-card px-6 py-3 text-purple-400">
+                <StarIcon className="h-5 w-5 inline mr-2" />
+                Free Trial Available
               </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Financial Forecaster Pro</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$399<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive financial forecasting and risk assessment</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Customer Sentiment Tracker</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$199<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Real-time customer sentiment analysis</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Meeting Transcriber Pro</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$99<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Advanced meeting transcription and analysis</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Customer Churn Predictor</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$249<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Predict and prevent customer churn</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Content Moderator Pro</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$199<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Automated content moderation with AI</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Task Scheduler Pro</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">$79<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Intelligent task scheduling and optimization</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Micro SaaS Pricing */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Micro SaaS Solutions Pricing</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Task Manager Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$29<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">AI-powered task management and team collaboration</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Smart Expense Tracker Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$19<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">AI-powered expense tracking and financial management</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Lead Generator Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$99<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">AI-powered lead generation and qualification</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Time Tracker Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$39<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive time tracking and productivity analytics</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Invoice Generator Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$29<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Professional invoice generation and management</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">CRM Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$49<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">AI-powered customer relationship management</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Analytics Dashboard Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$79<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive business analytics and reporting</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Form Builder Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$39<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Advanced form builder with AI optimization</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Survey Builder Pro</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$49<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Professional survey creation and analysis</p>
-              </div>
-            </div>
-          </div>
-
-          {/* IT Solutions Pricing */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">IT Solutions Pricing</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Cloud Infrastructure</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$1,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Scalable cloud solutions and infrastructure management</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">DevOps Automation</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$2,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive DevOps solutions with CI/CD pipelines</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">API Development</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$3,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive API development and integration services</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Data Engineering</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$4,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive data engineering and ETL solutions</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Blockchain Solutions</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$8,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive blockchain and Web3 development</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">IoT Solutions</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$5,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive IoT and edge computing solutions</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Security Audit</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$3,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Comprehensive security assessment and penetration testing</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Web Development</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$3,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Modern web development with responsive design</p>
-              </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Mobile Development</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">$5,000<span className="text-sm text-gray-500">/month</span></div>
-                <p className="text-gray-600 text-sm">Native and cross-platform mobile app development</p>
-              </div>
-            </div>
-          </div>
-
-          {/* FAQ Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Frequently Asked Questions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Can I change my plan anytime?</h3>
-                <p className="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Is there a free trial?</h3>
-                <p className="text-gray-600">Yes, we offer a 14-day free trial for all our plans with no credit card required.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">What payment methods do you accept?</h3>
-                <p className="text-gray-600">We accept all major credit cards, PayPal, and bank transfers for enterprise plans.</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Do you offer custom pricing?</h3>
-                <p className="text-gray-600">Yes, we offer custom pricing for enterprise clients with specific requirements.</p>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-xl mb-8 opacity-90">
-              Choose the perfect plan for your business and start transforming with AI today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Start Free Trial
-              </Link>
-              <Link to="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Contact Sales
-              </Link>
-            </div>
-            <div className="mt-8 text-sm opacity-75">
-              <p>📞 <strong>Phone:</strong> +1 302 464 0950</p>
-              <p>✉️ <strong>Email:</strong> kleber@ziontechgroup.com</p>
-              <p>📍 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </section>
+
+      {/* General Pricing Tiers */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+              Choose Your Plan
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              All plans include core features with different levels of support and customization
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Basic Plan */}
+            <div className="glass-card p-8 card-hover">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-white mb-2">Basic</h3>
+                <p className="text-gray-400 mb-6">Perfect for startups and small businesses</p>
+                <div className="text-4xl font-bold text-white mb-2">
+                  $99<span className="text-lg text-gray-400">/month</span>
+                </div>
+                <p className="text-sm text-gray-500">per service</p>
+              </div>
+
+              <ul className="space-y-4 mb-8">
+                {basicFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-center text-gray-300">
+                    <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <Link 
+                to="/contact"
+                className="w-full btn-neon text-center py-3 font-semibold"
+              >
+                Get Started
+              </Link>
+            </div>
+
+            {/* Pro Plan */}
+            <div className="glass-card p-8 card-hover relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  Most Popular
+                </span>
+              </div>
+              
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-white mb-2">Professional</h3>
+                <p className="text-gray-400 mb-6">Ideal for growing businesses</p>
+                <div className="text-4xl font-bold text-white mb-2">
+                  $299<span className="text-lg text-gray-400">/month</span>
+                </div>
+                <p className="text-sm text-gray-500">per service</p>
+              </div>
+
+              <ul className="space-y-4 mb-8">
+                {proFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-center text-gray-300">
+                    <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <Link 
+                to="/contact"
+                className="w-full btn-neon text-center py-3 font-semibold"
+              >
+                Get Started
+              </Link>
+            </div>
+
+            {/* Enterprise Plan */}
+            <div className="glass-card p-8 card-hover">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-white mb-2">Enterprise</h3>
+                <p className="text-gray-400 mb-6">For large organizations</p>
+                <div className="text-4xl font-bold text-white mb-2">
+                  $799<span className="text-lg text-gray-400">/month</span>
+                </div>
+                <p className="text-sm text-gray-500">per service</p>
+              </div>
+
+              <ul className="space-y-4 mb-8">
+                {enterpriseFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-center text-gray-300">
+                    <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <Link 
+                to="/contact"
+                className="w-full btn-neon text-center py-3 font-semibold"
+              >
+                Contact Sales
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service-Specific Pricing */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+              Service-Specific Pricing
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Detailed pricing for each of our AI and IT services
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {popularServices.map((service, index) => {
+              const pricing = getServicePricing(service);
+              return (
+                <div 
+                  key={service.id}
+                  className={`glass-card p-8 card-hover transition-all duration-500 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  }`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+                    <p className="text-sm text-gray-400 mb-4">{service.shortDescription}</p>
+                  </div>
+
+                  <div className="space-y-4 mb-6">
+                    <div className="flex justify-between items-center py-2 border-b border-gray-700">
+                      <span className="text-gray-300">Basic</span>
+                      <span className="text-2xl font-bold text-cyan-400">${pricing.basic}</span>
+                    </div>
+                    <div className="flex justify-between items-center py-2 border-b border-gray-700">
+                      <span className="text-gray-300">Professional</span>
+                      <span className="text-2xl font-bold text-purple-400">${pricing.pro}</span>
+                    </div>
+                    <div className="flex justify-between items-center py-2">
+                      <span className="text-gray-300">Enterprise</span>
+                      <span className="text-2xl font-bold text-pink-400">${pricing.enterprise}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-2 mb-6">
+                    <Link 
+                      to={service.route}
+                      className="flex-1 btn-neon text-center py-2 text-sm font-semibold"
+                    >
+                      Learn More
+                    </Link>
+                    <Link 
+                      to={service.demoUrl || '#'}
+                      className="px-4 py-2 glass-card text-cyan-400 hover:text-white transition-colors border border-cyan-400/30 text-sm"
+                    >
+                      Demo
+                    </Link>
+                  </div>
+
+                  <div className="text-xs text-gray-500 text-center">
+                    {billingCycle === 'yearly' ? 'Billed annually' : 'Billed monthly'}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link 
+              to="/services"
+              className="btn-neon hover-glow px-8 py-4 text-lg font-semibold"
+            >
+              View All Services
+              <ArrowRightIcon className="ml-2 h-5 w-5 inline" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="space-y-6">
+            <div className="glass-card p-6">
+              <h3 className="text-lg font-semibold text-white mb-3">Do you offer free trials?</h3>
+              <p className="text-gray-400">Yes! Most of our services offer a 14-day free trial. Contact us to get started with your trial.</p>
+            </div>
+
+            <div className="glass-card p-6">
+              <h3 className="text-lg font-semibold text-white mb-3">Can I change my plan anytime?</h3>
+              <p className="text-gray-400">Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect immediately.</p>
+            </div>
+
+            <div className="glass-card p-6">
+              <h3 className="text-lg font-semibold text-white mb-3">What payment methods do you accept?</h3>
+              <p className="text-gray-400">We accept all major credit cards, PayPal, and bank transfers for enterprise customers.</p>
+            </div>
+
+            <div className="glass-card p-6">
+              <h3 className="text-lg font-semibold text-white mb-3">Is there a setup fee?</h3>
+              <p className="text-gray-400">No setup fees! All our services are ready to use immediately after signup.</p>
+            </div>
+
+            <div className="glass-card p-6">
+              <h3 className="text-lg font-semibold text-white mb-3">Do you offer custom pricing?</h3>
+              <p className="text-gray-400">Yes! For enterprise customers with specific needs, we offer custom pricing and solutions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="glass-card p-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 holographic-text">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Join thousands of companies already using our AI and IT solutions. 
+              Start your free trial today or contact us for a custom quote.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link 
+                to="/contact" 
+                className="btn-neon hover-glow focus-neon px-8 py-4 text-lg font-semibold"
+              >
+                Start Free Trial
+                <RocketLaunchIcon className="ml-2 h-5 w-5 inline" />
+              </Link>
+              <Link 
+                to="/contact" 
+                className="glass-card hover-lift px-8 py-4 text-lg font-semibold text-cyan-400 border-cyan-400/30"
+              >
+                Get Custom Quote
+                <SparklesIcon className="ml-2 h-5 w-5 inline" />
+              </Link>
+            </div>
+
+            <div className="mt-8 text-sm text-gray-400">
+              <p>📞 <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
+              <p>✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 

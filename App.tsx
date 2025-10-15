@@ -2,6 +2,7 @@ import React, { Suspense, lazy, useEffect, memo } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './app/styles/futuristic.css';
+import './app/styles/futuristic-enhanced.css';
 // Components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -163,7 +164,6 @@ const AILegalDocumentAnalyzerPage = lazy(() => import('./app/ai-legal-document-a
 
 // New IT Solutions
 const QuantumComputingSolutionsPage = lazy(() => import('./app/quantum-computing-solutions/page'));
-const EdgeComputingSolutionsPage = lazy(() => import('./app/edge-computing-solutions/page'));
 
 // New AI Medical Services
 const AIMedicalDiagnosisAssistantPage = lazy(() => import('./app/ai-medical-diagnosis-assistant/page'));
@@ -423,7 +423,6 @@ const App = memo(() => {
                     
                     {/* New IT Solutions */}
                     <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
-                    <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
                     
                     {/* New AI Medical Services */}
                     <Route path="/ai-medical-diagnosis-assistant" element={<AIMedicalDiagnosisAssistantPage />} />
