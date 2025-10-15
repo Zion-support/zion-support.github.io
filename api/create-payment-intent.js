@@ -1,123 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const  withErrorLogging = (handler) => {
-  return async (req, res) => {
-    try {
-      await handler(req, res)
-    } catch (error) {
-      console.error('API Error:', error);"
-    }
-  }
-}
-export default withErrorLogging(async (req, res) => {
-  if (req.method !== 'POST') {"
-    return res.status(405).json({ error: 'Method not allowed' });"
-  }
-
-  try {
-    const { amount, currency = 'usd' } = req.body;"
-    // Mock payment intent creation
-    const  paymentIntent = {
-      id= `pi_${Date.now()}`,
-      amount,
-      currency,
-      status: 'requires_payment_method',"
-      client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`
-    }
-    res.status(200).json({ paymentIntent })
-  } catch (error) {
-    console.error('Payment intent creation failed=', error);"
-    res.status(500).json({ error: 'Failed to create payment intent' });"
-  }
-})
-=======
-<<<<<<< HEAD
-const withErrorLogging  =  (handler) => {
-=======
-const: withErrorLogging = (handler) => {
->>>>>>> main
-=======
-const withErrorLogging = (handler) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-df8b
-  return async (req, res) => {
-    try {
-=======
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
->>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
       await handler(req, res);
     } catch (error) {
       console.error('API Error:', error);
-<<<<<<< HEAD
-      res.status(500).json({ 
-        error: 'Internal server error',
-        message: error.message 
-      });
-<<<<<<< HEAD
->>>>>>> main
-
-  } catch (error) {
-    console.error(error);
-  };
-  };
-      res.status(500).json({
-    error: 'Internal server error",
-    message: error.message 
-
-  });
-    };
-=======
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-df8b
-=======
       res.status(500).json({
         error: 'Internal server error',
         message: error.message
       });
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
   };
 };
 
 export default withErrorLogging(async (req, res) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    try {";
-;";";
-    // Stripe payment intent creation logic would go here";";";
-    res.status(200).json({ message: 'Payment intent created" 
-=======
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-b0e1
-
-  try {
-    const { amount, currency = 'usd' } = req.body;
-    
-    // Mock payment intent creation
-    const paymentIntent = {
-      id: `pi_${Date.now()}`,
-      amount,
-      currency,
-      status: 'requires_payment_method',
-      client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`
-    };
-    
-    res.status(200).json({ paymentIntent });
-  } catch (error) {
-    console.error('Payment intent creation failed:', error);
-    res.status(500).json({ error: 'Failed to create payment intent' });
-  }
-});
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> main
-=======
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -147,11 +42,3 @@ export default withErrorLogging(async (req, res) => {
     });
   }
 });
->>>>>>> cursor/fix-errors-and-merge-to-main-df8b
-=======
-export default function handler(req, res) {
-  res.status(200).json({ message: 'API endpoint' });
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b0e1

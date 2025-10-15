@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './app/styles/futuristic.css';
 
 // Components
-<<<<<<< HEAD
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
@@ -15,18 +14,6 @@ import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Lazy load pages for better performance
-=======
-import Navigation from './app/components/Navigation'
-import Sidebar from './app/components/Sidebar'
-import Footer from './app/components/Footer'
-import ErrorBoundary from './app/components/ErrorBoundary'
-import GlobalErrorBoundary from './app/components/GlobalErrorBoundary'
-import PerformanceMonitor from './app/components/PerformanceMonitor'
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
-import LoadingSpinner from './app/components/LoadingSpinner'
-;
-// Lazy load pages for better performance;
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
 const HomePage = lazy(() => import('./app/page'));
 const AboutPage = lazy(() => import('./app/about/page'));
 const ContactPage = lazy(() => import('./app/contact/page'));
