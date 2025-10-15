@@ -1,120 +1,129 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Calendar, 
-  Users, 
-  Target, 
+  DollarSign, 
+  TrendingUp, 
   BarChart3, 
-  Clock, 
+  Brain, 
+  Zap, 
   CheckCircle, 
   ArrowRight, 
   Star,
-  Zap,
-  Brain,
+  Phone,
+  Mail,
+  Clock,
   Shield,
+  Globe,
+  Award,
+  Activity,
+  FileText,
+  AlertCircle,
+  PieChart,
+  Database,
   Cloud,
   Smartphone,
-  Globe,
-  Database,
   Settings,
-  TrendingUp,
-  AlertCircle,
-  FileText,
   MessageSquare,
-  Bell,
-  PieChart,
-  Activity,
-  Award
+  Target,
+  Users,
+  Calendar,
+  Briefcase,
+  GraduationCap,
+  Calculator,
+  LineChart
 } from 'lucide-react';
 
-const AiProjectManagementProPage: React.FC = () => {
+const AiFinancialAnalysisProPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Task Assignment",
-      description: "Intelligent task distribution based on team member skills, workload, and availability using machine learning algorithms.",
-      benefits: ["40% faster project completion", "Optimal resource utilization", "Reduced bottlenecks"]
+      title: "AI-Powered Forecasting",
+      description: "Advanced machine learning models predict financial trends, cash flow, and market movements with 95% accuracy.",
+      benefits: ["95% forecast accuracy", "Real-time predictions", "Risk assessment", "Market trend analysis"]
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Predictive Analytics",
-      description: "Advanced analytics that predict project risks, delays, and resource needs before they become problems.",
-      benefits: ["90% risk reduction", "Proactive issue resolution", "Better decision making"]
+      title: "Automated Financial Reporting",
+      description: "Intelligent financial report generation with automated data analysis, insights, and compliance reporting.",
+      benefits: ["Automated report generation", "Real-time insights", "Compliance automation", "Custom dashboards"]
     },
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Smart Goal Tracking",
-      description: "AI-driven goal setting and tracking with automatic progress monitoring and milestone alerts.",
-      benefits: ["Real-time progress visibility", "Automated milestone tracking", "Goal achievement optimization"]
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Investment Analysis",
+      description: "AI-driven investment analysis with portfolio optimization, risk assessment, and performance tracking.",
+      benefits: ["Portfolio optimization", "Risk assessment", "Performance tracking", "Investment recommendations"]
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Team Collaboration Hub",
-      description: "Integrated communication tools with AI-powered meeting summaries and action item extraction.",
-      benefits: ["Seamless team communication", "Automated meeting notes", "Action item tracking"]
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Time Tracking & Analytics",
-      description: "Intelligent time tracking with productivity insights and automated timesheet generation.",
-      benefits: ["Accurate time tracking", "Productivity insights", "Automated reporting"]
+      icon: <Calculator className="w-6 h-6" />,
+      title: "Budget Optimization",
+      description: "Intelligent budget planning and optimization with cost analysis, resource allocation, and spending predictions.",
+      benefits: ["Cost optimization", "Resource allocation", "Spending predictions", "Budget planning"]
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security with SOC 2 compliance and advanced data protection.",
-      benefits: ["Bank-level security", "Compliance automation", "Data protection"]
+      title: "Fraud Detection",
+      description: "Advanced AI algorithms detect fraudulent transactions, anomalies, and suspicious activities in real-time.",
+      benefits: ["Real-time fraud detection", "Anomaly detection", "Risk mitigation", "Compliance monitoring"]
+    },
+    {
+      icon: <LineChart className="w-6 h-6" />,
+      title: "Market Analysis",
+      description: "Comprehensive market analysis with sentiment analysis, competitor tracking, and economic indicators monitoring.",
+      benefits: ["Market sentiment analysis", "Competitor tracking", "Economic indicators", "Trend analysis"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$29",
+      price: "$149",
       period: "per month",
-      description: "Perfect for small teams getting started",
+      description: "Perfect for small businesses and startups",
       features: [
-        "Up to 5 team members",
-        "Basic AI task assignment",
-        "Standard analytics dashboard",
+        "Up to $1M in transactions",
+        "Basic AI forecasting",
+        "Standard financial reports",
         "Email support",
-        "5GB storage",
-        "Basic integrations"
+        "5GB data storage",
+        "Basic integrations",
+        "Monthly insights"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "$399",
       period: "per month",
-      description: "Ideal for growing teams and businesses",
+      description: "Ideal for growing businesses with complex financial needs",
       features: [
-        "Up to 25 team members",
+        "Up to $10M in transactions",
         "Advanced AI features",
-        "Predictive analytics",
+        "Comprehensive reporting",
         "Priority support",
-        "50GB storage",
+        "50GB data storage",
         "Advanced integrations",
-        "Custom workflows",
+        "Real-time insights",
+        "Custom dashboards",
         "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$999",
       period: "per month",
-      description: "For large organizations with complex needs",
+      description: "For large organizations with enterprise-level requirements",
       features: [
-        "Unlimited team members",
+        "Unlimited transactions",
         "Full AI suite",
         "Custom AI models",
-        "24/7 dedicated support",
-        "Unlimited storage",
+        "Advanced analytics",
         "White-label options",
         "Custom integrations",
-        "Advanced security",
-        "Dedicated account manager"
+        "Dedicated account manager",
+        "24/7 phone support",
+        "Unlimited storage",
+        "Advanced security"
       ],
       popular: false
     }
@@ -122,34 +131,41 @@ const AiProjectManagementProPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Project Manager",
+      name: "David Chen",
+      role: "CFO",
       company: "TechCorp Solutions",
-      content: "AI Project Management Pro has revolutionized how we handle complex projects. The AI predictions have saved us countless hours and prevented major delays.",
+      content: "AI Financial Analysis Pro has transformed our financial planning. The forecasting accuracy is incredible and has helped us make better investment decisions.",
       rating: 5
     },
     {
-      name: "Michael Chen",
-      role: "CTO",
-      company: "InnovateLab",
-      content: "The intelligent task assignment feature is incredible. It automatically matches tasks to the right team members based on their skills and availability.",
+      name: "Maria Rodriguez",
+      role: "Financial Director",
+      company: "GrowthTech Inc",
+      content: "The automated reporting feature saves us hours every month. The AI insights have helped us identify cost-saving opportunities worth millions.",
       rating: 5
     },
     {
-      name: "Emily Rodriguez",
-      role: "Operations Director",
-      company: "Global Dynamics",
-      content: "We've seen a 40% improvement in project completion times since implementing this platform. The analytics insights are game-changing.",
+      name: "James Wilson",
+      role: "Investment Manager",
+      company: "Capital Partners",
+      content: "The investment analysis tools are game-changing. We've improved our portfolio performance by 25% since implementing this platform.",
       rating: 5
     }
+  ];
+
+  const stats = [
+    { number: "95%", label: "Forecast Accuracy", icon: <Target className="w-6 h-6" /> },
+    { number: "25%", label: "Cost Reduction", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "60%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
+    { number: "99.9%", label: "Fraud Detection", icon: <Shield className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Project Management Pro - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered project management platform with intelligent task assignment, predictive analytics, and automated workflow optimization." />
-        <meta name="keywords" content="AI project management, intelligent task assignment, predictive analytics, team collaboration, project tracking, workflow automation" />
+        <title>AI Financial Analysis Pro - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered financial analysis platform with intelligent forecasting, automated reporting, and investment optimization." />
+        <meta name="keywords" content="AI financial analysis, financial forecasting, investment analysis, automated reporting, fraud detection, budget optimization" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -164,20 +180,20 @@ const AiProjectManagementProPage: React.FC = () => {
             <div className="text-center max-w-6xl mx-auto">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                 <Star className="w-4 h-4 mr-2" />
-                #1 AI Project Management Platform
+                #1 AI Financial Analysis Platform
               </div>
               
               <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  AI Project Management
+                  AI Financial Analysis
                 </span>
                 <br />
                 <span className="text-white">Pro</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                Transform your project management with AI-powered intelligence. Automate task assignment, 
-                predict risks, and optimize workflows with cutting-edge artificial intelligence.
+                Transform your financial operations with AI-powered intelligence. Optimize investments, 
+                predict market trends, and automate financial analysis with cutting-edge artificial intelligence.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -199,34 +215,15 @@ const AiProjectManagementProPage: React.FC = () => {
 
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <TrendingUp className="w-8 h-8 text-cyan-400" />
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-center group">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                      <div className="text-cyan-400">{stat.icon}</div>
+                    </div>
+                    <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
+                    <div className="text-gray-400 text-sm">{stat.label}</div>
                   </div>
-                  <div className="text-3xl font-bold text-white mb-1">40%</div>
-                  <div className="text-gray-400 text-sm">Faster Completion</div>
-                </div>
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <Target className="w-8 h-8 text-green-400" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-1">90%</div>
-                  <div className="text-gray-400 text-sm">Risk Reduction</div>
-                </div>
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <Users className="w-8 h-8 text-purple-400" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-1">500+</div>
-                  <div className="text-gray-400 text-sm">Teams Using</div>
-                </div>
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <Award className="w-8 h-8 text-orange-400" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-1">99.9%</div>
-                  <div className="text-gray-400 text-sm">Uptime</div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -242,7 +239,7 @@ const AiProjectManagementProPage: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Harness the power of AI to revolutionize your project management workflow
+                Harness the power of AI to optimize every aspect of your financial operations
               </p>
             </div>
             
@@ -285,7 +282,7 @@ const AiProjectManagementProPage: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Choose the perfect plan for your team size and needs
+                Choose the perfect plan for your financial analysis needs
               </p>
             </div>
             
@@ -348,7 +345,7 @@ const AiProjectManagementProPage: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Join hundreds of successful teams using AI Project Management Pro
+                Join hundreds of successful organizations using AI Financial Analysis Pro
               </p>
             </div>
             
@@ -386,10 +383,10 @@ const AiProjectManagementProPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Project Management?
+                Ready to Transform Your Financial Analysis?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Start your free trial today and experience the power of AI-driven project management.
+                Start your free trial today and experience the power of AI-driven financial analysis.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -415,4 +412,4 @@ const AiProjectManagementProPage: React.FC = () => {
   );
 };
 
-export default AiProjectManagementProPage;
+export default AiFinancialAnalysisProPage;

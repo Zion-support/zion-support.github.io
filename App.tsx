@@ -37,6 +37,11 @@ import AiClimateSolutionsProPage from './app/ai-climate-solutions-pro/page';
 import AiAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
 import Ai3DGenerationPage from './app/ai-3d-generation/page';
 import AiBlockchainSolutionsPage from './app/ai-blockchain-solutions/page';
+import AiProjectManagementProPage from './app/ai-project-management-pro/page';
+import AiCustomerSupportProPage from './app/ai-customer-support-pro/page';
+import AiSalesOptimizationProPage from './app/ai-sales-optimization-pro/page';
+import AiHrManagementProPage from './app/ai-hr-management-pro/page';
+import AiFinancialAnalysisProPage from './app/ai-financial-analysis-pro/page';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -110,6 +115,11 @@ const App: React.FC = () => {
                   <Route path="/ai-agricultural-intelligence-pro" element={<AiAgriculturalIntelligenceProPage />} />
                   <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
                   <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
+                  <Route path="/ai-project-management-pro" element={<AiProjectManagementProPage />} />
+                  <Route path="/ai-customer-support-pro" element={<AiCustomerSupportProPage />} />
+                  <Route path="/ai-sales-optimization-pro" element={<AiSalesOptimizationProPage />} />
+                  <Route path="/ai-hr-management-pro" element={<AiHrManagementProPage />} />
+                  <Route path="/ai-financial-analysis-pro" element={<AiFinancialAnalysisProPage />} />
                 </Routes>
               </Suspense>
             </main>

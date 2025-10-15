@@ -70,7 +70,12 @@ const Footer: React.FC = () => {
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
+        { name: 'AI Sales Optimization Pro', href: '/ai-sales-optimization-pro' },
+        { name: 'AI HR Management Pro', href: '/ai-hr-management-pro' },
+        { name: 'AI Financial Analysis Pro', href: '/ai-financial-analysis-pro' }
       ]
     }
   ];
@@ -98,8 +103,9 @@ const Footer: React.FC = () => {
     <footer className="bg-slate-900 text-white relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
-        <div className="absolute inset-0 bg-cyber-grid opacity-10"></div>
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-cyan-500 animate-pulse"></div>
+        <div className="absolute inset-0 cyber-grid-bg opacity-10"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-cyan-500 energy-pulse"></div>
+        <div className="absolute inset-0 data-stream-bg"></div>
       </div>
 
       <div className="relative z-10">
@@ -109,12 +115,12 @@ const Footer: React.FC = () => {
             {/* Company Info */}
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-white" />
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center energy-pulse">
+                  <Zap className="w-6 h-6 text-white neon-glow" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
-                  <p className="text-sm text-cyan-400">Advanced AI & IT Solutions</p>
+                  <h3 className="text-xl font-bold text-white holographic-text">Zion Tech Group</h3>
+                  <p className="text-sm text-cyan-400 neon-glow">Advanced AI & IT Solutions</p>
                 </div>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
@@ -151,10 +157,10 @@ const Footer: React.FC = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-slate-800 hover:bg-cyan-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+                    className="w-10 h-10 bg-slate-800 hover:bg-cyan-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 energy-pulse"
                     aria-label={social.name}
                   >
-                    {social.icon}
+                    <div className="neon-glow">{social.icon}</div>
                   </a>
                 ))}
               </div>
@@ -205,8 +211,8 @@ const Footer: React.FC = () => {
               </ul>
 
               {/* Newsletter Signup */}
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-cyan-500/20">
-                <h4 className="text-lg font-semibold text-white mb-3">Stay Updated</h4>
+              <div className="bg-slate-800/50 rounded-lg p-6 border border-cyan-500/20 neon-border">
+                <h4 className="text-lg font-semibold text-white mb-3 holographic-text">Stay Updated</h4>
                 <p className="text-gray-300 text-sm mb-4">
                   Get the latest updates on AI and IT innovations.
                 </p>
@@ -214,9 +220,9 @@ const Footer: React.FC = () => {
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="flex-1 px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                    className="flex-1 px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 cyber-pulse"
                   />
-                  <button className="px-4 py-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white rounded-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 font-semibold">
+                  <button className="cyber-button px-4 py-2 text-white rounded-lg font-semibold neon-glow">
                     Subscribe
                   </button>
                 </div>
@@ -226,35 +232,37 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="border-t border-cyan-500/20 bg-slate-800/30">
-          <div className="container mx-auto px-4 py-8">
+        <div className="border-t border-cyan-500/20 bg-slate-800/30 relative overflow-hidden">
+          {/* Background Effects */}
+          <div className="absolute inset-0 cyber-grid-bg opacity-10"></div>
+          <div className="container mx-auto px-4 py-8 relative z-10">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div className="group">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-8 h-8 text-white" />
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full mx-auto mb-3 group-hover:scale-110 transition-transform duration-300 energy-pulse">
+                  <Users className="w-8 h-8 text-white neon-glow" />
                 </div>
-                <div className="text-2xl font-bold text-white mb-1">500+</div>
+                <div className="text-2xl font-bold text-white mb-1 holographic-text">500+</div>
                 <div className="text-sm text-gray-400">Happy Clients</div>
               </div>
               <div className="group">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-600 to-cyan-600 rounded-full mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <Award className="w-8 h-8 text-white" />
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-600 to-cyan-600 rounded-full mx-auto mb-3 group-hover:scale-110 transition-transform duration-300 energy-pulse">
+                  <Award className="w-8 h-8 text-white neon-glow" />
                 </div>
-                <div className="text-2xl font-bold text-white mb-1">1000+</div>
+                <div className="text-2xl font-bold text-white mb-1 holographic-text">1000+</div>
                 <div className="text-sm text-gray-400">Projects Completed</div>
               </div>
               <div className="group">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <Clock className="w-8 h-8 text-white" />
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mx-auto mb-3 group-hover:scale-110 transition-transform duration-300 energy-pulse">
+                  <Clock className="w-8 h-8 text-white neon-glow" />
                 </div>
-                <div className="text-2xl font-bold text-white mb-1">99.9%</div>
+                <div className="text-2xl font-bold text-white mb-1 holographic-text">99.9%</div>
                 <div className="text-sm text-gray-400">Uptime Guarantee</div>
               </div>
               <div className="group">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <Shield className="w-8 h-8 text-white" />
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full mx-auto mb-3 group-hover:scale-110 transition-transform duration-300 energy-pulse">
+                  <Shield className="w-8 h-8 text-white neon-glow" />
                 </div>
-                <div className="text-2xl font-bold text-white mb-1">24/7</div>
+                <div className="text-2xl font-bold text-white mb-1 holographic-text">24/7</div>
                 <div className="text-sm text-gray-400">Support Available</div>
               </div>
             </div>

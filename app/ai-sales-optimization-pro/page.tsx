@@ -1,120 +1,126 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Calendar, 
-  Users, 
+  TrendingUp, 
   Target, 
   BarChart3, 
-  Clock, 
+  Users, 
+  Zap, 
   CheckCircle, 
   ArrowRight, 
   Star,
-  Zap,
+  Phone,
+  Mail,
+  Clock,
   Brain,
   Shield,
+  Globe,
+  Award,
+  Activity,
+  FileText,
+  AlertCircle,
+  PieChart,
+  Database,
   Cloud,
   Smartphone,
-  Globe,
-  Database,
   Settings,
-  TrendingUp,
-  AlertCircle,
-  FileText,
   MessageSquare,
-  Bell,
-  PieChart,
-  Activity,
-  Award
+  DollarSign,
+  Percent,
+  Graph
 } from 'lucide-react';
 
-const AiProjectManagementProPage: React.FC = () => {
+const AiSalesOptimizationProPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Task Assignment",
-      description: "Intelligent task distribution based on team member skills, workload, and availability using machine learning algorithms.",
-      benefits: ["40% faster project completion", "Optimal resource utilization", "Reduced bottlenecks"]
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Predictive Analytics",
-      description: "Advanced analytics that predict project risks, delays, and resource needs before they become problems.",
-      benefits: ["90% risk reduction", "Proactive issue resolution", "Better decision making"]
+      title: "AI Lead Scoring",
+      description: "Intelligent lead scoring that analyzes customer behavior, engagement patterns, and demographic data to identify high-value prospects.",
+      benefits: ["40% higher conversion rates", "Automated lead prioritization", "Reduced sales cycle time", "Better resource allocation"]
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Smart Goal Tracking",
-      description: "AI-driven goal setting and tracking with automatic progress monitoring and milestone alerts.",
-      benefits: ["Real-time progress visibility", "Automated milestone tracking", "Goal achievement optimization"]
+      title: "Predictive Sales Analytics",
+      description: "Advanced AI models predict sales outcomes, identify upsell opportunities, and forecast revenue with 95% accuracy.",
+      benefits: ["95% forecast accuracy", "Proactive upsell identification", "Revenue optimization", "Risk mitigation"]
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Team Collaboration Hub",
-      description: "Integrated communication tools with AI-powered meeting summaries and action item extraction.",
-      benefits: ["Seamless team communication", "Automated meeting notes", "Action item tracking"]
+      icon: <MessageSquare className="w-6 h-6" />,
+      title: "AI Sales Coaching",
+      description: "Real-time sales coaching with AI-powered insights, conversation analysis, and personalized improvement recommendations.",
+      benefits: ["Real-time feedback", "Personalized coaching", "Performance improvement", "Best practice sharing"]
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Time Tracking & Analytics",
-      description: "Intelligent time tracking with productivity insights and automated timesheet generation.",
-      benefits: ["Accurate time tracking", "Productivity insights", "Automated reporting"]
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Sales Performance Analytics",
+      description: "Comprehensive analytics dashboard with AI-driven insights into sales performance, pipeline health, and team productivity.",
+      benefits: ["Real-time performance tracking", "Pipeline health monitoring", "Team productivity insights", "Data-driven decisions"]
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Automated Follow-ups",
+      description: "AI-powered automated follow-up sequences that adapt based on customer behavior and engagement patterns.",
+      benefits: ["60% increase in response rates", "Personalized follow-ups", "Reduced manual work", "Better timing optimization"]
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security with SOC 2 compliance and advanced data protection.",
-      benefits: ["Bank-level security", "Compliance automation", "Data protection"]
+      title: "CRM Integration",
+      description: "Seamless integration with popular CRM systems and sales tools for unified data management and workflow automation.",
+      benefits: ["Unified data management", "Workflow automation", "Seamless integration", "Data consistency"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$29",
+      price: "$79",
       period: "per month",
-      description: "Perfect for small teams getting started",
+      description: "Perfect for small sales teams getting started with AI",
       features: [
-        "Up to 5 team members",
-        "Basic AI task assignment",
+        "Up to 5 sales reps",
+        "Basic AI lead scoring",
         "Standard analytics dashboard",
+        "Email integration",
+        "Basic CRM integration",
         "Email support",
-        "5GB storage",
-        "Basic integrations"
+        "5GB data storage"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "$199",
       period: "per month",
-      description: "Ideal for growing teams and businesses",
+      description: "Ideal for growing sales teams with higher volumes",
       features: [
-        "Up to 25 team members",
+        "Up to 25 sales reps",
         "Advanced AI features",
         "Predictive analytics",
+        "AI sales coaching",
+        "Advanced CRM integration",
         "Priority support",
-        "50GB storage",
-        "Advanced integrations",
-        "Custom workflows",
+        "50GB data storage",
+        "Custom reporting",
         "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$499",
       period: "per month",
-      description: "For large organizations with complex needs",
+      description: "For large sales organizations with complex needs",
       features: [
-        "Unlimited team members",
+        "Unlimited sales reps",
         "Full AI suite",
         "Custom AI models",
-        "24/7 dedicated support",
-        "Unlimited storage",
+        "Advanced analytics",
         "White-label options",
         "Custom integrations",
-        "Advanced security",
-        "Dedicated account manager"
+        "Dedicated account manager",
+        "24/7 phone support",
+        "Unlimited data storage",
+        "Advanced security"
       ],
       popular: false
     }
@@ -122,34 +128,41 @@ const AiProjectManagementProPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Project Manager",
+      name: "Robert Johnson",
+      role: "Sales Director",
       company: "TechCorp Solutions",
-      content: "AI Project Management Pro has revolutionized how we handle complex projects. The AI predictions have saved us countless hours and prevented major delays.",
+      content: "AI Sales Optimization Pro increased our conversion rates by 40% and reduced our sales cycle by 25%. The AI lead scoring is incredibly accurate.",
       rating: 5
     },
     {
-      name: "Michael Chen",
-      role: "CTO",
-      company: "InnovateLab",
-      content: "The intelligent task assignment feature is incredible. It automatically matches tasks to the right team members based on their skills and availability.",
+      name: "Maria Garcia",
+      role: "VP of Sales",
+      company: "GrowthTech Inc",
+      content: "The predictive analytics feature has transformed our sales forecasting. We now have 95% accuracy in our revenue predictions.",
       rating: 5
     },
     {
-      name: "Emily Rodriguez",
-      role: "Operations Director",
-      company: "Global Dynamics",
-      content: "We've seen a 40% improvement in project completion times since implementing this platform. The analytics insights are game-changing.",
+      name: "James Wilson",
+      role: "Sales Manager",
+      company: "Enterprise Solutions",
+      content: "The AI sales coaching has improved our team's performance significantly. Every rep now has a personal AI coach available 24/7.",
       rating: 5
     }
+  ];
+
+  const stats = [
+    { number: "40%", label: "Higher Conversion", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "95%", label: "Forecast Accuracy", icon: <Target className="w-6 h-6" /> },
+    { number: "25%", label: "Faster Sales Cycle", icon: <Clock className="w-6 h-6" /> },
+    { number: "60%", label: "More Follow-ups", icon: <Zap className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Project Management Pro - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered project management platform with intelligent task assignment, predictive analytics, and automated workflow optimization." />
-        <meta name="keywords" content="AI project management, intelligent task assignment, predictive analytics, team collaboration, project tracking, workflow automation" />
+        <title>AI Sales Optimization Pro - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered sales optimization platform with intelligent lead scoring, predictive analytics, and automated sales coaching." />
+        <meta name="keywords" content="AI sales optimization, lead scoring, predictive analytics, sales coaching, CRM integration, sales automation, revenue optimization" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -164,20 +177,20 @@ const AiProjectManagementProPage: React.FC = () => {
             <div className="text-center max-w-6xl mx-auto">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                 <Star className="w-4 h-4 mr-2" />
-                #1 AI Project Management Platform
+                #1 AI Sales Optimization Platform
               </div>
               
               <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  AI Project Management
+                  AI Sales Optimization
                 </span>
                 <br />
                 <span className="text-white">Pro</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                Transform your project management with AI-powered intelligence. Automate task assignment, 
-                predict risks, and optimize workflows with cutting-edge artificial intelligence.
+                Transform your sales performance with AI-powered intelligence. Boost conversion rates, 
+                optimize sales processes, and accelerate revenue growth with cutting-edge artificial intelligence.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -199,34 +212,15 @@ const AiProjectManagementProPage: React.FC = () => {
 
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <TrendingUp className="w-8 h-8 text-cyan-400" />
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-center group">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                      <div className="text-cyan-400">{stat.icon}</div>
+                    </div>
+                    <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
+                    <div className="text-gray-400 text-sm">{stat.label}</div>
                   </div>
-                  <div className="text-3xl font-bold text-white mb-1">40%</div>
-                  <div className="text-gray-400 text-sm">Faster Completion</div>
-                </div>
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <Target className="w-8 h-8 text-green-400" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-1">90%</div>
-                  <div className="text-gray-400 text-sm">Risk Reduction</div>
-                </div>
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <Users className="w-8 h-8 text-purple-400" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-1">500+</div>
-                  <div className="text-gray-400 text-sm">Teams Using</div>
-                </div>
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <Award className="w-8 h-8 text-orange-400" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-1">99.9%</div>
-                  <div className="text-gray-400 text-sm">Uptime</div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -242,7 +236,7 @@ const AiProjectManagementProPage: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Harness the power of AI to revolutionize your project management workflow
+                Harness the power of AI to optimize every aspect of your sales process
               </p>
             </div>
             
@@ -285,7 +279,7 @@ const AiProjectManagementProPage: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Choose the perfect plan for your team size and needs
+                Choose the perfect plan for your sales team size and needs
               </p>
             </div>
             
@@ -348,7 +342,7 @@ const AiProjectManagementProPage: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Join hundreds of successful teams using AI Project Management Pro
+                Join hundreds of successful sales teams using AI Sales Optimization Pro
               </p>
             </div>
             
@@ -386,10 +380,10 @@ const AiProjectManagementProPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Project Management?
+                Ready to Optimize Your Sales Performance?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Start your free trial today and experience the power of AI-driven project management.
+                Start your free trial today and experience the power of AI-driven sales optimization.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -415,4 +409,4 @@ const AiProjectManagementProPage: React.FC = () => {
   );
 };
 
-export default AiProjectManagementProPage;
+export default AiSalesOptimizationProPage;

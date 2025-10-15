@@ -1,100 +1,106 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Calendar, 
   Users, 
-  Target, 
+  UserCheck, 
   BarChart3, 
-  Clock, 
+  Brain, 
+  Zap, 
   CheckCircle, 
   ArrowRight, 
   Star,
-  Zap,
-  Brain,
+  Phone,
+  Mail,
+  Clock,
   Shield,
+  Globe,
+  Award,
+  Activity,
+  FileText,
+  AlertCircle,
+  PieChart,
+  Database,
   Cloud,
   Smartphone,
-  Globe,
-  Database,
   Settings,
-  TrendingUp,
-  AlertCircle,
-  FileText,
   MessageSquare,
-  Bell,
-  PieChart,
-  Activity,
-  Award
+  Target,
+  TrendingUp,
+  Calendar,
+  Briefcase,
+  GraduationCap
 } from 'lucide-react';
 
-const AiProjectManagementProPage: React.FC = () => {
+const AiHrManagementProPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Task Assignment",
-      description: "Intelligent task distribution based on team member skills, workload, and availability using machine learning algorithms.",
-      benefits: ["40% faster project completion", "Optimal resource utilization", "Reduced bottlenecks"]
+      title: "AI-Powered Recruitment",
+      description: "Intelligent candidate screening, resume analysis, and interview scheduling with AI-driven matching algorithms.",
+      benefits: ["50% faster hiring process", "Better candidate matching", "Reduced bias in selection", "Automated screening"]
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Predictive Analytics",
-      description: "Advanced analytics that predict project risks, delays, and resource needs before they become problems.",
-      benefits: ["90% risk reduction", "Proactive issue resolution", "Better decision making"]
+      title: "Employee Analytics",
+      description: "Advanced analytics for employee performance, engagement, and retention with predictive insights and recommendations.",
+      benefits: ["Predictive retention models", "Performance insights", "Engagement tracking", "Data-driven decisions"]
     },
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Smart Goal Tracking",
-      description: "AI-driven goal setting and tracking with automatic progress monitoring and milestone alerts.",
-      benefits: ["Real-time progress visibility", "Automated milestone tracking", "Goal achievement optimization"]
+      icon: <UserCheck className="w-6 h-6" />,
+      title: "Smart Onboarding",
+      description: "Automated onboarding workflows with personalized learning paths and progress tracking for new employees.",
+      benefits: ["Personalized onboarding", "Automated workflows", "Progress tracking", "Faster time-to-productivity"]
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Team Collaboration Hub",
-      description: "Integrated communication tools with AI-powered meeting summaries and action item extraction.",
-      benefits: ["Seamless team communication", "Automated meeting notes", "Action item tracking"]
+      icon: <MessageSquare className="w-6 h-6" />,
+      title: "AI Performance Reviews",
+      description: "Intelligent performance review generation with 360-degree feedback analysis and development recommendations.",
+      benefits: ["Automated review generation", "360-degree feedback", "Development insights", "Objective evaluations"]
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Time Tracking & Analytics",
-      description: "Intelligent time tracking with productivity insights and automated timesheet generation.",
-      benefits: ["Accurate time tracking", "Productivity insights", "Automated reporting"]
+      icon: <Zap className="w-6 h-6" />,
+      title: "Workforce Planning",
+      description: "AI-driven workforce planning with demand forecasting, skill gap analysis, and succession planning.",
+      benefits: ["Demand forecasting", "Skill gap analysis", "Succession planning", "Resource optimization"]
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security with SOC 2 compliance and advanced data protection.",
-      benefits: ["Bank-level security", "Compliance automation", "Data protection"]
+      title: "Compliance Management",
+      description: "Automated compliance tracking with labor law updates, policy management, and audit trail maintenance.",
+      benefits: ["Automated compliance", "Policy management", "Audit trails", "Risk mitigation"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$29",
+      price: "$99",
       period: "per month",
-      description: "Perfect for small teams getting started",
+      description: "Perfect for small businesses with basic HR needs",
       features: [
-        "Up to 5 team members",
-        "Basic AI task assignment",
-        "Standard analytics dashboard",
+        "Up to 50 employees",
+        "Basic AI recruitment",
+        "Standard analytics",
+        "Employee self-service portal",
+        "Basic compliance tracking",
         "Email support",
-        "5GB storage",
-        "Basic integrations"
+        "10GB document storage"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "$249",
       period: "per month",
-      description: "Ideal for growing teams and businesses",
+      description: "Ideal for growing companies with advanced HR requirements",
       features: [
-        "Up to 25 team members",
+        "Up to 250 employees",
         "Advanced AI features",
-        "Predictive analytics",
+        "Comprehensive analytics",
+        "Advanced recruitment tools",
+        "Performance management",
         "Priority support",
-        "50GB storage",
-        "Advanced integrations",
+        "100GB document storage",
         "Custom workflows",
         "API access"
       ],
@@ -102,19 +108,20 @@ const AiProjectManagementProPage: React.FC = () => {
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$599",
       period: "per month",
-      description: "For large organizations with complex needs",
+      description: "For large organizations with complex HR operations",
       features: [
-        "Unlimited team members",
+        "Unlimited employees",
         "Full AI suite",
         "Custom AI models",
-        "24/7 dedicated support",
-        "Unlimited storage",
+        "Advanced workforce planning",
         "White-label options",
         "Custom integrations",
-        "Advanced security",
-        "Dedicated account manager"
+        "Dedicated account manager",
+        "24/7 phone support",
+        "Unlimited storage",
+        "Advanced security"
       ],
       popular: false
     }
@@ -122,34 +129,41 @@ const AiProjectManagementProPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Project Manager",
+      name: "Sarah Thompson",
+      role: "HR Director",
       company: "TechCorp Solutions",
-      content: "AI Project Management Pro has revolutionized how we handle complex projects. The AI predictions have saved us countless hours and prevented major delays.",
+      content: "AI HR Management Pro has revolutionized our recruitment process. We've reduced hiring time by 50% and improved candidate quality significantly.",
       rating: 5
     },
     {
-      name: "Michael Chen",
-      role: "CTO",
-      company: "InnovateLab",
-      content: "The intelligent task assignment feature is incredible. It automatically matches tasks to the right team members based on their skills and availability.",
+      name: "Michael Rodriguez",
+      role: "VP of People",
+      company: "GrowthTech Inc",
+      content: "The employee analytics feature provides incredible insights into our workforce. We can now predict and prevent turnover before it happens.",
       rating: 5
     },
     {
-      name: "Emily Rodriguez",
-      role: "Operations Director",
-      company: "Global Dynamics",
-      content: "We've seen a 40% improvement in project completion times since implementing this platform. The analytics insights are game-changing.",
+      name: "Lisa Chen",
+      role: "Chief People Officer",
+      company: "Enterprise Solutions",
+      content: "The AI-powered performance reviews have made our evaluation process more objective and comprehensive. Our employees love the personalized development insights.",
       rating: 5
     }
+  ];
+
+  const stats = [
+    { number: "50%", label: "Faster Hiring", icon: <Clock className="w-6 h-6" /> },
+    { number: "95%", label: "Retention Rate", icon: <Users className="w-6 h-6" /> },
+    { number: "40%", label: "Reduced Bias", icon: <Target className="w-6 h-6" /> },
+    { number: "60%", label: "Time Saved", icon: <Zap className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Project Management Pro - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered project management platform with intelligent task assignment, predictive analytics, and automated workflow optimization." />
-        <meta name="keywords" content="AI project management, intelligent task assignment, predictive analytics, team collaboration, project tracking, workflow automation" />
+        <title>AI HR Management Pro - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered HR management platform with intelligent recruitment, employee analytics, and automated workforce planning." />
+        <meta name="keywords" content="AI HR management, intelligent recruitment, employee analytics, performance management, workforce planning, HR automation" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -164,20 +178,20 @@ const AiProjectManagementProPage: React.FC = () => {
             <div className="text-center max-w-6xl mx-auto">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                 <Star className="w-4 h-4 mr-2" />
-                #1 AI Project Management Platform
+                #1 AI HR Management Platform
               </div>
               
               <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  AI Project Management
+                  AI HR Management
                 </span>
                 <br />
                 <span className="text-white">Pro</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                Transform your project management with AI-powered intelligence. Automate task assignment, 
-                predict risks, and optimize workflows with cutting-edge artificial intelligence.
+                Transform your human resources with AI-powered intelligence. Streamline recruitment, 
+                optimize employee management, and enhance workforce planning with cutting-edge artificial intelligence.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -199,34 +213,15 @@ const AiProjectManagementProPage: React.FC = () => {
 
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <TrendingUp className="w-8 h-8 text-cyan-400" />
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-center group">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                      <div className="text-cyan-400">{stat.icon}</div>
+                    </div>
+                    <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
+                    <div className="text-gray-400 text-sm">{stat.label}</div>
                   </div>
-                  <div className="text-3xl font-bold text-white mb-1">40%</div>
-                  <div className="text-gray-400 text-sm">Faster Completion</div>
-                </div>
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <Target className="w-8 h-8 text-green-400" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-1">90%</div>
-                  <div className="text-gray-400 text-sm">Risk Reduction</div>
-                </div>
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <Users className="w-8 h-8 text-purple-400" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-1">500+</div>
-                  <div className="text-gray-400 text-sm">Teams Using</div>
-                </div>
-                <div className="text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <Award className="w-8 h-8 text-orange-400" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-1">99.9%</div>
-                  <div className="text-gray-400 text-sm">Uptime</div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -242,7 +237,7 @@ const AiProjectManagementProPage: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Harness the power of AI to revolutionize your project management workflow
+                Harness the power of AI to optimize every aspect of your human resources
               </p>
             </div>
             
@@ -285,7 +280,7 @@ const AiProjectManagementProPage: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Choose the perfect plan for your team size and needs
+                Choose the perfect plan for your organization size and HR needs
               </p>
             </div>
             
@@ -348,7 +343,7 @@ const AiProjectManagementProPage: React.FC = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Join hundreds of successful teams using AI Project Management Pro
+                Join hundreds of successful organizations using AI HR Management Pro
               </p>
             </div>
             
@@ -386,10 +381,10 @@ const AiProjectManagementProPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Project Management?
+                Ready to Transform Your HR Operations?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Start your free trial today and experience the power of AI-driven project management.
+                Start your free trial today and experience the power of AI-driven HR management.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -415,4 +410,4 @@ const AiProjectManagementProPage: React.FC = () => {
   );
 };
 
-export default AiProjectManagementProPage;
+export default AiHrManagementProPage;

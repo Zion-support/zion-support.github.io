@@ -76,7 +76,12 @@ const Header: React.FC = () => {
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
+        { name: 'AI Sales Optimization Pro', href: '/ai-sales-optimization-pro' },
+        { name: 'AI HR Management Pro', href: '/ai-hr-management-pro' },
+        { name: 'AI Financial Analysis Pro', href: '/ai-financial-analysis-pro' }
       ]
     },
     {
@@ -91,29 +96,31 @@ const Header: React.FC = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20 shadow-2xl' 
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20 shadow-2xl neon-border' 
         : 'bg-transparent'
     }`}>
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-2 px-4">
-        <div className="container mx-auto flex justify-between items-center text-sm">
+      <div className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-2 px-4 relative overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0 data-stream-bg"></div>
+        <div className="container mx-auto flex justify-between items-center text-sm relative z-10">
           <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 neon-glow">
               <Phone className="w-4 h-4" />
               <span>+1 302 464 0950</span>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 neon-glow">
               <Mail className="w-4 h-4" />
               <span>kleber@ziontechgroup.com</span>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 neon-glow">
               <MapPin className="w-4 h-4" />
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-4">
-            <span className="text-cyan-200">24/7 Support Available</span>
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <span className="text-cyan-200 neon-glow">24/7 Support Available</span>
+            <div className="w-2 h-2 bg-green-400 rounded-full energy-pulse"></div>
           </div>
         </div>
       </div>
@@ -124,14 +131,14 @@ const Header: React.FC = () => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 energy-pulse">
+                <Zap className="w-6 h-6 text-white neon-glow" />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors holographic-text">
                   Zion Tech Group
                 </span>
-                <span className="text-xs text-cyan-400 -mt-1">Advanced AI & IT Solutions</span>
+                <span className="text-xs text-cyan-400 -mt-1 neon-glow">Advanced AI & IT Solutions</span>
               </div>
             </Link>
 
@@ -181,7 +188,7 @@ const Header: React.FC = () => {
 
             {/* CTA Button */}
             <div className="hidden lg:flex items-center space-x-4">
-              <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
+              <button className="cyber-button neon-glow text-white px-6 py-2 rounded-lg font-semibold">
                 Get Quote
               </button>
             </div>
@@ -189,9 +196,9 @@ const Header: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
+              className="lg:hidden p-2 text-gray-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors energy-pulse"
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? <X className="w-6 h-6 neon-glow" /> : <Menu className="w-6 h-6 neon-glow" />}
             </button>
           </div>
         </div>
@@ -200,8 +207,10 @@ const Header: React.FC = () => {
         <div className={`lg:hidden transition-all duration-300 ${
           isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
-          <div className="bg-slate-800/95 backdrop-blur-md border-t border-cyan-500/20">
-            <div className="container mx-auto px-4 py-4 space-y-2">
+          <div className="bg-slate-800/95 backdrop-blur-md border-t border-cyan-500/20 relative overflow-hidden">
+            {/* Background Effects */}
+            <div className="absolute inset-0 cyber-grid-bg opacity-20"></div>
+            <div className="container mx-auto px-4 py-4 space-y-2 relative z-10">
               {navigationItems.map((item) => (
                 <div key={item.name}>
                   <Link
@@ -234,7 +243,7 @@ const Header: React.FC = () => {
                 </div>
               ))}
               <div className="pt-4 border-t border-cyan-500/20">
-                <button className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300">
+                <button className="cyber-button w-full text-white px-6 py-3 rounded-lg font-semibold neon-glow">
                   Get Quote
                 </button>
               </div>
