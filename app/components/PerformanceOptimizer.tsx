@@ -69,11 +69,36 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
+        getCLS((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            // eslint-disable-next-line no-console
+            console.log('CLS:', metric);
+          }
+        });
+        getFID((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            // eslint-disable-next-line no-console
+            console.log('FID:', metric);
+          }
+        });
+        getFCP((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            // eslint-disable-next-line no-console
+            console.log('FCP:', metric);
+          }
+        });
+        getLCP((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            // eslint-disable-next-line no-console
+            console.log('LCP:', metric);
+          }
+        });
+        getTTFB((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            // eslint-disable-next-line no-console
+            console.log('TTFB:', metric);
+          }
+        });
       });
     }
 
@@ -81,10 +106,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'navigation') {
-            console.log('Navigation timing:', entry);
-          } else if (entry.entryType === 'resource') {
-            console.log('Resource timing:', entry);
+          if (process.env.NODE_ENV === 'development') {
+            if (entry.entryType === 'navigation') {
+              // eslint-disable-next-line no-console
+              console.log('Navigation timing:', entry);
+            } else if (entry.entryType === 'resource') {
+              // eslint-disable-next-line no-console
+              console.log('Resource timing:', entry);
+            }
           }
         });
       });

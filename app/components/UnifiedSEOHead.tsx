@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
-interface EnhancedSEOOptimizerProps {
+interface SEOHeadProps {
   title?: string;
   description?: string;
   keywords?: string;
@@ -17,7 +17,13 @@ interface EnhancedSEOOptimizerProps {
   tags?: string[];
 }
 
-const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
+interface StructuredData {
+  '@context': string;
+  '@type': string;
+  [key: string]: unknown;
+}
+
+const UnifiedSEOHead: React.FC<SEOHeadProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 99.9% uptime SLA, 24/7 support.",
   keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, Zion Tech Group, machine learning, 5G solutions, micro SaaS, enterprise software",
@@ -35,269 +41,157 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
   const currentUrl = `https://ziontechgroup.com${location.pathname}`;
   const finalCanonical = canonical || currentUrl;
 
-  // Generate enhanced structured data
-  const generateEnhancedStructuredData = () => {
-    const baseStructuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://ziontechgroup.com/logo.png",
-        "width": 200,
-        "height": 60
+  // Generate base organization structured data
+  const generateBaseStructuredData = (): StructuredData => ({
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://ziontechgroup.com/logo.png',
+      width: 200,
+      height: 60
+    },
+    description,
+    foundingDate: '2020',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '364 E Main St STE 1008',
+      addressLocality: 'Middletown',
+      addressRegion: 'DE',
+      postalCode: '19709',
+      addressCountry: 'US'
+    },
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: '+1-302-464-0950',
+        contactType: 'customer service',
+        areaServed: 'US',
+        availableLanguage: 'English',
+        email: 'kleber@ziontechgroup.com'
       },
-      "description": description,
-      "foundingDate": "2020",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "364 E Main St STE 1008",
-        "addressLocality": "Middletown",
-        "addressRegion": "DE",
-        "postalCode": "19709",
-        "addressCountry": "US"
-      },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+1-302-464-0950",
-          "contactType": "customer service",
-          "areaServed": "US",
-          "availableLanguage": "English",
-          "email": "kleber@ziontechgroup.com"
-        },
-        {
-          "@type": "ContactPoint",
-          "telephone": "+1-302-464-0950",
-          "contactType": "technical support",
-          "areaServed": "US",
-          "availableLanguage": "English",
-          "email": "support@ziontechgroup.com"
-        }
-      ],
-      "sameAs": [
-        "https://linkedin.com/company/ziontechgroup",
-        "https://twitter.com/ziontechgroup",
-        "https://github.com/ziontechgroup",
-        "https://facebook.com/ziontechgroup"
-      ],
-      "service": [
-        {
-          "@type": "Service",
-          "name": "AI Solutions",
-          "description": "Cutting-edge artificial intelligence solutions for business automation and optimization",
-          "provider": {
-            "@type": "Organization",
-            "name": "Zion Tech Group"
-          },
-          "offers": {
-            "@type": "Offer",
-            "availability": "https://schema.org/InStock",
-            "priceCurrency": "USD",
-            "category": "Technology Services"
-          }
-        },
-        {
-          "@type": "Service",
-          "name": "IT Services",
-          "description": "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and custom development",
-          "provider": {
-            "@type": "Organization",
-            "name": "Zion Tech Group"
-          },
-          "offers": {
-            "@type": "Offer",
-            "availability": "https://schema.org/InStock",
-            "priceCurrency": "USD",
-            "category": "Technology Services"
-          }
-        },
-        {
-          "@type": "Service",
-          "name": "5G Implementation",
-          "description": "Next-generation connectivity and infrastructure services for modern businesses",
-          "provider": {
-            "@type": "Organization",
-            "name": "Zion Tech Group"
-          },
-          "offers": {
-            "@type": "Offer",
-            "availability": "https://schema.org/InStock",
-            "priceCurrency": "USD",
-            "category": "Technology Services"
-          }
-        },
-        {
-          "@type": "Service",
-          "name": "Micro SaaS Solutions",
-          "description": "Ready-to-use software solutions for immediate deployment and business growth",
-          "provider": {
-            "@type": "Organization",
-            "name": "Zion Tech Group"
-          },
-          "offers": {
-            "@type": "Offer",
-            "availability": "https://schema.org/InStock",
-            "priceCurrency": "USD",
-            "category": "Software Solutions"
-          }
-        }
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Technology Services Catalog",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "AI Analytics",
-              "description": "Advanced AI-powered analytics solutions"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Cybersecurity Solutions",
-              "description": "Comprehensive cybersecurity protection services"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Cloud Infrastructure",
-              "description": "Scalable cloud infrastructure solutions"
-            }
-          }
-        ]
+      {
+        '@type': 'ContactPoint',
+        telephone: '+1-302-464-0950',
+        contactType: 'technical support',
+        areaServed: 'US',
+        availableLanguage: 'English',
+        email: 'support@ziontechgroup.com'
       }
-    };
+    ],
+    sameAs: [
+      'https://linkedin.com/company/ziontechgroup',
+      'https://twitter.com/ziontechgroup',
+      'https://github.com/ziontechgroup',
+      'https://facebook.com/ziontechgroup'
+    ],
+    service: [
+      {
+        '@type': 'Service',
+        name: 'AI Solutions',
+        description: 'Cutting-edge artificial intelligence solutions for business automation and optimization'
+      },
+      {
+        '@type': 'Service',
+        name: 'IT Services',
+        description: 'Comprehensive technology solutions including cloud infrastructure, cybersecurity, and custom development'
+      },
+      {
+        '@type': 'Service',
+        name: '5G Implementation',
+        description: 'Next-generation connectivity and infrastructure services for modern businesses'
+      },
+      {
+        '@type': 'Service',
+        name: 'Micro SaaS Solutions',
+        description: 'Ready-to-use software solutions for immediate deployment and business growth'
+      }
+    ]
+  });
 
-    // Add page-specific structured data
+  // Generate page-specific structured data
+  const generatePageStructuredData = (): StructuredData => {
+    const baseData = generateBaseStructuredData();
     const path = location.pathname;
-    
+
     if (path === '/') {
       return {
-        ...baseStructuredData,
-        "@type": "WebSite",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://ziontechgroup.com/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        },
-        "mainEntity": {
-          "@type": "ItemList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "AI Solutions",
-              "url": "https://ziontechgroup.com/ai-services"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "IT Services",
-              "url": "https://ziontechgroup.com/services"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Micro SaaS",
-              "url": "https://ziontechgroup.com/micro-saas"
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
-              "name": "5G Solutions",
-              "url": "https://ziontechgroup.com/5g-solutions"
-            }
-          ]
+        ...baseData,
+        '@type': 'WebSite',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: 'https://ziontechgroup.com/search?q={search_term_string}',
+          'query-input': 'required name=search_term_string'
         }
       };
     }
-    
+
     if (path === '/about') {
       return {
-        ...baseStructuredData,
-        "@type": "AboutPage",
-        "mainEntity": {
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "description": "Leading provider of AI and IT solutions",
-          "foundingDate": "2020",
-          "numberOfEmployees": "50-100",
-          "industry": "Technology"
+        ...baseData,
+        '@type': 'AboutPage',
+        mainEntity: {
+          '@type': 'Organization',
+          name: 'Zion Tech Group',
+          description: 'Leading provider of AI and IT solutions',
+          foundingDate: '2020',
+          numberOfEmployees: '50-100',
+          industry: 'Technology'
         }
       };
     }
-    
+
     if (path === '/contact') {
       return {
-        ...baseStructuredData,
-        "@type": "ContactPage",
-        "mainEntity": {
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
-            "contactType": "customer service",
-            "email": "kleber@ziontechgroup.com",
-            "areaServed": "US"
+        ...baseData,
+        '@type': 'ContactPage',
+        mainEntity: {
+          '@type': 'Organization',
+          name: 'Zion Tech Group',
+          contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+1-302-464-0950',
+            contactType: 'customer service',
+            email: 'kleber@ziontechgroup.com',
+            areaServed: 'US'
           }
         }
       };
     }
-    
+
     if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-') || path.startsWith('/5g-')) {
       return {
-        ...baseStructuredData,
-        "@type": "Service",
-        "name": title,
-        "description": description,
-        "provider": {
-          "@type": "Organization",
-          "name": "Zion Tech Group"
+        ...baseData,
+        '@type': 'Service',
+        name: title,
+        description,
+        provider: {
+          '@type': 'Organization',
+          name: 'Zion Tech Group'
         },
-        "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
-          "priceCurrency": "USD",
-          "category": "Technology Services",
-          "validFrom": "2024-01-01",
-          "validThrough": "2025-12-31"
+        offers: {
+          '@type': 'Offer',
+          availability: 'https://schema.org/InStock',
+          priceCurrency: 'USD',
+          category: 'Technology Services',
+          validFrom: '2024-01-01',
+          validThrough: '2025-12-31'
         },
-        "areaServed": {
-          "@type": "Country",
-          "name": "United States"
+        areaServed: {
+          '@type': 'Country',
+          name: 'United States'
         },
-        "serviceType": "AI and IT Solutions",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": `${title} Services`,
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": title,
-                "description": description
-              }
-            }
-          ]
-        }
+        serviceType: 'AI and IT Solutions'
       };
     }
-    
-    return baseStructuredData;
+
+    return baseData;
   };
 
   // Generate FAQ structured data
-  const generateFAQStructuredData = () => {
+  const generateFAQStructuredData = (): StructuredData => {
     const faqs = [
       {
         question: "What services does Zion Tech Group offer?",
@@ -322,28 +216,28 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
     ];
 
     return {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map(faq => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer
         }
       }))
     };
   };
 
   // Generate breadcrumb structured data
-  const generateBreadcrumbStructuredData = () => {
+  const generateBreadcrumbStructuredData = (): StructuredData => {
     const pathSegments = location.pathname.split('/').filter(Boolean);
     const breadcrumbs = [
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://ziontechgroup.com"
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://ziontechgroup.com'
       }
     ];
 
@@ -356,29 +250,29 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
         .join(' ');
       
       breadcrumbs.push({
-        "@type": "ListItem",
-        "position": index + 2,
-        "name": name,
-        "item": `https://ziontechgroup.com${currentPath}`
+        '@type': 'ListItem',
+        position: index + 2,
+        name,
+        item: `https://ziontechgroup.com${currentPath}`
       });
     });
 
     return {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": breadcrumbs
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: breadcrumbs
     };
   };
 
-  const finalStructuredData = structuredData || generateEnhancedStructuredData();
+  const finalStructuredData = structuredData || generatePageStructuredData();
   const faqStructuredData = generateFAQStructuredData();
   const breadcrumbStructuredData = generateBreadcrumbStructuredData();
 
   // Track page views and SEO metrics
   useEffect(() => {
     // Track page view in analytics
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: title,
         page_location: currentUrl,
         custom_map: {
@@ -388,8 +282,8 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
     }
 
     // Track SEO performance
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'seo_optimization', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as { gtag: Function }).gtag('event', 'seo_optimization', {
         event_category: 'SEO',
         event_label: 'page_loaded',
         value: 1
@@ -487,8 +381,6 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
       
       {/* Preload critical resources */}
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      <link rel="preload" href="/assets/index-Dq8n7JAm.css" as="style" />
-      <link rel="preload" href="/assets/index-DApGEc-z.js" as="script" />
       
       {/* DNS prefetch for performance */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
@@ -503,4 +395,4 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
   );
 };
 
-export default EnhancedSEOOptimizer;
+export default UnifiedSEOHead;

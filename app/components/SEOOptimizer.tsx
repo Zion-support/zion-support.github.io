@@ -9,7 +9,7 @@ interface SEOOptimizerProps {
   canonical?: string;
   ogImage?: string;
   noIndex?: boolean;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import SEOHead from './components/SEOHead';
+import UnifiedSEOHead from './components/UnifiedSEOHead';
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
@@ -59,7 +59,7 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <SEOHead 
+      <UnifiedSEOHead 
         title="Zion Tech Group - Advanced AI & IT Solutions"
         description="Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology."
         keywords="AI solutions, cybersecurity, cloud infrastructure, digital transformation, IT services, machine learning, artificial intelligence"
