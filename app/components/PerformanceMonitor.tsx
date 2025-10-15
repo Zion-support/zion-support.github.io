@@ -50,10 +50,23 @@ const PerformanceMonitor: React.FC = () => {
         if (navigation) {
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
           const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+          const firstPaint = window.performance.getEntriesByName('first-paint')[0]?.startTime || 0;
+          const firstContentfulPaint = window.performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0;
+          
+          // Send performance metrics to analytics
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'page_performance', {
+              event_category: 'Performance',
+              event_label: 'Page Load',
+              value: Math.round(loadTime)
+            });
+          }
           
           if (process.env.NODE_ENV === 'development') {
             console.log(`[Performance] Page Load Time: ${loadTime}ms`);
             console.log(`[Performance] DOM Content Loaded: ${domContentLoaded}ms`);
+            console.log(`[Performance] First Paint: ${firstPaint}ms`);
+            console.log(`[Performance] First Contentful Paint: ${firstContentfulPaint}ms`);
           }
         }
       }

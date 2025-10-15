@@ -1,4 +1,4 @@
-import React from 'react';
+// AI Content Moderator page component
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 

@@ -11,6 +11,29 @@ const AccessibilityEnhancer: React.FC = memo(() => {
           (mainContent as HTMLElement).focus();
         }
       }
+      
+      // Close dropdowns on Escape
+      if (event.key === 'Escape') {
+        const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
+        openDropdowns.forEach(dropdown => {
+          (dropdown as HTMLElement).click();
+        });
+      }
+      
+      // Navigate dropdowns with arrow keys
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+        const activeElement = document.activeElement;
+        if (activeElement && activeElement.getAttribute('aria-haspopup') === 'true') {
+          event.preventDefault();
+          const menu = activeElement.nextElementSibling;
+          if (menu && menu.getAttribute('role') === 'menu') {
+            const firstItem = menu.querySelector('[role="menuitem"]') as HTMLElement;
+            if (firstItem) {
+              firstItem.focus();
+            }
+          }
+        }
+      }
     };
 
     // Add focus management for modals and dropdowns

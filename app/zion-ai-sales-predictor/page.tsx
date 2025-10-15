@@ -1,4 +1,4 @@
-import React from 'react';
+// AI Sales Predictor page component
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 

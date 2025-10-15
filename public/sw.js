@@ -1,3 +1,4 @@
+// Service Worker for PWA functionality
 const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [
   '/',
