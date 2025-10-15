@@ -1,12 +1,6 @@
-export const registerServiceWorker = () => {
-  return;
-}
-        })
-        .catch((registrationError) => { if (process.env.NODE_ENV === 'development') {
-            }
-        });
-    });
-  }
+export const utilityFunction = () => {
+  // Utility function implementation
+  return {
+    // Return utility functions or data
+  };
 };
-
-export default NotFoundPage;

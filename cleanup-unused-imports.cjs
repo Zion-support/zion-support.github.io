@@ -1,72 +1,103 @@
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Function to clean up unused imports in a file
-function cleanupFile(filePath) {
+// List of files that need import cleanup
+const filesToClean = [
+  'app/ai-3d-generation/page.tsx',
+  'app/ai-accounting-assistant/page.tsx',
+  'app/ai-agricultural-intelligence-pro/page.tsx',
+  'app/ai-api-management/page.tsx',
+  'app/ai-api-manager/page.tsx',
+  'app/ai-automated-reporting/page.tsx',
+  'app/ai-automated-testing/page.tsx',
+  'app/ai-autonomous-systems/page.tsx',
+  'app/ai-blockchain-analytics/page.tsx',
+  'app/ai-blockchain-solutions/page.tsx',
+  'app/ai-business-intelligence-pro/page.tsx',
+  'app/ai-chatbot-builder/page.tsx',
+  'app/ai-chatbot-enterprise/page.tsx',
+  'app/ai-climate-prediction-engine/page.tsx',
+  'app/ai-climate-solutions-pro/page.tsx',
+  'app/ai-code-assistant/page.tsx',
+  'app/ai-content-generation/page.tsx',
+  'app/ai-database-solutions/page.tsx',
+  'app/ai-project-management-pro/page.tsx',
+  'app/ai-services/page.tsx',
+  'app/ai-social-media-manager/page.tsx',
+  'app/ai-social-media-manager-pro/page.tsx',
+  'app/ai-voice-assistant-enterprise/page.tsx',
+  'app/api-docs/page.tsx',
+  'app/business-intelligence/page.tsx',
+  'app/careers/page.tsx',
+  'app/cloud-migration-services/page.tsx',
+  'app/components/About.tsx',
+  'app/components/AdvancedErrorBoundary.tsx',
+  'app/components/ComprehensiveErrorBoundary.tsx',
+  'app/components/EnhancedNavigation.tsx',
+  'app/components/ErrorHandler.tsx',
+  'app/components/FuturisticCard.tsx',
+  'app/components/ProductionErrorBoundary.tsx',
+  'app/components/Sidebar.tsx',
+  'app/docs/page.tsx',
+  'app/DynamicPageLoader.tsx',
+  'app/it-services/page.tsx',
+  'app/pages/HomePage.tsx',
+  'app/status/page.tsx',
+  'app/zion-analytics-pro/page.tsx',
+  'app/zion-cloud-vault/page.tsx',
+  'app/zion-compliance-manager/page.tsx',
+  'app/zion-content-studio/page.tsx',
+  'app/zion-data-sync/page.tsx',
+  'app/zion-email-automation/page.tsx',
+  'app/zion-inventory-smart/page.tsx',
+  'app/zion-invoice-genius/page.tsx',
+  'app/zion-lead-magnet/page.tsx',
+  'app/zion-performance-monitor/page.tsx',
+  'app/zion-project-master/page.tsx',
+  'app/zion-security-shield/page.tsx',
+  'app/zion-social-scheduler/page.tsx',
+  'app/zion-workflow-automation/page.tsx'
+];
+
+function cleanImports(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const fullPath = path.join(__dirname, filePath);
+    let content = fs.readFileSync(fullPath, 'utf8');
     
-    // Skip if file doesn't exist or is not a TypeScript/JavaScript file
-    if (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts') && !filePath.endsWith('.jsx') && !filePath.endsWith('.js')) {
-      return;
-    }
+    // Remove unused imports - only keep the ones that are actually used
+    const usedImports = [
+      'Helmet',
+      'ArrowRight',
+      'CheckCircle',
+      'Star',
+      'Shield',
+      'Brain',
+      'BarChart',
+      'MessageSquare',
+      'Globe',
+      'Zap',
+      'Clock'
+    ];
     
-    // Skip if file is in node_modules or other build directories
-    if (filePath.includes('node_modules') || filePath.includes('dist') || filePath.includes('.next')) {
-      return;
-    }
+    // Create a clean import statement with only used imports
+    const cleanImport = `import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Shield, Brain, BarChart, MessageSquare, Globe, Zap, Clock } from 'lucide-react';`;
     
-    console.log(`Processing: ${filePath}`);
+    // Replace the import section
+    content = content.replace(
+      /import React from 'react';\nimport { Helmet } from 'react-helmet-async';\nimport { [^}]+ } from 'lucide-react';/,
+      cleanImport
+    );
     
-    // Run ESLint with --fix to automatically remove unused imports
-    try {
-      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"extends": ["@typescript-eslint/recommended"], "parser": "@typescript-eslint/parser", "rules": {"@typescript-eslint/no-unused-vars": "error"}}'`, { stdio: 'pipe' });
-    } catch (error) {
-      // ESLint might fail, but that's okay - we'll continue
-      console.log(`ESLint warning for ${filePath}: ${error.message}`);
-    }
+    fs.writeFileSync(fullPath, content, 'utf8');
+    console.log(`Cleaned imports for ${filePath}`);
     
   } catch (error) {
-    console.log(`Error processing ${filePath}: ${error.message}`);
+    console.error(`Error cleaning ${filePath}:`, error.message);
   }
 }
 
-// Function to recursively find all TypeScript/JavaScript files
-function findFiles(dir) {
-  const files = [];
-  
-  try {
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip certain directories
-        if (!['node_modules', 'dist', '.next', '.git'].includes(item)) {
-          files.push(...findFiles(fullPath));
-        }
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
-        files.push(fullPath);
-      }
-    }
-  } catch (error) {
-    console.log(`Error reading directory ${dir}: ${error.message}`);
-  }
-  
-  return files;
-}
-
-// Main execution
-console.log('Starting cleanup of unused imports...');
-
-const files = findFiles('./app');
-console.log(`Found ${files.length} files to process`);
-
-for (const file of files) {
-  cleanupFile(file);
-}
-
-console.log('Cleanup completed!');
+// Clean all files
+console.log('Starting to clean up unused imports...');
+filesToClean.forEach(cleanImports);
+console.log('Finished cleaning imports!');

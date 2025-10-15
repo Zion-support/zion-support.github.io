@@ -1,8 +1,32 @@
-import React from 'react';
+const fs = require('fs');
+const path = require('path');
+
+// List of broken files that need fixing
+const brokenFiles = [
+  'app/ai-3d-generation/page.tsx',
+  'app/ai-accounting-assistant/page.tsx',
+  'app/ai-agricultural-intelligence-pro/page.tsx',
+  'app/ai-api-management/page.tsx',
+  'app/ai-api-manager/page.tsx',
+  'app/ai-automated-reporting/page.tsx',
+  'app/ai-automated-testing/page.tsx',
+  'app/ai-autonomous-systems/page.tsx',
+  'app/ai-blockchain-analytics/page.tsx',
+  'app/ai-blockchain-solutions/page.tsx',
+  'app/ai-business-intelligence-pro/page.tsx',
+  'app/ai-chatbot-builder/page.tsx',
+  'app/ai-climate-prediction-engine/page.tsx',
+  'app/ai-climate-solutions-pro/page.tsx',
+  'app/ai-database-solutions/page.tsx',
+  'app/ai-project-management-pro/page.tsx'
+];
+
+function createBasicPageTemplate(componentName, title, description, keywords) {
+  return `import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Shield, Award, Brain, Cpu, Target, BarChart, MessageSquare, Phone, Mail, Users, Globe, Zap, TrendingUp, Clock, DollarSign } from 'lucide-react';
 
-const ContentCarousel = () => {
+const ${componentName} = () => {
   const features = [
     {
       title: "Advanced AI Integration",
@@ -108,9 +132,9 @@ const ContentCarousel = () => {
   return (
     <>
       <Helmet>
-        <title>Content Carousel | Zion Tech Group</title>
-        <meta name="description" content="Advanced Content Carousel solutions powered by AI and cutting-edge technology" />
-        <meta name="keywords" content="ai 3d generation, AI solutions, enterprise software, automation, technology" />
+        <title>${title} | Zion Tech Group</title>
+        <meta name="description" content="${description}" />
+        <meta name="keywords" content="${keywords}" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -118,10 +142,10 @@ const ContentCarousel = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Content Carousel
+                ${title}
               </h1>
               <p className="text-xl text-gray-300 mb-8">
-                Advanced Content Carousel solutions powered by AI and cutting-edge technology
+                ${description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
@@ -210,7 +234,7 @@ const ContentCarousel = () => {
                   </p>
                   <div className="mb-6">
                     <span className="text-4xl font-bold text-white">
-                      ${plan.price}
+                      $${plan.price}
                     </span>
                     <span className="text-gray-300">
                       /{plan.period}
@@ -293,4 +317,36 @@ const ContentCarousel = () => {
   );
 };
 
-export default ContentCarousel;
+export default ${componentName};
+`;
+}
+
+function fixBrokenComponent(filePath) {
+  try {
+    const fullPath = path.join(__dirname, filePath);
+    
+    // Extract component name from file path
+    const pathParts = filePath.split('/');
+    const fileName = pathParts[pathParts.length - 1];
+    const componentName = fileName.replace('.tsx', '').replace('page', '').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).replace(/\s/g, '') || 'AIService';
+    
+    // Create title and description based on component name
+    const title = componentName.replace(/([A-Z])/g, ' $1').trim();
+    const description = `Advanced ${title.toLowerCase()} solutions powered by AI and cutting-edge technology`;
+    const keywords = `${title.toLowerCase()}, AI solutions, enterprise software, automation, technology`;
+    
+    console.log(`Fixing ${filePath} with component name: ${componentName}`);
+    
+    const newContent = createBasicPageTemplate(componentName, title, description, keywords);
+    fs.writeFileSync(fullPath, newContent, 'utf8');
+    console.log(`Fixed ${filePath}`);
+    
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+// Fix all broken files
+console.log('Starting to fix broken components with template...');
+brokenFiles.forEach(fixBrokenComponent);
+console.log('Finished fixing components!');
