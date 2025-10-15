@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
@@ -22,28 +13,10 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   text = 'Loading...',
   fullScreen = false,
   className = ''
-<<<<<<< HEAD
-=======
-import React from 'react';
-
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
-  className?: string;
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  text = 'Loading...', 
-  className = '' 
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     lg: 'w-12 h-12',
     xl: 'w-16 h-16'
   };
@@ -53,7 +26,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       <Loader2 className={`animate-spin text-purple-500 ${sizeClasses[size]}`} />
       {text && (
         <p className="mt-2 text-sm text-gray-300">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
           {text}
         </p>
       )}
@@ -71,25 +43,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   }
 
   return spinner;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-=======
-lg: 'w-12 h-12'
-  };
-
-  return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-purple-600`}></div>
-      {text && (
-        <p className="mt-2 text-sm text-gray-400">{text}</p>
-      )}
-    </div>
-  );
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
 };
 
 export default LoadingSpinner;
