@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useRef } from 'react';
+import { useEffect, useCallback, useRef } from 'react;'
 
 interface PerformanceMetrics {
   fcp?: number;
@@ -40,21 +40,21 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   const observerRef = useRef<PerformanceObserver | null>(null);
   const reportIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {
+  const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: Record<string, unknown>) => {''
     // Report to analytics
-    if (typeof window !== 'undefined' && (window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
-      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', name, {
+    if (typeof window !== 'undefined' && (window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {''
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', name, {''
         event_category: category,
         value: Math.round(value),
         non_interaction: true
       });
     }
     // Report to custom analytics endpoint
-    if (process.env.NODE_ENV === 'production') {
-      fetch('/api/analytics/performance', {
-        method: 'POST',
+    if (process.env.NODE_ENV === 'production') {''
+      fetch('/api/analytics/performance', {''
+        method: 'POST',''
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json'''
         },
         body: JSON.stringify({
           metric: name,
@@ -68,7 +68,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       });
     }
     // Log in development (commented out for production)
-    // if (process.env.NODE_ENV === 'development') {
+    // if (process.env.NODE_ENV === 'development') {''
     //   console.log(`Performance Metric - ${name}:`, value);
     // }
   }, []);
@@ -77,11 +77,11 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     const metrics = metricsRef.current;
     
     Object.entries(metrics).forEach(([key, value]) => {
-      if (typeof value === 'number' && !isNaN(value)) {
+      if (typeof value === 'number' && !isNaN(value)) {''
         reportMetric(key.toUpperCase(), value);
-      } else if (typeof value === 'object' && value !== null) {
+      } else if (typeof value === 'object' && value !== null) {''
         Object.entries(value).forEach(([subKey, subValue]) => {
-          if (typeof subValue === 'number' && !isNaN(subValue)) {
+          if (typeof subValue === 'number' && !isNaN(subValue)) {''
             reportMetric(`${key.toUpperCase()}_${subKey.toUpperCase()}`, subValue);
           }
         });
@@ -90,7 +90,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   }, [reportMetric]);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return;''
 
     const setupPerformanceObserver = () => {
       try {
@@ -107,59 +107,59 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
             };
 
             switch (entry.entryType) {
-              case 'paint':
-                if (entry.name === 'first-contentful-paint') {
+              case 'paint':''
+                if (entry.name === 'first-contentful-paint') {''
                   metricsRef.current.fcp = metric.startTime;
                 }
                 break;
-              case 'largest-contentful-paint':
+              case 'largest-contentful-paint':''
                 metricsRef.current.lcp = metric.startTime;
                 break;
-              case 'first-input':
+              case 'first-input':''
                 if (!metric.hadRecentInput && metric.value !== undefined) {
                   metricsRef.current.cls = (metricsRef.current.cls || 0) + metric.value;
                 }
                 break;
-              case 'navigation':
+              case 'navigation':''
                 break;
-              case 'measure':
-                if (entry.name === 'time-to-interactive') {
+              case 'measure':''
+                if (entry.name === 'time-to-interactive') {''
                   metricsRef.current.tti = metric.duration;
                 }
-                if (entry.name === 'first-meaningful-paint') {
+                if (entry.name === 'first-meaningful-paint') {''
                   metricsRef.current.fmp = metric.startTime;
                 }
                 break;
-              case 'longtask':
+              case 'longtask':''
                 if (metric.duration && metric.duration > longTaskThreshold) {
-                  reportMetric('LONG_TASK', metric.duration, 'Performance');
+                  reportMetric('LONG_TASK', metric.duration, 'Performance');''
                 }
                 break;
-              case 'resource':
+              case 'resource':''
                 if (enableResourceTiming && metric.duration && metric.duration > 1000) {
-                  reportMetric('SLOW_RESOURCE', metric.duration, 'Performance');
+                  reportMetric('SLOW_RESOURCE', metric.duration, 'Performance');''
                 }
                 break;
             }
           }
         });
 
-        const entryTypes = ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'];
+        const entryTypes = ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'];''
         if (enableLongTaskMonitoring) {
-          entryTypes.push('longtask');
+          entryTypes.push('longtask');''
         }
         if (enableResourceTiming) {
-          entryTypes.push('resource');
+          entryTypes.push('resource');''
         }
         observer.observe({ entryTypes });
         observerRef.current = observer;
       } catch (error) {
-        console.warn('Performance Observer not supported:', error);
+        console.warn('Performance Observer not supported:', error);''
       }
     };
 
     const setupMemoryMonitoring = () => {
-      if (!enableMemoryMonitoring || !('memory' in performance)) return;
+      if (!enableMemoryMonitoring || !('memory' in performance)) return;''
 
       const checkMemory = () => {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
@@ -175,7 +175,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
           };
           // Alert if memory usage is high
           if (usedMB / limitMB > memoryThreshold) {
-            reportMetric('HIGH_MEMORY_USAGE', (usedMB / limitMB) * 100, 'Performance');
+            reportMetric('HIGH_MEMORY_USAGE', (usedMB / limitMB) * 100, 'Performance');''
           }
         }
       };
@@ -199,9 +199,9 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       });
 
       try {
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });''
       } catch (error) {
-        console.warn('Layout Shift Observer not supported:', error);
+        console.warn('Layout Shift Observer not supported:', error);''
       }
       return () => clsObserver.disconnect();
     };
@@ -216,7 +216,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     const handleBeforeUnload = () => {
       reportMetrics();
     };
-    window.addEventListener('beforeunload', handleBeforeUnload);
+    window.addEventListener('beforeunload', handleBeforeUnload);''
 
     return () => {
       if (observerRef.current) {
@@ -231,7 +231,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       if (reportIntervalRef.current) {
         clearInterval(reportIntervalRef.current);
       }
-      window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.removeEventListener('beforeunload', handleBeforeUnload);''
     };
   }, [
     enableMemoryMonitoring,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 
 interface EnhancedAccessibilityEnhancerProps {
   className?: string;
@@ -6,7 +6,7 @@ interface EnhancedAccessibilityEnhancerProps {
 }
 
 const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({ 
-  className = '', 
+  className = ', ''
   children 
 }) => {
   return (

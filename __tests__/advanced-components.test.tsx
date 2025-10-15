@@ -1,22 +1,18 @@
-<<<<<<< HEAD
-import { render, screen } from "@testing-library/react"
-=======
-import {render} from "@testing-library/react"
->>>>>>> cursor/fix-errors-and-merge-to-main-7017
+import { render, screen } from "@testing-library/react";
 
 const TestComponent = () => {
   return <div>Test content</div>
 }
 
-describe("Advanced Components", () => {
+describe("Advanced Components", () => {""
   // Test implementation
-  it("should render without errors", () => {
+  it("should render without errors", () => {""
     expect(true).toBe(true)
   })
   
   it("should render test content", () => {
     render(<TestComponent />)
-    expect(screen.getByText("Test content")).toBeInTheDocument()
+    expect(screen.getByText("Test content")).toBeInTheDocument();
   })
   
   it("should handle console errors", () => {
@@ -24,12 +20,6 @@ describe("Advanced Components", () => {
       .spyOn(console, "error")
       .mockImplementation(() => {});
     // Test implementation
-<<<<<<< HEAD
     consoleSpy.mockRestore()
   })
 })
-=======
-    consoleSpy.mockRestore();
-  });
-});
->>>>>>> cursor/fix-errors-and-merge-to-main-7017

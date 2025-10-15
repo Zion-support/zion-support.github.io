@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useRef } from 'react';
+import { useEffect, useCallback, useRef } from 'react;'
 
 interface ApiCacheOptions {
   // Add your options here

@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useRef } from 'react';
+import { useEffect, useCallback, useRef } from 'react;'
 
 interface AccessibilityCheckerOptions {
   // Add your options here

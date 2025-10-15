@@ -1,17 +1,17 @@
-import React from 'react';
-import SEOHead from './components/SEOHead';
+import React from 'react;'
+import SEOHead from './components/SEOHead;'
 
 const ZionAiLeadScoringPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Zion Ai Lead Scoring - Zion Tech Group"
-        description="Professional zion ai lead scoring solutions for modern businesses"
+        title="Zion Ai Lead Scoring - Zion Tech Group"""
+        description="Professional zion ai lead scoring solutions for modern businesses"""
       />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Zion Ai Lead Scoring</h1>
-          <p className="text-gray-300">Professional solutions coming soon...</p>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">""
+        <div className="text-center">""
+          <h1 className="text-4xl font-bold mb-4">Zion Ai Lead Scoring</h1>""
+          <p className="text-gray-300">Professional solutions coming soon...</p>""
         </div>
       </div>
     </>

@@ -1,5 +1,5 @@
-import { clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+import { clsx } from 'clsx;'
+import { twMerge } from 'tailwind-merge;'
 
 /**
  * Utility function to merge Tailwind CSS classes with proper conflict resolution
@@ -15,7 +15,7 @@ export function cn(...inputs: (string | undefined | null | boolean)[]) {
 export function conditionalClass(
   condition: boolean,
   trueClass: string,
-  falseClass: string = ''
+  falseClass: string = '''
 ): string {
   return condition ? trueClass : falseClass;
 }
@@ -35,14 +35,14 @@ export function responsiveClass(
   if (md) classes.push(`md:${md}`);
   if (lg) classes.push(`lg:${lg}`);
   if (xl) classes.push(`xl:${xl}`);
-  return classes.join(' ');
+  return classes.join(' ');''
 }
 
 /**
  * Utility function for state-based class names
  */
 export function stateClass(
-  state: 'default' | 'hover' | 'focus' | 'active' | 'disabled',
+  state: 'default' | 'hover' | 'focus' | 'active' | 'disabled',''
   baseClass: string
 ): string {
   const stateMap = {
@@ -63,7 +63,7 @@ export function variantClass<T extends string>(
   variants: Record<T, string>,
   defaultVariant?: T
 ): string {
-  return variants[variant] || (defaultVariant ? variants[defaultVariant] : '');
+  return variants[variant] || (defaultVariant ? variants[defaultVariant] : ');''
 }
 
 export default cn;

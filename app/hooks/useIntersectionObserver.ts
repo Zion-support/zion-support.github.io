@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react;'
 
 export function useIntersectionObserver(
   callback: IntersectionObserverCallback,
@@ -12,7 +12,7 @@ export function useIntersectionObserver(
 
     const observer = new IntersectionObserver(callback, {
       threshold: 0.1,
-      rootMargin: '50px',
+      rootMargin: '50px',''
       ...options
     });
 
