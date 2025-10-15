@@ -1,17 +1,1 @@
-import React from 'react';
-
-interface PerformanceUtilsOptions {
-  });
-
-  // Add your hooks logic here;
-  useEffect(() => {
-    // Add your effect logic here;
-  }, [
-  ]);
-
-  return {
-    // Return your hook values here;
-  };
-};
-export default PerformanceUtils''"""""
-"""
+import React from 'react'

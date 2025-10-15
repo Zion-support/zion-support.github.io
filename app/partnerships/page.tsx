@@ -1,4 +1,4 @@
 
 const Page = () => {
-  return null;
+  return null
 }

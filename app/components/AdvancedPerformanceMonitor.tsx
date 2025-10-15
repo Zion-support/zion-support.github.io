@@ -3,8 +3,8 @@ interface PerformanceMetrics {}
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
   logToConsole = false
-}) => {};
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({)};
+}) => {}
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({)}
     fcp: null,
     lcp: null,
     fid= null,
@@ -13,8 +13,8 @@ interface PerformanceMetrics {}
     fmp: null,
     memory: null,
 
-      return;
-    const newMetrics: PerformanceMetrics  =  {};
+      return
+    const newMetrics: PerformanceMetrics  =  {}
       fcp: null,
       lcp: null,
       fid= null,
@@ -40,8 +40,8 @@ interface PerformanceMetrics {}
     newMetrics.cls = clsValue
     // Time to First Byte (TTFB)
     if (navigationEntry) {}
-      newMetrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      newMetrics.navigation = {};
+      newMetrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart
+      newMetrics.navigation = {}
         loadEventEnd: navigationEntry.loadEventEnd,
         domContentLoadedEventEnd: navigationEntry.domContentLoadedEventEnd,
         domContentLoadedEventStart: navigationEntry.domContentLoadedEventStart,
@@ -50,84 +50,29 @@ interface PerformanceMetrics {}
     }
 
 
-    // First Meaningful Paint (FMP) - approximated;
+    // First Meaningful Paint (FMP) - approximated
 if (fmpEntry) {}
       newMetrics.fmp = fmpEntry.startTime
 
 
-    // Memory usage;
+    // Memory usage
 newMetrics.memory = {}
         usedJSHeapSize: memoryInfo.usedJSHeapSize,
         totalJSHeapSize: memoryInfo.totalJSHeapSize,
-        jsHeapSizeLimit: memoryInfo.jsHeapSizeLimit;
-observer.disconnect();
-        clearInterval(interval);
-  }, [
-    measurePerformance, enableRealTimeMonitoring"""""
-  """"""
-  ])"""""""
-  // This component doesn"t render anything visible"
-  return null;
-
-    if (onMetricsUpdate) {}
-      onMetricsUpdate(newMetrics)
-"
-""
-    if (logToConsole) {}"""
-      console.log('Performance Metrics:', newMetrics)""
-
-  }, [onMetricsUpdate, logToConsole])
-  useEffect(() => {}
-    // Initial measurement;
-measurePerformance()
-    if (enableRealTimeMonitoring) {}
-      // Set up real-time monitoring;"
-const  observer = new PerformanceObserver((list) => {}""
-        list.getEntries().forEach((entry) => {}"""
-          if (entry.entryType === 'largest-contentful-paint' ||)"""""
-              entry.entryType === 'first-input' || """""
-              entry.entryType === 'layout-shift') {}""
-            measurePerformance()
-"
-        })""
-      })"""
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })""
-      // Periodic monitoring;
-const  interval = setInterval(measurePerformance, 5000)
-      return () => {}
-        observer.disconnect()
+        jsHeapSizeLimit: memoryInfo.jsHeapSizeLimit
+observer.disconnect()
         clearInterval(interval)
+  }, [
+    measurePerformance, enableRealTimeMonitoring"
+  "
+  ])"
+  // This component doesn"t render anything visible"
 "
-""
-  }, [measurePerformance, enableRealTimeMonitoring])"""
-  // This component doesn't render anything visible""'
-  return null
-
-
-  return null;
-
-const ComponentsPage: React.FC = () => {
-  return null;
-}
-      <SEOHead;>"
-        </div>""
-      </div>"""
-    </>;,"""""
-  ),""""""
-}"""""""
-""""
-"""
-        title="Components - Zion Tech Group"""""
-        description="Professional components solutions for modern businesses"""""
-      />"""""
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"""""
-        <div className ="text-center">"""""
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>"""""
-          <p className ="text-gray-300">Professional solutions coming soon...</p>""
-        </div>;
-      </div>;
-    </>;
-  ),
 "
-""
-"""
+    if (logToConsole) {}"
+      console.log('Performance Metrics:'
+          if (entry.entryType === 'largest-contentful-paint'
+              entry.entryType === 'first-input'
+              entry.entryType === 'layout-shift'
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'
+  // This component doesn'

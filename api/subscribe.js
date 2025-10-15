@@ -4,10 +4,7 @@ const withErrorLogging = (handler) => {
       await handler(req, res);
     } catch (error) {
       console.error('API Error:', error);
-      res.status(500).json({ 
-        error: 'Internal server error',
-        message: error.message 
-      });
+      res.status(500).json({ error: 'Internal server error' });
     }
   };
 };
@@ -17,37 +14,18 @@ export default withErrorLogging(async (req, res) => {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  try {
-    const { email, name, interests = [] } = req.body;
-    
-    // Validate email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email || !emailRegex.test(email)) {
-      return res.status(400).json({ 
-        error: 'Invalid email address' 
-      });
-    }
+  const { email, name, interests } = req.body;
 
-    // Mock subscription processing
-    const subscriptionId = `sub_${Date.now()}`;
-    console.log('Subscription received:', { 
-      subscriptionId, 
-      email, 
-      name, 
-      interests,
-      timestamp: new Date().toISOString() 
-    });
+  try {
+    // Subscription logic here
+    console.log('Subscription request:', { email, name, interests });
     
-    // In a real application, you would save this to a database
-    // and integrate with an email service
-    
-    res.status(200).json({
-      success: true,
-      subscriptionId: subscriptionId,
-      message: 'Successfully subscribed'
+    res.status(200).json({ 
+      success: true, 
+      message: 'Successfully subscribed' 
     });
   } catch (error) {
     console.error('Subscription error:', error);
-    res.status(500).json({ error: 'Subscription failed' });
+    res.status(500).json({ error: 'Failed to subscribe' });
   }
 });

@@ -4,10 +4,7 @@ const withErrorLogging = (handler) => {
       await handler(req, res);
     } catch (error) {
       console.error('API Error:', error);
-      res.status(500).json({ 
-        error: 'Internal server error',
-        message: error.message 
-      });
+      res.status(500).json({ error: 'Internal server error' });
     }
   };
 };
@@ -17,48 +14,21 @@ export default withErrorLogging(async (req, res) => {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  try {
-    const { 
-      userId, 
-      amount, 
-      currency = 'usd',
-      transactionType = 'deposit'
-    } = req.body;
-    
-    // Validate required fields
-    if (!userId || !amount) {
-      return res.status(400).json({ 
-        error: 'Missing required fields' 
-      });
-    }
+  const { action, amount, currency } = req.body;
 
-    // Mock wallet transaction processing
-    const transactionId = `txn_${Date.now()}`;
-    const walletBalance = Math.random() * 10000; // Mock balance
+  try {
+    // Wallet operations logic here
+    console.log('Wallet operation:', { action, amount, currency });
     
-    console.log('Wallet transaction:', { 
-      transactionId, 
-      userId, 
-      amount, 
-      currency,
-      transactionType,
-      timestamp: new Date().toISOString() 
-    });
-    
-    // In a real application, you would update the database
-    // and integrate with a payment processor
-    
-    res.status(200).json({
+    const result = {
       success: true,
-      transactionId: transactionId,
-      balance: walletBalance,
-      message: 'Transaction processed successfully'
-    });
+      balance: 1000, // Mock balance
+      transactionId: 'tx_' + Date.now()
+    };
+
+    res.status(200).json(result);
   } catch (error) {
-    console.error('Wallet transaction error:', error);
-    res.status(500).json({ 
-      error: 'Failed to process wallet transaction',
-      message: error.message 
-    });
+    console.error('Wallet operation error:', error);
+    res.status(500).json({ error: 'Failed to process wallet operation' });
   }
 });

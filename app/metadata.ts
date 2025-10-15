@@ -1,13 +1,27 @@
-interface MetadataOptions {
-    // Initialize your state here;
+import { useRef } from 'react';
 
-export const Metadata  = (options: MetadataOptions = {}) => {
-  const stateRef  = useRef<MetadataState>({// Initialize your state here;
+interface MetadataOptions {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+}
+
+interface MetadataState {
+  title: string;
+  description: string;
+  keywords: string[];
+}
+
+export const useMetadata = (options: MetadataOptions = {}) => {
+  const stateRef = useRef<MetadataState>({
+    title: options.title || 'Zion Tech Group',
+    description: options.description || 'Advanced AI and IT Solutions',
+    keywords: options.keywords || ['AI', 'IT', 'Technology', 'Solutions'],
   });
+
   return {
-    // Return your hook values here;
+    title: stateRef.current.title,
+    description: stateRef.current.description,
+    keywords: stateRef.current.keywords,
   };
 };
-export default Metadata;';';'
-
-export default Metadata'';'

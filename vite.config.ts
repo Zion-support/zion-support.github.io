@@ -1,15 +1,12 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
   plugins: [
     react({
-      // Enable React Fast Refresh
-      fastRefresh: true,
-      // Optimize JSX runtime
       jsxRuntime: 'automatic',
-    })
+    }),
   ],
   resolve: {
     alias: {
@@ -22,10 +19,8 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: true,
     minify: 'esbuild',
     target: 'es2020',
-    cssCodeSplit: true,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -40,34 +35,24 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Optimize chunk size
-    chunkSizeWarningLimit: 1000,
+    commonjsOptions: {
+      include: [
+        'react',
+        'react-dom',
+        'react-router-dom',
+        '@heroicons/react/24/outline',
+        'framer-motion',
+        'clsx',
+        'tailwind-merge',
+      ],
+    },
   },
   server: {
     port: 3000,
     open: true,
-    host: true,
-    cors: true,
   },
   preview: {
     port: 4173,
     open: true,
-    host: true,
   },
-  // Optimize dependencies
-  optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      '@heroicons/react/24/outline',
-      'framer-motion',
-      'clsx',
-      'tailwind-merge'
-    ],
-  },
-  // CSS optimization
-  css: {
-    devSourcemap: true,
-  },
-})
+});

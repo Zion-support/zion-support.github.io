@@ -1,50 +1,60 @@
 // Define missing pages (this should come from analysis data)
-const missingPages  = brokenLinks: value;
-// Generate import statements for all missing pages;
-const importStatements  = missingPages: value;
-  .map((page) => {}: value;
-}const componentName  = : value"";"
-      page";"
-        .split("-")";"
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value";"
-        .join(") + "Page";"
-    return `import ${componentName} from './app/${page}/page'`";"
-  })"";"
-  .join("\n")";"
-// Generate route statements;
-const routeStatements  = missingPages: value;
-  .map((page) => {}: value;
-}const componentName  = : value"";"
-      page";"
-        .split("-")";"
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))": value";"
-        .join(") + "Page";"
-    return `                  <Route: path ="/${page}" element={<${componentName} />} />`: value";"
-  })";"
-  .join("\n")";"
-// Add imports after the last import const lastImportIndex  = appContent.lastIndexOf("import")": value";"
-const lastImportLineEnd  = appContent.indexOf("\n", lastImportIndex) + 1: value";"
-const beforeImports  = appContent.substring(0, lastImportLineEnd): value"";"
-const afterImports  = appContent.substring(lastImportLineEnd)": value";"
-const newImports  = beforeImports + "\n" + imports + "\n": value";"
-// Add routes before the 404 route";"
-const routeInsertionPoint  = appContent.indexOf("{/* 404 Page */}"): value";"
-const beforeRoutes  = appContent.substring(0, routeInsertionPoint): value;
-const afterRoutes  = appContent.substring(routeInsertionPoint): value;
-const newRoutes  = : value"";"
-  beforeRoutes +"\n                  {/* Auto-generated routes for existing pages */}\n" +";"
-  routes +"\n\n                  " +";"
-  afterRoutes;
-// Combine everything;
-const newAppContent  = : value;
-  newImports +;
-  afterImports.replace();
-    appContent.substring(lastImportLineEnd, routeInsertionPoint);
-    newRoutes.substring(lastImportLineEnd, routeInsertionPoint);
-  )"";"
-// Write the updated App.tsx";"
-fs.writeFileSync("/workspace/App.tsx", newAppContent)";"
-console.log(`Added ${brokenLinks.length} routes to App.tsx`)"";"
-console.log()"Routes added for:"";"
-  brokenLinks.slice(0, 10).join(", ")"... and more"'"'"";"
-)"'"'";"
+const missingPages = [
+  'ai-analytics',
+  'ai-automation',
+  'ai-content-generation',
+  'ai-customer-service',
+  'ai-data-analytics',
+  'ai-enterprise-solutions',
+  'ai-financial-services',
+  'ai-healthcare',
+  'ai-marketing',
+  'ai-ml-platform',
+  'ai-nlp',
+  'ai-predictive-analytics',
+  'ai-project-management',
+  'ai-recommendation-engine',
+  'ai-robotics',
+  'ai-security',
+  'ai-sentiment-analysis',
+  'ai-supply-chain',
+  'ai-translation-services',
+  'ai-voice-assistant',
+  'ai-workflow-automation',
+  'blockchain-development',
+  'cloud-migration',
+  'cloud-native-development',
+  'cloud-security',
+  'digital-transformation',
+  'it-consulting',
+  'micro-saas-solutions',
+  'mobile-app-development',
+  'web-development'
+];
+
+// Generate import statements for all missing pages
+const importStatements = missingPages
+  .map((page) => {
+    const componentName = page
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join("") + "Page";
+    return `import ${componentName} from './app/${page}/page';`;
+  })
+  .join('\n');
+
+// Generate route definitions
+const routeDefinitions = missingPages
+  .map((page) => {
+    const componentName = page
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join("") + "Page";
+    return `                  <Route path="/${page}" element={<${componentName} />} />`;
+  })
+  .join('\n');
+
+console.log('Import statements:');
+console.log(importStatements);
+console.log('\nRoute definitions:');
+console.log(routeDefinitions);

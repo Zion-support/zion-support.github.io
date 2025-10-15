@@ -1,16 +1,14 @@
 
 interface ApiClientOptions {
-  });
-
-  // Add your hooks logic here;
+  })
+  // Add your hooks logic here
   useEffect(() => {
-    // Add your effect logic here;
+    // Add your effect logic here
   }, [
-  ]);
-
+  ])
   return {
-    // Return your hook values here;
-  };
-};
-export default ApiClient''"""""
-"""
+    // Return your hook values here
+  }
+}
+export default ApiClient"
+"

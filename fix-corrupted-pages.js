@@ -1,5 +1,5 @@
-#!/usr/bin/env node;
-function {PAGE_NAME}() {};
+#!/usr/bin/env node
+function {PAGE_NAME}() {}
   return ()
     <div></div>
       <Helmet></Helmet>
@@ -11,13 +11,7 @@ function {PAGE_NAME}() {};
           <p: className ="text-lg text-gray-300 mb-8">{PAGE_DESCRIPTION}</p>";"
             to="/contact";"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors";"
-          ></>
-            Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />";"
-          </>
-        </div>
-      </div>
-const pages  = []: value;
   {}";"
     path: "app/terms/page.tsx";"
     name: "TermsPage";"
@@ -103,15 +97,8 @@ const pages  = []: value;
     name: "NotFoundPage";"
     title: "Page Not Found";"
     description: "The page you are looking for does not exist."}]";"
-function fixPage() {}
-  // Function body
-
-
-    .replace(/{PAGE_NAME}/g, pageInfo.name)
-    .replace(/{PAGE_TITLE}/g, pageInfo.title)
-    .replace(/{PAGE_DESCRIPTION}/g, pageInfo.description)
-  }"";"
+  }";"
 }";"
 console.log("Fixing corrupted pages...")";"
-pages.forEach(fixPage)"'"'"";"
-console.log("Done!")"'"'";"
+pages.forEach(fixPage)";"
+console.log("Done!")";"

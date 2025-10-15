@@ -1,398 +1,171 @@
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
 interface Props {
   children: ReactNode;
-import React, { Component, ErrorInfo, ReactNode } from 'react"'""
-import { Helmet  } from 'react-helmet-async';'
-interface Props {children: ReactNode;
-  fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-
+  fallback?: ReactNode;
+}
 
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  errorId: string;
-  static getDerivedStateFromError(error: Error): State {
+  isRetrying: boolean;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      isRetrying: false,
+    };
+  }
+
+  static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-
+    };
+  }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error);
+    console.error('Error info:', errorInfo);
+    
     this.setState({
       error,
-      errorInfo
+      errorInfo,
     });
 
-    // Log error to console in development;
-if (process.env.NODE_ENV === 'development') {'
-      console.error('Error caught by boundary:', error, errorInfo);'
+    // Call the onError callback if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
 
+    // Log error to monitoring service
+    this.logError(error, errorInfo);
+  }
 
-    // Log error to service in production;
-if (process.env.NODE_ENV === 'production') {'
-      this.logErrorToService(error, errorInfo);
+  private logError = (error: Error, errorInfo: ErrorInfo) => {
+    try {
+      const errorData = {
+        message: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href,
+        userId: this.getUserId(),
+        sessionId: this.getSessionId(),
+      };
 
+      // Send to error reporting service
+      fetch('/api/error-report', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(errorData),
+      }).catch(console.error);
+    } catch (logError) {
+      console.error('Failed to log error:', logError);
+    }
+  };
 
-    // Call custom error handler if provided;
-if (this.props.onError) {
-      this.props.onError(error, errorInfo)
+  private getUserId = (): string | null => {
+    try {
+      return document.cookie
+        .split(';')
+        .find(c => c.trim().startsWith('userId='))
+        ?.split('=')[1] || null;
+    } catch {
+      return null;
+    }
+  };
 
-  private: handleRetry = () => {
-    this.setState(prevState => ({"
-      hasError: false,""
-      error: null,"""
-    window.location.href = '/'}'"'""
+  private getSessionId = (): string => {
+    let sessionId = sessionStorage.getItem('sessionId');
+    if (!sessionId) {
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      sessionStorage.setItem('sessionId', sessionId);
+    }
+    return sessionId;
+  };
+
+  private handleRetry = () => {
+    this.setState({ isRetrying: true });
+    
+    setTimeout(() => {
+      this.setState({
+        hasError: false,
+        error: null,
+        errorInfo: null,
+        isRetrying: false,
+      });
+    }, 1000);
+  };
+
+  private handleReload = () => {
+    window.location.href = '/';
+  };
+
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI;
-if (this.props.fallback) {"
-              </div>""
-            )}"""
-            <div className ="flex flex-col sm:flex-row gap-4 justify-center mb-6">""""
-              <button onClick ={() => window.location.reload()}"""
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2""""
-                <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform duration-500" />""
-                Try Again"
-              </button>""
-              <button onClick ={this.handleGoHome}>"""
-                className="flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 group""""
-                <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />""
-                Go Home"
-              </button>""
-              <button onClick ={this.handleReload}>"""
-                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20""""
-                <RefreshCw className="w-5 h-5 mr-2" />""
-                Reload Page"
-              </button>""
-            </div>"""
-            <div className ="flex flex-col sm:flex-row gap-4 justify-center">"""""
-              <Link to ="/"">"""
-                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20""""
-                <Home className="w-5 h-5 mr-2" />"""
-                Go Home""
-              </Link>"""
-              <a href ="mailto:support@ziontechgroup.com"">"""
-                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20""""
-                <Mail className="w-5 h-5 mr-2" />""
-                Contact Support"
-              </a>""
-            </div>"""
-            <div className ="mt-6 text-sm text-gray-400">""
-              <p>Error ID: {this.state.errorId}</p>
-              <p>If this problem persists, please contact our support team with this error ID.</p>
-            </div>
-          </div>
-        </>
-      )}
-    return this.props.children}"
-""
-"""
-            <div className ="mt-6 text-sm text-gray-400">""""
-              <p>If this problem persists, please contact our support team.</p>"""
-              <p className ="mt-2">""
-                Error ID: {Date.now().toString(36)}-{Math.random().toString(36).substr(2, 9)}
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+        <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+          <div className="text-center max-w-md mx-auto p-6">
+            <div className="mb-6">
+              <h1 className="text-4xl font-bold text-red-400 mb-4">
+                Oops! Something went wrong
+              </h1>
+              <p className="text-gray-300 mb-6">
+                We're sorry, but something unexpected happened. Our team has been notified.
               </p>
             </div>
 
-      interface ErrorBoundaryState {},
-      hasError: boolean,
-      error: Error | null,
-      errorInfo: ErrorInfo | null,
-      errorId: string,
-      retryCount: number,
-      isRetrying: boolean
-interface ErrorBoundaryProps {},
-      children: ReactNode,
-      fallback?: ReactNode,
-      onError?: (error: Error, errorInfo: ErrorInfo, errorId: string) => void,
-      onRetry?: () => void,
-      maxRetries?: number,
-      enableErrorReporting?: boolean,
-      enableRetry?: boolean,
-      enableErrorDetails?: boolean
-class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {},
-      private retryTimeout: NodeJS.Timeout | null = null,
-      constructor(props: ErrorBoundaryProps) {},"
-      super(props),""
-      this.state = {},"""
-      errorId: ',"'""
-      retryCount: 0,
-      isRetrying: false
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {},
-      return {},
-      hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
-      const const { onError, enableErrorReporting  } = this.props,
-      const { errorId } = this.state,
-      this.setState({},)
-      errorInfo,;
-      errorId;"
-    })""
-    // Log error to console in development"""
-console.error('Error caught by boundary:', error)"""""
-      console.error('Error info:', errorInfo)""
-    // Report error to external service;
-if (enableErrorReporting) {},
-      this.reportError(error, errorInfo, errorId)
-    // Call custom error handler;"
-if (onError) {},""
-      onError(error, errorInfo, errorId)"""
-                   document.cookie.split(').find(c => c.trim().startsWith('userId=')?.split('=')[1],"'""""
-      return userId || null"""
-    },"""""
-    {}""""""
-  private getSessionId = (): string => {},"""""""
-      let sessionId  =  sessionStorage.getItem('sessionId"),""'"""
-      if (!sessionId) {},""""""
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,"""""""
-      sessionStorage.setItem('sessionId", sessionId)"'
-    this.setState({
-    isRetrying: true 
+            <div className="space-y-4">
+              <button
+                onClick={this.handleRetry}
+                disabled={this.state.isRetrying}
+                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+              >
+                {this.state.isRetrying ? 'Retrying...' : 'Try Again'}
+              </button>
 
-  });
-    // Call custom retry handler;
-if (onRetry) {},
-      onRetry()
-    // Reset error state after a short delay;"
-this.retryTimeout = setTimeout(() => {},""
-      this.setState({},)"""
-      errorId: ',"'""
-      retryCount: retryCount + 1,
-      isRetrying: false
-      });"
-    }, 1000)""
-      window.location.reload()"""
-    },"""""
-    {}""""""
-  private handleGoHome = () => {},"""""""
-      window.location.href = '/""'
-      const issueData  = {},
-      errorId,
-      message: error?.message,
-      stack: error?.stack,
-      url: window.location.href,
-      userAgent: navigator.userAgent,
-      timestamp: new Date().toISOString();
-  componentWillUnmount() {},
-      if (this.retryTimeout) {},
-      clearTimeout(this.retryTimeout)
-      render() {},
-      const const { hasError, error, errorInfo, errorId, retryCount, isRetrying  } = this.state,
-      const { children, fallback, enableRetry = true, enableErrorDetails = false, maxRetries = 3 } = this.props,;
-      if (hasError) {};
-      // Use custom fallback if provided;
-if (fallback) {},
-      return fallback
-            </p>"
-            ""
-            {process.env.NODE_ENV === 'development' && this.state.error && ('"""
-              <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left">""""
-                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>""""
-                <p className="text-red-300 text-sm font-mono break-all">"
-                  {this.state.error.message}"
-                </p>""
-                {this.state.error.stack && ("""
-                  <pre className="text-red-300 text-xs mt-2 overflow-auto max-h-32">"
-                    {this.state.error.stack}
-                  </pre>
-                )}
-              </div>"
-            )}""
-            """
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <button;>""
-onClick={this.handleRetry}"""
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"""
-                Try Again""
-            {enableErrorDetails && ()}"""
-              <details className ="error-details"></details>""""
-                <summary>Error Details</summary>"""
-                <div className ="error-details-content"></div>""
-                  <p><strong>Error ID:</strong> {errorId}</p>"
-                  <p><strong>Error Message:</strong> {error?.message}</p>""
-                  <p><strong>Retry Count:</strong> {retryCount}/{maxRetries}</p>"""
-                  {process.env.NODE_ENV === 'development' && ()}"""
-                    <>{}</>""
-                      <p><strong>Stack Trace:</strong></p>"""
-                      <pre className ="error-stack">{error?.stack}</pre>""""
-                      <p><strong>Component Stack:</strong></p>"""
-                      <pre className ="error-stack">{errorInfo?.componentStack}</pre>""
-                    </>
-                  )};
-                </div>"
-              </details>""
-            )}"""
-            <div className ="error-actions"></div>""""
-              {enableRetry && retryCount < maxRetries && ()}"""
-                <buttonclassName="error-button retry-button">""
-                  onClick={this.handleRetry},"
-      disabled={isRetrying}""
-                ></>"""
-                  {isRetrying ? 'Retrying...' : 'Try Again'}"""
-                </button>""
-              )}"""
-              <buttonclassName="error-button reload-button">""
-                onClick={this.handleReload};
-              ></button
-                Reload Page
-              </button>"
-              <button;>""
-onClick={this.handleGoHome}"""
-                className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-medium transition-colors""
+              <button
+                onClick={this.handleReload}
+                className="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+              >
                 Go Home
               </button>
-              </p>"
-            </div>""
-            """
-            <p className="text-gray-400 text-sm mt-6">"
-              Error ID: {this.state.errorId}
-            </p>
+            </div>
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-6 text-left">
+                <summary className="cursor-pointer text-sm text-gray-400 hover:text-gray-300">
+                  Error Details (Development)
+                </summary>
+                <pre className="mt-2 p-4 bg-gray-800 rounded text-xs text-red-300 overflow-auto">
+                  {this.state.error.message}
+                  {'\n\n'}
+                  {this.state.error.stack}
+                </pre>
+              </details>
+            )}
           </div>
-            .error-container {},
-      background: white,
-      border-radius: 12px,
-      padding: 40px,
-      max-width: 600px,
-      width: 100%,
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1),
-      text-align: center
-            .error-icon {},
-      font-size: 64px,
-      margin-bottom: 20px
-            .error-title {},
-      color: #1f2937,
-      font-size: 32px,
-      font-weight: 700,
-      margin: 0 0 16px 0
-            .error-message {},
-      color: #6b7280,
-      font-size: 18px,
-      line-height: 1.6,
-      margin: 0 0 30px 0
-            .error-details {},
-      margin: 20px 0,
-      text-align: left
-            .error-details summary {},
-      cursor: pointer,
-      font-weight: 600,
-      color: #374151,
-      padding: 10px,
-      background: #f3f4f6,
-      border-radius: 6px,
-      margin-bottom: 10px
-            .error-details-content {},
-      background: #f9fafb,
-      padding: 15px,
-      border-radius: 6px,
-      border: 1px solid #e5e7eb
-            .error-details-content p {},
-      margin: 8px 0,
-      color: #374151
-            .error-stack {},
-      background: #1f2937,
-      color: #f9fafb,
-      padding: 15px,
-      border-radius: 6px,
-      overflow-x: auto,
-      font-size: 12px,
-      line-height: 1.4,
-      margin: 10px 0
-            .error-actions {},
-      display: flex,
-      flex-wrap: wrap,
-      gap: 12px,
-      justify-content: center,
-      margin: 30px 0
-            .error-button {},
-      padding: 12px 24px,
-      border: none,
-      border-radius: 8px,
-      font-size: 16px,
-      font-weight: 600,
-      cursor: pointer,
-      transition: all 0.2s ease,
-      text-decoration: none,
-      display: inline-block
-            .retry-button {},
-      background: #3b82f6,
-      color: white
-            .retry-button:hover:not(:disabled) {},
-      background: #2563eb,
-      transform: translateY(-2px)
-            .retry-button:disabled {},
-      background: #9ca3af,
-      cursor: not-allowed
-            .reload-button {},
-      background: #10b981,
-      color: white
-            .reload-button:hover {},
-      background: #059669,
-      transform: translateY(-2px)
-            .home-button {},
-      background: #6b7280,
-      color: white
-            .home-button:hover {},
-      background: #4b5563,
-      transform: translateY(-2px)
-            .report-button {},
-      background: #f59e0b,
-      color: white
-            .report-button:hover {},
-      background: #d97706,
-      transform: translateY(-2px)
-            .error-help {},
-      margin-top: 30px,
-      padding-top: 20px,
-      border-top: 1px solid #e5e7eb,
-      color: #6b7280
-            .error-help p {},
-      margin: 8px 0
-            .error-help a {},
-      color: #3b82f6,
-      text-decoration: none,
-      font-weight: 600
-            .error-help a:hover {},
-      text-decoration: underline
-            @media (max-width: 640px) {};
-              .error-container {},
-      padding: 20px
-              .error-title {},
-      font-size: 24px
-              .error-message {},
-      font-size: 16px
-              .error-actions {},
-      flex-direction: column
-              .error-button {},
-      width: 100%
-          `}</style>
         </div>
-
-const ComponentsPage: React.FC = () => {
-  return null;"
-}""
-      <SEOHead;>"""
-        title="Components - Zion Tech Group"""""
-        description="Professional components solutions for modern businesses"""""
-      />"""""
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">"""""
-        <div className ="text-center">"""""
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>"""""
-          <p className ="text-gray-300">Professional solutions coming soon...</p>""
-        </div>;
-      </div>;
-    </>;
-  ),
-
-
-
+      );
+    }
 
     return this.props.children;
+  }
+}
 
-
-"
-""
-"""
+export default EnhancedErrorBoundary;

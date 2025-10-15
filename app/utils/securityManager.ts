@@ -1,16 +1,14 @@
 
 interface SecurityManagerOptions {
-  });
-
-  // Add your hooks logic here;
+  })
+  // Add your hooks logic here
   useEffect(() => {
-    // Add your effect logic here;
+    // Add your effect logic here
   }, [
-  ]);
-
+  ])
   return {
-    // Return your hook values here;
-  };
-};
-export default SecurityManager''"""""
-"""
+    // Return your hook values here
+  }
+}
+export default SecurityManager"
+"

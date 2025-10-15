@@ -4,10 +4,7 @@ const withErrorLogging = (handler) => {
       await handler(req, res);
     } catch (error) {
       console.error('API Error:', error);
-      res.status(500).json({
-        error: 'Internal server error',
-        message: error.message
-      });
+      res.status(500).json({ error: 'Internal server error' });
     }
   };
 };
@@ -17,28 +14,20 @@ export default withErrorLogging(async (req, res) => {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  try {
-    const { amount, currency = 'usd' } = req.body;
+  const { amount, currency = 'usd' } = req.body;
 
-    // Mock checkout session creation
+  try {
+    // Create checkout session logic here
     const session = {
-      id: `cs_${Date.now()}`,
-      amount: amount,
-      currency: currency,
-      status: 'open',
-      payment_intent: `pi_${Date.now()}`,
-      url: `https://checkout.stripe.com/pay/cs_${Date.now()}`
+      id: 'session_' + Date.now(),
+      amount,
+      currency,
+      status: 'open'
     };
 
-    res.status(200).json({
-      success: true,
-      session: session
-    });
+    res.status(200).json({ session });
   } catch (error) {
     console.error('Checkout session creation error:', error);
-    res.status(500).json({
-      error: 'Failed to create checkout session',
-      message: error.message
-    });
+    res.status(500).json({ error: 'Failed to create checkout session' });
   }
 });

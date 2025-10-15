@@ -4,10 +4,7 @@ const withErrorLogging = (handler) => {
       await handler(req, res);
     } catch (error) {
       console.error('API Error:', error);
-      res.status(500).json({ 
-        error: 'Internal server error',
-        message: error.message 
-      });
+      res.status(500).json({ error: 'Internal server error' });
     }
   };
 };
@@ -17,37 +14,21 @@ export default withErrorLogging(async (req, res) => {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  try {
-    const { destination, weight, dimensions } = req.body;
+  const { destination, weight, dimensions } = req.body;
 
-    // Mock shipping rates calculation
+  try {
+    // Shipping rates calculation logic here
+    console.log('Shipping rates request:', { destination, weight, dimensions });
+    
     const rates = [
-      {
-        service: 'Standard',
-        cost: 15.99,
-        estimatedDays: '5-7 business days'
-      },
-      {
-        service: 'Express',
-        cost: 29.99,
-        estimatedDays: '2-3 business days'
-      },
-      {
-        service: 'Overnight',
-        cost: 49.99,
-        estimatedDays: '1 business day'
-      }
+      { service: 'standard', cost: 10.99, days: 5 },
+      { service: 'express', cost: 19.99, days: 2 },
+      { service: 'overnight', cost: 29.99, days: 1 }
     ];
 
-    res.status(200).json({
-      success: true,
-      rates: rates
-    });
+    res.status(200).json({ rates });
   } catch (error) {
     console.error('Shipping rates error:', error);
-    res.status(500).json({
-      error: 'Failed to calculate shipping rates',
-      message: error.message
-    });
+    res.status(500).json({ error: 'Failed to calculate shipping rates' });
   }
 });

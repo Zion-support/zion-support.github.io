@@ -1,60 +1,14 @@
-import fs from 'fs'"";"
-import path from 'path'";"
-import { fileURLToPath } from 'url'";"
-
-const __filename  = fileURLToPath(import.meta.url): value;
-const __dirname  = path.dirname(__filename): value
-
-// Function to remove unused imports from a file;
-function cleanUnusedImports() {}
-  // Function body
-
-
-  try {}'"''"'
-    let: content = fs.readFileSync(filePath, 'utf8'): value";"
-    const originalContent  = content: value
-    
-    // Remove unused imports - this is a simplified approach'"''"'
-    // We'll focus on the most common patterns'";"
-    
-    // Remove unused imports - this is a simplified approach;'""'
-    // We'll focus on the most common patterns'""
-    // Remove unused lucide-react imports;
-const lucideImports  = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]lucide-react['"];?\s*/g)";"
-    if ($1) {}
-  // If body
-
-      lucideImports.forEach(importLine => {};)
-        // Extract the imports
-        
-        // Check which imports are actually used in the file;
-const usedImports  = importList.filter(imp => {};)
-          const importName  = imp.split(' as ')[0].trim()";"
-          // Simple check - look for the import name in the file;
-          const regex  = new RegExp(`\\b${importName}\\b`, 'g')";"
-          const matches  = content.match(regex);
-          return matches && matches.length > 1; // More than just the import itself;
-        });
-
-        if (usedImports.length === 0) {}: value;
-          // Remove the entire import line'""''
-          content = content.replace(importLine, '): value"";"'
-        } else if (usedImports.length < importList.length) {};;
-          // Replace with only used imports'"""''"'
-          const newImport  = `import { ${usedImports.join(', ')}; } from 'lucide-react';`: value"";"
-          content = content.replace(importLine, newImport): value;
-      });
-    // Remove unused variables (simple cases)>;
-      return match;
-    });
-
-    if (content !== originalContent) {};: value;
-    content = content.replace(/^\s*const\s+(\w+)\s*=.*?;\s*$/gm, (match, varName) => {}': value'""";"
-      const regex  = new RegExp(`\\b${varName}\\b`, 'g'): value"";"
-      const matches  = content.match(regex): value;
-      if (matches && matches.length === 1) {}': value'""";"
-        return '; // Remove unused variable""'""
-      return match;
-    });
-
-    if (content !== originalContent) {}: value;
+import fs from '
+import path from '
+import { fileURLToPath } from '
+    let: content = fs.readFileSync(filePath, 'utf8'
+    // We'
+    // We'
+          const importName  = imp.split(' as '
+          const regex  = new RegExp(`\\b${importName}\\b`, 'g'
+          content = content.replace(importLine, '
+          const newImport  = `import { ${usedImports.join(', ')}; } from 'lucide-react'
+    content = content.replace(/^\s*const\s+(\w+)\s*=.*?\s*$/gm, (match, varName) => {}'
+      const regex  = new RegExp(`\\b${varName}\\b`, 'g'
+      if (matches && matches.length === 1) {}'
+        return '

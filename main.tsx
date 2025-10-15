@@ -1,14 +1,26 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
 
-  <React.StrictMode></React.StrictMode>
-    <App />;
-  </React.StrictMode>;
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
 );
-// Register service worker for PWA functionality;
-if ($1) {}
-  // If body
 
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+// Register service worker for PWA functionality
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        console.log('SW registered: ', registration);
+      })
+      .catch((registrationError) => {
+        console.log('SW registration failed: ', registrationError);
       });
-  })";"
-    },";";"
-    {}";";";"
-""
+  });
+}

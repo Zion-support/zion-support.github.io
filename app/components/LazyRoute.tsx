@@ -1,6 +1,6 @@
       interface LazyRouteProps {},
-      component: () => Promise<{ default: ComponentType<any> }>,;
-      fallback?: React.ReactNode;
+      component: () => Promise<{ default: ComponentType<any> }>,
+      fallback?: React.ReactNode
 }) => {},
       const LazyComponent  = lazy(component),
       return ()
@@ -8,9 +8,9 @@
       <LazyComponent />
     </>
   )
-      fallback = <OptimizedLoadingSpinner size ="lg" text="Loading page..." />: value""
+      fallback = <OptimizedLoadingSpinner size ="lg" text="Loading page..." />: value"
 }) => {}: value,;"
-      const LazyComponent  = lazy(component): value,""
-      return ("""
-    {'"'""""
-"""
+      const LazyComponent  = lazy(component): value,"
+      return ("
+    {"
+"

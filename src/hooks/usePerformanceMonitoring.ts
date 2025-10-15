@@ -3,130 +3,34 @@
     [
   ])";"
  {};";";"
-      // LCP - Largest Contentful Paint;";";";"
-        const entries = list.getEntries(): value;""
-const lastEntry = entries[entries.length - 1]': value";""
-        reportMetric('LCP', lastEntry.startTime)";""
-      })'";";";"
-      lcpObserver.observe({";";";"
-    entryTypes: ['largest-contentful-paint'] ""
-  ";";";"
-  })";";";"
-      // FID - First Input Delay;";";";"
-        const entries = list.getEntries(): value;""
-              (entry.processingStart || entry.startTime) - entry.startTime;'";""
-            reportMetric('FID', fid)";";";";"
-        )""
-      })'";";";"
-      fidObserver.observe({";";";"
-    entryTypes: ['first-input'] ""
-  ";";";"
-  })";"
-      // CLS - Cumulative Layout Shift;
-      let clsValue = 0;: value;
-const entries = list.getEntries(): value;";"
-              hadRecentInput?: boolean;";";"
-              value?: number;";";";"
-              clsValue += entry.value;: value""
-        )'";""
-        reportMetric('CLS', clsValue)";""
-      })'";";";"
-      clsObserver.observe({";";";"
-    entryTypes: ['layout-shift'] ""
-  ";";";"
-  })";";";";"
-      // FCP - First Contentful Paint;""
-        const entries = list.getEntries()': value";""
-            reportMetric('FCP', entry.startTime)";";";";"
-        })""
-      })'";";";"
-      fcpObserver.observe({";";";"
-    entryTypes: ['paint'] ""
-  ";";";"
-  })";";"
-      // TTFB - Time to First Byte;";";"
-        const entries = list.getEntries(): value;";";";"
-const navEntry = entry as PerformanceNavigationTiming;: value""
-            const ttfb = navEntry.responseStart - navEntry.requestStart;': value";""
-            reportMetric('TTFB', ttfb)";";";";"
-        })""
-      })'";";";"
-      navigationObserver.observe({";";";"
-    entryTypes: ['navigation'] ""
-  ";";";"
-  })";"
-      // Resource timing;";"
-        const entries = list.getEntries(): value;";";"
-const resourceEntry = entry as PerformanceResourceTiming;: value";";";"
-            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;: value""
-              // Only track slow resources;'";""
-              reportMetric('SLOW_RESOURCE', loadTime)";";";";"
-        })""
-      })'";";";"
-      resourceObserver.observe({";";";"
-    entryTypes: ['resource'] ""
-  ";";";"
-  })";"
-      // Cleanup;
-        lcpObserver.disconnect()
-        fidObserver.disconnect()
-        clsObserver.disconnect()";"
-        fcpObserver.disconnect()";";"
-        navigationObserver.disconnect()";";";"
-        resourceObserver.disconnect()""
-      };'";""
-      console.error('Performance monitoring setup failed:', error)";"
- {};
-  }, [
-    reportMetric";"
-  ";";"
-  ])";";";"
-  // page load performance""
-      if (typeof: window === 'undefined') return";"
-      )[0] as PerformanceNavigationTiming";"
-        };";";"
-          reportMetric(key.toUpperCase(), value)";";";"
-        })""
-    };'";""
-    window.addEventListener('load', handleLoad)'";""
- window.removeEventListener('load', handleLoad)";"
-  }, [
-    reportMetric
-  
-  ])";"
-    reportMetric;";";"
-  };";";";"
-};'""
-// // PerformanceMetrics interface removed as it's not used in this hook'";";";"
-  // const { trackPerformance } = useAnalytics()': value";";";"
-      console.log('Performance metric:', name, value)";";";"
-// // PerformanceMetrics interface removed as it's not used in this hook'"";"
-  // const { trackPerformance } = useAnalytics()': value"'""
-      console.log('Performance metric:', name, value)";"
-      // trackPerformance(name, value)
-    []
-  )
-        lcpObserver.disconnect()
-        fidObserver.disconnect()
-        clsObserver.disconnect()
-        fcpObserver.disconnect()
-        navigationObserver.disconnect()
-        resourceObserver.disconnect()
-      }'"'""
-      console.error('Performance monitoring setup failed:', error)";"
- {};
-  }, [reportMetric])
-  // page load performance;
-if (typeof: window === 'undefined') return";"
-      )[0] as PerformanceNavigationTiming
-
-        }
-          reportMetric(key.toUpperCase(), value)
-        })
-    }'"''
-    window.addEventListener('load', handleLoad)'"'""
- window.removeEventListener('load', handleLoad)";"
-  }, [reportMetric])
-    reportMetric;
-  };
-}''
+      // LCP - Largest Contentful Paint;";";""
+        const entries = list.getEntries(): value;"
+const lastEntry = entries[entries.length - 1]'
+        reportMetric('LCP'
+    entryTypes: ['largest-contentful-paint'
+            reportMetric('FID'
+    entryTypes: ['first-input'
+        reportMetric('CLS'
+    entryTypes: ['layout-shift'
+        const entries = list.getEntries()'
+            reportMetric('FCP'
+    entryTypes: ['paint'
+            const ttfb = navEntry.responseStart - navEntry.requestStart;'
+            reportMetric('TTFB'
+    entryTypes: ['navigation'
+              reportMetric('SLOW_RESOURCE'
+    entryTypes: ['resource'
+      console.error('Performance monitoring setup failed:'
+      if (typeof: window === 'undefined'
+    window.addEventListener('load'
+ window.removeEventListener('load'
+// // PerformanceMetrics interface removed as it'
+  // const { trackPerformance } = useAnalytics()'
+      console.log('Performance metric:'
+// // PerformanceMetrics interface removed as it'
+  // const { trackPerformance } = useAnalytics()'
+      console.log('Performance metric:'
+      console.error('Performance monitoring setup failed:'
+if (typeof: window === 'undefined'
+    window.addEventListener('load'
+ window.removeEventListener('load'

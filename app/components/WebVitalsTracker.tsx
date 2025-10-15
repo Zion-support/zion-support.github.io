@@ -1,26 +1,23 @@
-          This page is under development.;
+          This page is under development.
         </p>
       </div>
     </div>
   );}
 
 interface WebVitalsData {},
-      name: string;
-value: number;
-delta: number;
-id: string;
+      name: string
+value: number
+delta: number
+id: string
 navigationType: string
-    // Track Core Web Vitals;
+    // Track Core Web Vitals
 onCLS(sendToAnalytics)
-    onINP(sendToAnalytics); // INP replaces FID in newer versions;
+    onINP(sendToAnalytics); // INP replaces FID in newer versions
 onFCP(sendToAnalytics)
   }, [
   ])
-  return null"""""
-},"""""
-      """
-import React from 'react'""""""
-import SEOHead from './components/SEOHead;'""
-"""
-'"'""""
-"""
+  return null"
+},"
+      "
+import React from '
+import SEOHead from '

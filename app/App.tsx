@@ -1,11 +1,10 @@
 "use client";"
-import React, { lazy, Suspense } from "react;"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom;"
-import { HelmetProvider } from "react-helmet-async;"
-import ErrorBoundary from "./components/ErrorBoundary;"
-import PerformanceMonitor from "./components/PerformanceMonitor;"
-import AccessibilityEnhancer from "./components/AccessibilityEnhancer;
-
+import React, { lazy, Suspense } from "react"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { HelmetProvider } from "react-helmet-async"
+import ErrorBoundary from "./components/ErrorBoundary"
+import PerformanceMonitor from "./components/PerformanceMonitor"
+import AccessibilityEnhancer from "
 // Lazy load pages for better performance"
 const HomePage = lazy(() => import("./page");"
 const AboutPage = lazy(() => import("./about/page");"
@@ -18,22 +17,12 @@ const TeamPage = lazy(() => import("./team/page");"
 const CareersPage = lazy(() => import("./careers/page");"
 const PrivacyPage = lazy(() => import("./privacy/page");"
 const TermsPage = lazy(() => import("./terms/page");"
-const CookiesPage = lazy(() => import("./cookies/page");
-
+const CookiesPage = lazy(() => import("./cookies/page"
 // 5G Solutions Pages"
-const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page");
-
-function App() {
-  return null;
-}
-    <Router>
-      <HelmetProvider>
-        <ErrorBoundary>
-          <PerformanceMonitor>
+const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"
             <AccessibilityEnhancer>"
               <Suspense fallback={<div className="min-h-screen flex items-center justify-center">"
-                <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
-              </div>}>
+                <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"
                 <Routes>"
                   <Route path="/" element={<HomePage />} />"
                   <Route path="/about" element={<AboutPage />} />"
@@ -47,15 +36,5 @@ function App() {
                   <Route path="/privacy" element={<PrivacyPage />} />"
                   <Route path="/terms" element={<TermsPage />} />"
                   <Route path="/cookies" element={<CookiesPage />} />"
-                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                </Routes>
-              </Suspense>
-            </AccessibilityEnhancer>
-          </PerformanceMonitor>
-        </ErrorBoundary>
-      </HelmetProvider>
-    </Router>
-  );
-}
-
+                  <Route path="/5g-solutions"
 export default App;"

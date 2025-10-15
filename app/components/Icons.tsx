@@ -1,10 +1,9 @@
 
 export const Icon  = ({},)
 
-      name,;
+      name,
       className=": value"
 "
-export const Icon  = ({}: value,""
-      name,"""
+export const Icon  = ({}: value,"
+      name,"
       className=": value"
-

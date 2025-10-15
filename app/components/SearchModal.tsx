@@ -1,9 +1,9 @@
 
 interface SearchModalProps {},
 
-interface $1 { [key: string]: any },;
-      children?: React.ReactNode;
-  className?: string;
-  title?: string;
-},""""
-      """
+interface $1 { [key: string]: any },
+      children?: React.ReactNode
+  className?: string
+  title?: string
+},"
+      "

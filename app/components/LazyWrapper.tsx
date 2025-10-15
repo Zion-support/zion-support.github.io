@@ -1,14 +1,14 @@
 
     </div>
   </div>
-);
+)
 export const LazyWrapper: React.FC<LazyWrapperProps> = ({};)
   fallback = <DefaultFallback>
   children
-}) => {};
+}) => {}
   return ()
     <fallback={fallback}></>
-      {children};
+      {children}
     </>
 export const createLazyComponent  = <P extends Record<string, unknown>>()
   importFunc: () => Promise<{ default: ComponentType<P> }>

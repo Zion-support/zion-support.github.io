@@ -41,9 +41,63 @@ const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));
 const MicroSAASSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
 const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
 
+function App() {
+  useEffect(() => {
+    // Initialize performance monitoring
+    if (typeof window !== 'undefined') {
+      // Performance monitoring initialization
+      console.log('App initialized');
+    }
+  }, []);
+
+  return (
+    <Router>
+      <HelmetProvider>
+        <GlobalErrorBoundary>
+          <PerformanceMonitor />
+          <AccessibilityEnhancer />
+          <div className="min-h-screen bg-gray-900 text-white">
+            <Navigation />
+            <main>
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/cookies" element={<CookiesPage />} />
+                  
+                  {/* AI Services Routes */}
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                  
+                  {/* IT Services Routes */}
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                  <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                  
+                  {/* 5G Solutions Routes */}
+                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                  
+                  {/* Micro SaaS Solutions Routes */}
+                  <Route path="/micro-saas-solutions" element={<MicroSAASSolutionsPage />} />
+                  <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+          </div>
+        </GlobalErrorBoundary>
       </HelmetProvider>
     </Router>
   );
 }
 
-export default App;"
+export default App;

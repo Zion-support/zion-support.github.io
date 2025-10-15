@@ -4,64 +4,28 @@ const withErrorLogging = (handler) => {
       await handler(req, res);
     } catch (error) {
       console.error('API Error:', error);
-      res.status(500).json({ 
-        error: 'Internal server error',
-        message: error.message 
-      });
+      res.status(500).json({ error: 'Internal server error' });
     }
   };
 };
 
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  const { name, email, company, message, service } = req.body;
+
   try {
-    const { 
-      companyName, 
-      contactName, 
-      email, 
-      phone, 
-      serviceType, 
-      description, 
-      preferredDate,
-      address
-    } = req.body;
-
-    // Validate required fields
-    if (!companyName || !contactName || !email || !serviceType) {
-      return res.status(400).json({
-        error: 'Company name, contact name, email, and service type are required'
-      });
-    }
-
-    // Mock onsite request processing
-    console.log('Onsite service request:', {
-      companyName,
-      contactName,
-      email,
-      phone,
-      serviceType,
-      description,
-      preferredDate,
-      address,
-      timestamp: new Date().toISOString()
-    });
-
-    // In a real application, you would save this to a database and send notifications
-    res.status(200).json({
-      success: true,
-      message: 'Onsite service request received. We will contact you within 24 hours.',
-      requestId: `req_${Date.now()}`
+    // Onsite request logic here
+    console.log('Onsite request:', { name, email, company, message, service });
+    
+    res.status(200).json({ 
+      success: true, 
+      message: 'Request submitted successfully' 
     });
   } catch (error) {
     console.error('Onsite request error:', error);
-    res.status(500).json({
-      error: 'Failed to process onsite request',
-      message: error.message
-    });
+    res.status(500).json({ error: 'Failed to submit request' });
   }
 });

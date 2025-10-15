@@ -4,10 +4,7 @@ const withErrorLogging = (handler) => {
       await handler(req, res);
     } catch (error) {
       console.error('API Error:', error);
-      res.status(500).json({ 
-        error: 'Internal server error',
-        message: error.message 
-      });
+      res.status(500).json({ error: 'Internal server error' });
     }
   };
 };
@@ -17,29 +14,21 @@ export default withErrorLogging(async (req, res) => {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  const { error, stack, userAgent, url } = req.body;
+
   try {
-    const { error, userAgent, url, timestamp, userId } = req.body;
-
-    // Log error details
+    // Log error to monitoring service
     console.error('Client Error Report:', {
-      error: error,
-      userAgent: userAgent,
-      url: url,
-      timestamp: timestamp || new Date().toISOString(),
-      userId: userId
+      error,
+      stack,
+      userAgent,
+      url,
+      timestamp: new Date().toISOString()
     });
 
-    // In a real application, you would save this to a database
-    // For now, we'll just acknowledge receipt
-    res.status(200).json({
-      success: true,
-      message: 'Error report received'
-    });
+    res.status(200).json({ success: true });
   } catch (error) {
     console.error('Error reporting error:', error);
-    res.status(500).json({
-      error: 'Failed to process error report',
-      message: error.message
-    });
+    res.status(500).json({ error: 'Failed to report error' });
   }
 });
