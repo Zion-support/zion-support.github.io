@@ -4,7 +4,7 @@ import {
   Users, 
   CheckCircle, 
   Brain, 
-  Zap,
+  // Zap,
   Shield,
   Globe,
   Lightbulb,

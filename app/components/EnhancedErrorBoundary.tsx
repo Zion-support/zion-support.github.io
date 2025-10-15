@@ -97,8 +97,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         errorInfo: undefined,
         retryCount: this.state.retryCount + 1
       });
-      }));
->>>>>>> cursor/fix-errors-and-merge-to-main-c51f
     }
   };
 

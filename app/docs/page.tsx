@@ -57,9 +57,6 @@ const DocsPage: React.FC = () => {
       title: 'API Reference',
       icon: <Book className="w-6 h-6" />,
       description: 'Complete API documentation and examples',
-=======
-      content: 'Detailed API reference with examples and best practices',
->>>>>>> a48f5fe93061cca12b17b0858aba29bd204709bb
       articles: [
         { title: 'Authentication', description: 'API authentication methods', readTime: '5 min' },
         { title: 'Endpoints', description: 'Complete endpoint reference', readTime: '45 min' },
