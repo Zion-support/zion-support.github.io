@@ -2,136 +2,133 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 import { 
-  CheckCircleIcon, 
-  CalendarIcon, 
-  ChartBarIcon, 
-  UsersIcon,
+  CloudIcon, 
+  ArrowUpIcon, 
+  ShieldCheckIcon, 
+  CheckCircleIcon,
   ArrowRightIcon,
   ClockIcon,
-  BoltIcon,
+  CpuChipIcon,
   DocumentTextIcon,
   SparklesIcon,
+  BoltIcon,
   CogIcon,
-  ShieldCheckIcon,
-  CloudIcon
+  ServerIcon
 } from '@heroicons/react/24/outline';
 
-const TaskManagerProPage: React.FC = () => {
+const CloudMigrationPage: React.FC = () => {
   const features = [
     {
-      icon: CheckCircleIcon,
-      title: 'Smart Task Management',
-      description: 'AI-powered task prioritization and intelligent scheduling based on deadlines and importance.',
-      price: '$19/mo'
-    },
-    {
-      icon: CalendarIcon,
-      title: 'Advanced Scheduling',
-      description: 'Automated calendar integration with smart time blocking and conflict resolution.',
-      price: '$24/mo'
-    },
-    {
-      icon: UsersIcon,
-      title: 'Team Collaboration',
-      description: 'Real-time collaboration with role-based permissions and advanced workflow management.',
-      price: '$39/mo'
-    },
-    {
-      icon: ChartBarIcon,
-      title: 'Analytics Dashboard',
-      description: 'Comprehensive productivity analytics with team performance insights and reporting.',
-      price: '$29/mo'
-    },
-    {
-      icon: BoltIcon,
-      title: 'Automation Engine',
-      description: 'Custom workflow automation with triggers, conditions, and automated task creation.',
-      price: '$34/mo'
-    },
-    {
       icon: CloudIcon,
-      title: 'Cloud Integration',
-      description: 'Seamless integration with 100+ popular tools and services for enhanced productivity.',
-      price: '$14/mo'
+      title: 'Multi-Cloud Strategy',
+      description: 'Comprehensive cloud migration strategy across AWS, Azure, and Google Cloud.',
+      price: '$299/mo'
+    },
+    {
+      icon: ArrowUpIcon,
+      title: 'Zero-Downtime Migration',
+      description: 'Seamless migration with zero business disruption and minimal downtime.',
+      price: '$499/mo'
+    },
+    {
+      icon: ShieldCheckIcon,
+      title: 'Security Assessment',
+      description: 'Complete security audit and compliance validation during migration.',
+      price: '$399/mo'
+    },
+    {
+      icon: CpuChipIcon,
+      title: 'Performance Optimization',
+      description: 'Optimize applications for cloud-native performance and scalability.',
+      price: '$349/mo'
+    },
+    {
+      icon: DocumentTextIcon,
+      title: 'Migration Planning',
+      description: 'Detailed migration roadmap with risk assessment and timeline.',
+      price: '$199/mo'
+    },
+    {
+      icon: ServerIcon,
+      title: 'Infrastructure as Code',
+      description: 'Automated infrastructure provisioning using IaC best practices.',
+      price: '$249/mo'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Individual',
-      price: '$12',
-      period: '/month',
-      description: 'Perfect for freelancers and individual professionals',
+      name: 'Assessment',
+      price: '$2,999',
+      period: 'one-time',
+      description: 'Perfect for small to medium businesses',
       features: [
-        'Unlimited Tasks & Projects',
-        'Basic AI Scheduling',
-        'Mobile & Desktop Apps',
-        'Email Support',
-        'Basic Integrations',
-        '1GB File Storage'
+        'Cloud Readiness Assessment',
+        'Migration Strategy Planning',
+        'Cost Analysis & Optimization',
+        'Security Review',
+        'Timeline & Roadmap',
+        'Risk Assessment'
       ],
       popular: false
     },
     {
-      name: 'Team',
-      price: '$39',
-      period: '/month',
-      description: 'Ideal for small to medium teams',
+      name: 'Migration',
+      price: '$9,999',
+      period: 'one-time',
+      description: 'Ideal for medium to large enterprises',
       features: [
-        'Everything in Individual',
-        'Team Collaboration Tools',
-        'Advanced AI Features',
-        'Priority Support',
-        'Advanced Integrations',
-        '10GB File Storage',
-        'Team Analytics',
-        'Custom Workflows',
-        'Up to 10 Team Members'
+        'Everything in Assessment',
+        'Complete Migration Execution',
+        'Zero-Downtime Migration',
+        'Performance Optimization',
+        'Security Implementation',
+        'Post-Migration Support (30 days)',
+        'Training & Documentation',
+        'Monitoring Setup'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$99',
-      period: '/month',
+      price: 'Custom',
+      period: 'quote',
       description: 'For large organizations with complex needs',
       features: [
-        'Everything in Team',
-        'Unlimited Team Members',
-        'Advanced Security',
-        'Custom Integrations',
-        'Dedicated Account Manager',
-        'API Access',
-        'White-label Solution',
-        'Advanced Analytics',
-        'Unlimited File Storage',
-        'Custom Training'
+        'Everything in Migration',
+        'Multi-Cloud Strategy',
+        'Custom Integration Development',
+        'Dedicated Migration Team',
+        'Extended Support (90 days)',
+        'Custom Training Programs',
+        'Ongoing Optimization',
+        '24/7 Support'
       ],
       popular: false
     }
   ];
 
   const benefits = [
-    'Increase team productivity by 40%',
-    'Reduce project completion time by 30%',
-    'Eliminate missed deadlines with AI scheduling',
-    'Improve team collaboration and communication',
-    'Get real-time insights into project progress',
-    'Automate repetitive tasks and workflows'
+    'Reduce infrastructure costs by 40%',
+    'Improve scalability and performance',
+    'Enhance security and compliance',
+    'Enable remote work capabilities',
+    'Reduce maintenance overhead',
+    'Future-proof your technology stack'
   ];
 
   return (
     <>
       <SEOHead 
-        title="AI Task Manager Pro - Zion Tech Group"
-        description="Advanced AI-powered task management with intelligent scheduling, team collaboration, and productivity analytics. Boost your team's efficiency today!"
-        keywords="task manager, project management, team collaboration, productivity tools, AI scheduling, workflow automation"
+        title="Cloud Migration Services - Zion Tech Group"
+        description="Professional cloud migration services with zero-downtime migration, security assessment, and performance optimization. Migrate to AWS, Azure, or Google Cloud!"
+        keywords="cloud migration, AWS migration, Azure migration, Google Cloud migration, cloud services, infrastructure migration"
       />
       
       <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 lg:py-32">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-slate-900 to-purple-900/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-slate-900 to-cyan-900/30"></div>
           <div className="absolute inset-0 opacity-30" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }}></div>
@@ -139,46 +136,46 @@ const TaskManagerProPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center bg-blue-500/10 rounded-full px-4 py-2 mb-6">
-                <CheckCircleIcon className="w-5 h-5 text-blue-400 mr-2" />
-                <span className="text-blue-300 text-sm font-medium">AI Task Manager Pro</span>
+                <CloudIcon className="w-5 h-5 text-blue-400 mr-2" />
+                <span className="text-blue-300 text-sm font-medium">Cloud Migration Services</span>
               </div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                  AI Task Manager Pro
+                <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  Cloud Migration Services
                 </span>
               </h1>
               
               <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Revolutionize your task management with AI-powered scheduling, intelligent automation, 
-                and advanced team collaboration. Boost productivity and never miss a deadline again.
+                Seamlessly migrate your infrastructure to the cloud with our expert migration services. 
+                Zero-downtime migration, security assessment, and performance optimization included.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25">
-                  Start Free Trial
+                <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25">
+                  Get Free Assessment
                 </button>
                 <button className="border-2 border-blue-400 text-blue-300 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
-                  Watch Demo
+                  View Case Studies
                 </button>
               </div>
               
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">40%</div>
-                  <div className="text-gray-300 text-sm">Productivity Increase</div>
+                  <div className="text-gray-300 text-sm">Cost Reduction</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">30%</div>
-                  <div className="text-gray-300 text-sm">Faster Completion</div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">Zero</div>
+                  <div className="text-gray-300 text-sm">Downtime</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">100+</div>
-                  <div className="text-gray-300 text-sm">Integrations</div>
+                  <div className="text-gray-300 text-sm">Successful Migrations</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">24/7</div>
-                  <div className="text-gray-300 text-sm">AI Monitoring</div>
+                  <div className="text-gray-300 text-sm">Support</div>
                 </div>
               </div>
             </div>
@@ -190,10 +187,10 @@ const TaskManagerProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                Why Choose <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Task Manager Pro</span>?
+                Why Choose <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Our Migration Services</span>?
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your task management with AI-powered automation and intelligent insights.
+                Transform your infrastructure with our proven cloud migration expertise.
               </p>
             </div>
             
@@ -213,17 +210,17 @@ const TaskManagerProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                Powerful <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Features</span>
+                Our <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Migration Services</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to manage and optimize your tasks with AI-powered intelligence.
+                Comprehensive cloud migration solutions tailored to your business needs.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="group bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/20">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors">
@@ -246,10 +243,10 @@ const TaskManagerProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                Choose Your <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Plan</span>
+                Choose Your <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Migration Plan</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing plans designed to scale with your task management needs.
+                Flexible pricing plans designed to meet your migration requirements.
               </p>
             </div>
             
@@ -262,7 +259,7 @@ const TaskManagerProPage: React.FC = () => {
                 }`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -288,10 +285,10 @@ const TaskManagerProPage: React.FC = () => {
                   
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
+                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
                       : 'border-2 border-blue-400 text-blue-300 hover:bg-blue-400 hover:text-white'
                   }`}>
-                    {plan.popular ? 'Start Free Trial' : 'Get Started'}
+                    {plan.popular ? 'Get Started' : 'Contact Sales'}
                   </button>
                 </div>
               ))}
@@ -300,17 +297,17 @@ const TaskManagerProPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900/40 via-slate-900 to-purple-900/40">
+        <section className="py-20 bg-gradient-to-r from-blue-900/40 via-slate-900 to-cyan-900/40">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Ready to Boost Your Team's Productivity?
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Ready to Migrate to the Cloud?
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 mb-8">
-              Join thousands of teams already using AI Task Manager Pro to streamline their workflows and achieve more.
+              Join hundreds of businesses already using our cloud migration services to modernize their infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
+              <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+                Get Free Assessment
               </button>
               <button className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                 Contact Sales
@@ -323,4 +320,4 @@ const TaskManagerProPage: React.FC = () => {
   );
 };
 
-export default TaskManagerProPage;
+export default CloudMigrationPage;

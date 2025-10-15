@@ -3,11 +3,15 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = memo(() => {
   return (
-    <footer className="glass-card mt-20">
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <footer className="glass-card mt-20 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-transparent to-cyan-900/10"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+      
+      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-6 text-gradient font-['Orbitron']">ZION TECH GROUP</h3>
+            <h3 className="text-2xl font-bold mb-6 text-gradient font-['Orbitron'] neon-text">ZION TECH GROUP</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services. 
               We help businesses transform through cutting-edge technology and innovative micro SAAS solutions.
@@ -44,9 +48,9 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-gradient">Core Services</h4>
+            <h4 className="text-lg font-semibold mb-6 text-gradient holographic">Core Services</h4>
             <ul className="space-y-3">
-              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Services</Link></li>
+              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors group">AI Services <span className="opacity-0 group-hover:opacity-100 transition-opacity">→</span></Link></li>
               <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">IT Solutions</Link></li>
               <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">Micro SaaS Solutions</Link></li>
               <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors">Cloud Infrastructure</Link></li>

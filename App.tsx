@@ -81,6 +81,13 @@ const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
 // Micro SaaS pages
 const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
 const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
+const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
+const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
+const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
+const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
+const AICodeAssistantProPage = lazy(() => import('./app/ai-code-assistant-pro/page'));
+const AIVideoGeneratorProPage = lazy(() => import('./app/ai-video-generator-pro/page'));
+const AIVoiceSynthesisProPage = lazy(() => import('./app/ai-voice-synthesis-pro/page'));
 
 // Missing pages
 const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
@@ -282,6 +289,9 @@ function App() {
                     <Route path="/ai-crm-optimizer" element={<AICRMOptimizerPage />} />
                     <Route path="/ai-email-optimizer" element={<AIEmailOptimizerPage />} />
                     <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
+                    <Route path="/ai-code-assistant-pro" element={<AICodeAssistantProPage />} />
+                    <Route path="/ai-video-generator-pro" element={<AIVideoGeneratorProPage />} />
+                    <Route path="/ai-voice-synthesis-pro" element={<AIVoiceSynthesisProPage />} />
                     <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
                     <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
                     <Route path="/data-analytics" element={<DataAnalyticsPage />} />
