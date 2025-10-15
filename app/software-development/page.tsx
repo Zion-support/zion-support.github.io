@@ -5,7 +5,6 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-<<<<<<< HEAD
 import FuturisticCard from '../components/FuturisticCard',
       import FuturisticButton from '../components/FuturisticButton',
       import ResponsiveContainer from '../components/ResponsiveContainer',
@@ -62,7 +61,7 @@ import FuturisticCard from '../components/FuturisticCard',
       features: ["Code refactoring", "migration", "UI/UX updates", "Performance optimization"],""
 
       price: "From $30,000"
-=======
+
 const SoftwareDevelopmentPage = () => {
   const services = [
     {
@@ -106,7 +105,7 @@ const SoftwareDevelopmentPage = () => {
       icon: <Cpu className ="w-8 h-8" />,";
       features: ["Code refactoring", "Database migration", "UI/UX updates", "Performance optimization"],";
       price: "From $30,000"";
->>>>>>> main
+
     }
   ];
 
@@ -124,7 +123,7 @@ const SoftwareDevelopmentPage = () => {
       title: "Discovery",";
       description: "Understand your requirements and define project scope"",
     },
-<<<<<<< HEAD
+
     {}
   ];
 ,
@@ -168,7 +167,7 @@ const SoftwareDevelopmentPage = () => {
       title: "Deployment",""
 
       description: "Deploy to production with monitoring and support"
-=======
+
     {
       step: "2", ";
       title: "Planning",";
@@ -188,7 +187,7 @@ const SoftwareDevelopmentPage = () => {
       step: "5",";
       title: "Deployment",";
       description: "Deploy to production with monitoring and support"",
->>>>>>> main
+
     }
   ];
 
@@ -198,9 +197,9 @@ const SoftwareDevelopmentPage = () => {
       description: "Tailored software that meets your specific business needs",";
       icon: <Code className ="w-6 h-6" />",
     },
-<<<<<<< HEAD
+
     {}
-=======
+
     {
       title: "Scalable Architecture",";
       description: "Built to grow with your business and handle increased load",";
@@ -216,7 +215,7 @@ const SoftwareDevelopmentPage = () => {
       description: "24/7 support and maintenance for your applications",";
       icon: <Shield className ="w-6 h-6" />",
     }
->>>>>>> main
+
   ];
 ,
       const benefits = [",
@@ -548,8 +547,6 @@ const SoftwareDevelopmentPage = () => {
       export default SoftwareDevelopmentPage;
 ;
 
-<<<<<<< HEAD
-=======
 const ComponentName = () => {
   return (
     <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";
@@ -742,4 +739,4 @@ const ComponentName = () => {
 export default SoftwareDevelopmentPage;
 
 }
->>>>>>> main
+

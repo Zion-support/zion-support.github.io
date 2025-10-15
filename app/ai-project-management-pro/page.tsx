@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react''
 import { Helmet } from 'react-helmet-async''
 } from 'lucide-react''
@@ -25,7 +25,6 @@ import { Helmet } from 'react-helmet-async''
     { name: 'Trello''}
     { name: 'Asana''}'
 
-=======
 import React from 'react';;
 import SEOHead from '../components/SEOHead';
 
@@ -46,4 +45,4 @@ const AiProjectManagementProPage: React.FC = () => {
 };
 
 export default AiProjectManagementProPage;
->>>>>>> main
+

@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from '../../components/SEOHead';
-<<<<<<< HEAD
 
 ,
       import { HelmetProvider } from "react-helmet-async",
@@ -362,7 +361,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {};
       export default Layout",
         "
 
-=======
 ;
 const AppPage: React.FC = () => {
   return (
@@ -382,4 +380,4 @@ const AppPage: React.FC = () => {
 };
 ;
 export default AppPage;'";'";
->>>>>>> main
+

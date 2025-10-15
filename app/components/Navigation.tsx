@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react',
       import {"}
         "
@@ -476,7 +476,7 @@ import React, { useState } from 'react',
     </nav>";"
 
   )
-=======
+
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -760,7 +760,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       </div>
     </nav>
   );
->>>>>>> main
+
 };
 
 export default Navigation;

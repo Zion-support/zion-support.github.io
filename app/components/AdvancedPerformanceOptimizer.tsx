@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 interface PerformanceOptimizerProps {}
   enableImageOptimization?: boolean;
@@ -124,7 +123,6 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({)}
 
   return null; // This component doesn't render anything
 
-=======
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -141,7 +139,7 @@ const ComponentsPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default ComponentsPage;'";'";

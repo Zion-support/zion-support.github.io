@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react',
       import { Helmet } from 'react-helmet-async',
       import { TrendingUp } from "lucide-react",
@@ -499,7 +499,6 @@ import React from 'react',
               to="/demo"
               className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -521,4 +520,4 @@ const AiSolutionsPage: React.FC = () => {
 };
 ;
 export default AiSolutionsPage;'";'";
->>>>>>> main
+

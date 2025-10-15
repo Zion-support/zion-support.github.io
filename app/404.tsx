@@ -1,12 +1,11 @@
 import React from 'react';;
 import { Helmet } from 'react-helmet-async';
 
-
 export default function NotFoundPage() {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
+
         <title>404 - Zion Tech Group</title>
         <meta name="description" content="Professional 404 services by Zion Tech Group." />
       </Helmet>
@@ -41,7 +40,6 @@ export default function NotFoundPage() {
             </a>
           </div>
 
-=======
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name ="description" content="The page you're looking for doesn't exist. Return to Zion Tech Group's homepage." />";
       </Helmet>
@@ -62,7 +60,7 @@ export default function NotFoundPage() {
           >
             Go Home
           </Link>
->>>>>>> main
+
         </div>
       </div>
     </>

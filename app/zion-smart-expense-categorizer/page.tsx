@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async""use client';
 export default function ZionSmartExpenseCategorizer() {}
@@ -67,7 +67,7 @@ export default function ZionSmartExpenseCategorizer() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -86,7 +86,7 @@ const ZionSmartExpenseCategorizerPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default ZionSmartExpenseCategorizerPage;'";'";

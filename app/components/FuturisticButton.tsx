@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import { cn } from "../lib/utils";
 interface FuturisticButtonProps {},
@@ -67,7 +66,6 @@ interface FuturisticButtonProps {},
 },
       export default FuturisticButton
 
-=======
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -87,4 +85,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

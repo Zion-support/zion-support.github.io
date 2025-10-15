@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react',
       import React, { useState } from "react",
       interface FormData {},
@@ -182,7 +182,6 @@ const ContactForm: React.FC = () => {};
 },
       export default ContactForm
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -204,4 +203,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

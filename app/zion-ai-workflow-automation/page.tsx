@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react""use client';
 export default function ZionAiWorkflowAutomationPage() {}
   return ()
@@ -12,7 +12,7 @@ export default function ZionAiWorkflowAutomationPage() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -31,7 +31,7 @@ const ZionAiWorkflowAutomationPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default ZionAiWorkflowAutomationPage;'";'";

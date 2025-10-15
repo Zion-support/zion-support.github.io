@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react',
       import React, { useState, useEffect } from "react",
       interface ContentItem {},
@@ -135,7 +135,6 @@ interface DynamicContentShowcaseProps {},
 },
       export default DynamicContentShowcase
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -157,4 +156,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

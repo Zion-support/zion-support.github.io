@@ -1,6 +1,5 @@
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
 const AiContentGenerationProPage: React.FC = () => {}
   return ()
     <>{}</>
@@ -12,7 +11,7 @@ const AiContentGenerationProPage: React.FC = () => {}
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Page</h1>
           <pclassName="text-gray-300">
-=======
+
 const AiContentGenerationProPage: React.FC = () => {
   return (
     <>
@@ -28,5 +27,4 @@ const AiContentGenerationProPage: React.FC = () => {
     </>
   ),
 };
->>>>>>> main
 

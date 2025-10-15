@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 "use client"
 import { useEffect, useCallback } from "react";
 import logger from "../../utils/logger";
@@ -186,7 +186,6 @@ export default function EnhancedPerformanceOptimizer() {}
 }
 };
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -208,4 +207,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

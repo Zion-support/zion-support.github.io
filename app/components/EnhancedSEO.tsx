@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async';
 
@@ -117,7 +116,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({};)
 },
       export default EnhancedSEO
 
-=======
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -137,4 +135,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

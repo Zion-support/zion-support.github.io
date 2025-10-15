@@ -5,7 +5,6 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-<<<<<<< HEAD
 import FuturisticCard from '../components/FuturisticCard',
       import FuturisticButton from '../components/FuturisticButton',
       import ResponsiveContainer from '../components/ResponsiveContainer',
@@ -157,7 +156,7 @@ import FuturisticCard from '../components/FuturisticCard',
       description: "Gain insights into process performance and bottlenecks",""
       icon: <className="w-6 h-6" />""
     };
-=======
+
 const TaskAutomationWorkflowPage = () => {
   const features = [
     {
@@ -266,7 +265,7 @@ const TaskAutomationWorkflowPage = () => {
       description: "Gain insights into process performance and bottlenecks",";
       icon: <BarChart3 className ="w-6 h-6" />",
     }
->>>>>>> main
+
   ];
 ,
       return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">",)
@@ -557,8 +556,6 @@ const TaskAutomationWorkflowPage = () => {
       export default TaskAutomationWorkflowPage;
 ;
 
-<<<<<<< HEAD
-=======
 const ComponentName = () => {
   return (
     <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";
@@ -742,4 +739,4 @@ const ComponentName = () => {
 export default TaskAutomationWorkflowPage;
 
 }
->>>>>>> main
+

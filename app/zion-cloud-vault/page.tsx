@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
   // return statement
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
@@ -223,7 +222,6 @@ import SEOHead from './components/SEOHead';
                 to="/demo"
                 className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
 
-=======
 ;
 const ZionCloudVaultPage: React.FC = () => {
   return (
@@ -243,4 +241,4 @@ const ZionCloudVaultPage: React.FC = () => {
 };
 ;
 export default ZionCloudVaultPage;'";'";
->>>>>>> main
+

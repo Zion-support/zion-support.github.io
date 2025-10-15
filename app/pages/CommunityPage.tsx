@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import {MessageSquare, BookOpen} from "lucide-react";
 ,
@@ -155,7 +154,6 @@ import {MessageSquare, BookOpen} from "lucide-react";
 ,
       export default CommunityPage;
 
-=======
 ;
 const PagesPage: React.FC = () => {
   return (
@@ -175,4 +173,4 @@ const PagesPage: React.FC = () => {
 };
 ;
 export default PagesPage;'";'";
->>>>>>> main
+

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react';
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
@@ -44,7 +44,7 @@ export default function NewsletterSignup() {}
       </div>
     </>
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -63,7 +63,7 @@ const ComponentsPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default ComponentsPage;'";'";

@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async',
       const features = [
@@ -81,7 +80,6 @@ export default DemoPage,
     {}
 export default Component;
 
-=======
 ;
 const DemoPage: React.FC = () => {
   return (
@@ -101,4 +99,4 @@ const DemoPage: React.FC = () => {
 };
 ;
 export default DemoPage;'";'";
->>>>>>> main
+

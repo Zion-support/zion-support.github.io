@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import {ArrowRight, CheckCircle} from "lucide-react",
       interface EnhancedHeroProps {},
@@ -203,7 +202,6 @@ import {ArrowRight, CheckCircle} from "lucide-react",
       export default EnhancedHero",
         "
 
-=======
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -223,4 +221,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

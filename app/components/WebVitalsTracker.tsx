@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { useEffect } from "react";
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from "web-vitals";
 interface WebVitalsData {},
@@ -74,7 +74,6 @@ interface WebVitalsData {},
 },
       export default WebVitalsTracker
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -96,4 +95,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

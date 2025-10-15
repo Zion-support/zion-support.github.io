@@ -5,7 +5,6 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-<<<<<<< HEAD
 import FuturisticCard from '../components/FuturisticCard',
       import FuturisticButton from '../components/FuturisticButton',
       import ResponsiveContainer from '../components/ResponsiveContainer',
@@ -157,7 +156,7 @@ import FuturisticCard from '../components/FuturisticCard',
       description: "Make informed decisions based on real data and analytics",""
       icon: <TrendingUp className="w-6 h-6" />""
     };
-=======
+
 const WebsiteAnalyticsToolPage = () => {
   const features = [
     {
@@ -266,7 +265,7 @@ const WebsiteAnalyticsToolPage = () => {
       description: "Make informed decisions based on real data and analytics",";
       icon: <TrendingUp className ="w-6 h-6" />",
     }
->>>>>>> main
+
   ];
 ,
       return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">",)
@@ -557,8 +556,6 @@ const WebsiteAnalyticsToolPage = () => {
       export default WebsiteAnalyticsToolPage;
 ;
 
-<<<<<<< HEAD
-=======
 const ComponentName = () => {
   return (
     <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";
@@ -742,4 +739,4 @@ const ComponentName = () => {
 export default WebsiteAnalyticsToolPage;
 
 }
->>>>>>> main
+

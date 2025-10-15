@@ -1,6 +1,5 @@
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
 const CareersPage: React.FC = () => {}
   return ()
     <>{}</>
@@ -8,13 +7,13 @@ const CareersPage: React.FC = () => {}
         title="CareersPage - Zion Tech Group"
 
         description="Zion Tech Group CareersPage page"
-=======
+
 const CareersPage: React.FC = () => {
   return (
     <>
       <SEOHead title ="CareersPage - Zion Tech Group - Zion Tech Group"";
         description="Zion Tech Group CareersPage page"";
->>>>>>> main
+
       />
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
         <div className ="text-center">";

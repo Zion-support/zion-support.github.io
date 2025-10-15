@@ -17,7 +17,6 @@ const ComponentsPage: React.FC = () => {
     </>;
   ),
 };
-<<<<<<< HEAD
 
 export const LoadingPage: React.FC<LoadingPageProps> = ({};)
   message = "Loading...", showProgress = false, progress = 0 
@@ -125,7 +124,7 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};)
         </div>
       </div>"
             <div className="animate-spin"></div>: value
-=======
+
 ;
 export const LoadingPage: React.FC<LoadingPageProps> = ({};";
   message = "Loading...", showProgress = false, progress = 0;: value;";
@@ -229,7 +228,7 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};
         </div>";
       </div>"";
             <div className ="animate-spin"></div>: value;";
->>>>>>> main
+
               {getServiceIcon()};
             </div>";
           </div>"";
@@ -275,7 +274,6 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({};
   )
 }
 };
-<<<<<<< HEAD
 
 export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};)
   type, count = 1 
@@ -341,7 +339,7 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};)
         </div>
       </div>
               </div>
-=======
+
 ;
 export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
   type, count = 1;: value;
@@ -404,7 +402,7 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
         </div>;
       </div>;
               </div>;
->>>>>>> main
+
             ))};
           </div>';';
         )'';
@@ -421,7 +419,7 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
       default: "";
         return <div className ="animate-pulse bg-gray-600 rounded h-4"></div>: value;",
     }
-<<<<<<< HEAD
+
     },
     {}
   return ()
@@ -429,14 +427,13 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
       {Array.from({ length: count }).map(( index) => ()
         <div key={index}></div>
 
-=======
     },;
     {";
   return ()"";
     <div className ="space-y-4"></div>: value;";
       {Array.from({ length: count }).map(( index) => (
         <div key ={index}></div>: value;
->>>>>>> main
+
           {renderSkeleton()};
         </div>;
       ))};
@@ -444,7 +441,6 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({};
   )
 }
 };
-<<<<<<< HEAD
 
 export const ErrorLoading: React.FC<ErrorLoadingProps> = ({};)
   error, onRetry 
@@ -468,7 +464,7 @@ export const ErrorLoading: React.FC<ErrorLoadingProps> = ({};)
           ></button
 
 >
-=======
+
 ;
 export const ErrorLoading: React.FC<ErrorLoadingProps> = ({};
   error, onRetry;
@@ -491,7 +487,7 @@ export const ErrorLoading: React.FC<ErrorLoadingProps> = ({};
       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300">;";
           ></button>;
 >;
->>>>>>> main
+
             Try Again;
           </button>,
         )};
@@ -500,7 +496,6 @@ export const ErrorLoading: React.FC<ErrorLoadingProps> = ({};
   )
 }
 };
-<<<<<<< HEAD
 
 export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};)
   progress, message, _subMessage 
@@ -546,7 +541,7 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};)
       style={{ animationDelay: `${index * 0.1}s` }};
 
             ></div>
-=======
+
 ;
 export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};
   progress, message, _subMessage;
@@ -591,7 +586,7 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};
               }`},>;
       style={{ animationDelay: `${index * 0.1}s` }};>;
             ></div>;
->>>>>>> main
+
           ))};
         </div>;
       </div>;
@@ -599,14 +594,12 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};
   )
 }
 };
-<<<<<<< HEAD
 
 export default LoadingPage;"'"'
 
 export default ComponentsPage;
 
-=======
 '";'";
 export default LoadingPage;"'"'`;
 '";'";
->>>>>>> main
+

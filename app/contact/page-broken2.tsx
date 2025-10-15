@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { Helmet } from "react-helmet-async";
 const Pagebroken2Page = () => {}
 }
@@ -45,7 +45,6 @@ const Pagebroken2Page = () => {}
   )
 }
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -64,7 +63,7 @@ const ContactPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default ContactPage;'";'";

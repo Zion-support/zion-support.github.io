@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 interface PerformanceMetrics {}
   fcp: number | null;
@@ -160,7 +159,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({)}
   // This component doesn't render anything visible
   return null;
 
-=======
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -177,7 +175,7 @@ const ComponentsPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default ComponentsPage;'";'";

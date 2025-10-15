@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import { cn } from "../lib/utils";
 interface ResponsiveTextProps {},
@@ -73,7 +72,6 @@ interface ResponsiveTextProps {},
 },
       export default ResponsiveText
 
-=======
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -93,4 +91,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

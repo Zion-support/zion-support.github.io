@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 ,
       import SEOOptimizer from "../../components/SEOOptimizer";
@@ -621,7 +620,6 @@ const ZionAiInvoiceGeneratorPage: React.FC = () => {""}
       </div>""
     </>""
 
-=======
 ;
 const ZionAiInvoiceGeneratorPage: React.FC = () => {
   return (
@@ -641,4 +639,4 @@ const ZionAiInvoiceGeneratorPage: React.FC = () => {
 };
 ;
 export default ZionAiInvoiceGeneratorPage;'";'";
->>>>>>> main
+

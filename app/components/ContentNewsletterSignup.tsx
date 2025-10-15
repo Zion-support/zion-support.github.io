@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react',
       import React, { useState } from "react",
       interface ContentNewsletterSignupProps {},
@@ -75,7 +75,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({},)
 },
       export default ContentNewsletterSignup
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -97,4 +96,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { Component, ErrorInfo, ReactNode } from 'react',
       import {RefreshCw, Home, Bug} from 'lucide-react',
       interface Props {"}
@@ -170,7 +170,7 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
 
 };
 ;
-=======
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { RefreshCw, Home, Bug } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -274,5 +274,4 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 }
 
->>>>>>> main
 export default GlobalErrorBoundary;

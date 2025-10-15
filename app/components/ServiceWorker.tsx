@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 interface ServiceWorkerProps {},
       children?: React.ReactNode
@@ -13,7 +12,6 @@ interface ServiceWorkerProps {},
     {}
 export default ServiceWorker;
 
-=======
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -33,4 +31,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

@@ -1,6 +1,5 @@
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {}
   return ()
     <>{}</>
@@ -8,13 +7,12 @@ const PagePage: React.FC = () => {}
         title="page - Zion Tech Group"
         description="Zion Tech Group page service page"
 
-=======
 const SpecializedServicesPage: React.FC = () => {
   return (
     <>
       <SEOHead title ="specialized-services - Zion Tech Group - Zion Tech Group"";
         description="Zion Tech Group specialized-services service page"";
->>>>>>> main
+
       />
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
         <div className ="text-center">";
@@ -23,13 +21,12 @@ const SpecializedServicesPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
+
   )
     },
     {}
 export default PagePage;
-=======
+
   ),
 };
->>>>>>> main
 

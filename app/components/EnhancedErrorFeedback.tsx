@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react',
       import React, { Component, ErrorInfo, ReactNode } from 'react',
       interface Props {},
@@ -204,7 +204,6 @@ export const ErrorBoundary: React.FC<{},
 
 export default GlobalErrorBoundary
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -226,4 +225,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

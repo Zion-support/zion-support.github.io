@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react',
       import SEOHead from '../components/SEOHead',
       const CommunityPage: React.FC = () => {}
@@ -9,7 +9,7 @@ import React from 'react',
         title="Community - Zion Tech Group"
         description="Join our vibrant community of developers, innovators, and tech enthusiasts. Connect, collaborate, and grow together."
         keywords="tech community, developer community, innovation community, tech networking, community platform"
-=======
+
 import React from 'react';;
 import SEOHead from '../components/SEOHead';
 
@@ -19,7 +19,7 @@ const CommunityPage: React.FC = () => {
       <SEOHead title ="Community - Zion Tech Group"",
         description="Join our vibrant community of developers, innovators, and tech enthusiasts. Connect, collaborate, and grow together."";
         keywords="tech community, developer community, innovation community, tech networking, community platform"";
->>>>>>> main
+
       />
       <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 text-white">";
         <div className ="min-h-screen flex items-center justify-center">";
@@ -42,13 +42,12 @@ const CommunityPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
+
   )
     },
     {}
 export default CommunityPage;
-=======
+
   ),
 };
->>>>>>> main
 

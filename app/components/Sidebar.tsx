@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState, useCallback, useMemo } from 'react'
 import {},
       X,
@@ -274,7 +274,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {},
               <span>Get Started</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </>
-=======
+
 import React from 'react';;
 import { X, ChevronDown, ChevronRight } from 'lucide-react';
 
@@ -371,7 +371,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 </div>
               </div>
             </div>
->>>>>>> main
+
           </div>
         </div>
         <nav className="p-4"></nav>

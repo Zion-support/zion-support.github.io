@@ -1,13 +1,11 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Network, Cpu, CheckCircle, ArrowRight } from 'lucide-react';
 
-=======
 import React from 'react';;
 import SEOHead from '../components/SEOHead';
 import { Wifi, CheckCircle, Network, Cpu, Smartphone } from 'lucide-react';
->>>>>>> main
 
 const FiveGSolutionsPage: React.FC = () => {
   const solutions = [

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface AccessibilityOptions {};
@@ -581,7 +581,6 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
     {}
 export default EnhancedAccessibilityManager;
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -603,4 +602,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react',
       const PricingPage: React.FC = () => {"}
         "
@@ -957,7 +957,6 @@ import React, { useState } from 'react',
       export default PricingPage;
 ;
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -979,4 +978,4 @@ const PagesPage: React.FC = () => {
 };
 ;
 export default PagesPage;'";'";
->>>>>>> main
+

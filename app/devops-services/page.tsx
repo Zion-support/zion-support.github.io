@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -275,7 +274,6 @@ const DevOpsServicesPage = () => {}
               size="lg"
               icon={<UsersclassName="w-5 h-5">}
 
-=======
 ;
 const DevopsServicesPage: React.FC = () => {
   return (
@@ -295,4 +293,4 @@ const DevopsServicesPage: React.FC = () => {
 };
 ;
 export default DevopsServicesPage;'";'";
->>>>>>> main
+

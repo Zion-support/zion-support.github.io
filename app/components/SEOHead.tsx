@@ -1,6 +1,5 @@
 import React from 'react';;';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async',
       interface SEOHeadProps {},
@@ -119,7 +118,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({},)
     {}
 export default Component;
 
-=======
 ;
 interface SEOHeadProps {
   title: string;
@@ -174,4 +172,4 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 };
 ;
 export default SEOHead;'";'";
->>>>>>> main
+

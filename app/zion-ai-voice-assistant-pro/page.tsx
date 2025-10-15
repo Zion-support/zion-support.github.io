@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async""use client';
 export default function ZionAIVoiceAssistantPro() {}
@@ -67,7 +67,7 @@ export default function ZionAIVoiceAssistantPro() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -86,7 +86,7 @@ const ZionAiVoiceAssistantProPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default ZionAiVoiceAssistantProPage;'";'";

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { createContext, useContext, useEffect, ReactNode } from "react",
       declare global {},
       interface Window {},
@@ -75,7 +75,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};)
 
 export default AnalyticsProvider
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -97,4 +96,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
   // return statement
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
@@ -221,7 +220,6 @@ import SEOHead from './components/SEOHead';
                 to="/demo"
                 className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
 
-=======
 ;
 const ZionSecurityShieldPage: React.FC = () => {
   return (
@@ -241,4 +239,4 @@ const ZionSecurityShieldPage: React.FC = () => {
 };
 ;
 export default ZionSecurityShieldPage;'";'";
->>>>>>> main
+

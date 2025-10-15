@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import { ChevronRight, Home } from "lucide-react";
 export default function Breadcrumb() {}
@@ -48,7 +47,6 @@ export default function Breadcrumb() {}
   )
 };
 
-=======
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -68,4 +66,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react',
       import { useState, useEffect } from "react",
       import { ChevronLeft, ChevronRight } from "lucide-react",
@@ -131,7 +131,6 @@ export default function ContentCarousel() {}
   )
 };
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -153,4 +152,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

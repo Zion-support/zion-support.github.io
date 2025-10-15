@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 'use client'
 import React, { useState } from 'react',
       import { useEffect, useState } from "react";
@@ -214,7 +214,6 @@ interface CacheStats {},
 },
       export default CacheManager
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -236,4 +235,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

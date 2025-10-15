@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 export default function LegalDocumentManagerPage() {}
   return ()
@@ -12,7 +12,7 @@ export default function LegalDocumentManagerPage() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -31,7 +31,7 @@ const LegalDocumentManagerPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default LegalDocumentManagerPage;'";'";

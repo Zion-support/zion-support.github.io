@@ -1,6 +1,5 @@
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
 const ITSolutionsPage: React.FC = () => {}
   const itServices = [
     {};
@@ -430,7 +429,7 @@ const ITSolutionsPage: React.FC = () => {}
             <>
               to="/demo"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-=======
+
 const ITSolutionsPage: React.FC = () => {
   return (
     <>
@@ -446,5 +445,4 @@ const ITSolutionsPage: React.FC = () => {
     </>
   ),
 };
->>>>>>> main
 

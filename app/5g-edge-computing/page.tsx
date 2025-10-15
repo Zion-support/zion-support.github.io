@@ -5,7 +5,7 @@ import SEOHead from '../components/SEOHead';
 const G5gEdgeComputingPage: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
+
       <SEOHead
         title="5G Edge Computing - Zion Tech Group"
         description="Advanced 5G edge computing solutions for modern businesses"
@@ -16,7 +16,6 @@ const G5gEdgeComputingPage: React.FC = () => {
           <h1 className="text-4xl font-bold mb-4">5G Edge Computing</h1>
           <p className="text-gray-300">Advanced 5G edge computing solutions coming soon...</p>
 
-=======
       <SEOHead title ="5G Edge Computing - Zion Tech Group"";
         description="Advanced 5G edge computing solutions for reduced latency and improved performance. Bring processing power closer to users with our edge computing infrastructure."";
       />
@@ -24,7 +23,7 @@ const G5gEdgeComputingPage: React.FC = () => {
         <div className ="text-center">";
           <h1 className ="text-4xl font-bold mb-4">5G Edge Computing</h1>";
           <p className ="text-gray-300">Coming soon...</p>";
->>>>>>> main
+
         </div>
       </div>
     </>

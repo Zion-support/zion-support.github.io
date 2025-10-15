@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
       </Helmet>
 
@@ -88,7 +87,6 @@ import SEOHead from './components/SEOHead';
     },
     {}
 
-=======
 ;
 const PressPage: React.FC = () => {
   return (
@@ -108,4 +106,4 @@ const PressPage: React.FC = () => {
 };
 ;
 export default PressPage;'";'";
->>>>>>> main
+

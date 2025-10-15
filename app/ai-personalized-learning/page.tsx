@@ -1,6 +1,5 @@
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
 const AiPersonalizedLearningPage: React.FC = () => {}
   const features = [
     {};
@@ -297,7 +296,7 @@ const AiPersonalizedLearningPage: React.FC = () => {}
                   Start Free Trial
                 </button>
                 <buttonclassName="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
-=======
+
 const AiPersonalizedLearningPage: React.FC = () => {
   return (
     <>
@@ -313,5 +312,4 @@ const AiPersonalizedLearningPage: React.FC = () => {
     </>
   ),
 };
->>>>>>> main
 

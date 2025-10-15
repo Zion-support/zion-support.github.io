@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import { Package, AlertTriangle } from "lucide-react";
 import FuturisticCard from '../components/FuturisticCard';
@@ -298,7 +297,6 @@ const InventoryManagementSystemPage = () => {}
               size="lg"
               icon={<GlobeclassName="w-5 h-5">}
 
-=======
 ;
 const InventoryManagementSystemPage: React.FC = () => {
   return (
@@ -318,4 +316,4 @@ const InventoryManagementSystemPage: React.FC = () => {
 };
 ;
 export default InventoryManagementSystemPage;'";'";
->>>>>>> main
+

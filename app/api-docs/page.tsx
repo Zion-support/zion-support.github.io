@@ -1,6 +1,5 @@
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {}
   return ()
     <>{}</>
@@ -12,7 +11,7 @@ const PagePage: React.FC = () => {}
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">api-docs</h1>
           <pclassName="text-gray-300">
-=======
+
 const ApiDocsPage: React.FC = () => {
   return (
     <>
@@ -28,5 +27,4 @@ const ApiDocsPage: React.FC = () => {
     </>
   ),
 };
->>>>>>> main
 

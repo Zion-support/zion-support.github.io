@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -121,7 +121,7 @@ const SEO: React.FC<SEOProps> = ({)}
     </Helmet>
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -140,7 +140,7 @@ const ComponentsPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default ComponentsPage;'";'";

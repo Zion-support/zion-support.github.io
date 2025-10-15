@@ -1,7 +1,6 @@
 import { Helmet };; from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async',
       export default function AiEmailAssistantPage() {"}
         "
@@ -280,7 +279,6 @@ import { Helmet } from 'react-helmet-async',
       </div>""
     </>""
 
-=======
 export default function AiEmailAssistantPage() {
   return (
     <>
@@ -365,4 +363,4 @@ export default function AiEmailAssistantPage() {
     </>
   ),
 }
->>>>>>> main
+

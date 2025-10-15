@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useEffect, useCallback } from "react";
 interface WebVitalsData {},
       name: string
@@ -35,12 +35,10 @@ interface WebVitalsData {},
       };
   }, []);
 
-
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
->>>>>>> main
+
 const ComponentsPage: React.FC = () => {
   return (
     <>;
@@ -57,10 +55,9 @@ const ComponentsPage: React.FC = () => {
     </>;
   ),
 };
-<<<<<<< HEAD
+
 export default CoreWebVitals
 
-=======
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

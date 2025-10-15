@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { } from "react";
 interface LazyWrapperProps {},
       fallback?: React.ReactNode
@@ -46,7 +46,6 @@ export { createLazyComponent } from '../utils/lazyLoading';
 export { createLazyComponent } from '../utils/lazyLoading',
       export default LazyWrapper;
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -68,4 +67,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

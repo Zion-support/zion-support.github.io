@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 import {},
       Globe,
@@ -41,7 +41,7 @@ const EnhancedServicesShowcase: React.FC = () => {};
         "Technology Integration",
         "Change Management",
         "Training & Support",
-=======
+
 import React from "react";
 import {
   Brain,
@@ -64,7 +64,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         "Natural Language Processing",";
         "Computer Vision",";
         "Predictive Analytics",";
->>>>>>> main
+
       ],
       href: "/ai-solutions",";
       gradient: "from-purple-500 to-pink-500",";
@@ -115,22 +115,21 @@ const EnhancedServicesShowcase: React.FC = () => {
         <div className="text-center mb-16"></div>
           <h2 className="text-4xl font-bold text-white mb-4"></h2>
 
-<<<<<<< HEAD
             Our Core Services
-=======
+
   return (
     <div className ="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";
       <div className ="container mx-auto px-4">";
         <div className ="text-center mb-16">";
           <h2 className ="text-4xl font-bold text-white mb-6">";
             Our <span className ="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Services</span>";
->>>>>>> main
+
           </h2>
           <p className ="text-xl text-gray-300 max-w-3xl mx-auto">";
             We provide comprehensive technology solutions to help your business thrive in the digital age.
           </p>
         </div>
-<<<<<<< HEAD
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
           {services.map((service, index) => (<divkey={index},>)
       className="cyber-card p-8 group hover:scale-105 transition-transform"
@@ -140,7 +139,6 @@ const EnhancedServicesShowcase: React.FC = () => {
 
                 <service.icon className="h-12 w-12 text-cyan-400 mr-4" />
                 <h3 className="text-2xl font-semibold text-white">
-=======
 
         <div className ="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
           {services.map((service, index) => (
@@ -152,14 +150,14 @@ const EnhancedServicesShowcase: React.FC = () => {
                   <service.icon: className ="w-6 h-6 text-white" />";
                 </div>
                 <h3 className ="text-xl font-semibold text-white mb-2">",
->>>>>>> main
+
                   {service.title}
                 </h3>
                 <p className ="text-gray-300 text-sm mb-4">";
                   {service.description}
                 </p>
               </div>
-<<<<<<< HEAD
+
               <p className="text-gray-300 mb-6">{service.description}</p>
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-cyan-400 mb-3">
@@ -179,7 +177,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                 </ul>
               </div>
               <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-=======
 
               <ul className ="space-y-2 mb-6">";
                 {service.features.map((feature, idx) => (
@@ -193,14 +190,14 @@ const EnhancedServicesShowcase: React.FC = () => {
               <Link to ={service.href}
                 className="inline-flex items-center gap-2 text-blue-400 hover: text-blue-300 font-medium transition-colors duration-200"";
               >
->>>>>>> main
+
                 Learn More
                 <ArrowRight className ="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />",
               </Link>
             </div>
           ))}
         </div>
-<<<<<<< HEAD
+
         <div className="text-center mt-16"></div>
           <>
             to="/contact"
@@ -211,8 +208,7 @@ const EnhancedServicesShowcase: React.FC = () => {
             <ArrowRight className="w-5 h-5 ml-2" />
           </>
         </div>
-=======
->>>>>>> main
+
       </div>
     </div>
   );

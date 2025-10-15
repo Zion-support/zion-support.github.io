@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 interface ErrorFallbackProps {},
       error: Error
@@ -40,7 +39,6 @@ interface ErrorFallbackProps {},
 },
       export default ErrorFallback;"'"'
 
-=======
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -60,4 +58,4 @@ const ComponentsPage: React.FC = () => {
 },'";'";
       export default ErrorFallback;"'"';";
 '";'";
->>>>>>> main
+

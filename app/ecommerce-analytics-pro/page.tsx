@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 export default function EcommerceAnalyticsProPage() {}
   return ()
@@ -12,7 +12,7 @@ export default function EcommerceAnalyticsProPage() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -31,7 +31,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default EcommerceAnalyticsProPage;'";'";

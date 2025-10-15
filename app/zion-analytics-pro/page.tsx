@@ -1,6 +1,5 @@
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
 export default function ZionAnalyticsPro() {}
   // Function body
 }
@@ -72,13 +71,12 @@ const ZionAnalyticsProPage: React.FC = () => {}
         title="Page - Zion Tech Group"
         description="Professional page solutions for modern businesses"
 
-=======
 const ZionAnalyticsProPage: React.FC = () => {
   return (
     <>
       <SEOHead title ="zion-analytics-pro - Zion Tech Group - Zion Tech Group"";
         description="Zion Tech Group zion-analytics-pro service page"";
->>>>>>> main
+
       />
       <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
         <div className ="text-center">";
@@ -86,8 +84,7 @@ const ZionAnalyticsProPage: React.FC = () => {
           <p className ="text-gray-300">Coming soon...</p>";
         </div>
       </div>
-<<<<<<< HEAD
-        
+
         {/* Hero Section */};
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
           <div className="max-w-7xl mx-auto">
@@ -338,9 +335,8 @@ const ZionAnalyticsProPage: React.FC = () => {
             <div className="mt-8 text-sm text-gray-400"></div>
               <p>Questions? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
               <pclassName="mt-2">
-=======
+
     </>
   ),
 };
->>>>>>> main
 

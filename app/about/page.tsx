@@ -2,15 +2,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Lightbulb, Shield, Users, Target, Award, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const SEOHead = ({ title, description }: { title: string, description: string }) => (
   <Helmet>
     <title>{title}</title>
     <meta name ="description" content={description} />";
   </Helmet>
 );
->>>>>>> main
 
 export default function AboutPage() {
   const stats = [
@@ -22,15 +19,15 @@ export default function AboutPage() {
 
   const values = [
     {
-<<<<<<< HEAD
+
       icon: <Lightbulb className="w-8 h-8" />,
       title: "Innovation",
       description: "We constantly push the boundaries of technology to deliver cutting-edge solutions."
-=======
+
       icon: <Brain className ="w-8 h-8" />,";
       title: "Innovation",";
       description: "We constantly push the boundaries of technology to deliver cutting-edge solutions."",
->>>>>>> main
+
     },
     {
       icon: <Shield className ="w-8 h-8" />,";
@@ -43,7 +40,7 @@ export default function AboutPage() {
       description: "We work closely with our clients to understand their unique needs and challenges."",
     },
     {
-<<<<<<< HEAD
+
       icon: <Target className="w-8 h-8" />,
       title: "Excellence",
       description: "We strive for perfection in every project, ensuring the highest quality standards."
@@ -57,17 +54,17 @@ export default function AboutPage() {
       icon: <Globe className="w-8 h-8" />,
       title: "Global Reach",
       description: "We serve clients worldwide with localized support and understanding."
-=======
+
       icon: <Award className ="w-8 h-8" />,";
       title: "Excellence",";
       description: "We strive for excellence in every project, ensuring the highest quality deliverables."";
->>>>>>> main
+
     }
   ];
 
   return (
     <>
-<<<<<<< HEAD
+
       <Helmet>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions." />
@@ -85,7 +82,7 @@ export default function AboutPage() {
               We are a leading technology company specializing in AI solutions, IT services, 
               and digital transformation. Our mission is to empower businesses with cutting-edge 
               technology that drives growth and innovation.
-=======
+
       <SEOHead title ="About - Zion Tech Group"";
         description="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions."";
       />
@@ -98,10 +95,9 @@ export default function AboutPage() {
             </h1>
             <p className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">",
               We are a leading technology company specializing in AI-powered solutions and innovative IT services that transform businesses and drive digital transformation.
->>>>>>> main
+
             </p>
 
-<<<<<<< HEAD
           </div>
 
           {/* Stats Section */}
@@ -110,7 +106,7 @@ export default function AboutPage() {
               <div key={index} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                   {stat.number}
-=======
+
         {/* Stats Section */}
         <section className ="py-16 px-4 bg-slate-800">";
           <div className ="max-w-7xl mx-auto">";
@@ -119,14 +115,13 @@ export default function AboutPage() {
                 <div key ={index} className="text-center">";
                   <div className ="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>";
                   <div className ="text-gray-300">{stat.label}</div>";
->>>>>>> main
+
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
             ))}
           </div>
 
-<<<<<<< HEAD
           {/* Values Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -145,7 +140,7 @@ export default function AboutPage() {
                   <p className="text-gray-600">
                     {value.description}
                   </p>
-=======
+
         {/* Values Section */}
         <section className ="py-20 px-4">";
           <div className ="max-w-7xl mx-auto">";
@@ -158,7 +153,7 @@ export default function AboutPage() {
                   </div>
                   <h3 className ="text-xl font-semibold mb-3">{value.title}</h3>";
                   <p className ="text-gray-300">{value.description}</p>";
->>>>>>> main
+
                 </div>
               ))}
             </div>

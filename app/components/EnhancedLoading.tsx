@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 interface EnhancedLoadingProps {},
       message?: string
@@ -59,7 +58,7 @@ interface EnhancedLoadingProps {},
       </div>
     </>
   );
-=======
+
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -76,7 +75,7 @@ const ComponentsPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default ComponentsPage;'";'";

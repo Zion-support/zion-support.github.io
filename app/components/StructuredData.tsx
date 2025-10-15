@@ -17,7 +17,7 @@ const ComponentsPage: React.FC = () => {
     </>;
   ),
 };
-<<<<<<< HEAD
+
 const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {};
 }const getStructuredData = () => {}
 }const baseData = {};
@@ -104,7 +104,6 @@ export const BreadcrumbStructuredData: React.FC<{ items: Array<{ name: string; u
 )
 export default StructuredData
 
-=======
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

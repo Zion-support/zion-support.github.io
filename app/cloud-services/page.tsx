@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { Helmet } from 'react-helmet-async';
 const CloudServicesPage: React.FC = () => {}
   const services = [
@@ -130,7 +130,6 @@ const CloudServicesPage: React.FC = () => {}
 
               <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center">
 
-=======
 import React from 'react';;
 import SEOHead from '../components/SEOHead';
 
@@ -152,7 +151,7 @@ const CloudServicesPage: React.FC = () => {
             </p>
             <div className ="flex flex-col sm: flex-row gap-4 justify-center">";
               <button className ="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">";
->>>>>>> main
+
                 Get Started
               </button>
               <button className ="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">";

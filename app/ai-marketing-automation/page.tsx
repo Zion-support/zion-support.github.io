@@ -1,6 +1,5 @@
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
 const AiMarketingAutomationPage: React.FC = () => {}
   return ()
     <>{}</>
@@ -259,7 +258,7 @@ const AiMarketingAutomationPage: React.FC = () => {}
                 <>
                   to="/demo"
                   className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
-=======
+
 const AiMarketingAutomationPage: React.FC = () => {
   return (
     <>
@@ -275,5 +274,4 @@ const AiMarketingAutomationPage: React.FC = () => {
     </>
   ),
 };
->>>>>>> main
 

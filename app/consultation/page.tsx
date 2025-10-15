@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { DollarSign } from "lucide-react";
@@ -270,7 +270,7 @@ export default function Consultation() {}
     {}
 
 export default ConsultationPage;
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -292,4 +292,4 @@ const ConsultationPage: React.FC = () => {
 };
 ;
 export default ConsultationPage;'";'";
->>>>>>> main
+

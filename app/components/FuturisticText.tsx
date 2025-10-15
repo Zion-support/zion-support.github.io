@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 interface FuturisticTextProps {},
       children: React.ReactNode,
@@ -103,10 +102,8 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({},)
     {}
 export default FuturisticText;
 
-
 export default ComponentsPage;
 
-=======
 ;
 interface $1 { [key: string]: any },;
       children: React.ReactNode,';';
@@ -192,4 +189,4 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({},';';
     {
 
 export default ComponentsPage;';';
->>>>>>> main
+

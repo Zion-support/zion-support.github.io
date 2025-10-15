@@ -14,7 +14,6 @@ export const useAnalytics = () => {};
   if ($1) {}
   // If body
 
-<<<<<<< HEAD
 }
 
 export default ComponentName;
@@ -32,7 +31,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};)
   children}) => {};
   useEffect(() => {};
 
-=======
 import React, { createContext, useContext, useEffect } from "react";
 
 interface AnalyticsContextType {
@@ -59,11 +57,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   children,
 }) => {
   useEffect(() => {
->>>>>>> main
+
     // Initialize analytics
     if (typeof window !== "undefined") {";
       // Google Analytics
-<<<<<<< HEAD
+
       if (process.env.NODE_ENV === "production") {}
         const script = document.createElement("script")
         script.async = true
@@ -76,7 +74,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 }
 
 }(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
-=======
+
       if (process.env.NODE_ENV === "production") {";
         const script = document.createElement("script");";
         script.async = true;
@@ -86,12 +84,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         (window as any).dataLayer = (window as any).dataLayer || [];
         function gtag(...args: any[]) {
           (window as any).dataLayer.push(args),
->>>>>>> main
+
         }
         gtag("js", new Date());";
         gtag("config", process.env.REACT_APP_GA_ID);";
       }
-<<<<<<< HEAD
+
     },
     {}
   }, []),
@@ -152,7 +150,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       return ()
     <AnalyticsContext.Provider value={value}></AnalyticsContext.Provider>
       {children};
-=======
+
     }
   }, []);
 
@@ -208,7 +206,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   return (
     <AnalyticsContext.Provider: value ={value}>
       {children}
->>>>>>> main
+
     </AnalyticsContext.Provider>
   )
     },
@@ -222,7 +220,6 @@ declare global {},
     {}
 };
 
-<<<<<<< HEAD
 // Extend Window interface for TypeScript
 declare global {}
   interface Window {}
@@ -232,6 +229,5 @@ declare global {}
     },
     {}
 
-=======
 export default AnalyticsProvider;
->>>>>>> main
+

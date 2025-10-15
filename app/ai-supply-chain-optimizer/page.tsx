@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { TrendingUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 export default function AISupplyChainOptimizer() {}
@@ -115,7 +115,7 @@ export default function AISupplyChainOptimizer() {}
         <div className="absolute inset-0 overflow-hidden"></div>
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-slate-500/20 to-gray-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-gray-500/20 to-slate-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-=======
+
 import React from 'react';;
 import SEOHead from '../components/SEOHead';
 
@@ -129,7 +129,7 @@ const AiSupplyChainOptimizerPage: React.FC = () => {
         <div className ="text-center">";
           <h1 className ="text-4xl font-bold mb-4">AI Supply Chain Optimizer</h1>";
           <p className ="text-gray-300">Coming soon...</p>";
->>>>>>> main
+
         </div>
 
         {/* Hero Section */};

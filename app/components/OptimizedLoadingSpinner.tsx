@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { memo, useMemo } from "react"
 import { Helmet } from "react-helmet-async";
 interface OptimizedLoadingSpinnerProps {},
@@ -114,7 +114,7 @@ interface OptimizedLoadingSpinnerProps {},
       </div>
     </>
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -133,7 +133,7 @@ const ComponentsPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default ComponentsPage;'";'";

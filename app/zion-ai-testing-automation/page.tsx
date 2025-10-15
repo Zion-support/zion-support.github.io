@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 /* global describe, test, expect, it, beforeEach */
 'use client';
@@ -14,7 +14,7 @@ export default function ZionAiTestingAutomationPage() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -33,7 +33,7 @@ const ZionAiTestingAutomationPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default ZionAiTestingAutomationPage;'";'";

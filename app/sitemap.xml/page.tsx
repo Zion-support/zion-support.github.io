@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import SEOHead from '../components/SEOHead';
 
@@ -24,7 +23,6 @@ const PagePage: React.FC = () => {}
     {}
 export default PagePage;
 
-=======
 ;
 const SitemapXmlPage: React.FC = () => {
   return (
@@ -44,4 +42,4 @@ const SitemapXmlPage: React.FC = () => {
 };
 ;
 export default SitemapXmlPage;'";'";
->>>>>>> main
+

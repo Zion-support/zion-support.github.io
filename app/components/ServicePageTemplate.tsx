@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async',
       import {CheckCircle, Star} from 'lucide-react';
@@ -282,7 +281,6 @@ import { Helmet } from 'react-helmet-async',
       export default ServicePageTemplate;
 ;
 
-=======
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -302,4 +300,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

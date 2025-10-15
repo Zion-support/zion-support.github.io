@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import {lazy} from 'react'
 import LazyWrapper from "./LazyWrapper";
 // Lazy loading helper function
@@ -8,7 +8,6 @@ export const createLazyComponent = <P extends Record<string, unknown>>(_importFu
       const WrappedComponent = (_props: P) => ()
     <LazyWrapper></LazyWrapper>
 
-=======
 import { lazy, ComponentType } from 'react'";
 import LazyWrapper from './LazyWrapper'";
 // Lazy loading helper function
@@ -18,7 +17,7 @@ export const createLazyComponent = <P extends Record<string, unknown>>(_importFu
   
   const WrappedComponent = (_props: P) => (
     <LazyWrapper>
->>>>>>> main
+
       <LazyComponent {...(props as P)} />
     </LazyWrapper>
   )

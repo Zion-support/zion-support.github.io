@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -297,7 +296,6 @@ const EmailMarketingPlatformPage = () => {}
               size="lg"
               icon={<GlobeclassName="w-5 h-5">}
 
-=======
 ;
 const EmailMarketingPlatformPage: React.FC = () => {
   return (
@@ -317,4 +315,4 @@ const EmailMarketingPlatformPage: React.FC = () => {
 };
 ;
 export default EmailMarketingPlatformPage;'";'";
->>>>>>> main
+

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 'use client',
       import React, { useState } from 'react',
       import { Helmet } from 'react-helmet-async',
@@ -1268,7 +1268,6 @@
 ,
       export default MicroSaaSSolutionsPage;
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -1290,4 +1289,4 @@ const MicroSaasSolutionsPage: React.FC = () => {
 };
 ;
 export default MicroSaasSolutionsPage;'";'";
->>>>>>> main
+

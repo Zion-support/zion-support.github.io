@@ -1,22 +1,21 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 export const Icon = ({},)
 
       name,
       className = "";: value
-=======
+
 ;
 export const Icon = ({}: value,;
       name,;
       className = "";: value;";
->>>>>>> main
+
   ...props;
 }: {},;
       name: string,;
       className?: string;
-<<<<<<< HEAD
+
   [key: string]: unknown;
 }) => {},
       return ()
@@ -28,10 +27,8 @@ export const Icon = ({}: value,;
     {}
 export default Icon;
 
-
 export default ComponentsPage;
 
-=======
   [key: string]: unknown,
 }) => {}: value,;
       return (
@@ -43,4 +40,4 @@ export default ComponentsPage;
 {
 
 export default ComponentsPage;'";'";
->>>>>>> main
+

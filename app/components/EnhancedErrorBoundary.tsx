@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { Component, ErrorInfo, ReactNode } from 'react',
       interface ErrorBoundaryState {},
       hasError: boolean,
@@ -447,7 +447,6 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   };
 }
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -466,7 +465,7 @@ const ComponentsPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default ComponentsPage;'";'";

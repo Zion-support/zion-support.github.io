@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react',
       interface LoadingSpinnerProps {}
   size?: 'sm' | 'md' | 'lg',
@@ -27,7 +27,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({)}
     {}
 export default Component;
 
-=======
 import React from 'react';;
 ;
 interface LoadingSpinnerProps {
@@ -55,7 +54,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ '',
   );
     };
 {
->>>>>>> main
 
   const spinner = (";
     <div className ="flex flex-col items-center justify-center space-y-4">`;
@@ -74,11 +72,9 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ '',
 ;
   return spinner;
 };
-<<<<<<< HEAD
 
 export default LoadingSpinner;
 
-=======
 ;
 export default LoadingSpinner;'";'";
->>>>>>> main
+

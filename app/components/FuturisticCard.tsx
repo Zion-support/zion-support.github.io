@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 interface FuturisticCardProps {},
       children: React.ReactNode,
@@ -73,7 +72,6 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({},)
     {}
 export default Component;
 
-=======
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -93,4 +91,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

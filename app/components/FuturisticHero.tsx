@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useEffect, useState } from 'react',
       const FuturisticHero: React.FC = () => {},
       const [currentText, setCurrentText] = useState(0),
@@ -190,7 +190,6 @@ import React, { useEffect, useState } from 'react',
     {}
 export default FuturisticHero;
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -212,4 +211,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

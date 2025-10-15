@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react',
       import React, { useState } from 'react',
       const SupportPage: React.FC = () => {"}
@@ -230,7 +230,6 @@ import React, { useState } from 'react',
       export default SupportPage;
 ;
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -252,4 +251,4 @@ const SupportPage: React.FC = () => {
 };
 ;
 export default SupportPage;'";'";
->>>>>>> main
+

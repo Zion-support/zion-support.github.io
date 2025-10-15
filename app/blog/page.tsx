@@ -1,7 +1,6 @@
 import React from 'react';;
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
 const BlogPage: React.FC = () => {}
 import React from 'react',
       import { Helmet } from 'react-helmet-async',
@@ -17,7 +16,7 @@ import React from 'react',
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
 
   );
-=======
+
 const BlogPage: React.FC = () => {
   return (
     <>
@@ -47,7 +46,7 @@ const BlogPage: React.FC = () => {
       </div>
     </>
   ),
->>>>>>> main
+
 };
 
 export default BlogPage;

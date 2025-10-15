@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 ,
       import SEOOptimizer from "../../components/SEOOptimizer";
@@ -621,7 +620,6 @@ const ZionAiVideoGeneratorPage: React.FC = () => {""}
       </div>""
     </>""
 
-=======
 ;
 const ZionAiVideoGeneratorPage: React.FC = () => {
   return (
@@ -641,4 +639,4 @@ const ZionAiVideoGeneratorPage: React.FC = () => {
 };
 ;
 export default ZionAiVideoGeneratorPage;'";'";
->>>>>>> main
+

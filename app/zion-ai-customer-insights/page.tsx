@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 ,
       import SEOOptimizer from "../../components/SEOOptimizer";
@@ -622,7 +621,6 @@ const ZionAiCustomerInsightsPage: React.FC = () => {""}
       </div>""
     </>""
 
-=======
 ;
 const ZionAiCustomerInsightsPage: React.FC = () => {
   return (
@@ -642,4 +640,4 @@ const ZionAiCustomerInsightsPage: React.FC = () => {
 };
 ;
 export default ZionAiCustomerInsightsPage;'";'";
->>>>>>> main
+

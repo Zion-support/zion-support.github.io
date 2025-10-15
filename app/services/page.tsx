@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 const ServicesPage: React.FC = () => {"}
         "
@@ -191,7 +190,6 @@ const ServicesPage: React.FC = () => {
 
 export default ServicesPage;
 
-=======
 ;
 const ServicesPage: React.FC = () => {","";
         """;
@@ -362,4 +360,4 @@ const ServicesPage: React.FC = () => {","";
 '";'";
 
 }}
->>>>>>> main
+

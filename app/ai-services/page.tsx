@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from "react",
       import { Helmet } from "react-helmet-async",
       export default function AIServices() {}
@@ -132,7 +132,6 @@ import React from "react",
           <div className="text-center">
             <buttonclassName="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -154,4 +153,4 @@ const AiServicesPage: React.FC = () => {
 };
 ;
 export default AiServicesPage;'";'";
->>>>>>> main
+

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react',
       import SEOHead from '../components/SEOHead',
       const CompliancePage: React.FC = () => {}
@@ -23,7 +23,6 @@ import React from 'react',
 
 export default CompliancePage;
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -48,4 +47,4 @@ export default CompliancePage;'";'";
 "'"';";
 '";'";
 }
->>>>>>> main
+

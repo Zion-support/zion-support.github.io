@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async',
       const StatusPage: React.FC = () => {"}
@@ -113,7 +112,6 @@ import { Helmet } from 'react-helmet-async',
 ,
       export default StatusPage;
 
-=======
 ;
 const PagesPage: React.FC = () => {
   return (
@@ -133,4 +131,4 @@ const PagesPage: React.FC = () => {
 };
 ;
 export default PagesPage;'";'";
->>>>>>> main
+

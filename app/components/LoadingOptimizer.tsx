@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { Helmet } from "react-helmet-async";
 export default function LoadingOptimizer() {}
   // Function body
@@ -23,7 +23,7 @@ export default function LoadingOptimizer() {}
       </div>
     </>
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -42,7 +42,7 @@ const ComponentsPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default ComponentsPage;'";'";

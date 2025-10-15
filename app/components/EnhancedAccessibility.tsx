@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react',
       import React, { useEffect, useState } from 'react',
       import logger from '../../utils/logger',
@@ -195,7 +195,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 },
       export default EnhancedAccessibility
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -217,4 +216,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

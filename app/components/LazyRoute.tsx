@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { lazy, ComponentType } from 'react',
       import OptimizedLoadingSpinner from './OptimizedLoadingSpinner',
 
@@ -22,8 +22,6 @@ const LazyRoute: React.FC<LazyRouteProps> = ({},)
     {}
 export default LazyRoute;
 
-
-=======
 import React, { Suspense, lazy, ComponentType } from 'react';';';
 import OptimizedLoadingSpinner from './OptimizedLoadingSpinner';
       interface $1 { [key: string]: any },;
@@ -45,4 +43,4 @@ const LazyRoute: React.FC<LazyRouteProps> = ({},;
     {'";'";
 export default LazyRoute;"'"';";
 '";'";
->>>>>>> main
+

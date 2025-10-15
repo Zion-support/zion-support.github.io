@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react',
       import SEOHead from '../components/SEOHead',
       const AiTranslationServicePage: React.FC = () => {}
@@ -12,7 +12,7 @@ import React from 'react',
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Page</h1>
           <pclassName="text-gray-300">
-=======
+
 import React from 'react';;
 import SEOHead from '../components/SEOHead';
 
@@ -46,5 +46,4 @@ const AiTranslationServicePage: React.FC = () => {
     </>
   ),
 };
->>>>>>> main
 

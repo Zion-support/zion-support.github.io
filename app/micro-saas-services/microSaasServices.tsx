@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 interface MicrosaasservicesProps {},
       className?: string;
@@ -16,7 +15,6 @@ interface MicrosaasservicesProps {},
 },
       export default Microsaasservices;"
 
-=======
 ;
 interface $1 { [key: string]: any },;
       className?: string;
@@ -31,4 +29,4 @@ interface $1 { [key: string]: any },;
 },";
       export default Microsaasservices;";
 '";'";
->>>>>>> main
+

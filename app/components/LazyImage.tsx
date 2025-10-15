@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react';
 import React, { useState, useRef, useEffect } from 'react';
 
@@ -76,7 +76,6 @@ const LazyImage: React.FC<LazyImageProps> = ({};)
 },
       export default LazyImage
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -98,4 +97,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

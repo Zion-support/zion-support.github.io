@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import SEOHead from '../components/SEOHead';
 ,
@@ -57,7 +56,6 @@ const structuredData = {"}
       export default HomePage;
 ;"'"'
 
-=======
 ';';
 import SEOHead from '../components/SEOHead';
       export default function HomePage() {","";
@@ -106,4 +104,4 @@ const structuredData = {",";
 '";'";
 
 }}}
->>>>>>> main
+

@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import { Helmet } from "react-helmet-async";
 import { ArrowRight } from "lucide-react";
@@ -36,7 +35,6 @@ export default function Header() {}
     },
     {}
 
-=======
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -56,4 +54,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

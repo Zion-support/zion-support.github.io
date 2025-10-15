@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 interface NeonButtonProps {},
       children?: React.ReactNode
@@ -54,7 +53,6 @@ interface NeonButtonProps {},
 },
       export default NeonButton
 
-=======
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -74,4 +72,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

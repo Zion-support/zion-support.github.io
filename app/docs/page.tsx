@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react',
       import { Helmet } from "react-helmet-async",
       const DocsPage: React.FC = () => {"}
@@ -415,7 +415,6 @@ import React, { useState } from 'react',
 ,
       export default DocsPage;
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -437,4 +436,4 @@ const DocsPage: React.FC = () => {
 };
 ;
 export default DocsPage;'";'";
->>>>>>> main
+

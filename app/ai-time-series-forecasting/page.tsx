@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react""use client';
 export default function AiTimeSeriesForecastingPage() {}
   return ()
@@ -12,7 +12,7 @@ export default function AiTimeSeriesForecastingPage() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -31,7 +31,7 @@ const AiTimeSeriesForecastingPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default AiTimeSeriesForecastingPage;'";'";

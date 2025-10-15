@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { Helmet } from 'react-helmet-async';
 const AiHealthcareDiagnosticsPage: React.FC = () => {}
   const services = [
@@ -92,7 +92,6 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {}
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />
 
-=======
 import React from 'react';;
 import SEOHead from '../components/SEOHead';
 
@@ -118,7 +117,7 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {
               </button>
               <button className ="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">";
                 Learn More
->>>>>>> main
+
               </button>
             </div>
           </div>

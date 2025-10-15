@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 export default function OptimizedLoading() {}
   // Function body
 
@@ -37,7 +37,6 @@ const ComponentsPage: React.FC = () => {
   )
 };
 
-=======
 export default function OptimizedLoading() {
   // Function body;
 }
@@ -52,4 +51,4 @@ export default function OptimizedLoading() {
 };
 ;
 export default ComponentsPage;";
->>>>>>> main
+

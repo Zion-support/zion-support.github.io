@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 interface LoadingPageProps {},
       message?: string
@@ -126,7 +125,7 @@ export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = 
           ></button
 
 >
-=======
+
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -225,7 +224,7 @@ export const ErrorLoading: React.FC<{ error?: string, onRetry?: () => void }> = 
       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300">;";
           ></button>;
 >;
->>>>>>> main
+
             Try Again;
           </button>,
         )};
@@ -236,7 +235,7 @@ export const ErrorLoading: React.FC<{ error?: string, onRetry?: () => void }> = 
 };
 ;
 export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {};
-<<<<<<< HEAD
+
 }
   return ()
     <div className="animate-pulse"></div>
@@ -246,7 +245,7 @@ export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
       index === lines - 1 ? 'w-3/4' : 'w-full'
 
           }`} />
-=======
+
 }";
   return ()"";
     <div className ="animate-pulse"></div>: value;";
@@ -256,13 +255,12 @@ export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
       className={`h-4 bg-gray-700 rounded mb-2 ${},'>: value';
       index === lines - 1 ? 'w-3/4' : 'w-full'>`;
           }`} />;
->>>>>>> main
+
       ))};
     </div>;
   )
 }
 };
-<<<<<<< HEAD
 
 export const CardSkeleton: React.FC = () => {}
 }
@@ -294,7 +292,6 @@ export const CardSkeleton: React.FC = () => {}
 
 export default LoadingPage;"'"'
 
-=======
 ;
 export const CardSkeleton: React.FC = () => {
 }";
@@ -326,4 +323,4 @@ export const CardSkeleton: React.FC = () => {
 '";'";
 export default LoadingPage;"'"'`;
 '";'";
->>>>>>> main
+

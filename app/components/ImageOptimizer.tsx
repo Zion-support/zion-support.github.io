@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState, useRef, useEffect } from 'react',
       interface ImageOptimizerProps {}
   src: string,
@@ -92,7 +92,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({)}
     {}
 export default ImageOptimizer;
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -114,4 +113,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

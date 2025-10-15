@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { Component, ErrorInfo, ReactNode } from 'react',
       interface Props {},
       children: ReactNode,
@@ -40,7 +40,7 @@ class LightweightErrorBoundary extends Component<Props, State> {},
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -60,13 +60,13 @@ import SEOHead from './components/SEOHead';
       message: error.message,;
       stack: error.stack,;
       componentStack: errorInfo.componentStack,;
->>>>>>> main
+
       timestamp: new Date().toISOString()
         });
       }).catch(() => {};: value;
         // Silently fail if error reporting fails;
       })
-<<<<<<< HEAD
+
     },
     {}
   },
@@ -149,7 +149,6 @@ const ComponentsPage: React.FC = () => {
 },
       export default LightweightErrorBoundary;
 
-=======
     },;
     {
   },;
@@ -215,4 +214,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

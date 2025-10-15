@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+
 import { Helmet } from 'react-helmet-async',
       const TermsPage: React.FC = () => {"}
         "
@@ -146,7 +146,6 @@ import { Helmet } from 'react-helmet-async',
     },
     {}
 
-=======
 import { Helmet } from 'react-helmet-async';
 const TermsPage: React.FC = () => {"",
   const lastUpdated = 'January 1, 2024';
@@ -231,7 +230,7 @@ const TermsPage: React.FC = () => {"",
       title: 'Payment Terms',"";
       description: 'Fees are non-refundable unless otherwise specified in writing',
     };
->>>>>>> main
+
   ];
 ;
   const prohibitedUses = ["";

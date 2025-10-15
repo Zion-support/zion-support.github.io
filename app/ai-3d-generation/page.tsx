@@ -1,7 +1,6 @@
 import React from 'react';;
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
 const Ai3DGenerationPage: React.FC = () => {}
   return ()
     <>{}</>
@@ -15,7 +14,6 @@ const Ai3DGenerationPage: React.FC = () => {}
           <h1 className="text-4xl font-bold mb-4">AI 3D Generation</h1>
           <pclassName="text-gray-300">
 
-=======
 const Ai3DGenerationPage: React.FC = () => {
   return (
     <>
@@ -34,4 +32,4 @@ const Ai3DGenerationPage: React.FC = () => {
 };
 
 export default Ai3DGenerationPage;
->>>>>>> main
+

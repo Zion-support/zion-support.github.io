@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -305,7 +304,7 @@ const EmployeeTimeTrackerPage = () => {}
     </div>
 
   );
-=======
+
 ;
 const EmployeeTimeTrackerPage: React.FC = () => {
   return (
@@ -322,7 +321,7 @@ const EmployeeTimeTrackerPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default EmployeeTimeTrackerPage;'";'";

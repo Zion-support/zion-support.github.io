@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useEffect, useState } from 'react',
       import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals',
       interface PerformanceMetrics {},
@@ -73,7 +73,6 @@ const PerformanceMonitor: React.FC = () => {},
 },
       export default PerformanceMonitor;
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -95,4 +94,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

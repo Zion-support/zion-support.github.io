@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 'use client'
 import { useEffect } from "react";
 const CriticalResourcePreloader = () => {};
@@ -127,7 +127,6 @@ const CriticalResourcePreloader = () => {};
 },
       export default CriticalResourcePreloader
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -149,4 +148,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

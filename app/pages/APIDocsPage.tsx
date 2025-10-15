@@ -1,6 +1,5 @@
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
 const APIDocsPage: React.FC = () => {}
   const [selectedAPI, setSelectedAPI] = useState('ai-chatbot');
   const [searchTerm, setSearchTerm] = useState('');
@@ -147,7 +146,7 @@ const APIDocsPage: React.FC = () => {}
         <div className="absolute inset-0 overflow-hidden">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>
-=======
+
 const APIDocsPage: React.FC = () => {
   return (
     <>
@@ -158,7 +157,7 @@ const APIDocsPage: React.FC = () => {
         <div className ="text-center">";
           <h1 className ="text-4xl font-bold mb-4"> A P I Docs Page</h1>";
           <p className ="text-gray-300">Coming soon...</p>";
->>>>>>> main
+
         </div>
       </div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>

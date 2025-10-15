@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import {"}
         "
@@ -342,7 +341,6 @@ const Footer: React.FC = () => {"}
         "
   )
 
-=======
 ;
 const ComponentsPage: React.FC = () => {
   return (
@@ -359,7 +357,7 @@ const ComponentsPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default ComponentsPage;'";'";

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react';';
 import React, { useState } from 'react',;
       const MobileNavigation: React.FC = () => {},
@@ -113,7 +113,6 @@ import React, { useState } from 'react',;
             </div>
           </div>
 
-
 const ComponentsPage: React.FC = () => {
   return (
     <>
@@ -130,7 +129,7 @@ const ComponentsPage: React.FC = () => {
       </div>
     </>
   );
-=======
+
 import React, { useState } from 'react';';';
 import React, { useState } from 'react',;";
       const MobileNavigation: React.FC = () => {},;
@@ -160,7 +159,7 @@ const ComponentsPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default ComponentsPage;'";'";

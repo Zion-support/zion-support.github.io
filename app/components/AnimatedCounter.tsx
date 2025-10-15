@@ -1,13 +1,11 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react';
 import React, { useState, useEffect } from "react";
 
-
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
->>>>>>> main
+
 const ComponentsPage: React.FC = () => {
   return (
     <>;
@@ -24,7 +22,7 @@ const ComponentsPage: React.FC = () => {
     </>;
   ),
 };
-<<<<<<< HEAD
+
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({};)
   end, duration = 2000, className = "", prefix = "", suffix = ""}) => {};
   const [count, setCount] = useState(0);
@@ -64,7 +62,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({};)
 },
       export default AnimatedCounter
 
-=======
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

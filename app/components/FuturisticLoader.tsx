@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 export default function FuturisticLoader() {}
   // Function body
 }
@@ -15,7 +15,6 @@ export default function FuturisticLoader() {}
   )
 };
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -37,4 +36,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

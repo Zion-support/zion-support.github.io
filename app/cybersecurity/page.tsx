@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import SEOHead from '../components/SEOHead',
       const CybersecurityPage: React.FC = () => {"}
@@ -245,7 +244,6 @@ import SEOHead from '../components/SEOHead',
 ,
       export default CybersecurityPage;
 
-=======
 ;
 const CybersecurityPage: React.FC = () => {
   return (
@@ -265,4 +263,4 @@ const CybersecurityPage: React.FC = () => {
 };
 ;
 export default CybersecurityPage;'";'";
->>>>>>> main
+

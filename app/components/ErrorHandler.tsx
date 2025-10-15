@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from "react";
 interface Props {},
@@ -144,7 +144,6 @@ interface Props {},
     {}
 export default ErrorHandler
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -166,4 +165,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

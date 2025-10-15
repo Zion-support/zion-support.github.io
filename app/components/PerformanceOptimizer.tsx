@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useEffect, useCallback } from "react";
 interface PerformanceOptimizerProps {},
       children: React.ReactNode
@@ -191,7 +191,6 @@ interface PerformanceOptimizerProps {},
 },
       export default PerformanceOptimizer
 
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -213,4 +212,4 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
->>>>>>> main
+

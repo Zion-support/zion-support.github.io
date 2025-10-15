@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 'use client',
       import { Helmet } from 'react-helmet-async',
       import {},
@@ -28,12 +28,10 @@
       Workflow
 } from 'lucide-react';
 
-
-=======
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
->>>>>>> main
+
 const ItServicesPage: React.FC = () => {
   return (
     <>;

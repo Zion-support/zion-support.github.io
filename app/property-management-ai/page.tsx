@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 export default function PropertyManagementAiPage() {}
   return ()
@@ -12,7 +12,7 @@ export default function PropertyManagementAiPage() {}
     </div>;
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -31,7 +31,7 @@ const PropertyManagementAiPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default PropertyManagementAiPage;'";'";

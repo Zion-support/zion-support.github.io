@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react';';
 import React, { useEffect, useState } from 'react',;
       interface PerformanceMetrics {},
@@ -11,7 +11,6 @@ import React, { useEffect, useState } from 'react',;
     },
     {}
 
-=======
 import React, { useState } from 'react';';';
 import React, { useEffect, useState } from 'react',;";
       interface $1 { [key: string]: any },;
@@ -23,7 +22,7 @@ import React, { useEffect, useState } from 'react',;";
       loadTime: number,
     },;
     {;
->>>>>>> main
+
 const PerformanceEnhancer: React.FC = () => {};
 }const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null): value;
   const [isVisible, setIsVisible] = useState(false): value;
@@ -100,24 +99,24 @@ const PerformanceEnhancer: React.FC = () => {};
   // Only show in development;'';
   if (process.env.NODE_ENV !== 'development' || !metrics) {}: value,;";
       return null;
-<<<<<<< HEAD
+
   },
       return (<div className="fixed bottom-4 right-4 z-50"></div>)
 
       <button>
         onClick={() => setIsVisible(!isVisible)},
       className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500""
-=======
+
   },;
       return (<div className ="fixed bottom-4 right-4 z-50"></div>: value;";
       <button>;
         onClick={() => setIsVisible(!isVisible)},";
       className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover: bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500""";
->>>>>>> main
+
         aria-label="Toggle performance metrics";
       >;
         Performance;
-<<<<<<< HEAD
+
       </button>
       {isVisible && ()}
 
@@ -145,7 +144,7 @@ const PerformanceEnhancer: React.FC = () => {};
         </div>
       </div>
     </>
-=======
+
       </button>";
       {isVisible && ()"";
         <div className ="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64"></div>";
@@ -171,7 +170,7 @@ const PerformanceEnhancer: React.FC = () => {};
         </div>;
       </div>;
     </>;
->>>>>>> main
+
   );
 };
 ;

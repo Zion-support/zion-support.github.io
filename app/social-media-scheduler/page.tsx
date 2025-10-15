@@ -5,7 +5,6 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-<<<<<<< HEAD
 import FuturisticCard from '../components/FuturisticCard',
       import FuturisticButton from '../components/FuturisticButton',
       import ResponsiveContainer from '../components/ResponsiveContainer',
@@ -157,7 +156,7 @@ import FuturisticCard from '../components/FuturisticCard',
       description: "Improve team collaboration and content approval workflows",""
       icon: <Users className="w-6 h-6" />""
     };
-=======
+
 const SocialMediaSchedulerPage = () => {
   const features = [
     {
@@ -266,7 +265,7 @@ const SocialMediaSchedulerPage = () => {
       description: "Improve team collaboration and content approval workflows",";
       icon: <Users className ="w-6 h-6" />",
     }
->>>>>>> main
+
   ];
 ,
       return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">",)
@@ -557,8 +556,6 @@ const SocialMediaSchedulerPage = () => {
       export default SocialMediaSchedulerPage;
 ;
 
-<<<<<<< HEAD
-=======
 const ComponentName = () => {
   return (
     <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";
@@ -742,4 +739,4 @@ const ComponentName = () => {
 export default SocialMediaSchedulerPage;
 
 }
->>>>>>> main
+

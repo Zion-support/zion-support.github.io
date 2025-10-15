@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -245,7 +245,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
     </Helmet>
 
   );
-=======
+
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
 ;
@@ -264,7 +264,7 @@ const ComponentsPage: React.FC = () => {
       </div>;
     </>;
   ),
->>>>>>> main
+
 };
 ;
 export default ComponentsPage;'";'";
