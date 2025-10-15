@@ -12,16 +12,11 @@ export const apiClient = {
     });
     
     if (!response.ok) {
-<<<<<<< HEAD
-      throw new Error(`HTTP error! status: ${response.status}`);
-=======
       throw new Error(`API request failed: ${response.status}`);
->>>>>>> cursor/analyze-improve-and-merge-code-49c8
     }
     
     return response.json();
   },
-<<<<<<< HEAD
   
   get: <T>(endpoint: string, options: RequestInit = {}): Promise<T> => {
     return apiClient.request<T>(endpoint, { ...options, method: 'GET' });
@@ -46,6 +41,4 @@ export const apiClient = {
   delete: <T>(endpoint: string, options: RequestInit = {}): Promise<T> => {
     return apiClient.request<T>(endpoint, { ...options, method: 'DELETE' });
   },
-=======
->>>>>>> cursor/analyze-improve-and-merge-code-49c8
 };

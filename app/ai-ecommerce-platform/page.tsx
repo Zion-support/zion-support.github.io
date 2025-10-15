@@ -1,55 +1,26 @@
-import { ArrowRight } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  ShoppingCart, 
-  Zap, 
   Shield, 
-  Globe, 
   Brain, 
   CheckCircle, 
   ArrowRight, 
   Star,
   Phone,
   Mail,
-  MapPin,
-  Download,
   Play,
-  Pause,
-  RefreshCw,
   Settings,
-  Eye,
-  Filter,
-  Calendar,
-  Target,
-  CreditCard,
   Package,
-  Truck,
   Users,
-  Award,
-  TrendingUp,
-  Cpu,
-  Database,
   BarChart3,
-  Activity,
-  Lock,
-  Clock,
   Smartphone,
   Search,
-  Heart,
-  Star as StarIcon,
-  ShoppingBag,
-  Tag,
-  Percent,
-  Headphones,
   MessageSquare,
-  Bell,
-  Gift
+  Percent
 } from 'lucide-react';
 
 const AiEcommercePlatformPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeTab, setActiveTab] = useState('overview');
 
   useEffect(() => {
     setIsVisible(true);

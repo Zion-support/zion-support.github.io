@@ -54,6 +54,6 @@ const FiveGReliability: React.FC = () => {
   );
 };
 
-export default FiveGReliabilityPage;
+export default FiveGReliability;
 
 

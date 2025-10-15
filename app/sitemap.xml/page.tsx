@@ -30,11 +30,7 @@ const SitemapXmlPage: React.FC = () => {
                   Custom Implementation
                 </h3>
                 <p className="text-green-700">
-<<<<<<< HEAD
-                  Tailored implementations for your specific requirements.
-=======
                   Tailored sitemap implementations for your specific requirements.
->>>>>>> cursor/analyze-improve-and-merge-code-49c8
                 </p>
               </div>
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
@@ -42,11 +38,7 @@ const SitemapXmlPage: React.FC = () => {
                   24/7 Support
                 </h3>
                 <p className="text-purple-700">
-<<<<<<< HEAD
-                  Round-the-clock support for all your needs.
-=======
                   Round-the-clock support for all your sitemap needs.
->>>>>>> cursor/analyze-improve-and-merge-code-49c8
                 </p>
               </div>
             </div>
@@ -57,8 +49,4 @@ const SitemapXmlPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default SitemapXmlPage;
-=======
-export default SitemapXmlPage;
->>>>>>> cursor/analyze-improve-and-merge-code-49c8
