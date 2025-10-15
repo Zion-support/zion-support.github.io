@@ -16,6 +16,14 @@ import AboutPage from './app/pages/AboutPage';
 import ServicesPage from './app/pages/ServicesPage';
 import ContactPage from './app/pages/ContactPage';
 
+// Service Pages
+import AiAnalyticsDashboardProPage from './app/ai-analytics-dashboard-pro/page';
+import AiVoiceAssistantEnterprisePage from './app/ai-voice-assistant-enterprise/page';
+import AiCybersecurityPlatformPage from './app/ai-cybersecurity-platform/page';
+import AiAccountingAssistantPage from './app/ai-accounting-assistant/page';
+import Page5gImplementationPage from './app/5g-implementation/page';
+import ItServicesPage from './app/it-services/page';
+
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -56,6 +64,14 @@ const App: React.FC = () => {
                       <Route path="/about" element={<AboutPage />} />
                       <Route path="/services" element={<ServicesPage />} />
                       <Route path="/contact" element={<ContactPage />} />
+                      
+                      {/* Service Pages */}
+                      <Route path="/ai-analytics-dashboard-pro" element={<AiAnalyticsDashboardProPage />} />
+                      <Route path="/ai-voice-assistant-enterprise" element={<AiVoiceAssistantEnterprisePage />} />
+                      <Route path="/ai-cybersecurity-platform" element={<AiCybersecurityPlatformPage />} />
+                      <Route path="/ai-accounting-assistant" element={<AiAccountingAssistantPage />} />
+                      <Route path="/5g-implementation" element={<Page5gImplementationPage />} />
+                      <Route path="/it-services" element={<ItServicesPage />} />
                     </Routes>
                   </Suspense>
                 </main>
