@@ -4,74 +4,86 @@ import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
   ArrowRight, 
-  Star, 
-  Users, 
+  Zap, 
+  Brain, 
   Shield, 
-  Clock, 
-  TrendingUp,
-  BarChart3,
-  Database,
-  Smartphone,
+  Cloud, 
+  Database, 
+  Server, 
   Globe,
-  Server,
-  Code,
-  Network,
+  BarChart3,
+  Users,
   Settings,
   Award,
-  Rocket,
+  Clock,
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  TrendingUp,
   Target,
-  Lightbulb
+  Lightbulb,
+  Rocket,
+  Lock,
+  Wifi,
+  Monitor,
+  HardDrive,
+  Layers,
+  MessageSquare,
+  Eye,
+  FileText,
+  Network
 } from 'lucide-react';
 
-const ITSolutionsPage: React.FC = () => {
+const DigitalTransformationPage: React.FC = () => {
   const services = [
     {
-      title: 'Web Development',
-      description: 'Modern, responsive web applications built with cutting-edge technologies',
-      icon: <Globe className="w-12 h-12 text-blue-400" />,
+      title: 'AI Integration',
+      description: 'Integrate artificial intelligence into your business processes',
+      icon: <Brain className="w-12 h-12 text-purple-400" />,
       features: [
-        'Responsive design',
-        'SEO optimization',
-        'Fast loading times',
-        'Cross-browser compatibility'
+        'Machine learning implementation',
+        'Process automation',
+        'Predictive analytics',
+        'Intelligent decision making'
       ],
-      price: 'From $5,000'
+      price: 'From $5,000/month'
     },
     {
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android',
-      icon: <Smartphone className="w-12 h-12 text-green-400" />,
+      title: 'Cloud Migration',
+      description: 'Migrate your systems to the cloud for better scalability',
+      icon: <Cloud className="w-12 h-12 text-blue-400" />,
       features: [
-        'iOS & Android apps',
-        'Cross-platform solutions',
-        'App store optimization',
-        'Push notifications'
+        'Zero-downtime migration',
+        'Cost optimization',
+        'Enhanced security',
+        'Improved performance'
       ],
-      price: 'From $10,000'
+      price: 'From $3,000/month'
     },
     {
-      title: 'API Development',
-      description: 'RESTful and GraphQL APIs for seamless data integration',
-      icon: <Network className="w-12 h-12 text-purple-400" />,
+      title: 'Process Automation',
+      description: 'Automate repetitive tasks and streamline workflows',
+      icon: <Zap className="w-12 h-12 text-yellow-400" />,
       features: [
-        'RESTful APIs',
-        'GraphQL endpoints',
-        'API documentation',
-        'Rate limiting & security'
+        'Workflow automation',
+        'Task optimization',
+        'Error reduction',
+        'Efficiency improvement'
       ],
-      price: 'From $3,000'
+      price: 'From $2,500/month'
     },
     {
-      title: 'Database Management',
-      description: 'Comprehensive database design, optimization, and maintenance',
-      icon: <Database className="w-12 h-12 text-cyan-400" />,
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable business insights',
+      icon: <BarChart3 className="w-12 h-12 text-green-400" />,
       features: [
-        'Database design',
-        'Performance optimization',
-        'Data migration',
-        'Backup & recovery'
+        'Real-time analytics',
+        'Custom dashboards',
+        'Predictive modeling',
+        'Business intelligence'
       ],
-      price: 'From $2,000'
+      price: 'From $2,000/month'
     }
   ];
 
@@ -111,13 +123,13 @@ const ITSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>IT Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT solutions including web development, mobile development, API development, and database management. Professional technology solutions for your business." />
-        <meta name="keywords" content="IT solutions, web development, mobile development, API development, database management, software development" />
-        <meta property="og:title" content="IT Solutions - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive IT solutions including web development, mobile development, API development, and database management." />
-        <meta property="og:url" content="https://ziontechgroup.com/it-solutions" />
-        <link rel="canonical" href="https://ziontechgroup.com/it-solutions" />
+        <title>Digital Transformation Services - Zion Tech Group</title>
+        <meta name="description" content="Transform your business with our comprehensive digital transformation services including AI integration, cloud migration, and process automation." />
+        <meta name="keywords" content="digital transformation, AI integration, cloud migration, process automation, data analytics, business transformation" />
+        <meta property="og:title" content="Digital Transformation Services - Zion Tech Group" />
+        <meta property="og:description" content="Transform your business with our comprehensive digital transformation services including AI integration, cloud migration, and process automation." />
+        <meta property="og:url" content="https://ziontechgroup.com/digital-transformation" />
+        <link rel="canonical" href="https://ziontechgroup.com/digital-transformation" />
       </Helmet>
 
       {/* Hero Section */}
@@ -130,14 +142,14 @@ const ITSolutionsPage: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              IT
+              Digital
               <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                {' '}Solutions
+                {' '}Transformation
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive IT solutions to power your digital transformation. 
-              From web development to database management, we provide end-to-end technology solutions.
+              Transform your business with our comprehensive digital transformation services. 
+              From AI integration to process automation, we help you stay ahead of the competition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -164,10 +176,10 @@ const ITSolutionsPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our IT Solutions
+              Our Transformation Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional IT solutions designed to meet your business needs and drive growth
+              Comprehensive digital transformation solutions designed to modernize your business
             </p>
           </div>
 
@@ -212,7 +224,7 @@ const ITSolutionsPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose Our IT Solutions?
+              Why Choose Our Transformation Services?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We deliver exceptional value through our expertise, innovation, and commitment to your success.
@@ -241,10 +253,10 @@ const ITSolutionsPage: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Technology?
+            Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Let our expert team help you build the technology solutions your business needs. 
+            Let our expert team help you transform your business with cutting-edge digital solutions. 
             Get started with a free consultation today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -267,4 +279,4 @@ const ITSolutionsPage: React.FC = () => {
   );
 };
 
-export default ITSolutionsPage;
+export default DigitalTransformationPage;

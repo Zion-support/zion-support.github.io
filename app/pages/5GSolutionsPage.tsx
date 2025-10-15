@@ -1,21 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Cloud, CheckCircle, ArrowRight } from 'lucide-react';
+import { Wifi, CheckCircle, ArrowRight } from 'lucide-react';
 
-const CloudSolutionsPage: React.FC = () => {
+const FiveGSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Cloud Solutions - Zion Tech Group</title>
-        <meta name="description" content="Scalable cloud solutions and infrastructure management for modern businesses." />
+        <title>5G Solutions - Zion Tech Group</title>
+        <meta name="description" content="Next-generation 5G implementation, IoT solutions, and smart city technologies." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="text-center">
-          <Cloud className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
-          <h1 className="text-4xl font-bold text-white mb-6">Cloud Solutions</h1>
+          <Wifi className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
+          <h1 className="text-4xl font-bold text-white mb-6">5G Solutions</h1>
           <p className="text-lg text-gray-300 mb-8">
-            Scalable cloud infrastructure and management solutions.
+            Next-generation 5G implementation and IoT solutions.
           </p>
           <Link
             to="/contact"
@@ -30,4 +30,4 @@ const CloudSolutionsPage: React.FC = () => {
   );
 };
 
-export default CloudSolutionsPage;
+export default FiveGSolutionsPage;

@@ -4,26 +4,38 @@ import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
   ArrowRight, 
-  Star, 
-  Users, 
+  Server, 
   Shield, 
-  Clock, 
-  TrendingUp,
-  BarChart3,
-  Database,
-  Smartphone,
+  Zap, 
+  Database, 
   Globe,
-  Server,
-  Code,
-  Network,
+  BarChart3,
+  Users,
   Settings,
   Award,
-  Rocket,
+  Clock,
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  TrendingUp,
   Target,
-  Lightbulb
+  Lightbulb,
+  Rocket,
+  Lock,
+  Wifi,
+  Monitor,
+  HardDrive,
+  Layers,
+  MessageSquare,
+  Eye,
+  FileText,
+  Network,
+  Code,
+  Smartphone
 } from 'lucide-react';
 
-const ITSolutionsPage: React.FC = () => {
+const ITServicesPage: React.FC = () => {
   const services = [
     {
       title: 'Web Development',
@@ -111,13 +123,13 @@ const ITSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>IT Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT solutions including web development, mobile development, API development, and database management. Professional technology solutions for your business." />
-        <meta name="keywords" content="IT solutions, web development, mobile development, API development, database management, software development" />
-        <meta property="og:title" content="IT Solutions - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive IT solutions including web development, mobile development, API development, and database management." />
-        <meta property="og:url" content="https://ziontechgroup.com/it-solutions" />
-        <link rel="canonical" href="https://ziontechgroup.com/it-solutions" />
+        <title>IT Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including web development, mobile development, API development, and database management. Professional technology solutions for your business." />
+        <meta name="keywords" content="IT services, web development, mobile development, API development, database management, software development" />
+        <meta property="og:title" content="IT Services - Zion Tech Group" />
+        <meta property="og:description" content="Comprehensive IT services including web development, mobile development, API development, and database management." />
+        <meta property="og:url" content="https://ziontechgroup.com/it-services" />
+        <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Helmet>
 
       {/* Hero Section */}
@@ -132,11 +144,11 @@ const ITSolutionsPage: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               IT
               <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                {' '}Solutions
+                {' '}Services
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive IT solutions to power your digital transformation. 
+              Comprehensive IT services to power your digital transformation. 
               From web development to database management, we provide end-to-end technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -164,7 +176,7 @@ const ITSolutionsPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our IT Solutions
+              Our IT Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Professional IT solutions designed to meet your business needs and drive growth
@@ -212,7 +224,7 @@ const ITSolutionsPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose Our IT Solutions?
+              Why Choose Our IT Services?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We deliver exceptional value through our expertise, innovation, and commitment to your success.
@@ -267,4 +279,4 @@ const ITSolutionsPage: React.FC = () => {
   );
 };
 
-export default ITSolutionsPage;
+export default ITServicesPage;

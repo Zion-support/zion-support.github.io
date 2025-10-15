@@ -1,21 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Cloud, CheckCircle, ArrowRight } from 'lucide-react';
+import { Book, CheckCircle, ArrowRight } from 'lucide-react';
 
-const CloudSolutionsPage: React.FC = () => {
+const DocumentationPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Cloud Solutions - Zion Tech Group</title>
-        <meta name="description" content="Scalable cloud solutions and infrastructure management for modern businesses." />
+        <title>Documentation - Zion Tech Group</title>
+        <meta name="description" content="Complete guides, tutorials, and API references for our solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="text-center">
-          <Cloud className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
-          <h1 className="text-4xl font-bold text-white mb-6">Cloud Solutions</h1>
+          <Book className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
+          <h1 className="text-4xl font-bold text-white mb-6">Documentation</h1>
           <p className="text-lg text-gray-300 mb-8">
-            Scalable cloud infrastructure and management solutions.
+            Complete guides and API references for our solutions.
           </p>
           <Link
             to="/contact"
@@ -30,4 +30,4 @@ const CloudSolutionsPage: React.FC = () => {
   );
 };
 
-export default CloudSolutionsPage;
+export default DocumentationPage;
