@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet }; from "react-helmet-async";"
 import { Brain, Shield, Users, Award }; from 'lucide-react';";"
 const  SEOHead = ({ title, description }: { title: string; description: string }) => (
@@ -163,54 +164,53 @@ import React from 'react;'";
 import { Helmet } from 'react-helmet-async;'";
 'use client;''";
 export default function Page() {
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function AboutPage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-df8b
   return (
-    <div: className ="min-h-screen bg-white">""";
+    <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta: name ="description" content="Professional page services by Zion Tech Group." />""";
+        <title>About - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team." />
       </Helmet>
-      <div: className ="container mx-auto px-4 py-16">;""";
-        <div: className ="text-center">;""";
-          <h1: className ="text-4xl font-bold text-gray-900 mb-8">;""";
-            Page;
-          </h1>
-          <p: className ="text-xl text-gray-600 mb-8">;""";
-            Professional page solutions tailored to your business needs.;
-          </p>
-          <div: className ="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;""";
-            <div: className ="bg-blue-50 border border-blue-200 rounded-lg p-6">;""";
-              <h3: className ="text-lg font-semibold text-blue-900 mb-2">;""";
-                Expert Solutions;
-              </h3>
-              <p: className ="text-blue-700">;""";
-                Our team of experts delivers cutting-edge page solutions.;
-              </p>
-            </div>
-            <div: className ="bg-green-50 border border-green-200 rounded-lg p-6">;""";
-              <h3: className ="text-lg font-semibold text-green-900 mb-2">;""";
-                Custom Implementation;
-              </h3>
-              <p: className ="text-green-700">;""";
-                Tailored page implementations for your specific requirements.;
-              </p>
-            </div>
-            <div: className ="bg-purple-50 border border-purple-200 rounded-lg p-6">;""";
-              <h3: className ="text-lg font-semibold text-purple-900 mb-2">;""";
-                24/7 Support;
-              </h3>
-              <p: className ="text-purple-700">;""";
-                Round-the-clock support for all your page needs.;
-              </p>
-            </div>
-          </div>
-          <div: className ="mt-12">;""";
-            <button: className ="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;""";
-              Get Started Today;
-            </button>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>
+          
+          <div className="prose prose-lg max-w-none">
+            <p className="text-xl text-gray-600 mb-8">
+              We are a leading technology company dedicated to delivering innovative solutions 
+              that transform businesses and drive digital transformation.
+            </p>
+            
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h2>
+            <p className="text-gray-600 mb-6">
+              To empower businesses with cutting-edge technology solutions that drive growth, 
+              efficiency, and innovation in the digital age.
+            </p>
+            
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Values</h2>
+            <ul className="list-disc list-inside text-gray-600 mb-6">
+              <li>Innovation and Excellence</li>
+              <li>Customer-Centric Approach</li>
+              <li>Integrity and Transparency</li>
+              <li>Continuous Learning and Growth</li>
+            </ul>
+            
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Team</h2>
+            <p className="text-gray-600 mb-6">
+              Our diverse team of experts brings together decades of experience in technology, 
+              business, and innovation to deliver exceptional results for our clients.
+            </p>
           </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );}
 }''";
 =======
@@ -474,3 +474,7 @@ export default function AboutPage() {
 
 }))))
 >>>>>>> main
+=======
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-df8b

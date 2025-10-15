@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
@@ -144,31 +145,26 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: {;";
 import React, { Suspense, lazy } from 'react';";";";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';";";";
 import { HelmetProvider } from 'react-helmet-async';";";";
+=======
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-df8b
 
 // Core components - keep these synchronous for critical path
-import Navigation from './app/components/Navigation';";";";";";";";
-import Sidebar from './app/components/Sidebar';";";";";";";";
-import Footer from './app/components/Footer';";";";";";";";
-import LightweightErrorBoundary from './app/components/LightweightErrorBoundary';";";";";";";";
-import PerformanceMonitor from './app/components/PerformanceMonitor';";";";";";";";
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';";";";";";";";
-import OptimizedLoadingSpinner from './app/components/OptimizedLoadingSpinner';";";";";";";";
-import SEOHead from './app/components/SEOHead';";";";";";";";
+import Navigation from './app/components/Navigation';
+import Sidebar from './app/components/Sidebar';
+import Footer from './app/components/Footer';
+import LightweightErrorBoundary from './app/components/LightweightErrorBoundary';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
 
-// Lazy load all page components
-const: HomePage = lazy(() => import('./app/page'));";";";";";";";
-const: AboutPage = lazy(() => import('./app/pages/AboutPage'));";";";";";";";
-const: ContactPage = lazy(() => import('./app/pages/ContactPage'));";";";";";";";
-const: ServicesPage = lazy(() => import('./app/pages/ServicesPage'));";";";";";";";
-const: BlogPage = lazy(() => import('./app/pages/BlogPage'));";";";";";";";
-const: TutorialsPage = lazy(() => import('./app/pages/TutorialsPage'));";";";";";";";
-const: DemoPage = lazy(() => import('./app/pages/DemoPage'));";";";";";";";
-const: SupportPage = lazy(() => import('./app/pages/SupportPage'));";";";";";";";
-const: PrivacyPage = lazy(() => import('./app/pages/PrivacyPage'));";";";";";";";
-const: TermsPage = lazy(() => import('./app/pages/TermsPage'));";";";";";";";
-const: PricingPage = lazy(() => import('./app/pages/PricingPage'));";";";";";";";
-const: SolutionsPage = lazy(() => import('./app/pages/SolutionsPage'));";";";";";";";
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./app/page'));
+const AboutPage = lazy(() => import('./app/about/page'));
+const ServicesPage = lazy(() => import('./app/services/page'));
+const ContactPage = lazy(() => import('./app/contact/page'));
 
+<<<<<<< HEAD
 // Service pages
 const: AIServicesPage = lazy(() => import('./app/pages/AIServicesPage'));";";";";";";";
 const: ITServicesPage = lazy(() => import('./app/pages/ITServicesPage'));";";";";";";";
@@ -223,10 +219,17 @@ export const: ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; re
         </div>
       </div>
     </div>
+=======
+// Loading component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-df8b
   </div>
 <<<<<<< HEAD
 )
 function App() {
+<<<<<<< HEAD
   const [sidebarOpen, setSidebarOpen] = React.useState(false)
 =======
 );
@@ -433,6 +436,34 @@ function App() {,
 <<<<<<< HEAD
     </LightweightErrorBoundary>
   )
+=======
+  return (
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen bg-slate-900">
+          <Navigation />
+          <div className="flex">
+            <Sidebar />
+            <main className="flex-1 p-6">
+              <LightweightErrorBoundary>
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                  </Routes>
+                </Suspense>
+              </LightweightErrorBoundary>
+            </main>
+          </div>
+          <Footer />
+          <PerformanceMonitor />
+        </div>
+      </Router>
+    </HelmetProvider>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-df8b
 }
 
 export default App

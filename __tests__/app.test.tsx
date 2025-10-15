@@ -7,6 +7,7 @@ describe('HomePage', () => {
     render(<HomePage />);
     expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 
   it('displays the main heading', () => {
     render(<HomePage />);
@@ -18,5 +19,13 @@ describe('HomePage', () => {
     render(<HomePage />);
     const ctaButton = screen.getByRole('button', { name: /get started/i });
     expect(ctaButton).toBeInTheDocument();
+=======
+  
+  it('renders navigation links', () => {
+    render(<HomePage />);
+    expect(screen.getByText('About')).toBeInTheDocument();
+    expect(screen.getByText('Services')).toBeInTheDocument();
+    expect(screen.getByText('Contact')).toBeInTheDocument();
+>>>>>>> cursor/fix-errors-and-merge-to-main-df8b
   });
 });

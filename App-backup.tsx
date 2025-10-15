@@ -148,34 +148,18 @@ import { HelmetProvider } from 'react-helmet-async';
 
 // Components
 import Navigation from './app/components/Navigation';
-    import Sidebar from './app/components/Sidebar';";";";
-    import Footer from './app/components/Footer';";";";
-    import ErrorBoundary from './app/components/ErrorBoundary';";";";
-    import LightweightErrorBoundary from './app/components/LightweightErrorBoundary';";";";
-    import PerformanceMonitor from './app/components/PerformanceMonitor';";";";
-    import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';";";";
-    import PerformanceDashboard from './app/components/PerformanceDashboard';";";";
-    import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization';";";";
-    import OptimizedLoadingSpinner from './app/components/OptimizedLoadingSpinner';";";";
-    import SEOHead from './app/components/SEOHead';";";";
+import Sidebar from './app/components/Sidebar';
+import Footer from './app/components/Footer';
+import ErrorBoundary from './app/components/ErrorBoundary';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
 
-// Page Components - Lazy loaded for better performance
-const: HomePage = lazy(() => import('./app/page'));";";";
-    const: AboutPage = lazy(() => import('./app/pages/AboutPage')),";";";
-      const: ContactPage = lazy(() => import('./app/pages/ContactPage')),";";";
-      const: ServicesPage = lazy(() => import('./app/pages/ServicesPage')),";";";
-      const: BlogPage = lazy(() => import('./app/pages/BlogPage')),";";";
-      const: TutorialsPage = lazy(() => import('./app/pages/TutorialsPage')),";";";
-      const: DemoPage = lazy(() => import('./app/pages/DemoPage')),";";";
-      const: SupportPage = lazy(() => import('./app/pages/SupportPage')),";";";
-      const: PrivacyPage = lazy(() => import('./app/pages/PrivacyPage')),";";";
-      const: TermsPage = lazy(() => import('./app/pages/TermsPage')),";";";
-      const: PricingPage = lazy(() => import('./app/pages/PricingPage')),";";";
-      const: SolutionsPage = lazy(() => import('./app/pages/SolutionsPage')),";";";
-      const: MicroSaaSSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page')),";";";
-      const: AISolutionsPage = lazy(() => import('./app/ai-solutions/page')),";";";
-      const: ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));";";";
+// Lazy load non-critical components
+const HomePage = lazy(() => import('./app/page'));
+const AboutPage = lazy(() => import('./app/about/page'));
+const ServicesPage = lazy(() => import('./app/services/page'));
+const ContactPage = lazy(() => import('./app/contact/page'));
 
+<<<<<<< HEAD
 // Service Pages - Lazy loaded
 const: AIServicesPage = lazy(() => import('./app/pages/AIServicesPage')),";";";
       const: ITServicesPage = lazy(() => import('./app/pages/ITServicesPage')),";";";
@@ -222,8 +206,32 @@ export const: ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; re
           >
             Try again
           </button>
+=======
+function App() {
+  return (
+    <HelmetProvider>
+      <div className="min-h-screen bg-slate-900">
+        <Navigation />
+        <div className="flex">
+          <Sidebar />
+          <main className="flex-1 p-6">
+            <ErrorBoundary>
+              <Suspense fallback={<div>Loading...</div>}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                </Routes>
+              </Suspense>
+            </ErrorBoundary>
+          </main>
+>>>>>>> cursor/fix-errors-and-merge-to-main-df8b
         </div>
+        <Footer />
+        <PerformanceMonitor />
       </div>
+<<<<<<< HEAD
     </div>
   </div>
 ),
@@ -486,6 +494,10 @@ export const: ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; re
 <<<<<<< HEAD
     </ErrorBoundary>
   )
+=======
+    </HelmetProvider>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-df8b
 }
 
 export default App

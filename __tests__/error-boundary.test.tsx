@@ -1,8 +1,15 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+<<<<<<< HEAD
 import { ErrorBoundary } from 'react-error-boundary';
 
 // Component that throws an error
+=======
+import '@testing-library/jest-dom';
+import ErrorBoundary from '../app/components/ErrorBoundary';
+
+// Mock component that throws an error
+>>>>>>> cursor/fix-errors-and-merge-to-main-df8b
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
     throw new Error('Test error');
@@ -10,6 +17,7 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   return <div>No error</div>;
 };
 
+<<<<<<< HEAD
 // Error fallback component
 const ErrorFallback = ({ error }: { error: Error }) => (
   <div role="alert">
@@ -45,4 +53,43 @@ describe('ErrorBoundary', () => {
     
     consoleSpy.mockRestore();
   });
+=======
+describe('ErrorBoundary', () => {
+  test('renders children when there is no error', () => {
+    render(
+      <ErrorBoundary>
+        <ThrowError shouldThrow={false} />
+      </ErrorBoundary>
+    );
+    expect(screen.getByText('No error')).toBeInTheDocument();
+  });
+
+  test('renders error message when child throws error', () => {
+    // Suppress console.error for this test
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+    
+    render(
+      <ErrorBoundary>
+        <ThrowError shouldThrow={true} />
+      </ErrorBoundary>
+    );
+    
+    expect(screen.getByText(/Something went wrong/i)).toBeInTheDocument();
+    
+    consoleSpy.mockRestore();
+  });
+
+  test('calls componentDidCatch when error occurs', () => {
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+    
+    render(
+      <ErrorBoundary>
+        <ThrowError shouldThrow={true} />
+      </ErrorBoundary>
+    );
+    
+    expect(consoleSpy).toHaveBeenCalled();
+    consoleSpy.mockRestore();
+  });
+>>>>>>> cursor/fix-errors-and-merge-to-main-df8b
 });
