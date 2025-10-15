@@ -1,34 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { organizationSchema, websiteSchema, serviceSchema } from './utils/structuredData';
 
 const HomePage: React.FC = () => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": "Leading provider of AI and IT solutions for modern businesses",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
-      "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "Innovation City",
-      "addressRegion": "IC",
-      "postalCode": "12345",
-      "addressCountry": "US"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup"
-    ]
-  };
-
   return (
     <>
       <Helmet>
@@ -46,7 +20,13 @@ const HomePage: React.FC = () => {
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         <link rel="canonical" href="https://ziontechgroup.com" />
         <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(websiteSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
         </script>
       </Helmet>
       

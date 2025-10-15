@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { performanceMonitor } from '../utils/performanceMonitor';
 
 interface WebVitalMetric {
   name: string;
@@ -26,6 +27,18 @@ const PerformanceMonitor: React.FC = () => {
       if (process.env.NODE_ENV === 'development') {
         console.log(`[Web Vitals] ${metric.name}:`, metric.value);
       }
+    };
+
+    // Start performance monitoring
+    performanceMonitor.observeWebVitals();
+    
+    // Mark app start
+    performanceMonitor.mark('app-start');
+    
+    // Measure app load time
+    const measureAppLoad = () => {
+      performanceMonitor.mark('app-loaded');
+      performanceMonitor.measure('app-load-time', 'app-start', 'app-loaded');
     };
 
     // Only load web-vitals in production or when needed
@@ -57,6 +70,13 @@ const PerformanceMonitor: React.FC = () => {
       }
     };
 
+    // Measure when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', measureAppLoad);
+    } else {
+      measureAppLoad();
+    }
+
     // Measure after page load
     if (document.readyState === 'complete') {
       measurePageLoad();
@@ -65,6 +85,7 @@ const PerformanceMonitor: React.FC = () => {
     }
 
     return () => {
+      document.removeEventListener('DOMContentLoaded', measureAppLoad);
       window.removeEventListener('load', measurePageLoad);
     };
   }, []);
