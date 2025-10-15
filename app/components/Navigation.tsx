@@ -20,19 +20,24 @@ const Navigation: React.FC = memo(() => {
   return (
     <nav className="nav-futuristic">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-20">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold gradient-text">Zion Tech Group</h1>
+            <Link to="/" className="flex-shrink-0 group">
+              <h1 className="text-3xl font-bold gradient-text group-hover:neon-text-cyan transition-all duration-300">
+                Zion Tech Group
+              </h1>
+              <div className="text-xs text-gray-400 mt-1 font-mono">
+                AI & IT Solutions
+              </div>
             </Link>
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="nav-link-futuristic">
-              Home
+          <div className="hidden lg:flex items-center space-x-1">
+            <Link to="/" className="nav-link-futuristic group">
+              <span className="group-hover:neon-text-cyan transition-colors">Home</span>
             </Link>
-            <Link to="/about" className="nav-link-futuristic">
-              About
+            <Link to="/about" className="nav-link-futuristic group">
+              <span className="group-hover:neon-text-cyan transition-colors">About</span>
             </Link>
             
             {/* Services Dropdown */}
@@ -40,10 +45,10 @@ const Navigation: React.FC = memo(() => {
               <button
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
-                className="nav-link-futuristic flex items-center"
+                className="nav-link-futuristic flex items-center group"
               >
-                Services
-                <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <span className="group-hover:neon-text-cyan transition-colors">Services</span>
+                <svg className="ml-1 h-4 w-4 group-hover:text-cyan-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
@@ -51,35 +56,65 @@ const Navigation: React.FC = memo(() => {
                 <div
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
-                  className="absolute left-0 mt-2 w-64 glass-effect z-50"
+                  className="absolute left-0 mt-2 w-80 glass-effect z-50 rounded-xl border border-cyan-500/20"
                 >
-                  <div className="py-2">
-                    <Link to="/services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">All Services</Link>
-                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">AI Services</Link>
-                    <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">IT Services</Link>
-                    <Link to="/micro-saas-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Micro SAAS Solutions</Link>
-                    <Link to="/cloud-infrastructure" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Cloud Infrastructure</Link>
-                    <Link to="/5g-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">5G Solutions</Link>
-                    <Link to="/digital-transformation" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Digital Transformation</Link>
+                  <div className="py-4">
+                    <div className="px-4 py-2 border-b border-gray-700/50">
+                      <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">Our Services</h3>
+                    </div>
+                    <div className="grid grid-cols-2 gap-1 px-2 py-2">
+                      <Link to="/services" className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors rounded-lg">
+                        <span className="font-medium">All Services</span>
+                        <div className="text-xs text-gray-500">Complete overview</div>
+                      </Link>
+                      <Link to="/ai-services" className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors rounded-lg">
+                        <span className="font-medium">AI Services</span>
+                        <div className="text-xs text-gray-500">Artificial Intelligence</div>
+                      </Link>
+                      <Link to="/it-services" className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors rounded-lg">
+                        <span className="font-medium">IT Services</span>
+                        <div className="text-xs text-gray-500">Technology Solutions</div>
+                      </Link>
+                      <Link to="/micro-saas-solutions" className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors rounded-lg">
+                        <span className="font-medium">Micro SAAS</span>
+                        <div className="text-xs text-gray-500">Software Solutions</div>
+                      </Link>
+                      <Link to="/cloud-infrastructure" className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors rounded-lg">
+                        <span className="font-medium">Cloud</span>
+                        <div className="text-xs text-gray-500">Infrastructure</div>
+                      </Link>
+                      <Link to="/5g-solutions" className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors rounded-lg">
+                        <span className="font-medium">5G Solutions</span>
+                        <div className="text-xs text-gray-500">Next-gen Networks</div>
+                      </Link>
+                      <Link to="/digital-transformation" className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors rounded-lg">
+                        <span className="font-medium">Digital Transform</span>
+                        <div className="text-xs text-gray-500">Business Evolution</div>
+                      </Link>
+                      <Link to="/data-analytics" className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors rounded-lg">
+                        <span className="font-medium">Data Analytics</span>
+                        <div className="text-xs text-gray-500">Business Intelligence</div>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               )}
             </div>
             
-            <Link to="/pricing" className="nav-link-futuristic">
-              Pricing
+            <Link to="/pricing" className="nav-link-futuristic group">
+              <span className="group-hover:neon-text-cyan transition-colors">Pricing</span>
             </Link>
-            <Link to="/blog" className="nav-link-futuristic">
-              Blog
+            <Link to="/blog" className="nav-link-futuristic group">
+              <span className="group-hover:neon-text-cyan transition-colors">Blog</span>
             </Link>
-            <Link to="/team" className="nav-link-futuristic">
-              Team
+            <Link to="/team" className="nav-link-futuristic group">
+              <span className="group-hover:neon-text-cyan transition-colors">Team</span>
             </Link>
-            <Link to="/careers" className="nav-link-futuristic">
-              Careers
+            <Link to="/careers" className="nav-link-futuristic group">
+              <span className="group-hover:neon-text-cyan transition-colors">Careers</span>
             </Link>
-            <Link to="/contact" className="nav-link-futuristic">
-              Contact
+            <Link to="/contact" className="nav-link-futuristic group">
+              <span className="group-hover:neon-text-cyan transition-colors">Contact</span>
             </Link>
           </div>
 
@@ -97,42 +132,92 @@ const Navigation: React.FC = memo(() => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden glass-effect mx-4 mt-2 rounded-lg">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/" className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-              Home
+        <div className="lg:hidden glass-effect mx-4 mt-2 rounded-xl border border-cyan-500/20">
+          <div className="px-4 pt-4 pb-4 space-y-2">
+            <div className="border-b border-gray-700/50 pb-3 mb-3">
+              <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">Navigation</h3>
+            </div>
+            
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 block px-3 py-3 rounded-lg text-base font-medium transition-colors hover:bg-cyan-500/10">
+              <span className="flex items-center">
+                <span className="mr-3">🏠</span>
+                Home
+              </span>
             </Link>
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-              About
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 block px-3 py-3 rounded-lg text-base font-medium transition-colors hover:bg-cyan-500/10">
+              <span className="flex items-center">
+                <span className="mr-3">ℹ️</span>
+                About
+              </span>
             </Link>
             
             {/* Mobile Services Menu */}
             <div className="px-3 py-2">
-              <div className="text-gray-300 text-base font-medium mb-2">Services</div>
-              <div className="ml-4 space-y-1">
-                <Link to="/services" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">All Services</Link>
-                <Link to="/ai-services" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">AI Services</Link>
-                <Link to="/it-services" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">IT Services</Link>
-                <Link to="/micro-saas-solutions" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">Micro SAAS Solutions</Link>
-                <Link to="/cloud-infrastructure" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">Cloud Infrastructure</Link>
-                <Link to="/5g-solutions" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">5G Solutions</Link>
-                <Link to="/digital-transformation" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">Digital Transformation</Link>
+              <div className="text-gray-300 text-base font-medium mb-3 flex items-center">
+                <span className="mr-3">⚙️</span>
+                Services
+              </div>
+              <div className="ml-6 space-y-2">
+                <Link to="/services" className="text-gray-400 hover:text-cyan-400 block px-3 py-2 rounded-lg text-sm transition-colors hover:bg-cyan-500/10">
+                  <span className="font-medium">All Services</span>
+                  <div className="text-xs text-gray-500">Complete overview</div>
+                </Link>
+                <Link to="/ai-services" className="text-gray-400 hover:text-cyan-400 block px-3 py-2 rounded-lg text-sm transition-colors hover:bg-cyan-500/10">
+                  <span className="font-medium">AI Services</span>
+                  <div className="text-xs text-gray-500">Artificial Intelligence</div>
+                </Link>
+                <Link to="/it-services" className="text-gray-400 hover:text-cyan-400 block px-3 py-2 rounded-lg text-sm transition-colors hover:bg-cyan-500/10">
+                  <span className="font-medium">IT Services</span>
+                  <div className="text-xs text-gray-500">Technology Solutions</div>
+                </Link>
+                <Link to="/micro-saas-solutions" className="text-gray-400 hover:text-cyan-400 block px-3 py-2 rounded-lg text-sm transition-colors hover:bg-cyan-500/10">
+                  <span className="font-medium">Micro SAAS</span>
+                  <div className="text-xs text-gray-500">Software Solutions</div>
+                </Link>
+                <Link to="/cloud-infrastructure" className="text-gray-400 hover:text-cyan-400 block px-3 py-2 rounded-lg text-sm transition-colors hover:bg-cyan-500/10">
+                  <span className="font-medium">Cloud Infrastructure</span>
+                  <div className="text-xs text-gray-500">Scalable Solutions</div>
+                </Link>
+                <Link to="/5g-solutions" className="text-gray-400 hover:text-cyan-400 block px-3 py-2 rounded-lg text-sm transition-colors hover:bg-cyan-500/10">
+                  <span className="font-medium">5G Solutions</span>
+                  <div className="text-xs text-gray-500">Next-gen Networks</div>
+                </Link>
+                <Link to="/digital-transformation" className="text-gray-400 hover:text-cyan-400 block px-3 py-2 rounded-lg text-sm transition-colors hover:bg-cyan-500/10">
+                  <span className="font-medium">Digital Transformation</span>
+                  <div className="text-xs text-gray-500">Business Evolution</div>
+                </Link>
               </div>
             </div>
-            <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-              Pricing
+            
+            <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 block px-3 py-3 rounded-lg text-base font-medium transition-colors hover:bg-cyan-500/10">
+              <span className="flex items-center">
+                <span className="mr-3">💰</span>
+                Pricing
+              </span>
             </Link>
-            <Link to="/blog" className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-              Blog
+            <Link to="/blog" className="text-gray-300 hover:text-cyan-400 block px-3 py-3 rounded-lg text-base font-medium transition-colors hover:bg-cyan-500/10">
+              <span className="flex items-center">
+                <span className="mr-3">📝</span>
+                Blog
+              </span>
             </Link>
-            <Link to="/team" className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-              Team
+            <Link to="/team" className="text-gray-300 hover:text-cyan-400 block px-3 py-3 rounded-lg text-base font-medium transition-colors hover:bg-cyan-500/10">
+              <span className="flex items-center">
+                <span className="mr-3">👥</span>
+                Team
+              </span>
             </Link>
-            <Link to="/careers" className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-              Careers
+            <Link to="/careers" className="text-gray-300 hover:text-cyan-400 block px-3 py-3 rounded-lg text-base font-medium transition-colors hover:bg-cyan-500/10">
+              <span className="flex items-center">
+                <span className="mr-3">💼</span>
+                Careers
+              </span>
             </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-              Contact
+            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 block px-3 py-3 rounded-lg text-base font-medium transition-colors hover:bg-cyan-500/10">
+              <span className="flex items-center">
+                <span className="mr-3">📞</span>
+                Contact
+              </span>
             </Link>
           </div>
         </div>
