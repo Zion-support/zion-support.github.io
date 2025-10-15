@@ -1,6 +1,9 @@
 import React from 'react';
+
+const PagePage: React.FC = () => {
 import SEOHead from '../components/SEOHead';
 
+const CompliancePage: React.FC = () => {
   return (<>
       <Helmet>
         <title>Compliance Services - Zion Tech Group | Regulatory Compliance & Security</title>

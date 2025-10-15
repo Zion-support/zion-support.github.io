@@ -1,6 +1,9 @@
 import React from 'react';
+
+const PagePage: React.FC = () => {
 import SEOHead from '../components/SEOHead';
 
+const AiExpenseTrackerPage: React.FC = () => {
   return (<>
       <Helmet>
         <title>AI Expense Tracker - Zion Tech Group</title>

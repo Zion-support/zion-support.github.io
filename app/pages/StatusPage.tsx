@@ -1,4 +1,6 @@
 import React from 'react';
+
+const StatusPagePage: React.FC = () => {
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Database } from 'lucide-react';const StatusPage: React.FC = () => {

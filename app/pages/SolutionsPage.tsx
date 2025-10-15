@@ -1,4 +1,6 @@
 import React from 'react';
+
+const SolutionsPagePage: React.FC = () => {
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Target, Rocket, Users, Globe, TrendingUp } from 'lucide-react';const SolutionsPage: React.FC = () => {

@@ -1,4 +1,6 @@
 import React from 'react';
+
+const SoftwareDevelopmentPagePage: React.FC = () => {
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Database, Smartphone, Globe, Network } from 'lucide-react';const SoftwareDevelopmentPage: React.FC = () => {

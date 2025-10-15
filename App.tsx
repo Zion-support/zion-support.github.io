@@ -59,6 +59,65 @@ const LazyTermsPage = React.lazy(() => import('./app/pages/TermsPage'));
 const LazyPricingPage = React.lazy(() => import('./app/pages/PricingPage'));
 const LazySolutionsPage = React.lazy(() => import('./app/pages/SolutionsPage'));
 
+// AI Service Lazy Components
+const LazyAI3DGenerationPage = React.lazy(() => import('./app/ai-3d-generation/page'));
+const LazyAIAnalyticsDashboardProPage = React.lazy(() => import('./app/ai-analytics-dashboard-pro/page'));
+const LazyAIAutomationPlatformPage = React.lazy(() => import('./app/ai-automation-platform/page'));
+const LazyAICustomerSentimentTrackerPage = React.lazy(() => import('./app/ai-customer-sentiment-tracker/page'));
+const LazyAICustomerSupportChatbotPage = React.lazy(() => import('./app/ai-customer-support-chatbot/page'));
+const LazyAIEcommerceOptimizerProPage = React.lazy(() => import('./app/ai-ecommerce-optimizer-pro/page'));
+const LazyAIEmailAssistantPage = React.lazy(() => import('./app/ai-email-assistant/page'));
+const LazyAIEmailMarketingAutomationPage = React.lazy(() => import('./app/ai-email-marketing-automation/page'));
+const LazyAIExpenseTrackerPage = React.lazy(() => import('./app/ai-expense-tracker/page'));
+const LazyAIFinancialAnalyticsProPage = React.lazy(() => import('./app/ai-financial-analytics-pro/page'));
+const LazyAIHealthcareDiagnosticsPage = React.lazy(() => import('./app/ai-healthcare-diagnostics/page'));
+const LazyAIMarketingAutomationPage = React.lazy(() => import('./app/ai-marketing-automation/page'));
+const LazyAIPersonalizedLearningPage = React.lazy(() => import('./app/ai-personalized-learning/page'));
+const LazyAIPoweredDevOpsPage = React.lazy(() => import('./app/ai-powered-devops/page'));
+const LazyAIPoweredEmailAnalyzerPage = React.lazy(() => import('./app/ai-powered-email-analyzer/page'));
+const LazyAIProjectManagementProPage = React.lazy(() => import('./app/ai-project-management-pro/page'));
+const LazyAIQuantumComputingPage = React.lazy(() => import('./app/ai-quantum-computing/page'));
+const LazyAISmartSchedulerPage = React.lazy(() => import('./app/ai-smart-scheduler/page'));
+const LazyAISocialMediaManagerPage = React.lazy(() => import('./app/ai-social-media-manager/page'));
+const LazyAISupplyChainOptimizerPage = React.lazy(() => import('./app/ai-supply-chain-optimizer/page'));
+const LazyAITranslationServicePage = React.lazy(() => import('./app/ai-translation-service/page'));
+
+// Zion Service Lazy Components
+const LazyZionAICRMProPage = React.lazy(() => import('./app/zion-ai-crm-pro/page'));
+const LazyZionAICustomerInsightsPage = React.lazy(() => import('./app/zion-ai-customer-insights/page'));
+const LazyZionAIInvoiceGeneratorPage = React.lazy(() => import('./app/zion-ai-invoice-generator/page'));
+const LazyZionAIMarketingAutomationProPage = React.lazy(() => import('./app/zion-ai-marketing-automation-pro/page'));
+const LazyZionAIProjectManagerProPage = React.lazy(() => import('./app/zion-ai-project-manager-pro/page'));
+const LazyZionAIVideoGeneratorPage = React.lazy(() => import('./app/zion-ai-video-generator/page'));
+const LazyZionAnalyticsProPage = React.lazy(() => import('./app/zion-analytics-pro/page'));
+const LazyZionCloudVaultPage = React.lazy(() => import('./app/zion-cloud-vault/page'));
+const LazyZionSecurityShieldPage = React.lazy(() => import('./app/zion-security-shield/page'));
+
+// Other Service Lazy Components
+const LazyBlockchainWeb3Page = React.lazy(() => import('./app/blockchain-web3/page'));
+const LazyCloudInfrastructureManagementPage = React.lazy(() => import('./app/cloud-infrastructure-management/page'));
+const LazyCloudMigrationProPage = React.lazy(() => import('./app/cloud-migration-pro/page'));
+const LazyCommunityPage = React.lazy(() => import('./app/community/page'));
+const LazyCompliancePage = React.lazy(() => import('./app/compliance/page'));
+const LazyConsultationPage = React.lazy(() => import('./app/consultation/page'));
+const LazyCustomDevelopmentPage = React.lazy(() => import('./app/custom-development/page'));
+const LazyCustomerRelationshipManagerPage = React.lazy(() => import('./app/customer-relationship-manager/page'));
+const LazyDevOpsServicesPage = React.lazy(() => import('./app/devops-services/page'));
+const LazyEmailMarketingPlatformPage = React.lazy(() => import('./app/email-marketing-platform/page'));
+const LazyEmployeeTimeTrackerPage = React.lazy(() => import('./app/employee-time-tracker/page'));
+const LazyFinancialReportingToolPage = React.lazy(() => import('./app/financial-reporting-tool/page'));
+const LazyInventoryManagementSystemPage = React.lazy(() => import('./app/inventory-management-system/page'));
+const LazyITSolutionsPage = React.lazy(() => import('./app/it-solutions/page'));
+const LazyPartnersPage = React.lazy(() => import('./app/partners/page'));
+const LazyPressPage = React.lazy(() => import('./app/press/page'));
+const LazyProjectManagementToolPage = React.lazy(() => import('./app/project-management-tool/page'));
+const LazySmartExpenseCategorizerPage = React.lazy(() => import('./app/smart-expense-categorizer/page'));
+const LazySmartInventoryOptimizerPage = React.lazy(() => import('./app/smart-inventory-optimizer/page'));
+const LazySocialMediaSchedulerPage = React.lazy(() => import('./app/social-media-scheduler/page'));
+const LazySoftwareDevelopmentPage = React.lazy(() => import('./app/software-development/page'));
+const LazyTaskAutomationWorkflowPage = React.lazy(() => import('./app/task-automation-workflow/page'));
+const LazyWebsiteAnalyticsToolPage = React.lazy(() => import('./app/website-analytics-tool/page'));
+
 function App() {
   return (
     <HelmetProvider>
@@ -108,63 +167,63 @@ function App() {
                     <Route path="/careers" element={<CareersPage />} />
                     
                     {/* AI Service Pages */}
-                    <Route path="/ai-3d-generation" element={<React.lazy(() => import('./app/ai-3d-generation/page'))} />}
-                    <Route path="/ai-analytics-dashboard-pro" element={<React.lazy(() => import('./app/ai-analytics-dashboard-pro/page'))} />}
-                    <Route path="/ai-automation-platform" element={<React.lazy(() => import('./app/ai-automation-platform/page'))} />}
-                    <Route path="/ai-customer-sentiment-tracker" element={<React.lazy(() => import('./app/ai-customer-sentiment-tracker/page'))} />}
-                    <Route path="/ai-customer-support-chatbot" element={<React.lazy(() => import('./app/ai-customer-support-chatbot/page'))} />}
-                    <Route path="/ai-ecommerce-optimizer-pro" element={<React.lazy(() => import('./app/ai-ecommerce-optimizer-pro/page'))} />}
-                    <Route path="/ai-email-assistant" element={<React.lazy(() => import('./app/ai-email-assistant/page'))} />}
-                    <Route path="/ai-email-marketing-automation" element={<React.lazy(() => import('./app/ai-email-marketing-automation/page'))} />}
-                    <Route path="/ai-expense-tracker" element={<React.lazy(() => import('./app/ai-expense-tracker/page'))} />}
-                    <Route path="/ai-financial-analytics-pro" element={<React.lazy(() => import('./app/ai-financial-analytics-pro/page'))} />}
-                    <Route path="/ai-healthcare-diagnostics" element={<React.lazy(() => import('./app/ai-healthcare-diagnostics/page'))} />}
-                    <Route path="/ai-marketing-automation" element={<React.lazy(() => import('./app/ai-marketing-automation/page'))} />}
-                    <Route path="/ai-personalized-learning" element={<React.lazy(() => import('./app/ai-personalized-learning/page'))} />}
-                    <Route path="/ai-powered-devops" element={<React.lazy(() => import('./app/ai-powered-devops/page'))} />}
-                    <Route path="/ai-powered-email-analyzer" element={<React.lazy(() => import('./app/ai-powered-email-analyzer/page'))} />}
-                    <Route path="/ai-project-management-pro" element={<React.lazy(() => import('./app/ai-project-management-pro/page'))} />}
-                    <Route path="/ai-quantum-computing" element={<React.lazy(() => import('./app/ai-quantum-computing/page'))} />}
-                    <Route path="/ai-smart-scheduler" element={<React.lazy(() => import('./app/ai-smart-scheduler/page'))} />}
-                    <Route path="/ai-social-media-manager" element={<React.lazy(() => import('./app/ai-social-media-manager/page'))} />}
-                    <Route path="/ai-supply-chain-optimizer" element={<React.lazy(() => import('./app/ai-supply-chain-optimizer/page'))} />}
-                    <Route path="/ai-translation-service" element={<React.lazy(() => import('./app/ai-translation-service/page'))} />}
+                    <Route path="/ai-3d-generation" element={<Suspense fallback={<LoadingSpinner />}><LazyAI3DGenerationPage /></Suspense>} />
+                    <Route path="/ai-analytics-dashboard-pro" element={<Suspense fallback={<LoadingSpinner />}><LazyAIAnalyticsDashboardProPage /></Suspense>} />
+                    <Route path="/ai-automation-platform" element={<Suspense fallback={<LoadingSpinner />}><LazyAIAutomationPlatformPage /></Suspense>} />
+                    <Route path="/ai-customer-sentiment-tracker" element={<Suspense fallback={<LoadingSpinner />}><LazyAICustomerSentimentTrackerPage /></Suspense>} />
+                    <Route path="/ai-customer-support-chatbot" element={<Suspense fallback={<LoadingSpinner />}><LazyAICustomerSupportChatbotPage /></Suspense>} />
+                    <Route path="/ai-ecommerce-optimizer-pro" element={<Suspense fallback={<LoadingSpinner />}><LazyAIEcommerceOptimizerProPage /></Suspense>} />
+                    <Route path="/ai-email-assistant" element={<Suspense fallback={<LoadingSpinner />}><LazyAIEmailAssistantPage /></Suspense>} />
+                    <Route path="/ai-email-marketing-automation" element={<Suspense fallback={<LoadingSpinner />}><LazyAIEmailMarketingAutomationPage /></Suspense>} />
+                    <Route path="/ai-expense-tracker" element={<Suspense fallback={<LoadingSpinner />}><LazyAIExpenseTrackerPage /></Suspense>} />
+                    <Route path="/ai-financial-analytics-pro" element={<Suspense fallback={<LoadingSpinner />}><LazyAIFinancialAnalyticsProPage /></Suspense>} />
+                    <Route path="/ai-healthcare-diagnostics" element={<Suspense fallback={<LoadingSpinner />}><LazyAIHealthcareDiagnosticsPage /></Suspense>} />
+                    <Route path="/ai-marketing-automation" element={<Suspense fallback={<LoadingSpinner />}><LazyAIMarketingAutomationPage /></Suspense>} />
+                    <Route path="/ai-personalized-learning" element={<Suspense fallback={<LoadingSpinner />}><LazyAIPersonalizedLearningPage /></Suspense>} />
+                    <Route path="/ai-powered-devops" element={<Suspense fallback={<LoadingSpinner />}><LazyAIPoweredDevOpsPage /></Suspense>} />
+                    <Route path="/ai-powered-email-analyzer" element={<Suspense fallback={<LoadingSpinner />}><LazyAIPoweredEmailAnalyzerPage /></Suspense>} />
+                    <Route path="/ai-project-management-pro" element={<Suspense fallback={<LoadingSpinner />}><LazyAIProjectManagementProPage /></Suspense>} />
+                    <Route path="/ai-quantum-computing" element={<Suspense fallback={<LoadingSpinner />}><LazyAIQuantumComputingPage /></Suspense>} />
+                    <Route path="/ai-smart-scheduler" element={<Suspense fallback={<LoadingSpinner />}><LazyAISmartSchedulerPage /></Suspense>} />
+                    <Route path="/ai-social-media-manager" element={<Suspense fallback={<LoadingSpinner />}><LazyAISocialMediaManagerPage /></Suspense>} />
+                    <Route path="/ai-supply-chain-optimizer" element={<Suspense fallback={<LoadingSpinner />}><LazyAISupplyChainOptimizerPage /></Suspense>} />
+                    <Route path="/ai-translation-service" element={<Suspense fallback={<LoadingSpinner />}><LazyAITranslationServicePage /></Suspense>} />
                     
                     {/* Zion Service Pages */}
-                    <Route path="/zion-ai-crm-pro" element={<React.lazy(() => import('./app/zion-ai-crm-pro/page'))} />}
-                    <Route path="/zion-ai-customer-insights" element={<React.lazy(() => import('./app/zion-ai-customer-insights/page'))} />}
-                    <Route path="/zion-ai-invoice-generator" element={<React.lazy(() => import('./app/zion-ai-invoice-generator/page'))} />}
-                    <Route path="/zion-ai-marketing-automation-pro" element={<React.lazy(() => import('./app/zion-ai-marketing-automation-pro/page'))} />}
-                    <Route path="/zion-ai-project-manager-pro" element={<React.lazy(() => import('./app/zion-ai-project-manager-pro/page'))} />}
-                    <Route path="/zion-ai-video-generator" element={<React.lazy(() => import('./app/zion-ai-video-generator/page'))} />}
-                    <Route path="/zion-analytics-pro" element={<React.lazy(() => import('./app/zion-analytics-pro/page'))} />}
-                    <Route path="/zion-cloud-vault" element={<React.lazy(() => import('./app/zion-cloud-vault/page'))} />}
-                    <Route path="/zion-security-shield" element={<React.lazy(() => import('./app/zion-security-shield/page'))} />}
+                    <Route path="/zion-ai-crm-pro" element={<Suspense fallback={<LoadingSpinner />}><LazyZionAICRMProPage /></Suspense>} />
+                    <Route path="/zion-ai-customer-insights" element={<Suspense fallback={<LoadingSpinner />}><LazyZionAICustomerInsightsPage /></Suspense>} />
+                    <Route path="/zion-ai-invoice-generator" element={<Suspense fallback={<LoadingSpinner />}><LazyZionAIInvoiceGeneratorPage /></Suspense>} />
+                    <Route path="/zion-ai-marketing-automation-pro" element={<Suspense fallback={<LoadingSpinner />}><LazyZionAIMarketingAutomationProPage /></Suspense>} />
+                    <Route path="/zion-ai-project-manager-pro" element={<Suspense fallback={<LoadingSpinner />}><LazyZionAIProjectManagerProPage /></Suspense>} />
+                    <Route path="/zion-ai-video-generator" element={<Suspense fallback={<LoadingSpinner />}><LazyZionAIVideoGeneratorPage /></Suspense>} />
+                    <Route path="/zion-analytics-pro" element={<Suspense fallback={<LoadingSpinner />}><LazyZionAnalyticsProPage /></Suspense>} />
+                    <Route path="/zion-cloud-vault" element={<Suspense fallback={<LoadingSpinner />}><LazyZionCloudVaultPage /></Suspense>} />
+                    <Route path="/zion-security-shield" element={<Suspense fallback={<LoadingSpinner />}><LazyZionSecurityShieldPage /></Suspense>} />
                     
                     {/* Other Service Pages */}
-                    <Route path="/blockchain-web3" element={<React.lazy(() => import('./app/blockchain-web3/page'))} />}
-                    <Route path="/cloud-infrastructure-management" element={<React.lazy(() => import('./app/cloud-infrastructure-management/page'))} />}
-                    <Route path="/cloud-migration-pro" element={<React.lazy(() => import('./app/cloud-migration-pro/page'))} />}
-                    <Route path="/community" element={<React.lazy(() => import('./app/community/page'))} />}
-                    <Route path="/compliance" element={<React.lazy(() => import('./app/compliance/page'))} />}
-                    <Route path="/consultation" element={<React.lazy(() => import('./app/consultation/page'))} />}
-                    <Route path="/custom-development" element={<React.lazy(() => import('./app/custom-development/page'))} />}
-                    <Route path="/customer-relationship-manager" element={<React.lazy(() => import('./app/customer-relationship-manager/page'))} />}
-                    <Route path="/devops-services" element={<React.lazy(() => import('./app/devops-services/page'))} />}
-                    <Route path="/email-marketing-platform" element={<React.lazy(() => import('./app/email-marketing-platform/page'))} />}
-                    <Route path="/employee-time-tracker" element={<React.lazy(() => import('./app/employee-time-tracker/page'))} />}
-                    <Route path="/financial-reporting-tool" element={<React.lazy(() => import('./app/financial-reporting-tool/page'))} />}
-                    <Route path="/inventory-management-system" element={<React.lazy(() => import('./app/inventory-management-system/page'))} />}
-                    <Route path="/it-solutions" element={<React.lazy(() => import('./app/it-solutions/page'))} />}
-                    <Route path="/partners" element={<React.lazy(() => import('./app/partners/page'))} />}
-                    <Route path="/press" element={<React.lazy(() => import('./app/press/page'))} />}
-                    <Route path="/project-management-tool" element={<React.lazy(() => import('./app/project-management-tool/page'))} />}
-                    <Route path="/smart-expense-categorizer" element={<React.lazy(() => import('./app/smart-expense-categorizer/page'))} />}
-                    <Route path="/smart-inventory-optimizer" element={<React.lazy(() => import('./app/smart-inventory-optimizer/page'))} />}
-                    <Route path="/social-media-scheduler" element={<React.lazy(() => import('./app/social-media-scheduler/page'))} />}
-                    <Route path="/software-development" element={<React.lazy(() => import('./app/software-development/page'))} />}
-                    <Route path="/task-automation-workflow" element={<React.lazy(() => import('./app/task-automation-workflow/page'))} />}
-                    <Route path="/website-analytics-tool" element={<React.lazy(() => import('./app/website-analytics-tool/page'))} />}
+                    <Route path="/blockchain-web3" element={<Suspense fallback={<LoadingSpinner />}><LazyBlockchainWeb3Page /></Suspense>} />
+                    <Route path="/cloud-infrastructure-management" element={<Suspense fallback={<LoadingSpinner />}><LazyCloudInfrastructureManagementPage /></Suspense>} />
+                    <Route path="/cloud-migration-pro" element={<Suspense fallback={<LoadingSpinner />}><LazyCloudMigrationProPage /></Suspense>} />
+                    <Route path="/community" element={<Suspense fallback={<LoadingSpinner />}><LazyCommunityPage /></Suspense>} />
+                    <Route path="/compliance" element={<Suspense fallback={<LoadingSpinner />}><LazyCompliancePage /></Suspense>} />
+                    <Route path="/consultation" element={<Suspense fallback={<LoadingSpinner />}><LazyConsultationPage /></Suspense>} />
+                    <Route path="/custom-development" element={<Suspense fallback={<LoadingSpinner />}><LazyCustomDevelopmentPage /></Suspense>} />
+                    <Route path="/customer-relationship-manager" element={<Suspense fallback={<LoadingSpinner />}><LazyCustomerRelationshipManagerPage /></Suspense>} />
+                    <Route path="/devops-services" element={<Suspense fallback={<LoadingSpinner />}><LazyDevOpsServicesPage /></Suspense>} />
+                    <Route path="/email-marketing-platform" element={<Suspense fallback={<LoadingSpinner />}><LazyEmailMarketingPlatformPage /></Suspense>} />
+                    <Route path="/employee-time-tracker" element={<Suspense fallback={<LoadingSpinner />}><LazyEmployeeTimeTrackerPage /></Suspense>} />
+                    <Route path="/financial-reporting-tool" element={<Suspense fallback={<LoadingSpinner />}><LazyFinancialReportingToolPage /></Suspense>} />
+                    <Route path="/inventory-management-system" element={<Suspense fallback={<LoadingSpinner />}><LazyInventoryManagementSystemPage /></Suspense>} />
+                    <Route path="/it-solutions" element={<Suspense fallback={<LoadingSpinner />}><LazyITSolutionsPage /></Suspense>} />
+                    <Route path="/partners" element={<Suspense fallback={<LoadingSpinner />}><LazyPartnersPage /></Suspense>} />
+                    <Route path="/press" element={<Suspense fallback={<LoadingSpinner />}><LazyPressPage /></Suspense>} />
+                    <Route path="/project-management-tool" element={<Suspense fallback={<LoadingSpinner />}><LazyProjectManagementToolPage /></Suspense>} />
+                    <Route path="/smart-expense-categorizer" element={<Suspense fallback={<LoadingSpinner />}><LazySmartExpenseCategorizerPage /></Suspense>} />
+                    <Route path="/smart-inventory-optimizer" element={<Suspense fallback={<LoadingSpinner />}><LazySmartInventoryOptimizerPage /></Suspense>} />
+                    <Route path="/social-media-scheduler" element={<Suspense fallback={<LoadingSpinner />}><LazySocialMediaSchedulerPage /></Suspense>} />
+                    <Route path="/software-development" element={<Suspense fallback={<LoadingSpinner />}><LazySoftwareDevelopmentPage /></Suspense>} />
+                    <Route path="/task-automation-workflow" element={<Suspense fallback={<LoadingSpinner />}><LazyTaskAutomationWorkflowPage /></Suspense>} />
+                    <Route path="/website-analytics-tool" element={<Suspense fallback={<LoadingSpinner />}><LazyWebsiteAnalyticsToolPage /></Suspense>} />
                   </Routes>
                 </Suspense>
               </main>

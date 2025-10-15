@@ -1,6 +1,9 @@
 import React from 'react';
+
+const PagePage: React.FC = () => {
 import SEOHead from '../components/SEOHead';
 
+const AiEmailAssistantPage: React.FC = () => {
   return (<>
       <Helmet>
         <title>AI Email Assistant - Zion Tech Group</title>

@@ -1,4 +1,6 @@
 import React from 'react';
+
+const PagePage: React.FC = () => {
 import SEOHead from '../components/SEOHead';
 
   return (<>

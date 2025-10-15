@@ -1,5 +1,6 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
+import { CheckCircleIcon, UserGroupIcon, LightBulbIcon, ShieldCheckIcon, GlobeAltIcon, CogIcon } from '@heroicons/react/24/outline';
 
 const AboutPage: React.FC = () => {
   const values = [

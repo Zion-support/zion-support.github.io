@@ -1,4 +1,6 @@
 import React from 'react';
+
+const PagePage: React.FC = () => {
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Users, Globe, Shield, Zap } from 'lucide-react';export default function Partners() {
