@@ -39,16 +39,48 @@ const Navigation: React.FC = () => {
                 <div
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
-                  className="absolute left-0 mt-2 w-64 glass-effect z-50"
+                  className="absolute left-0 mt-2 w-96 glass-effect z-50"
                 >
                   <div className="py-2">
-                    <Link to="/services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">All Services</Link>
+                    <div className="px-4 py-2 text-xs font-semibold text-cyan-400 uppercase tracking-wider border-b border-cyan-500/20">AI & Machine Learning</div>
                     <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">AI Services</Link>
+                    <Link to="/ai-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">AI Solutions</Link>
+                    <Link to="/ai-content-generator" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">AI Content Generator</Link>
+                    <Link to="/data-analytics" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Data Analytics</Link>
+                    
+                    <div className="px-4 py-2 text-xs font-semibold text-cyan-400 uppercase tracking-wider border-b border-cyan-500/20 mt-2">IT Services</div>
                     <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">IT Services</Link>
-                    <Link to="/micro-saas-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Micro SAAS Solutions</Link>
+                    <Link to="/web-development" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Web Development</Link>
+                    <Link to="/mobile-development" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Mobile Development</Link>
+                    <Link to="/database-management" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Database Management</Link>
+                    <Link to="/network-infrastructure" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Network Infrastructure</Link>
+                    
+                    <div className="px-4 py-2 text-xs font-semibold text-cyan-400 uppercase tracking-wider border-b border-cyan-500/20 mt-2">Infrastructure</div>
                     <Link to="/cloud-infrastructure" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Cloud Infrastructure</Link>
                     <Link to="/5g-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">5G Solutions</Link>
+                    
+                    <div className="px-4 py-2 text-xs font-semibold text-cyan-400 uppercase tracking-wider border-b border-cyan-500/20 mt-2">Business Solutions</div>
                     <Link to="/digital-transformation" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Digital Transformation</Link>
+                    <Link to="/micro-saas-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Micro SaaS Solutions</Link>
+                    
+                    <div className="px-4 py-2 text-xs font-semibold text-cyan-400 uppercase tracking-wider border-b border-cyan-500/20 mt-2">AI Tools</div>
+                    <Link to="/zion-ai-content-moderator" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">AI Content Moderator</Link>
+                    <Link to="/zion-ai-customer-churn-predictor" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Customer Churn Predictor</Link>
+                    <Link to="/zion-ai-customer-churn-predictor-pro" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Customer Churn Predictor Pro</Link>
+                    <Link to="/zion-ai-customer-sentiment-tracker" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Customer Sentiment Tracker</Link>
+                    <Link to="/zion-ai-customer-support-pro" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Customer Support Pro</Link>
+                    <Link to="/zion-ai-document-analyzer" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Document Analyzer</Link>
+                    <Link to="/zion-ai-email-marketing-pro" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Email Marketing Pro</Link>
+                    <Link to="/zion-ai-financial-forecaster" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Financial Forecaster</Link>
+                    <Link to="/zion-ai-inventory-optimizer-pro" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Inventory Optimizer Pro</Link>
+                    <Link to="/zion-ai-meeting-transcriber" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Meeting Transcriber</Link>
+                    <Link to="/zion-ai-sales-predictor" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Sales Predictor</Link>
+                    <Link to="/zion-ai-social-scheduler-pro" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Social Scheduler Pro</Link>
+                    <Link to="/zion-ai-task-scheduler" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Task Scheduler</Link>
+                    <Link to="/zion-ai-workflow-automator" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Workflow Automator</Link>
+                    <Link to="/zion-ai-workflow-automator-pro" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Workflow Automator Pro</Link>
+                    <Link to="/zion-customer-satisfaction-monitor" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Customer Satisfaction Monitor</Link>
+                    <Link to="/zion-smart-expense-tracker" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors">Smart Expense Tracker</Link>
                   </div>
                 </div>
               )}
@@ -93,6 +125,7 @@ const Navigation: React.FC = () => {
             <Link to="/about" className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">
               About
             </Link>
+<<<<<<< HEAD
             <div className="px-3 py-2">
               <div className="text-gray-300 text-base font-medium mb-2">Services</div>
               <div className="ml-4 space-y-1">
@@ -104,6 +137,108 @@ const Navigation: React.FC = () => {
                 <Link to="/5g-solutions" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">5G Solutions</Link>
                 <Link to="/digital-transformation" className="text-gray-400 hover:text-cyan-400 block px-3 py-1 rounded-md text-sm transition-colors">Digital Transformation</Link>
               </div>
+=======
+            <div className="space-y-1">
+              <div className="text-gray-700 px-3 py-2 text-base font-medium">AI & Machine Learning</div>
+              <Link to="/ai-services" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Services
+              </Link>
+              <Link to="/ai-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Solutions
+              </Link>
+              <Link to="/ai-content-generator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Content Generator
+              </Link>
+              <Link to="/data-analytics" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Data Analytics
+              </Link>
+              
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">IT Services</div>
+              <Link to="/it-services" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                IT Services
+              </Link>
+              <Link to="/web-development" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Web Development
+              </Link>
+              <Link to="/mobile-development" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Mobile Development
+              </Link>
+              <Link to="/database-management" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Database Management
+              </Link>
+              <Link to="/network-infrastructure" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Network Infrastructure
+              </Link>
+              
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Infrastructure</div>
+              <Link to="/cloud-infrastructure" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Cloud Infrastructure
+              </Link>
+              <Link to="/5g-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                5G Solutions
+              </Link>
+              
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Business Solutions</div>
+              <Link to="/digital-transformation" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Digital Transformation
+              </Link>
+              <Link to="/micro-saas-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Micro SaaS Solutions
+              </Link>
+              
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">AI Tools</div>
+              <Link to="/zion-ai-content-moderator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Content Moderator
+              </Link>
+              <Link to="/zion-ai-customer-churn-predictor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Customer Churn Predictor
+              </Link>
+              <Link to="/zion-ai-customer-churn-predictor-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Customer Churn Predictor Pro
+              </Link>
+              <Link to="/zion-ai-customer-sentiment-tracker" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Customer Sentiment Tracker
+              </Link>
+              <Link to="/zion-ai-customer-support-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Customer Support Pro
+              </Link>
+              <Link to="/zion-ai-document-analyzer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Document Analyzer
+              </Link>
+              <Link to="/zion-ai-email-marketing-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Email Marketing Pro
+              </Link>
+              <Link to="/zion-ai-financial-forecaster" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Financial Forecaster
+              </Link>
+              <Link to="/zion-ai-inventory-optimizer-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Inventory Optimizer Pro
+              </Link>
+              <Link to="/zion-ai-meeting-transcriber" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Meeting Transcriber
+              </Link>
+              <Link to="/zion-ai-sales-predictor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Sales Predictor
+              </Link>
+              <Link to="/zion-ai-social-scheduler-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Social Scheduler Pro
+              </Link>
+              <Link to="/zion-ai-task-scheduler" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Task Scheduler
+              </Link>
+              <Link to="/zion-ai-workflow-automator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Workflow Automator
+              </Link>
+              <Link to="/zion-ai-workflow-automator-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Workflow Automator Pro
+              </Link>
+              <Link to="/zion-customer-satisfaction-monitor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Customer Satisfaction Monitor
+              </Link>
+              <Link to="/zion-smart-expense-tracker" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Smart Expense Tracker
+              </Link>
+>>>>>>> cursor/comprehensive-app-audit-and-update-1ae3
             </div>
             <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors">
               Pricing

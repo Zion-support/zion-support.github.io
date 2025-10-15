@@ -68,6 +68,7 @@ const HomePage: React.FC = () => {
               We provide cutting-edge AI and IT solutions to help your business thrive in the digital age. 
               Transform your operations with our innovative micro SAAS services and advanced technology solutions.
             </p>
+<<<<<<< HEAD
             
             {/* Contact Information */}
             <div className="mb-12 p-6 glass-effect rounded-2xl max-w-2xl mx-auto">
@@ -91,6 +92,40 @@ const HomePage: React.FC = () => {
               <a href="/contact" className="px-8 py-3 border-2 border-cyan-500 text-cyan-400 rounded-full font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 hover:scale-105">
                 Get Quote
               </a>
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <a href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Get Started
+              </a>
+              <a href="/about" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+                Learn More
+              </a>
+            </div>
+            
+            {/* Featured Services */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Services</h3>
+                <p className="text-gray-600 mb-4">
+                  Advanced artificial intelligence solutions including machine learning, NLP, and computer vision.
+                </p>
+                <a href="/ai-services" className="text-blue-600 hover:text-blue-800">Explore AI Services →</a>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Infrastructure</h3>
+                <p className="text-gray-600 mb-4">
+                  Scalable cloud solutions that provide reliability, security, and performance for your business.
+                </p>
+                <a href="/cloud-infrastructure" className="text-blue-600 hover:text-blue-800">Explore Cloud Solutions →</a>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
+                <p className="text-gray-600 mb-4">
+                  Complete digital transformation services to modernize your business processes and systems.
+                </p>
+                <a href="/digital-transformation" className="text-blue-600 hover:text-blue-800">Learn More →</a>
+              </div>
+>>>>>>> cursor/comprehensive-app-audit-and-update-1ae3
             </div>
           </div>
         </div>
