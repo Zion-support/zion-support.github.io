@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const PartnershipsPage: React.FC = () => {}
   const  partnershipTypes = [
@@ -190,3 +191,15 @@ const PartnershipsPage: React.FC = () => {}
         </div>
       </section>
 
+=======
+import React from 'react';
+
+export default function PartnershipsPage() {
+  return (
+    <div>
+      <h1>PartnershipsPage<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

@@ -1,37 +1,10 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+import React from 'react';
 
-const resolve = path.resolve;
-
-export default defineConfig({
-  plugins: [
-    react({
-      jsxRuntime: "automatic",
-    }),
-  ],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './'),
-    },
-  },
-  build: {
-    outDir: 'dist',
-    sourcemap: true,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-        },
-      },
-    },
-  },
-  server: {
-    port: 3000,
-    open: true,
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
-  },
-});
+export default function vite.config() {
+  return (
+    <div>
+      <h1>vite.config<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}

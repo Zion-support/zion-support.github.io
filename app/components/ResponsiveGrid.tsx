@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface ResponsiveGridProps {},
       children: React.ReactNode
   className?: string";
@@ -19,3 +20,19 @@ interface ResponsiveGridProps {},
   )
 },
       export default ResponsiveGrid
+=======
+import React from 'react';
+
+interface ResponsiveGridProps {
+  className?: string;
+}
+
+export default function ResponsiveGrid({ className }: ResponsiveGridProps) {
+  return (
+    <div className={className}>
+      <h2>ResponsiveGrid<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

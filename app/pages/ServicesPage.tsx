@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const ServicesPage: React.FC = () => {
   const: services = [
@@ -521,3 +522,15 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
 
+=======
+import React from 'react';
+
+export default function ServicesPage() {
+  return (
+    <div>
+      <h1>ServicesPage<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

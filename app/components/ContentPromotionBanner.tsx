@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 interface ContentPromotionBannerProps {},
       title?: string;
@@ -18,8 +19,15 @@ variant?: "primary" | "secondary" | "success"""
         return "bg-gradient-to-r from-green-500 to-emerald-600"""
       default:
         return "bg-gradient-to-r from-cyan-500 to-purple-600"""
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae
 
+interface ContentPromotionBannerProps {
+  className?: string;
+}
 
+<<<<<<< HEAD
   const  getIcon = () => {}
 }switch (variant) {},
       case "primary":""
@@ -54,3 +62,13 @@ variant?: "primary" | "secondary" | "success"""
 
 
 
+=======
+export default function ContentPromotionBanner({ className }: ContentPromotionBannerProps) {
+  return (
+    <div className={className}>
+      <h2>ContentPromotionBanner<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

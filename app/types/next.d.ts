@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
@@ -9,3 +10,11 @@ declare global {
 }
 
 export {};
+=======
+/// Comment
+
+export interface next.d {
+  id: string;
+  name: string;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

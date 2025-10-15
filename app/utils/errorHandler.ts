@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ErrorReport, ErrorContext, ErrorSeverity } from '../types/app.types';
 
 class ErrorHandler {
@@ -79,3 +80,11 @@ class ErrorHandler {
 }
 
 export const errorHandler = new ErrorHandler();
+=======
+/// Comment
+
+export function errorHandler() {
+  /// Comment
+  return null;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

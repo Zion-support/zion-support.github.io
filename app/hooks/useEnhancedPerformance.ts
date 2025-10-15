@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 
 export const useEnhancedPerformance = () => {
@@ -14,3 +15,16 @@ export const useEnhancedPerformance = () => {
 };
 
 export default useEnhancedPerformance;
+=======
+import { useState, useEffect } from 'react';
+
+export function useEnhancedPerformance() {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    /// Comment
+  }, []);
+  
+  return { state, setState };
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

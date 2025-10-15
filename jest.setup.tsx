@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -85,3 +86,15 @@ console.error = (...args: any[]) => {
   }
   originalError.call(console, ...args);
 };
+=======
+import React from 'react';
+
+export default function jest.setup() {
+  return (
+    <div>
+      <h1>jest.setup<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

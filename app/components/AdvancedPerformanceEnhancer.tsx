@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   enableImageOptimization?: boolean;
   enablePreloading?: boolean;
   enableCaching?: boolean;
@@ -68,3 +69,19 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps>  =  ({)};
 ;"
 
 export default ComponentsPage;'";'";"
+=======
+import React from 'react';
+
+interface AdvancedPerformanceEnhancerProps {
+  className?: string;
+}
+
+export default function AdvancedPerformanceEnhancer({ className }: AdvancedPerformanceEnhancerProps) {
+  return (
+    <div className={className}>
+      <h2>AdvancedPerformanceEnhancer<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

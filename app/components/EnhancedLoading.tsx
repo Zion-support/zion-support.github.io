@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface EnhancedLoadingProps {},
       message?: string;
 showProgress?: boolean;
@@ -60,3 +61,19 @@ progress?: number
 ;"
 
 export default ComponentsPage;'";'";"
+=======
+import React from 'react';
+
+interface EnhancedLoadingProps {
+  className?: string;
+}
+
+export default function EnhancedLoading({ className }: EnhancedLoadingProps) {
+  return (
+    <div className={className}>
+      <h2>EnhancedLoading<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const PortfolioPage: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState('all');""
@@ -310,3 +311,15 @@ const PortfolioPage: React.FC = () => {}
         </div>
       </section>
 
+=======
+import React from 'react';
+
+export default function PortfolioPage() {
+  return (
+    <div>
+      <h1>PortfolioPage<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   return ()
     <div  className ="min-h-screen bg-white">;""
       <Helmet>
@@ -80,3 +81,19 @@ import SEOHead from './components/SEOHead";"'
 ;"
 
 export default ComponentsPage;'";'";"
+=======
+import React from 'react';
+
+interface FuturisticCardEnhancedProps {
+  className?: string;
+}
+
+export default function FuturisticCardEnhanced({ className }: FuturisticCardEnhancedProps) {
+  return (
+    <div className={className}>
+      <h2>FuturisticCardEnhanced<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

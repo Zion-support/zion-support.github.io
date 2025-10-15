@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   return ()
     <div  className ="min-h-screen bg-white">;""
       <Helmet>
@@ -80,3 +81,19 @@ import SEOHead from './components/SEOHead";"'
 ;"
 
 export default ComponentsPage;'";'";"
+=======
+import React from 'react';
+
+interface FuturisticTextEnhancedProps {
+  className?: string;
+}
+
+export default function FuturisticTextEnhanced({ className }: FuturisticTextEnhancedProps) {
+  return (
+    <div className={className}>
+      <h2>FuturisticTextEnhanced<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

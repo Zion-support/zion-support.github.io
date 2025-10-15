@@ -1,4 +1,6 @@
+import React from 'react';
 
+<<<<<<< HEAD
 const SolutionsPage: React.FC = () => {}
   const  industrySolutions = [
     {}
@@ -441,3 +443,13 @@ const SolutionsPage: React.FC = () => {}
         </div>
       </section>
 
+=======
+export default function SolutionsPage() {
+  return (
+    <div>
+      <h1>SolutionsPage<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface Props {},
       children: ReactNode;
 fallback?: ReactNode
@@ -49,3 +50,19 @@ try {,
     },";"
 
 import SEOHead from './components/SEOHead";"'
+=======
+import React from 'react';
+
+interface ErrorHandlerProps {
+  className?: string;
+}
+
+export default function ErrorHandler({ className }: ErrorHandlerProps) {
+  return (
+    <div className={className}>
+      <h2>ErrorHandler<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

@@ -1,4 +1,6 @@
+import React from 'react';
 
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function NotFoundPage() {
@@ -24,3 +26,13 @@ export default function NotFoundPage() {
   );
 }
 
+=======
+export default function NotFound404() {
+  return (
+    <div>
+      <h1>404 - Page Not Found</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

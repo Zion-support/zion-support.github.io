@@ -1,3 +1,4 @@
+<<<<<<< HEAD
       interface EnhancedSEOOptimizerProps {},
       title?: string,
       description?: string,
@@ -319,3 +320,19 @@ if (typeof window !== 'undefined' && window.gtag) {},""
 ;"
 
 export default ComponentsPage;'";'";"
+=======
+import React from 'react';
+
+interface EnhancedSEOOptimizerProps {
+  className?: string;
+}
+
+export default function EnhancedSEOOptimizer({ className }: EnhancedSEOOptimizerProps) {
+  return (
+    <div className={className}>
+      <h2>EnhancedSEOOptimizer<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

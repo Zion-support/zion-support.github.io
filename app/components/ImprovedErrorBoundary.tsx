@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const ImprovedErrorBoundary: React.FC = () => {}
   return ()
     <div  className ="min-h-screen bg-white">;""
@@ -72,3 +73,19 @@ solutions tailored to your specific needs and requirements.
         </div>;
       </section>;";"
 import SEOHead from './components/SEOHead";"'
+=======
+import React from 'react';
+
+interface ImprovedErrorBoundaryProps {
+  className?: string;
+}
+
+export default function ImprovedErrorBoundary({ className }: ImprovedErrorBoundaryProps) {
+  return (
+    <div className={className}>
+      <h2>ImprovedErrorBoundary<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

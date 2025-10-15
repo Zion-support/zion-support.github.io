@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import SEOHead from '../components/SEOHead'
 ;
@@ -307,3 +308,15 @@ const BlogPage: React.FC = () => {}
 
 
 
+=======
+import React from 'react';
+
+export default function BlogPage() {
+  return (
+    <div>
+      <h1>BlogPage<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

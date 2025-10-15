@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const HelpPage: React.FC = () => {}
   const [searchTerm, setSearchTerm] = useState('');""
@@ -409,3 +410,15 @@ to succeed with our AI and IT solutions.
         </div>
       </section>
 
+=======
+import React from 'react';
+
+export default function HelpPage() {
+  return (
+    <div>
+      <h1>HelpPage<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -248,3 +249,19 @@
 
 
 
+=======
+import React from 'react';
+
+interface EnhancedNavigationProps {
+  className?: string;
+}
+
+export default function EnhancedNavigation({ className }: EnhancedNavigationProps) {
+  return (
+    <div className={className}>
+      <h2>EnhancedNavigation<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

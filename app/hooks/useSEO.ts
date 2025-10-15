@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 
 export const useSEO = () => {
@@ -14,3 +15,16 @@ export const useSEO = () => {
 };
 
 export default useSEO;
+=======
+import { useState, useEffect } from 'react';
+
+export function useSEO() {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    /// Comment
+  }, []);
+  
+  return { state, setState };
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 interface CacheStats {},
       hits: number,
@@ -37,3 +38,19 @@ if ((window as any).gc) {};
     // Image lazy loading with intersection observer
 
 
+=======
+import React from 'react';
+
+interface CacheManagerProps {
+  className?: string;
+}
+
+export default function CacheManager({ className }: CacheManagerProps) {
+  return (
+    <div className={className}>
+      <h2>CacheManager<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
         </div>"
         <h2 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h2>
         <p className="text-gray-300 mb-6">{error}</p>
@@ -145,3 +146,19 @@ export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
 };"
 '";'";"
 export default LoadingPage;"'"'`;"
+=======
+import React from 'react';
+
+interface LoadingStatesProps {
+  className?: string;
+}
+
+export default function LoadingStates({ className }: LoadingStatesProps) {
+  return (
+    <div className={className}>
+      <h2>LoadingStates<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

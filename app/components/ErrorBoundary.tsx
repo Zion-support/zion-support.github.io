@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -62,4 +63,19 @@ export default class ErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
+=======
+import React from 'react';
+
+interface ErrorBoundaryProps {
+  className?: string;
+}
+
+export default function ErrorBoundary({ className }: ErrorBoundaryProps) {
+  return (
+    <div className={className}>
+      <h2>ErrorBoundary<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae
 }

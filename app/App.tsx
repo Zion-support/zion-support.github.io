@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -61,3 +62,15 @@ function App() {
 }
 
 export default App;
+=======
+import React from 'react';
+
+export default function App() {
+  return (
+    <div>
+      <h1>App<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

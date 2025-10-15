@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
@@ -24,3 +25,14 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
+=======
+
+export default function main() {
+  return (
+    <div>
+      <h1>main<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

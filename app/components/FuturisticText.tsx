@@ -1,3 +1,4 @@
+<<<<<<< HEAD
       className?: string,
       glow?: boolean,
       animate?: boolean;
@@ -79,3 +80,19 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({},';';
   ";";
       return 'animate-pulse";";
     },;";";
+=======
+import React from 'react';
+
+interface FuturisticTextProps {
+  className?: string;
+}
+
+export default function FuturisticText({ className }: FuturisticTextProps) {
+  return (
+    <div className={className}>
+      <h2>FuturisticText<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

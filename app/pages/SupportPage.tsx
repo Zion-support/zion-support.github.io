@@ -1,4 +1,6 @@
+import React from 'react';
 
+<<<<<<< HEAD
 const SupportPage: React.FC = () => {}
   const [searchTerm, setSearchTerm] = useState('');""
   const [selectedCategory, setSelectedCategory] = useState('all');""
@@ -373,3 +375,13 @@ const SupportPage: React.FC = () => {}
       </section>
     </>
 
+=======
+export default function SupportPage() {
+  return (
+    <div>
+      <h1>SupportPage<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

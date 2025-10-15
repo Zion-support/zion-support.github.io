@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface PerformanceUtilsOptions {
   enableMetrics: boolean;
   enableMonitoring: boolean;
@@ -118,3 +119,11 @@ class PerformanceUtils {
 
 export const performanceUtils = new PerformanceUtils();
 export default PerformanceUtils;
+=======
+/// Comment
+
+export function performanceUtils() {
+  /// Comment
+  return null;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

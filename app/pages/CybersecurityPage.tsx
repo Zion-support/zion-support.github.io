@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const CybersecurityPage: React.FC = () => {}
   return ()
@@ -14,3 +15,15 @@ const CybersecurityPage: React.FC = () => {}
 }
 
 
+=======
+import React from 'react';
+
+export default function CybersecurityPage() {
+  return (
+    <div>
+      <h1>CybersecurityPage<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

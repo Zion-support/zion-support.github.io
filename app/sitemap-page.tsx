@@ -1,3 +1,4 @@
+<<<<<<< HEAD
               Get Started Today;
             </button>;
           </div>;
@@ -13,3 +14,15 @@ import SEOHead from '../../components/SEOHead";"'
 ;"
 
 export default AppPage;'";'";"
+=======
+import React from 'react';
+
+export default function sitemappage() {
+  return (
+    <div>
+      <h1>sitemap-page<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

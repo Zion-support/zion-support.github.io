@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const AISolutionsPage: React.FC = () => {}
   return ()
@@ -10,3 +11,15 @@ const AISolutionsPage: React.FC = () => {}
     </>,
   ),
 
+=======
+import React from 'react';
+
+export default function AISolutionsPage() {
+  return (
+    <div>
+      <h1>AISolutionsPage<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

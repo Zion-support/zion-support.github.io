@@ -1,3 +1,4 @@
+<<<<<<< HEAD
               Get Started Today;
             </button>;
           </div>;
@@ -13,3 +14,11 @@ import SEOHead from './components/SEOHead";"'
 ;"
 
 export default UtilsPage;'";'";"
+=======
+/// Comment
+
+export function navigation() {
+  /// Comment
+  return null;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

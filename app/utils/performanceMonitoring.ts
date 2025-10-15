@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // performanceMonitoring
 export const performanceMonitoring = {
   // Utility functions will be implemented here
@@ -7,3 +8,11 @@ export const performanceMonitoring = {
 };
 
 export default performanceMonitoring;
+=======
+/// Comment
+
+export function performanceMonitoring() {
+  /// Comment
+  return null;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

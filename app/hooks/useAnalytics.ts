@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Analytics hook for tracking events and page views
 
 interface AnalyticsEvent {
@@ -40,3 +41,16 @@ export const useAnalytics = () => {
 };
 
 export default useAnalytics;
+=======
+import { useState, useEffect } from 'react';
+
+export function useAnalytics() {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    /// Comment
+  }, []);
+  
+  return { state, setState };
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -77,4 +78,19 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
+=======
+import React from 'react';
+
+interface GlobalErrorBoundaryProps {
+  className?: string;
+}
+
+export default function GlobalErrorBoundary({ className }: GlobalErrorBoundaryProps) {
+  return (
+    <div className={className}>
+      <h2>GlobalErrorBoundary<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae
 }

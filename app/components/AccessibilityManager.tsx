@@ -1,3 +1,4 @@
+<<<<<<< HEAD
       interface AccessibilitySettings {}
 
   highContrast: boolean,
@@ -17,10 +18,15 @@
     const  savedSettings = localStorage.getItem('accessibility-settings'),"
       if (savedSettings) {}
       try {}
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae
 
-        setSettings(JSON.parse(savedSettings))
-      } catch (error) {}
+interface AccessibilityManagerProps {
+  className?: string;
+}
 
+<<<<<<< HEAD
       }
     }
   }, [])
@@ -178,3 +184,13 @@ if (newSettings.keyboardNavigation) {}
   )";
     },";";
 export default AccessibilityManager;"
+=======
+export default function AccessibilityManager({ className }: AccessibilityManagerProps) {
+  return (
+    <div className={className}>
+      <h2>AccessibilityManager<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

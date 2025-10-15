@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 interface EnhancedSEOProps {};
   title: string;
@@ -26,3 +27,19 @@ interface EnhancedSEOProps {};
 
 
 
+=======
+import React from 'react';
+
+interface EnhancedSEOProps {
+  className?: string;
+}
+
+export default function EnhancedSEO({ className }: EnhancedSEOProps) {
+  return (
+    <div className={className}>
+      <h2>EnhancedSEO<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

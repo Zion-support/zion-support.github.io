@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface FuturisticServiceCardProps {},
       title: string,
   description: string
@@ -185,3 +186,19 @@ cutting-edge technology
 ;"
 
 export default ComponentsPage;'";'";"
+=======
+import React from 'react';
+
+interface FuturisticServiceCardProps {
+  className?: string;
+}
+
+export default function FuturisticServiceCard({ className }: FuturisticServiceCardProps) {
+  return (
+    <div className={className}>
+      <h2>FuturisticServiceCard<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

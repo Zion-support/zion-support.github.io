@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function ComponentsPage() {}
   // Function body
 
@@ -34,3 +35,19 @@ export default function ComponentsPage() {}
 ;"
 
 export default ComponentsPage;'";'";"
+=======
+import React from 'react';
+
+interface ServiceCardSkeletonProps {
+  className?: string;
+}
+
+export default function ServiceCardSkeleton({ className }: ServiceCardSkeletonProps) {
+  return (
+    <div className={className}>
+      <h2>ServiceCardSkeleton<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

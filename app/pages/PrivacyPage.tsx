@@ -1,4 +1,6 @@
+import React from 'react';
 
+<<<<<<< HEAD
 
 
 
@@ -270,3 +272,13 @@ const PrivacyPage: React.FC = () => {}
 
 
 
+=======
+export default function PrivacyPage() {
+  return (
+    <div>
+      <h1>PrivacyPage<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

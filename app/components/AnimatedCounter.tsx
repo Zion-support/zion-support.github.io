@@ -1,4 +1,6 @@
+import React from 'react';
 
+<<<<<<< HEAD
   const [count, setCount] = useState(0);
   useEffect(() => {};
     let startTime: number;
@@ -24,3 +26,17 @@
     </span>
 
 
+=======
+interface AnimatedCounterProps {
+  className?: string;
+}
+
+export default function AnimatedCounter({ className }: AnimatedCounterProps) {
+  return (
+    <div className={className}>
+      <h2>AnimatedCounter<// Comment
+      <p>This component is under construction.<// Comment
+    <// Comment
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

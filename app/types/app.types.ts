@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Application Types
  * Core type definitions for the Zion Tech Group website
@@ -307,4 +308,11 @@ export interface PWAFeatures {
   pushNotifications: boolean;
   backgroundSync: boolean;
   periodicSync: boolean;
+=======
+/// Comment
+
+export interface app.types {
+  id: string;
+  name: string;
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae
 }

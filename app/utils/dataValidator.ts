@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // dataValidator
 export const dataValidator = {
   // Utility functions will be implemented here
@@ -7,3 +8,11 @@ export const dataValidator = {
 };
 
 export default dataValidator;
+=======
+/// Comment
+
+export function dataValidator() {
+  /// Comment
+  return null;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae

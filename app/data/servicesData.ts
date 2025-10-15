@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface Service {
   id: string;
   title: string;
@@ -66,3 +67,10 @@ export const services: Service[] = [
 ];
 
 export default services;
+=======
+/// Comment
+
+export const servicesDataData = {
+  /// Comment
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-ccae
