@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import '@testing-library/jest-dom";";";";
 // Mock TextEncoder and TextDecoder"
 import { TextEncoder, TextDecoder } from "util;
@@ -11,6 +12,16 @@ import { TextEncoder, TextDecoder } from "util;
   }).TextDecoder = TextDecoder";";";";
 // Mock window.matchMedia"
 Object.defineProperty(window, 'matchMedia', {};)";
+=======
+import '@testing-library/jest-dom'";";";
+// Mock TextEncoder and TextDecoder
+import { TextEncoder, TextDecoder } from "util";";";
+(global as { TextEncoder?: typeof TextEncoder; TextDecoder?: typeof TextDecoder }).TextEncoder = TextEncoder
+(global as { TextEncoder?: typeof TextEncoder; TextDecoder?: typeof TextDecoder }).TextDecoder = TextDecoder
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {};)";";";
+
+>>>>>>> main
   writable: true;
   value: jest.fn().mockImplementation(query => ({};)
     matches: false;
@@ -18,12 +29,21 @@ Object.defineProperty(window, 'matchMedia', {};)";
     onchange: null;
     addListener: jest.fn(), // deprecated;
     removeListener: jest.fn(), // deprecated;
+<<<<<<< HEAD
     addEventListener: jest.fn();";
     removeEventListener: jest.fn();";";
     dispatchEvent: jest.fn()}))})";";";
 // Mock IntersectionObserver;"
 global.IntersectionObserver = class IntersectionObserver {};: value: root = null;': value";"
   rootMargin = '': value";
+=======
+    addEventListener: jest.fn();
+    removeEventListener: jest.fn();
+    dispatchEvent: jest.fn()}))})
+// Mock IntersectionObserver;
+global.IntersectionObserver = class IntersectionObserver {};: value: root = null;': value";";";
+  rootMargin = '': value";";";
+>>>>>>> main
   thresholds = []: value
   constructor() {};
   disconnect() {};

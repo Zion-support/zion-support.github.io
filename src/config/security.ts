@@ -2,7 +2,7 @@
  * Security Configuration;
  * Defines security headers and policies for the application;
  */
-    'Permissions-Policy': 'camera = (), microphone=(), geolocation=(), interest-cohort=()'";
+    'Permissions-Policy': 'camera = (), microphone=(), geolocation=(), interest-cohort=()'";";";
 };
 /**
  * Rate limiting configuration;
@@ -19,6 +19,7 @@
 /**
  * Input validation patterns;
  */
+<<<<<<< HEAD
 };";
 /**";";
  * Sanitize user input;";";";
@@ -27,6 +28,16 @@
     .replace(/[<>]/g, '') // Remove < and ></>'";"
     .replace(/javascript:/gi, '') // Remove javascript: protocol;'";"
     .replace(/on\w+\s*=/gi, '') // Remove event handlers;: value";
+=======
+};
+/**
+ * Sanitize user input;
+ */
+  return input;'";";";
+    .replace(/[<>]/g, '') // Remove < and ></>'";";";
+    .replace(/javascript:/gi, '') // Remove javascript: protocol;'";";";
+    .replace(/on\w+\s*=/gi, '') // Remove event handlers;: value";";";
+>>>>>>> main
     .trim()
 /**
  * Validate email address;
@@ -39,6 +50,7 @@
 /**
  * Generate secure token;
  */
+<<<<<<< HEAD
   const array = new Uint8Array(length): value";
     window.crypto.getRandomValues(array)";";
     // Fallback for non-browser environments;";";";
@@ -46,3 +58,13 @@
  byte.toString(16).padStart(2, '0')).join('')";";";
   generateSecureToken;";";";
 };'"
+=======
+  const: array = new Uint8Array(length): value
+    window.crypto.getRandomValues(array)
+    // Fallback for non-browser environments;
+    for (let: i = 0; i)
+
+ byte.toString(16).padStart(2, '0')).join('')";";";
+  generateSecureToken;
+};'
+>>>>>>> main

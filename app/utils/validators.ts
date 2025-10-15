@@ -22,6 +22,11 @@ export const Validators = (options: ValidatorsOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default Validators;';';";";";";
 "
+=======
+;
+export default Validators;';';";";";
+>>>>>>> main

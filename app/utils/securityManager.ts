@@ -22,6 +22,11 @@ export const SecurityManager = (options: SecurityManagerOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default SecurityManager;';';";";";";
 "
+=======
+;
+export default SecurityManager;';';";";";
+>>>>>>> main

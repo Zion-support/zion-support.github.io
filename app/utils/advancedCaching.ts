@@ -22,6 +22,11 @@ export const AdvancedCaching = (options: AdvancedCachingOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default AdvancedCaching;';';";";";";
 "
+=======
+;
+export default AdvancedCaching;';';";";";
+>>>>>>> main

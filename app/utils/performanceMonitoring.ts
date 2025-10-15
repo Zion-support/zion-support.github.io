@@ -22,6 +22,11 @@ export const PerformanceMonitoring = (options: PerformanceMonitoringOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default PerformanceMonitoring;';';";";";";
 "
+=======
+;
+export default PerformanceMonitoring;';';";";";
+>>>>>>> main

@@ -22,6 +22,11 @@ export const FormValidation = (options: FormValidationOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default FormValidation;';';";";";";
 "
+=======
+;
+export default FormValidation;';';";";";
+>>>>>>> main

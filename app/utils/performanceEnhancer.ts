@@ -22,6 +22,11 @@ export const PerformanceEnhancer = (options: PerformanceEnhancerOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default PerformanceEnhancer;';';";";";";
 "
+=======
+;
+export default PerformanceEnhancer;';';";";";
+>>>>>>> main

@@ -22,6 +22,11 @@ export const Logger = (options: LoggerOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default Logger;';';";";";";
 "
+=======
+;
+export default Logger;';';";";";
+>>>>>>> main

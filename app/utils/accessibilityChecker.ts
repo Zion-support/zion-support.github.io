@@ -22,6 +22,11 @@ export const AccessibilityChecker = (options: AccessibilityCheckerOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default AccessibilityChecker;';';";";";";
 "
+=======
+;
+export default AccessibilityChecker;';';";";";
+>>>>>>> main

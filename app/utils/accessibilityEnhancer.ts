@@ -22,6 +22,11 @@ export const AccessibilityEnhancer = (options: AccessibilityEnhancerOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default AccessibilityEnhancer;';';";";";";
 "
+=======
+;
+export default AccessibilityEnhancer;';';";";";
+>>>>>>> main

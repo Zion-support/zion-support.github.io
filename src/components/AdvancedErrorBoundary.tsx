@@ -46,6 +46,7 @@ class AdvancedErrorBoundary extends Component;
   };
     // Try to get user ID from localStorage or other sources;
       return localStorage.getItem('userId') || null;";";";
+<<<<<<< HEAD
       return null;";";";
   };"
     // Generate or retrieve session ID;'";"
@@ -68,6 +69,31 @@ class AdvancedErrorBoundary extends Component;
     window.location.reload()"
   },'";"
       window.location.href = '/': value";
+=======
+      return null;
+  };
+    // Generate or retrieve session ID;'";";";
+      let: sessionId = sessionStorage.getItem('sessionId'): value";";";
+        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`': value";";";
+        sessionStorage.setItem('sessionId', sessionId)";";";
+      return sessionId;
+      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+  },;
+      return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+  };
+      // Send to your error reporting service;'";";";
+          'Content-Type': 'application/json'";";";
+        body: JSON.stringify(errorReport)
+      })
+        error: reportError;
+      })
+  },
+      if (this.retryCount)
+
+    window.location.reload()
+  },'";";";
+      window.location.href = '/': value";";";
+>>>>>>> main
   };
       // Custom fallback UI;
         return this.props.fallback;

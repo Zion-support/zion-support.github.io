@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-10-15T13:05:42.354Z",
+=======
+  "timestamp": "2025-10-15T13:15:03.443Z",
+>>>>>>> main
   "optimizations": {
     "criticalCSS": true,
     "imageOptimization": true,

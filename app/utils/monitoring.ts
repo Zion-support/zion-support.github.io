@@ -22,6 +22,11 @@ export const Monitoring = (options: MonitoringOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default Monitoring;';';";";";";
 "
+=======
+;
+export default Monitoring;';';";";";
+>>>>>>> main

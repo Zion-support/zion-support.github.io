@@ -22,6 +22,11 @@ export const UseEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default UseEnhancedPerformance;';';";";";";
 "
+=======
+;
+export default UseEnhancedPerformance;';';";";";
+>>>>>>> main

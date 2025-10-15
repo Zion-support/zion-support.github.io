@@ -22,6 +22,11 @@ export const AdvancedAnalytics = (options: AdvancedAnalyticsOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default AdvancedAnalytics;';';";";";";
 "
+=======
+;
+export default AdvancedAnalytics;';';";";";
+>>>>>>> main

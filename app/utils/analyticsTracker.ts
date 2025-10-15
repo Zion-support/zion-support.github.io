@@ -22,6 +22,11 @@ export const AnalyticsTracker = (options: AnalyticsTrackerOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default AnalyticsTracker;';';";";";";
 "
+=======
+;
+export default AnalyticsTracker;';';";";";
+>>>>>>> main

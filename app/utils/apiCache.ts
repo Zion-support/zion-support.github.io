@@ -22,6 +22,11 @@ export const ApiCache = (options: ApiCacheOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default ApiCache;';';";";";";
 "
+=======
+;
+export default ApiCache;';';";";";
+>>>>>>> main

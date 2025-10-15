@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 require('@testing-library/jest-dom');";";";";
 // Mock window.matchMedia"
 Object.defineProperty(window, 'matchMedia', {)}";
+=======
+require('@testing-library/jest-dom');";";";
+
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {)}";";";
+
+>>>>>>> main
   writable: true,
   value: jest.fn().mockImplementation(query => ({)};
     matches: false,
@@ -19,6 +27,7 @@ global.IntersectionObserver = class IntersectionObserver {};
   unobserve() {};
 };
 // Mock ResizeObserver
+<<<<<<< HEAD
 global.ResizeObserver = class ResizeObserver {};
   constructor() {};
   disconnect() {};
@@ -27,6 +36,19 @@ global.ResizeObserver = class ResizeObserver {};
 };";";";
 // Mock performance"
 Object.defineProperty(window, 'performance', {)}";
+=======
+global.ResizeObserver = class ResizeObserver {}
+
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock performance
+Object.defineProperty(window, 'performance', {)}";";";
+
+>>>>>>> main
   writable: true,
   value: {};
     now: jest.fn(() => Date.now()),

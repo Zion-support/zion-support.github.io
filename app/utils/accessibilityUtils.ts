@@ -22,6 +22,11 @@ export const AccessibilityUtils = (options: AccessibilityUtilsOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default AccessibilityUtils;';';";";";";
 "
+=======
+;
+export default AccessibilityUtils;';';";";";
+>>>>>>> main

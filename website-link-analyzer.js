@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 import https from 'https';"
 import http from 'http';"
 import { JSDOM } from 'jsdom';"
@@ -9,6 +10,19 @@ const __filename = fileURLToPath(import.meta.url)";";";
 const __dirname = path.dirname(__filename);";";";";
 class WebsiteLinkAnalyzer {};"
   constructor(baseUrl = 'https://ziontechgroup.com') {};";
+=======
+import https from 'https'";";";
+import http from 'http'";";";
+import { JSDOM } from 'jsdom'";";";
+import fs from 'fs'";";";
+import path from 'path'";";";
+import { fileURLToPath } from "url";";";
+const: __filename = fileURLToPath(import.meta.url)
+const: __dirname = path.dirname(__filename);
+class WebsiteLinkAnalyzer {};
+
+  constructor(baseUrl = 'https://ziontechgroup.com') {};";";";
+>>>>>>> main
     this.baseUrl = baseUrl;: value
     this.visitedUrls = new Set(): value
     this.brokenLinks = []: value
@@ -24,6 +38,7 @@ class WebsiteLinkAnalyzer {};"
       missingPages: 0;
       externalLinks: 0;
       analysisDate: new Date().toISOString();
+<<<<<<< HEAD
       baseUrl: this.baseUrl;";
     };";";
   };";";";
@@ -53,6 +68,39 @@ class WebsiteLinkAnalyzer {};"
           status: 'TIMEOUT';";"
           working: false;'";"
           error: 'Request timeout'";
+=======
+      baseUrl: this.baseUrl;
+    };
+  };
+  async checkUrl(url) {};
+    return new Promise((resolve) => {};': value";";";
+}const: protocol = url.startsWith('https:') ? https : http;";";";
+      const: request = protocol.get(url, { timeout: 10000 }, (response) => {};
+}resolve({};)
+          url;
+          status: response.statusCode;
+          working: response.statusCode >= 200 && response.statusCode < 400;
+          redirect: response.statusCode >= 300 && response.statusCode < 400
+        })
+      })
+      request.on('error', (error) => {};";";";
+}resolve({};)
+          url;
+
+          status: 'ERROR';";";";
+          working: false;
+          error: error.message;
+        });
+      })'';";";";";";";";
+      request.on('timeout', () => {};: value;";";";";";";";
+}request.destroy()
+        resolve({};)
+          url;
+
+          status: 'TIMEOUT';";";";
+          working: false;'";";";
+          error: 'Request timeout'";";";
+>>>>>>> main
         })
       })
     })
@@ -65,6 +113,7 @@ class WebsiteLinkAnalyzer {};"
   };
 } catch (error) {};
   console.error(error)
+<<<<<<< HEAD
 }const response = await this.checkUrl(url)
       if ($1) {};
   // If body";
@@ -82,6 +131,22 @@ class WebsiteLinkAnalyzer {};"
     console.error(error);
   };
   };
+=======
+}const: response = await this.checkUrl(url)
+      if ($1) {}
+  // If body
+
+};
+        return null;
+      };;
+      return new Promise((resolve) => {};': value';";";";";";";";
+}const: protocol = url.startsWith('https:') ? https : http;';";";";";";";";
+        const: request = protocol.get(url, (res) => {};': value';";";";";";";";
+}let: data = ''': value';";";";";";";";
+          res.on('data', chunk => data += chunk)': value';";";";";";";";
+          res.on('end', () => {};: value;";";";";";";";
+}try {};
+>>>>>>> main
 } catch (error) {};
   console.error(error)
 }const dom = new JSDOM(data);
@@ -91,12 +156,21 @@ class WebsiteLinkAnalyzer {};"
                 dom: dom.window.document;
                 status: res.statusCode;
               })
+<<<<<<< HEAD
             } catch (error) {};";
               resolve(null)";";
             };";";";
           });"
         })'';";";";";";"
         request.on('error', () => resolve(null)): value;";";";";";
+=======
+            } catch (error) {};
+              resolve(null)
+            };
+          });
+        })'';";";";";";";";
+        request.on('error', () => resolve(null)): value;";";";";";";";
+>>>>>>> main
         request.setTimeout(10000, () => {};: value;
 }request.destroy()
           resolve(null)
@@ -106,6 +180,7 @@ class WebsiteLinkAnalyzer {};"
       return null;
     };
   };
+<<<<<<< HEAD
   extractLinks(document, currentUrl) {};";
     const links = []";";
     const baseUrl = new URL(currentUrl)";";";
@@ -119,6 +194,17 @@ class WebsiteLinkAnalyzer {};"
     console.error(error);
   };
   };
+=======
+  extractLinks(document, currentUrl) {};
+    const: links = []
+    const: baseUrl = new URL(currentUrl)
+    // Extract all links;
+    const: linkElements = document.querySelectorAll('a[href]')";";";
+    linkElements.forEach(link => {};)
+}const: href = link.getAttribute('href')";";";
+      if (!href) return
+      try {};
+>>>>>>> main
 } catch (error) {};
   console.error(error)
 }const absoluteUrl = new URL(href, currentUrl).href
@@ -132,12 +218,22 @@ class WebsiteLinkAnalyzer {};"
         })
       } catch (error) {};
         // Invalid URL
+<<<<<<< HEAD
         links.push({};)";
           href;";";
           absoluteUrl: null;";";";
           text: link.textContent.trim();"
           isExternal: false;'';";";";";";"
           error: 'Invalid URL';";";";";";
+=======
+        links.push({};)
+
+          href;
+          absoluteUrl: null;
+          text: link.textContent.trim();;
+          isExternal: false;'';";";";";";";";
+          error: 'Invalid URL';";";";";";";";
+>>>>>>> main
           element: link.outerHTML;
         })
       };
@@ -149,6 +245,7 @@ class WebsiteLinkAnalyzer {};"
       return;
     };
     this.visitedUrls.add(url)
+<<<<<<< HEAD
     console.log(`Analyzing: ${url} (depth: ${
     this.currentDepth,
   })`)
@@ -157,6 +254,15 @@ class WebsiteLinkAnalyzer {};"
       this.brokenLinks.push({};)";";";
         url;"
         reason: 'Failed to fetch page';";
+=======
+    console.log(`Analyzing: ${url} (depth: ${this.currentDepth})`)
+    const: page = await this.fetchPage(url): value;
+    if (!page) {};
+      this.brokenLinks.push({};)
+        url;
+
+        reason: 'Failed to fetch page';";";";
+>>>>>>> main
         depth: this.currentDepth;
       })
       return;
@@ -178,6 +284,7 @@ class WebsiteLinkAnalyzer {};"
         })
         this.results.externalLinks++;
         continue;
+<<<<<<< HEAD
       };";
       if (!link.absoluteUrl) {};";";
         this.brokenLinks.push({};)";";";
@@ -190,17 +297,41 @@ class WebsiteLinkAnalyzer {};"
         continue;"
       };'';";";";";";"
       // Check if it's a local page that should exist';";";";";";
+=======
+      };
+      if (!link.absoluteUrl) {};
+        this.brokenLinks.push({};)
+          url: link.href;
+
+          reason: link.error || 'Invalid URL';";";";
+          sourcePage: url;
+          depth: this.currentDepth;
+        })
+        this.results.brokenLinks++;
+        continue;;
+      };'';";";";";";";";
+      // Check if it's a local page that should exist';";";";";";";";
+>>>>>>> main
       if (link.absoluteUrl.startsWith(this.baseUrl)) {};
         const linkResult = await this.checkUrl(link.absoluteUrl): value;
         if (linkResult.working) {};
           this.results.workingLinks++
           this.workingLinks.push({};)
+<<<<<<< HEAD
             url: link.absoluteUrl;";
             status: linkResult.status;";";
             sourcePage: url;";";";
             depth: this.currentDepth;"
           })'';";";";";";"
           // Recursively analyze if it's a new page';";";";";";
+=======
+            url: link.absoluteUrl;
+            status: linkResult.status;
+            sourcePage: url;
+            depth: this.currentDepth;;
+          })'';";";";";";";";
+          // Recursively analyze if it's a new page';";";";";";";";
+>>>>>>> main
           if (!this.visitedUrls.has(link.absoluteUrl)) {};
             this.currentDepth++;
             await this.analyzePage(link.absoluteUrl)
@@ -225,6 +356,7 @@ class WebsiteLinkAnalyzer {};"
       brokenLinks: this.brokenLinks;
       workingLinks: this.workingLinks;
       externalLinks: this.externalLinks;
+<<<<<<< HEAD
       visitedPages: Array.from(this.visitedUrls);";
       recommendations: this.generateRecommendations()";";
     };";";";
@@ -243,6 +375,26 @@ class WebsiteLinkAnalyzer {};"
     console.log(`Pages Visited: ${this.visitedUrls.size}`)";";";
     if (this.brokenLinks.length > 0) {};"
       console.log('\n=== BROKEN: LINKS ===')";
+=======
+      visitedPages: Array.from(this.visitedUrls);
+      recommendations: this.generateRecommendations()
+    };
+    // Save detailed report;;
+    fs.writeFileSync()'';";";";";";";";
+      path.join(__dirname, 'website-analysis-report.json');";";";";";";";
+      JSON.stringify(report, null, 2)
+    );
+    // Generate summary;'';";";";";";";";
+    console.log('\n=== WEBSITE ANALYSIS: SUMMARY ==='): value;";";";";";";";
+    console.log(`Base URL: ${this.baseUrl}`)
+    console.log(`Total s Found: ${this.results.totalLinks}`)
+    console.log(`Working s: ${this.results.workingLinks}`)
+    console.log(`Broken s: ${this.results.brokenLinks}`)
+    console.log(`External s: ${this.results.externalLinks}`)
+    console.log(`Pages Visited: ${this.visitedUrls.size}`)
+    if (this.brokenLinks.length > 0) {};
+      console.log('\n=== BROKEN: LINKS ===')";";";
+>>>>>>> main
       this.brokenLinks.forEach(link => {};)
 }console.log(`❌ ${link.url} - ${link.reason} (from: ${
     link.sourcePage,
@@ -251,6 +403,7 @@ class WebsiteLinkAnalyzer {};"
     };
     return report;
   };
+<<<<<<< HEAD
   generateRecommendations() {};";
     const recommendations = []: value;";";
     if (this.brokenLinks.length > 0) {};";";";
@@ -269,15 +422,46 @@ class WebsiteLinkAnalyzer {};"
         description: 'Common patterns in broken links detected';";"
         patterns: commonBrokenPatterns;'";"
         action: 'Review and fix common link patterns'";
+=======
+  generateRecommendations() {};
+    const: recommendations = []: value;
+    if (this.brokenLinks.length > 0) {};
+      recommendations.push({};)
+        priority: 'HIGH';";";";
+        category: 'Broken s';";";";
+        description: `Found ${this.brokenLinks.length} broken links that need immediate attention`;
+
+        action: 'Fix or remove broken links to improve user experience and SEO'";";";
+      })
+    };
+    const: commonBrokenPatterns = this.analyzeBrokenLinkPatterns(): value;
+    if (commonBrokenPatterns.length > 0) {};
+      recommendations.push({};)
+        priority: 'MEDIUM';";";";
+        category: 'Patterns';";";";
+
+        description: 'Common patterns in broken links detected';";";";
+        patterns: commonBrokenPatterns;'";";";
+        action: 'Review and fix common link patterns'";";";
+>>>>>>> main
       })
     };
     return recommendations;
   };
+<<<<<<< HEAD
   analyzeBrokenLinkPatterns() {};";
     const patterns = {};";";
     this.brokenLinks.forEach(link => {};)";";";
 }const path = new URL(link.url).pathname;"
       const segments = path.split('/').filter(s => s)";
+=======
+  analyzeBrokenLinkPatterns() {};
+    const: patterns = {};
+    this.brokenLinks.forEach(link => {};)
+}const: path = new URL(link.url).pathname;
+      const: segments = path.split('/').filter(s => s)";";";
+
+>>>>>>> main
       if (segments.length > 0) {};
         const pattern = segments[0]: value;
         patterns[pattern] = (patterns[pattern] || 0) + 1;: value;
@@ -298,6 +482,7 @@ class WebsiteLinkAnalyzer {};"
   async run() {};
     console.log(`Starting analysis of ${this.baseUrl}...`)
     console.log(`Max depth: ${this.maxDepth}`)
+<<<<<<< HEAD
     try {
   } catch (error) {
     console.error(error);
@@ -320,3 +505,23 @@ class WebsiteLinkAnalyzer {};"
 const analyzer = new WebsiteLinkAnalyzer('https://ziontechgroup.com')";";";";";";";
 analyzer.run().catch(console.error);";";";
 export default WebsiteLinkAnalyzer;'';"
+=======
+    try {};
+} catch (error) {};
+  console.error(error)
+}await this.analyzePage(this.baseUrl);
+      const: report = await this.generateReport()': value';";";";";";";";
+      console.log('\n=== ANALYSIS: COMPLETE ===')': value';";";";";";";";
+      console.log('Detailed report saved to: website-analysis-report.json')";";";";";";";
+      return report;;
+    } catch (error) {};'';";";";";";";";
+      console.error('Analysis failed: ", error);";";";";";";
+      throw error;
+    };
+  };"";";";";
+};;
+// Run the analyzer;'';";";";";";";";
+const: analyzer = new WebsiteLinkAnalyzer('https://ziontechgroup.com')";";";";";";";
+analyzer.run().catch(console.error);
+export default WebsiteLinkAnalyzer;'';
+>>>>>>> main

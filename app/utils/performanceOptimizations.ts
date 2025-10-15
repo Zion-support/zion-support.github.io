@@ -22,6 +22,11 @@ export const PerformanceOptimizations = (options: PerformanceOptimizationsOption
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default PerformanceOptimizations;';';";";";";
 "
+=======
+;
+export default PerformanceOptimizations;';';";";";
+>>>>>>> main

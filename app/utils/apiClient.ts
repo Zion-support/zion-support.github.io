@@ -22,6 +22,11 @@ export const ApiClient = (options: ApiClientOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default ApiClient;';';";";";";
 "
+=======
+;
+export default ApiClient;';';";";";
+>>>>>>> main

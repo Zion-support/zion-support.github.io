@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';";";";
 
 interface fix-app-pagesProps {
@@ -7,6 +8,17 @@ interface fix-app-pagesProps {
 const fix-app-pages: React.FC<fix-app-pagesProps>  =  ({;";";";
     ;",";
   className = '',;";";";";";
+=======
+import React from 'react';;";";";";";";";
+;
+interface fix-app-pagesProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+;
+const fix-app-pages: React.FC<fix-app-pagesProps> = ({ ;
+  className = '',;";";";";";";";
+>>>>>>> main
   children;
   }) => {
   return (

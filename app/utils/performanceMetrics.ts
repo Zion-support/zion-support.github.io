@@ -22,6 +22,11 @@ export const PerformanceMetrics = (options: PerformanceMetricsOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default PerformanceMetrics;';';";";";";
 "
+=======
+;
+export default PerformanceMetrics;';';";";";
+>>>>>>> main

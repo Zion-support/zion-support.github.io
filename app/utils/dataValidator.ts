@@ -22,6 +22,11 @@ export const DataValidator = (options: DataValidatorOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default DataValidator;';';";";";";
 "
+=======
+;
+export default DataValidator;';';";";";
+>>>>>>> main

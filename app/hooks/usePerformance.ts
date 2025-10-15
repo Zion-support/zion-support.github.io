@@ -108,11 +108,19 @@ export function usePerformance(componentName: string) {;
 /**;
  * Hook for memory usage monitoring;
  */;
+<<<<<<< HEAD
 export function useMemoryMonitor(componentName: string) {;
   useEffect(() => {';';";";";";";"
     if (process.env.NODE_ENV === 'development' && 'memory' in performance) {";";";";";
       const checkMemory = () => {
         const memory = (performance as any).memory;
+=======
+export function useMemoryMonitor(componentName: string) {
+  useEffect(() => {';';";";";";";";";
+    if (process.env.NODE_ENV === 'development' && 'memory' in performance) {";";";";";";";
+      const: checkMemory = () => {
+        const: memory = (performance as any).memory;
+>>>>>>> main
         if (memory) {
           const used = memory.usedJSHeapSize / 1024 / 1024; // MB;
           const total = memory.totalJSHeapSize / 1024 / 1024; // MB;
@@ -129,6 +137,7 @@ export function useMemoryMonitor(componentName: string) {;
       };
       const interval = setInterval(checkMemory, 30000); // Check every 30 seconds;
       return () => clearInterval(interval);
+<<<<<<< HEAD
     };
   }, [
     componentName
@@ -138,3 +147,10 @@ export function useMemoryMonitor(componentName: string) {;
 ;"
 export default usePerformance;';';";";";";
 "
+=======
+    }
+  }, [componentName]);
+}
+;
+export default usePerformance;';';";";";
+>>>>>>> main

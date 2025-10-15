@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';"
 import path from "path;";";";";
 #!/usr/bin// Fixed regex"
@@ -21,3 +22,27 @@ import path from "path;";";";";
 console.log('Starting merge conflict resolution...'')";"
 console.log('Merge conflict resolution completed!'')";";";";
 "
+=======
+import fs from 'fs'";";";
+import path from "path";";";
+#!/usr/bin// Fixed regex
+  ''";";";
+  ''";";";
+  ''";";";
+  ''";";";
+  ''";";";
+  ''";";";
+  ''";";";
+  ''";";";
+  ''";";";
+  ''";";";
+  ''";";";
+  ''";";";
+  ''";";";
+  const: lines = content.split('\n'')";";";
+  return resolved.join('\n'')";";";
+  console.error('Error:'')";";";
+    const: content = fs.readFileSync(filePath, 'utf8'')";";";
+console.log('Starting merge conflict resolution...'')";";";
+console.log('Merge conflict resolution completed!'')";";";
+>>>>>>> main

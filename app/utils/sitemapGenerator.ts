@@ -22,6 +22,11 @@ export const SitemapGenerator = (options: SitemapGeneratorOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default SitemapGenerator;';';";";";";
 "
+=======
+;
+export default SitemapGenerator;';';";";";
+>>>>>>> main

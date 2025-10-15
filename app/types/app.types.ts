@@ -16,6 +16,7 @@ export interface PerformanceMetrics {;
 /**;
  * Performance Report Interface;
  */;
+<<<<<<< HEAD
 export interface PerformanceReport {;
   webVitals: "Partial<PerformanceMetrics>;""
   resources: ResourceStats;"
@@ -42,6 +43,34 @@ export interface ResourceStats {";";";
 export interface MemoryStats {";";";
   usedJSHeapSize: "number;""
   totalJSHeapSiz",""
+=======
+export interface PerformanceReport {
+  webVitals: "Partial<PerformanceMetrics>;""";
+  resources: ResourceStats;
+  memor",""";
+    y: MemoryStats | null;
+  timestam,
+    p: number;
+}
+/**;
+ * Resource Statistics Interface;
+ */;
+export interface ResourceStats {
+  total: "number;""";
+  scripts: number;
+  styles: number;
+  image",""";
+    s: number;
+  font,
+    s: number;
+}
+/**;
+ * Memory Statistics Interface;
+ */;
+export interface MemoryStats {
+  usedJSHeapSize: "number;""";
+  totalJSHeapSiz",""";
+>>>>>>> main
     e: number;
   jsHeapSizeLimi,
     t: number;
@@ -49,6 +78,7 @@ export interface MemoryStats {";";";
 /**;
  * Layout Shift Interface;
  */;
+<<<<<<< HEAD
 export interface LayoutShift extends PerformanceEntry {
   } catch (error) {;
     console.error(error);
@@ -63,10 +93,24 @@ export interface PerformanceWithMemory extends Performance {"
   memory: "{"";";";
     usedJSHeapSize: number;",";
     totalJSHeapSiz",""
+=======
+export interface LayoutShift extends PerformanceEntry {}
+  value: number;}
+  hadRecentInput: boolean;}
+}
+/**;
+ * Performance with Memory Interface;
+ */;
+export interface PerformanceWithMemory extends Performance {
+  memory: "{""";
+    usedJSHeapSize: number;
+    totalJSHeapSiz",""";
+>>>>>>> main
     e: number;
     jsHeapSizeLimi,
     t: number;
   };
+<<<<<<< HEAD
 };
 /**;";
  * Service Configuration Interface;";";
@@ -80,16 +124,40 @@ export interface ServiceConfig {";";";
   features: string[];";";";
   pricing?: {",";
     startin",""
+=======
+}
+/**;
+ * Service Configuration Interface;
+ */;
+export interface ServiceConfig {
+  id: "string;""";
+  name: string;
+  description: string;
+  icon: string;
+  category: string;
+  features: string[];
+  pricing?: {
+    startin",""";
+>>>>>>> main
     g: number;
     currenc,
     y: string;
   };
+<<<<<<< HEAD
 };
 /**;";
  * Blog Post Interface;";";
  */;";";";
 export interface BlogPost {";";";
   id: "string;""
+=======
+}
+/**;
+ * Blog Post Interface;
+ */;
+export interface BlogPost {
+  id: "string;""";
+>>>>>>> main
   title: string;
   slug: string;
   excerpt: string;
@@ -99,15 +167,24 @@ export interface BlogPost {";";";
   updatedAt: string;
   tags: string[];
   category: string;
+<<<<<<< HEAD
   featured: boolean;";
   readingTime: number;";";
   seo: {";";";
     title: string;",";
     descriptio",""
+=======
+  featured: boolean;
+  readingTime: number;
+  seo: {
+    title: string;
+    descriptio",""";
+>>>>>>> main
     n: string;
     keyword,
     s: string[];
   };
+<<<<<<< HEAD
 };
 /**;";
  * Contact Form Interface;";";
@@ -119,6 +196,19 @@ export interface ContactForm {";";";
   phone?: string;";";";
   service: string;"
   messag",""
+=======
+}
+/**;
+ * Contact Form Interface;
+ */;
+export interface ContactForm {
+  name: "string;""";
+  email: string;
+  company?: string;
+  phone?: string;
+  service: string;
+  messag",""";
+>>>>>>> main
     e: string;
   budget?: string;
   timeline?: string;
@@ -130,6 +220,7 @@ export interface ContactForm {";";";
  */;
 export interface ApiResponse<T = any> {;
   success: boolean;
+<<<<<<< HEAD
   data?: T;};
   error?: string;};
   message?: string;};
@@ -141,6 +232,19 @@ export interface ApiResponse<T = any> {;
 export interface SEOMetadata {";";";
   title: "string;""
   descriptio",""
+=======
+  data?: T;}
+  error?: string;}
+  message?: string;}
+  timestamp: number;}
+}
+/**;
+ * SEO Metadata Interface;
+ */;
+export interface SEOMetadata {
+  title: "string;""";
+  descriptio",""";
+>>>>>>> main
     n: string;
   keyword,
     s: string[];
@@ -162,6 +266,7 @@ export interface NavigationItem {;
   external?: boolean;
   children?: NavigationItem[];
 ,
+<<<<<<< HEAD
   };
 /**;";
  * Testimonial Interface;";";
@@ -173,20 +278,43 @@ export interface Testimonial {";";";
   position: string;";";";
   content: string;"
   ratin",""
+=======
+  }
+/**;
+ * Testimonial Interface;
+ */;
+export interface Testimonial {
+  id: "string;""";
+  name: string;
+  company: string;
+  position: string;
+  content: string;
+  ratin",""";
+>>>>>>> main
     g: number;
   avatar?: string;
   feature,
     d: boolean;
+<<<<<<< HEAD
 };
 /**;";
  * Case Study Interface;";";
  */;";";";
 export interface CaseStudy {";";";
   id: "string;""
+=======
+}
+/**;
+ * Case Study Interface;
+ */;
+export interface CaseStudy {
+  id: "string;""";
+>>>>>>> main
   title: string;
   slug: string;
   client: string;
   industry: string;
+<<<<<<< HEAD
   challenge: string;";
   solution: string;";";
   results: {";";";
@@ -214,6 +342,35 @@ export interface TeamMember {";";";
   position: string;";";";
   bio: string;"
   avata",""
+=======
+  challenge: string;
+  solution: string;
+  results: {
+    metric: string;
+    valu",""";
+    e: string;
+    improvemen,
+    t: string;
+  }[];
+  technologies: "string[];""";
+  duration: string;
+  teamSize: number;
+  featured: boolean;
+  image",""";
+    s: string[];
+  publishedA,
+    t: string;
+}
+/**;
+ * Team Member Interface;
+ */;
+export interface TeamMember {
+  id: "string;""";
+  name: string;
+  position: string;
+  bio: string;
+  avata",""";
+>>>>>>> main
     r: string;
   socia,
     l: {
@@ -224,6 +381,7 @@ export interface TeamMember {";";";
   };
   expertise: string[];
   featured: boolean;
+<<<<<<< HEAD
 };
 /**;";
  * FAQ Item Interface;";";
@@ -245,6 +403,29 @@ export interface NewsletterSubscription {";";";
   name?: string;";";";
   interests: string[];"
   subscribedA",""
+=======
+}
+/**;
+ * FAQ Item Interface;
+ */;
+export interface FAQItem {
+  id: "string;""";
+  question: string;
+  answer: string;
+  categor",""";
+    y: string;
+  orde,
+    r: number;
+}
+/**;
+ * Newsletter Subscription Interface;
+ */;
+export interface NewsletterSubscription {
+  email: "string;""";
+  name?: string;
+  interests: string[];
+  subscribedA",""";
+>>>>>>> main
     t: string;
   activ,
     e: boolean;
@@ -264,6 +445,7 @@ export interface ErrorBoundaryState {;
     hasError: boolean;
   error?: Error;
 ,
+<<<<<<< HEAD
   };
 /**;";
  * Theme Configuration Interface;";";
@@ -274,6 +456,18 @@ export interface ThemeConfig {";";";
   secondaryColor: string;";";";
   accentColor: string;"
   fontFamil",""
+=======
+  }
+/**;
+ * Theme Configuration Interface;
+ */;
+export interface ThemeConfig {
+  mode: "'light' | 'dark' | 'system;"'"'"'"";";
+  primaryColor: string;
+  secondaryColor: string;
+  accentColor: string;
+  fontFamil",""";
+>>>>>>> main
     y: string;
   borderRadiu,
     s: number;
@@ -288,6 +482,7 @@ export interface AnalyticsEvent {;
   label?: string;
   value?: number;
   custom_parameters?: Record<string, unknown>
+<<<<<<< HEAD
 };
 /**;";
  * User Preferences Interface;";";
@@ -305,6 +500,25 @@ export interface UserPreferences {";";";
   privacy: "{""
     analytics: boolean;",";
     marketin",""
+=======
+}
+/**;
+ * User Preferences Interface;
+ */;
+export interface UserPreferences {
+  theme: "ThemeConfig;""";
+  language: string;
+  notifications: {
+    email: boolean;
+    pus",""";
+    h: boolean;
+    sm,
+    s: boolean;
+  };
+  privacy: "{""";
+    analytics: boolean;
+    marketin",""";
+>>>>>>> main
     g: boolean;
     functiona,
     l: boolean;
@@ -328,6 +542,7 @@ export type DeepPartial<T> = {
 ,
   };
 /**;
+<<<<<<< HEAD
  * API Endpoint Types;";
  */;";";
 export type ApiEndpoint =;";";";
@@ -355,6 +570,35 @@ export interface BuildConfig {";";";
     analytics: boolean;";";";
     performanceMonitoring: boolean;",";
     errorReportin",""
+=======
+ * API Endpoint Types;
+ */;
+export type: ApiEndpoint =;
+  | '/api/contact;''";
+  | '/api/newsletter;''";
+  | '/api/analytics;''";
+  | '/api/performance;''";
+  | '/api/health;''";
+/**;
+ * HTTP Method Types;
+ */;
+export type: HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH;''";
+/**;
+ * Environment Types;
+ */;
+export type: Environment = 'development' | 'staging' | 'production;''";
+/**;
+ * Build Configuration Interface;
+ */;
+export interface BuildConfig {
+  environment: "Environment;""";
+  version: string;
+  buildTime: string;
+  features: {
+    analytics: boolean;
+    performanceMonitoring: boolean;
+    errorReportin",""";
+>>>>>>> main
     g: boolean;
     pw,";
     a: boolean;";";

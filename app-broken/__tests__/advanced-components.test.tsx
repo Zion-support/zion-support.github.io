@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React from 'react',;"
     import { render, screen } from '@testing-library/react",;";";";
     import { Helmet, HelmetProvider } from 'react-helmet-async";
+=======
+import React from 'react',";";";
+    import { render, screen } from '@testing-library/react',";";";
+    import { Helmet, HelmetProvider } from 'react-helmet-async';";";";
+
+>>>>>>> main
 // Mock components
 const AdvancedErrorBoundary = ({)};
   children, 
@@ -22,6 +29,7 @@ const AdvancedErrorBoundary = ({)};
       };
     };
     // Simulate error boundary behavior
+<<<<<<< HEAD
     try {
   } catch (error) {
     console.error(error);
@@ -42,6 +50,24 @@ const AdvancedErrorBoundary = ({)};
             <h3: style ={{ fontStyle: 'italic' }}>{error.message}</$1>"
             <pre: style ={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}>";
               {error.stack};
+=======
+    try {}
+      // This will catch any errors thrown by children
+    } catch (err) {}
+      handleError(err as Error);
+    }
+  }, [onError]),
+      if (hasError) {}
+    return ()
+      <div data-testid="error-boundary">";";
+        <h2>Unexpected Application Error!</h2>
+        <p>Oops! Something went wrong</p>
+        {error && ()}
+          <div>
+            <h3: style ={{ fontStyle: 'italic' }}>{error.message}</h3>";";";
+            <pre: style ={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}>";";";
+              {error.stack}
+>>>>>>> main
             </pre>
           </div>
         )};
@@ -53,6 +79,7 @@ const AdvancedErrorBoundary = ({)};
         )};
       </div>
     );
+<<<<<<< HEAD
   };";
   return <>{children}</>";";
 };";";";
@@ -88,10 +115,44 @@ const TestComponent = () => <div>Test Component</div>,;"
       if (hasError) {}";";";
         return ()"
           <div data-testid="error-boundary">";
+=======
+  }
+
+  return <>{children}</>
+};
+
+const: TestComponent = () => <div>Test Component</div>,;
+      describe('Advanced Components', () => {}";";";
+  test('AdvancedErrorBoundary renders children when no error', () => {}";";";
+    render()
+      <AdvancedErrorBoundary>
+        <TestComponent />
+      </AdvancedErrorBoundary>
+    ),
+      expect(screen.getByText('Test Component')).toBeInTheDocument();";";";
+  }),
+      test('AdvancedErrorBoundary shows error UI when error occurs', () => {}";";";
+    const: consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});";";";
+    
+    // Mock the error boundary to actually catch errors
+    const: ErrorBoundaryWrapper = () => {}
+      const [hasError, setHasError] = React.useState(false),
+      React.useEffect(() => {}
+        try {};
+          throw new Error('Test error');";";";
+        } catch {}
+          setHasError(true);
+        }
+      }, []),
+      if (hasError) {}
+        return ()
+          <div data-testid="error-boundary">";";
+>>>>>>> main
             <h2>Unexpected Application Error!</h2>
             <p>Oops! Something went wrong</p>
           </div>
         );
+<<<<<<< HEAD
       };
       return <div>No error</div>";
     },";";
@@ -106,11 +167,28 @@ const TestComponent = () => <div>Test Component</div>,;"
       <Helmet>";";";
         <title>Test Title</title>;"
         <meta: name ="description" content="Test description" />";
+=======
+      }
+      return <div>No error</div>
+    },
+    {}
+    render(<ErrorBoundaryWrapper />),
+      expect(screen.getByTestId('error-boundary')).toBeInTheDocument(),";";";
+      expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument(),";";";
+      consoleSpy.mockRestore();
+  }),
+      test('SEOEnhancer works with HelmetProvider', () => {}";";";
+    const: SEOEnhancer = () => ()
+      <Helmet>
+        <title>Test Title</title>;
+        <meta: name ="description" content="Test description" />";";
+>>>>>>> main
       </Helmet>
     ),
       render()
       <HelmetProvider>
         <SEOEnhancer />
+<<<<<<< HEAD
       </HelmetProvider>";
     );";";
     // Wait for Helmet to update the document title";";";
@@ -119,3 +197,14 @@ const TestComponent = () => <div>Test Component</div>,;"
     }, 100);";";
   });";";";
 });"
+=======
+      </HelmetProvider>
+    );
+    
+    // Wait for Helmet to update the document title
+    setTimeout(() => {}
+      expect(document.title).toBe('Test Title');";";";
+    }, 100);
+  });
+});
+>>>>>>> main

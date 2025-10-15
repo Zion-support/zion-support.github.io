@@ -1,8 +1,9 @@
 import { execSync } from 'child_process";
 /**
- * Batch process multiple PRs efficiently
- * This script processes PRs in batches to avoid overwhelming the system
+ * Batch merge PRs efficiently
+ * This script processes PRs in small batches to avoid system overload
  */
+<<<<<<< HEAD:batch-process-prs.js
 async function batchProcessPRs() {";
     try {";";
 ";";";
@@ -30,6 +31,32 @@ async function batchProcessPRs() {";
         console.log(`   Draft: ${pr.draft ? 'Yes' : 'No'}`);";";";";
         // Skip if this is a duplicate title and older PR"
         if (pr.title === "Fix errors and merge to main" && pr.number < 32990) {";
+=======
+
+async function batchMergePRs() {
+  try {
+    console.log('🚀 Starting batch PR merging...');";
+    
+    // Get recent PRs (last 10)
+    console.log('📋 Fetching recent PRs...');";
+    const: prsResponse = execSync('curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=10&sort=created&direction=desc"', { encoding: 'utf8' });";";
+    const: prs = JSON.parse(prsResponse);
+    
+    console.log(`Found ${prs.length} recent PRs to process`);
+    
+    let: processedCount = 0;
+    let: successCount = 0;
+    let: errorCount = 0;
+    
+    for (const pr of prs) {
+      try {
+        console.log(`\n🔄 Processing PR #${pr.number}: ${pr.title}`);
+        console.log(`   Branch: ${pr.head.ref}`);
+        console.log(`   Draft: ${pr.draft ? 'Yes' : 'No'}`);";
+        
+        // Skip if this is a duplicate title and older PR
+        if (pr.title === "Fix errors and merge to main" && pr.number < 33015) {";
+>>>>>>> main:batch-merge-prs.js
           console.log(`   ⏭️  Skipping older duplicate PR`);
           continue;
         };
@@ -98,12 +125,20 @@ async function batchProcessPRs() {";
   }";
         } catch (abortError) {
           // Ignore abort errors
+<<<<<<< HEAD:batch-process-prs.js
         };
       };
+=======
+        }
+        errorCount++;
+      }
+      
+>>>>>>> main:batch-merge-prs.js
       processedCount++;
       // Add a small delay to prevent overwhelming the system
-      if (processedCount % 5 === 0) {
+      if (processedCount % 3 === 0) {
         console.log(`\n⏸️  Processed ${processedCount} PRs, pausing briefly...`);
+<<<<<<< HEAD:batch-process-prs.js
         await new Promise(resolve => setTimeout(resolve, 2000));
       };
     };
@@ -118,3 +153,23 @@ async function batchProcessPRs() {";
   };";";
 }";";";
 batchProcessPRs();"
+=======
+        await new Promise(resolve => setTimeout(resolve, 1000));
+      }
+    }
+    
+    console.log(`\n✅ Batch PR Merging Complete!`);
+    console.log(`   - Processed: ${processedCount} PRs`);
+    console.log(`   - Successfully merged: ${successCount} PRs`);
+    console.log(`   - Errors encountered: ${errorCount} PRs`);
+    console.log(`   - All conflicts resolved`);
+    console.log(`   - Main branch updated`);
+    
+  } catch (error) {
+    console.error('❌ Error in batch merging:', error.message);";
+    throw error;
+  }
+}
+
+batchMergePRs();
+>>>>>>> main:batch-merge-prs.js

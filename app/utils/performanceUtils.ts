@@ -22,6 +22,11 @@ export const PerformanceUtils = (options: PerformanceUtilsOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default PerformanceUtils;';';";";";";
 "
+=======
+;
+export default PerformanceUtils;';';";";";
+>>>>>>> main

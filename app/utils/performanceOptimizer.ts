@@ -22,6 +22,11 @@ export const PerformanceOptimizer = (options: PerformanceOptimizerOptions = {,
     // Return your hook values here;
   };
 };
+<<<<<<< HEAD
 
 export default PerformanceOptimizer;';';";";";";
 "
+=======
+;
+export default PerformanceOptimizer;';';";";";
+>>>>>>> main

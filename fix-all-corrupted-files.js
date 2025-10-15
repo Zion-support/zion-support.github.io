@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';";";";
 
 interface fix-all-corrupted-filesProps {
@@ -7,6 +8,17 @@ interface fix-all-corrupted-filesProps {
 const fix-all-corrupted-files: React.FC<fix-all-corrupted-filesProps>  =  ({;";";";
     ;",";
   className = '',;";";";";";
+=======
+import React from 'react';;";";";";";";";
+;
+interface fix-all-corrupted-filesProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+;
+const fix-all-corrupted-files: React.FC<fix-all-corrupted-filesProps> = ({ ;
+  className = '',;";";";";";";";
+>>>>>>> main
   children;
   }) => {
   return (
