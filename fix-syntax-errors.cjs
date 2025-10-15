@@ -1,199 +1,132 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
-// Function to fix common syntax errors in TSX files
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, "utf8");
-    let modified = false;
+// Function to fix HTML entities back to normal quotes
+function fixHtmlEntities(content) {
+  return content
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&');
+}
 
-    // Fix malformed function names like "5GDataAnalyticsZionTechGroup"
-    const functionNameMatch = content.match(
-      /export default function (\d+[A-Za-z]+)/,
-    );
-    if (functionNameMatch) {
-      const malformedName = functionNameMatch[1];
-      const properName = malformedName.replace(/^\d+/, "") + "Page";
-      content = content.replace(new RegExp(malformedName, "g"), properName);
-      modified = true;
-    }
-
-    // Fix malformed className attributes
-    content = content.replace(
-      /className="([^"]*?)\s+([^"]*?)"/g,
-      (match, part1, part2) => {
-        if (part1.includes("text-") && part2.includes("mb-")) {
-          return `className="${part1} ${part2}"`;
+// Function to fix unused imports more carefully
+function fixUnusedImports(content) {
+  // Only remove imports that are clearly unused and safe to remove
+  const lines = content.split('\n');
+  const newLines = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    
+    // Check if this is a lucide-react import line
+    if (line.includes("from 'lucide-react'") || line.includes('from "lucide-react"')) {
+      // Extract the import statement and check what's actually used
+      const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
+      if (importMatch) {
+        const imports = importMatch[1].split(',').map(imp => imp.trim());
+        
+        // Check which imports are actually used in the file
+        const usedImports = imports.filter(imp => {
+          const importName = imp.trim();
+          // Skip if it's a default import or has spaces (complex destructuring)
+          if (importName.includes(' ') || importName.includes('as ')) {
+            return true;
+          }
+          
+          // Check if this import is used in the file content
+          const usageRegex = new RegExp(`\\b${importName}\\b`, 'g');
+          const matches = content.match(usageRegex);
+          return matches && matches.length > 1; // More than just the import statement
+        });
+        
+        if (usedImports.length === 0) {
+          // Remove the entire import line if no imports are used
+          continue;
+        } else if (usedImports.length !== imports.length) {
+          // Replace with only used imports
+          newLines.push(`import { ${usedImports.join(', ')} } from 'lucide-react';`);
+          continue;
         }
-        return match;
-      },
-    );
-
-    // Fix malformed text content
-    content = content.replace(
-      /text-4 xl font-boldtext-whitemb-6/g,
-      "text-4xl font-bold text-white mb-6",
-    );
-    content = content.replace(
-      /text-lgtext-gray-300mb-8/g,
-      "text-lg text-gray-300 mb-8",
-    );
-
-    // Fix malformed JSX elements
-    content = content.replace(
-      /<title \/>([^<]+)<\/title>/g,
-      "<title>$1</title>",
-    );
-    content = content.replace(
-      /<span className="w-5 h-5ml-2" \/>([^<]+)/g,
-      '<h1 className="text-4xl font-bold text-white mb-6">$1</h1>',
-    );
-    content = content.replace(
-      /<p className="w-5 h-5ml-2">([^<]+)/g,
-      '<p className="text-lg text-gray-300 mb-8">$1</p>',
-    );
-
-    // Fix malformed Link components
-    content = content.replace(
-      /<Link to="([^"]+)" className="([^"]*?)">([^<]+)<\/Link>/g,
-      (match, to, className, text) => {
-        if (className.includes("transformhover:scale-105")) {
-          className = className.replace(
-            "transformhover:scale-105",
-            "transform hover:scale-105",
-          );
-        }
-        if (className.includes("from-cyan-500to-purple-500")) {
-          className = className.replace(
-            "from-cyan-500to-purple-500",
-            "from-cyan-500 to-purple-500",
-          );
-        }
-        if (className.includes("shadow-lghover:shadow-cyan-500/25")) {
-          className = className.replace(
-            "shadow-lghover:shadow-cyan-500/25",
-            "shadow-lg hover:shadow-cyan-500/25",
-          );
-        }
-        return `<Link to="${to}" className="${className}">${text}</Link>`;
-      },
-    );
-
-    // Fix missing closing tags and malformed JSX
-    content = content.replace(
-      /<h2 className="w-5 h-5ml-2" \/>([^<]+)/g,
-      '<h2 className="text-3xl font-bold text-white mb-4">$1</h2>',
-    );
-    content = content.replace(
-      /<p className="w-5 h-5ml-2">([^<]+)/g,
-      '<p className="text-lg text-gray-300 mb-8">$1</p>',
-    );
-
-    // Fix duplicate 'use client' directives
-    content = content.replace(
-      /'use client';\s*'use client';/g,
-      "'use client';",
-    );
-
-    // Fix malformed imports
-    content = content.replace(
-      /import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Brain, Clock, Target } from 'lucide-react';\s*'use client';/g,
-      "'use client';\nimport { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Clock, Target } from 'lucide-react';",
-    );
-
-    // Fix malformed JSX structure
-    content = content.replace(
-      /<title>([^<]+)<\/title>\s*\{[^}]*\}/g,
-      "<title>$1</title>",
-    );
-
-    // Fix incomplete function declarations
-    if (
-      content.includes("export default function") &&
-      !content.includes("return (")
-    ) {
-      const functionMatch = content.match(
-        /export default function ([^(]+)\(\)\s*\{/,
-      );
-      if (functionMatch) {
-        const functionName = functionMatch[1].trim();
-        const basicTemplate = `
-  return (
-    <>
-      <Helmet>
-        <title>${functionName} - Zion Tech Group</title>
-        <meta name="description" content="Professional ${functionName.toLowerCase().replace(/([A-Z])/g, " $1")} services by Zion Tech Group." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">${functionName}</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional ${functionName.toLowerCase().replace(/([A-Z])/g, " $1")} services coming soon.</p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}`;
-
-        content = content.replace(
-          /export default function ([^(]+)\(\)\s*\{[^}]*\}/s,
-          `export default function ${functionName}() {${basicTemplate}`,
-        );
-        modified = true;
       }
     }
+    
+    newLines.push(line);
+  }
+  
+  return newLines.join('\n');
+}
 
-    if (modified) {
-      fs.writeFileSync(filePath, content, "utf8");
+// Function to remove console statements
+function removeConsoleStatements(content) {
+  return content.replace(/console\.(log|warn|error|info)\([^)]*\);?\s*/g, '');
+}
+
+// Function to process a file
+function processFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    const originalContent = content;
+    
+    // Fix HTML entities first
+    content = fixHtmlEntities(content);
+    
+    // Fix unused imports
+    content = fixUnusedImports(content);
+    
+    // Remove console statements
+    content = removeConsoleStatements(content);
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
+      modified = true;
     }
-    return false;
+    
+    return modified;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to recursively find and fix TSX files
-function fixAllTSXFiles(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-
-    if (stat.isDirectory()) {
-      fixedCount += fixAllTSXFiles(filePath);
-    } else if (file.endsWith(".tsx")) {
-      if (fixSyntaxErrors(filePath)) {
-        fixedCount++;
+// Function to recursively find all TypeScript/JavaScript files
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
       }
     }
   }
-
-  return fixedCount;
+  
+  traverse(dir);
+  return files;
 }
 
 // Main execution
-console.log("Starting syntax error fixes...");
-const appDir = path.join(__dirname, "app");
-const fixedCount = fixAllTSXFiles(appDir);
-console.log(`Fixed ${fixedCount} files.`);
+const appDir = path.join(__dirname, 'app');
+const files = findFiles(appDir);
 
-// Also fix the main App.tsx file
-const appTsxPath = path.join(__dirname, "App.tsx");
-if (fs.existsSync(appTsxPath)) {
-  if (fixSyntaxErrors(appTsxPath)) {
-    console.log("Fixed: App.tsx");
+console.log(`Found ${files.length} files to process...`);
+
+let modifiedCount = 0;
+for (const file of files) {
+  if (processFile(file)) {
+    modifiedCount++;
   }
 }
 
-console.log("Syntax error fixes completed.");
+console.log(`\nProcessed ${files.length} files, modified ${modifiedCount} files.`);

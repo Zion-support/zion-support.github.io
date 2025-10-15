@@ -374,7 +374,7 @@ export default function ZionAnalyticsPro() {
               <p>✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </>
   );

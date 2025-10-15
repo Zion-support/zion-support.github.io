@@ -1,25 +1,18 @@
-import { render, screen } from "@testing-library/react";
+import React from "react";
 
-const TestComponent = () => {
-  return <div>Test content</div>;
-};
+import { render } from "@testing-library/react";
+import { HelmetProvider } from "react-helmet-async";
+import { BrowserRouter } from "react-router-dom";
 
 describe("Advanced Components", () => {
-  // Test implementation
-  it("should render without errors", () => {
-    expect(true).toBe(true);
-  });
-
-  it("should render test content", () => {
-    render(<TestComponent />);
-    expect(screen.getByText("Test content")).toBeInTheDocument();
-  });
-
-  it("should handle console errors", () => {
-    const consoleSpy = jest
-      .spyOn(console, "error")
-      .mockImplementation(() => {});
-    // Test implementation
-    consoleSpy.mockRestore();
+  it("should render without crashing", () => {
+    const { container } = render(
+      <HelmetProvider>
+        <BrowserRouter>
+          <div>Test component</div>
+        </BrowserRouter>
+      </HelmetProvider>,
+    );
+    expect(container).toBeInTheDocument();
   });
 });

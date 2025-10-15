@@ -1,5 +1,5 @@
-import React, { useState, useCallback } from 'react';
-import { Loader2, AlertCircle } from 'lucide-react';
+import React, { useState, useRef, useEffect } from "react";
+import { ImageIcon, Loader2 } from "lucide-react";
 
 interface OptimizedImageProps {
   src: string;
@@ -8,6 +8,7 @@ interface OptimizedImageProps {
   height?: number;
   className?: string;
   priority?: boolean;
+  quality?: number;
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
   sizes?: string;
@@ -23,84 +24,119 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   height,
   className = '',
   priority = false,
+  quality = 75,
   placeholder = 'empty',
-  blurDataURL = '',
-  // quality = 75, // Currently unused but kept for future implementation
+  blurDataURL,
   sizes = '100vw',
   loading = 'lazy',
   onLoad,
   onError
 }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(priority);
+  const imgRef = useRef<HTMLImageElement>(null);
 
-  const handleLoad = useCallback(() => {
-    setIsLoading(false);
-    setImageLoaded(true);
+  useEffect(() => {
+    if (priority) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1, rootMargin: '50px' }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [priority]);
+
+  const handleLoad = () => {
+    setIsLoaded(true);
     onLoad?.();
-  }, [onLoad]);
+  };
 
-  const handleError = useCallback(() => {
-    setIsLoading(false);
+  const handleError = () => {
     setHasError(true);
     onError?.();
-  }, [onError]);
+  };
+
+  // Generate optimized src for different formats
+  const getOptimizedSrc = (originalSrc: string) => {
+    // If it's already a data URL or external URL, return as is
+    if (originalSrc.startsWith('data:') || originalSrc.startsWith('http')) {
+      return originalSrc;
+    }
+    // For local images, you could implement image optimization here
+    // This is a placeholder for actual optimization logic
+    return originalSrc;
+  };
+
+  const optimizedSrc = getOptimizedSrc(src);
 
   if (hasError) {
     return (
       <div 
-        className={`flex items-center justify-center bg-gray-200 text-gray-500 ${className}`}
+        className={`flex items-center justify-center bg-gray-200 dark:bg-gray-700 ${className}`}
         style={{ width, height }}
-        role="img"
-        aria-label={alt}
+        ref={imgRef}
       >
-        <div className="text-center">
-          <AlertCircle className="w-8 h-8 mx-auto mb-2" />
-          <p className="text-sm">Failed to load image</p>
+        <div className="text-center text-gray-500">
+          <ImageIcon className="w-8 h-8 mx-auto mb-2" />
+          <span className="text-sm">Failed to load image</span>
         </div>
       </div>
     );
   }
 
   return (
-    <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
-      {isLoading && (
+    <div 
+      className={`relative overflow-hidden ${className}`}
+      style={{ width, height }}
+      ref={imgRef}
+    >
+      {/* Blur placeholder */}
+      {placeholder === 'blur' && blurDataURL && !isLoaded && (
+        <div 
+          className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
+          style={{ backgroundImage: `url(${blurDataURL})` }}
+        />
+      )}
+      
+      {/* Loading spinner */}
+      {!isLoaded && !hasError && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
-          {placeholder === 'blur' && blurDataURL ? (
-            <img 
-              src={blurDataURL} 
-              alt="" 
-              className="w-full h-full object-cover filter blur-sm"
-            />
-          ) : (
-            <div className="text-center">
-              <Loader2 className="w-6 h-6 animate-spin text-cyan-500 mx-auto mb-2" />
-              <p className="text-xs text-gray-500">Loading...</p>
-            </div>
-          )}
+          <Loader2 className="w-6 h-6 animate-spin text-gray-400" />
         </div>
       )}
-
-      <img
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        loading={priority ? 'eager' : loading}
-        sizes={sizes}
-        className={`transition-opacity duration-300 ${
-          imageLoaded ? 'opacity-100' : 'opacity-0'
-        } ${className}`}
-        onLoad={handleLoad}
-        onError={handleError}
-        style={{
-          width: width ? `${width}px` : '100%',
-          height: height ? `${height}px` : 'auto',
-          objectFit: 'cover'
-        }}
-        decoding="async"
-      />
+      
+      {/* Actual image */}
+      {isInView && (
+        <img
+          src={optimizedSrc}
+          alt={alt}
+          width={width}
+          height={height}
+          sizes={sizes}
+          loading={loading}
+          onLoad={handleLoad}
+          onError={handleError}
+          className={`transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      )}
     </div>
   );
 };

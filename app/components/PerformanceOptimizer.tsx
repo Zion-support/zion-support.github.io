@@ -1,24 +1,21 @@
-import React from "react";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface PerformanceOptimizerProps {
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
-}
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  className = "",
-  title,
-  description,
-}) => {
+const PerformanceOptimizer = () => {
   return (
-    <div className={`enhanced-component ${className}`}>
-      {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>}
-      {description && <p className="text-gray-600 mb-4">{description}</p>}
-      {children}
-    </div>
+    <>
+      <Helmet>
+        <title>PerformanceOptimizer - Zion Tech Group</title>
+        <meta name="description" content="PerformanceOptimizer page - Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">PerformanceOptimizer</h1>
+          <p className="text-gray-300">This page is under construction.</p>
+        </div>
+      </div>
+    </>
   );
 };
 

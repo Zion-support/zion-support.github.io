@@ -1,121 +1,87 @@
-export function debounce<T extends (...args: any[]) => any>(
-  func: T,
-  wait: number,
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  };
-}
+// Performance monitoring utilities
+export const performanceMonitor = {
+  // Measure component render time
+  measureRender: (componentName: string, renderFn: () => void) => {
+    const start = performance.now();
+    renderFn();
+    const end = performance.now();
+    console.warn(`${componentName} rendered in ${end - start}ms`);
+  },
 
-export function throttle<T extends (...args: any[]) => any>(
-  func: T,
-  limit: number,
-): (...args: Parameters<T>) => void {
-  let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+  // Measure async operations
+  measureAsync: async (operationName: string, operation: () => Promise<unknown>) => {
+    const start = performance.now();
+    const result = await operation();
+    const end = performance.now();
+    console.warn(`${operationName} completed in ${end - start}ms`);
+    return result;
+  },
+
+  // Memory usage monitoring
+  getMemoryUsage: () => {
+    if ('memory' in performance) {
+      const memory = (performance as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      return {
+        used: memory?.usedJSHeapSize || 0,
+        total: memory?.totalJSHeapSize || 0,
+        limit: memory?.jsHeapSizeLimit || 0
+      };
     }
-  };
-}
+    return null;
+  },
 
-export function createIntersectionObserver(
-  callback: IntersectionObserverCallback,
-  options?: IntersectionObserverInit,
-): IntersectionObserver | null {
-  if (typeof window === "undefined") return null;
-  return new IntersectionObserver(callback, options);
-}
+  // Bundle size monitoring
+  getBundleSize: () => {
+    const scripts = document.querySelectorAll('script[src]');
+    let totalSize = 0;
+    scripts.forEach(script => {
+      const src = script.getAttribute('src');
+      if (src && src.includes('assets')) {
+        // This would need to be implemented with actual size measurement
+        totalSize += 1; // Placeholder
+      }
+    });
+    return totalSize;
+  }
+};
 
-export function getMemoryUsage(): any {
-  if (typeof window === "undefined" || !("memory" in performance)) return null;
-  return (performance as any).memory;
-}
-
-export function preloadCriticalResources(): void {
-  if (typeof window === "undefined") return;
-
-  const criticalResources = ["/fonts/inter.woff2", "/css/critical.css"];
-
-  criticalResources.forEach((resource) => {
-    const link = document.createElement("link");
-    link.rel = "preload";
-    link.href = resource;
-    link.as = resource.endsWith(".css") ? "style" : "font";
-    if (resource.endsWith(".woff2")) {
-      link.crossOrigin = "anonymous";
-    }
-    document.head.appendChild(link);
+// Lazy loading utility
+export const lazyLoad = (importFn: () => Promise<unknown>) => {
+  return React.lazy(() => {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(importFn());
+      }, 100); // Small delay to prevent blocking
+    });
   });
-}
+};
 
-export function optimizeImage(
-  src: string,
-  width?: number,
-  height?: number,
-): string {
-  if (!src) return "";
-
+// Image optimization utility
+export const optimizeImage = (src: string, width?: number, quality: number = 80) => {
+  if (src.startsWith('http')) {
+    return src; // External images
+  }
+  
   const params = new URLSearchParams();
-  if (width) params.set("w", width.toString());
-  if (height) params.set("h", height.toString());
-  params.set("q", "80");
-  params.set("f", "auto");
-
+  if (width) params.set('w', width.toString());
+  params.set('q', quality.toString());
+  
   return `${src}?${params.toString()}`;
-}
+};
 
-export function createLazyImageObserver(): IntersectionObserver | null {
-  if (typeof window === "undefined") return null;
+// Preload critical resources
+export const preloadCriticalResources = () => {
+  const criticalResources = [
+    '/assets/css/index.css',
+    '/assets/js/react-core.js',
+    '/assets/js/app.js'
+  ];
 
-  return new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          if (img.dataset.src) {
-            img.src = img.dataset.src;
-            img.classList.remove("lazy");
-            img.classList.add("loaded");
-          }
-        }
-      });
-    },
-    {
-      rootMargin: "50px 0px",
-      threshold: 0.01,
-    },
-  );
-}
-
-export function checkPerformanceBudget(): void {
-  if (typeof window === "undefined") return;
-
-  const budget = {
-    fcp: 1800, // First Contentful Paint
-    lcp: 2500, // Largest Contentful Paint
-    fid: 100, // First Input Delay
-    cls: 0.1, // Cumulative Layout Shift
-  };
-
-  // This would typically integrate with a performance monitoring service
-  console.log("Performance budget check:", budget);
-}
-
-export function addResourceHints(): void {
-  if (typeof window === "undefined") return;
-
-  // Add DNS prefetch for external domains
-  const domains = ["fonts.googleapis.com", "fonts.gstatic.com"];
-
-  domains.forEach((domain) => {
-    const link = document.createElement("link");
-    link.rel = "dns-prefetch";
-    link.href = `//${domain}`;
+  criticalResources.forEach(resource => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = resource;
+    link.as = resource.endsWith('.css') ? 'style' : 'script';
     document.head.appendChild(link);
   });
-}
+};

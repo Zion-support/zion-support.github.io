@@ -378,7 +378,7 @@ export default function ZionCloudVault() {
               <p>✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime • ✓ 24/7 support</p>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </>
   );
