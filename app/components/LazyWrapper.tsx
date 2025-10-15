@@ -35,7 +35,7 @@ export const createLazyComponent = <P extends Record<string, unknown>>(
   
   const WrappedComponent = (props: P) => (
     <LazyWrapper>
-      <LazyComponent {...(props as P)} />
+      <LazyComponent {...(props as any)} />
     </LazyWrapper>
   );
   

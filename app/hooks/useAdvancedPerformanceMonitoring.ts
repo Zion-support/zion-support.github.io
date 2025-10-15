@@ -43,7 +43,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   const reportMetric = useCallback((name: string, value: number, category = 'Performance', _metadata?: any) => {
     // Report to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as Record<string, unknown>).gtag('event', name, {
+      (window as any)['gtag']('event', name, {
         event_category: category,
         value: Math.round(value),
         non_interaction: true,
@@ -112,17 +112,17 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
                 break;
               
               case 'first-input':
-                metricsRef.current.fid = metric.processingStart - metric.startTime;
+                metricsRef.current.fid = (metric as any).processingStart - metric.startTime;
                 break;
               
               case 'layout-shift':
                 if (!metric.hadRecentInput) {
-                  metricsRef.current.cls = (metricsRef.current.cls || 0) + metric.value;
+                  metricsRef.current.cls = (metricsRef.current.cls || 0) + (metric.value || 0);
                 }
                 break;
               
               case 'navigation':
-                metricsRef.current.ttfb = metric.responseStart - metric.requestStart;
+                metricsRef.current.ttfb = (metric as any).responseStart - (metric as any).requestStart;
                 break;
               
               case 'measure':
@@ -172,19 +172,20 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 
       const checkMemory = () => {
         const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-        const usedMB = memory.usedJSHeapSize / 1048576;
-        const totalMB = memory.totalJSHeapSize / 1048576;
-        const limitMB = memory.jsHeapSizeLimit / 1048576;
+        if (memory) {
+          const usedMB = memory.usedJSHeapSize / 1048576;
+          const totalMB = memory.totalJSHeapSize / 1048576;
+          const limitMB = memory.jsHeapSizeLimit / 1048576;
 
-        metricsRef.current.memory = {
-          used: usedMB,
-          total: totalMB,
-          limit: limitMB,
-        };
-
-        // Alert if memory usage is high
-        if (usedMB / limitMB > memoryThreshold) {
-          reportMetric('HIGH_MEMORY_USAGE', (usedMB / limitMB) * 100, 'Performance');
+          metricsRef.current.memory = {
+            used: usedMB,
+            total: totalMB,
+            limit: limitMB,
+          };
+          // Alert if memory usage is high
+          if (usedMB / limitMB > memoryThreshold) {
+            reportMetric('HIGH_MEMORY_USAGE', (usedMB / limitMB) * 100, 'Performance');
+          }
         }
       };
 

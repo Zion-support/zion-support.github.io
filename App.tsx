@@ -3,10 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import Navigation from './app/components/Navigation';
+import Header from './app/components/Header';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import LoadingStates from './app/components/LoadingStates';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
 // import LazyWrapper from './app/components/LazyWrapper';
 // import LoadingSpinner from './app/components/LoadingSpinner';
 
@@ -66,10 +67,11 @@ function App() {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <Router>
-          <div className="min-h-screen bg-slate-900">
-            <Navigation />
-            <main className="relative z-10" id="main-content" role="main">
+        <PerformanceMonitor>
+          <Router>
+            <div className="min-h-screen bg-slate-900">
+              <Header />
+              <main className="relative z-10" id="main-content" role="main">
               <Suspense fallback={<LoadingStates />}>
                 <Routes>
                   {/* Main Pages */}
@@ -111,10 +113,11 @@ function App() {
                   } />
                 </Routes>
               </Suspense>
-            </main>
-            <Footer />
-          </div>
-        </Router>
+              </main>
+              <Footer />
+            </div>
+          </Router>
+        </PerformanceMonitor>
       </ErrorBoundary>
     </HelmetProvider>
   );

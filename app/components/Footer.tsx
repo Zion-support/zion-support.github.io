@@ -238,16 +238,26 @@ const Footer: React.FC = () => {
               <p className="text-gray-300 text-sm mb-4">
                 Get the latest updates on our services and industry insights.
               </p>
-              <div className="flex">
+              <form className="flex" onSubmit={(e) => e.preventDefault()}>
+                <label htmlFor="newsletter-email" className="sr-only">
+                  Enter your email address to subscribe to our newsletter
+                </label>
                 <input
+                  id="newsletter-email"
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-3 py-2 bg-slate-700 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+                  aria-label="Email address for newsletter subscription"
+                  required
                 />
-                <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition-colors text-sm">
+                <button 
+                  type="submit"
+                  className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition-colors text-sm"
+                  aria-label="Subscribe to newsletter"
+                >
                   Subscribe
                 </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>

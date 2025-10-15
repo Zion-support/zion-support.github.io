@@ -1,21 +1,26 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Hero from './components/Hero';
 
-const Page: React.FC = () => {
+const HomePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+        <title>Zion Tech Group - Advanced AI & IT Solutions</title>
+        <meta name="description" content="Leading provider of cutting-edge AI, IT, and 5G solutions. Transform your business with innovative technology and intelligent automation." />
+        <meta name="keywords" content="AI solutions, IT services, 5G solutions, micro SAAS, quantum computing, edge computing, business transformation" />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
+        <meta property="og:description" content="Leading provider of cutting-edge AI, IT, and 5G solutions. Transform your business with innovative technology and intelligent automation." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
+        <meta name="twitter:description" content="Leading provider of cutting-edge AI, IT, and 5G solutions. Transform your business with innovative technology and intelligent automation." />
+        <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">Page</h1>
-          <p className="text-gray-300 text-center">Coming soon...</p>
-        </div>
-      </div>
+      <Hero />
     </>
   );
 };
 
-export default Page;
+export default HomePage;
