@@ -1,29 +1,22 @@
-<<<<<<< HEAD
-export default async function handler(req, res) {
-=======
-export default async (req, res) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-  if (req.method !== 'POST') {
+export default function handler(req, res) {
+  if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const { name, email, company, message, service } = req.body;
+    const quotes = [
+      "Innovation distinguishes between a leader and a follower. - Steve Jobs",
+      "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+      "Technology is nothing. What's important is that you have a faith in people. - Steve Jobs",
+      "The only way to do great work is to love what you do. - Steve Jobs",
+      "Innovation is the ability to see change as an opportunity, not a threat. - Steve Jobs"
+    ];
 
-    if (!name || !email || !message) {
-      return res.status(400).json({ error: 'Name, email, and message are required' });
-    }
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
-    // Here you would typically save to a database or send an email
-    console.log('Quote request:', { name, email, company, message, service });
-    
-    res.status(200).json({ success: true, message: 'Quote request submitted successfully!' });
-  } catch (error) {
-    console.error('Quote request error:', error);
-    res.status(500).json({ error: 'Failed to submit quote request' });
+    res.status(200).json({ quote: randomQuote });
+  } catch (err) {
+    console.error('Error in quotes handler:', err);
+    res.status(500).json({ error: 'Internal server error' });
   }
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

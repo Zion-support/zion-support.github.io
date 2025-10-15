@@ -1,27 +1,19 @@
+import React from 'react';
 
-import SEOHead from '../components/SEOHead';
+interface pageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-const G5gDataAnalyticsPage: React.FC = () => {
+const page: React.FC<pageProps> = ({ 
+  className = '', 
+  children 
+}) => {
   return (
-    <>
-      <SEOHead 
-        title="Page - Zion Tech Group"
-        description="Advanced page solutions for modern businesses"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-<<<<<<< HEAD
-          <h1 className="text-4xl font-bold mb-4">5g-data-analytics</h1>
-          <p className="text-gray-300">Coming soon...</p>
-=======
-          <h1 className="text-4xl font-bold mb-4">Page</h1>
-          <p className="text-gray-300">Advanced solutions coming soon...</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-        </div>
-      </div>
-    </>
-  )
-    },
-    {
+    <div className={`page ${className}`}>
+      {children}
+    </div>
+  );
+};
 
-export default G5gDataAnalyticsPage;
+export default page;

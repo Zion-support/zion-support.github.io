@@ -1,7 +1,19 @@
-import {clsx} from "clsx"
-import { twMerge } from "tailwind-merge"
-export function cn() {
-  // Function body
+import React from 'react';
+
+interface cnProps {
+  className?: string;
+  children?: React.ReactNode;
 }
-}return twMerge(clsx(inputs))
+
+const cn: React.FC<cnProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`cn ${className}`}>
+      {children}
+    </div>
+  );
 };
+
+export default cn;

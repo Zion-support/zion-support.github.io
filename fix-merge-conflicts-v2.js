@@ -1,22 +1,19 @@
-import fs from 'fs'
-import path from 'path'
-#!/usr/bin// Fixed regex
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  const lines = content.split('\n''
-  return resolved.join('\n''
-  console.error('Error:''
-    const content = fs.readFileSync(filePath, 'utf8''
-console.log('Starting merge conflict resolution...''
-console.log('Merge conflict resolution completed!''
+import React from 'react';
+
+interface fix-merge-conflicts-v2Props {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const fix-merge-conflicts-v2: React.FC<fix-merge-conflicts-v2Props> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`fix-merge-conflicts-v2 ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default fix-merge-conflicts-v2;

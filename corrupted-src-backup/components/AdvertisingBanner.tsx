@@ -1,14 +1,19 @@
+import React from 'react';
 
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-export default AdvertisingbannerPage
-'use client'
-  return ()
-    <div>Content</div>
-  )
-        <title>Advertisingbanner - Zion Tech Group</title>
-            <h1 className = "text-4xl font-bold text-white mb-4">Advertisingbanner</h1>
-            <p className="text-gray-300 mb-8">This page is under construction.</p>
-              Learn More
-  )
+interface AdvertisingBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`advertisingbanner ${className}`}>
+      {children}
+    </div>
+  );
 };
+
+export default AdvertisingBanner;

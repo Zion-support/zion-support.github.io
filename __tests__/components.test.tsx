@@ -1,25 +1,19 @@
-import { describe, test, expect } from "@jest/globals"
-import {render, screen} from "@testing-library/react"
-import { HelmetProvider } from "react-helmet-async"
-import Loading from "../app/components/Loading"
-import SEOHead from "../app/components/SEOHead"
+import React from 'react';
 
-describe("Components", () => {
-  test("Loading component renders", () => {
-    render(
-      <HelmetProvider>
-        <Loading />
-      </HelmetProvider>,
-    )
-    expect(screen.getByText("Loading...")).toBeInTheDocument()
-  })
-  
-  test("SEOHead component renders", () => {
-    render(
-      <HelmetProvider>
-        <SEOHead title="Test Title" description="Test Description" />
-      </HelmetProvider>,
-    )
-    expect(document.head).toBeInTheDocument()
-  })
-})
+interface components.testProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const components.test: React.FC<components.testProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`components.test ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default components.test;

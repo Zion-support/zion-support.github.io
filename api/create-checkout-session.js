@@ -1,41 +1,25 @@
-const withErrorLogging = (handler) => {
-  return async (req, res) => {
-    try {
-      return await handler(req, res);
-    } catch (error) {
-      console.error('API Error:', error);
-      res.status(500).json({ 
-        error: 'Internal server error',
-        message: error.message 
-      });
-    }
-  };
-};
-
-export default withErrorLogging(async (req, res) => {
+export default function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    // Placeholder for Stripe checkout session creation
-    const { amount, currency = 'usd' } = req.body;
+    const { priceId, quantity = 1 } = req.body;
     
-    if (!amount) {
-      return res.status(400).json({ error: 'Amount is required' });
+    if (!priceId) {
+      return res.status(400).json({ error: 'Price ID is required' });
     }
 
-    // In a real implementation, you would create a Stripe checkout session here
-    const session = {
-      id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
-      url: 'https://checkout.stripe.com/test',
-      amount: amount,
-      currency: currency
-    };
+    // In a real implementation, you would integrate with Stripe here
+    // For now, we'll return a mock session ID
+    const sessionId = 'cs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
 
-    res.status(200).json({ session });
-  } catch (error) {
-    console.error('Checkout session creation error:', error);
-    res.status(500).json({ error: 'Failed to create checkout session' });
+    res.status(200).json({ 
+      sessionId,
+      message: 'Checkout session created successfully' 
+    });
+  } catch (err) {
+    console.error('Error in checkout handler:', err);
+    res.status(500).json({ error: 'Internal server error' });
   }
-});
+}

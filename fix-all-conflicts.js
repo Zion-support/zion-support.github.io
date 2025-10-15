@@ -1,13 +1,19 @@
-#!/usr/bin/env node
-import fs from 'fs'
-import path from 'path'
-// Function to fix merge conflicts in a file
-function fixMergeConflicts() {
-  // Function body
+import React from 'react';
+
+interface fix-all-conflictsProps {
+  className?: string;
+  children?: React.ReactNode;
 }
-}try {};
-} catch (error) {};
-  console.error(error)
-}let content = fs.readFileSync(filePath, 'utf8')
-    // Check if file has merge conflicts
-    if (!content.includes(')'
+
+const fix-all-conflicts: React.FC<fix-all-conflictsProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`fix-all-conflicts ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default fix-all-conflicts;

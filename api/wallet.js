@@ -1,64 +1,46 @@
-<<<<<<< HEAD
-// API endpoint for wallet operations
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
 import fs from 'fs';
 import path from 'path';
 
-const file = path.join(process.cwd(), 'data', 'wallets.json');
-
-<<<<<<< HEAD
 export default function handler(req, res) {
-  if (req.method !== "POST") {
-=======
-export default async (req, res) => {
   if (req.method !== 'POST') {
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-    return res.status(405).json({ error: "Method not allowed" });
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const { action, amount, currency, description } = req.body;
-
-    if (!action) {
-      return res.status(400).json({ error: "Action is required" });
+    const { address, balance } = req.body;
+    
+    if (!address) {
+      return res.status(400).json({ error: 'Wallet address is required' });
     }
 
+    const file = path.join(process.cwd(), 'data', 'wallets.json');
+    
     // Ensure data directory exists
-    const dir = path.dirname(file);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
+    const dataDir = path.dirname(file);
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
     }
 
-    // Load existing wallets
+    // Read existing wallets
     let wallets = [];
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
       wallets = JSON.parse(data);
     }
 
-    // Process wallet action
-    const walletAction = {
-      id: Date.now().toString(),
-      action,
-      amount,
-      currency,
-      description,
-      timestamp: new Date().toISOString()
-    };
+    // Add or update wallet
+    const existingIndex = wallets.findIndex(w => w.address === address);
+    if (existingIndex >= 0) {
+      wallets[existingIndex] = { address, balance: balance || 0, updatedAt: new Date().toISOString() };
+    } else {
+      wallets.push({ address, balance: balance || 0, createdAt: new Date().toISOString() });
+    }
 
-    wallets.push(walletAction);
-
-    // Save to file
     fs.writeFileSync(file, JSON.stringify(wallets, null, 2));
 
-    res.status(200).json({ success: true, message: "Wallet action processed successfully" });
-  } catch (error) {
-    console.error('Wallet operation error:', error);
-    res.status(500).json({ error: "Failed to process wallet operation" });
+    res.status(200).json({ success: true, message: 'Wallet updated successfully' });
+  } catch (err) {
+    console.error('Error in wallet handler:', err);
+    res.status(500).json({ error: 'Internal server error' });
   }
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

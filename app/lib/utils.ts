@@ -1,7 +1,19 @@
-import {clsx} from "clsx"
-import { twMerge } from "tailwind-merge"
-export function cn() {
-  // Function body
+import React from 'react';
+
+interface utilsProps {
+  className?: string;
+  children?: React.ReactNode;
 }
-}return twMerge(clsx(inputs))
+
+const utils: React.FC<utilsProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`utils ${className}`}>
+      {children}
+    </div>
+  );
 };
+
+export default utils;

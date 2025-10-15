@@ -1,4 +1,19 @@
-import React, { useState } from 'react',
-      import SEOHead from '../components/SEOHead',
-      import { ChevronDown, ChevronUp } from 'lucide-react';
+import React from 'react';
 
+interface pageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const page: React.FC<pageProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`page ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default page;

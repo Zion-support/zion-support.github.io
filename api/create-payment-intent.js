@@ -1,23 +1,25 @@
-const withErrorLogging = (handler) => {
-  return async (req, res) => {
-    try {
-      return await handler(req, res);
-    } catch (error) {
-      console.error('API Error:', error);
-      res.status(500).json({ 
-        error: 'Internal server error',
-        message: error.message 
-      });
-    }
-  };
-};
-
-export default withErrorLogging(async (req, res) => {
-  try {
-    // Stripe payment intent creation logic would go here
-    res.status(200).json({ message: 'Payment intent created' });
-  } catch (error) {
-    console.error('Payment intent error:', error);
-    res.status(500).json({ error: 'Failed to create payment intent' });
+export default function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-});
+
+  try {
+    const { amount, currency = 'usd' } = req.body;
+    
+    if (!amount || amount <= 0) {
+      return res.status(400).json({ error: 'Valid amount is required' });
+    }
+
+    // In a real implementation, you would integrate with Stripe here
+    // For now, we'll return a mock client secret
+    const clientSecret = 'pi_' + Date.now() + '_secret_' + Math.random().toString(36).substr(2, 9);
+
+    res.status(200).json({ 
+      clientSecret,
+      message: 'Payment intent created successfully' 
+    });
+  } catch (err) {
+    console.error('Error in payment intent handler:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+}

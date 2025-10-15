@@ -1,16 +1,19 @@
-import fs from 'fs'
-#!/usr/bin// Fixed regex
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  ''
-  const lines = content.split('\n''
-  return resolved.join('\n''
-  console.error('Error:''
-    const content = fs.readFileSync(filePath, 'utf8''
-console.log('Fixing API files merge conflicts...''
-console.log('API files merge conflict resolution completed!''
+import React from 'react';
+
+interface fix-api-conflictsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const fix-api-conflicts: React.FC<fix-api-conflictsProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`fix-api-conflicts ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default fix-api-conflicts;

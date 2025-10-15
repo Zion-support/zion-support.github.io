@@ -1,30 +1,23 @@
-<<<<<<< HEAD
 export default function handler(req, res) {
-=======
-export default async (req, res) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const { error, stack, userAgent, url } = req.body;
+    const { error, stack, url, userAgent } = req.body;
     
-    console.error('Client Error Report:', {
+    // Log error to console (in production, you'd want to use a proper logging service)
+    console.error('Client Error:', {
       error,
       stack,
-      userAgent,
       url,
+      userAgent,
       timestamp: new Date().toISOString()
     });
 
-    res.status(200).json({ message: 'Error reported successfully' });
-  } catch (error) {
-    console.error('Error reporting failed:', error);
-    res.status(500).json({ error: 'Failed to report error' });
+    res.status(200).json({ success: true });
+  } catch (err) {
+    console.error('Error in error-report handler:', err);
+    res.status(500).json({ error: 'Internal server error' });
   }
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2

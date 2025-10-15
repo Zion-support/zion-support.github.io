@@ -1,56 +1,19 @@
-#!/usr/bin/env node
+import React from 'react';
 
-import fs from 'fs';
-
-// Function to fix malformed JSX structure
-function fixJSXStructure(content) {
-  let fixed = content;
-  
-  // Fix malformed JSX fragments
-  fixed = fixed.replace(/<>\s*$/gm, '');
-  fixed = fixed.replace(/<\/>\s*$/gm, '');
-  
-  // Fix JSX elements that are not properly structured
-  fixed = fixed.replace(/<div[^>]*><\/div>;\s*$/gm, '');
-  fixed = fixed.replace(/<svg[^>]*><\/svg>;\s*$/gm, '');
-  fixed = fixed.replace(/<path[^>]*\/>;\s*$/gm, '');
-  
-  // Fix standalone JSX elements
-  fixed = fixed.replace(/<[^>]+>;\s*$/gm, '');
-  
-  // Clean up empty lines
-  fixed = fixed.replace(/\n\s*\n\s*\n/g, '\n\n');
-  
-  return fixed;
+interface fix-jsx-structureProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-// Function to fix specific problematic files
-function fixProblematicFiles() {
-  const filesToFix = [
-    '/workspace/App.tsx',
-    '/workspace/App-backup.tsx',
-    '/workspace/App-minimal.tsx',
-    '/workspace/App-optimized.tsx',
-    '/workspace/EnhancedFooter.tsx'
-  ];
-  
-  for (const filePath of filesToFix) {
-    try {
-      if (fs.existsSync(filePath)) {
-        console.log(`🔧 Fixing ${filePath}...`);
-        const content = fs.readFileSync(filePath, 'utf8');
-        const fixed = fixJSXStructure(content);
-        
-        if (fixed !== content) {
-          fs.writeFileSync(filePath, fixed);
-          console.log(`✅ Fixed ${filePath}`);
-        }
-      }
-    } catch (error) {
-      console.error(`❌ Error fixing ${filePath}:`, error.message);
-    }
-  }
-}
+const fix-jsx-structure: React.FC<fix-jsx-structureProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`fix-jsx-structure ${className}`}>
+      {children}
+    </div>
+  );
+};
 
-// Run the fix
-fixProblematicFiles();
+export default fix-jsx-structure;

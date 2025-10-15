@@ -1,134 +1,19 @@
-#!/usr/bin/env node";"
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-;
-// Function to find all files with merge conflicts";"
-function findConflictFiles() {";"
-  try {";"
-function resolveMergeConflicts(content) {";"
-  // Remove merge conflict markers and keep the newer version";"
-  const lines = content.split('\n');
-  const resolvedLines = [];
-  let inConflict = false;
-  let keepNewer = false;
-;
-  for (let i = 0; i < lines.length; i++) {";"
-    const line = lines[i];
-;
-      inConflict = true;
-      continue;
-    };
-;
-      keepNewer = true;
-      continue;
-    };
-;
-      inConflict = false;
-      keepNewer = false;
-      continue;
-    };
-;
-    if (inConflict && !keepNewer) {";"
-      continue;
-    };
-;
-    resolvedLines.push(line);
-  };
-;
-  return resolvedLines.join('\n');
+import React from 'react';
+
+interface fix-conflictsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const fix-conflicts: React.FC<fix-conflictsProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`fix-conflicts ${className}`}>
+      {children}
+    </div>
+  );
 };
-;
-// Function to fix common syntax errors";"
-function fixSyntaxErrors(content) {";"
-  let fixed = content;
-;
-  // Fix unterminated string literals by adding quotes";"
-  fixed = fixed.replace(/([^"'])\s*$/gm, (match, char) => {";'
-    if (char && !char.match(/[;}\])]/)) {";"
-      return char + '";';"
-    };
-    return match;
-  });
-;
-  // Fix missing semicolons";"
-  fixed = fixed.replace(/([^;}])\s*$/gm, (match, char) => {";"
-    if (char && !char.match(/[;}\])]/) && !match.includes('{') && !match.includes('(')) {";"
-      return char + ';';
-    };
-    return match;
-  });
-;
-  // Fix JSX syntax issues";"
-  fixed = fixed.replace(/<([^>]+)>\s*$/gm, (match, tag) => {";"
-    if (!match.includes('</') && !match.includes('/>')) {";"
-      return match + '</' + tag.split(' ')[0] + '>';
-    };
-    return match;
-  });
-;
-  return fixed;
-};
-;
-// Function to clean up unused imports";"
-function cleanUnusedImports(content) {";"
-  const lines = content.split('\n');
-  const cleanedLines = [];
-;
-  for (const line of lines) {";"
-    // Skip lines that are just unused imports";"
-    if (line.trim().startsWith('import ') && line.includes(' is defined but never used')) {";"
-      continue;
-    };
-    cleanedLines.push(line);
-  };
-;
-  return cleanedLines.join('\n');
-};
-;
-// Main function to fix all files";"
-function fixAllFiles() {";"
-  console.log('🔍 Finding files with merge conflicts...');
-  const conflictFiles = findConflictFiles();
-;
-  if (conflictFiles.length === 0) {";"
-    console.log('✅ No merge conflicts found!');
-    return;
-  };
-;
-  console.log(`📁 Found ${conflictFiles.length} files with conflicts:`);
-  conflictFiles.forEach(file => console.log(`  - ${file}`));
-;
-  let fixedCount = 0;
-;
-  for (const filePath of conflictFiles) {";"
-    try {";"
-      console.log(`🔧 Fixing ${filePath}...`);
-;
-      let content = fs.readFileSync(filePath, 'utf8');
-;
-      // Resolve merge conflicts";"
-      content = resolveMergeConflicts(content);
-;
-      // Fix syntax errors";"
-      content = fixSyntaxErrors(content);
-;
-      // Clean up unused imports";"
-      content = cleanUnusedImports(content);
-;
-      // Write the fixed content back";"
-      fs.writeFileSync(filePath, content);
-;
-      console.log(`✅ Fixed ${filePath}`);
-      fixedCount++;
-;
-    } catch (error) {";"
-      console.error(`❌ Error fixing ${filePath}:`, error.message);
-    };
-  };
-;
-  console.log(`\n🎉 Fixed ${fixedCount} out of ${conflictFiles.length} files!`);
-};
-;
-// Run the fix";"
-fixAllFiles();
+
+export default fix-conflicts;

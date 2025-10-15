@@ -1,48 +1,19 @@
-/**
- * Security Configuration
- * Defines security headers and policies for the application
- */
-    'Permissions-Policy': 'camera = (), microphone=(), geolocation=(), interest-cohort=()'
+import React from 'react';
+
+interface securityProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const security: React.FC<securityProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`security ${className}`}>
+      {children}
+    </div>
+  );
 };
-/**
- * Rate limiting configuration
- */
-};
-/**
- * CORS configuration
- */
-};
-/**
- * Session configuration
- */
-};
-/**
- * Input validation patterns
- */
-};
-/**
- * Sanitize user input
- */
-  return input
-    .replace(/[<>]/g, '') // Remove < and ></>
-    .replace(/javascript:/gi, '') // Remove javascript: protocol
-    .replace(/on\w+\s*=/gi, '') // Remove event handlers
-    .trim()
-/**
- * Validate email address
- */
-  return validationPatterns.email.test(email)
-/**
- * Validate URL
- */
-  return validationPatterns.url.test(url)
-/**
- * Generate secure token
- */
-  const array = new Uint8Array(length)
-    window.crypto.getRandomValues(array)
-    // Fallback for non-browser environments
-    for (let i = 0; i
- byte.toString(16).padStart(2, '0')).join('')
-  generateSecureToken
-};
+
+export default security;

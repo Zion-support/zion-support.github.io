@@ -1,55 +1,19 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-      import React, { useState, useEffect } from "react",
-      interface AnimatedTextProps {},
-      text: string,
-      className?: string,
-      delay?: number,
-      speed?: number
-    },
-    {
-const AnimatedText: React.FC<AnimatedTextProps> = ({},
-      text, className = "", delay = 0, speed = 100, }) => {},
-      const [displayedText, setDisplayedText] = useState(""),
-      const [currentIndex, setCurrentIndex] = useState(0),
-      useEffect(() => {},
-      if (currentIndex < text.length) {},
-      const timeout = setTimeout(() => {},
-      setDisplayedText((prev) => prev + text[currentIndex]),
-      setCurrentIndex((prev) => prev + 1);
-      }, delay + speed),
-      return () => clearTimeout(timeout)
-    },
-    {
-=======
-import React, { useState } from 'react';
-import React, { useState, useEffect } from "react";
+import React from 'react';
 
-interface AnimatedTextProps {};
-  text: string;
+interface AnimatedTextProps {
   className?: string;
-  delay?: number;
-  speed?: number;
-};
-const AnimatedText: React.FC<AnimatedTextProps> = ({};
-  text, className = "", delay = 0, speed = 100, }) => {};
-  const [displayedText, setDisplayedText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {};
-    if ($1) {
-  // If body
+  children?: React.ReactNode;
 }
-      const timeout = setTimeout(() => {};
-        setDisplayedText((prev) => prev + text[currentIndex]);
-        setCurrentIndex((prev) => prev + 1);
-      }, delay + speed);
 
-      return () => clearTimeout(timeout);
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-20d2
-    return undefined
-  }, [currentIndex, text, delay, speed])
-  return <span className={className}>{displayedText}</span>
-},
-      export default AnimatedText
+const AnimatedText: React.FC<AnimatedTextProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`animatedtext ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default AnimatedText;

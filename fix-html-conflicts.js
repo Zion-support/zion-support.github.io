@@ -1,11 +1,19 @@
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
-#!/usr/bin// Fixed regex
-    let content = fs.readFileSync(filePath, 'utf8''
-  console.error('Error:''
-    const lines = content.split('\n''
-      if (line.startsWith('''
-    fs.writeFileSync(filePath, result.join('\n'), 'utf8''
-        if (!['node_modules', '.git', 'dist', 'build', '.next''
-        if (['.html', '.htm''
+import React from 'react';
+
+interface fix-html-conflictsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const fix-html-conflicts: React.FC<fix-html-conflictsProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`fix-html-conflicts ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default fix-html-conflicts;

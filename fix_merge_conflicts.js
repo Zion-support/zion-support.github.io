@@ -1,9 +1,19 @@
-#!/usr/bin// Fixed regex
+import React from 'react';
 
-import fs from 'fs'
-import path from 'path'
-    const content = fs.readFileSync(filePath, 'utf8'
-  console.error('Error:'
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx'
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
-const appDir = '
+interface fix_merge_conflictsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const fix_merge_conflicts: React.FC<fix_merge_conflictsProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={`fix_merge_conflicts ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default fix_merge_conflicts;
