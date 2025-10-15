@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  BarChart3, 
+  Mic, 
   Zap, 
   Shield, 
   Globe, 
@@ -11,13 +11,36 @@ import {
   Star,
   Phone,
   Mail,
+  MapPin,
+  Download,
   Play,
-  Target
+  Pause,
+  RefreshCw,
+  Settings,
+  Eye,
+  Filter,
+  Calendar,
+  Target,
+  Volume2,
+  Headphones,
+  Radio,
+  MessageSquare,
+  Languages,
+  Users,
+  Award,
+  TrendingUp,
+  Cpu,
+  Database,
+  BarChart3,
+  Activity,
+  Lock,
+  Clock,
+  Smartphone
 } from 'lucide-react';
 
-const AiAnalyticsDashboardProPage: React.FC = () => {
+const AiVoiceAssistantEnterprisePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  // const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState('overview');
 
   useEffect(() => {
     setIsVisible(true);
@@ -25,73 +48,100 @@ const AiAnalyticsDashboardProPage: React.FC = () => {
 
   const features = [
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Real-time Analytics",
-      description: "Monitor your business metrics in real-time with live data streaming and instant updates.",
-      benefits: ["Live data updates", "Instant insights", "Real-time alerts", "Performance monitoring"]
+      icon: <Mic className="w-6 h-6" />,
+      title: "Advanced Voice Recognition",
+      description: "State-of-the-art speech-to-text with 99.5% accuracy in 50+ languages and dialects.",
+      benefits: ["99.5% accuracy", "50+ languages", "Noise cancellation", "Real-time processing"]
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Insights",
-      description: "Leverage machine learning algorithms to uncover hidden patterns and predict future trends.",
-      benefits: ["Predictive analytics", "Pattern recognition", "Anomaly detection", "Smart recommendations"]
+      title: "Natural Language Understanding",
+      description: "Deep learning models that understand context, intent, and complex conversational flows.",
+      benefits: ["Context awareness", "Intent recognition", "Multi-turn conversations", "Sentiment analysis"]
     },
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Custom Dashboards",
-      description: "Create personalized dashboards tailored to your specific business needs and KPIs.",
-      benefits: ["Drag-and-drop builder", "Custom widgets", "Role-based views", "Mobile optimization"]
+      icon: <Volume2 className="w-6 h-6" />,
+      title: "Text-to-Speech Synthesis",
+      description: "Human-like voice synthesis with emotional expression and multiple voice personalities.",
+      benefits: ["Natural voices", "Emotional expression", "Multiple personalities", "Custom voice training"]
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Data Source Integration",
-      description: "Connect and analyze data from multiple sources including databases, APIs, and cloud services.",
-      benefits: ["100+ integrations", "Data transformation", "ETL pipelines", "API management"]
+      title: "Multi-Language Support",
+      description: "Seamless conversation in multiple languages with automatic translation and localization.",
+      benefits: ["Auto-translation", "Cultural adaptation", "Regional accents", "Language switching"]
     },
     {
       icon: <Shield className="w-6 h-6" />,
       title: "Enterprise Security",
-      description: "Bank-level security with encryption, access controls, and compliance management.",
-      benefits: ["End-to-end encryption", "Role-based access", "Audit logs", "GDPR compliance"]
+      description: "Bank-level encryption, compliance with GDPR/CCPA, and secure voice data processing.",
+      benefits: ["End-to-end encryption", "GDPR compliance", "Data privacy", "Secure processing"]
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Automated Reporting",
-      description: "Generate and distribute reports automatically with scheduled delivery and custom formats.",
-      benefits: ["Scheduled reports", "Email delivery", "PDF/Excel export", "Custom templates"]
+      icon: <Settings className="w-6 h-6" />,
+      title: "Custom Integration",
+      description: "Easy integration with existing systems, CRM, ERP, and third-party applications.",
+      benefits: ["API integration", "Webhook support", "Custom workflows", "Legacy system support"]
+    }
+  ];
+
+  const useCases = [
+    {
+      title: "Customer Service",
+      description: "24/7 intelligent customer support with voice and chat capabilities",
+      icon: <Headphones className="w-8 h-8" />,
+      benefits: ["24/7 availability", "Instant responses", "Multi-channel support", "Customer satisfaction"]
+    },
+    {
+      title: "Healthcare",
+      description: "Voice-enabled patient care and medical documentation",
+      icon: <Activity className="w-8 h-8" />,
+      benefits: ["Patient monitoring", "Medical transcription", "Appointment scheduling", "HIPAA compliance"]
+    },
+    {
+      title: "Education",
+      description: "Interactive learning with voice-based tutoring and assessment",
+      icon: <Users className="w-8 h-8" />,
+      benefits: ["Personalized learning", "Voice assessments", "Language training", "Accessibility support"]
+    },
+    {
+      title: "Smart Home",
+      description: "Voice control for IoT devices and home automation systems",
+      icon: <Smartphone className="w-8 h-8" />,
+      benefits: ["Device control", "Routine automation", "Energy management", "Security monitoring"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$199",
       period: "month",
-      description: "Perfect for small businesses getting started with analytics",
+      description: "Perfect for small businesses starting with voice AI",
       features: [
-        "Up to 5 data sources",
-        "10 custom dashboards",
-        "Real-time analytics",
-        "Basic AI insights",
+        "Up to 1,000 voice interactions",
+        "5 languages supported",
+        "Basic voice recognition",
         "Email support",
-        "5GB data storage"
+        "Standard integration",
+        "1 voice personality"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$599",
+      price: "$499",
       period: "month",
-      description: "Ideal for growing companies with advanced analytics needs",
+      description: "Ideal for growing companies with advanced voice needs",
       features: [
-        "Up to 25 data sources",
-        "Unlimited dashboards",
-        "Advanced AI insights",
-        "Custom integrations",
+        "Up to 10,000 voice interactions",
+        "25 languages supported",
+        "Advanced NLP capabilities",
         "Priority support",
-        "50GB data storage",
-        "API access",
-        "White-label options"
+        "Custom integrations",
+        "5 voice personalities",
+        "Analytics dashboard",
+        "API access"
       ],
       popular: true
     },
@@ -99,15 +149,15 @@ const AiAnalyticsDashboardProPage: React.FC = () => {
       name: "Enterprise",
       price: "$999",
       period: "month",
-      description: "Complete solution for large organizations with complex requirements",
+      description: "Complete solution for large organizations",
       features: [
-        "Unlimited data sources",
-        "Unlimited dashboards",
-        "Full AI suite",
-        "Custom development",
+        "Unlimited voice interactions",
+        "50+ languages supported",
+        "Full AI capabilities",
         "24/7 dedicated support",
-        "Unlimited data storage",
-        "Advanced security",
+        "Custom development",
+        "Unlimited personalities",
+        "Advanced analytics",
         "On-premise deployment"
       ],
       popular: false
@@ -116,38 +166,49 @@ const AiAnalyticsDashboardProPage: React.FC = () => {
 
   const testimonials = [
     {
+      name: "Jennifer Martinez",
+      company: "CustomerFirst Corp",
+      role: "VP of Customer Experience",
+      content: "The AI Voice Assistant has transformed our customer service. We've seen a 70% reduction in wait times and 95% customer satisfaction.",
+      rating: 5
+    },
+    {
+      name: "Dr. Robert Kim",
+      company: "MedTech Solutions",
+      role: "Chief Medical Officer",
+      content: "Voice-enabled patient care has revolutionized our workflow. The accuracy and natural conversation flow are exceptional.",
+      rating: 5
+    },
+    {
       name: "Sarah Johnson",
-      company: "TechCorp Inc.",
-      role: "CTO",
-      content: "The AI Analytics Dashboard Pro has revolutionized how we analyze our data. The predictive insights have helped us increase revenue by 35%.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      company: "DataFlow Solutions",
-      role: "Data Director",
-      content: "The real-time analytics and custom dashboards have given us unprecedented visibility into our business operations.",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "GrowthTech",
-      role: "VP of Analytics",
-      content: "The AI-powered insights have helped us identify opportunities we never knew existed. ROI was achieved within 2 months.",
+      company: "EduTech Innovations",
+      role: "Director of Learning",
+      content: "Our students love the interactive voice learning experience. Engagement has increased by 60% since implementation.",
       rating: 5
     }
+  ];
+
+  const languages = [
+    { name: "English", flag: "🇺🇸", accuracy: "99.8%" },
+    { name: "Spanish", flag: "🇪🇸", accuracy: "99.5%" },
+    { name: "French", flag: "🇫🇷", accuracy: "99.3%" },
+    { name: "German", flag: "🇩🇪", accuracy: "99.4%" },
+    { name: "Chinese", flag: "🇨🇳", accuracy: "99.2%" },
+    { name: "Japanese", flag: "🇯🇵", accuracy: "99.1%" },
+    { name: "Arabic", flag: "🇸🇦", accuracy: "98.9%" },
+    { name: "Portuguese", flag: "🇵🇹", accuracy: "99.3%" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Analytics Dashboard Pro - Advanced Business Intelligence | Zion Tech Group</title>
-        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time analytics, predictive modeling, and custom dashboards for businesses of all sizes." />
-        <meta name="keywords" content="AI analytics, business intelligence, data visualization, predictive analytics, real-time dashboards, machine learning" />
-        <meta property="og:title" content="AI Analytics Dashboard Pro - Zion Tech Group" />
-        <meta property="og:description" content="Advanced AI-powered analytics platform with real-time insights and predictive modeling" />
+        <title>AI Voice Assistant Enterprise - Advanced Conversational AI | Zion Tech Group</title>
+        <meta name="description" content="Transform customer interactions with our enterprise-grade AI voice assistant. 99.5% accuracy, 50+ languages, and seamless integration for modern businesses." />
+        <meta name="keywords" content="AI voice assistant, conversational AI, voice recognition, speech synthesis, customer service, voice automation" />
+        <meta property="og:title" content="AI Voice Assistant Enterprise - Zion Tech Group" />
+        <meta property="og:description" content="Enterprise-grade AI voice assistant with advanced conversational capabilities" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-analytics-dashboard-pro" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-voice-assistant-enterprise" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -176,16 +237,16 @@ const AiAnalyticsDashboardProPage: React.FC = () => {
               <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                   <Star className="w-4 h-4 mr-2" />
-                  #1 AI Analytics Platform
+                  #1 Enterprise Voice AI Platform
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    AI Analytics Dashboard Pro
+                    AI Voice Assistant Enterprise
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Transform your data into actionable insights with our advanced AI-powered analytics platform. 
-                  Real-time dashboards, predictive modeling, and intelligent automation for modern businesses.
+                  Revolutionize customer interactions with our advanced AI voice assistant. 
+                  99.5% accuracy, 50+ languages, and enterprise-grade security for modern businesses.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -193,7 +254,7 @@ const AiAnalyticsDashboardProPage: React.FC = () => {
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    Get Started Today
+                    Start Free Trial
                   </a>
                   <a
                     href="#demo"
@@ -213,11 +274,11 @@ const AiAnalyticsDashboardProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Powerful Features
+                    Advanced Voice AI Features
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Everything you need to turn your data into business intelligence and actionable insights.
+                  Everything you need to create intelligent, natural voice interactions with your customers.
                 </p>
               </div>
               
@@ -250,17 +311,85 @@ const AiAnalyticsDashboardProPage: React.FC = () => {
             </div>
           </section>
 
+          {/* Use Cases Section */}
+          <section className="py-20 bg-slate-900">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    Industry Applications
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Discover how our AI voice assistant is transforming industries worldwide.
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {useCases.map((useCase, index) => (
+                  <div 
+                    key={index} 
+                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                      <div className="text-white">{useCase.icon}</div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
+                    <p className="text-gray-300 mb-6">{useCase.description}</p>
+                    <div className="space-y-2">
+                      {useCase.benefits.map((benefit, benefitIndex) => (
+                        <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Languages Section */}
+          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    50+ Languages Supported
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Communicate with your global audience in their native language with exceptional accuracy.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+                {languages.map((language, index) => (
+                  <div 
+                    key={index} 
+                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
+                  >
+                    <div className="text-4xl mb-3">{language.flag}</div>
+                    <div className="text-white font-semibold mb-1">{language.name}</div>
+                    <div className="text-cyan-400 text-sm">{language.accuracy}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
           {/* Pricing Section */}
           <section className="py-20 bg-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Simple Pricing
+                    Flexible Pricing Plans
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the plan that fits your business needs. All plans include our core AI analytics features.
+                  Choose the plan that fits your voice AI needs and budget.
                 </p>
               </div>
               
@@ -320,11 +449,11 @@ const AiAnalyticsDashboardProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    What Our Clients Say
+                    Client Success Stories
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Join hundreds of companies that have transformed their business with our AI analytics platform.
+                  See how companies are transforming customer experience with our AI voice assistant.
                 </p>
               </div>
               
@@ -340,7 +469,7 @@ const AiAnalyticsDashboardProPage: React.FC = () => {
                       ))}
                     </div>
                     <p className="text-gray-300 mb-6 leading-relaxed">
-                      &ldquo;{testimonial.content}&rdquo;
+                      "{testimonial.content}"
                     </p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -358,10 +487,10 @@ const AiAnalyticsDashboardProPage: React.FC = () => {
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready to Transform Your Data?
+                  Ready to Transform Customer Experience?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Start your journey with AI-powered analytics today. Get a free consultation and see how we can help your business grow.
+                  Start your voice AI journey today and provide exceptional customer service with our advanced AI voice assistant.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -376,7 +505,7 @@ const AiAnalyticsDashboardProPage: React.FC = () => {
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                   >
                     <Mail className="w-5 h-5 mr-2" />
-                    Get Free Consultation
+                    Get Free Demo
                   </a>
                 </div>
               </div>
@@ -388,6 +517,4 @@ const AiAnalyticsDashboardProPage: React.FC = () => {
   );
 };
 
-export default AiAnalyticsDashboardProPage;
-
-
+export default AiVoiceAssistantEnterprisePage;
