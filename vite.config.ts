@@ -20,7 +20,10 @@ export default defineConfig({
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
           ui: ['@heroicons/react', 'framer-motion', 'lucide-react'],
-          utils: ['clsx', 'tailwind-merge']
+          utils: ['clsx', 'tailwind-merge'],
+          services: ['./app/data/servicesData.ts'],
+          analytics: ['web-vitals'],
+          helmet: ['react-helmet-async']
         }
       }
     },
