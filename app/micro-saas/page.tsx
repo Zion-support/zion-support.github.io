@@ -1,50 +1,8 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  BarChart3, 
-  Shield, 
-  Cloud, 
-  Zap, 
-  Users, 
-  ShoppingCart, 
-  MessageSquare, 
-  FileText, 
-  Calendar, 
-  CreditCard,
-  Database,
-  Smartphone,
-  Globe,
-  Settings,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Lock,
-  Clock,
-  Target,
-  Brain,
-  Mail,
-  Search,
-  Workflow,
-  TestTube,
-  Archive,
-  Monitor,
-  Code,
-  Key
-} from 'lucide-react';
-=======
 import React from "react";
 import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Video, Calculator, Package, Receipt, ClipboardList, Workflow} from "lucide-react";
 import SEOOptimizer from "../components/SEOOptimizer";
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
-<<<<<<< HEAD
-const MicroSaaSPage: React.FC = () => {
-=======
 const MicroSaasPage: React.FC = () => {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
   const microSaasServices = [
     {
       id: 'zion-analytics-pro',
@@ -345,8 +303,6 @@ const MicroSaasPage: React.FC = () => {
     { number: '30-day', label: 'Free Trial' }
   ];
 
-<<<<<<< HEAD
-=======
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -374,7 +330,6 @@ const MicroSaasPage: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
   return (
     <>
       <SEOHead 

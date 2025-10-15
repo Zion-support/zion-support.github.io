@@ -1,19 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import SEOHead from '../components/SEOHead';
-
-const AiPoweredEmailAnalyzerPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead 
-        title="AI-Powered Email Analyzer - Zion Tech Group"
-        description="Revolutionize your email communication with our AI-powered email analyzer. Get sentiment analysis, smart suggestions, and performance insights."
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">AI-Powered Email Analyzer</h1>
-          <p className="text-gray-300">Coming soon...</p>
-=======
 
   const pricingPlans = [
     {
@@ -65,9 +50,28 @@ const AiPoweredEmailAnalyzerPage: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
-        </div>
-      </section>
+  return (
+    <>
+      <Helmet>
+        <title>AI-Powered Email Analyzer - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered email analysis solution for intelligent email processing and insights." />
+        <meta name="keywords" content="email analyzer, AI, email processing, email insights" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-slate-900 text-white">
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                AI-Powered Email Analyzer
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Advanced AI-powered email analysis solution for intelligent email processing and insights.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 };

@@ -1,10 +1,6 @@
 import React from "react";
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async";
-=======
 import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award, Globe, Target, MessageSquare, Share, Award as AwardIcon, BookOpen, Phone, Star as StarIcon } from 'lucide-react';import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 export default function ZionAiVideoGenerator() {
   const features = [

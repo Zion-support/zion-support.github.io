@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { BarChart3, Globe, Users, CheckCircle, ArrowRight, Target, Zap, Database, TrendingUp } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';

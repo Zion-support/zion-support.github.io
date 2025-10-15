@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import {render} from "@testing-library/react"
 
 const TestComponent = () => {
@@ -20,10 +18,9 @@ describe("Advanced Components", () => {
   it("should handle console errors", () => {
     const consoleSpy = jest
       .spyOn(console, "error")
-      .mockImplementation(() => {}
-})
+      .mockImplementation(() => {})
+    
     // Test implementation
     consoleSpy.mockRestore()
   })
 })
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7

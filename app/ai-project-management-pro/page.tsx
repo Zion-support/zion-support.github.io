@@ -1,25 +1,31 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-} from 'lucide-react''
-    'AI-powered task prioritization and scheduling''
-    'Intelligent resource allocation and workload balancing''
-    'Automated project timeline generation''
-    'Real-time collaboration and communication tools''
-    'Advanced analytics and performance insights''
-    'Risk assessment and mitigation suggestions''
-    'Custom workflow automation''
-    'Integration with 100+ popular tools''
-    'Mobile app for on-the-go management''
-    'Advanced reporting and dashboard customization''
-    'Increase project completion rate by 40%''
-    'Reduce project delays by 60%''
-    'Improve team productivity by 35%''
-    'Save 15+ hours per week on project management''
-    'Better resource utilization and cost control''
-    'Enhanced team collaboration and communication''
-    { name: 'Slack''
-    { name: 'Microsoft Teams''
-    { name: 'Google Workspace''
-    { name: 'Jira''
-    { name: 'Trello''
-    { name: 'Asana''}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const AIProjectManagementProPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>AI Project Management Pro - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered project management solution with intelligent task prioritization and resource allocation." />
+        <meta name="keywords" content="project management, AI, task management, resource allocation" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-slate-900 text-white">
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                AI Project Management Pro
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Advanced AI-powered project management solution with intelligent task prioritization and resource allocation.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default AIProjectManagementProPage;

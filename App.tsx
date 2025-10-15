@@ -1,8 +1,5 @@
 import React, { Suspense } from 'react';
-<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-=======
-import {Routes, Route} from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
 
@@ -152,4 +149,3 @@ function App() {
 }
 
 export default App;
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7

@@ -1,24 +1,28 @@
-<<<<<<< HEAD
 import React from 'react';
-import SEOHead from '../components/SEOHead';
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
+import { Helmet } from 'react-helmet-async';
 
 const AiHealthcareDiagnosticsPage: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
-      <SEOHead 
-        title="AI Healthcare Diagnostics - Zion Tech Group"
-        description="Revolutionary AI-powered medical diagnostics with image analysis, symptom assessment, and treatment recommendations."
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">AI Healthcare Diagnostics</h1>
-          <p className="text-gray-300">Coming soon...</p>
-        </div>
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
+      <Helmet>
+        <title>AI Healthcare Diagnostics - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered healthcare diagnostics solution for accurate medical analysis and diagnosis." />
+        <meta name="keywords" content="healthcare, AI diagnostics, medical analysis, healthcare technology" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-slate-900 text-white">
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                AI Healthcare Diagnostics
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Advanced AI-powered healthcare diagnostics solution for accurate medical analysis and diagnosis.
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );

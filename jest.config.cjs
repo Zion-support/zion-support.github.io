@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-export default {
-  preset: 'ts-jest',
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-=======
 module.exports = {
+  preset: 'ts-jest',
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/app/$1',
     '^@/components/(.*)$': '<rootDir>/app/components/$1',

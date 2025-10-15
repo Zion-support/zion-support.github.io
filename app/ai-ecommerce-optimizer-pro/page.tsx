@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react''
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -209,4 +206,3 @@ export default function AiEcommerceOptimizerProPage() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7

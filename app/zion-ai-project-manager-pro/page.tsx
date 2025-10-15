@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 import {ArrowRight, Calendar, BarChart3, CheckCircle, Star, Users, Target, TrendingUp, Shield, Globe, Clock, Play, Star, Star} from 'lucide-react';import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 export default function ZionAiProjectManagerPro() {
   const features = [
