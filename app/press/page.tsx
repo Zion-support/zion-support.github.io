@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Globe, Users, Award, TrendingUp } from 'lucide-react';
@@ -229,21 +228,6 @@ export default function Press() {
               </div>
             </div>
           </div>
-=======
-import SEOHead from '../components/SEOHead';
-
-const PressPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead 
-        title="press - Zion Tech Group"
-        description="Zion Tech Group press service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">press</h1>
-          <p className="text-gray-300">Coming soon...</p>
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
         </div>
       </div>
     </>

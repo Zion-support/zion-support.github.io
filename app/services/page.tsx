@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Smartphone as Phone, Laptop, Headphones, CheckCircle, Star, Award, Rocket, Sparkles } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -340,12 +339,6 @@ export default function Services() {
     }
   ];
 
-=======
-import React from 'react';
-import SEOHead from '../components/SEOHead';
-
-const ServicesPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
   return (
     <>
       <SEOHead 

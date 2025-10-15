@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3 } from 'lucide-react';
 
@@ -71,11 +70,7 @@ const FiveGSolutionsPage: React.FC = () => {
     "5G NR", "Network Slicing", "Edge Computing", "IoT Protocols", 
     "AI/ML Integration", "Cloud-Native", "SDN/NFV", "MEC"
   ];
-=======
-import SEOHead from '../components/SEOHead';
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
 
-const G5gSolutionsPage: React.FC = () => {
   return (
     <>
       <SEOHead 
@@ -92,4 +87,4 @@ const G5gSolutionsPage: React.FC = () => {
   );
 };
 
-export default G5gSolutionsPage;
+export default FiveGSolutionsPage;

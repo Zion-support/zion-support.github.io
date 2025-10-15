@@ -1,7 +1,6 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -119,12 +118,7 @@ const filteredData = faqData.map(category => ({
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
   })).filter(category => category.questions.length > 0);
-=======
-export default function FaqZionTechGroup() {
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
-=======
 const FaqPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
   return (
     <>
       <SEOHead 

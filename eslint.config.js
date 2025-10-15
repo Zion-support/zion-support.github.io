@@ -3,9 +3,10 @@ import globals from "globals"
 import reactHooks from "eslint-plugin-react-hooks"
 import reactRefresh from "eslint-plugin-react-refresh"
 import tseslint from "typescript-eslint"
-export default tseslint.config()
-  {}
-    ignores: []
+
+export default tseslint.config(
+  {
+    ignores: [
       "dist",
       ".next",
       "backup-problematic/**",
@@ -16,19 +17,25 @@ export default tseslint.config()
       "public/sw.js",
       "identify_missing_pages.js",
       "merge-with-conflict-resolution.js",
-      "resolve-all-conflicts.js"]},
-  {}
+      "resolve-all-conflicts.js"
+    ]
+  },
+  {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
-    languageOptions: {}
+    languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser},
-    plugins: {}
+      globals: globals.browser
+    },
+    plugins: {
       "react-hooks": reactHooks,
-      "react-refresh": reactRefresh},
-    rules: {}
+      "react-refresh": reactRefresh
+    },
+    rules: {
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": "off",
       "@typescript-eslint/no-unused-vars": "error",
-      "@typescript-eslint/no-explicit-any": "off"}},
+      "@typescript-eslint/no-explicit-any": "off"
+    }
+  }
 )

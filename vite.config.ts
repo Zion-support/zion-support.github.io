@@ -28,32 +28,6 @@ export default defineConfig({
   build: {
     outDir: "dist",
     sourcemap: false,
-<<<<<<< HEAD
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          // Create chunks based on node_modules
-          if (id.includes('node_modules')) {
-            // React and React DOM
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'react-vendor';
-            }
-            // Lucide React icons
-            if (id.includes('lucide-react')) {
-              return 'icons-vendor';
-            }
-            // Framer Motion
-            if (id.includes('framer-motion')) {
-              return 'animation-vendor';
-            }
-            // Other vendor libraries
-            return 'vendor';
-          }
-        },
-      },
-    },
-=======
     minify: "terser",
     target: "es2020",
     cssCodeSplit: true,
@@ -205,7 +179,6 @@ export default defineConfig({
         },
       },
     },
->>>>>>> 4322005aab0ef7243ec1380fa17dedddf01c149e
   },
   server: {
     port: 3000,
@@ -224,12 +197,8 @@ export default defineConfig({
       'framer-motion',
     ],
   },
-<<<<<<< HEAD
-});
-=======
   // CSS optimization
   css: {
     devSourcemap: true,
   },
 });
->>>>>>> 4322005aab0ef7243ec1380fa17dedddf01c149e

@@ -53,7 +53,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   };
 
   return (
-<<<<<<< HEAD
     <div className="relative">
       {!isLoaded && (
         <div 
@@ -76,43 +75,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       loading="lazy"
       decoding="async"
     />
-=======
-    <div
-      ref={imgRef}
-      className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
-    >
-      {!isLoaded && !hasError && (
-        <img
-          src={placeholder}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
-          aria-hidden="true"
-        />
-      )}
-      
-      {isInView && !hasError && (
-        <img
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
-          onLoad={handleLoad}
-          onError={handleError}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-          loading={priority ? 'eager' : 'lazy'}
-          decoding="async"
-        />
-      )}
-      
-      {hasError && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">
-          <span className="text-sm">Failed to load image</span>
-        </div>
-      )}
->>>>>>> cursor/analyze-improve-and-merge-code-4a9f
     </div>
   );
 };
