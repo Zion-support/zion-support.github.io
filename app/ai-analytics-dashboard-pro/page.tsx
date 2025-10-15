@@ -7,9 +7,6 @@ import {
   TrendingUp, 
   Target, 
   Database,
-  Cloud,
-  ShoppingCart,
-  DollarSign
 } from 'lucide-react';
 
 const AIAnalyticsDashboardProPage: React.FC = () => {

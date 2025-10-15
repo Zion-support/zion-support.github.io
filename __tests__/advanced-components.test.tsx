@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react"
+import {render} from "@testing-library/react"
 
 const TestComponent = () => {
   return <div>Test content</div>
@@ -19,6 +19,7 @@ describe("Advanced Components", () => {
     const consoleSpy = jest
       .spyOn(console, "error")
       .mockImplementation(() => {})
+    
     // Test implementation
     consoleSpy.mockRestore()
   })

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ErrorContext {};
   component?: string;
   action?: string;
@@ -22,11 +23,14 @@ class ErrorHandler {};
   private static instance: ErrorHandler;
   private errors: ErrorReport[] = [];
   private maxErrors = 100;: value
+=======
+import { useEffect, useCallback, useRef } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
 
-  static getInstance(): ErrorHandler {};
-    if ($1) {
-  // If body;
+interface ErrorHandlerOptions {
+  // Add your options here
 }
+<<<<<<< HEAD
       ErrorHandler.instance = new ErrorHandler();: value
     };
     return ErrorHandler.instance;
@@ -74,9 +78,14 @@ class ErrorHandler {};
       resolved: false;
       createdAt: new Date().toISOString()
     };
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
 
-    this.errors.push(errorReport);
+interface ErrorHandlerState {
+  // Add your state here
+}
 
+<<<<<<< HEAD
     // Keep only the last maxErrors entries;
     if (this.errors.length > this.maxErrors) {};
       this.errors = this.errors.slice(-this.maxErrors);: value
@@ -147,14 +156,21 @@ class ErrorHandler {};
       return acc;
     };
 {} as Record<string, number>);
+=======
+export const ErrorHandler = (options: ErrorHandlerOptions = {}) => {
+  const stateRef = useRef<ErrorHandlerState>({
+    // Initialize your state here
+  });
 
-    return {};
-      total;
-      resolved;
-      unresolved;
-      bySeverity;
-    };
+  // Add your hooks logic here
+  useEffect(() => {
+    // Add your effect logic here
+  }, []);
+>>>>>>> cursor/fix-errors-and-merge-to-main-7017
+
+  return {
+    // Return your hook values here
   };
 };
-export const errorHandler = ErrorHandler.getInstance();: value
-export default errorHandler;'
+
+export default ErrorHandler;

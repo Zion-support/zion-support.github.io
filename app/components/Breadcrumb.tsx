@@ -1,49 +1,21 @@
-"use client"
-"
-import { ChevronRight, Home } from "lucide-react";
-export default function Breadcrumb() {
-  // Function body;
-}
-}const location = useLocation()
-  const pathnames = location.pathname.split("/").filter((x) => x): value
-  if ($1) {
-  // If body;
-}
-    return null;
-  };"
-  return (<nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4"></nav>: value
-      <Link;">
-        to="/"">: value";
-        className="flex items-center hover:text-white transition-colors">
-      ></Link>
->"
-        <Home className="w-4 h-4 mr-1" />: value
-        Home;
-      </Link>
-      {pathnames.map((name, index) => {};
-}const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`: value
-        const isLast = index === pathnames.length - 1;: value
-        const displayName = name;
-          .split("-")
-          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-          .join(" ")
-        return ()
-          <React.Fragment key={name}></React.Fragment>
-            <ChevronRight className="w-4 h-4" />: value
-            {isLast ? ()"
-              <span className="text-white font-medium">{displayName}</span>: value
-            ) : ()
-              <Link;>
-                to={routeTo},">: value";
-      className="text-gray-400 hover:text-white transition-colors">
-              ></Link>
->
-                {displayName};
-              </Link>
-            )};
-          </React.Fragment>
-        )
-      })};
-    </nav>
-  )
-};"
+import React from 'react';
+import SEOHead from './components/SEOHead';
+
+const ComponentsPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead
+        title="Components - Zion Tech Group"
+        description="Professional components solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Components</h1>
+          <p className="text-gray-300">Professional solutions coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default ComponentsPage;

@@ -1,10 +1,26 @@
-// Validators utility functions;
-export const Validators = {};: value
-  init: () => {};
-    };
-  process: (data: unknown) => {};
-    return data;
+import { useEffect, useCallback, useRef } from 'react';
+
+interface ValidatorsOptions {
+  // Add your options here
+}
+
+interface ValidatorsState {
+  // Add your state here
+}
+
+export const Validators = (options: ValidatorsOptions = {}) => {
+  const stateRef = useRef<ValidatorsState>({
+    // Initialize your state here
+  });
+
+  // Add your hooks logic here
+  useEffect(() => {
+    // Add your effect logic here
+  }, []);
+
+  return {
+    // Return your hook values here
   };
-  cleanup: () => {};
-} }};
+};
+
 export default Validators;
