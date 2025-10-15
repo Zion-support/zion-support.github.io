@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 import js from "@eslint/js"
 import globals from "globals"
 import reactHooks from "eslint-plugin-react-hooks"
 import reactRefresh from "eslint-plugin-react-refresh"
 import tseslint from "typescript-eslint"
-=======
-import js from "@eslint/js
-import globals from "globals
-import reactHooks from "eslint-plugin-react-hooks
-import reactRefresh from "eslint-plugin-react-refresh
-import tseslint from "typescript-eslint
->>>>>>> 3e833c3ad2c3ddcb3543c60cbab89bd9bae51a20
+
 export default tseslint.config(
   {
     ignores: [
@@ -26,14 +19,10 @@ export default tseslint.config(
       "public/sw.js",
       "identify_missing_pages.js",
       "merge-with-conflict-resolution.js",
-<<<<<<< HEAD
       "resolve-all-conflicts.js",
       "**/app/**/*.tsx",
       "**/api/**/*.js",
       "**/__tests__/**/*.tsx"
-=======
-      "resolve-all-conflicts.js"
->>>>>>> main
     ]
   },
   {

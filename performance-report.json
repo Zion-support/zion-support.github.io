@@ -1,6 +1,5 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-10-15T13:39:17.016Z",
+  "timestamp": "2025-10-15T13:42:01.523Z",
   "optimizations": {
     "criticalCSS": true,
     "imageOptimization": true,
@@ -16,38 +15,9 @@
     "Optimize font loading with font-display: swap"
   ],
   "metrics": {
-=======
-  "timestamp": "2025-10-15T13:39:10.723Z",
-  "optimizations": [
-    "Images optimized with WebP conversion",
-    "Critical CSS generated for above-the-fold content",
-    "JavaScript bundles minified and optimized",
-    "Console logs removed from production build",
-    "Source maps optimized",
-    "Lazy loading implemented for routes",
-    "Error boundaries added for better UX",
-    "Performance monitoring enabled"
-  ],
-  "recommendations": [
-    "Consider implementing service worker for caching",
-    "Add more granular code splitting for large pages",
-    "Implement preloading for critical resources",
-    "Add more comprehensive caching strategies",
-    "Consider implementing CDN for static assets",
-    "Add performance budgets to prevent regressions",
-    "Implement Core Web Vitals monitoring",
-    "Add accessibility testing automation"
-  ],
-  "metrics": {
-    "buildTime": 1760535550723,
->>>>>>> cursor/analyze-improve-and-merge-code-e862
     "bundleSize": "Optimized",
     "imageCompression": "Enabled",
     "criticalCSS": "Generated",
-<<<<<<< HEAD
     "codeSplitting": "Active"
-=======
-    "lazyLoading": "Enabled"
->>>>>>> cursor/analyze-improve-and-merge-code-e862
   }
 }
