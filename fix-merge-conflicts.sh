@@ -9,7 +9,6 @@ find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v 
         in_head=false
         in_other=true
         continue
-      elif [[ "$line" == ">>>>>>>"* ]]; then
         in_head=false
         in_other=false
         continue

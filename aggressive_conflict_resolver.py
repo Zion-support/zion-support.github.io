@@ -12,7 +12,6 @@ def aggressive_resolve_conflicts(content):
     """
     Aggressively resolve merge conflicts by keeping only the HEAD version.
     """
-    # Remove all merge conflict markers and everything between  and >>>>>>>
     # Keep only content between  and     
     # First, find all conflict blocks
     pattern = r'\n(.*?)\n.*?\n    

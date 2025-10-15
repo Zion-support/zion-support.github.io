@@ -29,11 +29,6 @@ function resolveConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');';
     // Remove merge conflict markers and keep the HEAD version (current branch)
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> main\n/g, '$1');';
-    // Clean up any remaining conflict markers;
-    content = content.replace(/<<<<<<< HEAD\n/g, '');';
-    content = content.replace(/=======\n/g, '');';
-    content = content.replace(/>>>>>>> main\n/g, '');';
     // Clean up extra newlines;
     content = content.replace(/\n\n\n+/g, '\n\n');';
     fs.writeFileSync(filePath, content);

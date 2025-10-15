@@ -1,15 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-export default function Page() {
-  return (
-    <div>
-      <h1>Page Under Construction</h1>
-      <p>This page is currently being updated.</p>
-    </div>
-  );
-}
-=======
 // Mock components
 const AdvancedErrorBoundary = ({ children, enableRetry, onError }: { 
   children: React.ReactNode; 
@@ -108,4 +98,3 @@ describe('Advanced Components', () => {
     expect(document.title).toBe('Test Title');
   });
 });
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79

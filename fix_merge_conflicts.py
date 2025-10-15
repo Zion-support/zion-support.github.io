@@ -13,25 +13,6 @@ def fix_merge_conflicts(file_path):
             content = f.read()
         
         # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
-            
-        print(f"Fixing merge conflicts in: {file_path}")
-        
-        # Split by merge conflict markers
-        parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
-        
-        if len(parts) < 2:
-            return False
-            
-        # Reconstruct content by choosing HEAD version (odd indices)
-        new_content = parts[0]  # Content before first conflict
-        
-        for i in range(1, len(parts), 2):
-            if i + 1 < len(parts):
-                # Choose HEAD version (the first part after <<<<<<< HEAD)
-                new_content += parts[i]
-                # Skip the ======= part (parts[i+1])
                 if i + 2 < len(parts):
                     new_content += parts[i + 2]
         

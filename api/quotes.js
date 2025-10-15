@@ -14,12 +14,7 @@ export default async function handler(req, res) {
   }
 
   try {
-<<<<<<< HEAD
-
     // Process the quote request
-=======
-// Process the quote request
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     const quote = {
       id: Date.now().toString(),
       name,
@@ -44,9 +39,5 @@ export default async function handler(req, res) {
     console.error('Quote submission error:', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   }
 }

@@ -30,30 +30,10 @@ function fixMergeConflicts(filePath) {
     let _modified = false;
 
     // Check if file has merge conflict markers;
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {';
-      global.console.log(`Fixing merge conflicts in: ${filePath}`);
-      
-      // Remove merge conflict markers and keep the HEAD version;
-      const lines = content.split('\n');';
-      const cleanedLines = [];
-      let inConflict = false;
-      let conflictDepth = 0;
-
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        
-        if (line.includes('<<<<<<< HEAD')) {';
-          inConflict = true;
-          conflictDepth++;
-          continue;
-        }
-        
-        if (line.includes('=======')) {';
           // Skip everything until the closing marker;
           continue;
         }
         
-        if (line.includes('>>>>>>> ')) {';
           inConflict = false;
           conflictDepth--;
           continue;

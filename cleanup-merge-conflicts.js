@@ -1,6 +1,5 @@
 #!/usr/bin// Fixed regex;
     /// Fixed regex;
-    if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>'';
     const cleanedContent = cleanedLines.join('\n'';
     fs.writeFileSync(filePath, cleanedContent, 'utf8'';
       if (['node_modules', '.git', 'dist', 'build', '.next'';

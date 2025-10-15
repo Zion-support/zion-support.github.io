@@ -50,61 +50,6 @@ function fixFile(filePath) {
     }
     
     // Fix merge conflict markers
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1');
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1');
-    
-    // Fix specific syntax errors
-    content = content.replace(/;\s*\);/g, '\n  );');
-    content = content.replace(/;\s*<\/>;/g, '\n    </>');
-    content = content.replace(/;\s*\);/g, '\n  );');
-    
-    // Fix malformed JSX in broken files
-    if (filePath.includes('app-broken') || filePath.includes('app-disabled')) {
-      // For broken/disabled files, try to create a minimal valid structure
-      if (content.includes('import React from') && !content.includes('export default')) {
-        content = content.replace(/import React[^;]+;/g, '');
-        content = `import React from 'react';\n\nexport default function Page()   {\n  return (\n    <div>\n      <h1>Page Under Construction</h1>\n      <p>This page is currently being updated.</p>\n    </div>\n  );\n}`;
-      }
-    }
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to find all problematic files
-function findProblematicFiles(dir) {
-  const files = [];
-  
-  function searchDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
-          searchDirectory(fullPath);
-        }
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('import React from \'react;') || 
-              content.includes('import { Helmet } from \'react-helmet-async;') ||
-              content.includes('<>') ||
-              content.includes('</>') ||
-              content.includes('<<<<<<< HEAD') ||
-              content.includes('=======') ||
-              content.includes('>>>>>>>')) {
             files.push(fullPath);
           }
         } catch (err) {

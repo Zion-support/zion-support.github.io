@@ -39,7 +39,6 @@ function fixSyntaxErrors(filePath) {
     return false;
   } catch (_error) {
     global.console._error(`  ❌ Error processing ${filePath}:`, _error.message);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c;
     return false;
   }
 }

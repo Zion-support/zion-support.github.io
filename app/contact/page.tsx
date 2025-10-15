@@ -35,12 +35,7 @@ export default function ContactPage()    {
 
   const contactInfo = [
     {
-<<<<<<< HEAD
-
-      icon: 'Phone',
-=======
 icon: 'Phone',
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       title: 'Phone',
       value: '+1 (555) 123-4567',
       description: 'Mon-Fri 9AM-6PM EST'
@@ -59,10 +54,6 @@ icon: 'Phone',
     },
     {
       icon: 'Clock',
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
-=======
 icon: Phone,
       title: 'Phone',
       value: '+1 (555) 123-4567',
@@ -86,7 +77,6 @@ icon: Phone,
       value: 'Monday - Friday',
 value: 'Monday - Friday',
 value: 'Monday - Friday',
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       description: '9:00 AM - 6:00 PM EST'
     }
   ];
