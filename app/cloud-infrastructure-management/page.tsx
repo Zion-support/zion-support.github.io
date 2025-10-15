@@ -1,7 +1,69 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Cloud, Shield, Zap, Globe, Lock, Cpu } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
-  return (<Layout>
+const CloudInfrastructureManagementPage: React.FC = () => {
+  const features = [
+    {
+      icon: <Cloud className="w-12 h-12 text-blue-400" />,
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud platforms with zero downtime"
+    },
+    {
+      icon: <Shield className="w-12 h-12 text-blue-400" />,
+      title: "Security Management",
+      description: "Comprehensive security monitoring and threat protection"
+    },
+    {
+      icon: <Zap className="w-12 h-12 text-blue-400" />,
+      title: "Auto-scaling",
+      description: "Dynamic resource allocation based on demand"
+    },
+    {
+      icon: <Globe className="w-12 h-12 text-blue-400" />,
+      title: "Multi-cloud Strategy",
+      description: "Optimized multi-cloud deployments for maximum efficiency"
+    },
+    {
+      icon: <Lock className="w-12 h-12 text-blue-400" />,
+      title: "Compliance",
+      description: "Ensure compliance with industry standards and regulations"
+    }
+  ];
+
+  const services = [
+    {
+      category: "Cloud Platforms",
+      items: [
+        "AWS Management",
+        "Azure Solutions",
+        "Google Cloud",
+        "Hybrid Cloud"
+      ]
+    },
+    {
+      category: "Infrastructure",
+      items: [
+        "Server Management",
+        "Load Balancing",
+        "Database Optimization",
+        "Monitoring & Alerting"
+      ]
+    },
+    {
+      category: "Security",
+      items: [
+        "Access Control",
+        "Data Encryption",
+        "Backup & Recovery",
+        "Disaster Recovery"
+      ]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -79,7 +141,7 @@ import SEOHead from '../components/SEOHead';
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,219 +1,222 @@
-import React, { useEffect, useCallback } from 'react'
-import { useLocation } from 'react-router-dom'
-interface PerformanceOptimizerProps {}
-  enableImageOptimization?: boolean
-  enablePreloading?: boolean
-  enableCaching?: boolean
-  enableCompression?: boolean
+import React, { useEffect, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
+
+interface PerformanceOptimizerProps {
+  enableImageOptimization?: boolean;
+  enablePreloading?: boolean;
+  enableCaching?: boolean;
+  enableCompression?: boolean;
 }
 
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true, enablePreloading = true, enableCaching = true, enableCompression = true, }) => {
+  enableImageOptimization = true,
+  enablePreloading = true,
+  enableCaching = true,
+  enableCompression = true,
+}) => {
   const location = useLocation();
 
   // Image optimization
-  const optimizeImages = useCallback(() => {}
-}if (!enableImageOptimization) return
-    const images = document.querySelectorAll('img')
-    images.forEach((img) => {}
-}// Add loading="lazy" to images below the fold
-      if (img.getBoundingClientRect().top > window.innerHeight) {}
-        img.setAttribute('loading', 'lazy')
+  const optimizeImages = useCallback(() => {
+    if (!enableImageOptimization) return;
+    
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      // Add loading="lazy" to images below the fold
+      if (img.getBoundingClientRect().top > window.innerHeight) {
+        img.setAttribute('loading', 'lazy');
       }
+      
       // Add decoding="async" for better performance
-      img.setAttribute('decoding', 'async')
-      // Add fetchpriority="high" for above-the-fold images
-      if (img.getBoundingClientRect().top <= window.innerHeight) {}
-        img.setAttribute('fetchpriority', 'high')
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
       }
-    })
-  }, [enableImageOptimization])
+      
+      // Add proper alt text if missing
+      if (!img.hasAttribute('alt')) {
+        img.setAttribute('alt', '');
+      }
+      
+      // Optimize image sizes
+      if (img.src && !img.src.includes('data:')) {
+        const imgElement = img as HTMLImageElement;
+        if (imgElement.naturalWidth > 0 && imgElement.naturalHeight > 0) {
+          const aspectRatio = imgElement.naturalWidth / imgElement.naturalHeight;
+          const containerWidth = imgElement.offsetWidth;
+          const optimalHeight = Math.round(containerWidth / aspectRatio);
+          
+          if (imgElement.offsetHeight !== optimalHeight) {
+            imgElement.style.height = `${optimalHeight}px`;
+          }
+        }
+      }
+    });
+  }, [enableImageOptimization]);
+
   // Preload critical resources
-  const preloadCriticalResources = useCallback(() => {}
-}if (!enablePreloading) return
+  const preloadCriticalResources = useCallback(() => {
+    if (!enablePreloading) return;
+    
     // Preload critical CSS
-    const criticalCSS = document.createElement('link')
-    criticalCSS.rel = 'preload'
-    criticalCSS.href = '/assets/index-Dq8n7JAm.css'
-    criticalCSS.as = 'style'
-    criticalCSS.onload = () => {}
-}criticalCSS.rel = 'stylesheet'
+    const criticalCSS = document.querySelector('link[rel="stylesheet"]');
+    if (criticalCSS) {
+      const preloadLink = document.createElement('link');
+      preloadLink.rel = 'preload';
+      preloadLink.as = 'style';
+      preloadLink.href = criticalCSS.href;
+      document.head.appendChild(preloadLink);
     }
-    document.head.appendChild(criticalCSS)
+    
     // Preload critical fonts
-    const fontPreload = document.createElement('link')
-    fontPreload.rel = 'preload'
-    fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
-    fontPreload.as = 'style'
-    document.head.appendChild(fontPreload)
-    // Preload next likely page based on current route
-    const nextPage = getNextLikelyPage(location.pathname)
-    if (nextPage) {}
-      const prefetchLink = document.createElement('link')
-      prefetchLink.rel = 'prefetch'
-      prefetchLink.href = nextPage
-      document.head.appendChild(prefetchLink)
-    }
-  }, [enablePreloading, location.pathname])
-  // Enhanced caching strategies
-  const setupCaching = useCallback(() => {}
-}if (!enableCaching) return
-    // Service Worker registration for caching
-    if ('serviceWorker' in navigator) {}
+    const fontLinks = document.querySelectorAll('link[href*="font"]');
+    fontLinks.forEach((link) => {
+      const preloadLink = document.createElement('link');
+      preloadLink.rel = 'preload';
+      preloadLink.as = 'font';
+      preloadLink.href = link.href;
+      preloadLink.crossOrigin = 'anonymous';
+      document.head.appendChild(preloadLink);
+    });
+    
+    // Preload next page resources
+    const nextPageLinks = document.querySelectorAll('a[href]');
+    nextPageLinks.forEach((link) => {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('/') && !href.startsWith('//')) {
+        const prefetchLink = document.createElement('link');
+        prefetchLink.rel = 'prefetch';
+        prefetchLink.href = href;
+        document.head.appendChild(prefetchLink);
+      }
+    });
+  }, [enablePreloading]);
+
+  // Enable caching strategies
+  const enableCachingStrategies = useCallback(() => {
+    if (!enableCaching) return;
+    
+    // Set cache headers for static assets
+    if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          if (process.env.NODE_ENV === 'development') {
-            }
+          console.log('Service Worker registered:', registration);
         })
-        .catch((registrationError) => {
-          if (process.env.NODE_ENV === 'development') {
-            }
+        .catch((error) => {
+          console.log('Service Worker registration failed:', error);
         });
     }
-    // Set up cache headers for static assets
-    const staticAssets = document.querySelectorAll('link[rel="stylesheet"], script[src]')
-    staticAssets.forEach((asset) => {}
-}if (asset instanceof HTMLLinkElement && asset.href) {}
-        // Add cache control headers via meta tags
-        const cacheMeta = document.createElement('meta')
-        cacheMeta.setAttribute('http-equiv', 'Cache-Control')
-        cacheMeta.setAttribute('content', 'public, max-age=31536000')
-        asset.appendChild(cacheMeta)
+    
+    // Enable browser caching
+    const cacheableResources = document.querySelectorAll('link[rel="stylesheet"], script[src], img[src]');
+    cacheableResources.forEach((resource) => {
+      if (resource instanceof HTMLLinkElement || resource instanceof HTMLScriptElement || resource instanceof HTMLImageElement) {
+        resource.setAttribute('cache-control', 'max-age=31536000');
       }
-    })
-  }, [enableCaching])
-  // Compression optimization
-  const setupCompression = useCallback(() => {}
-}if (!enableCompression) return
-    // Enable gzip compression hints
-    const compressionMeta = document.createElement('meta')
-    compressionMeta.setAttribute('http-equiv', 'Accept-Encoding')
-    compressionMeta.setAttribute('content', 'gzip, deflate, br')
-    document.head.appendChild(compressionMeta)
-    // Optimize resource loading
-    const scripts = document.querySelectorAll('script[src]')
-    scripts.forEach((script) => {}
-}if (script instanceof HTMLScriptElement) {}
-        script.setAttribute('defer', '')
-        script.setAttribute('async', '')
-      }
-    })
-  }, [enableCompression])
-  // Memory management
-  const optimizeMemory = useCallback(() => {}
-}// Clean up unused event listeners
-    const cleanup = () => {}
-}// Remove old event listeners that might be causing memory leaks
-      const oldListeners = document.querySelectorAll('[data-listener-cleanup]')
-      oldListeners.forEach((element) => {}
-}element.removeAttribute('data-listener-cleanup')
-      })
+    });
+  }, [enableCaching]);
+
+  // Enable compression
+  const enableCompressionStrategies = useCallback(() => {
+    if (!enableCompression) return;
+    
+    // Enable gzip compression for text-based resources
+    const originalFetch = window.fetch;
+    window.fetch = async (input, init) => {
+      const request = new Request(input, {
+        ...init,
+        headers: {
+          ...init?.headers,
+          'Accept-Encoding': 'gzip, deflate, br'
+        }
+      });
+      return originalFetch(request);
+    };
+  }, [enableCompression]);
+
+  // Performance monitoring
+  const monitorPerformance = useCallback(() => {
+    // Monitor Core Web Vitals
+    if ('web-vitals' in window) {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS((metric) => {
+          if (metric.value > 0.25) {
+            console.warn('Poor CLS detected:', metric.value);
+          }
+        });
+        
+        getFID((metric) => {
+          if (metric.value > 300) {
+            console.warn('Poor FID detected:', metric.value);
+          }
+        });
+        
+        getFCP((metric) => {
+          if (metric.value > 3000) {
+            console.warn('Poor FCP detected:', metric.value);
+          }
+        });
+        
+        getLCP((metric) => {
+          if (metric.value > 4000) {
+            console.warn('Poor LCP detected:', metric.value);
+          }
+        });
+        
+        getTTFB((metric) => {
+          if (metric.value > 1500) {
+            console.warn('Poor TTFB detected:', metric.value);
+          }
+        });
+      });
     }
-    // Run cleanup every 5 minutes
-    const cleanupInterval = setInterval(cleanup, 5 * 60 * 1000)
-    return () => clearInterval(cleanupInterval)
-  }, [])
-  // Bundle splitting optimization
-  const optimizeBundleSplitting = useCallback(() => {}
-}// Dynamically import non-critical components
-    const lazyLoadComponents = () => {}
-}const observer = new IntersectionObserver((entries) => {}
-}entries.forEach((entry) => {}
-}if (entry.isIntersecting) {}
-            const target = entry.target as HTMLElement
-            const componentName = target.dataset.lazyComponent
-            if (componentName) {}
-              // Mark component as loaded
-              target.classList.add('loaded')
-              observer.unobserve(target)
+    
+    // Monitor resource loading
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'resource') {
+            const resource = entry as PerformanceResourceTiming;
+            if (resource.duration > 1000) {
+              console.warn('Slow resource detected:', resource.name, resource.duration);
             }
           }
-        })
-      })
-      // Observe all elements with lazy-loading data attribute
-      const lazyElements = document.querySelectorAll('[data-lazy-component]')
-      lazyElements.forEach((element) => observer.observe(element))
+        });
+      });
+      observer.observe({ entryTypes: ['resource'] });
     }
-    // Start lazy loading after initial page load
-    if (document.readyState === 'complete') {}
-      lazyLoadComponents()
-    } else {}
-      window.addEventListener('load', lazyLoadComponents)
-    }
-  }, [])
-  // Performance monitoring
-  const setupPerformanceMonitoring = useCallback(() => {}
-}// Monitor Core Web Vitals
-    const observer = new PerformanceObserver((list) => {}
-}list.getEntries().forEach((entry) => {}
-}if (entry.entryType === 'largest-contentful-paint') {}
-          const lcp = entry as PerformanceEntry & { startTime: number }
-          if (lcp.startTime > 2500) {}
-            // LCP is too slow, trigger optimization
-            optimizeImages()
-          }
-        }
-      })
-    })
-    observer.observe({ entryTypes: ['largest-contentful-paint'] })
-    // Monitor memory usage
-    if ('memory' in performance) {}
-      const checkMemory = () => {}
-}const memory = (performance as any).memory
-        const usedMemory = memory.usedJSHeapSize / memory.jsHeapSizeLimit
-        if (usedMemory > 0.8) {}
-          // Memory usage is high, trigger garbage collection
-          if (window.gc) {}
-            window.gc()
-          }
-        }
-      }
-      setInterval(checkMemory, 30000); // Check every 30 seconds
-    }
-  }, [optimizeImages])
-  // Initialize all optimizations
-  useEffect(() => {}
-}const cleanup = optimizeMemory()
-    // Run optimizations after a short delay to not block initial render
-    const timeoutId = setTimeout(() => {}
-}optimizeImages()
-      preloadCriticalResources()
-      setupCaching()
-      setupCompression()
-      optimizeBundleSplitting()
-      setupPerformanceMonitoring()
-    }, 100)
-    return () => {}
-}clearTimeout(timeoutId)
-      cleanup()
-    }
-  }, []
+  }, []);
+
+  // Apply optimizations on mount and route change
+  useEffect(() => {
+    optimizeImages();
+    preloadCriticalResources();
+    enableCachingStrategies();
+    enableCompressionStrategies();
+    monitorPerformance();
+  }, [
+    location,
     optimizeImages,
     preloadCriticalResources,
-    setupCaching,
-    setupCompression,
-    optimizeMemory,
-    optimizeBundleSplitting,
-    setupPerformanceMonitoring])
-  // Re-run optimizations on route change
-  useEffect(() => {}
-}const timeoutId = setTimeout(() => {}
-}optimizeImages()
-      preloadCriticalResources()
-    }, 200)
-    return () => clearTimeout(timeoutId)
-  }, [location.pathname, optimizeImages, preloadCriticalResources])
+    enableCachingStrategies,
+    enableCompressionStrategies,
+    monitorPerformance
+  ]);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      // Cleanup any ongoing operations
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then((registrations) => {
+          registrations.forEach((registration) => {
+            registration.unregister();
+          });
+        });
+      }
+    };
+  }, []);
+
   return null; // This component doesn't render anything
-}
-// Helper function to determine next likely page
-const getNextLikelyPage = (currentPath: string): string | null => {}
-}const likelyPages: Record<string, string> = {}
-    '/': '/about',
-    '/about': '/services',
-    '/services': '/contact',
-    '/ai-services': '/ai-analytics',
-    '/micro-saas': '/zion-analytics-pro',
-    '/5g-solutions': '/5g-implementation'}
-  return likelyPages[currentPath] || null
-}
-export default AdvancedPerformanceOptimizer
+};
+
+export default AdvancedPerformanceOptimizer;

@@ -146,7 +146,6 @@ const AIProjectManagementProPage: React.FC = () => {
     { number: '15+', label: 'Hours Saved Weekly' }
   ];
 
-const AiProjectManagementProPage: React.FC = () => {
   return (
     <>
       <Helmet>

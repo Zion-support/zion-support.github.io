@@ -1,7 +1,10 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import SEOHead from '../components/SEOHead';
 
-  return (<>
+const AiExpenseTrackerPage: React.FC = () => {
+  return (
+    <>
       <Helmet>
         <title>AI Expense Tracker - Zion Tech Group</title>
         <meta

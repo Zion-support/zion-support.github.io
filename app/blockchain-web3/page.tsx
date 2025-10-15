@@ -1,7 +1,69 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Shield, Zap, Globe, Lock, Cpu } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
-  return (<Layout>
+const BlockchainWeb3Page: React.FC = () => {
+  const features = [
+    {
+      icon: <Shield className="w-12 h-12 text-purple-400" />,
+      title: "Smart Contracts",
+      description: "Secure, automated contracts that execute without intermediaries"
+    },
+    {
+      icon: <Zap className="w-12 h-12 text-purple-400" />,
+      title: "DeFi Solutions",
+      description: "Decentralized finance applications for modern businesses"
+    },
+    {
+      icon: <Globe className="w-12 h-12 text-purple-400" />,
+      title: "Web3 Integration",
+      description: "Seamless integration with Web3 ecosystems and protocols"
+    },
+    {
+      icon: <Lock className="w-12 h-12 text-purple-400" />,
+      title: "Security Audits",
+      description: "Comprehensive security audits for blockchain applications"
+    },
+    {
+      icon: <Cpu className="w-12 h-12 text-purple-400" />,
+      title: "NFT Platforms",
+      description: "Custom NFT marketplaces and tokenization solutions"
+    }
+  ];
+
+  const services = [
+    {
+      category: "Blockchain Development",
+      items: [
+        "Smart Contract Development",
+        "DApp Development",
+        "Token Creation",
+        "Blockchain Consulting"
+      ]
+    },
+    {
+      category: "Web3 Solutions",
+      items: [
+        "DeFi Protocols",
+        "NFT Marketplaces",
+        "DAO Development",
+        "Cross-chain Integration"
+      ]
+    },
+    {
+      category: "Security & Audit",
+      items: [
+        "Smart Contract Audits",
+        "Penetration Testing",
+        "Security Consulting",
+        "Compliance Review"
+      ]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -78,7 +140,7 @@ import SEOHead from '../components/SEOHead';
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

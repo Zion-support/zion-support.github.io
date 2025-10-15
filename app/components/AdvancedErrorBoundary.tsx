@@ -4,167 +4,165 @@ import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (_error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
-interface State {}
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
-  errorId?: string
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
 }
-class AdvancedErrorBoundary extends Component<Props, State> {}
-  constructor(props: Props) {}
-    super(props)
-    this.state = { hasError: false }
+
+class AdvancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error: Error): State {}
-    return {}
+
+  static getDerivedStateFromError(error: Error): State {
+    return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    }
+    };
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
-    this.setState({}
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
       error,
-      errorInfo})
-    // Call custom error handler if provided
-    if (this.props.onError) {}
-      this.props.onError(error, errorInfo)
+      errorInfo
+    });
+
+    // Call the onError callback if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
     }
+
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      }
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
 
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {}
-      this.logErrorToService(error, errorInfo)
+    // Send error to monitoring service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would typically send the error to a monitoring service
+      // like Sentry, LogRocket, or similar
+      console.error('Production error:', error, errorInfo);
     }
   }
 
-  logErrorToService = (_error: Error, errorInfo: ErrorInfo) => {
-    // You can integrate with services like Sentry, LogRocket, etc.
-    const errorData = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      errorId: this.state.errorId,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href}
-    // Log the error data for debugging
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
 
-    // Example: Send to your error reporting service
-    // You could send this to your backend:
-    // fetch('/api/error-report', {}
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(errorData)
-    // })
-    // For now, just log to console
-    // Error data logged
-  }
-  handleReset = () => {}
-}this.setState({}
-      hasError: false,
-      error: undefined,
-      errorInfo: undefined,
-      errorId: undefined
-    })
-  }
-  handleReportError = () => {}
-}const { error, errorId } = this.state
-    const subject = `Error Report - ${errorId}`
-    const body = `Error: ${error?.message}\n\nStack: ${error?.stack}\n\nPlease describe what you were doing when this error occurred:`
-    const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-    window.open(mailtoLink)
-  }
-  render() {}
-    if (this.state.hasError) {}
-      if (this.props.fallback) {}
-        return this.props.fallback
+  handleReload = () => {
+    window.location.reload();
+  };
+
+  handleGoHome = () => {
+    window.location.href = '/';
+  };
+
+  handleReportError = () => {
+    const { error, errorInfo, errorId } = this.state;
+    const subject = `Error Report - ${errorId}`;
+    const body = `
+Error Details:
+- Error: ${error?.message}
+- Stack: ${error?.stack}
+- Component Stack: ${errorInfo?.componentStack}
+- Error ID: ${errorId}
+- URL: ${window.location.href}
+- User Agent: ${navigator.userAgent}
+- Timestamp: ${new Date().toISOString()}
+    `;
+    
+    const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoLink);
+  };
+
+  render() {
+    if (this.state.hasError) {
+      // Use custom fallback if provided
+      if (this.props.fallback) {
+        return this.props.fallback;
       }
-      return ()
-        <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
-          <div className="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="flex justify-center mb-6">
-              <AlertTriangle className="h-20 w-20 text-red-500" />
+
+      return (
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
+            <div className="mb-6">
+              <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
+              <h1 className="text-2xl font-bold text-gray-900 mb-2">
+                Oops! Something went wrong
+              </h1>
+              <p className="text-gray-600 mb-4">
+                We're sorry, but something unexpected happened. Our team has been notified.
+              </p>
+              {this.state.errorId && (
+                <p className="text-sm text-gray-500 mb-4">
+                  Error ID: {this.state.errorId}
+                </p>
+              )}
             </div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong
-            </h1>
-            <p className="text-gray-600 mb-6 text-lg">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-            </p>
-            {this.state.errorId && ()
-              <div className="bg-gray-100 p-4 rounded-lg mb-6">
-                <p className="text-sm text-gray-600">
-                  <strong>Error ID:</strong> {this.state.errorId}
-                </p>
-                <p className="text-xs text-gray-500 mt-1">
-                  Please include this ID when contacting support
-                </p>
-              </div>
-            )}
-            {process.env.NODE_ENV === 'development' && this.state.error && ()
-              <details className="mb-6 text-left">
-                <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2">
-                  Error Details (Development)
-                </summary>
-                <div className="bg-gray-100 p-3 rounded text-xs font-mono text-gray-800 overflow-auto max-h-40">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  {this.state.errorInfo && ()
-                    <div>
-                      <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
-                  )}
-                </div>
-              </details>
-            )}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+
+            <div className="space-y-3">
               <button
-                onClick={this.handleReset}
-                className="flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                onClick={this.handleRetry}
+                className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
               >
-                <RefreshCw className="h-4 w-4 mr-2" />
+                <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
+              
               <button
-                onClick={() => window.location.href = '/'}
-                className="flex items-center justify-center px-6 py-3 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
+                onClick={this.handleReload}
+                className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors flex items-center justify-center"
               >
-                <Home className="h-4 w-4 mr-2" />
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Reload Page
+              </button>
+              
+              <button
+                onClick={this.handleGoHome}
+                className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center"
+              >
+                <Home className="w-4 h-4 mr-2" />
                 Go Home
               </button>
+              
               <button
                 onClick={this.handleReportError}
-                className="flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+                className="w-full bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors flex items-center justify-center"
               >
-                <Mail className="h-4 w-4 mr-2" />
-                Report Issue
+                <Mail className="w-4 h-4 mr-2" />
+                Report Error
               </button>
             </div>
-            <div className="mt-8 pt-6 border-t border-gray-200">
-              <p className="text-sm text-gray-500">
-                If this problem persists, please contact our support team at{' '}
-                <a
-                  href="mailto:support@ziontechgroup.com"
-                  className="text-blue-600 hover:text-blue-800"
-                >
-                  support@ziontechgroup.com
-                </a>
-              </p>
-            </div>
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-6 text-left">
+                <summary className="cursor-pointer text-sm text-gray-600 hover:text-gray-800">
+                  Error Details (Development)
+                </summary>
+                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
+                  {this.state.error.stack}
+                </pre>
+                {this.state.errorInfo && (
+                  <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
+                    {this.state.errorInfo.componentStack}
+                  </pre>
+                )}
+              </details>
+            )}
           </div>
         </div>
-      )
+      );
     }
-    return this.props.children
+
+    return this.props.children;
   }
 }
-export default AdvancedErrorBoundary
+
+export default AdvancedErrorBoundary;
