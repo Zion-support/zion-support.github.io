@@ -15,6 +15,8 @@ const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
 const FiveGSolutionsPage = React.lazy(() => import('./app/5g-solutions/page'));
+const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'));
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'));
 const PricingPage = React.lazy(() => import('./app/pricing/page'));
 const PortfolioPage = React.lazy(() => import('./app/portfolio/page'));
 const NewsPage = React.lazy(() => import('./app/news/page'));
@@ -110,6 +112,8 @@ const App: React.FC = () => {
                 <Route path="/support" element={<SupportPage />} />
                 <Route path="/careers" element={<CareersPage />} />
                 <Route path="/sitemap" element={<SitemapPage />} />
+                <Route path="/cloud-services" element={<CloudServicesPage />} />
+                <Route path="/cybersecurity" element={<CybersecurityPage />} />
                 
                 {/* New AI Services */}
                 <Route path="/ai-smart-contracts" element={<AiSmartContractsPage />} />

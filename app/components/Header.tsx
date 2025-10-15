@@ -52,7 +52,8 @@ const Header: React.FC = memo(() => {
         { name: 'API Reference', path: '/api-docs' },
         { name: 'Help Center', path: '/help' },
         { name: 'System Status', path: '/status' },
-        { name: 'Support', path: '/support' }
+        { name: 'Support', path: '/support' },
+        { name: 'Sitemap', path: '/sitemap' }
       ]
     },
     { 
@@ -64,6 +65,17 @@ const Header: React.FC = memo(() => {
         { name: 'Careers', path: '/careers' },
         { name: 'News & Updates', path: '/news' },
         { name: 'Contact Us', path: '/contact' }
+      ]
+    },
+    { 
+      name: 'Legal', 
+      path: '#',
+      dropdown: [
+        { name: 'Privacy Policy', path: '/privacy-policy' },
+        { name: 'Terms of Service', path: '/terms' },
+        { name: 'Service Level Agreement', path: '/sla' },
+        { name: 'Cookie Policy', path: '/cookies' },
+        { name: 'GDPR Compliance', path: '/gdpr' }
       ]
     },
     { name: 'Contact', path: '/contact' }

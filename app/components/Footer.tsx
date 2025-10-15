@@ -75,6 +75,15 @@ const Footer: React.FC = () => {
     { name: 'Sitemap', path: '/sitemap' }
   ];
 
+  const serviceLinks = [
+    { name: 'Micro SAAS Solutions', path: '/micro-saas' },
+    { name: 'AI Services', path: '/ai-services' },
+    { name: 'IT Services', path: '/it-services' },
+    { name: '5G Solutions', path: '/5g-solutions' },
+    { name: 'Cloud Services', path: '/cloud-services' },
+    { name: 'Cybersecurity', path: '/cybersecurity' }
+  ];
+
   const legalLinks = [
     { name: 'Privacy Policy', path: '/privacy-policy' },
     { name: 'Terms of Service', path: '/terms' },
@@ -161,26 +170,19 @@ const Footer: React.FC = () => {
           {/* Services */}
           <div>
             <h3 className="text-xl font-semibold mb-6">Our Services</h3>
-            <div className="space-y-4">
-              {serviceCategories.map((category, index) => (
-                <div key={index}>
-                  <h4 className="text-lg font-medium text-blue-400 mb-3">{category.title}</h4>
-                  <ul className="space-y-2">
-                    {category.services.map((service, serviceIndex) => (
-                      <li key={serviceIndex}>
-                        <Link
-                          to={service.path}
-                          className="text-gray-300 hover:text-white transition-colors flex items-center group text-sm"
-                        >
-                          <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                          {service.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            <ul className="space-y-2">
+              {serviceLinks.map((service, index) => (
+                <li key={index}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-white transition-colors flex items-center group text-sm"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {service.name}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           {/* Quick Links */}
