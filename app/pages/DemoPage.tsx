@@ -1,22 +1,28 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
+import { Helmet } from "react-helmet-async";
+
 const DemoPage: React.FC = () => {
   return (
-  <>
-      <Helmet></Helmet>
-        <title>DemoPage - Zion Tech Group</title>
-        <meta name="description" content="DemoPage - Zion Tech Group" />
+    <>
+      <Helmet>
+        <title>Demo - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Experienceour solutions with live demos"
+        />
+        <meta name="keywords" content="demo,live demo, solutions showcase" />
       </Helmet>
-      
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">DemoPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Demo</h1>
+            <div className="text-gray-400">
+              <p>Demos coming soon...</p>
+            </div>
+          </div>
         </div>
       </div>
-)
-    </>)
+    </>
   );
-}
-}
-export default DemoPag;e;
+};
+export default DemoPage;

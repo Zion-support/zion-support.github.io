@@ -1,22 +1,28 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
+import { Helmet } from "react-helmet-async";
+
 const BlogPage: React.FC = () => {
   return (
-  <>
-      <Helmet></Helmet>
-        <title>BlogPage - Zion Tech Group</title>
-        <meta name="description" content="BlogPage - Zion Tech Group" />
+    <>
+      <Helmet>
+        <title>Blog - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Latestinsights and updates fromZion Tech Group"
+        />
+        <meta name="keywords" content="blog,tech insights, AI, IT solutions" />
       </Helmet>
-      
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">BlogPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Blog</h1>
+            <div className="text-gray-400">
+              <p>Blog posts coming soon...</p>
+            </div>
+          </div>
         </div>
       </div>
-)
-    </>)
+    </>
   );
-}
-}
-export default BlogPag;e;
+};
+export default BlogPage;

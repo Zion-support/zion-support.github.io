@@ -1,132 +1,201 @@
-const fs = require('fs');';
-const _path = require('_path');';
-// Get all TypeScript/TSX files in the app directory;
-function getAllTsxFiles(dir) {
-  let files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = _path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files = files.concat(getAllTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {';
-      files.push(fullPath);
-    }
-  }
-  
-  return files;
-}
+#!/usr/bin/env node
 
-function fixFile(filePath) {
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+console.log('🔧 Starting comprehensive error fixing...');
+
+// Function to fix merge conflicts in a file
+function fixMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');';
-    let _modified = false;
-    
-    // Fix common JSX syntax issues;
-    const originalContent = content;
-    
-    // Fix malformed JSX fragments;
-    content = content.replace(/<>([^<]*?)(?!<\/>)/g, '<React.Fragment>$1</React.Fragment>');';
-    // Fix unclosed JSX elements by adding proper closing tags;
-    content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)([^>]*)>(?!.*<\/\1>)([^<]*?)(?=<|$)/g, (match, tagName, attrs, innerText) => {
-      if (innerText.trim() && !innerText.includes('<')) {';
-        return `<${tagName}${attrs}>${innerText}</${tagName}>`;
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Remove merge conflict markers and keep the HEAD version
+    const lines = content.split('\n');
+    const newLines = [];
+    let inConflict = false;
+    let keepHead = false;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      if (line.includes('<<<<<<< HEAD')) {
+        inConflict = true;
+        keepHead = true;
+        continue;
+      } else if (line.includes('=======')) {
+        keepHead = false;
+        continue;
+      } else if (line.includes('>>>>>>>')) {
+        inConflict = false;
+        keepHead = false;
+        continue;
       }
-      return match;
-    });
-    
-    // Fix malformed template literals in JSX;
-    content = content.replace(/\$\{([^}]*)\}/g, '{$1}');';
-    // Fix missing semicolons after JSX;
-    content = content.replace(/(<\/[a-zA-Z][a-zA-Z0-9]*>)\s*$/gm, '$1;');';
-    // Fix malformed JSX expressions;
-    content = content.replace(/\{([^}]*)\}/g, (match, content) => {
-      if (content.includes('`') && content.includes('${')) {';
-        return `{${content.replace(/`/g, '').replace(/\$\{/g, '{').replace(/\}/g, '}')}}`;';
-      }
-      return match;
-    });
-    
-    // Fix missing React imports;
-    if (content.includes('React.FC') || content.includes('useState') || content.includes('useEffect')) {';
-      if (!content.includes("import React")) {
-        content = "import React from 'react';\n" + content;';
-        _modified = true;
+      
+      if (!inConflict || keepHead) {
+        newLines.push(line);
       }
     }
-    
-    // Fix missing Helmet imports;
-    if (content.includes('<Helmet') && !content.includes("import { Helmet }")) {';
-      content = content.replace(/import React[^;]*;/, '$&\nimport { Helmet } from \'react-helmet-async\';');';
-      _modified = true;
+
+    const newContent = newLines.join('\n');
+    if (newContent !== content) {
+      fs.writeFileSync(filePath, newContent, 'utf8');
+      console.log(`✅ Fixed merge conflicts in: ${filePath}`);
+      modified = true;
     }
-    
-    // Fix missing lucide-react imports;
-    if (content.includes('ArrowRight') || content.includes('CheckCircle') || content.includes('Star')) {';
-      if (!content.includes("from 'lucide-react'")) {';
-        const iconMatches = content.match(/\b(ArrowRight|CheckCircle|Star|Users|Shield|Clock|Globe|BarChart|Target|TrendingUp|Zap|Brain|DollarSign|Camera|Eye|UserCheck|FileText|Mail|Shield|AlertTriangle|Brain|DollarSign|Camera|Eye|UserCheck|FileText|Mail|Shield|AlertTriangle)\b/g);
-        if (iconMatches) {
-          const uniqueIcons = [...new Set(iconMatches)];
-          const importStatement = `import { ${uniqueIcons.join(', ')} } from 'lucide-react';`;';
-          content = content.replace(/import React[^;]*;/, `$&\n${importStatement}`);
-          _modified = true;
-        }
-      }
-    }
-    
-    // Fix malformed component declarations;
-    content = content.replace(/export default function\s+(\w+)\s*\(\s*\)\s*{/, 'const $1: React.FC = () => {');';
-    // Fix missing closing braces and parentheses;
-    const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
-    const openParens = (content.match(/\(/g) || []).length;
-    const closeParens = (content.match(/\)/g) || []).length;
-    
-    if (openBraces > closeBraces) {
-      content += '}'.repeat(openBraces - closeBraces);';
-      _modified = true;
-    }
-    
-    if (openParens > closeParens) {
-      content += ')'.repeat(openParens - closeParens);';
-      _modified = true;
-    }
-    
-    // Fix malformed JSX attributes;
-    content = content.replace(/(\w+)\s*=\s*{([^}]*)\}/g, '$1={$2}');';
-    // Fix missing export statements;
-    if (content.includes('const ') && content.includes('React.FC') && !content.includes('export default')) {';
-      const componentName = content.match(/const\s+(\w+):\s*React\.FC/)?.[1];
-      if (componentName) {
-        content += `\n\nexport default ${componentName};`;
-        _modified = true;
-      }
-    }
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content);
-      global.console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (_error) {
-    global.console._error(`Error fixing ${filePath}:`, _error.message);
-    return false;
+  } catch (error) {
+    console.error(`❌ Error fixing merge conflicts in ${filePath}:`, error.message);
   }
 }
 
-// Get all TSX files;
-const tsxFiles = getAllTsxFiles('./app');';
-global.console.log(`Found ${tsxFiles.length} TypeScript files to check...`);
+// Function to fix JSX syntax errors
+function fixJSXErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-let fixedCount = 0;
-for (const file of tsxFiles) {
-  if (fixFile(file)) {
-    fixedCount++;
+    // Fix common JSX syntax errors
+    const fixes = [
+      // Fix buttonton -> button
+      { pattern: /buttonton/g, replacement: 'button' },
+      // Fix malformed JSX attributes
+      { pattern: /onSidebarToggle\s*=\s*\{\s*\(\)\s*=>\s*\{\s*\}\s*\}/g, replacement: 'onSidebarToggle={() => {}}' },
+      // Fix missing spaces around operators
+      { pattern: /=\s*'/g, replacement: "= '" },
+      { pattern: /'\s*=/g, replacement: "' =" },
+      // Fix missing spaces in object properties
+      { pattern: /event_category:/g, replacement: 'event_category: ' },
+      { pattern: /event_label:/g, replacement: 'event_label: ' },
+      // Fix missing spaces in function calls
+      { pattern: /setTimeout\(/g, replacement: 'setTimeout(' },
+      { pattern: /clearTimeout\(/g, replacement: 'clearTimeout(' },
+    ];
+
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✅ Fixed JSX syntax errors in: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`❌ Error fixing JSX errors in ${filePath}:`, error.message);
   }
 }
 
-global.console.log(`Fixed ${fixedCount} files`);
+// Function to fix TypeScript syntax errors
+function fixTypeScriptErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix common TypeScript syntax errors
+    const fixes = [
+      // Fix missing commas in object literals
+      { pattern: /(\w+):\s*(\w+)\s*(\w+):/g, replacement: '$1: $2,\n  $3:' },
+      // Fix missing semicolons
+      { pattern: /(\w+)\s*$/gm, replacement: '$1;' },
+      // Fix malformed interface declarations
+      { pattern: /interface\s+(\w+)\s*\{/g, replacement: 'interface $1 {' },
+      // Fix missing return types
+      { pattern: /const\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*\{/g, replacement: 'const $1 = ($2): void => {' },
+    ];
+
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✅ Fixed TypeScript syntax errors in: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`❌ Error fixing TypeScript errors in ${filePath}:`, error.message);
+  }
+}
+
+// Get all files with merge conflicts
+const mergeConflictFiles = [
+  './app/config/errorBoundaryConfig.tsx',
+  './app/components/Navigation.tsx',
+  './app/components/PerformanceOptimizer.tsx',
+  './app/components/Footer.tsx',
+  './app/components/SEOOptimizer.tsx',
+  './app/components/ContentPromotionBanner.tsx',
+  './app/blog/ai-2025-sept-30-operational-trust-scorecards-v3/page.tsx',
+  './app/blog/ai-innovation-labs-product-development-2025/page.tsx',
+  './app/blog/ai-enterprise-transformation-2025/page.tsx',
+  './app/sitemap.ts',
+  './app/ai-3d-generation/page.tsx',
+  './app/5g-mobile-applications/page.tsx',
+  './app/5g-smart-city-solutions/page.tsx',
+  './app/5g-edge-computing/page.tsx',
+  './app/5g-network-optimization/page.tsx',
+  './app/5g-private-networks/page.tsx',
+  './app/5g-network-infrastructure/page.tsx',
+  './app/5g-iot-solutions/page.tsx'
+];
+
+// Get all files with JSX errors
+const jsxErrorFiles = [
+  './app/components/Sidebar.tsx',
+  './app/components/ErrorBoundary.tsx',
+  './app/components/ContentCarousel.tsx',
+  './app/case-studies/page.tsx',
+  './app/support/page.tsx',
+  './app/careers/page.tsx',
+  './app/micro-saas/page.tsx'
+];
+
+// Fix merge conflicts
+console.log('\n🔧 Fixing merge conflicts...');
+mergeConflictFiles.forEach(file => {
+  if (fs.existsSync(file)) {
+    fixMergeConflicts(file);
+  }
+});
+
+// Fix JSX errors
+console.log('\n🔧 Fixing JSX syntax errors...');
+jsxErrorFiles.forEach(file => {
+  if (fs.existsSync(file)) {
+    fixJSXErrors(file);
+  }
+});
+
+// Fix TypeScript errors in component files
+console.log('\n🔧 Fixing TypeScript syntax errors...');
+const componentFiles = [
+  './app/components/AccessibilityEnhancer.tsx',
+  './app/components/AdvancedPerformanceOptimizer.tsx',
+  './app/components/AnalyticsProvider.tsx',
+  './app/components/ContentCarousel.tsx',
+  './app/components/ContentStatistics.tsx',
+  './app/components/DynamicContentShowcase.tsx',
+  './app/components/EnhancedAnalytics.tsx',
+  './app/components/EnhancedSEO.tsx',
+  './app/components/ErrorBoundary.tsx',
+  './app/components/MetaManager.tsx',
+  './app/components/PerformanceMonitor.tsx',
+  './app/components/SEOEnhancer.tsx',
+  './app/components/Sidebar.tsx'
+];
+
+componentFiles.forEach(file => {
+  if (fs.existsSync(file)) {
+    fixTypeScriptErrors(file);
+  }
+});
+
+console.log('\n✅ Error fixing completed!');

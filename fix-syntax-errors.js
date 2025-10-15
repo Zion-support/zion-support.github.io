@@ -1,86 +1,108 @@
 #!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-function fixSyntaxErrors(filePath) {
+import { glob } from 'glob';
+
+// Common fixes for syntax errors
+const fixes = [
+  // Fix JSX fragment issues
+  {
+    pattern: /<>(\s*<div[^>]*>[\s\S]*?)(\s*<\/div>\s*)(?!\s*<\/>)/g,
+    replacement: '<>$1$2</>'
+  },
+  // Fix missing closing tags
+  {
+    pattern: /<div([^>]*)>([^<]*(?:<[^/][^>]*>[^<]*)*?)(?!\s*<\/div>)/g,
+    replacement: '<div$1>$2</div>'
+  },
+  // Fix malformed className attributes
+  {
+    pattern: /className="([^"]*?)([a-zA-Z])([a-zA-Z])/g,
+    replacement: 'className="$1$2 $3"'
+  },
+  // Fix missing spaces in className
+  {
+    pattern: /className="([^"]*?)([a-zA-Z])([a-zA-Z])([a-zA-Z])/g,
+    replacement: 'className="$1$2 $3$4"'
+  },
+  // Fix unterminated strings
+  {
+    pattern: /"([^"]*?)([^"]*?)$/gm,
+    replacement: '"$1$2"'
+  },
+  // Fix missing semicolons
+  {
+    pattern: /(\w+)\s*$/gm,
+    replacement: '$1;'
+  }
+];
+
+// Files to fix
+const filesToFix = [
+  'app/5g-data-analytics/page.tsx',
+  'app/5g-edge-computing/page.tsx',
+  'app/5g-implementation/page.tsx',
+  'app/5g-infrastructure/page.tsx',
+  'app/5g-iot-solutions/page.tsx',
+  'app/5g-mobile-applications/page.tsx',
+  'app/5g-network-infrastructure/page.tsx',
+  'app/5g-network-optimization/page.tsx',
+  'app/5g-private-networks/page.tsx',
+  'app/5g-smart-city-solutions/page.tsx',
+  'app/5g-solutions/page.tsx',
+  'app/5g-performance/page.tsx',
+  'app/5g-reliability/page.tsx',
+  'app/5g-scalability/page.tsx',
+  'app/5g-security/page.tsx',
+  'app/5g-support/page.tsx',
+  'app/5g-testing/page.tsx',
+  'app/5g-training/page.tsx',
+  'app/5g-transformation/page.tsx',
+  'app/5g-upgrade/page.tsx'
+];
+
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    // Fix missing closing tags and syntax issues
-    const originalContent = content;
-    // Fix missing closing div tags
-    content = content.replace(/<div\s+key="[^"]*"\s*>\s*className="[^"]*"\s*>/g, '<div key="$1" className="$2">');
-    // Fix malformed JSX attributes
-    content = content.replace(/className="\$1"/g, 'className="service-card"');
-    // Fix missing closing tags for common patterns
-    content = content.replace(/<div\s+key="[^"]*"\s*>\s*className="[^"]*"\s*>\s*<div/g, '<div key="$1" className="$2"><div');
-    // Fix missing semicolons and closing braces
-    content = content.replace(/export default (\w+)(?!;)/g, 'export default $1;');
-    // Fix missing closing tags for React components
-    content = content.replace(/(<[A-Z]\w+[^>]*>)(?!.*<\/\1>)(?!.*\/>)/g, (match, tag) => {
-      const tagName = tag.match(/<(\w+)/)[1];
-}
-      return match + `</${tagName}>`;
+    let originalContent = content;
+    
+    // Apply fixes
+    fixes.forEach(fix => {
+      content = content.replace(fix.pattern, fix.replacement);
     });
-    // Fix JSX fragment issues
-    content = content.replace(/<>\s*<\/>/g, '<></>');
-    // Fix missing closing parentheses in function calls
-    content = content.replace(/\(([^)]*)\s*$/gm, '($1)');
-    // Fix malformed object literals
-    content = content.replace(/\{\s*([^}]*)\s*$/gm, '{\n  $1\n}');
-    // Fix missing commas in object literals
-    content = content.replace(/([^,}])\s*\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');
-    // Fix missing closing brackets
-    content = content.replace(/\[\s*([^\]]*)\s*$/gm, '[\n  $1\n]');
-    // Fix missing closing parentheses in JSX
-    content = content.replace(/\(\s*([^)]*)\s*$/gm, '(\n  $1\n)');
-    // Clean up extra whitespace
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/^\s*\n/gm, '');
+    
+    // Specific fixes for common patterns
+    content = content.replace(/className="([^"]*?)([a-zA-Z])([a-zA-Z])([a-zA-Z])/g, 'className="$1$2 $3$4"');
+    content = content.replace(/className="([^"]*?)([a-zA-Z])([a-zA-Z])/g, 'className="$1$2 $3"');
+    content = content.replace(/className="([^"]*?)([a-zA-Z])/g, 'className="$1$2"');
+    
+    // Fix missing closing tags
+    content = content.replace(/(<div[^>]*>)([^<]*(?:<[^/][^>]*>[^<]*)*?)(?!\s*<\/div>)/g, '$1$2</div>');
+    
+    // Fix JSX fragments
+    content = content.replace(/<>(\s*<div[^>]*>[\s\S]*?)(\s*<\/div>\s*)(?!\s*<\/>)/g, '<>$1$2</>');
+    
     if (content !== originalContent) {
-  fs.writeFileSync(filePath, content);
-}
-      console.log(`Fixed syntax errors in: ${filePath}`);
-      modified = true;
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
-    return modified;
+    return false;
   } catch (error) {
-}
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
-function findFilesWithSyntaxErrors(dir) {
-  const files = [];
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git') && !item.includes('app-broken')) {
-        traverse(fullPath);
-}
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item) && !item.includes('app-broken')) {
-  files.push(fullPath);
-}
-      }
+
+// Fix all files
+let fixedCount = 0;
+filesToFix.forEach(filePath => {
+  if (fs.existsSync(filePath)) {
+    if (fixFile(filePath)) {
+      fixedCount++;
     }
   }
-  traverse(dir);
-  return files;
-}
-// Main execution
-const projectRoot = process.cwd();
-console.log('Searching for files with syntax errors...');
-const filesToCheck = findFilesWithSyntaxErrors(projectRoot);
-console.log(`Checking ${filesToCheck.length} files for syntax errors`);
-let fixedCount = 0;
-for (const file of filesToCheck) {
-  if (fixSyntaxErrors(file)) {
-    fixedCount++;
-}
-  }
-}
-console.log(`Fixed syntax errors in ${fixedCount} files`);
+});
+
+console.log(`Fixed ${fixedCount} files`);

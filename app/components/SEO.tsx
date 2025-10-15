@@ -1,100 +1,66 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
 interface SEOProps {
-<<<<<<< HEAD
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  type?: 'website' | 'article' | 'profile'
-  author?: string
-  publishedTime?: string
-  modifiedTime?: string
-  section?: string
-  tags?: string[]}
-=======
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
   keywords?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'profile';
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: object;
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
 const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI & IT Solutions',
-  description = 'Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
-  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, technology consulting, Zion Tech Group',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website'
+  title,
+  description,
+  keywords = '',
+  canonicalUrl,
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData
 }) => {
-<<<<<<< HEAD
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
-  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`
-  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.svg',
-    description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      addressCountry: 'US'
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com'
-    },
-    sameAs: [
-      'https://www.linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://github.com/ziontechgroup'
-    ]
-  }
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+  const siteUrl = process.env.VITE_APP_URL || 'https://ziontechgroup.com';
+  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : undefined;
+  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+
   return (
     <Helmet>
+      {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      {fullCanonicalUrl && <link rel="canonical" href={fullCanonicalUrl} />}
       
-      {/* Open Graph */}
+      {/* Open Graph Tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:image" content={image} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={fullCanonicalUrl || siteUrl} />
+      <meta property="og:image" content={fullOgImage} />
+      <meta property="og:site_name" content="Zion Tech Group" />
       
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={fullOgImage} />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
+      {/* Additional SEO Tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
     </Helmet>
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
-}
-export default SEO;
-=======
-  )}
-export default SEO
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 };
 
 export default SEO;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

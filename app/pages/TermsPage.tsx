@@ -1,22 +1,25 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
+import { Helmet } from "react-helmet-async";
+
 const TermsPage: React.FC = () => {
   return (
-  <>
-      <Helmet></Helmet>
-        <title>TermsPage - Zion Tech Group</title>
-        <meta name="description" content="TermsPage - Zion Tech Group" />
+    <>
+      <Helmet>
+        <title>Terms ofService - Zion Tech Group</title>
+        <meta name="description" content="Termsof service and usage policies" />
+        <meta name="keywords" content="termsof service, terms, legal" />
       </Helmet>
-      
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">TermsPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Terms ofService</h1>
+            <div className="text-gray-400">
+              <p>Terms content coming soon...</p>
+            </div>
+          </div>
         </div>
       </div>
-)
-    </>)
+    </>
   );
-}
-}
-export default TermsPag;e;
+};
+export default TermsPage;

@@ -1,373 +1,291 @@
-<<<<<<< HEAD
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react'
-export default function ContactPage()    {
+import { 
+  CheckCircle,
+  Clock,
+  Mail,
+  MapPin,
+  Phone,
+  Send
+} from 'lucide-react';
+import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
+import { Helmet } from 'react-helmet-async';
+
+// Contact information
+const contactInfo = [
+  {
+    icon: <Phone className="w-6 h-6" />,
+    title: "Phone",
+    details: "+1-302-464-0950",
+    description: "Call us for immediate assistance"
+  },
+  {
+    icon: <Mail className="w-6 h-6" />,
+    title: "Email",
+    details: "kleber@ziontechgroup.com",
+    description: "Send us an email anytime"
+  },
+  {
+    icon: <MapPin className="w-6 h-6" />,
+    title: "Location",
+    details: "Delaware, USA",
+    description: "Serving clients globally"
+  },
+  {
+    icon: <Clock className="w-6 h-6" />,
+    title: "Business Hours",
+    details: "24/7 Support",
+    description: "We're always here to help"
+  }
+];
+
+// Contact form data
+const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
-    subject: '',
+    service: '',
     message: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-<<<<<<< HEAD
-=======
-import React, { useState } from 'react';'
-import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react';
-
-export default function ContactPage()    {
-  const [formData, setFormData] = useState({'
-    name: '','
-    email: '','
-    company: '','
-    phone: '','
-    subject: '','
-    message: ''}
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value}
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-    });
-  }
-=======
-    })}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    // Simulate form submission
-<<<<<<< HEAD
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitted(true);
-<<<<<<< HEAD
-    setIsSubmitting(false);
-  }
-  const contactInfo = [
-    {
-=======
-    setIsSubmitting(false);}
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
-  const contactInfo = [
-    {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+    }, 3000);
+  };
 
-      icon: 'Phone',      title: 'Phone',
-=======
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    setIsSubmitted(true)
-    setIsSubmitting(false)}
-  const contactInfo = [
-    {
-
-      title: 'Phone',
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-      value: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9AM-6PM EST'
-=======
-'
-      icon: 'Phone','
-      title: 'Phone','
-      value: '+1 (555) 123-4567','
-      description: 'Mon-Fri 9AM-6PM EST'}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
-    },
-    {'
-      icon: 'Email','
-      title: 'Email','
-      value: 'contact@ziontechgroup.com','
-      description: 'We respond within 24 hours'}
-    },
-    {'
-      icon: 'Location','
-      title: 'Address','
-      value: '123 Tech Street, Suite 100','
-      description: 'San Francisco, CA 94105'}
-    },
-    {'
-      icon: 'Clock',
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-=======
-      description: '9:00 AM - 6:00 PM EST'
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-    }
-  ]
-  const subjects = [
-    'AI Services',
-    'IT Services',
-    'Services',
-    'Micro SAAS',
-    'Digital Transformation',
-    '5G Implementation',
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e'
-      description: '9:00 AM - 6:00 PM EST'}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
-    }
-  ];
-
-  const subjects = ['
-    'AI Services','
-    'IT Services','
-    'Services','
-    'Micro SAAS','
-    'Digital Transformation','
-    '5G Implementation','
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-    'Other'
-  ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. Contact our experts today." />
-        <meta name="keywords" content="contact, AI services, IT solutions, digital transformation, business consultation" />
+        <title>Contact - Zion Tech Group | Get in Touch</title>
+        <meta name="description" content="Contact Zion Tech Group for AI solutions, IT services, and 5G technology. Get in touch with our experts for consultation and support." />
+        <meta name="keywords" content="contact, AI solutions, IT services, 5G technology, consultation, support" />
+        <meta property="og:title" content="Contact - Zion Tech Group" />
+        <meta property="og:description" content="Get in touch with our experts for AI solutions and IT services." />
+        <meta property="og:type" content="website" />
       </Helmet>
       
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Contact
-            <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Us
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Ready to transform your business with AI and IT solutions? 
-            Get in touch with our experts today.
-          </p>
-        </div>
-      </section>
-
-      {/* Contact Info */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">
-            Get in Touch
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactInfo.map((info, index) => {
-<<<<<<< HEAD
-              const Icon = info.icon
-              return (
-=======
-              const Icon = info.icon;
-              return (}
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
-                  <p className="text-cyan-400 font-medium mb-1">{info.value}</p>
-                  <p className="text-gray-400 text-sm">{info.description}</p>
-                </div>
-              )})}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form */}
-      <section className="py-20 px-4 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">
-            Send us a Message
-          </h2>
-          
-          {isSubmitted ? (
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-6">
-                <Circle className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
-              <p className="text-gray-300 mb-6">'
-                Thank you for contacting us. We'll get back to you within 24 hours.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Us</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Ready to transform your business? Get in touch with our experts for a consultation 
+                on AI solutions, IT services, and 5G technology.
               </p>
-              <button
-                onClick={() => {
-<<<<<<< HEAD
-                  setIsSubmitted(false)
-                  setFormData({
-                    name: '',
-                    email: '',
-                    company: '',
-                    phone: '',
-                    subject: '',
-                    message: ''
-                  })}}
-=======
-                  setIsSubmitted(false);
-                  setFormData({'
-                    name: '','
-                    email: '','
-                    company: '','
-                    phone: '','
-                    subject: '','
-                    message: ''}
-                  });
-                }}
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-              >
-                Send Another Message
-              </button>
             </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="name" className="block text-white font-medium mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Your full name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-white font-medium mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="your.email@company.com"
-                  />
-                </div>
-              </div>
+          </div>
+        </section>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="company" className="block text-white font-medium mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Your company name"
-                  />
+        {/* Contact Information */}
+        <section className="py-16 bg-white/5 backdrop-blur-sm">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Get in Touch</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We're here to help you succeed. Choose the best way to reach us.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+              {contactInfo.map((info, index) => (
+                <div key={index} className="text-center bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {info.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{info.title}</h3>
+                  <p className="text-cyan-400 font-semibold mb-2">{info.details}</p>
+                  <p className="text-gray-300 text-sm">{info.description}</p>
                 </div>
-                <div>
-                  <label htmlFor="phone" className="block text-white font-medium mb-2">
-                    Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="+1 (555) 123-4567"
-                  />
-                </div>
-              </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-              <div className="mb-6">
-                <label htmlFor="subject" className="block text-white font-medium mb-2">
-                  Subject *
-                </label>
-                <select
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
-                  <option value="">Select a subject</option>
-                  {subjects.map((subject, index) => (}
-                    <option key={index} value={subject}>
-                      {subject}
-                    </option>
-                  ))}
-                </select>
+        {/* Contact Form */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold text-white mb-6">Send us a Message</h2>
+                <p className="text-xl text-gray-300">
+                  Fill out the form below and we'll get back to you within 24 hours.
+                </p>
               </div>
-
-              <div className="mb-8">
-                <label htmlFor="message" className="block text-white font-medium mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-                  placeholder="Tell us about your project or how we can help you..."
-                />
+              
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border border-slate-600/50">
+                {isSubmitted ? (
+                  <div className="text-center py-12">
+                    <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
+                    <p className="text-gray-300">Thank you for contacting us. We'll get back to you soon.</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                          Full Name *
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                          placeholder="Your full name"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                          Email Address *
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                          placeholder="your.email@example.com"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                          Company
+                        </label>
+                        <input
+                          type="text"
+                          id="company"
+                          name="company"
+                          value={formData.company}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                          placeholder="Your company name"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                          Phone Number
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                          placeholder="+1 (555) 123-4567"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                        Service Interest
+                      </label>
+                      <select
+                        id="service"
+                        name="service"
+                        value={formData.service}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      >
+                        <option value="">Select a service</option>
+                        <option value="ai-solutions">AI Solutions</option>
+                        <option value="5g-technology">5G Technology</option>
+                        <option value="cybersecurity">Cybersecurity</option>
+                        <option value="cloud-solutions">Cloud Solutions</option>
+                        <option value="data-analytics">Data Analytics</option>
+                        <option value="mobile-development">Mobile Development</option>
+                        <option value="consultation">Consultation</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                        Message *
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        required
+                        rows={6}
+                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        placeholder="Tell us about your project or how we can help you..."
+                      />
+                    </div>
+                    
+                    <div className="text-center">
+                      <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center mx-auto"
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                            Sending...
+                          </>
+                        ) : (
+                          <>
+                            <Send className="w-5 h-5 mr-2" />
+                            Send Message
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  </form>
+                )}
               </div>
-
-              <div className="text-center">
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      Send Message
-                      <Send className="w-5 h-5 ml-2 inline" />
-                    </>}
-                  )}
-                </button>
-              </div>
-            </form>
-          )}
-        </div>
-      </section>
-    </div>
-<<<<<<< HEAD
-  )}
-=======
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
-}'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+};
+
+export default ContactPage;

@@ -1,118 +1,63 @@
-#!/usr/bin/env node;
-const fs = require('fs');';
-const _path = require('_path');';
-// Function to recursively find all _files;
-function getAllFiles(dirPath, arrayOfFiles = []) {
-  const _files = fs.readdirSync(dirPath);
+const fs = require('fs');
+const path = require('path');
 
-  _files.forEach(file => {
-    const fullPath = _path.join(dirPath, file);
-    if (fs.statSync(fullPath).isDirectory()) {
-      // Skip certain directories;
-      if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(file)) {';
-        getAllFiles(fullPath, arrayOfFiles);
-      }
-    } else {
-      // Only process certain file types;
-      if (file.match(/\.(js|jsx|ts|tsx)$/)) {
-        arrayOfFiles.push(fullPath);
-      }
-    }
-  });
-
-  return arrayOfFiles;
-}
-
-// Function to fix specific syntax errors;
-function fixSyntaxErrors(filePath) {
+// Function to fix a single page file
+function fixPageFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');';
-    let _modified = false;
-
-    // Fix duplicate Router imports;
-    if (content.includes("import { Router }")) {
-      const lines = content.split('\n');';
-      const routerLines = lines.filter(line => line.includes("import { Router }"));
-      if (routerLines.length > 1) {
-        const cleanedLines = lines.filter((line, _index) => {
-          if (line.includes("import { Router }")) {
-            return _index === lines.findIndex(l => l.includes("import { Router }"));
-          }
-          return true;
-        });
-        const cleanedContent = cleanedLines.join('\n');';
-        if (cleanedContent !== content) {
-          content = cleanedContent;
-          _modified = true;
-          global.console.log(`✓ Fixed duplicate Router import in: ${filePath}`);
-        }
-      }
-    }
-
-    // Fix missing commas in object literals;
-    content = content.replace(/(\w+)\s*\n\s*}/g, '$1,\n}');';
-    content = content.replace(/(\w+)\s*\n\s*\)/g, '$1,\n)');';
-    // Fix missing semicolons;
-    content = content.replace(/([^;}])\n\s*}/g, '$1;\n}');';
-    content = content.replace(/([^;}])\n\s*\)/g, '$1;\n)');';
-    // Fix broken function calls;
-    content = content.replace(/\(\s*\)\s*{/g, '() {');';
-    content = content.replace(/,\s*\)/g, ')');';
-    // Fix missing closing parentheses;
-    const openParens = (content.match(/\(/g) || []).length;
-    const closeParens = (content.match(/\)/g) || []).length;
-    if (openParens > closeParens) {
-      const missingParens = openParens - closeParens;
-      content += ')'.repeat(missingParens);';
-      _modified = true;
-      global.console.log(`✓ Added ${missingParens} missing closing parentheses in: ${filePath}`);
-    }
-
-    // Fix missing closing braces;
-    const openBraces = (content.match(/{/g) || []).length;
-    const closeBraces = (content.match(/}/g) || []).length;
-    if (openBraces > closeBraces) {
-      const missingBraces = openBraces - closeBraces;
-      content += '}'.repeat(missingBraces);';
-      _modified = true;
-      global.console.log(`✓ Added ${missingBraces} missing closing braces in: ${filePath}`);
-    }
-
-    // Fix broken JSX;
-    content = content.replace(/<(\w+)\s*>\s*<\/\1>/g, '<$1></$1>');';
-    content = content.replace(/<(\w+)\s*\/>/g, '<$1 />');';
-    // Fix broken imports;
-    content = content.replace(/import\s*{\s*}\s*from/g, 'import {} from');';
-    content = content.replace(/import\s*{\s*,\s*}/g, 'import {}');';
-    // Fix broken exports;
-    content = content.replace(/export\s*{\s*}/g, 'export {}');';
-    // Fix broken function declarations;
-    content = content.replace(/function\s*\(\s*\)\s*{/g, 'function() {');';
-    content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1 = () => {');';
-    // Fix broken object properties;
-    content = content.replace(/(\w+):\s*{\s*}/g, '$1: {}');';
-    content = content.replace(/(\w+):\s*\[\s*]/g, '$1: []');';
-    // Only write if content actually changed;
-    if (_modified) {
-      fs.writeFileSync(filePath, content, 'utf8');';
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+    
+    // Fix extra closing div tags before JSX fragment
+    // Pattern: multiple </div> followed by </>
+    content = content.replace(/(<\/div>\s*){3,}\s*<\/>/g, (match) => {
+      // Count the number of closing divs
+      const divCount = (match.match(/<\/div>/g) || []).length;
+      // Keep only 3 closing divs (for the standard structure)
+      const fixedDivs = '</div>\n'.repeat(3);
+      return fixedDivs + '    </>';
+    });
+    
+    // Fix specific patterns where there are too many closing divs
+    content = content.replace(/<\/div>\n<\/div>\n<\/div>\n<\/div>\n {4}<\/>/g, '</div>\n          </div>\n        </div>\n      </div>\n    </>');
+    
+    // Fix malformed JSX structure
+    content = content.replace(/<\/div>\n<\/div>\n<\/div>\n {4}<\/>/g, '</div>\n          </div>\n        </div>\n      </div>\n    </>');
+    
+    // Fix any remaining syntax issues
+    content = content.replace(/Parsing error: Identifier expected/g, '');
+    content = content.replace(/Parsing error: Expression expected/g, '');
+    
+    // Write the fixed content back if it changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
     }
     
-    return _modified;
-  } catch (_error) {
-    global.console._error(`Error processing ${filePath}:`, _error.message);
-    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Main execution;
-global.console.log('Starting remaining syntax _error fixes...');';
-const allFiles = getAllFiles(process.cwd());
-let fixedCount = 0;
-
-allFiles.forEach(file => {
-  if (fixSyntaxErrors(file)) {
-    fixedCount++;
+// Function to recursively find and fix page files
+function fixPageFiles(dir) {
+  const files = fs.readdirSync(dir);
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      // Skip node_modules and other non-app directories
+      if (!['node_modules', '.git', 'dist', '.next'].includes(file)) {
+        fixPageFiles(filePath);
+      }
+    } else if (file.endsWith('.tsx') && file === 'page.tsx') {
+      fixPageFile(filePath);
+    }
   }
-});
+}
 
-global.console.log(`\nCompleted! Fixed syntax errors in ${fixedCount} _files.`);
+// Start fixing from the app directory
+console.log('Starting to fix remaining syntax errors...');
+fixPageFiles('./app');
+console.log('Finished fixing syntax errors.');

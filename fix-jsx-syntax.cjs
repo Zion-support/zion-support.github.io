@@ -2,48 +2,101 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-// Find all .tsx files in the app directory
-const files = glob.sync('app/**/*.tsx', { cwd: __dirname });
+// Function to fix JSX syntax issues
+function fixJSXSyntax(content) {
+  // Fix malformed JSX fragments
+  content = content.replace(/<>Helmet>/g, '<><Helmet>');
+  content = content.replace(/<\/Helmet>/g, '</Helmet>');
+  
+  // Fix malformed component names
+  content = content.replace(/constHomepagePage:/g, 'const HomePage:');
+  content = content.replace(/constFooterpagePage:/g, 'const FooterPage:');
+  content = content.replace(/constNavigationpagePage:/g, 'const NavigationPage:');
+  
+  // Fix malformed JSX tags
+  content = content.replace(/<Helmet>/g, '<Helmet>');
+  content = content.replace(/<\/Helmet>/g, '</Helmet>');
+  content = content.replace(/<Link/g, '<Link');
+  content = content.replace(/<\/Link>/g, '</Link>');
+  content = content.replace(/<div/g, '<div');
+  content = content.replace(/<\/div>/g, '</div>');
+  content = content.replace(/<section/g, '<section');
+  content = content.replace(/<\/section>/g, '</section>');
+  content = content.replace(/<h1/g, '<h1');
+  content = content.replace(/<\/h1>/g, '</h1>');
+  content = content.replace(/<p/g, '<p');
+  content = content.replace(/<\/p>/g, '</p>');
+  content = content.replace(/<button/g, '<button');
+  content = content.replace(/<\/button>/g, '</button>');
+  content = content.replace(/<a/g, '<a');
+  content = content.replace(/<\/a>/g, '</a>');
+  content = content.replace(/<ul/g, '<ul');
+  content = content.replace(/<\/ul>/g, '</ul>');
+  content = content.replace(/<li/g, '<li');
+  content = content.replace(/<\/li>/g, '</li>');
+  content = content.replace(/<footer/g, '<footer');
+  content = content.replace(/<\/footer>/g, '</footer>');
+  content = content.replace(/<nav/g, '<nav');
+  content = content.replace(/<\/nav>/g, '</nav>');
+  content = content.replace(/<header/g, '<header');
+  content = content.replace(/<\/header>/g, '</header>');
+  content = content.replace(/<main/g, '<main');
+  content = content.replace(/<\/main>/g, '</main>');
+  content = content.replace(/<article/g, '<article');
+  content = content.replace(/<\/article>/g, '</article>');
+  content = content.replace(/<aside/g, '<aside');
+  content = content.replace(/<\/aside>/g, '</aside>');
+  
+  // Fix malformed JSX attributes
+  content = content.replace(/className="([^"]*)\s+([^"]*)"/g, (match, first, second) => {
+    return `className="${first} ${second}"`;
+  });
+  
+  // Fix malformed JSX fragments
+  content = content.replace(/<>\s*</g, '<>');
+  content = content.replace(/<\/>\s*</g, '</>');
+  
+  // Fix malformed closing tags
+  content = content.replace(/<\/>\s*$/g, '</>');
+  
+  return content;
+}
 
-console.log(`Found ${files.length} files to process`);
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixJSXSyntax(content);
+    
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Main execution
+console.log('Starting JSX syntax fixes...');
+
+// Find all TypeScript/JSX files
+const files = glob.sync('app/**/*.{ts,tsx}', { cwd: __dirname });
+
+let fixedCount = 0;
+let totalFiles = files.length;
+
+console.log(`Found ${totalFiles} files to process...`);
 
 files.forEach(file => {
-  const filePath = path.join(__dirname, file);
-  
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix common JSX syntax errors
-    // Remove semicolons after JSX elements
-    content = content.replace(/;\s*>/g, '>');
-    content = content.replace(/;\s*<\//g, '</');
-    content = content.replace(/;\s*{/g, '{');
-    content = content.replace(/;\s*}/g, '}');
-    
-    // Fix unterminated strings in imports
-    content = content.replace(/from\s+['"]([^'"]*);/g, 'from \'$1\';');
-    
-    // Fix missing quotes in imports
-    content = content.replace(/from\s+([^'";\s]+);/g, 'from \'$1\';');
-    
-    // Fix merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    
-    // Fix common syntax issues
-    content = content.replace(/;\s*$/gm, '');
-    content = content.replace(/\s+;/g, '');
-    
-    // Fix 'use client' directive placement
-    content = content.replace(/'use client';\s*import/g, "import\n'use client'");
-    
-    // Write the fixed content back
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${file}`);
-    
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+  const fullPath = path.join(__dirname, file);
+  if (processFile(fullPath)) {
+    fixedCount++;
   }
 });
 
-console.log('JSX syntax fixing completed');
+console.log(`\nFixed ${fixedCount} out of ${totalFiles} files.`);
+console.log('JSX syntax fixes completed!');
