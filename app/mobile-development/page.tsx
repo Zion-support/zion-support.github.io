@@ -1,89 +1,41 @@
-<<<<<<< HEAD
-import React from 'react;'
-import { Helmet } from 'react-helmet-async;'
-'use client;''
-export default function Page() {
-  return (
-    <div className="min-h-screen bg-white">""
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." />""
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">;""
-        <div className="text-center">;""
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">;""
-            Page;
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">;""
-            Professional page solutions tailored to your business needs.;
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;""
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;""
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">;""
-                Expert Solutions;
-              </h3>
-              <p className="text-blue-700">;""
-                Our team of experts delivers cutting-edge page solutions.;
-              </p>
-            </div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;""
-              <h3 className="text-lg font-semibold text-green-900 mb-2">;""
-                Custom Implementation;
-              </h3>
-              <p className="text-green-700">;""
-                Tailored page implementations for your specific requirements.;
-              </p>
-            </div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">;""
-              <h3 className="text-lg font-semibold text-purple-900 mb-2">;""
-                24/7 Support;
-              </h3>
-              <p className="text-purple-700">;""
-                Round-the-clock support for all your page needs.;
-              </p>
-            </div>
-          </div>
-          <div className="mt-12">;""
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;""
-              Get Started Today;
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );}
-}''
-=======
-import SEOHead from '../components/SEOHead';
-
-const PagePage: React.FC = () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        title="page - Zion Tech Group"
-        description="Zion Tech Group page service page"
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const MobileDevelopmentPage: React.FC = () => {
   return (
     <>
-      <SEOHead title ="mobile-development - Zion Tech Group - Zion Tech Group"";
-        description="Zion Tech Group mobile-development service page"";
-
-      />
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">mobile-development - Zion Tech Group</h1>";
-          <p className ="text-gray-300">Coming soon...</p>";
+      <Helmet>
+        <title>Mobile Development - Zion Tech Group</title>
+        <meta name="description" content="Native and cross-platform mobile app development for iOS and Android." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">Mobile Development</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Native and cross-platform mobile app development
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-md border">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">iOS Development</h3>
+              <p className="text-gray-600">
+                Create native iOS applications using Swift and the latest iOS technologies.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md border">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Android Development</h3>
+              <p className="text-gray-600">
+                Build native Android applications using Kotlin and modern Android development practices.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </>
-
-  )
-    },
-    {}
-export default PagePage;
-
-  ),
+  );
 };
 
->>>>>>> main
+export default MobileDevelopmentPage;

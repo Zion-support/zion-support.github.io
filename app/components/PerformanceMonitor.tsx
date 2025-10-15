@@ -1,153 +1,77 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react;'
-interface PerformanceMetrics {
-  cls: number | null;
-  fcp: number | null;}
-  lcp: number | null;}
-  ttfb: number | null;}
-  loadTime: number | null;}
+import React, { useEffect } from 'react';
+
+interface WebVitalMetric {
+  name: string;
+  value: number;
+  delta: number;
+  id: string;
+  navigationType: string;
 }
+
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    fcp: null,
-    lcp: null,
-    ttfb: null,
-    loadTime: null
-  });
   useEffect(() => {
-    // Only run in development
-    if (process.env.NODE_ENV !== 'development') {''
-      return;
-    }
-    // Simulate performance metrics for development
-    const simulateMetrics = () => {
-      setMetrics({)
-        cls: Math.random() * 0.1,
-        fcp: Math.random() * 1000 + 500,}
-        lcp: Math.random() * 2000 + 1000,}
-        ttfb: Math.random() * 500 + 200,}
-        loadTime: Math.random() * 3000 + 1000}
+    // Monitor Core Web Vitals with proper analytics
+    const sendToAnalytics = (metric: WebVitalMetric) => {
+      // Send to analytics service (replace with your analytics provider)
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          event_label: metric.id,
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          non_interaction: true,
+        });
+      }
+      
+      // Also log in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`[Web Vitals] ${metric.name}:`, metric.value);
+      }
+    };
+
+    // Only load web-vitals in production or when needed
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
+        onCLS(sendToAnalytics);
+        onFCP(sendToAnalytics);
+        onLCP(sendToAnalytics);
+        onTTFB(sendToAnalytics);
+        onINP(sendToAnalytics);
+      }).catch((error) => {
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Failed to load web-vitals:', error);
+        }
       });
-    };
-    // Simulate metrics after a delay
-    const timer = setTimeout(simulateMetrics, 2000);
-    return () => clearTimeout(timer);
-  }, []);
-  // Don't render anything in production''
-  if (process.env.NODE_ENV === 'production') {''
-    return null;
-  }
-  return (
-    <div className="fixed bottom-4 left-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs">""
-      <h3 className="font-bold mb-2">Performance Metrics</h3>""
-      <div className="space-y-1 text-sm">""
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>''
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>''
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>''
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>''
-        <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'Loading...'}</div>''
-      </div>
-    </div>
-  );
-};
-export default PerformanceMonitor;
-=======
+    }
 
-import React, { useEffect, useState } from 'react',
-      import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals',
-      interface PerformanceMetrics {},
-      CLS: number | null,
-      INP: number | null,
-      FCP: number | null,
-      LCP: number | null,
-      TTFB: number | null
-    },
-    {}
-const PerformanceMonitor: React.FC = () => {},
-      const [metrics, setMetrics] = useState<PerformanceMetrics>({},)
-      CLS: null,
-      INP: null,
-      FCP: null,
-      LCP: null,
-      TTFB: null
-  }),
-      useEffect(() => {},
-      const handleMetric = (metric: any) => {},
-      setMetrics(prev => ({};)
-        ...prev;
-        [metric.name]: metric.value
-      }));
-
-      // Send to analytics (replace with your analytics service)
-      if (typeof window !== 'undefined' && (window as any).gtag) {};
-        (window as any).gtag('event', metric.name, {},)
-      event_category: 'Web Vitals',
-      value: Math.round(metric.value),
-      event_label: metric.id,
-      non_interaction: true})
-    },
-    {}
-    };
-
-    // Measure Core Web Vitals
-    onCLS(handleMetric),
-      onINP(handleMetric),
-      onFCP(handleMetric),
-      onLCP(handleMetric),
-      onTTFB(handleMetric);
-
-    // Performance observer for additional metrics
-    if ($1) {}
-  // If body
-}
-      const observer = new PerformanceObserver((list) => {};
-        for (const entry of list.getEntries()) {};
-          if (entry.entryType === 'navigation') {};
-            // Navigation timing metrics collected
+    // Monitor page load performance
+    const measurePageLoad = () => {
+      if (typeof window !== 'undefined' && window.performance) {
+        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+          const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+          
+          if (process.env.NODE_ENV === 'development') {
+            console.log(`[Performance] Page Load Time: ${loadTime}ms`);
+            console.log(`[Performance] DOM Content Loaded: ${domContentLoaded}ms`);
           }
-    },
-    {}
-      }),
-      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
-    },
-    {}
-    // Memory usage monitoring
-    if ('memory' in performance) {};
-      // Memory usage metrics collected
+        }
+      }
+    };
+
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePageLoad();
+    } else {
+      window.addEventListener('load', measurePageLoad);
+    }
+
+    return () => {
+      window.removeEventListener('load', measurePageLoad);
     };
   }, []);
 
-  // Development mode: metrics available for debugging
-  useEffect(() => {},
-      if (process.env.NODE_ENV === 'development') {};
-      // Performance metrics available for debugging
-    };
-  }, [metrics]),
-      return null; // This component doesn't render anything'
-},
-      export default PerformanceMonitor;
-
-import React from 'react';;';
-import SEOHead from './components/SEOHead';
-;
-const ComponentsPage: React.FC = () => {
-  return (
-    <>;
-      <SEOHead;
-        title="Components - Zion Tech Group"";
-        description="Professional components solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-        </div>;
-      </div>;
-    </>;
-  ),
+  return null;
 };
-;
-export default ComponentsPage;'";'";
 
->>>>>>> main
+export default PerformanceMonitor;

@@ -1,111 +1,52 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
-<<<<<<< HEAD
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-const resolve = path.resolve;
-=======
->>>>>>> main
-
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react({
-      // Enable React Fast Refresh
-<<<<<<< HEAD
-      fastRefresh: true
-=======
-      fastRefresh: true,
-      // Optimize JSX runtime
-      jsxRuntime: 'automatic',
->>>>>>> main
-    })
-  ],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './app'),
-<<<<<<< HEAD
-      '@/components': path.resolve(__dirname, './app/components'),
-      '@/utils': path.resolve(__dirname, './app/utils'),
-      '@/hooks': path.resolve(__dirname, './hooks'),
-=======
-      '@components': path.resolve(__dirname, './app/components'),
-      '@pages': path.resolve(__dirname, './app/pages'),
-      '@utils': path.resolve(__dirname, './utils'),
-      '@types': path.resolve(__dirname, './types'),
->>>>>>> main
-    },
-  },
+  plugins: [react()],
   build: {
     outDir: 'dist',
-<<<<<<< HEAD
-    sourcemap: false,
-    minify: 'esbuild',
-    target: 'es2020',
-=======
     sourcemap: true,
-    minify: 'esbuild',
-    target: 'es2020',
-    cssCodeSplit: true,
->>>>>>> main
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          icons: ['@heroicons/react'],
-          motion: ['framer-motion'],
-          ui: ['clsx', 'tailwind-merge'],
-        },
-<<<<<<< HEAD
-        chunkFileNames: "assets/js/[name]-[hash].js",
-        entryFileNames: "assets/js/[name]-[hash].js",
-      },
+          ui: ['@heroicons/react', 'framer-motion', 'lucide-react'],
+          utils: ['clsx', 'tailwind-merge']
+        }
+      }
     },
-    // Optimize bundle size
-    treeshake: true,
-  },
-  server: {
-    port: 3000,
-    open: false,
-    host: true,
-  },
-  preview: {
-    port: 4173,
-=======
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
-      },
-    },
-    // Optimize chunk size
     chunkSizeWarningLimit: 1000,
   },
   server: {
     port: 3000,
     open: true,
-    host: true,
-    cors: true,
+    hmr: {
+      overlay: false
+    }
   },
-  preview: {
-    port: 4173,
-    open: true,
->>>>>>> main
-    host: true,
-  },
-  // Optimize dependencies
   optimizeDeps: {
     include: [
-      'react',
-      'react-dom',
+      'react', 
+      'react-dom', 
       'react-router-dom',
-      '@heroicons/react/24/outline',
+      '@heroicons/react',
       'framer-motion',
-      'clsx',
-      'tailwind-merge'
-    ],
+      'lucide-react'
+    ]
   },
-  // CSS optimization
+  esbuild: {
+    drop: ['console', 'debugger'],
+  },
   css: {
     devSourcemap: true,
-  },
-});
+  }
+})

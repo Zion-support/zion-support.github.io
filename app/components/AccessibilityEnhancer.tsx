@@ -1,89 +1,120 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react;'
-const AccessibilityEnhancer: React.FC = () => {
+import React, { useEffect, memo } from 'react';
+
+const AccessibilityEnhancer: React.FC = memo(() => {
   useEffect(() => {
-    // Skip to main content functionality
+    // Add keyboard navigation support
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Skip to main content
+      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+        const mainContent = document.querySelector('main');
+        if (mainContent) {
+          (mainContent as HTMLElement).focus();
+        }
+      }
+    };
+
+    // Add focus management for modals and dropdowns
+    const handleFocusIn = (event: FocusEvent) => {
+      const target = event.target as HTMLElement;
+      
+      // Add focus ring for keyboard users
+      if (target.matches('button, a, input, textarea, select, [tabindex]')) {
+        target.classList.add('keyboard-focus');
+      }
+    };
+
+    const handleFocusOut = (event: FocusEvent) => {
+      const target = event.target as HTMLElement;
+      target.classList.remove('keyboard-focus');
+    };
+
+    // Add ARIA live region for announcements
+    const addLiveRegion = () => {
+      const existingLiveRegion = document.getElementById('aria-live-region');
+      if (!existingLiveRegion) {
+        const liveRegion = document.createElement('div');
+        liveRegion.id = 'aria-live-region';
+        liveRegion.setAttribute('aria-live', 'polite');
+        liveRegion.setAttribute('aria-atomic', 'true');
+        liveRegion.className = 'sr-only';
+        document.body.appendChild(liveRegion);
+      }
+    };
+
+    // Add skip link
     const addSkipLink = () => {
-      const skipLink = document.createElement('a');''
-      skipLink.href = '#main-content;'
-      skipLink.textContent = 'Skip to main content;'
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50;'
-      skipLink.style.zIndex = '9999;'
-      document.body.insertBefore(skipLink, document.body.firstChild);
+      const existingSkipLink = document.getElementById('skip-link');
+      if (!existingSkipLink) {
+        const skipLink = document.createElement('a');
+        skipLink.id = 'skip-link';
+        skipLink.href = '#main-content';
+        skipLink.textContent = 'Skip to main content';
+        skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+        document.body.insertBefore(skipLink, document.body.firstChild);
+      }
     };
-    // High contrast mode toggle
-    const addHighContrastToggle = () => {
-      const toggle = document.createElement('button');''
-      toggle.textContent = 'Toggle High Contrast;'
-      toggle.className = 'fixed bottom-4 right-4 bg-purple-600 text-white px-4 py-2 rounded z-50;'
-      toggle.onclick = () => {
-        document.body.classList.toggle('high-contrast');''
-      };
+
+    // Add main content ID
+    const addMainContentId = () => {
+      const mainContent = document.querySelector('main');
+      if (mainContent && !mainContent.id) {
+        mainContent.id = 'main-content';
+      }
     };
-    // Focus management
-    const enhanceFocus = () => {
-      // Add focus indicators
-      const style = document.createElement('style');''
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #8b5cf6 !important;
-          outline-offset: 2px !important;
-        }
-        .high-contrast {}
-          filter: contrast(150%) brightness(110%);}
-        }
-      `;
-      document.head.appendChild(style);
-    };
-    // Keyboard navigation enhancement
-    const enhanceKeyboardNavigation = () => {
-      document.addEventListener('keydown', (e) => {''
-        if (e.key === 'Tab') {''
-          document.body.classList.add('keyboard-navigation');''
-        }
-      });
-      document.addEventListener('mousedown', () => {''
-        document.body.classList.remove('keyboard-navigation');''
-      });
-    };
+
     // Initialize accessibility features
+    addLiveRegion();
     addSkipLink();
-    addHighContrastToggle();
-    enhanceFocus();
-    enhanceKeyboardNavigation();
-    // Cleanup function
+    addMainContentId();
+
+    // Add event listeners
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('focusin', handleFocusIn);
+    document.addEventListener('focusout', handleFocusOut);
+
+    // Add CSS for keyboard focus
+    const style = document.createElement('style');
+    style.textContent = `
+      .keyboard-focus {
+        outline: 2px solid #3b82f6 !important;
+        outline-offset: 2px !important;
+      }
+      
+      .sr-only {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+      }
+      
+      .focus\\:not-sr-only:focus {
+        position: static !important;
+        width: auto !important;
+        height: auto !important;
+        padding: 0.5rem 1rem !important;
+        margin: 0 !important;
+        overflow: visible !important;
+        clip: auto !important;
+        white-space: normal !important;
+      }
+    `;
+    document.head.appendChild(style);
+
     return () => {
-      const skipLink = document.querySelector('a[href="#main-content"]');'"'"
-      if (skipLink) {
-        skipLink.remove();
-      }
-      const toggle = document.querySelector('button[onclick*="high-contrast"]');'"'"
-      if (toggle) {
-        toggle.remove();
-      }
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('focusin', handleFocusIn);
+      document.removeEventListener('focusout', handleFocusOut);
     };
   }, []);
+
   return null;
-};
+});
+
+AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
+
 export default AccessibilityEnhancer;
-=======
-import React from 'react';;";
-;
-interface AccessibilityEnhancerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-;
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ';',";
-  className = '',;";";";
-  children;
-}) => {
-  return (
-    <div: className ={`accessibilityenhancer ${className}`}>;
-      {children}
-    </div>;
-  );
-};
-;
-export default AccessibilityEnhancer;';';";
->>>>>>> main
