@@ -4,7 +4,8 @@ export default {
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',  },
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+  },
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', { useESM: true }],
     '^.+\\.(js|jsx)$': 'babel-jest',
@@ -21,5 +22,5 @@ export default {
   testPathIgnorePatterns: ["<rootDir>/out/", "<rootDir>/node_modules/"],
   transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$|@testing-library|@heroicons|framer-motion))',
-  ],};
-ursor/fix-errors-and-merge-to-main-5ae7
+  ],
+};
