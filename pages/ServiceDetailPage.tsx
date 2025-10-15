@@ -6,7 +6,6 @@ import {
   Star, 
   Users, 
   Shield, 
-  Zap,
   ArrowRight,
   Phone,
   Mail,
