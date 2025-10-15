@@ -65,8 +65,20 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 border-t border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50 relative overflow-hidden">
+      {/* Futuristic background effects */}
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-purple-900/20 to-transparent"></div>
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '30px 30px'
+        }}></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
@@ -169,19 +181,41 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="mt-8 pt-8 border-t border-slate-700">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="flex items-center text-gray-400 text-sm">
-              <PhoneIcon className="w-4 h-4 mr-2" />
-              <span>+1 302 464 0950</span>
+        <div className="mt-8 pt-8 border-t border-slate-700/50">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-center text-gray-300 text-sm group hover:text-cyan-400 transition-colors duration-300">
+              <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
+                <PhoneIcon className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <div className="font-semibold text-white">Phone</div>
+                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
             </div>
-            <div className="flex items-center text-gray-400 text-sm">
-              <EnvelopeIcon className="w-4 h-4 mr-2" />
-              <span>kleber@ziontechgroup.com</span>
+            <div className="flex items-center text-gray-300 text-sm group hover:text-cyan-400 transition-colors duration-300">
+              <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
+                <EnvelopeIcon className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <div className="font-semibold text-white">Email</div>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
             </div>
-            <div className="flex items-center text-gray-400 text-sm">
-              <MapPinIcon className="w-4 h-4 mr-2" />
-              <span>364 E Main St STE 1008 Middletown DE 19709</span>
+            <div className="flex items-center text-gray-300 text-sm group hover:text-cyan-400 transition-colors duration-300">
+              <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
+                <MapPinIcon className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <div className="font-semibold text-white">Address</div>
+                <span className="hover:text-cyan-400 transition-colors">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </span>
+              </div>
             </div>
           </div>
         </div>

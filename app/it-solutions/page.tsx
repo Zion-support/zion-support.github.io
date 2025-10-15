@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -848,13 +843,165 @@ const ITSolutionsPage: React.FC = () => {
       icon: <FileText className="w-8 h-8 text-amber-400" />,
       popular: false,
       link: 'https://ziontechgroup.com/it-audit-compliance'
+    },
+    {
+      id: 'cloud-migration-services',
+      name: 'Cloud Migration Services',
+      price: '$399/mo',
+      originalPrice: '$799/mo',
+      description: 'Seamless migration to cloud platforms',
+      longDescription: 'Migrate your applications and data to the cloud with minimal downtime and maximum security using our proven migration methodology.',
+      features: [
+        'Migration Planning',
+        'Data Migration',
+        'Application Migration',
+        'Security Implementation',
+        'Performance Optimization',
+        'Testing & Validation',
+        'Training & Support',
+        'Cost Optimization',
+        'Monitoring Setup',
+        'Disaster Recovery'
+      ],
+      benefits: [
+        'Reduce migration risks',
+        'Minimize downtime',
+        'Improve scalability',
+        'Lower infrastructure costs',
+        'Enhance security'
+      ],
+      category: 'Cloud Computing',
+      icon: <Cloud className="w-8 h-8 text-blue-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/cloud-migration-services'
+    },
+    {
+      id: 'devops-automation',
+      name: 'DevOps Automation Platform',
+      price: '$249/mo',
+      originalPrice: '$499/mo',
+      description: 'Automate your DevOps pipeline and deployment processes',
+      longDescription: 'Streamline your development workflow with automated CI/CD pipelines, testing, and deployment processes.',
+      features: [
+        'CI/CD Pipeline Setup',
+        'Automated Testing',
+        'Deployment Automation',
+        'Infrastructure as Code',
+        'Monitoring & Logging',
+        'Security Scanning',
+        'Performance Testing',
+        'Rollback Capabilities',
+        'Team Collaboration',
+        'Integration APIs'
+      ],
+      benefits: [
+        'Reduce deployment time by 80%',
+        'Improve code quality',
+        'Minimize human errors',
+        'Increase team productivity',
+        'Accelerate time to market'
+      ],
+      category: 'Development',
+      icon: <Settings className="w-8 h-8 text-green-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/devops-automation'
+    },
+    {
+      id: 'it-asset-management',
+      name: 'IT Asset Management System',
+      price: '$149/mo',
+      originalPrice: '$299/mo',
+      description: 'Track and manage all your IT assets',
+      longDescription: 'Keep track of all your IT assets, licenses, and warranties with our comprehensive asset management system.',
+      features: [
+        'Asset Inventory',
+        'License Management',
+        'Warranty Tracking',
+        'Depreciation Calculation',
+        'Asset Lifecycle Management',
+        'Barcode Scanning',
+        'Reporting & Analytics',
+        'Integration APIs',
+        'Mobile App',
+        'Team Collaboration'
+      ],
+      benefits: [
+        'Reduce asset costs',
+        'Improve compliance',
+        'Optimize asset utilization',
+        'Prevent license violations',
+        'Streamline procurement'
+      ],
+      category: 'Management',
+      icon: <Database className="w-8 h-8 text-indigo-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/it-asset-management'
+    },
+    {
+      id: 'network-monitoring',
+      name: 'Network Monitoring & Analytics',
+      price: '$199/mo',
+      originalPrice: '$399/mo',
+      description: 'Comprehensive network monitoring and performance analytics',
+      longDescription: 'Monitor your network infrastructure 24/7 with real-time alerts, performance analytics, and predictive maintenance.',
+      features: [
+        'Real-time Monitoring',
+        'Performance Analytics',
+        'Alert Management',
+        'Traffic Analysis',
+        'Bandwidth Monitoring',
+        'Security Monitoring',
+        'Historical Reporting',
+        'Mobile Alerts',
+        'Integration APIs',
+        'Custom Dashboards'
+      ],
+      benefits: [
+        'Prevent network outages',
+        'Optimize performance',
+        'Reduce downtime',
+        'Improve security',
+        'Lower maintenance costs'
+      ],
+      category: 'Networking',
+      icon: <Wifi className="w-8 h-8 text-cyan-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/network-monitoring'
+    },
+    {
+      id: 'it-service-desk',
+      name: 'IT Service Desk Platform',
+      price: '$179/mo',
+      originalPrice: '$359/mo',
+      description: 'Complete IT service desk and ticketing system',
+      longDescription: 'Manage IT support requests, incidents, and service requests with our comprehensive service desk platform.',
+      features: [
+        'Ticket Management',
+        'Incident Tracking',
+        'Service Catalog',
+        'Knowledge Base',
+        'SLA Management',
+        'Automation Rules',
+        'Reporting & Analytics',
+        'Mobile App',
+        'Integration APIs',
+        'Team Collaboration'
+      ],
+      benefits: [
+        'Improve response times',
+        'Enhance user satisfaction',
+        'Streamline support processes',
+        'Reduce support costs',
+        'Better resource allocation'
+      ],
+      category: 'Support',
+      icon: <Headphones className="w-8 h-8 text-pink-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/it-service-desk'
     }
   ];
-<<<<<<< HEAD
 
   const categories = ['All', 'Cloud Computing', 'Security', 'Networking', 'Data Center', 'Support', 'Development', 'Database', 'Consulting', 'Backup', 'Mobile', 'Virtualization', 'Compliance'];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 
   const features = [
     '24/7 Expert Support',
@@ -930,7 +1077,6 @@ const ITSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>IT Solutions - Comprehensive Technology Services | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, networking, data center management, and custom software development. Transform your business with our expert IT services." />
         <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, networking, data center, software development, IT support, technology consulting" />
@@ -938,11 +1084,6 @@ const ITSolutionsPage: React.FC = () => {
         <meta property="og:description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, networking, data center management, and custom software development." />
         <meta property="og:url" content="https://ziontechgroup.com/it-solutions" />
         <link rel="canonical" href="https://ziontechgroup.com/it-solutions" />
-=======
-        <title>IT Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT solutions including infrastructure management, cloud migration, network security, and database optimization services." />
-        <meta name="keywords" content="IT solutions, infrastructure management, cloud migration, network security, database management, IT support, Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
       </Helmet>
 
       {/* Hero Section */}
@@ -981,7 +1122,6 @@ const ITSolutionsPage: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -1208,10 +1348,6 @@ const ITSolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
-        </section>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
     </>
   );
 };

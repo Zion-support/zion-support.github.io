@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3, Star } from 'lucide-react';
@@ -64,24 +63,16 @@ const FiveGSolutionsPage: React.FC = () => {
       popular: true,
       icon: <Shield className="w-8 h-8" />,
       benefits: "Achieve enterprise-grade security with private networks"
-<<<<<<< HEAD
-    }  ];
-=======
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 
   const benefits = [
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Ultra-Low Latency",
       description: "Achieve sub-millisecond latency for real-time applications"
-<<<<<<< HEAD
-    },    {
-=======
     },
     {
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
       icon: <Network className="w-6 h-6" />,
       title: "Massive Connectivity",
       description: "Support millions of devices per square kilometer"
@@ -95,24 +86,14 @@ const FiveGSolutionsPage: React.FC = () => {
       icon: <Shield className="w-6 h-6" />,
       title: "Enhanced Security",
       description: "Advanced encryption and network slicing for secure communications"
-<<<<<<< HEAD
-    }  ];
-=======
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 
   const technologies = [
     "5G NR", "Network Slicing", "Edge Computing", "IoT Protocols", 
     "AI/ML Integration", "Cloud-Native", "SDN/NFV", "MEC"
   ];
-=======
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
-export default function FiveGSolutionsPage() {
   return (
     <>
       <Helmet>
@@ -129,9 +110,7 @@ export default function FiveGSolutionsPage() {
           <p className="text-lg text-gray-300 mb-8">
             Comprehensive 5G solutions by Zion Tech Group. Transform your
             business with our expert solutions.
-          </p>
-
-<<<<<<< HEAD
+            </p>
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
@@ -203,8 +182,7 @@ export default function FiveGSolutionsPage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-        </div>
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
+          </div>
       </div>
     </>
   );

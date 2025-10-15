@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -213,6 +212,156 @@ const AISolutionsPage: React.FC = () => {
       category: 'Blockchain',
       icon: <Network className="w-8 h-8 text-yellow-400" />,
       popular: false
+    },
+    {
+      id: 'ai-voice-assistant',
+      name: 'AI Voice Assistant Pro',
+      price: '$199/mo',
+      originalPrice: '$399/mo',
+      description: 'Intelligent voice assistant for business applications',
+      longDescription: 'Create custom voice assistants that can handle customer inquiries, schedule meetings, and automate business processes through natural speech.',
+      features: [
+        'Natural Language Processing',
+        'Voice Recognition',
+        'Text-to-Speech',
+        'Multi-language Support',
+        'Custom Voice Training',
+        'Integration APIs',
+        'Analytics Dashboard',
+        'Conversation Management',
+        'Mobile & Web Support',
+        'Custom Commands'
+      ],
+      benefits: [
+        'Improve accessibility',
+        'Reduce response time',
+        'Enhance user experience',
+        'Automate voice tasks',
+        'Scale voice interactions'
+      ],
+      category: 'Conversational AI',
+      icon: <Mic className="w-8 h-8 text-indigo-400" />,
+      popular: true
+    },
+    {
+      id: 'ai-predictive-maintenance',
+      name: 'AI Predictive Maintenance',
+      price: '$399/mo',
+      originalPrice: '$799/mo',
+      description: 'Predict equipment failures before they happen',
+      longDescription: 'Use machine learning to analyze equipment data and predict maintenance needs, reducing downtime and operational costs.',
+      features: [
+        'Equipment Monitoring',
+        'Failure Prediction',
+        'Maintenance Scheduling',
+        'Cost Optimization',
+        'Real-time Alerts',
+        'Historical Analysis',
+        'Integration APIs',
+        'Custom Models',
+        'Reporting Dashboard',
+        'Mobile Notifications'
+      ],
+      benefits: [
+        'Reduce downtime by 50%',
+        'Lower maintenance costs',
+        'Extend equipment life',
+        'Improve efficiency',
+        'Prevent costly failures'
+      ],
+      category: 'Analytics',
+      icon: <Settings className="w-8 h-8 text-red-400" />,
+      popular: false
+    },
+    {
+      id: 'ai-fraud-detection',
+      name: 'AI Fraud Detection System',
+      price: '$299/mo',
+      originalPrice: '$599/mo',
+      description: 'Advanced fraud detection and prevention system',
+      longDescription: 'Protect your business from fraudulent activities with our AI-powered detection system that learns and adapts to new threats.',
+      features: [
+        'Real-time Detection',
+        'Machine Learning Models',
+        'Risk Scoring',
+        'Transaction Monitoring',
+        'Behavioral Analysis',
+        'Alert Management',
+        'Integration APIs',
+        'Custom Rules',
+        'Analytics Dashboard',
+        'Compliance Reporting'
+      ],
+      benefits: [
+        'Reduce fraud losses by 80%',
+        'Improve detection accuracy',
+        'Lower false positives',
+        'Enhance security',
+        'Comply with regulations'
+      ],
+      category: 'Security',
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      popular: true
+    },
+    {
+      id: 'ai-personalization-engine',
+      name: 'AI Personalization Engine',
+      price: '$249/mo',
+      originalPrice: '$499/mo',
+      description: 'Personalize user experiences with AI',
+      longDescription: 'Create personalized experiences for your users by analyzing their behavior and preferences to deliver relevant content and recommendations.',
+      features: [
+        'User Behavior Analysis',
+        'Content Personalization',
+        'Recommendation Engine',
+        'A/B Testing',
+        'Real-time Adaptation',
+        'Multi-channel Support',
+        'Analytics Dashboard',
+        'Integration APIs',
+        'Custom Algorithms',
+        'Performance Tracking'
+      ],
+      benefits: [
+        'Increase engagement by 60%',
+        'Improve conversion rates',
+        'Enhance user satisfaction',
+        'Boost revenue',
+        'Reduce bounce rates'
+      ],
+      category: 'Analytics',
+      icon: <Users className="w-8 h-8 text-purple-400" />,
+      popular: false
+    },
+    {
+      id: 'ai-document-processor',
+      name: 'AI Document Processor',
+      price: '$179/mo',
+      originalPrice: '$359/mo',
+      description: 'Automatically process and extract data from documents',
+      longDescription: 'Extract, classify, and process documents automatically using advanced OCR and machine learning technologies.',
+      features: [
+        'OCR Technology',
+        'Document Classification',
+        'Data Extraction',
+        'Form Processing',
+        'Invoice Processing',
+        'Contract Analysis',
+        'Integration APIs',
+        'Custom Templates',
+        'Batch Processing',
+        'Quality Assurance'
+      ],
+      benefits: [
+        'Save 90% processing time',
+        'Reduce manual errors',
+        'Improve accuracy',
+        'Scale document processing',
+        'Lower operational costs'
+      ],
+      category: 'Automation',
+      icon: <FileText className="w-8 h-8 text-teal-400" />,
+      popular: false
     }
   ];
 
@@ -292,7 +441,6 @@ const AISolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>AI Solutions - Advanced Artificial Intelligence Services | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive AI solutions including chatbots, computer vision, content generation, analytics, and automation. Transform your business with cutting-edge AI technology." />
         <meta name="keywords" content="AI solutions, artificial intelligence, chatbots, computer vision, content generation, analytics, automation, machine learning" />
@@ -308,40 +456,8 @@ const AISolutionsPage: React.FC = () => {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
 =======
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-
-import { Link } from "react-router-dom";
-
-export default function GDataAnalyticsZionTechGroupPage() {
-  return (
-    <>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Ai Solutions</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional ai solutions services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
-=======
-        <title>AI Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">AI Solutions</h1>
-          <p className="text-gray-300 text-center">Discover our comprehensive AI solutions and services.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
+  import { ArrowRight } from "lucide-react";
+            <p className="text-gray-300 text-center">Discover our comprehensive AI solutions and services.</p>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -572,12 +688,9 @@ export default function GDataAnalyticsZionTechGroupPage() {
             </Link>
           </div>
         </div>
-      </section>    </>
+      </section>
+    </>
   );
-<<<<<<< HEAD
 };
 
 export default AISolutionsPage;
-=======
-}
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56

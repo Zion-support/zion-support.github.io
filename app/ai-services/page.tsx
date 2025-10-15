@@ -645,9 +645,6 @@ export default function AIServices() {
       featured: false
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       name: "AI Security Solutions",
       description: "Advanced AI-powered security systems to protect your digital assets and infrastructure.",
       features: ["Threat detection", "Anomaly detection", "Behavioral analysis", "Incident response", "Zero-day protection", "Compliance monitoring"],
