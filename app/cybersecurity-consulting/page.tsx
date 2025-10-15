@@ -13,9 +13,10 @@ const CybersecurityConsultingPage: React.FC = () => {
     "Threat intelligence and monitoring",
     "Identity and access management (IAM)",
     "Network security and firewall configuration",
-    "Data protection and encryption solutions"];
+    "Data protection and encryption solutions"
+  ];
 
-const services = [
+  const services = [
     { name: "Security Assessment", icon: <Shield className="w-6 h-6" />, color: "text-blue-600" },
     { name: "Penetration Testing", icon: <Lock className="w-6 h-6" />, color: "text-red-600" },
     { name: "Compliance Audit", icon: <CheckCircle className="w-6 h-6" />, color: "text-green-600" },
@@ -24,7 +25,7 @@ const services = [
     { name: "Threat Monitoring", icon: <Eye className="w-6 h-6" />, color: "text-cyan-600" }
   ];
 
-const pricingPlans = [
+  const pricingPlans = [
     {
       name: "Assessment",
       price: "$5,000",
@@ -35,8 +36,9 @@ const pricingPlans = [
         "Vulnerability scanning",
         "Risk analysis report",
         "Security recommendations",
-        "Compliance check"]
-        "Executive summary"],
+        "Compliance check",
+        "Executive summary"
+      ],
       popular: false
     },
     {
@@ -49,8 +51,9 @@ const pricingPlans = [
         "Incident response support",
         "Security training sessions",
         "Compliance monitoring",
-        "Threat intelligence updates"]
-        "24/7 emergency support"],
+        "Threat intelligence updates",
+        "24/7 emergency support"
+      ],
       popular: true
     },
     {
@@ -63,20 +66,21 @@ const pricingPlans = [
         "Dedicated security team",
         "Custom security solutions",
         "Advanced threat protection",
-        "Security operations center"]
-        "Ongoing optimization"],
+        "Security operations center",
+        "Ongoing optimization"
+      ],
       popular: false
     }
   ];
 
-const stats = [
+  const stats = [
     { number: "99.9%", label: "Security Uptime", icon: <Shield className="w-6 h-6" /> },
     { number: "50%", label: "Risk Reduction", icon: <TrendingUp className="w-6 h-6" /> },
     { number: "24/7", label: "Monitoring", icon: <Eye className="w-6 h-6" /> },
     { number: "100+", label: "Secured Organizations", icon: <Users className="w-6 h-6" /> }
   ];
 
-const benefits = [
+  const benefits = [
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Enhanced Security",

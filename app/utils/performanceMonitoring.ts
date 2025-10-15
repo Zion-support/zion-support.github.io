@@ -8,8 +8,8 @@ export const performanceMonitoring = {
     if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'performance_measurement', {
             name: name,
-            duration: duration}
-          })
+            duration: duration
+          });
         }
       }
     }
