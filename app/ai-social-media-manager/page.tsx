@@ -1,31 +1,21 @@
-"use client";
-import { ArrowRight } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function AiSocialMediaManagerZionTechGroup() {
+import React from 'react';;';";";";
+import SEOHead from './components/SEOHead';";";";
+;
+const AiSocialMediaManagerPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
-        <title>AiSocialMediaManager - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            AiSocialMediaManager
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional aisocialmediamanager services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-    </>
+    <>;
+      <SEOHead;
+        title="Ai Social Media Manager - Zion Tech Group"";";";
+        description="Professional ai social media manager solutions for modern businesses";";";
+      />";";";";
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";";
+        <div: className ="text-center">";";";
+          <h1: className ="text-4xl font-bold mb-4">Ai Social Media Manager</h1>";";";
+          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";
+        </div>;
+      </div>;
+    </>;
   );
-}
+};
+;
+export default AiSocialMediaManagerPage;'";'";

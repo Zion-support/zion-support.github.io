@@ -1,11 +1,9 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, TrendingUp, Users, DollarSign } from 'lucide-react';
+import { TrendingUp, DollarSign, CheckCircle, Users, ArrowRight } from "lucide-react";
 
-export default function CaseStudies() {
+const CaseStudiesPage: React.FC = () => {}
   const caseStudies = [
-    {
+    {}
       id: 1,
       title: "AI-Powered E-commerce Transformation",
       client: "TechRetail Inc.",
@@ -21,7 +19,7 @@ export default function CaseStudies() {
       duration: "6 months",
       team: "8 specialists"
     },
-    {
+    {}
       id: 2,
       title: "Cloud Migration for Financial Services",
       client: "SecureBank Corp.",
@@ -37,7 +35,7 @@ export default function CaseStudies() {
       duration: "4 months",
       team: "12 specialists"
     },
-    {
+    {}
       id: 3,
       title: "Cybersecurity Implementation",
       client: "HealthCare Plus",
@@ -62,8 +60,8 @@ export default function CaseStudies() {
     { label: "Cost Savings", value: "$2M+", icon: <DollarSign className="w-6 h-6" /> }
   ];
 
-  return (
-    <>
+  return ()
+    <>{}</>
       <Helmet>
         <title>Case Studies - Zion Tech Group | Success Stories</title>
         <meta name="description" content="Explore our successful projects and case studies showcasing our expertise in AI, cloud, and cybersecurity solutions." />
@@ -86,7 +84,7 @@ export default function CaseStudies() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {stats.map((stat, index) => ()}
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <div className="text-white">{stat.icon}</div>
@@ -103,66 +101,50 @@ export default function CaseStudies() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Success Stories</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Success Stories</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how we've helped businesses transform and achieve their goals
+                Discover how we've helped businesses transform their operations with cutting-edge technology
               </p>
             </div>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {caseStudies.map((study) => (
-                <div key={study.id} className="bg-white/10 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                  <img
-                    src={study.image}
-                    alt={study.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">
-                        {study.industry}
-                      </span>
-                      <span className="text-gray-400 text-sm">
-                        {study.duration}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-3">
-                      {study.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4">
-                      <strong>Client:</strong> {study.client}
-                    </p>
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge:</h4>
-                      <p className="text-sm text-gray-300">{study.challenge}</p>
-                    </div>
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution:</h4>
-                      <p className="text-sm text-gray-300">{study.solution}</p>
-                    </div>
-                    <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Results:</h4>
-                      <ul className="space-y-1">
-                        {study.results.map((result, index) => (
-                          <li key={index} className="flex items-center text-sm text-gray-300">
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                            {result}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-400">
-                        Team: {study.team}
-                      </span>
-                      <Link
-                        to={`/case-studies/${study.id}`}
-                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm"
-                      >
-                        Read More
-                        <ArrowRight className="ml-1 w-4 h-4" />
-                      </Link>
-                    </div>
+              {caseStudies.map((study) => ()}
+                <div key={study.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
+                  <div className="mb-6">
+                    <div className="text-sm text-cyan-400 font-semibold mb-2">{study.industry}</div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{study.title}</h3>
+                    <p className="text-gray-300 mb-4">{study.client}</p>
                   </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
+                    <p className="text-gray-300 text-sm mb-4">{study.challenge}</p>
+                    
+                    <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
+                    <p className="text-gray-300 text-sm mb-4">{study.solution}</p>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Results</h4>
+                    <ul className="space-y-2">
+                      {study.results.map((result, index) => ()}
+                        <li key={index} className="flex items-center text-gray-300 text-sm">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {result}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="flex justify-between items-center text-sm text-gray-400 mb-6">
+                    <span>Duration: {study.duration}</span>
+                    <span>Team: {study.team}</span>
+                  </div>
+
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center">
+                    View Details
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </button>
                 </div>
               ))}
             </div>
@@ -170,32 +152,32 @@ export default function CaseStudies() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Start Your Success Story?
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Success Story?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let us help you achieve similar results for your business. Contact us today for a free consultation.
+              Let us help you achieve similar results with our proven expertise and cutting-edge solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <>
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200"
               >
-                Start Your Project
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/consultation"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                Get Started Today
+              </>
+              <>
+                to="/services"
+                className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200"
               >
-                Free Consultation
-              </Link>
+                View Our Services
+              </>
             </div>
           </div>
         </section>
+
       </div>
     </>
   );
-}
+};
+;
+export default CaseStudiesPage;'";'";

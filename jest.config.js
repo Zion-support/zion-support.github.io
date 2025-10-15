@@ -1,8 +1,9 @@
-export default {
+
+export default {}
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
-  moduleNameMapper: {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleNameMapper: {}
     '^@/(.*)$': '<rootDir>/app/$1',
     '^@/components/(.*)$': '<rootDir>/app/components/$1',
     '^@/pages/(.*)$': '<rootDir>/app/$1',
@@ -13,40 +14,31 @@ export default {
     '^@/data/(.*)$': '<rootDir>/app/data/$1',
     '^@/content/(.*)$': '<rootDir>/app/content/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-
-  },
-  transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
-    "^.+\\.(js|jsx)$": "babel-jest",
-  },
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': 'jest-transform-stub'},
+  transform: {}
+    '^.+\\.(ts|tsx)$': ['ts-jest', { useESM: true }],
+    '^.+\\.(js|jsx)$': 'babel-jest'},
   testMatch: [
-
     '<rootDir>/app/**/__tests__/**/*.(ts|tsx|js|jsx)',
     '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)',
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
     '<rootDir>/**/*.(test|spec).(ts|tsx|js|jsx)',
-  ],
-  collectCoverageFrom: [
-    'src/**/*.{ts,tsx}',
     '!src/**/*.d.ts',
+
     '!src/setupTests.ts',
-  ],
+  ],'
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  globals: {
-    'ts-jest': {
+  globals: {}
+    'ts-jest': {}
       useESM: true,
-      tsconfig: {
+      tsconfig: {}
+
         jsx: 'react-jsx'
       }
     }
-  },
+  },'
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  preset: 'ts-jest',
+  transformIgnorePatterns: ['
+    'node_modules/(?!(.*\\.mjs$|@testing-library|@heroicons|framer-motion))',
+  ]};
 
-  transformIgnorePatterns: [
-
-    "node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))",
-  ],
-};
-
-};

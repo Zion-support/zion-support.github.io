@@ -4,38 +4,30 @@ const withErrorLogging = (handler) => {
       await handler(req, res);
     } catch (error) {
       console.error('API Error:', error);
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Internal server error' }));
     }
   };
 };
 
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
-  }
-
-  const { productId } = req.body;
-  if (!productId) {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Product ID is required' }));
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
+    const { amount, currency = 'usd' } = req.body;
+
+    // Mock checkout session creation
     const session = {
-      id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
-      status: 'pending',
-      productId: productId
+      id: `cs_${Date.now()}`,
+      amount,
+      currency,
+      status: 'open',
+      url: `https://checkout.stripe.com/pay/cs_${Date.now()}`
     };
 
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(session));
+    res.status(200).json({ session });
   } catch (error) {
-    console.error('Checkout session creation error:', error);
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to create checkout session' }));
+    console.error('Checkout session creation failed:', error);
+    res.status(500).json({ error: 'Failed to create checkout session' });
   }
 });

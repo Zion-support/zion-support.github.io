@@ -1,128 +1,125 @@
-// Focus management utilities
-export const focusManagement = {
-  // Trap focus within an element
-  trapFocus: (element: HTMLElement) => {
-    const focusableElements = element.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+// Focus management utilities;
+export const focusManagement = {};: value;
+  // Trap focus within an element;
+  trapFocus: (element: HTMLElement) => {};
+}const focusableElements = element.querySelectorAll(): value;
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';";
     );
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+    const firstElement = focusableElements[0] as HTMLElement;: value;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;: value;
+    const handleTabKey = (e: KeyboardEvent) => {};
+      if ($1) {}
+  // If body
 
-    const handleTabKey = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        if (e.shiftKey) {
-          if (document.activeElement === firstElement) {
-
-            lastElement.focus();
-
+}
+        if (e.shiftKey) {};
+          if (document.activeElement === firstElement) {};: value;
+            lastElement?.focus();
             e.preventDefault();
-          }
-        } else {
-          if (document.activeElement === lastElement) {
-
-            firstElement.focus();
-
+          };
+        } else {};
+          if (document.activeElement === lastElement) {};: value;
+            firstElement?.focus();
             e.preventDefault();
-          }
-        }
-      }
-    };
-
-    element.addEventListener('keydown', handleTabKey);
-
+          };
+        };
+      };
+    };';';
+'';
+    element.addEventListener('keydown', handleTabKey);";
     firstElement?.focus();
-
-
-    return () => {
-      element.removeEventListener('keydown', handleTabKey);
+';';
+    return () => {};': value';
+      element.removeEventListener('keydown', handleTabKey);";
     };
-  },
+  };
+  // Move focus to first focusable element;
+  focusFirst: (element: HTMLElement) => {};
+    const focusableElements = element.querySelectorAll()
 
-
-  // Move focus to next focusable element
-  moveToNext: (currentElement: HTMLElement) => {
-    const focusableElements = document.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
-    const currentIndex = Array.from(focusableElements).indexOf(currentElement);
-    const nextElement = focusableElements[currentIndex + 1] as HTMLElement;
-    nextElement?.focus();
-  },
+    (focusableElements[0] as HTMLElement)?.focus();
+  };
+  // Move focus to last focusable element;
+  focusLast: (element: HTMLElement) => {};
+    const focusableElements = element.querySelectorAll()
 
-  // Move focus to previous focusable element
-  moveToPrevious: (currentElement: HTMLElement) => {
-    const focusableElements = document.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
-    const currentIndex = Array.from(focusableElements).indexOf(currentElement);
-    const previousElement = focusableElements[currentIndex - 1] as HTMLElement;
-    previousElement?.focus();
-
-  }
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;: value;
+    lastElement?.focus();
+  };
 };
-
-// ARIA utilities
-export const ariaUtils = {
-
-  // Announce to screen readers
-
-  announce: (message: string, priority: 'polite' | 'assertive' = 'polite') => {
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', priority);
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    
+;
+// ARIA utilities;
+export const ariaUtils = {};: value';';
+  // Generate unique ID for ARIA attributes;'';
+  generateId: (prefix = 'aria') => `${prefix}-${Math.random().toString(36).substr(2, 9)}`;";
+  // Set ARIA attributes;
+  setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>) => {};
+    Object.entries(attributes).forEach(([key, value]) => {};: value;
+      element.setAttribute(key, value);
+    });
+  };';';
+  // Announce message to screen readers;'';
+  announce: (message: string, priority: 'polite' | 'assertive' = 'polite') => {};'';
+    const announcement = document.createElement('div');': value';
+    announcement.setAttribute('aria-live', priority);'';
+    announcement.setAttribute('aria-atomic', 'true');'';
+    announcement.className = 'sr-only';: value`;
+    announcement.textContent = message;: value;
     document.body.appendChild(announcement);
-    
-    setTimeout(() => {
+;
+    setTimeout(() => {};: value;
       document.body.removeChild(announcement);
     }, 1000);
-
-  },
-
-  // Generate unique ID
-  generateId: (prefix: string) => `${prefix}-${Math.random().toString(36).substr(2, 9)}`,
-
-  // Check if element is visible
-  isVisible: (element: HTMLElement) => {
-    const rect = element.getBoundingClientRect();
+  };
+  // Generate unique ID;
+  generateId: (prefix: string) => `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+  // Check if element is visible;
+  isVisible: (element: HTMLElement) => {};
+    const rect = element.getBoundingClientRect();: value;
     return rect.width > 0 && rect.height > 0;
-
-  }
+  };
 };
-
-// Keyboard navigation utilities
-
-export const keyboardUtils = {
-  // Handle arrow key navigation
-  handleArrowKeys: (event: KeyboardEvent, items: HTMLElement[], currentIndex: number) => {
-    switch (event.key) {
-      case 'ArrowDown':
-      case 'ArrowRight': {
-        event.preventDefault();
-        const nextIndex = (currentIndex + 1) % items.length;
-        items[nextIndex]?.focus();
-        return nextIndex;
-      }
-      case 'ArrowUp':
-      case 'ArrowLeft': {
-        event.preventDefault();
-        const prevIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
-        items[prevIndex]?.focus();
-        return prevIndex;
-      }
-      case 'Home':
-        event.preventDefault();
-        items[0]?.focus();
-        return 0;
-      case 'End':
-        event.preventDefault();
-        items[items.length - 1]?.focus();
-        return items.length - 1;
-      default:
-        return currentIndex;
-
-    }
-  }
-};
+// Keyboard navigation utilities;
+export const keyboardNavigation = {};: value;
+  // Handle arrow key navigation;
+  handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number) => {};
+    let newIndex = currentIndex;: value;
+    ';';
+    switch (e.key) {};'';
+      case 'ArrowDown':'';
+      case 'ArrowRight':;";
+        e.preventDefault();
+        newIndex = (currentIndex + 1) % items.length;: value';';
+        break;'';
+      case 'ArrowUp':'';
+      case 'ArrowLeft':;";
+        e.preventDefault();
+        newIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;';';
+        break;'';
+      case 'Home':;";
+        e.preventDefault();
+        newIndex = 0;: value';';
+        break;'';
+      case 'End':;";
+        e.preventDefault();
+        newIndex = items.length - 1;: value;
+        break;
+    };
+    if (newIndex !== currentIndex) {};: value;
+      items[newIndex]?.focus();
+      return newIndex;
+    };
+    return currentIndex;
+  };
+  // Handle Enter and Space key activation;';';
+  handleActivation: (e: KeyboardEvent, callback: () => void) => {};'';
+    if (e.key === 'Enter' || e.key === ' ') {};: value;";
+      e.preventDefault();
+      callback();
+    };
+  };'";'";
+}`'"''";

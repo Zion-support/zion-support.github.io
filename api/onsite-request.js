@@ -4,56 +4,58 @@ import path from 'path';
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 
-  const { name, email, company, phone, message, location } = req.body || {};
-
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-
-  let existing = [];
   try {
+    const { name, email, company, phone, message, serviceType, preferredDate } = req.body;
+
+    // Ensure data directory exists
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+
+    // Load existing requests
+    let requests = [];
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
-      existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = [];
+      requests = JSON.parse(data);
     }
-  } catch (error) {
-    console.error('Error reading existing requests:', error);
-    existing = [];
-  }
 
-  const newRequest = {
-    id: Date.now().toString(),
-    name,
-    email,
-    company,
-    phone,
-    message,
-    location,
-    status: 'pending',
-    createdAt: new Date().toISOString()
-  };
+    // Add new request
+    const newRequest = {
+      id: Date.now().toString(),
+      name,
+      email,
+      company,
+      phone,
+      message,
+      serviceType,
+      preferredDate,
+      timestamp: new Date().toISOString(),
+      status: 'pending'
+    };
 
-  existing.push(newRequest);
+    requests.push(newRequest);
 
-  try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    // Save to file
+    fs.writeFileSync(file, JSON.stringify(requests, null, 2));
+
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({
-      success: true,
-      id: newRequest.id,
-      message: 'Onsite request submitted successfully'
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Onsite request submitted successfully',
+      requestId: newRequest.id
     }));
   } catch (error) {
-    console.error('Error saving onsite request:', error);
+    console.error('Onsite request error:', error);
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save request' }));
+    res.status(500).end(JSON.stringify({ 
+      error: 'Failed to submit onsite request' 
+    }));
   }
 }

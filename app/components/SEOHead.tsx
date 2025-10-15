@@ -1,115 +1,56 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react';;';";";";
+import { Helmet }; from 'react-helmet-async';";";";
+;
 interface SEOHeadProps {
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
   keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
+  canonicalUrl?: string;
   ogImage?: string;
-  ogUrl?: string;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
-  twitterSite?: string;
-  twitterCreator?: string;
-  structuredData?: object;
-  noindex?: boolean;
-  nofollow?: boolean;
+  ogType?: string;
+  twitterCard?: string;
+  noIndex?: boolean;
 }
-
+;
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered micro SAAS solutions, IT services, and innovative technology solutions.',
-  keywords = 'AI solutions, micro SAAS, IT services, software development, cloud computing, cybersecurity, data analytics',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-  canonical,
-  ogTitle,
-  ogDescription,
-  ogImage,
-  ogUrl,
-  twitterCard = 'summary_large_image',
-  twitterSite = '@ziontechgroup',
-  twitterCreator = '@ziontechgroup',
-  structuredData,
-  noindex = false,
-  nofollow = false
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullDescription = description || 'Leading provider of AI-powered micro SAAS solutions, IT services, and innovative technology solutions.';
-  const fullImage = image || 'https://ziontechgroup.com/og-image.jpg';
-  const fullUrl = url || 'https://ziontechgroup.com';
-  const fullCanonical = canonical || fullUrl;
-
-  const robotsContent = [
-    noindex ? 'noindex' : 'index',
-    nofollow ? 'nofollow' : 'follow'
-  ].join(', ');
-
+  title,;
+  description,;
+  keywords,;
+  canonicalUrl,;
+  ogImage,';';";";";
+  ogType = 'website',';";";";
+  twitterCard = 'summary_large_image',;";";";
+  noIndex = false;
+}) => {';';";";";
+  const: fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;';";";";
+  const: fullDescription = description || 'Professional AI and IT solutions for modern businesses';';";";";
+  const: fullKeywords = keywords || 'AI solutions, IT services, technology consulting, software development, artificial intelligence';";";";
+;
   return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={fullDescription} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content={robotsContent} />
-      <link rel="canonical" href={fullCanonical} />
-
-      {/* Open Graph Tags */}
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={ogTitle || fullTitle} />
-      <meta property="og:description" content={ogDescription || fullDescription} />
-      <meta property="og:image" content={ogImage || fullImage} />
-      <meta property="og:url" content={ogUrl || fullUrl} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-
-      {/* Twitter Card Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:site" content={twitterSite} />
-      <meta name="twitter:creator" content={twitterCreator} />
-      <meta name="twitter:title" content={ogTitle || fullTitle} />
-      <meta name="twitter:description" content={ogDescription || fullDescription} />
-      <meta name="twitter:image" content={ogImage || fullImage} />
-
-      {/* Article Meta Tags */}
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {author && <meta property="article:author" content={author} />}
-      {section && <meta property="article:section" content={section} />}
-      {tags.map((tag, index) => (
-        <meta key={index} property="article:tag" content={tag} />
-      ))}
-
-      {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
-
-      {/* Additional SEO Tags */}
-      <meta name="theme-color" content="#8b5cf6" />
-      <meta name="msapplication-TileColor" content="#8b5cf6" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    </Helmet>
+    <Helmet>;
+      <title>{fullTitle}</title>;
+      <meta: name ="description" content={fullDescription} />";";";
+      <meta: name ="keywords" content={fullKeywords} />";";";
+      <link: rel ="canonical" href={canonicalUrl || window.location.href} />;";";
+      {/* Open Graph */}";";";";
+      <meta: property ="og:title" content={fullTitle} />";";";
+      <meta: property ="og:description" content={fullDescription} />";";";
+      <meta: property ="og:type" content={ogType} />";";";
+      <meta: property ="og:url" content={canonicalUrl || window.location.href} />";";";
+      {ogImage && <meta: property ="og:image" content={ogImage} />}";";
+;
+      {/* Twitter */}";";";";
+      <meta: name ="twitter:card" content={twitterCard} />";";";
+      <meta: name ="twitter:title" content={fullTitle} />";";";
+      <meta: name ="twitter:description" content={fullDescription} />";";";
+      {ogImage && <meta: name ="twitter:image" content={ogImage} />}";";
+;
+      {/* Additional SEO */}'";'";";";";";
+      <meta: name ="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />";";";";";
+      <meta: name ="viewport" content="width=device-width, initial-scale=1" />";";";
+      <meta: httpEquiv ="Content-Type" content="text/html; charset=utf-8" />;";";
+    </Helmet>;
   );
 };
-
-export default SEOHead;
+;
+export default SEOHead;'";'";

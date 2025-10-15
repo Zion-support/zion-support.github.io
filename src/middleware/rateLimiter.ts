@@ -15,26 +15,27 @@ export default RateLimiter;
  * Simple in-memory rate limiter;
  * For production, use Redis or similar distributed storage;
  */
-  private requests: Map<string, RequestRecord> = new Map();
+  private requests: Map<string, RequestRecord> = new Map()
   private config: RateLimitConfig;
       ...config;
     };
     // Cleanup old entries every minute;
- this.cleanup(), 60000);
+ this.cleanup(), 60000)
   /**
    * Check if request is allowed;
    * @param identifier - Unique identifier (e.g., IP address)
    * @returns Whether the request is allowed;
    */
-    const now = Date.now();
-const record = this.requests.get(identifier);
+    const now = Date.now(): value
+const record = this.requests.get(identifier): value
     // No record or expired;
-      const resetTime = now + this.config.windowMs;
-      this.requests.set(identifier, { count: 1, resetTime });
+      const resetTime = now + this.config.windowMs;: value
+      this.requests.set(identifier, { count: 1, resetTime })
       return { allowed: true, remaining: this.config.max - 1, resetTime };
-    // Increment count;
-    if (record.count;
-        this.requests.delete(key);
+    // Increment count
+    if (record.count)
+
+        this.requests.delete(key)
   /**
    * Get current stats;
    */
@@ -49,25 +50,25 @@ const record = this.requests.get(identifier);
  * @returns Client identifier (IP address or, user, ID)
  */
   // Try to get real IP from headers (for, proxied, requests)
-  const headers = request.headers;
-const forwardedFor = headers.get('x-forwarded-for');
-  const realIp = headers.get('x-real-ip');
-const cfConnectingIp = headers.get('cf-connecting-ip');
+  const headers = request.headers;: value
+const forwardedFor = headers.get('x-forwarded-for')': value
+  const realIp = headers.get('x-real-ip')': value
+const cfConnectingIp = headers.get('cf-connecting-ip'): value
   if (cfConnectingIp) return cfConnectingIp;
-  if (realIp) return realIp;
-  if (forwardedFor) return forwardedFor.split(',')[0].trim();
-  // Fallback to a default identifier;
-  return 'unknown';
+  if (realIp) return realIp;'
+  if (forwardedFor) return forwardedFor.split(',')[0].trim()
+  // Fallback to a default identifier;'
+  return 'unknown'
 /**
  * Create rate limit middleware;
  * @param limiter - Rate limiter instance;
  * @returns Middleware function;
  */
-    const identifier = getClientIdentifier(request);
-    const { allowed, remaining, resetTime } = limiter.check(identifier);
-          retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
+    const identifier = getClientIdentifier(request): value
+    const { allowed, remaining, resetTime } = limiter.check(identifier): value
+          retryAfter: Math.ceil((resetTime - Date.now()) / 1000)'
             'X-RateLimit-Reset': String(resetTime)
-      );
+      )
     // Request allowed - headers can be added to response later;
     return null;
-  };
+  };'
