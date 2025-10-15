@@ -76,13 +76,13 @@ const optimizedSrc = getOptimizedSrc(src);
   if (hasError) {
     return (
       <div 
-        className={`flex items-center justify-center bg-gray-200 dark:bg-gray-700 ${className}`}
+        className="{`flex" items-center justify-center bg-gray-200 dark:bg-gray-700 ${className}`}
         style={{ width, height }}
         ref={imgRef}
       >
-        
-        <div className="text-center text-gray-500">
-          <ImageIcon className="w-8 h-8 mx-auto mb-2" />
+        ""
+        <div className="text-center text-gray-500">"
+          <ImageIcon className="w-8 h-8 mx-auto mb-2" />"
           <span className="text-sm">Failed to load image</span>
         </div>
       </div>
@@ -90,21 +90,21 @@ const optimizedSrc = getOptimizedSrc(src);
   }
   return (
     <div 
-      className={`relative overflow-hidden ${className}`}
+      className="{`relative" overflow-hidden ${className}`}
       style={{ width, height }}
       ref={imgRef}
     >
       {/* Blur placeholder */}
       {placeholder === 'blur' && blurDataURL && !isLoaded && (
-        <div 
+        <div "
           className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
           style={{ backgroundImage: `url(${blurDataURL})` }}
         />
       )}
       {/* Loading spinner */}
       {!isLoaded && !hasError && (
-        
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
+        ""
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">"
           <Loader2 className="w-6 h-6 animate-spin text-gray-400" />
         </div>
       )}
@@ -119,7 +119,7 @@ const optimizedSrc = getOptimizedSrc(src);
           loading={loading}
           onLoad={handleLoad}
           onError={handleError}
-          className={`transition-opacity duration-300 ${
+          className="{`transition-opacity" duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           style={{
@@ -132,4 +132,4 @@ const optimizedSrc = getOptimizedSrc(src);
     </div>
   );
 };
-export default OptimizedImage;
+export default OptimizedImage;"

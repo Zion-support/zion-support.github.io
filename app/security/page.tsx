@@ -1,3 +1,4 @@
+import { Shield, Users, FileText, CheckCircle, ArrowRight, Eye, Award, User, Helmet } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -14,7 +15,7 @@ const SecurityPage: React.FC = () => {
         'Encrypted backups'
       ]
     },
-    {
+    {"
       icon: <Lock className="w-8 h-8" />,
       title: 'Access Controls',
       description: 'Multi-layered access controls with role-based permissions and multi-factor authentication.',
@@ -25,7 +26,7 @@ const SecurityPage: React.FC = () => {
         'Regular access reviews'
       ]
     },
-    {
+    {"
       icon: <Eye className="w-8 h-8" />,
       title: 'Continuous Monitoring',
       description: '24/7 security monitoring with real-time threat detection and automated response.',
@@ -36,7 +37,7 @@ const SecurityPage: React.FC = () => {
         'Anomaly detection'
       ]
     },
-    {
+    {"
       icon: <Award className="w-8 h-8" />,
       title: 'Compliance Certifications',
       description: 'We maintain industry-leading security certifications and compliance standards.',
@@ -53,37 +54,37 @@ const complianceStandards = [
     {
       name: 'SOC 2 Type II',
       description: 'Audited controls for security, availability, processing integrity, confidentiality, and privacy',
-      status: 'Certified',
+      status: 'Certified',"
       icon: <CheckCircle className="w-6 h-6" />
     },
     {
       name: 'ISO 27001',
       description: 'International standard for information security management systems',
-      status: 'Compliant',
+      status: 'Compliant',"
       icon: <CheckCircle className="w-6 h-6" />
     },
     {
       name: 'GDPR',
       description: 'General Data Protection Regulation compliance for EU data protection',
-      status: 'Compliant',
+      status: 'Compliant',"
       icon: <CheckCircle className="w-6 h-6" />
     },
     {
       name: 'HIPAA',
       description: 'Health Insurance Portability and Accountability Act compliance',
-      status: 'Compliant',
+      status: 'Compliant',"
       icon: <CheckCircle className="w-6 h-6" />
     },
     {
       name: 'PCI DSS',
       description: 'Payment Card Industry Data Security Standard for payment processing',
-      status: 'Compliant',
+      status: 'Compliant',"
       icon: <CheckCircle className="w-6 h-6" />
     },
     {
       name: 'NIST Framework',
       description: 'National Institute of Standards and Technology cybersecurity framework',
-      status: 'Aligned',
+      status: 'Aligned',"
       icon: <CheckCircle className="w-6 h-6" />
     }
   ];
@@ -170,62 +171,62 @@ const incidentResponse = [
   return (
     <>
       <Helmet>
-        <title>Security - Zion Tech Group | Enterprise Security & Compliance</title>
-        <meta name="description" content="Learn about Zion Tech Group's enterprise-grade security measures, compliance certifications, and data protection practices." />
-        <meta name="keywords" content="security, cybersecurity, data protection, compliance, SOC 2, ISO 27001, encryption, privacy" />
-        <meta property="og:title" content="Security - Zion Tech Group" />
-        <meta property="og:description" content="Enterprise-grade security and compliance" />
+        <title>Security - Zion Tech Group | Enterprise Security & Compliance</title>"
+        <meta name="description" content="Learn about Zion Tech Group's enterprise-grade security measures, compliance certifications, and data protection practices." />"
+        <meta name="keywords" content="security, cybersecurity, data protection, compliance, SOC 2, ISO 27001, encryption, privacy" />"
+        <meta property="og:title" content="Security - Zion Tech Group" />"
+        <meta property="og:description" content="Enterprise-grade security and compliance" />"
         <meta property="og:type" content="website" />
       </Helmet>
-      
+      ""
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+        {/* Hero Section */}"
         <section className="py-20">
-          
+          ""
         <div className="container mx-auto px-4">
-            
+            ""
         <div className="text-center max-w-4xl mx-auto">
-              
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              ""
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
                 Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Security</span>
               </h1>
-              
+              ""
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 Your data security is our top priority. We implement enterprise-grade security measures and maintain industry-leading compliance standards.
               </p>
             </div>
           </div>
         </section>
-        {/* Security Features */}
+        {/* Security Features */}"
         <section className="py-20">
-          
+          ""
         <div className="container mx-auto px-4">
-            
-        <div className="max-w-6xl mx-auto">
+            ""
+        <div className="max-w-6xl mx-auto">"
               <h2 className="text-3xl font-bold text-white mb-12 text-center">Security Features</h2>
-              
+              ""
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {securityFeatures.map((feature, index) => (
+                {securityFeatures.map((feature, index) => ("
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
-                    
+                    ""
         <div className="flex items-center mb-6">
-                      
+                      ""
         <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-6">
-                        
+                        ""
         <div className="text-white">{feature.icon}</div>
                       </div>
-                      <div>
+                      <div>"
                         <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
                       </div>
                     </div>
-                    
+                    ""
           <p className="text-gray-300 mb-6">{feature.description}</p>
-                    <div>
-                      <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:</h4>
+                    <div>"
+                      <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:</h4>"
                       <ul className="space-y-2">
-                        {feature.details.map((detail, detailIndex) => (
-                          <li key={detailIndex} className="flex items-start">
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                        {feature.details.map((detail, detailIndex) => ("
+                          <li key={detailIndex} className="flex items-start">"
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0" />"
                             <span className="text-gray-300 text-sm">{detail}</span>
                           </li>
                         ))}
@@ -237,27 +238,27 @@ const incidentResponse = [
             </div>
           </div>
         </section>
-        {/* Compliance Standards */}
+        {/* Compliance Standards */}"
         <section className="py-20 bg-white/5 backdrop-blur-sm">
-          
+          ""
         <div className="container mx-auto px-4">
-            
-        <div className="max-w-6xl mx-auto">
+            ""
+        <div className="max-w-6xl mx-auto">"
               <h2 className="text-3xl font-bold text-white mb-12 text-center">Compliance & Certifications</h2>
-              
+              ""
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {complianceStandards.map((standard, index) => (
+                {complianceStandards.map((standard, index) => ("
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
-                    
-        <div className="flex items-center justify-between mb-4">
+                    ""
+        <div className="flex items-center justify-between mb-4">"
                       <h3 className="text-lg font-bold text-white">{standard.name}</h3>
-                      
+                      ""
         <div className="flex items-center text-green-400">
-                        {standard.icon}
+                        {standard.icon}"
                         <span className="ml-2 text-sm font-semibold">{standard.status}</span>
                       </div>
                     </div>
-                    
+                    ""
           <p className="text-gray-300 text-sm">{standard.description}</p>
                   </div>
                 ))}
@@ -265,22 +266,22 @@ const incidentResponse = [
             </div>
           </div>
         </section>
-        {/* Security Measures */}
+        {/* Security Measures */}"
         <section className="py-20">
-          
+          ""
         <div className="container mx-auto px-4">
-            
-        <div className="max-w-6xl mx-auto">
+            ""
+        <div className="max-w-6xl mx-auto">"
               <h2 className="text-3xl font-bold text-white mb-12 text-center">Comprehensive Security Measures</h2>
-              
+              ""
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {securityMeasures.map((category, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20">
-                    <h3 className="text-xl font-bold text-white mb-6">{category.category}</h3>
+                {securityMeasures.map((category, index) => ("
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20">"
+                    <h3 className="text-xl font-bold text-white mb-6">{category.category}</h3>"
                     <ul className="space-y-3">
-                      {category.measures.map((measure, measureIndex) => (
-                        <li key={measureIndex} className="flex items-start">
-                          <Shield className="w-4 h-4 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
+                      {category.measures.map((measure, measureIndex) => ("
+                        <li key={measureIndex} className="flex items-start">"
+                          <Shield className="w-4 h-4 text-cyan-400 mr-3 mt-1 flex-shrink-0" />"
                           <span className="text-gray-300 text-sm">{measure}</span>
                         </li>
                       ))}
@@ -291,25 +292,25 @@ const incidentResponse = [
             </div>
           </div>
         </section>
-        {/* Incident Response */}
+        {/* Incident Response */}"
         <section className="py-20 bg-white/5 backdrop-blur-sm">
-          
+          ""
         <div className="container mx-auto px-4">
-            
-        <div className="max-w-6xl mx-auto">
+            ""
+        <div className="max-w-6xl mx-auto">"
               <h2 className="text-3xl font-bold text-white mb-12 text-center">Incident Response Process</h2>
-              
+              ""
         <div className="space-y-6">
-                {incidentResponse.map((phase, index) => (
+                {incidentResponse.map((phase, index) => ("
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
-                    
-        <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-xl font-bold text-white">{phase.phase}</h3>
+                    ""
+        <div className="flex items-center justify-between mb-4">"
+                      <h3 className="text-xl font-bold text-white">{phase.phase}</h3>"
                       <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
                         {phase.timeline}
                       </span>
                     </div>
-                    
+                    ""
           <p className="text-gray-300">{phase.description}</p>
                   </div>
                 ))}
@@ -317,54 +318,54 @@ const incidentResponse = [
             </div>
           </div>
         </section>
-        {/* Security Resources */}
+        {/* Security Resources */}"
         <section className="py-20">
-          
+          ""
         <div className="container mx-auto px-4">
-            
-        <div className="max-w-6xl mx-auto">
+            ""
+        <div className="max-w-6xl mx-auto">"
               <h2 className="text-3xl font-bold text-white mb-12 text-center">Security Resources</h2>
-              
+              ""
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 text-center hover:border-cyan-500/40 transition-all duration-300">
-                  <FileText className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                ""
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 text-center hover:border-cyan-500/40 transition-all duration-300">"
+                  <FileText className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
                   <h3 className="text-xl font-bold text-white mb-3">Security Whitepaper</h3>
-                  
+                  ""
           <p className="text-gray-300 mb-6">Download our comprehensive security whitepaper</p>
-                  <a
-                    href="/security-whitepaper.pdf"
+                  <a"
+                    href="/security-whitepaper.pdf""
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
-                    Download PDF
+                    Download PDF"
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
-                
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 text-center hover:border-cyan-500/40 transition-all duration-300">
-                  <Users className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                ""
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 text-center hover:border-cyan-500/40 transition-all duration-300">"
+                  <Users className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
                   <h3 className="text-xl font-bold text-white mb-3">Security Training</h3>
-                  
+                  ""
           <p className="text-gray-300 mb-6">Security awareness training for your team</p>
-                  <a
-                    href="/contact?type=security-training"
+                  <a"
+                    href="/contact?type=security-training""
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
-                    Learn More
+                    Learn More"
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
-                
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 text-center hover:border-cyan-500/40 transition-all duration-300">
-                  <Shield className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                ""
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 text-center hover:border-cyan-500/40 transition-all duration-300">"
+                  <Shield className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
                   <h3 className="text-xl font-bold text-white mb-3">Security Audit</h3>
-                  
+                  ""
           <p className="text-gray-300 mb-6">Request a security audit of your systems</p>
-                  <a
-                    href="/contact?type=security-audit"
+                  <a"
+                    href="/contact?type=security-audit""
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
-                    Request Audit
+                    Request Audit"
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
@@ -372,27 +373,27 @@ const incidentResponse = [
             </div>
           </div>
         </section>
-        {/* Contact Security Team */}
+        {/* Contact Security Team */}"
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-          
+          ""
         <div className="container mx-auto px-4">
-            
-        <div className="max-w-4xl mx-auto text-center">
+            ""
+        <div className="max-w-4xl mx-auto text-center">"
               <h2 className="text-3xl font-bold text-white mb-6">Security Questions?</h2>
-              
+              ""
           <p className="text-xl text-gray-300 mb-8">
                 Our security team is available to answer any questions about our security measures and compliance.
               </p>
-              
+              ""
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="mailto:security@ziontechgroup.com"
+                <a"
+                  href="mailto:security@ziontechgroup.com""
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Contact Security Team
                 </a>
-                <a
-                  href="/contact"
+                <a"
+                  href="/contact""
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   General Contact
@@ -405,4 +406,4 @@ const incidentResponse = [
     </>
   );
 };
-export default SecurityPage;
+export default SecurityPage;"

@@ -2,55 +2,46 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-// Function to fix HTML entities in JSX
-function fixHtmlEntities(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+// Find all problematic files
+const files = glob.sync('app/**/*.tsx', { cwd: '/workspace' });
 
-    // Fix unescaped quotes in JSX
-    content = content.replace(/([^\\])"/g, '$1&quot;');
-    content = content.replace(/^"/g, '&quot;');
-    
-    // Fix unescaped apostrophes in JSX
-    content = content.replace(/([^\\])'/g, '$1&apos;');
-    content = content.replace(/^'/g, '&apos;');
-
-    // Fix specific patterns that are common
-    content = content.replace(/don't/g, 'don&apos;t');
-    content = content.replace(/can't/g, 'can&apos;t');
-    content = content.replace(/won't/g, 'won&apos;t');
-    content = content.replace(/it's/g, 'it&apos;s');
-    content = content.replace(/we're/g, 'we&apos;re');
-    content = content.replace(/you're/g, 'you&apos;re');
-    content = content.replace(/they're/g, 'they&apos;re');
-    content = content.replace(/I'm/g, 'I&apos;m');
-    content = content.replace(/I'll/g, 'I&apos;ll');
-    content = content.replace(/I've/g, 'I&apos;ve');
-    content = content.replace(/I'd/g, 'I&apos;d');
-
-    // Fix quotes in specific contexts
-    content = content.replace(/"([^"]*)"([^>]*>)/g, '&quot;$1&quot;$2');
-    content = content.replace(/([^=])"([^"]*)"([^>]*>)/g, '$1&quot;$2&quot;$3');
-
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed HTML entities in: ${filePath}`);
-      modified = true;
-    }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
-}
-
-// Get all TypeScript and TSX files
-const files = glob.sync('app/**/*.{ts,tsx}', { cwd: __dirname });
-
-console.log(`Found ${files.length} files to process...`);
+console.log(`Found ${files.length} files to check`);
 
 files.forEach(file => {
-  const fullPath = path.join(__dirname, file);
-  fixHtmlEntities(fullPath);
+  const filePath = path.join('/workspace', file);
+  let content = fs.readFileSync(filePath, 'utf8');
+  let modified = false;
+
+  // Fix HTML entities in import statements
+  if (content.includes('&apos;') || content.includes('&quot;')) {
+    console.log(`Fixing HTML entities in ${file}`);
+    
+    // Fix quotes in import statements
+    content = content.replace(/from\s+&apos;([^&]+)&apos;/g, "from '$1'");
+    content = content.replace(/from\s+&quot;([^&]+)&quot;/g, 'from "$1"');
+    
+    // Fix quotes in JSX attributes
+    content = content.replace(/className=&quot;([^&]+)&quot;/g, 'className="$1"');
+    content = content.replace(/title=&quot;([^&]+)&quot;/g, 'title="$1"');
+    content = content.replace(/description=&quot;([^&]+)&quot;/g, 'description="$1"');
+    content = content.replace(/name=&quot;([^&]+)&quot;/g, 'name="$1"');
+    content = content.replace(/type=&quot;([^&]+)&quot;/g, 'type="$1"');
+    content = content.replace(/placeholder=&quot;([^&]+)&quot;/g, 'placeholder="$1"');
+    content = content.replace(/alt=&quot;([^&]+)&quot;/g, 'alt="$1"');
+    content = content.replace(/href=&quot;([^&]+)&quot;/g, 'href="$1"');
+    content = content.replace(/src=&quot;([^&]+)&quot;/g, 'src="$1"');
+    
+    // Fix quotes in JSX text content
+    content = content.replace(/&quot;([^&]+)&quot;/g, '"$1"');
+    content = content.replace(/&apos;([^&]+)&apos;/g, "'$1'");
+    
+    modified = true;
+  }
+
+  if (modified) {
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed ${file}`);
+  }
 });
 
-console.log('HTML entities cleanup completed!');
+console.log('HTML entities fixes completed');

@@ -30,14 +30,14 @@ const getBreadcrumbName = () => {
   return (
     <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-cyan-500/20 py-2">
       
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ol className="flex items-center space-x-2 text-sm">
+        <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
+        <ol className=flex items-center space-x-2 text-sm>
           <li>
-            <Link
+            <Link"
               to="/"
               className="text-gray-400 hover:text-cyan-400 transition-colors flex items-center"
             >
-              <Home className="w-4 h-4" />
+              <Home className=w-4 h-4 />
             </Link>
           </li>
           {pathnames.map((path, index) => {
@@ -46,14 +46,14 @@ const getBreadcrumbName = () => {
 const isLast = index === pathnames.length - 1;
   return (
               <li key={path} className="flex items-center space-x-2">
-                <ChevronRight className="w-4 h-4 text-gray-500" />
+                <ChevronRight className=w-4 h-4 text-gray-500 />
                 {isLast ? (
-                  <span className="text-cyan-400 font-medium">
+                  <span className=text-cyan-400 font-medium>
                     {getBreadcrumbName(path)}
                   </span>
                 ) : (
                   <Link
-                    to={routeTo}
+                    to={routeTo}"
                     className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     {getBreadcrumbName(path)}
@@ -67,4 +67,4 @@ const isLast = index === pathnames.length - 1;
     </nav>
   );
 };
-export default Breadcrumb;
+export default Breadcrumb;"

@@ -26,7 +26,7 @@ const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
     className
   ].filter(Boolean).join(' ');
   return (
-    <div className={gridClasses}>
+    <div className="{gridClasses}">
       {children}
     </div>
   );

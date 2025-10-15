@@ -1,3 +1,4 @@
+import { Clock, CheckCircle, Star, ArrowRight, Helmet } from 'lucide-react';
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -382,30 +383,29 @@ const benefits = [
         <title>Micro-saas - Zion Tech Group</title>
         <meta name="description" content="Zion Tech Group - Micro-saas page" />
       </Helmet>
-      
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen" bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="pt-20" pb-16 px-4 sm:px-6 lg:px-8>
           
-        <div className="max-w-7xl mx-auto text-center">
+        <div className="max-w-7xl" mx-auto text-center>
             
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl" md:text-6xl font-bold text-white mb-6>"
               Micro <span className="text-cyan-400">SAAS</span>
             </h1>
             
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl" text-gray-300 mb-8 max-w-3xl mx-auto>
               Powerful business tools designed for small to medium businesses. Get enterprise-level functionality at affordable prices.
             </p>
             
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+        <div className="flex" flex-col sm:flex-row gap-4 justify-center>
+              <Link"
                 to="/contact"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors flex items-center justify-center space-x-2"
               >
                 <span>Start Free Trial</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4" h-4 />
               </Link>
-              <Link
+              <Link"
                 to="/demo"
                 className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 font-semibold py-3 px-8 rounded-lg transition-colors"
               >
@@ -415,23 +415,23 @@ const benefits = [
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-20">
+        <section className="px-4" sm:px-6 lg:px-8 mb-20>
           
-        <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
+        <div className="max-w-7xl" mx-auto>
+            <h2 className="text-3xl" font-bold text-white text-center mb-12>
               Why Choose Our Micro SAAS Solutions?
             </h2>
             
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid" grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
               {benefits.map((benefit, index) => {
                 const IconComponent = benefit.icon;
   return (
                   <div key={index} className="text-center">
                     
-        <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <IconComponent className="w-8 h-8 text-cyan-400" />
+        <div className="w-16" h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4>
+                      <IconComponent className="w-8" h-8 text-cyan-400 />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                    <h3 className="text-xl" font-semibold text-white mb-2>{benefit.title}</h3>
                     
           <p className="text-gray-300">{benefit.description}</p>
                   </div>
@@ -441,15 +441,15 @@ const benefits = [
           </div>
         </section>
         {/* Category Filter */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-12">
+        <section className="px-4" sm:px-6 lg:px-8 mb-12>
           
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl" mx-auto>
             
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex" flex-wrap justify-center gap-4>
               {categories.map((category) => (
                 <button
                   key={category}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+                  className="{`px-6" py-3 rounded-lg font-semibold transition-colors ${
                     category === 'All'
                       ? 'bg-cyan-500 text-white'
                       : 'bg-slate-800/50 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400'
@@ -462,20 +462,20 @@ const benefits = [
           </div>
         </section>
         {/* Products Grid */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-20">
+        <section className="px-4" sm:px-6 lg:px-8 mb-20>
           
-        <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
+        <div className="max-w-7xl" mx-auto>
+            <h2 className="text-3xl" font-bold text-white text-center mb-12>
               Our Micro SAAS Products
             </h2>
             
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid" grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>
               {microSaasProducts.map((product) => {
                 const IconComponent = product.icon;
   return (
                   <div
                     key={product.id}
-                    className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${
+                    className="{`bg-slate-800/50" backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${
                       product.popular 
                         ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
                         : 'border-cyan-500/20'
@@ -483,50 +483,50 @@ const benefits = [
                   >
                     {product.popular && (
                       
-        <div className="flex items-center justify-center mb-4">
-                        <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center space-x-1">
-                          <Star className="w-4 h-4" />
+        <div className="flex" items-center justify-center mb-4>
+                        <span className="bg-gradient-to-r" from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center space-x-1>
+                          <Star className="w-4" h-4 />
                           <span>Most Popular</span>
                         </span>
                       </div>
                     )}
                     
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex" items-center justify-between mb-4>
                       
-        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center">
-                        <IconComponent className="w-6 h-6 text-cyan-400" />
+        <div className="w-12" h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center>
+                        <IconComponent className="w-6" h-6 text-cyan-400 />
                       </div>
-                      <span className="px-3 py-1 bg-slate-700 text-gray-300 text-sm rounded-full">
+                      <span className="px-3" py-1 bg-slate-700 text-gray-300 text-sm rounded-full>
                         {product.category}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{product.title}</h3>
+                    <h3 className="text-xl" font-bold text-white mb-3>{product.title}</h3>
                     
-          <p className="text-gray-300 mb-6 leading-relaxed">{product.description}</p>
+          <p className="text-gray-300" mb-6 leading-relaxed>{product.description}</p>
                     {/* Rating and Users */}
                     
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex" items-center justify-between mb-4>
                       
-        <div className="flex items-center space-x-2">
+        <div className="flex" items-center space-x-2>
                         
-        <div className="flex items-center space-x-1">
+        <div className="flex" items-center space-x-1>
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className={`w-4 h-4 ${i < Math.floor(product.rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} />
+                            <Star key={i} className="{`w-4" h-4 ${i < Math.floor(product.rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} />
                           ))}
                         </div>
-                        <span className="text-sm text-gray-300">{product.rating}</span>
+                        <span className="text-sm" text-gray-300>{product.rating}</span>
                       </div>
-                      <span className="text-sm text-gray-400">{product.users} users</span>
+                      <span className="text-sm" text-gray-400>{product.users} users</span>
                     </div>
-                    <ul className="space-y-2 mb-6">
+                    <ul className="space-y-2" mb-6>
                       {product.features.slice(0, 4).map((feature, index) => (
-                        <li key={index} className="flex items-center space-x-2 text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        <li key={index} className="flex" items-center space-x-2 text-gray-300>
+                          <CheckCircle className="w-4" h-4 text-green-400 flex-shrink-0 />
                           <span className="text-sm">{feature}</span>
                         </li>
                       ))}
                       {product.features.length > 4 && (
-                        <li className="text-sm text-cyan-400">
+                        <li className="text-sm" text-cyan-400>
                           +{product.features.length - 4} more features
                         </li>
                       )}
@@ -534,39 +534,39 @@ const benefits = [
                     
         <div className="mb-6">
                       
-        <div className="flex items-center justify-between mb-2">
+        <div className="flex" items-center justify-between mb-2>
                         
-        <div className="flex items-center space-x-2">
-                          <span className="text-2xl font-bold text-cyan-400">{product.price}</span>
-                          <span className="text-sm text-gray-400 line-through">{product.marketPrice}</span>
+        <div className="flex" items-center space-x-2>
+                          <span className="text-2xl" font-bold text-cyan-400>{product.price}</span>
+                          <span className="text-sm" text-gray-400 line-through>{product.marketPrice}</span>
                         </div>
-                        <span className="bg-green-500/20 text-green-400 px-2 py-1 rounded-full text-xs font-semibold">
+                        <span className="bg-green-500/20" text-green-400 px-2 py-1 rounded-full text-xs font-semibold>
                           Save {product.savings}
                         </span>
                       </div>
                       
-        <div className="flex items-center space-x-1 text-gray-400 text-sm">
-                        <Clock className="w-4 h-4" />
+        <div className="flex" items-center space-x-1 text-gray-400 text-sm>
+                        <Clock className="w-4" h-4 />
                         <span>14-day free trial</span>
                       </div>
                     </div>
                     
         <div className="space-y-2">
                       <Link
-                        to={`/${product.id}`}
+                        to={`/${product.id}`}"
                         className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105"
                       >
                         <span>Start Free Trial</span>
-                        <ArrowRight className="w-4 h-4" />
+                        <ArrowRight className="w-4" h-4 />
                       </Link>
                       <a
-                        href={product.link}
+                        href={product.link}"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full border border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 font-semibold py-2 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-sm"
                       >
                         <span>Learn More</span>
-                        <ArrowRight className="w-3 h-3" />
+                        <ArrowRight className="w-3" h-3 />
                       </a>
                     </div>
                   </div>
@@ -576,28 +576,28 @@ const benefits = [
           </div>
         </section>
         {/* CTA Section */}
-        <section className="px-4 sm:px-6 lg:px-8 pb-20">
+        <section className="px-4" sm:px-6 lg:px-8 pb-20>
           
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl" mx-auto text-center>
             
-        <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12">
-              <h2 className="text-3xl font-bold text-white mb-4">
+        <div className="bg-slate-800/50" backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12>
+              <h2 className="text-3xl" font-bold text-white mb-4>
                 Ready to Streamline Your Business?
               </h2>
               
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl" text-gray-300 mb-8>
                 Start your free trial today and experience the power of our micro SAAS solutions.
               </p>
               
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+        <div className="flex" flex-col sm:flex-row gap-4 justify-center>
+                <Link"
                   to="/contact"
                   className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors flex items-center justify-center space-x-2"
                 >
                   <span>Start Free Trial</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4" h-4 />
                 </Link>
-                <Link
+                <Link"
                   to="/demo"
                   className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 font-semibold py-3 px-8 rounded-lg transition-colors"
                 >
@@ -611,4 +611,4 @@ const benefits = [
     </>
   );
 };
-export default MicroSaasPage;
+export default MicroSaasPage;"

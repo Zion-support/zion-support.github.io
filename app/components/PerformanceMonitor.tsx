@@ -51,4 +51,4 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
   );
 };
 
-export default PerformanceMonitor;
+export default PerformanceMonitor;"

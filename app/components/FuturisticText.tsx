@@ -57,7 +57,7 @@ const textClasses = [
     className
   ].filter(Boolean).join(' ');
   return (
-    <Component className={textClasses}>
+    <Component className="{textClasses}">
       {children}
     </Component>
   );

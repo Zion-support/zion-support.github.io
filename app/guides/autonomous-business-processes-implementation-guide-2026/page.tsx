@@ -1,26 +1,28 @@
+
 import { Helmet } from "react-helmet-async";
 
 const AutonomousBusinessProcessesImplementationGuide2026Page: React.FC = () => { return (
-    <> <Helmet> <title>Autonomous Business Processes Implementation Guide 2026</title> <meta name="description" content="Professional autonomous business processes implementation guide 2026 solutions and services" /> <meta name="keywords" content="autonomous, business, processes, implementation, guide, 2026" /> </Helmet> 
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+      <Helmet> <title>Autonomous Business Processes Implementation Guide 2026</title> <meta name="description" content="Professional autonomous business processes implementation guide 2026 solutions and services" /> <meta name="keywords" content="autonomous, business, processes, implementation, guide, 2026" /> </Helmet>
+      <div className="min-h-screen" bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
         
-        <div className="container mx-auto px-4 py-16">
+        <div className="container" mx-auto px-4 py-16>
           
         <div className="text-center">
             
-          <h1 className="text-4xl font-bold text-white mb-8">
+          <h1 className="text-4xl" font-bold text-white mb-8>
               Autonomous Business Processes Implementation Guide 2026
             </h1>
             
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl" text-gray-300 mb-8>
               Professional autonomous business processes implementation guide
               2026 solutions and services
             </p>
             
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <div className="grid" md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12>
               
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+        <div className="bg-blue-50" border border-blue-200 rounded-lg p-6>
+                <h3 className="text-lg" font-semibold text-blue-900 mb-2>
                   Expert Solutions
                 </h3>
                 
@@ -29,8 +31,8 @@ const AutonomousBusinessProcessesImplementationGuide2026Page: React.FC = () => {
                 </p>
               </div>
               
-        <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
+        <div className="bg-green-50" border border-green-200 rounded-lg p-6>
+                <h3 className="text-lg" font-semibold text-green-900 mb-2>
                   Custom Implementation
                 </h3>
                 
@@ -39,8 +41,8 @@ const AutonomousBusinessProcessesImplementationGuide2026Page: React.FC = () => {
                 </p>
               </div>
               
-        <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+        <div className="bg-purple-50" border border-purple-200 rounded-lg p-6>
+                <h3 className="text-lg" font-semibold text-purple-900 mb-2>
                   24/7 Support
                 </h3>
                 
@@ -55,4 +57,4 @@ const AutonomousBusinessProcessesImplementationGuide2026Page: React.FC = () => {
     </>
   );
 };
-export default AutonomousBusinessProcessesImplementationGuide2026Page;
+export default AutonomousBusinessProcessesImplementationGuide2026Page;"

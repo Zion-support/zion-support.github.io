@@ -20,7 +20,7 @@ const ResponsiveText: React.FC<ResponsiveTextProps> = ({
     className
   ].filter(Boolean).join(' ');
   return (
-    <p className={textClasses}>
+    <p className="{textClasses}">
       {children}
     </p>
   );

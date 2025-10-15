@@ -47,19 +47,19 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       {/* Neon glow effect */}
       <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-300" />
       
-      {/* Animated border */}
-      <div className="absolute inset-0 rounded-lg border border-transparent bg-gradient-to-r from-purple-500 to-cyan-500 bg-clip-border">
+      {/* Animated border */}"
+      <div className="absolute inset-0 rounded-lg border border-transparent bg-gradient-to-r from-purple-500 to-cyan-500 bg-clip-border">"
         <div className="absolute inset-0 rounded-lg bg-slate-900 m-px" />
       </div>
       
-      {/* Content */}
-      <span className="relative z-10 flex items-center justify-center gap-2">
+      {/* Content */}"
+      <span className="relative z-10 flex items-center justify-center gap-2">"
         {icon && <span className="flex-shrink-0">{icon}</span>}
         {children}
       </span>
       
-      {/* Animated shine effect */}
-      <div className="absolute inset-0 rounded-lg overflow-hidden">
+      {/* Animated shine effect */}"
+      <div className="absolute inset-0 rounded-lg overflow-hidden">"
         <div className="absolute -top-2 -left-2 w-4 h-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 group-hover:animate-pulse transform -skew-x-12 transition-all duration-500" />
       </div>
     </>
@@ -67,7 +67,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
 
   if (href) {
     return (
-      <Link href={href} className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${disabledClasses} ${className} group inline-block`}>
+      <Link href={href} className="{`${baseClasses}" ${sizeClasses[size]} ${variantClasses[variant]} ${disabledClasses} ${className} group inline-block`}>
         {buttonContent}
       </Link>
     );
@@ -78,7 +78,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${disabledClasses} ${className} group`}
+      className="{`${baseClasses}" ${sizeClasses[size]} ${variantClasses[variant]} ${disabledClasses} ${className} group`}
       whileHover={!disabled ? { scale: 1.05 } : {}}
       whileTap={!disabled ? { scale: 0.95 } : {}}
       initial={{ opacity: 0, y: 20 }}
@@ -90,4 +90,4 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   );
 };
 
-export default FuturisticButton;
+export default FuturisticButton;"
