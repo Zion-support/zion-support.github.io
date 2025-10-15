@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-800 text-white">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           <div className="lg:col-span-2">
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-4">
@@ -26,13 +26,24 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Services</h4>
+            <h4 className="text-md font-semibold mb-4">Core Services</h4>
             <ul className="space-y-2">
               <li><Link to="/services" className="text-gray-300 hover:text-white">All Services</Link></li>
               <li><Link to="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
               <li><Link to="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
               <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-white">Cloud Infrastructure</Link></li>
               <li><Link to="/5g-solutions" className="text-gray-300 hover:text-white">5G Solutions</Link></li>
+              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-white">Digital Transformation</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">AI Products</h4>
+            <ul className="space-y-2">
+              <li><Link to="/ai-content-generator" className="text-gray-300 hover:text-white">AI Content Generator</Link></li>
+              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">AI Customer Support Pro</Link></li>
+              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">AI Workflow Automator Pro</Link></li>
+              <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-white">AI Email Marketing Pro</Link></li>
               <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
             </ul>
           </div>
