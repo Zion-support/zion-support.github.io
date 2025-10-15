@@ -172,20 +172,20 @@ export default function App() {
                           </p>
                         </div>
                         <div className="space-y-4">
-                          <a 
-                            href="/" 
+                          <Link 
+                            to="/" 
                             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
                           >
                             Go Back Home
-                          </a>
+                          </Link>
                           <div className="text-sm text-gray-500">
-                            <a href="/contact" className="text-blue-600 hover:text-blue-800">
+                            <Link to="/contact" className="text-blue-600 hover:text-blue-800">
                               Contact Support
-                            </a>
+                            </Link>
                             {' • '}
-                            <a href="/services" className="text-blue-600 hover:text-blue-800">
+                            <Link to="/services" className="text-blue-600 hover:text-blue-800">
                               Browse Services
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       </div>
