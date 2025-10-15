@@ -96,11 +96,20 @@ const Navigation: React.FC = () => {
                     <Link to="/zion-ai-customer-churn-predictor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Customer Churn Predictor
                     </Link>
+                    <Link to="/zion-ai-customer-churn-predictor-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Churn Predictor Pro
+                    </Link>
                     <Link to="/zion-ai-customer-sentiment-tracker" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Customer Sentiment Tracker
                     </Link>
+                    <Link to="/zion-ai-customer-support-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Customer Support Pro
+                    </Link>
                     <Link to="/zion-ai-document-analyzer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Document Analyzer
+                    </Link>
+                    <Link to="/zion-ai-email-marketing-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Email Marketing Pro
                     </Link>
                     <Link to="/zion-ai-financial-forecaster" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Financial Forecaster
@@ -110,6 +119,9 @@ const Navigation: React.FC = () => {
                     </Link>
                     <Link to="/zion-ai-workflow-automator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Workflow Automator
+                    </Link>
+                    <Link to="/zion-ai-workflow-automator-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Workflow Automator Pro
                     </Link>
                   </div>
                 </div>
@@ -213,11 +225,20 @@ const Navigation: React.FC = () => {
                 <Link to="/zion-ai-customer-churn-predictor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                   Customer Churn Predictor
                 </Link>
+                <Link to="/zion-ai-customer-churn-predictor-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  Churn Predictor Pro
+                </Link>
                 <Link to="/zion-ai-customer-sentiment-tracker" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                   Customer Sentiment Tracker
                 </Link>
+                <Link to="/zion-ai-customer-support-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  Customer Support Pro
+                </Link>
                 <Link to="/zion-ai-document-analyzer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                   Document Analyzer
+                </Link>
+                <Link to="/zion-ai-email-marketing-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  Email Marketing Pro
                 </Link>
                 <Link to="/zion-ai-financial-forecaster" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                   Financial Forecaster
@@ -227,6 +248,9 @@ const Navigation: React.FC = () => {
                 </Link>
                 <Link to="/zion-ai-workflow-automator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                   Workflow Automator
+                </Link>
+                <Link to="/zion-ai-workflow-automator-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                  Workflow Automator Pro
                 </Link>
               </div>
             </div>
