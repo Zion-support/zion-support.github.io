@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 interface PerformanceMetrics {
   cls?: number;
@@ -27,11 +27,10 @@ const PerformanceMonitor: React.FC = () => {
             // Send to analytics service with enhanced tracking
             if (typeof window !== 'undefined' && window.gtag) {
               window.gtag('event', 'performance_metric', {
-                metric_name: metric.name,
-                metric_value: metric.value,
-                metric_delta: metric.delta,
-                metric_id: metric.id,
-                metric_navigationType: metric.navigationType
+                event_category: 'performance',
+                event_label: metric.name,
+                value: metric.value,
+                non_interaction: true
               });
             }
           }
