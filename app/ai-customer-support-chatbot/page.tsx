@@ -145,7 +145,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
     { number: '45%', label: 'Higher Satisfaction' }
   ];
 
-const AiCustomerSupportChatbotPage: React.FC = () => {
+const AICustomerSupportChatbotPage: React.FC = () => {
   return (
     <>
       <Helmet>

@@ -1,7 +1,11 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 
-  return (<>
+const CommunityPage: React.FC = () => {
+  return (
+    <>
       <Helmet>
         <title>Community - Zion Tech Group | Tech Community & Events</title>
         <meta

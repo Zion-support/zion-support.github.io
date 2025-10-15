@@ -28,7 +28,7 @@ import {
   RefreshCw
 } from 'lucide-react';
 
-const AIProjectManagementProPage: React.FC = () => {
+// Removed duplicate component declaration
   const features = [
     'AI-powered task prioritization and scheduling',
     'Intelligent resource allocation and workload balancing',

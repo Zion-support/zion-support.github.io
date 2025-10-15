@@ -1,7 +1,11 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 
-  return (<>
+const CompliancePage: React.FC = () => {
+  return (
+    <>
       <Helmet>
         <title>Compliance Services - Zion Tech Group | Regulatory Compliance & Security</title>
         <meta

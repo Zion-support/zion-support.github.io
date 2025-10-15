@@ -1,7 +1,11 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 
-  return (<Layout>
+const AiSmartSchedulerPage: React.FC = () => {
+  return (
+    <Layout>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 min-h-screen flex items-center">
         <div className="container mx-auto px-4 py-20">
