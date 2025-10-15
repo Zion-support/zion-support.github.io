@@ -1,31 +1,24 @@
-// Service Worker for Zion Tech Group
-const CACHE_NAME = 'zion-tech-group-v1';
-const STATIC_CACHE_NAME = 'zion-static-v1';
-const DYNAMIC_CACHE_NAME = 'zion-dynamic-v1';
+// Service Worker for Zion Tech Group Website
+const CACHE_NAME = 'zion-tech-v1';
+const STATIC_CACHE = 'zion-static-v1';
+const DYNAMIC_CACHE = 'zion-dynamic-v1';
 
-// Files to cache immediately
-const STATIC_FILES = [
+// Assets to cache immediately
+const STATIC_ASSETS = [
   '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/manifest.json',
-  '/favicon.ico',
+  '/app/styles/futuristic.css',
+  'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
 ];
 
-// Install event - cache static files
+// Install event - cache static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(STATIC_CACHE_NAME)
+    caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('[SW] Caching static files');
-        return cache.addAll(STATIC_FILES);
+        return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
-        console.log('[SW] Static files cached');
         return self.skipWaiting();
-      })
-      .catch((error) => {
-        console.error('[SW] Failed to cache static files:', error);
       })
   );
 });
@@ -36,16 +29,16 @@ self.addEventListener('activate', (event) => {
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
-          cacheNames.map((cacheName) => {
-            if (cacheName !== STATIC_CACHE_NAME && cacheName !== DYNAMIC_CACHE_NAME) {
-              console.log('[SW] Deleting old cache:', cacheName);
+          cacheNames
+            .filter((cacheName) => {
+              return cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE;
+            })
+            .map((cacheName) => {
               return caches.delete(cacheName);
-            }
-          })
+            })
         );
       })
       .then(() => {
-        console.log('[SW] Service worker activated');
         return self.clients.claim();
       })
   );
@@ -71,7 +64,6 @@ self.addEventListener('fetch', (event) => {
       .then((cachedResponse) => {
         // Return cached version if available
         if (cachedResponse) {
-          console.log('[SW] Serving from cache:', request.url);
           return cachedResponse;
         }
 
@@ -87,41 +79,34 @@ self.addEventListener('fetch', (event) => {
             const responseToCache = response.clone();
 
             // Cache dynamic content
-            caches.open(DYNAMIC_CACHE_NAME)
+            caches.open(DYNAMIC_CACHE)
               .then((cache) => {
                 cache.put(request, responseToCache);
               });
 
             return response;
           })
-          .catch((error) => {
-            console.error('[SW] Fetch failed:', error);
-            
+          .catch(() => {
             // Return offline page for navigation requests
             if (request.mode === 'navigate') {
-              return caches.match('/offline.html') || new Response(
-                '<html><body><h1>Offline</h1><p>Please check your internet connection.</p></body></html>',
-                { headers: { 'Content-Type': 'text/html' } }
-              );
+              return caches.match('/');
             }
-            
-            throw error;
           });
       })
   );
 });
 
-// Background sync for offline actions
+// Background sync for analytics
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'background-sync') {
+  if (event.tag === 'analytics-sync') {
     event.waitUntil(
-      // Handle background sync tasks
-      handleBackgroundSync()
+      // Send queued analytics data
+      sendQueuedAnalytics()
     );
   }
 });
 
-// Push notifications
+// Push notifications (if needed in future)
 self.addEventListener('push', (event) => {
   if (event.data) {
     const data = event.data.json();
@@ -132,20 +117,8 @@ self.addEventListener('push', (event) => {
       vibrate: [100, 50, 100],
       data: {
         dateOfArrival: Date.now(),
-        primaryKey: data.primaryKey || 1
-      },
-      actions: [
-        {
-          action: 'explore',
-          title: 'Learn More',
-          icon: '/icon-192x192.png'
-        },
-        {
-          action: 'close',
-          title: 'Close',
-          icon: '/icon-192x192.png'
-        }
-      ]
+        primaryKey: data.primaryKey
+      }
     };
 
     event.waitUntil(
@@ -154,48 +127,12 @@ self.addEventListener('push', (event) => {
   }
 });
 
-// Notification click handler
-self.addEventListener('notificationclick', (event) => {
-  event.notification.close();
-
-  if (event.action === 'explore') {
-    event.waitUntil(
-      clients.openWindow('/')
-    );
-  }
-});
-
-// Helper function for background sync
-async function handleBackgroundSync() {
+// Helper function to send queued analytics
+async function sendQueuedAnalytics() {
   try {
-    // Get pending offline actions from IndexedDB
-    const pendingActions = await getPendingActions();
-    
-    for (const action of pendingActions) {
-      try {
-        await processOfflineAction(action);
-        await removePendingAction(action.id);
-      } catch (error) {
-        console.error('[SW] Failed to process offline action:', error);
-      }
-    }
+    // Implementation would depend on your analytics service
+    console.log('Sending queued analytics data...');
   } catch (error) {
-    console.error('[SW] Background sync failed:', error);
+    console.error('Failed to send analytics data:', error);
   }
-}
-
-// Helper functions (implement based on your needs)
-async function getPendingActions() {
-  // Return pending actions from IndexedDB
-  return [];
-}
-
-async function processOfflineAction(action) {
-  // Process the offline action
-  console.log('[SW] Processing offline action:', action);
-}
-
-async function removePendingAction(actionId) {
-  // Remove processed action from IndexedDB
-  console.log('[SW] Removing processed action:', actionId);
 }

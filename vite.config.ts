@@ -43,7 +43,23 @@ export default defineConfig({
             if (id.includes('clsx') || id.includes('tailwind-merge')) {
               return 'utils';
             }
+            if (id.includes('web-vitals')) {
+              return 'analytics';
+            }
+            if (id.includes('react-helmet-async')) {
+              return 'seo';
+            }
             return 'vendor';
+          }
+          // Split app code by feature
+          if (id.includes('/app/components/')) {
+            return 'components';
+          }
+          if (id.includes('/app/hooks/')) {
+            return 'hooks';
+          }
+          if (id.includes('/app/utils/')) {
+            return 'utils';
           }
         },
         chunkFileNames: 'assets/[name]-[hash].js',

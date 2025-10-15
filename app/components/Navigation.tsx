@@ -131,7 +131,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   ];
 
   const isActive = (path: string) => {
-    return location.pathname === path;
+    try {
+      return location.pathname === path;
+    } catch (error) {
+      // Fallback for SSR or if location is undefined
+      return false;
+    }
   };
 
   const toggleServicesMenu = () => {

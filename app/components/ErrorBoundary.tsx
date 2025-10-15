@@ -39,6 +39,12 @@ class ErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
+
+    // In production, you might want to send this to an error reporting service
+    if (process.env.NODE_ENV === 'production') {
+      // Example: Send to error reporting service
+      // errorReportingService.captureException(error, { extra: errorInfo });
+    }
   }
 
   render() {

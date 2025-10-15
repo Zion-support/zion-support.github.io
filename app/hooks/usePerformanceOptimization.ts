@@ -89,7 +89,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     
     // Add error handling
     link.onerror = () => {
-      console.warn(`Failed to preload resource: ${href}`);
+      if (process.env.NODE_ENV === 'development') {
+        console.warn(`Failed to preload resource: ${href}`);
+      }
     };
     
     document.head.appendChild(link);
@@ -103,10 +105,14 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       const img = new Image();
       img.src = url;
       img.onload = () => {
-        console.log(`Preloaded image: ${url}`);
+        if (process.env.NODE_ENV === 'development') {
+          console.log(`Preloaded image: ${url}`);
+        }
       };
       img.onerror = () => {
-        console.warn(`Failed to preload image: ${url}`);
+        if (process.env.NODE_ENV === 'development') {
+          console.warn(`Failed to preload image: ${url}`);
+        }
       };
     });
   }, [enablePreloading]);

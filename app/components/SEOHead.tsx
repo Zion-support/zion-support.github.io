@@ -49,6 +49,17 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      
+      {/* Performance hints */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
     </Helmet>
   );
 };
