@@ -72,7 +72,7 @@ const ContentPromotionBanner: React.FC = () => {
     return () => clearInterval(interval);
   }, [banners.length]);
 
-  const handleClose = () => {  return (
+  const handleClose = () => {
     setIsVisible(false);
   };
 

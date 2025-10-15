@@ -4,6 +4,52 @@ import { Brain, Code, Wifi, Cloud, Target, Users, TrendingUp, Clock, Zap, Shield
 
 const ServicesOverviewPage: React.FC = () => {
   const serviceCategories = [
+    {
+      title: "AI Services",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-600",
+      description: "Revolutionary AI-powered solutions for modern businesses",
+      services: [
+        { name: "AI Analytics Dashboard Pro", price: "$299/month", features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards"] },
+        { name: "AI Content Generation Pro", price: "$199/month", features: ["AI Writing", "Content Optimization", "Multi-language Support"] },
+        { name: "AI Customer Service Bot", price: "$149/month", features: ["24/7 Support", "Natural Language Processing", "Multi-channel Integration"] }
+      ]
+    },
+    {
+      title: "IT Services",
+      icon: <Code className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-600",
+      description: "Comprehensive IT solutions for digital transformation",
+      services: [
+        { name: "Cloud Migration Pro", price: "$399/month", features: ["Zero-downtime Migration", "Security Compliance", "Performance Optimization"] },
+        { name: "DevOps Automation", price: "$249/month", features: ["CI/CD Pipeline", "Infrastructure as Code", "Monitoring & Alerting"] },
+        { name: "Cybersecurity Suite", price: "$199/month", features: ["Threat Detection", "Vulnerability Assessment", "Incident Response"] }
+      ]
+    },
+    {
+      title: "5G Solutions",
+      icon: <Wifi className="w-8 h-8" />,
+      color: "from-green-500 to-teal-600",
+      description: "Next-generation 5G infrastructure and applications",
+      services: [
+        { name: "5G Network Implementation", price: "$5,999", features: ["Network Planning", "Equipment Installation", "Performance Testing"] },
+        { name: "5G IoT Solutions", price: "$3,999", features: ["Device Connectivity", "Data Analytics", "Edge Computing"] },
+        { name: "5G Edge Computing", price: "$2,999", features: ["Low Latency Processing", "Real-time Analytics", "AI Inference"] }
+      ]
+    },
+    {
+      title: "Cloud Services",
+      icon: <Cloud className="w-8 h-8" />,
+      color: "from-orange-500 to-red-600",
+      description: "Scalable cloud solutions for modern businesses",
+      services: [
+        { name: "Cloud Infrastructure", price: "$299/month", features: ["Auto-scaling", "Load Balancing", "Disaster Recovery"] },
+        { name: "Cloud Storage Pro", price: "$99/month", features: ["Unlimited Storage", "Data Encryption", "Backup & Sync"] },
+        { name: "Cloud Security", price: "$149/month", features: ["Identity Management", "Access Control", "Compliance Monitoring"] }
+      ]
+    }
+  ];
+
   const features = [
     {
       title: "AI Services",
