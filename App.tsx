@@ -23,6 +23,7 @@ const PrivacyPage = React.lazy(() => import('./app/pages/PrivacyPage'));
 const TermsPage = React.lazy(() => import('./app/pages/TermsPage'));
 const PricingPage = React.lazy(() => import('./app/pages/PricingPage'));
 const SolutionsPage = React.lazy(() => import('./app/pages/SolutionsPage'));
+const PortfolioPage = React.lazy(() => import('./app/pages/PortfolioPage'));
 const MicroSaaSSolutionsPage = React.lazy(() => import('./app/micro-saas-solutions/page'));
 const AISolutionsPage = React.lazy(() => import('./app/ai-solutions/page'));
 const ITSolutionsPage = React.lazy(() => import('./app/it-solutions/page'));
@@ -88,6 +89,7 @@ function App() {
                   <Route path="/terms" element={<TermsPage />} />
                   <Route path="/pricing" element={<PricingPage />} />
                   <Route path="/solutions" element={<SolutionsPage />} />
+                  <Route path="/portfolio" element={<PortfolioPage />} />
                   
                   {/* Service Pages */}
                   <Route path="/ai-services" element={<AIServicesPage />} />
