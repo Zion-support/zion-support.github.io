@@ -1,8 +1,11 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
+export default function Page() {
   return (<>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>Sitemap - Zion Tech Group | Complete Website Directory</title>
         <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our AI services, micro SAAS solutions, _5G technology, and company information." />
         <meta name="robots" content="index, follow" />

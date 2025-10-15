@@ -129,7 +129,9 @@ const DemoPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>Demo - Zion Tech Group | See Our Solutions in Action</title>
         <meta name="description" content="Schedule a personalized demo of our AI and IT solutions. See how our technology can transform your business." />
         <meta name="keywords" content="demo, AI demo, IT solutions demo, micro SAAS demo, cloud demo, mobile app demo" />
@@ -137,9 +139,9 @@ const DemoPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+      </><section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
@@ -183,7 +185,7 @@ const DemoPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Select the solution you'd like to see in action. Our experts will tailor the demo to your specific needs.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {demos.map((demo) => (
@@ -270,7 +272,7 @@ const DemoPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our demo process is designed to give you the most value in the shortest time.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {demoSteps.map((step) => (
@@ -302,7 +304,7 @@ const DemoPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Don't just take our word for it. Here's what clients say about our demos.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
@@ -345,7 +347,7 @@ const DemoPage: React.FC = () => {
               <Phone className="w-5 h-5 mr-2" />
               Call Now
             </a>
-          </div>
+          </div></section></section>
         </div>
       </section>
     </>

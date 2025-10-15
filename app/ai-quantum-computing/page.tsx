@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code-4a9f
+import SEOHead from '../components/SEOHead';
 
 const AiQuantumComputingPage: React.FC = () => {
   return (
@@ -11,8 +11,8 @@ const AiQuantumComputingPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        </div><section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div></section></section>
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
           
           <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -95,7 +95,7 @@ const AiQuantumComputingPage: React.FC = () => {
                 Harness the power of quantum mechanics to solve problems that are impossible 
                 for classical computers. From quantum machine learning to quantum simulation.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -124,7 +124,7 @@ const AiQuantumComputingPage: React.FC = () => {
                 Discover how quantum computing is revolutionizing industries and solving 
                 previously impossible problems.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {applications.map((application, index) => (
@@ -159,7 +159,7 @@ const AiQuantumComputingPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Access cutting-edge quantum computing resources. Choose the plan that fits your research needs.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
@@ -222,7 +222,7 @@ const AiQuantumComputingPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 See how leading researchers and organizations are using our quantum computing platform.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
@@ -267,7 +267,7 @@ const AiQuantumComputingPage: React.FC = () => {
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <MessageSquare className="w-6 h-6 text-white" />
-                </div>
+                </div></section></section>
                 <h3 className="text-white font-semibold mb-2">Email</h3>
                 <p className="text-cyan-400">kleber@ziontechgroup.com</p>
               </div>

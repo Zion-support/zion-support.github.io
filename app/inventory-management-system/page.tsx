@@ -125,7 +125,7 @@ const InventoryManagementSystemPage = () => {
       />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      </div><section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
@@ -153,7 +153,7 @@ const InventoryManagementSystemPage = () => {
             >
               Watch Demo
             </FuturisticButton>
-          </div>
+          </div></section></section>
         </ResponsiveContainer>
       </section>
 
@@ -167,7 +167,7 @@ const InventoryManagementSystemPage = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Everything you need to manage inventory efficiently and optimize your supply chain.
             </p>
-          </div>
+          </div></section></section>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature) => (
               <FuturisticCard key={index} className="h-full">
@@ -202,7 +202,7 @@ const InventoryManagementSystemPage = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Choose the plan that fits your business size and inventory complexity. No hidden fees, no surprises.
             </p>
-          </div>
+          </div></section></section>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan) => (
               <FuturisticCard key={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
@@ -253,7 +253,7 @@ const InventoryManagementSystemPage = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Join thousands of businesses who have optimized their inventory operations with our system.
             </p>
-          </div>
+          </div></section></section>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit) => (
               <div key={index} className="text-center">
@@ -294,7 +294,7 @@ const InventoryManagementSystemPage = () => {
             >
               Watch Demo
             </FuturisticButton>
-          </div>
+          </div></section></section>
         </ResponsiveContainer>
       </section>
     </div>

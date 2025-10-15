@@ -1,3 +1,4 @@
+export default function Page() {
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -128,3 +129,4 @@ class GlobalErrorBoundary extends Component<Props, State> {
 }
 
 export default GlobalErrorBoundary;
+}

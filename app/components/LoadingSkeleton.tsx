@@ -9,7 +9,7 @@ export default function LoadingSkeleton() {}
       </Helmet>
       <div className="loading-skeleton-container">
         <div className="skeleton">
-          <div className="skeleton-line"></div>
+          <div className="skeleton-line"></div></div>
           <div className="skeleton-line"></div>
           <div className="skeleton-line"></div>
         </div>

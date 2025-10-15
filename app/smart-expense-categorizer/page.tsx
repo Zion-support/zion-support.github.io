@@ -115,6 +115,7 @@ import { Receipt, TrendingUp, Shield, Zap, BarChart3, Users, CheckCircle, ArrowR
     { number: "3x", label: "Faster Processing" }
   ];
 
+export default function Page() {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Smart Expense Categorizer | Zion Tech Group</title>
@@ -123,7 +124,7 @@ import { Receipt, TrendingUp, Shield, Zap, BarChart3, Users, CheckCircle, ArrowR
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
+      </div><section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -134,7 +135,7 @@ import { Receipt, TrendingUp, Shield, Zap, BarChart3, Users, CheckCircle, ArrowR
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6">
               <Receipt className="w-5 h-5 text-cyan-400 mr-2" />
               <span className="text-cyan-300 font-medium">AI-Powered Expense Intelligence</span>
-            </div>
+            </div></section></section>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Automate Your

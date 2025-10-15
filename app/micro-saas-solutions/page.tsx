@@ -211,6 +211,7 @@ import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Database, Globe, Target
     }
   ];
 
+export default function Page() {
   return (<>
       <Helmet>
         <title>Micro SAAS Solutions - Innovative Software for Modern Businesses | Zion Tech Group</title>
@@ -223,9 +224,9 @@ import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Database, Globe, Target
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+      </><section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
       </section>

@@ -1,93 +1,150 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-// import path from 'path';
+import path from 'path';
 import { glob } from 'glob';
 
-// Patterns to fix malformed object syntax
+// Common patterns to fix
 const fixes = [
-  // Fix trailing commas in object properties
-  { pattern: /(\w+):\s*([^,}]+),\s*}/g, replacement: '$1: $2 }' },
-  // Fix trailing commas in arrays
-  { pattern: /(\w+)\s*,\s*]/g, replacement: '$1 ]' },
-  // Fix double commas
-  { pattern: /,\s*,/g, replacement: ',' },
-  // Fix semicolons in object properties
-  { pattern: /(\w+):\s*([^,}]+);/g, replacement: '$1: $2,' },
-  // Fix malformed object declarations
-  { pattern: /{\s*(\w+):\s*([^,}]+),\s*}/g, replacement: '{ $1: $2 }' },
-  // Fix array syntax issues
-  { pattern: /\[\s*(\w+)\s*,\s*\]/g, replacement: '[ $1 ]' },
-  // Fix malformed JSX attributes
-  { pattern: /const\s+(\w+)\s*=\s*{([^}]+)}/g, replacement: '$1={$2}' },
-  // Fix duplicate closing brackets
-  { pattern: /\]\]/g, replacement: ']' },
+  // Fix malformed imports with extra text
+  {
+    pattern: /import.*?;.*?ursor\/analyze-improve-and-merge-code-4a9f/g,
+    replacement: (match) => {
+      const importMatch = match.match(/import.*?;/);
+      return importMatch ? importMatch[0] : match;
+    }
+  },
+  
+  // Fix missing function declarations
+  {
+    pattern: /^  return \(<div/gm,
+    replacement: 'export default function Page() {\n  return (<div'
+  },
+  
+  // Fix missing function declarations with Helmet
+  {
+    pattern: /^  return \(<>/gm,
+    replacement: 'export default function Page() {\n  return (<>'
+  },
+  
+  // Fix missing closing tags for sections
+  {
+    pattern: /<section([^>]*)>([\s\S]*?)(?=<section|<\/div>|$)/g,
+    replacement: (match, attributes, content) => {
+      if (!content.includes('</section>')) {
+        return `<section${attributes}>${content}</section>`;
+      }
+      return match;
+    }
+  },
+  
   // Fix malformed export statements
-  { pattern: /export\s+default\s+NotFoundPage;/g, replacement: 'export default config;' },
-  // Fix interface syntax
-  { pattern: /(\w+):\s*(\w+);,/g, replacement: '$1: $2;' },
+  {
+    pattern: /export default (\w+);$/gm,
+    replacement: (match, name) => {
+      // Convert to proper case
+      const properName = name.charAt(0).toUpperCase() + name.slice(1).replace(/([A-Z])/g, '$1');
+      return `export default ${properName};`;
+    }
+  },
+  
+  // Fix missing imports
+  {
+    pattern: /<Helmet>/g,
+    replacement: (match, offset, string) => {
+      if (!string.includes('import { Helmet }')) {
+        return 'import { Helmet } from "react-helmet-async";\n\n' + match;
+      }
+      return match;
+    }
+  },
+  
+  // Fix missing motion imports
+  {
+    pattern: /<motion\./g,
+    replacement: (match, offset, string) => {
+      if (!string.includes('import { motion }')) {
+        return 'import { motion } from "framer-motion";\n\n' + match;
+      }
+      return match;
+    }
+  }
 ];
 
+// Function to fix a single file
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    let modified = false;
     
-    // Apply all fixes
+    // Apply fixes
     fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
+      if (typeof fix.replacement === 'function') {
+        const newContent = content.replace(fix.pattern, fix.replacement);
+        if (newContent !== content) {
+          content = newContent;
+          modified = true;
+        }
+      } else {
+        const newContent = content.replace(fix.pattern, fix.replacement);
+        if (newContent !== content) {
+          content = newContent;
+          modified = true;
+        }
+      }
     });
     
-    // Additional specific fixes for common patterns
-    content = content.replace(/,\s*}/g, ' }');
-    content = content.replace(/,\s*]/g, ' ]');
-    content = content.replace(/;\s*}/g, ' }');
-    content = content.replace(/;\s*]/g, ' ]');
+    // Additional specific fixes
+    // Fix missing closing tags
+    if (content.includes('<section') && !content.includes('</section>')) {
+      content = content.replace(/(<section[^>]*>)([\s\S]*?)(?=<section|<\/div>|$)/g, '$1$2</section>');
+      modified = true;
+    }
     
-    // Fix malformed object destructuring
-    content = content.replace(/{\s*(\w+)\s*,\s*}/g, '{ $1 }');
+    // Fix missing function wrapper
+    if (content.includes('return (<') && !content.includes('function') && !content.includes('=>')) {
+      content = `export default function Page() {\n${content}\n}`;
+      modified = true;
+    }
     
-    // Fix malformed array destructuring
-    content = content.replace(/\[\s*(\w+)\s*,\s*\]/g, '[ $1 ]');
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (modified) {
+      fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
       return true;
     }
-    return false
-  } catch (error) {}
-    console.error(`Error fixing ${filePath}:`, error.message)
-    return false
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
-// Function to recursively find and fix files
-function fixDirectory(dirPath) {}
-}let fixedCount = 0
-  try {}
-} catch (error) {}
-  console.error(error)
-}const items = fs.readdirSync(dirPath)
-    for (const item of items) {}
-      const fullPath = path.join(dirPath, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {}
-        // Skip node_modules and other build directories
-        if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {}
-          fixedCount += fixDirectory(fullPath)
-        }
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {}
-        if (fixSyntaxErrors(fullPath)) {}
-          fixedCount++
-        }
+
+// Main function
+async function main() {
+  console.log('Starting syntax error fixes...');
+  
+  // Find all TypeScript/JavaScript files
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'api/**/*.js',
+    'components/**/*.tsx',
+    'components/**/*.ts'
+  ];
+  
+  let totalFixed = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
+    for (const file of files) {
+      if (fixFile(file)) {
+        totalFixed++;
       }
     }
-  } catch (error) {}
-    console.error(`Error reading directory ${dirPath}:`, error.message)
   }
-  return fixedCount
+  
+  console.log(`Fixed ${totalFixed} files`);
 }
-// Main execution
-console.log('Starting syntax error fixes...')
-const fixedCount = fixDirectory('./')
-console.log(`Syntax fixes complete. Fixed ${fixedCount} files.`)
+
+main().catch(console.error);

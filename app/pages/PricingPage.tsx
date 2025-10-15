@@ -268,7 +268,9 @@ const PricingPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>Pricing - Transparent Pricing for AI & IT Solutions | Zion Tech Group</title>
         <meta name="description" content="Transparent pricing for our comprehensive AI and IT solutions. Choose from micro SAAS, AI services, and IT solutions with flexible pricing options." />
         <meta name="keywords" content="pricing, micro SAAS pricing, AI services pricing, IT services pricing, cloud infrastructure pricing, cybersecurity pricing" />
@@ -279,9 +281,9 @@ const PricingPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+      </><section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
@@ -341,7 +343,7 @@ const PricingPage: React.FC = () => {
                 <span>{category.name}</span>
               </button>
             ))}
-          </div>
+          </div></section></section>
         </div>
       </section>
 
@@ -358,7 +360,7 @@ const PricingPage: React.FC = () => {
                     <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
-                  </div>
+                  </div></section></section>
                 )}
                 
                 <div className="mb-6">
@@ -446,7 +448,7 @@ const PricingPage: React.FC = () => {
                       On-premise deployment options
                     </li>
                   </ul>
-                </div>
+                </div></section></section>
                 <div>
                   <h4 className="text-lg font-semibold text-purple-400 mb-3">Benefits:</h4>
                   <ul className="space-y-2 text-gray-300">
@@ -492,7 +494,7 @@ const PricingPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Get answers to common questions about our pricing and services.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="bg-slate-800/50 rounded-xl p-6">
@@ -566,7 +568,7 @@ const PricingPage: React.FC = () => {
             >
               Schedule Demo
             </Link>
-          </div>
+          </div></section></section>
         </div>
       </section>
     </>

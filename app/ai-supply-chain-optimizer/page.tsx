@@ -128,7 +128,7 @@ export default function AISupplyChainOptimizer() {
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-slate-500/20 to-gray-500/20 border border-slate-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-slate-400 mr-2" />
               <span className="text-slate-400 text-sm font-medium">30% Cost Reduction Guaranteed</span>
-            </div>
+            </div></section></section>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               AI Supply Chain
@@ -186,7 +186,7 @@ export default function AISupplyChainOptimizer() {
                 Our AI supply chain optimizer combines machine learning, predictive analytics, and real-time optimization 
                 to deliver unprecedented efficiency and cost savings.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
@@ -231,7 +231,7 @@ export default function AISupplyChainOptimizer() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Tailored supply chain optimization solutions for different industries and business models.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {industries.map((industry, index) => (
@@ -264,7 +264,7 @@ export default function AISupplyChainOptimizer() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the plan that fits your organization's size and supply chain complexity.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
@@ -334,7 +334,7 @@ export default function AISupplyChainOptimizer() {
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-slate-500 to-gray-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Mail className="w-6 h-6 text-white" />
-                </div>
+                </div></section></section>
                 <h3 className="text-white font-semibold mb-2">Email</h3>
                 <p className="text-slate-400">kleber@ziontechgroup.com</p>
               </div>

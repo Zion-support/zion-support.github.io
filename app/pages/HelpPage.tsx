@@ -161,7 +161,9 @@ const HelpPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>Help Center - Zion Tech Group | Support & Documentation</title>
         <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Find answers, documentation, and contact our expert support team." />
         <meta name="keywords" content="help center, support, documentation, FAQ, troubleshooting, customer service" />
@@ -169,9 +171,9 @@ const HelpPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+      </><section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
@@ -230,7 +232,7 @@ const HelpPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Find the information you need organized by topic and category.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {helpCategories.map((category) => (
@@ -264,7 +266,7 @@ const HelpPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the support channel that works best for you.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {supportChannels.map((channel) => (
@@ -301,7 +303,7 @@ const HelpPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Find quick answers to common questions about our services and solutions.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="max-w-4xl mx-auto">
             <div className="space-y-4">
@@ -352,7 +354,7 @@ const HelpPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Access our comprehensive library of resources and documentation.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {resources.map((resource) => (
@@ -401,7 +403,7 @@ const HelpPage: React.FC = () => {
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
               </a>
-            </div>
+            </div></section></section>
           </div>
         </div>
       </section>

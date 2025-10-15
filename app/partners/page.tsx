@@ -91,6 +91,7 @@ import { CheckCircle, Users, Globe, Shield, Zap } from 'lucide-react';export def
     }
   ];
 
+export default function Page() {
   return (<>
       <Helmet>
         <title>Partners - Zion Tech Group | Strategic Partnerships</title>

@@ -18,6 +18,7 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
       value: "99.9%", _label: "Uptime", icon: <Zap className="w-8 h-8" />, _color: "text-green-400", _}, _{
       value: "50+", _label: "Awards Won", icon: <Award className="w-8 h-8" />, _color: "text-yellow-400", _}, _{
       value: "40%", _label: "Cost Savings", icon: <TrendingUp className="w-8 h-8" />, _color: "text-purple-400", _}, _], className = "", _}) => {
+export default function Page() {
   return (<div className={`py-16 ${className}`}>
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">

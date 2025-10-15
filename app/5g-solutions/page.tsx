@@ -78,9 +78,14 @@ const G5gSolutionsPage: React.FC = () => {
                 Transform your business with cutting-edge 5G technology. Deploy faster, scale efficiently, and stay ahead of the competition.
               </p>
             </div>
+          </div>
+        </section>
 
+        {/* Services Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {solutions.map((solution, index) => (
+              {g5gServices.map((solution, index) => (
                 <div key={index} className="text-center">
                   <div className="text-cyan-400 mb-4 flex justify-center">
                     {solution.icon}

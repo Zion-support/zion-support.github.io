@@ -1,8 +1,11 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
+export default function Page() {
   return (<>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>Compliance Services - Zion Tech Group | Regulatory Compliance & Security</title>
         <meta
           name="description"
@@ -16,7 +19,7 @@ import SEOHead from '../components/SEOHead';
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
-        <section className="py-20 px-4">
+        </div><section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -41,7 +44,7 @@ import SEOHead from '../components/SEOHead';
               >
                 Free Assessment
               </Link>
-            </div>
+            </div></section></section>
           </div>
         </section>
 
@@ -53,7 +56,7 @@ import SEOHead from '../components/SEOHead';
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We maintain the highest standards of compliance and security across multiple frameworks
               </p>
-            </div>
+            </div></section></section>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {complianceFrameworks.map((framework, index) => (
@@ -82,7 +85,7 @@ import SEOHead from '../components/SEOHead';
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive compliance solutions tailored to your industry and regulatory requirements
               </p>
-            </div>
+            </div></section></section>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
@@ -110,7 +113,7 @@ import SEOHead from '../components/SEOHead';
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Partner with experts who understand the complexities of regulatory compliance
               </p>
-            </div>
+            </div></section></section>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
@@ -140,7 +143,7 @@ import SEOHead from '../components/SEOHead';
               Start Your Compliance Journey
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-          </div>
+          </div></section></section>
         </section>
       </div>
     </>

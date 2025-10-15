@@ -138,7 +138,9 @@ const APIDocsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>API Documentation - Zion Tech Group | Developer Resources</title>
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group's AI and IT solutions. Get started with our developer-friendly APIs." />
         <meta name="keywords" content="API documentation, developer resources, REST API, SDK, integration, developer tools" />
@@ -146,9 +148,9 @@ const APIDocsPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-16">
+      </><section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-16">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
@@ -192,7 +194,7 @@ const APIDocsPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Built for developers, by developers. Our APIs are designed for ease of use and maximum performance.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature) => (
@@ -220,7 +222,7 @@ const APIDocsPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Explore our APIs and try them out with interactive examples.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* API List */}
@@ -353,7 +355,7 @@ const APIDocsPage: React.FC = () => {
             >
               Contact Developer Support
             </Link>
-          </div>
+          </div></section></section>
         </div>
       </section>
     </>

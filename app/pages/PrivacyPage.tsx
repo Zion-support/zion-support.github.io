@@ -80,6 +80,7 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
     'Lodge a complaint with a supervisory authority'
   ];
 
+export default function Page() {
   return (<>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group | Data Protection & Privacy</title>
@@ -89,9 +90,9 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+      </><section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
@@ -138,7 +139,7 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We collect only the information necessary to provide and improve our services.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {dataTypes.map((dataType, index) => (
@@ -163,7 +164,7 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 p-8 rounded-xl">
                   <h2 className="text-2xl font-bold text-white mb-6">{section.title}</h2>
                   <p className="text-gray-300 leading-relaxed text-lg">{section.content}</p>
-                </div>
+                </div></section></section>
               ))}
             </div>
           </div>
@@ -178,7 +179,7 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               You have control over your personal information. Here are your rights under applicable data protection laws.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -201,7 +202,7 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               If you have any questions about this privacy policy or our data practices, please contact us.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -263,7 +264,7 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
                     By continuing to use our services after any changes to this privacy policy, you acknowledge 
                     that you have read and understood the updated policy.
                   </p>
-                </div>
+                </div></section></section>
               </div>
             </div>
           </div>

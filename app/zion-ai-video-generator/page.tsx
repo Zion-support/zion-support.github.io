@@ -147,8 +147,8 @@ const ZionAiVideoGeneratorPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        </div><section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div></section></section>
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
           
           <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -231,7 +231,7 @@ const ZionAiVideoGeneratorPage: React.FC = () => {
                 Everything you need to create professional videos with AI. From text-to-video generation 
                 to advanced editing tools, we've got you covered.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -260,7 +260,7 @@ const ZionAiVideoGeneratorPage: React.FC = () => {
                 Whether you're creating marketing content, educational videos, or social media posts, 
                 our AI video generator adapts to your needs.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => (
@@ -295,7 +295,7 @@ const ZionAiVideoGeneratorPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the plan that fits your video creation needs. All plans include our core AI features.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
@@ -358,7 +358,7 @@ const ZionAiVideoGeneratorPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Join thousands of content creators, marketers, and businesses using our AI video generator.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
@@ -403,7 +403,7 @@ const ZionAiVideoGeneratorPage: React.FC = () => {
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <MessageSquare className="w-6 h-6 text-white" />
-                </div>
+                </div></section></section>
                 <h3 className="text-white font-semibold mb-2">Email</h3>
                 <p className="text-cyan-400">kleber@ziontechgroup.com</p>
               </div>

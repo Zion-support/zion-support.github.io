@@ -12,6 +12,7 @@ export default function NewsletterSignup() {
     // Handle newsletter signup
     };
 
+export default function Page() {
   return (<>
       <Helmet>
         <title>Newsletter Signup - Zion Tech Group</title>

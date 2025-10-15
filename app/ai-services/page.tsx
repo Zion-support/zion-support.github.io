@@ -207,8 +207,8 @@ const AiServicesPage: React.FC = () => {
       />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center">
-        <div className="absolute inset-0 bg-black/50"></div>
+      </><section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center">
+        <div className="absolute inset-0 bg-black/50"></div></section></section>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -252,7 +252,7 @@ const AiServicesPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive AI solutions designed to meet your specific business needs and drive innovation
             </p>
-          </div>
+          </div></section></section>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
@@ -286,7 +286,7 @@ const AiServicesPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               A structured approach to implementing AI solutions that deliver real business value
             </p>
-          </div>
+          </div></section></section>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -345,7 +345,7 @@ const AiServicesPage: React.FC = () => {
             >
               Schedule Consultation
             </Link>
-          </div>
+          </div></section></section>
         </div>
       </section>
     </>

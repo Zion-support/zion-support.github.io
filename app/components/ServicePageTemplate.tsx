@@ -39,13 +39,13 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="py-20">
+        </div><section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="flex justify-center mb-8">
                 <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">
                   {icon}
-                </div>
+                </div></section></section>
               </div>
               <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
                 {title}
@@ -81,7 +81,7 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 {shortDescription}
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -101,7 +101,7 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({
               <h2 className="text-4xl lg:text-5xl font-bold mb-6">
                 Why Choose Our <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">{title}</span>?
               </h2>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -124,7 +124,7 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({
               <h2 className="text-4xl lg:text-5xl font-bold mb-6">
                 Technologies & <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Tools</span>
               </h2>
-            </div>
+            </div></section></section>
             
             <div className="flex flex-wrap justify-center gap-4">
               {technologies.map((tech, index) => (
@@ -143,7 +143,7 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({
               <h2 className="text-4xl lg:text-5xl font-bold mb-6">
                 Pricing & <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Packages</span>
               </h2>
-            </div>
+            </div></section></section>
             
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
               <div className="text-center">
@@ -184,7 +184,7 @@ const ServicePageTemplate: React.FC<ServicePageProps> = ({
               >
                 Schedule Demo
               </Link>
-            </div>
+            </div></section></section>
           </div>
         </section>
       </div>

@@ -114,7 +114,9 @@ const BlogPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>Blog - Zion Tech Group | AI & IT Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, and technology trends from Zion Tech Group experts." />
         <meta name="keywords" content="blog, AI insights, IT trends, technology news, micro SAAS, cloud computing, mobile development" />
@@ -122,9 +124,9 @@ const BlogPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+      </><section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
@@ -174,7 +176,7 @@ const BlogPage: React.FC = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
-            </div>
+            </div></section></section>
 
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
@@ -206,7 +208,7 @@ const BlogPage: React.FC = () => {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">Featured Article</h2>
               <p className="text-xl text-gray-300">Our latest insights and expert analysis</p>
-            </div>
+            </div></section></section>
 
             <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300">
               <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -276,7 +278,7 @@ const BlogPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Explore our collection of expert insights and industry analysis.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {regularPosts.map((post) => (
@@ -372,7 +374,7 @@ const BlogPage: React.FC = () => {
               <button className="bg-white text-cyan-600 hover:bg-gray-100 px-6 py-3 rounded-r-lg transition-colors font-semibold">
                 Subscribe
               </button>
-            </div>
+            </div></section></section>
           </div>
         </div>
       </section>

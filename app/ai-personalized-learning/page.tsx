@@ -102,8 +102,11 @@ const AiPersonalizedLearningPage: React.FC = () => {
     "Languages", "Soft Skills", "Certification Prep", "Technical Skills"
   ];
 
+export default function Page() {
   return (<>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>AI Personalized Learning - Zion Tech Group | Adaptive Education Platform</title>
         <meta name="description" content="Revolutionary AI-powered personalized learning platform with adaptive curriculum, multi-modal content, and intelligent progress tracking for individuals and organizations." />
         <meta name="keywords" content="ai personalized learning, _adaptive education, _online learning, _corporate training, _skill development, educational technology" />
@@ -115,7 +118,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="py-20">
+        </div><section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -132,7 +135,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
                 <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                   View Courses
                 </button>
-              </div>
+              </div></section></section>
             </div>
           </div>
         </section>
@@ -145,7 +148,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powered by advanced AI algorithms that adapt to each learner&apos;s unique needs and learning style
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -169,7 +172,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Learn from thousands of courses across diverse subjects and industries
               </p>
-            </div>
+            </div></section></section>
             
             <div className="flex flex-wrap justify-center gap-4">
               {subjects.map((subject, index) => (
@@ -189,7 +192,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our AI personalized learning platform serves diverse educational needs
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => (
@@ -215,7 +218,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the perfect plan for your learning journey. All plans include our AI personalization engine.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
@@ -277,7 +280,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
                   Contact Sales
                 </button>
-              </div>
+              </div></section></section>
             </div>
           </div>
         </section>

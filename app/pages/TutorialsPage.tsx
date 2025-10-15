@@ -140,6 +140,7 @@ import { ArrowRight, Clock, Search, Filter, Play, BookOpen, Star, Target } from 
   const featuredTutorial = tutorials.find(tutorial => tutorial.featured);
   const regularTutorials = filteredTutorials.filter(tutorial => !tutorial.featured);
 
+export default function Page() {
   return (<>
       <Helmet>
         <title>Tutorials - Zion Tech Group | Learn AI & IT Skills</title>
@@ -149,9 +150,9 @@ import { ArrowRight, Clock, Search, Filter, Play, BookOpen, Star, Target } from 
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+      </><section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
@@ -201,7 +202,7 @@ import { ArrowRight, Clock, Search, Filter, Play, BookOpen, Star, Target } from 
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
-            </div>
+            </div></section></section>
 
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
@@ -248,7 +249,7 @@ import { ArrowRight, Clock, Search, Filter, Play, BookOpen, Star, Target } from 
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">Featured Tutorial</h2>
               <p className="text-xl text-gray-300">Our most popular and comprehensive learning resource</p>
-            </div>
+            </div></section></section>
 
             <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300">
               <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -329,7 +330,7 @@ import { ArrowRight, Clock, Search, Filter, Play, BookOpen, Star, Target } from 
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive learning resources for all skill levels.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {regularTutorials.map((tutorial) => (
@@ -444,7 +445,7 @@ import { ArrowRight, Clock, Search, Filter, Play, BookOpen, Star, Target } from 
               <BookOpen className="w-5 h-5 mr-2" />
               Explore Solutions
             </Link>
-          </div>
+          </div></section></section>
         </div>
       </section>
     </>

@@ -1,8 +1,11 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code-4a9f
+import SEOHead from '../components/SEOHead';
 
+export default function Page() {
   return (<>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>AI Healthcare Diagnostics - Zion Tech Group | Medical AI Solutions</title>
         <meta
           name="description"
@@ -28,7 +31,7 @@ import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-rose-500/20 to-pink-500/20 border border-rose-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-rose-400 mr-2" />
               <span className="text-rose-400 text-sm font-medium">99.2% Diagnostic Accuracy</span>
-            </div>
+            </div></section></section>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               AI Healthcare
@@ -71,7 +74,7 @@ import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code
                 Our AI healthcare diagnostics platform combines cutting-edge machine learning with medical expertise 
                 to deliver accurate, _fast, and reliable diagnostic support.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (<div
@@ -115,7 +118,7 @@ import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Transform healthcare delivery across different medical settings with our AI-powered diagnostic solutions.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => (
@@ -148,7 +151,7 @@ import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the plan that fits your healthcare organization's needs and budget.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
@@ -218,7 +221,7 @@ import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-rose-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Mail className="w-6 h-6 text-white" />
-                </div>
+                </div></section></section>
                 <h3 className="text-white font-semibold mb-2">Email</h3>
                 <p className="text-rose-400">kleber@ziontechgroup.com</p>
               </div>

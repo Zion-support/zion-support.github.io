@@ -110,6 +110,7 @@ const SoftwareDevelopmentPage = () => {
     }
   ];
 
+export default function Page() {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Software Development Services - Zion Tech Group | Custom Web & Mobile Apps"
@@ -119,7 +120,7 @@ const SoftwareDevelopmentPage = () => {
       />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      </div><section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
@@ -146,7 +147,7 @@ const SoftwareDevelopmentPage = () => {
             >
               Free Consultation
             </FuturisticButton>
-          </div>
+          </div></section></section>
         </ResponsiveContainer>
       </section>
 
@@ -160,7 +161,7 @@ const SoftwareDevelopmentPage = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Comprehensive software development solutions tailored to your business needs.
             </p>
-          </div>
+          </div></section></section>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (<FuturisticCard key={index} className="h-full">
                 <div className="text-center mb-6">
@@ -203,7 +204,7 @@ const SoftwareDevelopmentPage = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Modern, proven technologies for building robust and scalable applications.
             </p>
-          </div>
+          </div></section></section>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {technologies.map((tech, index) => (<div key={index} className="text-center">
                 <h3 className="text-lg font-semibold text-cyan-400 mb-4">{tech.name}</h3>
@@ -230,7 +231,7 @@ const SoftwareDevelopmentPage = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               A proven methodology to deliver high-quality software on time and within budget.
             </p>
-          </div>
+          </div></section></section>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {process.map((step, index) => (
               <div key={index} className="text-center">
@@ -255,7 +256,7 @@ const SoftwareDevelopmentPage = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Experience the difference of working with a dedicated development team.
             </p>
-          </div>
+          </div></section></section>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -296,7 +297,7 @@ const SoftwareDevelopmentPage = () => {
             >
               Schedule Consultation
             </FuturisticButton>
-          </div>
+          </div></section></section>
         </ResponsiveContainer>
       </section>
     </div>

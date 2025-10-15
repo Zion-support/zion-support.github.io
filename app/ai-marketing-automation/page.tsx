@@ -4,7 +4,9 @@ import SEOHead from '../components/SEOHead';
 const AiMarketingAutomationPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>AI Marketing Automation - Zion Tech Group | Advanced Marketing Solutions</title>
         <meta
           name="description"
@@ -30,7 +32,7 @@ const AiMarketingAutomationPage: React.FC = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 animate-pulse">
                   {" "}Automation
                 </span>
-                <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 rounded-lg blur opacity-30 animate-pulse"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 rounded-lg blur opacity-30 animate-pulse"></div></section></section>
               </h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -67,7 +69,7 @@ const AiMarketingAutomationPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover the comprehensive suite of AI-powered marketing automation tools designed to boost your campaigns and drive results.
               </p>
-            </div>
+            </div></section></section>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (<div
                   key={index}
@@ -117,7 +119,7 @@ const AiMarketingAutomationPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the perfect plan for your marketing automation needs. All plans include our core AI features and 24/7 support.
               </p>
-            </div>
+            </div></section></section>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <div
@@ -187,7 +189,7 @@ const AiMarketingAutomationPage: React.FC = () => {
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Email className="w-6 h-6 text-white" />
-                  </div>
+                  </div></section></section>
                   <h3 className="text-white font-semibold mb-2">Email</h3>
                   <p className="text-pink-400">kleber@ziontechgroup.com</p>
                 </div>

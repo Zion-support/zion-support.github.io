@@ -156,7 +156,7 @@ const ZionAiProjectManagerProPage: React.FC = () => {
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 mb-6">
                   <Calendar className="w-4 h-4 text-emerald-400 mr-2" />
                   <span className="text-emerald-400 text-sm font-medium">AI-Powered Project Management</span>
-                </div>
+                </div></section></section>
                 
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                   Zion AI Project
@@ -255,7 +255,7 @@ const ZionAiProjectManagerProPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Everything you need to transform your project management with artificial intelligence.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (<div
@@ -295,7 +295,7 @@ const ZionAiProjectManagerProPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the plan that fits your team size. All plans include our core AI features.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
@@ -360,7 +360,7 @@ const ZionAiProjectManagerProPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Join thousands of project managers already using Zion AI Project Manager Pro to boost their team's performance.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
@@ -405,7 +405,7 @@ const ZionAiProjectManagerProPage: React.FC = () => {
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Mail className="w-6 h-6 text-white" />
-                  </div>
+                  </div></section></section>
                   <h3 className="text-white font-semibold mb-2">Email</h3>
                   <p className="text-emerald-400">kleber@ziontechgroup.com</p>
                 </div>

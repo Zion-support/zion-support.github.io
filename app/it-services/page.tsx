@@ -1,8 +1,11 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
+export default function Page() {
   return (<>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>IT Services - Zion Tech Group | Professional IT Solutions</title>
         <meta
           name="description"
@@ -16,7 +19,7 @@ import SEOHead from '../components/SEOHead';
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
-        <section className="py-20 px-4">
+        </div><section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -41,7 +44,7 @@ import SEOHead from '../components/SEOHead';
               >
                 Free Consultation
               </Link>
-            </div>
+            </div></section></section>
           </div>
         </section>
 
@@ -53,7 +56,7 @@ import SEOHead from '../components/SEOHead';
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive IT solutions tailored to meet your business needs and drive efficiency.
               </p>
-            </div>
+            </div></section></section>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {itServices.map((service, index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="text-cyan-400 mb-4">{service.icon}</div>
@@ -81,7 +84,7 @@ import SEOHead from '../components/SEOHead';
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of professional IT management with our expert team and cutting-edge solutions.
               </p>
-            </div>
+            </div></section></section>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
@@ -119,7 +122,7 @@ import SEOHead from '../components/SEOHead';
               >
                 Schedule Consultation
               </Link>
-            </div>
+            </div></section></section>
           </div>
         </section>
       </div>

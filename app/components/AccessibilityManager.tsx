@@ -122,6 +122,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
     setSettings(defaultSettings);
   };
 
+export default function Page() {
   return (<>
       {children}
       {/* Accessibility Panel */}

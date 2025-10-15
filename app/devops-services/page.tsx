@@ -112,7 +112,7 @@ const DevOpsServicesPage = () => {
       />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      </div><section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
@@ -140,7 +140,7 @@ const DevOpsServicesPage = () => {
             >
               Free Consultation
             </FuturisticButton>
-          </div>
+          </div></section></section>
         </ResponsiveContainer>
       </section>
 
@@ -155,7 +155,7 @@ const DevOpsServicesPage = () => {
               Comprehensive DevOps solutions designed to streamline your development workflow 
               and accelerate time-to-market.
             </p>
-          </div>
+          </div></section></section>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <FuturisticCard key={index} className="h-full">
@@ -199,7 +199,7 @@ const DevOpsServicesPage = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Transform your development process with proven DevOps practices and cutting-edge tools.
             </p>
-          </div>
+          </div></section></section>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit) => (
               <div key={index} className="text-center">
@@ -224,7 +224,7 @@ const DevOpsServicesPage = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               A proven methodology to transform your development and operations.
             </p>
-          </div>
+          </div></section></section>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {process.map((step) => (
               <div key={index} className="text-center">
@@ -265,7 +265,7 @@ const DevOpsServicesPage = () => {
             >
               Schedule Consultation
             </FuturisticButton>
-          </div>
+          </div></section></section>
         </ResponsiveContainer>
       </section>
     </div>

@@ -208,7 +208,9 @@ const PortfolioPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>Portfolio - Zion Tech Group | Our Work & Success Stories</title>
         <meta name="description" content="Explore our portfolio of successful AI and IT projects. See how we've helped businesses transform with cutting-edge technology solutions." />
         <meta name="keywords" content="portfolio, projects, case studies, AI solutions, web development, mobile apps, cloud solutions" />
@@ -216,9 +218,9 @@ const PortfolioPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+      </><section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
@@ -260,7 +262,7 @@ const PortfolioPage: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat) => (
               <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div></section></section>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
             ))}
@@ -282,7 +284,7 @@ const PortfolioPage: React.FC = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
-            </div>
+            </div></section></section>
 
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
@@ -316,7 +318,7 @@ const PortfolioPage: React.FC = () => {
                   <div className="text-center">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <Zap className="w-8 h-8 text-white" />
-                    </div>
+                    </div></section></section>
                     <h3 className="text-xl font-semibold text-white">{project.title}</h3>
                   </div>
                   <div className="absolute top-4 right-4 flex space-x-2">
@@ -461,7 +463,7 @@ const PortfolioPage: React.FC = () => {
               <Rocket className="w-5 h-5 mr-2" />
               View Our Services
             </Link>
-          </div>
+          </div></section></section>
         </div>
       </section>
     </>

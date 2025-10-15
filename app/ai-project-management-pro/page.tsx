@@ -160,9 +160,9 @@ const AiProjectManagementProPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
+      </><section className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
@@ -219,7 +219,7 @@ const AiProjectManagementProPage: React.FC = () => {
               Our AI-powered project management platform includes everything you need to plan, 
               execute, and deliver projects successfully.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -246,7 +246,7 @@ const AiProjectManagementProPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Connect with your existing tools and workflows for a unified project management experience.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {integrations.map((integration, index) => (
@@ -275,7 +275,7 @@ const AiProjectManagementProPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Join thousands of teams that have transformed their project management with our AI platform.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
@@ -302,7 +302,7 @@ const AiProjectManagementProPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI project management platform works across all industries and team sizes.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
@@ -335,7 +335,7 @@ const AiProjectManagementProPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the perfect plan for your team. All plans include 14-day free trial and no setup fees.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
@@ -407,7 +407,7 @@ const AiProjectManagementProPage: React.FC = () => {
             >
               Schedule Demo
             </Link>
-          </div>
+          </div></section></section>
         </div>
       </section>
     </>

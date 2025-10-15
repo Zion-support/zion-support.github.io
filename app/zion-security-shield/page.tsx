@@ -1,8 +1,11 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
+export default function Page() {
   return (<>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>Zion Security Shield - Advanced Cybersecurity Platform | Zion Tech Group</title>
         <meta
           name="description"
@@ -16,12 +19,12 @@ import SEOHead from '../components/SEOHead';
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        </div><section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-6">
               <Shield className="w-4 h-4 text-red-400 mr-2" />
               <span className="text-red-400 text-sm font-medium">Enterprise-Grade Security</span>
-            </div>
+            </div></section></section>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
                 Zion Security Shield
@@ -75,7 +78,7 @@ import SEOHead from '../components/SEOHead';
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Everything you need to protect your business from modern cyber threats.
               </p>
-            </div>
+            </div></section></section>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -107,7 +110,7 @@ import SEOHead from '../components/SEOHead';
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 All the security tools you need in one comprehensive platform.
               </p>
-            </div>
+            </div></section></section>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {securityFeatures.map((feature, index) => (
                 <div
@@ -132,7 +135,7 @@ import SEOHead from '../components/SEOHead';
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the security level that matches your business needs. All plans include 30-day free trial.
               </p>
-            </div>
+            </div></section></section>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
@@ -192,7 +195,7 @@ import SEOHead from '../components/SEOHead';
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 See what security professionals say about Zion Security Shield
               </p>
-            </div>
+            </div></section></section>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
@@ -238,7 +241,7 @@ import SEOHead from '../components/SEOHead';
               >
                 Schedule Security Demo
               </Link>
-            </div>
+            </div></section></section>
           </div>
         </section>
       </div>

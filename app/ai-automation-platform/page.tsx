@@ -1,6 +1,8 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code-4a9f
+import { Helmet } from "react-helmet-async";
 
+export default function AIAutomationPlatformPage() {
+export default function Page() {
   return (<>
       <Helmet>
         <title>AI Automation Platform - Intelligent Process Automation | Zion Tech Group</title>
@@ -10,7 +12,7 @@ import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4">
+        </div><section className="relative py-20 px-4">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -28,7 +30,7 @@ import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code
                   <Play className="mr-2 w-5 h-5" />
                   Watch Demo
                 </button>
-              </div>
+              </div></section></section>
             </div>
           </div>
         </section>
@@ -39,7 +41,7 @@ import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Platform Features</h2>
               <p className="text-xl text-gray-300">Comprehensive AI automation capabilities</p>
-            </div>
+            </div></section></section>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -61,7 +63,7 @@ import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Platform</h2>
               <p className="text-xl text-gray-300">Proven results and measurable impact</p>
-            </div>
+            </div></section></section>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
@@ -86,11 +88,11 @@ import SEOHead from '../components/SEOHead';ursor/analyze-improve-and-merge-code
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
               Get Started Today
             </button>
-          </div>
+          </div></section></section>
         </section>
       </div>
     </>
   );
 };
 
-export default AiAutomationPlatformPage;
+export default AIAutomationPlatformPage;

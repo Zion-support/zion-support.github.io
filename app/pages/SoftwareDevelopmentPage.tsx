@@ -29,6 +29,7 @@ import { ArrowRight, CheckCircle, Database, Smartphone, Globe, Network } from 'l
     }
   ];
 
+export default function Page() {
   return (<>
       <Helmet>
         <title>Software Development - Zion Tech Group | Custom Software Solutions</title>
@@ -37,9 +38,9 @@ import { ArrowRight, CheckCircle, Database, Smartphone, Globe, Network } from 'l
         <link rel="canonical" href="https://ziontechgroup.com/software-development" />
       </Helmet>
 
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+      </><section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
@@ -75,7 +76,7 @@ import { ArrowRight, CheckCircle, Database, Smartphone, Globe, Network } from 'l
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive software development solutions for every business need.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {developmentServices.map((service, index) => (<div key={index} className="bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">

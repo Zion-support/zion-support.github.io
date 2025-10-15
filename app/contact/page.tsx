@@ -83,8 +83,8 @@ const ContactPage: React.FC = () => {
       />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center">
-        <div className="absolute inset-0 bg-black/50"></div>
+      </><section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center">
+        <div className="absolute inset-0 bg-black/50"></div></section></section>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-blue-300 bg-clip-text text-transparent">
@@ -114,7 +114,7 @@ const ContactPage: React.FC = () => {
                   <div key={index} className="flex items-start gap-4 p-4 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors">
                     <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-blue-400 flex-shrink-0">
                       {info.icon}
-                    </div>
+                    </div></section></section>
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>
                       <p className="text-blue-400 font-medium mb-1">{info.details}</p>

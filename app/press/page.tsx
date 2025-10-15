@@ -1,8 +1,11 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
+export default function Page() {
   return (<>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>Press - Zion Tech Group | Media Center & News</title>
         <meta name="description" content="Latest press releases, media kit, and news from Zion Tech Group. Stay updated with our latest announcements and achievements." />
         <meta name="keywords" content="press, _media, _news, _press releases, _Zion Tech Group, _AI company, technology news" />

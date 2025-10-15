@@ -210,6 +210,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
     }
   ];
 
+export default function Page() {
   return (<>
       <Helmet>
         <title>Solutions - Zion Tech Group | Industry-Specific AI & IT Solutions</title>
@@ -219,9 +220,9 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+      </><section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
@@ -265,7 +266,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We specialize in delivering technology solutions that address the unique needs of different industries.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industrySolutions.map((solution, index) => (<div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -305,7 +306,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive technology solutions powered by the latest innovations in AI, cloud, and data science.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {technologySolutions.map((solution, index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300">
@@ -341,7 +342,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Ready-to-use software solutions that can be deployed quickly and scaled as your business grows.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {microSaaSSolutions.map((solution, index) => (<Link
@@ -381,7 +382,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Real results from real clients. See how our solutions have transformed businesses across industries.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-xl hover:bg-white/10 transition-all duration-300">
@@ -438,7 +439,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
               <Rocket className="w-5 h-5 mr-2" />
               Schedule Demo
             </Link>
-          </div>
+          </div></section></section>
         </div>
       </section>
     </>

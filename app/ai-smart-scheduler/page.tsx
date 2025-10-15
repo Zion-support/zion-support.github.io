@@ -27,7 +27,7 @@ import SEOHead from '../components/SEOHead';
               >
                 Watch Demo
               </Link>
-            </div>
+            </div></section></section>
           </div>
         </div>
       </section>
@@ -42,7 +42,7 @@ import SEOHead from '../components/SEOHead';
             <p className="text-gray-300 text-lg">
               Powered by advanced AI to make scheduling effortless and efficient
             </p>
-          </div>
+          </div></section></section>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-gray-800 p-6 rounded-lg">
@@ -69,7 +69,7 @@ import SEOHead from '../components/SEOHead';
             <p className="text-gray-300 text-lg">
               Choose the plan that fits your team size and needs
             </p>
-          </div>
+          </div></section></section>
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
@@ -130,7 +130,7 @@ import SEOHead from '../components/SEOHead';
             <p className="text-gray-300 text-lg">
               See what our customers say about AI Smart Scheduler
             </p>
-          </div>
+          </div></section></section>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-gray-800 p-6 rounded-lg">
@@ -175,7 +175,7 @@ import SEOHead from '../components/SEOHead';
             >
               Learn More
             </Link>
-          </div>
+          </div></section></section>
         </div>
       </section>
     </Layout>

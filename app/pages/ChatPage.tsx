@@ -4,16 +4,18 @@ import { MessageSquare } from "lucide-react";
 const ChatPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>Live Chat - Zion Tech Group | Get Instant Support</title>
         <meta name="description" content="Get instant help with our live chat support. Our expert team is available 24/7 to assist you with any questions or issues." />
         <meta name="keywords" content="live chat, instant support, customer service, help desk" />
         <link rel="canonical" href="https://ziontechgroup.com/chat" />
       </Helmet>
 
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+      </><section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 

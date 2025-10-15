@@ -159,9 +159,9 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 overflow-hidden">
+      </><section className="relative py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-green-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-green-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
@@ -218,7 +218,7 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
               Our AI-powered customer support chatbot includes everything you need to provide 
               exceptional customer service 24/7.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -245,7 +245,7 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Connect with your existing tools and workflows for a unified customer experience.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {integrations.map((integration, index) => (
@@ -274,7 +274,7 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Join thousands of businesses that have transformed their customer support with our AI chatbot.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
@@ -301,7 +301,7 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI customer support chatbot works across all industries and business types.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
@@ -334,7 +334,7 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the perfect plan for your business. All plans include 14-day free trial and no setup fees.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
@@ -406,7 +406,7 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
             >
               Schedule Demo
             </Link>
-          </div>
+          </div></section></section>
         </div>
       </section>
     </>

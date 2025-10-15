@@ -76,14 +76,14 @@ export default function Consultation() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
+        </div><section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Free Consultation</h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Get expert advice on your technology needs. No obligation, just professional guidance.
               </p>
-            </div>
+            </div></section></section>
           </div>
         </section>
 
@@ -95,7 +95,7 @@ export default function Consultation() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Get professional insights and recommendations tailored to your business needs.
               </p>
-            </div>
+            </div></section></section>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
@@ -119,7 +119,7 @@ export default function Consultation() {
                 <p className="text-gray-300">
                   Fill out the form below and we'll get back to you within 24 hours.
                 </p>
-              </div>
+              </div></section></section>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">

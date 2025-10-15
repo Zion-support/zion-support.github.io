@@ -20,7 +20,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {}
         <BrowserRouter>
           <AnalyticsProvider>
             <EnhancedPerformanceMonitor showInProduction={false} />
-            <Helmet>
+            import { Helmet } from "react-helmet-async";
+
+<Helmet>
               <title>Zion Tech Group - Advanced AI and IT Solutions</title>
               <meta
                 name="description"

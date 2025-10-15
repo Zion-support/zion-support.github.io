@@ -84,6 +84,7 @@ const PerformanceEnhancer: React.FC = () => {}
     return null
   }
 
+export default function Page() {
   return (<div className="fixed bottom-4 right-4 z-50">
       <button
         onClick={() => setIsVisible(!isVisible)}

@@ -116,6 +116,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {}
     )
   }
 
+export default function Page() {
   return (<div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6 w-80 z-50">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">

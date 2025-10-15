@@ -1,22 +1,25 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
+export default function Page() {
   return (<>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join our team of experts in AI, cloud, and cybersecurity. Explore career opportunities at Zion Tech Group." />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
+        </div><section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Join Our Team</h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Build the future of technology with us. We're looking for passionate professionals to join our mission.
               </p>
-            </div>
+            </div></section></section>
           </div>
         </section>
 
@@ -28,7 +31,7 @@ import SEOHead from '../components/SEOHead';
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We offer competitive benefits and a supportive work environment that fosters growth and innovation.
               </p>
-            </div>
+            </div></section></section>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
@@ -51,7 +54,7 @@ import SEOHead from '../components/SEOHead';
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our current job openings and find the perfect role for you.
               </p>
-            </div>
+            </div></section></section>
             <div className="space-y-8">
               {openPositions.map((position) => (<div key={position.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
@@ -140,7 +143,7 @@ import SEOHead from '../components/SEOHead';
               >
                 Learn More
               </Link>
-            </div>
+            </div></section></section>
           </div>
         </section>
       </div>

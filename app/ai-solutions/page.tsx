@@ -273,9 +273,9 @@ const AISolutionsPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900 overflow-hidden">
+      </><section className="relative py-20 bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
@@ -321,7 +321,7 @@ const AISolutionsPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From customer service to data analysis, our AI solutions are designed to solve real business challenges.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
@@ -359,7 +359,7 @@ const AISolutionsPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose from our comprehensive suite of AI-powered solutions designed to transform your business operations.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
@@ -437,7 +437,7 @@ const AISolutionsPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the perfect AI solution plan for your business. All plans include 14-day free trial.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map((tier, index) => (
@@ -505,7 +505,7 @@ const AISolutionsPage: React.FC = () => {
             >
               Schedule Demo
             </Link>
-          </div>
+          </div></section></section>
         </div>
       </section>
     </>

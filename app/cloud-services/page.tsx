@@ -4,7 +4,9 @@ import SEOHead from '../components/SEOHead';
 const CloudServicesPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>Cloud Services - Zion Tech Group | Cloud Migration & Infrastructure</title>
         <meta
           name="description"
@@ -18,7 +20,7 @@ const CloudServicesPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
-        <section className="py-20 px-4">
+        </div><section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -43,7 +45,7 @@ const CloudServicesPage: React.FC = () => {
               >
                 Free Consultation
               </Link>
-            </div>
+            </div></section></section>
           </div>
         </section>
 
@@ -55,7 +57,7 @@ const CloudServicesPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive cloud solutions tailored to meet your business needs and drive digital transformation.
               </p>
-            </div>
+            </div></section></section>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
@@ -84,7 +86,7 @@ const CloudServicesPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cloud transformation with our expert guidance and cutting-edge solutions.
               </p>
-            </div>
+            </div></section></section>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
@@ -114,7 +116,7 @@ const CloudServicesPage: React.FC = () => {
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
                   Get Free Assessment
                 </button>
-              </div>
+              </div></section></section>
             </div>
           </div>
         </section>

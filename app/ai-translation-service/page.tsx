@@ -1,8 +1,11 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
+export default function Page() {
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>AI Translation Service | Zion Tech Group</title>
         <meta
           name="description"
@@ -11,7 +14,7 @@ import SEOHead from '../components/SEOHead';
       </Helmet>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      </div><section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -38,7 +41,7 @@ import SEOHead from '../components/SEOHead';
             >
               Learn More
             </Link>
-          </div>
+          </div></section></section>
         </div>
       </section>
 
@@ -52,7 +55,7 @@ import SEOHead from '../components/SEOHead';
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI-powered translation solutions deliver unmatched accuracy, _speed, and security.
             </p>
-          </div>
+          </div></section></section>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
@@ -84,7 +87,7 @@ import SEOHead from '../components/SEOHead';
             <p className="text-gray-300 text-lg">
               Choose the plan that fits your translation needs
             </p>
-          </div>
+          </div></section></section>
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
@@ -144,7 +147,7 @@ import SEOHead from '../components/SEOHead';
               Join hundreds of companies already using our AI translation
               services.
             </p>
-          </div>
+          </div></section></section>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
@@ -195,7 +198,7 @@ import SEOHead from '../components/SEOHead';
             >
               Schedule Demo
             </Link>
-          </div>
+          </div></section></section>
         </div>
       </section>
     </div>

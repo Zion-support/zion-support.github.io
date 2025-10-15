@@ -132,6 +132,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
     return matchesCategory && matchesSearch;
   });
 
+export default function Page() {
   return (<>
       <Helmet>
         <title>Support - Zion Tech Group | Help & Support Center</title>
@@ -141,9 +142,9 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+      </><section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
@@ -192,7 +193,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
               />
-            </div>
+            </div></section></section>
           </div>
         </div>
       </section>
@@ -205,7 +206,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the support channel that works best for you.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {supportChannels.map((channel, index) => (
@@ -242,7 +243,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Access our comprehensive library of resources and documentation.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {resources.map((resource, index) => (
@@ -276,7 +277,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Find quick answers to common questions about our services and solutions.
             </p>
-          </div>
+          </div></section></section>
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -352,7 +353,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
               </a>
-            </div>
+            </div></section></section>
           </div>
         </div>
       </section>

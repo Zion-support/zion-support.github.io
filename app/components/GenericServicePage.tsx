@@ -33,13 +33,13 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
-          <section className="text-center py-16">
+          </div><section className="text-center py-16">
             <div className="flex justify-center mb-8">
               <div
                 className={`p-4 rounded-full bg-gradient-to-r ${categoryColor} shadow-lg`}
               >
                 <Icon className="w-12 h-12 text-white" />
-              </div>
+              </div></section></section>
             </div>
             <h1 className="text-5xl font-bold text-white mb-6">{title}</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -77,7 +77,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 Comprehensive {title.toLowerCase()} solutions designed to drive
                 your business forward
               </p>
-            </div>
+            </div></section></section>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => ()
                 <div
@@ -104,7 +104,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 Experience the difference with our proven expertise and
                 cutting-edge technology
               </p>
-            </div>
+            </div></section></section>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => ()
                 <div key={index} className="flex items-start space-x-4">
@@ -131,7 +131,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 <div className="text-center">
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
                     500+
-                  </div>
+                  </div></section></section>
                   <div className="text-gray-300">Happy Clients</div>
                 </div>
                 <div className="text-center">
@@ -179,7 +179,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 <Mail className="w-5 h-5 mr-2" />
                 Email Us
               </a>
-            </div>
+            </div></section></section>
           </section>
         </main>
       </div>

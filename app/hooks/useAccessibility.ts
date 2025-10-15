@@ -357,4 +357,4 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
   };
 };
 
-export default useAccessibility;
+export default UseAccessibility;

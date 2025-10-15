@@ -158,6 +158,7 @@ import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Datab
     }
   ];
 
+export default function Page() {
   return (<>
       <Helmet>
         <title>Our Services - Comprehensive AI & IT Solutions | Zion Tech Group</title>
@@ -170,9 +171,9 @@ import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Datab
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+      </><section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
@@ -218,7 +219,7 @@ import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Datab
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose from our comprehensive range of services designed to meet every business need.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {serviceCategories.map((category, index) => (
@@ -267,7 +268,7 @@ import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Datab
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We deliver exceptional value through our expertise, innovation, and commitment to your success.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -297,7 +298,7 @@ import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Datab
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We follow a proven methodology to ensure successful project delivery and maximum value.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-5 gap-8">
             {processSteps.map((step, index) => (
@@ -332,7 +333,7 @@ import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Datab
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Trusted by businesses worldwide for our innovative solutions and exceptional service.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -385,7 +386,7 @@ import { CheckCircle, ArrowRight, Zap, Brain, Server, Globe, Shield, Code, Datab
             >
               View Pricing
             </Link>
-          </div>
+          </div></section></section>
         </div>
       </section>
     </>

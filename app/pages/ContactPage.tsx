@@ -101,7 +101,9 @@ const ContactPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get in touch via phone, email, or our contact form. We're here to help transform your business." />
         <meta name="keywords" content="contact, get in touch, AI solutions, IT services, consultation, support" />
@@ -139,7 +141,7 @@ const ContactPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the most convenient way to get in touch with our team.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactMethods.map((method) => (
@@ -174,7 +176,7 @@ const ContactPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Fill out the form below and we'll get back to you within 24 hours.
               </p>
-            </div>
+            </div></section></section>
 
             {isSubmitted ? (
               <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-8 text-center">
@@ -334,7 +336,7 @@ const ContactPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We're available through multiple channels to ensure you can reach us when you need us.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600/50 text-center">

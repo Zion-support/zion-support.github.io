@@ -71,14 +71,14 @@ export default function CaseStudies() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
+        </div><section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Case Studies</h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Real success stories from our clients across various industries
               </p>
-            </div>
+            </div></section></section>
           </div>
         </section>
 
@@ -89,7 +89,7 @@ export default function CaseStudies() {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="text-white">{stat.icon}</div>
+                    <div className="text-white">{stat.icon}</div></section></section>
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-300">{stat.label}</div>
@@ -107,7 +107,7 @@ export default function CaseStudies() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover how we've helped businesses transform and achieve their goals
               </p>
-            </div>
+            </div></section></section>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {caseStudies.map((study) => (
                 <div key={study.id} className="bg-white/10 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
@@ -192,7 +192,7 @@ export default function CaseStudies() {
               >
                 Free Consultation
               </Link>
-            </div>
+            </div></section></section>
           </div>
         </section>
       </div>

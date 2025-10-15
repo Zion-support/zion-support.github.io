@@ -41,6 +41,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     )
   }
 
+export default function Page() {
   return (<div
       className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`}
     >

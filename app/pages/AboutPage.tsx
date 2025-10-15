@@ -32,8 +32,11 @@ const AboutPage: React.FC = () => {
     { number: '24/7', label: 'Support Available' }
   ];
 
+export default function Page() {
   return (<>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering innovative technology solutions." />
         <meta name="keywords" content="about us, _Zion Tech Group, _company, _mission, _values, _team, technology solutions" />
@@ -41,8 +44,8 @@ const AboutPage: React.FC = () => {
       
       <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
-        <section className="relative py-20 lg:py-32">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
+        </div><section className="relative py-20 lg:py-32">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div></section></section>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-5xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
@@ -64,7 +67,7 @@ const AboutPage: React.FC = () => {
                 <div key={index} className="text-center">
                   <div className="text-4xl lg:text-5xl font-bold text-purple-400 mb-2">
                     {stat.number}
-                  </div>
+                  </div></section></section>
                   <div className="text-gray-300 text-lg">
                     {stat.label}
                   </div>
@@ -84,7 +87,7 @@ const AboutPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 These core values guide everything we do and shape our approach to delivering exceptional technology solutions.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
@@ -123,7 +126,7 @@ const AboutPage: React.FC = () => {
                 Get in Touch
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
-            </div>
+            </div></section></section>
           </div>
         </section>
       </div>

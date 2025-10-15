@@ -10,6 +10,7 @@ import { CheckCircle, Database } from 'lucide-react';const StatusPage: React.FC 
     { name: 'Authentication', status: 'operational', uptime: '99.9%' }
   ];
 
+export default function Page() {
   return (<>
       <Helmet>
         <title>System Status - Zion Tech Group | Service Status</title>
@@ -18,9 +19,9 @@ import { CheckCircle, Database } from 'lucide-react';const StatusPage: React.FC 
         <link rel="canonical" href="https://ziontechgroup.com/status" />
       </Helmet>
 
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+      </><section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
@@ -46,7 +47,7 @@ import { CheckCircle, Database } from 'lucide-react';const StatusPage: React.FC 
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Current status of all our services and systems.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="max-w-4xl mx-auto">
             <div className="space-y-4">

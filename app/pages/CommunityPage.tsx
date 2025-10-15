@@ -27,16 +27,18 @@ const CommunityPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>Community - Zion Tech Group | Developer Community</title>
         <meta name="description" content="Join our vibrant developer community. Connect, learn, and collaborate with other developers using Zion Tech Group's solutions." />
         <meta name="keywords" content="community, developer community, forums, code sharing, learning resources" />
         <link rel="canonical" href="https://ziontechgroup.com/community" />
       </Helmet>
 
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+      </><section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
@@ -71,7 +73,7 @@ const CommunityPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Connect, learn, and grow with our developer community.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {communityFeatures.map((feature) => (

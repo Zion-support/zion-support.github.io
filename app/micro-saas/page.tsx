@@ -1782,7 +1782,7 @@ const MicroSaasPage: React.FC = () => {
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">50+ Ready-to-Use Solutions</span>
-            </div>
+            </div></section></section>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Micro
@@ -1840,7 +1840,7 @@ const MicroSaasPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 Choose from our comprehensive suite of business software solutions. Each tool is designed to solve specific business challenges with powerful features and intuitive interfaces.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasServices.map((service) => (
@@ -1926,7 +1926,7 @@ const MicroSaasPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 See what our clients say about our micro SAAS solutions
               </p>
-            </div>
+            </div></section></section>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial) => (
                 <div
@@ -1970,7 +1970,7 @@ const MicroSaasPage: React.FC = () => {
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Mail className="w-6 h-6 text-white" />
-                </div>
+                </div></section></section>
                 <h3 className="text-white font-semibold mb-2">Email</h3>
                 <p className="text-cyan-400">kleber@ziontechgroup.com</p>
               </div>

@@ -102,7 +102,7 @@ const ZionAnalyticsProPage: React.FC = () => {
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <BarChart3 className="w-4 h-4 text-cyan-400 mr-2" />
                 <span className="text-cyan-400 text-sm font-medium">#1 Business Intelligence Platform</span>
-              </div>
+              </div></section></section>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
@@ -165,7 +165,7 @@ const ZionAnalyticsProPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 Everything you need to transform your data into actionable business intelligence
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -195,7 +195,7 @@ const ZionAnalyticsProPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the plan that fits your business needs. All plans include a 14-day free trial.
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
@@ -260,7 +260,7 @@ const ZionAnalyticsProPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Join thousands of businesses using Zion Analytics Pro to drive growth
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
@@ -317,7 +317,7 @@ const ZionAnalyticsProPage: React.FC = () => {
                 <DollarSign className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
                 View Pricing
               </Link>
-            </div>
+            </div></section></section>
 
             <div className="mt-8 text-sm text-gray-400">
               <p>Questions? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>

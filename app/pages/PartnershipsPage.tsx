@@ -68,7 +68,9 @@ const PartnershipsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>Partnerships - Zion Tech Group | Partner With Us</title>
         <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Explore partnership opportunities and benefits." />
         <meta name="keywords" content="partnerships, partner program, technology partners, channel partners, strategic partnerships" />
@@ -76,9 +78,9 @@ const PartnershipsPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+      </><section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div></section></section>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
@@ -122,7 +124,7 @@ const PartnershipsPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the partnership model that best fits your business goals and capabilities.
             </p>
-          </div>
+          </div></section></section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {partnershipTypes.map((type) => (
@@ -163,7 +165,7 @@ const PartnershipsPage: React.FC = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div></section></section>
 
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Partner Benefits</h2>
@@ -203,7 +205,7 @@ const PartnershipsPage: React.FC = () => {
             >
               Contact Sales
             </Link>
-          </div>
+          </div></section></section>
         </div>
       </section>
     </>

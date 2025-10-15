@@ -4,7 +4,9 @@ import SEOHead from '../components/SEOHead';
 const BlogPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>Blog - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />
       </Helmet>

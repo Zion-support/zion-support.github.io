@@ -121,8 +121,8 @@ const filteredData = faqData.map(category => ({
       />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center">
-        <div className="absolute inset-0 bg-black/50"></div>
+      </><section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center">
+        <div className="absolute inset-0 bg-black/50"></div></section></section>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-100 to-purple-300 bg-clip-text text-transparent">
@@ -172,7 +172,7 @@ const filteredData = faqData.map(category => ({
                             <p className="text-gray-300 leading-relaxed">
                               {item.answer}
                             </p>
-                          </div>
+                          </div></section></section>
                         )}
                       </div>
                     );
@@ -206,7 +206,7 @@ const filteredData = faqData.map(category => ({
             >
               Schedule Consultation
             </a>
-          </div>
+          </div></section></section>
         </div>
       </section>
     </>

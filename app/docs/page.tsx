@@ -89,7 +89,7 @@ const DocsPage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="py-20">
+        </div><section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -111,7 +111,7 @@ const DocsPage: React.FC = () => {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
-                </div>
+                </div></section></section>
               </div>
             </div>
           </div>
@@ -125,7 +125,7 @@ const DocsPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Most viewed and helpful documentation articles
               </p>
-            </div>
+            </div></section></section>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {popularArticles.map((article, index) => (
@@ -157,7 +157,7 @@ const DocsPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Browse our comprehensive documentation organized by topic
               </p>
-            </div>
+            </div></section></section>
             
             <div className="max-w-6xl mx-auto space-y-6">
               {filteredSections.map((section) => (
@@ -225,7 +225,7 @@ const DocsPage: React.FC = () => {
                   <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
                     View Examples
                   </button>
-                </div>
+                </div></section></section>
               </div>
             </div>
           </div>
@@ -240,7 +240,7 @@ const DocsPage: React.FC = () => {
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                   More tools and resources to help you succeed
                 </p>
-              </div>
+              </div></section></section>
               
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">

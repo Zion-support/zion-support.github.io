@@ -174,4 +174,4 @@ class ErrorHandler {
 }
 
 export const errorHandler = ErrorHandler.getInstance();
-export default errorHandler;
+export default ErrorHandler;

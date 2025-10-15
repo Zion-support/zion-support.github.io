@@ -1,8 +1,11 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
+export default function Page() {
   return (<>
-      <Helmet>
+      import { Helmet } from "react-helmet-async";
+
+<Helmet>
         <title>Community - Zion Tech Group | Tech Community & Events</title>
         <meta
           name="description"
@@ -16,7 +19,7 @@ import SEOHead from '../components/SEOHead';
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
-        <section className="py-20 px-4">
+        </div><section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -40,7 +43,7 @@ import SEOHead from '../components/SEOHead';
               >
                 View Events
               </Link>
-            </div>
+            </div></section></section>
           </div>
         </section>
 
@@ -52,7 +55,7 @@ import SEOHead from '../components/SEOHead';
                 <div key={index} className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-4">
                     {stat.icon}
-                  </div>
+                  </div></section></section>
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
                 </div>
@@ -69,7 +72,7 @@ import SEOHead from '../components/SEOHead';
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Join our upcoming events and workshops to learn, network, and grow
               </p>
-            </div>
+            </div></section></section>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {events.map((event, index) => (
@@ -108,7 +111,7 @@ import SEOHead from '../components/SEOHead';
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Get involved in our community programs and make a difference
               </p>
-            </div>
+            </div></section></section>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {initiatives.map((initiative, index) => (
@@ -139,7 +142,7 @@ import SEOHead from '../components/SEOHead';
               Join Our Community
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-          </div>
+          </div></section></section>
         </section>
       </div>
     </>
