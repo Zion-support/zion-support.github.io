@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Ambulance, ArrowRight, Brain, CheckCircle, Heart, Hospital, Mail, Microscope, Phone, Pill, Play, Shield, Shield as ShieldIcon, Star, Stethoscope, UserCheck } from 'lucide-react';
+import { Ambulance, ArrowRight, Brain, CheckCircle, Heart, Hospital, Mail, Microscope, Phone, Pill, Play, Shield, Star, Stethoscope, UserCheck } from 'lucide-react';
 
 const AIHealthcareSolutionsProPage = () => {
   return (
