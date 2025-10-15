@@ -7,12 +7,12 @@ interface LoadingSpinnerProps {
   className?: string;
   color?: 'primary' | 'secondary' | 'white';
 }
-  )
-const Loading Spinner: React.FC<Loading Spinner Props> = ({
-  size = 'md'
-  text = 'Loading...'
-  full Screen = false
-  class Name = ''
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  text = 'Loading...',
+  fullScreen = false,
+  className = '',
   color = 'primary'
 }) => {
   const sizeClasses = {
@@ -28,25 +28,22 @@ const Loading Spinner: React.FC<Loading Spinner Props> = ({
   };
 
   const spinner = (
-    <div class Name={`flex flex-col items-center justify-center ${class Name}`}>
+    <div className={`flex flex-col items-center justify-center ${className}`}>
       <div
-        class Name={`${size Classes} border-2 border-gray-300 border-t-2 border-t-current rounded-full animate-spin ${color Classes}`}
-  )
+        className={`${sizeClasses[size]} border-2 border-gray-300 border-t-2 border-t-current rounded-full animate-spin ${colorClasses[color]}`}
       />
       {text && (
-        <p className="mt-2text-smtext-gray-300">
+        <p className="mt-2 text-sm text-gray-300">
           {text}
         </p>
       )}
-  )
     </div>
-  )
-  if (full Screen) {
+  );
+
+  if (fullScreen) {
     return (
-      <div className="fixe dinset-0bg-slate-900/8 0backdrop-blur-smflexitems-centerjustify-centerz-50">
-        <div className="bg-slate-800rounded-lgp-8shadow-xl">{spinner}
-          </div>
-        </div>
+      <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
+        <div className="bg-slate-800 rounded-lg p-8 shadow-xl">{spinner}</div>
       </div>
     );
   }

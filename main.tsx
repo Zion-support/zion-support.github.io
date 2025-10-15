@@ -30,14 +30,14 @@ if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
       .register("/sw.js")
-      .then((_registration) => {
+      .then((registration) => {
         if (process.env.NODE_ENV === "development") {
-          console.warn("Service Worker registered successfully");
+          console.log("Service Worker registered successfully:", registration);
         }
       })
-      .catch((_error) => {
+      .catch((error) => {
         if (process.env.NODE_ENV === "development") {
-          console.warn("Service Worker registration failed");
+          console.error("Service Worker registration failed:", error);
         }
       });
   });

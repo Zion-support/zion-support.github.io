@@ -1,69 +1,33 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 
-const Page404Page: React.FC = () => {
-  const services = [
-    {
-      title: 'Expert 404 Solutions',
-      description: 'Professional 404 services tailored to your needs.'
-    },
-    {
-      title: 'Custom Implementation',
-      description: 'Tailored 404 implementations for your specific requirements.'
-    },
-    {
-      title: '24/7 Support',
-      description: 'Round-the-clock support for all your 404 needs.'
-    }
-  ];
-
+const NotFoundPage: React.FC = () => {
   return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9170
     <>
-      <div>
       <Helmet>
-        <title>4 0 4 - Zion Tech Group</title>
-        <meta name="description" content="Professional 4 0 4 solutions and services" />
-        <meta name="keywords" content="4 0 4" />
+        <title>404 - Page Not Found | Zion Tech Group</title>
+        <meta name="description" content="The page you're looking for doesn't exist. Return to our homepage." />
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">4 0 4</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional 4 0 4 solutions and services
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
-          </div>
+      
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-9xl font-bold text-purple-400 mb-4">404</h1>
+          <h2 className="text-3xl font-bold mb-4">Page Not Found</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-md">
+            The page you're looking for doesn't exist or has been moved.
+          </p>
+          <Link 
+            to="/" 
+            className="inline-flex items-center bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
+          >
+            Go Home
+          </Link>
+        </div>
       </div>
-</>
+    </>
   );
 };
 
-export default Page404Page;
+export default NotFoundPage;

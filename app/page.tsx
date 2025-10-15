@@ -2,35 +2,53 @@ import React, { Suspense } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { Brain, Shield, Zap, Users, Target, ArrowRight } from 'lucide-react'
-import Performance Monitor from './components/Performance Monitor'
+import PerformanceMonitor from './components/PerformanceMonitor'
 
 function HomePage() {
   const features = [
     {
-      title: "Service 1"
-      description: "Description 1"
-    }
+      title: "AI Solutions",
+      description: "Advanced artificial intelligence solutions for business automation and optimization",
+      icon: Brain
+    },
     {
-      title: "Service 2"
-      description: "Description 2"
+      title: "Cybersecurity",
+      description: "Comprehensive security solutions to protect your digital assets",
+      icon: Shield
+    },
+    {
+      title: "5G Technology",
+      description: "Next-generation 5G infrastructure and implementation services",
+      icon: Zap
+    },
+    {
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud solutions for modern business needs",
+      icon: Users
+    },
+    {
+      title: "Digital Transformation",
+      description: "Complete digital transformation strategies and implementation",
+      icon: Target
     }
   ]
+
   return (
     <>
-      <div>
-      <Performance Monitor />
+      <PerformanceMonitor />
       <Helmet>
-        <title>Zion Tech Group - Advanced A I and I T Solutions</title>
-        <meta name="description" content="Leading provider of A I solutions, cybersecurity, and I T services for modern businesses" />
-        <meta name="keywords" content="A I solutions, cybersecurity, I T services, digital transformation, automation" />
-        <meta property="og:title" content="Zion Tech Group - Advanced A I and I T Solutions" />
-        <meta property="og:description" content="Leading provider of A I solutions, cybersecurity, and I T services for modern businesses" />
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <meta name="description" content="Leading provider of AI solutions, cybersecurity, and IT services for modern businesses" />
+        <meta name="keywords" content="AI solutions, cybersecurity, IT services, digital transformation, automation" />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="og:description" content="Leading provider of AI solutions, cybersecurity, and IT services for modern businesses" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Advanced A I and I T Solutions" />
-        <meta name="twitter:description" content="Leading provider of A I solutions, cybersecurity, and I T services for modern businesses" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta name="twitter:description" content="Leading provider of AI solutions, cybersecurity, and IT services for modern businesses" />
         <link rel="canonical" href="https://zion.app" />
       </Helmet>
+      
       <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-20">
@@ -42,7 +60,6 @@ function HomePage() {
               Advanced AI and IT Solutions for the Digital Future
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        
               <Link 
                 to="/services" 
                 className="inline-flex items-center bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
@@ -57,13 +74,14 @@ function HomePage() {
                 Get Started
               </Link>
             </div>
+          </div>
 
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
               <div 
                 key={index} 
-                className="bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-purple-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/2 0"
+                className="bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-purple-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
@@ -71,12 +89,10 @@ function HomePage() {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
-  )
           </div>
-        </section>
 
           {/* CTA Section */}
-          <div className="text-center bg-gradient-to-r from-purple-900/5 0 to-cyan-900/5 0 p-12 rounded-lg">
+          <div className="text-center bg-gradient-to-r from-purple-900/50 to-cyan-900/50 p-12 rounded-lg">
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Let our experts help you implement cutting-edge solutions
@@ -90,41 +106,40 @@ function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
 
-      {/* About Section */}
-      <section className="py-20bg-gradient-to-r from-slate-900 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xlmx-auto text-center">
-            <h2 className="text-4xlmd:text-5xl font-bold text-white mb-8">
-              Why Choose Zion Tech Group?
-            </h2>
-            <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-              With over 4 years of experience in cutting-edge technology solutions, 
-              we've helped businesses across various industries transform their operations 
-              and achieve unprecedented growth.
-            </p>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
-                <div className="text-gray-300">Projects Completed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">25+</div>
-                <div className="text-gray-300">Happy Clients</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
-                <div className="text-gray-300">Success Rate</div>
+        {/* About Section */}
+        <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className="text-xl text-gray-300 mb-12 leading-relaxed">
+                With over 4 years of experience in cutting-edge technology solutions, 
+                we've helped businesses across various industries transform their operations 
+                and achieve unprecedented growth through innovative AI and IT solutions.
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-green-400 mb-2">500+</div>
+                  <div className="text-gray-300">Projects Completed</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-blue-400 mb-2">200+</div>
+                  <div className="text-gray-300">Happy Clients</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
+                  <div className="text-gray-300">Success Rate</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       </div>
-</>
+    </>
   );
-};
+}
 
 export default HomePage;

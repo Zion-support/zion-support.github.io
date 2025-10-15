@@ -14,32 +14,19 @@ interface State {
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props)
-    this.state = { has Error: false }
-  )
+    super(props);
+    this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true;, error };
-  componentDidCatch(_error: Error, _errorInfo: ErrorInfo) => {
-    // Error logged
-  render() => {
-    if (this.state.hasError) => {
-      return (
-        <div className="min-h-screenflexitems-centerjustify-centerbg-slate-900">
-          <div className="text-center">
-            <h1 className="text-4xlfont-bold text-whitemb-4">Something went wrong</h1>
-            <p className="text-gray-300mb-8">We're sorry, but something unexpected happened.</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="$1">
-              Reload Page
-            </button>
-            </div>
-        </div>
-          </div>
-        </div>
-      );
-    }
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo
+    });
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -48,11 +35,10 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log to external service in production
     if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send the error to a logging service
       console.error('Production error:', error.message);
     }
   }
-  )
+
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
@@ -60,51 +46,56 @@ class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center mb-4">
-              <div className="flex-shrink-0">
-                <svg className="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div className="min-h-screen flex items-center justify-center bg-slate-900">
+          <div className="text-center max-w-md mx-auto px-4">
+            <div className="mb-8">
+              <div className="w-24 h-24 mx-auto mb-4 bg-red-500 rounded-full flex items-center justify-center">
+                <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
                 </svg>
               </div>
-              <div className="ml-3">
-                <h3 className="text-lg font-medium text-gray-900">
-                  Something went wrong
-                </h3>
-              </div>
-            </div>
-            <div className="mt-2">
-              <p className="text-sm text-gray-500">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
+              <h1 className="text-4xl font-bold text-white mb-4">Oops! Something went wrong</h1>
+              <p className="text-gray-300 mb-8">
+                We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
               </p>
             </div>
-            <div className="mt-4">
+            
+            <div className="space-y-4">
               <button
                 onClick={() => window.location.reload()}
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
-                Refresh Page
+                className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                Try Again
               </button>
+              
+              <button
+                onClick={() => window.history.back()}
+                className="w-full bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                Go Back
+              </button>
+              
+              <a
+                href="/"
+                className="block w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 px-6 rounded-lg transition-colors text-center">
+                Go Home
+              </a>
             </div>
+            
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-4">
-                <summary className="text-sm text-gray-600 cursor-pointer">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 text-xs text-gray-500 bg-gray-100 p-2 rounded overflow-auto">
+              <details className="mt-8 text-left">
+                <summary className="text-gray-400 cursor-pointer mb-2">Error Details (Development)</summary>
+                <pre className="bg-slate-800 p-4 rounded text-xs text-red-400 overflow-auto">
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
           </div>
-      )
+        </div>
+      );
     }
-  )
-    return this.props.children
+
+    return this.props.children;
   }
-  )
 }
-  )
-export default Error;; Boundary
+
+export default ErrorBoundary;
