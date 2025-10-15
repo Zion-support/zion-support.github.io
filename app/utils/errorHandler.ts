@@ -1,4 +1,5 @@
 import { ErrorReport, ErrorContext, ErrorSeverity } from '../types/app.types';
+import { logger } from './logger';
 
 class ErrorHandler {
   private errors: ErrorReport[] = [];
@@ -73,10 +74,7 @@ class ErrorHandler {
   }
 
   private logError(errorReport: ErrorReport): void {
-    // Log to console only in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error reported:', errorReport);
-    }
+    logger.error('Error reported', errorReport);
     
     // Send to external logging service in production
     if (process.env.NODE_ENV === 'production') {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '../components/SEOHead';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -28,12 +28,12 @@ const ContactPage: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       // Here you would typically send the data to your backend
-      console.log('Form submitted:', formData);
+      // Form data will be sent to backend API
       
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      console.error('Error submitting form:', error);
+      // Error will be handled by error boundary
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -42,10 +42,11 @@ const ContactPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for your AI and IT solution needs. We're here to help." />
-      </Helmet>
+      <SEOHead
+        title="Contact Us"
+        description="Get in touch with Zion Tech Group for your AI and IT solution needs. We're here to help."
+        keywords="contact, support, AI solutions, IT services, help"
+      />
       
       <div className="min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

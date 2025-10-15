@@ -22,9 +22,25 @@ const PerformanceMonitor: React.FC = () => {
         });
       }
       
-      // Also log in development
+      // Log in development for debugging
       if (process.env.NODE_ENV === 'development') {
-        console.log(`[Web Vitals] ${metric.name}:`, metric.value);
+        // Use a more structured logging approach
+        const logData = {
+          type: 'Web Vitals',
+          metric: metric.name,
+          value: metric.value,
+          timestamp: new Date().toISOString()
+        };
+        // Only log in development
+        if (typeof window !== 'undefined' && window.localStorage) {
+          try {
+            const logs = JSON.parse(localStorage.getItem('performanceLogs') || '[]');
+            logs.push(logData);
+            localStorage.setItem('performanceLogs', JSON.stringify(logs.slice(-50))); // Keep last 50 logs
+          } catch (e) {
+            // Ignore localStorage errors
+          }
+        }
       }
     };
 
@@ -50,8 +66,22 @@ const PerformanceMonitor: React.FC = () => {
           const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
           
           if (process.env.NODE_ENV === 'development') {
-            console.log(`[Performance] Page Load Time: ${loadTime}ms`);
-            console.log(`[Performance] DOM Content Loaded: ${domContentLoaded}ms`);
+            // Store performance data for debugging
+            const perfData = {
+              type: 'Page Performance',
+              loadTime: loadTime,
+              domContentLoaded: domContentLoaded,
+              timestamp: new Date().toISOString()
+            };
+            if (typeof window !== 'undefined' && window.localStorage) {
+              try {
+                const logs = JSON.parse(localStorage.getItem('performanceLogs') || '[]');
+                logs.push(perfData);
+                localStorage.setItem('performanceLogs', JSON.stringify(logs.slice(-50)));
+              } catch (e) {
+                // Ignore localStorage errors
+              }
+            }
           }
         }
       }
