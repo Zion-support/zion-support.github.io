@@ -1,288 +1,172 @@
-'use client';';
-import React from 'react';';';
-import { Helmet , MessageCircle, Brain, Shield, Users, Zap, CheckCircle, ArrowRight, Star, BarChart, Globe, Lock, Target  } from 'react-helmet-async';';';
-import { MessageCircle, Brain, Shield, Users, Zap, CheckCircle, ArrowRight, Star, BarChart, Globe, Lock, Target  } from 'lucide-react';';'
-;
-const AIChatbotEnterprisePage: React.FC = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
+<<<<<<< HEAD
+import React from 'react;'
+import { ArrowRight } from 'lucide-react;'
+import { CheckCircle } from 'lucide-react;'
+import { Star } from 'lucide-react;'
+import { Users } from 'lucide-react;'
+import { Clock } from 'lucide-react;'
+import { DollarSign } from 'lucide-react;'
+import { Shield } from 'lucide-react;'
+import { Code } from 'lucide-react;'
+import { Database } from 'lucide-react;'
+import { Mail } from 'lucide-react;'
+import { Settings } from 'lucide-react;'
+import { Target } from 'lucide-react;'
+import { TrendingUp } from 'lucide-react;'
+import { PieChart } from 'lucide-react;'
+import { MessageSquare } from 'lucide-react;'
+import { Heart } from 'lucide-react;'
+import { Globe } from 'lucide-react;'
+import { Smartphone } from 'lucide-react;'
+import { Network } from 'lucide-react;'
+import { Lock } from 'lucide-react;'
+import { Cpu } from 'lucide-react;'
+import { Wifi } from 'lucide-react;'
+import { Building2 } from 'lucide-react;'
+import { Briefcase } from 'lucide-react;'
+import { Lightbulb } from 'lucide-react;'
+import { Link } from 'react-router-dom;'
+import EnhancedSEO from '../components/EnhancedSEO;'
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,""
+      title: 'Advanced Features',''
+      description: 'Cutting-edge technology for maximum efficiency''
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,""
+      title: 'Secure & Reliable',''
+      description: 'Enterprise-grade security and 99.9% uptime''
+    },
+    {
+      icon: <Users className="w-8 h-8" />,""
+      title: 'Expert Support',''
+      description: '24/7 support from our team of specialists''
+    }
+  ];
   return (
-  // TODO: Add parameters
-)
     <>
-<Helmet>
-<title>AI Enterprise Chatbot | Zion Tech Group</title>
-<meta name="description" content="Deploy enterprise-grade AI chatbots with advanced natural language processing, multi-channel support, and seamless integration for large-scale customer service operations." />"
-<meta name="keywords" content="enterprise chatbot, AI customer service, conversational AI, enterprise automation, AI support" /></Helmet>"
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
+      <EnhancedSEO
+        title="Page - Zion Tech Group""
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""
+        keywords="page, business solutions, technology services, professional services""
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center">"
-<div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">"
-<Brain className="w-5 h-5 text-cyan-400 mr-2" />"
-<span className="text-cyan-400 font-medium">Enterprise AI</span></div>"
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6">"
-                AI Enterprise
-                <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">"
-                  Chatbot
-                </span></h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-                Deploy enterprise-grade AI chatbots with advanced natural language processing,
-                multi-channel support, and seamless integration for large-scale customer
-                service operations and internal automation.
-              </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">"
-                  Get Enterprise Demo
-                  <ArrowRight className="w-5 h-5 ml-2 inline" /></button>"
-<button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">"
-                  Contact Sales
-                </button></div>
-</div></div>
-</section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">"
-                Enterprise-Grade Capabilities
-              </h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-                Built for large organizations with advanced security, scalability,
-                and integration capabilities to handle millions of conversations.
-              </p></div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
-<div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">"
-<div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">"
-<MessageCircle className="w-6 h-6 text-white" /></div>"
-<h3 className="text-xl font-semibold text-white mb-4">Advanced NLP</h3>"
-<p className="text-gray-300 mb-4">"
-                  State-of-the-art natural language processing with context understanding,
-                  sentiment analysis, and multi-language support for global enterprises.
-                </p>
-<ul className="space-y-2 text-sm text-gray-400">"
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />"
-                    Context-aware conversations
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />"
-                    Multi-language support
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />"
-                    Sentiment analysis
-                  </li></ul>
-</div>
-<div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">"
-<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">"
-<Shield className="w-6 h-6 text-white" /></div>"
-<h3 className="text-xl font-semibold text-white mb-4">Enterprise Security</h3>"
-<p className="text-gray-300 mb-4">"
-                  Bank-level security with end-to-end encryption, compliance certifications,
-                  and advanced access controls for sensitive enterprise data.
-                </p>
-<ul className="space-y-2 text-sm text-gray-400">"
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-purple-400 mr-2" />"
-                    End-to-end encryption
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-purple-400 mr-2" />"
-                    SOC 2 compliance
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-purple-400 mr-2" />"
-                    Role-based access
-                  </li></ul>
-</div>
-<div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-500/40 transition-all duration-300">"
-<div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6">"
-<Globe className="w-6 h-6 text-white" /></div>"
-<h3 className="text-xl font-semibold text-white mb-4">Multi-Channel Support</h3>"
-<p className="text-gray-300 mb-4">"
-                  Deploy across all customer touchpoints including web, mobile,
-                  social media, and messaging platforms with unified management.
-                </p>
-<ul className="space-y-2 text-sm text-gray-400">"
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-green-400 mr-2" />"
-                    Web & mobile integration
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-green-400 mr-2" />"
-                    Social media channels
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-green-400 mr-2" />"
-                    Unified dashboard
-                  </li></ul>
-</div>
-<div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300">"
-<div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-6">"
-<Zap className="w-6 h-6 text-white" /></div>"
-<h3 className="text-xl font-semibold text-white mb-4">High Performance</h3>"
-<p className="text-gray-300 mb-4">"
-                  Handle millions of concurrent conversations with sub-second response times
-                  and 99.9% uptime guaranteed for enterprise operations.
-                </p>
-<ul className="space-y-2 text-sm text-gray-400">"
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-orange-400 mr-2" />"
-                    Sub-second responses
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-orange-400 mr-2" />"
-                    99.9% uptime SLA
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-orange-400 mr-2" />"
-                    Auto-scaling
-                  </li></ul>
-</div>
-<div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">"
-<div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6">"
-<Users className="w-6 h-6 text-white" /></div>"
-<h3 className="text-xl font-semibold text-white mb-4">Team Collaboration</h3>"
-<p className="text-gray-300 mb-4">"
-                  Advanced team management with agent handoff, supervisor oversight,
-                  and collaborative training tools for continuous improvement.
-                </p>
-<ul className="space-y-2 text-sm text-gray-400">"
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-blue-400 mr-2" />"
-                    Agent handoff
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-blue-400 mr-2" />"
-                    Supervisor dashboard
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-blue-400 mr-2" />"
-                    Training tools
-                  </li></ul>
-</div>
-<div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-pink-500/20 hover:border-pink-500/40 transition-all duration-300">"
-<div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">"
-<BarChart className="w-6 h-6 text-white" /></div>"
-<h3 className="text-xl font-semibold text-white mb-4">Advanced Analytics</h3>"
-<p className="text-gray-300 mb-4">"
-                  Comprehensive analytics and reporting with real-time insights,
-                  conversation analytics, and performance metrics for optimization.
-                </p>
-<ul className="space-y-2 text-sm text-gray-400">"
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-pink-400 mr-2" />"
-                    Real-time insights
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-pink-400 mr-2" />"
-                    Conversation analytics
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-pink-400 mr-2" />"
-                    Performance metrics
-                  </li></ul>
-</div></div>
-</div></section>
-
-        {/* Integration Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">"
-                Seamless Enterprise Integration
-              </h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-                Integrate with your existing enterprise systems and workflows
-                for a unified customer experience across all touchpoints.
-              </p></div>
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"
-<div>
-<h3 className="text-2xl font-bold text-white mb-6">Enterprise Integrations</h3>"
-<div className="space-y-6">"
-<div className="flex items-center space-x-4">"
-<div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">"
-<Lock className="w-6 h-6 text-white" /></div>"
-<div>
-<h4 className="text-lg font-semibold text-white">CRM Integration</h4>"
-<p className="text-gray-300">Connect with Salesforce, HubSpot, and other CRM systems</p></div>"
-</div>
-<div className="flex items-center space-x-4">"
-<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">"
-<Target className="w-6 h-6 text-white" /></div>"
-<div>
-<h4 className="text-lg font-semibold text-white">ERP Systems</h4>"
-<p className="text-gray-300">Integrate with SAP, Oracle, and enterprise resource planning</p></div>"
-</div>
-<div className="flex items-center space-x-4">"
-<div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">"
-<MessageCircle className="w-6 h-6 text-white" /></div>"
-<div>
-<h4 className="text-lg font-semibold text-white">Communication Platforms</h4>"
-<p className="text-gray-300">Slack, Microsoft Teams, and internal communication tools</p></div>"
-</div>
-<div className="flex items-center space-x-4">"
-<div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center">"
-<BarChart className="w-6 h-6 text-white" /></div>"
-<div>
-<h4 className="text-lg font-semibold text-white">Analytics Platforms</h4>"
-<p className="text-gray-300">Tableau, Power BI, and business intelligence tools</p></div>"
-</div></div>
-</div>
-<div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-cyan-500/20">"
-<h3 className="text-2xl font-bold text-white mb-6">Enterprise Benefits</h3>"
-<div className="space-y-6">"
-<div className="flex justify-between items-center">"
-<span className="text-gray-300">Response Time</span>"
-<span className="text-cyan-400 font-bold">&lt; 1 second</span></div>"
-<div className="flex justify-between items-center">"
-<span className="text-gray-300">Uptime SLA</span>"
-<span className="text-green-400 font-bold">99.9%</span></div>"
-<div className="flex justify-between items-center">"
-<span className="text-gray-300">Concurrent Users</span>"
-<span className="text-purple-400 font-bold">1M+</span></div>"
-<div className="flex justify-between items-center">"
-<span className="text-gray-300">Languages Supported</span>"
-<span className="text-orange-400 font-bold">50+</span></div>"
-<div className="flex justify-between items-center">"
-<span className="text-gray-300">Integration APIs</span>"
-<span className="text-pink-400 font-bold">100+</span></div>"
-</div></div>
-</div></div>
-</section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-4xl mx-auto text-center">"
-<h2 className="text-4xl font-bold text-white mb-6">"
-              Ready for Enterprise AI?
-            </h2>
-<p className="text-xl text-gray-300 mb-8">"
-              Join Fortune 500 companies using our enterprise AI chatbot
-              to transform customer service and internal operations.
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto text-center">""
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
+              Page
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
+              Professional page services designed to help your business succeed and grow.
             </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">"
-                Schedule Enterprise Demo
-                <ArrowRight className="w-5 h-5 ml-2 inline" /></button>"
-<button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">"
-                Contact Enterprise Sales
-              </button></div>
-</div></section>
-</div></>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/demo""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View Demo
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">""
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
+                  <p className="text-gray-300">{feature.description}</p>""
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+          <div className="max-w-4xl mx-auto text-center">""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">""
+              Let's discuss how our page services can help your business succeed.''
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/services""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
-;
-export default AIChatbotEnterprisePage;
+const page = React.lazy(() => import('./page'));''
+export default page;
 =======
+import SEOHead from '../components/SEOHead';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+const AiChatbotEnterprisePage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="Page - Zion Tech Group"
+        description="Advanced page solutions powered by AI"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Page</h1>
+          <pclassName="text-gray-300">
+
+const AiChatbotEnterprisePage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title ="ai-chatbot-enterprise - Zion Tech Group - Zion Tech Group"";
+        description="Zion Tech Group ai-chatbot-enterprise service page"";
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">ai-chatbot-enterprise - Zion Tech Group</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+      </div>
+    </>
+  ),
+};
+
+>>>>>>> main

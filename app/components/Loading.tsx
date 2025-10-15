@@ -1,151 +1,168 @@
-'use client';';
-import React from 'react';';';
-import {Helmet}}from 'react-helmet-async';';';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';';';
-const LoadingPage: React.FC = () => {,;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
+<<<<<<< HEAD
+import React from 'react';'
+import { Brain, Zap, Shield, Globe } from 'lucide-react';'
+interface LoadingProps {
+  message?: string;
+  size?: 'sm' | 'md' | 'lg';'
 }
-  // TODO: Add properties
-}
-      icon: Brain,
-      title: 'AI-Powered Solutions','
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',},'
-    {icon: Zap,
-      title: 'High Performance','
-      description: 'Lightning-fast processing and real-time analytics for optimal results',},'
-    {icon: Shield,
-      title: 'Enterprise Security','
-      description: 'Bank-level security with encryption and compliance standards',},'
-    {icon: Globe,
-      title: 'Global Reach','
-  ];];];
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Advanced AI technology integration','
-    'Real-time processing and analytics','
-    'Enterprise-grade security and compliance','
-    'Scalable and flexible solutions','
-
-    '24/7 technical support','
-
-    'Easy integration with existing systems','
-
-    'Cost-effective pricing plans','
-    'Proven track record of success''
-  ];
-
-export default function LoadingPage() {
+const Loading: React.FC<LoadingProps> = ({
+  message = "Loading...","
+  size = 'md''
+}) => {
+  const sizeClasses = {
+    sm: 'w-8 h-8',''
+    md: 'w-12 h-12',''
+    lg: 'w-16 h-16''
+  };
+  const iconSizeClasses = {
+    sm: 'w-4 h-4',''
+    md: 'w-6 h-6',''
+    lg: 'w-8 h-8''
+  };
+  const icons = [Brain, Zap, Shield, Globe];
+  const [currentIcon, setCurrentIcon] = React.useState(0);
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIcon((prev) => (prev + 1) % icons.length);
+    }, 800); // Faster animation for better UX
+    return () => clearInterval(interval);
+  }, []);
+  const CurrentIcon = icons[currentIcon];
   return (
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Helmet>
-<title>Loading | Zion Tech Group</title>
-<meta name="description" content="Professional Loading services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
-<meta name="keywords" content="Loading, AI solutions, IT services, Zion Tech Group, loading" /></Helmet>"
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center">"
-<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
-<span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">"
-                Loading
-              </span>
-<br />
-<span className="text-white">Solutions</span></h1>"
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-              Transform your business with our advanced loading solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">"
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" /></button>"
-<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">"
-                Learn More
-              </button></div>
-</div></div>
-</section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
-              Why Choose Our Loading?
-            </h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-              Our loading solutions deliver unmatched performance, security, and scalability.
-            </p></div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
-            {features.map((feature, index) => (
-  // TODO: Add parameters
-)
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">"
-<div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">"
-<feature.icon className="h-6 w-6 text-white" /></div>"
-<h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
-<p className="text-gray-300">{feature.description}</p></div>"
-            ))}
-          </div></div>
-</section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
-              Key Benefits
-            </h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-              Experience the power of our loading solutions for your business.
-            </p></div>
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
-            {benefits.map((benefit, index) => (
-  // TODO: Add parameters
-)
-              <div key={index} className="flex items-start space-x-3">"
-<CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />"
-<p className="text-gray-300 text-lg">{benefit}</p></div>"
-            ))}
-          </div></div>
-</section>
-
+    <div
+      className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center""
+      role="status""
+      aria-live="polite""
+      aria-label="Loading content""
+    >
+      <div className="text-center">""
+        {/* Animated Icon */}
+        <div className={`${sizeClasses[size]} mx-auto mb-6 relative`}>
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full animate-pulse"></div>""
+          <div className="relative bg-slate-900 rounded-full flex items-center justify-center h-full w-full">""
+            <CurrentIcon className={`${iconSizeClasses[size]} text-cyan-400 animate-spin`} />
+          </div>
+        </div>
+      </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-4xl mx-auto text-center">"
-<div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">"
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
-              Ready to Get Started?
-            </h2>
-<p className="text-xl text-purple-100 mb-8">"
-              Contact our experts to discuss your loading needs and get a customized solution.
-            </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">"
-<Phone className="mr-2 h-5 w-5" />"
-                Call Now
-              </button>
-<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">"
-<Mail className="mr-2 h-5 w-5" />"
-                Email Us
-              </button></div>
-</div></div>
-</section></div>
+      <section className="py-16 px-4 bg-blue-600">;""
+        <div className="max-w-4xl mx-auto text-center">;""
+          <h2 className="text-3xl font-bold text-white mb-6">;""
+            Ready to Get Started?;
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">;""
+            Let's discuss how our loading;''
+            services can help you achieve your goals.;
+          </p>
+          <a>
+            href="/contact";""
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";""
+          >;
+            Get Started Today;
+          </a>
+        </div>
+      </section>
+    </div>
   );
 };
-;
-export default LoadingPage;
+      { /* CTA Section */ }"""
+      <section className="py-16 px-4 bg-blue-600">"""
+        <div className=max-w-4xl mx-auto text-center></div>
+          <h2 className="text-3xl font-bold text-white mb-6">"""
+            Ready to Get Started?;
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">""
+            Let&apos;s discuss how our loading
+            services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact""
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors""
+          >
+            Get Started Today;
+          </a>
+        </div>
+      </section>
+    </div>
+  )
+}
+                We provide comprehensive loading
+                solutions tailored to your specific needs and requirements.</p>
+              <ul className="space-y-3">""
+                <li className="flex items-center">""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>""
+                  Custom solutions</li>
+                <li className="flex items-center">""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>""
+                  Expert consultation</li>
+                <li className="flex items-center">""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>""
+                  Ongoing support</li></ul></div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">""
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>""
+              <p className="mb-6">""
+                Ready to transform your business with our loading services?</p>
+              <a
+                href="/contact""
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">""
+                Contact Us</a></div></div></div></section>{/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">""
+        <div className="max-w-4xl mx-auto text-center">""
+          <h2 className="text-3xl font-bold text-white mb-6">""
+            Ready to Get Started?</h2>
+          <p className="text-xl text-blue-100 mb-8">""
+            Let's discuss how our loading''
+            services can help you achieve your goals.</p>
+          <a
+            href="/contact""
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">""
+            Get Started Today</a></div></section></div>
+export default Loading
+'
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+import { Helmet } from "react-helmet-async";
+interface LoadingProps {}
+  message?: string
+}
+
+export default function Loading({ message = "Loading..." }: LoadingProps) {}
+  return ()
+    <div>
+      <Helmet>
+        <title>Loading - Zion Tech Group</title>
+        <meta name="description" content="Loading page" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Components</h1>
+          <p className="text-gray-300">Professional solutions coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const ComponentsPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+
+};
+;
+export default ComponentsPage;'";'";
+>>>>>>> main

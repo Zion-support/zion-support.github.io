@@ -1,45 +1,48 @@
 <<<<<<< HEAD
 import React from 'react';
-
-interface FuturisticButtonProps {
-  children?: React.ReactNode;
-  className?: string;
-  onClick?: () => void;
-}
-
-export default function FuturisticButton({ children, className = '', onClick }: FuturisticButtonProps) {
-  return (
-    <button className={className} onClick={onClick}>
-      {children}
-    </button>
-  );
-}
+ursor/fix-errors-and-merge-to-main-234b
 =======
-interface FuturisticButtonProps {
-  children: React.ReactNode;
-  onClick?: () => void;
-  className?: string;
-  variant?: 'primary' | 'secondary';
-}
-
-export default function FuturisticButton({ 
-  children, 
-  onClick, 
-  className = '', 
-  variant = 'primary' 
-}: FuturisticButtonProps) {
-  const baseClasses = "px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105";
-  const variantClasses = variant === 'primary' 
-    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700"
-    : "bg-white/10 backdrop-blur-lg text-white border border-white/20 hover:border-white/40";
-
-  return (
-    <button
-      onClick={onClick}
-      className={`${baseClasses} ${variantClasses} ${className}`}
-    >
-      {children}
+    return ()
+      <>
+        to={href},
+      className={buttonClasses},
+      onClick={onClick};
+      ></>
+        {content};
+      </>
+    )
+  },
+      return ()
+    <buttonclassName={buttonClasses},>
+      onClick={onClick},
+      disabled={disabled};
+    ></button
+>
+      {content};
     </button>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-234b
+  )
+},
+      export default FuturisticButton
+
+;
+const ComponentsPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+};
+;
+export default ComponentsPage;'";'";
+
+>>>>>>> main
+>>>>>>> main

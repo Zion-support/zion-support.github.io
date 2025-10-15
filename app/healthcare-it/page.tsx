@@ -1,218 +1,174 @@
-
-export default function HealthcareITPage() {;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
+<<<<<<< HEAD
+import React from 'react;'
+import { ArrowRight } from 'lucide-react;'
+import { CheckCircle } from 'lucide-react;'
+import { Star } from 'lucide-react;'
+import { Users } from 'lucide-react;'
+import { Clock } from 'lucide-react;'
+import { DollarSign } from 'lucide-react;'
+import { Shield } from 'lucide-react;'
+import { Code } from 'lucide-react;'
+import { Database } from 'lucide-react;'
+import { Mail } from 'lucide-react;'
+import { Settings } from 'lucide-react;'
+import { Target } from 'lucide-react;'
+import { TrendingUp } from 'lucide-react;'
+import { PieChart } from 'lucide-react;'
+import { MessageSquare } from 'lucide-react;'
+import { Heart } from 'lucide-react;'
+import { Globe } from 'lucide-react;'
+import { Smartphone } from 'lucide-react;'
+import { Network } from 'lucide-react;'
+import { Lock } from 'lucide-react;'
+import { Cpu } from 'lucide-react;'
+import { Wifi } from 'lucide-react;'
+import { Building2 } from 'lucide-react;'
+import { Briefcase } from 'lucide-react;'
+import { Lightbulb } from 'lucide-react;'
+import { Link } from 'react-router-dom;'
+import EnhancedSEO from '../components/EnhancedSEO;'
+const Page = () => {
+  const features = [
     {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Heart,
-icon: Heart,
-      title: 'HIPAA Compliance','
-      description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.','
-      benefits: ['Automated compliance', 'Audit trails', 'Risk management'],'
+      icon: <CheckCircle className="w-8 h-8" />,""
+      title: 'Advanced Features',''
+      description: 'Cutting-edge technology for maximum efficiency''
     },
-    {icon: Zap,
-      title: 'Patient Data Security','
-      description: 'Bank-level security for patient data with encryption, access controls, and monitoring.','
-      benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']}]'
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>)"
-return (
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>"
->>>>>>> origin/main
-      <SEOOptimizer>
-<Navigation />
-      {/* Hero Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></div>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>'"
-<div className="relative max-w-7xl mx-auto text-center"></div>"
-<h1>Healthcare;</h1>
-<span>IT Solutions;</span></span>
-</h1>
-<p>Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations.;</p>
-            Protect patient data while improving operational efficiency.
-          </p>
-<ArrowRight />
-</button>
-<button>Learn More;</button></button>
-</div></div>
-</section>
-  ];
-;
-const stats = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    { number: '99.9%', label: 'System Uptime', icon: Clock },'
-    { number: '500+', label: 'Healthcare Clients', icon: Users },'
-    { number: '15+', label: 'Years Experience', icon: Shield },'
-    { number: '24/7', label: 'Support Available', icon: Heart }'
+    {
+      icon: <Shield className="w-8 h-8" />,""
+      title: 'Secure & Reliable',''
+      description: 'Enterprise-grade security and 99.9% uptime''
+    },
+    {
+      icon: <Users className="w-8 h-8" />,""
+      title: 'Expert Support',''
+      description: '24/7 support from our team of specialists''
+    }
   ];
   return (
-  // TODO: Add parameters
-)
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>"
-<Navigation >{/* Hero Section */}</Navigation></Navigation>
-<section className="relative py-20 px-4 overflow-hidden">"
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">)</div>"
-<Navigation />)
-      {/* Hero Section */})
-      <section className="relative py-20 px-4 overflow-hidden">)"
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></div>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>'"
-<div className="relative max-w-7xl mx-auto text-center"></div>"
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Healthcare<span className="block bg-gradient-to-r from-red-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">IT Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Specialized IT solutions for healthcare with HIPAA compliance, security, and interoperability.</p>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></section>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>'"
-
-  return (
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">"
-<SEOOptimizer
-        title="Healthcare IT Solutions - Zion Tech Group""
-        description="Comprehensive healthcare IT solutions including HIPAA compliance, patient data security, and system integration for healthcare organizations.""
-        keywords="healthcare IT, HIPAA compliance, patient data security, EHR integration, healthcare analytics, medical technology""
+    <>
+      <EnhancedSEO
+        title="Page - Zion Tech Group""
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""
+        keywords="page, business solutions, technology services, professional services""
       />
-<Navigation />
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden"></section>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" />"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />'"
-<div className="relative max-w-7xl mx-auto text-center">"
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">"
-            Healthcare
-            <span className="block bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">IT Solutions"
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">"
-            Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations.
-            Protect patient data while improving operational efficiency.
-        </section>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<p>Comprehensive IT solutions for all aspects of healthcare delivery and management.</p></p>
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,"
-            {services.map((service, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div>,"
-                <div className="text-4xl mb-4">{service.icon</div>}</div>"
-<h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>"
-<p className="text-gray-300">{service.description</p>}</p></div>"
-            ))}
-          </div></div>
-</section>
-      {/* Benefits Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-              Comprehensive IT solutions for all aspects of healthcare delivery and management.
-            </p></div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>"
-            {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    services.map((service, index) => ()
-            ))}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto text-center">""
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
+              Page
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
+              Professional page services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/demo""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View Demo
+              </Link>
+            </div>
           </div>
-        ))
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4"></section>"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
-<h2>Why Choose Our Healthcare IT Solutions?</h2></h2>
-<p>Experience the benefits of modern healthcare technology with our proven solutions.</p></p>
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6"></div>,"
-            {benefits.map((benefit, index) => (
-  // TODO: Add parameters
-)
-                <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>"
-<div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>"
-<CheckCircle />
-<h3 className="text-lg font-semibold text-white">{benefit}</h3></div>"
-              Why Choose Our Healthcare IT Solutions?
+        </section>
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">""
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
+                  <p className="text-gray-300">{feature.description}</p>""
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+          <div className="max-w-4xl mx-auto text-center">""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
+              Ready to Get Started?
             </h2>
-<p></p>
-              Experience the benefits of modern healthcare technology with our proven solutions.
-            </p></div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
-            {benefits.map((benefit, index) => (
-  // TODO: Add parameters
-)
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">"
-<div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">"
-<CheckCircle className="w-8 h-8 text-white" /></div>"
-<h3 className="text-lg font-semibold text-white">{benefit}</h3></div>"
->>>>>>> origin/main
-            ))}
-
-        <div className="max-w-4xl mx-auto text-center">"
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
-            Ready to Transform Your Healthcare IT?
-          </h2>
-<p className="text-xl text-red-100 mb-8">"
-            Let's discuss how our healthcare IT solutions can improve your operations and patient care.'
-          </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-white text-red-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">"
-              Schedule Consultation
-            </button>
-<button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">"
-              View Case Studies
-      {/* CTA Section */}
-<section className="py-20 px-4"></section>"
-< className="$2 /></div>"
-<div className="text-center mb-16"></div>"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div>
->>>>>>> origin/main
-        </section></button>
-<button>View Case Studies;</button>
->>>>>>> origin/main
-            </button></div>
-</div></section>
-<Footer/ / />
-  )
-}
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">View Case Studies"
-      <Footer />
-  )
-}</div></div>
-</div></div>
-</div></div>
-</div></div>
-</div></div>
-</div></div>
-</span></button>
-</button></p>
-</p></p>
-</p></h1>
-</h2></h3>
-</h3></section>
-</section></section>
-</section>
->>>>>>> cursor/delete-records-a75e
+            <p className="text-xl text-gray-300 mb-8">""
+              Let's discuss how our page services can help your business succeed.''
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/services""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+const page = React.lazy(() => import('./page'));''
+export default page;
 =======
+import SEOHead from '../components/SEOHead';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+const PagePage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="page - Zion Tech Group"
+        description="Zion Tech Group page service page"
+
+const HealthcareItPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title ="healthcare-it - Zion Tech Group - Zion Tech Group"";
+        description="Zion Tech Group healthcare-it service page"";
+
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">healthcare-it - Zion Tech Group</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+      </div>
+    </>
+
+  )
+    },
+    {}
+export default PagePage;
+
+  ),
+};
+
+>>>>>>> main

@@ -1,132 +1,203 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-//   '/',
-//   '/about',
-//   '/contact',
-//   '/services',
-//   '/ai-services',
-//   '/micro-saas',
-//   '/5g-solutions',
-  '/manifest.json',
-];
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-}
-=======
-const CACHE_NAME = 'zion-tech-group-v1';';
-const STATIC_CACHE = 'zion-static-v1';';
-const DYNAMIC_CACHE = 'zion-dynamic-v1';'
-
-// Files to cache immediately;
-const STATIC_FILES = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
+// Service Worker for Zion Tech Group
+const CACHE_NAME = 'zion-tech-group-v1';'
+const STATIC_CACHE = 'static-v1';'
+const DYNAMIC_CACHE = 'dynamic-v1';'
+// Assets to cache immediately
+const STATIC_ASSETS = [
   '/','
   '/index.html','
   '/manifest.json','
-  '/robots.txt','
-  '/sitemap.xml','
-  // Add other static assets as needed
+  '/favicon.ico','
+  '/images/icon-192x192.png','
+  '/images/icon-512x512.png''
 ];
+// Install event - cache static assets
+self.addEventListener('install', (event) => {'
+  event.waitUntil(
+    caches.open(STATIC_CACHE)
+      .then((cache) => {
+        console.log('Caching static assets');'
+        return cache.addAll(STATIC_ASSETS);
+      })
+      .then(() => {
+        return self.skipWaiting();
+      })
+  );
+});
+// Activate event - clean up old caches
+self.addEventListener('activate', (event) => {'
+  event.waitUntil(
+    caches.keys()
+      .then((cacheNames) => {
+<<<<<<< HEAD
+        return Promise.all(
+          cacheNames.map((cacheName) => {
+            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+              console.log('Deleting old cache:', cacheName);'
+              return caches.delete(cacheName);
+            }
+          })
+        )
+      })
+<<<<<<< HEAD
+      .then(() => {
+        return self.clients.claim()ursor/fix-errors-and-merge-to-main-d2b1
+      })
+  );
+});
+// Fetch event - serve from cache, fallback to network
+self.addEventListener('fetch', (event) => {'
+  const { request } = event;
+  const url = new URL(request.url);
+  // Skip non-GET requests
+  if (request.method !== 'GET') {'
+    return;
+  }
+  // Skip cross-origin requests
+  if (url.origin !== location.origin) {
+    return
+=======
+self.addEventListener('fetch', (event) => {}
+  const { request } = event;
+  const url = new URL(request.url);
 
-// Install event - cache static files;
-const urlsToCache = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-  '/','
-  '/about','
-  '/services','
-  '/contact','
-  '/static/js/bundle.js','
-  '/static/css/main.css','
-  '/manifest.json''
+  // Skip non-GET requests
+  if (request.method !="=" 'GET') {}
+    return;}
+  }
+  event.respondWith(
+    caches.match(request)
+      .then((response) => {
+        // Return cached version if available
+        if (response) {
+          return responseursor/fix-errors-and-merge-to-main-d2b1
+        }
+        // Otherwise, fetch from network
+        return fetch(request)
+<<<<<<< HEAD
+          .then((response) => {
+            // Don't cache if not a valid response'
+            if (!response || response.status !== 200 || response.type !== 'basic') {'
+              return response;
+            }
+            // Clone the response
+            const responseToCache = response.clone();
+            // Cache dynamic content
+            caches.open(DYNAMIC_CACHE)
+<<<<<<< HEAD
+              .then((cache) => {
+                cache.put(request, responseToCache);
+              });
+            return response;
+          })
+          .catch(() => {
+            // Return offline page for navigation requests
+            if (request.destination === 'document') {'
+              return caches.match('/offline.html');'
+            }
+          });
+      })
+  );
+});
+// Background sync for offline form submissions
+self.addEventListener('sync', (event) => {'
+  if (event.tag === 'background-sync') {'
+    event.waitUntil(
+      // Handle offline form submissions here
+      console.log('Background sync triggered')'
+    );
+  }
+});
+// Push notifications
+self.addEventListener('push', (event) => {'
+  const options = {
+    body: event.data ? event.data.text() : 'New update available!','
+    icon: '/images/icon-192x192.png','
+    badge: '/images/icon-192x192.png','
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    },
+    actions: [
+      {
+        action: 'explore','
+        title: 'Go to the site','
+        icon: '/images/icon-192x192.png''
+      },
+      {
+        action: 'close','
+        title: 'Close notification','
+        icon: '/images/icon-192x192.png''
+      }
+    ]
+<<<<<<< HEAD
+  }
+  event.waitUntil(
+=======
+  };
+  event.waitUntil(
+    self.registration.showNotification('Zion Tech Group', options)'
+  );
+});
+// Notification click handler
+self.addEventListener('notificationclick', (event) => {'
+  event.notification.close();
+  if (event.action === 'explore') {'
+    event.waitUntil(
+      clients.openWindow('/')'
+    );
+  }
+});
+=======
+const: CACHE_NAME = 'zion-tech-group-v1';: value';";";";";";
+const: urlsToCache = [': value';";";";";";
+  '/';'';";";";";";
+  '/static/js/bundle.js';'';";";";";";
+  '/static/css/main.css';'';";";";";";
+  '/manifest.json';";";";";";
 ];
 
 // Install event
->>>>>>> origin/main
-self.addEventListener('install', (event) => {'
-  console.log('Service Worker installing...');'
-  event.waitUntil(
-  // TODO: Add parameters
-)
+self.addEventListener('install', (event) => {};";
+  event.waitUntil()
+
+    caches.open(CACHE_NAME)
+      .then((cache) => {};': value";
+        console.log('Opened cache');";
+        return cache.addAll(urlsToCache);
+      })
   );
 });
 
 // Fetch event
-self.addEventListener('fetch', (event) => {'
-  event.respondWith(
-  // TODO: Add parameters
-)
+self.addEventListener('fetch', (event) => {};";
+  event.respondWith()
+
     caches.match(event.request)
-      .then((response) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        // Return cached version or fetch from network
-        return response || fetch(event.request)
+      .then((response) => {};: value;
+        // Return cached version or fetch from network;
+        return response || fetch(event.request);
       })
-  )
-})
-// Activate event
-self.addEventListener('activate', (event) => {'
-  event.waitUntil(
-  // TODO: Add parameters
-)
-    caches.keys().then((cacheNames) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      return Promise.all(
-  // TODO: Add parameters
-)
-        cacheNames.map((cacheName) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          if (cacheName !== CACHE_NAME) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-            console.log('Deleting old cache:', cacheName)'
-            return caches.delete(cacheName)
-          }
-        })
-      )
-    })
   );
 });
 
-// Background sync for offline form submissions
-self.addEventListener('sync', (event) => {'
-  if (event.tag === 'contact-form') {'
-    event.waitUntil(syncContactForm());
-  }
-});
+// Activate event
+self.addEventListener('activate', (event) => {};";
+  event.waitUntil()
+    caches.keys().then((cacheNames) => {};
+      return Promise.all()
+        cacheNames.map((cacheName) => {};
+          if ($1) {}
+  // If body
+}
 
-async function syncContactForm() {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // Handle offline form submissions
-  console.log('Syncing contact form data');'
-}
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
+            console.log('Deleting old cache:', cacheName);";
+            return caches.delete(cacheName);
+          };
+        })
+      );
+    })"";";";
+  );;
+});'';
+>>>>>>> main

@@ -53,12 +53,8 @@ def main():
                 content = f.read()
             
             # Check if file has conflicts
-<<<<<<< HEAD
             if '' in content or '>>>>>>>' in content:
                 print(f"Fixing conflicts in {file_path}...")
-=======
-            if '                print(f"Fixing conflicts in {file_path}...")
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
                 
                 # Resolve conflicts
                 fixed_content = resolve_conflicts(content)

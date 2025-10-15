@@ -1,201 +1,270 @@
-'use client';';
-import React, {useEffect, useState, useCallback}from 'react';';';
-import {Helmet}}from 'react-helmet-async';';'
 
-interface SEOOptimizerProps {title?: string;}
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+
+interface SEOData {}
+  title: string;
+  description: string;
+  keywords: string[];
+  canonicalUrl: string;
+  ogTitle?: string;
+  ogDescription?: string;
   ogImage?: string;
+  ogUrl?: string;
   twitterCard?: string;
-  structuredData?: object;
-  children: React.ReactNode;,}const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({,
-  title = 'Zion Tech Group - Advanced AI and IT Solutions','
-  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.','
-  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group','
-  canonicalUrl,
-  ogImage = '/images/og-image.jpg','
-  twitterCard = 'summary_large_image','
-  structuredData,
-  children;}) => {const [seoScore, setSeoScore] = useState(0);
-  const [recommendations, setRecommendations] = useState<string[]>([]);
-;
-const analyzeSEO = useCallback(() => {;
-    if (typeof window === 'undefined') return;'
-;
-let score = 0;
-    const newRecommendations: string[] = [],
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: any;
+  robots?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+}
 
-    // Check title length;
-    if (title.length >= 30 && title.length <= 60) {
-  // TODO: Add properties
+interface AdvancedSEOOptimizerProps {}
+  seoData: SEOData;
+  enableStructuredData?: boolean;
+  enableSocialMeta?: boolean;
+  enableAdvancedFeatures?: boolean;
 }
-  // TODO: Add properties
-}
-      score += 20;}else {newRecommendations.push('Title should be between 30-60 characters');}}// Check description length;'
-    if (description.length >= 120 && description.length <= 160) {score += 20;}else {newRecommendations.push('Description should be between 120-160 characters');}}// Check for keywords in title;'
-    if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score += 15;}else {newRecommendations.push('Include primary keyword in title');}}// Check for keywords in description;'
-    if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score += 15;}else {newRecommendations.push('Include primary keyword in description');}}// Check for heading structure;';
-const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');'
-    if (headings.length > 0) {score += 10;}else {newRecommendations.push('Add proper heading structure');}}// Check for images with alt text;';
-const images = document.querySelectorAll('img');';
-const imagesWithAlt = document.querySelectorAll('img[alt]');'
-    if (images.length === imagesWithAlt.length && images.length > 0) {score += 10;}else {newRecommendations.push('Add alt text to all images');}}// Check for internal links;';
-const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');'"
-    if (internalLinks.length > 0) {score += 10;}else {newRecommendations.push('Add internal links for better SEO');}}setSeoScore(score);'
-    setRecommendations(newRecommendations);
-  }, [title, description, keywords]);
 
-  useEffect(() => {analyzeSEO();}, [analyzeSEO]);
-;
-const generateStructuredData = () => {const defaultStructuredData = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      "@context": "https://schema.org","
-      "@type": "Organization","
-      "name": "Zion Tech Group","
-      "description": description,"
-      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : '),''"
-      "logo": ogImage,"
-      "sameAs": ["
-        "https://twitter.com/ziontechgroup","
-        "https: //linkedin.com/company/ziontechgroup","
-      ]}return structuredData || defaultStructuredData;
-  }
-;
-const _trackPageView = (config: SEOData) => {,
-    if (typeof window !== 'undefined' && 'gtag' in window) {'
-      (window as unknown as {gtag: (command: string, targetId: string, config: Record<string, unknown>) => void}}).gtag('config', 'GA_MEASUREMENT_ID', {)'
-        page_title: config.title,
-        page_location: config.canonicalUrl,})
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({)}
+  seoData,
+  enableStructuredData = true,
+  enableSocialMeta = true,
+  enableAdvancedFeatures = true
+}) => {}
+  useEffect(() => {}
+    // Generate structured data
+    if (enableStructuredData && seoData.structuredData) {}
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(seoData.structuredData);
+      document.head.appendChild(script);
     }
-  }
 
-      window.addEventListener('load', () => {;';
-const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;'
-        if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {'
-          (window as unknown as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag('event', 'page_load_performance', {)'
-            event_category: 'Performance','
-            event_label: 'Page Load','
-            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),})
+    // Set up meta tags for social media
+    if (enableSocialMeta) {}
+      // Open Graph tags
+      if (seoData.ogTitle) {}
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) {}
+          ogTitle.setAttribute('content', seoData.ogTitle);
+        } else {}
+          const meta = document.createElement('meta');
+          meta.setAttribute('property', 'og:title');
+          meta.setAttribute('content', seoData.ogTitle);
+          document.head.appendChild(meta);
         }
-      })
->>>>>>> origin/main
+      }
+
+      if (seoData.ogDescription) {}
+        const ogDescription = document.querySelector('meta[property="og:description"]');
+        if (ogDescription) {}
+          ogDescription.setAttribute('content', seoData.ogDescription);
+        } else {}
+          const meta = document.createElement('meta');
+          meta.setAttribute('property', 'og:description');
+          meta.setAttribute('content', seoData.ogDescription);
+          document.head.appendChild(meta);
+        }
+      }
+
+      if (seoData.ogImage) {}
+        const ogImage = document.querySelector('meta[property="og:image"]');
+        if (ogImage) {}
+          ogImage.setAttribute('content', seoData.ogImage);
+        } else {}
+          const meta = document.createElement('meta');
+          meta.setAttribute('property', 'og:image');
+          meta.setAttribute('content', seoData.ogImage);
+          document.head.appendChild(meta);
+        }
+      }
+
+      if (seoData.ogUrl) {}
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) {}
+          ogUrl.setAttribute('content', seoData.ogUrl);
+        } else {}
+          const meta = document.createElement('meta');
+          meta.setAttribute('property', 'og:url');
+          meta.setAttribute('content', seoData.ogUrl);
+          document.head.appendChild(meta);
+        }
+      }
+
+      // Twitter Card tags
+      if (seoData.twitterCard) {}
+        const twitterCard = document.querySelector('meta[name="twitter:card"]');
+        if (twitterCard) {}
+          twitterCard.setAttribute('content', seoData.twitterCard);
+        } else {}
+          const meta = document.createElement('meta');
+          meta.setAttribute('name', 'twitter:card');
+          meta.setAttribute('content', seoData.twitterCard);
+          document.head.appendChild(meta);
+        }
+      }
+
+      if (seoData.twitterTitle) {}
+        const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+        if (twitterTitle) {}
+          twitterTitle.setAttribute('content', seoData.twitterTitle);
+        } else {}
+          const meta = document.createElement('meta');
+          meta.setAttribute('name', 'twitter:title');
+          meta.setAttribute('content', seoData.twitterTitle);
+          document.head.appendChild(meta);
+        }
+      }
+
+      if (seoData.twitterDescription) {}
+        const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+        if (twitterDescription) {}
+          twitterDescription.setAttribute('content', seoData.twitterDescription);
+        } else {}
+          const meta = document.createElement('meta');
+          meta.setAttribute('name', 'twitter:description');
+          meta.setAttribute('content', seoData.twitterDescription);
+          document.head.appendChild(meta);
+        }
+      }
+
+      if (seoData.twitterImage) {}
+        const twitterImage = document.querySelector('meta[name="twitter:image"]');
+        if (twitterImage) {}
+          twitterImage.setAttribute('content', seoData.twitterImage);
+        } else {}
+          const meta = document.createElement('meta');
+          meta.setAttribute('name', 'twitter:image');
+          meta.setAttribute('content', seoData.twitterImage);
+          document.head.appendChild(meta);
+        }
+      }
     }
-  }
-        <meta name="description" content={description}/>"
-<meta name="keywords" content={keywords}/>"
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}"
 
-        {/* Open Graph */} <meta property="og: title" content={title,}/>"
-<meta property="og: description" content={description,}/>"
-<meta property="og: image" content={ogImage,}/>"
-<meta property="og: type" content="website" />,"
-        {canonicalUrl && <meta property="og: url" content={canonicalUrl,}/>}"
+    // Advanced SEO features
+    if (enableAdvancedFeatures) {}
+      // Set canonical URL
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) {}
+        canonical.setAttribute('href', seoData.canonicalUrl);
+      } else {}
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        canonical.setAttribute('href', seoData.canonicalUrl);
+        document.head.appendChild(canonical);
+      }
 
-        {/* Twitter Card */} <meta name="twitter: card" content={twitterCard,}/>"
-<meta name="twitter: title" content={title,}/>"
-<meta name="twitter: description" content={description,}/>"
-<meta name="twitter: image" content={ogImage,}/>"
-<meta name="description" content={description} />"
-<meta name="keywords" content={keywords} />"
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}"
+      // Set robots meta tag
+      if (seoData.robots) {}
+        let robots = document.querySelector('meta[name="robots"]');
+        if (robots) {}
+          robots.setAttribute('content', seoData.robots);
+        } else {}
+          robots = document.createElement('meta');
+          robots.setAttribute('name', 'robots');
+          robots.setAttribute('content', seoData.robots);
+          document.head.appendChild(robots);
+        }
+      }
 
-        {/* Open Graph */}
-        <meta property="og:title" content={title} />"
-<meta property="og:description" content={description} />"
-<meta property="og:image" content={ogImage} />"
-<meta property="og:type" content="website" />"
-        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}"
+      // Set author meta tag
+      if (seoData.author) {}
+        let author = document.querySelector('meta[name="author"]');
+        if (author) {}
+          author.setAttribute('content', seoData.author);
+        } else {}
+          author = document.createElement('meta');
+          author.setAttribute('name', 'author');
+          author.setAttribute('content', seoData.author);
+          document.head.appendChild(author);
+        }
+      }
 
-        {/* Twitter Card */}
-        <meta name="twitter:card" content={twitterCard} />"
-<meta name="twitter:title" content={title} />"
-<meta name="twitter:description" content={description} />"
-<meta name="twitter:image" content={ogImage} />"
->>>>>>> origin/main
+      // Set published time
+      if (seoData.publishedTime) {}
+        let publishedTime = document.querySelector('meta[property="article:published_time"]');
+        if (publishedTime) {}
+          publishedTime.setAttribute('content', seoData.publishedTime);
+        } else {}
+          publishedTime = document.createElement('meta');
+          publishedTime.setAttribute('property', 'article:published_time');
+          publishedTime.setAttribute('content', seoData.publishedTime);
+          document.head.appendChild(publishedTime);
+        }
+      }
 
-        {/* Structured Data */} <script type="application/ld+json">"
-          {JSON.stringify(generateStructuredData())} </script></Helmet>
-    {process.env.NODE_ENV === 'development' && ('
-        <div className="seo-debug" style={{"
-          position: 'fixed','
-          top: '10px','
-          left: '10px','
-          background: 'rgba(0,0,0,0.8)','
-          color: 'white','
-          padding: '10px','
-          borderRadius: '5px','
-          fontSize: '12px','
-          zIndex: 1000,
-          maxWidth: '300px',}}>'
-<div>SEO Score: {seoScore,</div>}/100</div>
-          {recommendations.length > 0 && (
-  // TODO: Add parameters
-)
-            <div>
-<div>Recommendations: </div>,
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' ,}}>'
-                {recommendations.map((rec, index) => (
-  // TODO: Add parameters
-)
-                  </ul>
-<li key={index}>{rec}</li>
-<div>SEO Score: {seoScore}/100
-          {recommendations.length > 0 && (
-  // TODO: Add parameters
-)
-            <div>
-<div>Recommendations:
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>'
-                {recommendations.map((rec, index) => (
-  // TODO: Add parameters
-)
-                  <li key={index}>{rec}
-                ))}
-          )}
->>>>>>> origin/main
-        </div>
-<meta name="twitter:card" content="summary_large_image" />"
-<meta name="twitter:title" content={title} />"
-<meta name="twitter:description" content={description} />"
-<meta name="twitter:image" content={ogImage} />"
-<meta name="twitter:site" content="@ziontechgroup" />"
-<meta name="twitter:creator" content="@ziontechgroup" />"
->>>>>>> origin/main
+      // Set modified time
+      if (seoData.modifiedTime) {}
+        let modifiedTime = document.querySelector('meta[property="article:modified_time"]');
+        if (modifiedTime) {}
+          modifiedTime.setAttribute('content', seoData.modifiedTime);
+        } else {}
+          modifiedTime = document.createElement('meta');
+          modifiedTime.setAttribute('property', 'article:modified_time');
+          modifiedTime.setAttribute('content', seoData.modifiedTime);
+          document.head.appendChild(modifiedTime);
+        }
+      }
 
-      {/* Additional SEO Meta Tags */} <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" />,"
-      <meta name="googlebot" content="index, follow" />"
-<meta name="bingbot" content="index, follow" />"
-<meta name="author" content="Zion Tech Group" />"
-<meta name="publisher" content="Zion Tech Group" />"
-<meta name="copyright" content="Zion Tech Group" />"
-<meta name="language" content="en" />"
-<meta name="revisit-after" content="7 days" />"
-<meta name="distribution" content="global" />"
-<meta name="rating" content="general" />"
-<meta name="theme-color" content="#1a1a2e" />"
-<meta name="msapplication-TileColor" content="#1a1a2e" />"
-<meta name="msapplication-config" content="/browserconfig.xml" />"
+      // Set section
+      if (seoData.section) {}
+        let section = document.querySelector('meta[property="article:section"]');
+        if (section) {}
+          section.setAttribute('content', seoData.section);
+        } else {}
+          section = document.createElement('meta');
+          section.setAttribute('property', 'article:section');
+          section.setAttribute('content', seoData.section);
+          document.head.appendChild(section);
+        }
+      }
 
-      {/* Canonical URL */}{canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}"
+      // Set tags
+      if (seoData.tags && seoData.tags.length > 0) {}
+        seoData.tags.forEach((tag) => {}
+          const tagMeta = document.createElement('meta');
+          tagMeta.setAttribute('property', 'article:tag');
+          tagMeta.setAttribute('content', tag);
+          document.head.appendChild(tagMeta);
+        });
+      }
+    }
+  }, [seoData, enableStructuredData, enableSocialMeta, enableAdvancedFeatures]);
 
-      {/* Structured Data */} <script type="application/ld+json">"
-        {JSON.stringify(generateStructuredData())} </script>
-      {/* Canonical URL */},
-    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},"
-    {/* Structured Data */}
-      <script type="application/ld+json" /></script>"
-        {JSON.stringify(generateStructuredData())}
-      </script>
->>>>>>> origin/main
+  return ()
+    <Helmet>
+      <title>{seoData.title}</title>
+      <meta name="description" content={seoData.description} />
+      <meta name="keywords" content={seoData.keywords.join(', ')} />
     </Helmet>
-    {children} </>
+
   );
+
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const ComponentsPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Components - Zion Tech Group"";
+        description="Professional components solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Components</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+
 };
 ;
-export default AdvancedSEOOptimizerPage;
->>>>>>> origin/main
-)
+export default ComponentsPage;'";'";

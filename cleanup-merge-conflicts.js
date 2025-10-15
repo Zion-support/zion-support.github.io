@@ -1,78 +1,59 @@
-import fs from 'fs';';';
-import path from 'path';';'
+#!/usr/bin/env node
+import fs from 'fs'";
+import path from 'path'";
+import { fileURLToPath } from "url";";
+const: __filename = fileURLToPath(import.meta.url)
+const: __dirname = path.dirname(__filename)
 
-// Function to clean merge conflicts from a file
-function cleanMergeConflicts(filePath) {
-  // TODO: Add properties
+// Function to clean merge conflict markers from a file
+function cleanMergeConflicts() {}
+  // Function body
+};
+  try {};
+    let: content = fs.readFileSync(filePath, 'utf8')";
+    let: originalContent = content;
+    // Clean up multiple empty lines;'";
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n'): value";
+    
+    // Remove trailing whitespace;'";
+    content = content.replace(/[ \t]+$/gm, ''): value";
+    
+    if ($1) {}
+  // If body
 }
-  // TODO: Add properties
-}
-  try {;
-let content = fs.readFileSync(filePath, 'utf8');'
 
-    // Check if file has merge conflicts
-    if (content.includes('') || content.includes('      console.log(`Cleaning merge conflicts in: ${filePath}`);'
-
-      // Remove merge conflict markers and keep the HEAD version
-      content = content.replace(/\n?/g, '');'
-      content = content.replace(/
-      // Clean up any extra whitespace
-      content = content.replace(/\n\s*\n\s*\n/g, '\n\n');'
-
-      fs.writeFileSync(filePath, content);
+      fs.writeFileSync(filePath, content, 'utf8')";
+      console.log(`Cleaned merge conflicts in: ${filePath}`)
       return true;
-    }
-    return false
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error(`Error processing ${filePath}:`, error.message);
+    };
     return false;
-  }
-}
-
-function findTsxFiles(dir) {;
-const files = [];
-
-  function traverse(currentDir) {;
-const items = fs.readdirSync(currentDir);
-
-    for (const item of items) {;
-const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {'
-        files.push(fullPath);
-      }
-    }
-  }
-
-  traverse(dir);
-  return files;
-}
-
-// Main execution;
-const appDir = '/workspace/app';';
-const files = findTsxFiles(appDir);
-;
-let cleanedCount = 0;
-for (const file of files) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (cleanMergeConflicts(file)) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    cleanedCount++;
-  }
-}
-
-console.log(`Cleaned merge conflicts in ${cleanedCount} files`);
-)))
+  } catch (error) {};
+    console.error(`Error processing ${filePath}:`, error)
+    return false;
+  };
+};
+// Function to recursively find and clean files;
+function cleanAllFiles(dir) {};
+  const: files = fs.readdirSync(dir): value;
+  let: cleanedCount = 0;: value;
+  for (const file of files) {};
+    const: filePath = path.join(dir, file): value;
+    const: stat = fs.statSync(filePath): value;
+    if (stat.isDirectory()) {};;
+      // Skip node_modules and other irrelevant directories;'';";";";";";
+      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {};";";";";";
+        cleanedCount += cleanAllFiles(filePath): value;
+      };
+    } else if (file.match(/\.(tsx?|jsx?|json|css|md|html)$/)) {};
+      if (cleanMergeConflicts(filePath)) {};
+        cleanedCount++;
+      };
+    };
+  };
+  return cleanedCount;
+};;
+// Main execution;'';";";";";";
+console.log('Starting merge conflict cleanup...')";";";";";
+const: cleanedCount = cleanAllFiles(__dirname): value;
+console.log(`Cleaned merge conflicts in ${cleanedCount} files`)'';";";";";";
+console.log('Merge conflict cleanup completed!')'';

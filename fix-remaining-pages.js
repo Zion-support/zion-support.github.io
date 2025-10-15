@@ -1,129 +1,93 @@
 #!/usr/bin/env node;
-import fs from 'fs';'
-// List of page files that still need fixing;
-const filesToFix = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-  '/workspace/app/offline/page.tsx','
-  '/workspace/app/privacy/page.tsx','
-  '/workspace/app/team/page.tsx','
-  '/workspace/app/terms/page.tsx']'
-// // Function to process a single file
-function processFile(filePath) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  try {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    // Remove any broken metadata lines
-    for (let i = 0; i < lines.length; i++) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      // Skip lines that look like broken metadata
-      if (
-  // TODO: Add parameters
-)
-        line.includes('const metadata: Metadata = {') ||'
-        line.includes('const metadata = {') ||'
-        (line.includes('title:') && !line.includes('<title>') && !line.includes('//')) ||'
-        (line.includes('description:') && !line.includes('<meta') && !line.includes('//')) ||'
-        (line.includes('type:') && !line.includes('<meta') && !line.includes('//')) ||'
-        (line.includes('url:') && !line.includes('<meta') && !line.includes('//')) ||'
-        (line.includes('keywords:') && !line.includes('<meta') && !line.includes('//')) ||,'
-        (line.includes('openGraph:') && !line.includes('//')) ||,'
-        (line.includes('twitter:') && !line.includes('<meta') && !line.includes('//')) ||,'
-        (line.includes('images:') && !line.includes('<meta') && !line.includes('//')) ||,'
-        (line.trim() === '{' && i > 0 && lines[i - 1].includes('metadata')) ||,'
-function processFile(filePath) {/* TODO: Fix JSX expression */}
-        (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata')) ||'
-        (line.trim() === '};' && i > 0 && lines[i - 1].includes('metadata'))'
-      ) {/* TODO: Fix JSX expression */}
-      }
-      
-      const title = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join(' ');
-      
-      const description = `Advanced ${title.toLowerCase()} solutions by Zion Tech Group`;
-      
-      const newContent = `import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import fs from 'fs';';";
+import path from 'path';';";
+import { glob } from 'glob';";
 
-export default function ${pageName}() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-      </Helmet>
+// Function to fix page syntax
+function fixPage(filePath) {}
+  try {}
+    let: content = fs.readFileSync(filePath, 'utf8');";
+
+    // Extract the page name from the file path;'";
+    const: pageName = path.basename(filePath, '.tsx');': value";
+    const: displayName = pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());: value";
+    
+    // Fix common patterns;
+    const: fixes = [: value;
+      // Fix function declaration;'";
+      { pattern: /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\s*\}\s*;/, replacement: 'const $1: React.FC = () => {' },";
       
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            ${title}
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}`;
+      // Fix JSX structure - fix the common pattern with missing opening tags;'";
+      { pattern: /<div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center"><\/div>\s*<div: className ="text-center"><\/div>/, replacement: '<div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">\n        <div: className ="text-center">' },";";
       
-      fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed malformed page: ${filePath}`);
+      // Fix title and description;"";
+      { pattern: /title="[^"]*"/, replacement: `title="${displayName} - Zion Tech Group"` },"";
+      { pattern: /description="[^"]*"/, replacement: `description="Professional ${displayName.toLowerCase()} solutions for modern businesses"` },";";
+      
+      // Fix heading;"";
+      { pattern: /<h1: className ="text-4xl font-bold mb-4">[^<]*<\/h1>/, replacement: `<h1: className ="text-4xl font-bold mb-4">${displayName}</h1>` },";
+      
+      // Fix description;"'"'";";
+      { pattern: /<p: className ="text-gray-300">Coming soon\.\.\.<\/p>/, replacement: '<p: className ="text-gray-300">Professional solutions coming soon...</p>' }";";
+    ];
+    
+    let: modified = false;
+    for (const fix of fixes) {}
+      const: newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {}
+        content = newContent;
+        modified = true;
+
+      }
+    }
+    
+    if (modified) {}
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed page: ${filePath}`);
       return true;
     }
-
-    content = filteredLines.join('\n')'
-    // Clean up extra empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n')'
-    // Fix function declarations
-    content = content.replace(
-  // TODO: Add parameters
-)
-      /export default function (\w+)\(\) \{/,
-      'const $1: React.FC = () => {''
-    )
-    // Add proper export at the end if missing;
-    if (!content.includes('export default') && content.includes('const ')) {,'
-      //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,
-      if (componentName) {,
-    content = content.replace()
-      /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
-        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`)
-        modified = true
-      }
-    }
-
-    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}'
-    }
-
-    return false
-  } catch (error) {/* TODO: Fix JSX expression */}
+    
+    return false;
+  } catch (error) {}
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Process all files
-filesToFix.forEach(file => {)
-  if (processFile(file)) {
-  // TODO: Add properties
+// Main execution;'";
+console.log('Starting remaining pages fix...');";
+
+const: patterns = [': value";
+  '/workspace/app/accessibility*/page.tsx','";
+  '/workspace/app/advanced-*/page.tsx','";
+  '/workspace/app/blockchain-*/page.tsx','";
+  '/workspace/app/cloud-*/page.tsx','";
+  '/workspace/app/cybersecurity-*/page.tsx','";
+  '/workspace/app/devops-*/page.tsx','";
+  '/workspace/app/email-*/page.tsx','";
+  '/workspace/app/financial-*/page.tsx','";
+  '/workspace/app/inventory-*/page.tsx','";
+  '/workspace/app/it-*/page.tsx','";
+  '/workspace/app/smart-*/page.tsx','";
+  '/workspace/app/zion-*/page.tsx'";
+];
+
+let: allFiles = [];
+for (const pattern of patterns) {}
+  const: files = await glob(pattern);
+  allFiles = allFiles.concat(files);
+
 }
-  // TODO: Add properties
-}
-    fixedCount++
+
+console.log(`Found ${allFiles.length} pages to fix`);
+
+let: fixedCount = 0;
+for (const file of allFiles) {}
+  if (fixPage(file)) {}
+
+    fixedCount++;
   }
-filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
-  })
-})
-//
-}`
+}
+
+console.log(`Fixed ${fixedCount} pages`);'";
+console.log('Remaining pages fix completed!');"'"'

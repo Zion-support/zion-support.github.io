@@ -1,152 +1,172 @@
-'use client';';
-import React from 'react';';';
-import { Helmet , Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock  } from 'react-helmet-async';';';
-import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock  } from 'lucide-react';';'
-;
-const CybersecurityAdvancedPage: React.FC = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
+<<<<<<< HEAD
+import React from 'react;'
+import { ArrowRight } from 'lucide-react;'
+import { CheckCircle } from 'lucide-react;'
+import { Star } from 'lucide-react;'
+import { Users } from 'lucide-react;'
+import { Clock } from 'lucide-react;'
+import { DollarSign } from 'lucide-react;'
+import { Shield } from 'lucide-react;'
+import { Code } from 'lucide-react;'
+import { Database } from 'lucide-react;'
+import { Mail } from 'lucide-react;'
+import { Settings } from 'lucide-react;'
+import { Target } from 'lucide-react;'
+import { TrendingUp } from 'lucide-react;'
+import { PieChart } from 'lucide-react;'
+import { MessageSquare } from 'lucide-react;'
+import { Heart } from 'lucide-react;'
+import { Globe } from 'lucide-react;'
+import { Smartphone } from 'lucide-react;'
+import { Network } from 'lucide-react;'
+import { Lock } from 'lucide-react;'
+import { Cpu } from 'lucide-react;'
+import { Wifi } from 'lucide-react;'
+import { Building2 } from 'lucide-react;'
+import { Briefcase } from 'lucide-react;'
+import { Lightbulb } from 'lucide-react;'
+import { Link } from 'react-router-dom;'
+import EnhancedSEO from '../components/EnhancedSEO;'
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,""
+      title: 'Advanced Features',''
+      description: 'Cutting-edge technology for maximum efficiency''
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,""
+      title: 'Secure & Reliable',''
+      description: 'Enterprise-grade security and 99.9% uptime''
+    },
+    {
+      icon: <Users className="w-8 h-8" />,""
+      title: 'Expert Support',''
+      description: '24/7 support from our team of specialists''
+    }
+  ];
   return (
-  // TODO: Add parameters
-)
     <>
-<Helmet>
-<title>Advanced Cybersecurity | Zion Tech Group</title>
-<meta name="description" content="Enterprise-grade cybersecurity solutions with threat hunting, incident response, and advanced security analytics for comprehensive protection." />"
-<meta name="keywords" content="advanced cybersecurity, threat hunting, incident response, security analytics, enterprise security" /></Helmet>"
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
+      <EnhancedSEO
+        title="Page - Zion Tech Group""
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""
+        keywords="page, business solutions, technology services, professional services""
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center">"
-<div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">"
-<Brain className="w-5 h-5 text-cyan-400 mr-2" />"
-<span className="text-cyan-400 font-medium">AI-Powered Solution</span></div>"
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6">"
-                Advanced Cybersecurity
-              </h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-                Enterprise-grade cybersecurity solutions with threat hunting, incident response, and advanced security analytics for comprehensive protection.
-              </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">"
-                  Get Started Free
-                  <ArrowRight className="w-5 h-5 ml-2 inline" /></button>"
-<button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">"
-                  View Demo
-                </button></div>
-</div></div>
-</section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">"
-                Advanced AI Capabilities
-              </h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-                Leverage cutting-edge artificial intelligence to transform your business
-                operations and achieve unprecedented efficiency and accuracy.
-              </p></div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
-<div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">"
-<div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">"
-<Brain className="w-6 h-6 text-white" /></div>"
-<h3 className="text-xl font-semibold text-white mb-4">Intelligent Processing</h3>"
-<p className="text-gray-300 mb-4">"
-                  Advanced AI algorithms process complex data and tasks with human-level
-                  intelligence and superhuman speed and accuracy.
-                </p>
-<ul className="space-y-2 text-sm text-gray-400">"
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />"
-                    Machine learning models
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />"
-                    Pattern recognition
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />"
-                    Predictive analytics
-                  </li></ul>
-</div>
-<div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">"
-<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">"
-<Zap className="w-6 h-6 text-white" /></div>"
-<h3 className="text-xl font-semibold text-white mb-4">Automated Workflows</h3>"
-<p className="text-gray-300 mb-4">"
-                  Streamline your operations with intelligent automation that handles
-                  complex workflows and decision-making processes.
-                </p>
-<ul className="space-y-2 text-sm text-gray-400">"
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-purple-400 mr-2" />"
-                    Process automation
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-purple-400 mr-2" />"
-                    Smart scheduling
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-purple-400 mr-2" />"
-                    Dynamic optimization
-                  </li></ul>
-</div>
-<div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-500/40 transition-all duration-300">"
-<div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6">"
-<Shield className="w-6 h-6 text-white" /></div>"
-<h3 className="text-xl font-semibold text-white mb-4">Enterprise Security</h3>"
-<p className="text-gray-300 mb-4">"
-                  Bank-level security with advanced encryption, compliance certifications,
-                  and enterprise-grade access controls for sensitive operations.
-                </p>
-<ul className="space-y-2 text-sm text-gray-400">"
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-green-400 mr-2" />"
-                    End-to-end encryption
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-green-400 mr-2" />"
-                    Compliance standards
-                  </li>
-<li className="flex items-center">"
-<CheckCircle className="w-4 h-4 text-green-400 mr-2" />"
-                    Access controls
-                  </li></ul>
-</div></div>
-</div></section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-4xl mx-auto text-center">"
-<h2 className="text-4xl font-bold text-white mb-6">"
-              Ready to Transform Your Business?
-            </h2>
-<p className="text-xl text-gray-300 mb-8">"
-              Join thousands of businesses already using our AI solutions to drive
-              innovation, efficiency, and growth.
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto text-center">""
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
+              Page
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
+              Professional page services designed to help your business succeed and grow.
             </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">"
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" /></button>"
-<button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">"
-                Schedule Demo
-              </button></div>
-</div></section>
-</div></>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/demo""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View Demo
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">""
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
+                  <p className="text-gray-300">{feature.description}</p>""
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+          <div className="max-w-4xl mx-auto text-center">""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">""
+              Let's discuss how our page services can help your business succeed.''
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/services""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
-;
-export default CybersecurityAdvancedPage;
+const page = React.lazy(() => import('./page'));''
+export default page;
 =======
+import SEOHead from '../components/SEOHead';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+const CybersecurityAdvancedPage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="Page - Zion Tech Group"
+        description="Professional page solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Page</h1>
+          <pclassName="text-gray-300">
+
+const CybersecurityAdvancedPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title ="cybersecurity-advanced - Zion Tech Group - Zion Tech Group"";
+        description="Zion Tech Group cybersecurity-advanced service page"";
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">cybersecurity-advanced - Zion Tech Group</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+      </div>
+    </>
+  ),
+};
+
+>>>>>>> main

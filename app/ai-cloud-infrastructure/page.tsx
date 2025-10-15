@@ -1,225 +1,171 @@
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';';';
-const AiCloudInfrastructurePage: React.FC = () => {,;
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';';';
-const AiCloudInfrastructurePage: React.FC = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
+<<<<<<< HEAD
+import React from 'react;'
+import { ArrowRight } from 'lucide-react;'
+import { CheckCircle } from 'lucide-react;'
+import { Star } from 'lucide-react;'
+import { Users } from 'lucide-react;'
+import { Clock } from 'lucide-react;'
+import { DollarSign } from 'lucide-react;'
+import { Shield } from 'lucide-react;'
+import { Code } from 'lucide-react;'
+import { Database } from 'lucide-react;'
+import { Mail } from 'lucide-react;'
+import { Settings } from 'lucide-react;'
+import { Target } from 'lucide-react;'
+import { TrendingUp } from 'lucide-react;'
+import { PieChart } from 'lucide-react;'
+import { MessageSquare } from 'lucide-react;'
+import { Heart } from 'lucide-react;'
+import { Globe } from 'lucide-react;'
+import { Smartphone } from 'lucide-react;'
+import { Network } from 'lucide-react;'
+import { Lock } from 'lucide-react;'
+import { Cpu } from 'lucide-react;'
+import { Wifi } from 'lucide-react;'
+import { Building2 } from 'lucide-react;'
+import { Briefcase } from 'lucide-react;'
+import { Lightbulb } from 'lucide-react;'
+import { Link } from 'react-router-dom;'
+import EnhancedSEO from '../components/EnhancedSEO;'
+const Page = () => {
+  const features = [
     {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Brain,
-      title: 'AI-Powered Intelligence','
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.','
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},'
-    {icon: BarChart,
-      title: 'Advanced Analytics','
-      description: 'Comprehensive analytics dashboard with real-time data visualization.','
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},'
-    {icon: Target,
-      title: 'Precision Targeting','
-      description: 'Target specific goals and objectives with precision and accuracy.','
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},'
-    {icon: TrendingUp,
-      title: 'Growth Optimization','
-      description: 'Optimize your business growth with data-driven strategies.','
-    'Reduce infrastructure costs by 40%','
-    'Improve performance by 60%','
-    'Increase reliability by 95%','
-    'Lower operational overhead by 50%','
-    'Enable global scalability','
-    'Automate infrastructure management','
-    'Enhance security and compliance','
-    'Optimize resource utilization''
-  ];
-;
-const useCases = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'Enterprise Migration','
-      description: 'Migrate enterprise applications to cloud with AI-powered optimization','
-      icon: '🏢''
+      icon: <CheckCircle className="w-8 h-8" />,""
+      title: 'Advanced Features',''
+      description: 'Cutting-edge technology for maximum efficiency''
     },
     {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'E-commerce Platforms','
-      description: 'Scale e-commerce platforms with intelligent cloud infrastructure','
-      icon: '🛒''
+      icon: <Shield className="w-8 h-8" />,""
+      title: 'Secure & Reliable',''
+      description: 'Enterprise-grade security and 99.9% uptime''
     },
     {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'Data Analytics','
-      description: 'Build scalable data analytics platforms in the cloud','
-      icon: '📊''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'IoT Applications','
-      description: 'Support IoT applications with edge computing and cloud infrastructure','
-      icon: '📡''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'Mobile Apps','
-      description: 'Power mobile applications with scalable cloud backend services','
-      icon: '📱''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'AI/ML Workloads','
-      description: 'Run AI and machine learning workloads on optimized cloud infrastructure','
-      icon: '🤖''
+      icon: <Users className="w-8 h-8" />,""
+      title: 'Expert Support',''
+      description: '24/7 support from our team of specialists''
     }
   ];
->>>>>>> cursor/delete-records-a75e
-
-export default function PagePage() {
   return (
-  // TODO: Add parameters
-)
     <>
-</>
-<Helmet>
-<title>Ai Cloud Infrastructure - Zion Tech Group</title>
-<meta name="description" content="Advanced AI-powered ai cloud infrastructure solution for modern businesses." />"
-<meta name="keywords" content="AI ai cloud infrastructure, artificial intelligence, ai cloud infrastructure, AI solutions, intelligent automation" /></Helmet>"
-<Navigation />
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">"
+      <EnhancedSEO
+        title="Page - Zion Tech Group""
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""
+        keywords="page, business solutions, technology services, professional services""
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden"></section>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />'"
-<div className="relative max-w-7xl mx-auto text-center">"
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">"
-              Ai Cloud Infrastructure
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto text-center">""
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
+              Page
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""
+                Solutions
+              </span>
             </h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">"
-              Advanced AI-powered ai cloud infrastructure solution for modern businesses.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
+              Professional page services designed to help your business succeed and grow.
             </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-gradient-to-r from-pink-500 to-blue-600 hover:from-pink-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
                 Get Started
-              </button>
-<button className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">"
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/demo""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
                 View Demo
-              </button></div>
-</div></section>
-
+              </Link>
+            </div>
+          </div>
+        </section>
         {/* Features Section */}
-        <section className="py-20 px-4"></section>"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>"
-                Powerful AI Features,
-  </
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI platform can revolutionize your business operations.</p></p>"
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>"
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
               {features.map((feature, index) => (
-  // TODO: Add parameters
-)
->>>>>>> origin/main
+                <div key={index} className="text-center">""
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
+                  <p className="text-gray-300">{feature.description}</p>""
                 </div>
               ))}
-            </div></div>
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+          <div className="max-w-4xl mx-auto text-center">""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">""
+              Let's discuss how our page services can help your business succeed.''
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/services""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+=======
+import SEOHead from '../components/SEOHead';
 
-        {/* Benefits Section */}
-        <section className="py-20 px-4"></section>"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
-                Why Choose Our Solution?
-              </h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-                Proven results that drive business growth and efficiency
-              </p></div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
-              {benefits.map((benefit, index) => (
-  // TODO: Add parameters
-)
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">"
-<div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">"
-<CheckCircle className="w-8 h-8 text-white" /></div>"
-<p className="text-lg text-white font-medium">{benefit}</p></div>"
-<h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
-<p className="text-gray-300 mb-4">{feature.description}</p>"
-<ul className="space-y-2">"
-                  {feature.benefits.map((benefit, benefitIndex) => (
-  // TODO: Add parameters
-)
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">"
-<CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />"
-                      {benefit}
-                    </li>
-                  ))}
-                </ul></div>
-            ))}
-          </div></div>
-</section>
+const AiCloudInfrastructurePage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="Page - Zion Tech Group"
+        description="Advanced page solutions powered by AI"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Page</h1>
+          <pclassName="text-gray-300">
 
-{/* CTA Section */}
-        <section className="py-20 px-4"></section>"
-<div className="max-w-4xl mx-auto text-center">"
-<div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">"
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
-                Ready to Get Started?
-              </h2>
-<p className="text-xl text-gray-300 mb-8">"
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-gradient-to-r from-pink-500 to-blue-600 hover:from-pink-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">"
-                  Contact Us
-                </button>
-<button className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">"
-                  Learn More
-                </button>
-              ))
-            </div></div>
-</section></div>
-<Footer /></React.Fragment>
+const AiCloudInfrastructurePage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title ="ai-cloud-infrastructure - Zion Tech Group - Zion Tech Group"";
+        description="Zion Tech Group ai-cloud-infrastructure service page"";
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">ai-cloud-infrastructure - Zion Tech Group</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+>>>>>>> main
+      </div>
+    </>
   ),
 };
-;
-export default AiCloudInfrastructurePage;
->>>>>>> origin/main
-
->>>>>>> cursor/delete-records-a75e
-}
+<<<<<<< HEAD
+const page = React.lazy(() => import('./page'));''
+export default page;
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+>>>>>>> main

@@ -1,210 +1,323 @@
-import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'react-helmet-async';';';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';';'
-;
-const PagePage: React.FC = () => {;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Brain,
-      title: 'AI-Powered Solutions','
-      description: 'Advanced AI technology to transform your business operations and improve efficiency''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Zap,
-      title: 'High Performance','
-      description: 'Lightning-fast processing and real-time analytics for optimal results''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Shield,
-      title: 'Enterprise Security','
-      description: 'Bank-level security with encryption and compliance standards''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Globe,
-      title: 'Global Reach','
-      description: 'Worldwide deployment and support for international businesses''
-    }
-  ];
-;
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Advanced AI technology integration','
-    'Real-time processing and analytics','
-    'Enterprise-grade security and compliance','
-    'Scalable and flexible solutions','
-    '24/7 technical support','
-    'Easy integration with existing systems','
-    'Cost-effective pricing plans','
-    'Proven track record of success''
-  ];
-
-export default function PagePage() {
+<<<<<<< HEAD
+import React from 'react;'
+import { Helmet } from 'react-helmet-async;'
+'use client;''
+export default function Page() {
   return (
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Helmet>
-<title>Page | Zion Tech Group</title>
-<meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
-<meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" /></Helmet>;";
-const CybersecurityPage: React.FC = () => {;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Shield,
-      title: 'Advanced Threat Protection','
-      description: 'Multi-layered security solutions to protect against sophisticated cyber threats and attacks.''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Lock,
-      title: 'Data Encryption','
-      description: 'End-to-end encryption for all your sensitive data and communications.''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Eye,
-      title: '24/7 Monitoring','
-      description: 'Continuous monitoring and real-time threat detection across all your systems.''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: AlertTriangle,
-      title: 'Incident Response','
-      description: 'Rapid response and recovery services to minimize damage from security breaches.''
-    }
-  ]
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Protect sensitive business data','
-    'Comply with industry regulations','
-    'Prevent costly security breaches','
-    'Maintain business continuity','
-    'Build customer trust and confidence','
-    'Reduce security-related downtime','
-    'Access to security experts','
-    'Customized security solutions''
-  ]
-
-    'Proven track record of success''
-  ]
-<Helmet />
-<title>Page | Zion Tech Group</title>
-<meta name="description" content="AI-powered solution" />"
-<meta name="keywords" content="AI, artificial intelligence, business solutions" /></Helmet>"
-</div></div>
-</div></section>
-      {/* Features Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
-<h2>Why Choose Our Page?,</h2></h2>
-<p>Our page solutions deliver unmatched performance, security, and scalability.</p></p>
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,"
-            {features.map((feature, index) => (
-  // TODO: Add parameters
-)
-                <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,"
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>"
-<feature />
-<h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
-<p className="text-gray-300">{feature.description}</p>"
-              ))
-            ))}
-          </div></div>
-</section>
-      {/* Benefits Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
-<h2>Key Benefits;</h2></h2>
-<p>Experience the power of our page solutions for your business.,</p></p>
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,"
-            {benefits.map((benefit, index) => (
-  // TODO: Add parameters
-)
-                <div key={index}className="flex items-start space-x-3"></div>"
-<CheckCircle />
-<p className="text-gray-300 text-lg">{benefit</p>}</p></div>"
-            ))}
-          </div></div>
-</section>
-      {/* CTA Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="max-w-4xl mx-auto text-center"></div>"
-<div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,"
-            <h2>Ready to Get Started?</h2></h2>
-<p>Contact our experts to discuss your page needs and get a customized solution.</p></p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
-              <button>
-<Phone>
-                Call Now;
-              </button>
-<button>
-<Mail>
-                Email Us;
-              </button></div>
-</div></div>
-</section>;
-export default PagePage;
-
-}}
->>>>>>> cursor/delete-records-a75e
+    <div className="min-h-screen bg-white">""
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />""
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">;""
+        <div className="text-center">;""
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">;""
+            Page;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">;""
+            Professional page solutions tailored to your business needs.;
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;""
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;""
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">;""
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">;""
+                Our team of experts delivers cutting-edge page solutions.;
+              </p>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;""
+              <h3 className="text-lg font-semibold text-green-900 mb-2">;""
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">;""
+                Tailored page implementations for your specific requirements.;
+              </p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">;""
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">;""
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">;""
+                Round-the-clock support for all your page needs.;
+              </p>
+            </div>
+          </div>
+          <div className="mt-12">;""
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;""
+              Get Started Today;
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );}
+}''
 =======
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+import SEOHead from '../components/SEOHead',
+      const CybersecurityPage: React.FC = () => {"}
+        "
+  return (",)
+        "
+    <>{"}</>
+        "
+      <SEOHead",>
+        "
+        title="Cybersecurity Solutions - Zion Tech Group",
+      description="Advanced cybersecurity solutions including threat detection, vulnerability assessment, and security consulting services.",
+      keywords="cybersecurity, security solutions, threat detection, vulnerability assessment, security consulting" />""
+      {/* Hero Section */};
+      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center">""
+        <div className="absolute inset-0 bg-black/50"></div>""
+        <div className="container mx-auto px-4 relative z-10">""
+          <div className="max-w-4xl mx-auto text-center">""
+            <div className="inline-flex items-center gap-2 bg-red-500/20 text-red-400 px-4 py-2 rounded-full text-sm font-medium mb-6">""
+              <className="w-4 h-4" />",
+        "
+              Advanced Security Solutions",
+        "
+            </div>""
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-red-100 to-red-300 bg-clip-text text-transparent">",
+        "
+              Cybersecurity",
+        "
+              <span className="block text-4xl md:text-5xl text-red-400 mt-2">Solutions</span>",
+        "
+            </h1>",
+        "
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">",
+        "
+              Protect your digital assets with our comprehensive cybersecurity solutions.",
+        "
+              From threat detection to compliance management, we secure your business against evolving cyber threats.",
+        "
+            </p>",
+        "
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+        "
+              <",>
+        "
+                to="/contact",
+      className="group bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-red-500/25 hover:scale-105";
+              >",
+        "
+                Get Security Assessment",
+        "
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />",
+        "
+              </>",
+        "
+              <"">
+                to="/consultation",
+      className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 hover:scale-105";
+              >",
+        "
+                Free Consultation",
+        "
+              </>",
+        "
+            </div>",
+        "
+          </div>",
+        "
+        </div>",
+        "
+      </section>""
+      {/* Services Section */};
+      <section className="py-20 bg-slate-800">""
+        <div className="container mx-auto px-4">""
+          <div className="text-center mb-16">""
+            <h2 className="text-4xl font-bold text-white mb-4">Our Security Services</h2>""
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">",
+        "
+              Comprehensive cybersecurity solutions tailored to your business needs",
+        "
+            </p>",
+        "
+          </div>",
+        "
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">""
+            <div className="bg-slate-700 p-8 rounded-xl hover:bg-slate-600 transition-colors">""
+              <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-6">""
+                <className="w-6 h-6 text-red-400" />",
+        "
+              </div>",
+        "
+              <h3 className="text-xl font-semibold text-white mb-4">Threat Detection</h3>""
+              <p className="text-gray-300 mb-4">",
+        "
+                Advanced threat detection and response systems to identify and neutralize cyber threats in real-time.",
+        "
+              </p>""
+              <ul className="space-y-2 text-sm text-gray-400">""
+                <li className="flex items-center gap-2">""
+                  <CheckCircle className="w-4 h-4 text-green-400" />",
+        "
+                  Real-time monitoring",
+        "
+                </li>""
+                <li className="flex items-center gap-2">""
+                  <CheckCircle className="w-4 h-4 text-green-400" />",
+        "
+                  AI-powered detection",
+        "
+                </li>""
+                <li className="flex items-center gap-2">""
+                  <CheckCircle className="w-4 h-4 text-green-400" />",
+        "
+                  Automated response",
+        "
+                </li>",
+        "
+              </ul>",
+        "
+            </div>""
+            <div className="bg-slate-700 p-8 rounded-xl hover:bg-slate-600 transition-colors">""
+              <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-6">""
+                <Lock className="w-6 h-6 text-red-400" />",
+        "
+              </div>",
+        "
+              <h3 className="text-xl font-semibold text-white mb-4">Vulnerability Assessment</h3>""
+              <p className="text-gray-300 mb-4">",
+        "
+                Comprehensive security audits to identify vulnerabilities and provide actionable remediation plans.",
+        "
+              </p>""
+              <ul className="space-y-2 text-sm text-gray-400">""
+                <li className="flex items-center gap-2">""
+                  <CheckCircle className="w-4 h-4 text-green-400" />",
+        "
+                  Penetration testing",
+        "
+                </li>""
+                <li className="flex items-center gap-2">""
+                  <CheckCircle className="w-4 h-4 text-green-400" />",
+        "
+                  Security scanning",
+        "
+                </li>""
+                <li className="flex items-center gap-2">""
+                  <CheckCircle className="w-4 h-4 text-green-400" />",
+        "
+                  Risk assessment",
+        "
+                </li>",
+        "
+              </ul>",
+        "
+            </div>""
+            <div className="bg-slate-700 p-8 rounded-xl hover:bg-slate-600 transition-colors">""
+              <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-6">""
+                <className="w-6 h-6 text-red-400" />",
+        "
+              </div>",
+        "
+              <h3 className="text-xl font-semibold text-white mb-4">Security ing</h3>""
+              <p className="text-gray-300 mb-4">",
+        "
+                24/7 security monitoring and incident response to ensure continuous protection of your assets.",
+        "
+              </p>""
+              <ul className="space-y-2 text-sm text-gray-400">""
+                <li className="flex items-center gap-2">""
+                  <CheckCircle className="w-4 h-4 text-green-400" />",
+        "
+                  24/7 monitoring",
+        "
+                </li>""
+                <li className="flex items-center gap-2">""
+                  <CheckCircle className="w-4 h-4 text-green-400" />",
+        "
+                  Incident response",
+        "
+                </li>""
+                <li className="flex items-center gap-2">""
+                  <CheckCircle className="w-4 h-4 text-green-400" />",
+        "
+                  Security reporting",
+        "
+                </li>",
+        "
+              </ul>",
+        "
+            </div>",
+        "
+          </div>",
+        "
+        </div>",
+        "
+      </section>",
+        "
+      {/* CTA Section */};
+      <section className="py-20 bg-gradient-to-r from-red-600 to-purple-600">""
+        <div className="container mx-auto px-4 text-center">""
+          <h2 className="text-4xl font-bold text-white mb-6">",
+        "
+            Ready to Secure Your Business?",
+        "
+          </h2>""
+          <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">",
+        "
+            Don't wait for a security breach. Get professional cybersecurity assessment and protection today.",
+        "
+          </p>""
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+        "
+            <",>
+        "
+              to="/contact",
+      className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors";
+            >",
+        "
+              Get Started Now",
+        "
+            </>",
+        "
+            <",>
+        "
+              to="/consultation",
+      className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors";
+            >",
+        "
+              Schedule Consultation",
+        "
+            </>",
+        "
+          </div>",
+        "
+        </div>",
+        "
+      </section>",
+        "
+    </>""
+  )
+    },
+    {}
+,
+      export default CybersecurityPage;
+
+;
+const CybersecurityPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Cybersecurity - Zion Tech Group"";
+        description="Professional cybersecurity solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Cybersecurity</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+};
+;
+export default CybersecurityPage;'";'";
+
+>>>>>>> main

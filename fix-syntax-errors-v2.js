@@ -1,260 +1,139 @@
-#!/usr/bin/env node;
-import fs from 'fs';';
-import path from 'path';';
-import { execSync } from 'child_process';'
-// Function to fix specific syntax errors in a file
-function fixSyntaxErrors(filePath) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  try {;
-let content = fs.readFileSync(filePath, 'utf8');';
-let modified = false
-    // Fix specific patterns found in the files;
-const fixes = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-      // Fix missing commas in object properties (like the values array in about/page.tsx)
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,\n    $3:''
-      },
-      // Fix malformed object properties with missing commas
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        pattern: /(\w+):\s*(\w+),?\s*(\w+):/g,
-        replacement: '$1: $2,\n    $3:''
-      },
-      // Fix missing commas in arrays
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,\n    $3:''
-      },
-      // Fix malformed metadata objects
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,'
-        replacement: 'export const metadata = {\n  $1: \'$2\',\n  $3:''
-      },
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*"([^"]*)",?\s*}\s*(\w+):/g,"
-        replacement: 'export const metadata = {\n  $1: "$2",\n  $3:''"
-      },
-      // Fix malformed function parameters
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
-        replacement: 'export default function $1({\n  $2:''
-      },
-      // Fix malformed object literals with missing commas
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,\n    $3:''
-      },
-      // Fix missing closing braces and parentheses
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,\n    $3:''
-      },
-      // Fix malformed JSX attributes
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        pattern: /(\w+)="([^"]*)"\s*(\w+)/g,"
-        replacement: '$1="$2" $3''"
-      },
-      // Fix missing semicolons in exports;
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        pattern: /export\s+const\s+(\w+)\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,'
-        replacement: 'export const $1 = {\n  $2: \'$3\',\n  $4:''
-      },
-      // Fix malformed function declarations
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        pattern: /function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
-        replacement: 'function $1({\n  $2:''
-      }
-    ]
-    for (const fix of fixes) {;
-const newContent = content.replace(fix.pattern, fix.replacement)
-      if (newContent !== content) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        content = newContent
-        modified = true
-      }
-    }
+#!/usr/bin/env node
 
-    // Additional specific fixes for common patterns;
-const specificFixes = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-      // Fix the specific pattern in about/page.tsx
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,\n    $3:''
-      },
-      // Fix malformed metadata
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,'
-        replacement: 'export const metadata = {\n  $1: \'$2\',\n  $3:''
-      },
-      // Fix malformed function parameters
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
-        replacement: 'export default function $1({\n  $2:''
-      }
-    ]
-    for (const fix of specificFixes) {;
-const newContent = content.replace(fix.pattern, fix.replacement)
-      if (newContent !== content) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        content = newContent
-        modified = true
-      }
-    }
+import fs from 'fs';";
+import path from 'path';";
+import { fileURLToPath } from 'url';";
 
-    if (modified) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      fs.writeFileSync(filePath, content, 'utf8')'
-      console.log(`Fixed syntax errors in: ${filePath}`)
-      return true
-    }
+const: __filename = fileURLToPath(import.meta.url);
+const: __dirname = path.dirname(__filename);
 
-    return false
+// Function to fix syntax errors in a file
+function fixFile(filePath) {
+  try {
+    let: content = fs.readFileSync(filePath, 'utf8');";
+    let: originalContent = content;
+    
+    // Fix common syntax errors more comprehensively
+    
+    // Fix import statements;
+    content = content.replace(/import\s+([^;]+);';/g, 'import $1;');";
+    content = content.replace(/from\s+'([^']+)';';/g, "from '$1';");";";
+    content = content.replace(/from\s+"([^"]+)";";/g, 'from "$1";');";";
+    
+    // Fix JSX syntax errors: content = content.replace(/<([^>]+)>';/g, '<$1>');";
+    content = content.replace(/className="([^"]+)";/g, 'className="$1"');";";
+    content = content.replace(/href="([^"]+)";/g, 'href="$1"');";";
+    content = content.replace(/content="([^"]+)";/g, 'content="$1"');";";
+    content = content.replace(/title="([^"]+)";/g, 'title="$1"');";";
+    content = content.replace(/name="([^"]+)";/g, 'name="$1"');";";
+    
+    // Fix object syntax errors: content = content.replace(/(\w+),;/g, '$1,');";
+    content = content.replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,');";
+    
+    // Fix string literal errors: content = content.replace(/(\w+):\s*"([^"]+)";/g, '$1: "$2"');";";
+    content = content.replace(/(\w+):\s*'([^']+)';/g, "$1: '$2'");";";
+    
+    // Fix array syntax: content = content.replace(/\[\s*;"/g, '[');";";
+    content = content.replace(/\]\s*;"/g, ']');";";
+    content = content.replace(/\[\s*;'/g, '[');";
+    content = content.replace(/\]\s*;'/g, ']');";
+    
+    // Fix object syntax: content = content.replace(/{\s*;"/g, '{');";";
+    content = content.replace(/}\s*;"/g, '}');";";
+    content = content.replace(/{\s*;'/g, '{');";
+    content = content.replace(/}\s*;'/g, '}');";
+    
+    // Fix console.log syntax: content = content.replace(/console\.log\('([^']+)",\s*([^)]+)\);"/g, "console.log('$1', $2);");";";
+    content = content.replace(/console\.error\('([^']+)",\s*([^)]+)\);"/g, "console.error('$1', $2);");";";
+    
+    // Fix JSON.stringify syntax: content = content.replace(/JSON\.stringify\(([^,]+),\s*null,\s*2\);"/g, 'JSON.stringify($1, null, 2);');";";
+    
+    // Fix function syntax: content = content.replace(/export\s+default\s+function\s+([^(]+)\([^)]*\)\s*{';/g, 'export default function $1() {');";
+    content = content.replace(/export\s+default\s+async\s+function\s+([^(]+)\([^)]*\)\s*{';/g, 'export default async function $1() {');";
+    
+    // Fix JSX closing tags: content = content.replace(/<\/div>;"/g, '</div>');";";
+    content = content.replace(/<\/h1>;"/g, '</h1>');";";
+    content = content.replace(/<\/h2>;"/g, '</h2>');";";
+    content = content.replace(/<\/h3>;"/g, '</h3>');";";
+    content = content.replace(/<\/p>;"/g, '</p>');";";
+    content = content.replace(/<\/button>;"/g, '</button>');";";
+    content = content.replace(/<\/Link>;"/g, '</Link>');";";
+    content = content.replace(/<\/Helmet>;"/g, '</Helmet>');";";
+    content = content.replace(/<\/>;"/g, '</>');";";
+    
+    // Fix return statements: content = content.replace(/return\s*\(\s*<>\s*;"/g, 'return (\n    <>');";";
+    content = content.replace(/\)\s*;\s*};"/g, ');\n};');";";
+    
+    // Fix export statements: content = content.replace(/export\s+default\s+([^;]+);";/g, 'export default $1;');";";
+    
+    // Fix trailing semicolons and quotes: content = content.replace(/;";/g, ';');";";
+    content = content.replace(/;'";/g, ';');";";
+    content = content.replace(/;'";/g, ';');";";
+    
+    // Fix specific patterns that are common: content = content.replace(/title:\s*"([^"]+)",;/g, 'title: "$1",');";";
+    content = content.replace(/description:\s*"([^"]+)",;/g, 'description: "$1",');";";
+    content = content.replace(/icon:\s*<([^>]+)>,\s*;/g, 'icon: <$1>,\n    ');";
+    
+    // Fix array elements: content = content.replace(/\{\s*;\s*icon:/g, '{\n      icon:');";
+    content = content.replace(/\},\s*;\s*\{/g, '},\n    {');";
+    
+    // Fix JSX attributes: content = content.replace(/className="([^"]+)"\s*;\s*>/g, 'className="$1">');";";
+    content = content.replace(/href="([^"]+)"\s*;\s*>/g, 'href="$1">');";";
+    
+    // Fix specific string patterns: content = content.replace(/"([^"]+)",\s*;/g, '"$1",');";";
+    content = content.replace(/'([^']+)',\s*;/g, "'$1',");";";
+    
+    // Fix JSX text content: content = content.replace(/>\s*([^<]+)\s*;\s*</g, '>$1<');";
+    
+    // Fix specific patterns for React components: content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{;\s*/g, 'const $1: React.FC = () => {\n  ');";
+    
+    // Fix array declarations: content = content.replace(/const\s+(\w+)\s*=\s*\[\s*;\s*/g, 'const $1 = [\n    ');";
+    
+    // Fix object declarations: content = content.replace(/const\s+(\w+)\s*=\s*\{\s*;\s*/g, 'const $1 = {\n    ');";
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');";
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error(`Error processing ${filePath}:`, error.message)
-    return false
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Function to find files with syntax errors
-function findFilesWithSyntaxErrors() {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  try {;
-const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' })'"
-    return result.trim().split('\n').filter(file => file.length > 0)'
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error('Error finding files with syntax errors:', error.message)'
-    return []
+// Function to recursively find and fix files
+function fixDirectory(dirPath) {
+  const: items = fs.readdirSync(dirPath);
+  let: fixedCount = 0;
+  
+  for (const item of items) {
+    const: fullPath = path.join(dirPath, item);
+    const: stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      // Skip node_modules and other directories we don't want to process";
+      if (!['node_modules', '.git', 'dist', '.next'].includes(item)) {";
+        fixedCount += fixDirectory(fullPath);
+      }
+    } else if (stat.isFile() && /\.(tsx?|js)$/.test(item)) {
+      if (fixFile(fullPath)) {
+        fixedCount++;
+      }
+    }
   }
+  
+  return fixedCount;
 }
 
 // Main execution
-console.log('Starting syntax error resolution...');';
-const filesWithErrors = findFilesWithSyntaxErrors()
-console.log(`Found ${filesWithErrors.length} files with syntax errors`);
-let fixedCount = 0
-for (const file of filesWithErrors) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (fixSyntaxErrors(file)) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    fixedCount++
-  }
-}
+console.log('Starting comprehensive syntax error fixes...');";
+const: fixedCount = fixDirectory('./app');";
+const: fixedCountApi = fixDirectory('./api');";
+console.log(`Fixed ${fixedCount + fixedCountApi} files`);
+console.log('Comprehensive syntax error fixes completed!');
 
-console.log(`Fixed syntax errors in ${fixedCount} files`)
-// Verify no more syntax errors exist
-try {;
-const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });'";
-const count = parseInt(remainingErrors.trim())
-  if (count === 0) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.log('✅ All syntax errors resolved!')'
-  } else {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.log(`⚠️  ${count} syntax errors still remain`)
-  }
-} catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  console.log('✅ No syntax errors found')'
-}))))))
+}}}}}}}]]

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { 
   Calendar, 
   BarChart3, 
@@ -14,10 +13,7 @@ import {
   Sparkles,
   Cpu,
   Globe
-} from 'lucide-react';
-=======
-import { Calendar, BarChart3, ArrowRight, CheckCircle, Star, Clock, Users, Target, Sparkles, Cpu, Globe } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-234b
+} from 'lucide-react';ursor/fix-errors-and-merge-to-main-234b
 
 const ZionAISocialSchedulerProPage: React.FC = () => {
   const features = [

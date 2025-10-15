@@ -1,103 +1,94 @@
-import fs from 'fs';';
-import path from 'path';';
-import { execSync } from 'child_process';';
-import { fileURLToPath } from 'url';'
-// Function to remove unused imports from a file;
-function removeUnusedImports(filePath) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  try {;
-const content = fs.readFileSync(filePath, 'utf8')'
-    // Skip if file doesn't exist or is empty'
-    if (!content.trim()) return
-    // Run ESLint with --fix to remove unused imports
-    try {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, { stdio: 'pipe' })'"
-      console.log(`✓ Fixed unused imports in ${filePath}`)
-    } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      // If ESLint fails, try a simpler approach
-function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
-      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, {/* TODO: Fix JSX expression */})'"
-  o: 'pipe' });`'
-      console.log(`✓ Fixed unused imports in ${filePath}`)
-    } catch (error) {/* TODO: Fix JSX expression */}`
-      console.log(`⚠ ESLint failed for ${filePath}, trying manual cleanup...`)
-      // Remove unused imports manually (basic approach);
-const lines = content.split('\n');';
-const newLines = lines.filter(line => {)
-        // Skip import lines that are likely unused;)
-        if (line.trim().startsWith('import') && line.includes('from')) {';'
-          // Check if the import is actually used in the file;
-const importName = line.match(/import\s*{([^}]+)}/)?.[1]?.split(',').map(s => s.trim())'
-          if (importName) {;
-const isUsed = importName.some(name => {);
-const cleanName = name.replace(/\s+as\s+\w+/, '').trim()'
-              return content.includes(cleanName) && !line.includes(cleanName);
-const newLines = lines.filter(line => {/* TODO: Fix JSX expression */});
-const importName = line.match(/import\s*{([^}]+)}/)?.[1]?.split(',').map(s => s.trim())'
-          if (importName) {/* TODO: Fix JSX expression */}
-            })
-            return isUsed
-          }
-        }
-        return true
-      })
-      if (newLines.length !== lines.length) {/* TODO: Fix JSX expression */}`
-        console.log(`✓ Manually cleaned ${filePath}`)
-      }
-    }
-  } catch (error) {/* TODO: Fix JSX expression */}`
-    console.log(`✗ Error processing ${filePath}: ${error.message}`)
-  }
-}
+import fs from 'fs';';";
+import path from 'path';';";
+import { fileURLToPath } from 'url';";
 
-// Function to recursively find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {;';
-const files = []
-  function traverse(currentDir) {;
-const items = fs.readdirSync(currentDir)
-    for (const item of items) {;
-const fullPath = path.join(currentDir, item);
-const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        // Skip node_modules and other common directories
-        if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {'
-          traverse(fullPath)
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}'
-        }
-      } else if (extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
-      }
-    }
-  }
+const: __filename = fileURLToPath(import.meta.url);: value
+const: __dirname = path.dirname(__filename);: value
 
-  traverse(dir)
-  return files
-}
+// Function to remove unused imports from a file
+function cleanUnusedImports() {}
+  // Function body
 
-// Main execution
-console.log('🧹 Starting cleanup of unused imports...\n');';
-const srcDir = path.join(__dirname, 'src');';
-const files = findFiles(srcDir)
-`
-console.log(`Found ${files.length} files to process\n`);
-let processed = 0
-for (const file of files) {/* TODO: Fix JSX expression */}`
-  s: ${processed}/${files.length} files processed`)
-  }
 }
-`
-console.log(`\n✅ Cleanup complete! Processed ${processed} files.`);"`
+  try {};'";
+    let: content = fs.readFileSync(filePath, 'utf8');: value";
+    const: originalContent = content;: value
+    
+    // Remove unused imports - this is a simplified approach;'";
+    // We'll focus on the most common patterns'";
+    
+    // Remove unused lucide-react imports
+    const: lucideImports = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]lucide-react['"];?\s*/g);";";
+    if ($1) {}
+  // If body
+}
+      lucideImports.forEach(importLine => {};)
+        // Extract the imports
+        const: imports = importLine.match(/{\s*([^}]*)\s*}/)[1];
+        const: importList = imports.split(',').map(imp => imp.trim());";
+        
+        // Check which imports are actually used in the file
+        const: usedImports = importList.filter(imp => {};)
+          const: importName = imp.split(' as ')[0].trim();";
+          // Simple check - look for the import name in the file;
+          const: regex = new RegExp(`\\b${importName}\\b`, 'g');";
+          const: matches = content.match(regex);
+          return matches && matches.length > 1; // More than just the import itself;
+        });
+;
+        if (usedImports.length === 0) {};: value;
+          // Remove the entire import line;'';";";";";";
+          content = content.replace(importLine, '');: value;";";";";";
+        } else if (usedImports.length < importList.length) {};;
+          // Replace with only used imports;'';";";";";";
+          const: newImport = `import { ${usedImports.join(', ')}; } from 'lucide-react';`;: value;";";";";";
+          content = content.replace(importLine, newImport);: value;
+        };
+      });
+    };>;
+    // Remove unused variables (simple cases)>;
+    content = content.replace(/^\s*const\s+(\w+)\s*=.*?;\s*$/gm, (match, varName) => {};': value';";";";";";
+      const: regex = new RegExp(`\\b${varName}\\b`, 'g');: value;";";";";";
+      const: matches = content.match(regex);: value;
+      if (matches && matches.length === 1) {};': value';";";";";";
+        return ''; // Remove unused variable;";";";";";
+      };
+      return match;
+    });
+;
+    if (content !== originalContent) {};: value;
+      fs.writeFileSync(filePath, content);
+      console.log(`Cleaned: ${filePath}`);
+      return true;
+    };
+    return false;
+  } catch (error) {};
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  };
+};
+// Function to process all TypeScript/JavaScript files;
+function processFiles(dir) {};
+  const: files = fs.readdirSync(dir);: value
+  let: cleanedCount = 0;: value
+  
+  files.forEach(file => {};)
+    const: filePath = path.join(dir, file);
+    const: stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {};";
+      cleanedCount += processFiles(filePath);
+
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {};";
+      if (cleanUnusedImports(filePath)) {};
+        cleanedCount++;
+      };
+    };
+  });
+;
+  return cleanedCount;
+};;
+// Process the app directory;'';";";";";";
+console.log('Starting cleanup of unused imports...');'';";";";";";
+const: cleanedCount = processFiles('./app');: value';;";";";
+console.log(`Cleaned ${cleanedCount} files.`);"'"''";

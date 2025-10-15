@@ -1,101 +1,134 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
-import { BarChart3, TrendingUp, Database, Eye } from 'lucide-react';
-
-export default function ZionAiAnalyticsProPage() {
-  const features = [
-    {
-      title: "Advanced Analytics",
-      description: "Powerful AI-driven analytics for deep business insights",
-      icon: <BarChart3 className="w-8 h-8" />
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Monitor your business metrics in real-time with live dashboards",
-      icon: <TrendingUp className="w-8 h-8" />
-    },
-    {
-      title: "Data Integration",
-      description: "Seamlessly integrate data from multiple sources and platforms",
-      icon: <Database className="w-8 h-8" />
-    },
-    {
-      title: "Predictive Insights",
-      description: "Get predictive analytics and forecasting capabilities",
-      icon: <Eye className="w-8 h-8" />
-    }
-  ];
-
+import React from 'react;'
+import { Helmet } from 'react-helmet-async;'
+'use client;''
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-white">""
       <Helmet>
-        <title>Zion AI Analytics Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics platform for comprehensive business intelligence and insights." />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />""
       </Helmet>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Zion AI Analytics Pro
+      <div className="container mx-auto px-4 py-16">;""
+        <div className="text-center">;""
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">;""
+            Page;
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transform your data into actionable insights with our advanced AI-powered analytics platform.
+          <p className="text-xl text-gray-600 mb-8">;""
+            Professional page solutions tailored to your business needs.;
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-6">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-=======
-
-export default function ZionAiAnalyticsPro() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Zion AI Analytics Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI analytics solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Zion AI Analytics Pro
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI-powered analytics for data-driven business decisions.
-          </p>
-        </div>
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Real-time Analytics</h3>
-              <p className="text-gray-600">
-                Get instant insights from your data with real-time analytics.
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;""
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;""
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">;""
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">;""
+                Our team of experts delivers cutting-edge page solutions.;
               </p>
             </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Predictive Modeling</h3>
-              <p className="text-gray-600">
-                AI-powered predictive models for forecasting and trend analysis.
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;""
+              <h3 className="text-lg font-semibold text-green-900 mb-2">;""
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">;""
+                Tailored page implementations for your specific requirements.;
               </p>
             </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Custom Dashboards</h3>
-              <p className="text-gray-600">
-                Create custom dashboards tailored to your business needs.
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">;""
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">;""
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">;""
+                Round-the-clock support for all your page needs.;
               </p>
             </div>
           </div>
->>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
+          <div className="mt-12">;""
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;""
+              Get Started Today;
+            </button>
+          </div>
         </div>
       </div>
     </div>
+  );}
+}''
+=======
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async""use client';
+export default function Page() {}
+  return ()
+    <div className="min-h-screen bg-white">;
+      <Helmet>;
+        <title>Page - Zion Tech Group</title>;
+        <meta name="description" content="Professional page services by Zion Tech Group." />;
+      </Helmet>;
+      <div className="container mx-auto px-4 py-16">;
+        <div className="text-center">;
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">;
+            Page;
+          </h1>;
+          <p className="text-xl text-gray-600 mb-8">;
+            Professional page solutions tailored to your business needs.;
+          </p>;
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">;
+                Expert Solutions;
+              </h3>;
+              <p className="text-blue-700">;
+                Our team of experts delivers cutting-edge page solutions.;
+              </p>;
+            </div>;
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;
+              <h3 className="text-lg font-semibold text-green-900 mb-2">;
+                Custom Implementation;
+              </h3>;
+              <p className="text-green-700">;
+                Tailored page implementations for your specific requirements.;
+              </p>;
+            </div>;
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">;
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">;
+                24/7 Support;
+              </h3>;
+              <p className="text-purple-700">;
+                Round-the-clock support for all your page needs.;
+              </p>;
+            </div>;
+          </div>;
+          <div className="mt-12">;
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
+              Get Started Today;
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+
   );
-}
+
+import React from 'react';;';
+import SEOHead from './components/SEOHead';
+;
+const ZionAiAnalyticsProPage: React.FC = () => {
+  return (
+    <>;
+      <SEOHead;
+        title="Zion Ai Analytics Pro - Zion Tech Group"";
+        description="Professional zion ai analytics pro solutions for modern businesses";
+      />";
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">Zion Ai Analytics Pro</h1>";
+          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
+        </div>;
+      </div>;
+    </>;
+  ),
+
+};
+;
+export default ZionAiAnalyticsProPage;'";'";
+>>>>>>> main

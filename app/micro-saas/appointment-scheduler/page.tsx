@@ -1,115 +1,174 @@
-  const serviceName = 'appointment-scheduler';';
-const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');'
-
-export default function PagePage() {
+<<<<<<< HEAD
+import React from 'react;'
+import { ArrowRight } from 'lucide-react;'
+import { CheckCircle } from 'lucide-react;'
+import { Star } from 'lucide-react;'
+import { Users } from 'lucide-react;'
+import { Clock } from 'lucide-react;'
+import { DollarSign } from 'lucide-react;'
+import { Shield } from 'lucide-react;'
+import { Code } from 'lucide-react;'
+import { Database } from 'lucide-react;'
+import { Mail } from 'lucide-react;'
+import { Settings } from 'lucide-react;'
+import { Target } from 'lucide-react;'
+import { TrendingUp } from 'lucide-react;'
+import { PieChart } from 'lucide-react;'
+import { MessageSquare } from 'lucide-react;'
+import { Heart } from 'lucide-react;'
+import { Globe } from 'lucide-react;'
+import { Smartphone } from 'lucide-react;'
+import { Network } from 'lucide-react;'
+import { Lock } from 'lucide-react;'
+import { Cpu } from 'lucide-react;'
+import { Wifi } from 'lucide-react;'
+import { Building2 } from 'lucide-react;'
+import { Briefcase } from 'lucide-react;'
+import { Lightbulb } from 'lucide-react;'
+import { Link } from 'react-router-dom;'
+import EnhancedSEO from '../components/EnhancedSEO;'
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,""
+      title: 'Advanced Features',''
+      description: 'Cutting-edge technology for maximum efficiency''
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,""
+      title: 'Secure & Reliable',''
+      description: 'Enterprise-grade security and 99.9% uptime''
+    },
+    {
+      icon: <Users className="w-8 h-8" />,""
+      title: 'Expert Support',''
+      description: '24/7 support from our team of specialists''
+    }
+  ];
   return (
-  // TODO: Add parameters
-)
     <>
-</>
-<Helmet>
-<title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
-<meta name="description" content={`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`} />"
-<link rel="canonical" href={`https://ziontechgroup.com/micro-saas/${serviceName}`} /></Helmet>"
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-<section className="pt-24 pb-16 px-4"></section>"
-<div className="max-w-7xl mx-auto text-center"></div>"
-<div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>"
-<Settings className="w-4 h-4" />"
-<span>{title}</span></li>
-<h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">"
-              {title} </h1>
-<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Solution</span></h1>"
-<p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">"
-              Powerful {title.toLowerCase()} micro SaaS solution designed for modern businesses.
+      <EnhancedSEO
+        title="Page - Zion Tech Group""
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs.""
+        keywords="page, business solutions, technology services, professional services""
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto text-center">""
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
+              Page
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">""
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
+              Professional page services designed to help your business succeed and grow.
             </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
-<button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">"
-<span>Get Started</span>
-<ArrowRight className="w-5 h-5" /></button>"
-<button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/demo""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
                 View Demo
-        <link></Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-<section className="py-20 px-4"></section>"
-< className="$2 /></div>"
-<div className="text-center mb-16"></div>"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="max-w-7xl mx-auto text-center"></div>"
-<div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>"
-<Settings>
-<span>{title</span>}</span></div>
-<h1>{title</h1>} </h1>
-<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Solution</span></h1>"
-<p>Powerful {title.toLowerCase()</p>}}micro SaaS solution designed for modern businesses.
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""
+          <div className="max-w-7xl mx-auto">""
+            <div className="text-center mb-16">""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">""
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">""
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">""
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
+                  <p className="text-gray-300">{feature.description}</p>""
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+          <div className="max-w-4xl mx-auto text-center">""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">""
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">""
+              Let's discuss how our page services can help your business succeed.''
             </p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
-              <button></button>
-<span>Get Started</span>
-<ArrowRight></button>
-<button>View Demo,</button>
-              </button></li>
-</li></section>
-<p>We're developing powerful {title.toLowerCase()</p>}}solutions. Stay tuned for updates!'
-              </p></div>
-</div></section>
-</div></>
-  )
-}
-export default MicroSaaSPage;
-import React from 'react';';
-import { Helmet } from 'react-helmet-async';';
-import { Settings, ArrowRight } from 'lucide-react';';';
-const MicroSaaSPage: React.FC = () => {;
-const serviceName = 'appointment-scheduler';';
-const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')'
-  return (
-  // TODO: Add parameters
-)
-    <React.Fragment>
-<Helmet>
-<title>{title} | Zion Tech Group - Micro SaaS Solutions
-        <meta name="description" content={`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`} />"
-<link rel="canonical" href={`https://ziontechgroup.com/micro-saas/${serviceName}`} />"
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<section className="pt-24 pb-16 px-4">"
-<div className="max-w-7xl mx-auto text-center">"
-<div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">"
-<Settings className="w-4 h-4" />"
-<span>{title}
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">"
-              {title}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Solution"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">"
-              Powerful {title.toLowerCase()} micro SaaS solution designed for modern businesses.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">"
-<span>Get Started
-                <ArrowRight className="w-5 h-5" />"
-<button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">View Demo"
-        <section className="py-16 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Coming Soon"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-                We're developing powerful {title.toLowerCase()} solutions. Stay tuned for updates!'
-  )
-}
-export default MicroSaaSPage;
-</div></div>
-</div></div>
-</div></div>
-</span></span>
-</span></button>
-</button></p>
-</p></h1>
-</h2></li>
-</section></section>
-</li>
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link
+                to="/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""
+              </Link>
+              <Link
+                to="/services""
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+const page = React.lazy(() => import('./page'));''
+export default page;
 =======
+import SEOHead from '../components/SEOHead';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+const PagePage: React.FC = () => {}
+  return ()
+    <>{}</>
+      <SEOHead>
+        title="page - Zion Tech Group"
+        description="Zion Tech Group page service page"
+
+const AppointmentSchedulerPage: React.FC = () => {
+  return (
+    <>
+      <SEOHead title ="appointment-scheduler - Zion Tech Group - Zion Tech Group"";
+        description="Zion Tech Group appointment-scheduler service page"";
+
+      />
+      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div className ="text-center">";
+          <h1 className ="text-4xl font-bold mb-4">appointment-scheduler - Zion Tech Group</h1>";
+          <p className ="text-gray-300">Coming soon...</p>";
+        </div>
+      </div>
+    </>
+
+  )
+    },
+    {}
+export default PagePage;
+
+  ),
+};
+
+>>>>>>> main
