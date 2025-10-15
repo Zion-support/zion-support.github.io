@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
+  Share2, 
+  Users, 
+  TrendingUp, 
+  BarChart3, 
   Zap, 
+  Shield, 
+  Globe, 
   Brain, 
   CheckCircle, 
   ArrowRight, 
@@ -18,50 +20,33 @@ import {
   Pause,
   RefreshCw,
   Settings,
+  Eye,
   Filter,
   Clock,
   PieChart,
   LineChart,
   Activity,
+  AlertTriangle,
+  CheckSquare,
+  FileText,
+  MessageSquare,
+  Camera,
+  Hash,
+  Heart,
+  MessageCircle,
+  ThumbsUp,
   Target,
   Calendar,
-  FileText,
-  Bot,
-  Search,
-  BookOpen,
-  Lightbulb,
-  ThumbsUp,
-  MessageCircle,
-  HelpCircle,
-  Hash,
-  AtSign,
-  Camera,
-  Video,
   Image,
+  Video,
   Link,
   Hashtag,
-  Percent,
-  Graph,
-  PiggyBank,
-  Wallet,
-  Banknote,
-  TrendingDown,
-  Globe,
-  Users,
-  Database,
-  Server,
-  Network,
-  Key,
-  Fingerprint,
-  Scan,
-  Bug,
-  Virus,
-  Wifi,
-  Cloud,
-  HardDrive
+  AtSign,
+  DollarSign,
+  Award
 } from 'lucide-react';
 
-const AiCybersecuritySuiteProPage: React.FC = () => {
+const AiSocialMediaManagerProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -71,102 +56,102 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI Threat Detection",
-      description: "Advanced machine learning algorithms detect and prevent cyber threats in real-time with 99.9% accuracy.",
-      benefits: ["Real-time monitoring", "Behavioral analysis", "Anomaly detection", "Predictive threat modeling"]
+      title: "AI Content Generation",
+      description: "Generate engaging posts, captions, and hashtags using advanced AI that understands your brand voice and audience.",
+      benefits: ["Brand voice matching", "Hashtag optimization", "Content scheduling", "Trend analysis"]
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive social media analytics with AI-powered insights, competitor analysis, and performance predictions.",
+      benefits: ["Engagement metrics", "ROI tracking", "Competitor analysis", "Growth predictions"]
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Audience Intelligence",
+      description: "Deep audience insights with AI-powered demographic analysis, interest mapping, and engagement optimization.",
+      benefits: ["Demographic analysis", "Interest mapping", "Engagement optimization", "Audience growth"]
+    },
+    {
+      icon: <Calendar className="w-6 h-6" />,
+      title: "Smart Scheduling",
+      description: "AI-powered optimal posting times, content calendar management, and cross-platform synchronization.",
+      benefits: ["Optimal timing", "Content calendar", "Cross-platform sync", "Bulk scheduling"]
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Zero Trust Security",
-      description: "Implement zero trust architecture with continuous verification and least privilege access controls.",
-      benefits: ["Identity verification", "Access controls", "Network segmentation", "Continuous monitoring"]
-    },
-    {
-      icon: <Lock className="w-6 h-6" />,
-      title: "Advanced Encryption",
-      description: "Military-grade encryption for data at rest, in transit, and in use with quantum-resistant algorithms.",
-      benefits: ["AES-256 encryption", "Quantum-resistant", "Key management", "Compliance ready"]
-    },
-    {
-      icon: <Eye className="w-6 h-6" />,
-      title: "Security Monitoring",
-      description: "24/7 security operations center with AI-powered monitoring and incident response automation.",
-      benefits: ["24/7 SOC", "Automated response", "Threat hunting", "Incident management"]
-    },
-    {
-      icon: <Bug className="w-6 h-6" />,
-      title: "Vulnerability Management",
-      description: "Automated vulnerability scanning, assessment, and remediation with AI-powered prioritization.",
-      benefits: ["Automated scanning", "Risk assessment", "Patch management", "Compliance tracking"]
+      title: "Brand Safety",
+      description: "AI-powered content moderation, brand safety checks, and crisis management to protect your reputation.",
+      benefits: ["Content moderation", "Brand safety", "Crisis alerts", "Reputation monitoring"]
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Incident Response",
-      description: "Automated incident response with AI-driven forensics and rapid threat containment.",
-      benefits: ["Auto-containment", "Forensic analysis", "Recovery planning", "Lessons learned"]
+      title: "Automation Suite",
+      description: "Automate responses, engagement, and content distribution across all major social media platforms.",
+      benefits: ["Auto-responses", "Engagement automation", "Content distribution", "Workflow automation"]
     }
   ];
 
-  const securityLayers = [
-    { name: "Network Security", icon: <Network className="w-8 h-8" />, color: "text-blue-500" },
-    { name: "Endpoint Protection", icon: <HardDrive className="w-8 h-8" />, color: "text-green-500" },
-    { name: "Cloud Security", icon: <Cloud className="w-8 h-8" />, color: "text-cyan-500" },
-    { name: "Data Protection", icon: <Database className="w-8 h-8" />, color: "text-purple-500" },
-    { name: "Identity Management", icon: <Fingerprint className="w-8 h-8" />, color: "text-orange-500" },
-    { name: "Application Security", icon: <Server className="w-8 h-8" />, color: "text-red-500" },
-    { name: "Email Security", icon: <Mail className="w-8 h-8" />, color: "text-indigo-500" },
-    { name: "Mobile Security", icon: <Wifi className="w-8 h-8" />, color: "text-pink-500" }
+  const platforms = [
+    { name: "Facebook", icon: <MessageCircle className="w-8 h-8" />, color: "text-blue-500" },
+    { name: "Instagram", icon: <Camera className="w-8 h-8" />, color: "text-pink-500" },
+    { name: "Twitter", icon: <Hash className="w-8 h-8" />, color: "text-cyan-500" },
+    { name: "LinkedIn", icon: <Users className="w-8 h-8" />, color: "text-blue-600" },
+    { name: "TikTok", icon: <Video className="w-8 h-8" />, color: "text-white" },
+    { name: "YouTube", icon: <Play className="w-8 h-8" />, color: "text-red-500" },
+    { name: "Pinterest", icon: <Image className="w-8 h-8" />, color: "text-red-600" },
+    { name: "Snapchat", icon: <Camera className="w-8 h-8" />, color: "text-yellow-500" }
   ];
 
   const pricingPlans = [
     {
-      name: "Essential",
-      price: "$199",
+      name: "Starter",
+      price: "$79",
       period: "month",
-      description: "Perfect for small businesses starting their security journey",
+      description: "Perfect for small businesses and influencers",
       features: [
-        "Basic threat detection",
-        "Email security",
-        "Endpoint protection",
-        "24/7 monitoring",
+        "3 social media accounts",
+        "Basic AI content generation",
+        "Standard analytics",
+        "Content scheduling",
         "Email support",
-        "5GB log storage",
+        "5GB media storage",
         "Mobile app access",
-        "Basic reporting"
+        "Basic templates"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$399",
+      price: "$149",
       period: "month",
-      description: "Ideal for growing companies with advanced security needs",
+      description: "Ideal for growing brands and agencies",
       features: [
-        "Advanced AI threat detection",
-        "Zero trust architecture",
-        "All security layers",
-        "Comprehensive monitoring",
+        "10 social media accounts",
+        "Advanced AI features",
+        "Comprehensive analytics",
+        "Team collaboration",
         "Priority support",
-        "50GB log storage",
+        "50GB media storage",
         "API access",
-        "Advanced analytics",
-        "Compliance reporting",
+        "Custom templates",
+        "Competitor analysis",
         "White-label options"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$299",
       period: "month",
       description: "Complete solution for large organizations",
       features: [
-        "Full AI security suite",
-        "Custom security policies",
-        "Dedicated SOC team",
-        "Advanced forensics",
+        "Unlimited accounts",
+        "Full AI suite",
+        "Advanced analytics",
+        "Custom development",
         "24/7 dedicated support",
-        "Unlimited log storage",
+        "Unlimited storage",
         "Advanced security",
         "On-premise deployment",
         "Custom integrations",
@@ -178,56 +163,45 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "Financial Services Corp",
-      role: "CISO",
-      content: "AI Cybersecurity Suite Pro has transformed our security posture. The AI threat detection has prevented 15 major attacks in the last 6 months, and our incident response time has improved by 80%.",
+      name: "Lisa Chen",
+      company: "Fashion Forward",
+      role: "Marketing Director",
+      content: "AI Social Media Manager Pro has transformed our social media strategy. The AI-generated content performs 3x better than our manual posts, and we've grown our following by 200% in just 6 months.",
       rating: 5
     },
     {
-      name: "David Chen",
-      company: "Healthcare Systems",
-      role: "IT Security Director",
-      content: "The zero trust implementation and automated vulnerability management have been game-changers. We've achieved 100% compliance with healthcare regulations and reduced security incidents by 90%.",
+      name: "Marcus Johnson",
+      company: "TechStart Agency",
+      role: "Social Media Manager",
+      content: "The analytics and audience insights are incredible. We can now predict which content will perform best and optimize our campaigns in real-time. ROI has increased by 150%.",
       rating: 5
     },
     {
-      name: "Sarah Johnson",
-      company: "E-commerce Platform",
-      role: "VP of Security",
-      content: "The AI-powered monitoring and automated incident response have saved us millions in potential breaches. The 24/7 SOC team provides peace of mind, and ROI was achieved within 3 months.",
+      name: "Emily Rodriguez",
+      company: "E-commerce Plus",
+      role: "Digital Marketing Lead",
+      content: "The automation features have saved us 20 hours per week. The AI content generation is so good that our engagement rates have doubled across all platforms.",
       rating: 5
     }
   ];
 
   const metrics = [
-    { number: "99.9%", label: "Threat Detection Accuracy", icon: <Target className="w-6 h-6" /> },
-    { number: "80%", label: "Faster Response Time", icon: <Zap className="w-6 h-6" /> },
-    { number: "90%", label: "Reduced Security Incidents", icon: <Shield className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Monitoring", icon: <Activity className="w-6 h-6" /> }
-  ];
-
-  const complianceStandards = [
-    { name: "SOC 2", description: "Security compliance" },
-    { name: "ISO 27001", description: "Information security" },
-    { name: "GDPR", description: "Data protection" },
-    { name: "HIPAA", description: "Healthcare compliance" },
-    { name: "PCI DSS", description: "Payment security" },
-    { name: "NIST", description: "Cybersecurity framework" },
-    { name: "CIS", description: "Security controls" },
-    { name: "FedRAMP", description: "Government compliance" }
+    { number: "500M+", label: "Posts Analyzed", icon: <BarChart3 className="w-6 h-6" /> },
+    { number: "10K+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "95%", label: "Content Performance", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "24/7", label: "AI Monitoring", icon: <Clock className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Cybersecurity Suite Pro - Advanced Security Solutions | Zion Tech Group</title>
-        <meta name="description" content="Protect your business with AI-powered cybersecurity solutions. Advanced threat detection, zero trust security, and 24/7 monitoring for comprehensive protection." />
-        <meta name="keywords" content="AI cybersecurity, threat detection, zero trust security, security monitoring, vulnerability management, incident response, compliance" />
-        <meta property="og:title" content="AI Cybersecurity Suite Pro - Zion Tech Group" />
-        <meta property="og:description" content="Advanced AI-powered cybersecurity solutions with comprehensive protection" />
+        <title>AI Social Media Manager Pro - Intelligent Social Media Management | Zion Tech Group</title>
+        <meta name="description" content="Transform your social media strategy with AI-powered content generation, analytics, and automation. Grow your audience and engagement across all platforms." />
+        <meta name="keywords" content="AI social media management, social media automation, content generation, social media analytics, brand management, social media scheduling" />
+        <meta property="og:title" content="AI Social Media Manager Pro - Zion Tech Group" />
+        <meta property="og:description" content="Intelligent social media management platform with AI-powered content generation and analytics" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-cybersecurity-suite-pro" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-social-media-manager-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -256,16 +230,16 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
               <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                   <Star className="w-4 h-4 mr-2" />
-                  #1 AI Cybersecurity Platform
+                  #1 AI Social Media Platform
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    AI Cybersecurity Suite Pro
+                    AI Social Media Manager Pro
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Protect your business with the most advanced AI-powered cybersecurity solutions. 
-                  Comprehensive threat detection, zero trust security, and 24/7 monitoring for complete protection.
+                  Revolutionize your social media strategy with AI-powered content generation, 
+                  intelligent analytics, and automated management across all platforms.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -273,7 +247,7 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    Get Security Assessment
+                    Start Free Trial
                   </a>
                   <a
                     href="#demo"
@@ -287,30 +261,30 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Security Layers Section */}
+          {/* Platform Support Section */}
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Comprehensive Security Layers
+                    All Major Platforms
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Multi-layered security approach covering all aspects of your digital infrastructure.
+                  Manage all your social media accounts from one powerful AI-driven platform.
                 </p>
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-                {securityLayers.map((layer, index) => (
+                {platforms.map((platform, index) => (
                   <div 
                     key={index} 
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 group"
                   >
-                    <div className={`${layer.color} mb-3 group-hover:scale-110 transition-transform duration-300 flex justify-center`}>
-                      {layer.icon}
+                    <div className={`${platform.color} mb-3 group-hover:scale-110 transition-transform duration-300 flex justify-center`}>
+                      {platform.icon}
                     </div>
-                    <div className="text-white font-semibold text-sm">{layer.name}</div>
+                    <div className="text-white font-semibold text-sm">{platform.name}</div>
                   </div>
                 ))}
               </div>
@@ -323,11 +297,11 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    AI-Powered Security Features
+                    AI-Powered Features
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Everything you need to protect your business with intelligent cybersecurity solutions.
+                  Everything you need to dominate social media with intelligent automation and insights.
                 </p>
               </div>
               
@@ -366,11 +340,11 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Proven Security Results
+                    Proven Results
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Join thousands of organizations achieving remarkable security improvements with our AI platform.
+                  Join thousands of brands achieving remarkable social media success with our AI platform.
                 </p>
               </div>
               
@@ -388,45 +362,17 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Compliance Section */}
+          {/* Pricing Section */}
           <section className="py-20 bg-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Compliance & Standards
+                    Flexible Pricing
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Meet industry standards and regulatory requirements with our comprehensive compliance framework.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-                {complianceStandards.map((standard, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
-                  >
-                    <div className="text-cyan-400 font-bold text-lg mb-2">{standard.name}</div>
-                    <div className="text-gray-300 text-sm">{standard.description}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Pricing Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Flexible Security Plans
-                  </span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the security plan that fits your organization's needs and risk profile.
+                  Choose the plan that fits your social media needs. All plans include our core AI features.
                 </p>
               </div>
               
@@ -481,16 +427,16 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
           </section>
 
           {/* Testimonials Section */}
-          <section className="py-20 bg-slate-900">
+          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Security Success Stories
+                    Success Stories
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  See how organizations are protecting their assets with our AI cybersecurity platform.
+                  See how brands are achieving social media success with our AI platform.
                 </p>
               </div>
               
@@ -524,11 +470,11 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready to Secure Your Business?
+                  Ready to Dominate Social Media?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Start your security assessment today and discover how our AI-powered cybersecurity 
-                  solutions can protect your organization from evolving threats.
+                  Start your free trial today and experience the power of AI-driven social media management. 
+                  No credit card required.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -543,7 +489,7 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                   >
                     <Mail className="w-5 h-5 mr-2" />
-                    Get Security Assessment
+                    Get Free Consultation
                   </a>
                 </div>
               </div>
@@ -555,4 +501,4 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
   );
 };
 
-export default AiCybersecuritySuiteProPage;
+export default AiSocialMediaManagerProPage;

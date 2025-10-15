@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
+  Calendar, 
+  Users, 
+  Target, 
+  BarChart3, 
   Zap, 
+  Shield, 
+  Globe, 
   Brain, 
   CheckCircle, 
   ArrowRight, 
@@ -18,50 +20,24 @@ import {
   Pause,
   RefreshCw,
   Settings,
+  Eye,
   Filter,
   Clock,
   PieChart,
   LineChart,
   Activity,
-  Target,
-  Calendar,
+  TrendingUp,
+  AlertTriangle,
+  CheckSquare,
   FileText,
-  Bot,
-  Search,
-  BookOpen,
-  Lightbulb,
-  ThumbsUp,
-  MessageCircle,
-  HelpCircle,
-  Hash,
-  AtSign,
-  Camera,
-  Video,
-  Image,
-  Link,
-  Hashtag,
-  Percent,
-  Graph,
-  PiggyBank,
-  Wallet,
-  Banknote,
-  TrendingDown,
-  Globe,
-  Users,
-  Database,
-  Server,
-  Network,
-  Key,
-  Fingerprint,
-  Scan,
-  Bug,
-  Virus,
-  Wifi,
-  Cloud,
-  HardDrive
+  MessageSquare,
+  GitBranch,
+  Timer,
+  Award,
+  DollarSign
 } from 'lucide-react';
 
-const AiCybersecuritySuiteProPage: React.FC = () => {
+const AiProjectManagerProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -71,66 +47,55 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI Threat Detection",
-      description: "Advanced machine learning algorithms detect and prevent cyber threats in real-time with 99.9% accuracy.",
-      benefits: ["Real-time monitoring", "Behavioral analysis", "Anomaly detection", "Predictive threat modeling"]
+      title: "AI-Powered Task Management",
+      description: "Intelligent task prioritization, automatic scheduling, and smart resource allocation using advanced AI algorithms.",
+      benefits: ["Smart prioritization", "Auto-scheduling", "Resource optimization", "Deadline prediction"]
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Real-time Analytics",
+      description: "Comprehensive project analytics with predictive insights, risk assessment, and performance tracking.",
+      benefits: ["Live dashboards", "Predictive analytics", "Risk assessment", "Performance metrics"]
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Team Collaboration",
+      description: "Advanced collaboration tools with AI-powered communication, file sharing, and team coordination.",
+      benefits: ["Smart notifications", "File collaboration", "Team chat", "Meeting scheduling"]
+    },
+    {
+      icon: <Target className="w-6 h-6" />,
+      title: "Goal Tracking",
+      description: "Set and track project goals with AI-driven progress monitoring and milestone management.",
+      benefits: ["Goal setting", "Progress tracking", "Milestone alerts", "Success metrics"]
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Zero Trust Security",
-      description: "Implement zero trust architecture with continuous verification and least privilege access controls.",
-      benefits: ["Identity verification", "Access controls", "Network segmentation", "Continuous monitoring"]
-    },
-    {
-      icon: <Lock className="w-6 h-6" />,
-      title: "Advanced Encryption",
-      description: "Military-grade encryption for data at rest, in transit, and in use with quantum-resistant algorithms.",
-      benefits: ["AES-256 encryption", "Quantum-resistant", "Key management", "Compliance ready"]
-    },
-    {
-      icon: <Eye className="w-6 h-6" />,
-      title: "Security Monitoring",
-      description: "24/7 security operations center with AI-powered monitoring and incident response automation.",
-      benefits: ["24/7 SOC", "Automated response", "Threat hunting", "Incident management"]
-    },
-    {
-      icon: <Bug className="w-6 h-6" />,
-      title: "Vulnerability Management",
-      description: "Automated vulnerability scanning, assessment, and remediation with AI-powered prioritization.",
-      benefits: ["Automated scanning", "Risk assessment", "Patch management", "Compliance tracking"]
+      title: "Security & Compliance",
+      description: "Enterprise-grade security with data encryption, access controls, and compliance management.",
+      benefits: ["End-to-end encryption", "Role-based access", "Audit trails", "GDPR compliance"]
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Incident Response",
-      description: "Automated incident response with AI-driven forensics and rapid threat containment.",
-      benefits: ["Auto-containment", "Forensic analysis", "Recovery planning", "Lessons learned"]
+      title: "Automation Suite",
+      description: "Automate repetitive tasks, generate reports, and streamline workflows with intelligent automation.",
+      benefits: ["Workflow automation", "Report generation", "Task automation", "Smart reminders"]
     }
-  ];
-
-  const securityLayers = [
-    { name: "Network Security", icon: <Network className="w-8 h-8" />, color: "text-blue-500" },
-    { name: "Endpoint Protection", icon: <HardDrive className="w-8 h-8" />, color: "text-green-500" },
-    { name: "Cloud Security", icon: <Cloud className="w-8 h-8" />, color: "text-cyan-500" },
-    { name: "Data Protection", icon: <Database className="w-8 h-8" />, color: "text-purple-500" },
-    { name: "Identity Management", icon: <Fingerprint className="w-8 h-8" />, color: "text-orange-500" },
-    { name: "Application Security", icon: <Server className="w-8 h-8" />, color: "text-red-500" },
-    { name: "Email Security", icon: <Mail className="w-8 h-8" />, color: "text-indigo-500" },
-    { name: "Mobile Security", icon: <Wifi className="w-8 h-8" />, color: "text-pink-500" }
   ];
 
   const pricingPlans = [
     {
-      name: "Essential",
-      price: "$199",
+      name: "Starter",
+      price: "$49",
       period: "month",
-      description: "Perfect for small businesses starting their security journey",
+      description: "Perfect for small teams and individual projects",
       features: [
-        "Basic threat detection",
-        "Email security",
-        "Endpoint protection",
-        "24/7 monitoring",
+        "Up to 5 projects",
+        "10 team members",
+        "Basic AI features",
+        "Standard templates",
         "Email support",
-        "5GB log storage",
+        "5GB storage",
         "Mobile app access",
         "Basic reporting"
       ],
@@ -138,35 +103,35 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
     },
     {
       name: "Professional",
-      price: "$399",
+      price: "$99",
       period: "month",
-      description: "Ideal for growing companies with advanced security needs",
+      description: "Ideal for growing teams with advanced needs",
       features: [
-        "Advanced AI threat detection",
-        "Zero trust architecture",
-        "All security layers",
-        "Comprehensive monitoring",
+        "Unlimited projects",
+        "50 team members",
+        "Advanced AI features",
+        "Custom templates",
         "Priority support",
-        "50GB log storage",
+        "50GB storage",
         "API access",
         "Advanced analytics",
-        "Compliance reporting",
+        "Integrations",
         "White-label options"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$199",
       period: "month",
       description: "Complete solution for large organizations",
       features: [
-        "Full AI security suite",
-        "Custom security policies",
-        "Dedicated SOC team",
-        "Advanced forensics",
+        "Unlimited everything",
+        "Unlimited team members",
+        "Full AI suite",
+        "Custom development",
         "24/7 dedicated support",
-        "Unlimited log storage",
+        "Unlimited storage",
         "Advanced security",
         "On-premise deployment",
         "Custom integrations",
@@ -179,55 +144,48 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
   const testimonials = [
     {
       name: "Jennifer Martinez",
-      company: "Financial Services Corp",
-      role: "CISO",
-      content: "AI Cybersecurity Suite Pro has transformed our security posture. The AI threat detection has prevented 15 major attacks in the last 6 months, and our incident response time has improved by 80%.",
+      company: "TechStart Inc.",
+      role: "Project Manager",
+      content: "AI Project Manager Pro has revolutionized how we manage projects. The AI insights have helped us reduce project delays by 40% and improve team productivity significantly.",
       rating: 5
     },
     {
-      name: "David Chen",
-      company: "Healthcare Systems",
-      role: "IT Security Director",
-      content: "The zero trust implementation and automated vulnerability management have been game-changers. We've achieved 100% compliance with healthcare regulations and reduced security incidents by 90%.",
+      name: "David Thompson",
+      company: "Digital Solutions Co.",
+      role: "CTO",
+      content: "The predictive analytics and automated task management have been game-changers. We've seen a 60% improvement in project delivery times.",
       rating: 5
     },
     {
-      name: "Sarah Johnson",
-      company: "E-commerce Platform",
-      role: "VP of Security",
-      content: "The AI-powered monitoring and automated incident response have saved us millions in potential breaches. The 24/7 SOC team provides peace of mind, and ROI was achieved within 3 months.",
+      name: "Sarah Kim",
+      company: "Innovation Labs",
+      role: "Operations Director",
+      content: "The AI-powered resource allocation and risk assessment features have helped us avoid costly project overruns. ROI was achieved within the first month.",
       rating: 5
     }
   ];
 
-  const metrics = [
-    { number: "99.9%", label: "Threat Detection Accuracy", icon: <Target className="w-6 h-6" /> },
-    { number: "80%", label: "Faster Response Time", icon: <Zap className="w-6 h-6" /> },
-    { number: "90%", label: "Reduced Security Incidents", icon: <Shield className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Monitoring", icon: <Activity className="w-6 h-6" /> }
-  ];
-
-  const complianceStandards = [
-    { name: "SOC 2", description: "Security compliance" },
-    { name: "ISO 27001", description: "Information security" },
-    { name: "GDPR", description: "Data protection" },
-    { name: "HIPAA", description: "Healthcare compliance" },
-    { name: "PCI DSS", description: "Payment security" },
-    { name: "NIST", description: "Cybersecurity framework" },
-    { name: "CIS", description: "Security controls" },
-    { name: "FedRAMP", description: "Government compliance" }
+  const integrations = [
+    { name: "Slack", description: "Team communication" },
+    { name: "Microsoft Teams", description: "Video conferencing" },
+    { name: "Google Workspace", description: "Document collaboration" },
+    { name: "Jira", description: "Issue tracking" },
+    { name: "GitHub", description: "Code management" },
+    { name: "Salesforce", description: "CRM integration" },
+    { name: "Trello", description: "Kanban boards" },
+    { name: "Asana", description: "Task management" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Cybersecurity Suite Pro - Advanced Security Solutions | Zion Tech Group</title>
-        <meta name="description" content="Protect your business with AI-powered cybersecurity solutions. Advanced threat detection, zero trust security, and 24/7 monitoring for comprehensive protection." />
-        <meta name="keywords" content="AI cybersecurity, threat detection, zero trust security, security monitoring, vulnerability management, incident response, compliance" />
-        <meta property="og:title" content="AI Cybersecurity Suite Pro - Zion Tech Group" />
-        <meta property="og:description" content="Advanced AI-powered cybersecurity solutions with comprehensive protection" />
+        <title>AI Project Manager Pro - Intelligent Project Management | Zion Tech Group</title>
+        <meta name="description" content="Transform your project management with AI-powered tools. Smart task management, predictive analytics, and automated workflows for modern teams." />
+        <meta name="keywords" content="AI project management, project management software, team collaboration, task automation, project analytics, workflow management" />
+        <meta property="og:title" content="AI Project Manager Pro - Zion Tech Group" />
+        <meta property="og:description" content="Intelligent project management platform with AI-powered automation and analytics" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-cybersecurity-suite-pro" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-project-manager-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -256,16 +214,16 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
               <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                   <Star className="w-4 h-4 mr-2" />
-                  #1 AI Cybersecurity Platform
+                  #1 AI Project Management Platform
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    AI Cybersecurity Suite Pro
+                    AI Project Manager Pro
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Protect your business with the most advanced AI-powered cybersecurity solutions. 
-                  Comprehensive threat detection, zero trust security, and 24/7 monitoring for complete protection.
+                  Revolutionize your project management with AI-powered automation, predictive analytics, 
+                  and intelligent task management. Built for modern teams who demand efficiency and results.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -273,7 +231,7 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    Get Security Assessment
+                    Start Free Trial
                   </a>
                   <a
                     href="#demo"
@@ -287,47 +245,17 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Security Layers Section */}
+          {/* Features Section */}
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Comprehensive Security Layers
+                    Powerful AI Features
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Multi-layered security approach covering all aspects of your digital infrastructure.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-                {securityLayers.map((layer, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 group"
-                  >
-                    <div className={`${layer.color} mb-3 group-hover:scale-110 transition-transform duration-300 flex justify-center`}>
-                      {layer.icon}
-                    </div>
-                    <div className="text-white font-semibold text-sm">{layer.name}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Features Section */}
-          <section className="py-20 bg-slate-900">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    AI-Powered Security Features
-                  </span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Everything you need to protect your business with intelligent cybersecurity solutions.
+                  Everything you need to manage projects intelligently with AI-powered automation and insights.
                 </p>
               </div>
               
@@ -360,56 +288,28 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Metrics Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Proven Security Results
-                  </span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Join thousands of organizations achieving remarkable security improvements with our AI platform.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                {metrics.map((metric, index) => (
-                  <div key={index} className="text-center group">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                      <div className="text-cyan-400">{metric.icon}</div>
-                    </div>
-                    <div className="text-3xl font-bold text-white mb-1">{metric.number}</div>
-                    <div className="text-gray-400 text-sm">{metric.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Compliance Section */}
+          {/* Integrations Section */}
           <section className="py-20 bg-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Compliance & Standards
+                    Seamless Integrations
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Meet industry standards and regulatory requirements with our comprehensive compliance framework.
+                  Connect with your favorite tools and platforms for a unified project management experience.
                 </p>
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-                {complianceStandards.map((standard, index) => (
+                {integrations.map((integration, index) => (
                   <div 
                     key={index} 
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
                   >
-                    <div className="text-cyan-400 font-bold text-lg mb-2">{standard.name}</div>
-                    <div className="text-gray-300 text-sm">{standard.description}</div>
+                    <div className="text-cyan-400 font-bold text-lg mb-2">{integration.name}</div>
+                    <div className="text-gray-300 text-sm">{integration.description}</div>
                   </div>
                 ))}
               </div>
@@ -422,11 +322,11 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Flexible Security Plans
+                    Simple Pricing
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the security plan that fits your organization's needs and risk profile.
+                  Choose the plan that fits your team size and project needs. All plans include our core AI features.
                 </p>
               </div>
               
@@ -486,11 +386,11 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Security Success Stories
+                    What Our Users Say
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  See how organizations are protecting their assets with our AI cybersecurity platform.
+                  Join thousands of teams that have transformed their project management with AI.
                 </p>
               </div>
               
@@ -524,11 +424,11 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready to Secure Your Business?
+                  Ready to Transform Your Project Management?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Start your security assessment today and discover how our AI-powered cybersecurity 
-                  solutions can protect your organization from evolving threats.
+                  Start your free trial today and experience the power of AI-driven project management. 
+                  No credit card required.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -543,7 +443,7 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                   >
                     <Mail className="w-5 h-5 mr-2" />
-                    Get Security Assessment
+                    Get Free Consultation
                   </a>
                 </div>
               </div>
@@ -555,4 +455,4 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
   );
 };
 
-export default AiCybersecuritySuiteProPage;
+export default AiProjectManagerProPage;
