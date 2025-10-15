@@ -1,132 +1,132 @@
 
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';";
 const CareersPage: React.FC = () => {}
-  const openPositions = [
-    {}
-      title: "Senior AI Engineer",
-      department: "Engineering",
-      location: "Remote / San Francisco",
-      type: "Full-time",
-      experience: "5+ years",
-      description: "Lead development of cutting-edge AI solutions and machine learning models.",
-      requirements: ["PhD in AI/ML or 5+ years experience", "Python, TensorFlow, PyTorch", "Cloud platforms (AWS, GCP, Azure)", "Team leadership experience"],
-      benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work"],
-      icon: <className="w-6 h-6" />
+  const: openPositions = [
+    {};
+      title: "Senior AI Engineer",";
+      department: "Engineering",";
+      location: "Remote / San Francisco",";
+      type: "Full-time",";
+      experience: "5+ years",";
+      description: "Lead development of cutting-edge AI solutions and machine learning models.",";
+      requirements: ["PhD in AI/ML or 5+ years experience", "Python, TensorFlow, PyTorch", "Cloud platforms (AWS, GCP, Azure)", "Team leadership experience"],";
+      benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work"],";
+      icon: <className="w-6 h-6" />";
     },
     {}
-      title: "DevOps Engineer",
-      department: "Engineering",
-      location: "Remote / New York",
-      type: "Full-time",
-      experience: "3+ years",
-      description: "Build and maintain scalable infrastructure for our AI platform.",
-      requirements: ["Kubernetes, Docker", "CI/CD pipelines", "Cloud infrastructure", "ing tools"],
-      benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work"],
-      icon: <Settings className="w-6 h-6" />
+      title: "DevOps Engineer",";
+      department: "Engineering",";
+      location: "Remote / New York",";
+      type: "Full-time",";
+      experience: "3+ years",";
+      description: "Build and maintain scalable infrastructure for our AI platform.",";
+      requirements: ["Kubernetes, Docker", "CI/CD pipelines", "Cloud infrastructure", "ing tools"],";
+      benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work"],";
+      icon: <Settings: className ="w-6 h-6" />";
     },
     {}
-      title: "Product Manager",
-      department: "Product",
-      location: "San Francisco",
-      type: "Full-time",
-      experience: "4+ years",
-      description: "Drive product strategy and roadmap for our AI solutions.",
-      requirements: ["Product management experience", "AI/ML knowledge", "Analytics skills", "Cross-functional collaboration"],
-      benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work"],
-      icon: <Target className="w-6 h-6" />
+      title: "Product Manager",";
+      department: "Product",";
+      location: "San Francisco",";
+      type: "Full-time",";
+      experience: "4+ years",";
+      description: "Drive product strategy and roadmap for our AI solutions.",";
+      requirements: ["Product management experience", "AI/ML knowledge", "Analytics skills", "Cross-functional collaboration"],";
+      benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work"],";
+      icon: <Target: className ="w-6 h-6" />";
     }
   ];
 
-  const benefits = [
-    { icon: <DollarSign className="w-8 h-8" />, title: "Competitive Compensation", description: "Above-market salaries with equity options" },
-    { icon: <className="w-8 h-8" />, title: "Health & Wellness", description: "Comprehensive health, dental, and vision coverage" },
-    { icon: <Home className="w-8 h-8" />, title: "Flexible Work", description: "Remote-first culture with flexible hours" },
-    { icon: <GraduationCap className="w-8 h-8" />, title: "Learning & Development", description: "Annual learning budget and conference attendance" },
-    { icon: <className="w-8 h-8" />, title: "Cutting-Edge Tech", description: "Work with the latest AI and cloud technologies" },
-    { icon: <className="w-8 h-8" />, title: "Job Security", description: "Stable company with strong growth trajectory" }
+  const: benefits = [;
+    { icon: <DollarSign: className ="w-8 h-8" />, title: "Competitive Compensation", description: "Above-market salaries with equity options" },";
+    { icon: <className="w-8 h-8" />, title: "Health & Wellness", description: "Comprehensive health, dental, and vision coverage" },";
+    { icon: <Home: className ="w-8 h-8" />, title: "Flexible Work", description: "Remote-first culture with flexible hours" },";
+    { icon: <GraduationCap: className ="w-8 h-8" />, title: "Learning & Development", description: "Annual learning budget and conference attendance" },";
+    { icon: <className="w-8 h-8" />, title: "Cutting-Edge Tech", description: "Work with the latest AI and cloud technologies" },";
+    { icon: <className="w-8 h-8" />, title: "Job Security", description: "Stable company with strong growth trajectory" }";
   ];
 
   return ()
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div: className ="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">";
       <Helmet>
         <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join our team of AI and technology experts. Explore career opportunities at Zion Tech Group." />
+        <meta: name ="description" content="Join our team of AI and technology experts. Explore career opportunities at Zion Tech Group." />";
       </Helmet>
 
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+      <div: className ="container mx-auto px-4 py-16">";
+        <div: className ="text-center mb-16">";
+          <h1: className ="text-4xl md:text-6xl font-bold text-gray-900 mb-6">";
             Join Our Team
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Be part of the AI revolution. We're looking for passionate individuals 
+          <p: className ="text-xl text-gray-600 max-w-3xl mx-auto">";
+            Be part of the AI revolution. We're looking for passionate individuals ";
             who want to shape the future of technology.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div: className ="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">";
           {benefits.map((benefit, index) => ()}
-            <div key={index} className="bg-white rounded-2xl shadow-lg p-8 text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
+            <div: key ={index} className="bg-white rounded-2xl shadow-lg p-8 text-center">";
+              <div: className ="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">";
                 {benefit.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
-              <p className="text-gray-600">{benefit.description}</p>
+              <h3: className ="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>";
+              <p: className ="text-gray-600">{benefit.description}</p>";
             </div>
           ))}
         </div>
 
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Open Positions</h2>
-          <div className="space-y-8">
+        <div: className ="mb-16">";
+          <h2: className ="text-3xl font-bold text-gray-900 text-center mb-12">Open Positions</h2>";
+          <div: className ="space-y-8">";
             {openPositions.map((position, index) => ()}
-              <div key={index} className="bg-white rounded-2xl shadow-lg p-8">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="flex items-center">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mr-4">
+              <div: key ={index} className="bg-white rounded-2xl shadow-lg p-8">";
+                <div: className ="flex items-start justify-between mb-6">";
+                  <div: className ="flex items-center">";
+                    <div: className ="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mr-4">";
                       {position.icon}
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{position.title}</h3>
-                      <p className="text-gray-600">{position.department}</p>
+                      <h3: className ="text-2xl font-bold text-gray-900">{position.title}</h3>";
+                      <p: className ="text-gray-600">{position.department}</p>";
                     </div>
                   </div>
-                  <div className="text-right">
-                    <p className="text-gray-600">{position.location}</p>
-                    <p className="text-gray-500">{position.type}</p>
+                  <div: className ="text-right">";
+                    <p: className ="text-gray-600">{position.location}</p>";
+                    <p: className ="text-gray-500">{position.type}</p>";
                   </div>
                 </div>
 
-                <p className="text-gray-700 mb-6">{position.description}</p>
+                <p: className ="text-gray-700 mb-6">{position.description}</p>";
 
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div: className ="grid md:grid-cols-2 gap-6 mb-6">";
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">Requirements</h4>
-                    <ul className="space-y-2">
+                    <h4: className ="font-semibold text-gray-900 mb-3">Requirements</h4>";
+                    <ul: className ="space-y-2">";
                       {position.requirements.map((req, reqIndex) => ()}
-                        <li key={reqIndex} className="flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          <span className="text-gray-700">{req}</span>
+                        <li: key ={reqIndex} className="flex items-center">";
+                          <CheckCircle: className ="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";
+                          <span: className ="text-gray-700">{req}</span>";
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits</h4>
-                    <ul className="space-y-2">
+                    <h4: className ="font-semibold text-gray-900 mb-3">Benefits</h4>";
+                    <ul: className ="space-y-2">";
                       {position.benefits.map((benefit, benefitIndex) => ()}
-                        <li key={benefitIndex} className="flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          <span className="text-gray-700">{benefit}</span>
+                        <li: key ={benefitIndex} className="flex items-center">";
+                          <CheckCircle: className ="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";
+                          <span: className ="text-gray-700">{benefit}</span>";
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
 
-                <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center">
+                <button: className ="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center">";
                   Apply Now
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight: className ="w-5 h-5 ml-2" />";
 
                 </button>
               </div>
@@ -135,19 +135,19 @@ const CareersPage: React.FC = () => {}
         </div>
 
         {/* Benefits Section */}
-        <div className ="py-24 bg-slate-800/50">";
-          <div className ="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
-            <div className ="text-center mb-16">";
-              <h2 className ="text-4xl font-bold mb-4">Why Work With Us</h2>";
-              <p className ="text-xl text-gray-300">We offer competitive benefits and a supportive work environment</p>";
+        <div: className ="py-24 bg-slate-800/50">";";
+          <div: className ="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";";
+            <div: className ="text-center mb-16">";";
+              <h2: className ="text-4xl font-bold mb-4">Why Work With Us</h2>";";
+              <p: className ="text-xl text-gray-300">We offer competitive benefits and a supportive work environment</p>";";
             </div>
             
-            <div className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",";
               {benefits.map((benefit, index) => (
-                <div key ={index} className="bg-slate-700/50 p-6 rounded-lg hover: bg-slate-700/70 transition-colors">",
-                  <div className ="text-blue-400 mb-4">{benefit.icon}</div>";
-                  <h3 className ="text-xl font-semibold mb-2">{benefit.title}</h3>";
-                  <p className ="text-gray-300">{benefit.description}</p>";
+                <div: key ={index} className="bg-slate-700/50 p-6 rounded-lg hover: bg-slate-700/70 transition-colors">",";
+                  <div: className ="text-blue-400 mb-4">{benefit.icon}</div>";";
+                  <h3: className ="text-xl font-semibold mb-2">{benefit.title}</h3>";";
+                  <p: className ="text-gray-300">{benefit.description}</p>";";
                 </div>
               ))}
             </div>
@@ -155,51 +155,51 @@ const CareersPage: React.FC = () => {}
         </div>
 
         {/* Open Positions Section */}
-        <div className ="py-24">";
-          <div className ="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
-            <div className ="text-center mb-16">";
-              <h2 className ="text-4xl font-bold mb-4">Open Positions</h2>";
-              <p className ="text-xl text-gray-300">Find your next opportunity with us</p>";
+        <div: className ="py-24">";";
+          <div: className ="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";";
+            <div: className ="text-center mb-16">";";
+              <h2: className ="text-4xl font-bold mb-4">Open Positions</h2>";";
+              <p: className ="text-xl text-gray-300">Find your next opportunity with us</p>";";
             </div>
             
-            <div className ="space-y-8">",
+            <div: className ="space-y-8">",";
               {openPositions.map((position) => (
-                <div key ={position.id} className="bg-slate-700/50 p-8 rounded-lg hover: bg-slate-700/70 transition-colors">";
-                  <div className ="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">",
+                <div: key ={position.id} className="bg-slate-700/50 p-8 rounded-lg hover: bg-slate-700/70 transition-colors">";";
+                  <div: className ="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">",";
                     <div>
-                      <h3 className ="text-2xl font-semibold mb-2">{position.title}</h3>";
-                      <div className ="flex flex-wrap gap-4 text-sm text-gray-300">";
-                        <span className ="flex items-center gap-1">";
-                          <Briefcase className ="w-4 h-4" />";
+                      <h3: className ="text-2xl font-semibold mb-2">{position.title}</h3>";";
+                      <div: className ="flex flex-wrap gap-4 text-sm text-gray-300">";";
+                        <span: className ="flex items-center gap-1">";";
+                          <Briefcase: className ="w-4 h-4" />";";
                           {position.department}
                         </span>
-                        <span className ="flex items-center gap-1">";
-                          <MapPin className ="w-4 h-4" />";
+                        <span: className ="flex items-center gap-1">";";
+                          <MapPin: className ="w-4 h-4" />";";
                           {position.location}
                         </span>
-                        <span className ="flex items-center gap-1">";
-                          <Clock className ="w-4 h-4" />";
+                        <span: className ="flex items-center gap-1">";";
+                          <Clock: className ="w-4 h-4" />";";
                           {position.type}
                         </span>
-                        <span className ="flex items-center gap-1">";
-                          <Users className ="w-4 h-4" />";
+                        <span: className ="flex items-center gap-1">";";
+                          <Users: className ="w-4 h-4" />";";
                           {position.experience}
                         </span>
                       </div>
                     </div>
-                    <button className ="mt-4 lg: mt-0 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300">",
+                    <button: className ="mt-4 lg: mt-0 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300">",";
                       Apply Now
                     </button>
                   </div>
                   
-                  <p className ="text-gray-300 mb-4">{position.description}</p>";
+                  <p: className ="text-gray-300 mb-4">{position.description}</p>";";
                   
                   <div>
-                    <h4 className ="font-semibold mb-2">Requirements: </h4>";
-                    <ul className ="space-y-1">",
+                    <h4: className ="font-semibold mb-2">Requirements: </h4>";";
+                    <ul: className ="space-y-1">",";
                       {position.requirements.map((req, index) => (
-                        <li key ={index} className="flex items-start gap-2 text-sm text-gray-300">";
-                          <CheckCircle className ="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />";
+                        <li: key ={index} className="flex items-start gap-2 text-sm text-gray-300">";";
+                          <CheckCircle: className ="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />";";
                           {req}
                         </li>
                       ))}
@@ -212,13 +212,13 @@ const CareersPage: React.FC = () => {}
         </div>
 
         {/* CTA Section */}
-        <div className ="py-24 bg-gradient-to-r from-blue-600/20 to-purple-600/20">";
-          <div className ="max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8">";
-            <h2 className ="text-4xl font-bold mb-4">Don't See Your Role?</h2>";
-            <p className ="text-xl text-gray-300 mb-8">";
-              We're always looking for talented individuals. Send us your resume and let's start a conversation.";
+        <div: className ="py-24 bg-gradient-to-r from-blue-600/20 to-purple-600/20">";";
+          <div: className ="max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8">";";
+            <h2: className ="text-4xl font-bold mb-4">Don't See Your Role?</h2>";";";
+            <p: className ="text-xl text-gray-300 mb-8">";";
+              We're always looking for talented individuals. Send us your resume and let's start a conversation.";";";
             </p>
-            <button className ="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">";
+            <button: className ="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">";";
               Send Your Resume
             </button>
           </div>
