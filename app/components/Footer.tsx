@@ -51,22 +51,12 @@ const Footer: React.FC = () => {
       services: [
         { name: 'Cloud Migration', path: '/cloud-migration-services' },
         { name: 'Cybersecurity', path: '/cybersecurity-consulting' },
-<<<<<<< HEAD
-        { name: 'DevOps', path: '/devops-solutions' },
-        { name: 'Mobile Development', path: '/mobile-development' },
-        { name: 'Web Development', path: '/web-development' },
-<<<<<<< HEAD
-=======
         { name: 'DevOps Solutions', path: '/devops-solutions' },
         { name: 'Mobile Development', path: '/mobile-app-development' },
         { name: 'Web Development', path: '/web-application-development' },
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-265e
-        { name: 'Database Solutions', path: '/database-solutions' }
-=======
         { name: 'Database Solutions', path: '/database-solutions' },
         { name: 'Quantum Computing', path: '/quantum-computing-solutions' },
         { name: 'Edge Computing', path: '/edge-computing-solutions' }
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-06e6
       ]
     },
     {
@@ -77,11 +67,8 @@ const Footer: React.FC = () => {
         { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
         { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
         { name: '5G Edge Computing', path: '/5g-edge-computing' },
-<<<<<<< HEAD
-        { name: '5G Private Networks', path: '/5g-private-networks' }
-=======
+        { name: '5G Private Networks', path: '/5g-private-networks' },
         { name: '5G Security Solutions', path: '/5g-security' }
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-265e
       ]
     }
   ];
