@@ -3,17 +3,18 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 text-white">
+    <footer className="futuristic-card bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white border-t border-cyan-500/20">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           <div className="lg:col-span-2">
-            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+            <h3 className="text-lg font-semibold mb-4 neon-text">Zion Tech Group</h3>
             <p className="text-gray-300 mb-4">
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
             <div className="text-sm text-gray-400 mb-4">
-              <p>Email: contact@ziontechgroup.com</p>
-              <p>Phone: +1 (555) 123-4567</p>
+              <p className="hover:text-cyan-400 transition-colors duration-300">Email: kleber@ziontechgroup.com</p>
+              <p className="hover:text-cyan-400 transition-colors duration-300">Phone: +1 302 464 0950</p>
+              <p className="hover:text-cyan-400 transition-colors duration-300">Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
             </div>
             <div className="flex space-x-4">
               <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
@@ -26,25 +27,26 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Core Services</h4>
+            <h4 className="text-md font-semibold mb-4 neon-text-purple">Core Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-gray-300 hover:text-white">All Services</Link></li>
-              <li><Link to="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
-              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-white">Cloud Infrastructure</Link></li>
-              <li><Link to="/5g-solutions" className="text-gray-300 hover:text-white">5G Solutions</Link></li>
-              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-white">Digital Transformation</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">All Services</Link></li>
+              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">AI Services</Link></li>
+              <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">IT Services</Link></li>
+              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Cloud Infrastructure</Link></li>
+              <li><Link to="/5g-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">5G Solutions</Link></li>
+              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Digital Transformation</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">AI Products</h4>
+            <h4 className="text-md font-semibold mb-4 neon-text-green">AI Products</h4>
             <ul className="space-y-2">
-              <li><Link to="/ai-content-generator" className="text-gray-300 hover:text-white">AI Content Generator</Link></li>
-              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">AI Customer Support Pro</Link></li>
-              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">AI Workflow Automator Pro</Link></li>
-              <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-white">AI Email Marketing Pro</Link></li>
-              <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
+              <li><Link to="/ai-content-generator" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">AI Content Generator</Link></li>
+              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">AI Customer Support Pro</Link></li>
+              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">AI Workflow Automator Pro</Link></li>
+              <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">AI Email Marketing Pro</Link></li>
+              <li><Link to="/zion-ai-chatbot-pro" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">AI Chatbot Pro</Link></li>
+              <li><Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">Pricing</Link></li>
             </ul>
           </div>
           

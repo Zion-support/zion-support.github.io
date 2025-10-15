@@ -11,16 +11,16 @@ const HomePage: React.FC = () => {
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "Innovation City",
-      "addressRegion": "IC",
-      "postalCode": "12345",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
       "addressCountry": "US"
     },
     "sameAs": [
@@ -50,46 +50,96 @@ const HomePage: React.FC = () => {
         </script>
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="min-h-screen futuristic-bg animated-bg cyber-grid particle-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold holographic-text mb-6 floating" data-text="Welcome to Zion Tech Group">
               Welcome to Zion Tech Group
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto floating-delayed">
               We provide cutting-edge AI and IT solutions to help your business thrive in the digital age.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 floating-slow">
+              <a href="/contact" className="neon-button neon-glow">
                 Get Started
               </a>
-              <a href="/about" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+              <a href="/about" className="cyber-button">
                 Learn More
               </a>
             </div>
             
             {/* Featured Services */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Services</h3>
-                <p className="text-gray-600 mb-4">
+              <div className="futuristic-card p-6 pulse-neon data-stream">
+                <h3 className="text-xl font-semibold neon-text-purple mb-4">AI Services</h3>
+                <p className="text-gray-300 mb-4">
                   Advanced artificial intelligence solutions including machine learning, NLP, and computer vision.
                 </p>
-                <a href="/ai-services" className="text-blue-600 hover:text-blue-800">Explore AI Services →</a>
+                <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 neon-glow">Explore AI Services →</a>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Infrastructure</h3>
-                <p className="text-gray-600 mb-4">
+              <div className="futuristic-card p-6 pulse-neon-slow matrix-rain">
+                <h3 className="text-xl font-semibold neon-text-green mb-4">Cloud Infrastructure</h3>
+                <p className="text-gray-300 mb-4">
                   Scalable cloud solutions that provide reliability, security, and performance for your business.
                 </p>
-                <a href="/cloud-infrastructure" className="text-blue-600 hover:text-blue-800">Explore Cloud Solutions →</a>
+                <a href="/cloud-infrastructure" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 neon-glow">Explore Cloud Solutions →</a>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
-                <p className="text-gray-600 mb-4">
+              <div className="futuristic-card p-6 pulse-neon">
+                <h3 className="text-xl font-semibold neon-text-pink mb-4">Digital Transformation</h3>
+                <p className="text-gray-300 mb-4">
                   Complete digital transformation services to modernize your business processes and systems.
                 </p>
-                <a href="/digital-transformation" className="text-blue-600 hover:text-blue-800">Learn More →</a>
+                <a href="/digital-transformation" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 neon-glow">Learn More →</a>
+              </div>
+            </div>
+
+            {/* Micro SAAS Services Section */}
+            <div className="mt-20">
+              <h2 className="text-3xl font-bold neon-text mb-8 text-center">Our AI-Powered Micro SAAS Solutions</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="futuristic-card p-6 pulse-neon">
+                  <h3 className="text-lg font-semibold neon-text-green mb-3">AI Chatbot Pro</h3>
+                  <p className="text-gray-300 text-sm mb-4">Advanced conversational AI with natural language understanding</p>
+                  <a href="/zion-ai-chatbot-pro" className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors duration-300">Learn More →</a>
+                </div>
+                <div className="futuristic-card p-6 pulse-neon-slow">
+                  <h3 className="text-lg font-semibold neon-text-purple mb-3">Document Processor</h3>
+                  <p className="text-gray-300 text-sm mb-4">Intelligent document processing with OCR and data extraction</p>
+                  <a href="/zion-ai-document-processor" className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors duration-300">Learn More →</a>
+                </div>
+                <div className="futuristic-card p-6 pulse-neon">
+                  <h3 className="text-lg font-semibold neon-text-pink mb-3">Workflow Automator</h3>
+                  <p className="text-gray-300 text-sm mb-4">Automate business processes with AI-powered optimization</p>
+                  <a href="/zion-ai-workflow-automator-pro" className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors duration-300">Learn More →</a>
+                </div>
+                <div className="futuristic-card p-6 pulse-neon-slow">
+                  <h3 className="text-lg font-semibold neon-text mb-3">Email Marketing Pro</h3>
+                  <p className="text-gray-300 text-sm mb-4">AI-powered email marketing with personalization and automation</p>
+                  <a href="/zion-ai-email-marketing-pro" className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors duration-300">Learn More →</a>
+                </div>
+              </div>
+            </div>
+
+            {/* Stats Section */}
+            <div className="mt-20">
+              <h2 className="text-3xl font-bold neon-text mb-8 text-center">Why Choose Zion Tech Group?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl font-bold neon-text-green mb-2">500+</div>
+                  <div className="text-gray-300">Projects Completed</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold neon-text-purple mb-2">50+</div>
+                  <div className="text-gray-300">AI Solutions</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold neon-text-pink mb-2">24/7</div>
+                  <div className="text-gray-300">Support Available</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold neon-text mb-2">99.9%</div>
+                  <div className="text-gray-300">Uptime Guarantee</div>
+                </div>
               </div>
             </div>
           </div>

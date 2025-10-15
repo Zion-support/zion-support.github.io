@@ -33,6 +33,8 @@ import MobileDevelopmentPage from './app/mobile-development/page';
 import DatabaseManagementPage from './app/database-management/page';
 import NetworkInfrastructurePage from './app/network-infrastructure/page';
 import CookiesPage from './app/cookies/page';
+import ZionAIChatbotProPage from './app/zion-ai-chatbot-pro/page';
+import ZionAIDocumentProcessorPage from './app/zion-ai-document-processor/page';
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -99,6 +101,10 @@ export default function App() {
                   <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
                   <Route path="/database-management" element={<DatabaseManagementPage />} />
                   <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                  
+                  {/* New AI Product Pages */}
+                  <Route path="/zion-ai-chatbot-pro" element={<ZionAIChatbotProPage />} />
+                  <Route path="/zion-ai-document-processor" element={<ZionAIDocumentProcessorPage />} />
                   
                   {/* Company Pages */}
                   <Route path="/team" element={<TeamPage />} />
