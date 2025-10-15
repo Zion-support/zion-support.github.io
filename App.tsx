@@ -53,16 +53,23 @@ const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow
 const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 
-// New Micro SaaS Services
-const ZionAIChatbotBuilderPage = lazy(() => import('./app/zion-ai-chatbot-builder/page'));
-const ZionAIFormBuilderPage = lazy(() => import('./app/zion-ai-form-builder/page'));
-const ZionAIDocumentProcessorPage = lazy(() => import('./app/zion-ai-document-processor/page'));
-const ZionAISchedulingAssistantPage = lazy(() => import('./app/zion-ai-scheduling-assistant/page'));
-const ZionAISocialMediaManagerPage = lazy(() => import('./app/zion-ai-social-media-manager/page'));
-const ZionAICRMOptimizerPage = lazy(() => import('./app/zion-ai-crm-optimizer/page'));
-const ZionAIEmailOptimizerPage = lazy(() => import('./app/zion-ai-email-optimizer/page'));
-const ZionAIWebsiteAnalyzerPage = lazy(() => import('./app/zion-ai-website-analyzer/page'));
-const ZionAIDataVisualizerPage = lazy(() => import('./app/zion-ai-data-visualizer/page'));
+// Additional Service Pages
+const AIChatbotBuilderPage = lazy(() => import('./app/ai-chatbot-builder/page'));
+const AIDocumentProcessorPage = lazy(() => import('./app/ai-document-processor/page'));
+const AIFormBuilderPage = lazy(() => import('./app/ai-form-builder/page'));
+const AIFraudDetectionPage = lazy(() => import('./app/ai-fraud-detection/page'));
+const AIImageRecognitionPage = lazy(() => import('./app/ai-image-recognition/page'));
+const AILeadScoringPage = lazy(() => import('./app/ai-lead-scoring/page'));
+const AIPredictiveMaintenancePage = lazy(() => import('./app/ai-predictive-maintenance/page'));
+const AIPriceOptimizerPage = lazy(() => import('./app/ai-price-optimizer/page'));
+const AISchedulingAssistantPage = lazy(() => import('./app/ai-scheduling-assistant/page'));
+const AIVoiceAssistantPage = lazy(() => import('./app/ai-voice-assistant/page'));
+const APIDevelopmentPage = lazy(() => import('./app/api-development/page'));
+const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
+const DataEngineeringPage = lazy(() => import('./app/data-engineering/page'));
+const DevOpsAutomationPage = lazy(() => import('./app/devops-automation/page'));
+const IoTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
+const SecurityAuditPage = lazy(() => import('./app/security-audit/page'));
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -127,6 +134,24 @@ export default function App() {
                   <Route path="/database-management" element={<DatabaseManagementPage />} />
                   <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
                   
+                  {/* Additional Service Pages */}
+                  <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                  <Route path="/ai-document-processor" element={<AIDocumentProcessorPage />} />
+                  <Route path="/ai-form-builder" element={<AIFormBuilderPage />} />
+                  <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
+                  <Route path="/ai-image-recognition" element={<AIImageRecognitionPage />} />
+                  <Route path="/ai-lead-scoring" element={<AILeadScoringPage />} />
+                  <Route path="/ai-predictive-maintenance" element={<AIPredictiveMaintenancePage />} />
+                  <Route path="/ai-price-optimizer" element={<AIPriceOptimizerPage />} />
+                  <Route path="/ai-scheduling-assistant" element={<AISchedulingAssistantPage />} />
+                  <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                  <Route path="/api-development" element={<APIDevelopmentPage />} />
+                  <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
+                  <Route path="/data-engineering" element={<DataEngineeringPage />} />
+                  <Route path="/devops-automation" element={<DevOpsAutomationPage />} />
+                  <Route path="/iot-solutions" element={<IoTSolutionsPage />} />
+                  <Route path="/security-audit" element={<SecurityAuditPage />} />
+                  
                   {/* Company Pages */}
                   <Route path="/team" element={<TeamPage />} />
                   <Route path="/careers" element={<CareersPage />} />
@@ -163,17 +188,6 @@ export default function App() {
                   <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
                   <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
                   <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
-                  
-                  {/* New Micro SaaS Services */}
-                  <Route path="/zion-ai-chatbot-builder" element={<ZionAIChatbotBuilderPage />} />
-                  <Route path="/zion-ai-form-builder" element={<ZionAIFormBuilderPage />} />
-                  <Route path="/zion-ai-document-processor" element={<ZionAIDocumentProcessorPage />} />
-                  <Route path="/zion-ai-scheduling-assistant" element={<ZionAISchedulingAssistantPage />} />
-                  <Route path="/zion-ai-social-media-manager" element={<ZionAISocialMediaManagerPage />} />
-                  <Route path="/zion-ai-crm-optimizer" element={<ZionAICRMOptimizerPage />} />
-                  <Route path="/zion-ai-email-optimizer" element={<ZionAIEmailOptimizerPage />} />
-                  <Route path="/zion-ai-website-analyzer" element={<ZionAIWebsiteAnalyzerPage />} />
-                  <Route path="/zion-ai-data-visualizer" element={<ZionAIDataVisualizerPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">

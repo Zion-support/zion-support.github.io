@@ -32,27 +32,38 @@ const Sidebar: React.FC = () => {
             <Link to="/micro-saas-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Micro SaaS Solutions
             </Link>
-          </div>
-          
-          <div className="space-y-1 mt-6">
-            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Micro SaaS Tools</div>
-            <Link to="/zion-ai-chatbot-builder" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+            <Link to="/ai-chatbot-builder" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               AI Chatbot Builder
             </Link>
-            <Link to="/zion-ai-form-builder" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              AI Form Builder
-            </Link>
-            <Link to="/zion-ai-document-processor" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+            <Link to="/ai-document-processor" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               AI Document Processor
             </Link>
-            <Link to="/zion-ai-scheduling-assistant" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              AI Scheduling Assistant
+            <Link to="/ai-fraud-detection" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Fraud Detection
             </Link>
-            <Link to="/zion-ai-social-media-manager" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              AI Social Media Manager
+            <Link to="/ai-image-recognition" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Image Recognition
             </Link>
-            <Link to="/zion-ai-crm-optimizer" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              AI CRM Optimizer
+            <Link to="/ai-voice-assistant" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Voice Assistant
+            </Link>
+            <Link to="/data-engineering" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Data Engineering
+            </Link>
+            <Link to="/api-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              API Development
+            </Link>
+            <Link to="/devops-automation" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              DevOps Automation
+            </Link>
+            <Link to="/iot-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              IoT Solutions
+            </Link>
+            <Link to="/blockchain-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Blockchain Solutions
+            </Link>
+            <Link to="/security-audit" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Security Audit
             </Link>
           </div>
           
@@ -79,11 +90,30 @@ const Sidebar: React.FC = () => {
             <Link to="/zion-ai-task-scheduler" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Task Scheduler
             </Link>
-            <Link to="/zion-ai-customer-sentiment-tracker" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              Sentiment Tracker
+            <Link to="/zion-smart-expense-tracker" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Smart Expense Tracker
             </Link>
-            <Link to="/zion-ai-meeting-transcriber" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              Meeting Transcriber
+          </div>
+          
+          <div className="mb-4">
+            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Additional Services</h3>
+            <Link to="/ai-chatbot-builder" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Chatbot Builder
+            </Link>
+            <Link to="/ai-document-processor" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Document Processor
+            </Link>
+            <Link to="/ai-fraud-detection" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Fraud Detection
+            </Link>
+            <Link to="/ai-voice-assistant" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Voice Assistant
+            </Link>
+            <Link to="/blockchain-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Blockchain Solutions
+            </Link>
+            <Link to="/iot-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              IoT Solutions
             </Link>
           </div>
           

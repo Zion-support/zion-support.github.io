@@ -417,12 +417,296 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   :root {
     --space-md: 0.75rem;
     --space-lg: 1rem;
     --space-xl: 1.5rem;
     --space-2xl: 2rem;
+  }
+  
+  .btn-futuristic {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+  
+  .card-futuristic {
+    padding: 16px;
+  }
+  
+  .nav-link-futuristic {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  /* Mobile Navigation */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-primary);
+    z-index: 9999;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .mobile-nav.open {
+    transform: translateX(0);
+  }
+  
+  /* Responsive Grid */
+  .grid-responsive {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .grid-responsive {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .grid-responsive {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .grid-responsive {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .text-responsive {
+    font-size: 0.875rem;
+  }
+  
+  .text-responsive-lg {
+    font-size: 1.125rem;
+  }
+  
+  .text-responsive-xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-responsive-2xl {
+    font-size: 2rem;
+  }
+  
+  .text-responsive-3xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-responsive-4xl {
+    font-size: 3rem;
+  }
+  
+  .text-responsive-5xl {
+    font-size: 3.5rem;
+  }
+  
+  .text-responsive-6xl {
+    font-size: 4rem;
+  }
+  
+  /* Mobile spacing */
+  .mobile-p-4 {
+    padding: 1rem;
+  }
+  
+  .mobile-p-6 {
+    padding: 1.5rem;
+  }
+  
+  .mobile-p-8 {
+    padding: 2rem;
+  }
+  
+  .mobile-py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .mobile-py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .mobile-py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  /* Mobile margins */
+  .mobile-mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .mobile-mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .mobile-mb-8 {
+    margin-bottom: 2rem;
+  }
+  
+  .mobile-mb-12 {
+    margin-bottom: 3rem;
+  }
+  
+  /* Mobile flexbox */
+  .mobile-flex-col {
+    flex-direction: column;
+  }
+  
+  .mobile-flex-col-reverse {
+    flex-direction: column-reverse;
+  }
+  
+  .mobile-items-center {
+    align-items: center;
+  }
+  
+  .mobile-justify-center {
+    justify-content: center;
+  }
+  
+  .mobile-text-center {
+    text-align: center;
+  }
+  
+  /* Mobile grid */
+  .mobile-grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .mobile-gap-4 {
+    gap: 1rem;
+  }
+  
+  .mobile-gap-6 {
+    gap: 1.5rem;
+  }
+  
+  .mobile-gap-8 {
+    gap: 2rem;
+  }
+}
+
+/* Tablet responsive */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .tablet-grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .tablet-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .tablet-text-lg {
+    font-size: 1.125rem;
+  }
+  
+  .tablet-text-xl {
+    font-size: 1.25rem;
+  }
+  
+  .tablet-text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .tablet-text-3xl {
+    font-size: 1.875rem;
+  }
+  
+  .tablet-text-4xl {
+    font-size: 2.25rem;
+  }
+  
+  .tablet-text-5xl {
+    font-size: 3rem;
+  }
+}
+
+/* Desktop responsive */
+@media (min-width: 1025px) {
+  .desktop-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .desktop-grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  
+  .desktop-grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  
+  .desktop-text-6xl {
+    font-size: 3.75rem;
+  }
+  
+  .desktop-text-7xl {
+    font-size: 4.5rem;
+  }
+  
+  .desktop-text-8xl {
+    font-size: 6rem;
+  }
+  
+  .desktop-text-9xl {
+    font-size: 8rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .high-dpi-text {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Landscape orientation */
+@media (orientation: landscape) and (max-height: 500px) {
+  .landscape-hide {
+    display: none;
+  }
+  
+  .landscape-compact {
+    padding: 0.5rem;
+  }
+}
+
+/* Print responsive */
+@media print {
+  .print-hide {
+    display: none !important;
+  }
+  
+  .print-show {
+    display: block !important;
+  }
+  
+  .print-text-black {
+    color: black !important;
+  }
+  
+  .print-bg-white {
+    background: white !important;
   }
 }
 
