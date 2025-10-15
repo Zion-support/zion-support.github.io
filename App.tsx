@@ -159,6 +159,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
     </div>
   </div>
 );
+
 // Loading component
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center">
@@ -305,9 +306,6 @@ const App = memo(() => {
                     
                     {/* Additional missing pages */}
                     <Route path="/accessibility-page" element={<AccessibilityPagePage />} />
-                    <Route path="/ai-crm-optimizer" element={<AICRMOptimizerPage />} />
-                    <Route path="/ai-data-visualizer" element={<AIDataVisualizerPage />} />
-                    <Route path="/ai-email-optimizer" element={<AIEmailOptimizerPage />} />
                     <Route path="/ai-fraud-detection-pro" element={<AIFraudDetectionProPage />} />
                     <Route path="/ai-image-recognition-pro" element={<AIImageRecognitionProPage />} />
                     <Route path="/ai-lead-scoring-pro" element={<AILeadScoringProPage />} />
@@ -382,7 +380,8 @@ const App = memo(() => {
               </ErrorBoundary>
             </main>
             
-            <Footer />          </div>
+            <Footer />
+          </div>
         </Router>
       </HelmetProvider>
     </GlobalErrorBoundary>
@@ -390,5 +389,4 @@ const App = memo(() => {
 });
 
 App.displayName = 'App';
-
 export default App;
