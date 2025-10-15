@@ -1,1217 +1,431 @@
-<<<<<<< HEAD
 'use client';
-import React, { useState } from 'react';
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '../components/SEOHead';
+import FuturisticBackground from '../components/FuturisticBackground';
+import NeonButton from '../components/NeonButton';
+import AnimatedCard from '../components/AnimatedCard';
 import { 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Users, 
+  Server, 
+  Cloud, 
   Shield, 
-  Clock, 
-  TrendingUp,
-  BarChart3,
-  Database,
-  Smartphone,
+  Database, 
+  Smartphone, 
   Globe,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Users,
+  Clock,
   Target,
-  Lightbulb,
-  Rocket,
-  Award,
-  Phone,
-  Mail,
-  MapPin,
   Zap,
-  Code,
-  Eye,
-  MessageSquare,
-  Cpu,
-  Network,
-  FileText,
-  Settings,
-  CreditCard,
   Lock,
-  Cloud,
-  Wifi,
-  Monitor,
-  Server,
-  Key,
-  Search,
-  Filter,
-  Download,
-  Upload,
-  Share,
-  Edit,
-  Trash,
-  Plus,
-  Minus,
-  Refresh,
-  Play,
-  Pause,
-  Stop,
-  Volume2,
-  Camera,
-  Image,
-  Video,
-  Music,
-  Headphones,
-  Mic,
-  MicOff,
-  Bell,
-  BellOff,
-  Heart,
-  ThumbsUp,
-  ThumbsDown,
-  Flag,
-  Bookmark,
-  Tag,
-  Calendar,
-  ClockIcon,
-  Timer,
-  Stopwatch,
-  AlarmClock,
-  CalendarDays,
-  Clock3,
-  Clock4,
-  Clock5,
-  Clock6,
-  Clock7,
-  Clock8,
-  Clock9,
-  Clock10,
-  Clock11,
-  Clock12,
-  Sun,
-  Moon,
-  CloudSun,
-  CloudRain,
-  CloudSnow,
-  CloudLightning,
-  CloudFog,
-  CloudDrizzle,
-  CloudHail,
-  CloudSleet,
-  CloudWind,
-  CloudMoon,
-  CloudMoonRain,
-  CloudMoonSnow,
-  CloudMoonLightning,
-  CloudMoonFog,
-  CloudMoonDrizzle,
-  CloudMoonHail,
-  CloudMoonSleet,
-  CloudMoonWind,
-  CloudSunRain,
-  CloudSunSnow,
-  CloudSunLightning,
-  CloudSunFog,
-  CloudSunDrizzle,
-  CloudSunHail,
-  CloudSunSleet,
-  CloudSunWind,
-  Package,
-  HardDrive,
-  Router,
-  Printer,
-  Scanner,
-  Keyboard,
-  Mouse,
-  Headset,
-  Webcam,
-  Speaker,
-  Microphone,
-  Laptop,
-  Desktop,
-  Tablet,
-  Smartphone as PhoneIcon,
-  Watch,
-  Gamepad2,
-  Joystick,
-  Controller,
-  Remote,
-  Cable,
-  Plug,
-  Battery,
-  Power,
-  Wrench,
-  Screwdriver,
-  Hammer,
-  Saw,
-  Drill,
-  Screw,
-  Nut,
-  Bolt,
-  Washer,
-  Spring,
-  Gear,
-  Cog,
-  Settings2,
-  Sliders,
-  ToggleLeft,
-  ToggleRight,
-  Switch,
-  Button,
-  Knob,
-  Dial,
-  Lever,
-  Handle,
-  Grip,
-  Hold,
-  Grab,
-  Pinch,
-  Tap,
-  Click,
-  Press,
-  Push,
-  Pull,
-  Drag,
-  Drop,
-  Move,
-  Slide,
-  Swipe,
-  Scroll,
-  Zoom,
-  Rotate,
-  Flip,
-  Tilt,
-  Bend,
-  Stretch,
-  Squeeze,
-  Squash,
-  Compress,
-  Expand,
-  Shrink,
-  Grow,
-  Increase,
-  Decrease,
-  Add,
-  Remove,
-  Insert,
-  Delete,
-  Create,
-  Destroy,
-  Build,
-  Break,
-  Fix,
-  Repair,
-  Maintain,
-  Service,
-  Support,
-  Help,
-  Guide,
-  Tutorial,
-  Manual,
-  Documentation,
-  Instructions,
-  Steps,
-  Process,
-  Workflow,
-  Pipeline,
-  Chain,
-  Link,
-  Connect,
-  Disconnect,
-  Join,
-  Split,
-  Merge,
-  Combine,
-  Separate,
-  Divide,
-  Multiply,
-  Add as PlusIcon,
-  Subtract,
-  Equals,
-  NotEquals,
-  GreaterThan,
-  LessThan,
-  GreaterThanOrEqual,
-  LessThanOrEqual,
-  And,
-  Or,
-  Not,
-  Xor,
-  Nand,
-  Nor,
-  Xnor,
-  True,
-  False,
-  Null,
-  Undefined,
-  Empty,
-  Full,
-  Half,
-  Quarter,
-  Third,
-  Fifth,
-  Sixth,
-  Seventh,
-  Eighth,
-  Ninth,
-  Tenth,
-  Hundredth,
-  Thousandth,
-  Millionth,
-  Billionth,
-  Trillionth,
-  Infinity,
-  NaN,
-  Error,
-  Warning,
-  Info,
-  Success,
-  Failure,
-  Pass,
-  Fail,
-  Skip,
-  Retry,
-  Cancel,
-  Abort,
-  Stop as StopIcon,
-  Pause as PauseIcon,
-  Play as PlayIcon,
-  Record,
-  Rewind,
-  FastForward,
-  SkipBack,
-  SkipForward,
-  Previous,
-  Next,
-  First,
-  Last,
-  Top,
-  Bottom,
-  Up,
-  Down,
-  Left,
-  Right,
-  North,
-  South,
-  East,
-  West,
-  Northeast,
-  Northwest,
-  Southeast,
-  Southwest,
-  Center,
-  Middle,
-  Edge,
-  Corner,
-  Side,
-  Front,
-  Back,
-  Inside,
-  Outside,
-  Above,
-  Below,
-  Over,
-  Under,
-  Beside,
-  Between,
-  Among,
-  Through,
-  Across,
-  Around,
-  Along,
-  Against,
-  Toward,
-  Away,
-  Into,
-  Onto,
-  Off,
-  On,
-  In,
-  Out,
-  Up as UpIcon,
-  Down as DownIcon,
-  Left as LeftIcon,
-  Right as RightIcon,
-  Forward,
-  Backward,
-  Clockwise,
-  Counterclockwise,
-  Horizontal,
-  Vertical,
-  Diagonal,
-  Parallel,
-  Perpendicular,
-  Tangent,
-  Normal,
-  Average,
-  Median,
-  Mode,
-  Range,
-  Minimum,
-  Maximum,
-  Sum,
-  Product,
-  Difference,
-  Quotient,
-  Remainder,
-  Modulo,
-  Power,
-  Root,
-  Square,
-  Cube,
-  Factorial,
-  Logarithm,
-  Exponential,
-  Sine,
-  Cosine,
-  Tangent as TanIcon,
-  Cotangent,
-  Secant,
-  Cosecant,
-  ArcSine,
-  ArcCosine,
-  ArcTangent,
-  ArcCotangent,
-  ArcSecant,
-  ArcCosecant,
-  HyperbolicSine,
-  HyperbolicCosine,
-  HyperbolicTangent,
-  HyperbolicCotangent,
-  HyperbolicSecant,
-  HyperbolicCosecant,
-  InverseHyperbolicSine,
-  InverseHyperbolicCosine,
-  InverseHyperbolicTangent,
-  InverseHyperbolicCotangent,
-  InverseHyperbolicSecant,
-  InverseHyperbolicCosecant,
-  Absolute,
-  Ceiling,
-  Floor,
-  Round,
-  Truncate,
-  Sign,
-  Magnitude,
-  Phase,
-  Real,
-  Imaginary,
-  Complex,
-  Conjugate,
-  Transpose,
-  Inverse,
-  Determinant,
-  Trace,
-  Rank,
-  Nullity,
-  Eigenvalue,
-  Eigenvector,
-  Singular,
-  Nonsingular,
-  Symmetric,
-  Antisymmetric,
-  SkewSymmetric,
-  Hermitian,
-  SkewHermitian,
-  Unitary,
-  Orthogonal,
-  Normal as NormalMatrix,
-  PositiveDefinite,
-  NegativeDefinite,
-  Indefinite,
-  Semidefinite,
-  PositiveSemidefinite,
-  NegativeSemidefinite,
-  Diagonal as DiagonalMatrix,
-  Tridiagonal,
-  Banded,
-  Sparse,
-  Dense,
-  Full as FullMatrix,
-  Empty as EmptyMatrix,
-  Zero,
-  Identity,
-  Ones,
-  Random,
-  Uniform,
-  Normal as NormalDistribution,
-  Gaussian,
-  Binomial,
-  Poisson,
-  Exponential as ExponentialDistribution,
-  Gamma,
-  Beta,
-  ChiSquared,
-  StudentT,
-  FisherF,
-  Uniform as UniformDistribution,
-  Triangular,
-  Lognormal,
-  Weibull,
-  Pareto,
-  Cauchy,
-  Laplace,
-  Logistic,
-  Hypergeometric,
-  Geometric,
-  NegativeBinomial,
-  Multinomial,
-  Dirichlet,
-  Wishart,
-  InverseWishart,
-  MatrixT,
-  MatrixNormal,
-  MatrixGamma,
-  MatrixBeta,
-  MatrixDirichlet,
-  MatrixWishart,
-  MatrixInverseWishart,
-  MatrixT as MatrixTDistribution,
-  MatrixNormal as MatrixNormalDistribution,
-  MatrixGamma as MatrixGammaDistribution,
-  MatrixBeta as MatrixBetaDistribution,
-  MatrixDirichlet as MatrixDirichletDistribution,
-  MatrixWishart as MatrixWishartDistribution,
-  MatrixInverseWishart as MatrixInverseWishartDistribution
+  Settings,
+  Network
 } from 'lucide-react';
 
 const ITSolutionsPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-
   const itServices = [
     {
       id: 'cloud-infrastructure',
-      name: 'Cloud Infrastructure Solutions',
-      price: '$299/mo',
-      originalPrice: '$599/mo',
-      description: 'Comprehensive cloud infrastructure management and optimization',
-      longDescription: 'Design, deploy, and manage scalable cloud infrastructure solutions using AWS, Azure, and Google Cloud platforms.',
+      name: 'Cloud Infrastructure Management',
+      description: 'Comprehensive cloud infrastructure solutions with AWS, Azure, and GCP expertise for scalable, secure, and cost-effective deployments.',
+      icon: Cloud,
       features: [
-        'Multi-cloud Architecture',
-        'Auto-scaling Solutions',
-        'Load Balancing',
-        'Disaster Recovery',
-        'Security Hardening',
-        'Cost Optimization',
-        'Performance Monitoring',
-        'Backup & Recovery',
-        'Migration Services',
-        '24/7 Support'
+        'Multi-cloud architecture',
+        'Auto-scaling solutions',
+        'Cost optimization',
+        'Security compliance',
+        'Disaster recovery',
+        '24/7 monitoring'
       ],
-      benefits: [
-        'Reduce infrastructure costs by 40%',
-        'Improve scalability and flexibility',
-        'Enhance security and compliance',
-        'Increase system reliability',
-        'Streamline operations'
-      ],
-      category: 'Cloud Computing',
-      icon: <Cloud className="w-8 h-8 text-blue-400" />,
-      popular: true,
-      link: 'https://ziontechgroup.com/cloud-infrastructure'
+      pricing: {
+        starter: { price: 299, period: 'month', features: ['Basic cloud setup', 'Email support', 'Standard monitoring'] },
+        professional: { price: 799, period: 'month', features: ['Advanced architecture', 'Priority support', 'Custom monitoring', 'API access'] },
+        enterprise: { price: 1499, period: 'month', features: ['Custom solutions', '24/7 support', 'Dedicated team', 'White-label options'] }
+      },
+      href: '/cloud-infrastructure',
+      category: 'Cloud',
+      rating: 4.9,
+      users: '2,100+'
     },
     {
       id: 'cybersecurity-solutions',
       name: 'Cybersecurity Solutions',
-      price: '$399/mo',
-      originalPrice: '$799/mo',
-      description: 'Comprehensive security solutions to protect your digital assets',
-      longDescription: 'Implement enterprise-grade cybersecurity measures including threat detection, incident response, and compliance management.',
+      description: 'Advanced cybersecurity services including threat detection, vulnerability assessment, and compliance management.',
+      icon: Shield,
       features: [
-        'Threat Detection & Response',
-        'Vulnerability Assessment',
-        'Penetration Testing',
-        'Security Monitoring',
-        'Compliance Management',
-        'Identity & Access Management',
-        'Data Encryption',
-        'Network Security',
-        'Security Training',
-        'Incident Response'
+        'Threat detection',
+        'Vulnerability assessment',
+        'Compliance management',
+        'Incident response',
+        'Security training',
+        'Penetration testing'
       ],
-      benefits: [
-        'Protect against cyber threats',
-        'Ensure regulatory compliance',
-        'Reduce security risks',
-        'Improve incident response',
-        'Enhance security posture'
-      ],
+      pricing: {
+        starter: { price: 399, period: 'month', features: ['Basic security', 'Email support', 'Standard monitoring'] },
+        professional: { price: 999, period: 'month', features: ['Advanced security', 'Priority support', 'Custom solutions', 'API access'] },
+        enterprise: { price: 1999, period: 'month', features: ['Full security suite', '24/7 support', 'Dedicated team', 'Custom compliance'] }
+      },
+      href: '/cybersecurity-solutions',
       category: 'Security',
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      popular: true,
-      link: 'https://ziontechgroup.com/cybersecurity-solutions'
+      rating: 4.8,
+      users: '1,800+'
+    },
+    {
+      id: 'database-management',
+      name: 'Database Management Pro',
+      description: 'Expert database administration, optimization, and management services for MySQL, PostgreSQL, MongoDB, and more.',
+      icon: Database,
+      features: [
+        'Database optimization',
+        'Performance tuning',
+        'Backup & recovery',
+        'Security hardening',
+        'Migration services',
+        'Monitoring & alerts'
+      ],
+      pricing: {
+        starter: { price: 199, period: 'month', features: ['1 database', 'Basic optimization', 'Email support'] },
+        professional: { price: 499, period: 'month', features: ['5 databases', 'Advanced optimization', 'Priority support', 'API access'] },
+        enterprise: { price: 999, period: 'month', features: ['Unlimited databases', 'Custom solutions', '24/7 support', 'Dedicated DBA'] }
+      },
+      href: '/database-management',
+      category: 'Database',
+      rating: 4.7,
+      users: '1,500+'
+    },
+    {
+      id: 'mobile-development',
+      name: 'Mobile App Development',
+      description: 'Native and cross-platform mobile app development for iOS and Android with modern frameworks and best practices.',
+      icon: Smartphone,
+      features: [
+        'Native iOS/Android',
+        'Cross-platform development',
+        'UI/UX design',
+        'App store deployment',
+        'Performance optimization',
+        'Maintenance & support'
+      ],
+      pricing: {
+        starter: { price: 4999, period: 'project', features: ['Basic app', '2 platforms', '3 months support'] },
+        professional: { price: 14999, period: 'project', features: ['Advanced app', 'All platforms', '6 months support', 'API integration'] },
+        enterprise: { price: 49999, period: 'project', features: ['Custom app', 'White-label', '12 months support', 'Dedicated team'] }
+      },
+      href: '/mobile-development',
+      category: 'Development',
+      rating: 4.9,
+      users: '800+'
+    },
+    {
+      id: 'web-development',
+      name: 'Web Application Development',
+      description: 'Modern web application development with React, Node.js, Python, and other cutting-edge technologies.',
+      icon: Globe,
+      features: [
+        'Modern frameworks',
+        'Responsive design',
+        'API development',
+        'Performance optimization',
+        'SEO optimization',
+        'Security implementation'
+      ],
+      pricing: {
+        starter: { price: 2999, period: 'project', features: ['Basic website', '3 pages', '1 month support'] },
+        professional: { price: 9999, period: 'project', features: ['Advanced web app', 'Unlimited pages', '3 months support', 'API integration'] },
+        enterprise: { price: 29999, period: 'project', features: ['Custom web app', 'White-label', '6 months support', 'Dedicated team'] }
+      },
+      href: '/web-development',
+      category: 'Development',
+      rating: 4.8,
+      users: '2,500+'
+    },
+    {
+      id: 'devops-solutions',
+      name: 'DevOps Solutions',
+      description: 'Complete DevOps implementation with CI/CD pipelines, infrastructure as code, and automated deployment.',
+      icon: Settings,
+      features: [
+        'CI/CD pipelines',
+        'Infrastructure as code',
+        'Container orchestration',
+        'Monitoring & logging',
+        'Automated testing',
+        'Deployment automation'
+      ],
+      pricing: {
+        starter: { price: 399, period: 'month', features: ['Basic CI/CD', 'Email support', 'Standard monitoring'] },
+        professional: { price: 999, period: 'month', features: ['Advanced DevOps', 'Priority support', 'Custom pipelines', 'API access'] },
+        enterprise: { price: 1999, period: 'month', features: ['Full DevOps suite', '24/7 support', 'Dedicated team', 'Custom solutions'] }
+      },
+      href: '/devops-solutions',
+      category: 'DevOps',
+      rating: 4.8,
+      users: '1,200+'
     },
     {
       id: 'network-infrastructure',
       name: 'Network Infrastructure',
-      price: '$199/mo',
-      originalPrice: '$399/mo',
-      description: 'Design and implement robust network infrastructure',
-      longDescription: 'Build and maintain high-performance network infrastructure including LAN, WAN, wireless, and data center networking.',
+      description: 'Design, implementation, and management of secure, scalable network infrastructure solutions.',
+      icon: Network,
       features: [
-        'Network Design & Planning',
-        'Router & Switch Configuration',
-        'Wireless Network Setup',
-        'VPN Implementation',
-        'Network Monitoring',
-        'Performance Optimization',
-        'Troubleshooting & Support',
-        'Security Implementation',
-        'Capacity Planning',
-        'Documentation'
+        'Network design',
+        'Security implementation',
+        'Performance optimization',
+        'Monitoring & management',
+        'Disaster recovery',
+        'Compliance support'
       ],
-      benefits: [
-        'Improve network performance',
-        'Enhance security',
-        'Reduce downtime',
-        'Optimize bandwidth usage',
-        'Scale with business growth'
-      ],
-      category: 'Networking',
-      icon: <Network className="w-8 h-8 text-green-400" />,
-      popular: false,
-      link: 'https://ziontechgroup.com/network-infrastructure'
-    },
-    {
-      id: 'data-center-solutions',
-      name: 'Data Center Solutions',
-      price: '$599/mo',
-      originalPrice: '$1199/mo',
-      description: 'Complete data center design and management',
-      longDescription: 'Design, build, and manage modern data centers with high availability, energy efficiency, and scalability.',
-      features: [
-        'Data Center Design',
-        'Server Virtualization',
-        'Storage Solutions',
-        'Power & Cooling',
-        'Environmental Monitoring',
-        'Disaster Recovery',
-        'Backup Solutions',
-        'Security Implementation',
-        'Compliance Management',
-        '24/7 Monitoring'
-      ],
-      benefits: [
-        'Improve data center efficiency',
-        'Reduce operational costs',
-        'Enhance reliability',
-        'Ensure compliance',
-        'Optimize space utilization'
-      ],
-      category: 'Data Center',
-      icon: <Server className="w-8 h-8 text-purple-400" />,
-      popular: false,
-      link: 'https://ziontechgroup.com/data-center-solutions'
-    },
-    {
-      id: 'it-support-services',
-      name: 'IT Support Services',
-      price: '$149/mo',
-      originalPrice: '$299/mo',
-      description: 'Comprehensive IT support and maintenance',
-      longDescription: 'Provide ongoing IT support, maintenance, and troubleshooting services to keep your systems running smoothly.',
-      features: [
-        '24/7 Help Desk Support',
-        'Remote & On-site Support',
-        'System Maintenance',
-        'Software Updates',
-        'Hardware Support',
-        'User Training',
-        'Documentation',
-        'Proactive Monitoring',
-        'Incident Management',
-        'Change Management'
-      ],
-      benefits: [
-        'Reduce IT downtime',
-        'Improve user productivity',
-        'Lower support costs',
-        'Ensure system reliability',
-        'Streamline IT operations'
-      ],
-      category: 'Support',
-      icon: <Headphones className="w-8 h-8 text-cyan-400" />,
-      popular: true,
-      link: 'https://ziontechgroup.com/it-support-services'
-    },
-    {
-      id: 'software-development',
-      name: 'Custom Software Development',
-      price: '$499/mo',
-      originalPrice: '$999/mo',
-      description: 'Custom software solutions tailored to your business needs',
-      longDescription: 'Develop custom software applications, web platforms, and mobile apps using modern technologies and best practices.',
-      features: [
-        'Custom Application Development',
-        'Web Application Development',
-        'Mobile App Development',
-        'API Development',
-        'Database Design',
-        'UI/UX Design',
-        'Quality Assurance',
-        'Testing & Deployment',
-        'Maintenance & Support',
-        'Documentation'
-      ],
-      benefits: [
-        'Tailored to business needs',
-        'Improve operational efficiency',
-        'Enhance customer experience',
-        'Scale with business growth',
-        'Competitive advantage'
-      ],
-      category: 'Development',
-      icon: <Code className="w-8 h-8 text-orange-400" />,
-      popular: false,
-      link: 'https://ziontechgroup.com/software-development'
-    },
-    {
-      id: 'database-management',
-      name: 'Database Management',
-      price: '$249/mo',
-      originalPrice: '$499/mo',
-      description: 'Comprehensive database design, optimization, and management',
-      longDescription: 'Design, implement, and manage database systems with high performance, security, and scalability.',
-      features: [
-        'Database Design & Architecture',
-        'Performance Optimization',
-        'Data Migration',
-        'Backup & Recovery',
-        'Security Implementation',
-        'Monitoring & Maintenance',
-        'Query Optimization',
-        'Indexing Strategies',
-        'Replication Setup',
-        'Disaster Recovery'
-      ],
-      benefits: [
-        'Improve database performance',
-        'Ensure data integrity',
-        'Reduce storage costs',
-        'Enhance security',
-        'Streamline data management'
-      ],
-      category: 'Database',
-      icon: <Database className="w-8 h-8 text-indigo-400" />,
-      popular: false,
-      link: 'https://ziontechgroup.com/database-management'
+      pricing: {
+        starter: { price: 299, period: 'month', features: ['Basic network', 'Email support', 'Standard monitoring'] },
+        professional: { price: 799, period: 'month', features: ['Advanced network', 'Priority support', 'Custom solutions', 'API access'] },
+        enterprise: { price: 1499, period: 'month', features: ['Full network suite', '24/7 support', 'Dedicated team', 'Custom infrastructure'] }
+      },
+      href: '/network-infrastructure',
+      category: 'Network',
+      rating: 4.7,
+      users: '1,000+'
     },
     {
       id: 'it-consulting',
       name: 'IT Consulting Services',
-      price: '$199/mo',
-      originalPrice: '$399/mo',
-      description: 'Strategic IT consulting and technology planning',
-      longDescription: 'Get expert guidance on IT strategy, technology selection, and digital transformation initiatives.',
+      description: 'Strategic IT consulting to help you make informed technology decisions and optimize your IT infrastructure.',
+      icon: Users,
       features: [
-        'IT Strategy Planning',
-        'Technology Assessment',
-        'Digital Transformation',
-        'Process Optimization',
-        'Vendor Selection',
-        'Cost Analysis',
-        'Risk Assessment',
-        'Compliance Review',
-        'Training & Education',
-        'Project Management'
+        'Technology strategy',
+        'Architecture planning',
+        'Cost optimization',
+        'Risk assessment',
+        'Vendor management',
+        'Digital transformation'
       ],
-      benefits: [
-        'Align IT with business goals',
-        'Optimize technology investments',
-        'Reduce risks',
-        'Improve efficiency',
-        'Stay competitive'
-      ],
+      pricing: {
+        starter: { price: 199, period: 'hour', features: ['Basic consulting', 'Email support', 'Standard reports'] },
+        professional: { price: 299, period: 'hour', features: ['Advanced consulting', 'Priority support', 'Custom solutions', 'API access'] },
+        enterprise: { price: 499, period: 'hour', features: ['Full consulting suite', '24/7 support', 'Dedicated team', 'Custom solutions'] }
+      },
+      href: '/it-consulting',
       category: 'Consulting',
-      icon: <Lightbulb className="w-8 h-8 text-yellow-400" />,
-      popular: false,
-      link: 'https://ziontechgroup.com/it-consulting'
-    },
-    {
-      id: 'backup-disaster-recovery',
-      name: 'Backup & Disaster Recovery',
-      price: '$179/mo',
-      originalPrice: '$359/mo',
-      description: 'Comprehensive backup and disaster recovery solutions',
-      longDescription: 'Protect your critical data and systems with robust backup and disaster recovery solutions.',
-      features: [
-        'Automated Backup Solutions',
-        'Disaster Recovery Planning',
-        'Data Replication',
-        'Recovery Testing',
-        'Off-site Storage',
-        'Cloud Backup',
-        'Recovery Time Optimization',
-        'Business Continuity',
-        'Compliance Management',
-        '24/7 Monitoring'
-      ],
-      benefits: [
-        'Protect critical data',
-        'Minimize downtime',
-        'Ensure business continuity',
-        'Meet compliance requirements',
-        'Reduce recovery costs'
-      ],
-      category: 'Backup',
-      icon: <HardDrive className="w-8 h-8 text-teal-400" />,
-      popular: false,
-      link: 'https://ziontechgroup.com/backup-disaster-recovery'
-    },
-    {
-      id: 'mobile-device-management',
-      name: 'Mobile Device Management',
-      price: '$129/mo',
-      originalPrice: '$259/mo',
-      description: 'Secure and manage mobile devices across your organization',
-      longDescription: 'Implement comprehensive mobile device management solutions to secure and manage smartphones, tablets, and other mobile devices.',
-      features: [
-        'Device Enrollment',
-        'Security Policies',
-        'App Management',
-        'Remote Wipe',
-        'Location Tracking',
-        'Compliance Monitoring',
-        'User Management',
-        'Content Management',
-        'Analytics & Reporting',
-        'Integration APIs'
-      ],
-      benefits: [
-        'Enhance mobile security',
-        'Simplify device management',
-        'Ensure compliance',
-        'Improve productivity',
-        'Reduce support costs'
-      ],
-      category: 'Mobile',
-      icon: <Smartphone className="w-8 h-8 text-pink-400" />,
-      popular: false,
-      link: 'https://ziontechgroup.com/mobile-device-management'
-    },
-    {
-      id: 'virtualization-solutions',
-      name: 'Virtualization Solutions',
-      price: '$349/mo',
-      originalPrice: '$699/mo',
-      description: 'Server and desktop virtualization solutions',
-      longDescription: 'Implement comprehensive virtualization solutions to optimize resource utilization and improve flexibility.',
-      features: [
-        'Server Virtualization',
-        'Desktop Virtualization',
-        'Application Virtualization',
-        'Storage Virtualization',
-        'Network Virtualization',
-        'Cloud Integration',
-        'Performance Optimization',
-        'Resource Management',
-        'Migration Services',
-        'Support & Maintenance'
-      ],
-      benefits: [
-        'Reduce hardware costs',
-        'Improve resource utilization',
-        'Enhance flexibility',
-        'Simplify management',
-        'Enable remote work'
-      ],
-      category: 'Virtualization',
-      icon: <Monitor className="w-8 h-8 text-violet-400" />,
-      popular: false,
-      link: 'https://ziontechgroup.com/virtualization-solutions'
-    },
-    {
-      id: 'it-audit-compliance',
-      name: 'IT Audit & Compliance',
-      price: '$299/mo',
-      originalPrice: '$599/mo',
-      description: 'IT audit and compliance management services',
-      longDescription: 'Ensure your IT systems meet regulatory requirements and industry standards with comprehensive audit and compliance services.',
-      features: [
-        'Compliance Assessment',
-        'Security Audits',
-        'Risk Assessment',
-        'Policy Development',
-        'Gap Analysis',
-        'Remediation Planning',
-        'Documentation',
-        'Training Programs',
-        'Ongoing Monitoring',
-        'Certification Support'
-      ],
-      benefits: [
-        'Ensure regulatory compliance',
-        'Identify security gaps',
-        'Reduce audit risks',
-        'Improve security posture',
-        'Maintain certifications'
-      ],
-      category: 'Compliance',
-      icon: <FileText className="w-8 h-8 text-amber-400" />,
-      popular: false,
-      link: 'https://ziontechgroup.com/it-audit-compliance'
-    }
-  ];
-<<<<<<< HEAD
-
-  const categories = ['All', 'Cloud Computing', 'Security', 'Networking', 'Data Center', 'Support', 'Development', 'Database', 'Consulting', 'Backup', 'Mobile', 'Virtualization', 'Compliance'];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
-
-  const features = [
-    '24/7 Expert Support',
-    'Proven Methodologies',
-    'Scalable Solutions',
-    'Industry Expertise',
-    'Cost Optimization',
-    'Security First',
-    'Compliance Ready',
-    'Performance Monitoring',
-    'Disaster Recovery',
-    'Custom Solutions'
-  ];
-
-  const stats = [
-    { number: '500+', label: 'IT Projects Completed' },
-    { number: '100+', label: 'Enterprise Clients' },
-    { number: '99.9%', label: 'System Uptime' },
-    { number: '24/7', label: 'Support Available' }
-  ];
-
-  const pricingTiers = [
-    {
-      name: 'Basic',
-      price: '$199/mo',
-      description: 'Perfect for small businesses',
-      features: [
-        'Basic IT support',
-        'Email support',
-        'Standard monitoring',
-        'Basic security',
-        'Monthly reports',
-        'Remote assistance'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$499/mo',
-      description: 'Ideal for growing businesses',
-      features: [
-        'Advanced IT support',
-        'Priority support',
-        'Proactive monitoring',
-        'Advanced security',
-        'Weekly reports',
-        'On-site support',
-        'Custom solutions'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      description: 'For large organizations',
-      features: [
-        'Dedicated IT team',
-        '24/7 support',
-        'Comprehensive monitoring',
-        'Enterprise security',
-        'Real-time reports',
-        'Full-service support',
-        'Custom development'
-      ],
-      popular: false
+      rating: 4.9,
+      users: '1,400+'
     }
   ];
 
-  const filteredServices = selectedCategory === 'All' 
-    ? itServices 
-    : itServices.filter(service => service.category === selectedCategory);
+  const categories = ['All', 'Cloud', 'Security', 'Database', 'Development', 'DevOps', 'Network', 'Consulting'];
 
   return (
     <>
-      <Helmet>
-<<<<<<< HEAD
-        <title>IT Solutions - Comprehensive Technology Services | Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, networking, data center management, and custom software development. Transform your business with our expert IT services." />
-        <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, networking, data center, software development, IT support, technology consulting" />
-        <meta property="og:title" content="IT Solutions - Comprehensive Technology Services" />
-        <meta property="og:description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, networking, data center management, and custom software development." />
-        <meta property="og:url" content="https://ziontechgroup.com/it-solutions" />
-        <link rel="canonical" href="https://ziontechgroup.com/it-solutions" />
-=======
-        <title>IT Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT solutions including infrastructure management, cloud migration, network security, and database optimization services." />
-        <meta name="keywords" content="IT solutions, infrastructure management, cloud migration, network security, database management, IT support, Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              IT Solutions
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                {' '}That Scale
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive IT solutions designed to modernize your infrastructure, 
-              enhance security, and drive business growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/25 flex items-center group"
-              >
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="#pricing"
-                className="border-2 border-white/30 hover:border-blue-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center group"
-              >
-                View Pricing
-                <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
+      <SEOHead 
+        title="IT Solutions - Zion Tech Group"
+        description="Comprehensive IT solutions and services to modernize your infrastructure. From cloud migration to cybersecurity, we have the expertise you need."
+        keywords="IT solutions, cloud infrastructure, cybersecurity, database management, web development, mobile development, DevOps, IT consulting"
+      />
+      
+      <div className="min-h-screen bg-slate-900 text-white relative overflow-hidden">
+        <FuturisticBackground />
+        
+        {/* Hero Section */}
+        <section className="relative z-10 py-20 lg:py-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center space-x-2 bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Server className="w-4 h-4" />
+                <span>IT Solutions & Services</span>
+              </div>
+              
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                  IT Solutions
+                </span>
+              </h1>
+              
+              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed">
+                Comprehensive IT solutions and services to modernize your infrastructure, enhance security, 
+                and drive digital transformation. From cloud migration to cybersecurity, we have the expertise you need.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <NeonButton href="/contact" size="lg">
+                  Get Started Today
+                </NeonButton>
+                <NeonButton href="/demo" variant="secondary" size="lg">
+                  IT Assessment
+                </NeonButton>
+              </div>
+              
+              {/* IT Stats */}
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-400 mb-2">500+</div>
+                  <div className="text-gray-300 text-sm">Projects Completed</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
+                  <div className="text-gray-300 text-sm">Uptime Guarantee</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+                  <div className="text-gray-300 text-sm">Support Available</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+                  <div className="text-gray-300 text-sm">Expert Engineers</div>
+                </div>
+              </div>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
+        </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-300 text-sm md:text-base">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Category Filter */}
-      <section className="py-8 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
-                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-white'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our IT Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose from our comprehensive suite of IT solutions designed to address your specific technology needs.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {filteredServices.map((service, index) => (
-              <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10 group relative ${
-                service.popular ? 'ring-2 ring-blue-500' : ''
-              }`}>
-                {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="group-hover:scale-110 transition-transform">
-                      {service.icon}
+        {/* Services Grid */}
+        <section className="relative z-10 py-16 lg:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 lg:mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">IT Services</span>
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose from our comprehensive collection of IT solutions, each designed to address specific business needs.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+              {itServices.map((service) => (
+                <AnimatedCard key={service.id} href={service.href} glowColor="cyan">
+                  <div className="space-y-4">
+                    {/* Service Header */}
+                    <div className="flex items-start justify-between">
+                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                        <service.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span className="text-sm text-gray-300">{service.rating}</span>
+                      </div>
                     </div>
-                    <span className="text-sm text-blue-400 font-medium">{service.category}</span>
+                    
+                    {/* Service Info */}
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                        {service.name}
+                      </h3>
+                      <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                        {service.description}
+                      </p>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-blue-400 font-medium">{service.category}</span>
+                        <span className="text-gray-500">{service.users} users</span>
+                      </div>
+                    </div>
+                    
+                    {/* Pricing */}
+                    <div className="border-t border-slate-700 pt-4">
+                      <div className="flex items-baseline space-x-2">
+                        <span className="text-2xl font-bold text-white">${service.pricing.starter.price}</span>
+                        <span className="text-gray-400 text-sm">/{service.pricing.starter.period}</span>
+                        <span className="text-xs text-gray-500">starting</span>
+                      </div>
+                    </div>
+                    
+                    {/* Features Preview */}
+                    <div className="space-y-2">
+                      {service.features.slice(0, 3).map((feature, index) => (
+                        <div key={index} className="flex items-center space-x-2">
+                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                          <span className="text-sm text-gray-300">{feature}</span>
+                        </div>
+                      ))}
+                      <div className="text-sm text-blue-400 font-medium">
+                        +{service.features.length - 3} more features
+                      </div>
+                    </div>
+                    
+                    {/* CTA */}
+                    <div className="pt-4">
+                      <div className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
+                        <span className="text-sm font-medium">Learn More</span>
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
-                    {service.name}
-                  </h3>
-                  <div className="flex items-center space-x-2 mb-3">
-                    <span className="text-2xl font-bold text-blue-400">{service.price}</span>
-                    <span className="text-sm text-gray-400 line-through">{service.originalPrice}</span>
+                </AnimatedCard>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* IT Capabilities Section */}
+        <section className="relative z-10 py-16 lg:py-20 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 lg:mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                IT <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Capabilities</span>
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+                Our IT solutions leverage cutting-edge technologies and best practices to deliver reliable, scalable, and secure infrastructure.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <AnimatedCard glowColor="blue">
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto">
+                    <Cloud className="w-8 h-8 text-white" />
                   </div>
-                  <p className="text-gray-300 mb-4 text-sm">
-                    {service.description}
+                  <h3 className="text-2xl font-bold text-white">Cloud Infrastructure</h3>
+                  <p className="text-gray-400">
+                    Scalable cloud solutions with AWS, Azure, and GCP expertise for modern, secure, and cost-effective deployments.
                   </p>
                 </div>
-
-                <ul className="space-y-2 mb-6">
-                  {service.features.slice(0, 4).map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                  {service.features.length > 4 && (
-                    <li className="text-xs text-blue-400 font-medium">
-                      +{service.features.length - 4} more features
-                    </li>
-                  )}
-                </ul>
-
-                <div className="space-y-3">
-                  <a
-                    href={service.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white text-center py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-sm"
-                  >
-                    Learn More
-                  </a>
-                  <Link
-                    to="/contact"
-                    className="block w-full border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white text-center py-2 rounded-lg font-semibold transition-all duration-300 text-sm"
-                  >
-                    Get Quote
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose Our IT Solutions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IT solutions are designed with enterprise-grade reliability, security, and scalability in mind.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-center space-x-4 p-6 bg-slate-700/30 rounded-lg hover:bg-slate-600/30 transition-colors group">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="text-gray-300 font-medium group-hover:text-white transition-colors">{feature}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              IT Solutions Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect IT solution plan for your business. All plans include 30-day free trial and no setup fees.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
-              <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-                tier.popular ? 'ring-2 ring-blue-500 bg-slate-700/50' : ''
-              }`}>
-                {tier.popular && (
-                  <div className="text-center mb-4">
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
+              </AnimatedCard>
+              
+              <AnimatedCard glowColor="green">
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                    <Shield className="w-8 h-8 text-white" />
                   </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                  <div className="text-4xl font-bold text-blue-400 mb-2">{tier.price}</div>
-                  <p className="text-gray-300">{tier.description}</p>
+                  <h3 className="text-2xl font-bold text-white">Cybersecurity</h3>
+                  <p className="text-gray-400">
+                    Advanced security solutions including threat detection, vulnerability assessment, and compliance management.
+                  </p>
                 </div>
-
-                <ul className="space-y-4 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  to="/contact"
-                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 ${
-                    tier.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white'
-                      : 'border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
-                  }`}
-                >
-                  Get Started
-                </Link>
-              </div>
-            ))}
+              </AnimatedCard>
+              
+              <AnimatedCard glowColor="purple">
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto">
+                    <Settings className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">DevOps & Automation</h3>
+                  <p className="text-gray-400">
+                    Complete DevOps implementation with CI/CD pipelines, infrastructure as code, and automated deployment.
+                  </p>
+                </div>
+              </AnimatedCard>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your IT Infrastructure?
-          </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Let our expert team help you modernize your IT infrastructure and drive business growth with our comprehensive solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            >
-              Get Free Consultation
-            </Link>
-            <Link
-              to="/demo"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-            >
-              Schedule Demo
-            </Link>
+        {/* CTA Section */}
+        <section className="relative z-10 py-16 lg:py-20">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+              Ready to Modernize Your IT Infrastructure?
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-300 mb-8 lg:mb-12">
+              Transform your IT infrastructure with our comprehensive solutions. Get started today and experience the power of modern technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <NeonButton href="/contact" size="lg">
+                Start IT Transformation
+              </NeonButton>
+              <NeonButton href="/demo" variant="secondary" size="lg">
+                IT Consultation
+              </NeonButton>
+            </div>
           </div>
-        </div>
-      </section>
-=======
         </section>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
     </>
   );
 };

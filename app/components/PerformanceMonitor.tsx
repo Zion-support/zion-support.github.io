@@ -1,192 +1,57 @@
 import React, { useState, useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-import { logger } from '../utils/logger';
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  fcp?: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
-  loadTime?: number;
-  CLS?: number | null;
-  INP?: number | null;
-  FCP?: number | null;
-  LCP?: number | null;
-  TTFB?: number | null;
+  cls: number;
+  fcp: number;
+  lcp: number;
+  ttfb: number;
+  loadTime: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+interface PerformanceMonitorProps {
+  showInProduction?: boolean;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
+  showInProduction = false 
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    cls: 0,
+    fcp: 0,
+    lcp: 0,
+    ttfb: 0,
+    loadTime: 0
+  });
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Only show in development or when debug flag is set
-    const shouldShow = process.env.NODE_ENV === 'development' || 
-                      localStorage.getItem('debug-performance') === 'true';
-    
-    if (shouldShow) {
-      setIsVisible(true);
+    // Only show in development or if explicitly enabled
+    if (process.env.NODE_ENV === 'production' && !showInProduction) {
+      return;
     }
 
-    // Monitor Core Web Vitals
-    onCLS((metric) => {
-      logger.performance('CLS', metric.value, { metric: 'CLS', value: metric.value });
-      setMetrics(prev => ({ ...prev, CLS: metric.value, cls: metric.value }));
-      // Send to analytics service
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'CLS',
-          value: Math.round(metric.value * 1000),
-        });
-      }
-    });
-
-    onINP((metric) => {
-      logger.performance('INP', metric.value, { metric: 'INP', value: metric.value });
-      setMetrics(prev => ({ ...prev, INP: metric.value }));
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'INP',
-          value: Math.round(metric.value),
-        });
-      }
-    });
-
-    onFCP((metric) => {
-      logger.performance('FCP', metric.value, { metric: 'FCP', value: metric.value });
-      setMetrics(prev => ({ ...prev, FCP: metric.value, fcp: metric.value }));
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'FCP',
-          value: Math.round(metric.value),
-        });
-      }
-    });
-
-    onLCP((metric) => {
-      logger.performance('LCP', metric.value, { metric: 'LCP', value: metric.value });
-      setMetrics(prev => ({ ...prev, LCP: metric.value, lcp: metric.value }));
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'LCP',
-          value: Math.round(metric.value),
-        });
-      }
-    });
-
-    onTTFB((metric) => {
-      logger.performance('TTFB', metric.value, { metric: 'TTFB', value: metric.value });
-      setMetrics(prev => ({ ...prev, TTFB: metric.value, ttfb: metric.value }));
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'TTFB',
-          value: Math.round(metric.value),
-        });
-      }
-    });
-
-    // Measure additional performance metrics
     const measurePerformance = () => {
-      const newMetrics: PerformanceMetrics = {};
+      const newMetrics = { ...metrics };
 
-      // Time to First Byte
-      if (performance.timing) {
-        newMetrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
-      }
+      // Core Web Vitals
+      onCLS((metric) => {
+        newMetrics.cls = metric.value;
+      });
 
-      // Page load time
-      if (performance.timing) {
-        newMetrics.loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-      }
 
-      setMetrics(prev => ({ ...prev, ...newMetrics }));
-    };
+      onFCP((metric) => {
+        newMetrics.fcp = metric.value;
+      });
 
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
+      onLCP((metric) => {
+        newMetrics.lcp = metric.value;
+      });
 
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, []);
-
-  if (!isVisible) return null;
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg text-xs font-mono z-50 max-w-xs">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="text-sm font-semibold">Performance</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
-        >
-          ×
-        </button>
-      </div>
-      
-      <div className="space-y-1">
-        {metrics.fcp && (
-          <div>FCP: {Math.round(metrics.fcp)}ms</div>
-        )}
-        {metrics.lcp && (
-          <div>LCP: {Math.round(metrics.lcp)}ms</div>
-        )}
-        {metrics.ttfb && (
-          <div>TTFB: {Math.round(metrics.ttfb)}ms</div>
-        )}
-        {metrics.loadTime && (
-          <div>Load: {Math.round(metrics.loadTime)}ms</div>
-        )}
-        {metrics.cls && (
-          <div>CLS: {metrics.cls.toFixed(3)}</div>
-        )}
-      </div>
-      
-      <div className="mt-2 pt-2 border-t border-slate-600 text-xs text-gray-400">
-        Press F12 for more details
-      </div>
-    </div>
-  );
-
-<<<<<<< HEAD
-      // Largest Contentful Paint
-      if ('PerformanceObserver' in window) {
-        try {
-          const observer = new PerformanceObserver((list) => {
-            const entries = list.getEntries();
-            const lastEntry = entries[entries.length - 1];
-            newMetrics.lcp = lastEntry.startTime;
-          });
-          observer.observe({ entryTypes: ['largest-contentful-paint'] });
-        } catch (error) {
-          console.warn('LCP Observer not supported:', error);
-        }
-=======
-    onTTFB((metric) => {
-      logger.performance('TTFB', metric.value, { metric: 'TTFB', value: metric.value });
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'TTFB',
-          value: Math.round(metric.value),
-        });
->>>>>>> origin/cursor/analyze-improve-and-merge-code-f23e
-      }
-
-      // Time to First Byte
-      if (performance.timing) {
-        newMetrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
-      }
+      onTTFB((metric) => {
+        newMetrics.ttfb = metric.value;
+      });
 
       // Page load time
       if (performance.timing) {
@@ -208,125 +73,73 @@ const PerformanceMonitor: React.FC = () => {
     };
   }, []);
 
-  if (!isVisible) return null;
+  if (!isVisible) {
+    return (
+      <button
+        onClick={() => setIsVisible(true)}
+        className="fixed bottom-4 left-4 z-50 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
+        aria-label="Open performance monitor"
+      >
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+      </button>
+    );
+  }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg text-xs font-mono z-50 max-w-xs">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="text-sm font-semibold">Performance</h3>
+    <div className="fixed bottom-4 left-4 z-50 bg-gray-800 text-white rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-lg font-semibold">Performance Monitor</h3>
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white"
+          aria-label="Close performance monitor"
         >
-          ×
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
         </button>
       </div>
-      
-      <div className="space-y-1">
-        {metrics.fcp && (
-          <div>FCP: {Math.round(metrics.fcp)}ms</div>
-        )}
-        {metrics.lcp && (
-          <div>LCP: {Math.round(metrics.lcp)}ms</div>
-        )}
-        {metrics.ttfb && (
-          <div>TTFB: {Math.round(metrics.ttfb)}ms</div>
-        )}
-        {metrics.loadTime && (
-          <div>Load: {Math.round(metrics.loadTime)}ms</div>
-        )}
+
+      <div className="space-y-2 text-sm">
+        <div className="flex justify-between">
+          <span className="text-gray-300">CLS:</span>
+          <span className={metrics.cls > 0.1 ? 'text-red-400' : 'text-green-400'}>
+            {metrics.cls.toFixed(3)}
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-gray-300">FCP:</span>
+          <span className={metrics.fcp > 1800 ? 'text-red-400' : 'text-green-400'}>
+            {metrics.fcp.toFixed(1)}ms
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-gray-300">LCP:</span>
+          <span className={metrics.lcp > 2500 ? 'text-red-400' : 'text-green-400'}>
+            {metrics.lcp.toFixed(1)}ms
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-gray-300">TTFB:</span>
+          <span className={metrics.ttfb > 600 ? 'text-red-400' : 'text-green-400'}>
+            {metrics.ttfb.toFixed(1)}ms
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-gray-300">Load Time:</span>
+          <span className={metrics.loadTime > 3000 ? 'text-red-400' : 'text-green-400'}>
+            {metrics.loadTime.toFixed(0)}ms
+          </span>
+        </div>
       </div>
-      
+
       <div className="mt-2 pt-2 border-t border-slate-600 text-xs text-gray-400">
         Press F12 for more details
       </div>
     </div>
   );
-=======
-import React, { useEffect, useState } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-
-interface PerformanceMetrics {
-  CLS: number | null;
-  INP: number | null;
-  FCP: number | null;
-  LCP: number | null;
-  TTFB: number | null;
-}
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    CLS: null,
-    INP: null,
-    FCP: null,
-    LCP: null,
-    TTFB: null
-  });
-
-  useEffect(() => {
-    const handleMetric = (metric: any) => {
-      setMetrics(prev => ({
-        ...prev,
-        [metric.name]: metric.value
-      }));
-
-      // Send to analytics (replace with your analytics service)
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          value: Math.round(metric.value),
-          event_label: metric.id,
-          non_interaction: true,
-        });
-      }
-    };
-
-    // Measure Core Web Vitals
-    onCLS(handleMetric);
-    onINP(handleMetric);
-    onFCP(handleMetric);
-    onLCP(handleMetric);
-    onTTFB(handleMetric);
-
-    // Performance observer for additional metrics
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            const navEntry = entry as PerformanceNavigationTiming;
-            console.log('Navigation timing:', {
-              domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-              loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-              domInteractive: navEntry.domInteractive - navEntry.navigationStart,
-            });
-          }
-        }
-      });
-
-      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
-    }
-
-    // Memory usage monitoring
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      console.log('Memory usage:', {
-        used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-        total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-        limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
-      });
-    }
-
-  }, []);
-
-  // Development mode: show metrics in console
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Performance Metrics:', metrics);
-    }
-  }, [metrics]);
-
-  return null; // This component doesn't render anything
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 };
 
 export default PerformanceMonitor;

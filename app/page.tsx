@@ -3,6 +3,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import SEOHead from './components/SEOHead';
+import FuturisticBackground from './components/FuturisticBackground';
+import NeonButton from './components/NeonButton';
+import AnimatedCard from './components/AnimatedCard';
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
@@ -65,13 +68,11 @@ const HomePage: React.FC = () => {
         keywords="AI solutions, cybersecurity, cloud infrastructure, digital transformation, IT services, machine learning, artificial intelligence"
       />
       
-      <div className="min-h-screen bg-slate-900 text-white">
+      <div className="min-h-screen bg-slate-900 text-white relative overflow-hidden">
+        <FuturisticBackground />
+        
         {/* Hero Section */}
-        <section className="relative overflow-hidden min-h-screen flex items-center">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
-          <div className="absolute inset-0 opacity-20" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}></div>
+        <section className="relative z-10 overflow-hidden min-h-screen flex items-center">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
             <div className="text-center">
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
@@ -81,18 +82,12 @@ const HomePage: React.FC = () => {
                 Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services that drive innovation and growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 lg:mb-16 px-4">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
-                >
+                <NeonButton href="/contact" size="lg">
                   Get Started Today
-                </Link>
-                <Link
-                  to="/about"
-                  className="border-2 border-purple-400 text-purple-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 text-sm sm:text-base"
-                >
+                </NeonButton>
+                <NeonButton href="/about" variant="secondary" size="lg">
                   Learn More
-                </Link>
+                </NeonButton>
               </div>
               
               {/* Stats */}
@@ -126,25 +121,23 @@ const HomePage: React.FC = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {services.map((service, index) => (
-                <Link
-                  key={index}
-                  to={service.href}
-                  className="group bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10"
-                >
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                <AnimatedCard key={index} href={service.href} glowColor="purple">
+                  <div className="space-y-4">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-purple-300 transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-400 group-hover:text-gray-300 transition-colors text-sm sm:text-base">
+                      {service.description}
+                    </p>
+                    <div className="mt-4 flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">
+                      <span className="text-sm font-medium">Learn More</span>
+                      <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </div>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-purple-300 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-400 mb-4 group-hover:text-gray-300 transition-colors text-sm sm:text-base">
-                    {service.description}
-                  </p>
-                  <div className="mt-4 flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">
-                    <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </Link>
+                </AnimatedCard>
               ))}
             </div>
           </div>

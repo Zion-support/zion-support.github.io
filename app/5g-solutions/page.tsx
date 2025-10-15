@@ -1,7 +1,24 @@
-<<<<<<< HEAD
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3, Star } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
+import FuturisticBackground from '../components/FuturisticBackground';
+import NeonButton from '../components/NeonButton';
+import AnimatedCard from '../components/AnimatedCard';
+import { 
+  Wifi, 
+  Shield, 
+  CheckCircle, 
+  ArrowRight, 
+  Clock, 
+  Network, 
+  Cpu, 
+  Smartphone, 
+  BarChart3, 
+  Star,
+  Globe,
+  Zap
+} from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
   const solutions = [
@@ -12,200 +29,286 @@ const FiveGSolutionsPage: React.FC = () => {
       price: "From $5,999",
       marketPrice: "$12,999-49,999",
       popular: true,
-      icon: <Wifi className="w-8 h-8" />,
+      icon: Wifi,
       benefits: "Deploy 5G networks 60% faster than industry average"
     },
     {
       name: "5G Network Infrastructure",
       description: "Robust 5G infrastructure with advanced tower installation and fiber optic connectivity.",
-      features: ["Tower installation", "Fiber optics deployment", "Coverage optimization", "Signal boosting", "Maintenance contracts", "Performance monitoring"],
-      price: "From $4,999",
-      marketPrice: "$9,999-39,999",
+      features: ["Tower installation", "Fiber optic setup", "Antenna configuration", "Power systems", "Backup systems", "Security implementation"],
+      price: "From $9,999",
+      marketPrice: "$19,999-79,999",
       popular: false,
-      icon: <Network className="w-8 h-8" />,
-      benefits: "Achieve 99.9% network uptime with our infrastructure"
-    },
-    {
-      name: "5G IoT Solutions",
-      description: "Comprehensive IoT connectivity solutions powered by 5G for smart devices and sensors.",
-      features: ["Device connectivity", "Data analytics", "Remote monitoring", "Edge computing", "Real-time processing", "Scalable architecture"],
-      price: "From $3,999",
-      marketPrice: "$7,999-29,999",
-      popular: false,
-      icon: <Cpu className="w-8 h-8" />,
-      benefits: "Connect 10x more devices with ultra-low latency"
-    },
-    {
-      name: "5G Smart City Solutions",
-      description: "Transform your city with 5G-powered smart infrastructure and citizen services.",
-      features: ["Traffic management", "Public safety systems", "Energy efficiency", "Citizen services", "Environmental monitoring", "Emergency response"],
-      price: "From $7,999",
-      marketPrice: "$19,999-99,999",
-      popular: false,
-      icon: <Smartphone className="w-8 h-8" />,
-      benefits: "Improve city efficiency by 40% with smart solutions"
+      icon: Network,
+      benefits: "99.9% uptime guarantee with enterprise-grade infrastructure"
     },
     {
       name: "5G Edge Computing",
-      description: "Ultra-low latency edge computing solutions for real-time applications and AI inference.",
-      features: ["Low latency processing", "Local data centers", "Real-time analytics", "AI inference", "Content delivery", "Autonomous systems"],
-      price: "From $2,999",
-      marketPrice: "$5,999-19,999",
+      description: "Ultra-low latency edge computing solutions for real-time applications and IoT devices.",
+      features: ["Edge server deployment", "Latency optimization", "IoT integration", "Real-time processing", "Data analytics", "Cloud connectivity"],
+      price: "From $7,999",
+      marketPrice: "$15,999-59,999",
       popular: false,
-      icon: <BarChart3 className="w-8 h-8" />,
-      benefits: "Reduce latency by 90% with edge computing"
+      icon: Cpu,
+      benefits: "Reduce latency by 80% with edge computing architecture"
+    },
+    {
+      name: "5G Mobile Applications",
+      description: "High-performance mobile apps optimized for 5G networks with advanced features.",
+      features: ["5G-optimized apps", "Real-time streaming", "AR/VR integration", "IoT connectivity", "Cloud sync", "Offline capabilities"],
+      price: "From $4,999",
+      marketPrice: "$9,999-39,999",
+      popular: true,
+      icon: Smartphone,
+      benefits: "10x faster app performance with 5G optimization"
+    },
+    {
+      name: "5G Data Analytics",
+      description: "Advanced analytics platform for 5G network performance monitoring and optimization.",
+      features: ["Real-time monitoring", "Performance analytics", "Predictive maintenance", "Network optimization", "Custom dashboards", "API integration"],
+      price: "From $3,999",
+      marketPrice: "$7,999-29,999",
+      popular: false,
+      icon: BarChart3,
+      benefits: "Optimize network performance with AI-powered analytics"
     },
     {
       name: "5G Private Networks",
-      description: "Dedicated 5G private networks with enhanced security and custom configuration.",
-      features: ["Dedicated spectrum", "Enhanced security", "Custom configuration", "SLA guarantees", "Isolated infrastructure", "Custom applications"],
-      price: "From $6,999",
-      marketPrice: "$14,999-59,999",
-      popular: true,
-      icon: <Shield className="w-8 h-8" />,
-      benefits: "Achieve enterprise-grade security with private networks"
-<<<<<<< HEAD
-    }  ];
-=======
+      description: "Dedicated 5G private networks for enterprise with enhanced security and control.",
+      features: ["Private network setup", "Enhanced security", "Custom configuration", "Dedicated resources", "SLA guarantees", "24/7 support"],
+      price: "From $12,999",
+      marketPrice: "$24,999-99,999",
+      popular: false,
+      icon: Shield,
+      benefits: "Enterprise-grade security with dedicated 5G infrastructure"
+    },
+    {
+      name: "5G Smart City Solutions",
+      description: "Comprehensive smart city infrastructure powered by 5G technology.",
+      features: ["Smart traffic management", "Environmental monitoring", "Public safety systems", "Energy management", "Citizen services", "Data integration"],
+      price: "From $49,999",
+      marketPrice: "$99,999-499,999",
+      popular: false,
+      icon: Globe,
+      benefits: "Transform cities with intelligent 5G-powered infrastructure"
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 
-  const benefits = [
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Ultra-Low Latency",
-      description: "Achieve sub-millisecond latency for real-time applications"
-<<<<<<< HEAD
-    },    {
-=======
-    },
-    {
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
-      icon: <Network className="w-6 h-6" />,
-      title: "Massive Connectivity",
-      description: "Support millions of devices per square kilometer"
-    },
-    {
-      icon: <Cpu className="w-6 h-6" />,
-      title: "Edge Computing",
-      description: "Process data locally for faster response times"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Enhanced Security",
-      description: "Advanced encryption and network slicing for secure communications"
-<<<<<<< HEAD
-    }  ];
-=======
-    }
+  const stats = [
+    { number: '99.9%', label: 'Network Uptime' },
+    { number: '< 1ms', label: 'Latency' },
+    { number: '10Gbps', label: 'Peak Speed' },
+    { number: '1M+', label: 'Devices Supported' }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 
-  const technologies = [
-    "5G NR", "Network Slicing", "Edge Computing", "IoT Protocols", 
-    "AI/ML Integration", "Cloud-Native", "SDN/NFV", "MEC"
-  ];
-=======
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
-
-export default function FiveGSolutionsPage() {
   return (
     <>
-      <Helmet>
-        <title>5G Solutions - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Comprehensive 5G solutions for businesses"
-        />
-      </Helmet>
+      <SEOHead 
+        title="5G Solutions - Zion Tech Group"
+        description="Transform your business with our comprehensive 5G solutions. From network implementation to edge computing, we deliver cutting-edge 5G technology."
+        keywords="5G solutions, 5G implementation, 5G network infrastructure, edge computing, 5G mobile apps, smart city solutions"
+      />
+      
+      <div className="min-h-screen bg-slate-900 text-white relative overflow-hidden">
+        <FuturisticBackground />
+        
+        {/* Hero Section */}
+        <section className="relative z-10 py-20 lg:py-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center space-x-2 bg-green-500/10 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Wifi className="w-4 h-4" />
+                <span>5G Technology Solutions</span>
+              </div>
+              
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 lg:mb-8">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400">
+                  5G Solutions
+                </span>
+              </h1>
+              
+              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed">
+                Transform your business with our comprehensive 5G solutions. From network implementation to edge computing, 
+                we deliver cutting-edge 5G technology that drives innovation and growth.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <NeonButton href="/contact" size="lg">
+                  Get Started Today
+                </NeonButton>
+                <NeonButton href="/demo" variant="secondary" size="lg">
+                  View 5G Demo
+                </NeonButton>
+              </div>
+              
+              {/* 5G Stats */}
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-3xl font-bold text-green-400 mb-2">{stat.number}</div>
+                    <div className="text-gray-300 text-sm">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">5G Solutions</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Comprehensive 5G solutions by Zion Tech Group. Transform your
-            business with our expert solutions.
-          </p>
-
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 bg-white/5">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our 5G Solutions?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Built with cutting-edge technology and industry expertise
+        {/* Solutions Grid */}
+        <section className="relative z-10 py-16 lg:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 lg:mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400">5G Solutions</span>
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose from our comprehensive collection of 5G solutions, each designed to leverage the power of next-generation wireless technology.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-cyan-400 mb-4 flex justify-center">
-                    {benefit.icon}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {solutions.map((solution, index) => (
+                <AnimatedCard key={index} glowColor="green">
+                  <div className="space-y-6">
+                    {/* Solution Header */}
+                    <div className="flex items-start justify-between">
+                      <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                        <solution.icon className="w-6 h-6 text-white" />
+                      </div>
+                      {solution.popular && (
+                        <span className="bg-gradient-to-r from-green-500 to-cyan-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                          Popular
+                        </span>
+                      )}
+                    </div>
+                    
+                    {/* Solution Info */}
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-green-300 transition-colors">
+                        {solution.name}
+                      </h3>
+                      <p className="text-gray-400 leading-relaxed mb-4">
+                        {solution.description}
+                      </p>
+                      <div className="text-sm text-green-400 font-medium mb-4">
+                        {solution.benefits}
+                      </div>
+                    </div>
+                    
+                    {/* Pricing */}
+                    <div className="border-t border-slate-700 pt-4">
+                      <div className="flex items-baseline justify-between">
+                        <div>
+                          <div className="text-2xl font-bold text-white">{solution.price}</div>
+                          <div className="text-sm text-gray-400">Market: {solution.marketPrice}</div>
+                        </div>
+                        <div className="text-right">
+                          <div className="text-sm text-green-400 font-medium">Save up to 60%</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Features */}
+                    <div className="space-y-2">
+                      <h4 className="text-sm font-semibold text-gray-300">Key Features:</h4>
+                      {solution.features.slice(0, 4).map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center space-x-2">
+                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                          <span className="text-sm text-gray-300">{feature}</span>
+                        </div>
+                      ))}
+                      <div className="text-sm text-green-400 font-medium">
+                        +{solution.features.length - 4} more features
+                      </div>
+                    </div>
+                    
+                    {/* CTA */}
+                    <div className="pt-4">
+                      <NeonButton href="/contact" size="md" className="w-full">
+                        Get Quote
+                      </NeonButton>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
-                </div>
+                </AnimatedCard>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Technologies Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">5G Technologies We Use</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leveraging the latest 5G standards and cutting-edge technologies
+        {/* Why Choose 5G Section */}
+        <section className="relative z-10 py-16 lg:py-20 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 lg:mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400">5G Technology</span>?
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+                5G technology offers unprecedented speed, reliability, and connectivity for modern businesses.
               </p>
             </div>
             
-            <div className="flex flex-wrap justify-center gap-4">
-              {technologies.map((tech, index) => (
-                <span key={index} className="px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-cyan-500/20 hover:text-cyan-400 transition-all duration-300">
-                  {tech}
-                </span>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <AnimatedCard glowColor="green">
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">Ultra-Fast Speed</h3>
+                  <p className="text-gray-400">
+                    10x faster than 4G with speeds up to 10 Gbps for lightning-fast data transfer and real-time applications.
+                  </p>
+                </div>
+              </AnimatedCard>
+              
+              <AnimatedCard glowColor="cyan">
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto">
+                    <Clock className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">Ultra-Low Latency</h3>
+                  <p className="text-gray-400">
+                    Sub-millisecond latency for real-time applications, IoT devices, and mission-critical operations.
+                  </p>
+                </div>
+              </AnimatedCard>
+              
+              <AnimatedCard glowColor="purple">
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto">
+                    <Globe className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">Massive Connectivity</h3>
+                  <p className="text-gray-400">
+                    Support for over 1 million devices per square kilometer, perfect for smart cities and IoT deployments.
+                  </p>
+                </div>
+              </AnimatedCard>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy 5G?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Let&apos;s discuss how 5G can transform your business and give you a competitive advantage.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-                  Schedule Consultation
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
-                  View Portfolio
-                </button>
-              </div>
+        <section className="relative z-10 py-16 lg:py-20">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+              Ready to Embrace 5G Technology?
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-300 mb-8 lg:mb-12">
+              Transform your business with our cutting-edge 5G solutions. Get started today and experience the future of wireless technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <NeonButton href="/contact" size="lg">
+                Start 5G Journey
+              </NeonButton>
+              <NeonButton href="/demo" variant="secondary" size="lg">
+                5G Consultation
+              </NeonButton>
             </div>
           </div>
         </section>
-=======
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
       </div>
     </>
   );
-}
+};
+
+export default FiveGSolutionsPage;

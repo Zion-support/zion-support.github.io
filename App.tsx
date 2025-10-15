@@ -35,6 +35,10 @@ import AIServicesPage from './app/ai-services/page';
 import ITServicesPage from './app/it-solutions/page';
 import FiveGSolutionsPage from './app/5g-solutions/page';
 
+// Micro SAAS Pages
+import ZionAnalyticsProPage from './app/zion-analytics-pro/page';
+import ZionSecurityShieldPage from './app/zion-security-shield/page';
+
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -98,10 +102,11 @@ function App() {
                       {/* Service Pages */}
                       <Route path="/ai-services" element={<AIServicesPage />} />
                       <Route path="/it-services" element={<ITServicesPage />} />
-                      <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-                      <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-                      {/* Service Pages */}
                       <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                      
+                      {/* Micro SAAS Pages */}
+                      <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+                      <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
                       
                       {/* Catch all route */}
                       <Route path="*" element={

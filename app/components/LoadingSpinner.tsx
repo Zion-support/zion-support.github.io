@@ -21,31 +21,28 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     xl: 'w-12 h-12'
   };
 
-  const containerClasses = fullScreen 
-    ? `min-h-screen flex flex-col items-center justify-center space-y-2 ${className}`
-    : `flex flex-col items-center justify-center space-y-2 ${className}`;
-
-  return (
-    <div className={containerClasses}>
+  const spinner = (
+    <div className="flex flex-col items-center justify-center space-y-2">
       <Loader2 data-testid="loading-spinner" className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
       {text && (
         <p className="text-gray-300 text-sm animate-pulse">{text}</p>
       )}
     </div>
   );
-<<<<<<< HEAD
-=======
 
   if (fullScreen) {
     return (
-      <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
+      <div className={`fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50 ${className}`}>
         {spinner}
       </div>
     );
   }
 
-  return spinner;
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
+  return (
+    <div className={className}>
+      {spinner}
+    </div>
+  );
 };
 
 export default LoadingSpinner;
