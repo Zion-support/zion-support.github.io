@@ -80,8 +80,25 @@ class ErrorHandler {
     
     // Send to external logging service in production
     if (process.env.NODE_ENV === 'production') {
-      // Example: Send to external service like Sentry, LogRocket, etc.
-      // this.sendToExternalService(errorReport);
+      this.sendToExternalService(errorReport);
+    }
+  }
+
+  private sendToExternalService(errorReport: ErrorReport): void {
+    try {
+      // Send to error reporting API endpoint
+      fetch('/api/error-report', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(errorReport),
+      }).catch(() => {
+        // Silently fail if error reporting service is unavailable
+        console.warn('Failed to send error report to external service');
+      });
+    } catch (error) {
+      console.warn('Failed to send error report:', error);
     }
   }
 }
