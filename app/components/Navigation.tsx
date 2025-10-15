@@ -111,6 +111,29 @@ const Navigation: React.FC = () => {
                     <Link to="/zion-ai-workflow-automator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Workflow Automator
                     </Link>
+                    
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Additional Services</div>
+                    <Link to="/ai-voice-assistant" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Voice Assistant
+                    </Link>
+                    <Link to="/blockchain-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Blockchain Solutions
+                    </Link>
+                    <Link to="/iot-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      IoT Solutions
+                    </Link>
+                    <Link to="/ai-fraud-detection" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Fraud Detection
+                    </Link>
+                    <Link to="/ai-image-recognition" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Image Recognition
+                    </Link>
+                    <Link to="/devops-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      DevOps Automation
+                    </Link>
+                    <Link to="/security-audit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Security Audit
+                    </Link>
                   </div>
                 </div>
               )}

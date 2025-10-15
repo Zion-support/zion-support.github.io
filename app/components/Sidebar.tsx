@@ -32,6 +32,21 @@ const Sidebar: React.FC = () => {
             <Link to="/micro-saas-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Micro SaaS Solutions
             </Link>
+            <Link to="/ai-voice-assistant" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Voice Assistant
+            </Link>
+            <Link to="/blockchain-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Blockchain Solutions
+            </Link>
+            <Link to="/iot-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              IoT Solutions
+            </Link>
+            <Link to="/devops-automation" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              DevOps Automation
+            </Link>
+            <Link to="/security-audit" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Security Audit
+            </Link>
           </div>
           
           <div className="mb-4">

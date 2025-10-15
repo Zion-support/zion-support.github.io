@@ -34,6 +34,11 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/database-management" className="text-gray-300 hover:text-white">Database Management</Link></li>
               <li><Link to="/network-infrastructure" className="text-gray-300 hover:text-white">Network Infrastructure</Link></li>
               <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Solutions</Link></li>
+              <li><Link to="/ai-voice-assistant" className="text-gray-300 hover:text-white">AI Voice Assistant</Link></li>
+              <li><Link to="/blockchain-solutions" className="text-gray-300 hover:text-white">Blockchain Solutions</Link></li>
+              <li><Link to="/iot-solutions" className="text-gray-300 hover:text-white">IoT Solutions</Link></li>
+              <li><Link to="/devops-automation" className="text-gray-300 hover:text-white">DevOps Automation</Link></li>
+              <li><Link to="/security-audit" className="text-gray-300 hover:text-white">Security Audit</Link></li>
             </ul>
           </div>
           
