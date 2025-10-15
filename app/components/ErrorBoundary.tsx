@@ -20,7 +20,18 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    // Use proper error handling instead of console.error
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+    
+    // Report error to error handler
+    const { errorHandler } = require('../utils/errorHandler');
+    errorHandler.reportError(error, {
+      component: 'ErrorBoundary',
+      action: 'componentDidCatch',
+      ...errorInfo
+    });
   }
 
   render() {

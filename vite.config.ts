@@ -6,31 +6,72 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    sourcemap: process.env.NODE_ENV === 'development',
-    minify: 'esbuild',
+    sourcemap: true,
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
+      },
+    },
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['@heroicons/react', 'framer-motion'],
-          utils: ['clsx', 'tailwind-merge']
-        }
+          ui: ['@heroicons/react', 'framer-motion', 'lucide-react'],
+          utils: ['clsx', 'tailwind-merge'],
+          analytics: ['web-vitals'],
+          helmet: ['react-helmet-async']
+        },
+        chunkFileNames: () => `js/[name]-[hash].js`,
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: (assetInfo) => {
+          if (!assetInfo.name) return 'assets/[name]-[hash].[ext]';
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/\.(css)$/.test(assetInfo.name)) {
+            return `css/[name]-[hash].${ext}`;
+          }
+          return `assets/[name]-[hash].${ext}`;
+        },
       }
     },
-    target: 'esnext',
+    chunkSizeWarningLimit: 800,
+    target: 'es2020',
     cssCodeSplit: true,
-    chunkSizeWarningLimit: 1000
+    reportCompressedSize: true,
   },
   server: {
     port: 3000,
     open: true,
-    host: true
+    hmr: {
+      overlay: false
+    }
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'clsx', 'tailwind-merge']
+    include: [
+      'react', 
+      'react-dom', 
+      'react-router-dom',
+      '@heroicons/react',
+      'framer-motion',
+      'lucide-react',
+      'react-helmet-async',
+      'web-vitals'
+    ],
+    exclude: ['@vite/client', '@vite/env']
   },
   esbuild: {
-    drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : []
+    drop: ['console', 'debugger'],
+    pure: ['console.log', 'console.info', 'console.debug'],
+  },
+  css: {
+    devSourcemap: true,
   }
 })
