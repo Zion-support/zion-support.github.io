@@ -317,6 +317,15 @@ export const: generatePageSEO = (pageData: {};)
   content: string
   path: string
 
+<<<<<<< HEAD
+  generateStructuredData(data: Record<string, unknown>): string {
+    if (this.config.structuredData) {
+      return JSON.stringify(data);
+    }
+    return '';
+  }
+}
+=======
   keywords?: string[]
   noindex?: boolean;
   nofollow?: boolean;
@@ -336,6 +345,7 @@ export const: generateServiceSEO = (serviceData: {};)
   description: string
   path: string
   category: string
+>>>>>>> main
 
   features: string[]
 }): SEOData => {};';';";";";";";
