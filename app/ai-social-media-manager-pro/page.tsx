@@ -1,10 +1,7 @@
-import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, Camera, CheckCircle, Hash, Image, Mail, MessageCircle, Phone, Play, Star } from 'lucide-react';
+import { ArrowRight, Brain, Camera, CheckCircle, Phone, Play, Star } from 'lucide-react';
 
 const AISocialMediaManagerProPage = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
   const features = [
     {
       icon: <Brain className="w-8 h-8" />,
@@ -21,16 +18,16 @@ const AISocialMediaManagerProPage = () => {
   ];
 
   const platforms = [
-    { name: "Facebook", status: "Active" },
-    { name: "Twitter", status: "Active" },
-    { name: "Instagram", status: "Active" },
-    { name: "LinkedIn", status: "Inactive" }
+    { name: "Facebook", status: "Active", color: "text-blue-500", icon: <MessageCircle className="w-6 h-6" /> },
+    { name: "Twitter", status: "Active", color: "text-sky-500", icon: <Hash className="w-6 h-6" /> },
+    { name: "Instagram", status: "Active", color: "text-pink-500", icon: <Camera className="w-6 h-6" /> },
+    { name: "LinkedIn", status: "Inactive", color: "text-blue-600", icon: <Mail className="w-6 h-6" /> }
   ];
 
   const metrics = [
-    { name: "Engagement Rate", value: "15.2%" },
-    { name: "Followers", value: "50K+" },
-    { name: "Posts per Day", value: "5" }
+    { name: "Engagement Rate", value: "15.2%", icon: <Star className="w-6 h-6" />, number: "15.2%", label: "Engagement Rate" },
+    { name: "Followers", value: "50K+", icon: <CheckCircle className="w-6 h-6" />, number: "50K+", label: "Followers" },
+    { name: "Posts per Day", value: "5", icon: <Play className="w-6 h-6" />, number: "5", label: "Posts per Day" }
   ];
 
   const pricingPlans = [

@@ -1,10 +1,6 @@
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, BookOpen, Brain, CheckCircle, Mail, Phone, Play, Star, Users } from 'lucide-react';
+import { ArrowRight, BookOpen, Brain, CheckCircle, Phone, Play, Star } from 'lucide-react';
 
 const AIEducationSolutionsProPage = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
   const features = [
     {
       icon: <Brain className="w-8 h-8" />,

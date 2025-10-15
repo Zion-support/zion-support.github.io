@@ -1,12 +1,8 @@
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, CheckCircle, Heart, Mail, Phone, Play, Shield, Star } from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Heart, Phone, Play, Star } from 'lucide-react';
 
 const ShieldIcon = Shield;
 
 const AIHealthcareSolutionsProPage = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
   const features = [
     {
       icon: <Brain className="w-8 h-8" />,

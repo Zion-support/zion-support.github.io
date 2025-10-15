@@ -1,10 +1,6 @@
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, Brain, CheckCircle, Mail, Phone, Play, Star } from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Phone, Play, Star } from 'lucide-react';
 
 const AIMarketingAutomationProPage = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
   const features = [
     {
       icon: <Brain className="w-8 h-8" />,
