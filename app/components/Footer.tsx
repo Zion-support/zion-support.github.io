@@ -3,29 +3,31 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 text-white">
+    <footer className="futuristic-bg text-white border-t border-cyan-500/20">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
-            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+            <h3 className="text-lg font-semibold mb-4 neon-text">Zion Tech Group</h3>
             <p className="text-gray-300 mb-4">
               Advanced AI and IT Solutions for the modern world. Empowering businesses with cutting-edge technology.
             </p>
             <div className="flex space-x-4">
-              <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">Website</a>
-              <a href="mailto:contact@ziontechgroup.com" className="text-gray-300 hover:text-white">Email</a>
+              <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-cyan-400 transition-colors">Website</a>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-cyan-400 transition-colors">Email</a>
             </div>
           </div>
           
           <div>
             <h4 className="text-md font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
-              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-white">Cloud Infrastructure</Link></li>
-              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-white">Digital Transformation</Link></li>
-              <li><Link to="/data-analytics" className="text-gray-300 hover:text-white">Data Analytics</Link></li>
-              <li><Link to="/web-development" className="text-gray-300 hover:text-white">Web Development</Link></li>
+              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Services</Link></li>
+              <li><Link to="/comprehensive-ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">Comprehensive AI</Link></li>
+              <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">IT Services</Link></li>
+              <li><Link to="/comprehensive-it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">Comprehensive IT</Link></li>
+              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors">Cloud Infrastructure</Link></li>
+              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-cyan-400 transition-colors">Digital Transformation</Link></li>
+              <li><Link to="/data-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors">Data Analytics</Link></li>
+              <li><Link to="/web-development" className="text-gray-300 hover:text-cyan-400 transition-colors">Web Development</Link></li>
             </ul>
           </div>
           

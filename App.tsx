@@ -1,6 +1,7 @@
 import { Suspense, useEffect } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import './app/styles/globals.css'
 
 // Import pages
 import HomePage from './app/page';
@@ -32,6 +33,11 @@ import MicroSAASSolutionsPage from './app/micro-saas-solutions/page';
 import APIDocsPage from './app/api-docs/page';
 import AccessibilityPage from './app/accessibility/page';
 import AIContentGeneratorPage from './app/ai-content-generator/page';
+import AIChatbotBuilderPage from './app/ai-chatbot-builder/page';
+import AIFormBuilderPage from './app/ai-form-builder/page';
+import AIVideoGeneratorPage from './app/ai-video-generator/page';
+import ComprehensiveITServicesPage from './app/comprehensive-it-services/page';
+import ComprehensiveAIServicesPage from './app/comprehensive-ai-services/page';
 
 // Import Zion AI Tools
 import ZionAIContentModeratorPage from './app/zion-ai-content-moderator/page';
@@ -105,6 +111,8 @@ export default function App() {
                   {/* Service Pages */}
                   <Route path="/ai-services" element={<AIServicesPage />} />
                   <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/comprehensive-it-services" element={<ComprehensiveITServicesPage />} />
+                  <Route path="/comprehensive-ai-services" element={<ComprehensiveAIServicesPage />} />
                   <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                   <Route path="/ai-solutions" element={<AISolutionsPage />} />
                   <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
@@ -136,6 +144,9 @@ export default function App() {
                   
                   {/* AI Tools Pages */}
                   <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                  <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                  <Route path="/ai-form-builder" element={<AIFormBuilderPage />} />
+                  <Route path="/ai-video-generator" element={<AIVideoGeneratorPage />} />
                   
                   {/* Zion AI Tools */}
                   <Route path="/zion-ai-content-moderator" element={<ZionAIContentModeratorPage />} />

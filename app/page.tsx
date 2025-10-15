@@ -11,16 +11,16 @@ const HomePage: React.FC = () => {
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1 302 464 0950",
       "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "Innovation City",
-      "addressRegion": "IC",
-      "postalCode": "12345",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
       "addressCountry": "US"
     },
     "sameAs": [
@@ -50,20 +50,20 @@ const HomePage: React.FC = () => {
         </script>
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="min-h-screen futuristic-bg particles">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Welcome to Zion Tech Group
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6">
+              Welcome to <span className="neon-text">Zion Tech Group</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl mx-auto px-4">
               We provide cutting-edge AI and IT solutions to help your business thrive in the digital age.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
+              <a href="/contact" className="cyber-button text-center w-full sm:w-auto">
                 Get Started
               </a>
-              <a href="/about" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors text-center">
+              <a href="/about" className="cyber-button text-center w-full sm:w-auto" style={{borderColor: 'var(--neon-purple)', color: 'var(--neon-purple)'}}>
                 Learn More
               </a>
             </div>
@@ -71,59 +71,59 @@ const HomePage: React.FC = () => {
           
           {/* Services Preview */}
           <div className="mt-20">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Services</h3>
-                <p className="text-gray-600 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-12 neon-text-purple">Our Services</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              <div className="glass-card p-6 hover-lift hover-glow floating">
+                <h3 className="text-xl font-semibold text-white mb-4 neon-text">AI Services</h3>
+                <p className="text-gray-300 mb-4">
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                 </p>
-                <a href="/ai-services" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</a>
+                <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium">Learn More →</a>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Infrastructure</h3>
-                <p className="text-gray-600 mb-4">
+              <div className="glass-card p-6 hover-lift hover-glow floating-delayed">
+                <h3 className="text-xl font-semibold text-white mb-4 neon-text-purple">Cloud Infrastructure</h3>
+                <p className="text-gray-300 mb-4">
                   Scalable cloud solutions that provide reliability, security, and performance for your business applications.
                 </p>
-                <a href="/cloud-infrastructure" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</a>
+                <a href="/cloud-infrastructure" className="text-purple-400 hover:text-purple-300 font-medium">Learn More →</a>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
-                <p className="text-gray-600 mb-4">
+              <div className="glass-card p-6 hover-lift hover-glow floating-slow">
+                <h3 className="text-xl font-semibold text-white mb-4 neon-text-pink">Digital Transformation</h3>
+                <p className="text-gray-300 mb-4">
                   Complete digital transformation services to modernize your business processes and systems.
                 </p>
-                <a href="/digital-transformation" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</a>
+                <a href="/digital-transformation" className="text-pink-400 hover:text-pink-300 font-medium">Learn More →</a>
               </div>
             </div>
           </div>
           
           {/* AI Tools Preview */}
           <div className="mt-20">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI-Powered Tools</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Content Moderator</h3>
-                <p className="text-gray-600 text-sm mb-3">Automated content moderation using AI</p>
-                <a href="/zion-ai-content-moderator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</a>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-12 neon-text-green">AI-Powered Tools</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+              <div className="glass-card p-4 hover-lift hover-glow floating">
+                <h3 className="text-lg font-semibold text-white mb-2 neon-text">Chatbot Builder</h3>
+                <p className="text-gray-300 text-sm mb-3">Build intelligent chatbots without coding</p>
+                <a href="/ai-chatbot-builder" className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">Try Now →</a>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Sales Predictor</h3>
-                <p className="text-gray-600 text-sm mb-3">Predict sales trends with AI</p>
-                <a href="/zion-ai-sales-predictor" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</a>
+              <div className="glass-card p-4 hover-lift hover-glow floating-delayed">
+                <h3 className="text-lg font-semibold text-white mb-2 neon-text-green">Form Builder</h3>
+                <p className="text-gray-300 text-sm mb-3">Create smart forms with AI assistance</p>
+                <a href="/ai-form-builder" className="text-green-400 hover:text-green-300 text-sm font-medium">Try Now →</a>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Workflow Automator</h3>
-                <p className="text-gray-600 text-sm mb-3">Automate business workflows</p>
-                <a href="/zion-ai-workflow-automator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</a>
+              <div className="glass-card p-4 hover-lift hover-glow floating-slow">
+                <h3 className="text-lg font-semibold text-white mb-2 neon-text-pink">Video Generator</h3>
+                <p className="text-gray-300 text-sm mb-3">Create professional videos with AI</p>
+                <a href="/ai-video-generator" className="text-pink-400 hover:text-pink-300 text-sm font-medium">Try Now →</a>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Financial Forecaster</h3>
-                <p className="text-gray-600 text-sm mb-3">AI-powered financial predictions</p>
-                <a href="/zion-ai-financial-forecaster" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</a>
+              <div className="glass-card p-4 hover-lift hover-glow floating">
+                <h3 className="text-lg font-semibold text-white mb-2 neon-text-purple">Content Moderator</h3>
+                <p className="text-gray-300 text-sm mb-3">Automated content moderation using AI</p>
+                <a href="/zion-ai-content-moderator" className="text-purple-400 hover:text-purple-300 text-sm font-medium">Try Now →</a>
               </div>
             </div>
             <div className="text-center mt-8">
-              <a href="/services" className="text-blue-600 hover:text-blue-800 font-medium">View All Services →</a>
+              <a href="/services" className="text-cyan-400 hover:text-cyan-300 font-medium neon-text">View All Services →</a>
             </div>
           </div>
         </div>
