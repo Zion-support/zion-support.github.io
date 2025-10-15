@@ -101,29 +101,29 @@ const ContactPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></></Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get in touch via phone, email, or our contact form. We're here to help transform your business." />
-        <meta name="keywords" content="contact, get in touch, AI solutions, IT services, consultation, support" />
-        <link rel="canonical" href="https://ziontechgroup.com/contact" />
+        <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get in touch via phone, email, or our contact form. We're here to help transform your business." /></meta>
+        <meta name="keywords" content="contact, get in touch, AI solutions, IT services, consultation, support" /></meta>
+        <link rel="canonical" href="https://ziontechgroup.com/contact" /></link>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="absolute inset-0 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></section>
+        <div className="absolute inset-0 overflow-hidden"></div>
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <div className="container mx-auto px-4 relative z-10"></div>
+          <div className="text-center max-w-4xl mx-auto"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Get in
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"></span>
                 {' '}Touch
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
               Ready to transform your business with cutting-edge AI and IT solutions? 
               Let's discuss your project and explore how we can help you achieve your goals.
             </p>
@@ -132,20 +132,20 @@ const ContactPage: React.FC = () => {
       </section>
 
       {/* Contact Methods */}
-      <section className="py-20 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+      <section className="py-20 bg-slate-800"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">How to Reach Us</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Choose the most convenient way to get in touch with our team.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {contactMethods.map((method) => (
-              <div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <method.icon className="w-8 h-8 text-white" />
+              <div key={index} className="group bg-slate-700/50 hover:bg-slate-700/70 p-8 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform"></div>
+                  <method.icon className="w-8 h-8 text-white" /></method>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{method.title}</h3>
                 <p className="text-cyan-400 font-medium mb-2">{method.details}</p>
@@ -154,8 +154,8 @@ const ContactPage: React.FC = () => {
                   <a
                     href={method.action}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
-                  >
-                    <Zap className="w-4 h-4 mr-1" />
+                  ></a>
+                    <Zap className="w-4 h-4 mr-1" /></Zap>
                     Contact Now
                   </a>
                 )}
@@ -166,27 +166,27 @@ const ContactPage: React.FC = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
+      <section className="py-20 bg-gradient-to-br from-slate-900 to-purple-900"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-4xl mx-auto"></div>
+            <div className="text-center mb-12"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Send Us a Message</h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
                 Fill out the form below and we'll get back to you within 24 hours.
               </p>
             </div>
 
             {isSubmitted ? (
-              <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-8 text-center">
-                <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+              <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-8 text-center"></div>
+                <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" /></CheckCircle>
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent Successfully!</h3>
                 <p className="text-gray-300">Thank you for contacting us. We'll get back to you soon.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label htmlFor="name" className="block text-white font-medium mb-2">
+              <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8"></form>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"></div>
+                  <div></div>
+                    <label htmlFor="name" className="block text-white font-medium mb-2"></label>
                       Full Name *
                     </label>
                     <input
@@ -198,10 +198,10 @@ const ContactPage: React.FC = () => {
                       required
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Enter your full name"
-                    />
+                    /></input>
                   </div>
-                  <div>
-                    <label htmlFor="email" className="block text-white font-medium mb-2">
+                  <div></div>
+                    <label htmlFor="email" className="block text-white font-medium mb-2"></label>
                       Email Address *
                     </label>
                     <input
@@ -213,13 +213,13 @@ const ContactPage: React.FC = () => {
                       required
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Enter your email address"
-                    />
+                    /></input>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label htmlFor="company" className="block text-white font-medium mb-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"></div>
+                  <div></div>
+                    <label htmlFor="company" className="block text-white font-medium mb-2"></label>
                       Company Name
                     </label>
                     <input
@@ -230,10 +230,10 @@ const ContactPage: React.FC = () => {
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Enter your company name"
-                    />
+                    /></input>
                   </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-white font-medium mb-2">
+                  <div></div>
+                    <label htmlFor="phone" className="block text-white font-medium mb-2"></label>
                       Phone Number
                     </label>
                     <input
@@ -244,13 +244,13 @@ const ContactPage: React.FC = () => {
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Enter your phone number"
-                    />
+                    /></input>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label htmlFor="service" className="block text-white font-medium mb-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"></div>
+                  <div></div>
+                    <label htmlFor="service" className="block text-white font-medium mb-2"></label>
                       Service Interested In
                     </label>
                     <select
@@ -259,15 +259,15 @@ const ContactPage: React.FC = () => {
                       value={formData.service}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
+                    ></select>
                       <option value="">Select a service</option>
                       {services.map((service) => (
                         <option key={index} value={service}>{service}</option>
                       ))}
                     </select>
                   </div>
-                  <div>
-                    <label htmlFor="budget" className="block text-white font-medium mb-2">
+                  <div></div>
+                    <label htmlFor="budget" className="block text-white font-medium mb-2"></label>
                       Project Budget
                     </label>
                     <select
@@ -276,7 +276,7 @@ const ContactPage: React.FC = () => {
                       value={formData.budget}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
+                    ></select>
                       <option value="">Select budget range</option>
                       {budgetRanges.map((range) => (
                         <option key={index} value={range}>{range}</option>
@@ -285,8 +285,8 @@ const ContactPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="mb-8">
-                  <label htmlFor="message" className="block text-white font-medium mb-2">
+                <div className="mb-8"></div>
+                  <label htmlFor="message" className="block text-white font-medium mb-2"></label>
                     Project Details *
                   </label>
                   <textarea
@@ -298,23 +298,23 @@ const ContactPage: React.FC = () => {
                     rows={6}
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                     placeholder="Tell us about your project, goals, and any specific requirements..."
-                  />
+                  /></textarea>
                 </div>
 
-                <div className="text-center">
+                <div className="text-center"></div>
                   <button
                     type="submit"
                     disabled={isSubmitting}
                     className="group bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center mx-auto disabled:transform-none disabled:shadow-none"
-                  >
+                  ></button>
                     {isSubmitting ? (
                       <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></></div>
                         Sending...
                       </>
                     ) : (
                       <>
-                        <Send className="w-5 h-5 mr-2" />
+                        <Send className="w-5 h-5 mr-2" /></></Send>
                         Send Message
                       </>
                     )}
@@ -327,39 +327,39 @@ const ContactPage: React.FC = () => {
       </section>
 
       {/* Additional Contact Options */}
-      <section className="py-20 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+      <section className="py-20 bg-slate-800"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Other Ways to Connect</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               We're available through multiple channels to ensure you can reach us when you need us.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600/50 text-center">
-              <MessageSquare className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600/50 text-center"></div>
+              <MessageSquare className="w-12 h-12 text-cyan-400 mx-auto mb-4" /></MessageSquare>
               <h3 className="text-xl font-semibold text-white mb-2">Live Chat</h3>
               <p className="text-gray-300 mb-4">Chat with our team in real-time for immediate assistance.</p>
-              <button className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+              <button className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"></button>
                 Start Chat
               </button>
             </div>
 
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600/50 text-center">
-              <Calendar className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600/50 text-center"></div>
+              <Calendar className="w-12 h-12 text-purple-400 mx-auto mb-4" /></Calendar>
               <h3 className="text-xl font-semibold text-white mb-2">Schedule Meeting</h3>
               <p className="text-gray-300 mb-4">Book a consultation call at your convenience.</p>
-              <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"></button>
                 Book Now
               </button>
             </div>
 
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600/50 text-center">
-              <Headphones className="w-12 h-12 text-green-400 mx-auto mb-4" />
+            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600/50 text-center"></div>
+              <Headphones className="w-12 h-12 text-green-400 mx-auto mb-4" /></Headphones>
               <h3 className="text-xl font-semibold text-white mb-2">Support Center</h3>
               <p className="text-gray-300 mb-4">Get help with existing projects and technical issues.</p>
-              <button className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+              <button className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"></button>
                 Get Support
               </button>
             </div>

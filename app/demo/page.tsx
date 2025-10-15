@@ -49,12 +49,12 @@ import { Helmet } from 'react-helmet-async';
 
   return (
     <>
-      <Helmet>
+      <Helmet></></Helmet>
         <title>Demo - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="See our AI and IT solutions in action with live demos." />
+        <meta name="description" content="See our AI and IT solutions in action with live demos." /></meta>
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
+        <div className="text-center"></div>
           <h1 className="text-4xl font-bold text-white mb-4">Demo</h1>
           <p className="text-gray-300">Coming soon...</p>
         </div>
@@ -69,9 +69,9 @@ export default DemoPage;
       <SEOHead 
         title="demo - Zion Tech Group"
         description="Zion Tech Group demo service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
+      /></></SEOHead>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
+        <div className="text-center"></div>
           <h1 className="text-4xl font-bold mb-4">demo</h1>
           <p className="text-gray-300">Coming soon...</p>
         </div>

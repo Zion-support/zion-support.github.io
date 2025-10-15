@@ -28,8 +28,8 @@ export default EnhancedErrorBoundary
     }
     // Log to console in development
       console.group('🚨 Error Boundary Caught Error')
-      console.error('Error Report:', errorReport)
-      console.groupEnd()
+      console.error('Error Report:', errorReport);
+      console.groupEnd();
     // Send to error reporting service (implement, as, needed)
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
@@ -49,7 +49,7 @@ export default EnhancedErrorBoundary
   }
     this.setState({ hasError: false, error: undefined, errorInfo: undefined })
   }
-    window.location.reload()
+    window.location.reload();
   }
     window.location.href = '/'
   }

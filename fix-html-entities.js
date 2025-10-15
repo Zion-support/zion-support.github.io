@@ -4,13 +4,19 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-function fixHtmlEntities(filePath) {}
-}try {}
-} catch (error) {}
+function fixHtmlEntities(filePath) {
+  // TODO: Implement
+}
+}try {
+  // TODO: Implement
+}
+} catch (error) {
+  // TODO: Implement
+}
   console.error(error)
-}let content = fs.readFileSync(filePath, 'utf8')
-// Fix common HTML entities
-    const fixes = []
+}let content = fs.readFileSync(filePath, 'utf8');
+// Fix common HTML entities;
+    const fixes = [];
       { from: /&apos;/g, to: "'" },
       { from: /&quot;/g, to: '"' },
       { from: /&lt;/g, to: '<' },
@@ -20,33 +26,51 @@ function fixHtmlEntities(filePath) {}
       { from: /&lbrace;/g, to: '{' }
     ]
     let hasChanges = false
-    fixes.forEach(fix => {}
-}if (fix.from.test(content)) {}
+    fixes.forEach(fix => {
+  // TODO: Implement
+}
+}if (fix.from.test(content)) {
+  // TODO: Implement
+}
         content = content.replace(fix.from, fix.to)
         hasChanges = true
       }
     })
-    if (hasChanges) {}
+    if (hasChanges) {
+  // TODO: Implement
+}
       fs.writeFileSync(filePath, content, 'utf8')
       console.log(`Fixed HTML entities in: ${filePath}`)
       return true
     }
     return false
-  } catch (error) {}
+  } catch (error) {
+  // TODO: Implement
+}
     console.error(`Error processing ${filePath}:`, error.message)
     return false
   }
 }
-function findTsxFiles(dir) {}
+function findTsxFiles(dir) {
+  // TODO: Implement
+}
 }const files = []
-  function traverse(currentDir) {}
+  function traverse(currentDir) {
+  // TODO: Implement
+}
 }const items = fs.readdirSync(currentDir)
-    for (const item of items) {}
+    for (const item of items) {
+  // TODO: Implement
+}
       const fullPath = path.join(currentDir, item)
       const stat = fs.statSync(fullPath)
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {}
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+  // TODO: Implement
+}
         traverse(fullPath)
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {}
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+  // TODO: Implement
+}
         files.push(fullPath)
       }
     }
@@ -59,9 +83,13 @@ const appDir = path.join(__dirname, 'app')
 const files = findTsxFiles(appDir)
 console.log(`Found ${files.length} TypeScript files to process...`)
 let fixedCount = 0
-files.forEach(file => {}
-}if (fixHtmlEntities(file)) {}
+files.forEach(file => {
+  // TODO: Implement
+}
+}if (fixHtmlEntities(file)) {
+  // TODO: Implement
+}
     fixedCount++
   }
 })
-console.log(`Fixed HTML entities in ${fixedCount} files.`)
+console.log(`Fixed HTML entities in ${fixedCount} files.`)"

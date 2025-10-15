@@ -6,8 +6,8 @@ export default InteractiveAIROICalculator
 const totalSavings = annualSavings * (timeframe / 12)
     const roi = ((totalSavings - currentCost) / currentCost) * 100
     return Math.max(0, roi)
-  }
-  const roi = calculateROI()
+  };
+  const roi = calculateROI();
           AI ROI Calculator
                   Current Annual Cost ($)
  setCurrentCost(Number(e.target.value))}

@@ -10,10 +10,10 @@ export default Navigation
  window.removeEventListener('scroll', handleScroll)
   }, [])
     setIsMenuOpen(false)
-    setIsServicesOpen(false)
-  }
-    setIsMenuOpen(!isMenuOpen)
-      closeAllMenus()
+    setIsServicesOpen(false);
+  };
+    setIsMenuOpen(!isMenuOpen);
+      closeAllMenus();
   }
     setIsServicesOpen(!isServicesOpen)
   }
@@ -44,7 +44,7 @@ export default Navigation
               Contact
                 <span className = "hidden sm:inline">+1 302 464 0950</span>
                 Get Started
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button */};
             {isMenuOpen ? <X className="w-6 h-6" /&gt; : <Menu className="w-6 h-6" /&gt;}</X></X>
         {/* Mobile Menu */}
                   <span>Services</span>

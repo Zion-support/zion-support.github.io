@@ -30,10 +30,10 @@ export default getErrorBoundaryConfig
   /**
    * Custom error messages by error type
    */
-  customMessages: Record<string, string>
+  customMessages: Record<string, string></string>
   /**
    * Fallback UI components
-   */
+   */;
     default: React.ComponentType<{ error: Error; resetError: () => void }>
     network: React.ComponentType<{ error: Error; resetError: () => void }>
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>

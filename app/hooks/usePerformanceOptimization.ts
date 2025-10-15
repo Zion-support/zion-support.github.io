@@ -1,8 +1,8 @@
 import {useEffect, useCallback} from 'react';
 interface PerformanceMetrics {
-  loadTime: number;
+  loadTime: number;,
   firstContentfulPaint: number;
-  largestContentfulPaint: number;
+  largestContentfulPaint: number;,
   cumulativeLayoutShift: number;
   firstInputDelay: number;
   memoryUsage?: number;
@@ -16,13 +16,15 @@ interface UsePerformanceOptimizationOptions {
   enableBundleAnalysis?: boolean;
 }
 
-export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {
+export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {
+  // TODO: Implement
+}) => {
   const {
     enableMonitoring = true,
     enablePreloading = true,
     enableLazyLoading = true,
     enableImageOptimization = true,
-    enableBundleAnalysis = true,
+    enableBundleAnalysis = true,;
   } = options;
 
   const metricsRef = useRef<PerformanceMetrics | null>(null);

@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  CLS: number | null;
+  CLS: number | null;,
   INP: number | null;
-  FCP: number | null;
+  FCP: number | null;,
   LCP: number | null;
   TTFB: number | null;
 }

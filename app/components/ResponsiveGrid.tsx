@@ -1,9 +1,13 @@
 import React from 'react'
 import { cn } from '../lib/utils'
-interface ResponsiveGridProps {}
+interface ResponsiveGridProps {
+  // TODO: Implement
+}
   children: React.ReactNode
   className?: string
-  cols?: {}
+  cols?: {
+  // TODO: Implement
+}
     default: number
     sm?: number
     md?: number
@@ -22,7 +26,9 @@ const ResponsiveGrid = (_{
     lg: 'gap-6',
     xl: 'gap-8'
   }
-  const gridColsClasses = {}
+  const gridColsClasses = {
+  // TODO: Implement
+}
     1: 'grid-cols-1',
     2: 'grid-cols-2',
     3: 'grid-cols-3',
@@ -36,12 +42,12 @@ const ResponsiveGrid = (_{
     cols.md && `md:${gridColsClasses[cols.md]}`,
     cols.lg && `lg:${gridColsClasses[cols.lg]}`,
     cols.xl && `xl:${gridColsClasses[cols.xl]}`,
-    gapClasses[gap]
-  ].filter(Boolean).join(' ')
-  return ()
-    <div className={cn(responsiveClasses, className)}>
+    gapClasses[gap];
+  ].filter(Boolean).join(' ');
+  return();
+    <div className={cn(responsiveClasses, className)}></div>
       {children}
     </div>
   )
 }
-export default ResponsiveGrid
+export default ResponsiveGrid;

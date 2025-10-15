@@ -17,6 +17,6 @@ import path from 'path
   const lines = content.split('\n''
   return resolved.join('\n''
   console.error('Error:''
-    const content = fs.readFileSync(filePath, 'utf8''
-console.log('Starting merge conflict resolution...''
-console.log('Merge conflict resolution completed!''
+    const content = fs.readFileSync(filePath, 'utf8'';
+console.log('Starting merge conflict resolution...'';
+console.log('Merge conflict resolution completed!'';))))))

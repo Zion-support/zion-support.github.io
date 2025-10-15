@@ -1,6 +1,6 @@
-  loadTime: number
+  loadTime: number,
   firstContentfulPaint: number
-  largestContentfulPaint: number
+  largestContentfulPaint: number,
   cumulativeLayoutShift: number
   firstInputDelay: number
       return null
@@ -8,12 +8,11 @@
     const paintEntries = performance.getEntriesByType('paint')
       loadTime: navigation
         ? navigation.loadEventEnd - navigation.loadEventStart
-      firstContentfulPaint:
- entry.name = == 'first-contentful-paint')
-      firstInputDelay: 0
+      firstContentfulPaint: entry.name = == 'first-contentful-paint'),
+  firstInputDelay: 0
     }
     // Measure LCP
-      const entries = list.getEntries()
+      const entries = list.getEntries();
 const lastEntry = entries[entries.length - 1]
         metrics.largestContentfulPaint = lastEntry.startTime
     })
@@ -34,9 +33,9 @@ const lastEntry = entries[entries.length - 1]
     })
     fidObserver.observe({ entryTypes: ['first-input'] })
     // Cleanup observers after a delay
-      lcpObserver.disconnect()
-      clsObserver.disconnect()
-      fidObserver.disconnect()
+      lcpObserver.disconnect();
+      clsObserver.disconnect();
+      fidObserver.disconnect();
     }, 10000)
     return metrics
   }, [])
@@ -59,15 +58,15 @@ const link = document.createElement('link')
     })
   }, [])
     // Measure performance after page load
-      const metrics = measurePerformance()
+      const metrics = measurePerformance();
         // Send metrics to analytics in production
           // Track metrics in production
             console.log('Performance metrics:', metrics)
     }, 1000)
     // Optimize images
-    optimizeImages()
+    optimizeImages();
     // Preload critical resources
-    preloadCriticalResources()
+    preloadCriticalResources();
  clearTimeout(timer)
   }, [measurePerformance, optimizeImages, preloadCriticalResources])
     preloadCriticalResources

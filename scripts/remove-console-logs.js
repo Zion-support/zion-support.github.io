@@ -9,7 +9,7 @@ import { glob } from 'glob'
 function removeConsoleLogs(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
-    const originalContent = content
+    const originalContent = content;
     
     // Remove console.log, console.warn, console.error, console.info, console.debug
     content = content.replace(/console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?/g, '')
@@ -33,14 +33,21 @@ async function main() {
     // Find all JavaScript files in dist directory
     const files = await glob('dist/**/*.js')
     
-    for (const file of files) {
-      removeConsoleLogs(file)
+    if (files.length === 0) {
+      console.log('No JavaScript files found in dist directory')
+      return
     }
+    
+    // Process each file
+    files.forEach(file => {
+      removeConsoleLogs(file)
+    })
     
     console.log('Console log removal completed!')
   } catch (error) {
-    console.error('Error removing console logs:', error)
+    console.error('Error during console log removal:', error.message)
   }
 }
 
+// Run the script
 main()

@@ -42,7 +42,7 @@ export default Footer
                   ))}
         {/* Bottom Section */}
               © 2024 Zion Tech Group. All rights reserved.
-                  {link.name}
-              ))}
-  )
-}
+                  {link.name};
+              ))};
+  );
+};

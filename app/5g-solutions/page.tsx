@@ -42,3 +42,5 @@ const FiveGSolutionsPage: React.FC = () => {
       marketPrice: "$5,999-19,999",
       popular: false,
       icon: <Smartphone className="w-8 h-8" />,
+
+}}]

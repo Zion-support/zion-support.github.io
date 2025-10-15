@@ -23,5 +23,6 @@ const CareersPage = lazy(() => import("./careers/page"))
 const PrivacyPage = lazy(() => import("./privacy/page"))
 const TermsPage = lazy(() => import("./terms/page"))
 const CookiesPage = lazy(() => import("./cookies/page"))
-
-// 5G Solutions Pages
+;
+// 5G Solutions Pages;
+;

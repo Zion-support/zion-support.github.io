@@ -62,4 +62,4 @@ function processFiles(dir) {
 // Process the app directory
 console.log('Starting comprehensive fix of map syntax errors...');
 const fixedCount = processFiles('./app');
-console.log(`Fixed ${fixedCount} files.`);
+console.log(`Fixed ${fixedCount} files.`);))))))

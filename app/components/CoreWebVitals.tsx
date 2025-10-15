@@ -1,16 +1,26 @@
 import React, { useEffect, useCallback } from 'react'
-interface WebVitalsData {}
-  name: string
+interface WebVitalsData {
+  // TODO: Implement
+}
+  name: string,
   value: number
-  delta: number
+  delta: number,
   id: string
   navigationType: string
 }
-const CoreWebVitals: React.FC = () => {}
-}const reportWebVitals = useCallback((data: WebVitalsData) => {}
+const CoreWebVitals: React.FC = () => {
+  // TODO: Implement
+}
+}const reportWebVitals = useCallback((data: WebVitalsData) => {
+  // TODO: Implement
+}
 }// Send to Google Analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {}
-      (window as any).gtag('event', 'web_vitals', {}
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+  // TODO: Implement
+}
+      (window as any).gtag('event', 'web_vitals', {
+  // TODO: Implement
+}
         metric_name: data.name,
         metric_value: Math.round(data.value),
         metric_delta: Math.round(data.delta),
@@ -19,17 +29,21 @@ const CoreWebVitals: React.FC = () => {}
       })
     }
     // Send to custom analytics
-    if (typeof window !== 'undefined' && (window as any).analytics) {}
-      (window as any).analytics.track('Web Vitals', {}
+    if (typeof window !== 'undefined' && (window as any).analytics) {
+  // TODO: Implement
+}
+      (window as any).analytics.track('Web Vitals', {
+  // TODO: Implement
+}
         metric: data.name,
         value: data.value,
         delta: data.delta,
         id: data.id
       })
     }
-    // Log in development
-    if (process.env.NODE_ENV === 'development') {
-      }
+    // Log in development;
+    if (process.env.NODE_ENV === 'development') {;
+      };
   }, []);
 
   useEffect(() => {
@@ -44,7 +58,8 @@ const CoreWebVitals: React.FC = () => {}
         onTTFB(reportWebVitals);
         onINP(reportWebVitals);
       } catch (error) {
-        }
+  // TODO: Implement
+}
     };
 
     measureWebVitals();
@@ -52,4 +67,4 @@ const CoreWebVitals: React.FC = () => {}
 
   return null; // This component doesn't render anything
 }
-export default CoreWebVitals
+export default CoreWebVitals;

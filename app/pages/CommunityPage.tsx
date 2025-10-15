@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import {MessageSquare, BookOpen} from "lucide-react";
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 const CommunityPage: React.FC = () => {
   const communityFeatures = [
@@ -30,62 +26,62 @@ const CommunityPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></></Helmet>
         <title>Community - Zion Tech Group | Developer Community</title>
-        <meta name="description" content="Join our vibrant developer community. Connect, learn, and collaborate with other developers using Zion Tech Group's solutions." />
-        <meta name="keywords" content="community, developer community, forums, code sharing, learning resources" />
-        <link rel="canonical" href="https://ziontechgroup.com/community" />
+        <meta name="description" content="Join our vibrant developer community. Connect, learn, and collaborate with other developers using Zion Tech Group's solutions." /></meta>
+        <meta name="keywords" content="community, developer community, forums, code sharing, learning resources" /></meta>
+        <link rel="canonical" href="https://ziontechgroup.com/community" /></link>
       </Helmet>
 
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="absolute inset-0 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16"></section>
+        <div className="absolute inset-0 overflow-hidden"></div>
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <div className="container mx-auto px-4 relative z-10"></div>
+          <div className="text-center max-w-4xl mx-auto"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Developer
-              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"></span>
                 {' '}Community
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
               Join our vibrant community of developers, share knowledge, and collaborate on innovative projects.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center"
-              >
+              ></Link>
                 Join Community
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+      <section className="py-20 bg-slate-800"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Community Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Connect, learn, and grow with our developer community.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {communityFeatures.map((feature) => (
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+              <div key={index} className="text-center group"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform"></div>
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors"></h3>
                   {feature.title}
                 </h3>
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors">
+                <p className="text-gray-300 group-hover:text-gray-200 transition-colors"></p>
                   {feature.description}
                 </p>
               </div>

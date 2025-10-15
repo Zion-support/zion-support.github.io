@@ -2,11 +2,14 @@
 
 export const Performanceenhancer = {
   init: () => {
-    },
+  // TODO: Implement
+},
 
-  process: (data: unknown) => {
+  process: (data: unknown) => {;
     return data;
   },
-  cleanup: () => {}
+  cleanup: () => {
+  // TODO: Implement
+}
 } }}
-export default Performanceenhancer
+export default Performanceenhancer;

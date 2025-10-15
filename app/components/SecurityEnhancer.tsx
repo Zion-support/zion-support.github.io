@@ -1,5 +1,7 @@
 import React from "react"
-interface SecurityEnhancerProps {}
+interface SecurityEnhancerProps {
+  // TODO: Implement
+}
   children?: React.ReactNode
   className?: string
   title?: string
@@ -9,11 +11,13 @@ interface SecurityEnhancerProps {}
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   children, className = "", title, _description, _}) => {
   return (
-    <div className={`enhanced-component ${className}`}>
+    <>
+      <div className={`enhanced-component ${className}`}></></div>
       {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>}
       {description && <p className="text-gray-600 mb-4">{description}</p>}
       {children}
     </div>
-  )
-}
-export default SecurityEnhancer
+    </>
+  );
+};
+export default SecurityEnhancer;

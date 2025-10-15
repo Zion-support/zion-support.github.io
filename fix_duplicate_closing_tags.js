@@ -2,7 +2,9 @@ import fs from 'fs'
 import path from 'path'
 #!/usr/bin/env node
 // Function to fix duplicate closing tags
-function fixDuplicateClosingTags(content) {}
+function fixDuplicateClosingTags(content) {
+  // TODO: Implement
+}
 }// Fix duplicate Link closing tags
   content = content.replace(/<\/Link>\s*<\/Link>/g, '</Link>')
   // Fix any other duplicate closing tags
@@ -17,36 +19,58 @@ function fixDuplicateClosingTags(content) {}
   content = content.replace(/<\/h6>\s*<\/h6>/g, '</h6>')
   return content
 // Function to process a single file
-function processFile(filePath) {}
-}try {}
-} catch (error) {}
+function processFile(filePath) {
+  // TODO: Implement
+}
+}try {
+  // TODO: Implement
+}
+} catch (error) {
+  // TODO: Implement
+}
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixedContent = fixDuplicateClosingTags(content)
-    if (content !== fixedContent) {}
+    if (content !== fixedContent) {
+  // TODO: Implement
+}
       fs.writeFileSync(filePath, fixedContent, 'utf8')
       console.log(`Fixed duplicate closing tags: ${filePath}`)
       return true
     return false
-  } catch (error) {}
+  } catch (error) {
+  // TODO: Implement
+}
     console.error(`Error processing ${filePath}:`, error.message)
     return false
 // Function to recursively find and process TSX files
-function processDirectory(dirPath) {}
+function processDirectory(dirPath) {
+  // TODO: Implement
+}
 }let processedCount = 0
-  function walkDir(currentPath) {}
+  function walkDir(currentPath) {
+  // TODO: Implement
+}
 }const items = fs.readdirSync(currentPath)
-    for (const item, of, items) {}
+    for (const item, of, items) {
+  // TODO: Implement
+}
       const fullPath = path.join(currentPath, item)
 const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {}
+      if (stat.isDirectory()) {
+  // TODO: Implement
+}
         walkDir(fullPath)
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {}
-        if (processFile(fullPath)) {}
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+  // TODO: Implement
+}
+        if (processFile(fullPath)) {
+  // TODO: Implement
+}
           processedCount++
   walkDir(dirPath)
   return processedCount
 // Main execution
-console.log('Starting duplicate closing tag fixes...')
-const processedCount = processDirectory('./app')
-console.log(`Processed ${processedCount} files.`)
+console.log('Starting duplicate closing tag fixes...');
+const processedCount = processDirectory('./app');
+console.log(`Processed ${processedCount} files.`);

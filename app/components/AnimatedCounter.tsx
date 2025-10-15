@@ -29,18 +29,22 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       }
     }
     animationFrame = requestAnimationFrame(animate)
-    return () => {}
-}if (animationFrame) {}
+    return () => {
+  // TODO: Implement
+}
+}if (animationFrame) {
+  // TODO: Implement
+}
         cancelAnimationFrame(animationFrame)
       }
     }
   }, [end, duration])
-  return ()
-    <span className={className}>
+  return();
+    <span className={className}></span>
       {prefix}
       {count.toLocaleString()}
       {suffix}
     </span>
   )
 }
-export default AnimatedCounter
+export default AnimatedCounter;

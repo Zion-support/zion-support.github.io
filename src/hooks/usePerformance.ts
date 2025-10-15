@@ -1,8 +1,8 @@
-  loadTime: number
+  loadTime: number,
   domContentLoaded: number
-  firstContentfulPaint: number
+  firstContentfulPaint: number,
   largestContentfulPaint: number
-  cumulativeLayoutShift: number
+  cumulativeLayoutShift: number,
   firstInputDelay: number
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
   const [isMonitoring, setIsMonitoring] = useState(false)
@@ -40,7 +40,7 @@
     // Start monitoring
     setIsMonitoring(true)
     // Measure performance after page load
-      measurePerformance()
+      measurePerformance();
       window.addEventListener('load', measurePerformance)
       window.removeEventListener('load', measurePerformance)
     }

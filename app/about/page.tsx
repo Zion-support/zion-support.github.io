@@ -1,17 +1,19 @@
 import { Helmet } from "react-helmet-async";
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Shield, Users, Award } from 'lucide-react';
-=======
-import {Brain, Shield, Users, Award} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 export default function AboutPage() {
+  return;
+}
+  return;
+}
+  // TODO: Implement
+}
   const stats = [
     { number: "500+", label: "Projects Completed" },
     { number: "100+", label: "Happy Clients" },
     { number: "50+", label: "AI Solutions" },
-    { number: "24/7", label: "Support" }
+    { number: "24/7", label: "Support" };
   ];
 
   const values = [
@@ -39,25 +41,24 @@ export default function AboutPage() {
 
   return (
     <>
-      <Helmet>
-<<<<<<< HEAD
+      <Helmet></></Helmet>
         <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions." />
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions." /></meta>
       </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white">
+      <div className="min-h-screen bg-slate-900 text-white"></div>
         {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        <section className="relative py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6"></h1>
               About <span className="text-blue-400">Zion Tech Group</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               We are a leading technology company specializing in AI solutions, 
               IT services, and innovative digital transformations that drive business success.
             </p>
-            <div className="flex flex-wrap justify-center gap-8 mt-12">
+            <div className="flex flex-wrap justify-center gap-8 mt-12"></div>
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
+                <div key={index} className="text-center"></div>
                   <div className="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
                 </div>
@@ -67,13 +68,13 @@ export default function AboutPage() {
         </section>
 
         {/* Values Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
             <h2 className="text-4xl font-bold text-center mb-16">Our Values</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {values.map((value, index) => (
-                <div key={index} className="text-center p-6 rounded-lg bg-slate-800">
-                  <div className="text-blue-400 mb-4 flex justify-center">
+                <div key={index} className="text-center p-6 rounded-lg bg-slate-800"></div>
+                  <div className="text-blue-400 mb-4 flex justify-center"></div>
                     {value.icon}
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
@@ -85,24 +86,24 @@ export default function AboutPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 bg-slate-800">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-20 px-4 bg-slate-800"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-4xl font-bold mb-6">Ready to Work With Us?</h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8"></p>
               Let's discuss how we can help transform your business with our innovative solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
+              ></Link>
                 Get in Touch
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5" /></ArrowRight>
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-3 border border-blue-400 text-blue-400 rounded-lg hover:bg-blue-400 hover:text-white transition-colors"
-              >
+              ></Link>
                 View Our Services
               </Link>
             </div>
@@ -112,43 +113,3 @@ export default function AboutPage() {
     </>
   );
 }
-=======
-        <title>About - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group - Leading AI and IT Solutions Provider" />
-      </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold mb-6">About Zion Tech Group</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We are a leading technology company specializing in AI solutions, cloud services, 
-              and innovative IT solutions that transform businesses.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="text-center p-6 bg-slate-800 rounded-lg">
-                <div className="text-blue-400 mb-4 flex justify-center">
-                  {value.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
-                <p className="text-gray-300">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7

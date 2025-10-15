@@ -66,7 +66,7 @@ export default ITServicesPage
         {/* CTA Section */}
             <h2 className = "text-3xl font-bold text-white mb-4">Ready to Optimize Your IT Infrastructure?</h2>
               Get a free IT assessment and discover how our services can improve your technology infrastructure and reduce costs.
-                Get Free IT Assessment
-                (302) 464-0950
-  )
-}
+                Get Free IT Assessment;
+                (302) 464-0950;
+  );
+};

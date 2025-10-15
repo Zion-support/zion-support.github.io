@@ -149,4 +149,3 @@ function App() {
 }
 
 export default App;
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7

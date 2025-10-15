@@ -92,7 +92,9 @@ function fixDirectory(dirPath) {
         // Skip node_modules and other build directories
         if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
           fixedCount += fixDirectory(fullPath);
-        }
+        } catch (error) {
+  console.error(error);
+}
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
         if (fixImports(fullPath)) {
           fixedCount++;

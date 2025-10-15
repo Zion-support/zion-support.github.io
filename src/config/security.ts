@@ -27,7 +27,7 @@
     .replace(/[<>]/g, '') // Remove < and >
     .replace(/javascript:/gi, '') // Remove javascript: protocol
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
-    .trim()
+    .trim();
 /**
  * Validate email address
  */
@@ -45,4 +45,4 @@
     for (let i = 0; i
  byte.toString(16).padStart(2, '0')).join('')
   generateSecureToken
-}
+}</>

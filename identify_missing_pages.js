@@ -159,6 +159,6 @@ console.log(`Total links referenced: ${allLinks.length}`)
 console.log(`Missing pages: ${missingPages.length}`)
 console.log(`Broken links: ${brokenLinks.length}`)
 console.log(`Existing pages: ${existingPages.length}`)
-// Write results to files
-fs.writeFileSync('/workspace/missing_pages.txt', missingPages.join('\n'))
-fs.writeFileSync('/workspace/broken_links.txt', brokenLinks.join('\n'))
+// Write results to files;
+fs.writeFileSync('/workspace/missing_pages.txt', missingPages.join('\n'));
+fs.writeFileSync('/workspace/broken_links.txt', brokenLinks.join('\n'));

@@ -182,4 +182,4 @@ filesWithConflicts.forEach(fixMergeConflicts);
 console.log('Fixing unused imports...');
 filesWithUnusedImports.forEach(fixUnusedImports);
 
-console.log('All issues fixed!');
+console.log('All issues fixed!');)

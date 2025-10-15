@@ -1,16 +1,26 @@
 'use client'
 import { useEffect } from 'react'
-const CriticalResourcePreloader = () => {}
-}useEffect(() => {}
-}const preloadCriticalResources = () => {}
-}// Critical fonts
-      const criticalFonts = []
-        {}
+const CriticalResourcePreloader = () => {
+  // TODO: Implement
+}
+}useEffect(() => {
+  // TODO: Implement
+}
+}const preloadCriticalResources = () => {
+  // TODO: Implement
+}
+}// Critical fonts;
+      const criticalFonts = [];
+        {
+  // TODO: Implement
+};
           href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap',
           as: 'style',
           crossorigin: 'anonymous'
         },
-        {}
+        {
+  // TODO: Implement
+}
           href: 'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2',
           as: 'font',
           type: 'font/woff2',
@@ -34,7 +44,9 @@ const CriticalResourcePreloader = () => {}
         '/images/cta-bg.webp'
       ]
       // Preload fonts
-      criticalFonts.forEach(font => {}
+      criticalFonts.forEach(font => {
+  // TODO: Implement
+}
 }const link = document.createElement('link')
         link.rel = 'preload'
         link.href = font.href
@@ -44,7 +56,9 @@ const CriticalResourcePreloader = () => {}
         document.head.appendChild(link)
       })
       // Preload CSS
-      criticalCSS.forEach(css => {}
+      criticalCSS.forEach(css => {
+  // TODO: Implement
+}
 }const link = document.createElement('link')
         link.rel = 'preload'
         link.href = css
@@ -52,7 +66,9 @@ const CriticalResourcePreloader = () => {}
         document.head.appendChild(link)
       })
       // Preload JavaScript
-      criticalJS.forEach(js => {}
+      criticalJS.forEach(js => {
+  // TODO: Implement
+}
 }const link = document.createElement('link')
         link.rel = 'preload'
         link.href = js
@@ -60,7 +76,9 @@ const CriticalResourcePreloader = () => {}
         document.head.appendChild(link)
       })
       // Preload images
-      criticalImages.forEach(img => {}
+      criticalImages.forEach(img => {
+  // TODO: Implement
+}
 }const link = document.createElement('link')
         link.rel = 'preload'
         link.href = img
@@ -69,7 +87,9 @@ const CriticalResourcePreloader = () => {}
       })
     }
     // Preconnect to external domains
-    const preconnectDomains = () => {}
+    const preconnectDomains = () => {
+  // TODO: Implement
+}
 }const domains = []
         'https://fonts.googleapis.com',
         'https://fonts.gstatic.com',
@@ -77,7 +97,9 @@ const CriticalResourcePreloader = () => {}
         'https://www.googletagmanager.com',
         'https://cdn.jsdelivr.net'
       ]
-      domains.forEach(domain => {}
+      domains.forEach(domain => {
+  // TODO: Implement
+}
 }const link = document.createElement('link')
         link.rel = 'preconnect'
         link.href = domain
@@ -86,13 +108,17 @@ const CriticalResourcePreloader = () => {}
       })
     }
     // DNS prefetch for additional domains
-    const dnsPrefetchDomains = () => {}
+    const dnsPrefetchDomains = () => {
+  // TODO: Implement
+}
 }const domains = []
         'https://api.ziontechgroup.com',
         'https://cdn.ziontechgroup.com',
         'https://analytics.ziontechgroup.com'
       ]
-      domains.forEach(domain => {}
+      domains.forEach(domain => {
+  // TODO: Implement
+}
 }const link = document.createElement('link')
         link.rel = 'dns-prefetch'
         link.href = domain
@@ -100,9 +126,9 @@ const CriticalResourcePreloader = () => {}
       })
     }
     // Initialize preloading
-    preloadCriticalResources()
-    preconnectDomains()
-    dnsPrefetchDomains()
+    preloadCriticalResources();
+    preconnectDomains();
+    dnsPrefetchDomains();
     // Preload next page resources on hover
     const preloadOnHover = () => {
       const links = document.querySelectorAll('a[href^="/"]')
@@ -124,4 +150,4 @@ const CriticalResourcePreloader = () => {}
   }, [])
   return null
 }
-export default CriticalResourcePreloader
+export default CriticalResourcePreloader);

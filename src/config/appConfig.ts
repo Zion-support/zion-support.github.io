@@ -3,33 +3,32 @@ export default config
  * Application Configuration
  * Centralized configuration management for the Zion Tech Group application
  */
-    name: string
-    version: string
+    name: string,
+  version: string
     environment: 'development' | 'production' | 'test'
   }
-    baseUrl: string
-    timeout: number
+    baseUrl: string,
+  timeout: number
     retryAttempts: number
   }
-    analytics: boolean
-    monitoring: boolean
-    errorTracking: boolean
-    performanceOptimization: boolean
+    analytics: boolean,
+  monitoring: boolean
+    errorTracking: boolean,
+  performanceOptimization: boolean
   }
-    enableLazyLoading: boolean
-    imageLazyLoadThreshold: number
-    componentLazyLoadThreshold: number
-    cacheMaxAge: number
+    enableLazyLoading: boolean,
+  imageLazyLoadThreshold: number
+    componentLazyLoadThreshold: number,
+  cacheMaxAge: number
   }
-    enableCSP: boolean
-    enableHSTS: boolean
+    enableCSP: boolean,
+  enableHSTS: boolean
     enableXSSProtection: boolean
   }
-    environment:
-      (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
-    retryAttempts: 3
-    performanceOptimization: true
-    cacheMaxAge: 3600000, // 1 hour in milliseconds
+    environment: (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development',
+  retryAttempts: 3
+    performanceOptimization: true,
+  cacheMaxAge: 3600000, // 1 hour in milliseconds
     enableXSSProtection: true
 }
 /**
@@ -56,4 +55,4 @@ export default config
 /**
  * Check if running in development
  */
-  return config.app.environment === 'development'
+  return config.app.environment === 'development';

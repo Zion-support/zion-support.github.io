@@ -7,9 +7,9 @@ const MicroSaasServicesPage: React.FC = () => {
       <SEOHead 
         title="micro-saas-services - Zion Tech Group"
         description="Zion Tech Group micro-saas-services service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
+      /></></SEOHead>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
+        <div className="text-center"></div>
           <h1 className="text-4xl font-bold mb-4">micro-saas-services</h1>
           <p className="text-gray-300">Coming soon...</p>
         </div>

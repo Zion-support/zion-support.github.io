@@ -1,5 +1,7 @@
 import React from 'react'
-interface LoadingSpinnerProps {}
+interface LoadingSpinnerProps {
+  // TODO: Implement
+}
   size?: 'sm' | 'md' | 'lg' | 'xl'
   color?: 'primary' | 'secondary' | 'white'
   text?: string
@@ -13,41 +15,49 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
     xl: 'w-16 h-16'}
-  const colorClasses = {}
+  const colorClasses = {
+  // TODO: Implement
+}
     primary: 'text-cyan-500',
     secondary: 'text-purple-500',
     white: 'text-white'}
   const spinner = ()
-    <div className="flex flex-col items-center justify-center space-y-4">
-      <div className="relative">
+    <div className="flex flex-col items-center justify-center space-y-4"></div>
+      <div className="relative"></div>
         {/* Outer ring */}
         <div
           className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-t-current`}
-          style={{}
+          style={{
+  // TODO: Implement
+}
             animation: 'spin 1s linear infinite'}}
-        />
+        /></div>
         {/* Inner ring */}
         <div
           className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-b-current`}
-          style={{}
+          style={{
+  // TODO: Implement
+}
             animation: 'spin 1.5s linear infinite reverse'}}
-        />
+        /></div>
       </div>
       {text && ()
-        <div className="text-center">
-          <p className={`text-sm font-medium ${colorClasses[color]} animate-pulse`}>
+        <div className="text-center"></div>
+          <p className={`text-sm font-medium ${colorClasses[color]} animate-pulse`}></p>
             {text}
           </p>
         </div>
       )}
     </div>
   )
-  if (fullScreen) {}
-    return ()
-      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center z-50">
-        <div className="text-center">
+  if (fullScreen) {
+  // TODO: Implement;
+};
+    return();
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center z-50"></div>
+        <div className="text-center"></div>
           {spinner}
-          <div className="mt-8">
+          <div className="mt-8"></div>
             <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>
             <p className="text-gray-300">Loading amazing experiences...</p>
           </div>
@@ -57,4 +67,4 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   }
   return spinner
 }
-export default ModernLoadingSpinner
+export default ModernLoadingSpinner;

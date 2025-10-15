@@ -2,7 +2,9 @@ import fs from 'fs'
 import path from 'path'
 #!/usr/bin/env node
 // Function to fix all remaining comprehensive issues
-function fixRemainingComprehensive(content) {}
+function fixRemainingComprehensive(content) {
+  // TODO: Implement
+}
 }// Fix malformed meta tags with spaces
   content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/  \/>/g, '<meta name="$1" content="$2" />')
   content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/>/g, '<meta name="$1" content="$2" />')
@@ -10,15 +12,15 @@ function fixRemainingComprehensive(content) {}
     return `className="${part1}${part2}"`
   })
   // Fix specific patterns
-  content = content.replace(/className="min-h-screenbg-gradient-to-br/g, 'className="min-h-screen bg-gradient-to-br')
-  content = content.replace(/className="max-w-7xlmx-auto/g, 'className="max-w-7xl mx-auto')
+  content = content.replace(/className="min-h-screenbg-gradient-to-br/g, 'className="min-h-screen bg-gradient-to-br')"
+  content = content.replace(/className="max-w-7xlmx-auto/g, 'className="max-w-7xl mx-auto')"
   content = content.replace(/className="text-center"/g, 'className="text-center"')
-  content = content.replace(/className="text-4xlfont-bold/g, 'className="text-4xl font-bold')
-  content = content.replace(/className="text-xltext-gray-300/g, 'className="text-xl text-gray-300')
-  content = content.replace(/className="bg-gradient-to-rfrom-cyan-500/g, 'className="bg-gradient-to-r from-cyan-500')
-  content = content.replace(/className="flexitems-center/g, 'className="flex items-center')
-  content = content.replace(/className="justify-centermx-auto/g, 'className="justify-center mx-auto')
-  content = content.replace(/className="w-5h-5/g, 'className="w-5 h-5')
+  content = content.replace(/className="text-4xlfont-bold/g, 'className="text-4xl font-bold')"
+  content = content.replace(/className="text-xltext-gray-300/g, 'className="text-xl text-gray-300')"
+  content = content.replace(/className="bg-gradient-to-rfrom-cyan-500/g, 'className="bg-gradient-to-r from-cyan-500')"
+  content = content.replace(/className="flexitems-center/g, 'className="flex items-center')"
+  content = content.replace(/className="justify-centermx-auto/g, 'className="justify-center mx-auto')"
+  content = content.replace(/className="w-5h-5/g, 'className="w-5 h-5')"
   content = content.replace(/className="ml-2"/g, 'className="ml-2"')
   content = content.replace(/className="mb-4"/g, 'className="mb-4"')
   content = content.replace(/className="mb-6"/g, 'className="mb-6"')
@@ -47,36 +49,58 @@ function fixRemainingComprehensive(content) {}
   content = content.replace(/<button className="([^"]*)"\s*\/>\s*([^<]+)\s*<\/button>/g, '<button className="$1">$2</button>')
   return content
 // Function to process a single file
-function processFile(filePath) {}
-}try {}
-} catch (error) {}
+function processFile(filePath) {
+  // TODO: Implement
+}
+}try {
+  // TODO: Implement
+}
+} catch (error) {
+  // TODO: Implement
+}
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixedContent = fixRemainingComprehensive(content)
-    if (content !== fixedContent) {}
+    if (content !== fixedContent) {
+  // TODO: Implement
+}
       fs.writeFileSync(filePath, fixedContent, 'utf8')
       console.log(`Fixed comprehensive issues: ${filePath}`)
       return true
     return false
-  } catch (error) {}
+  } catch (error) {
+  // TODO: Implement
+}
     console.error(`Error processing ${filePath}:`, error.message)
     return false
 // Function to recursively find and process TSX files
-function processDirectory(dirPath) {}
+function processDirectory(dirPath) {
+  // TODO: Implement
+}
 }let processedCount = 0
-  function walkDir(currentPath) {}
+  function walkDir(currentPath) {
+  // TODO: Implement
+}
 }const items = fs.readdirSync(currentPath)
-    for (const item, of, items) {}
+    for (const item, of, items) {
+  // TODO: Implement
+}
       const fullPath = path.join(currentPath, item)
 const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {}
+      if (stat.isDirectory()) {
+  // TODO: Implement
+}
         walkDir(fullPath)
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {}
-        if (processFile(fullPath)) {}
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+  // TODO: Implement
+}
+        if (processFile(fullPath)) {
+  // TODO: Implement
+}
           processedCount++
   walkDir(dirPath)
   return processedCount
 // Main execution
-console.log('Starting comprehensive remaining fixes...')
-const processedCount = processDirectory('./app')
-console.log(`Processed ${processedCount} files.`)
+console.log('Starting comprehensive remaining fixes...');
+const processedCount = processDirectory('./app');
+console.log(`Processed ${processedCount} files.`);

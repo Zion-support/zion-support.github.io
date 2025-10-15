@@ -3,10 +3,10 @@ export default SystemMonitor
 /**
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health
- */
-// Removed unused collectPerformanceMetrics function
-// Helper functions
-  const metrics = performanceOptimizer.getMetrics()
+ */;
+// Removed unused collectPerformanceMetrics function;
+// Helper functions;
+  const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0
   let score = 100
   // Deduct points for slow load times
@@ -25,28 +25,28 @@ export default SystemMonitor
   connection?: NetworkConnection
   mozConnection?: NetworkConnection
   webkitConnection?: NetworkConnection
-    score: number
-    loadTime: number
-    firstContentfulPaint: number
-    largestContentfulPaint: number
-    firstInputDelay: number
-    cumulativeLayoutShift: number
+    score: number,
+  loadTime: number
+    firstContentfulPaint: number,
+  largestContentfulPaint: number
+    firstInputDelay: number,
+  cumulativeLayoutShift: number
   }
-    total: number
-    byType: Record<string, number>
-    byCategory: Record<string, number>
-    bySeverity: Record<string, number>
+    total: number,
+  byType: Record<string, number></string>
+    byCategory: Record<string, number></string>
+    bySeverity: Record<string, number></string>
     recent: Array
   }
-    used: number
-    total: number
-    limit: number
-    percentage: number
+    used: number,
+  total: number
+    limit: number,
+  percentage: number
   }
-    effectiveType: string
-    downlink: number
-    rtt: number
-    saveData: boolean
+    effectiveType: string,
+  downlink: number
+    rtt: number,
+  saveData: boolean
   }
   refreshInterval?: number
   showDetails?: boolean
@@ -57,13 +57,13 @@ export default SystemMonitor
   const [isMonitoring, setIsMonitoring] = useState(false)
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null)
   // Update metrics
-      const performanceMetrics = performanceOptimizer.getMetrics()
-const performanceScore = calculatePerformanceScore()
-      const errorStats = errorHandler.getErrorStatistics()
+      const performanceMetrics = performanceOptimizer.getMetrics();
+const performanceScore = calculatePerformanceScore();
+      const errorStats = errorHandler.getErrorStatistics();
       // Get memory info
-      const memoryInfo = getMemoryInfo()
+      const memoryInfo = getMemoryInfo();
       // Get network info
-      const networkInfo = getNetworkInfo()
+      const networkInfo = getNetworkInfo();
           largestContentfulPaint: 0, // Not available in current metrics
           firstInputDelay: 0, // Not available in current metrics
           cumulativeLayoutShift: 0, // Not available in current metrics
@@ -77,9 +77,9 @@ const performanceScore = calculatePerformanceScore()
   }, [])
   // Initialize monitoring
       setIsMonitoring(true)
-      updateMetrics()
+      updateMetrics();
     }
-    initializeMonitoring()
+    initializeMonitoring();
       // Stop monitoring (placeholder - implement, as, needed)
       setIsMonitoring(false)
     }
@@ -89,7 +89,7 @@ const performanceScore = calculatePerformanceScore()
     const interval = setInterval(updateMetrics, refreshInterval)
  clearInterval(interval)
   }, [isMonitoring, refreshInterval, updateMetrics])
-  // Get memory information
+  // Get memory information;
       const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
@@ -115,7 +115,7 @@ const a = document.createElement('a')
     a.href = url
     a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`
     document.body.appendChild(a)
-    a.click()
+    a.click();
     document.body.removeChild(a)
     URL.revokeObjectURL(url)
   }

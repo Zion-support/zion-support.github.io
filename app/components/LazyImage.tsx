@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import React, { useState, useRef, useEffect } from 'react';
 
 interface LazyImageProps {
-  src: string;
+  src: string;,
   alt: string;
   className?: string;
   placeholder?: React.ReactNode;
@@ -28,30 +28,40 @@ const LazyImage: React.FC<LazyImageProps> = ({
           observer.disconnect();
         }
       },
-      {}
+      {
+  // TODO: Implement
+}
         threshold: 0.1,
         rootMargin: '50px'}
     )
-    if (imgRef.current) {}
+    if (imgRef.current) {
+  // TODO: Implement
+}
       observer.observe(imgRef.current)
     }
-    return () => observer.disconnect()
+    return () => observer.disconnect();
   }, [])
-  const handleLoad = () => {}
+  const handleLoad = () => {
+  // TODO: Implement
+}
 }setIsLoaded(true)
     onLoad?.()
   }
-  const handleError = () => {}
+  const handleError = () => {
+  // TODO: Implement
+}
 }setIsError(true)
     onError?.()
   }
-  if (isError && fallback) {}
+  if (isError && fallback) {
+  // TODO: Implement
+}
     return <>{fallback}</>
   }
-  return ()
-    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
+  return();
+    </><div ref={imgRef} className={`relative overflow-hidden ${className}`}></div>
       {!isLoaded && !isError && placeholder && ()
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-700">
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-700"></div>
           {placeholder}
         </div>
       )}
@@ -59,7 +69,9 @@ const LazyImage: React.FC<LazyImageProps> = ({
         <img
           src={src}
           alt={alt}
-          className={`transition-opacity duration-300 ${}
+          className={`transition-opacity duration-300 ${
+  // TODO: Implement
+}
             isLoaded ? 'opacity-100' : 'opacity-0'
           } ${className}`}
           loading={loading}
@@ -68,9 +80,9 @@ const LazyImage: React.FC<LazyImageProps> = ({
           onLoad={handleLoad}
           onError={handleError}
           decoding="async"
-        />
+        /></img>
       )}
     </div>
   )
 }
-export default LazyImage
+export default LazyImage;

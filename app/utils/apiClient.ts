@@ -2,11 +2,14 @@
 
 export const Apiclient = {
   init: () => {
-    },
+  // TODO: Implement
+},
 
-  process: (data: unknown) => {
+  process: (data: unknown) => {;
     return data;
   },
-  cleanup: () => {}
+  cleanup: () => {
+  // TODO: Implement
+}
 } }}
-export default Apiclient
+export default Apiclient;

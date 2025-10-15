@@ -1,31 +1,47 @@
 // Next.js type definitions
-declare module "next" {}
-  export interface NextPageProps {}
+declare module "next" {
+  // TODO: Implement
+}
+  export interface NextPageProps {
+  // TODO: Implement
+}
     params: { [key: string]: string }
     searchParams: { [key: string]: string | string[] | undefined }
   }
 }
-declare module "*.svg" {}
+declare module "*.svg" {
+  // TODO: Implement
+}
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>
   export default content
 }
-declare module "*.png" {}
+declare module "*.png" {
+  // TODO: Implement
+}
   const content: string
   export default content
 }
-declare module "*.jpg" {}
+declare module "*.jpg" {
+  // TODO: Implement
+}
   const content: string
   export default content
 }
-declare module "*.jpeg" {}
+declare module "*.jpeg" {
+  // TODO: Implement
+}
   const content: string
   export default content
 }
-declare module "*.gif" {}
+declare module "*.gif" {
+  // TODO: Implement
+}
   const content: string
   export default content
 }
-declare module "*.webp" {}
+declare module "*.webp" {
+  // TODO: Implement
+}
   const content: string
   export default content
 }

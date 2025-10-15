@@ -37,13 +37,13 @@ const text = target.textContent?.trim() || ''
             })
       })
     }
-    // Initialize analytics
-    initAnalytics()
-    trackPageView()
-    trackInteractions()
+    // Initialize analytics;
+    initAnalytics();
+    trackPageView();
+    trackInteractions();
     window.addEventListener('popstate', handleRouteChange)
       window.removeEventListener('popstate', handleRouteChange)
     }
   }, [GA_TRACKING_ID])
   return <>{children}</>
-}
+}</>

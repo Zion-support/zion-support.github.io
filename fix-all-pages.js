@@ -1,6 +1,6 @@
-import fs from 'fs'
-import path from 'path'
-import React from 'react'
+import fs from 'fs';
+import path from 'path';
+import React from 'react';
 export default ${componentName};`
 // Get all AI service pages from App.tsx
 const aiServicePages = []
@@ -64,7 +64,7 @@ const allPages = []
   ...resourcePages
 ]
  `'use client'
-  return ()
+  return();
     <div>Content</div>
   )
         <title>${title} - Zion Tech Group</title>
@@ -84,7 +84,9 @@ const allPages = []
   const pageDir = path.join('/workspace/app', pageName)
 const pageFile = path.join(pageDir, 'page.tsx')
   // Create directory if it doesn't exist
-  if (!fs.existsSync(pageDir)) {}
+  if (!fs.existsSync(pageDir)) {
+  // TODO: Implement
+}
     fs.mkdirSync(pageDir, { recursive: true })
   // Overwrite page file with correct template
   fs.writeFileSync(pageFile, pageTemplate(pageName, title, componentName))

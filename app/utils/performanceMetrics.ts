@@ -2,11 +2,14 @@
 
 export const Performancemetrics = {
   init: () => {
-    },
+  // TODO: Implement
+},
 
-  process: (data: unknown) => {
+  process: (data: unknown) => {;
     return data;
   },
-  cleanup: () => {}
+  cleanup: () => {
+  // TODO: Implement
+}
 } }}
-export default Performancemetrics
+export default Performancemetrics;

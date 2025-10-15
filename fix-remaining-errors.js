@@ -19,7 +19,7 @@ function fixFile(filePath) {
     
     // Fix malformed JSX
     content = content.replace(/<>/g, '<>');
-    content = content.replace(/<\/>;/g, '</>');
+    content = content.replace(/<\/>;/g, '</></>');
     content = content.replace(/<Helmet>/g, '<Helmet>');
     content = content.replace(/<\/Helmet>;/g, '</Helmet>');
     content = content.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>');
@@ -32,7 +32,11 @@ function fixFile(filePath) {
     content = content.replace(/export default function ([^  {]+)\s*{/g, 'export default function $1   {');
     
     // Fix missing closing parentheses
-    content = content.replace(/return \(\s*<>([\s\S]*?)\s*<\/>;\s*\);/g, 'return (\n    <>\n$1\n    </>\n  );');
+    content = content.replace(/return \(\s*<>([\s\S]*?)\s*<\/>;\s*\);/g, 'return (
+    </><>
+      \n    <>\n$1\n    </>\n
+    </></>
+  );');
     
     // Fix test file issues by commenting out problematic lines
     if (filePath.includes('.test.') || filePath.includes('__tests__') || filePath.includes('test')) {
@@ -65,6 +69,12 @@ function fixFile(filePath) {
 
 // Main execution
 async function main() {
+  return;
+}
+  return;
+}
+  // TODO: Implement
+}
   console.log('🔍 Finding problematic files...');
   const problematicFiles = findProblematicFiles('.');
   console.log(`Found ${problematicFiles.length} problematic files`);

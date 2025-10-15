@@ -9,14 +9,16 @@ global.TextDecoder = TextDecoder;
 // Mock react-router-dom
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
-  useLocation: () => ({
-    pathname: '/',
+  useLocation: () => ({,
+  pathname: '/',
     search: '',
     hash: '',
     state: null,
   }),
   useNavigate: () => jest.fn(),
-  useParams: () => ({}),
+  useParams: () => ({
+  // TODO: Implement
+}),
   Link: ({ children, ...props }) => <a {...props}>{children}</a>,
   NavLink: ({ children, ...props }) => <a {...props}>{children}</a>,
   useSearchParams: () => [new URLSearchParams(), jest.fn()],
@@ -39,8 +41,8 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
 // Mock window.matchMedia
 Object.defineProperty(window, "matchMedia", {
   writable: true,
-  value: jest.fn().mockImplementation((query) => ({
-    matches: false,
+  value: jest.fn().mockImplementation((query) => ({,
+  matches: false,
     media: query,
     onchange: null,
     addListener: jest.fn(), // deprecated

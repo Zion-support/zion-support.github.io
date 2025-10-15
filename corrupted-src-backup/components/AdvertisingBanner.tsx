@@ -1,9 +1,9 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-export default AdvertisingbannerPage
-'use client'
-  return ()
+import Footer from '../components/Footer';
+export default AdvertisingbannerPage;
+'use client';
+  return();
     <div>Content</div>
   )
         <title>Advertisingbanner - Zion Tech Group</title>
@@ -11,4 +11,4 @@ export default AdvertisingbannerPage
             <p className="text-gray-300 mb-8">This page is under construction.</p>
               Learn More
   )
-}
+};

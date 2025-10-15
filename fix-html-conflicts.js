@@ -7,6 +7,6 @@ import { fileURLToPath } from 'url
     const lines = content.split('\n''
       if (line.startsWith('<<<<<<<''
       if (line.startsWith('''
-    fs.writeFileSync(filePath, result.join('\n'), 'utf8''
-        if (!['node_modules', '.git', 'dist', 'build', '.next''
-        if (['.html', '.htm''
+    fs.writeFileSync(filePath, result.join('\n'), 'utf8'';
+        if (!['node_modules', '.git', 'dist', 'build', '.next'';
+        if (['.html', '.htm'';))))))))))]]

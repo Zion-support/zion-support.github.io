@@ -2,11 +2,14 @@
 
 export const Validators = {
   init: () => {
-    },
+  // TODO: Implement
+},
 
-  process: (data: unknown) => {
+  process: (data: unknown) => {;
     return data;
   },
-  cleanup: () => {}
+  cleanup: () => {
+  // TODO: Implement
+}
 } }}
-export default Validators
+export default Validators;

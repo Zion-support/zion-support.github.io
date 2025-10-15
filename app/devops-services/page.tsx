@@ -54,22 +54,22 @@ const DevOpsServicesPage = () => {
     {
       title: "Faster Deployments",
       description: "Reduce deployment time from hours to minutes",
-      icon: <Clock className="w-6 h-6" />
+      icon: <Clock className="w-6 h-6" /></Clock>
     },
     {
       title: "Improved Reliability",
       description: "99.9% uptime with automated failover and recovery",
-      icon: <Shield className="w-6 h-6" />
+      icon: <Shield className="w-6 h-6" /></Shield>
     },
     {
       title: "Cost Optimization",
       description: "Reduce infrastructure costs by up to 40%",
-      icon: <BarChart3 className="w-6 h-6" />
+      icon: <BarChart3 className="w-6 h-6" /></BarChart3>
     },
     {
       title: "Team Productivity",
       description: "Focus on development, not infrastructure management",
-      icon: <Users className="w-6 h-6" />
+      icon: <Users className="w-6 h-6" /></Users>
     }
   ];
 
@@ -102,27 +102,27 @@ const DevOpsServicesPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></></div>
       <EnhancedSEO
         title="DevOps Services - Zion Tech Group | CI/CD, Infrastructure as Code, Cloud Migration"
         description="Professional DevOps services including CI/CD pipeline setup, infrastructure as code, container orchestration, and cloud migration. Accelerate your software delivery."
         keywords="DevOps services, CI/CD pipeline, infrastructure as code, Kubernetes, Docker, cloud migration, monitoring, automation"
         canonical="https://ziontechgroup.com/devops-services"
-      />
-
+      /></EnhancedSEO>
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
+        <ResponsiveContainer className="text-center"></ResponsiveContainer>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></span>
               DevOps Services
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
             Accelerate your software delivery with our comprehensive DevOps solutions. 
             From CI/CD pipelines to cloud migration, we help you build, deploy, and scale faster.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <FuturisticButton
               href="/contact"
               variant="primary"
@@ -144,32 +144,34 @@ const DevOpsServicesPage = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <ResponsiveContainer></ResponsiveContainer>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Our DevOps Services
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
               Comprehensive DevOps solutions designed to streamline your development workflow 
               and accelerate time-to-market.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <FuturisticCard key={index} className="h-full">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            {services.map((service
+    </>
+  ) => (
+              <FuturisticCard key={index} className="h-full"></FuturisticCard>
+                <div className="text-center mb-6"></div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   <div className="text-cyan-400 font-semibold mb-4">{service.price}</div>
                 </div>
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-6"></ul>
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                       {feature}
                     </li>
                   ))}
@@ -179,7 +181,7 @@ const DevOpsServicesPage = () => {
                   variant="outline"
                   size="sm"
                   className="w-full"
-                >
+                ></FuturisticButton>
                   Learn More
                 </FuturisticButton>
               </FuturisticCard>
@@ -189,20 +191,20 @@ const DevOpsServicesPage = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
+        <ResponsiveContainer></ResponsiveContainer>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Why Choose Our DevOps Services?
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
               Transform your development process with proven DevOps practices and cutting-edge tools.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {benefits.map((benefit) => (
-              <div key={index} className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div key={index} className="text-center"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                   {benefit.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
@@ -214,20 +216,20 @@ const DevOpsServicesPage = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <ResponsiveContainer></ResponsiveContainer>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Our DevOps Process
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
               A proven methodology to transform your development and operations.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8"></div>
             {process.map((step) => (
-              <div key={index} className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
+              <div key={index} className="text-center"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg"></div>
                   {step.step}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
@@ -239,15 +241,15 @@ const DevOpsServicesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-        <ResponsiveContainer className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30"></section>
+        <ResponsiveContainer className="text-center"></ResponsiveContainer>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
             Ready to Transform Your DevOps?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
             Let our DevOps experts help you build a more efficient, reliable, and scalable development process.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <FuturisticButton
               href="/contact"
               variant="primary"

@@ -41,11 +41,11 @@ import { motion } from 'framer-motion';
       period: "/month",
       description: "Perfect for individuals",
       features: [
-        "Up to 500 transactions/month",
-        "Basic AI categorization",
-        "Receipt scanning",
-        "Basic analytics",
-        "Email support",
+        "Up to 500 transactions/month",";
+        "Basic AI categorization",";
+        "Receipt scanning",";
+        "Basic analytics",";
+        "Email support",";
         "1 user account"
       ],
       popular: false
@@ -56,12 +56,12 @@ import { motion } from 'framer-motion';
       period: "/month",
       description: "Ideal for small businesses",
       features: [
-        "Up to 5,000 transactions/month",
-        "Advanced AI categorization",
-        "Bank integration",
-        "Advanced analytics",
-        "Priority support",
-        "5 user accounts",
+        "Up to 5,000 transactions/month",";
+        "Advanced AI categorization",";
+        "Bank integration",";
+        "Advanced analytics",";
+        "Priority support",";
+        "5 user accounts",";
         "API access"
       ],
       popular: true
@@ -72,12 +72,12 @@ import { motion } from 'framer-motion';
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited transactions",
-        "Custom AI models",
-        "White-label solution",
-        "Advanced security",
-        "Dedicated support",
-        "Unlimited users",
+        "Unlimited transactions",";
+        "Custom AI models",";
+        "White-label solution",";
+        "Advanced security",";
+        "Dedicated support",";
+        "Unlimited users",";
         "Custom integrations"
       ],
       popular: false
@@ -114,56 +114,59 @@ import { motion } from 'framer-motion';
     { number: "3x", label: "Faster Processing" }
   ];
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+  return (
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></></div>
+      <Helmet></Helmet>
         <title>Smart Expense Categorizer | Zion Tech Group</title>
-        <meta name="description" content="Automate expense categorization with AI-powered receipt processing, bank integration, and real-time analytics." />
-        <meta name="keywords" content="expense management, _receipt scanning, _expense categorization, _financial automation, AI expenses" />
+        <meta name="description" content="Automate expense categorization with AI-powered receipt processing, bank integration, and real-time analytics." /></meta>
+        <meta name="keywords" content="expense management, _receipt scanning, _expense categorization, _financial automation, AI expenses" /></meta>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
-          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6">
-              <Receipt className="w-5 h-5 text-cyan-400 mr-2" />
+          ></motion>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6"></div>
+              <Receipt className="w-5 h-5 text-cyan-400 mr-2" /></Receipt>
               <span className="text-cyan-300 font-medium">AI-Powered Expense Intelligence</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6"></h1>
               Automate Your
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Expense Management</span>
             </h1>
             
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Transform your expense management with AI-powered categorization, _automated receipt processing, and real-time financial insights that save time and money.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-              >
+              ></motion>
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <ArrowRight className="w-5 h-5 ml-2 inline" /></ArrowRight>
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              >
+              ></motion>
                 View Demo
               </motion.button>
             </div>
           </motion.div>
         </div>
       </div>
+    </>
     </>
   );
 };

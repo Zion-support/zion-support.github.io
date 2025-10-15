@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import React, { useState, useRef, useEffect } from 'react';
 
 interface OptimizedImageProps {
-  src: string;
+  src: string;,
   alt: string;
   className?: string;
   width?: number;
@@ -31,49 +31,57 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       },
       { threshold: 0.1 }
     )
-    if (imgRef.current) {}
+    if (imgRef.current) {
+  // TODO: Implement
+}
       observer.observe(imgRef.current)
     }
-    return () => observer.disconnect()
+    return () => observer.disconnect();
   }, [priority])
-  const handleLoad = () => {}
+  const handleLoad = () => {
+  // TODO: Implement
+}
 }setIsLoaded(true)
     onLoad?.()
   }
-  const handleError = () => {}
+  const handleError = () => {
+  // TODO: Implement
+}
 }setHasError(true)
     onError?.()
   }
   const imageSrc = isInView ? src : placeholder
-  return ()
+  return();
     <div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
-    >
+    ></div>
       {!isLoaded && !hasError && ()
-        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"></div>
           <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"></div>
         </div>
       )}
       {hasError ? ()
-        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
+        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center"></div>
           <div className="text-gray-400 text-sm">Failed to load image</div>
         </div>
       ) : ()
         <img
           src={imageSrc}
           alt={alt}
-          className={`transition-opacity duration-300 ${}
+          className={`transition-opacity duration-300 ${
+  // TODO: Implement
+}
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           onLoad={handleLoad}
           onError={handleError}
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"
-        />
+        /></img>
       )}
     </div>
   )
 }
-export default OptimizedImage
+export default OptimizedImage;

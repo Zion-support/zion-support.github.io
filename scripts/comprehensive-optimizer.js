@@ -161,14 +161,14 @@ const optimizeCSS = () => {
 const generatePerformanceReport = (bundleAnalysis, imageAnalysis, cssAnalysis) => {
   const report = {
     timestamp: new Date().toISOString(),
-    build: {
-      totalSize: bundleAnalysis.totalSize + imageAnalysis.totalSize + cssAnalysis.totalSize,
+    build: {,
+  totalSize: bundleAnalysis.totalSize + imageAnalysis.totalSize + cssAnalysis.totalSize,
       bundleSize: bundleAnalysis.totalSize,
       imageSize: imageAnalysis.totalSize,
       cssSize: cssAnalysis.totalSize,
     },
-    files: {
-      bundles: bundleAnalysis.files,
+    files: {,
+  bundles: bundleAnalysis.files,
       images: imageAnalysis.files,
       css: cssAnalysis.files,
     },
@@ -177,8 +177,8 @@ const generatePerformanceReport = (bundleAnalysis, imageAnalysis, cssAnalysis) =
       ...(imageAnalysis.totalSize > 500 ? ['Consider implementing image optimization pipeline'] : []),
       ...(cssAnalysis.totalSize > 100 ? ['Consider purging unused CSS'] : []),
     ],
-    performance: {
-      score: Math.max(0, 100 - (bundleAnalysis.totalSize / 10) - (imageAnalysis.totalSize / 20)),
+    performance: {,
+  score: Math.max(0, 100 - (bundleAnalysis.totalSize / 10) - (imageAnalysis.totalSize / 20)),
       grade: bundleAnalysis.totalSize < 300 ? 'A' : bundleAnalysis.totalSize < 500 ? 'B' : 'C'
     }
   };
@@ -197,8 +197,9 @@ const main = () => {
     if (!fs.existsSync(config.buildDir)) {
       log('Build directory not found. Please run build first.', 'error');
       process.exit(1);
-    }
-
+    } catch (error) {
+  console.error(error);
+}
     // Analyze bundles
     const bundleAnalysis = analyzeBundles();
     

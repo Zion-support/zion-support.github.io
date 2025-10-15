@@ -1,8 +1,12 @@
 // Focus management utilities
-export const focusManagement = {}
+export const focusManagement = {
+  // TODO: Implement
+}
   // Trap focus within an element
-  trapFocus: (element: HTMLElement) => {}
-}const focusableElements = element.querySelectorAll()
+  trapFocus: (element: HTMLElement) => {
+  // TODO: Implement
+};
+}const focusableElements = element.querySelectorAll();
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
@@ -57,7 +61,7 @@ export const ariaUtils = {
 
   // Set ARIA attributes
   setAriaAttributes: (element: HTMLElement, attributes: Record<string, string>) => {
-    Object.entries(attributes).forEach(([key, value]) => {
+    Object.entries(attributes).forEach(([key, value]) => {;
       element.setAttribute(key, value);
     });
   },
@@ -89,7 +93,7 @@ export const ariaUtils = {
 // Keyboard navigation utilities
 export const keyboardNavigation = {
   // Handle arrow key navigation
-  handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number) => {
+  handleArrowKeys: (e: KeyboardEvent, items: HTMLElement[], currentIndex: number) => {;
     let newIndex = currentIndex;
     
     switch (e.key) {

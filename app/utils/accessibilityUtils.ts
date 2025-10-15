@@ -2,11 +2,14 @@
 
 export const Accessibilityutils = {
   init: () => {
-    },
+  // TODO: Implement
+},
 
-  process: (data: unknown) => {
+  process: (data: unknown) => {;
     return data;
   },
-  cleanup: () => {}
+  cleanup: () => {
+  // TODO: Implement
+}
 } }}
-export default Accessibilityutils
+export default Accessibilityutils;

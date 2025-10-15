@@ -41,11 +41,11 @@ import { motion } from 'framer-motion';
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 SKUs",
-        "Basic demand forecasting",
-        "Reorder point alerts",
-        "Basic analytics",
-        "Email support",
+        "Up to 1,000 SKUs",";
+        "Basic demand forecasting",";
+        "Reorder point alerts",";
+        "Basic analytics",";
+        "Email support",";
         "1 warehouse location"
       ],
       popular: false
@@ -56,12 +56,12 @@ import { motion } from 'framer-motion';
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 10,000 SKUs",
-        "Advanced AI forecasting",
-        "Multi-location support",
-        "Advanced analytics",
-        "Priority support",
-        "API access",
+        "Up to 10,000 SKUs",";
+        "Advanced AI forecasting",";
+        "Multi-location support",";
+        "Advanced analytics",";
+        "Priority support",";
+        "API access",";
         "Supplier integration"
       ],
       popular: true
@@ -72,12 +72,12 @@ import { motion } from 'framer-motion';
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited SKUs",
-        "Custom AI models",
-        "White-label solution",
-        "Advanced security",
-        "Dedicated support",
-        "Custom integrations",
+        "Unlimited SKUs",";
+        "Custom AI models",";
+        "White-label solution",";
+        "Advanced security",";
+        "Dedicated support",";
+        "Custom integrations",";
         "On-premise deployment"
       ],
       popular: false
@@ -114,56 +114,59 @@ import { motion } from 'framer-motion';
     { number: "50%", label: "Less Waste" }
   ];
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+  return (
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></></div>
+      <Helmet></Helmet>
         <title>Smart Inventory Optimizer | Zion Tech Group</title>
-        <meta name="description" content="Revolutionize your inventory management with AI-powered demand forecasting, smart reorder points, and real-time analytics." />
-        <meta name="keywords" content="inventory management, _demand forecasting, _supply chain, _inventory optimization, AI inventory" />
+        <meta name="description" content="Revolutionize your inventory management with AI-powered demand forecasting, smart reorder points, and real-time analytics." /></meta>
+        <meta name="keywords" content="inventory management, _demand forecasting, _supply chain, _inventory optimization, AI inventory" /></meta>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
-          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6">
-              <Package className="w-5 h-5 text-cyan-400 mr-2" />
+          ></motion>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6"></div>
+              <Package className="w-5 h-5 text-cyan-400 mr-2" /></Package>
               <span className="text-cyan-300 font-medium">AI-Powered Inventory Intelligence</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6"></h1>
               Optimize Your
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Inventory Management</span>
             </h1>
             
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Transform your inventory operations with AI-powered demand forecasting, _smart reorder points, and real-time analytics that reduce costs and improve efficiency.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-              >
+              ></motion>
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <ArrowRight className="w-5 h-5 ml-2 inline" /></ArrowRight>
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              >
+              ></motion>
                 View Demo
               </motion.button>
             </div>
           </motion.div>
         </div>
       </div>
+    </>
     </>
   );
 };

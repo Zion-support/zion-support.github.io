@@ -10,14 +10,14 @@ export default {
     '^.+\\.(ts|tsx)$': ['ts-jest', { useESM: true }],
     '^.+\\.(js|jsx)$': 'babel-jest',
   },
-  testMatch: [
-    "<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)",
-    "<rootDir>/__tests__/**/*.(test|spec).(ts|tsx|js|jsx)",
+  testMatch: [;
+    "<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)",";
+    "<rootDir>/__tests__/**/*.(test|spec).(ts|tsx|js|jsx)",";
   ],
   collectCoverageFrom: [
-    "app/**/*.{ts,tsx}",
-    "!app/**/index.{ts,tsx}",
-    "!app/**/*.d.ts",
+    "app/**/*.{ts,tsx}",";
+    "!app/**/index.{ts,tsx}",";
+    "!app/**/*.d.ts",";
   ],
   testPathIgnorePatterns: ["<rootDir>/out/", "<rootDir>/node_modules/"],
   transformIgnorePatterns: [

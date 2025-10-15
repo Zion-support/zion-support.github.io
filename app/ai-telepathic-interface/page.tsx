@@ -7,9 +7,9 @@ const AiTelepathicInterfacePage: React.FC = () => {
       <SEOHead 
         title="ai-telepathic-interface - Zion Tech Group"
         description="Zion Tech Group ai-telepathic-interface service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
+      /></></SEOHead>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
+        <div className="text-center"></div>
           <h1 className="text-4xl font-bold mb-4">ai-telepathic-interface</h1>
           <p className="text-gray-300">Coming soon...</p>
         </div>

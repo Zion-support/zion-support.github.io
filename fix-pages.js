@@ -1,6 +1,6 @@
-import fs from 'fs'
-import path from 'path'
-import React from 'react'
+import fs from 'fs';
+import path from 'path';
+import React from 'react';
 export default ${componentName};`
 // List of pages that need to be fixed
 const pagesToFix = []
@@ -8,7 +8,7 @@ const pagesToFix = []
   'case-studies', 'careers', 'ai-services', 'it-services', 'micro-saas'
 ]
  `'use client'
-  return ()
+  return();
     <div>Content</div>
   )
         <title>${title} - Zion Tech Group</title>
@@ -28,7 +28,9 @@ const pagesToFix = []
   const pageDir = path.join('/workspace/app', pageName)
 const pageFile = path.join(pageDir, 'page.tsx')
   // Create directory if it doesn't exist
-  if (!fs.existsSync(pageDir)) {}
+  if (!fs.existsSync(pageDir)) {
+  // TODO: Implement
+}
     fs.mkdirSync(pageDir, { recursive: true })
   // Overwrite page file with correct template
   fs.writeFileSync(pageFile, pageTemplate(pageName, title, componentName))

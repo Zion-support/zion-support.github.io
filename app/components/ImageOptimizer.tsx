@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import React, { useState, useRef, useEffect } from 'react';
 
 interface ImageOptimizerProps {
-  src: string;
+  src: string;,
   alt: string;
   className?: string;
   width?: number;
@@ -61,17 +61,20 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
 
   if (hasError) {
     return (
+    <>
       <div 
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height }}
-      >
+      ></></div>
         <span className="text-gray-500 text-sm">Image failed to load</span>
       </div>
-    );
+    </>
+  );
   }
 
   if (priority) {
     return (
+    <>
       <img
         ref={imgRef}
         src={optimizedSrc}
@@ -84,8 +87,11 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         onError={handleError}
         loading="eager"
         decoding="async"
-      />
-    );
+      /></></img>
+    </>
+  );
   }
 
   return (
+
+})

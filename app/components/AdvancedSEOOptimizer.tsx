@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
-  title: string;
+  title: string;,
   description: string;
-  keywords: string[];
+  keywords: string[];,
   canonicalUrl: string;
   ogTitle?: string;
   ogDescription?: string;
@@ -41,22 +41,22 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (!enableStructuredData || !seoData.structuredData) return null;
 
     const baseStructuredData = {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": seoData.title,
-      "description": seoData.description,
-      "url": seoData.canonicalUrl,
-      "author": {
-        "@type": "Organization",
+      "@context": "https://schema.org",";
+      "@type": "WebPage",";
+      "name": seoData.title,";
+      "description": seoData.description,";
+      "url": seoData.canonicalUrl,";
+      "author": {";
+        "@type": "Organization",";
         "name": "Zion Tech Group"
       },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Zion Tech Group",
+      "publisher": {";
+        "@type": "Organization",";
+        "name": "Zion Tech Group",";
         "url": "https://ziontechgroup.com"
       },
-      "datePublished": seoData.publishedTime || new Date().toISOString(),
-      "dateModified": seoData.modifiedTime || new Date().toISOString(),
+      "datePublished": seoData.publishedTime || new Date().toISOString(),";
+      "dateModified": seoData.modifiedTime || new Date().toISOString(),";
       ...seoData.structuredData
     };
 
@@ -69,20 +69,20 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
     const pathSegments = seoData.canonicalUrl.replace('https://ziontechgroup.com', '').split('/').filter(Boolean);
     const breadcrumbs = pathSegments.map((segment, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "name": segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
-      "item": `https://ziontechgroup.com/${pathSegments.slice(0, index + 1).join('/')}`
+      "@type": "ListItem",";
+      "position": index + 1,";
+      "name": segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),";
+      "item": `https://ziontechgroup.com/${pathSegments.slice(0, index + 1).join('/')}`";
     }));
 
     return {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+      "@context": "https://schema.org",";
+      "@type": "BreadcrumbList",";
+      "itemListElement": [";
         {
-          "@type": "ListItem",
-          "position": 0,
-          "name": "Home",
+          "@type": "ListItem",";
+          "position": 0,";
+          "name": "Home",";
           "item": "https://ziontechgroup.com"
         },
         ...breadcrumbs
@@ -95,14 +95,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (!enableStructuredData || !seoData.structuredData?.faq) return null;
 
     return {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": seoData.structuredData.faq.map((faq: any) => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer
+      "@context": "https://schema.org",";
+      "@type": "FAQPage",";
+      "mainEntity": seoData.structuredData.faq.map((faq: any) => ({";
+        "@type": "Question",";
+        "name": faq.question,";
+        "acceptedAnswer": {";
+          "@type": "Answer",";
+          "text": faq.answer";
         }
       }))
     };
@@ -113,29 +113,29 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (!enableStructuredData) return null;
 
     return {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com",
-      "logo": "https://ziontechgroup.com/logo.png",
-      "description": "Leading provider of AI and IT solutions, cloud services, and digital transformation services.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "123 Tech Street",
-        "addressLocality": "San Francisco",
-        "addressRegion": "CA",
-        "postalCode": "94105",
+      "@context": "https://schema.org",";
+      "@type": "Organization",";
+      "name": "Zion Tech Group",";
+      "url": "https://ziontechgroup.com",";
+      "logo": "https://ziontechgroup.com/logo.png",";
+      "description": "Leading provider of AI and IT solutions, cloud services, and digital transformation services.",";
+      "address": {";
+        "@type": "PostalAddress",";
+        "streetAddress": "123 Tech Street",";
+        "addressLocality": "San Francisco",";
+        "addressRegion": "CA",";
+        "postalCode": "94105",";
         "addressCountry": "US"
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-302-464-0950",
-        "contactType": "customer service",
+      "contactPoint": {";
+        "@type": "ContactPoint",";
+        "telephone": "+1-302-464-0950",";
+        "contactType": "customer service",";
         "email": "support@ziontechgroup.com"
       },
-      "sameAs": [
-        "https://twitter.com/ziontechgroup",
-        "https://linkedin.com/company/ziontechgroup",
+      "sameAs": [";
+        "https://twitter.com/ziontechgroup",";
+        "https://linkedin.com/company/ziontechgroup",";
         "https://facebook.com/ziontechgroup"
       ]
     };
@@ -146,17 +146,17 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (!enableStructuredData || !seoData.structuredData?.service) return null;
 
     return {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": seoData.structuredData.service.name,
-      "description": seoData.structuredData.service.description,
-      "provider": {
-        "@type": "Organization",
+      "@context": "https://schema.org",";
+      "@type": "Service",";
+      "name": seoData.structuredData.service.name,";
+      "description": seoData.structuredData.service.description,";
+      "provider": {";
+        "@type": "Organization",";
         "name": "Zion Tech Group"
       },
-      "areaServed": "Worldwide",
-      "serviceType": seoData.structuredData.service.type,
-      "offers": seoData.structuredData.service.offers
+      "areaServed": "Worldwide",";
+      "serviceType": seoData.structuredData.service.type,";
+      "offers": seoData.structuredData.service.offers";
     };
   };
 
@@ -242,13 +242,15 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const serviceData = generateServiceStructuredData();
 
   return (
-    <Helmet>
+    <>
+      <Helmet></></Helmet>
       {/* Basic Meta Tags */}
       <title>{seoData.title}</title>
-      <meta name="description" content={seoData.description} />
-      <meta name="keywords" content={seoData.keywords.join(', ')} />
-      <link rel="canonical" href={seoData.canonicalUrl} />
-      
+      <meta name="description" content={seoData.description} /></meta>
+      <meta name="keywords" content={seoData.keywords.join(', '
+    </></meta>
+  )} /></meta>
+      <link rel="canonical" href={seoData.canonicalUrl} /></link>
       {/* Robots Meta */}
       {seoData.robots && <meta name="robots" content={seoData.robots} />}
       
@@ -258,25 +260,25 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       {/* Open Graph Meta Tags */}
       {enableSocialMeta && (
         <>
-          <meta property="og:title" content={seoData.ogTitle || seoData.title} />
-          <meta property="og:description" content={seoData.ogDescription || seoData.description} />
-          <meta property="og:image" content={seoData.ogImage || 'https://ziontechgroup.com/og-image.jpg'} />
-          <meta property="og:url" content={seoData.ogUrl || seoData.canonicalUrl} />
-          <meta property="og:type" content="website" />
-          <meta property="og:site_name" content="Zion Tech Group" />
-          <meta property="og:locale" content="en_US" />
+          <meta property="og:title" content={seoData.ogTitle || seoData.title} /></></meta>
+          <meta property="og:description" content={seoData.ogDescription || seoData.description} /></meta>
+          <meta property="og:image" content={seoData.ogImage || 'https://ziontechgroup.com/og-image.jpg'} /></meta>
+          <meta property="og:url" content={seoData.ogUrl || seoData.canonicalUrl} /></meta>
+          <meta property="og:type" content="website" /></meta>
+          <meta property="og:site_name" content="Zion Tech Group" /></meta>
+          <meta property="og:locale" content="en_US" /></meta>
         </>
       )}
       
       {/* Twitter Card Meta Tags */}
       {enableSocialMeta && (
         <>
-          <meta name="twitter:card" content={seoData.twitterCard || "summary_large_image"} />
-          <meta name="twitter:title" content={seoData.twitterTitle || seoData.title} />
-          <meta name="twitter:description" content={seoData.twitterDescription || seoData.description} />
-          <meta name="twitter:image" content={seoData.twitterImage || seoData.ogImage || 'https://ziontechgroup.com/twitter-image.jpg'} />
-          <meta name="twitter:site" content="@ziontechgroup" />
-          <meta name="twitter:creator" content="@ziontechgroup" />
+          <meta name="twitter:card" content={seoData.twitterCard || "summary_large_image"} /></></meta>
+          <meta name="twitter:title" content={seoData.twitterTitle || seoData.title} /></meta>
+          <meta name="twitter:description" content={seoData.twitterDescription || seoData.description} /></meta>
+          <meta name="twitter:image" content={seoData.twitterImage || seoData.ogImage || 'https://ziontechgroup.com/twitter-image.jpg'} /></meta>
+          <meta name="twitter:site" content="@ziontechgroup" /></meta>
+          <meta name="twitter:creator" content="@ziontechgroup" /></meta>
         </>
       )}
       
@@ -285,36 +287,36 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       {seoData.modifiedTime && <meta property="article:modified_time" content={seoData.modifiedTime} />}
       {seoData.section && <meta property="article:section" content={seoData.section} />}
       {seoData.tags && seoData.tags.map(tag => (
-        <meta key={tag} property="article:tag" content={tag} />
+        <meta key={tag} property="article:tag" content={tag} /></meta>
       ))}
       
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json"></script>
           {JSON.stringify(structuredData)}
         </script>
       )}
       
       {breadcrumbData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json"></script>
           {JSON.stringify(breadcrumbData)}
         </script>
       )}
       
       {faqData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json"></script>
           {JSON.stringify(faqData)}
         </script>
       )}
       
       {organizationData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json"></script>
           {JSON.stringify(organizationData)}
         </script>
       )}
       
       {serviceData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json"></script>
           {JSON.stringify(serviceData)}
         </script>
       )}
@@ -322,15 +324,15 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       {/* Additional SEO Meta Tags */}
       {enableAdvancedFeatures && (
         <>
-          <meta name="theme-color" content="#1e40af" />
-          <meta name="msapplication-TileColor" content="#1e40af" />
-          <meta name="msapplication-config" content="/browserconfig.xml" />
-          <meta name="apple-mobile-web-app-capable" content="yes" />
-          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-          <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-          <meta name="application-name" content="Zion Tech Group" />
-          <meta name="mobile-web-app-capable" content="yes" />
-          <meta name="format-detection" content="telephone=no" />
+          <meta name="theme-color" content="#1e40af" /></></meta>
+          <meta name="msapplication-TileColor" content="#1e40af" /></meta>
+          <meta name="msapplication-config" content="/browserconfig.xml" /></meta>
+          <meta name="apple-mobile-web-app-capable" content="yes" /></meta>
+          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /></meta>
+          <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
+          <meta name="application-name" content="Zion Tech Group" /></meta>
+          <meta name="mobile-web-app-capable" content="yes" /></meta>
+          <meta name="format-detection" content="telephone=no" /></meta>
         </>
       )}
     </Helmet>

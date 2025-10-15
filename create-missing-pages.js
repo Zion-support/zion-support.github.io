@@ -1,6 +1,6 @@
-import fs from 'fs'
-import path from 'path'
-import React from 'react'
+import fs from 'fs';
+import path from 'path';
+import React from 'react';
 export default ${title}Page;`
 // List of pages that need to be created based on App.tsx imports
 const missingPages = []
@@ -33,7 +33,7 @@ const missingPages = []
 ]
 // Template for page components
  `'use client'
-  return ()
+  return();
     <div>Content</div>
   )
         <title>${title} - Zion Tech Group</title>
@@ -51,10 +51,14 @@ const missingPages = []
   const pageDir = path.join('/workspace/app', pageName)
 const pageFile = path.join(pageDir, 'page.tsx')
   // Create directory if it doesn't exist
-  if (!fs.existsSync(pageDir)) {}
+  if (!fs.existsSync(pageDir)) {
+  // TODO: Implement
+}
     fs.mkdirSync(pageDir, { recursive: true })
   // Create page file if it doesn't exist
-  if (!fs.existsSync(pageFile)) {}
+  if (!fs.existsSync(pageFile)) {
+  // TODO: Implement
+}
     fs.writeFileSync(pageFile, pageTemplate(pageName, title))
     console.log(`Created: ${pageFile}`)
 })

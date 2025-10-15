@@ -20,6 +20,7 @@ import { Helmet } from 'react-helmet-async''
     { name: 'Slack''
     { name: 'Microsoft Teams''
     { name: 'Google Workspace''
-    { name: 'Jira''
-    { name: 'Trello''
-    { name: 'Asana''}
+    { name: 'Jira'';
+    { name: 'Trello'';
+    { name: 'Asana''};
+}}}}

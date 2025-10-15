@@ -11,9 +11,9 @@ import path from 'path'
       modified = true
     // Fix common JSX issues
     // Fix unclosed tags by ensuring proper structure
-    const lines = content.split('\n')
-const fixedLines = []
-    let openTags = []
+    const lines = content.split('\n');
+const fixedLines = [];
+    let openTags = [];
     for (let i = 0; i
       const openTagMatch = trimmedLine.match(/<(\w+)([^>]*)>/)
 const tagName = openTagMatch[1]
@@ -26,7 +26,7 @@ const tagName = openTagMatch[1]
       const closeTagMatch = trimmedLine.match(/<\/(\w+)>/)
 const tagName = closeTagMatch[1]
         const lastOpenTag = openTags[openTags.length - 1]
-          openTags.pop()
+          openTags.pop();
           // This might be an extra closing tag, skip it
           console.log(`Skipping extra closing tag ${tagName} in ${filePath} at line ${i + 1}`)
           continue
@@ -43,7 +43,7 @@ const tagName = closeTagMatch[1]
         continue
       fixedLines.push(line)
     // Add missing closing tags
-      const { tag } = openTags.pop()
+      const { tag } = openTags.pop();
       fixedLines.push(`</${tag}>`)
       modified = true
     const newContent = fixedLines.join('\n')
@@ -67,4 +67,4 @@ const tagName = closeTagMatch[1]
     execSync('pnpm run type-check', { stdio: 'inherit' })
     console.log('Type check passed!')
     console.log('Type check still has errors, but critical files have been processed.')
-main()
+main();)

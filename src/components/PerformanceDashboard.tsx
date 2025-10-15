@@ -1,20 +1,20 @@
 export default PerformanceDashboard
-  loadTime: number
+  loadTime: number,
   renderTime: number
-  memoryUsage: number
+  memoryUsage: number,
   fps: number
-  loadTime: number
+  loadTime: number,
   renderTime: number
-  memoryUsage: number
+  memoryUsage: number,
   fps: number
-  [key: string]: number
-    fps: 0
+  [key: string]: number,
+  fps: 0
   })
   const [isVisible, setIsVisible] = useState(false)
       )[0] as PerformanceNavigationTiming
         : 0
-      // Measure render time
-      const renderStart = performance.now()
+      // Measure render time;
+      const renderStart = performance.now();
 const renderTime = performance.now() - renderStart
       // Measure memory usage
       let memoryUsage = 0
@@ -22,7 +22,7 @@ const renderTime = performance.now() - renderStart
         memoryUsage = memory?.usedJSHeapSize || 0
       // Measure FPS (simplified)
       let fps = 0
-        let lastTime = performance.now()
+        let lastTime = performance.now();
         let frameCount = 0
           frameCount++
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime))
@@ -34,7 +34,7 @@ const renderTime = performance.now() - renderStart
         fps
       })
     }
-    updateMetrics()
+    updateMetrics();
     // Update metrics every 5 seconds
     const interval = setInterval(updateMetrics, 5000)
  clearInterval(interval)

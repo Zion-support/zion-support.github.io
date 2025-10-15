@@ -1,9 +1,9 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-export default AccessibilityenhancerPage
-'use client'
-  return ()
+import Footer from '../components/Footer';
+export default AccessibilityenhancerPage;
+'use client';
+  return();
     <div>Content</div>
   )
         <title>Accessibilityenhancer - Zion Tech Group</title>
@@ -11,4 +11,4 @@ export default AccessibilityenhancerPage
             <p className="text-gray-300 mb-8">This page is under construction.</p>
               Learn More
   )
-}
+};

@@ -93,9 +93,11 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
   `;
 
   return (
-    <span className={baseClasses}>
+    <>
+      <span className={baseClasses}></></span>
       {children}
     </span>
+    </>
   );
 };
 

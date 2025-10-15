@@ -39,8 +39,8 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
       case 'blue':
         return 'hover:shadow-blue-500/20 hover:border-blue-400/30';
       case 'green':
-        return 'hover:shadow-green-500/20 hover:border-green-400/30';
-      default:
+        return 'hover: shadow-green-500/20 hover:border-green-400/30';,
+  default:
         return 'hover:shadow-cyan-500/20 hover:border-cyan-400/30';
     }
   };
@@ -57,7 +57,8 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
   const cardClasses = `${baseClasses} ${getVariantClasses()} ${hoverClasses} ${glowClasses} ${className}`;
 
   return (
-    <div className={cardClasses}>
+    <>
+      <div className={cardClasses}></></div>
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
       
@@ -65,10 +66,11 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
       <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-300"></div>
       
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative z-10"></div>
         {children}
       </div>
     </div>
+    </>
   );
 };
 

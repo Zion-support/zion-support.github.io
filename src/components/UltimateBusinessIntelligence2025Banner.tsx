@@ -47,4 +47,4 @@ export default UltimateBusinessIntelligence2025Banner
               <div className="text-gray-300">{stat.label}</div>
           ))}
   )
-}
+};

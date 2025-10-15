@@ -1,8 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-import {Brain, Server, Layers} from "lucide-react";
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 
 const PricingPage: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
@@ -271,38 +267,38 @@ const PricingPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></></Helmet>
         <title>Pricing - Transparent Pricing for AI & IT Solutions | Zion Tech Group</title>
-        <meta name="description" content="Transparent pricing for our comprehensive AI and IT solutions. Choose from micro SAAS, AI services, and IT solutions with flexible pricing options." />
-        <meta name="keywords" content="pricing, micro SAAS pricing, AI services pricing, IT services pricing, cloud infrastructure pricing, cybersecurity pricing" />
-        <meta property="og:title" content="Pricing - Transparent Pricing for AI & IT Solutions" />
-        <meta property="og:description" content="Transparent pricing for our comprehensive AI and IT solutions. Choose from micro SAAS, AI services, and IT solutions." />
-        <meta property="og:url" content="https://ziontechgroup.com/pricing" />
-        <link rel="canonical" href="https://ziontechgroup.com/pricing" />
+        <meta name="description" content="Transparent pricing for our comprehensive AI and IT solutions. Choose from micro SAAS, AI services, and IT solutions with flexible pricing options." /></meta>
+        <meta name="keywords" content="pricing, micro SAAS pricing, AI services pricing, IT services pricing, cloud infrastructure pricing, cybersecurity pricing" /></meta>
+        <meta property="og:title" content="Pricing - Transparent Pricing for AI & IT Solutions" /></meta>
+        <meta property="og:description" content="Transparent pricing for our comprehensive AI and IT solutions. Choose from micro SAAS, AI services, and IT solutions." /></meta>
+        <meta property="og:url" content="https://ziontechgroup.com/pricing" /></meta>
+        <link rel="canonical" href="https://ziontechgroup.com/pricing" /></link>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden"></section>
+        <div className="absolute inset-0 overflow-hidden"></div>
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <div className="container mx-auto px-4 relative z-10"></div>
+          <div className="text-center max-w-4xl mx-auto"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Transparent
-              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"></span>
                 {' '}Pricing
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"></p>
               Choose the perfect plan for your business. All plans include 14-day free trial and no setup fees.
             </p>
             
             {/* Billing Toggle */}
-            <div className="flex items-center justify-center mb-8">
-              <span className={`mr-3 ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
+            <div className="flex items-center justify-center mb-8"></div>
+              <span className={`mr-3 ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}></span>
                 Monthly
               </span>
               <button
@@ -313,11 +309,11 @@ const PricingPage: React.FC = () => {
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                     billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'
                   }`}
-                />
+                /></span>
               </button>
-              <span className={`ml-3 ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
+              <span className={`ml-3 ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}></span>
                 Yearly
-                <span className="ml-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
+                <span className="ml-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full"></span>
                   Save 20%
                 </span>
               </span>
@@ -327,9 +323,9 @@ const PricingPage: React.FC = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-4">
+      <section className="py-8 bg-slate-800"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="flex flex-wrap justify-center gap-4"></div>
             {categories.map((category) => (
               <button
                 key={category.id}
@@ -349,63 +345,63 @@ const PricingPage: React.FC = () => {
       </section>
 
       {/* Pricing Grid */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <section className="py-20 bg-slate-900"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
             {filteredPricing.map((service) => (
               <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10 group relative ${
                 service.popular ? 'ring-2 ring-purple-500' : ''
-              }`}>
+              }`}></div>
                 {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
+                    <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold"></span>
                       Most Popular
                     </span>
                   </div>
                 )}
                 
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                <div className="mb-6"></div>
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors"></h3>
                     {service.name}
                   </h3>
-                  <div className="flex items-baseline mb-3">
-                    <span className="text-4xl font-bold text-purple-400">
+                  <div className="flex items-baseline mb-3"></div>
+                    <span className="text-4xl font-bold text-purple-400"></span>
                       {billingCycle === 'monthly' ? service.monthlyPrice : service.yearlyPrice}
                     </span>
-                    <span className="text-gray-400 ml-2">
+                    <span className="text-gray-400 ml-2"></span>
                       /{billingCycle === 'monthly' ? 'mo' : 'yr'}
                     </span>
                   </div>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-gray-300 text-sm"></p>
                     {service.description}
                   </p>
                 </div>
 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-8"></ul>
                   {service.features.slice(0, 6).map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
                       {feature}
                     </li>
                   ))}
                   {service.features.length > 6 && (
-                    <li className="text-sm text-purple-400 font-medium">
+                    <li className="text-sm text-purple-400 font-medium"></li>
                       +{service.features.length - 6} more features
                     </li>
                   )}
                 </ul>
 
-                <div className="space-y-3">
+                <div className="space-y-3"></div>
                   <Link
                     to="/contact"
                     className="block w-full bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                  >
+                  ></Link>
                     Get Started
                   </Link>
                   <Link
                     to={`/${service.name.toLowerCase().replace(/\s+/g, '-')}`}
                     className="block w-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white text-center py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
+                  ></Link>
                     Learn More
                   </Link>
                 </div>
@@ -416,57 +412,57 @@ const PricingPage: React.FC = () => {
       </section>
 
       {/* Enterprise Section */}
-      <section className="py-20 bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 bg-slate-800"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               Need Custom Solutions?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8"></p>
               For large enterprises with specific requirements, we offer custom solutions tailored to your needs.
             </p>
             
-            <div className="bg-slate-700/50 rounded-xl p-8 mb-8">
+            <div className="bg-slate-700/50 rounded-xl p-8 mb-8"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise Solutions</h3>
-              <div className="grid md:grid-cols-2 gap-6 text-left">
-                <div>
+              <div className="grid md:grid-cols-2 gap-6 text-left"></div>
+                <div></div>
                   <h4 className="text-lg font-semibold text-purple-400 mb-3">What's Included:</h4>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <ul className="space-y-2 text-gray-300"></ul>
+                    <li className="flex items-center"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                       Custom development and integration
                     </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <li className="flex items-center"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                       Dedicated account manager
                     </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <li className="flex items-center"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                       24/7 priority support
                     </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <li className="flex items-center"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                       On-premise deployment options
                     </li>
                   </ul>
                 </div>
-                <div>
+                <div></div>
                   <h4 className="text-lg font-semibold text-purple-400 mb-3">Benefits:</h4>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <ul className="space-y-2 text-gray-300"></ul>
+                    <li className="flex items-center"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                       Scalable to any size
                     </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <li className="flex items-center"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                       White-label solutions
                     </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <li className="flex items-center"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                       Custom training and onboarding
                     </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <li className="flex items-center"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                       Flexible payment terms
                     </li>
                   </ul>
@@ -477,68 +473,68 @@ const PricingPage: React.FC = () => {
             <Link
               to="/contact"
               className="inline-flex items-center bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            >
+            ></Link>
               Contact Sales
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
             </Link>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 bg-slate-900"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Get answers to common questions about our pricing and services.
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-6">
-            <div className="bg-slate-800/50 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">
+          <div className="max-w-4xl mx-auto space-y-6"></div>
+            <div className="bg-slate-800/50 rounded-xl p-6"></div>
+              <h3 className="text-xl font-semibold text-white mb-3"></h3>
                 Do you offer a free trial?
               </h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300"></p>
                 Yes! All our services come with a 14-day free trial. No credit card required to get started.
               </p>
             </div>
             
-            <div className="bg-slate-800/50 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">
+            <div className="bg-slate-800/50 rounded-xl p-6"></div>
+              <h3 className="text-xl font-semibold text-white mb-3"></h3>
                 Can I change my plan anytime?
               </h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300"></p>
                 Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect immediately.
               </p>
             </div>
             
-            <div className="bg-slate-800/50 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">
+            <div className="bg-slate-800/50 rounded-xl p-6"></div>
+              <h3 className="text-xl font-semibold text-white mb-3"></h3>
                 What payment methods do you accept?
               </h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300"></p>
                 We accept all major credit cards, PayPal, and bank transfers. Enterprise customers can also pay via invoice.
               </p>
             </div>
             
-            <div className="bg-slate-800/50 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">
+            <div className="bg-slate-800/50 rounded-xl p-6"></div>
+              <h3 className="text-xl font-semibold text-white mb-3"></h3>
                 Is there a setup fee?
               </h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300"></p>
                 No setup fees! We believe in transparent pricing with no hidden costs.
               </p>
             </div>
             
-            <div className="bg-slate-800/50 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-white mb-3">
+            <div className="bg-slate-800/50 rounded-xl p-6"></div>
+              <h3 className="text-xl font-semibold text-white mb-3"></h3>
                 Do you offer discounts for annual billing?
               </h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300"></p>
                 Yes! Save 20% when you choose annual billing instead of monthly.
               </p>
             </div>
@@ -547,26 +543,26 @@ const PricingPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600"></section>
+        <div className="container mx-auto px-4 text-center"></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto"></p>
             Choose your plan and start transforming your business today. 
             All plans include 14-day free trial and no setup fees.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               to="/contact"
               className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-            >
+            ></Link>
               Start Free Trial
             </Link>
             <Link
               to="/demo"
               className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-            >
+            ></Link>
               Schedule Demo
             </Link>
           </div>

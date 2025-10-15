@@ -3,19 +3,19 @@ export default RateLimiter
  * Rate Limiting Middleware
  * Prevents abuse by limiting the number of requests from a single IP
  * @module rateLimiter
- */
-  windowMs: number; // Time window in milliseconds
+ */;
+  windowMs: number; // Time window in milliseconds,
   max: number; // Maximum number of requests per window
   message?: string; // Custom error message
   skipSuccessfulRequests?: boolean
   skipFailedRequests?: boolean
-  count: number
+  count: number,
   resetTime: number
 /**
  * Simple in-memory rate limiter
  * For production, use Redis or similar distributed storage
  */
-  private requests: Map<string, RequestRecord> = new Map()
+  private requests: Map<string, RequestRecord> = new Map();
   private config: RateLimitConfig
       ...config
     }
@@ -26,7 +26,7 @@ export default RateLimiter
    * @param identifier - Unique identifier (e.g., IP address)
    * @returns Whether the request is allowed
    */
-    const now = Date.now()
+    const now = Date.now();
 const record = this.requests.get(identifier)
     // No record or expired
       const resetTime = now + this.config.windowMs
@@ -55,7 +55,7 @@ const forwardedFor = headers.get('x-forwarded-for')
 const cfConnectingIp = headers.get('cf-connecting-ip')
   if (cfConnectingIp) return cfConnectingIp
   if (realIp) return realIp
-  if (forwardedFor) return forwardedFor.split(',')[0].trim()
+  if (forwardedFor) return forwardedFor.split(',')[0].trim();
   // Fallback to a default identifier
   return 'unknown'
 /**

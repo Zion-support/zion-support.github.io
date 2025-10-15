@@ -18,15 +18,15 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react'
-
-interface SidebarProps {
-  isOpen: boolean;
+} from 'lucide-react';
+;
+interface SidebarProps {;
+  isOpen: boolean;,
   onClose: () => void;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const location = useLocation()
+  const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())
 
   const toggleSection = useCallback((section: string) => {
@@ -100,31 +100,30 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       <div 
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
         onClick={onClose}
-      />
-      
+      /></></div>
       {/* Sidebar */}
-      <div className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl z-50 overflow-y-auto">
-        <div className="p-6">
+      <div className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl z-50 overflow-y-auto"></div>
+        <div className="p-6"></div>
           {/* Header */}
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+          <div className="flex items-center justify-between mb-8"></div>
+            <div className="flex items-center space-x-2"></div>
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center"></div>
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"></span>
                 Zion Tech Group
               </span>
             </div>
             <button
               onClick={onClose}
               className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-white/10"
-            >
-              <X className="w-5 h-5" />
+            ></button>
+              <X className="w-5 h-5" /></X>
             </button>
           </div>
 
           {/* Main Navigation */}
-          <div className="space-y-2 mb-8">
+          <div className="space-y-2 mb-8"></div>
             {mainNavItems.map((item) => (
               <Link
                 key={item.name}
@@ -135,7 +134,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     : 'text-gray-300 hover:bg-white/10 hover:text-white'
                 }`}
                 onClick={onClose}
-              >
+              ></Link>
                 {item.icon}
                 <span className="font-medium">{item.name}</span>
               </Link>
@@ -143,23 +142,23 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* AI Services Section */}
-          <div className="mb-6">
+          <div className="mb-6"></div>
             <button
               onClick={() => toggleSection('ai-services')}
               className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium text-left"
             >
-              <div className="flex items-center space-x-3">
-                <Brain className="w-4 h-4" />
+              <div className="flex items-center space-x-3"></div>
+                <Brain className="w-4 h-4" /></Brain>
                 <span>AI Services</span>
               </div>
               {expandedSections.has('ai-services') ? (
-                <ChevronDown className="w-4 h-4" />
+                <ChevronDown className="w-4 h-4" /></ChevronDown>
               ) : (
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="w-4 h-4" /></ChevronRight>
               )}
             </button>
             
-            {expandedSections.has('ai-services') && (<div className="ml-6 mt-2 space-y-1">
+            {expandedSections.has('ai-services') && (<div className="ml-6 mt-2 space-y-1"></div>
                 {aiServices.map((service) => (
                   <Link
                     key={service.name}
@@ -170,7 +169,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         : 'text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/5'
                     }`}
                     onClick={onClose}
-                  >
+                  ></Link>
                     {service.icon}
                     <span className="text-sm">{service.name}</span>
                   </Link>
@@ -180,23 +179,23 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* IT Services Section */}
-          <div className="mb-6">
+          <div className="mb-6"></div>
             <button
               onClick={() => toggleSection('it-services')}
               className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 font-medium text-left"
             >
-              <div className="flex items-center space-x-3">
-                <Settings className="w-4 h-4" />
+              <div className="flex items-center space-x-3"></div>
+                <Settings className="w-4 h-4" /></Settings>
                 <span>IT Services</span>
               </div>
               {expandedSections.has('it-services') ? (
-                <ChevronDown className="w-4 h-4" />
+                <ChevronDown className="w-4 h-4" /></ChevronDown>
               ) : (
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="w-4 h-4" /></ChevronRight>
               )}
             </button>
             
-            {expandedSections.has('it-services') && (<div className="ml-6 mt-2 space-y-1">
+            {expandedSections.has('it-services') && (<div className="ml-6 mt-2 space-y-1"></div>
                 {itServices.map((service) => (
                   <Link
                     key={service.name}
@@ -207,7 +206,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         : 'text-gray-400 hover:text-green-400 hover:bg-green-500/5'
                     }`}
                     onClick={onClose}
-                  >
+                  ></Link>
                     {service.icon}
                     <span className="text-sm">{service.name}</span>
                   </Link>
@@ -217,23 +216,23 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Micro SAAS Section */}
-          <div className="mb-6">
+          <div className="mb-6"></div>
             <button
               onClick={() => toggleSection('micro-saas')}
               className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium text-left"
             >
-              <div className="flex items-center space-x-3">
-                <Zap className="w-4 h-4" />
+              <div className="flex items-center space-x-3"></div>
+                <Zap className="w-4 h-4" /></Zap>
                 <span>Micro SAAS</span>
               </div>
               {expandedSections.has('micro-saas') ? (
-                <ChevronDown className="w-4 h-4" />
+                <ChevronDown className="w-4 h-4" /></ChevronDown>
               ) : (
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="w-4 h-4" /></ChevronRight>
               )}
             </button>
             
-            {expandedSections.has('micro-saas') && (<div className="ml-6 mt-2 space-y-1">
+            {expandedSections.has('micro-saas') && (<div className="ml-6 mt-2 space-y-1"></div>
                 {microSaasServices.map((service) => (
                   <Link
                     key={service.name}
@@ -244,12 +243,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         : 'text-gray-400 hover:text-purple-400 hover:bg-purple-500/5'
                     }`}
                     onClick={onClose}
-                  >
+                  ></Link>
                     {service.icon}
-                    <div className="flex-1 flex items-center justify-between">
+                    <div className="flex-1 flex items-center justify-between"></div>
                       <span className="text-sm">{service.name}</span>
                       {service.featured && (
-                        <Star className="w-3 h-3 text-yellow-400 fill-current" />
+                        <Star className="w-3 h-3 text-yellow-400 fill-current" /></Star>
                       )}
                     </div>
                   </Link>
@@ -259,11 +258,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Contact Info */}
-          <div className="border-t border-white/10 pt-6">
+          <div className="border-t border-white/10 pt-6"></div>
             <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Contact Info</h4>
-            <div className="space-y-3">
+            <div className="space-y-3"></div>
               {contactInfo.map((info, index) => (
-                <div key={index} className="flex items-center space-x-3 text-sm text-gray-300">
+                <div key={index} className="flex items-center space-x-3 text-sm text-gray-300"></div>
                   <div className="w-5 h-5 text-cyan-400">{info.icon}</div>
                   <span>{info.text}</span>
                 </div>
@@ -272,44 +271,44 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* CTA Button */}
-          <div className="mt-6">
+          <div className="mt-6"></div>
             <Link
               to="/consultation"
               className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 font-semibold shadow-lg hover:shadow-cyan-500/25 group"
               onClick={onClose}
-            >
+            ></Link>
               <span>Get Started</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" /></ArrowRight>
             </Link>
           </div>
         </div>
-        <nav className="p-4">
+        <nav className="p-4"></nav>
           <Link
             to="/"
             className="block py-2 text-gray-300 hover:text-white"
             onClick={onClose}
-          >
+          ></Link>
             Home
           </Link>
           <Link
             to="/about"
             className="block py-2 text-gray-300 hover:text-white"
             onClick={onClose}
-          >
+          ></Link>
             About
           </Link>
           <Link
             to="/services"
             className="block py-2 text-gray-300 hover:text-white"
             onClick={onClose}
-          >
+          ></Link>
             Services
           </Link>
           <Link
             to="/contact"
             className="block py-2 text-gray-300 hover:text-white"
             onClick={onClose}
-          >
+          ></Link>
             Contact
           </Link>
         </nav>

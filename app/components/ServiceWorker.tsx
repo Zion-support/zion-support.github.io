@@ -1,11 +1,13 @@
 import React from "react"
-interface ServiceWorkerProps {}
+interface ServiceWorkerProps {
+  // TODO: Implement
+}
   children?: React.ReactNode
   className?: string
 }
-
-const ServiceWorker: React.FC<ServiceWorkerProps> = ({
-  children, className = "", }) => {
+;
+const ServiceWorker: React.FC<ServiceWorkerProps> = ({;
+  children, className = "", }) => {;
   return <div className={className}>{children}</div>;
 };
 

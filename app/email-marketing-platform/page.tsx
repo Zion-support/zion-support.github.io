@@ -51,10 +51,10 @@ const EmailMarketingPlatformPage = () => {
       period: "per month",
       description: "Perfect for small businesses and startups",
       features: [
-        "Up to 1,000 subscribers",
-        "Unlimited emails",
-        "Basic templates",
-        "Email support",
+        "Up to 1,000 subscribers",";
+        "Unlimited emails",";
+        "Basic templates",";
+        "Email support",";
         "Mobile app access"
       ],
       popular: false
@@ -65,11 +65,11 @@ const EmailMarketingPlatformPage = () => {
       period: "per month",
       description: "Ideal for growing businesses and marketers",
       features: [
-        "Up to 10,000 subscribers",
-        "Advanced automation",
-        "Custom templates",
-        "Priority support",
-        "A/B testing",
+        "Up to 10,000 subscribers",";
+        "Advanced automation",";
+        "Custom templates",";
+        "Priority support",";
+        "A/B testing",";
         "Advanced analytics"
       ],
       popular: true
@@ -80,11 +80,11 @@ const EmailMarketingPlatformPage = () => {
       period: "per month",
       description: "For large organizations with advanced needs",
       features: [
-        "Unlimited subscribers",
-        "Advanced automation",
-        "Custom integrations",
-        "Dedicated support",
-        "Advanced security",
+        "Unlimited subscribers",";
+        "Advanced automation",";
+        "Custom integrations",";
+        "Dedicated support",";
+        "Advanced security",";
         "Custom development"
       ],
       popular: false
@@ -95,47 +95,47 @@ const EmailMarketingPlatformPage = () => {
     {
       title: "Increase Engagement",
       description: "Boost email engagement rates by up to 50% with personalization",
-      icon: <Target className="w-6 h-6" />
+      icon: <Target className="w-6 h-6" /></Target>
     },
     {
       title: "Save Time",
       description: "Automate your email marketing and save hours every week",
-      icon: <Zap className="w-6 h-6" />
+      icon: <Zap className="w-6 h-6" /></Zap>
     },
     {
       title: "Better ROI",
       description: "Track and optimize your email marketing ROI with detailed analytics",
-      icon: <BarChart3 className="w-6 h-6" />
+      icon: <BarChart3 className="w-6 h-6" /></BarChart3>
     },
     {
       title: "Easy to Use",
       description: "Intuitive interface that makes email marketing accessible to everyone",
-      icon: <Shield className="w-6 h-6" />
+      icon: <Shield className="w-6 h-6" /></Shield>
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></></div>
       <EnhancedSEO
         title="Email Marketing Platform - Zion Tech Group | Advanced Email Marketing & Automation"
         description="Powerful email marketing platform with drag-and-drop builder, automation workflows, advanced segmentation, and analytics. Boost your email marketing ROI."
         keywords="email marketing platform, email automation, email builder, email segmentation, email analytics, marketing automation"
         canonical="https://ziontechgroup.com/email-marketing-platform"
-      />
-
+      /></EnhancedSEO>
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
+        <ResponsiveContainer className="text-center"></ResponsiveContainer>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></span>
               Email Marketing Platform
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
             Create, send, and track email campaigns that drive results. Our comprehensive platform 
             makes email marketing easy and effective for businesses of all sizes.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <FuturisticButton
               href="/contact"
               variant="primary"
@@ -157,30 +157,32 @@ const EmailMarketingPlatformPage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <ResponsiveContainer></ResponsiveContainer>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Powerful Email Marketing Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
               Everything you need to create, send, and optimize your email campaigns.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature) => (
-              <FuturisticCard key={index} className="h-full">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            {features.map((feature
+    </>
+  ) => (
+              <FuturisticCard key={index} className="h-full"></FuturisticCard>
+                <div className="text-center mb-6"></div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                 </div>
-                <ul className="space-y-2">
+                <ul className="space-y-2"></ul>
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                       {benefit}
                     </li>
                   ))}
@@ -192,38 +194,38 @@ const EmailMarketingPlatformPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
+        <ResponsiveContainer></ResponsiveContainer>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Simple, Transparent Pricing
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
               Choose the plan that fits your business size and email marketing needs. No hidden fees, no surprises.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
             {pricing.map((plan) => (
-              <FuturisticCard key={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+              <FuturisticCard key={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></FuturisticCard>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold"></span>
                       Most Popular
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-6">
+                <div className="text-center mb-6"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">
+                  <div className="text-4xl font-bold text-cyan-400 mb-2"></div>
                     {plan.price}
                     <span className="text-lg text-gray-400">{plan.period}</span>
                   </div>
                   <p className="text-gray-300 text-sm">{plan.description}</p>
                 </div>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-8"></ul>
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
                       {feature}
                     </li>
                   ))}
@@ -233,7 +235,7 @@ const EmailMarketingPlatformPage = () => {
                   variant={plan.popular ? "primary" : "outline"}
                   size="sm"
                   className="w-full"
-                >
+                ></FuturisticButton>
                   Get Started
                 </FuturisticButton>
               </FuturisticCard>
@@ -243,20 +245,20 @@ const EmailMarketingPlatformPage = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <ResponsiveContainer></ResponsiveContainer>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Why Choose Our Email Marketing Platform?
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
               Join thousands of businesses who have transformed their email marketing with our platform.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {benefits.map((benefit) => (
-              <div key={index} className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div key={index} className="text-center"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                   {benefit.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
@@ -268,15 +270,15 @@ const EmailMarketingPlatformPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-        <ResponsiveContainer className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30"></section>
+        <ResponsiveContainer className="text-center"></ResponsiveContainer>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
             Ready to Transform Your Email Marketing?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
             Start your free trial today and see how our email marketing platform can boost your ROI.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <FuturisticButton
               href="/contact"
               variant="primary"

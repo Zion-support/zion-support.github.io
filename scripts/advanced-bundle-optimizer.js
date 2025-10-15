@@ -149,10 +149,10 @@ const generateOptimizationRecommendations = (analysis) => {
 // Generate Vite configuration optimizations
 const generateViteOptimizations = (analysis) => {
   const optimizations = {
-    build: {
-      rollupOptions: {
-        output: {
-          manualChunks: {
+    build: {,
+  rollupOptions: {
+        output: {,
+  manualChunks: {
             // Core React libraries
             'react-core': ['react', 'react-dom'],
             // Router
@@ -173,8 +173,8 @@ const generateViteOptimizations = (analysis) => {
         }
       }
     },
-    optimizeDeps: {
-      include: [
+    optimizeDeps: {,
+  include: [
         'react',
         'react-dom',
         'react-router-dom',
@@ -189,13 +189,13 @@ const generateViteOptimizations = (analysis) => {
 // Generate performance budget
 const generatePerformanceBudget = (analysis) => {
   const budget = {
-    total: {
-      max: 500, // KB
+    total: {,
+  max: 500, // KB
       current: analysis.totalSize,
       status: analysis.totalSize <= 500 ? 'pass' : 'fail'
     },
-    individual: {
-      max: 200, // KB
+    individual: {,
+  max: 200, // KB
       current: analysis.largestFile.size,
       status: analysis.largestFile.size <= 200 ? 'pass' : 'fail'
     },
@@ -220,8 +220,9 @@ const main = () => {
     if (!fs.existsSync(config.buildDir)) {
       log('Build directory not found. Please run build first.', 'error');
       process.exit(1);
-    }
-
+    } catch (error) {
+  console.error(error);
+}
     // Analyze bundle composition
     const analysis = analyzeBundleComposition();
     

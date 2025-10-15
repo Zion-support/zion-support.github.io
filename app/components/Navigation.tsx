@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { 
   Bars3Icon, 
   XMarkIcon,
@@ -28,9 +29,9 @@ import {
   CodeBracketIcon,
   DevicePhoneMobileIcon,
   UserPlusIcon,
-  CheckCircleIcon,
-  RocketLaunchIcon,
-  ServerIcon
+  CheckCircleIcon,;
+  RocketLaunchIcon,;
+  ServerIcon;
 } from '@heroicons/react/24/outline';
 
 interface NavigationProps {
@@ -43,8 +44,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
   const [isResourcesOpen, setIsResourcesOpen] = useState(false)
   const [isCompanyOpen, setIsCompanyOpen] = useState(false)
-  const location = useLocation()
-
+  const location = useLocation();
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
@@ -157,30 +157,23 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   }
 
   const toggleCompanyMenu = () => {
-<<<<<<< HEAD
-    setIsCompanyOpen(!isCompanyOpen);
-    setIsServicesOpen(false);
-    setIsSolutionsOpen(false);
-    setIsResourcesOpen(false);
-  };
-
-  const isActive = (path: string) => location.pathname === path
-=======
     setIsCompanyOpen(!isCompanyOpen)
     setIsServicesOpen(false)
     setIsSolutionsOpen(false)
     setIsResourcesOpen(false)
   }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
+
+  const isActive = (path: string) => location.pathname === path
 
   return (
-    <nav className="bg-slate-900 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex">
-            <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="flex-shrink-0 flex items-center">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+    <>
+      <nav className="bg-slate-900 shadow-lg"></></nav>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+        <div className="flex justify-between h-16"></div>
+          <div className="flex"></div>
+            <div className="flex-shrink-0 flex items-center"></div>
+              <Link to="/" className="flex-shrink-0 flex items-center"></Link>
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"></div>
                   <span className="text-white font-bold text-sm">Z</span>
                 </div>
                 <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
@@ -188,9 +181,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
-              {navigation.map((item) => (
-                <div key={item.name} className="relative">
+            <div className="hidden lg:ml-6 lg:flex lg:space-x-8"></div>
+              {navigation.map((item
+    </>
+  ) => (
+                <div key={item.name} className="relative"></div>
                   <Link
                     to={item.href}
                     className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
@@ -198,8 +193,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                         ? 'border-blue-500 text-white'
                         : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white'
                     }`}
-                  >
-                    <item.icon className="w-4 h-4" />
+                  ></Link>
+                    <item.icon className="w-4 h-4" /></item>
                     <span>{item.name}</span>
                     {item.submenu && <ChevronDownIcon className="w-4 h-4" />}
                   </Link>
@@ -213,14 +208,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       (item.name === 'Resources' && isResourcesOpen) ||
                       (item.name === 'Company' && isCompanyOpen)
                         ? 'block' : 'hidden'
-                    }`}>
+                    }`}></div>
                       {item.submenu.map((subItem) => (
-                        <div key={subItem.name}>
+                        <div key={subItem.name}></div>
                           <Link
                             to={subItem.href}
                             className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white"
-                          >
-                            <subItem.icon className="w-4 h-4 mr-3" />
+                          ></Link>
+                            <subItem.icon className="w-4 h-4 mr-3" /></subItem>
                             <span>{subItem.name}</span>
                           </Link>
                         </div>
@@ -233,28 +228,28 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center">
+          <div className="lg:hidden flex items-center"></div>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
-                <XMarkIcon className="h-6 w-6" />
+                <XMarkIcon className="h-6 w-6" /></XMarkIcon>
               ) : (
-                <Bars3Icon className="h-6 w-6" />
+                <Bars3Icon className="h-6 w-6" /></Bars3Icon>
               )}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700 max-h-96 overflow-y-auto">
+        <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}></div>
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700 max-h-96 overflow-y-auto"></div>
             {navigation.map((item) => (
-              <div key={item.name}>
+              <div key={item.name}></div>
                 {item.submenu ? (
-                  <div>
+                  <div></div>
                     <button
                       onClick={() => {
                         if (item.name === 'AI Services') toggleServicesMenu();
@@ -265,9 +260,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       }}
                       className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-300 hover:text-white hover:bg-slate-700"
                     >
-                      <item.icon className="w-5 h-5 mr-3" />
+                      <item.icon className="w-5 h-5 mr-3" /></item>
                       <span>{item.name}</span>
-                      <ChevronDownIcon className="w-4 h-4 ml-auto" />
+                      <ChevronDownIcon className="w-4 h-4 ml-auto" /></ChevronDownIcon>
                     </button>
 
                     {/* Mobile Submenu */}
@@ -278,15 +273,15 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       (item.name === 'Resources' && isResourcesOpen) ||
                       (item.name === 'Company' && isCompanyOpen)
                         ? 'block' : 'hidden'
-                    }`}>
+                    }`}></div>
                       {item.submenu.map((subItem) => (
-                        <div key={subItem.name}>
+                        <div key={subItem.name}></div>
                           <Link
                             to={subItem.href}
                             className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-slate-700"
                             onClick={() => setIsOpen(false)}
                           >
-                            <subItem.icon className="w-4 h-4 mr-3" />
+                            <subItem.icon className="w-4 h-4 mr-3" /></subItem>
                             <span>{subItem.name}</span>
                           </Link>
                         </div>
@@ -294,7 +289,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     </div>
                   </div>
                 ) : (
-<<<<<<< HEAD
                   <Link
                     to={item.href}
                     className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${
@@ -304,21 +298,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     }`}
                     onClick={() => setIsOpen(false)}
                   >
-                    <item.icon className="w-5 h-5 mr-3" />
+                    <item.icon className="w-5 h-5 mr-3" /></item>
                     {item.name}
                   </Link>
-=======
-                  <div>
-                    <Link
-                      to={item.href}
-                      className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${isActive(item.href) ? 'text-white bg-slate-700' : 'text-gray-300 hover:text-white hover:bg-slate-700'}`}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <item.icon className="w-5 h-5 mr-3" />
-                      {item.name}
-                    </Link>
-                  </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6743
                 )}
               </div>
             ))}
@@ -329,4 +311,4 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   )
 }
 
-export default Navigation
+export default Navigation;

@@ -1,14 +1,16 @@
 // Jest-DOM matchers
 import '@testing-library/jest-dom'
 // Polyfill fetch and enable fetch mocks
-import 'whatwg-fetch'
-// import fetchMock from 'jest-fetch-mock'
-// fetchMock.enableMocks()
+import 'whatwg-fetch';
+// import fetchMock from 'jest-fetch-mock';
+// fetchMock.enableMocks();
 // Reset fetch mocks before each test to ensure isolation
-// beforeEach(() => {}
-}//   fetchMock.resetMocks()
+// beforeEach(() => {
+  // TODO: Implement
+}
+}//   fetchMock.resetMocks();
 // })
-// Polyfill TextEncoder and TextDecoder for JSDOM environment
+// Polyfill TextEncoder and TextDecoder for JSDOM environment;
 import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder as unknown as typeof global.TextEncoder;
 global.TextDecoder = TextDecoder as unknown as typeof global.TextDecoder;
@@ -18,9 +20,13 @@ process.env['VITE_REOWN_PROJECT_ID'] = 'test_project_id_from_jest_setup'
 process.env['NEXT_PUBLIC_SUPABASE_URL'] = 'http://localhost:54321'
 process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY'] = 'test_anon_key'
 // Mock window.matchMedia for Jest
-Object.defineProperty(window, 'matchMedia', {}
+Object.defineProperty(window, 'matchMedia', {
+  // TODO: Implement
+}
   writable: true,
-  value: jest.fn().mockImplementation(query => ({}
+  value: jest.fn().mockImplementation(query => ({
+  // TODO: Implement
+}
     matches: false, // Default to false (light theme)
     media: query,
     onchange: null,
@@ -30,25 +36,51 @@ Object.defineProperty(window, 'matchMedia', {}
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()}))})
 // Mock ResizeObserver for Radix UI components and other libraries that might use it
-global.ResizeObserver = jest.fn().mockImplementation(() => ({}
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  // TODO: Implement
+}
   observe: jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn()}))
 // Polyfill for URL.revokeObjectURL
-if (typeof URL.revokeObjectURL === 'undefined') {}
-  URL.revokeObjectURL = jest.fn()
+if (typeof URL.revokeObjectURL === 'undefined') {
+  // TODO: Implement
+}
+  URL.revokeObjectURL = jest.fn();
 }
 // Polyfill for window.scrollTo
-if (typeof window.scrollTo === 'undefined') {}
-  window.scrollTo = jest.fn()
+if (typeof window.scrollTo === 'undefined') {
+  // TODO: Implement
+}
+  window.scrollTo = jest.fn();
 }
 // Polyfill IntersectionObserver for components that use it (e.g., embla-carousel)
-if (typeof window.IntersectionObserver === 'undefined') {}
-  class MockIntersectionObserver {}
-    constructor() {}
-    observe() {}
-    unobserve() {}
-    disconnect() {}
+if (typeof window.IntersectionObserver === 'undefined') {
+  // TODO: Implement
+}
+  class MockIntersectionObserver {
+  // TODO: Implement
+}
+    constructor() {
+  return;
+}
+  // TODO: Implement
+}
+    observe() {
+  return;
+}
+  // TODO: Implement
+}
+    unobserve() {
+  return;
+}
+  // TODO: Implement
+}
+    disconnect() {
+  return;
+}
+  // TODO: Implement
+}
     takeRecords() { return []; }
   }
   // @ts-expect-error - Mock implementation for testing

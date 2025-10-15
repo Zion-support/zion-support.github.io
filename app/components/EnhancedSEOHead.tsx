@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
-  title: string;
+  title: string;,
   description: string;
   keywords?: string;
   canonical?: string;
@@ -22,87 +22,91 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 
   const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": siteUrl,
-    "logo": `${siteUrl}/images/logo.png`,
-    "description": "Leading provider of AI-powered solutions, IT services, and digital transformation",
-    "contactPoint": {}
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
+    "@context": "https://schema.org",";
+    "@type": "Organization",";
+    "name": "Zion Tech Group",";
+    "url": siteUrl,";
+    "logo": `${siteUrl}/images/logo.png`,";
+    "description": "Leading provider of AI-powered solutions, IT services, and digital transformation",";
+    "contactPoint": {
+  // TODO: Implement
+}";
+      "@type": "ContactPoint",";
+      "telephone": "+1-302-464-0950",";
+      "contactType": "customer service",";
       "email": "kleber@ziontechgroup.com"
     },
-    "address": {}
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
+    "address": {
+  // TODO: Implement
+}";
+      "@type": "PostalAddress",";
+      "streetAddress": "364 E Main St STE 1008",";
+      "addressLocality": "Middletown",";
+      "addressRegion": "DE",";
+      "postalCode": "19709",";
       "addressCountry": "US"
     },
-    "sameAs": []
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup",
+    "sameAs": []";
+      "https://twitter.com/ziontechgroup",";
+      "https://linkedin.com/company/ziontechgroup",";
       "https://github.com/ziontechgroup"
     ]
   }
   const mergedStructuredData = structuredData
     ? { ...defaultStructuredData, ...structuredData }
     : defaultStructuredData
-  return ()
-    <Helmet>
+  return();
+    <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
-      <meta name="description" content={description} />
+      <meta name="description" content={description} /></meta>
       {keywords && <meta name="keywords" content={keywords} />}
-      <link rel="canonical" href={fullCanonical} />
+      <link rel="canonical" href={fullCanonical} /></link>
       {/* Robots */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} /></meta>
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={fullCanonical} />
-      <meta property="og:image" content={fullOgImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:title" content={title} /></meta>
+      <meta property="og:description" content={description} /></meta>
+      <meta property="og:type" content={ogType} /></meta>
+      <meta property="og:url" content={fullCanonical} /></meta>
+      <meta property="og:image" content={fullOgImage} /></meta>
+      <meta property="og:image:width" content="1200" /></meta>
+      <meta property="og:image:height" content="630" /></meta>
+      <meta property="og:site_name" content="Zion Tech Group" /></meta>
       {/* Twitter Card */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullOgImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:card" content={twitterCard} /></meta>
+      <meta name="twitter:title" content={title} /></meta>
+      <meta name="twitter:description" content={description} /></meta>
+      <meta name="twitter:image" content={fullOgImage} /></meta>
+      <meta name="twitter:site" content="@ziontechgroup" /></meta>
       {/* Additional SEO Meta Tags */}
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="author" content="Zion Tech Group" /></meta>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" /></meta>
       {/* Language and Region */}
-      <meta name="language" content="en-US" />
-      <meta name="geo.region" content="US-DE" />
-      <meta name="geo.placename" content="Middletown, Delaware" />
+      <meta name="language" content="en-US" /></meta>
+      <meta name="geo.region" content="US-DE" /></meta>
+      <meta name="geo.placename" content="Middletown, Delaware" /></meta>
       {/* Mobile App Meta Tags */}
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      <meta name="mobile-web-app-capable" content="yes" /></meta>
+      <meta name="apple-mobile-web-app-capable" content="yes" /></meta>
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /></meta>
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
       {/* Theme Color */}
-      <meta name="theme-color" content="#00ffff" />
-      <meta name="msapplication-TileColor" content="#00ffff" />
+      <meta name="theme-color" content="#00ffff" /></meta>
+      <meta name="msapplication-TileColor" content="#00ffff" /></meta>
       {/* Structured Data */}
-      <script type="application/ld+json">
+      <script type="application/ld+json"></script>
         {JSON.stringify(mergedStructuredData)}
       </script>
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" /></link>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></link>
+      <link rel="preconnect" href="https://www.google-analytics.com" /></link>
       {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>
+      <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
     </Helmet>
   )
 }
-export default EnhancedSEOHead
+export default EnhancedSEOHead;

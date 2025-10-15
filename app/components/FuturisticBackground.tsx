@@ -1,26 +1,28 @@
 import React from 'react';
 
-<<<<<<< HEAD
 const FuturisticBackground: React.FC = () => {
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none">
+    <>
+      <div className="fixed inset-0 overflow-hidden pointer-events-none"></></div>
       {/* Animated Grid */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-20"></div>
         <div 
           className="w-full h-full"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(rgba(6, 182, 212, 0.1
+    </></div>
+  ) 1px, transparent 1px),
               linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '50px 50px',
             animation: 'gridMove 20s linear infinite'
           }}
-        />
+        /></div>
       </div>
 
       {/* Floating Particles */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0"></div>
         {[...Array(20)].map((_, i) => (
           <div
             key={i}
@@ -31,12 +33,12 @@ const FuturisticBackground: React.FC = () => {
               animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
               animationDelay: `${Math.random() * 2}s`
             }}
-          />
+          /></div>
         ))}
       </div>
 
       {/* Animated Orbs */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0"></div>
         <div 
           className="absolute w-64 h-64 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl"
           style={{
@@ -44,7 +46,7 @@ const FuturisticBackground: React.FC = () => {
             top: '20%',
             animation: 'orbFloat 8s ease-in-out infinite'
           }}
-        />
+        /></div>
         <div 
           className="absolute w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"
           style={{
@@ -52,7 +54,7 @@ const FuturisticBackground: React.FC = () => {
             top: '60%',
             animation: 'orbFloat 12s ease-in-out infinite reverse'
           }}
-        />
+        /></div>
         <div 
           className="absolute w-80 h-80 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl"
           style={{
@@ -60,29 +62,29 @@ const FuturisticBackground: React.FC = () => {
             top: '10%',
             animation: 'orbFloat 10s ease-in-out infinite'
           }}
-        />
+        /></div>
       </div>
 
       {/* Scanning Lines */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0"></div>
         <div 
           className="absolute w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-60"
           style={{
             top: '30%',
             animation: 'scanLine 4s linear infinite'
           }}
-        />
+        /></div>
         <div 
           className="absolute w-full h-0.5 bg-gradient-to-r from-transparent via-purple-400 to-transparent opacity-60"
           style={{
             top: '70%',
             animation: 'scanLine 6s linear infinite reverse'
           }}
-        />
+        /></div>
       </div>
 
       {/* Neon Glow Effects */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0"></div>
         <div 
           className="absolute w-full h-full"
           style={{
@@ -93,7 +95,7 @@ const FuturisticBackground: React.FC = () => {
             `,
             animation: 'neonPulse 6s ease-in-out infinite'
           }}
-        />
+        /></div>
       </div>
 
       {/* CSS Animations */}

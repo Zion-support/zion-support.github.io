@@ -8,14 +8,16 @@ interface LazyRouteProps {
 
 const LazyRoute: React.FC<LazyRouteProps> = ({ 
   component, 
-  fallback = <OptimizedLoadingSpinner size="lg" text="Loading page..." /> 
+  fallback = <OptimizedLoadingSpinner size="lg" text="Loading page..." /></OptimizedLoadingSpinner>
 }) => {
   const LazyComponent = lazy(component);
 
   return (
-    <Suspense fallback={fallback}>
-      <LazyComponent />
+    <>
+      <Suspense fallback={fallback}></></Suspense>
+      <LazyComponent /></LazyComponent>
     </Suspense>
+    </>
   );
 };
 

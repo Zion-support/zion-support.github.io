@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import React, { useState } from 'react';
-<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-74b7
@@ -126,19 +125,25 @@ const SupportPage: React.FC = () => {
   };
 
 export default function Support() {
+  return;
+}
+  return;
+}
+  // TODO: Implement
+}
   return (
     <>
       <SEOHead 
         title="support - Zion Tech Group"
         description="Zion Tech Group support service page"
-      />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
+      /></></SEOHead>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
+        <div className="text-center"></div>
           <h1 className="text-4xl font-bold mb-4">support</h1>
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </>
+    </>;
   );
 };
 

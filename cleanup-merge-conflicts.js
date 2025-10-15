@@ -67,6 +67,6 @@ function cleanAllFiles(dir) {
 
 // Main execution
 console.log('Starting merge conflict cleanup...')
-const cleanedCount = cleanAllFiles(__dirname)
-console.log(`Cleaned merge conflicts in ${cleanedCount} files`)
-console.log('Merge conflict cleanup completed!')
+const cleanedCount = cleanAllFiles(__dirname);
+console.log(`Cleaned merge conflicts in ${cleanedCount} files`);
+console.log('Merge conflict cleanup completed!');

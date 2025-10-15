@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarChart3, Shield, Zap, Cpu } from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';
->>>>>>> cursor/fix-errors-and-merge-to-main-74b7
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -93,45 +89,46 @@ const SoftwareDevelopmentPage = () => {
     {
       title: "Custom Solutions",
       description: "Tailored software that meets your specific business needs",
-      icon: <Code className="w-6 h-6" />
+      icon: <Code className="w-6 h-6" /></Code>
     },
     {
       title: "Scalable Architecture",
       description: "Built to grow with your business and handle increased load",
-      icon: <BarChart3 className="w-6 h-6" />
+      icon: <BarChart3 className="w-6 h-6" /></BarChart3>
     },
     {
       title: "Modern Technologies",
       description: "Latest tools and frameworks for optimal performance",
-      icon: <Zap className="w-6 h-6" />
+      icon: <Zap className="w-6 h-6" /></Zap>
     },
     {
       title: "Ongoing Support",
       description: "24/7 support and maintenance for your applications",
-      icon: <Shield className="w-6 h-6" />
+      icon: <Shield className="w-6 h-6" /></Shield>
     }
   ];
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></></div>
       <EnhancedSEO
         title="Software Development Services - Zion Tech Group | Custom Web & Mobile Apps"
         description="Professional software development services including custom web applications, mobile apps, _enterprise software, and API development. Modern technologies and agile methodology."
         keywords="software development, _custom web applications, _mobile app development, _enterprise software, _API development, _React, Node.js"
         canonical="https://ziontechgroup.com/software-development"
-      />
-
+      /></EnhancedSEO>
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
+        <ResponsiveContainer className="text-center"></ResponsiveContainer>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></span>
               Software Development
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
             Transform your ideas into powerful software solutions. From web applications to mobile apps, we build custom software that drives business growth.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <FuturisticButton
               href="/contact"
               variant="primary"
@@ -153,30 +150,32 @@ const SoftwareDevelopmentPage = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <ResponsiveContainer></ResponsiveContainer>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Our Development Services
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
               Comprehensive software development solutions tailored to your business needs.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (<FuturisticCard key={index} className="h-full">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            {services.map((service, index
+    </>
+  ) => (<FuturisticCard key={index} className="h-full"></FuturisticCard>
+                <div className="text-center mb-6"></div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   <div className="text-cyan-400 font-semibold mb-4">{service.price}</div>
                 </div>
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-6"></ul>
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                       {feature}
                     </li>
                   ))}
@@ -186,7 +185,7 @@ const SoftwareDevelopmentPage = () => {
                   variant="outline"
                   size="sm"
                   className="w-full"
-                >
+                ></FuturisticButton>
                   Get Quote
                 </FuturisticButton>
               </FuturisticCard>
@@ -196,22 +195,22 @@ const SoftwareDevelopmentPage = () => {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
+        <ResponsiveContainer></ResponsiveContainer>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Technologies We Use
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
               Modern, proven technologies for building robust and scalable applications.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-            {technologies.map((tech, index) => (<div key={index} className="text-center">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8"></div>
+            {technologies.map((tech, index) => (<div key={index} className="text-center"></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-4">{tech.name}</h3>
-                <ul className="space-y-2">
+                <ul className="space-y-2"></ul>
                   {tech.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="text-gray-300 text-sm">
+                    <li key={itemIndex} className="text-gray-300 text-sm"></li>
                       {item}
                     </li>
                   ))}
@@ -223,20 +222,20 @@ const SoftwareDevelopmentPage = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <ResponsiveContainer></ResponsiveContainer>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Our Development Process
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
               A proven methodology to deliver high-quality software on time and within budget.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8"></div>
             {process.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
+              <div key={index} className="text-center"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg"></div>
                   {step.step}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
@@ -248,20 +247,20 @@ const SoftwareDevelopmentPage = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
+        <ResponsiveContainer></ResponsiveContainer>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Why Choose Our Development Services?
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto"></p>
               Experience the difference of working with a dedicated development team.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div key={index} className="text-center"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                   {benefit.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
@@ -273,15 +272,15 @@ const SoftwareDevelopmentPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-        <ResponsiveContainer className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30"></section>
+        <ResponsiveContainer className="text-center"></ResponsiveContainer>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
             Ready to Build Your Software Solution?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
             Let our experienced developers bring your vision to life with cutting-edge technology and best practices.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <FuturisticButton
               href="/contact"
               variant="primary"

@@ -9,20 +9,22 @@ interface AccessibilityOptions {
 }
 
 interface AccessibilityState {
-  isHighContrast: boolean;
+  isHighContrast: boolean;,
   isReducedMotion: boolean;
-  isKeyboardUser: boolean;
+  isKeyboardUser: boolean;,
   currentFocus: HTMLElement | null;
   focusHistory: HTMLElement[];
 }
 
-export const useAccessibility = (options: AccessibilityOptions = {}) => {
+export const useAccessibility = (options: AccessibilityOptions = {
+  // TODO: Implement
+}) => {
   const {
     enableKeyboardNavigation = true,
     enableScreenReaderSupport = true,
     enableHighContrast = true,
     enableFocusManagement = true,
-    enableReducedMotion = true
+    enableReducedMotion = true;
   } = options;
 
   const stateRef = useRef<AccessibilityState>({
@@ -249,15 +251,15 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
     const style = document.createElement('style');
     style.textContent = `
       .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
+        position: absolute;,
+  width: 1px;
+        height: 1px;,
+  padding: 0;
+        margin: -1px;,
+  overflow: hidden;
         clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
+        white-space: nowrap;,
+  border: 0;
       }
 
       .focus-visible {
@@ -281,19 +283,19 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {
       }
 
       .skip-link {
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        background: #000;
-        color: #fff;
-        padding: 8px;
+        position: absolute;,
+  top: -40px;
+        left: 6px;,
+  background: #000;
+        color: #fff;,
+  padding: 8px;
         text-decoration: none;
         z-index: 1000;
         border-radius: 4px;
       }
 
-      .skip-link:focus {
-        top: 6px;
+      .skip-link: focus {,
+  top: 6px;
       }
     `;
     document.head.appendChild(style);

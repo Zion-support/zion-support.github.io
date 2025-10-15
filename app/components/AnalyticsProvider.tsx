@@ -13,9 +13,13 @@ interface AnalyticsContextType {
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>()
   undefined,
 )
-export const useAnalytics = () => {}
+export const useAnalytics = () => {
+  // TODO: Implement
+}
 }const context = useContext(AnalyticsContext)
-  if (!context) {}
+  if (!context) {
+  // TODO: Implement
+}
     throw new Error("useAnalytics must be used within an AnalyticsProvider")
   }
   return context
@@ -26,14 +30,16 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   useEffect(() => {
     if (typeof window !== "undefined") {
       // Google Analytics
-      if (process.env.NODE_ENV === "production") {}
+      if (process.env.NODE_ENV === "production") {
+  // TODO: Implement
+}
         const script = document.createElement("script")
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
         script.async = true
         document.head.appendChild(script)
         window.gtag =
           window.gtag ||
-          function (...args: unknown[]) {
+          function (...args: unknown[]) {;
             (window.gtag as any).q = (window.gtag as any).q || [];
             (window.gtag as any).q.push(args);
           };
@@ -56,13 +62,15 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         page_location: window.location.href})
     }
   }
-  const value: AnalyticsContextType = {}
+  const value: AnalyticsContextType = {
+  // TODO: Implement
+}
     trackEvent,
     trackPageView}
-  return ()
-    <AnalyticsContext.Provider value={value}>
+  return();
+    <AnalyticsContext.Provider value={value}></AnalyticsContext>
       {children}
     </AnalyticsContext.Provider>
   )
 }
-export default AnalyticsProvider
+export default AnalyticsProvider;

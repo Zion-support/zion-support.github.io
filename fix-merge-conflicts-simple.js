@@ -31,6 +31,6 @@ console.log('Starting merge conflict resolution...')
 const filesWithConflicts = findFilesWithMergeConflicts('/workspace')
 console.log(`Found ${filesWithConflicts.length} files with merge conflicts`)
 let fixedCount = 0
-    fixedCount++
-console.log(`Fixed merge conflicts in ${fixedCount} files`)
-console.log('Merge conflict resolution completed!')
+    fixedCount++;
+console.log(`Fixed merge conflicts in ${fixedCount} files`);
+console.log('Merge conflict resolution completed!');)

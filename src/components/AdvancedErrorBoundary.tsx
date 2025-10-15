@@ -2,24 +2,24 @@ export default AdvancedErrorBoundary
 // Simple logger implementation
       // console.error(message, context)
 }
-  hasError: boolean
+  hasError: boolean,
   error: Error | null
-  errorInfo: ErrorInfo | null
+  errorInfo: ErrorInfo | null,
   errorId: string | null
   children: ReactNode
   fallback?: ReactNode
  void
   enableErrorReporting?: boolean
   enableRetry?: boolean
-  errorId: string | null
+  errorId: string | null,
   error: Error
-  errorInfo: ErrorInfo
+  errorInfo: ErrorInfo,
   message: string
-  stack: string | undefined
+  stack: string | undefined,
   componentStack: string | null | undefined
-  timestamp: string
+  timestamp: string,
   userAgent: string
-  url: string
+  url: string,
   userId: string | null
   sessionId: string
 class AdvancedErrorBoundary extends Component
@@ -38,8 +38,8 @@ class AdvancedErrorBoundary extends Component
     // Call custom error handler
       this.props.onError(error, errorInfo)
     // Report error to external service
-      this.reportError(error, errorInfo)
-      sessionId: this.getSessionId()
+      this.reportError(error, errorInfo);
+      sessionId: this.getSessionId();
     }
     // Send to error reporting service
     this.sendErrorReport(errorReport)
@@ -65,7 +65,7 @@ class AdvancedErrorBoundary extends Component
       })
   }
     if (this.retryCount
-    window.location.reload()
+    window.location.reload();
   }
     window.location.href = '/'
   }

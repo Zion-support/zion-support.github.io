@@ -32,8 +32,8 @@ import {
   FileText,
   MessageSquare,
   ShoppingCart,
-  Search,
-  Target,
-  Workflow
+  Search,;
+  Target,;
+  Workflow;
 } from 'lucide-react';
 
