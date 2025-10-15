@@ -89,14 +89,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon },
         { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
         { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
-        { name: 'AI Video Generator', href: '/ai-video-generator', icon: EyeIcon },
-        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: ChatBubbleLeftRightIcon },
-        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: EyeIcon },
-        { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ShieldCheckIcon },
-        { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: UserGroupIcon },
-        { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: AcademicCapIcon },
-        { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: ChartBarIcon },
-        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: CogIcon }
+        { name: 'AI Video Generator', href: '/zion-ai-video-generator', icon: EyeIcon },
+        { name: 'AI Audio Processor', href: '/zion-ai-voice-synthesis', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI 3D Model Generator', href: '/zion-ai-image-generator', icon: EyeIcon },
+        { name: 'AI Legal Assistant', href: '/zion-ai-document-analyzer', icon: ShieldCheckIcon },
+        { name: 'AI Medical Assistant', href: '/zion-ai-customer-support-pro', icon: UserGroupIcon },
+        { name: 'AI Education Tutor', href: '/zion-ai-meeting-transcriber', icon: AcademicCapIcon },
+        { name: 'AI Real Estate Analyzer', href: '/zion-ai-predictive-analytics', icon: ChartBarIcon },
+        { name: 'AI Supply Chain Optimizer', href: '/zion-ai-workflow-automator', icon: CogIcon }
       ]
     },
     {
@@ -212,6 +212,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     setIsResourcesOpen(false);
   };
 
+  const closeAllMenus = () => {
+    setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+    setIsResourcesOpen(false);
+    setIsCompanyOpen(false);
+  };
+
   return (
     <nav className="bg-slate-900/95 backdrop-blur-lg border-b border-cyan-500/30 relative overflow-hidden">
       {/* Animated background */}
@@ -236,35 +243,39 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative">
-                <Link
-                  to={item.href}
-                  onClick={() => {
-                    if (item.name === 'AI Services') toggleServicesMenu();
-                    else if (item.name === 'Micro SaaS') toggleSolutionsMenu();
-                    else if (item.name === 'IT Solutions') toggleResourcesMenu();
-                    else if (item.name === 'Resources') toggleResourcesMenu();
-                    else if (item.name === 'Company') toggleCompanyMenu();
-                  }}
-                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 border-b-2 group hover:scale-105 ${
-                    isActive(item.href)
-                      ? 'border-cyan-500 text-cyan-300 neon-glow'
-                      : 'border-transparent text-gray-300 hover:border-cyan-300 hover:text-cyan-300 hover:shadow-lg hover:shadow-cyan-500/25'
-                  }`}
-                >
-                  <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                  <span className="ml-2">{item.name}</span>
-                  {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform" />}
-                </Link>
-                {/* Dropdown Menu */}
-                {item.submenu && (
-                  <div className={`absolute left-0 mt-2 w-56 glass-card py-2 z-50 border border-cyan-500/30 backdrop-blur-lg ${
-                    (item.name === 'AI Services' && isServicesOpen) ||
-                    (item.name === 'Micro SaaS' && isSolutionsOpen) ||
-                    (item.name === 'IT Solutions' && isResourcesOpen) ||
-                    (item.name === 'Resources' && isResourcesOpen) ||
-                    (item.name === 'Company' && isCompanyOpen)
-                      ? 'block' : 'hidden'
-                  }`}>
+                {item.submenu ? (
+                  <button
+                    onClick={() => {
+                      if (item.name === 'AI Services') toggleServicesMenu();
+                      else if (item.name === 'Micro SaaS') toggleSolutionsMenu();
+                      else if (item.name === 'IT Solutions') toggleResourcesMenu();
+                      else if (item.name === 'Resources') toggleResourcesMenu();
+                      else if (item.name === 'Company') toggleCompanyMenu();
+                    }}
+                    className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 border-b-2 group hover:scale-105 ${
+                      isActive(item.href)
+                        ? 'border-cyan-500 text-cyan-300 neon-glow'
+                        : 'border-transparent text-gray-300 hover:border-cyan-300 hover:text-cyan-300 hover:shadow-lg hover:shadow-cyan-500/25'
+                    }`}
+                  >
+                    <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                    <span className="ml-2">{item.name}</span>
+                    <ChevronDownIcon className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform" />
+                  </button>
+                ) : (
+                  <Link
+                    to={item.href}
+                    onClick={closeAllMenus}
+                    className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 border-b-2 group hover:scale-105 ${
+                      isActive(item.href)
+                        ? 'border-cyan-500 text-cyan-300 neon-glow'
+                        : 'border-transparent text-gray-300 hover:border-cyan-300 hover:text-cyan-300 hover:shadow-lg hover:shadow-cyan-500/25'
+                    }`}
+                  >
+                    <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                    <span className="ml-2">{item.name}</span>
+                  </Link>
+                )}
                 {/* Dropdown Menu */}
                 {item.submenu && (
                   <div 
@@ -283,6 +294,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       <div key={subItem.name} role="none">
                         <Link
                           to={subItem.href}
+                          onClick={closeAllMenus}
                           className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-300 transition-all duration-300 group"
                         >
                           <subItem.icon className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />

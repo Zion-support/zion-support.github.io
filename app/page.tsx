@@ -40,7 +40,7 @@ const HomePage: React.FC = () => {
       icon: CloudIcon,
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions and infrastructure management for modern businesses.',
-      href: '/cloud-solutions',
+      href: '/cloud-infrastructure',
       gradient: 'from-blue-500 to-cyan-500',
       glow: 'shadow-blue-500/25'
     },

@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import {
   X,
   ChevronDown,
@@ -144,9 +144,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               {expandedSections.has(section.title) && (
                 <div className="bg-slate-800">
                   {section.items.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.href}
+                      onClick={onClose}
                       className={`flex items-center px-6 py-3 text-sm transition-colors ${
                         isActive(item.href)
                           ? 'bg-blue-600 text-white'
@@ -158,7 +159,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                       {isActive(item.href) && (
                         <ArrowRight className="h-3 w-3 ml-auto" />
                       )}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}
