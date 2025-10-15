@@ -6,15 +6,7 @@ import FuturisticBackground from '../components/FuturisticBackground';
 const AiServicesPage: React.FC = () => {
   const services = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: Brain,
-=======
-      icon: Star,
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
-=======
-      icon: Brain,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'AI Consulting',
       description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',
       color: 'from-purple-500 to-pink-500'
