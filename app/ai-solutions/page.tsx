@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -213,10 +212,340 @@ const AISolutionsPage: React.FC = () => {
       category: 'Blockchain',
       icon: <Network className="w-8 h-8 text-yellow-400" />,
       popular: false
+    },
+    {
+      id: 'ai-3d-generation',
+      name: 'AI 3D Generation Studio',
+      price: '$399/mo',
+      originalPrice: '$799/mo',
+      description: 'AI-powered 3D model generation and animation',
+      longDescription: 'Create stunning 3D models, animations, and virtual environments using our advanced AI-powered 3D generation platform.',
+      features: [
+        '3D Model Generation',
+        'Texture Synthesis',
+        'Animation Creation',
+        'Virtual Environment Design',
+        'AR/VR Content Creation',
+        'Real-time Rendering',
+        'Custom Style Transfer',
+        'Batch Processing',
+        'API Integration',
+        'Cloud Rendering'
+      ],
+      benefits: [
+        'Reduce 3D creation time by 80%',
+        'Lower production costs',
+        'Scale content creation',
+        'Professional quality output',
+        'Easy integration'
+      ],
+      category: '3D & Graphics',
+      icon: <Eye className="w-8 h-8 text-pink-400" />,
+      popular: false
+    },
+    {
+      id: 'ai-automated-testing',
+      name: 'AI Automated Testing Suite',
+      price: '$299/mo',
+      originalPrice: '$599/mo',
+      description: 'Intelligent test automation and quality assurance',
+      longDescription: 'Automate your testing processes with AI-powered test generation, execution, and maintenance for web and mobile applications.',
+      features: [
+        'Test Case Generation',
+        'Automated Test Execution',
+        'Visual Testing',
+        'Performance Testing',
+        'API Testing',
+        'Cross-browser Testing',
+        'Mobile Testing',
+        'Regression Testing',
+        'Test Data Management',
+        'Reporting & Analytics'
+      ],
+      benefits: [
+        'Reduce testing time by 70%',
+        'Improve test coverage',
+        'Catch bugs earlier',
+        'Reduce manual effort',
+        'Ensure quality releases'
+      ],
+      category: 'Testing',
+      icon: <Settings className="w-8 h-8 text-green-400" />,
+      popular: true
+    },
+    {
+      id: 'ai-conversation-analytics',
+      name: 'AI Conversation Analytics',
+      price: '$199/mo',
+      originalPrice: '$399/mo',
+      description: 'Advanced conversation analysis and insights',
+      longDescription: 'Analyze customer conversations across all channels to extract insights, sentiment, and actionable intelligence.',
+      features: [
+        'Multi-channel Analysis',
+        'Sentiment Analysis',
+        'Intent Recognition',
+        'Topic Extraction',
+        'Conversation Summarization',
+        'Trend Analysis',
+        'Real-time Monitoring',
+        'Custom Dashboards',
+        'API Integration',
+        'Export Capabilities'
+      ],
+      benefits: [
+        'Improve customer experience',
+        'Identify service gaps',
+        'Optimize agent performance',
+        'Track satisfaction trends',
+        'Make data-driven decisions'
+      ],
+      category: 'Analytics',
+      icon: <MessageSquare className="w-8 h-8 text-cyan-400" />,
+      popular: false
+    },
+    {
+      id: 'ai-crm-assistant',
+      name: 'AI CRM Assistant',
+      price: '$249/mo',
+      originalPrice: '$499/mo',
+      description: 'Intelligent CRM automation and insights',
+      longDescription: 'Enhance your CRM with AI-powered automation, lead scoring, and customer insights to boost sales performance.',
+      features: [
+        'Lead Scoring',
+        'Opportunity Prediction',
+        'Email Automation',
+        'Follow-up Reminders',
+        'Customer Segmentation',
+        'Sales Forecasting',
+        'Pipeline Analysis',
+        'Integration APIs',
+        'Custom Workflows',
+        'Performance Analytics'
+      ],
+      benefits: [
+        'Increase sales by 35%',
+        'Improve lead quality',
+        'Automate follow-ups',
+        'Better pipeline visibility',
+        'Optimize sales processes'
+      ],
+      category: 'Sales',
+      icon: <Users className="w-8 h-8 text-blue-400" />,
+      popular: true
+    },
+    {
+      id: 'ai-customer-churn',
+      name: 'AI Customer Churn Prevention',
+      price: '$179/mo',
+      originalPrice: '$359/mo',
+      description: 'Predict and prevent customer churn with AI',
+      longDescription: 'Identify at-risk customers and implement retention strategies using AI-powered churn prediction and prevention.',
+      features: [
+        'Churn Prediction Models',
+        'Risk Scoring',
+        'Retention Campaigns',
+        'Behavioral Analysis',
+        'Intervention Triggers',
+        'A/B Testing',
+        'ROI Tracking',
+        'Integration APIs',
+        'Custom Alerts',
+        'Performance Dashboards'
+      ],
+      benefits: [
+        'Reduce churn by 50%',
+        'Increase customer lifetime value',
+        'Improve retention rates',
+        'Optimize marketing spend',
+        'Boost revenue'
+      ],
+      category: 'Customer Success',
+      icon: <TrendingUp className="w-8 h-8 text-red-400" />,
+      popular: false
+    },
+    {
+      id: 'ai-customer-sentiment-tracker',
+      name: 'AI Customer Sentiment Tracker',
+      price: '$149/mo',
+      originalPrice: '$299/mo',
+      description: 'Real-time customer sentiment monitoring',
+      longDescription: 'Monitor customer sentiment across all touchpoints to identify issues and opportunities for improvement.',
+      features: [
+        'Real-time Sentiment Analysis',
+        'Multi-channel Monitoring',
+        'Trend Analysis',
+        'Alert System',
+        'Custom Dashboards',
+        'API Integration',
+        'Historical Data',
+        'Competitor Analysis',
+        'Report Generation',
+        'Team Collaboration'
+      ],
+      benefits: [
+        'Improve customer satisfaction',
+        'Identify issues early',
+        'Track brand perception',
+        'Optimize customer experience',
+        'Make informed decisions'
+      ],
+      category: 'Customer Success',
+      icon: <Heart className="w-8 h-8 text-pink-400" />,
+      popular: false
+    },
+    {
+      id: 'ai-customer-support-bot',
+      name: 'AI Customer Support Bot',
+      price: '$199/mo',
+      originalPrice: '$399/mo',
+      description: 'Advanced AI customer support automation',
+      longDescription: 'Provide 24/7 customer support with our intelligent AI bot that handles common queries and escalates complex issues.',
+      features: [
+        'Natural Language Processing',
+        'Multi-language Support',
+        'Knowledge Base Integration',
+        'Ticket Management',
+        'Escalation Rules',
+        'Learning Capabilities',
+        'Analytics Dashboard',
+        'Custom Branding',
+        'API Integration',
+        'Human Handoff'
+      ],
+      benefits: [
+        'Reduce support costs by 60%',
+        'Improve response times',
+        '24/7 availability',
+        'Consistent service quality',
+        'Scale support operations'
+      ],
+      category: 'Customer Support',
+      icon: <Headphones className="w-8 h-8 text-green-400" />,
+      popular: true
+    },
+    {
+      id: 'ai-cyber-defense-matrix',
+      name: 'AI Cyber Defense Matrix',
+      price: '$499/mo',
+      originalPrice: '$999/mo',
+      description: 'Comprehensive AI-powered cybersecurity platform',
+      longDescription: 'Protect your organization with our advanced AI cybersecurity platform that provides multi-layered defense and threat intelligence.',
+      features: [
+        'Threat Intelligence',
+        'Behavioral Analysis',
+        'Incident Response',
+        'Vulnerability Management',
+        'Compliance Monitoring',
+        'Security Orchestration',
+        'Threat Hunting',
+        'Risk Assessment',
+        'Integration APIs',
+        'Custom Policies'
+      ],
+      benefits: [
+        'Detect advanced threats',
+        'Reduce response time',
+        'Automate security operations',
+        'Ensure compliance',
+        'Protect critical assets'
+      ],
+      category: 'Cybersecurity',
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      popular: true
+    },
+    {
+      id: 'ai-data-visualization',
+      name: 'AI Data Visualization Studio',
+      price: '$179/mo',
+      originalPrice: '$359/mo',
+      description: 'Intelligent data visualization and storytelling',
+      longDescription: 'Transform complex data into compelling visual stories with our AI-powered data visualization platform.',
+      features: [
+        'Auto-chart Generation',
+        'Interactive Dashboards',
+        'Storytelling Mode',
+        'Custom Templates',
+        'Real-time Updates',
+        'Collaborative Editing',
+        'Export Options',
+        'API Integration',
+        'Mobile Responsive',
+        'White-label Solutions'
+      ],
+      benefits: [
+        'Create visuals 10x faster',
+        'Improve data comprehension',
+        'Engage stakeholders',
+        'Make data-driven decisions',
+        'Scale visualization efforts'
+      ],
+      category: 'Data Visualization',
+      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
+      popular: false
+    },
+    {
+      id: 'ai-design-studio',
+      name: 'AI Design Studio',
+      price: '$249/mo',
+      originalPrice: '$499/mo',
+      description: 'AI-powered design creation and optimization',
+      longDescription: 'Create stunning designs with our AI-powered design studio that generates logos, graphics, and marketing materials.',
+      features: [
+        'Logo Generation',
+        'Graphic Design',
+        'Marketing Materials',
+        'Brand Kit Creation',
+        'Template Library',
+        'Style Transfer',
+        'Batch Processing',
+        'High-resolution Export',
+        'Collaboration Tools',
+        'Brand Consistency'
+      ],
+      benefits: [
+        'Reduce design costs by 70%',
+        'Maintain brand consistency',
+        'Scale design production',
+        'Professional quality output',
+        'Faster time to market'
+      ],
+      category: 'Design',
+      icon: <Eye className="w-8 h-8 text-orange-400" />,
+      popular: true
+    },
+    {
+      id: 'ai-devops-automation',
+      name: 'AI DevOps Automation',
+      price: '$399/mo',
+      originalPrice: '$799/mo',
+      description: 'Intelligent DevOps automation and optimization',
+      longDescription: 'Streamline your DevOps processes with AI-powered automation for CI/CD, monitoring, and infrastructure management.',
+      features: [
+        'CI/CD Optimization',
+        'Infrastructure Automation',
+        'Performance Monitoring',
+        'Anomaly Detection',
+        'Auto-scaling',
+        'Deployment Automation',
+        'Log Analysis',
+        'Incident Response',
+        'Integration APIs',
+        'Custom Workflows'
+      ],
+      benefits: [
+        'Reduce deployment time by 80%',
+        'Improve system reliability',
+        'Automate routine tasks',
+        'Optimize resource usage',
+        'Scale operations efficiently'
+      ],
+      category: 'DevOps',
+      icon: <Settings className="w-8 h-8 text-blue-400" />,
+      popular: false
     }
   ];
 
-  const categories = ['All', 'Conversational AI', 'Computer Vision', 'Content Creation', 'Analytics', 'Automation', 'Blockchain'];
+  const categories = ['All', 'Conversational AI', 'Computer Vision', 'Content Creation', 'Analytics', 'Automation', 'Blockchain', '3D & Graphics', 'Testing', 'Customer Success', 'Customer Support', 'Cybersecurity', 'Data Visualization', 'Design', 'DevOps'];
 
   const useCases = [
     {
@@ -292,7 +621,6 @@ const AISolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>AI Solutions - Advanced Artificial Intelligence Services | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive AI solutions including chatbots, computer vision, content generation, analytics, and automation. Transform your business with cutting-edge AI technology." />
         <meta name="keywords" content="AI solutions, artificial intelligence, chatbots, computer vision, content generation, analytics, automation, machine learning" />
@@ -307,41 +635,6 @@ const AISolutionsPage: React.FC = () => {
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-=======
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-
-import { Link } from "react-router-dom";
-
-export default function GDataAnalyticsZionTechGroupPage() {
-  return (
-    <>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Ai Solutions</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional ai solutions services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
-=======
-        <title>AI Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">AI Solutions</h1>
-          <p className="text-gray-300 text-center">Discover our comprehensive AI solutions and services.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -572,12 +865,9 @@ export default function GDataAnalyticsZionTechGroupPage() {
             </Link>
           </div>
         </div>
-      </section>    </>
+      </section>
+    </>
   );
-<<<<<<< HEAD
 };
 
 export default AISolutionsPage;
-=======
-}
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56

@@ -30,21 +30,21 @@ import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
 import AISolutionsPage from './app/ai-solutions/page';
 import ITSolutionsPage from './app/it-solutions/page';
 
-// Service Pages
-import AIServicesPage from './app/pages/AIServicesPage';
-import ITServicesPage from './app/pages/ITServicesPage';
-import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
-import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
-import CaseStudiesPage from './app/pages/CaseStudiesPage';
-import CareersPage from './app/pages/CareersPage';
+// Service Pages - using existing pages
+import AIServicesPage from './app/pages/AISolutionsPage';
+import ITServicesPage from './app/it-solutions/page';
+import CloudInfrastructurePage from './app/pages/CloudSolutionsPage';
+import DigitalTransformationPage from './app/pages/SolutionsPage';
+import CaseStudiesPage from './app/pages/PortfolioPage';
+import CareersPage from './app/pages/AboutPage';
 
-// Additional Pages
+// Additional Pages - using existing pages
 import CybersecurityPage from './app/pages/CybersecurityPage';
 import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
-import MicroSaaSPage from './app/pages/MicroSaaSPage';
-import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
-import TeamPage from './app/pages/TeamPage';
-import DocumentationPage from './app/pages/DocumentationPage';
+import MicroSaaSPage from './app/micro-saas-solutions/page';
+import FiveGSolutionsPage from './app/5g-solutions/page';
+import TeamPage from './app/pages/AboutPage';
+import DocumentationPage from './app/pages/SupportPage';
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (

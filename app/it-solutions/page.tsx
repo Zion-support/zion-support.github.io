@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -848,13 +843,289 @@ const ITSolutionsPage: React.FC = () => {
       icon: <FileText className="w-8 h-8 text-amber-400" />,
       popular: false,
       link: 'https://ziontechgroup.com/it-audit-compliance'
+    },
+    {
+      id: 'cloud-migration-services',
+      name: 'Cloud Migration Services',
+      price: '$2,500/mo',
+      originalPrice: '$5,000/mo',
+      description: 'Complete cloud migration and optimization',
+      longDescription: 'Migrate your applications and data to the cloud with our comprehensive migration services including planning, execution, and optimization.',
+      features: [
+        'Migration Planning',
+        'Application Assessment',
+        'Data Migration',
+        'Infrastructure Setup',
+        'Security Configuration',
+        'Performance Optimization',
+        'Testing & Validation',
+        'Training & Support',
+        'Cost Optimization',
+        'Ongoing Management'
+      ],
+      benefits: [
+        'Reduce infrastructure costs by 40%',
+        'Improve scalability and flexibility',
+        'Enhance security and compliance',
+        'Increase system reliability',
+        'Enable remote work capabilities'
+      ],
+      category: 'Cloud Computing',
+      icon: <Cloud className="w-8 h-8 text-blue-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/cloud-migration-services'
+    },
+    {
+      id: 'enterprise-software-development',
+      name: 'Enterprise Software Development',
+      price: '$5,000/mo',
+      originalPrice: '$10,000/mo',
+      description: 'Custom enterprise software solutions',
+      longDescription: 'Develop robust, scalable enterprise software solutions tailored to your business requirements and industry standards.',
+      features: [
+        'Custom Application Development',
+        'Enterprise Architecture Design',
+        'API Development & Integration',
+        'Database Design & Optimization',
+        'Security Implementation',
+        'Performance Optimization',
+        'Quality Assurance',
+        'Documentation & Training',
+        'Maintenance & Support',
+        'Scalability Planning'
+      ],
+      benefits: [
+        'Tailored to business needs',
+        'Improve operational efficiency',
+        'Enhance competitive advantage',
+        'Scale with business growth',
+        'Reduce long-term costs'
+      ],
+      category: 'Development',
+      icon: <Code className="w-8 h-8 text-purple-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/enterprise-software-development'
+    },
+    {
+      id: 'mobile-app-development',
+      name: 'Mobile App Development',
+      price: '$3,000/mo',
+      originalPrice: '$6,000/mo',
+      description: 'Native and cross-platform mobile applications',
+      longDescription: 'Create powerful mobile applications for iOS and Android with our comprehensive mobile development services.',
+      features: [
+        'iOS App Development',
+        'Android App Development',
+        'Cross-platform Solutions',
+        'UI/UX Design',
+        'API Integration',
+        'Push Notifications',
+        'App Store Optimization',
+        'Testing & Quality Assurance',
+        'Maintenance & Updates',
+        'Performance Monitoring'
+      ],
+      benefits: [
+        'Reach mobile users effectively',
+        'Improve customer engagement',
+        'Increase business visibility',
+        'Enhance user experience',
+        'Generate additional revenue'
+      ],
+      category: 'Mobile Development',
+      icon: <Smartphone className="w-8 h-8 text-green-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/mobile-app-development'
+    },
+    {
+      id: 'e-commerce-solutions',
+      name: 'E-commerce Solutions',
+      price: '$2,000/mo',
+      originalPrice: '$4,000/mo',
+      description: 'Complete e-commerce platform development',
+      longDescription: 'Build and optimize e-commerce platforms that drive sales and provide exceptional customer experiences.',
+      features: [
+        'E-commerce Platform Development',
+        'Payment Gateway Integration',
+        'Inventory Management',
+        'Order Processing',
+        'Customer Management',
+        'Analytics & Reporting',
+        'SEO Optimization',
+        'Mobile Responsiveness',
+        'Security Implementation',
+        'Performance Optimization'
+      ],
+      benefits: [
+        'Increase online sales',
+        'Improve customer experience',
+        'Streamline operations',
+        'Enhance security',
+        'Scale with business growth'
+      ],
+      category: 'E-commerce',
+      icon: <Globe className="w-8 h-8 text-orange-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/e-commerce-solutions'
+    },
+    {
+      id: 'api-development-integration',
+      name: 'API Development & Integration',
+      price: '$1,500/mo',
+      originalPrice: '$3,000/mo',
+      description: 'Custom API development and system integration',
+      longDescription: 'Develop robust APIs and integrate systems to streamline operations and improve data flow across your organization.',
+      features: [
+        'Custom API Development',
+        'RESTful API Design',
+        'GraphQL Implementation',
+        'API Documentation',
+        'System Integration',
+        'Data Synchronization',
+        'Authentication & Security',
+        'Performance Optimization',
+        'Monitoring & Analytics',
+        'Version Management'
+      ],
+      benefits: [
+        'Improve system connectivity',
+        'Streamline data flow',
+        'Enhance operational efficiency',
+        'Enable third-party integrations',
+        'Reduce manual processes'
+      ],
+      category: 'API Development',
+      icon: <Network className="w-8 h-8 text-cyan-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/api-development-integration'
+    },
+    {
+      id: 'data-warehouse-solutions',
+      name: 'Data Warehouse Solutions',
+      price: '$3,500/mo',
+      originalPrice: '$7,000/mo',
+      description: 'Enterprise data warehouse design and implementation',
+      longDescription: 'Build comprehensive data warehouses to centralize, organize, and analyze your business data for better decision-making.',
+      features: [
+        'Data Warehouse Design',
+        'ETL Process Development',
+        'Data Modeling',
+        'Business Intelligence Setup',
+        'Data Quality Management',
+        'Performance Optimization',
+        'Security Implementation',
+        'Backup & Recovery',
+        'Monitoring & Maintenance',
+        'Training & Support'
+      ],
+      benefits: [
+        'Centralize business data',
+        'Improve data quality',
+        'Enable better analytics',
+        'Support decision-making',
+        'Ensure data security'
+      ],
+      category: 'Data Management',
+      icon: <Database className="w-8 h-8 text-indigo-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/data-warehouse-solutions'
+    },
+    {
+      id: 'it-infrastructure-consulting',
+      name: 'IT Infrastructure Consulting',
+      price: '$2,000/mo',
+      originalPrice: '$4,000/mo',
+      description: 'Strategic IT infrastructure planning and optimization',
+      longDescription: 'Get expert guidance on IT infrastructure strategy, technology selection, and optimization to support business growth.',
+      features: [
+        'Infrastructure Assessment',
+        'Technology Roadmap',
+        'Capacity Planning',
+        'Cost Optimization',
+        'Security Review',
+        'Performance Analysis',
+        'Vendor Evaluation',
+        'Implementation Planning',
+        'Change Management',
+        'Ongoing Advisory'
+      ],
+      benefits: [
+        'Optimize IT investments',
+        'Improve system performance',
+        'Reduce operational costs',
+        'Enhance security posture',
+        'Align IT with business goals'
+      ],
+      category: 'Consulting',
+      icon: <Lightbulb className="w-8 h-8 text-yellow-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/it-infrastructure-consulting'
+    },
+    {
+      id: 'managed-it-services',
+      name: 'Managed IT Services',
+      price: '$1,200/mo',
+      originalPrice: '$2,400/mo',
+      description: 'Comprehensive managed IT services',
+      longDescription: 'Outsource your IT operations to our expert team for proactive management, monitoring, and support of your technology infrastructure.',
+      features: [
+        '24/7 Monitoring',
+        'Proactive Maintenance',
+        'Help Desk Support',
+        'Security Management',
+        'Backup & Recovery',
+        'Software Updates',
+        'Hardware Management',
+        'Network Administration',
+        'Performance Optimization',
+        'Strategic Planning'
+      ],
+      benefits: [
+        'Reduce IT operational costs',
+        'Improve system reliability',
+        'Access to expert knowledge',
+        'Focus on core business',
+        'Predictable IT expenses'
+      ],
+      category: 'Managed Services',
+      icon: <Settings className="w-8 h-8 text-teal-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/managed-it-services'
+    },
+    {
+      id: 'digital-transformation',
+      name: 'Digital Transformation Services',
+      price: '$4,000/mo',
+      originalPrice: '$8,000/mo',
+      description: 'Complete digital transformation solutions',
+      longDescription: 'Transform your business operations with comprehensive digital transformation services including process automation, cloud migration, and technology modernization.',
+      features: [
+        'Process Analysis & Optimization',
+        'Digital Strategy Development',
+        'Technology Modernization',
+        'Workflow Automation',
+        'Change Management',
+        'Training & Adoption',
+        'Performance Monitoring',
+        'Continuous Improvement',
+        'ROI Measurement',
+        'Ongoing Support'
+      ],
+      benefits: [
+        'Modernize business operations',
+        'Improve efficiency and productivity',
+        'Enhance customer experience',
+        'Enable innovation',
+        'Stay competitive'
+      ],
+      category: 'Digital Transformation',
+      icon: <Rocket className="w-8 h-8 text-purple-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/digital-transformation'
     }
   ];
-<<<<<<< HEAD
 
-  const categories = ['All', 'Cloud Computing', 'Security', 'Networking', 'Data Center', 'Support', 'Development', 'Database', 'Consulting', 'Backup', 'Mobile', 'Virtualization', 'Compliance'];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
+  const categories = ['All', 'Cloud Computing', 'Security', 'Networking', 'Data Center', 'Support', 'Development', 'Database', 'Consulting', 'Backup', 'Mobile', 'Virtualization', 'Compliance', 'Mobile Development', 'E-commerce', 'API Development', 'Data Management', 'Managed Services', 'Digital Transformation'];
 
   const features = [
     '24/7 Expert Support',
@@ -930,7 +1201,6 @@ const ITSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>IT Solutions - Comprehensive Technology Services | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, networking, data center management, and custom software development. Transform your business with our expert IT services." />
         <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, networking, data center, software development, IT support, technology consulting" />
@@ -938,11 +1208,6 @@ const ITSolutionsPage: React.FC = () => {
         <meta property="og:description" content="Discover our comprehensive IT solutions including cloud infrastructure, cybersecurity, networking, data center management, and custom software development." />
         <meta property="og:url" content="https://ziontechgroup.com/it-solutions" />
         <link rel="canonical" href="https://ziontechgroup.com/it-solutions" />
-=======
-        <title>IT Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT solutions including infrastructure management, cloud migration, network security, and database optimization services." />
-        <meta name="keywords" content="IT solutions, infrastructure management, cloud migration, network security, database management, IT support, Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
       </Helmet>
 
       {/* Hero Section */}
@@ -981,7 +1246,6 @@ const ITSolutionsPage: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -1208,10 +1472,6 @@ const ITSolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
-        </section>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
     </>
   );
 };

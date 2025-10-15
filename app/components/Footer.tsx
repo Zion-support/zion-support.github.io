@@ -58,10 +58,10 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', href: '#', icon: 'facebook' },
-    { name: 'Twitter', href: '#', icon: 'twitter' },
-    { name: 'LinkedIn', href: '#', icon: 'linkedin' },
-    { name: 'GitHub', href: '#', icon: 'github' }
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: 'facebook' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' }
   ];
 
   return (
@@ -173,11 +173,11 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="flex items-center text-gray-400 text-sm">
               <PhoneIcon className="w-4 h-4 mr-2" />
-              <span>+1 302 464 0950</span>
+              <a href="tel:+13024640950" className="hover:text-white transition-colors">+1 302 464 0950</a>
             </div>
             <div className="flex items-center text-gray-400 text-sm">
               <EnvelopeIcon className="w-4 h-4 mr-2" />
-              <span>kleber@ziontechgroup.com</span>
+              <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">kleber@ziontechgroup.com</a>
             </div>
             <div className="flex items-center text-gray-400 text-sm">
               <MapPinIcon className="w-4 h-4 mr-2" />

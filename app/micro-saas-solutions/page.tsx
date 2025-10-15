@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -492,13 +487,320 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       icon: <Code className="w-8 h-8 text-red-400" />,
       popular: false,
       link: 'https://ziontechgroup.com/api-management'
+    },
+    {
+      id: 'ai-accounting-assistant',
+      name: 'AI Accounting Assistant Pro',
+      price: '$49/mo',
+      originalPrice: '$99/mo',
+      description: 'Automated bookkeeping and financial management',
+      longDescription: 'Streamline your accounting processes with our AI-powered accounting assistant that handles invoicing, expense tracking, and financial reporting.',
+      features: [
+        'Automated Invoice Generation',
+        'Expense Categorization',
+        'Tax Preparation',
+        'Financial Reporting',
+        'Bank Reconciliation',
+        'Receipt Scanning',
+        'Multi-currency Support',
+        'Integration with Banks',
+        'Compliance Monitoring',
+        'Audit Trail'
+      ],
+      benefits: [
+        'Save 20+ hours per month',
+        'Reduce accounting errors by 95%',
+        'Automated tax compliance',
+        'Real-time financial insights',
+        'Professional financial reports'
+      ],
+      category: 'Finance',
+      icon: <CreditCard className="w-8 h-8 text-green-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-accounting-assistant'
+    },
+    {
+      id: 'ai-content-moderation-pro',
+      name: 'AI Content Moderation Pro',
+      price: '$79/mo',
+      originalPrice: '$149/mo',
+      description: 'Automated content moderation and safety',
+      longDescription: 'Keep your platform safe with our advanced AI content moderation system that automatically detects and filters inappropriate content.',
+      features: [
+        'Image & Video Analysis',
+        'Text Content Filtering',
+        'Spam Detection',
+        'Hate Speech Detection',
+        'NSFW Content Filtering',
+        'Real-time Processing',
+        'Custom Rule Engine',
+        'API Integration',
+        'Dashboard Analytics',
+        'Human Review Queue'
+      ],
+      benefits: [
+        'Reduce moderation costs by 80%',
+        '24/7 content monitoring',
+        'Consistent policy enforcement',
+        'Scale with user growth',
+        'Protect brand reputation'
+      ],
+      category: 'AI Tools',
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-content-moderation-pro'
+    },
+    {
+      id: 'ai-climate-solutions-pro',
+      name: 'AI Climate Solutions Pro',
+      price: '$199/mo',
+      originalPrice: '$399/mo',
+      description: 'Climate data analysis and sustainability insights',
+      longDescription: 'Monitor and analyze environmental data to make informed decisions about sustainability and climate impact.',
+      features: [
+        'Carbon Footprint Tracking',
+        'Environmental Data Analysis',
+        'Sustainability Reporting',
+        'Climate Risk Assessment',
+        'Energy Usage Optimization',
+        'Waste Reduction Analytics',
+        'Compliance Monitoring',
+        'Predictive Modeling',
+        'Custom Dashboards',
+        'API Integration'
+      ],
+      benefits: [
+        'Reduce carbon footprint by 30%',
+        'Meet sustainability goals',
+        'Comply with regulations',
+        'Optimize resource usage',
+        'Improve brand reputation'
+      ],
+      category: 'Sustainability',
+      icon: <Globe className="w-8 h-8 text-green-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-climate-solutions-pro'
+    },
+    {
+      id: 'ai-agricultural-intelligence',
+      name: 'AI Agricultural Intelligence',
+      price: '$149/mo',
+      originalPrice: '$299/mo',
+      description: 'Smart farming and crop optimization',
+      longDescription: 'Optimize agricultural operations with AI-powered insights for crop monitoring, yield prediction, and resource management.',
+      features: [
+        'Crop Health Monitoring',
+        'Yield Prediction',
+        'Weather Analysis',
+        'Soil Quality Assessment',
+        'Pest Detection',
+        'Irrigation Optimization',
+        'Harvest Planning',
+        'Market Price Analysis',
+        'IoT Integration',
+        'Mobile App'
+      ],
+      benefits: [
+        'Increase crop yield by 25%',
+        'Reduce water usage by 40%',
+        'Minimize pesticide use',
+        'Optimize harvest timing',
+        'Maximize profitability'
+      ],
+      category: 'Agriculture',
+      icon: <Target className="w-8 h-8 text-yellow-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-agricultural-intelligence'
+    },
+    {
+      id: 'ai-business-intelligence-pro',
+      name: 'AI Business Intelligence Pro',
+      price: '$299/mo',
+      originalPrice: '$599/mo',
+      description: 'Advanced business analytics and insights',
+      longDescription: 'Transform your business data into actionable insights with our comprehensive AI-powered business intelligence platform.',
+      features: [
+        'Predictive Analytics',
+        'Custom Dashboard Builder',
+        'Real-time Data Visualization',
+        'Automated Report Generation',
+        'KPI Tracking',
+        'Data Integration',
+        'Machine Learning Models',
+        'Collaborative Workspaces',
+        'Mobile Analytics',
+        'White-label Solutions'
+      ],
+      benefits: [
+        'Make data-driven decisions',
+        'Identify growth opportunities',
+        'Improve operational efficiency',
+        'Reduce reporting time by 90%',
+        'Scale with business growth'
+      ],
+      category: 'Analytics',
+      icon: <BarChart3 className="w-8 h-8 text-blue-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-business-intelligence-pro'
+    },
+    {
+      id: 'ai-code-assistant-pro',
+      name: 'AI Code Assistant Pro',
+      price: '$199/mo',
+      originalPrice: '$399/mo',
+      description: 'AI-powered coding assistant and code review',
+      longDescription: 'Accelerate development with our AI coding assistant that provides intelligent code suggestions, reviews, and optimization.',
+      features: [
+        'Code Generation',
+        'Bug Detection',
+        'Code Review',
+        'Performance Optimization',
+        'Security Analysis',
+        'Documentation Generation',
+        'Multi-language Support',
+        'IDE Integration',
+        'Team Collaboration',
+        'Learning Recommendations'
+      ],
+      benefits: [
+        'Increase coding speed by 50%',
+        'Reduce bugs by 70%',
+        'Improve code quality',
+        'Learn best practices',
+        'Accelerate development'
+      ],
+      category: 'Development',
+      icon: <Code className="w-8 h-8 text-purple-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-code-assistant-pro'
+    },
+    {
+      id: 'ai-customer-insights',
+      name: 'AI Customer Insights Platform',
+      price: '$179/mo',
+      originalPrice: '$359/mo',
+      description: 'Deep customer behavior analysis and insights',
+      longDescription: 'Understand your customers better with AI-powered analytics that reveal behavior patterns, preferences, and engagement insights.',
+      features: [
+        'Customer Segmentation',
+        'Behavior Analysis',
+        'Churn Prediction',
+        'Sentiment Analysis',
+        'Personalization Engine',
+        'Engagement Scoring',
+        'Lifetime Value Prediction',
+        'Recommendation Engine',
+        'A/B Testing',
+        'Real-time Insights'
+      ],
+      benefits: [
+        'Increase customer retention by 40%',
+        'Improve personalization',
+        'Reduce churn by 60%',
+        'Boost conversion rates',
+        'Enhance customer experience'
+      ],
+      category: 'Analytics',
+      icon: <Users className="w-8 h-8 text-cyan-400" />,
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-customer-insights'
+    },
+    {
+      id: 'ai-cybersecurity-monitor-pro',
+      name: 'AI Cybersecurity Monitor Pro',
+      price: '$249/mo',
+      originalPrice: '$499/mo',
+      description: 'Advanced threat detection and security monitoring',
+      longDescription: 'Protect your digital assets with our AI-powered cybersecurity platform that provides real-time threat detection and response.',
+      features: [
+        'Threat Detection',
+        'Anomaly Detection',
+        'Incident Response',
+        'Vulnerability Scanning',
+        'Compliance Monitoring',
+        'Security Analytics',
+        'Real-time Alerts',
+        'Automated Response',
+        'Integration APIs',
+        'Custom Rules'
+      ],
+      benefits: [
+        'Detect threats 10x faster',
+        'Reduce false positives by 90%',
+        'Automate incident response',
+        'Ensure compliance',
+        'Protect critical assets'
+      ],
+      category: 'Security',
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-cybersecurity-monitor-pro'
+    },
+    {
+      id: 'ai-content-generation-pro',
+      name: 'AI Content Generation Pro',
+      price: '$149/mo',
+      originalPrice: '$299/mo',
+      description: 'Advanced content creation and marketing automation',
+      longDescription: 'Create high-quality content at scale with our AI-powered content generation platform for blogs, social media, and marketing materials.',
+      features: [
+        'Blog Post Generation',
+        'Social Media Content',
+        'Email Campaigns',
+        'Product Descriptions',
+        'SEO Optimization',
+        'Multi-language Support',
+        'Brand Voice Customization',
+        'Content Templates',
+        'Plagiarism Detection',
+        'Performance Analytics'
+      ],
+      benefits: [
+        'Increase content output by 500%',
+        'Maintain brand consistency',
+        'Optimize for SEO',
+        'Reduce content costs',
+        'Scale marketing efforts'
+      ],
+      category: 'Content Creation',
+      icon: <FileText className="w-8 h-8 text-orange-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-content-generation-pro'
+    },
+    {
+      id: 'ai-automation-platform',
+      name: 'AI Automation Platform',
+      price: '$399/mo',
+      originalPrice: '$799/mo',
+      description: 'End-to-end business process automation',
+      longDescription: 'Automate complex business processes with our comprehensive AI automation platform that combines RPA, machine learning, and intelligent workflows.',
+      features: [
+        'Workflow Automation',
+        'RPA Integration',
+        'Custom Bot Development',
+        'Document Processing',
+        'Email Automation',
+        'Data Extraction',
+        'API Integration',
+        'Performance Monitoring',
+        'Error Handling',
+        'Scalable Infrastructure'
+      ],
+      benefits: [
+        'Reduce manual work by 80%',
+        'Improve process accuracy',
+        'Scale operations efficiently',
+        'Reduce operational costs',
+        'Focus on strategic tasks'
+      ],
+      category: 'Automation',
+      icon: <Settings className="w-8 h-8 text-indigo-400" />,
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-automation-platform'
     }
   ];
-<<<<<<< HEAD
 
-  const categories = ['All', 'AI Tools', 'Marketing', 'Productivity', 'Sales', 'E-commerce', 'Support', 'Analytics', 'Storage', 'Web Development', 'Development'];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
+  const categories = ['All', 'AI Tools', 'Marketing', 'Productivity', 'Sales', 'E-commerce', 'Support', 'Analytics', 'Storage', 'Web Development', 'Development', 'Finance', 'Sustainability', 'Agriculture', 'Security', 'Content Creation', 'Automation'];
 
   const features = [
     'Scalable Architecture',
@@ -574,7 +876,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Micro SaaS Solutions - Innovative Software as a Service | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive suite of micro SaaS solutions including AI tools, marketing automation, project management, CRM, and more. Transform your business with our innovative software solutions." />
         <meta name="keywords" content="micro SaaS, software as a service, AI tools, marketing automation, project management, CRM, business software, productivity tools" />
@@ -582,11 +883,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         <meta property="og:description" content="Discover our comprehensive suite of micro SaaS solutions including AI tools, marketing automation, project management, CRM, and more." />
         <meta property="og:url" content="https://ziontechgroup.com/micro-saas-solutions" />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas-solutions" />
-=======
-        <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive micro SaaS solutions designed to accelerate your business growth with cutting-edge technology." />
-        <meta name="keywords" content="micro SaaS, SaaS solutions, business software, cloud applications, Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
       </Helmet>
 
       {/* Hero Section */}
@@ -625,7 +921,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -852,10 +1147,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
-        </section>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
     </>
   );
 };

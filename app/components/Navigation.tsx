@@ -21,6 +21,7 @@ import {
   SignalIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline';
+import { BarChart3, Code, Settings, Smartphone } from 'lucide-react';
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
@@ -48,7 +49,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
         { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon },
+        { name: 'Web Development', href: '/web-development', icon: GlobeAltIcon },
+        { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone },
+        { name: 'E-commerce Solutions', href: '/e-commerce-solutions', icon: GlobeAltIcon }
       ]
     },
     { 
@@ -60,20 +64,28 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },
         { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon },
         { name: 'Cloud Solutions', href: '/cloud-solutions', icon: CloudIcon },
-        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: ShieldCheckIcon }
+        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: ShieldCheckIcon },
+        { name: 'Data Analytics', href: '/data-analytics', icon: BarChart3 },
+        { name: 'API Development', href: '/api-development', icon: Code },
+        { name: 'DevOps Services', href: '/devops-services', icon: Settings }
       ]
     },
     { name: 'Resources', href: '#', icon: DocumentTextIcon, submenu: [
       { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
       { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
       { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
-      { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon }
+      { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
+      { name: 'White Papers', href: '/white-papers', icon: DocumentTextIcon },
+      { name: 'Webinars', href: '/webinars', icon: PlayIcon },
+      { name: 'API Documentation', href: '/api-docs', icon: Code }
     ]},
     { name: 'Company', href: '#', icon: UserGroupIcon, submenu: [
       { name: 'About Us', href: '/about', icon: InformationCircleIcon },
       { name: 'Team', href: '/team', icon: UserGroupIcon },
       { name: 'Careers', href: '/careers', icon: UserGroupIcon },
-      { name: 'Contact', href: '/contact', icon: PhoneIcon }
+      { name: 'Contact', href: '/contact', icon: PhoneIcon },
+      { name: 'Partnerships', href: '/partnerships', icon: UserGroupIcon },
+      { name: 'News & Updates', href: '/news', icon: DocumentTextIcon }
     ]},
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }

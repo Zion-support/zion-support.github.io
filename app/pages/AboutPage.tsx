@@ -141,12 +141,8 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-      </div>    </>
-=======
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
   );
 };
 
