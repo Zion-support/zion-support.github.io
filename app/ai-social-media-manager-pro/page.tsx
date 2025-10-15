@@ -43,6 +43,7 @@ const AISocialMediaManagerProPage = () => {
     { name: &quot;Jennifer Lee&quot;, role: &quot;Social Media Manager&quot;, content: &quot;Increased our engagement by 300%!&quot;, rating: 5, company: &quot;Digital Marketing Co.&quot; },
     { name: &quot;David Kim&quot;, role: &quot;Marketing Director&quot;, content: &quot;Best social media management tool!&quot;, rating: 5, company: &quot;Brand Solutions&quot; }
   ];
+
   return (
     <>
       <Helmet>
