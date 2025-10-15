@@ -76,6 +76,16 @@ const APIDocsPage = lazy(() => import('./app/api-docs/page'));
 const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
 
 // Additional missing pages
+const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
+const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
+const DemoPage = lazy(() => import('./app/demo/page'));
+const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
+const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
+const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
+const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
+const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
+
+// Additional missing pages
 const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
 const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
 const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
@@ -309,6 +319,16 @@ const App = memo(() => {
                     <Route path="/accessibility" element={<AccessibilityPage />} />
                     <Route path="/api-docs" element={<APIDocsPage />} />
                     <Route path="/partnerships" element={<PartnershipsPage />} />
+                    
+                    {/* Additional missing pages */}
+                    <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                    <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
+                    <Route path="/demo" element={<DemoPage />} />
+                    <Route path="/it-solutions" element={<ITSolutionsPage />} />
+                    <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
+                    <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
+                    <Route path="/customer-support-hub" element={<CustomerSupportHubPage />} />
+                    <Route path="/inventory-manager" element={<InventoryManagerPage />} />
                     
                     {/* Additional missing pages */}
                     <Route path="/accessibility-page" element={<AccessibilityPagePage />} />

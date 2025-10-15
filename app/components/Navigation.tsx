@@ -49,11 +49,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     {
       name: 'AI Services',
-      href: '/ai-solutions',
+      href: '/ai-services',
       icon: CpuChipIcon,
       submenu: [
-        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
+        { name: 'AI Services Overview', href: '/ai-services', icon: CpuChipIcon },
+        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
         { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: ChatBubbleLeftRightIcon },
         { name: 'AI Document Processor', href: '/ai-document-processor', icon: DocumentTextIcon },
         { name: 'AI Form Builder', href: '/ai-form-builder', icon: DocumentTextIcon },
@@ -86,6 +86,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: GlobeAltIcon,
       submenu: [
         { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
+        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
+        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
+        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
+        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
         { name: 'AI Meeting Transcriber', href: '/zion-ai-meeting-transcriber', icon: ChatBubbleLeftRightIcon },
         { name: 'AI Customer Satisfaction Monitor', href: '/zion-customer-satisfaction-monitor', icon: UserGroupIcon },
         { name: 'AI Inventory Optimizer', href: '/zion-ai-inventory-optimizer-pro', icon: CircleStackIcon },
@@ -109,16 +113,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: CogIcon,
       submenu: [
         { name: 'IT Solutions Overview', href: '/it-solutions', icon: CogIcon },
-        { name: 'Quantum Computing', href: '/quantum-computing-solutions', icon: CpuChipIcon },
-        { name: 'Edge Computing', href: '/edge-computing-solutions', icon: CloudIcon },
-        { name: 'Augmented Reality', href: '/augmented-reality-solutions', icon: EyeIcon },
-        { name: 'Virtual Reality', href: '/virtual-reality-solutions', icon: EyeIcon },
-        { name: 'Robotic Process Automation', href: '/robotic-process-automation', icon: CogIcon },
-        { name: 'Low-Code Platform', href: '/low-code-platform', icon: CodeBracketIcon },
-        { name: 'Serverless Architecture', href: '/serverless-architecture', icon: CloudIcon },
-        { name: 'Container Orchestration', href: '/container-orchestration', icon: CircleStackIcon },
-        { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: CpuChipIcon },
-        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: CircleStackIcon },
+        { name: 'IT Services', href: '/it-services', icon: CogIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
         { name: 'Web Development', href: '/web-development', icon: CodeBracketIcon },
         { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
@@ -131,7 +126,17 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'DevOps Automation', href: '/devops-automation', icon: CogIcon },
         { name: 'Data Engineering', href: '/data-engineering', icon: CircleStackIcon },
         { name: 'API Development', href: '/api-development', icon: CodeBracketIcon },
-        { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon }
+        { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon },
+        { name: 'Quantum Computing', href: '/quantum-computing-solutions', icon: CpuChipIcon },
+        { name: 'Edge Computing', href: '/edge-computing-solutions', icon: CloudIcon },
+        { name: 'Augmented Reality', href: '/augmented-reality-solutions', icon: EyeIcon },
+        { name: 'Virtual Reality', href: '/virtual-reality-solutions', icon: EyeIcon },
+        { name: 'Robotic Process Automation', href: '/robotic-process-automation', icon: CogIcon },
+        { name: 'Low-Code Platform', href: '/low-code-platform', icon: CodeBracketIcon },
+        { name: 'Serverless Architecture', href: '/serverless-architecture', icon: CloudIcon },
+        { name: 'Container Orchestration', href: '/container-orchestration', icon: CircleStackIcon },
+        { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: CpuChipIcon },
+        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: CircleStackIcon }
       ]
     },
     {
