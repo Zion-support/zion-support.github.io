@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 interface PromotionBanner {
-  id: string;,
-    title: string;,
-    subtitle: string;,
-    ctaText: string;,
-    ctaLink: string;,
-    backgroundColor: string;,
-    textColor: string;,
-    icon: string;
+  id: string;
+  title: string;
+  subtitle: string;
+  ctaText: string;
+  ctaLink: string;
+  backgroundColor: string;
+  textColor: string;
+  icon: string;
   stats?: {
-    value: string;,
+    value: string;
     label: string;
   }[];
 }
