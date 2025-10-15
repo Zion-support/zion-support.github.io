@@ -11,7 +11,7 @@ interface ResponsiveTextProps {
   className?: string;
 }
 
-const ResponsiveText = (_{ 
+const ResponsiveText = ({ 
   children, as: Component = 'p', size = 'base', weight = 'normal', color = 'white', align = 'left', className
 }: ResponsiveTextProps) => {
   const sizeClasses = {

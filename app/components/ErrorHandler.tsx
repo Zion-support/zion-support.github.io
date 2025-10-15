@@ -59,9 +59,8 @@ class ErrorHandler extends Component<Props, State> {
         timestamp: new Date().toISOString()
       };
       // Send to your error reporting service here
-
       } catch (reportingError) {
-      } catch (reportingError) {
+        console.error('Error reporting failed:', reportingError);
       }
   }
 

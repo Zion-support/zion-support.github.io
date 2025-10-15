@@ -168,9 +168,6 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
 
         observer.observe({ entryTypes });
         observerRef.current = observer;
-
-
-
       }
     };
 
@@ -184,7 +181,6 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
         const usedMB = memory.usedJSHeapSize / 1048576;
         const totalMB = memory.totalJSHeapSize / 1048576;
         const limitMB = memory.jsHeapSizeLimit / 1048576;
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
 
           metricsRef.current.memory = {
             used: usedMB,

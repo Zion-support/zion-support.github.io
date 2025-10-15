@@ -92,10 +92,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         errorInfo: undefined as ErrorInfo | undefined,
         retryCount: prevState.retryCount + 1
       }));
-        error: undefined,
-        errorInfo: undefined,
-        retryCount: prevState.retryCount + 1
-      }));
     }
   };
 

@@ -23,7 +23,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [isVisible, setIsVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect() => {
+  useEffect(() => {
     if (typeof window === 'undefined') return;
 
     const measurePerformance = async () => {

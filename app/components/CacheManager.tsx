@@ -20,10 +20,12 @@ const CacheManager = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-          } catch (error) {
-          }
-      }
+    try {
+      // Cache setup logic
+    } catch (error) {
+      console.error('Cache setup error:', error);
     }
+  }, []);
 
     // Cache API for dynamic caching
     const setupCacheStrategy = () => {
@@ -42,26 +44,32 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
+        } catch (error) {
+          console.error('Cache setup error:', error);
         }
       }
 
       // Cache API responses
       const cacheAPIResponses = async (request: Request) => {
         try {
-          const cache = await caches.open(CACHE_NAME)
-          const response = await fetch(request)
+          const cache = await caches.open(CACHE_NAME);
+          const response = await fetch(request);
           
           if (response.ok) {
-            cache.put(request, response.clone())
+            cache.put(request, response.clone());
           }
           
-          return response
+          return response;
+        } else {
           return fetch(request);
         }
+      } catch (error) {
+        console.error('Cache error:', error);
+        return fetch(request);
       }
 
       // Initialize caching
-      cacheStaticAssets()
+      cacheStaticAssets();
 
       // Intercept fetch requests for caching
       const originalFetch = window.fetch
@@ -113,15 +121,15 @@ const CacheManager = () => {
               imageObserver.unobserve(img)
             }
           }
-        })
+        });
       }
-    }
+    };
 
-    updateStats()
-    const interval = setInterval(updateStats, 5000)
+    updateStats();
+    const interval = setInterval(updateStats, 5000);
 
-    return () => clearInterval(interval)
-  }, [])
+    return () => clearInterval(interval);
+  }, []);
 
   // Toggle visibility with keyboard shortcut (Ctrl+Shift+C)
   useEffect(() => {
@@ -212,7 +220,7 @@ const CacheManager = () => {
         Press Ctrl+Shift+C to toggle
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CacheManager
+export default CacheManager;

@@ -59,10 +59,12 @@ export class GlobalErrorBoundary extends Component<Props, State> {
   private logErrorToService = (_error: Error, errorInfo: ErrorInfo) => {
     // In a real app, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag
-    .toISOString(),
+    const errorData = {
+      timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href
-    });
+    };
+    console.log('Error data:', errorData);
   };
 
   private handleRetry = () => {

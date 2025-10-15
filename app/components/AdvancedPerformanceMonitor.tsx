@@ -1,18 +1,39 @@
 'use client'
-import React, { useState } from 'react';
-import { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react';
 
-    }
+const AdvancedPerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState({
+    webVitals: {},
+    memory: {},
+    loadTime: 0
+  });
 
+  useEffect(() => {
     // Report metrics to analytics
     const reportMetric = () => {
       // Analytics reporting would go here
     }
 
+    const measureWebVitals = () => {
+      // Web vitals measurement
+    }
+
+    const measureMemory = () => {
+      // Memory measurement
+    }
+
+    const measureLoadTime = () => {
+      // Load time measurement
+    }
+
     measureWebVitals()
     measureMemory()
     measureLoadTime()
+  }, []);
 
+  return (
+    <div>
+      {/* Performance monitoring UI */}
     </div>
   )
 }
@@ -84,33 +105,52 @@ import { useEffect, useState } from 'react'
 
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-        }
+        console.log('Performance metrics:', metrics);
+      }
+      };
 
-      measureWebVitals()
-      measureMemory()
-      measureLoadTime()
-    }
+      // Web vitals measurement
+      const measureWebVitals = () => {
+        // Web vitals measurement logic
+      };
+
+      // Memory measurement
+      const measureMemory = () => {
+        // Memory measurement logic
+      };
+
+      // Load time measurement
+      const measureLoadTime = () => {
+        // Load time measurement logic
+      };
+
+      measureWebVitals();
+      measureMemory();
+      measureLoadTime();
+    };
 
     // Set up performance observer for additional metrics
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'measure') {
-            }
+            // Handle performance measures
+            console.log('Performance measure:', entry);
+          }
         }
-      })
-      observer.observe({ entryTypes: ['measure'] })
+      });
+      observer.observe({ entryTypes: ['measure'] });
     }
-  }, [])
+  }, []);
 
   // Calculate performance score
   const calculateScore = () => {
-    let score = 100
-    let factors = 0
+    let score = 100;
+    let factors = 0;
 
     if (metrics.fcp !== null) {
-      factors++
-      if (metrics.fcp > 1800) score -= 20
+      factors++;
+      if (metrics.fcp > 1800) score -= 20;
       else if (metrics.fcp > 1000) score -= 10
     }
 
@@ -155,11 +195,11 @@ import { useEffect, useState } from 'react'
           </div>
         )}
       </div>
-    )
+    );
   }
 
-  return null
-}
+  return null;
+};
 
 export default AdvancedPerformanceMonitor
 

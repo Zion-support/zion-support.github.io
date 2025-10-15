@@ -16,10 +16,15 @@ interface ContentStatisticsProps {
 const ContentStatistics: React.FC<ContentStatisticsProps> = ({
   stats = [
     {
-      value: "500+", label: "Happy Clients", icon: <Users className="w-8 h-8" />, _color: "text-blue-400", _}, _{
-      value: "99.9%", _label: "Uptime", icon: <Zap className="w-8 h-8" />, _color: "text-green-400", _}, _{
-      value: "50+", _label: "Awards Won", icon: <Award className="w-8 h-8" />, _color: "text-yellow-400", _}, _{
-      value: "40%", _label: "Cost Savings", icon: <TrendingUp className="w-8 h-8" />, _color: "text-purple-400", _}, _], className = "", _}) => {
+      value: "500+", label: "Happy Clients", icon: <Users className="w-8 h-8" />, color: "text-blue-400"
+    }, {
+      value: "99.9%", label: "Uptime", icon: <Zap className="w-8 h-8" />, color: "text-green-400"
+    }, {
+      value: "50+", label: "Awards Won", icon: <Award className="w-8 h-8" />, color: "text-yellow-400"
+    }, {
+      value: "40%", label: "Cost Savings", icon: <TrendingUp className="w-8 h-8" />, color: "text-purple-400"
+    }
+  ], className = "" }) => {
   return (<div className={`py-16 ${className}`}>
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">

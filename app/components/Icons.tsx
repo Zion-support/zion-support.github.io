@@ -1,4 +1,4 @@
-export const Icon = (_{
+export const Icon = ({
   name, className = "", ...props
 }: {
   name: string;
