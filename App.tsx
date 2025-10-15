@@ -2,6 +2,7 @@ import { Suspense, useEffect, lazy } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization'
+import './app/styles/futuristic.css'
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -64,6 +65,12 @@ const ZionAIEmailOptimizerPage = lazy(() => import('./app/zion-ai-email-optimize
 const ZionAIWebsiteAnalyzerPage = lazy(() => import('./app/zion-ai-website-analyzer/page'));
 const ZionAIDataVisualizerPage = lazy(() => import('./app/zion-ai-data-visualizer/page'));
 
+// Additional Micro SaaS Services
+const ZionAIProjectManagerPage = lazy(() => import('./app/zion-ai-project-manager/page'));
+const ZionAICustomerAnalyticsPage = lazy(() => import('./app/zion-ai-customer-analytics/page'));
+const ZionAICybersecurityMonitorPage = lazy(() => import('./app/zion-ai-cybersecurity-monitor/page'));
+const ZionAIInventoryOptimizerPage = lazy(() => import('./app/zion-ai-inventory-optimizer/page'));
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -96,13 +103,28 @@ export default function App() {
     <GlobalErrorBoundary>
       <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-gray-50">
+          <div className="min-h-screen futuristic-bg cyber-grid">
             <Navigation />
             <Sidebar />
             
-            <main className="flex-1">
+            <main className="flex-1 relative">
               <PerformanceMonitor />
               <AccessibilityEnhancer />
+              
+              {/* Animated Background Particles */}
+              <div className="particles">
+                {[...Array(20)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="particle"
+                    style={{
+                      left: `${Math.random() * 100}%`,
+                      animationDelay: `${Math.random() * 6}s`,
+                      animationDuration: `${6 + Math.random() * 4}s`
+                    }}
+                  />
+                ))}
+              </div>
               
               <Suspense fallback={<LoadingFallback />}>
                 <Routes>
@@ -174,6 +196,12 @@ export default function App() {
                   <Route path="/zion-ai-email-optimizer" element={<ZionAIEmailOptimizerPage />} />
                   <Route path="/zion-ai-website-analyzer" element={<ZionAIWebsiteAnalyzerPage />} />
                   <Route path="/zion-ai-data-visualizer" element={<ZionAIDataVisualizerPage />} />
+                  
+                  {/* Additional Micro SaaS Services */}
+                  <Route path="/zion-ai-project-manager" element={<ZionAIProjectManagerPage />} />
+                  <Route path="/zion-ai-customer-analytics" element={<ZionAICustomerAnalyticsPage />} />
+                  <Route path="/zion-ai-cybersecurity-monitor" element={<ZionAICybersecurityMonitorPage />} />
+                  <Route path="/zion-ai-inventory-optimizer" element={<ZionAIInventoryOptimizerPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
