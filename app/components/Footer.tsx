@@ -59,10 +59,10 @@ const Footer: React.FC = () => {
               and digital transformation for modern businesses.
             </p>
             <div className="flex space-x-4">
-              <a href="mailto:info@ziontechgroup.com" className="text-gray-400 hover:text-cyan-400 transition-colors">
+              <a href="mailto:kleber@ziontechgroup.com" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
-              <a href="tel:+1234567890" className="text-gray-400 hover:text-cyan-400 transition-colors">
+              <a href="tel:+13024640950" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Phone className="w-5 h-5" />
               </a>
             </div>
