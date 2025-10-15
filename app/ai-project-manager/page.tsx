@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Calendar, 
@@ -14,8 +13,6 @@ import {
   AlertTriangle,
   MessageSquare,
   FileText,
-  PieChart,
-  Settings,
   Shield
 } from 'lucide-react';
 

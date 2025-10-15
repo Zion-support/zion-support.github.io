@@ -1,10 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Share2, 
   TrendingUp, 
   Users, 
-  Calendar, 
   BarChart3, 
   Zap, 
   CheckCircle, 

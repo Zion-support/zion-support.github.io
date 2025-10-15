@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, BarChart3, Brain, CheckCircle, Globe, Mail, Phone, Play, Shield, Star, Target, Zap } from 'lucide-react';
 

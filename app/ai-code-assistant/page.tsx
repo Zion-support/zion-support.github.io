@@ -210,18 +210,16 @@ const AICodeAssistantPage = () => {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <FuturisticButton
-              href="/contact"
+              onClick={() => window.location.href = '/contact'}
               variant="primary"
               size="lg"
-              icon={<Code className="w-5 h-5" />}
             >
               Start Coding with AI
             </FuturisticButton>
             <FuturisticButton
-              href="#demo"
-              variant="outline"
+              onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
+              variant="secondary"
               size="lg"
-              icon={<Terminal className="w-5 h-5" />}
             >
               Try Live Demo
             </FuturisticButton>
@@ -437,10 +435,9 @@ const AICodeAssistantPage = () => {
                   ))}
                 </div>
                 <FuturisticButton
-                  href="/contact"
-                  variant={plan.popular ? "primary" : "outline"}
+                  onClick={() => window.location.href = '/contact'}
+                  variant={plan.popular ? "primary" : "secondary"}
                   className="w-full"
-                  icon={<ArrowRight className="w-4 h-4" />}
                 >
                   Get Started
                 </FuturisticButton>
@@ -498,18 +495,16 @@ const AICodeAssistantPage = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
-              href="/contact"
+              onClick={() => window.location.href = '/contact'}
               variant="primary"
               size="lg"
-              icon={<Code className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
             <FuturisticButton
-              href="/demo"
-              variant="outline"
+              onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
+              variant="secondary"
               size="lg"
-              icon={<Terminal className="w-5 h-5" />}
             >
               Try Live Demo
             </FuturisticButton>

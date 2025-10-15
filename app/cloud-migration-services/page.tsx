@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Cloud, 
@@ -12,10 +11,8 @@ import {
   TrendingUp,
   Database,
   Server,
-  Lock,
   Globe,
-  BarChart3,
-  Settings
+  BarChart3
 } from 'lucide-react';
 
 const CloudMigrationServicesPage: React.FC = () => {

@@ -3,9 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   CheckIcon, 
-  StarIcon,
   UserGroupIcon,
-  TrophyIcon,
   LightBulbIcon,
   ShieldCheckIcon,
   CpuChipIcon,

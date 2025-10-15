@@ -1,13 +1,7 @@
-import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, CheckCircle, Globe, Headphones, Mic, Settings, Smartphone, Star, Users, Volume2 } from 'lucide-react';
 
 const AiVoiceAssistantEnterprisePage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const features = [
     {

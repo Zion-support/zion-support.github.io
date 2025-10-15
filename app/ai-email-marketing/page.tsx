@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Mail, 
@@ -8,7 +7,6 @@ import {
   CheckCircle, 
   Star,
   ArrowRight,
-  Clock,
   Users,
   TrendingUp,
   Send,

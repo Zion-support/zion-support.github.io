@@ -1,4 +1,4 @@
-import { ArrowRight, BarChart3, Zap, Target, CheckCircle, Clock, DollarSign, Users, Settings, Globe, Shield, Brain } from "lucide-react";
+import { ArrowRight, BarChart3, Zap, Target, CheckCircle, Clock, Globe, Brain } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
 
