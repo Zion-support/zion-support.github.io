@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './app/components/Header';
 import Footer from './app/components/Footer';
 import Hero from './app/components/Hero';
-import Services from './app/components/Services';
+import Services from './pages/ServicesPage';
 import About from './app/components/About';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import ErrorBoundary from './app/components/ErrorBoundary';

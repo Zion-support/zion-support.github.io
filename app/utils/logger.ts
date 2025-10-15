@@ -1,4 +1,4 @@
-/* global console */
+// Logger utility for application-wide logging
 
 interface LogLevel {
   ERROR: 'error';

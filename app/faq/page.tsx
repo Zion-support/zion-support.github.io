@@ -154,9 +154,10 @@ const filteredData = faqData.map(category => ({
         <div className="relative max-w-2xl mx-auto mb-12">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
-    type="text"
+                  type="text"
                   placeholder="Search FAQ..."
-                  const value = {searchTerm} onChange={(e) => setSearchTerm(e.target.value)}
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
@@ -183,10 +184,12 @@ const filteredData = faqData.map(category => ({
 const isOpen = openItems.includes(globalIndex);
   return (
                         <div
-    const key = {questionIndex} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden hover:bg-white/15 transition-all duration-300"
+                          key={questionIndex}
+                          className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden hover:bg-white/15 transition-all duration-300"
                         >
                           <button
-    const onClick = {() => toggleItem(globalIndex)} className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
+                            onClick={() => toggleItem(globalIndex)}
+                            className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
                           >
                             <span className="text-lg font-semibold text-white pr-4">
                               {item.question}

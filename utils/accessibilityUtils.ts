@@ -145,14 +145,6 @@ export const keyboardNavigation = {
     }
     
     return currentIndex;
-  },
-
-  // Handle escape key
-  handleEscape: (e: KeyboardEvent, callback: () => void) => {
-    if (e.key === 'Escape') {
-      e.preventDefault();
-      callback();
-    }
   }
 };
 
