@@ -1,6 +1,9 @@
-/// Comment
+import React from 'react';
 
-export function GlobalErrorBoundary() {
-  /// Comment
-  return null;
+interface GlobalErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+export function GlobalErrorBoundary({ children }: GlobalErrorBoundaryProps) {
+  return <>{children}</>;
 }
