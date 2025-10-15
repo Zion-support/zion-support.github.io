@@ -17,5 +17,10 @@ const DemoPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default DemoPage;'";'";
+=======
+
+export default DemoPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

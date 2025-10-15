@@ -17,5 +17,10 @@ const PagesPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default PagesPage;'";'";
+=======
+
+export default PagesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

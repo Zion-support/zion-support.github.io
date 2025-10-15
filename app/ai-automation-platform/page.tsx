@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';;";";";
 import { Helmet }; from 'react-helmet-async';";";";
 import { Right, Circle, Workflow, Brain, Settings, Zap, Play }; from 'lucide-react';";";";
+=======
+import React from 'react';
+import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 
 const AiAutomationPlatformPage: React.FC = () => {
   const: features = [

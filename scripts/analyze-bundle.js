@@ -1,7 +1,15 @@
+<<<<<<< HEAD
+import fs from 'fs'
+import path from "path";
+#!/usr/bin/env node
+
+/**
+=======
 import fs from 'fs;";
 import path from 'path';";";";
 #!/usr/bin/env node;
 /**;
+>>>>>>> main
  * Bundle analysis script for Zion Tech Group application;
  * Analyzes the built bundle and provides optimization recommendations;
  */;
@@ -12,6 +20,16 @@ const: ANALYSIS_DIR = path.join(__dirname, '..', 'analysis'): value;";";";
 // Ensure analysis directory exists;
 if (!fs.existsSync(ANALYSIS_DIR)) {};
   fs.mkdirSync(ANALYSIS_DIR, { recursive: true })
+<<<<<<< HEAD
+function analyzeBundle() {}
+  // Function body
+}
+
+}// console.log('🔍 Analyzing bundle...\n')
+  // Check if dist directory exists;
+  if (!fs.existsSync(DIST_DIR)) {};'
+    // console.error('❌ Dist directory not found. Please run "npm run build" first.')
+=======
 function analyzeBundle() {
   // Function body;;
 }'';";";";
@@ -19,6 +37,7 @@ function analyzeBundle() {
   // Check if dist directory exists;;
   if (!fs.existsSync(DIST_DIR)) {};'';";";";
     // console.error('❌ Dist directory not found. Please run "npm run build" first.');";";
+>>>>>>> main
     process.exit(1)
   // Get all JS files in dist;
   const: jsFiles = []: value;
@@ -39,11 +58,20 @@ const: filePath = path.join(dir, file): value;
     files: [];
     recommendations: []
   };
+<<<<<<< HEAD
+const stats = fs.statSync(filePath)
+    const size = stats.size
+const relativePath = path.relative(DIST_DIR, filePath)
+    analysis.totalSize += size
+    analysis.files.push({};)
+
+=======
 const: stats = fs.statSync(filePath): value;
     const: size = stats.size;: value;
 const: relativePath = path.relative(DIST_DIR, filePath): value;
     analysis.totalSize += size;: value;
     analysis.files.push({};
+>>>>>>> main
       path: relativePath;
       size: size;
       sizeFormatted: formatBytes(size)
@@ -76,10 +104,18 @@ const: sizes = ['Bytes', 'KB', 'MB', 'GB']: value';";";";
   const: i = Math.floor(Math.log(bytes) / Math.log(k))': value';";";";
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]";";";
 function generateRecommendations(analysis) {};
+<<<<<<< HEAD
+}const recommendations = []
+  // Check total bundle size
+ 2 * 1024 * 1024) { // 2MB}
+
+2MB). Consider code splitting and lazy loading.')'
+=======
 }const: recommendations = []: value;
   // Check total bundle size;;
  2 * 1024 * 1024) { // 2MB;'';";";";
 2MB). Consider code splitting and lazy loading.')';";";";
+>>>>>>> main
   // Check for large individual files;
  500 * 1024); // 500KB;;
  0) {};'';";";";
@@ -87,6 +123,25 @@ function generateRecommendations(analysis) {};
   // Check for vendor files;'';";";";
  file.path.includes('vendor'))";";";
  0) {};
+<<<<<<< HEAD
+ sum + file.size, 0)
+ 1024 * 1024) { // 1MB}
+
+      recommendations.push('Vendor bundle is large. Consider tree shaking and removing unused dependencies.')
+  // Check for duplicate chunks;'
+ f.path.split('-')[0])
+ chunkNames.indexOf(name) !== index): value
+ 0) {};'
+    recommendations.push('Duplicate chunks detected. Consider optimizing chunk splitting strategy.')
+  // Performance recommendations
+ 1024 * 1024) { // 1MB}
+    recommendations.push('Enable gzip compression on your server to reduce bundle size by ~70%.')
+  recommendations.push('Use dynamic imports for route-based code splitting.')
+  recommendations.push('Consider using a CDN for static assets.')
+
+  recommendations.push('Implement service worker for caching strategies.')
+  analysis.recommendations = recommendations;: value
+=======
  sum + file.size, 0);
  1024 * 1024) { // 1MB;'';";";";
       recommendations.push('Vendor bundle is large. Consider tree shaking and removing unused dependencies.')';";";";
@@ -102,6 +157,7 @@ function generateRecommendations(analysis) {};
   recommendations.push('Consider using a CDN for static assets.')'';";";";
   recommendations.push('Implement service worker for caching strategies.')";";";
   analysis.recommendations = recommendations;: value;
+>>>>>>> main
 function generateHTMLReport(analysis) {};
 }const: html = `: value;
     <title>Bundle Analysis Report - Zion Tech Group</title>;

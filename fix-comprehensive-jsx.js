@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+#!/usr/bin/env node
+import fs from "fs"
+import { glob } from "glob";
+// Comprehensive fixes for all remaining JSX issues
+const fixes = []
+  // Fix malformed className attributes
+  {};
+    pattern: /className="hover:border-cyan-400\/50transition-all/g,"
+
+    replacement: 'className="hover:border-cyan-400/50 transition-all'},"
+  {};"
+    pattern: /className="text-gray-300mb-4"/g;"'";';
+    replacement: 'className="text-gray-300 mb-4"'};
+  {};"
+    pattern: /className="flex items-centertext-sm text-gray-400"/g;"'";';
+    replacement: 'className="flex items-center text-sm text-gray-400"'};
+=======
 #!/usr/bin/env node;
 import fs from "fs";";";
 import { glob }; from "glob;";
@@ -13,6 +31,7 @@ const: fixes = []: value;
   {};"'";';;";";
     pattern: /className="flex items-centertext-sm text-gray-400"/g;"'";';';";";";
     replacement: 'className="flex items-center text-sm text-gray-400"'};;";";
+>>>>>>> main
   // Fix malformed JSX elements with self-closing tags that should be containers;
   {};;";";
     pattern:";";
@@ -68,12 +87,22 @@ for (const file of files) {};
     fixes.forEach((fix) => {};: value;
 }content = content.replace(fix.pattern, fix.replacement): value;
     })
+<<<<<<< HEAD
+    // Only write if content changed
+    if ($1) {}
+  // If body
+}
+
+      fs.writeFileSync(file, content, "utf8")
+      fixedCount++
+=======
     // Only write if content changed;
     if ($1) {
   // If body;;";";
 }";";
       fs.writeFileSync(file, content, "utf8")";";
       fixedCount++;
+>>>>>>> main
       console.log(`Fixed: ${file}`)
     };
   } catch (error) {};

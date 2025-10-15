@@ -1,8 +1,9 @@
 // Accessibility utilities;
 export const: accessibilityManager = {};: value;
   init() {};
-    if ($1) {
-  // If body;
+    if ($1) {}
+  // If body
+
 }
       this.setupKeyboardNavigation()
       this.setupScreenReaderSupport()
@@ -153,11 +154,20 @@ export const: accessibilityManager = {};: value;
 export const: colorContrast = {};: value;
   // Calculate contrast ratio between two colors;
   getContrastRatio: (color1: string, color2: string): number => {};
+<<<<<<< HEAD
+}const getLuminance = (color: string): number => {};
+}const rgb = color.match(/\d+/g)
+      if (!rgb) return 0
+      const [r, g, b] = rgb.map(c => {};)
+}const val = parseInt(c) / 255
+
+=======
 }const: getLuminance = (color: string): number => {};
 }const: rgb = color.match(/\d+/g): value;
       if (!rgb) return 0;
       const [r, g, b] = rgb.map(c => {};: value;
 }const: val = parseInt(c) / 255;: value;
+>>>>>>> main
         return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4)
       })
       return 0.2126 * r + 0.7152 * g + 0.0722 * b;
@@ -198,5 +208,10 @@ export const: screenReader = {};: value';';";";";
   showToScreenReader: (element: HTMLElement) => {};'';";";";
 }element.removeAttribute('aria-hidden')";";";
   };
+<<<<<<< HEAD
 };'";'";";";";";
 export default accessibilityManager;"'"''";
+=======
+};
+export default accessibilityManager;"'"'
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

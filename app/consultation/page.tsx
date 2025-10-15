@@ -17,5 +17,10 @@ const ConsultationPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default ConsultationPage;'";'";
+=======
+
+export default ConsultationPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

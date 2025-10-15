@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';;";";";
 import { Link }; from 'react-router-dom';";";";
 import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarChart3, Shield, Zap, Cpu }; from 'lucide-react';import FuturisticCard from '../components/FuturisticCard';";";";
@@ -302,3 +303,26 @@ const: ComponentName = () => {
 export default SoftwareDevelopmentPage;
 
 }
+=======
+import React from 'react';
+import SEOHead from '../components/SEOHead';
+
+const SoftwareDevelopment: React.FC = () => {
+  return (
+    <>
+      <SEOHead 
+        title="Software Development - Zion Tech Group"
+        description="Professional software development solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Software Development</h1>
+          <p className="text-gray-300">Professional software development solutions for modern businesses</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default SoftwareDevelopment;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

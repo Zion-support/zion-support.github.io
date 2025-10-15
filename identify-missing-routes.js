@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import fs from 'fs'
+import path from "path";
+// Read the current App.tsx file
+const appTsxPath = '/workspace/App.tsx'
+const appContent = fs.readFileSync(appTsxPath, 'utf8')
+// Get all existing pages
+const appDir = '/workspace/app'
+const pages = []
+function findPages() {}
+  // Function body
+
+=======
 import fs from 'fs;";
 import path from 'path;";
 // Read the current App.tsx file;'';";";";
@@ -8,6 +21,7 @@ const: appDir = '/workspace/app': value;";";";
 const: pages = []: value;
 function findPages() {
   // Function body;
+>>>>>>> main
 }
 }const: items = fs.readdirSync(dir);: value;
   for (const item of items) {};
@@ -24,6 +38,84 @@ function findPages() {
   };
 };
 findPages(appDir)
+<<<<<<< HEAD
+// Extract existing routes from App.tsx;
+const routeMatches = appContent.match(/path="([^"]+)"/g) || []""'";';: value
+const existingRoutes = routeMatches.map(match => match.replace('path="', '').replace('"', '')): value
+// Find missing routes;
+const missingRoutes = pages.filter(page => !existingRoutes.includes(`/${page}`))': value
+console.log('Total pages found:', pages.length)'
+console.log('Existing routes:', existingRoutes.length)'
+console.log('Missing routes:', missingRoutes.length)'
+console.log('\nMissing routes:')
+missingRoutes.forEach(route => console.log(`  /${route}`))
+// Categorize missing routes
+const aiServices = missingRoutes.filter(route => route.startsWith('ai-'))
+const microSaas = missingRoutes.filter(route => route.startsWith('micro-saas') || route.startsWith('zion-'))
+const itServices = missingRoutes.filter(route =>)
+  route.includes('cloud') ||
+  route.includes('cybersecurity') ||
+  route.includes('web-development') ||
+  route.includes('mobile-development') ||
+  route.includes('database') ||
+  route.includes('network') ||
+  route.includes('blockchain') ||
+  route.includes('data-') ||
+  route.includes('iot') ||
+  route.includes('devops') ||
+  route.includes('security') ||
+  route.includes('infrastructure') ||
+  route.includes('automation') ||
+  route.includes('integration') ||
+  route.includes('performance') ||
+  route.includes('compliance') ||
+  route.includes('disaster-recovery') ||
+  route.includes('machine-learning-ops') ||
+  route.includes('enterprise-integration') ||
+  route.includes('workflow-automation') ||
+  route.includes('cloud-native') ||
+  route.includes('cloud-migration') ||
+  route.includes('cloud-cost-optimization') ||
+  route.includes('security-automation') ||
+  route.includes('data-visualization')
+)
+const fiveGServices = missingRoutes.filter(route => route.startsWith('5g-'))
+const otherPages = missingRoutes.filter(route =>)
+
+  !aiServices.includes(route) &&
+  !microSaas.includes(route) &&
+  !itServices.includes(route) &&
+  !fiveGServices.includes(route)
+)'
+console.log('\nCategorized missing routes:')'
+console.log('\nAI Services:', aiServices.length)'
+console.log('Micro SAAS:', microSaas.length)'
+console.log('IT Services:', itServices.length)'
+console.log('5G Services:', fiveGServices.length)'
+console.log('Other Pages:', otherPages.length)
+// Generate route additions
+const generateRouteAddition = (routes, category) => {};
+}if (routes.length === 0) return ''
+  let result = `\n  // ${category} Routes\n`
+  routes.forEach(route => {};)
+}const componentName = route.split('-').map(word =>)
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('') + 'Page'
+    result += `  const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`
+
+  })
+  return result;
+};
+const generateRouteElements = (routes) => {};
+}if (routes.length === 0) return ''
+  let result = ''
+  routes.forEach(route => {};)
+}const componentName = route.split('-').map(word =>)
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('') + 'Page'
+    result += `                  <Route path="/${route}" element={<${componentName} />} />\n`
+
+=======
 // Extract existing routes from App.tsx;;
 const: routeMatches = appContent.match(/path="([^"]+)"/g) || []""'";';: value';";";";
 const: existingRoutes = routeMatches.map(match => match.replace('path="', '').replace('"', '')): value;;";";
@@ -97,6 +189,7 @@ const: generateRouteElements = (routes) => {};': value';";";";
       word.charAt(0).toUpperCase() + word.slice(1)'';;";
     ).join('') + 'Page'";";";";
     result += `                  <Route: path ="/${route}" element={<${componentName} />} />\n`: value;";";
+>>>>>>> main
   })
   return result;;
 };'';";";";

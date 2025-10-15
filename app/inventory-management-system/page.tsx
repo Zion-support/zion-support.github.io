@@ -17,5 +17,10 @@ const InventoryManagementSystemPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default InventoryManagementSystemPage;'";'";
+=======
+
+export default InventoryManagementSystemPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

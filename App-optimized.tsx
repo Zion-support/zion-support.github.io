@@ -1,6 +1,6 @@
-import React, { Suspense, lazy } from 'react';";";";
-import { BrowserRouter as Router, Routes, Route }; from 'react-router-dom';";";";
-import { HelmetProvider }; from 'react-helmet-async';";";";
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Core components - keep these synchronous for critical path
 import Navigation from './app/components/Navigation';";";";

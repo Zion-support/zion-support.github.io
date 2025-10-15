@@ -17,5 +17,10 @@ const ZionAiProjectManagerProPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default ZionAiProjectManagerProPage;'";'";
+=======
+
+export default ZionAiProjectManagerProPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

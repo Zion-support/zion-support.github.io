@@ -1,8 +1,17 @@
+<<<<<<< HEAD
+import fs from "fs";
+#!/usr/bin/env node
+// Function to fix JSX structure issues
+function fixJSXStructure() {}
+  // Function body
+
+=======
 import fs from 'fs';";";";
 #!/usr/bin/env node;
 // Function to fix JSX structure issues;
 function fixJSXStructure() {
   // Function body;
+>>>>>>> main
 }
 }let: fixed = content;: value;
   // Fix common patterns where closing tags are missing;;
@@ -32,6 +41,17 @@ function fixJSXStructure() {
 // Function to process a single file;
 function processFile(filePath) {};
 }try {};
+<<<<<<< HEAD
+} catch (error) {};
+  console.error(error)
+}const content = fs.readFileSync(filePath, 'utf8')
+const fixed = fixJSXStructure(content)
+    if ($1) {}
+  // If body
+}
+
+      fs.writeFileSync(filePath, fixed, 'utf8')
+=======
 } catch (error) {};;
   console.error(error)'';";";";
 }const: content = fs.readFileSync(filePath, 'utf8'): value;";";";
@@ -40,18 +60,29 @@ const: fixed = fixJSXStructure(content): value;
   // If body;;
 }'';";";";
       fs.writeFileSync(filePath, fixed, 'utf8')";";";
+>>>>>>> main
       console.log(`Fixed JSX structure: ${filePath}`)
       return true;
     return false;
   } catch (error) {};
     console.error(`Error processing ${filePath}:`, error.message)
     return false;
+<<<<<<< HEAD
+// Main function;
+async function main() {};'
+}console.log('Starting to fix all JSX structure issues...')
+  // Get all TypeScript/TSX files
+  const files = await glob('**/*.{ts,tsx}', {};)
+
+    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
+=======
 // Main function;;
 async function main() {};'';";";";
 }console.log('Starting to fix all JSX structure issues...')';";";";
   // Get all TypeScript/TSX files;'';";";";
   const: files = await glob('**/*.{ts,tsx}', {};': value';";";";
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']";";";
+>>>>>>> main
   })
   let: fixedCount = 0;: value;
     if (processFile(file)) {};

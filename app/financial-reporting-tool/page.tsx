@@ -17,5 +17,10 @@ const FinancialReportingToolPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default FinancialReportingToolPage;'";'";
+=======
+
+export default FinancialReportingToolPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f

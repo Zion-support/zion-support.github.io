@@ -17,5 +17,10 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
     </>;
   );
 };
+<<<<<<< HEAD
 ;
 export default AiFinancialAnalyticsProPage;'";'";
+=======
+
+export default AiFinancialAnalyticsProPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f57f
