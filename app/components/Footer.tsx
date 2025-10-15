@@ -23,31 +23,53 @@ const Footer: React.FC = () => {
     {
       title: 'Micro SAAS Solutions',
       services: [
-        { name: 'AI Content Writer', path: '/micro-saas/ai-content-writer' },
-        { name: 'Project Manager', path: '/micro-saas/ai-project-manager' },
-        { name: 'Email Marketing', path: '/micro-saas/ai-email-marketing' },
-        { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard' },
-        { name: 'Document Processor', path: '/micro-saas/document-processor' }
+        { name: 'AI Content Writer Pro', path: '/ai-content-generation-pro' },
+        { name: 'AI Project Manager', path: '/ai-project-manager' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing' },
+        { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Document Processor', path: '/ai-document-processor' },
+        { name: 'AI Video Editor', path: '/ai-video-editor' },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+        { name: 'AI Data Visualization', path: '/ai-data-visualization' }
       ]
     },
     {
       title: 'AI Services',
       services: [
-        { name: 'AI Automation', path: '/ai-services/automation' },
-        { name: 'Machine Learning', path: '/ai-services/ml' },
-        { name: 'Computer Vision', path: '/ai-services/computer-vision' },
-        { name: 'Natural Language Processing', path: '/ai-services/nlp' },
-        { name: 'Predictive Analytics', path: '/ai-services/predictive-analytics' }
+        { name: 'AI Automation', path: '/ai-automation' },
+        { name: 'Machine Learning', path: '/ai-services' },
+        { name: 'Computer Vision', path: '/ai-computer-vision' },
+        { name: 'Natural Language Processing', path: '/ai-conversational-ai' },
+        { name: 'Predictive Analytics', path: '/ai-analytics' },
+        { name: 'AI Security Solutions', path: '/ai-security-solutions' },
+        { name: 'AI Business Intelligence Pro', path: '/ai-business-intelligence-pro' },
+        { name: 'AI Code Assistant Pro', path: '/ai-code-assistant-pro' }
       ]
     },
     {
       title: 'IT Services',
       services: [
-        { name: 'Cloud Migration', path: '/it-services/cloud-migration' },
-        { name: 'Cybersecurity', path: '/it-services/cybersecurity' },
-        { name: 'DevOps', path: '/it-services/devops' },
-        { name: 'Mobile Development', path: '/it-services/mobile-development' },
-        { name: 'Web Development', path: '/it-services/web-development' }
+        { name: 'Cloud Migration', path: '/cloud-migration-services' },
+        { name: 'Cybersecurity', path: '/cybersecurity-consulting' },
+        { name: 'DevOps Solutions', path: '/devops-solutions' },
+        { name: 'Mobile Development', path: '/mobile-development' },
+        { name: 'Web Development', path: '/web-development' },
+        { name: 'Database Solutions', path: '/database-solutions' },
+        { name: 'API Management', path: '/ai-api-management' },
+        { name: 'Performance Monitoring', path: '/performance-monitoring' }
+      ]
+    },
+    {
+      title: '5G Solutions',
+      services: [
+        { name: '5G Implementation', path: '/5g-implementation' },
+        { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
+        { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
+        { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
+        { name: '5G Edge Computing', path: '/5g-edge-computing' },
+        { name: '5G Private Networks', path: '/5g-private-networks' },
+        { name: '5G Mobile Applications', path: '/5g-mobile-applications' },
+        { name: '5G Data Analytics', path: '/5g-data-analytics' }
       ]
     }
   ];
@@ -126,19 +148,19 @@ const Footer: React.FC = () => {
 
           {/* Services */}
           <div className="lg:col-span-2">
-            <h3 className="text-xl font-semibold mb-6">Our Services</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <h3 className="text-xl font-semibold mb-6 text-white">Our Services</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {serviceCategories.map((category, index) => (
                 <div key={index}>
-                  <h4 className="text-lg font-medium text-blue-400 mb-4">{category.title}</h4>
+                  <h4 className="text-lg font-medium text-cyan-400 mb-4 border-b border-cyan-400/30 pb-2">{category.title}</h4>
                   <ul className="space-y-2">
                     {category.services.map((service, serviceIndex) => (
                       <li key={serviceIndex}>
                         <Link
                           to={service.path}
-                          className="text-gray-300 hover:text-white transition-colors flex items-center group"
+                          className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center group text-sm"
                         >
-                          <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                           {service.name}
                         </Link>
                       </li>

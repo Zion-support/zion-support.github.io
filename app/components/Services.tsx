@@ -17,12 +17,16 @@ const Services: React.FC = () => {
       color: 'from-cyan-500 to-blue-600',
       description: 'Revolutionary AI solutions for modern businesses',
       services: [
-        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', price: 'From $299/month' },
-        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro', price: 'From $199/month' },
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', price: 'From $149/month' },
-        { name: 'AI Project Manager', href: '/ai-project-manager', price: 'From $99/month' },
-        { name: 'AI Customer Support', href: '/ai-customer-support', price: 'From $149/month' },
-        { name: 'AI Email Marketing', href: '/ai-email-marketing', price: 'From $99/month' }
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', price: 'From $299/month', description: 'Advanced business intelligence with real-time insights' },
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro', price: 'From $199/month', description: 'Automated content creation for all platforms' },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', price: 'From $149/month', description: 'Intelligent social media automation and optimization' },
+        { name: 'AI Project Manager', href: '/ai-project-manager', price: 'From $99/month', description: 'Smart project planning and resource optimization' },
+        { name: 'AI Customer Support', href: '/ai-customer-support', price: 'From $149/month', description: '24/7 intelligent customer service automation' },
+        { name: 'AI Email Marketing', href: '/ai-email-marketing', price: 'From $99/month', description: 'Personalized email campaigns with AI optimization' },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro', price: 'From $199/month', description: 'Advanced AI-powered coding and debugging assistance' },
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro', price: 'From $399/month', description: 'Enterprise-grade data analytics and insights' },
+        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro', price: 'From $129/month', description: 'Environmental monitoring and sustainability analytics' },
+        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro', price: 'From $199/month', description: 'Smart farming and crop optimization solutions' }
       ]
     },
     {
@@ -31,12 +35,16 @@ const Services: React.FC = () => {
       color: 'from-purple-500 to-pink-600',
       description: 'Comprehensive IT solutions and cloud services',
       services: [
-        { name: 'Cloud Migration Services', href: '/cloud-migration-services', price: 'From $2,999' },
-        { name: 'Cybersecurity Consulting', href: '/cybersecurity-consulting', price: 'From $2,999' },
-        { name: 'Database Solutions', href: '/database-solutions', price: 'From $1,999' },
-        { name: 'DevOps Solutions', href: '/devops-solutions', price: 'From $1,499' },
-        { name: 'API Management', href: '/ai-api-management', price: 'From $999' },
-        { name: 'Performance Monitoring', href: '/performance-monitoring', price: 'From $799' }
+        { name: 'Cloud Migration Services', href: '/cloud-migration-services', price: 'From $2,999', description: 'Seamless migration to AWS, Azure, or GCP' },
+        { name: 'Cybersecurity Consulting', href: '/cybersecurity-consulting', price: 'From $2,999', description: 'Enterprise-grade security audits and implementation' },
+        { name: 'Database Solutions', href: '/database-solutions', price: 'From $1,999', description: 'High-performance database design and optimization' },
+        { name: 'DevOps Solutions', href: '/devops-solutions', price: 'From $1,499', description: 'CI/CD pipelines and infrastructure automation' },
+        { name: 'API Management', href: '/ai-api-management', price: 'From $999', description: 'Advanced API gateway and management platform' },
+        { name: 'Performance Monitoring', href: '/performance-monitoring', price: 'From $799', description: 'Real-time application and infrastructure monitoring' },
+        { name: 'Web Development', href: '/web-development', price: 'From $1,299', description: 'Modern, responsive websites and web applications' },
+        { name: 'Mobile Development', href: '/mobile-development', price: 'From $1,999', description: 'Native iOS and Android app development' },
+        { name: 'Blockchain Solutions', href: '/blockchain-solutions', price: 'From $3,999', description: 'Smart contracts and decentralized applications' },
+        { name: 'IoT Solutions', href: '/iot-solutions', price: 'From $2,499', description: 'Internet of Things device integration and management' }
       ]
     },
     {
@@ -45,12 +53,16 @@ const Services: React.FC = () => {
       color: 'from-green-500 to-teal-600',
       description: 'Next-generation 5G infrastructure and applications',
       services: [
-        { name: '5G Implementation', href: '/5g-implementation', price: 'From $5,999' },
-        { name: '5G Network Infrastructure', href: '/5g-network-infrastructure', price: 'From $4,999' },
-        { name: '5G IoT Solutions', href: '/5g-iot-solutions', price: 'From $3,999' },
-        { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions', price: 'From $7,999' },
-        { name: '5G Edge Computing', href: '/5g-edge-computing', price: 'From $2,999' },
-        { name: '5G Private Networks', href: '/5g-private-networks', price: 'From $6,999' }
+        { name: '5G Implementation', href: '/5g-implementation', price: 'From $5,999', description: 'Complete 5G network deployment and optimization' },
+        { name: '5G Network Infrastructure', href: '/5g-network-infrastructure', price: 'From $4,999', description: 'Advanced 5G core and RAN infrastructure setup' },
+        { name: '5G IoT Solutions', href: '/5g-iot-solutions', price: 'From $3,999', description: 'Ultra-reliable low-latency IoT connectivity' },
+        { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions', price: 'From $7,999', description: 'Comprehensive smart city infrastructure and services' },
+        { name: '5G Edge Computing', href: '/5g-edge-computing', price: 'From $2,999', description: 'Edge computing solutions for ultra-low latency' },
+        { name: '5G Private Networks', href: '/5g-private-networks', price: 'From $6,999', description: 'Dedicated 5G private network solutions' },
+        { name: '5G Mobile Applications', href: '/5g-mobile-applications', price: 'From $2,499', description: '5G-optimized mobile app development' },
+        { name: '5G Data Analytics', href: '/5g-data-analytics', price: 'From $1,999', description: 'Real-time 5G network performance analytics' },
+        { name: '5G Security Solutions', href: '/5g-security', price: 'From $3,499', description: 'Advanced 5G network security and monitoring' },
+        { name: '5G Testing & Optimization', href: '/5g-testing', price: 'From $1,499', description: 'Comprehensive 5G network testing and optimization' }
       ]
     },
     {
@@ -59,12 +71,16 @@ const Services: React.FC = () => {
       color: 'from-orange-500 to-red-600',
       description: 'Ready-to-use software solutions for immediate deployment',
       services: [
-        { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant', price: 'From $49/month' },
-        { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro', price: 'From $79/month' },
-        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro', price: 'From $129/month' },
-        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro', price: 'From $199/month' },
-        { name: 'AI 3D Generation', href: '/ai-3d-generation', price: 'From $149/month' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', price: 'From $299/month' }
+        { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant', price: 'From $49/month', description: 'Automated bookkeeping and financial reporting' },
+        { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro', price: 'From $79/month', description: 'Advanced content filtering and moderation' },
+        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro', price: 'From $129/month', description: 'Environmental monitoring and carbon tracking' },
+        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro', price: 'From $199/month', description: 'Smart farming and crop optimization' },
+        { name: 'AI 3D Generation', href: '/ai-3d-generation', price: 'From $149/month', description: 'AI-powered 3D model and asset generation' },
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', price: 'From $299/month', description: 'Smart contracts and DeFi applications' },
+        { name: 'AI Document Processor', href: '/ai-document-processor', price: 'From $89/month', description: 'Intelligent document analysis and processing' },
+        { name: 'AI Video Editor', href: '/ai-video-editor', price: 'From $119/month', description: 'Automated video editing and enhancement' },
+        { name: 'AI Voice Assistant', href: '/ai-voice-assistant', price: 'From $99/month', description: 'Custom voice AI for business applications' },
+        { name: 'AI Data Visualization', href: '/ai-data-visualization', price: 'From $79/month', description: 'Interactive charts and dashboard creation' }
       ]
     }
   ];
@@ -97,19 +113,22 @@ const Services: React.FC = () => {
                 </div>
               </div>
               
-              <div className="space-y-3">
+              <div className="space-y-3 max-h-96 overflow-y-auto">
                 {category.services.map((service, serviceIndex) => (
                   <Link
                     key={serviceIndex}
                     to={service.href}
-                    className="flex items-center justify-between p-3 bg-slate-700/50 rounded-lg hover:bg-slate-600/50 transition-all duration-200 group"
+                    className="block p-4 bg-slate-700/50 rounded-lg hover:bg-slate-600/50 transition-all duration-200 group border border-slate-600/50 hover:border-cyan-400/50"
                   >
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                      <span className="text-white font-medium">{service.name}</span>
+                    <div className="flex items-start justify-between mb-2">
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-1" />
+                        <span className="text-white font-medium group-hover:text-cyan-400 transition-colors">{service.name}</span>
+                      </div>
+                      <span className="text-cyan-400 text-sm font-semibold bg-cyan-400/10 px-2 py-1 rounded">{service.price}</span>
                     </div>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-cyan-400 text-sm font-semibold">{service.price}</span>
+                    <p className="text-gray-400 text-sm ml-7 mb-2">{service.description}</p>
+                    <div className="flex items-center justify-end">
                       <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />
                     </div>
                   </Link>

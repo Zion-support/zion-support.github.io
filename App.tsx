@@ -13,6 +13,9 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+const FiveGSolutionsPage = React.lazy(() => import('./app/5g-solutions/page'));
+const AiCodeAssistantProPage = React.lazy(() => import('./app/ai-code-assistant-pro/page'));
+const AiBusinessIntelligenceProPage = React.lazy(() => import('./app/ai-business-intelligence-pro/page'));
 const PricingPage = React.lazy(() => import('./app/pricing/page'));
 const PortfolioPage = React.lazy(() => import('./app/portfolio/page'));
 const NewsPage = React.lazy(() => import('./app/news/page'));
@@ -49,6 +52,9 @@ const App: React.FC = () => {
               <Route path="/micro-saas" element={<MicroSaasPage />} />
               <Route path="/ai-services" element={<AiServicesPage />} />
               <Route path="/it-services" element={<ItServicesPage />} />
+              <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+              <Route path="/ai-code-assistant-pro" element={<AiCodeAssistantProPage />} />
+              <Route path="/ai-business-intelligence-pro" element={<AiBusinessIntelligenceProPage />} />
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/portfolio" element={<PortfolioPage />} />
               <Route path="/news" element={<NewsPage />} />

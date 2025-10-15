@@ -22,9 +22,10 @@ const Header: React.FC = () => {
       name: 'Services', 
       path: '#',
       dropdown: [
-        { name: 'Micro SAAS Solutions', path: '/micro-saas' },
-        { name: 'AI Services', path: '/ai-services' },
-        { name: 'IT Services', path: '/it-services' }
+        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: 'Ready-to-use AI tools' },
+        { name: 'AI Services', path: '/ai-services', description: 'Custom AI solutions' },
+        { name: 'IT Services', path: '/it-services', description: 'Technology infrastructure' },
+        { name: '5G Solutions', path: '/5g-solutions', description: 'Next-gen connectivity' }
       ]
     },
     { name: 'About', path: '/about' },
@@ -101,15 +102,16 @@ const Header: React.FC = () => {
                   
                   {/* Dropdown Menu */}
                   {item.dropdown && activeDropdown === item.name && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                    <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20 py-4 z-50">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.name}
                           to={dropdownItem.path}
-                          className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                          className="block px-6 py-3 text-white hover:bg-cyan-500/20 hover:text-cyan-400 transition-all duration-200 group"
                           onClick={() => setActiveDropdown(null)}
                         >
-                          {dropdownItem.name}
+                          <div className="font-semibold group-hover:text-cyan-400 transition-colors">{dropdownItem.name}</div>
+                          <div className="text-sm text-gray-400 group-hover:text-cyan-300 transition-colors">{dropdownItem.description}</div>
                         </Link>
                       ))}
                     </div>
