@@ -36,7 +36,16 @@ code {
   outline-offset: 2px;
 }
 
-.keyboard-user *:focus {
+.keyboard-navigation *:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.keyboard-navigation button:focus,
+.keyboard-navigation a:focus,
+.keyboard-navigation input:focus,
+.keyboard-navigation textarea:focus,
+.keyboard-navigation select:focus {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
@@ -45,10 +54,34 @@ code {
   filter: contrast(1.2);
 }
 
+.high-contrast .text-gray-600 {
+  color: #000 !important;
+}
+
+.high-contrast .text-gray-500 {
+  color: #000 !important;
+}
+
+.high-contrast .border-gray-300 {
+  border-color: #000 !important;
+}
+
 .reduced-motion * {
   animation-duration: 0.01ms !important;
   animation-iteration-count: 1 !important;
   transition-duration: 0.01ms !important;
+}
+
+.reduced-motion .animate-spin {
+  animation: none !important;
+}
+
+.reduced-motion .animate-pulse {
+  animation: none !important;
+}
+
+.reduced-motion .animate-bounce {
+  animation: none !important;
 }
 
 /* Enhanced animations */

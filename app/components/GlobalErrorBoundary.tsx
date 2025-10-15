@@ -20,20 +20,17 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Global error caught:', error, errorInfo);
-    }
-    
     // Send error to monitoring service in production
     if (process.env.NODE_ENV === 'production') {
       // Replace with your error monitoring service (e.g., Sentry, LogRocket, etc.)
+      this.reportError(error, errorInfo);
+    } else {
+      // In development, store error for debugging
       this.reportError(error, errorInfo);
     }
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    // Example error reporting - replace with your service
     const errorData = {
       message: error.message,
       stack: error.stack,
@@ -41,18 +38,51 @@ class GlobalErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href,
+      severity: this.determineErrorSeverity(error),
     };
     
-    // Send to your error monitoring service
-    // Example: fetch('/api/error-report', { method: 'POST', body: JSON.stringify(errorData) });
+    // Send to your error monitoring service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Example: fetch('/api/error-report', { method: 'POST', body: JSON.stringify(errorData) });
+      this.sendToErrorService(errorData);
+    }
     
-    // For now, store in localStorage for debugging
+    // Store in localStorage for debugging
     try {
       const existingErrors = JSON.parse(localStorage.getItem('errorLogs') || '[]');
       existingErrors.push(errorData);
       localStorage.setItem('errorLogs', JSON.stringify(existingErrors.slice(-10))); // Keep last 10 errors
     } catch (e) {
       // Ignore localStorage errors
+    }
+  }
+
+  private determineErrorSeverity = (error: Error): 'low' | 'medium' | 'high' | 'critical' => {
+    if (error.name === 'ChunkLoadError' || error.message.includes('Loading chunk')) {
+      return 'low';
+    }
+    if (error.message.includes('Network') || error.message.includes('fetch')) {
+      return 'medium';
+    }
+    if (error.message.includes('TypeError') || error.message.includes('ReferenceError')) {
+      return 'high';
+    }
+    if (error.message.includes('OutOfMemory') || error.message.includes('Maximum call stack')) {
+      return 'critical';
+    }
+    return 'medium';
+  }
+
+  private sendToErrorService = async (errorData: any) => {
+    try {
+      // Replace with your actual error reporting service
+      // await fetch('/api/error-report', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(errorData)
+      // });
+    } catch (e) {
+      // Silently fail to avoid infinite error loops
     }
   }
 
