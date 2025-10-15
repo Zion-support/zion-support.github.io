@@ -28,8 +28,8 @@ const PerformanceMonitor: React.FC = () => {
       }
     };
 
-    // Only load web-vitals in production or when needed
-    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+    // Load web-vitals for performance monitoring
+    if (typeof window !== 'undefined') {
       import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
         onCLS(sendToAnalytics);
         onFCP(sendToAnalytics);

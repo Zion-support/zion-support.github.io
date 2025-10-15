@@ -1,7 +1,9 @@
-import { Suspense, useEffect, lazy } from 'react'
+import { Suspense, useEffect, lazy, useCallback } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization'
+import { initializeAccessibility } from './app/utils/accessibilityUtils'
+import { addResourceHints } from './app/utils/performanceUtils'
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -77,9 +79,30 @@ export default function App() {
   });
 
   useEffect(() => {
+    // Initialize accessibility features
+    initializeAccessibility();
+    
+    // Add resource hints for better performance
+    addResourceHints();
+    
     // Preload critical resources
     preloadResource('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', 'style');
   }, [preloadResource])
+
+  // Handle route changes for analytics and performance
+  const handleRouteChange = useCallback(() => {
+    // Track page views
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_path: window.location.pathname,
+      });
+    }
+  }, []);
+
+  // Use the route change handler
+  useEffect(() => {
+    handleRouteChange();
+  }, [handleRouteChange]);
 
   return (
     <GlobalErrorBoundary>
@@ -89,7 +112,7 @@ export default function App() {
             <Navigation />
             <Sidebar />
             
-            <main className="flex-1">
+            <main id="main-content" className="flex-1" role="main">
               <PerformanceMonitor />
               <AccessibilityEnhancer />
               
