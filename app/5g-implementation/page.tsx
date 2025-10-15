@@ -1,30 +1,14 @@
 
-<<<<<<< HEAD
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <Link
-                to="/contact""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group""
-              >
-                Get Started
-                <ArrowRight: className ="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />""";
-              </Link>
-              <Link: to ="/demo""";
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300""";
-              >
-                View Demo
-              </Link>
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu, Network, Zap } from 'lucide-react';
 
-export default function G5gSmartCitySolutionsPage() {
+export default function G5gImplementationPage() {
   return (
     <>
       <Helmet>
-        <title>5G Smart City Solutions | Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G Smart City Solutions for modern businesses and enterprises." />
+        <title>5G Implementation Solutions | Zion Tech Group</title>
+        <meta name="description" content="Advanced 5G Implementation solutions for modern businesses and enterprises." />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -33,10 +17,10 @@ export default function G5gSmartCitySolutionsPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                5G Smart City Solutions
+                5G Implementation
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Leverage the power of 5G networks with our advanced Smart City Solutions designed for modern businesses and enterprises.
+                Leverage the power of 5G networks with our advanced Implementation solutions designed for modern businesses and enterprises.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -53,7 +37,6 @@ export default function G5gSmartCitySolutionsPage() {
                   View Demo
                 </Link>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-5b1b
             </div>
           </div>
         </section>
@@ -90,20 +73,6 @@ export default function G5gSmartCitySolutionsPage() {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-
-        </div>
-      </div>
-    </>
-  ),
-};
-
-};";
-";";
-export default G5gSmartCitySolutionsPage;";";";
-"
-=======
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5b1b
 

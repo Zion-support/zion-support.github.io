@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
@@ -37,15 +36,3 @@ export default withErrorLogging(async (req, res) => {
     res.status(500).json({ error: 'Failed to create checkout session' });
   }
 });
-=======
-
-  return async (req, res) => {
-    try {
-      await handler(req, res)
-    } catch (error) {
-
-  }
-  try {
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

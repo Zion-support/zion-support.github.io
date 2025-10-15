@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -64,22 +63,10 @@ export default async function handler(req, res) {
     // Add new request
     const newRequest = {
       id: Date.now().toString(),
-=======
-
-    if (fs.existsSync(file)) {
-      const  data = fs.readFileSync(file, 'utf8');"
-      requests = JSON.parse(data)
-    }
-
-
-      id: Date.now().toString(),
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
       name,
       email,
       company,
       phone,
-<<<<<<< HEAD
       message,
       serviceType,
       preferredDate,
@@ -106,9 +93,3 @@ export default async function handler(req, res) {
     }));
   }
 }
-=======
-
-  }
-}
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2dd2
