@@ -8,6 +8,7 @@ interface SEOHeadProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
+  structuredData?: object;
   noIndex?: boolean;
 }
 ;
