@@ -23,6 +23,18 @@ const Sidebar: React.FC = () => {
             <Link to="/data-analytics" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Data Analytics
             </Link>
+            <Link to="/zion-ai-code-assistant" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Code Assistant
+            </Link>
+            <Link to="/zion-ai-data-scientist" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Data Scientist
+            </Link>
+            <Link to="/zion-ai-voice-assistant" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Voice Assistant
+            </Link>
+            <Link to="/zion-ai-image-generator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Image Generator
+            </Link>
           </div>
           
           <div className="space-y-1 mt-6">
@@ -42,6 +54,46 @@ const Sidebar: React.FC = () => {
             <Link to="/network-infrastructure" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Network Infrastructure
             </Link>
+            <Link to="/devops-automation" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              DevOps & CI/CD
+            </Link>
+            <Link to="/api-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              API Development
+            </Link>
+            <Link to="/blockchain-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Blockchain Solutions
+            </Link>
+            <Link to="/iot-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              IoT Solutions
+            </Link>
+            <Link to="/ai-integration" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Integration
+            </Link>
+          </div>
+          
+          <div className="space-y-1 mt-6">
+            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Business Solutions</div>
+            <Link to="/digital-transformation" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Digital Transformation
+            </Link>
+            <Link to="/micro-saas-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Micro SaaS Solutions
+            </Link>
+            <Link to="/zion-ai-crm" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI CRM Pro
+            </Link>
+            <Link to="/zion-ai-hr-manager" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI HR Manager
+            </Link>
+            <Link to="/zion-ai-accounting" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Accounting Pro
+            </Link>
+            <Link to="/zion-ai-marketing-automation" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Marketing Automation
+            </Link>
+            <Link to="/zion-ai-project-estimator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              AI Project Estimator
+            </Link>
           </div>
           
           <div className="space-y-1 mt-6">
@@ -51,12 +103,6 @@ const Sidebar: React.FC = () => {
             </Link>
             <Link to="/5g-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               5G Solutions
-            </Link>
-            <Link to="/digital-transformation" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              Digital Transformation
-            </Link>
-            <Link to="/micro-saas-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
-              Micro SaaS Solutions
             </Link>
           </div>
           
