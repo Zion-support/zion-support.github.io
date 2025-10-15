@@ -72,6 +72,12 @@ const Navigation: React.FC = () => {
                     <Link to="/network-infrastructure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Network Infrastructure
                     </Link>
+                    <Link to="/cybersecurity-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Cybersecurity Services
+                    </Link>
+                    <Link to="/devops-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      DevOps Automation
+                    </Link>
                     
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Infrastructure</div>
                     <Link to="/cloud-infrastructure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
@@ -111,6 +117,32 @@ const Navigation: React.FC = () => {
                     <Link to="/zion-ai-workflow-automator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       Workflow Automator
                     </Link>
+                    <Link to="/ai-fraud-detection" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Fraud Detection
+                    </Link>
+                    <Link to="/ai-image-recognition" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Image Recognition
+                    </Link>
+                    
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Micro SaaS Solutions</div>
+                    <Link to="/zion-project-manager-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Project Manager Pro
+                    </Link>
+                    <Link to="/zion-crm-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      CRM Pro
+                    </Link>
+                    <Link to="/zion-email-marketing-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Email Marketing Automation
+                    </Link>
+                    <Link to="/zion-social-media-manager" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Social Media Manager
+                    </Link>
+                    <Link to="/zion-inventory-manager-pro" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Inventory Manager Pro
+                    </Link>
+                    <Link to="/zion-customer-support-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Customer Support Automation
+                    </Link>
                   </div>
                 </div>
               )}
@@ -147,115 +179,123 @@ const Navigation: React.FC = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+        <div className="md:hidden bg-white shadow-lg">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 max-h-96 overflow-y-auto">
+            <Link to="/" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+            <Link to="/about" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
               About
             </Link>
+            
             <div className="space-y-1">
               <div className="text-gray-700 px-3 py-2 text-base font-medium">AI & Machine Learning</div>
-              <Link to="/ai-services" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/ai-services" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
                 AI Services
               </Link>
-              <Link to="/ai-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/ai-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
                 AI Solutions
               </Link>
-              <Link to="/ai-content-generator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/ai-content-generator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
                 AI Content Generator
               </Link>
-              <Link to="/data-analytics" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/data-analytics" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
                 Data Analytics
+              </Link>
+              <Link to="/ai-fraud-detection" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
+                AI Fraud Detection
+              </Link>
+              <Link to="/ai-image-recognition" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
+                AI Image Recognition
               </Link>
               
               <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">IT Services</div>
-              <Link to="/it-services" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/it-services" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
                 IT Services
               </Link>
-              <Link to="/web-development" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/web-development" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
                 Web Development
               </Link>
-              <Link to="/mobile-development" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/mobile-development" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
                 Mobile Development
               </Link>
-              <Link to="/database-management" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/database-management" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
                 Database Management
               </Link>
-              <Link to="/network-infrastructure" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/network-infrastructure" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
                 Network Infrastructure
+              </Link>
+              <Link to="/cybersecurity-services" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
+                Cybersecurity Services
+              </Link>
+              <Link to="/devops-automation" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
+                DevOps Automation
               </Link>
               
               <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Infrastructure</div>
-              <Link to="/cloud-infrastructure" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/cloud-infrastructure" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
                 Cloud Infrastructure
               </Link>
-              <Link to="/5g-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/5g-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
                 5G Solutions
               </Link>
               
               <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Business Solutions</div>
-              <Link to="/digital-transformation" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/digital-transformation" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
                 Digital Transformation
               </Link>
-              <Link to="/micro-saas-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/micro-saas-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
                 Micro SaaS Solutions
               </Link>
               
               <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">AI Tools</div>
-              <Link to="/zion-ai-content-moderator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/zion-ai-content-moderator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
                 AI Content Moderator
               </Link>
-              <Link to="/zion-ai-customer-churn-predictor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/zion-ai-customer-churn-predictor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
                 Customer Churn Predictor
               </Link>
-              <Link to="/zion-ai-customer-sentiment-tracker" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Customer Sentiment Tracker
-              </Link>
-              <Link to="/zion-ai-document-analyzer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Document Analyzer
-              </Link>
-              <Link to="/zion-ai-financial-forecaster" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
-                Financial Forecaster
-              </Link>
-              <Link to="/zion-ai-sales-predictor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/zion-ai-sales-predictor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
                 Sales Predictor
               </Link>
-              <Link to="/zion-ai-workflow-automator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+              <Link to="/zion-ai-workflow-automator" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
                 Workflow Automator
               </Link>
+              
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">Micro SaaS Solutions</div>
+              <Link to="/zion-project-manager-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
+                Project Manager Pro
+              </Link>
+              <Link to="/zion-crm-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
+                CRM Pro
+              </Link>
+              <Link to="/zion-email-marketing-automation" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
+                Email Marketing Automation
+              </Link>
+              <Link to="/zion-social-media-manager" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
+                Social Media Manager
+              </Link>
+              <Link to="/zion-inventory-manager-pro" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
+                Inventory Manager Pro
+              </Link>
+              <Link to="/zion-customer-support-automation" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)}>
+                Customer Support Automation
+              </Link>
             </div>
-            <div className="px-3 py-2 text-base font-medium text-gray-700">
-              Services
-            </div>
-            <div className="pl-6 space-y-1">
-              <Link to="/ai-services" className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm">AI Services</Link>
-              <Link to="/it-services" className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm">IT Services</Link>
-              <Link to="/cloud-infrastructure" className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm">Cloud Infrastructure</Link>
-              <Link to="/digital-transformation" className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm">Digital Transformation</Link>
-            </div>
-            <div className="px-3 py-2 text-base font-medium text-gray-700">
-              AI Tools
-            </div>
-            <div className="pl-6 space-y-1">
-              <Link to="/zion-ai-content-moderator" className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm">Content Moderator</Link>
-              <Link to="/zion-ai-customer-churn-predictor" className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm">Churn Predictor</Link>
-              <Link to="/zion-ai-sales-predictor" className="text-gray-600 hover:text-blue-600 block px-3 py-2 rounded-md text-sm">Sales Predictor</Link>
-            </div>
-            <Link to="/pricing" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+            
+            <Link to="/pricing" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
               Pricing
             </Link>
-            <Link to="/blog" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+            <Link to="/blog" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
               Blog
             </Link>
-            <Link to="/team" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+            <Link to="/team" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
               Team
             </Link>
-            <Link to="/careers" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+            <Link to="/careers" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
               Careers
             </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+            <Link to="/contact" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
               Contact
             </Link>
           </div>

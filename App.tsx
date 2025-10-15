@@ -53,6 +53,22 @@ const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow
 const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 
+// New Micro SaaS Services
+const ZionProjectManagerProPage = lazy(() => import('./app/zion-project-manager-pro/page'));
+const ZionCRMProPage = lazy(() => import('./app/zion-crm-pro/page'));
+const ZionEmailMarketingAutomationPage = lazy(() => import('./app/zion-email-marketing-automation/page'));
+const ZionSocialMediaManagerPage = lazy(() => import('./app/zion-social-media-manager/page'));
+const ZionInventoryManagerProPage = lazy(() => import('./app/zion-inventory-manager-pro/page'));
+const ZionCustomerSupportAutomationPage = lazy(() => import('./app/zion-customer-support-automation/page'));
+
+// Additional AI Services
+const AIFraudDetectionPage = lazy(() => import('./app/ai-fraud-detection/page'));
+const AIImageRecognitionPage = lazy(() => import('./app/ai-image-recognition/page'));
+
+// Additional IT Services
+const CybersecurityServicesPage = lazy(() => import('./app/cybersecurity-services/page'));
+const DevOpsAutomationPage = lazy(() => import('./app/devops-automation/page'));
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -152,6 +168,22 @@ export default function App() {
                   <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
                   <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
                   <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
+                  
+                  {/* New Micro SaaS Services */}
+                  <Route path="/zion-project-manager-pro" element={<ZionProjectManagerProPage />} />
+                  <Route path="/zion-crm-pro" element={<ZionCRMProPage />} />
+                  <Route path="/zion-email-marketing-automation" element={<ZionEmailMarketingAutomationPage />} />
+                  <Route path="/zion-social-media-manager" element={<ZionSocialMediaManagerPage />} />
+                  <Route path="/zion-inventory-manager-pro" element={<ZionInventoryManagerProPage />} />
+                  <Route path="/zion-customer-support-automation" element={<ZionCustomerSupportAutomationPage />} />
+                  
+                  {/* Additional AI Services */}
+                  <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
+                  <Route path="/ai-image-recognition" element={<AIImageRecognitionPage />} />
+                  
+                  {/* Additional IT Services */}
+                  <Route path="/cybersecurity-services" element={<CybersecurityServicesPage />} />
+                  <Route path="/devops-automation" element={<DevOpsAutomationPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">

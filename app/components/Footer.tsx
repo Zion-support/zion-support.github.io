@@ -34,6 +34,8 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/database-management" className="text-gray-300 hover:text-white">Database Management</Link></li>
               <li><Link to="/network-infrastructure" className="text-gray-300 hover:text-white">Network Infrastructure</Link></li>
               <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Solutions</Link></li>
+              <li><Link to="/cybersecurity-services" className="text-gray-300 hover:text-white">Cybersecurity Services</Link></li>
+              <li><Link to="/devops-automation" className="text-gray-300 hover:text-white">DevOps Automation</Link></li>
             </ul>
           </div>
           
@@ -49,6 +51,18 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
               <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
               <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Micro SaaS Solutions</h4>
+            <ul className="space-y-2">
+              <li><Link to="/zion-project-manager-pro" className="text-gray-300 hover:text-white">Project Manager Pro</Link></li>
+              <li><Link to="/zion-crm-pro" className="text-gray-300 hover:text-white">CRM Pro</Link></li>
+              <li><Link to="/zion-email-marketing-automation" className="text-gray-300 hover:text-white">Email Marketing Automation</Link></li>
+              <li><Link to="/zion-social-media-manager" className="text-gray-300 hover:text-white">Social Media Manager</Link></li>
+              <li><Link to="/zion-inventory-manager-pro" className="text-gray-300 hover:text-white">Inventory Manager Pro</Link></li>
+              <li><Link to="/zion-customer-support-automation" className="text-gray-300 hover:text-white">Customer Support Automation</Link></li>
               <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
             </ul>
           </div>

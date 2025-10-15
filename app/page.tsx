@@ -7,21 +7,21 @@ const HomePage: React.FC = memo(() => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "description": "Leading provider of AI and IT solutions for modern businesses",
+    "description": "Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation.",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "Innovation City",
-      "addressRegion": "IC",
-      "postalCode": "12345",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
       "addressCountry": "US"
     },
     "sameAs": [
@@ -113,7 +113,53 @@ const HomePage: React.FC = memo(() => {
               </div>
             </div>
             <div className="text-center mt-8">
-              <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium">View All Services →</Link>
+              <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium">View All AI Tools →</Link>
+            </div>
+          </div>
+          
+          {/* Micro SaaS Solutions Preview */}
+          <div className="mt-20">
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Micro SaaS Solutions</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Project Manager Pro</h3>
+                <p className="text-gray-600 mb-4">AI-powered project management with team collaboration and advanced analytics.</p>
+                <div className="text-sm text-blue-600 font-semibold mb-2">Starting at $29/month</div>
+                <Link to="/zion-project-manager-pro" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">CRM Pro</h3>
+                <p className="text-gray-600 mb-4">Advanced customer relationship management with AI lead scoring and automation.</p>
+                <div className="text-sm text-blue-600 font-semibold mb-2">Starting at $49/month</div>
+                <Link to="/zion-crm-pro" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Email Marketing Automation</h3>
+                <p className="text-gray-600 mb-4">AI-powered email campaigns with personalization and behavioral triggers.</p>
+                <div className="text-sm text-blue-600 font-semibold mb-2">Starting at $39/month</div>
+                <Link to="/zion-email-marketing-automation" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Social Media Manager</h3>
+                <p className="text-gray-600 mb-4">Comprehensive social media management with AI content creation and scheduling.</p>
+                <div className="text-sm text-blue-600 font-semibold mb-2">Starting at $49/month</div>
+                <Link to="/zion-social-media-manager" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Inventory Manager Pro</h3>
+                <p className="text-gray-600 mb-4">AI-powered inventory management with demand forecasting and automated reordering.</p>
+                <div className="text-sm text-blue-600 font-semibold mb-2">Starting at $79/month</div>
+                <Link to="/zion-inventory-manager-pro" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Customer Support Automation</h3>
+                <p className="text-gray-600 mb-4">AI-powered support automation with chatbots and intelligent ticket routing.</p>
+                <div className="text-sm text-blue-600 font-semibold mb-2">Starting at $59/month</div>
+                <Link to="/zion-customer-support-automation" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+              </div>
+            </div>
+            <div className="text-center mt-8">
+              <Link to="/micro-saas-solutions" className="text-blue-600 hover:text-blue-800 font-medium">View All Micro SaaS Solutions →</Link>
             </div>
           </div>
         </div>
