@@ -21,7 +21,79 @@ const AISolutionsPage: React.FC = () => {
       description: "Custom machine learning models tailored to your specific business needs with advanced algorithms and real-time processing.",
       icon: CpuChipIcon,
       features: [
-
+        "Custom model development",
+        "Real-time processing",
+        "Data preprocessing",
+        "Model optimization",
+        "Performance monitoring",
+        "Continuous learning"
+      ]
+    },
+    {
+      title: "Natural Language Processing",
+      description: "Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.",
+      icon: ChatBubbleLeftRightIcon,
+      features: [
+        "Text classification",
+        "Sentiment analysis",
+        "Language translation",
+        "Chatbot development",
+        "Document processing",
+        "Voice recognition"
+      ]
+    },
+    {
+      title: "Computer Vision",
+      description: "Image and video analysis solutions for object detection, recognition, and processing.",
+      icon: EyeIcon,
+      features: [
+        "Object detection",
+        "Image classification",
+        "Facial recognition",
+        "Video analysis",
+        "Medical imaging",
+        "Quality inspection"
+      ]
+    },
+    {
+      title: "Predictive Analytics",
+      description: "Data-driven predictions and forecasting to help businesses make informed decisions.",
+      icon: ChartBarIcon,
+      features: [
+        "Demand forecasting",
+        "Risk assessment",
+        "Customer behavior analysis",
+        "Market trends",
+        "Performance prediction",
+        "Anomaly detection"
+      ]
+    },
+    {
+      title: "Process Automation",
+      description: "Intelligent automation solutions to streamline business processes and reduce manual work.",
+      icon: CogIcon,
+      features: [
+        "Workflow automation",
+        "Document processing",
+        "Data extraction",
+        "Task scheduling",
+        "Quality control",
+        "Compliance monitoring"
+      ]
+    },
+    {
+      title: "AI Security",
+      description: "Advanced security solutions powered by AI to protect against cyber threats and fraud.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Threat detection",
+        "Fraud prevention",
+        "Access control",
+        "Behavioral analysis",
+        "Incident response",
+        "Compliance monitoring"
+      ]
+    }
   ];
 
   const benefits = [

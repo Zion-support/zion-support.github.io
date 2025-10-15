@@ -1,4 +1,20 @@
-import { Helmet } from "react-helmet-async"; ArrowRight, CheckCircle, Database, Server, Shield, Zap } from 'lucide-react'; const DatabaseSolutionsPage: React.FC = () => { const features = [ { icon: <Database className="w-8 h-8" />, title: "Database Design & Architecture", description: "Custom database solutions designed for scalability, performance, and reliability.", features: ["Schema Design", "Performance Optimization", "Scalability Planning", "Data Modeling"] }, { icon: <Server className="w-8 h-8" />, title: "Database Migration", description: "Seamless migration from legacy systems to modern database platforms.",
+import React from 'react';
+import { Helmet } from "react-helmet-async";
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Database, Server, Shield, Zap } from 'lucide-react';
+
+const DatabaseSolutionsPage: React.FC = () => {
+  const features = [
+    {
+      icon: <Database className="w-8 h-8" />,
+      title: "Database Design & Architecture",
+      description: "Custom database solutions designed for scalability, performance, and reliability.",
+      features: ["Schema Design", "Performance Optimization", "Scalability Planning", "Data Modeling"]
+    },
+    {
+      icon: <Server className="w-8 h-8" />,
+      title: "Database Migration",
+      description: "Seamless migration from legacy systems to modern database platforms.",
       features: ["Data Migration", "Zero Downtime", "Data Integrity", "Performance Testing"] },
     { icon: <Shield className="w-8 h-8" />,
       title: "Database Security",
