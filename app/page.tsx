@@ -220,13 +220,68 @@ const HomePage = () => {
       category: "Productivity",
       marketPrice: "$80-150/month",
       benefits: ["Smart categorization", "Auto responses", "Smart scheduling", "60% productivity boost"]
+    },
+    {
+      name: "Zion AI Social Media Manager",
+      description: "Comprehensive social media management with AI-powered content scheduling, hashtag optimization, and performance tracking across all platforms.",
+      price: "From $39/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/zion-ai-social-media-manager",
+      featured: true,
+      category: "Social Media",
+      marketPrice: "$99-200/month",
+      benefits: ["Multi-platform scheduling", "Hashtag optimization", "Performance analytics", "Content calendar"]
+    },
+    {
+      name: "Zion AI Meeting Assistant",
+      description: "AI-powered meeting transcription, note-taking, and action item extraction with real-time collaboration and follow-up automation.",
+      price: "From $49/month",
+      icon: <Calendar className="w-6 h-6" />,
+      link: "/zion-ai-meeting-assistant",
+      featured: true,
+      category: "Productivity",
+      marketPrice: "$129-250/month",
+      benefits: ["Live transcription", "Auto note-taking", "Action items", "Meeting summaries"]
+    },
+    {
+      name: "Zion AI Website Analyzer",
+      description: "Comprehensive website analysis with AI-powered SEO optimization, performance monitoring, and conversion rate optimization.",
+      price: "From $39/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-ai-website-analyzer",
+      featured: true,
+      category: "Web Analytics",
+      marketPrice: "$99-200/month",
+      benefits: ["SEO analysis", "Performance monitoring", "Conversion optimization", "Competitor analysis"]
+    },
+    {
+      name: "Zion AI HR Assistant Pro",
+      description: "Streamlined HR management with AI-powered resume screening, employee onboarding, performance tracking, and compliance monitoring.",
+      price: "From $59/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-hr-assistant",
+      featured: false,
+      category: "Human Resources",
+      marketPrice: "$149-300/month",
+      benefits: ["Resume screening", "Employee onboarding", "Performance tracking", "Compliance monitoring"]
+    },
+    {
+      name: "Zion AI Backup Manager",
+      description: "Intelligent data backup and recovery with AI-powered scheduling, version control, and automated disaster recovery planning.",
+      price: "From $19/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/zion-ai-backup-manager",
+      featured: false,
+      category: "Data Protection",
+      marketPrice: "$59-120/month",
+      benefits: ["Auto backup scheduling", "Version control", "Disaster recovery", "Data encryption"]
     }
   ];
 
   const stats = [
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "50,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "80+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
@@ -287,19 +342,17 @@ const HomePage = () => {
           ))}
         </div>
         
-        <ResponsiveContainer className="text-center relative z-10">
+        <ResponsiveContainer className="text-center relative z-10 hero-responsive">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-8 neon-border">
             <Sparkles className="w-5 h-5 text-cyan-400 mr-2 animate-pulse" />
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="holographic-text">
-              Welcome to Zion Tech Group
-            </span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight holographic-text">
+            Welcome to Zion Tech Group
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center text-responsive">
             Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
             <span className="text-cyan-400 font-semibold"> Transform your operations with cutting-edge technology and innovative solutions.</span>
           </p>
@@ -397,7 +450,7 @@ const HomePage = () => {
               <span className="text-cyan-400 font-semibold"> Save up to 60% compared to enterprise solutions.</span>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 grid-responsive">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
