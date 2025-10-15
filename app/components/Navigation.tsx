@@ -26,7 +26,15 @@ import {
   CodeBracketIcon,
   DevicePhoneMobileIcon,
   UserPlusIcon,
-  CheckCircleIcon
+  CheckCircleIcon,
+  HeartIcon,
+  HomeIcon as HomeIconSolid,
+  TruckIcon,
+  CubeIcon,
+  BeakerIcon,
+  ScaleIcon,
+  BuildingOfficeIcon,
+  MicrophoneIcon
 } from '@heroicons/react/24/outline';
 
 interface NavigationProps {
@@ -69,12 +77,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Email Optimizer', href: '/ai-email-optimizer', icon: EnvelopeIcon },
         { name: 'AI Website Analyzer', href: '/ai-website-analyzer', icon: EyeIcon },
         { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
-        { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ShieldCheckIcon },
-        { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: UserGroupIcon },
+        { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ScaleIcon },
+        { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: HeartIcon },
         { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: AcademicCapIcon },
-        { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: ChartBarIcon },
-        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: CogIcon },
-        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: EyeIcon },
+        { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: HomeIconSolid },
+        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: TruckIcon },
+        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: CubeIcon },
         { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: ChatBubbleLeftRightIcon },
         { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon }
       ]

@@ -17,7 +17,12 @@ import {
   UserGroupIcon,
   ShareIcon,
   PhoneIcon,
-  EnvelopeIcon
+  EnvelopeIcon,
+  HeartIcon,
+  AcademicCapIcon,
+  HomeIcon,
+  TruckIcon,
+  CubeIcon
 } from '@heroicons/react/24/outline';
 
 const HomePage: React.FC = () => {
@@ -654,14 +659,14 @@ const HomePage: React.FC = () => {
                   <span className="text-sm text-indigo-400 font-medium neon-text">Legal AI</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">
-                  Zion AI Legal Assistant
+                  AI Legal Assistant
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
                   Advanced legal document analysis and contract review platform with AI-powered insights, compliance checking, and risk assessment.
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-indigo-400 neon-text">$399/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$799/mo</span>
+                  <span className="text-2xl font-bold text-indigo-400 neon-text">$199/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$399/mo</span>
                 </div>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
@@ -677,7 +682,202 @@ const HomePage: React.FC = () => {
                     <span>Risk assessment</span>
                   </div>
                 </div>
-                <Link to="/zion-ai-legal-assistant"
+                <Link to="/ai-legal-assistant"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Medical Assistant */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <HeartIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-emerald-400 font-medium neon-text">Medical AI</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
+                  AI Medical Assistant
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Enhance patient care with AI-powered diagnostic support, medical records analysis, and treatment planning.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-emerald-400 neon-text">$299/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$599/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>98.7% diagnostic accuracy</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Medical records analysis</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Treatment planning</span>
+                  </div>
+                </div>
+                <Link to="/ai-medical-assistant"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Education Tutor */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <AcademicCapIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-amber-400 font-medium neon-text">Education AI</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
+                  AI Education Tutor
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Transform education with AI-powered personalized learning, interactive content, and comprehensive progress tracking.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-amber-400 neon-text">$29/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$99/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>65% improved outcomes</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Personalized learning</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>50+ languages supported</span>
+                  </div>
+                </div>
+                <Link to="/ai-education-tutor"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Real Estate Analyzer */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <HomeIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-teal-400 font-medium neon-text">Real Estate AI</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-teal-300 transition-colors">
+                  AI Real Estate Analyzer
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Make smarter real estate investments with AI-powered property valuation, market analysis, and ROI calculations.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-teal-400 neon-text">$99/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$299/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>97.3% valuation accuracy</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Market analysis</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>ROI calculations</span>
+                  </div>
+                </div>
+                <Link to="/ai-real-estate-analyzer"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Supply Chain Optimizer */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <TruckIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-blue-400 font-medium neon-text">Supply Chain AI</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                  AI Supply Chain Optimizer
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Optimize your entire supply chain with AI-powered demand forecasting, inventory management, and logistics optimization.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-blue-400 neon-text">$399/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$999/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>94.2% forecasting accuracy</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>40% cost reduction</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>65% fewer stockouts</span>
+                  </div>
+                </div>
+                <Link to="/ai-supply-chain-optimizer"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI 3D Model Generator */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <CubeIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-purple-400 font-medium neon-text">3D AI</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                  AI 3D Model Generator
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Create stunning 3D models from text descriptions or images with AI-powered generation and optimization.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-purple-400 neon-text">$49/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$199/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>96.8% generation accuracy</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>10x faster creation</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>20+ export formats</span>
+                  </div>
+                </div>
+                <Link to="/ai-3d-model-generator"
                   className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
@@ -709,10 +909,10 @@ const HomePage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
               {features.map((feature, index) => (
                 <div key={index} 
-                  className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 lg:p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-all duration-300 group hover:scale-105 hover:shadow-lg hover:shadow-green-500/10"
+                  className="flex items-center space-x-3 sm:space-x-4 p-4 sm:p-5 lg:p-6 bg-slate-800/30 rounded-xl hover:bg-slate-700/30 transition-all duration-300 group hover:scale-105 hover:shadow-lg hover:shadow-green-500/10 border border-slate-700/50 hover:border-green-500/30"
                   style={{
                     animationDelay: `${index * 50}ms`
                   }}
