@@ -5,7 +5,6 @@ import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
 import FuturisticText from "./components/FuturisticText";
-import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
 
@@ -187,7 +186,7 @@ const HomePage = () => {
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
-        <ResponsiveContainer className="text-center relative z-10">
+        <div className="container mx-auto px-4 text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
@@ -235,12 +234,12 @@ const HomePage = () => {
               </div>
             ))}
           </div>
-        </ResponsiveContainer>
+        </div>
       </section>
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Core Services
@@ -282,7 +281,7 @@ const HomePage = () => {
               </div>
             ))}
           </div>
-        </ResponsiveContainer>
+        </div>
       </section>
 
       {/* Micro SAAS Highlights */}

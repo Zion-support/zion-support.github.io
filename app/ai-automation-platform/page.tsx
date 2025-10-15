@@ -9,7 +9,6 @@ import {
   Shield, 
   BarChart3, 
   Settings,
-  ArrowRight,
   CheckCircle
 } from 'lucide-react';
 

@@ -17,9 +17,6 @@ import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-import EnhancedSEO from "./app/components/EnhancedSEO";
-import ImprovedAccessibility from "./app/components/ImprovedAccessibility";
-import ImprovedPerformanceMonitor from "./app/components/ImprovedPerformanceMonitor";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -32,6 +29,9 @@ const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
+const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
+const TermsPage = React.lazy(() => import("./app/terms/page"));
+const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
 
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
@@ -128,7 +128,7 @@ function App() {
   useEffect(() => {
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
-      console.log('Zion Tech Group App initialized');
+      // App initialized
     }
   }, []);
 
@@ -255,7 +255,7 @@ function App() {
                                   <div className="min-h-screen flex items-center justify-center">
                                     <div className="text-center">
                                       <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                                      <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
+                                      <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
                                       <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                                         Go Home
                                       </a>
