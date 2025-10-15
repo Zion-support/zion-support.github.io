@@ -134,3 +134,4 @@ const ItServicesPage: React.FC = () => { const itServices = [ { icon: <Cloud cla
   );
 };
 
+export default ITServicesPage;
