@@ -298,6 +298,261 @@ body {
     --space-xl: 1.5rem;
     --space-2xl: 2rem;
   }
+  
+  body {
+    font-size: 14px;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .grid-responsive {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .text-responsive {
+    font-size: 1.5rem;
+  }
+  
+  .text-responsive-lg {
+    font-size: 2rem;
+  }
+  
+  .text-responsive-xl {
+    font-size: 2.5rem;
+  }
+  
+  .padding-responsive {
+    padding: 1rem;
+  }
+  
+  .margin-responsive {
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .text-responsive {
+    font-size: 1.25rem;
+  }
+  
+  .text-responsive-lg {
+    font-size: 1.75rem;
+  }
+  
+  .text-responsive-xl {
+    font-size: 2rem;
+  }
+  
+  .grid-responsive-sm {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .padding-responsive-sm {
+    padding: 0.75rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid-responsive-md {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .grid-responsive-lg {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Mobile Navigation Improvements */
+@media (max-width: 768px) {
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+  }
+  
+  .mobile-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(20px);
+    z-index: 999;
+    overflow-y: auto;
+  }
+}
+
+/* Card Responsive Design */
+.card-responsive {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .card-responsive {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-responsive {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-responsive {
+    max-width: 700px;
+  }
+}
+
+/* Button Responsive Design */
+.btn-responsive {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .btn-responsive {
+    width: auto;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Text Responsive Design */
+.text-responsive {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 640px) {
+  .text-responsive {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-responsive {
+    font-size: 1.25rem;
+    line-height: 1.7;
+  }
+}
+
+/* Grid Responsive Utilities */
+.grid-1-col {
+  grid-template-columns: 1fr;
+}
+
+.grid-2-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4-col {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 640px) {
+  .grid-2-col,
+  .grid-3-col,
+  .grid-4-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .grid-3-col,
+  .grid-4-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid-4-col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Spacing Responsive Utilities */
+.space-responsive {
+  margin: 1rem 0;
+}
+
+@media (min-width: 640px) {
+  .space-responsive {
+    margin: 1.5rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .space-responsive {
+    margin: 2rem 0;
+  }
+}
+
+/* Image Responsive Design */
+.img-responsive {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* Container Responsive Design */
+.container-responsive {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-responsive {
+    max-width: 640px;
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-responsive {
+    max-width: 768px;
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-responsive {
+    max-width: 1024px;
+    padding: 0 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-responsive {
+    max-width: 1280px;
+    padding: 0 3rem;
+  }
 }
 
 /* Print Styles */

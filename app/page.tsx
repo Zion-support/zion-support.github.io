@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
+
+// Lazy load heavy components
+const LazyServicesSection = lazy(() => import('./components/LazyServicesSection'));
+const LazyAIToolsSection = lazy(() => import('./components/LazyAIToolsSection'));
 
 const HomePage: React.FC = () => {
   const structuredData = {
@@ -11,16 +15,16 @@ const HomePage: React.FC = () => {
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1 302 464 0950",
       "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "Innovation City",
-      "addressRegion": "IC",
-      "postalCode": "12345",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
       "addressCountry": "US"
     },
     "sameAs": [
@@ -51,81 +55,33 @@ const HomePage: React.FC = () => {
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="container-responsive py-12">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-responsive-xl md:text-6xl font-bold text-gray-900 mb-6">
               Welcome to Zion Tech Group
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-responsive text-gray-600 mb-8 max-w-3xl mx-auto">
               We provide cutting-edge AI and IT solutions to help your business thrive in the digital age.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
+              <a href="/contact" className="btn-responsive bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
                 Get Started
               </a>
-              <a href="/about" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors text-center">
+              <a href="/about" className="btn-responsive border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors text-center">
                 Learn More
               </a>
             </div>
           </div>
           
           {/* Services Preview */}
-          <div className="mt-20">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Services</h3>
-                <p className="text-gray-600 mb-4">
-                  Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
-                </p>
-                <a href="/ai-services" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</a>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Infrastructure</h3>
-                <p className="text-gray-600 mb-4">
-                  Scalable cloud solutions that provide reliability, security, and performance for your business applications.
-                </p>
-                <a href="/cloud-infrastructure" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</a>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
-                <p className="text-gray-600 mb-4">
-                  Complete digital transformation services to modernize your business processes and systems.
-                </p>
-                <a href="/digital-transformation" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</a>
-              </div>
-            </div>
-          </div>
+          <Suspense fallback={<div className="mt-20 text-center"><div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"></div></div>}>
+            <LazyServicesSection />
+          </Suspense>
           
           {/* AI Tools Preview */}
-          <div className="mt-20">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI-Powered Tools</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Content Moderator</h3>
-                <p className="text-gray-600 text-sm mb-3">Automated content moderation using AI</p>
-                <a href="/zion-ai-content-moderator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</a>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Sales Predictor</h3>
-                <p className="text-gray-600 text-sm mb-3">Predict sales trends with AI</p>
-                <a href="/zion-ai-sales-predictor" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</a>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Workflow Automator</h3>
-                <p className="text-gray-600 text-sm mb-3">Automate business workflows</p>
-                <a href="/zion-ai-workflow-automator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</a>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Financial Forecaster</h3>
-                <p className="text-gray-600 text-sm mb-3">AI-powered financial predictions</p>
-                <a href="/zion-ai-financial-forecaster" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</a>
-              </div>
-            </div>
-            <div className="text-center mt-8">
-              <a href="/services" className="text-blue-600 hover:text-blue-800 font-medium">View All Services →</a>
-            </div>
-          </div>
+          <Suspense fallback={<div className="mt-20 text-center"><div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"></div></div>}>
+            <LazyAIToolsSection />
+          </Suspense>
         </div>
       </div>
     </>

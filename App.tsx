@@ -51,6 +51,7 @@ import ZionAIWorkflowAutomatorPage from './app/zion-ai-workflow-automator/page';
 import ZionAIWorkflowAutomatorProPage from './app/zion-ai-workflow-automator-pro/page';
 import ZionCustomerSatisfactionMonitorPage from './app/zion-customer-satisfaction-monitor/page';
 import ZionSmartExpenseTrackerPage from './app/zion-smart-expense-tracker/page';
+import ZionAICustomerInsightsPage from './app/zion-ai-customer-insights/page';
 
 // Import components
 import Navigation from './app/components/Navigation';
@@ -155,6 +156,7 @@ export default function App() {
                   <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
                   <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
                   <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
+                  <Route path="/zion-ai-customer-insights" element={<ZionAICustomerInsightsPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">

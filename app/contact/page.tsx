@@ -48,33 +48,54 @@ const ContactPage: React.FC = () => {
       </Helmet>
       
       <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="container-responsive py-12">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h1 className="text-responsive-xl font-bold text-gray-900 mb-6">Contact Us</h1>
+            <p className="text-responsive text-gray-600 max-w-3xl mx-auto">
               Ready to transform your business with our AI and IT solutions? Get in touch with our team today.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-1-col lg:grid-2-col gap-12">
             <div>
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">Get in Touch</h2>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                  <p className="text-gray-600">contact@ziontechgroup.com</p>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-3">
+                  <div className="text-2xl">📧</div>
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900">Email</h3>
+                    <p className="text-gray-600">kleber@ziontechgroup.com</p>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800 text-sm">Send us an email</a>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                <div className="flex items-start space-x-3">
+                  <div className="text-2xl">📞</div>
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900">Phone</h3>
+                    <p className="text-gray-600">+1 302 464 0950</p>
+                    <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-800 text-sm">Call us now</a>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Address</h3>
-                  <p className="text-gray-600">123 Tech Street, Innovation City, IC 12345</p>
+                <div className="flex items-start space-x-3">
+                  <div className="text-2xl">📍</div>
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900">Address</h3>
+                    <p className="text-gray-600">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Website</h3>
-                  <p className="text-gray-600">https://ziontechgroup.com</p>
+                <div className="flex items-start space-x-3">
+                  <div className="text-2xl">🌐</div>
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900">Website</h3>
+                    <p className="text-gray-600">https://ziontechgroup.com</p>
+                    <a href="https://ziontechgroup.com" className="text-blue-600 hover:text-blue-800 text-sm">Visit our website</a>
+                  </div>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Business Hours</h4>
+                  <p className="text-gray-600 text-sm">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                  <p className="text-gray-600 text-sm">Saturday: 10:00 AM - 4:00 PM EST</p>
+                  <p className="text-gray-600 text-sm">Sunday: Closed</p>
                 </div>
               </div>
             </div>
