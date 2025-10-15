@@ -3,11 +3,11 @@ export const logger = {
     console.log(`[INFO] ${message}`, ...args);
   },
 
-  log(message: string, ...args: any[]): void {
-    if (this.shouldLog()) {'""'""
-      console.log(this.formatMessage('log', message), ...args)""";"
+  log: (message: string, ...args: any[]): void => {
+    if (logger.shouldLog()) {
+      console.log(logger.formatMessage('log', message), ...args);
     }
-  }
+  },
 
   error: (message: string, ...args: any[]): void => {
     console.error(`[ERROR] ${message}`, ...args);
@@ -15,38 +15,39 @@ export const logger = {
 
   debug: (message: string, ...args: any[]): void => {
     console.debug(`[DEBUG] ${message}`, ...args);
-  }
+  },
 
-  error(message: string, ...args: any[]): void {
-    /// Comment
-    console.error(this.formatMessage('error', message), ...args)""";"
-    /// Comment
-    if (this.config.enableRemote) {'""'""
-      this.sendToRemote('error', message, args)""";"
-    }
-  }
+  warn: (message: string, ...args: any[]): void => {
+    console.warn(`[WARN] ${message}`, ...args);
+  },
 
-  debug(message: string, ...args: any[]): void {
-    if (this.shouldLog()) {'""'""
-      console.debug(this.formatMessage('debug', message), ...args)""";"
-    }
-  }
+  shouldLog(): boolean {
+    return process.env.NODE_ENV === 'development' || 
+           (typeof window !== 'undefined' && window.localStorage?.getItem('debug') === 'true');
+  },
 
-  private async sendToRemote(level: LogLevel, message: string, args: any[]): Promise<void> {
-    try {
-      if (this.config.remoteEndpoint) {
-          },;
-          body: JSON.stringify({
-            level,;
-            message,;
-            args,;
-            timestamp: new Date().toISOString(),;
-            url: window.location.href,;
-            userAgent: navigator.userAgent;
-  
-  })
-        });
-      };
-    } catch {
-      /// Comment
-export default logger'"''
+  formatMessage(level: string, message: string): string {
+    const timestamp = new Date().toISOString();
+    return `[${timestamp}] [${level.toUpperCase()}] ${message}`;
+  },
+
+  group: (label: string): void => {
+    console.group(label);
+  },
+
+  groupEnd: (): void => {
+    console.groupEnd();
+  },
+
+  table: (data: any): void => {
+    console.table(data);
+  },
+
+  time: (label: string): void => {
+    console.time(label);
+  },
+
+  timeEnd: (label: string): void => {
+    console.timeEnd(label);
+  }
+};

@@ -83,10 +83,10 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
     dispatch({ type: 'SET_USER', payload: user });
   };
 
-  return (
-    <AnalyticsContext.Provider value={{ state, trackEvent, trackPageView, setUser }}>
-      {children}
-    </AnalyticsContext.Provider>
+  return React.createElement(
+    AnalyticsContext.Provider,
+    { value: { state, trackEvent, trackPageView, setUser } },
+    children
   );
 }
 
