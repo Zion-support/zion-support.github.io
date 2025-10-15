@@ -1,58 +1,304 @@
+import React from 'react';
+import {  } from "lucide-react";
+import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
+import ResponsiveContainer from '../components/ResponsiveContainer';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-import { Helmet } from "react-helmet-async";
+const EmployeeTimeTrackerPage = () => {
+  const features = [
+    {
+      title: "Automatic Time Tracking",
+      description: "Track time automatically with intelligent time detection and manual entry options",
+      icon: <Clock className="w-8 h-8" />,
+      benefits: ["Auto-start/stop", "Idle detection", "Manual entry", "Time rounding"]
+    },
+    {
+      title: "Project & Task Management",
+      description: "Organize time tracking by projects, tasks, and clients for better productivity insights",
+      icon: <Target className="w-8 h-8" />,
+      benefits: ["Project tracking", "Task breakdown", "Client billing", "Budget monitoring"]
+    },
+    {
+      title: "Team Management",
+      description: "Manage team members, assign projects, and track team productivity",
+      icon: <Users className="w-8 h-8" />,
+      benefits: ["Team dashboard", "Member management", "Role permissions", "Activity monitoring"]
+    },
+    {
+      title: "Reporting & Analytics",
+      description: "Comprehensive reports and analytics to track productivity and billable hours",
+      icon: <BarChart3 className="w-8 h-8" />,
+      benefits: ["Time reports", "Productivity metrics", "Billable hours", "Custom dashboards"]
+    },
+    {
+      title: "Mobile App",
+      description: "Track time on the go with our mobile app for iOS and Android",
+      icon: <Smartphone className="w-8 h-8" />,
+      benefits: ["Mobile tracking", "Offline mode", "GPS location", "Push notifications"]
+    },
+    {
+      title: "Integration Hub",
+      description: "Connect with your favorite tools for seamless workflow integration",
+      icon: <Zap className="w-8 h-8" />,
+      benefits: ["API access", "Webhook support", "Third-party apps", "Custom integrations"]
+    }
+  ];
 
-const EmployeeTimeTrackerPage: React.FC = () => {
+  const pricing = [
+    {
+      name: "Starter",
+      price: "$19",
+      period: "per month",
+      description: "Perfect for small teams and freelancers",
+      features: [
+        "Up to 5 team members",
+        "Basic time tracking",
+        "Simple reports",
+        "Email support",
+        "Mobile app access"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$49",
+      period: "per month",
+      description: "Ideal for growing teams and businesses",
+      features: [
+        "Up to 25 team members",
+        "Advanced analytics",
+        "Project management",
+        "API access",
+        "Priority support",
+        "Custom fields"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$99",
+      period: "per month",
+      description: "For large organizations with advanced needs",
+      features: [
+        "Unlimited team members",
+        "Advanced reporting",
+        "Custom integrations",
+        "Dedicated support",
+        "Advanced security",
+        "Custom development"
+      ],
+      popular: false
+    }
+  ];
+
+  const benefits = [
+    {
+      title: "Increase Productivity",
+      description: "Boost team productivity by up to 25% with better time management",
+      icon: <Zap className="w-6 h-6" />
+    },
+    {
+      title: "Accurate Billing",
+      description: "Ensure accurate client billing with detailed time tracking",
+      icon: <Target className="w-6 h-6" />
+    },
+    {
+      title: "Better Insights",
+      description: "Gain insights into team performance and project profitability",
+      icon: <BarChart3 className="w-6 h-6" />
+    },
+    {
+      title: "Easy to Use",
+      description: "Simple interface that teams love to use every day",
+      icon: <Shield className="w-6 h-6" />
+    }
+  ];
+
   return (
-    <>
-      <Helmet>
-        <title>Employee Time Tracker</title>
-        <meta
-          name="description"
-          content="Professional employee time tracker solutions and services"
-        />
-        <meta name="keywords" content="employee, time, tracker" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <EnhancedSEO
+        title="Employee Time Tracker - Zion Tech Group | Time Tracking & Productivity Software"
+        description="Advanced employee time tracking software with automatic tracking, project management, team analytics, and mobile app. Boost productivity and accurate billing."
+        keywords="employee time tracker, time tracking software, productivity tracking, project time tracking, team management, billable hours"
+        canonical="https://ziontechgroup.com/employee-time-tracker"
+      />
+
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <ResponsiveContainer className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Employee Time Tracker
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional employee time tracker solutions and services
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
-            </div>
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Track time effortlessly and boost team productivity with our comprehensive time tracking solution. 
+            Automatic tracking, project management, and detailed analytics all in one place.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <FuturisticButton
+              href="/contact"
+              variant="primary"
+              size="lg"
+              icon={<ArrowRight className="w-5 h-5" />}
+            >
+              Start Free Trial
+            </FuturisticButton>
+            <FuturisticButton
+              href="/demo"
+              variant="outline"
+              size="lg"
+              icon={<Globe className="w-5 h-5" />}
+            >
+              Watch Demo
+            </FuturisticButton>
           </div>
-        </div>
-      </div>
-    </>
+        </ResponsiveContainer>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <ResponsiveContainer>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Powerful Time Tracking Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Everything you need to track time effectively and manage team productivity.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature) => (
+              <FuturisticCard key={index} className="h-full">
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                </div>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </FuturisticCard>
+            ))}
+          </div>
+        </ResponsiveContainer>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <ResponsiveContainer>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Choose the plan that fits your team size and tracking needs. No hidden fees, no surprises.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan) => (
+              <FuturisticCard key={index} className={`h-full ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">
+                    {plan.price}
+                    <span className="text-lg text-gray-400">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300 text-sm">{plan.description}</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <FuturisticButton
+                  href="/contact"
+                  variant={plan.popular ? "primary" : "outline"}
+                  size="sm"
+                  className="w-full"
+                >
+                  Get Started
+                </FuturisticButton>
+              </FuturisticCard>
+            ))}
+          </div>
+        </ResponsiveContainer>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <ResponsiveContainer>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Why Choose Our Time Tracker?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Join thousands of teams who have improved their productivity with our time tracking solution.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit) => (
+              <div key={index} className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300 text-sm">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </ResponsiveContainer>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+        <ResponsiveContainer className="text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Track Time Better?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Start your free trial today and see how our time tracker can boost your team's productivity.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <FuturisticButton
+              href="/contact"
+              variant="primary"
+              size="lg"
+              icon={<ArrowRight className="w-5 h-5" />}
+            >
+              Start Free Trial
+            </FuturisticButton>
+            <FuturisticButton
+              href="/demo"
+              variant="outline"
+              size="lg"
+              icon={<Globe className="w-5 h-5" />}
+            >
+              Watch Demo
+            </FuturisticButton>
+          </div>
+        </ResponsiveContainer>
+      </section>
+    </div>
   );
 };
 
 export default EmployeeTimeTrackerPage;
-

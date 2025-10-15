@@ -1,51 +1,195 @@
+import React from 'react';
+import SEOHead from '../components/SEOHead';
 
-import { Helmet } from "react-helmet-async";
-
-const AiExpenseTrackerPage = () => {
-  return (
-    <>
+  return (<>
       <Helmet>
-        <title>Ai Expense Tracker</title>
+        <title>AI Expense Tracker - Zion Tech Group</title>
         <meta
           name="description"
-          content="Professional ai expense tracker solutions and services"
+          content="Smart expense tracking with AI-powered categorization, receipt scanning, and financial insights."
         />
-        <meta name="keywords" content="ai, expense, tracker" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">
-              Ai Expense Tracker
+
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        {/* Hero Section */}
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              AI Expense <span className="text-blue-600">Tracker</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional ai expense tracker solutions and services
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Smart expense tracking with AI-powered categorization, _receipt
+              scanning, and financial insights to help you manage your money
+              better.
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+              </Link>
+              <Link
+                to="/contact"
+                className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+
+          {/* Features Section */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
+              >
+                <div className="flex justify-center mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
                 </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
+            ))}
+          </div>
+
+          {/* Capabilities Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Key Capabilities
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {capabilities.map((capability, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
+                >
+                  <div className="flex justify-center mb-4">
+                    {capability.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    {capability.title}
+                  </h3>
+                  <p className="text-gray-300">{capability.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Pricing Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Pricing Plans
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div
+                  key={index}
+                  className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? "ring-2 ring-cyan-500" : ""}`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      {plan.name}
+                    </h3>
+                    <div className="text-4xl font-bold text-cyan-400 mb-2">
+                      {plan.price}
+                      <span className="text-lg text-gray-300">
+                        {plan.period}
+                      </span>
+                    </div>
+                    <p className="text-gray-300">{plan.description}</p>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li
+                        key={featureIndex}
+                        className="text-gray-300 flex items-center"
+                      >
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    to="/contact"
+                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      plan.popular
+                        ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600"
+                        : "border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10"
+                    }`}
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Testimonials Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              What Our Users Say
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
+                >
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map(( i) => (
+                      <Star
+                        className="w-5 h-5 text-yellow-400 fill-current"
+                        key={i}
+                      />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic">
+                    "{testimonial.content}"
+                  </p>
+                  <div>
+                    <p className="text-white font-semibold">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-gray-400 text-sm">
+                      {testimonial.company}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Take Control of Your Expenses?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Contact us to learn more about our AI expense tracking solutions
+              and how we can help you manage your finances better.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+              >
+                Contact Us
+              </Link>
+              <Link
+                to="/services"
+                className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+              >
+                View All Services
+              </Link>
             </div>
           </div>
         </div>
@@ -55,4 +199,3 @@ const AiExpenseTrackerPage = () => {
 };
 
 export default AiExpenseTrackerPage;
-

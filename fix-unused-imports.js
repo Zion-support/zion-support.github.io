@@ -1,97 +1,99 @@
 #!/usr/bin/env node
-
-import fs from "fs";
-import { execSync } from "child_process";
-
-// Find all .tsx files in the app directory
-const findTsxFiles = () => {
-  try {
-    const result = execSync('find app -name "*.tsx" -type f', {
-      encoding: "utf8",
-    });
-    return result
-      .trim()
-      .split("\n")
-      .filter((file) => file.length > 0);
-  } catch (error) {
-    console.error("Error finding .tsx files:", error.message);
-    return [];
+import fs from "fs"
+import { glob } from "glob"
+// Common unused imports that need to be removed
+const unusedImports = []
+  "Cloud",
+  "Code",
+  "Monitor",
+  "BarChart",
+  "Star",
+  "Settings",
+  "Users",
+  "DollarSign",
+  "TrendingUp",
+  "Shield",
+  "Target",
+  "Mail",
+  "Phone",
+  "Clock",
+  "PieChart",
+  "Activity",
+  "Award",
+  "BookOpen",
+  "Briefcase",
+  "Building",
+  "Calendar",
+  "Camera",
+  "Command",
+  "CreditCard",
+  "FileText",
+  "Gift",
+  "Heart",
+  "Home",
+  "Image",
+  "Laptop",
+  "Lock",
+  "MessageCircle",
+  "Palette",
+  "Play",
+  "Search",
+  "ShoppingCart",
+  "Smartphone",
+  "Tablet",
+  "Terminal",
+  "Truck",
+  "Wifi",
+  "Cpu",
+  "Database",
+  "Server",
+  "Layers"]
+function fixUnusedImports(filePath) {}
+}let content = fs.readFileSync(filePath, "utf8")
+  let modified = false
+  // Fix 'use client' directive placement
+  if ()
+    content.includes("'use client';") &&
+    !content.startsWith("'use client';")
+  ) {}
+    content = content.replace(/'use client';\s*\n/, "")
+    content = "'use client';\n" + content
+    modified = true
   }
-};
-
-// Fix unused React imports
-const fixUnusedReactImports = (filePath) => {
-  try {
-    let content = fs.readFileSync(filePath, "utf8");
-    let modified = false;
-
-    // Check if React is imported but not used (no JSX)
-    const hasReactImport = content.includes("import React from 'react';");
-    const hasJSX = content.includes("<") && content.includes(">");
-    const hasReactUsage =
-      content.includes("React.") || content.includes("React.createElement");
-
-    if (hasReactImport && !hasJSX && !hasReactUsage) {
-      content = content.replace(/import React from 'react';\n?/g, "");
-      modified = true;
+  // Remove unused imports
+  const lucideImportMatch = content.match()
+    /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/,
+  )
+  if (lucideImportMatch) {}
+    const existingIcons = lucideImportMatch[1].split(",").map((i) => i.trim())
+    const usedIcons = existingIcons.filter((icon) => {}
+}// Check if the icon is actually used in the file
+      const iconRegex = new RegExp(`\\b${icon}\\b`, "g")
+      const matches = content.match(iconRegex)
+      return matches && matches.length > 1; // More than just the import
+    })
+    if (usedIcons.length !== existingIcons.length) {}
+      if (usedIcons.length > 0) {}
+        content = content.replace()
+          lucideImportMatch[0],
+          `import { ${usedIcons.join(", ")} } from 'lucide-react';`,
+        )
+      } else {}
+        content = content.replace(lucideImportMatch[0] + "\n", "")
+      }
+      modified = true
     }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, "utf8");
-      console.warn(`Fixed unused React import: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
   }
-};
-
-// Fix unused Helmet imports
-const fixUnusedHelmetImports = (filePath) => {
-  try {
-    let content = fs.readFileSync(filePath, "utf8");
-    let modified = false;
-
-    const hasHelmetImport = content.includes(
-      "import { Helmet } from 'react-helmet-async';",
-    );
-    const usesHelmet =
-      content.includes("<Helmet") || content.includes("Helmet.");
-
-    if (hasHelmetImport && !usesHelmet) {
-      content = content.replace(
-        /import { Helmet } from 'react-helmet-async';\n?/g,
-        "",
-      );
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, "utf8");
-      console.warn(`Fixed unused Helmet import: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+  if (modified) {}
+    fs.writeFileSync(filePath, content)
+    console.log(`Fixed: ${filePath}`)
   }
-};
-
+}
 // Main execution
-console.warn("Fixing unused imports...");
-const tsxFiles = findTsxFiles();
-let fixedCount = 0;
-
-tsxFiles.forEach((file) => {
-  if (fixUnusedReactImports(file)) {
-    fixedCount++;
-  }
-  if (fixUnusedHelmetImports(file)) {
-    fixedCount++;
-  }
-});
-
-console.warn(`Fixed ${fixedCount} files with unused imports.`);
+async function main() {}
+}const pageFiles = await glob("app/**/page.tsx")
+  console.log(`Found ${pageFiles.length} page files to fix...`)
+  pageFiles.forEach(fixUnusedImports)
+  console.log("Unused imports fix completed!")
+}
+main().catch(console.error)

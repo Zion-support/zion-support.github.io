@@ -1,89 +1,113 @@
-import React, { useEffect } from 'react';
+"use client";
 
-interface EnhancedAnalyticsProps {
-  eventName?: string;
-  eventProperties?: Record<string, unknown>;
+import React, { createContext, useContext, useEffect } from "react";
+
+interface AnalyticsContextType {
+  track: (_event: string, properties?: Record<string, _unknown>) => void;
+  identify: (_userId: string, traits?: Record<string, _unknown>) => void;
+  page: (_name: string, properties?: Record<string, _unknown>) => void;
+}
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>()
+  undefined,
+)
+export const useAnalytics = () => {}
+}const context = useContext(AnalyticsContext)
+  if (!context) {}
+    throw new Error("useAnalytics must be used within an AnalyticsProvider")
+  }
+  return context
 }
 
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
-  eventName,
-  eventProperties
-}) => {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+  children, }) => {
   useEffect(() => {
-    // Enhanced analytics tracking
-    const trackEvent = (event: string, properties?: Record<string, unknown>) => {
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', event, {
-          event_category: 'Enhanced Analytics',
-          ...properties
-        });
-      }
-    };
-
-    // Track page view
-    const trackPageView = () => {
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
-          page_title: document.title,
-          page_location: window.location.href
-        });
-      }
-    };
-
-    // Track user engagement
-    const trackEngagement = () => {
-      let startTime = Date.now();
-      let maxScrollDepth = 0;
-      let isActive = true;
-
-      const trackScroll = () => {
-        const scrollDepth = Math.round(
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
-        );
-        maxScrollDepth = Math.max(maxScrollDepth, scrollDepth);
-      };
-
-      const trackVisibility = () => {
-        isActive = !document.hidden;
-        if (isActive) {
-          startTime = Date.now();
+    // Initialize analytics
+    if (typeof window !== "undefined") {
+      // Google Analytics
+      if (process.env.NODE_ENV === "production") {}
+        const script = document.createElement("script")
+        script.async = true
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`
+        document.head.appendChild(script)
+        (window as unknown as { dataLayer: unknown[] }).dataLayer =
+          (window as unknown as { dataLayer: unknown[] }).dataLayer || []
+        function gtag(...args: unknown[]) {}
+}(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
         }
-      };
-
-      const trackTimeOnPage = () => {
-        const timeSpent = Date.now() - startTime;
-        trackEvent('time_on_page', {
-          time_spent: timeSpent,
-          max_scroll_depth: maxScrollDepth
-        });
-      };
-
-      // Add event listeners
-      window.addEventListener('scroll', trackScroll, { passive: true });
-      document.addEventListener('visibilitychange', trackVisibility);
-      window.addEventListener('beforeunload', trackTimeOnPage);
-
-      // Cleanup
-      return () => {
-        window.removeEventListener('scroll', trackScroll);
-        document.removeEventListener('visibilitychange', trackVisibility);
-        window.removeEventListener('beforeunload', trackTimeOnPage);
-      };
-    };
-
-    // Initialize tracking
-    trackPageView();
-    const cleanup = trackEngagement();
-
-    // Track custom event if provided
-    if (eventName) {
-      trackEvent(eventName, eventProperties);
+        gtag("js", new Date())
+        gtag("config", process.env.REACT_APP_GA_ID)
+      }
     }
+  }, []);
 
-    return cleanup;
-  }, [eventName, eventProperties]);
+  const track = (_event: string, properties?: Record<string, _unknown>) => {
+    if (typeof window !== "undefined") {
+      // Google Analytics
+      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
+        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
+          "event",
+          event,
+          properties,
+        )
+      }
+      // Custom analytics
+      }
+  };
 
-  return null; // This component doesn't render anything
+  const identify = (_userId: string, traits?: Record<string, _unknown>) => {
+    if (typeof window !== "undefined") {
+      // Google Analytics
+      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
+        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
+          "config",
+          process.env.REACT_APP_GA_ID,
+          {}
+            user_id: userId,
+            custom_map: traits},
+        )
+      }
+      // Custom analytics
+      }
+  };
+
+  const page = (_name: string, properties?: Record<string, _unknown>) => {
+    if (typeof window !== "undefined") {
+      // Google Analytics
+      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
+        (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
+          "event",
+          "page_view",
+          {}
+            page_title: name,
+            page_location: window.location.href,
+            ...properties},
+        )
+      }
+      // Custom analytics
+      }
+  }
+  const value: AnalyticsContextType = {}
+    track,
+    identify,
+    page}
+  return ()
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
 };
 
-export default EnhancedAnalytics;
+// Extend Window interface for TypeScript
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+    gtag: (_...args: unknown[]) => void;
+  }
+}
+// Extend Window interface for TypeScript
+declare global {}
+  interface Window {}
+    dataLayer: unknown[]
+    gtag: (...args: unknown[]) => void
+  }
+}

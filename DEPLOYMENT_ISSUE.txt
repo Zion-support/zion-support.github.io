@@ -1,0 +1,1 @@
+NETLIFY BUILD FIX REQUIRED - See NETLIFY_BUILD_FIX.md for instructions to remove @netlify/plugin-nextjs from Netlify UI

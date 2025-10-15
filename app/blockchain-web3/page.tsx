@@ -1,51 +1,79 @@
+import React from 'react';
+import SEOHead from '../components/SEOHead';
 
-import { Helmet } from "react-helmet-async";
-
-const BlockchainWeb3Page: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Blockchain Web3</title>
-        <meta
-          name="description"
-          content="Professional blockchain web3 solutions and services"
-        />
-        <meta name="keywords" content="blockchain, web3" />
-      </Helmet>
+  return (<Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">
-              Blockchain Web3
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Blockchain & Web3 Solutions
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional blockchain web3 solutions and services
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with cutting-edge blockchain technology
+              and Web3 solutions
             </p>
-            <div className="gridmd:grid-cols-2lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20"
+              >
+                {feature.icon}
+                <h3 className="text-xl font-semibold text-white mb-2 mt-4">
+                  {feature.title}
                 </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
+            ))}
+          </div>
+
+          <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">
+              Our Services
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {services.map((service, index) => (<div key={index} className="text-center">
+                  <h3 className="text-xl font-semibold text-purple-400 mb-4">
+                    {service.category}
+                  </h3>
+                  <ul className="space-y-2">
+                    {service.items.map((item, itemIndex) => (
+                      <li
+                        key={itemIndex}
+                        className="text-gray-300 flex items-center justify-center"
+                      >
+                        <ArrowRight className="w-4 h-4 text-purple-400 mr-2" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">
+              Ready to Build the Future?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let's discuss how blockchain and Web3 can transform your business
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              >
+                Get Started
+              </Link>
+              <Link
+                to="/services"
+                className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              >
+                View All Services
+              </Link>
             </div>
           </div>
         </div>
@@ -55,4 +83,3 @@ const BlockchainWeb3Page: React.FC = () => {
 };
 
 export default BlockchainWeb3Page;
-

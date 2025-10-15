@@ -1,31 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-    <meta name="description" content="Leading provider of AI solutions, cloud infrastructure, and digital transformation services. Empowering businesses with cutting-edge technology." />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#8b5cf6" />
+    <meta
+      name="description"
+      content="Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology."
+    />
+    <meta
+      name="keywords"
+      content="AI solutions, IT services, cybersecurity, cloud computing, digital transformation, technology services, Zion Tech Group"
+    />
+    <meta name="author" content="Zion Tech Group" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ziontechgroup.com" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ziontechgroup.com" />
+    <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
+    <meta
+      property="og:description"
+      content="Leading provider of AI-powered solutions, cybersecurity, and digital transformation services."
+    />
+    <meta
+      property="og:image"
+      content="https://ziontechgroup.com/og-image.svg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Zion Tech Group - AI and IT Solutions"
+    />
+    <meta property="og:site_name" content="Zion Tech Group" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://ziontechgroup.com" />
+    <meta name="twitter:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
+    <meta name="twitter:description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services." />
+    <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
+    <meta name="twitter:site" content="@ziontechgroup" />
+    <meta name="twitter:creator" content="@ziontechgroup" />
     
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="/manifest.json" />
-    
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#7c3aed" />
-    
-    <!-- Apple Touch Icon -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    
+    <link rel="manifest" href="/manifest.json" />
+
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="preconnect" href="https://api.ziontechgroup.com" />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/images/hero-bg.webp" as="image" />
+
+    <!-- Critical CSS -->
+    <style>
+      /* Critical CSS for above-the-fold content */
+      body {
+        margin: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        background-color: #0f172a;
+        color: #ffffff;
+      }
+      
+      .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      }
+      
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid #3b82f6;
+        border-top: 4px solid transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+
+    <title>Zion Tech Group - AI & IT Solutions</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/main.tsx"></script>
+    <div id="root">
+      <div class="loading">
+        <div class="spinner"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

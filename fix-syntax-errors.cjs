@@ -1,203 +1,255 @@
-const fs = require('fs');
-const path = require('path');
+<<<<<<< HEAD
 
-// Function to fix common syntax errors in JSX files
-function fixJSXSyntax(content) {
-  let fixed = content;
-
-  // Fix spacing issues in class names
-  fixed = fixed.replace(/(\w+)-(\d+)(\w+)-(\d+)/g, '$1-$2 $3-$4');
-  fixed = fixed.replace(/(\w+)-(\d+)([A-Z])/g, '$1-$2 $3');
-  fixed = fixed.replace(/([a-z])([A-Z])/g, '$1 $2');
-  
-  // Fix common class name spacing issues
-  const classFixes = [
-    { from: /w-8h-8/g, to: 'w-8 h-8' },
-    { from: /text-4xlmd:/g, to: 'text-4xl md:' },
-    { from: /text-3xlmd:/g, to: 'text-3xl md:' },
-    { from: /text-xltext-/g, to: 'text-xl text-' },
-    { from: /text-centermb-/g, to: 'text-center mb-' },
-    { from: /max-w-7xlmx-auto/g, to: 'max-w-7xl mx-auto' },
-    { from: /max-w-4xlmx-auto/g, to: 'max-w-4xl mx-auto' },
-    { from: /max-w-3xlmx-auto/g, to: 'max-w-3xl mx-auto' },
-    { from: /max-w-2xlmx-auto/g, to: 'max-w-2xl mx-auto' },
-    { from: /py-2 0/g, to: 'py-20' },
-    { from: /px-4sm:/g, to: 'px-4 sm:' },
-    { from: /px-4sm:/g, to: 'px-4 sm:' },
-    { from: /px-6lg:/g, to: 'px-6 lg:' },
-    { from: /px-8/g, to: 'px-8' },
-    { from: /from-slate-9 00/g, to: 'from-slate-900' },
-    { from: /via-purple-9 0 0/g, to: 'via-purple-900' },
-    { from: /to-slate-9 0 0/g, to: 'to-slate-900' },
-    { from: /to-slate-9 0 0/g, to: 'to-slate-900' },
-    { from: /bg-gradient-to-r from-cyan-4 0 0/g, to: 'bg-gradient-to-r from-cyan-400' },
-    { from: /to-purple-4 0 0/g, to: 'to-purple-400' },
-    { from: /text-gray-3 0 0/g, to: 'text-gray-300' },
-    { from: /text-gray-30 0/g, to: 'text-gray-300' },
-    { from: /text-gray-60 0/g, to: 'text-gray-600' },
-    { from: /text-gray-90 0/g, to: 'text-gray-900' },
-    { from: /flexflex-col/g, to: 'flex flex-col' },
-    { from: /sm:flex-row/g, to: 'sm:flex-row' },
-    { from: /gap-4justify-center/g, to: 'gap-4 justify-center' },
-    { from: /inline-flexitems-center/g, to: 'inline-flex items-center' },
-    { from: /px-8py-4/g, to: 'px-8 py-4' },
-    { from: /bg-gradient-to-r from-cyan-5 00/g, to: 'bg-gradient-to-r from-cyan-500' },
-    { from: /to-purple-6 00/g, to: 'to-purple-600' },
-    { from: /text-whitefont-semibold/g, to: 'text-white font-semibold' },
-    { from: /rounded-lghover:/g, to: 'rounded-lg hover:' },
-    { from: /from-cyan-6 00/g, to: 'from-cyan-600' },
-    { from: /to-purple-7 0 0/g, to: 'to-purple-700' },
-    { from: /transition-allduration-3 0 0/g, to: 'transition-all duration-300' },
-    { from: /group-hover:translate-x-1/g, to: 'group-hover:translate-x-1' },
-    { from: /transition-transform/g, to: 'transition-transform' },
-    { from: /border border-cyan-4 00/g, to: 'border border-cyan-400' },
-    { from: /text-cyan-4 00/g, to: 'text-cyan-400' },
-    { from: /hover:bg-cyan-4 0 0\/1 0/g, to: 'hover:bg-cyan-400/10' },
-    { from: /py-20px-4/g, to: 'py-20 px-4' },
-    { from: /sm:px-6lg:px-8/g, to: 'sm:px-6 lg:px-8' },
-    { from: /max-w-7xlmx-auto/g, to: 'max-w-7xl mx-auto' },
-    { from: /text-centermb-1 6/g, to: 'text-center mb-16' },
-    { from: /text-3xlmd:text-4xl/g, to: 'text-3xl md:text-4xl' },
-    { from: /text-xltext-gray-3 0 0/g, to: 'text-xl text-gray-300' },
-    { from: /max-w-2xlmx-auto/g, to: 'max-w-2xl mx-auto' },
-    { from: /gridgrid-cols-1/g, to: 'grid grid-cols-1' },
-    { from: /md:grid-cols-3/g, to: 'md:grid-cols-3' },
-    { from: /gap-8/g, to: 'gap-8' },
-    { from: /text-center/g, to: 'text-center' },
-    { from: /w-16h-1 6/g, to: 'w-16 h-16' },
-    { from: /bg-gradient-to-r from-cyan-5 0 0/g, to: 'bg-gradient-to-r from-cyan-500' },
-    { from: /to-purple-6 0 0/g, to: 'to-purple-600' },
-    { from: /rounded-fullflex/g, to: 'rounded-full flex' },
-    { from: /items-centerjustify-center/g, to: 'items-center justify-center' },
-    { from: /mx-automb-4/g, to: 'mx-auto mb-4' },
-    { from: /text-xlfont-semibold/g, to: 'text-xl font-semibold' },
-    { from: /text-white mb-3/g, to: 'text-white mb-3' },
-    { from: /text-gray-30 0/g, to: 'text-gray-300' },
-    { from: /py-20px-4/g, to: 'py-20 px-4' },
-    { from: /sm:px-6lg:px-8/g, to: 'sm:px-6 lg:px-8' },
-    { from: /bg-slate-8 0 0\/3 0/g, to: 'bg-slate-800/30' },
-    { from: /max-w-4xlmx-auto/g, to: 'max-w-4xl mx-auto' },
-    { from: /text-3xlmd:text-4xl/g, to: 'text-3xl md:text-4xl' },
-    { from: /text-xltext-gray-3 0 0/g, to: 'text-xl text-gray-300' },
-    { from: /flexflex-col/g, to: 'flex flex-col' },
-    { from: /sm:flex-row/g, to: 'sm:flex-row' },
-    { from: /gap-4justify-center/g, to: 'gap-4 justify-center' },
-    { from: /inline-flexitems-center/g, to: 'inline-flex items-center' },
-    { from: /px-8py-4/g, to: 'px-8 py-4' },
-    { from: /bg-gradient-to-r from-cyan-5 00/g, to: 'bg-gradient-to-r from-cyan-500' },
-    { from: /to-purple-6 00/g, to: 'to-purple-600' },
-    { from: /text-whitefont-semibold/g, to: 'text-white font-semibold' },
-    { from: /rounded-lghover:/g, to: 'rounded-lg hover:' },
-    { from: /from-cyan-6 00/g, to: 'from-cyan-600' },
-    { from: /to-purple-7 0 0/g, to: 'to-purple-700' },
-    { from: /transition-allduration-3 0 0/g, to: 'transition-all duration-300' },
-    { from: /group-hover:translate-x-1/g, to: 'group-hover:translate-x-1' },
-    { from: /transition-transform/g, to: 'transition-transform' },
-    { from: /border border-cyan-4 00/g, to: 'border border-cyan-400' },
-    { from: /text-cyan-4 00/g, to: 'text-cyan-400' },
-    { from: /hover:bg-cyan-4 0 0\/1 0/g, to: 'hover:bg-cyan-400/10' },
-    { from: /ml-2w-5/g, to: 'ml-2 w-5' },
-    { from: /h-5group-hover:/g, to: 'h-5 group-hover:' },
-    { from: /translate-x-1transition-transform/g, to: 'translate-x-1 transition-transform' },
-    { from: /ml-2w-5/g, to: 'ml-2 w-5' },
-    { from: /h-5group-hover:/g, to: 'h-5 group-hover:' },
-    { from: /translate-x-1transition-transform/g, to: 'translate-x-1 transition-transform' }
-  ];
-
-  classFixes.forEach(fix => {
-    fixed = fixed.replace(fix.from, fix.to);
-  });
-
-  // Fix array syntax issues
-  fixed = fixed.replace(/const services = \[\s*\]\s*{/g, 'const services = [');
-  fixed = fixed.replace(/}\s*\]/g, '}]');
-  
-  // Fix malformed JSX attributes
-  fixed = fixed.replace(/className="([^"]*)\[([^"]*)\]/g, 'className="$1$2"');
-  
-  // Fix missing spaces in JSX
-  fixed = fixed.replace(/(\w+)([A-Z])/g, '$1 $2');
-  
-  // Fix specific parsing errors
-  fixed = fixed.replace(/;\s*$/gm, '');
-  fixed = fixed.replace(/,\s*;/g, ',');
-  fixed = fixed.replace(/;\s*{/g, ' {');
-  fixed = fixed.replace(/}\s*]/g, '}]');
-  
-  // Fix malformed JSX structure
-  fixed = fixed.replace(/<div className="([^"]*)"[^>]*>\s*<\/div>/g, '');
-  fixed = fixed.replace(/<h3[^>]*>\s*<\/h3>/g, '');
-  fixed = fixed.replace(/<p[^>]*>\s*<\/p>/g, '');
-  
-  // Fix broken class names with spaces
-  fixed = fixed.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1 $2"');
-  
-  // Fix specific issues found in the files
-  fixed = fixed.replace(/from-slate-9 00via-purple-9 0 0to-slate-9 0 0/g, 'from-slate-900 via-purple-900 to-slate-900');
-  fixed = fixed.replace(/bg-blue-50 border border-blue-200/g, 'bg-blue-50 border border-blue-200');
-  fixed = fixed.replace(/text-blue-900mb-2/g, 'text-blue-900 mb-2');
-  fixed = fixed.replace(/text-blue-700/g, 'text-blue-700');
-  fixed = fixed.replace(/bg-green-50border border-green-20 0rounded-lgp-6/g, 'bg-green-50 border border-green-200 rounded-lg p-6');
-  fixed = fixed.replace(/text-purple-900 mb-2/g, 'text-purple-900 mb-2');
-  fixed = fixed.replace(/\[[^\]]*\]/g, '');
-  fixed = fixed.replace(/bg-purple-50 border border-purple-200 rounded-lg p-6/g, 'bg-purple-50 border border-purple-200 rounded-lg p-6');
-  
-  // Fix array syntax
-  fixed = fixed.replace(/const services = \[\s*\]\s*{/g, 'const services = [');
-  fixed = fixed.replace(/}\s*\]/g, '}]');
-  fixed = fixed.replace(/,\s*;/g, ',');
-  
-  // Fix JSX structure issues
-  fixed = fixed.replace(/<div className="([^"]*)"[^>]*>\s*<\/div>/g, '');
-  fixed = fixed.replace(/<h3[^>]*>\s*<\/h3>/g, '');
-  fixed = fixed.replace(/<p[^>]*>\s*<\/p>/g, '');
-  
-  // Fix missing closing tags
-  fixed = fixed.replace(/<section[^>]*>(?!.*<\/section>)/g, (match) => {
-    if (!fixed.includes('</section>')) {
-      return match + '\n      </section>';
+// Function to fix common syntax errors in a file;
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');';
+    // Fix missing commas in object literals and arrays;
+    // Look for patterns like: key: value\n  key2: value2;
+    content = content.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*\s*:\s*[^,\n}]+)\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');';
+    // Fix missing commas in JSX props;
+    content = content.replace(/(\w+="[^"]*")\n\s*(\w+=)/g, '$1\n  $2');';
+    content = content.replace(/(\w+={[^}]*})\n\s*(\w+=)/g, '$1\n  $2');';
+    // Fix incomplete function calls - add missing closing parentheses;
+    // Look for patterns like: lazy(() => import("./path/page")\nconst;
+    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*const/g, 'lazy(() => import("$1")),\nconst');';
+    // Fix missing closing parentheses in lazy imports;
+    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*([a-zA-Z_$])/g, 'lazy(() => import("$1")),\n$2');';
+    // Fix missing commas after lazy imports;
+    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*\/\/ /g, 'lazy(() => import("$1")),\n// ');';
+    // Fix incomplete JSX elements;
+    content = content.replace(/(<[^>]+)\n\s*([a-zA-Z_$])/g, '$1>\n  $2');';
+    // Fix missing closing tags in JSX;
+    content = content.replace(/(<[^>]+)\n\s*<\/[^>]+>/g, '$1>\n  </div>');';
+    // Fix missing commas in array elements;
+    content = content.replace(/([^,\n])\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');';
+    // Fix missing closing brackets in objects;
+    content = content.replace(/([^}]\n\s*)([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1  $2');';
+    // Fix incomplete function declarations;
+    content = content.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*\)\s*{\s*\n\s*return\s*\(\s*\n\s*<[^>]*>\s*\n\s*\)\s*;\s*\n\s*}\s*\n\s*([a-zA-Z_$])/g, 
+      'function $1() {\n  return (\n    <div>\n      {/* Content */}\n    </div>\n  );\n}\n\n$2');';
+    // Fix missing export statements;
+    content = content.replace(/}\s*\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '}\n\nexport { $1');';
+    // Clean up multiple empty lines;
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');';
+    // Remove any remaining orphaned markers;
+    content = content.replace(/^<<<<<<<|^;
+      return true;
     }
-    return match;
-  });
-  
-  // Fix malformed className attributes
-  fixed = fixed.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1 $2"');
-  
-  return fixed;
+    
+    return false;
+  } catch (_error) {
+    global.console._error(`  ❌ Error processing ${filePath}:`, _error.message);
+=======
+const fs = require("fs");
+const path = require("path");
+
+// Function to fix common syntax errors in TSX files
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
+
+    // Fix malformed function names like "5GDataAnalyticsZionTechGroup"
+    const functionNameMatch = content.match(
+      /export default function (\d+[A-Za-z]+)/,
+    );
+    if (functionNameMatch) {
+      const malformedName = functionNameMatch[1];
+      const properName = malformedName.replace(/^\d+/, "") + "Page";
+      content = content.replace(new RegExp(malformedName, "g"), properName);
+      modified = true;
+    }
+
+    // Fix malformed className attributes
+    content = content.replace(
+      /className="([^"]*?)\s+([^"]*?)"/g,
+      (match, part1, part2) => {
+        if (part1.includes("text-") && part2.includes("mb-")) {
+          return `className="${part1} ${part2}"`;
+        }
+        return match;
+      },
+    );
+
+    // Fix malformed text content
+    content = content.replace(
+      /text-4 xl font-boldtext-whitemb-6/g,
+      "text-4xl font-bold text-white mb-6",
+    );
+    content = content.replace(
+      /text-lgtext-gray-300mb-8/g,
+      "text-lg text-gray-300 mb-8",
+    );
+
+    // Fix malformed JSX elements
+    content = content.replace(
+      /<title \/>([^<]+)<\/title>/g,
+      "<title>$1</title>",
+    );
+    content = content.replace(
+      /<span className="w-5 h-5ml-2" \/>([^<]+)/g,
+      '<h1 className="text-4xl font-bold text-white mb-6">$1</h1>',
+    );
+    content = content.replace(
+      /<p className="w-5 h-5ml-2">([^<]+)/g,
+      '<p className="text-lg text-gray-300 mb-8">$1</p>',
+    );
+
+    // Fix malformed Link components
+    content = content.replace(
+      /<Link to="([^"]+)" className="([^"]*?)">([^<]+)<\/Link>/g,
+      (match, to, className, text) => {
+        if (className.includes("transformhover:scale-105")) {
+          className = className.replace(
+            "transformhover:scale-105",
+            "transform hover:scale-105",
+          );
+        }
+        if (className.includes("from-cyan-500to-purple-500")) {
+          className = className.replace(
+            "from-cyan-500to-purple-500",
+            "from-cyan-500 to-purple-500",
+          );
+        }
+        if (className.includes("shadow-lghover:shadow-cyan-500/25")) {
+          className = className.replace(
+            "shadow-lghover:shadow-cyan-500/25",
+            "shadow-lg hover:shadow-cyan-500/25",
+          );
+        }
+        return `<Link to="${to}" className="${className}">${text}</Link>`;
+      },
+    );
+
+    // Fix missing closing tags and malformed JSX
+    content = content.replace(
+      /<h2 className="w-5 h-5ml-2" \/>([^<]+)/g,
+      '<h2 className="text-3xl font-bold text-white mb-4">$1</h2>',
+    );
+    content = content.replace(
+      /<p className="w-5 h-5ml-2">([^<]+)/g,
+      '<p className="text-lg text-gray-300 mb-8">$1</p>',
+    );
+
+    // Fix duplicate 'use client' directives
+    content = content.replace(
+      /'use client';\s*'use client';/g,
+      "'use client';",
+    );
+
+    // Fix malformed imports
+    content = content.replace(
+      /import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Brain, Clock, Target } from 'lucide-react';\s*'use client';/g,
+      "'use client';\nimport { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Clock, Target } from 'lucide-react';",
+    );
+
+    // Fix malformed JSX structure
+    content = content.replace(
+      /<title>([^<]+)<\/title>\s*\{[^}]*\}/g,
+      "<title>$1</title>",
+    );
+
+    // Fix incomplete function declarations
+    if (
+      content.includes("export default function") &&
+      !content.includes("return (")
+    ) {
+      const functionMatch = content.match(
+        /export default function ([^(]+)\(\)\s*\{/,
+      );
+      if (functionMatch) {
+        const functionName = functionMatch[1].trim();
+        const basicTemplate = `
+  return (
+    <>
+      <Helmet>
+        <title>${functionName} - Zion Tech Group</title>
+        <meta name="description" content="Professional ${functionName.toLowerCase().replace(/([A-Z])/g, " $1")} services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">${functionName}</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional ${functionName.toLowerCase().replace(/([A-Z])/g, " $1")} services coming soon.</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+}`;
+
+        content = content.replace(
+          /export default function ([^(]+)\(\)\s*\{[^}]*\}/s,
+          `export default function ${functionName}() {${basicTemplate}`,
+        );
+        modified = true;
+      }
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, "utf8");
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56
+    return false;
+  }
 }
 
-// Function to process all TSX files
-function processFiles() {
-  const appDir = path.join('/workspace', 'app');
-  
-  function processDirectory(dir) {
-    const files = fs.readdirSync(dir);
-    
-    files.forEach(file => {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        processDirectory(filePath);
-      } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
-        try {
-          const content = fs.readFileSync(filePath, 'utf8');
-          const fixed = fixJSXSyntax(content);
-          
-          if (content !== fixed) {
-            fs.writeFileSync(filePath, fixed, 'utf8');
-            console.log(`Fixed: ${filePath}`);
-          }
-        } catch (error) {
-          console.error(`Error processing ${filePath}:`, error.message);
+<<<<<<< HEAD
         }
       }
-    });
+    } catch (_error) {
+      // Skip directories that can't be read';
+    }
+  } else {
+    global.console.log(`File not found: ${filePath}`);
   }
-  
-  processDirectory(appDir);
-  console.log('All files processed!');
+
+=======
+// Function to recursively find and fix TSX files
+function fixAllTSXFiles(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      fixedCount += fixAllTSXFiles(filePath);
+    } else if (file.endsWith(".tsx")) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
+      }
+    }
+  }
+
+  return fixedCount;
 }
 
-// Run the fix
-processFiles();
+// Main execution
+console.log("Starting syntax error fixes...");
+const appDir = path.join(__dirname, "app");
+const fixedCount = fixAllTSXFiles(appDir);
+console.log(`Fixed ${fixedCount} files.`);
+
+// Also fix the main App.tsx file
+const appTsxPath = path.join(__dirname, "App.tsx");
+if (fs.existsSync(appTsxPath)) {
+  if (fixSyntaxErrors(appTsxPath)) {
+    console.log("Fixed: App.tsx");
+  }
+}
+
+console.log("Syntax error fixes completed.");
+>>>>>>> cursor/comprehensive-app-audit-and-update-8a56

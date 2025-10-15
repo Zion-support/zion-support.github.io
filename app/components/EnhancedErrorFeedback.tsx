@@ -1,82 +1,189 @@
-import React from 'react';
-import { AlertTriangle, Send } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 
-interface ErrorFeedbackProps {
-  error: Error;
-  onRetry?: () => void;
-  onReport?: (error: Error) => void;
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (_error: Error, errorInfo: ErrorInfo) => void;
 }
-
-const EnhancedErrorFeedback: React.FC<ErrorFeedbackProps> = ({
-  error,
-  onRetry,
-  onReport
-}) => {
-  const handleReport = () => {
-    if (onReport) {
-      onReport(error);
-    } else {
-      // Default behavior: log to console
-      console.error('Error reported:', error);
+interface State {}
+  hasError: boolean
+  error: Error | null
+  errorInfo: ErrorInfo | null
+  retryCount: number
+}
+export class GlobalErrorBoundary extends Component<Props, State> {}
+  private maxRetries = 3
+  constructor(props: Props) {}
+    super(props)
+    this.state = {}
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      retryCount: 0
     }
-  };
+  }
+  static getDerivedStateFromError(error: Error): Partial<State> {}
+    return {}
+      hasError: true,
+      error
+    }
+  }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
+    this.setState({}
+      error,
+      errorInfo
+    })
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      }
 
-  return (
-    <>
-      <Helmet>
-        <title>Error - Zion Tech Group</title>
-        <meta name="description" content="An error occurred while loading the page" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="max-w-md w-full mx-auto p-8">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
+    // Call custom error handler if provided
+    if (this.props.onError) {}
+      this.props.onError(error, errorInfo)
+    }
+    // Log to external service in production
+    if (process.env.NODE_ENV === 'production') {}
+      this.logErrorToService(error, errorInfo)
+    }
+  }
+
+  private logErrorToService = (_error: Error, errorInfo: ErrorInfo) => {
+    // In a real app, you would send this to an error reporting service
+    // like Sentry, LogRocket, or Bugsnag
+    .toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href
+    })
+  }
+  private handleRetry = () => {}
+}if (this.state.retryCount < this.maxRetries) {}
+      this.setState(prevState => ({}
+        hasError: false,
+        error: null,
+        errorInfo: null,
+        retryCount: prevState.retryCount + 1
+      }))
+    }
+  }
+  private handleGoHome = () => {}
+}window.location.href = '/'
+  }
+  private handleReload = () => {}
+}window.location.reload()
+  }
+  render() {}
+    if (this.state.hasError) {}
+      // Use custom fallback if provided
+      if (this.props.fallback) {}
+        return this.props.fallback
+      }
+      return ()
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="mb-8">
+              <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 flex items-center justify-center mb-6">
+                <AlertTriangle className="w-12 h-12 text-red-400" />
+              </div>
+              <h1 className="text-4xl font-bold text-white mb-4">
+                Oops! Something went wrong
+              </h1>
+              <p className="text-xl text-gray-300 mb-8">
+                We're sorry, but something unexpected happened. Our team has been notified.
+              </p>
             </div>
-            
-            <h1 className="text-xl font-semibold text-white mb-2">
-              Something went wrong
-            </h1>
-            
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try again.
-            </p>
-            
-            <div className="flex space-x-3">
-              {onRetry && (
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-8">
+              <h2 className="text-lg font-semibold text-white mb-4 flex items-center">
+                <Bug className="w-5 h-5 mr-2" />
+                Error Details
+              </h2>
+              <div className="text-left">
+                <p className="text-red-400 font-mono text-sm mb-2">
+                  {this.state.error?.message || 'Unknown error occurred'}
+                </p>
+                {process.env.NODE_ENV === 'development' && this.state.error?.stack && ()
+                  <details className="mt-4">
+                    <summary className="text-gray-300 cursor-pointer hover:text-white">
+                      Stack Trace
+                    </summary>
+                    <pre className="mt-2 p-4 bg-black/50 rounded text-xs text-gray-300 overflow-auto max-h-40">
+                      {this.state.error.stack}
+                    </pre>
+                  </details>
+                )}
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {this.state.retryCount < this.maxRetries && ()
                 <button
-                  onClick={onRetry}
-                  className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-2 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+                  onClick={this.handleRetry}
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
-                  Try Again
+                  <RefreshCw className="w-5 h-5 mr-2" />
+                  Try Again ({this.maxRetries - this.state.retryCount} left)
                 </button>
               )}
-              
               <button
-                onClick={handleReport}
-                className="flex-1 bg-white/10 text-white py-2 px-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
+                onClick={this.handleGoHome}
+                className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center border border-white/20"
               >
-                <Send className="w-4 h-4" />
-                Report Issue
+                <Home className="w-5 h-5 mr-2" />
+                Go Home
+              </button>
+              <button
+                onClick={this.handleReload}
+                className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center border border-white/20"
+              >
+                <RefreshCw className="w-5 h-5 mr-2" />
+                Reload Page
               </button>
             </div>
-
-            {process.env.NODE_ENV === 'development' && (
-              <details className="mt-6 p-4 bg-gray-800/50 rounded-lg text-left">
-                <summary className="cursor-pointer font-medium text-gray-300 mb-2">
-                  Error Details (Development)
-                </summary>
-                <pre className="text-xs text-gray-400 overflow-auto">
-                  {error.toString()}
-                </pre>
-              </details>
+            {this.state.retryCount >= this.maxRetries && ()
+              <div className="mt-6 p-4 bg-yellow-500/20 border border-yellow-500/30 rounded-lg">
+                <p className="text-yellow-300 text-sm">
+                  Maximum retry attempts reached. Please try reloading the page or contact support if the problem persists.
+                </p>
+              </div>
             )}
+            <div className="mt-8 text-sm text-gray-400">
+              <p>Error ID: {Date.now().toString(36)}</p>
+              <p>If this problem continues, please contact our support team.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </>
-  );
-};
+      )
+    }
+    return this.props.children
+  }
+}
+// Functional error boundary for specific components
+export const ErrorBoundary: React.FC<{
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (_error: Error) => void;
+}> = ({ children, fallback, _onError }) => {
+  const [hasError, setHasError] = React.useState(false);
+  const [error, setError] = React.useState<Error | null>(null);
 
-export default EnhancedErrorFeedback;
+  React.useEffect(() => {
+    const handleError = (_event: ErrorEvent) => {
+      setHasError(true);
+      setError(new Error(event.message));
+      if (onError) {
+        onError(new Error(event.message));
+      }
+    }
+    window.addEventListener('error', handleError)
+    return () => window.removeEventListener('error', handleError)
+  }, [onError])
+  if (hasError) {}
+    return fallback || ()
+      <div className="p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
+        <p className="text-red-300">Something went wrong: {error?.message}</p>
+      </div>
+    )
+  }
+  return <>{children}</>
+}
+export default GlobalErrorBoundary

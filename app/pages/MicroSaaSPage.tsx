@@ -1,31 +1,21 @@
-
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import SEOHead from '../components/SEOHead';
 
 const MicroSaaSPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Micro Saa S Solutions - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Innovativemicro Saa S solutions for modern businesses"
-        />
-        <meta
-          name="keywords"
-          content="microsaas, saas solutions, software as a service"
-        />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Micro Saa S Solutions</h1>
-            <div className="text-gray-400">
-              <p>Micro Saa S solutions coming soon...</p>
-            </div>
-          </div>
+      <SEOHead 
+        title="MicroSaaSPage - Zion Tech Group"
+        description="Zion Tech Group MicroSaaSPage page"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">MicroSaaSPage</h1>
+          <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </>
   );
 };
+
 export default MicroSaaSPage;
