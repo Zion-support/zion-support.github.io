@@ -35,7 +35,7 @@ export const createLazyComponent = <P extends object>(
   
   const WrappedComponent = (props: P) => (
     <LazyWrapper>
-      <LazyComponent {...props} />
+      <LazyComponent {...(props as any)} />
     </LazyWrapper>
   );
   
