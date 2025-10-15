@@ -5,6 +5,12 @@ import './index.css';
 import './app/styles/globals.css';
 import './app/styles/futuristic.css';
 
+// Add manifest link to head
+const manifestLink = document.createElement('link');
+manifestLink.rel = 'manifest';
+manifestLink.href = '/manifest.json';
+document.head.appendChild(manifestLink);
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />
