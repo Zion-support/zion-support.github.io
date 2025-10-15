@@ -115,7 +115,9 @@ const SocialMediaSchedulerPage = () => {
     }
   ];
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const ComponentName = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Social Media Scheduler - Zion Tech Group | Multi-Platform Social Media Management"
         description="Advanced social media scheduler with multi-platform posting, content calendar, _analytics, and team collaboration. Streamline your social media management."

@@ -110,7 +110,9 @@ const SoftwareDevelopmentPage = () => {
     }
   ];
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const ComponentName = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Software Development Services - Zion Tech Group | Custom Web & Mobile Apps"
         description="Professional software development services including custom web applications, mobile apps, _enterprise software, and API development. Modern technologies and agile methodology."

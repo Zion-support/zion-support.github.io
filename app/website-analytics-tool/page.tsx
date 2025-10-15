@@ -115,7 +115,9 @@ const WebsiteAnalyticsToolPage = () => {
     }
   ];
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const ComponentName = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Website Analytics Tool - Zion Tech Group | Advanced Web Analytics & Tracking"
         description="Powerful website analytics tool with real-time tracking, visitor behavior analysis, _conversion tracking, and custom dashboards. Optimize your website performance."

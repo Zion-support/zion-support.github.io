@@ -10,6 +10,8 @@ interface PerformanceMetrics {
   memoryUsage?: number;
 }
 
+
+export default ComponentName;
 interface UsePerformanceOptimizationOptions {
   enableMonitoring?: boolean;
   enablePreloading?: boolean;

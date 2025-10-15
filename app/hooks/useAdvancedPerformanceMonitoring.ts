@@ -1,5 +1,7 @@
 import { useEffect, useCallback, useRef } from 'react'
 interface PerformanceMetrics {}
+
+export default ComponentName;
   fcp?: number
   lcp?: number
   fid?: number

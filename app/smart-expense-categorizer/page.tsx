@@ -115,7 +115,9 @@ import { Receipt, TrendingUp, Shield, Zap, BarChart3, Users, CheckCircle, ArrowR
     { number: "3x", label: "Faster Processing" }
   ];
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const ComponentName = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Smart Expense Categorizer | Zion Tech Group</title>
         <meta name="description" content="Automate expense categorization with AI-powered receipt processing, bank integration, and real-time analytics." />

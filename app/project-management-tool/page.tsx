@@ -115,7 +115,9 @@ const ProjectManagementToolPage = () => {
     }
   ];
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const ComponentName = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Project Management Tool - Zion Tech Group | Team Collaboration & Task Management"
         description="Powerful project management tool with task management, team collaboration, _analytics, and time tracking. Streamline your workflow and boost productivity."

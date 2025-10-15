@@ -7,6 +7,8 @@ interface AnalyticsContextType {
   identify: (_userId: string, traits?: Record<string, _unknown>) => void;
   page: (_name: string, properties?: Record<string, _unknown>) => void;
 }
+
+export default ComponentName;
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>()
   undefined,
 )

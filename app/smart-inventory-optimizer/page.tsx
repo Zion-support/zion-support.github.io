@@ -115,7 +115,9 @@ import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle,
     { number: "50%", label: "Less Waste" }
   ];
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const ComponentName = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Smart Inventory Optimizer | Zion Tech Group</title>
         <meta name="description" content="Revolutionize your inventory management with AI-powered demand forecasting, smart reorder points, and real-time analytics." />

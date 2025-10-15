@@ -115,7 +115,9 @@ const TaskAutomationWorkflowPage = () => {
     }
   ];
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const ComponentName = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Task Automation Workflow - Zion Tech Group | Workflow Automation & Process Management"
         description="Advanced task automation workflow platform with visual workflow builder, team collaboration, and analytics. Streamline your business processes and boost productivity."
