@@ -64,11 +64,16 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
         { name: 'AI Price Optimizer', href: '/ai-price-optimizer', icon: CurrencyDollarIcon },
         { name: 'AI Scheduling Assistant', href: '/ai-scheduling-assistant', icon: CogIcon },
         { name: 'AI Content Generator', href: '/ai-content-generator', icon: DocumentTextIcon },
-        { name: 'AI CRM Optimizer', href: '/ai-crm-optimizer', icon: UserGroupIcon },
-        { name: 'AI Data Visualizer', href: '/ai-data-visualizer', icon: ChartBarIcon },
-        { name: 'AI Email Optimizer', href: '/ai-email-optimizer', icon: EnvelopeIcon },
-        { name: 'AI Website Analyzer', href: '/ai-website-analyzer', icon: EyeIcon },
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro', icon: CodeBracketIcon },
+        { name: 'AI Video Analyzer Pro', href: '/ai-video-analyzer-pro', icon: EyeIcon },
+        { name: 'AI Translator Pro', href: '/ai-translator-pro', icon: GlobeAltIcon },
+        { name: 'AI Personalization Engine Pro', href: '/ai-personalization-engine-pro', icon: CpuChipIcon },
+        { name: 'AI Voice Synthesizer Pro', href: '/ai-voice-synthesizer-pro', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Data Scientist Pro', href: '/ai-data-scientist-pro', icon: ChartBarIcon },
+        { name: 'AI Quality Assurance Pro', href: '/ai-quality-assurance-pro', icon: ShieldCheckIcon },
+        { name: 'AI Knowledge Graph Pro', href: '/ai-knowledge-graph-pro', icon: CpuChipIcon },
+        { name: 'AI Recommendation Engine Pro', href: '/ai-recommendation-engine-pro', icon: CpuChipIcon },
+        { name: 'AI Anomaly Detector Pro', href: '/ai-anomaly-detector-pro', icon: ShieldCheckIcon },
         { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon }
       ]
     },
@@ -78,23 +83,25 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
       icon: GlobeAltIcon,
       submenu: [
         { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
-        { name: 'AI Content Generator', href: '/ai-content-generator', icon: DocumentTextIcon },
-        { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon },
-        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
-        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
-        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
-        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon },
-        { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
-        { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
-        { name: 'AI Video Generator', href: '/ai-video-generator', icon: EyeIcon },
-        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: ChatBubbleLeftRightIcon },
-        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: EyeIcon },
-        { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ShieldCheckIcon },
-        { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: UserGroupIcon },
-        { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: AcademicCapIcon },
-        { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: ChartBarIcon },
-        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: CogIcon }
+        { name: 'AI Project Manager Pro', href: '/ai-project-manager-pro', icon: CheckCircleIcon },
+        { name: 'Smart Invoice Generator Pro', href: '/smart-invoice-generator-pro', icon: DocumentTextIcon },
+        { name: 'AI Customer Feedback Analyzer', href: '/ai-customer-feedback-analyzer', icon: ChatBubbleLeftRightIcon },
+        { name: 'Smart Contract Manager Pro', href: '/smart-contract-manager-pro', icon: DocumentTextIcon },
+        { name: 'AI HR Assistant Pro', href: '/ai-hr-assistant-pro', icon: UserGroupIcon },
+        { name: 'Smart Inventory Optimizer Pro', href: '/smart-inventory-optimizer-pro', icon: CircleStackIcon },
+        { name: 'AI Social Media Scheduler Pro', href: '/ai-social-media-scheduler-pro', icon: ShareIcon },
+        { name: 'Smart Email Marketing Pro', href: '/smart-email-marketing-pro', icon: EnvelopeIcon },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro', icon: ChatBubbleLeftRightIcon },
+        { name: 'Smart Analytics Dashboard Pro', href: '/smart-analytics-dashboard-pro', icon: ChartBarIcon },
+        { name: 'AI Workflow Automator Pro', href: '/ai-workflow-automator-pro', icon: CogIcon },
+        { name: 'Smart Document Manager Pro', href: '/smart-document-manager-pro', icon: DocumentTextIcon },
+        { name: 'AI Expense Tracker Pro', href: '/ai-expense-tracker-pro', icon: CurrencyDollarIcon },
+        { name: 'Smart Appointment Scheduler Pro', href: '/smart-appointment-scheduler-pro', icon: CogIcon },
+        { name: 'AI Password Manager Pro', href: '/ai-password-manager-pro', icon: ShieldCheckIcon },
+        { name: 'Smart Backup Manager Pro', href: '/smart-backup-manager-pro', icon: CircleStackIcon },
+        { name: 'AI Monitoring Dashboard Pro', href: '/ai-monitoring-dashboard-pro', icon: ChartBarIcon },
+        { name: 'Smart API Manager Pro', href: '/smart-api-manager-pro', icon: CodeBracketIcon },
+        { name: 'AI Security Scanner Pro', href: '/ai-security-scanner-pro', icon: ShieldCheckIcon }
       ]
     },
     {
@@ -116,16 +123,15 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
         { name: 'Data Engineering', href: '/data-engineering', icon: CircleStackIcon },
         { name: 'API Development', href: '/api-development', icon: CodeBracketIcon },
         { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon },
-        { name: 'Quantum Computing', href: '/quantum-computing-solutions', icon: CpuChipIcon },
-        { name: 'Edge Computing', href: '/edge-computing-solutions', icon: CloudIcon },
-        { name: 'AR Solutions', href: '/augmented-reality-solutions', icon: EyeIcon },
-        { name: 'VR Solutions', href: '/virtual-reality-solutions', icon: EyeIcon },
-        { name: 'RPA Solutions', href: '/robotic-process-automation', icon: CogIcon },
-        { name: 'Low-Code Platform', href: '/low-code-platform', icon: CodeBracketIcon },
-        { name: 'Serverless Architecture', href: '/serverless-architecture', icon: CloudIcon },
-        { name: 'Container Orchestration', href: '/container-orchestration', icon: CircleStackIcon },
-        { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: CpuChipIcon },
-        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: CircleStackIcon }
+        { name: 'Edge Computing', href: '/edge-computing', icon: CogIcon },
+        { name: 'Quantum Computing', href: '/quantum-computing', icon: CpuChipIcon },
+        { name: 'Augmented Reality', href: '/augmented-reality', icon: EyeIcon },
+        { name: 'Virtual Reality', href: '/virtual-reality', icon: EyeIcon },
+        { name: 'Robotic Process Automation', href: '/robotic-process-automation', icon: CogIcon },
+        { name: 'AI Infrastructure & MLOps', href: '/artificial-intelligence-infrastructure', icon: CpuChipIcon },
+        { name: 'Cybersecurity Operations', href: '/cybersecurity-operations', icon: ShieldCheckIcon },
+        { name: 'Cloud Migration', href: '/cloud-migration', icon: CloudIcon },
+        { name: 'Managed IT Services', href: '/managed-it-services', icon: CogIcon }
       ]
     },
     {
@@ -158,12 +164,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
   ];
 
   const isActive = (path: string) => {
-    try {
-      return location.pathname === path;
-    } catch (error) {
-      // Fallback for SSR or if location is undefined
-      return false;
-    }
+    return location.pathname === path;
   };
 
   const toggleServicesMenu = () => {
