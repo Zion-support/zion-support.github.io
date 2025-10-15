@@ -1,15 +1,19 @@
-import React, { Suspense } from 'react'
-import { Helmet } from 'react-helmet-async'
-
-
-
-const Support Page: React.FC = () => {
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle, ArrowRight, Search, Phone, Mail, MessageCircle, Zap, HelpCircle, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+interface FAQ {
+  question: string;
+  answer: string;
+  category: string;
+}
+
 const SupportPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+
   const services = [
     {
       title: 'Expert Support Solutions',
@@ -22,6 +26,27 @@ const SupportPage: React.FC = () => {
     {
       title: '24/7 Support',
       description: 'Round-the-clock support for all your support needs.'
+    }
+  ];
+
+  const resources = [
+    {
+      title: 'Documentation',
+      description: 'Comprehensive guides and API references',
+      icon: BookOpen,
+      link: '/docs'
+    },
+    {
+      title: 'Video Tutorials',
+      description: 'Step-by-step video guides',
+      icon: BookOpen,
+      link: '/tutorials'
+    },
+    {
+      title: 'Community Forum',
+      description: 'Connect with other users and experts',
+      icon: BookOpen,
+      link: '/community'
     }
   ];
 
@@ -108,13 +133,12 @@ const SupportPage: React.FC = () => {
 
   return (
     <>
-      <div>
       <Helmet>
         <title>Support - Zion Tech Group</title>
         <meta name="description" content="Professional support solutions and services" />
         <meta name="keywords" content="support" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">Support</h1>
@@ -136,7 +160,7 @@ const SupportPage: React.FC = () => {
             {/* Quick Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">&lt; 2min</div>
+                <div className="text-3xl font-bold text-white mb-2">&lt; 2min</div>
                 <div className="text-gray-400">Average Response Time</div>
               </div>
               <div className="text-center">
@@ -149,7 +173,7 @@ const SupportPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Support Channels */}
         <section className="py-16 px-4">
@@ -260,14 +284,11 @@ const SupportPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our comprehensive documentation, tutorials, and community resources.
               </p>
-              </div>
+            </div>
           </div>
+        </section>
       </div>
-    </div> 
-          
-        </div>
-      </div>
-</>
+    </>
   );
 };
 

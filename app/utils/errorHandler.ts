@@ -37,10 +37,7 @@ export const errorHandler = {
   },
   
   log: (error: Error, context?: Record<string, unknown>) => {
-<<<<<<< HEAD
-=======
     // Error logging logic
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-74aa
     console.error('Error logged:', error, context);
   },
   

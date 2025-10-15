@@ -11,19 +11,17 @@ const SEOOptimizer: React.FC = () => {
         metaDescription.content = 'Advanced AI & IT Solutions - Transform your business with cutting-edge artificial intelligence, 5G technology, and comprehensive IT services.';
         document.head.appendChild(metaDescription);
       }
-  )
-    }
-  )
-    // Update meta keywords
-    if (keywords) {
-      const meta Keywords = document.query Selector('meta')
-      if (meta Keywords) {
-        meta Keywords.set Attribute('content', keywords)
+
+      // Update meta keywords
+      const keywords = 'AI solutions, artificial intelligence, 5G technology, IT services, business transformation';
+      const metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (metaKeywords) {
+        metaKeywords.setAttribute('content', keywords);
       } else {
-        const meta = document.create Element('meta')
-        meta.name = 'keywords'
-        meta.content = keywords
-        document.head.append Child(meta)
+        const meta = document.createElement('meta');
+        meta.name = 'keywords';
+        meta.content = keywords;
+        document.head.appendChild(meta);
       }
 
       // Add structured data for organization
@@ -65,6 +63,6 @@ const SEOOptimizer: React.FC = () => {
   }, []);
 
   return null; // This component doesn't render anything
-}
-  )
-export default SEO;; Optimizer
+};
+
+export default SEOOptimizer;

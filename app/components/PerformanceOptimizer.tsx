@@ -1,7 +1,11 @@
 import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
 
 
-const PerformanceOptimizer: React.FC = () => {
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
+}
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
@@ -47,7 +51,7 @@ const PerformanceOptimizer: React.FC = () => {
     };
   }, []);
 
-  return null; // This component doesn't render anything
+  return <>{children}</>; // Render children
 };
 
 export default PerformanceOptimizer;

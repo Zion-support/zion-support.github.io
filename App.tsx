@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import Header from './app/components/Header';
 import Footer from './app/components/Footer';
 import Navigation from './app/components/Navigation';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
@@ -26,7 +25,6 @@ import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
 import ITServicesPage from './app/pages/ITServicesPage';
-import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
 import TeamPage from './app/pages/TeamPage';
 import PricingPage from './app/pages/PricingPage';
 import DemoPage from './app/pages/DemoPage';

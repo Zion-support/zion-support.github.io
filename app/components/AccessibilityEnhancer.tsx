@@ -1,7 +1,11 @@
 import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
 
 
-const AccessibilityEnhancer: React.FC = () => {
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
     // Enhance accessibility features
     const enhanceAccessibility = () => {
@@ -40,7 +44,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
   }, []);
 
-  return null; // This component doesn't render anything
+  return <>{children}</>; // Render children
 };
 
 export default AccessibilityEnhancer;
