@@ -45,466 +45,6 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-development'
       }
-    },
-    {
-      id: 'ai-chatbot-pro',
-      title: 'Zion AI Chatbot Pro',
-      description: 'Advanced conversational AI chatbot with natural language understanding and multi-channel deployment',
-      shortDescription: 'Intelligent chatbots that understand and respond naturally',
-      icon: '💬',
-      features: [
-        'Natural Language Understanding',
-        'Multi-language Support',
-        'Voice Integration',
-        'Sentiment Analysis',
-        'Context Awareness',
-        'API Integrations',
-        'Analytics Dashboard',
-        'Custom Training',
-        'Escalation Management',
-        'Omnichannel Deployment'
-      ],
-      pricing: {
-        basic: 199,
-        pro: 499,
-        enterprise: 1299
-      },
-      benefits: [
-        '24/7 customer support',
-        'Reduced response time',
-        'Improved customer satisfaction',
-        'Cost-effective scaling',
-        'Data-driven insights',
-        'Seamless integration'
-      ],
-      useCases: [
-        'Customer support automation',
-        'Lead qualification',
-        'E-commerce assistance',
-        'FAQ automation',
-        'Appointment booking',
-        'Order tracking'
-      ],
-      marketPrice: '$199 - $1,299/month',
-      contactInfo: {
-        phone: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-chatbot-pro'
-      }
-    },
-    {
-      id: 'ai-document-analyzer',
-      title: 'Zion AI Document Analyzer Pro',
-      description: 'Intelligent document processing and analysis platform with OCR, NLP, and automated data extraction',
-      shortDescription: 'Extract insights from documents with AI-powered analysis',
-      icon: '📄',
-      features: [
-        'OCR Technology',
-        'Document Classification',
-        'Data Extraction',
-        'Content Analysis',
-        'Language Detection',
-        'Format Conversion',
-        'Batch Processing',
-        'API Integration',
-        'Custom Templates',
-        'Security Compliance'
-      ],
-      pricing: {
-        basic: 149,
-        pro: 399,
-        enterprise: 999
-      },
-      benefits: [
-        'Automated data entry',
-        'Reduced manual work',
-        'Improved accuracy',
-        'Faster processing',
-        'Cost savings',
-        'Scalable solution'
-      ],
-      useCases: [
-        'Invoice processing',
-        'Contract analysis',
-        'Legal document review',
-        'Medical record analysis',
-        'Insurance claims',
-        'Compliance checking'
-      ],
-      marketPrice: '$149 - $999/month',
-      contactInfo: {
-        phone: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-document-analyzer'
-      }
-    },
-    {
-      id: 'ai-sales-predictor',
-      title: 'Zion AI Sales Predictor Pro',
-      description: 'Advanced sales forecasting and lead scoring platform with machine learning algorithms',
-      shortDescription: 'Predict sales outcomes with AI-powered forecasting',
-      icon: '📈',
-      features: [
-        'Sales Forecasting',
-        'Lead Scoring',
-        'Customer Lifetime Value',
-        'Churn Prediction',
-        'Market Analysis',
-        'Trend Detection',
-        'ROI Prediction',
-        'Custom Models',
-        'Real-time Analytics',
-        'Integration APIs'
-      ],
-      pricing: {
-        basic: 299,
-        pro: 799,
-        enterprise: 1999
-      },
-      benefits: [
-        'Improved sales accuracy',
-        'Better lead prioritization',
-        'Reduced churn rate',
-        'Increased revenue',
-        'Data-driven decisions',
-        'Competitive advantage'
-      ],
-      useCases: [
-        'Sales forecasting',
-        'Lead qualification',
-        'Customer retention',
-        'Revenue optimization',
-        'Market analysis',
-        'Performance tracking'
-      ],
-      marketPrice: '$299 - $1,999/month',
-      contactInfo: {
-        phone: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-sales-predictor'
-      }
-    },
-    {
-      id: 'ai-financial-forecaster',
-      title: 'Zion AI Financial Forecaster Pro',
-      description: 'Comprehensive financial forecasting and analysis platform with AI-powered predictions and risk assessment',
-      shortDescription: 'AI-powered financial forecasting and risk analysis',
-      icon: '💰',
-      features: [
-        'Financial Forecasting',
-        'Risk Assessment',
-        'Budget Planning',
-        'Cash Flow Analysis',
-        'Investment Optimization',
-        'Market Prediction',
-        'Fraud Detection',
-        'Compliance Monitoring',
-        'Real-time Alerts',
-        'Custom Dashboards'
-      ],
-      pricing: {
-        basic: 399,
-        pro: 999,
-        enterprise: 2499
-      },
-      benefits: [
-        'Accurate financial predictions',
-        'Risk mitigation',
-        'Better investment decisions',
-        'Compliance assurance',
-        'Cost optimization',
-        'Strategic planning'
-      ],
-      useCases: [
-        'Financial planning',
-        'Investment analysis',
-        'Risk management',
-        'Budget optimization',
-        'Fraud prevention',
-        'Compliance monitoring'
-      ],
-      marketPrice: '$399 - $2,499/month',
-      contactInfo: {
-        phone: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-financial-forecaster'
-      }
-    },
-    {
-      id: 'ai-customer-sentiment-tracker',
-      title: 'Zion AI Customer Sentiment Tracker Pro',
-      description: 'Real-time customer sentiment analysis and monitoring platform across all communication channels',
-      shortDescription: 'Monitor and analyze customer sentiment in real-time',
-      icon: '😊',
-      features: [
-        'Real-time Sentiment Analysis',
-        'Multi-channel Monitoring',
-        'Emotion Detection',
-        'Trend Analysis',
-        'Alert System',
-        'Custom Dashboards',
-        'API Integration',
-        'Historical Tracking',
-        'Competitor Analysis',
-        'Actionable Insights'
-      ],
-      pricing: {
-        basic: 199,
-        pro: 499,
-        enterprise: 1299
-      },
-      benefits: [
-        'Improved customer satisfaction',
-        'Proactive issue resolution',
-        'Better brand reputation',
-        'Data-driven insights',
-        'Competitive advantage',
-        'Customer retention'
-      ],
-      useCases: [
-        'Brand monitoring',
-        'Customer feedback analysis',
-        'Social media monitoring',
-        'Review management',
-        'Crisis management',
-        'Market research'
-      ],
-      marketPrice: '$199 - $1,299/month',
-      contactInfo: {
-        phone: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-customer-sentiment-tracker'
-      }
-    },
-    {
-      id: 'ai-meeting-transcriber',
-      title: 'Zion AI Meeting Transcriber Pro',
-      description: 'Advanced meeting transcription and analysis platform with AI-powered insights and action item extraction',
-      shortDescription: 'Transform meetings into actionable insights with AI',
-      icon: '🎤',
-      features: [
-        'Real-time Transcription',
-        'Speaker Identification',
-        'Action Item Extraction',
-        'Meeting Summaries',
-        'Search & Analytics',
-        'Multi-language Support',
-        'Integration APIs',
-        'Custom Vocabulary',
-        'Audio Quality Enhancement',
-        'Cloud Storage'
-      ],
-      pricing: {
-        basic: 99,
-        pro: 299,
-        enterprise: 799
-      },
-      benefits: [
-        'Improved meeting efficiency',
-        'Better documentation',
-        'Actionable insights',
-        'Time savings',
-        'Enhanced collaboration',
-        'Searchable records'
-      ],
-      useCases: [
-        'Meeting documentation',
-        'Action item tracking',
-        'Compliance recording',
-        'Training materials',
-        'Client meetings',
-        'Board meetings'
-      ],
-      marketPrice: '$99 - $799/month',
-      contactInfo: {
-        phone: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-meeting-transcriber'
-      }
-    },
-    {
-      id: 'ai-customer-churn-predictor',
-      title: 'Zion AI Customer Churn Predictor Pro',
-      description: 'Predictive analytics platform to identify at-risk customers and prevent churn with targeted retention strategies',
-      shortDescription: 'Predict and prevent customer churn with AI',
-      icon: '⚠️',
-      features: [
-        'Churn Prediction Models',
-        'Risk Scoring',
-        'Retention Campaigns',
-        'Behavioral Analysis',
-        'Early Warning System',
-        'Custom Triggers',
-        'A/B Testing',
-        'Integration APIs',
-        'Real-time Alerts',
-        'ROI Tracking'
-      ],
-      pricing: {
-        basic: 249,
-        pro: 699,
-        enterprise: 1799
-      },
-      benefits: [
-        'Reduced churn rate',
-        'Increased retention',
-        'Better customer insights',
-        'Targeted interventions',
-        'Revenue protection',
-        'Competitive advantage'
-      ],
-      useCases: [
-        'Customer retention',
-        'Subscription management',
-        'SaaS optimization',
-        'E-commerce retention',
-        'Service improvement',
-        'Revenue protection'
-      ],
-      marketPrice: '$249 - $1,799/month',
-      contactInfo: {
-        phone: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-customer-churn-predictor'
-      }
-    },
-    {
-      id: 'ai-content-moderator',
-      title: 'Zion AI Content Moderator Pro',
-      description: 'Automated content moderation platform with AI-powered detection of inappropriate content across text, images, and videos',
-      shortDescription: 'Automate content moderation with AI-powered detection',
-      icon: '🛡️',
-      features: [
-        'Multi-media Moderation',
-        'Real-time Detection',
-        'Custom Rules Engine',
-        'Bulk Processing',
-        'API Integration',
-        'Confidence Scoring',
-        'Human Review Queue',
-        'Analytics Dashboard',
-        'Compliance Reporting',
-        'Custom Training'
-      ],
-      pricing: {
-        basic: 199,
-        pro: 599,
-        enterprise: 1499
-      },
-      benefits: [
-        'Automated moderation',
-        'Reduced manual work',
-        'Consistent enforcement',
-        'Scalable solution',
-        'Compliance assurance',
-        'Cost savings'
-      ],
-      useCases: [
-        'Social media moderation',
-        'E-commerce content',
-        'User-generated content',
-        'Community management',
-        'Compliance monitoring',
-        'Brand protection'
-      ],
-      marketPrice: '$199 - $1,499/month',
-      contactInfo: {
-        phone: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-content-moderator'
-      }
-    },
-    {
-      id: 'ai-task-scheduler',
-      title: 'Zion AI Task Scheduler Pro',
-      description: 'Intelligent task scheduling and project management platform with AI-powered optimization and resource allocation',
-      shortDescription: 'Optimize task scheduling with AI-powered automation',
-      icon: '📅',
-      features: [
-        'AI Task Optimization',
-        'Resource Allocation',
-        'Deadline Management',
-        'Priority Scoring',
-        'Dependency Tracking',
-        'Team Collaboration',
-        'Progress Monitoring',
-        'Integration APIs',
-        'Custom Workflows',
-        'Analytics Dashboard'
-      ],
-      pricing: {
-        basic: 79,
-        pro: 199,
-        enterprise: 599
-      },
-      benefits: [
-        'Optimized scheduling',
-        'Improved productivity',
-        'Better resource utilization',
-        'Reduced conflicts',
-        'Enhanced collaboration',
-        'Data-driven decisions'
-      ],
-      useCases: [
-        'Project management',
-        'Resource planning',
-        'Team coordination',
-        'Deadline optimization',
-        'Workflow automation',
-        'Performance tracking'
-      ],
-      marketPrice: '$79 - $599/month',
-      contactInfo: {
-        phone: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-task-scheduler'
-      }
-    },
-    {
-      id: 'ai-workflow-automator-pro',
-      title: 'Zion AI Workflow Automator Pro',
-      description: 'Advanced workflow automation platform with AI-powered process optimization and intelligent decision making',
-      shortDescription: 'Automate complex workflows with AI intelligence',
-      icon: '⚡',
-      features: [
-        'Visual Workflow Builder',
-        'AI Process Optimization',
-        'Smart Decision Making',
-        'Integration Connectors',
-        'Conditional Logic',
-        'Error Handling',
-        'Monitoring Dashboard',
-        'Team Collaboration',
-        'Custom Triggers',
-        'Analytics & Reporting'
-      ],
-      pricing: {
-        basic: 149,
-        pro: 399,
-        enterprise: 999
-      },
-      benefits: [
-        'Process automation',
-        'Reduced manual work',
-        'Improved accuracy',
-        'Faster execution',
-        'Cost savings',
-        'Scalable operations'
-      ],
-      useCases: [
-        'Business process automation',
-        'Data processing',
-        'Customer onboarding',
-        'Order fulfillment',
-        'Lead qualification',
-        'Report generation'
-      ],
-      marketPrice: '$149 - $999/month',
-      contactInfo: {
-        phone: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com/ai-workflow-automator-pro'
-      }
 
     },
     {
@@ -1011,6 +551,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-consulting'
+
 }
     },
     {
@@ -1242,6 +783,11 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-customer-satisfaction-monitor'
       }
+
+      },
+
+      }
+
     },
     {
       id: 'ai-inventory-optimizer-pro',
@@ -1517,7 +1063,11 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-content-generator'
-},
+
+      },
+
+      }
+
     },
     {
       id: 'ai-customer-support',
@@ -1563,7 +1113,11 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-customer-support'
-},
+
+      },
+
+      }
+
     }
   ],
   microSaas: [
@@ -2302,6 +1856,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/security-scanner-pro'
       }
+
     },
     {
       id: 'smart-expense-tracker',
@@ -3037,7 +2592,11 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/expense-tracker'
-},
+
+      },
+
+      }
+
     },
     {
       id: 'email-marketing',
@@ -3083,7 +2642,11 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/email-marketing'
-},
+
+      },
+
+      }
+
     },
     {
       id: 'social-scheduler',
@@ -3129,7 +2692,11 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/social-scheduler'
-},
+
+      },
+
+      }
+
     },
     {
       id: 'inventory-optimizer',
@@ -3175,7 +2742,11 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/inventory-optimizer'
-},
+
+      },
+
+      }
+
     },
     {
       id: 'workflow-automator',
@@ -3221,7 +2792,11 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/workflow-automator'
-},
+
+      },
+
+      }
+
     }
   ],
   itSolutions: [
@@ -3822,6 +3397,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/digital-transformation'
       }
+
     },
     {
       id: 'devops-automation',
@@ -4419,7 +3995,11 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/cybersecurity'
-},
+
+      },
+
+      }
+
     },
     {
       id: 'data-analytics',
@@ -4465,7 +4045,11 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/data-analytics'
-},
+
+      },
+
+      }
+
     },
     {
       id: 'mobile-development',
@@ -4511,7 +4095,11 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/mobile-development'
-},
+
+      },
+
+      }
+
     },
     {
       id: 'web-development',
@@ -4557,7 +4145,11 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/web-development'
-},
+
+      },
+
+      }
+
     },
     {
       id: 'database-management',
@@ -4603,7 +4195,8 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/database-management'
-},
+
+      },
     }
   ],
   // New AI Services
@@ -5348,6 +4941,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/security-audit'
+
       }
     }
   ]
