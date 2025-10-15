@@ -242,14 +242,15 @@ const HomePage: React.FC = () => {
 
         {/* Micro SAAS Showcase Section */}
         <section className="py-16 sm:py-20 bg-slate-800/30 relative overflow-hidden">
-          {/* Animated Background */}
+          {/* Enhanced Animated Background */}
           <div className="absolute inset-0 cyber-grid opacity-20"></div>
-          <div className="floating-particles">
-            {[...Array(20)].map((_, i) => (
-              <div key={i} className="particle" style={{
+          <div className="absolute inset-0 matrix-bg"></div>
+          <div className="quantum-particles">
+            {[...Array(30)].map((_, i) => (
+              <div key={i} className="quantum-particle" style={{
                 left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 15}s`,
-                animationDuration: `${15 + Math.random() * 10}s`
+                animationDelay: `${Math.random() * 20}s`,
+                animationDuration: `${20 + Math.random() * 10}s`
               }}></div>
             ))}
           </div>
@@ -257,7 +258,7 @@ const HomePage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-                Featured <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent neon-text">Micro SAAS Solutions</span>
+                Featured <span className="holographic-text neon-glow-enhanced">Micro SAAS Solutions</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
                 Discover our innovative micro SAAS applications designed to solve specific business challenges with real functionality and AI-powered intelligence.
@@ -265,8 +266,8 @@ const HomePage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* AI Content Generator */}
-              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20">
+              {/* AI Content Generator Pro */}
+              <div className="group holographic-card energy-wave p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
                     <SparklesIcon className="w-6 h-6 text-white" />
@@ -277,7 +278,7 @@ const HomePage: React.FC = () => {
                   AI Content Generator Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Generate high-quality content for blogs, social media, and marketing materials using advanced AI with 95% accuracy.
+                  Generate high-quality content for blogs, social media, and marketing materials using advanced AI with 95% accuracy and real-time optimization.
                 </p>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-cyan-400 neon-text">$199/mo</span>
@@ -290,22 +291,26 @@ const HomePage: React.FC = () => {
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>SEO optimization</span>
+                    <span>SEO optimization & keyword research</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Multi-language support</span>
+                    <span>Multi-language support (50+ languages)</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Brand voice customization</span>
                   </div>
                 </div>
                 <Link to="/ai-content-generator"
-                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  className="block w-full cyber-button-enhanced text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
-                  Try Free Trial
+                  Try Free Trial - 14 Days
                 </Link>
               </div>
 
-              {/* AI CRM Optimizer */}
-              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20">
+              {/* AI CRM Optimizer Pro */}
+              <div className="group holographic-card energy-wave p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
                     <UserGroupIcon className="w-6 h-6 text-white" />
@@ -313,10 +318,10 @@ const HomePage: React.FC = () => {
                   <span className="text-sm text-purple-400 font-medium neon-text">CRM AI</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                  AI CRM Optimizer
+                  AI CRM Optimizer Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Transform your sales process with AI-powered lead scoring, predictive analytics, and automated workflows.
+                  Transform your sales process with AI-powered lead scoring, predictive analytics, automated workflows, and real-time customer insights.
                 </p>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-purple-400 neon-text">$299/mo</span>
@@ -329,22 +334,26 @@ const HomePage: React.FC = () => {
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>AI lead scoring</span>
+                    <span>AI lead scoring & prioritization</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Predictive analytics</span>
+                    <span>Predictive analytics & forecasting</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Automated follow-up sequences</span>
                   </div>
                 </div>
                 <Link to="/ai-crm-optimizer"
-                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  className="block w-full cyber-button-enhanced text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
-                  Try Free Trial
+                  Try Free Trial - 14 Days
                 </Link>
               </div>
 
-              {/* AI Data Visualizer */}
-              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20">
+              {/* AI Data Visualizer Pro */}
+              <div className="group holographic-card energy-wave p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
                     <ChartBarIcon className="w-6 h-6 text-white" />
@@ -352,10 +361,10 @@ const HomePage: React.FC = () => {
                   <span className="text-sm text-cyan-400 font-medium neon-text">Data Viz</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
-                  AI Data Visualizer
+                  AI Data Visualizer Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Transform complex data into stunning visualizations with AI-powered insights and 50+ chart types.
+                  Transform complex data into stunning visualizations with AI-powered insights, 50+ chart types, and real-time interactive dashboards.
                 </p>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-cyan-400 neon-text">$149/mo</span>
@@ -364,26 +373,30 @@ const HomePage: React.FC = () => {
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>50+ chart types</span>
+                    <span>50+ interactive chart types</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>AI-powered insights</span>
+                    <span>AI-powered insights & recommendations</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Real-time dashboards</span>
+                    <span>Real-time dashboards & alerts</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Custom branding & white-labeling</span>
                   </div>
                 </div>
                 <Link to="/ai-data-visualizer"
-                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  className="block w-full cyber-button-enhanced text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
-                  Try Free Trial
+                  Try Free Trial - 14 Days
                 </Link>
               </div>
 
-              {/* Social Media Scheduler */}
-              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/20">
+              {/* Social Media Scheduler Pro */}
+              <div className="group holographic-card energy-wave p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/20">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
                     <ShareIcon className="w-6 h-6 text-white" />
@@ -391,10 +404,10 @@ const HomePage: React.FC = () => {
                   <span className="text-sm text-pink-400 font-medium neon-text">Social</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-pink-300 transition-colors">
-                  Social Media Scheduler
+                  Social Media Scheduler Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Streamline your social media with AI-powered scheduling, content optimization, and multi-platform management.
+                  Streamline your social media with AI-powered scheduling, content optimization, multi-platform management, and engagement analytics.
                 </p>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-pink-400 neon-text">$49/mo</span>
@@ -407,17 +420,107 @@ const HomePage: React.FC = () => {
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>AI content optimization</span>
+                    <span>AI content optimization & hashtag suggestions</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>40% higher engagement</span>
+                    <span>40% higher engagement rates</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Advanced analytics & ROI tracking</span>
                   </div>
                 </div>
                 <Link to="/social-media-scheduler"
-                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  className="block w-full cyber-button-enhanced text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
-                  Try Free Trial
+                  Try Free Trial - 14 Days
+                </Link>
+              </div>
+
+              {/* AI Expense Tracker Pro */}
+              <div className="group holographic-card energy-wave p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <CurrencyDollarIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-green-400 font-medium neon-text">Finance</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
+                  AI Expense Tracker Pro
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Smart expense management with AI-powered categorization, receipt scanning, budget forecasting, and automated tax preparation.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-green-400 neon-text">$79/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$149/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>AI-powered receipt scanning</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Automated categorization & tax prep</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Budget forecasting & alerts</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Multi-currency support</span>
+                  </div>
+                </div>
+                <Link to="/expense-tracker-pro"
+                  className="block w-full cyber-button-enhanced text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial - 14 Days
+                </Link>
+              </div>
+
+              {/* AI Inventory Manager Pro */}
+              <div className="group holographic-card energy-wave p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <CircleStackIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-orange-400 font-medium neon-text">Inventory</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-orange-300 transition-colors">
+                  AI Inventory Manager Pro
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Intelligent inventory management with AI-powered demand forecasting, automated reordering, and real-time stock optimization.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-orange-400 neon-text">$129/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$249/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>AI demand forecasting (95% accuracy)</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Automated reordering & supplier management</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Real-time stock optimization</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Multi-location & warehouse support</span>
+                  </div>
+                </div>
+                <Link to="/zion-smart-inventory-manager"
+                  className="block w-full cyber-button-enhanced text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial - 14 Days
                 </Link>
               </div>
             </div>

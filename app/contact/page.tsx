@@ -43,18 +43,32 @@ const ContactPage: React.FC = memo(() => {
         canonicalUrl="https://ziontechgroup.com/contact"
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="min-h-screen bg-slate-900 text-white relative overflow-hidden">
+        {/* Futuristic Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-slate-900 to-cyan-900/30"></div>
+        <div className="absolute inset-0 cyber-grid opacity-20"></div>
+        <div className="quantum-particles">
+          {[...Array(25)].map((_, i) => (
+            <div key={i} className="quantum-particle" style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 20}s`,
+              animationDuration: `${20 + Math.random() * 10}s`
+            }}></div>
+          ))}
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Contact Us</h1>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 holographic-text neon-glow-enhanced">
+              Contact Us
+            </h1>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
               Ready to transform your business with our AI and IT solutions? Get in touch with our expert team today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+13024640950" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              <a href="tel:+13024640950" className="cyber-button-enhanced px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
                 📞 Call +1 (302) 464-0950
               </a>
-              <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
+              <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-300 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-border-animated">
                 ✉️ Email Us
               </a>
             </div>
