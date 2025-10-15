@@ -284,6 +284,7 @@ const AIProjectManagerProPage = () => {
             </div>
           </section>
         </main>
+      </div>
     </>
   );
 };
