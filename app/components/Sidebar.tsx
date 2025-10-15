@@ -8,12 +8,18 @@ const Sidebar: React.FC = () => {
         <div className="p-4">
           <h2 className="text-lg font-semibold text-gray-900">Quick Navigation</h2>
         </div>
+<<<<<<< HEAD
         <nav className="flex-1 px-4 pb-4 space-y-1">
           <div className="space-y-1">
             <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Core Services</div>
             <Link to="/services" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               All Services
             </Link>
+=======
+        <nav className="flex-1 px-4 pb-4 space-y-1 overflow-y-auto">
+          <div className="mb-4">
+            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Main Services</h3>
+>>>>>>> cursor/analyze-improve-and-merge-code-6282
             <Link to="/ai-services" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               AI Services
             </Link>
@@ -31,10 +37,17 @@ const Sidebar: React.FC = () => {
             </Link>
           </div>
           
+<<<<<<< HEAD
           <div className="space-y-1 mt-6">
             <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">AI Products</div>
             <Link to="/ai-content-generator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               AI Content Generator
+=======
+          <div className="mb-4">
+            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">AI Tools</h3>
+            <Link to="/zion-ai-content-moderator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Content Moderator
+>>>>>>> cursor/analyze-improve-and-merge-code-6282
             </Link>
             <Link to="/zion-ai-customer-support-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               AI Customer Support Pro
@@ -47,8 +60,13 @@ const Sidebar: React.FC = () => {
             </Link>
           </div>
           
+<<<<<<< HEAD
           <div className="space-y-1 mt-6">
             <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Company</div>
+=======
+          <div className="mb-4">
+            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Company</h3>
+>>>>>>> cursor/analyze-improve-and-merge-code-6282
             <Link to="/about" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               About
             </Link>
@@ -63,8 +81,13 @@ const Sidebar: React.FC = () => {
             </Link>
           </div>
           
+<<<<<<< HEAD
           <div className="space-y-1 mt-6">
             <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Resources</div>
+=======
+          <div>
+            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Resources</h3>
+>>>>>>> cursor/analyze-improve-and-merge-code-6282
             <Link to="/blog" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Blog
             </Link>
@@ -74,6 +97,7 @@ const Sidebar: React.FC = () => {
             <Link to="/api-docs" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               API Documentation
             </Link>
+<<<<<<< HEAD
           </div>
           
           <div className="space-y-1 mt-6">
@@ -86,6 +110,10 @@ const Sidebar: React.FC = () => {
             </Link>
             <Link to="/accessibility" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Accessibility
+=======
+            <Link to="/help" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Help Center
+>>>>>>> cursor/analyze-improve-and-merge-code-6282
             </Link>
           </div>
         </nav>
