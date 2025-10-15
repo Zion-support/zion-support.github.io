@@ -1,211 +1,289 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Code, Globe, Smartphone, Database, Shield, Zap, Users, Clock, DollarSign } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
+import { 
+  Code, 
+  Globe, 
+  Smartphone, 
+  Zap, 
+  Shield, 
+  BarChart3, 
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Award,
+  Clock,
+  Users,
+  Settings
+} from 'lucide-react';
 
-const WebDevelopmentPage = () => {
-  const services = [
+const WebDevelopmentPage: React.FC = () => {
+  const webServices = [
     {
-      id: 'frontend-development',
-      title: 'Frontend Development',
-      description: 'Modern, responsive web applications using React, Vue, and Angular.',
-      icon: Code,
-      features: ['React Applications', 'Vue.js Development', 'Angular Solutions', 'Progressive Web Apps'],
-      price: 'Starting at $2,500'
-    },
-    {
-      id: 'backend-development',
-      title: 'Backend Development',
-      description: 'Robust server-side applications and APIs for your business needs.',
-      icon: Database,
-      features: ['Node.js APIs', 'Python/Django', 'PHP/Laravel', 'Microservices'],
-      price: 'Starting at $3,000'
-    },
-    {
-      id: 'full-stack-development',
-      title: 'Full-Stack Development',
-      description: 'Complete web solutions from frontend to backend and everything in between.',
-      icon: Globe,
-      features: ['End-to-End Solutions', 'Database Design', 'API Integration', 'Deployment'],
-      price: 'Starting at $5,000'
-    },
-    {
-      id: 'mobile-web-apps',
-      title: 'Mobile Web Apps',
-      description: 'Cross-platform mobile applications that work on all devices.',
+      id: 'responsive-web-design',
+      title: 'Responsive Web Design',
+      description: 'Create beautiful, mobile-first websites that work perfectly on all devices.',
       icon: Smartphone,
-      features: ['Responsive Design', 'Mobile Optimization', 'Touch Interfaces', 'Offline Support'],
-      price: 'Starting at $3,500'
+      features: ['Mobile-First Design', 'Cross-Browser Compatibility', 'Fast Loading', 'SEO Optimized'],
+      price: 'Starting at $2,999',
+      popular: true,
     },
     {
       id: 'e-commerce-solutions',
       title: 'E-commerce Solutions',
-      description: 'Complete online stores with payment processing and inventory management.',
-      icon: Shield,
-      features: ['Payment Integration', 'Inventory Management', 'Order Processing', 'Security'],
-      price: 'Starting at $4,500'
+      description: 'Build powerful online stores with advanced features and seamless user experience.',
+      icon: Globe,
+      features: ['Payment Integration', 'Inventory Management', 'Order Tracking', 'Admin Dashboard'],
+      price: 'Starting at $4,999',
+      popular: false,
     },
     {
-      id: 'web-optimization',
-      title: 'Web Optimization',
-      description: 'Performance optimization and SEO improvements for existing websites.',
+      id: 'web-applications',
+      title: 'Web Applications',
+      description: 'Develop custom web applications tailored to your specific business needs.',
+      icon: Code,
+      features: ['Custom Development', 'API Integration', 'Database Design', 'User Authentication'],
+      price: 'Starting at $7,999',
+      popular: false,
+    },
+    {
+      id: 'cms-development',
+      title: 'CMS Development',
+      description: 'Create content management systems that make it easy to update your website.',
+      icon: Settings,
+      features: ['Easy Content Updates', 'User Management', 'SEO Tools', 'Multi-language Support'],
+      price: 'Starting at $3,999',
+      popular: false,
+    },
+    {
+      id: 'progressive-web-apps',
+      title: 'Progressive Web Apps',
+      description: 'Build app-like experiences that work offline and can be installed on devices.',
       icon: Zap,
-      features: ['Speed Optimization', 'SEO Enhancement', 'Security Updates', 'Analytics'],
-      price: 'Starting at $1,500'
-    }
+      features: ['Offline Functionality', 'Push Notifications', 'App-like Experience', 'Installable'],
+      price: 'Starting at $5,999',
+      popular: false,
+    },
+    {
+      id: 'web-maintenance',
+      title: 'Web Maintenance',
+      description: 'Keep your website secure, updated, and performing at its best.',
+      icon: Shield,
+      features: ['Security Updates', 'Performance Optimization', 'Backup & Recovery', '24/7 Monitoring'],
+      price: 'Starting at $299/month',
+      popular: false,
+    },
   ];
 
-  const process = [
+  const technologies = [
+    { name: 'React', icon: '⚛️' },
+    { name: 'Next.js', icon: '▲' },
+    { name: 'TypeScript', icon: '🔷' },
+    { name: 'Node.js', icon: '🟢' },
+    { name: 'MongoDB', icon: '🍃' },
+    { name: 'PostgreSQL', icon: '🐘' },
+    { name: 'AWS', icon: '☁️' },
+    { name: 'Docker', icon: '🐳' },
+  ];
+
+  const benefits = [
     {
-      step: '01',
-      title: 'Discovery & Planning',
-      description: 'We analyze your requirements and create a detailed project plan.'
+      title: 'Modern Technologies',
+      description: 'We use the latest technologies and best practices for optimal performance.',
+      icon: Code,
     },
     {
-      step: '02',
-      title: 'Design & Prototyping',
-      description: 'We create wireframes and prototypes to visualize your project.'
+      title: 'Mobile-First Approach',
+      description: 'All our websites are designed mobile-first for the best user experience.',
+      icon: Smartphone,
     },
     {
-      step: '03',
-      title: 'Development',
-      description: 'Our team builds your application using the latest technologies.'
+      title: 'SEO Optimized',
+      description: 'Built-in SEO features to help your website rank higher in search results.',
+      icon: BarChart3,
     },
     {
-      step: '04',
-      title: 'Testing & Launch',
-      description: 'We thoroughly test your application and deploy it to production.'
-    }
+      title: 'Fast & Secure',
+      description: 'Optimized for speed and security to protect your business and users.',
+      icon: Shield,
+    },
   ];
 
   return (
-    <div className="min-h-screen">
-      <EnhancedSEO 
-        title="Web Development Services - Zion Tech Group"
-        description="Professional web development services including frontend, backend, full-stack, and mobile web applications."
-        keywords="web development, frontend development, backend development, full-stack development, mobile web apps, e-commerce"
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Web Development Services
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Professional web development services to bring your ideas to life with modern, scalable, and secure web applications.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors flex items-center justify-center gap-2"
-            >
-              Get Started <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link 
-              to="/demo" 
-              className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-3 px-8 rounded-lg transition-colors"
-            >
-              View Portfolio
-            </Link>
+    <>
+      <Helmet>
+        <title>Web Development - Zion Tech Group | Custom Website Solutions</title>
+        <meta name="description" content="Professional web development services including responsive design, e-commerce, web applications, and CMS development." />
+        <meta name="keywords" content="web development, website design, e-commerce, web applications, responsive design, CMS development" />
+        <link rel="canonical" href="https://ziontechgroup.com/web-development" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Web <span className="text-cyan-400">Development</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Create stunning, high-performance websites and web applications that drive business growth and engage your audience.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors flex items-center justify-center space-x-2"
+              >
+                <span>Get Quote</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/demo"
+                className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 font-semibold py-3 px-8 rounded-lg transition-colors"
+              >
+                View Portfolio
+              </Link>
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* Technologies Section */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Technologies We Use
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+              {technologies.map((tech, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-slate-800/50 rounded-lg flex items-center justify-center mx-auto mb-3 text-2xl">
+                    {tech.icon}
+                  </div>
+                  <span className="text-gray-300 text-sm">{tech.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Why Choose Our Web Development Services?
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => {
+                const IconComponent = benefit.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <IconComponent className="w-8 h-8 text-cyan-400" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                    <p className="text-gray-300">{benefit.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service) => {
-            const IconComponent = service.icon;
-            return (
-              <div key={service.id} className="bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700 hover:border-blue-500 transition-colors p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <IconComponent className="w-12 h-12 text-blue-400" />
-                  <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+        <section className="px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Our Web Development Services
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {webServices.map((service) => {
+                const IconComponent = service.icon;
+                return (
+                  <div
+                    key={service.id}
+                    className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 ${
+                      service.popular 
+                        ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
+                        : 'border-cyan-500/20'
+                    }`}
+                  >
+                    {service.popular && (
+                      <div className="flex items-center justify-center mb-4">
+                        <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center space-x-1">
+                          <Star className="w-4 h-4" />
+                          <span>Most Popular</span>
+                        </span>
+                      </div>
+                    )}
+                    
+                    <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+                      <IconComponent className="w-6 h-6 text-cyan-400" />
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                    <p className="text-gray-300 mb-6">{service.description}</p>
+                    
+                    <ul className="space-y-2 mb-6">
+                      {service.features.map((feature, index) => (
+                        <li key={index} className="flex items-center space-x-2 text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <div className="flex items-center justify-between mb-6">
+                      <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                      <div className="flex items-center space-x-1 text-gray-400 text-sm">
+                        <Clock className="w-4 h-4" />
+                        <span>2-4 weeks</span>
+                      </div>
+                    </div>
+                    
+                    <Link
+                      to="/contact"
+                      className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                    >
+                      <span>Get Quote</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
                   </div>
-                </div>
-                
-                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-lg font-bold text-blue-400">{service.price}</span>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Clock className="w-4 h-4 mr-1" />
-                    <span>2-8 weeks</span>
-                  </div>
-                </div>
-                
-                <Link 
-                  to={`/${service.id}`}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
-                >
-                  Learn More <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Development Process */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Development Process</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">{step.step}</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-                <p className="text-gray-300">{step.description}</p>
-              </div>
-            ))}
+                );
+              })}
+            </div>
           </div>
-        </div>
+        </section>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-lg p-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Build Your Web Application?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss your project requirements and create a custom web solution that meets your business needs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
-            >
-              <Code className="w-5 h-5" />
-              Start Your Project
-            </Link>
-            <Link 
-              to="/pricing" 
-              className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-colors"
-            >
-              View Pricing
-            </Link>
+        <section className="px-4 sm:px-6 lg:px-8 pb-20">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Ready to Build Your Dream Website?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Let our expert developers create a website that perfectly represents your brand and drives results.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                >
+                  <span>Start Your Project</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/demo"
+                  className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 font-semibold py-3 px-8 rounded-lg transition-colors"
+                >
+                  View Portfolio
+                </Link>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
+    </>
   );
 };
 
 export default WebDevelopmentPage;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-30da

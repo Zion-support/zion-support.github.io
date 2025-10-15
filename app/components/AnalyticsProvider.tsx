@@ -1,89 +1,67 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
-import React, { useEffect } from 'react';
-=======
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
-
-const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useEffect(() => {
-    // Initialize analytics
-    }, []);
-
-<<<<<<< HEAD
-  return <>{children}</>;
-<<<<<<< HEAD
-};
-
-export default AnalyticsProvider;
-=======
 import React, { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string, properties?: Record<string, any>) => void;
+  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackPageView: (pageName: string, pagePath: string) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
 interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
 
-<<<<<<< HEAD
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    // Track event with Google Analytics or other analytics service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', eventName, properties);
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  useEffect(() => {
+    // Initialize Google Analytics or other analytics service
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+      // Add Google Analytics script here
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID || 'GA_MEASUREMENT_ID'}`;
+      document.head.appendChild(script);
+
+      script.onload = () => {
+        (window as any).dataLayer = (window as any).dataLayer || [];
+        function gtag(...args: any[]) {
+          (window as any).dataLayer.push(args);
+        }
+        (window as any).gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', process.env.REACT_APP_GA_ID || 'GA_MEASUREMENT_ID');
+      };
+    }
+  }, []);
+
+  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', eventName, parameters);
     }
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', eventName, properties);
+      console.log('Analytics Event:', eventName, parameters);
     }
   };
 
-  const trackPageView = (pageName: string, properties?: Record<string, any>) => {
-    // Track page view with Google Analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+  const trackPageView = (pageName: string, pagePath: string) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', process.env.REACT_APP_GA_ID || 'GA_MEASUREMENT_ID', {
         page_title: pageName,
         page_location: window.location.href,
-        ...properties
+        page_path: pagePath,
       });
     }
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Page View:', pageName, properties);
+      console.log('Page View:', pageName, pagePath);
     }
   };
 
-  useEffect(() => {
-    // Initialize analytics
-    if (typeof window !== 'undefined') {
-      // Initialize Google Analytics or other analytics service
-      console.log('Analytics initialized');
-    }
-  }, []);
-
   const value: AnalyticsContextType = {
     trackEvent,
-    trackPageView
+    trackPageView,
   };
 
   return (
@@ -91,28 +69,14 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
       {children}
     </AnalyticsContext.Provider>
   );
-=======
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-}) => {
-  useEffect(() => {
-    // Initialize Google Analytics if available
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: document.title,
-        page_location: window.location.href,
-      });
-    }
-  }, []);
+};
 
-  return <>{children}</>;
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
+export const useAnalytics = (): AnalyticsContextType => {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
 };
 
 export default AnalyticsProvider;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
-};
-
-export default AnalyticsProvider;
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
