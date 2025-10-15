@@ -50,6 +50,11 @@ const AILeadScoringPage = lazy(() => import('./app/ai-lead-scoring/page'));
 const AIPredictiveMaintenancePage = lazy(() => import('./app/ai-predictive-maintenance/page'));
 const AIPriceOptimizerPage = lazy(() => import('./app/ai-price-optimizer/page'));
 const AISchedulingAssistantPage = lazy(() => import('./app/ai-scheduling-assistant/page'));
+const AICRMOptimizerPage = lazy(() => import('./app/ai-crm-optimizer/page'));
+const AIDataVisualizerPage = lazy(() => import('./app/ai-data-visualizer/page'));
+const AIEmailOptimizerPage = lazy(() => import('./app/ai-email-optimizer/page'));
+const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
+const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
 const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
 const IOTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
 const DevOpsAutomationPage = lazy(() => import('./app/devops-automation/page'));
@@ -98,6 +103,71 @@ const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/pag
 const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
 const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
 const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
+
+// Additional missing pages
+const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
+const AICRMOptimizerPage = lazy(() => import('./app/ai-crm-optimizer/page'));
+const AIDataVisualizerPage = lazy(() => import('./app/ai-data-visualizer/page'));
+const AIEmailOptimizerPage = lazy(() => import('./app/ai-email-optimizer/page'));
+const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
+const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
+const AILeadScoringProPage = lazy(() => import('./app/ai-lead-scoring-pro/page'));
+const AIPredictiveMaintenanceProPage = lazy(() => import('./app/ai-predictive-maintenance-pro/page'));
+const AIPriceOptimizerProPage = lazy(() => import('./app/ai-price-optimizer-pro/page'));
+const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
+const AIVoiceAssistantProPage = lazy(() => import('./app/ai-voice-assistant-pro/page'));
+const AIWebsiteAnalyzerPage = lazy(() => import('./app/ai-website-analyzer/page'));
+const BlockchainSolutionsProPage = lazy(() => import('./app/blockchain-solutions-pro/page'));
+const DevOpsAutomationProPage = lazy(() => import('./app/devops-automation-pro/page'));
+const IOTSolutionsProPage = lazy(() => import('./app/iot-solutions-pro/page'));
+
+// Zion AI Services
+const ZionAIChatbotBuilderPage = lazy(() => import('./app/zion-ai-chatbot-builder/page'));
+const ZionAICodeAssistantPage = lazy(() => import('./app/zion-ai-code-assistant/page'));
+const ZionAIContentModeratorPage = lazy(() => import('./app/zion-ai-content-moderator/page'));
+const ZionAICRMOptimizerPage = lazy(() => import('./app/zion-ai-crm-optimizer/page'));
+const ZionAICustomerChurnPredictorPage = lazy(() => import('./app/zion-ai-customer-churn-predictor/page'));
+const ZionAICustomerChurnPredictorProPage = lazy(() => import('./app/zion-ai-customer-churn-predictor-pro/page'));
+const ZionAICustomerSentimentTrackerPage = lazy(() => import('./app/zion-ai-customer-sentiment-tracker/page'));
+const ZionAICustomerSupportProPage = lazy(() => import('./app/zion-ai-customer-support-pro/page'));
+const ZionAIDataVisualizerPage = lazy(() => import('./app/zion-ai-data-visualizer/page'));
+const ZionAIDocumentAnalyzerPage = lazy(() => import('./app/zion-ai-document-analyzer/page'));
+const ZionAIDocumentProcessorPage = lazy(() => import('./app/zion-ai-document-processor/page'));
+const ZionAIEmailMarketingProPage = lazy(() => import('./app/zion-ai-email-marketing-pro/page'));
+const ZionAIEmailOptimizerPage = lazy(() => import('./app/zion-ai-email-optimizer/page'));
+const ZionAIFinancialForecasterPage = lazy(() => import('./app/zion-ai-financial-forecaster/page'));
+const ZionAIFormBuilderPage = lazy(() => import('./app/zion-ai-form-builder/page'));
+const ZionAIFraudDetectionPage = lazy(() => import('./app/zion-ai-fraud-detection/page'));
+const ZionAIImageGeneratorPage = lazy(() => import('./app/zion-ai-image-generator/page'));
+const ZionAIImageRecognitionPage = lazy(() => import('./app/zion-ai-image-recognition/page'));
+const ZionAIInventoryOptimizerProPage = lazy(() => import('./app/zion-ai-inventory-optimizer-pro/page'));
+const ZionAILeadScoringPage = lazy(() => import('./app/zion-ai-lead-scoring/page'));
+const ZionAIMeetingTranscriberPage = lazy(() => import('./app/zion-ai-meeting-transcriber/page'));
+const ZionAIPredictiveAnalyticsPage = lazy(() => import('./app/zion-ai-predictive-analytics/page'));
+const ZionAIPredictiveMaintenancePage = lazy(() => import('./app/zion-ai-predictive-maintenance/page'));
+const ZionAIPriceOptimizerPage = lazy(() => import('./app/zion-ai-price-optimizer/page'));
+const ZionAISalesPredictorPage = lazy(() => import('./app/zion-ai-sales-predictor/page'));
+const ZionAISchedulingAssistantPage = lazy(() => import('./app/zion-ai-scheduling-assistant/page'));
+const ZionAISocialMediaManagerPage = lazy(() => import('./app/zion-ai-social-media-manager/page'));
+const ZionAISocialSchedulerProPage = lazy(() => import('./app/zion-ai-social-scheduler-pro/page'));
+const ZionAITaskSchedulerPage = lazy(() => import('./app/zion-ai-task-scheduler/page'));
+const ZionAITranslationServicePage = lazy(() => import('./app/zion-ai-translation-service/page'));
+const ZionAIVideoGeneratorPage = lazy(() => import('./app/zion-ai-video-generator/page'));
+const ZionAIVoiceAssistantPage = lazy(() => import('./app/zion-ai-voice-assistant/page'));
+const ZionAIVoiceSynthesisPage = lazy(() => import('./app/zion-ai-voice-synthesis/page'));
+const ZionAIWebsiteAnalyzerPage = lazy(() => import('./app/zion-ai-website-analyzer/page'));
+const ZionAIWorkflowAutomatorPage = lazy(() => import('./app/zion-ai-workflow-automator/page'));
+const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow-automator-pro/page'));
+const ZionAPIDevelopmentPage = lazy(() => import('./app/zion-api-development/page'));
+const ZionBlockchainSolutionsPage = lazy(() => import('./app/zion-blockchain-solutions/page'));
+const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
+const ZionCybersecurityAuditPage = lazy(() => import('./app/zion-cybersecurity-audit/page'));
+const ZionDevOpsAutomationPage = lazy(() => import('./app/zion-devops-automation/page'));
+const ZionIOTSolutionsPage = lazy(() => import('./app/zion-iot-solutions/page'));
+const ZionSmartAnalyticsDashboardPage = lazy(() => import('./app/zion-smart-analytics-dashboard/page'));
+const ZionSmartCRMAutomationPage = lazy(() => import('./app/zion-smart-crm-automation/page'));
+const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
+const ZionSmartInventoryManagerPage = lazy(() => import('./app/zion-smart-inventory-manager/page'));
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -215,6 +285,11 @@ function App() {
                     <Route path="/ai-predictive-maintenance" element={<AIPredictiveMaintenancePage />} />
                     <Route path="/ai-price-optimizer" element={<AIPriceOptimizerPage />} />
                     <Route path="/ai-scheduling-assistant" element={<AISchedulingAssistantPage />} />
+                    <Route path="/ai-crm-optimizer" element={<AICRMOptimizerPage />} />
+                    <Route path="/ai-data-visualizer" element={<AIDataVisualizerPage />} />
+                    <Route path="/ai-email-optimizer" element={<AIEmailOptimizerPage />} />
+                    <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
+                    <Route path="/expense-tracker-pro" element={<ExpenseTrackerProPage />} />
                     
                     {/* Advanced Solutions */}
                     <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
@@ -267,6 +342,71 @@ function App() {
                     <Route path="/inventory-manager" element={<InventoryManagerPage />} />
                     <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
                     <Route path="/expense-tracker-pro" element={<ExpenseTrackerProPage />} />
+                    
+                    {/* Additional missing pages */}
+                    <Route path="/accessibility-page" element={<AccessibilityPagePage />} />
+                    <Route path="/ai-crm-optimizer" element={<AICRMOptimizerPage />} />
+                    <Route path="/ai-data-visualizer" element={<AIDataVisualizerPage />} />
+                    <Route path="/ai-email-optimizer" element={<AIEmailOptimizerPage />} />
+                    <Route path="/ai-fraud-detection-pro" element={<AIFraudDetectionProPage />} />
+                    <Route path="/ai-image-recognition-pro" element={<AIImageRecognitionProPage />} />
+                    <Route path="/ai-lead-scoring-pro" element={<AILeadScoringProPage />} />
+                    <Route path="/ai-predictive-maintenance-pro" element={<AIPredictiveMaintenanceProPage />} />
+                    <Route path="/ai-price-optimizer-pro" element={<AIPriceOptimizerProPage />} />
+                    <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
+                    <Route path="/ai-voice-assistant-pro" element={<AIVoiceAssistantProPage />} />
+                    <Route path="/ai-website-analyzer" element={<AIWebsiteAnalyzerPage />} />
+                    <Route path="/blockchain-solutions-pro" element={<BlockchainSolutionsProPage />} />
+                    <Route path="/devops-automation-pro" element={<DevOpsAutomationProPage />} />
+                    <Route path="/iot-solutions-pro" element={<IOTSolutionsProPage />} />
+                    
+                    {/* Zion AI Services */}
+                    <Route path="/zion-ai-chatbot-builder" element={<ZionAIChatbotBuilderPage />} />
+                    <Route path="/zion-ai-code-assistant" element={<ZionAICodeAssistantPage />} />
+                    <Route path="/zion-ai-content-moderator" element={<ZionAIContentModeratorPage />} />
+                    <Route path="/zion-ai-crm-optimizer" element={<ZionAICRMOptimizerPage />} />
+                    <Route path="/zion-ai-customer-churn-predictor" element={<ZionAICustomerChurnPredictorPage />} />
+                    <Route path="/zion-ai-customer-churn-predictor-pro" element={<ZionAICustomerChurnPredictorProPage />} />
+                    <Route path="/zion-ai-customer-sentiment-tracker" element={<ZionAICustomerSentimentTrackerPage />} />
+                    <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+                    <Route path="/zion-ai-data-visualizer" element={<ZionAIDataVisualizerPage />} />
+                    <Route path="/zion-ai-document-analyzer" element={<ZionAIDocumentAnalyzerPage />} />
+                    <Route path="/zion-ai-document-processor" element={<ZionAIDocumentProcessorPage />} />
+                    <Route path="/zion-ai-email-marketing-pro" element={<ZionAIEmailMarketingProPage />} />
+                    <Route path="/zion-ai-email-optimizer" element={<ZionAIEmailOptimizerPage />} />
+                    <Route path="/zion-ai-financial-forecaster" element={<ZionAIFinancialForecasterPage />} />
+                    <Route path="/zion-ai-form-builder" element={<ZionAIFormBuilderPage />} />
+                    <Route path="/zion-ai-fraud-detection" element={<ZionAIFraudDetectionPage />} />
+                    <Route path="/zion-ai-image-generator" element={<ZionAIImageGeneratorPage />} />
+                    <Route path="/zion-ai-image-recognition" element={<ZionAIImageRecognitionPage />} />
+                    <Route path="/zion-ai-inventory-optimizer-pro" element={<ZionAIInventoryOptimizerProPage />} />
+                    <Route path="/zion-ai-lead-scoring" element={<ZionAILeadScoringPage />} />
+                    <Route path="/zion-ai-meeting-transcriber" element={<ZionAIMeetingTranscriberPage />} />
+                    <Route path="/zion-ai-predictive-analytics" element={<ZionAIPredictiveAnalyticsPage />} />
+                    <Route path="/zion-ai-predictive-maintenance" element={<ZionAIPredictiveMaintenancePage />} />
+                    <Route path="/zion-ai-price-optimizer" element={<ZionAIPriceOptimizerPage />} />
+                    <Route path="/zion-ai-sales-predictor" element={<ZionAISalesPredictorPage />} />
+                    <Route path="/zion-ai-scheduling-assistant" element={<ZionAISchedulingAssistantPage />} />
+                    <Route path="/zion-ai-social-media-manager" element={<ZionAISocialMediaManagerPage />} />
+                    <Route path="/zion-ai-social-scheduler-pro" element={<ZionAISocialSchedulerProPage />} />
+                    <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
+                    <Route path="/zion-ai-translation-service" element={<ZionAITranslationServicePage />} />
+                    <Route path="/zion-ai-video-generator" element={<ZionAIVideoGeneratorPage />} />
+                    <Route path="/zion-ai-voice-assistant" element={<ZionAIVoiceAssistantPage />} />
+                    <Route path="/zion-ai-voice-synthesis" element={<ZionAIVoiceSynthesisPage />} />
+                    <Route path="/zion-ai-website-analyzer" element={<ZionAIWebsiteAnalyzerPage />} />
+                    <Route path="/zion-ai-workflow-automator" element={<ZionAIWorkflowAutomatorPage />} />
+                    <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
+                    <Route path="/zion-api-development" element={<ZionAPIDevelopmentPage />} />
+                    <Route path="/zion-blockchain-solutions" element={<ZionBlockchainSolutionsPage />} />
+                    <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
+                    <Route path="/zion-cybersecurity-audit" element={<ZionCybersecurityAuditPage />} />
+                    <Route path="/zion-devops-automation" element={<ZionDevOpsAutomationPage />} />
+                    <Route path="/zion-iot-solutions" element={<ZionIOTSolutionsPage />} />
+                    <Route path="/zion-smart-analytics-dashboard" element={<ZionSmartAnalyticsDashboardPage />} />
+                    <Route path="/zion-smart-crm-automation" element={<ZionSmartCRMAutomationPage />} />
+                    <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
+                    <Route path="/zion-smart-inventory-manager" element={<ZionSmartInventoryManagerPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">

@@ -72,7 +72,7 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">AI Tools</h4>
+            <h4 className="text-md font-semibold mb-4">Zion AI Tools</h4>
             <ul className="space-y-2">
               <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Content Moderator</Link></li>
               <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">Customer Support Pro</Link></li>
@@ -83,9 +83,10 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
               <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
               <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
+              <li><Link to="/zion-ai-translation-service" className="text-gray-300 hover:text-white">Translation Service</Link></li>
+              <li><Link to="/zion-ai-video-generator" className="text-gray-300 hover:text-white">Video Generator</Link></li>
               <li><Link to="/ai-code-assistant" className="text-gray-300 hover:text-white">AI Code Assistant</Link></li>
               <li><Link to="/ai-translator" className="text-gray-300 hover:text-white">AI Translator</Link></li>
-              <li><Link to="/ai-video-generator" className="text-gray-300 hover:text-white">AI Video Generator</Link></li>
               <li><Link to="/ai-audio-processor" className="text-gray-300 hover:text-white">AI Audio Processor</Link></li>
               <li><Link to="/ai-3d-model-generator" className="text-gray-300 hover:text-white">AI 3D Model Generator</Link></li>
               <li><Link to="/ai-legal-assistant" className="text-gray-300 hover:text-white">AI Legal Assistant</Link></li>
@@ -117,6 +118,17 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/ai-lead-scoring-pro" className="text-gray-300 hover:text-white">AI Lead Scoring Pro</Link></li>
               <li><Link to="/ai-predictive-maintenance-pro" className="text-gray-300 hover:text-white">AI Predictive Maintenance Pro</Link></li>
               <li><Link to="/ai-price-optimizer-pro" className="text-gray-300 hover:text-white">AI Price Optimizer Pro</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Micro SaaS Solutions</h4>
+            <ul className="space-y-2">
+              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Overview</Link></li>
+              <li><Link to="/zion-smart-analytics-dashboard" className="text-gray-300 hover:text-white">Smart Analytics Dashboard</Link></li>
+              <li><Link to="/zion-smart-crm-automation" className="text-gray-300 hover:text-white">Smart CRM Automation</Link></li>
+              <li><Link to="/zion-smart-inventory-manager" className="text-gray-300 hover:text-white">Smart Inventory Manager</Link></li>
+              <li><Link to="/zion-smart-expense-tracker" className="text-gray-300 hover:text-white">Smart Expense Tracker</Link></li>
             </ul>
           </div>
           
