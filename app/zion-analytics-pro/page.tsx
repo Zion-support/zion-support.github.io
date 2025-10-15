@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionAnalyticsPro() {
-  return;
+
 },
     {
       title: "Predictive Analytics",
@@ -110,7 +109,9 @@ const testimonials = [
       avatar: "ER"
     }
   ];
-  return (
+
+export default function ZionAnalyticsPro() {
+    return (
     <>
       <Helmet>
         <title>Zion Analytics Pro - AI-Powered Business Intelligence Platform | Zion Tech Group</title>

@@ -1,8 +1,7 @@
 import { ArrowRight, Link, Target, CheckCircle, Globe, Coins } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
-export default function AIBlockchainAnalytics() {
-  return;
+
 },
     {
       title: "Smart Contract Intelligence",
@@ -121,7 +120,9 @@ const testimonials = [
       avatar: "DK"
     }
   ];
-  return (
+
+export default function AIBlockchainAnalytics() {
+    return (
     <>
       <Helmet>
         <title>AI Blockchain Analytics - AI-Powered Blockchain Analysis Platform | Zion Tech Group</title>

@@ -1,7 +1,6 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet, FileText, BarChart3, Users, Clock, Star, Zap, File, Activity } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionPerformanceMonitor() {
-  return;
+
 },
     {
       title: "AI-Powered Analytics",
@@ -120,7 +119,9 @@ const testimonials = [
       avatar: "DK"
     }
   ];
-  return (
+
+export default function ZionPerformanceMonitor() {
+    return (
     <>
       <Helmet>
         <title>Zion Performance Monitor - AI-Powered Application Performance Monitoring | Zion Tech Group</title>

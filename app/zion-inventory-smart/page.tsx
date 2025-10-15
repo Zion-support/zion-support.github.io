@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionInventorySmart() {
-  return;
+
 },
     {
       title: "Automated Reordering",
@@ -120,7 +119,9 @@ const testimonials = [
       avatar: "JW"
     }
   ];
-  return (
+
+export default function ZionInventorySmart() {
+    return (
     <>
       <Helmet>
         <title>Zion Inventory Smart - AI-Powered Inventory Management Platform | Zion Tech Group</title>

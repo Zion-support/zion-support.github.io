@@ -12,8 +12,7 @@ import {
   ShieldCheckIcon,
   CloudIcon} from '@heroicons/react/24/outline';
 
-export default function AiProjectManagementProPage() {
-  return;
+
 },
     {
       icon: ChartBarIcon,
@@ -117,7 +116,9 @@ const testimonials = [
       rating: 5
     }
   ];
-  return (
+
+export default function AiProjectManagementProPage() {
+    return (
     <>
       <Helmet>
         <title>AI Project Management Pro - Zion Tech Group</title>

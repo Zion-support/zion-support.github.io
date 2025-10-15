@@ -1,9 +1,8 @@
-import { ArrowRight, Calculator, Target, CheckCircle, Globe } from 'lucide-react';
+import { ArrowRight, Calculator, Target, CheckCircle, Globe, FileText, BarChart3, Receipt, TrendingUp, Shield, Users, Clock, Star, Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AIAccountingAssistant() {
-  return;
-},
+
+const features = [
     {
       title: "Smart Expense Tracking",
       description: "Intelligent expense tracking with receipt scanning, automatic categorization, and compliance monitoring",
@@ -121,6 +120,8 @@ const testimonials = [
       avatar: "SC"
     }
   ];
+
+export default function AIAccountingAssistant() {
   return (
     <>
       <Helmet>

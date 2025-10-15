@@ -1,7 +1,6 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet, FileText, Users, Clock, Star, Zap, Video, File, Calendar } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionContentStudio() {
-  return;
+
 },
     {
       title: "Visual Design Tools",
@@ -120,7 +119,9 @@ const testimonials = [
       avatar: "JW"
     }
   ];
-  return (
+
+export default function ZionContentStudio() {
+    return (
     <>
       <Helmet>
         <title>Zion Content Studio - AI-Powered Content Creation Platform | Zion Tech Group</title>

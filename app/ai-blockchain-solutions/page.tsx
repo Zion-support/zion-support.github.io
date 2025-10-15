@@ -1,8 +1,7 @@
 import { ArrowRight, Link, Target, CheckCircle, Globe, Coins } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
-export default function AIBlockchainSolutions() {
-  return;
+
 },
     {
       title: "Decentralized AI Networks",
@@ -121,7 +120,9 @@ const testimonials = [
       avatar: "DK"
     }
   ];
-  return (
+
+export default function AIBlockchainSolutions() {
+    return (
     <>
       <Helmet>
         <title>AI Blockchain Solutions - AI-Powered Blockchain Development Platform | Zion Tech Group</title>

@@ -1,8 +1,7 @@
-import { ArrowRight, Target, CheckCircle, Globe } from 'lucide-react';
+import { ArrowRight, Target, CheckCircle, Globe, FileText, BarChart3, Users, Clock, Star, Zap, File } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AIAutomatedReporting() {
-  return;
+
 },
     {
       title: "Real-time Data Integration",
@@ -121,7 +120,9 @@ const testimonials = [
       avatar: "LJ"
     }
   ];
-  return (
+
+export default function AIAutomatedReporting() {
+    return (
     <>
       <Helmet>
         <title>AI Automated Reporting - AI-Powered Report Generation Platform | Zion Tech Group</title>

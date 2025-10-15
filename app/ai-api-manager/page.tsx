@@ -1,8 +1,7 @@
 import { ArrowRight, Target, CheckCircle, Globe } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AIAPIManager() {
-  return;
+
 },
     {
       title: "Smart Load Balancing",
@@ -121,7 +120,9 @@ const testimonials = [
       avatar: "MJ"
     }
   ];
-  return (
+
+export default function AIAPIManager() {
+    return (
     <>
       <Helmet>
         <title>AI API Manager - AI-Powered API Orchestration & Management Platform | Zion Tech Group</title>

@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionSecurityShield() {
-  return;
+
 },
     {
       title: "Zero Trust Architecture",
@@ -120,7 +119,9 @@ const testimonials = [
       avatar: "RM"
     }
   ];
-  return (
+
+export default function ZionSecurityShield() {
+    return (
     <>
       <Helmet>
         <title>Zion Security Shield - Advanced Cybersecurity Protection | Zion Tech Group</title>

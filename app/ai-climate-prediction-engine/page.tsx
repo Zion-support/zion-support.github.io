@@ -1,8 +1,7 @@
 import { ArrowRight, Target, CheckCircle, Globe, Leaf } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
-export default function AIClimatePredictionEngine() {
-  return;
+
 },
     {
       title: "Predictive Weather Analytics",
@@ -121,7 +120,9 @@ const testimonials = [
       avatar: "LJ"
     }
   ];
-  return (
+
+export default function AIClimatePredictionEngine() {
+    return (
     <>
       <Helmet>
         <title>AI Climate Prediction Engine - AI-Powered Climate Modeling Platform | Zion Tech Group</title>

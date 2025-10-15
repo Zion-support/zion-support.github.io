@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionWorkflowAutomation() {
-  return;
+
 },
     {
       title: "AI-Powered Automation",
@@ -120,7 +119,9 @@ const testimonials = [
       avatar: "MC"
     }
   ];
-  return (
+
+export default function ZionWorkflowAutomation() {
+    return (
     <>
       <Helmet>
         <title>Zion Workflow Automation - AI-Powered Business Process Automation | Zion Tech Group</title>

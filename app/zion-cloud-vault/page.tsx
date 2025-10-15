@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionCloudVault() {
-  return;
+
 },
     {
       title: "Real-time Sync",
@@ -121,7 +120,9 @@ const testimonials = [
       avatar: "SC"
     }
   ];
-  return (
+
+export default function ZionCloudVault() {
+    return (
     <>
       <Helmet>
         <title>Zion Cloud Vault - Secure Cloud Storage & File Sharing | Zion Tech Group</title>

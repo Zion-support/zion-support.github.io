@@ -1,8 +1,7 @@
 import { ArrowRight, Target, CheckCircle, Globe, Bot } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
-export default function AIChatbotBuilder() {
-  return;
+
 },
     {
       title: "Natural Language Processing",
@@ -121,7 +120,9 @@ const testimonials = [
       avatar: "LJ"
     }
   ];
-  return (
+
+export default function AIChatbotBuilder() {
+    return (
     <>
       <Helmet>
         <title>AI Chatbot Builder - AI-Powered Chatbot Creation Platform | Zion Tech Group</title>

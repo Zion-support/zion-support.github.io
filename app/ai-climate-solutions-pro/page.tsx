@@ -1,8 +1,7 @@
 import { ArrowRight, Target, CheckCircle, Globe, Leaf } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
-export default function AIClimateSolutionsPro() {
-  return;
+
 },
     {
       title: "Carbon Footprint Analysis",
@@ -121,7 +120,9 @@ const testimonials = [
       avatar: "LJ"
     }
   ];
-  return (
+
+export default function AIClimateSolutionsPro() {
+    return (
     <>
       <Helmet>
         <title>AI Climate Solutions Pro - AI-Powered Climate Solutions Platform | Zion Tech Group</title>

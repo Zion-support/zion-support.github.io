@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionLeadMagnet() {
-  return;
+
 },
     {
       title: "Email Automation",
@@ -120,7 +119,9 @@ const testimonials = [
       avatar: "SJ"
     }
   ];
-  return (
+
+export default function ZionLeadMagnet() {
+    return (
     <>
       <Helmet>
         <title>Zion Lead Magnet - AI-Powered Lead Generation Platform | Zion Tech Group</title>

@@ -1,8 +1,7 @@
 import { ArrowRight, Target, CheckCircle, Globe, Brain } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AIAutonomousSystems() {
-  return;
+
 },
     {
       title: "Self-Learning Systems",
@@ -121,7 +120,9 @@ const testimonials = [
       avatar: "LJ"
     }
   ];
-  return (
+
+export default function AIAutonomousSystems() {
+    return (
     <>
       <Helmet>
         <title>AI Autonomous Systems - AI-Powered Autonomous System Management | Zion Tech Group</title>

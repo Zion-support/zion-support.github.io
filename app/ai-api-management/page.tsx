@@ -1,8 +1,7 @@
-import { ArrowRight, Globe, Target, CheckCircle } from 'lucide-react';
+import { ArrowRight, Globe, Target, CheckCircle, FileText, BarChart3, Shield, Users, Clock, Star, Zap, Mic, File } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AIAPIManagement() {
-  return;
+
 },
     {
       title: "Smart Analytics",
@@ -121,7 +120,9 @@ const testimonials = [
       avatar: "MR"
     }
   ];
-  return (
+
+export default function AIAPIManagement() {
+    return (
     <>
       <Helmet>
         <title>AI API Management - AI-Powered API Gateway & Management Platform | Zion Tech Group</title>

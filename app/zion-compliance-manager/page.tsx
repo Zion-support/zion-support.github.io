@@ -1,7 +1,6 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet, FileText, Shield, Users, Clock, Star, Mic, File } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionComplianceManager() {
-  return;
+
 },
     {
       title: "Regulatory Framework Support",
@@ -120,7 +119,9 @@ const testimonials = [
       avatar: "LR"
     }
   ];
-  return (
+
+export default function ZionComplianceManager() {
+    return (
     <>
       <Helmet>
         <title>Zion Compliance Manager - AI-Powered Compliance Management Platform | Zion Tech Group</title>

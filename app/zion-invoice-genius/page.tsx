@@ -1,7 +1,6 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet, FileText, BarChart3, Users, Clock, Star, Zap, File } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionInvoiceGenius() {
-  return;
+
 },
     {
       title: "Automated Billing",
@@ -120,7 +119,9 @@ const testimonials = [
       avatar: "SK"
     }
   ];
-  return (
+
+export default function ZionInvoiceGenius() {
+    return (
     <>
       <Helmet>
         <title>Zion Invoice Genius - AI-Powered Invoicing & Payment Platform | Zion Tech Group</title>

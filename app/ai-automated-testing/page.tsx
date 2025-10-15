@@ -1,8 +1,7 @@
 import { ArrowRight, TestTube, Target, CheckCircle, Globe, Bug } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function AIAutomatedTesting() {
-  return;
+
 },
     {
       title: "Intelligent Test Execution",
@@ -121,7 +120,9 @@ const testimonials = [
       avatar: "DK"
     }
   ];
-  return (
+
+export default function AIAutomatedTesting() {
+    return (
     <>
       <Helmet>
         <title>AI Automated Testing - AI-Powered Test Automation Platform | Zion Tech Group</title>

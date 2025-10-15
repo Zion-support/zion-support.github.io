@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionDataSync() {
-  return;
+
 },
     {
       title: "Multi-platform Integration",
@@ -120,7 +119,9 @@ const testimonials = [
       avatar: "LP"
     }
   ];
-  return (
+
+export default function ZionDataSync() {
+    return (
     <>
       <Helmet>
         <title>Zion Data Sync - Real-time Data Synchronization Platform | Zion Tech Group</title>

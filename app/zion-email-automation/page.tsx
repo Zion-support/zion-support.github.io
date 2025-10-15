@@ -1,7 +1,6 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet, FileText, BarChart3, Users, Clock, Star, Zap, Mail, File, Settings, Workflow } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionEmailAutomation() {
-  return;
+
 },
     {
       title: "Automated Workflows",
@@ -120,7 +119,9 @@ const testimonials = [
       avatar: "LC"
     }
   ];
-  return (
+
+export default function ZionEmailAutomation() {
+    return (
     <>
       <Helmet>
         <title>Zion Email Automation - AI-Powered Email Marketing Platform | Zion Tech Group</title>

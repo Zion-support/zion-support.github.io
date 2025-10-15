@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-export default function ZionSocialScheduler() {
-  return;
+
 },
     {
       title: "Content Calendar",
@@ -120,7 +119,9 @@ const testimonials = [
       avatar: "MG"
     }
   ];
-  return (
+
+export default function ZionSocialScheduler() {
+    return (
     <>
       <Helmet>
         <title>Zion Social Scheduler - AI-Powered Social Media Management | Zion Tech Group</title>

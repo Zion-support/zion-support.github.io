@@ -1,8 +1,7 @@
 import { ArrowRight, Target, CheckCircle, Globe, Brain } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link as RouterLink } from "react-router-dom";
-export default function AIBusinessIntelligencePro() {
-  return;
+
 },
     {
       title: "Real-time Dashboards",
@@ -121,7 +120,9 @@ const testimonials = [
       avatar: "LR"
     }
   ];
-  return (
+
+export default function AIBusinessIntelligencePro() {
+    return (
     <>
       <Helmet>
         <title>AI Business Intelligence Pro - AI-Powered Business Intelligence Platform | Zion Tech Group</title>
