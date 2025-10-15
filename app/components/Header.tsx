@@ -32,12 +32,15 @@ const Header: React.FC = () => {
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
-        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
-        { name: 'AI Content Generation', href: '/ai-content-generation' },
-        { name: 'AI Automation Platform', href: '/ai-automation-platform' },
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
+        { name: 'AI Automation Suite', href: '/ai-automation-suite' },
         { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
-        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' }
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' }
       ]
     },
     {
@@ -45,10 +48,11 @@ const Header: React.FC = () => {
       href: '/it-services',
       icon: <Code className="w-4 h-4" />,
       dropdown: [
-        { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
-        { name: 'API Management', href: '/ai-api-management' },
+        { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
+        { name: 'AI API Management', href: '/ai-api-management' },
         { name: 'Database Solutions', href: '/database-solutions' },
-        { name: 'Security Suite', href: '/advanced-security-suite' },
+        { name: 'Advanced Security Suite', href: '/advanced-security-suite' },
+        { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite' },
         { name: 'Performance Monitoring', href: '/performance-monitoring' },
         { name: 'DevOps Solutions', href: '/devops-solutions' }
       ]
@@ -63,7 +67,8 @@ const Header: React.FC = () => {
         { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
         { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
         { name: '5G Edge Computing', href: '/5g-edge-computing' },
-        { name: '5G Private Networks', href: '/5g-private-networks' }
+        { name: '5G Private Networks', href: '/5g-private-networks' },
+        { name: '5G AI Integration', href: '/5g-ai-integration' }
       ]
     },
     {
