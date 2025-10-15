@@ -11,6 +11,14 @@ const AccessibilityEnhancer: React.FC = memo(() => {
           (mainContent as HTMLElement).focus();
         }
       }
+      
+      // Escape key to close modals/dropdowns
+      if (event.key === 'Escape') {
+        const activeElement = document.activeElement as HTMLElement;
+        if (activeElement && activeElement.blur) {
+          activeElement.blur();
+        }
+      }
     };
 
     // Add focus management for modals and dropdowns
