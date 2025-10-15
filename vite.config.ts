@@ -28,12 +28,31 @@ export default defineConfig({
     cssCodeSplit: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          icons: ['@heroicons/react'],
-          motion: ['framer-motion'],
-          ui: ['clsx', 'tailwind-merge'],
+        manualChunks: (id) => {
+          // Create chunks based on actual usage
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor';
+            }
+            if (id.includes('react-router-dom')) {
+              return 'router';
+            }
+            if (id.includes('@heroicons/react') || id.includes('lucide-react')) {
+              return 'icons';
+            }
+            if (id.includes('framer-motion')) {
+              return 'motion';
+            }
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'ui';
+            }
+            // Group other node_modules into vendor
+            return 'vendor';
+          }
+          // Don't create chunks for app code unless it's large
+          if (id.includes('/app/') && id.includes('page')) {
+            return 'pages';
+          }
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -42,6 +61,8 @@ export default defineConfig({
     },
     // Optimize chunk size
     chunkSizeWarningLimit: 1000,
+    // Reduce empty chunks
+    emptyOutDir: true,
   },
   server: {
     port: 3000,
