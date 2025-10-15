@@ -7,21 +7,15 @@ interface AnalyticsContextType {
   identify: (_userId: string, traits?: Record<string, _unknown>) => void;
   page: (_name: string, properties?: Record<string, _unknown>) => void;
 }
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>()
   undefined,
-);
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error("useAnalytics must be used within an AnalyticsProvider");
+)
+export const useAnalytics = () => {}
+}const context = useContext(AnalyticsContext)
+  if (!context) {}
+    throw new Error("useAnalytics must be used within an AnalyticsProvider")
   }
-  return context;
-};
-
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
+  return context
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
@@ -30,19 +24,18 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     // Initialize analytics
     if (typeof window !== "undefined") {
       // Google Analytics
-      if (process.env.NODE_ENV === "production") {
-        const script = document.createElement("script");
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`;
-        document.head.appendChild(script);
-
+      if (process.env.NODE_ENV === "production") {}
+        const script = document.createElement("script")
+        script.async = true
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`
+        document.head.appendChild(script)
         (window as unknown as { dataLayer: unknown[] }).dataLayer =
-          (window as unknown as { dataLayer: unknown[] }).dataLayer || [];
-        function gtag(...args: unknown[]) {
-          (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args);
+          (window as unknown as { dataLayer: unknown[] }).dataLayer || []
+        function gtag(...args: unknown[]) {}
+}(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
         }
-        gtag("js", new Date());
-        gtag("config", process.env.REACT_APP_GA_ID);
+        gtag("js", new Date())
+        gtag("config", process.env.REACT_APP_GA_ID)
       }
     }
   }, []);
@@ -55,9 +48,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
           "event",
           event,
           properties,
-        );
+        )
       }
-
       // Custom analytics
       }
   };
@@ -69,13 +61,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
           "config",
           process.env.REACT_APP_GA_ID,
-          {
+          {}
             user_id: userId,
-            custom_map: traits,
-          },
-        );
+            custom_map: traits},
+        )
       }
-
       // Custom analytics
       }
   };
@@ -87,25 +77,20 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         (_window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
           "event",
           "page_view",
-          {
+          {}
             page_title: name,
             page_location: window.location.href,
-            ...properties,
-          },
-        );
+            ...properties},
+        )
       }
-
       // Custom analytics
       }
-  };
-
-  const value: AnalyticsContextType = {
+  }
+  const value: AnalyticsContextType = {}
     track,
     identify,
-    page,
-  };
-
-  return (
+    page}
+  return ()
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
@@ -117,5 +102,12 @@ declare global {
   interface Window {
     dataLayer: unknown[];
     gtag: (_...args: unknown[]) => void;
+  }
+}
+// Extend Window interface for TypeScript
+declare global {}
+  interface Window {}
+    dataLayer: unknown[]
+    gtag: (...args: unknown[]) => void
   }
 }

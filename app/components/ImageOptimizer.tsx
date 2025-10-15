@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import React, { useState, useRef, useEffect } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 interface ImageOptimizerProps {
   src: string;
@@ -11,27 +9,22 @@ interface ImageOptimizerProps {
   height?: number;
   priority?: boolean;
   placeholder?: string;
-  effect?: 'blur' | 'opacity' | 'black-and-white';
-  threshold?: number;
-  onLoad?: () => void;
-  onError?: () => void;
 }
 
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   src, alt, className = '', _width, _height, priority = false, _placeholder, effect = 'blur', threshold = 100, _onLoad, _onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   const handleLoad = () => {
     setIsLoaded(true);
-    onLoad?.();
   };
 
   const handleError = () => {
     setHasError(true);
-    onError?.();
   };
 
   // Generate optimized src with WebP support
@@ -96,28 +89,41 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   }
 
   return (
-    <div className="relative">
-      {!isLoaded && (
-        <div 
-          className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
-          style={{ width, height }}
+<div
+      ref={imgRef}
+      className={`relative overflow-hidden ${className}`}
+      style={{ width, height }}
+    >
+      {!isLoaded && !hasError && (
+        <img
+          src={placeholder}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          aria-hidden="true"
         />
       )}
-      <LazyLoadImage
-      src={optimizedSrc}
-      srcSet={srcSet}
-      alt={alt}
-      className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
-      width={width}
-      height={height}
-      effect={effect}
-      placeholderSrc={placeholder}
-      threshold={threshold}
-      onLoad={handleLoad}
-      onError={handleError}
-      loading="lazy"
-      decoding="async"
-    />
+      
+      {isInView && !hasError && (
+        <img
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          onLoad={handleLoad}
+          onError={handleError}
+          className={`w-full h-full object-cover transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+        />
+      )}
+      
+      {hasError && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">
+          <span className="text-sm">Failed to load image</span>
+        </div>
+      )}ursor/analyze-improve-and-merge-code-4a9f
     </div>
   );
 };

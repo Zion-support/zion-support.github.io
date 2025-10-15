@@ -7,9 +7,6 @@ export const Performancemetrics = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Performancemetrics;
+  cleanup: () => {}
+} }}
+export default Performancemetrics

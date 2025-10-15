@@ -1,19 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  CheckCircleIcon,
-  UserGroupIcon,
-  LightBulbIcon,
-  ShieldCheckIcon,
-  RocketLaunchIcon,
-  HeartIcon,
-  ArrowRightIcon,
-  StarIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon
-} from '@heroicons/react/24/outline';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '../components/SEOHead';
 
 const AboutPage: React.FC = () => {
   const values = [

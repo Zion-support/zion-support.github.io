@@ -1,9 +1,8 @@
-import React from 'react';
-import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react';
-
-interface LoadingPageProps {
-  message?: string;
-  showIcon?: boolean;
+import React from 'react'
+import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react'
+interface LoadingPageProps {}
+  message?: string
+  showIcon?: boolean
 }
 
 export const LoadingPage: React.FC<LoadingPageProps> = ({ 
@@ -12,7 +11,7 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
-        {showIcon && (
+        {showIcon && ()
           <div className="mb-8">
             <div className="relative">
               <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center animate-pulse">
@@ -37,22 +36,21 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
     switch (serviceName.toLowerCase()) {
       case 'ai':
       case 'ai services':
-        return <Brain className="w-8 h-8 text-cyan-400" />;
+        return <Brain className="w-8 h-8 text-cyan-400" />
       case 'security':
       case 'cybersecurity':
-        return <Shield className="w-8 h-8 text-green-400" />;
+        return <Shield className="w-8 h-8 text-green-400" />
       case 'micro saas':
       case 'saas':
-        return <Zap className="w-8 h-8 text-purple-400" />;
+        return <Zap className="w-8 h-8 text-purple-400" />
       case '5g':
       case '5g solutions':
-        return <Globe className="w-8 h-8 text-orange-400" />;
+        return <Globe className="w-8 h-8 text-orange-400" />
       default:
-        return <Brain className="w-8 h-8 text-cyan-400" />;
+        return <Brain className="w-8 h-8 text-cyan-400" />
     }
-  };
-
-  return (
+  }
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center max-w-md mx-auto px-4">
         <div className="mb-8">
@@ -89,7 +87,7 @@ export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = 
         </div>
         <h2 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h2>
         <p className="text-gray-300 mb-6">{error}</p>
-        {onRetry && (
+        {onRetry && ()
           <button
             onClick={onRetry}
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
@@ -99,26 +97,24 @@ export const ErrorLoading: React.FC<{ error?: string; onRetry?: () => void }> = 
         )}
       </div>
     </div>
-  );
-};
-
-export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
-  return (
+  )
+}
+export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {}
+}return ()
     <div className="animate-pulse">
       {Array.from({ length: lines }).map(( index) => (
         <div
           key={index}
-          className={`h-4 bg-gray-700 rounded mb-2 ${
+          className={`h-4 bg-gray-700 rounded mb-2 ${}
             index === lines - 1 ? 'w-3/4' : 'w-full'
           }`}
         />
       ))}
     </div>
-  );
-};
-
-export const CardSkeleton: React.FC = () => {
-  return (
+  )
+}
+export const CardSkeleton: React.FC = () => {}
+}return ()
     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
       <div className="w-16 h-16 bg-gray-700 rounded-lg mb-4"></div>
       <div className="h-6 bg-gray-700 rounded mb-3"></div>
@@ -128,7 +124,6 @@ export const CardSkeleton: React.FC = () => {
       </div>
       <div className="h-8 bg-gray-700 rounded w-1/3"></div>
     </div>
-  );
-};
-
-export default LoadingPage;
+  )
+}
+export default LoadingPage

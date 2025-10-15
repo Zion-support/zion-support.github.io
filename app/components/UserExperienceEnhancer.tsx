@@ -1,10 +1,9 @@
-import React from "react";
-
-interface UserExperienceEnhancerProps {
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
+import React from "react"
+interface UserExperienceEnhancerProps {}
+  children?: React.ReactNode
+  className?: string
+  title?: string
+  description?: string
 }
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
@@ -15,7 +14,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       {description && <p className="text-gray-600 mb-4">{description}</p>}
       {children}
     </div>
-  );
-};
-
-export default UserExperienceEnhancer;
+  )
+}
+export default UserExperienceEnhancer

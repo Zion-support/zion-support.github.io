@@ -194,4 +194,6 @@ import { ArrowRight, CheckCircle, TrendingUp, Users, DollarSign } from 'lucide-r
       </div>
     </>
   );
-}
+};
+
+export default CaseStudiesPage;

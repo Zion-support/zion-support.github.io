@@ -22,10 +22,8 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 
       return () => clearTimeout(timeout);
     }
-    return undefined;
-  }, [currentIndex, text, delay, speed]);
-
-  return <span className={className}>{displayedText}</span>;
-};
-
-export default AnimatedText;
+    return undefined
+  }, [currentIndex, text, delay, speed])
+  return <span className={className}>{displayedText}</span>
+}
+export default AnimatedText

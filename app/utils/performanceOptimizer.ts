@@ -7,9 +7,6 @@ export const Performanceoptimizer = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Performanceoptimizer;
+  cleanup: () => {}
+} }}
+export default Performanceoptimizer

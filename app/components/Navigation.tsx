@@ -33,16 +33,16 @@ import {
 } from '@heroicons/react/24/outline';
 
 interface NavigationProps {
-  onSidebarToggle?: () => void;
+  onSidebarToggle?: () => void
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false)
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false)
+  const location = useLocation()
 
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
@@ -111,9 +111,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
   ];
 
-  const isActive = (href: string) => {
-    return location.pathname === href;
-  };
+  const services = [
+    { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: RocketLaunchIcon },
+    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: CogIcon },
+    { name: 'IT Solutions', href: '/it-solutions', icon: ServerIcon },
+  ]
 
   const toggleServicesMenu = () => {
     setIsServicesOpen(!isServicesOpen);
@@ -136,22 +141,16 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     setIsCompanyOpen(false);
   };
 
-  const toggleCompanyMenu = () => {
-    setIsCompanyOpen(!isCompanyOpen);
-    setIsServicesOpen(false);
-    setIsSolutionsOpen(false);
-    setIsResourcesOpen(false);
-  };
+  const isActive = (path: string) => location.pathname === path
 
   return (
-    <nav className="bg-slate-900 border-b border-slate-700">
+    <nav className="bg-slate-900 border-b border-slate-700 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
               <div className="h-8 w-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
+                <span className="text-white font-bold text-sm">Z</span>
               </div>
               <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
             </Link>
@@ -225,9 +224,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               className="text-gray-300 hover:text-white p-2 rounded-md"
             >
               {isOpen ? (
-                <XMarkIcon className="block h-6 w-6" />
+                <XMarkIcon className="h-6 w-6" />
               ) : (
-                <Bars3Icon className="block h-6 w-6" />
+                <Bars3Icon className="h-6 w-6" />
               )}
             </button>
           </div>
@@ -304,10 +303,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </div>
             ))}
           </div>
-        </div>
+        )}
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation

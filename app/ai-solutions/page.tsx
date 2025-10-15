@@ -505,4 +505,4 @@ import { CheckCircle, ArrowRight, TrendingUp, BarChart3, Eye, MessageSquare, Net
   );
 };
 
-export default AISolutionsPage;
+export default AiSolutionsPage;

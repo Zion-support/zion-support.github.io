@@ -28,46 +28,38 @@ const LazyImage: React.FC<LazyImageProps> = ({
           observer.disconnect();
         }
       },
-      {
+      {}
         threshold: 0.1,
-        rootMargin: '50px',
-      }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
+        rootMargin: '50px'}
+    )
+    if (imgRef.current) {}
+      observer.observe(imgRef.current)
     }
-
-    return () => observer.disconnect();
-  }, []);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
-  const handleError = () => {
-    setIsError(true);
-    onError?.();
-  };
-
-  if (isError && fallback) {
-    return <>{fallback}</>;
+    return () => observer.disconnect()
+  }, [])
+  const handleLoad = () => {}
+}setIsLoaded(true)
+    onLoad?.()
   }
-
-  return (
+  const handleError = () => {}
+}setIsError(true)
+    onError?.()
+  }
+  if (isError && fallback) {}
+    return <>{fallback}</>
+  }
+  return ()
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
-      {!isLoaded && !isError && placeholder && (
+      {!isLoaded && !isError && placeholder && ()
         <div className="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-700">
           {placeholder}
         </div>
       )}
-      
-      {isInView && (
+      {isInView && ()
         <img
           src={src}
           alt={alt}
-          className={`transition-opacity duration-300 ${
+          className={`transition-opacity duration-300 ${}
             isLoaded ? 'opacity-100' : 'opacity-0'
           } ${className}`}
           loading={loading}
@@ -79,7 +71,6 @@ const LazyImage: React.FC<LazyImageProps> = ({
         />
       )}
     </div>
-  );
-};
-
-export default LazyImage;
+  )
+}
+export default LazyImage

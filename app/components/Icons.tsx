@@ -9,7 +9,6 @@ export const Icon = (_{
     <span className={`icon ${className}`} {...props}>
       {name}
     </span>
-  );
-};
-
-export default Icon;
+  )
+}
+export default Icon

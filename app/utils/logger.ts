@@ -7,9 +7,6 @@ export const Logger = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Logger;
+  cleanup: () => {}
+} }}
+export default Logger

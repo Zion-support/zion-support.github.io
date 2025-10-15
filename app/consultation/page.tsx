@@ -276,4 +276,6 @@ import { ArrowRight, Clock, Users, DollarSign, Shield } from 'lucide-react';expo
       </div>
     </>
   );
-}
+};
+
+export default ConsultationPage;

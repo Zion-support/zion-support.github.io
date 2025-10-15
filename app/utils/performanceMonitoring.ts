@@ -7,9 +7,6 @@ export const Performancemonitoring = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Performancemonitoring;
+  cleanup: () => {}
+} }}
+export default Performancemonitoring

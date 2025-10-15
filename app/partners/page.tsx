@@ -232,4 +232,6 @@ import { CheckCircle, Users, Globe, Shield, Zap } from 'lucide-react';export def
       </div>
     </>
   );
-}
+};
+
+export default PartnersPage;

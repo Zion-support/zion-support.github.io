@@ -270,4 +270,4 @@ const DevOpsServicesPage = () => {
   );
 };
 
-export default DevOpsServicesPage;
+export default DevopsServicesPage;

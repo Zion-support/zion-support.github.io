@@ -1,58 +1,50 @@
-import React from "react";
-import {
+import React from "react"
+import {}
   Brain,
   Shield,
   Zap,
   Globe,
   CheckCircle,
-  ArrowRight,
-} from "lucide-react";
-import { Link } from "react-router-dom";
-
-const EnhancedServicesShowcase: React.FC = () => {
-  const services = [
-    {
+  ArrowRight} from "lucide-react"
+import { Link } from "react-router-dom"
+const EnhancedServicesShowcase: React.FC = () => {}
+}const services = []
+    {}
       icon: Brain,
       title: "AI Solutions",
       description:
         "Cutting-edge artificial intelligence solutions to automate and optimize your business processes.",
-      features: [
+      features: []
         "Machine Learning",
         "Natural Language Processing",
         "Computer Vision",
-        "Predictive Analytics",
-      ],
-    },
-    {
+        "Predictive Analytics"]},
+    {}
       icon: Shield,
       title: "Cybersecurity",
       description:
         "Comprehensive security solutions to protect your business from cyber threats and data breaches.",
-      features: [
+      features: []
         "Security Audits",
         "Threat Detection",
         "Data Protection",
-        "Compliance Management",
-      ],
-    },
-    {
+        "Compliance Management"]},
+    {}
       icon: Zap,
       title: "Cloud Infrastructure",
       description:
         "Scalable and secure cloud solutions to modernize your infrastructure and reduce costs.",
-      features: [
+      features: []
         "Cloud Migration",
         "Infrastructure as Code",
         "Auto-scaling",
-        "Disaster Recovery",
-      ],
-    },
-    {
+        "Disaster Recovery"]},
+    {}
       icon: Globe,
       title: "Digital Transformation",
       description:
         "Complete digital transformation services to modernize your business and stay competitive.",
-      features: [
+      features: []
         "Strategy Development",
         "Technology Integration",
         "Change Management",
@@ -72,7 +64,6 @@ const EnhancedServicesShowcase: React.FC = () => {
             business and drive innovation
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (<div
               key={index}
@@ -90,7 +81,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                   Key Features
                 </h4>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex) => ()
                     <li
                       key={featureIndex}
                       className="flex items-center text-sm text-gray-300"
@@ -108,7 +99,6 @@ const EnhancedServicesShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-
         <div className="text-center mt-16">
           <Link
             to="/contact"
@@ -120,7 +110,6 @@ const EnhancedServicesShowcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default EnhancedServicesShowcase;
+  )
+}
+export default EnhancedServicesShowcase

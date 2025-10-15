@@ -1,9 +1,8 @@
-import React from "react";
-import { AlertTriangle, RefreshCw } from "lucide-react";
-
-interface ErrorFallbackProps {
-  error: Error;
-  resetErrorBoundary: () => void;
+import React from "react"
+import { AlertTriangle, RefreshCw } from "lucide-react"
+interface ErrorFallbackProps {}
+  error: Error
+  resetErrorBoundary: () => void
 }
 
 const ErrorFallback: React.FC<ErrorFallbackProps> = ({
@@ -35,7 +34,6 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
         </button>
       </div>
     </div>
-  );
-};
-
-export default ErrorFallback;
+  )
+}
+export default ErrorFallback

@@ -28,23 +28,20 @@ const FuturisticText = (_{
     } else {
       setIsComplete(true);
     }
-  }, [currentIndex, text, speed]);
-
-  useEffect(() => {
-    if (delay > 0) {
-      const timeout = setTimeout(() => {
-        setCurrentIndex(0);
-        setDisplayedText('');
-        setIsComplete(false);
-      }, delay);
-
-      return () => clearTimeout(timeout);
+  }, [currentIndex, text, speed])
+  useEffect(() => {}
+}if (delay > 0) {}
+      const timeout = setTimeout(() => {}
+}setCurrentIndex(0)
+        setDisplayedText('')
+        setIsComplete(false)
+      }, delay)
+      return () => clearTimeout(timeout)
     }
-  }, [delay]);
-
-  return (
+  }, [delay])
+  return ()
     <Component
-      className={cn(
+      className={cn()
         'relative inline-block',
         'before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300',
         'after:absolute after:inset-0 after:bg-gradient-to-r after:from-transparent after:via-cyan-500/20 after:to-transparent after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300',
@@ -52,11 +49,10 @@ const FuturisticText = (_{
       )}
     >
       {displayedText}
-      {!isComplete && (
+      {!isComplete && ()
         <span className="animate-pulse text-cyan-400">|</span>
       )}
     </Component>
-  );
-};
-
-export default FuturisticText;
+  )
+}
+export default FuturisticText

@@ -10,20 +10,18 @@ import { focusManagement, ariaUtils, keyboardNavigation } from './utils/accessib
 export { focusManagement, ariaUtils, keyboardNavigation };
 
 // Skip link component
-export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> = ({
+export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> = ({}
   target,
-  children,
-}) => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const targetElement = document.querySelector(target);
-    if (targetElement) {
-      (targetElement as HTMLElement).focus();
-      targetElement.scrollIntoView({ behavior: 'smooth' });
+  children}) => {}
+}const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {}
+}e.preventDefault()
+    const targetElement = document.querySelector(target)
+    if (targetElement) {}
+      (targetElement as HTMLElement).focus()
+      targetElement.scrollIntoView({ behavior: 'smooth' })
     }
-  };
-
-  return (
+  }
+  return ()
     <a
       href={target}
       onClick={handleClick}
@@ -31,65 +29,50 @@ export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> =
     >
       {children}
     </a>
-  );
-};
-
+  )
+}
 // Screen reader only text component
-export const ScreenReaderOnly: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <span className="sr-only">{children}</span>;
-};
-
+export const ScreenReaderOnly: React.FC<{ children: React.ReactNode }> = ({ children }) => {}
+}return <span className="sr-only">{children}</span>
+}
 // Focus trap component
-export const FocusTrap: React.FC<{ children: React.ReactNode; active: boolean }> = ({
+export const FocusTrap: React.FC<{ children: React.ReactNode; active: boolean }> = ({}
   children,
-  active,
-}) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (active && containerRef.current) {
-      return focusManagement.trapFocus(containerRef.current);
+  active}) => {}
+}const containerRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {}
+}if (active && containerRef.current) {}
+      return focusManagement.trapFocus(containerRef.current)
     }
-    return undefined;
-  }, [active]);
-
-  return <div ref={containerRef}>{children}</div>;
-};
-
+    return undefined
+  }, [active])
+  return <div ref={containerRef}>{children}</div>
+}
 // Responsive breakpoint hook
-export const useBreakpoint = (breakpoint: string) => {
-  const [matches, setMatches] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia(breakpoint);
-    setMatches(mediaQuery.matches);
-
-    const handleChange = (e: MediaQueryListEvent) => {
-      setMatches(e.matches);
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, [breakpoint]);
-
-  return matches;
-};
-
+export const useBreakpoint = (breakpoint: string) => {}
+}const [matches, setMatches] = useState(false)
+  useEffect(() => {}
+}const mediaQuery = window.matchMedia(breakpoint)
+    setMatches(mediaQuery.matches)
+    const handleChange = (e: MediaQueryListEvent) => {}
+}setMatches(e.matches)
+    }
+    mediaQuery.addEventListener('change', handleChange)
+    return () => mediaQuery.removeEventListener('change', handleChange)
+  }, [breakpoint])
+  return matches
+}
 // High contrast mode hook
-export const useHighContrast = () => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-    setIsHighContrast(mediaQuery.matches);
-
-    const handleChange = (e: MediaQueryListEvent) => {
-      setIsHighContrast(e.matches);
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
-
-  return isHighContrast;
-};
+export const useHighContrast = () => {}
+}const [isHighContrast, setIsHighContrast] = useState(false)
+  useEffect(() => {}
+}const mediaQuery = window.matchMedia('(prefers-contrast: high)')
+    setIsHighContrast(mediaQuery.matches)
+    const handleChange = (e: MediaQueryListEvent) => {}
+}setIsHighContrast(e.matches)
+    }
+    mediaQuery.addEventListener('change', handleChange)
+    return () => mediaQuery.removeEventListener('change', handleChange)
+  }, [])
+  return isHighContrast
+}

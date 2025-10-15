@@ -1,12 +1,14 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import './app/styles/futuristic.css';
 
 // Components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
+import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
@@ -75,7 +77,7 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   return (
-    <ErrorBoundary>
+    <GlobalErrorBoundary>
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-slate-900 flex">
@@ -144,7 +146,7 @@ function App() {
           </div>
         </Router>
       </HelmetProvider>
-    </ErrorBoundary>
+    </GlobalErrorBoundary>
   );
 }
 

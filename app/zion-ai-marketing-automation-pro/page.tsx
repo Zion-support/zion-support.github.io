@@ -128,6 +128,7 @@ export default function ZionAiMarketingAutomationPro() {
     { number: "10x", label: "Content Generation Speed", icon: <Zap className="w-6 h-6" /> }
   ];
 
+const ZionAiMarketingAutomationProPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -445,4 +446,6 @@ export default function ZionAiMarketingAutomationPro() {
       </div>
     </>
   );
-}
+};
+
+export default ZionAiMarketingAutomationProPage;

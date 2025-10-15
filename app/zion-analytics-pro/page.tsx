@@ -82,23 +82,12 @@ export default function ZionAnalyticsPro() {
     }
   ];
 
+const ZionAnalyticsProPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Zion Analytics Pro - AI-Powered Business Intelligence | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Transform your business with Zion Analytics Pro - AI-powered business intelligence platform with real-time analytics, predictive insights, and automated reporting. Start your free trial today!"
-        />
-        <meta
-          name="keywords"
-          content="business intelligence, analytics, data visualization, predictive analytics, AI insights, dashboard, reporting, Zion Analytics Pro"
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-analytics-pro" />
-      </Helmet>
-      <SEOOptimizer
-        title="Zion Analytics Pro - AI-Powered Business Intelligence | Zion Tech Group"
-        description="Transform your business with Zion Analytics Pro - AI-powered business intelligence platform with real-time analytics, predictive insights, and automated reporting. Start your free trial today!"
+      <SEOHead 
+        title="zion-analytics-pro - Zion Tech Group"
+        description="Zion Tech Group zion-analytics-pro service page"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -339,4 +328,6 @@ export default function ZionAnalyticsPro() {
       </div>
     </>
   );
-}
+};
+
+export default ZionAnalyticsProPage;

@@ -139,23 +139,12 @@ export default function ZionAiCustomerInsights() {
     }
   ];
 
+const ZionAiCustomerInsightsPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Zion AI Customer Insights - AI-Powered Customer Analytics | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Transform customer data into actionable insights with AI. Zion AI Customer Insights provides predictive analytics, sentiment analysis, and behavioral insights to boost retention and revenue."
-        />
-        <meta
-          name="keywords"
-          content="customer insights, AI analytics, customer behavior, predictive analytics, sentiment analysis, customer retention, churn prediction, customer lifetime value"
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-customer-insights" />
-      </Helmet>
-      <SEOOptimizer
-        title="Zion AI Customer Insights - AI-Powered Customer Analytics | Zion Tech Group"
-        description="Transform customer data into actionable insights with AI. Zion AI Customer Insights provides predictive analytics, sentiment analysis, and behavioral insights to boost retention and revenue."
+      <SEOHead 
+        title="zion-ai-customer-insights - Zion Tech Group"
+        description="Zion Tech Group zion-ai-customer-insights service page"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -456,4 +445,6 @@ export default function ZionAiCustomerInsights() {
       </div>
     </>
   );
-}
+};
+
+export default ZionAiCustomerInsightsPage;

@@ -7,9 +7,6 @@ export const Analyticstracker = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Analyticstracker;
+  cleanup: () => {}
+} }}
+export default Analyticstracker

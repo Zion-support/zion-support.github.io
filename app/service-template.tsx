@@ -1,15 +1,14 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-
-interface ServiceTemplateProps {
-  title: string;
-  description: string;
-  features: Array<{
-    title: string;
-    description: string;
-  }>;
+import React from "react"
+import { Helmet } from "react-helmet-async"
+import { Link } from "react-router-dom"
+import { ArrowRight } from "lucide-react"
+interface ServiceTemplateProps {}
+  title: string
+  description: string
+  features: Array<{}
+    title: string
+    description: string
+  }>
 }
 
 const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
@@ -19,7 +18,6 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
         <title>{title} | Zion Tech Group</title>
         <meta name="description" content={description} />
       </Helmet>
-
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -47,11 +45,10 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
           </div>
         </div>
       </div>
-
       <div className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => ()
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
@@ -66,7 +63,6 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
         </div>
       </div>
     </div>
-  );
-};
-
-export default ServiceTemplate;
+  )
+}
+export default ServiceTemplate

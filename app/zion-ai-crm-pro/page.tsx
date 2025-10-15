@@ -128,6 +128,7 @@ export default function ZionAiCrmPro() {
     { number: "24/7", label: "AI Support Available", icon: <Clock className="w-6 h-6" /> }
   ];
 
+const ZionAiCrmProPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -445,4 +446,6 @@ export default function ZionAiCrmPro() {
       </div>
     </>
   );
-}
+};
+
+export default ZionAiCrmProPage;

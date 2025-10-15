@@ -7,9 +7,6 @@ export const Performanceenhancer = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Performanceenhancer;
+  cleanup: () => {}
+} }}
+export default Performanceenhancer

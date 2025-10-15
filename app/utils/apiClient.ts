@@ -7,9 +7,6 @@ export const Apiclient = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Apiclient;
+  cleanup: () => {}
+} }}
+export default Apiclient

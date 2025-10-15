@@ -1,34 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Home, 
-  ArrowLeft, 
-  Mail, 
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
+import {}
+  Home,
+  ArrowLeft,
+  Mail,
   Phone,
   Zap,
   Brain,
   Server,
   Target
-} from 'lucide-react';
-
-const NotFoundPage: React.FC = () => {
-  const quickLinks = [
+} from 'lucide-react'
+const NotFoundPage: React.FC = () => {}
+}const quickLinks = []
     { name: 'Home', href: '/', icon: Home },
     { name: 'AI Services', href: '/ai-services', icon: Brain },
     { name: 'IT Services', href: '/it-services', icon: Server },
     { name: 'Micro SAAS', href: '/micro-saas', icon: Target },
     { name: 'Contact', href: '/contact', icon: Mail }
-  ];
-
-  return (
-    <>
+  ]
+  return ()
+    <div>
       <Helmet>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="description" content="The page you&apos;re looking for doesn&apos;t exist. Explore our AI, IT, and Micro SAAS services or contact us for assistance." />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* 404 Animation */}
@@ -44,18 +41,16 @@ const NotFoundPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Error Message */}
           <div className="mb-12">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Oops! Page Not Found
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              The page you&apos;re looking for seems to have vanished into the digital void. 
+              The page you&apos;re looking for seems to have vanished into the digital void.
               Don&apos;t worry, our AI-powered search can help you find what you need!
             </p>
           </div>
-
           {/* Quick Actions */}
           <div className="mb-12">
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -75,12 +70,11 @@ const NotFoundPage: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Quick Links */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-white mb-8">Popular Pages</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-              {quickLinks.map((link, index) => (
+              {quickLinks.map((link, index) => ()
                 <Link
                   key={index}
                   to={link.href}
@@ -96,7 +90,6 @@ const NotFoundPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Contact Section */}
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20">
             <h2 className="text-2xl font-bold text-white mb-4">Need Help?</h2>
@@ -120,7 +113,6 @@ const NotFoundPage: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* Fun Fact */}
           <div className="mt-12 text-center">
             <p className="text-gray-400 text-sm">
@@ -129,8 +121,7 @@ const NotFoundPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-};
-
-export default NotFoundPage;
+</div>
+  )
+}
+export default NotFoundPage

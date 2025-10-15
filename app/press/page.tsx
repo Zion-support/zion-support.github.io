@@ -1,65 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, Globe, Users, Award, TrendingUp } from 'lucide-react';
-
-export default function Press() {
-  const pressReleases = [
-    {
-      title: "Zion Tech Group Launches Advanced AI Analytics Platform",
-      date: "2024-01-15",
-      summary: "Revolutionary AI-powered analytics platform transforms business intelligence with real-time insights and predictive modeling.",
-      category: "Product Launch"
-    },
-    {
-      title: "Zion Tech Group Partners with Leading Cloud Providers",
-      date: "2024-01-10",
-      summary: "Strategic partnerships with AWS, Microsoft Azure, and Google Cloud expand our global reach and capabilities.",
-      category: "Partnership"
-    },
-    {
-      title: "Zion Tech Group Recognized as Top AI Company 2024",
-      date: "2024-01-05",
-      summary: "Industry recognition for innovation in artificial intelligence and machine learning solutions.",
-      category: "Award"
-    },
-    {
-      title: "Zion Tech Group Expands to European Markets",
-      date: "2023-12-20",
-      summary: "European expansion brings advanced AI solutions to new markets with localized support and compliance.",
-      category: "Expansion"
-    }
-  ];
-
-  const mediaKit = [
-    {
-      title: "Company Logo",
-      description: "High-resolution logos in various formats",
-      download: "Download Logo Pack"
-    },
-    {
-      title: "Executive Photos",
-      description: "Professional headshots of leadership team",
-      download: "Download Photos"
-    },
-    {
-      title: "Product Screenshots",
-      description: "High-quality screenshots of our AI solutions",
-      download: "Download Screenshots"
-    },
-    {
-      title: "Brand Guidelines",
-      description: "Complete brand guidelines and style guide",
-      download: "Download Guidelines"
-    }
-  ];
-
-  const stats = [
-    { number: "50+", label: "Press Mentions", icon: <Globe className="w-6 h-6" /> },
-    { number: "25+", label: "Awards Won", icon: <Award className="w-6 h-6" /> },
-    { number: "100+", label: "Media Contacts", icon: <Users className="w-6 h-6" /> },
-    { number: "99%", label: "Positive Coverage", icon: <TrendingUp className="w-6 h-6" /> }
-  ];
+import SEOHead from '../components/SEOHead';
 
   return (<>
       <Helmet>
@@ -231,4 +171,6 @@ export default function Press() {
       </div>
     </>
   );
-}
+};
+
+export default PressPage;

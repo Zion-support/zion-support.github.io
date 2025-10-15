@@ -1,67 +1,46 @@
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+import fs from 'fs'
+import path from 'path'
+import { glob } from 'glob'
 
 /**
  * Remove console.log statements from production build
  * This helps reduce bundle size and improve performance
  */
-
 function removeConsoleLogs(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
+    let content = fs.readFileSync(filePath, 'utf8')
+    const originalContent = content
     
     // Remove console.log, console.warn, console.error, console.info, console.debug
-    content = content.replace(/console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?/g, '');
+    content = content.replace(/console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?/g, '')
     
-    // Remove empty lines that might be left behind
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    // Remove empty lines left behind
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n')
     
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✓ Cleaned console logs from: ${filePath}`);
-      return true;
+      fs.writeFileSync(filePath, content, 'utf8')
+      console.log(`Removed console logs from: ${filePath}`)
     }
-    
-    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error processing ${filePath}:`, error.message)
   }
 }
 
-function processFiles() {
-  const patterns = [
-    'dist/**/*.js',
-    'dist/**/*.jsx',
-    'dist/**/*.ts',
-    'dist/**/*.tsx'
-  ];
-  
-  let totalFiles = 0;
-  let cleanedFiles = 0;
-  
-  patterns.forEach(pattern => {
-    const files = glob.sync(pattern, { cwd: process.cwd() });
+async function main() {
+  try {
+    console.log('Removing console logs from production build...')
     
-    files.forEach(file => {
-      totalFiles++;
-      if (removeConsoleLogs(file)) {
-        cleanedFiles++;
-      }
-    });
-  });
-  
-  console.log(`\n📊 Console Log Removal Summary:`);
-  console.log(`   Total files processed: ${totalFiles}`);
-  console.log(`   Files cleaned: ${cleanedFiles}`);
-  console.log(`   Files unchanged: ${totalFiles - cleanedFiles}`);
+    // Find all JavaScript files in dist directory
+    const files = await glob('dist/**/*.js')
+    
+    for (const file of files) {
+      removeConsoleLogs(file)
+    }
+    
+    console.log('Console log removal completed!')
+  } catch (error) {
+    console.error('Error removing console logs:', error)
+  }
 }
 
-// Run the script
-console.log('🧹 Removing console logs from production build...\n');
-processFiles();
-console.log('\n✅ Console log removal completed!');
-
-export { removeConsoleLogs, processFiles };
+main()

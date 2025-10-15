@@ -371,4 +371,6 @@ export default function AISupplyChainOptimizer() {
       </div>
     </>
   );
-}
+};
+
+export default AiSupplyChainOptimizerPage;

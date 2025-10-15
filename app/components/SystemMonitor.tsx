@@ -1,10 +1,9 @@
-import React from "react";
-
-interface SystemMonitorProps {
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
+import React from "react"
+interface SystemMonitorProps {}
+  children?: React.ReactNode
+  className?: string
+  title?: string
+  description?: string
 }
 
 const SystemMonitor: React.FC<SystemMonitorProps> = ({
@@ -15,7 +14,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       {description && <p className="text-gray-600 mb-4">{description}</p>}
       {children}
     </div>
-  );
-};
-
-export default SystemMonitor;
+  )
+}
+export default SystemMonitor

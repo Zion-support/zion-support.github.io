@@ -10,7 +10,7 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
       label: 'AI Services',
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
-      dropdown: [
+      dropdown: []
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
         { label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' },
         { label: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
@@ -38,11 +38,11 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
         { label: 'View All AI Services', href: '/ai-services' }
       ]
     },
-    {
+    {}
       label: 'IT Services',
       href: '/services',
       icon: <Shield className="w-4 h-4" />,
-      dropdown: [
+      dropdown: []
         { label: 'AI-Powered Business Intelligence Pro', href: '/ai-business-intelligence' },
         { label: 'AI Customer Support Automation Suite', href: '/ai-customer-support' },
         { label: 'AI Content Generation Studio', href: '/ai-content-generation' },
@@ -76,11 +76,11 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
         { label: 'View All IT Services', href: '/services' }
       ]
     },
-    {
+    {}
       label: 'Micro SAAS',
       href: '/micro-saas',
       icon: <Zap className="w-4 h-4" />,
-      dropdown: [
+      dropdown: []
         { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
         { label: 'Zion Security Shield', href: '/zion-security-shield' },
         { label: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
@@ -107,11 +107,11 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
         { label: 'View All Micro SAAS', href: '/micro-saas' }
       ]
     },
-    {
+    {}
       label: '5G Solutions',
       href: '/5g-solutions',
       icon: <Globe className="w-4 h-4" />,
-      dropdown: [
+      dropdown: []
         { label: '5G Data Analytics', href: '/5g-data-analytics' },
         { label: '5G Edge Computing', href: '/5g-edge-computing' },
         { label: '5G Implementation', href: '/5g-implementation' },
@@ -122,11 +122,11 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
         { label: 'View All 5G Solutions', href: '/5g-solutions' }
       ]
     },
-    {
+    {}
       label: 'Company',
       href: '/about',
       icon: <BarChart3 className="w-4 h-4" />,
-      dropdown: [
+      dropdown: []
         { label: 'About Us', href: '/about' },
         { label: 'Our Team', href: '/team' },
         { label: 'Careers', href: '/careers' },
@@ -137,9 +137,8 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
         { label: 'Partners', href: '/partners' }
       ]
     }
-  ];
-
-  const quickLinks = [
+  ]
+  const quickLinks = []
     { label: 'Pricing', href: '/pricing' },
     { label: 'Demo', href: '/demo' },
     { label: 'Support', href: '/support' },
@@ -156,7 +155,6 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
               Zion Tech Group
             </span>
           </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">
             {navigationItems.map((item) => (<div
@@ -173,11 +171,10 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
                   <span>{item.label}</span>
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                 </Link>
-                
                 {/* Dropdown Menu */}
                 {activeDropdown === item.label && (<div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50">
                     <div className="py-2">
-                      {item.dropdown.map((dropdownItem) => (
+                      {item.dropdown.map((dropdownItem) => ()
                         <Link
                           key={dropdownItem.href}
                           to={dropdownItem.href}
@@ -192,11 +189,10 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
               </div>
             ))}
           </nav>
-
           {/* Quick Links & CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <div className="hidden lg:flex space-x-4">
-              {quickLinks.map((link) => (
+              {quickLinks.map((link) => ()
                 <Link
                   key={link.href}
                   to={link.href}
@@ -214,7 +210,6 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -223,7 +218,6 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (<div className="lg:hidden py-4 border-t border-white/10">
             <div className="space-y-4">
@@ -257,7 +251,6 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
                   </div>
                 </div>
               ))}
-              
               <div className="pt-4 border-t border-white/10">
                 <div className="space-y-2">
                   {quickLinks.map((link) => (<Link
@@ -276,7 +269,6 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
         )}
       </div>
     </header>
-  );
-};
-
-export default EnhancedNavigation;
+  )
+}
+export default EnhancedNavigation

@@ -7,9 +7,6 @@ export const Apicache = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Apicache;
+  cleanup: () => {}
+} }}
+export default Apicache

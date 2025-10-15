@@ -1,10 +1,9 @@
-import React from "react";
-
-interface SearchModalProps {
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
+import React from "react"
+interface SearchModalProps {}
+  children?: React.ReactNode
+  className?: string
+  title?: string
+  description?: string
 }
 
 const SearchModal: React.FC<SearchModalProps> = ({
@@ -15,7 +14,6 @@ const SearchModal: React.FC<SearchModalProps> = ({
       {description && <p className="text-gray-600 mb-4">{description}</p>}
       {children}
     </div>
-  );
-};
-
-export default SearchModal;
+  )
+}
+export default SearchModal

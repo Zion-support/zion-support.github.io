@@ -1,10 +1,9 @@
-import React from "react";
-
-interface PerformanceDashboardProps {
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
+import React from "react"
+interface PerformanceDashboardProps {}
+  children?: React.ReactNode
+  className?: string
+  title?: string
+  description?: string
 }
 
 const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
@@ -15,7 +14,6 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
       {description && <p className="text-gray-600 mb-4">{description}</p>}
       {children}
     </div>
-  );
-};
-
-export default PerformanceDashboard;
+  )
+}
+export default PerformanceDashboard

@@ -7,9 +7,6 @@ export const Advancedcaching = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Advancedcaching;
+  cleanup: () => {}
+} }}
+export default Advancedcaching

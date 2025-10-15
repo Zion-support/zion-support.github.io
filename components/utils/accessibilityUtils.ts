@@ -1,8 +1,8 @@
 // Focus management utilities
-export const focusManagement = {
+export const focusManagement = {}
   // Trap focus within an element
-  trapFocus: (element: HTMLElement) => {
-    const focusableElements = element.querySelectorAll(
+  trapFocus: (element: HTMLElement) => {}
+}const focusableElements = element.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
@@ -85,8 +85,7 @@ export const ariaUtils = {
     const rect = element.getBoundingClientRect();
     return rect.width > 0 && rect.height > 0;
   }
-};
-
+}
 // Keyboard navigation utilities
 export const keyboardNavigation = {
   // Handle arrow key navigation
@@ -129,4 +128,4 @@ export const keyboardNavigation = {
       callback();
     }
   }
-};
+}

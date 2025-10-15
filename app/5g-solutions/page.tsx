@@ -2,17 +2,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Shield, CheckCircle, ArrowRight, Clock, Network, Cpu, Smartphone, BarChart3, Star } from 'lucide-react';
 
-const FiveGSolutionsPage: React.FC = () => {
-  const solutions = [
+const G5gSolutionsPage: React.FC = () => {
+  const g5gServices = [
     {
-      name: "5G Implementation",
-      description: "Complete 5G network deployment with zero-downtime migration and comprehensive testing.",
-      features: ["Network planning & design", "Equipment installation", "Performance testing", "Compliance certification", "24/7 monitoring", "Maintenance support"],
-      price: "From $5,999",
-      marketPrice: "$12,999-49,999",
-      popular: true,
       icon: <Wifi className="w-8 h-8" />,
-      benefits: "Deploy 5G networks 60% faster than industry average"
+      title: "5G Network Design",
+      description: "Complete 5G network architecture and infrastructure design for optimal coverage and performance.",
+      features: ["Network Planning", "Coverage Analysis", "Capacity Planning", "Interference Management"]
     },
     {
       name: "5G Network Infrastructure",
@@ -142,4 +138,4 @@ const FiveGSolutionsPage: React.FC = () => {
   );
 };
 
-export default FiveGSolutionsPage;
+export default G5gSolutionsPage;

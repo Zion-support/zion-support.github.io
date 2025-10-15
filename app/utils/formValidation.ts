@@ -7,9 +7,6 @@ export const Formvalidation = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Formvalidation;
+  cleanup: () => {}
+} }}
+export default Formvalidation

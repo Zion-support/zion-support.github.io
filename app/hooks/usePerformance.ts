@@ -1,37 +1,31 @@
-import { useEffect, useCallback, useRef } from 'react';
-import { logger } from '../utils/logger';
-
-interface PerformanceMetrics {
-  renderTime: number;
-  componentName: string;
-  timestamp: number;
+import { useEffect, useCallback, useRef } from 'react'
+import { logger } from '../utils/logger'
+interface PerformanceMetrics {}
+  renderTime: number
+  componentName: string
+  timestamp: number
 }
-
 /**
  * Hook for performance monitoring and optimization
  */
-export function usePerformance(componentName: string) {
-  const renderStartTime = useRef<number>(0);
-  const renderCount = useRef<number>(0);
-
+export function usePerformance(componentName: string) {}
+}const renderStartTime = useRef<number>(0)
+  const renderCount = useRef<number>(0)
   // Track render performance
-  useEffect(() => {
-    renderStartTime.current = performance.now();
-    renderCount.current += 1;
-
-    return () => {
-      const renderTime = performance.now() - renderStartTime.current;
-      
+  useEffect(() => {}
+}renderStartTime.current = performance.now()
+    renderCount.current += 1
+    return () => {}
+}const renderTime = performance.now() - renderStartTime.current
       if (renderTime > 16) { // More than one frame (16ms)
-        logger.warn(`Slow render detected in ${componentName}`, {
+        logger.warn(`Slow render detected in ${componentName}`, {}
           renderTime,
           renderCount: renderCount.current,
           componentName
-        });
+        })
       }
-    };
-  });
-
+    }
+  })
   // Debounced function for expensive operations
   const debounce = useCallback(_<T extends (...args: any[]) => any>(
       func: T,
@@ -44,8 +38,7 @@ export function usePerformance(componentName: string) {
       };
     },
     []
-  );
-
+  )
   // Throttled function for frequent operations
   const throttle = useCallback(_<T extends (...args: any[]) => any>(
       func: T,
@@ -58,11 +51,10 @@ export function usePerformance(componentName: string) {
           lastCall = now;
           func(...args);
         }
-      };
+      }
     },
     []
-  );
-
+  )
   // Memoization helper
   const memoize = useCallback(_<T extends (...args: any[]) => any>(func: T): T => {
       const cache = new Map();
@@ -71,16 +63,14 @@ export function usePerformance(componentName: string) {
         if (cache.has(key)) {
           return cache.get(key);
         }
-        const result = func(...args);
-        cache.set(key, result);
-        return result;
-      }) as T;
+        const result = func(...args)
+        cache.set(key, result)
+        return result
+      }) as T
     },
     []
-  );
-
+  )
   // Note: useIntersectionObserver is now a separate hook
-
   // Performance measurement helper
   const measurePerformance = useCallback(operation: string, fn: () => void) => {
       const start = performance.now();
@@ -93,45 +83,40 @@ export function usePerformance(componentName: string) {
       return duration;
     },
     [componentName]
-  );
-
-  return {
+  )
+  return {}
     debounce,
     throttle,
     memoize,
     measurePerformance,
     renderCount: renderCount.current
-  };
+  }
 }
-
 /**
  * Hook for memory usage monitoring
  */
-export function useMemoryMonitor(componentName: string) {
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && 'memory' in performance) {
-      const checkMemory = () => {
-        const memory = (performance as any).memory;
-        if (memory) {
+export function useMemoryMonitor(componentName: string) {}
+}useEffect(() => {}
+}if (process.env.NODE_ENV === 'development' && 'memory' in performance) {}
+      const checkMemory = () => {}
+}const memory = (performance as any).memory
+        if (memory) {}
           const used = memory.usedJSHeapSize / 1024 / 1024; // MB
           const total = memory.totalJSHeapSize / 1024 / 1024; // MB
           const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
-
-          if (used > limit * 0.8) {
-            logger.warn(`High memory usage detected in ${componentName}`, {
+          if (used > limit * 0.8) {}
+            logger.warn(`High memory usage detected in ${componentName}`, {}
               used: `${used.toFixed(2)}MB`,
               total: `${total.toFixed(2)}MB`,
               limit: `${limit.toFixed(2)}MB`,
               percentage: `${((used / limit) * 100).toFixed(2)}%`
-            });
+            })
           }
         }
-      };
-
+      }
       const interval = setInterval(checkMemory, 30000); // Check every 30 seconds
-      return () => clearInterval(interval);
+      return () => clearInterval(interval)
     }
-  }, [componentName]);
+  }, [componentName])
 }
-
-export default usePerformance;
+export default usePerformance

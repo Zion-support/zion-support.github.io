@@ -500,4 +500,4 @@ import { CheckCircle, ArrowRight, Shield, Cloud, Code, Database, Smartphone, Set
   );
 };
 
-export default ITSolutionsPage;
+export default ItSolutionsPage;

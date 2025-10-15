@@ -30,48 +30,41 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         }
       },
       { threshold: 0.1 }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
+    )
+    if (imgRef.current) {}
+      observer.observe(imgRef.current)
     }
-
-    return () => observer.disconnect();
-  }, [priority]);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
-  const handleError = () => {
-    setHasError(true);
-    onError?.();
-  };
-
-  const imageSrc = isInView ? src : placeholder;
-
-  return (
+    return () => observer.disconnect()
+  }, [priority])
+  const handleLoad = () => {}
+}setIsLoaded(true)
+    onLoad?.()
+  }
+  const handleError = () => {}
+}setHasError(true)
+    onError?.()
+  }
+  const imageSrc = isInView ? src : placeholder
+  return ()
     <div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
     >
-      {!isLoaded && !hasError && (
+      {!isLoaded && !hasError && ()
         <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
           <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"></div>
         </div>
       )}
-      
-      {hasError ? (
+      {hasError ? ()
         <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
           <div className="text-gray-400 text-sm">Failed to load image</div>
         </div>
-      ) : (
+      ) : ()
         <img
           src={imageSrc}
           alt={alt}
-          className={`transition-opacity duration-300 ${
+          className={`transition-opacity duration-300 ${}
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           onLoad={handleLoad}
@@ -81,7 +74,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         />
       )}
     </div>
-  );
-};
-
-export default OptimizedImage;
+  )
+}
+export default OptimizedImage

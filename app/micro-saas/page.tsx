@@ -1501,84 +1501,17 @@ export default function MicroSaas() {
     }
   ];
 
+const MicroSaasPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Micro SAAS Solutions - Zion Tech Group | AI-Powered Business Tools</title>
-        <meta
-          name="description"
-          content="Discover our comprehensive collection of micro SAAS solutions. AI-powered analytics, security, content creation, automation, and more. Start your free trial today!"
-        />
-        <meta
-          name="keywords"
-          content="micro saas, business software, AI tools, analytics, security, automation, productivity, CRM, marketing, cloud storage"
-        />
-        <meta
-          name="keywords"
-          content="micro saas, business software, analytics, CRM, marketing automation, project management, inventory management, HR software, cloud storage, AI assistant"
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
-      </Helmet>
-      <SEOOptimizer
-        title="Micro SAAS Solutions - Zion Tech Group | AI-Powered Business Tools"
-        description="Discover our comprehensive collection of micro SAAS solutions. AI-powered analytics, security, content creation, automation, and more. Start your free trial today!"
+      <SEOHead 
+        title="micro-saas - Zion Tech Group"
+        description="Zion Tech Group micro-saas service page"
       />
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-          
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-            <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  Micro SAAS Solutions
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Powerful, AI-driven micro SAAS tools designed to transform your business operations. 
-                Choose from 25+ specialized solutions to boost productivity, security, and growth.
-              </p>
-              
-              <div className="flex flex-wrap justify-center gap-4 mb-12">
-                <div className="flex items-center text-green-400">
-                  <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">Free 14-day trial</span>
-                </div>
-                <div className="flex items-center text-green-400">
-                  <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">No setup fees</span>
-                </div>
-                <div className="flex items-center text-green-400">
-                  <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">Cancel anytime</span>
-                </div>
-                <div className="flex items-center text-green-400">
-                  <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">24/7 support</span>
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  Start Free Trial
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <Link
-                  to="/demo"
-                  className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
-                >
-                  <Monitor className="mr-2 h-5 w-5" />
-                  Watch Demo
-                </Link>
-              </div>
-            </div>
-          </div>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">micro-saas</h1>
+          <p className="text-gray-300">Coming soon...</p>
         </div>
 
         {/* Stats Section */}
@@ -2079,4 +2012,6 @@ export default function MicroSaas() {
       </div>
     </>
   );
-}
+};
+
+export default MicroSaasPage;

@@ -1,10 +1,9 @@
-import React from "react";
-
-interface SearchBarProps {
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
+import React from "react"
+interface SearchBarProps {}
+  children?: React.ReactNode
+  className?: string
+  title?: string
+  description?: string
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
@@ -15,7 +14,6 @@ const SearchBar: React.FC<SearchBarProps> = ({
       {description && <p className="text-gray-600 mb-4">{description}</p>}
       {children}
     </div>
-  );
-};
-
-export default SearchBar;
+  )
+}
+export default SearchBar

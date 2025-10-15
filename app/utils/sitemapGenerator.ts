@@ -7,9 +7,6 @@ export const Sitemapgenerator = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Sitemapgenerator;
+  cleanup: () => {}
+} }}
+export default Sitemapgenerator

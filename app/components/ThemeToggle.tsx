@@ -1,10 +1,9 @@
-import React from "react";
-
-interface ThemeToggleProps {
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
+import React from "react"
+interface ThemeToggleProps {}
+  children?: React.ReactNode
+  className?: string
+  title?: string
+  description?: string
 }
 
 const ThemeToggle: React.FC<ThemeToggleProps> = ({
@@ -15,7 +14,6 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({
       {description && <p className="text-gray-600 mb-4">{description}</p>}
       {children}
     </div>
-  );
-};
-
-export default ThemeToggle;
+  )
+}
+export default ThemeToggle

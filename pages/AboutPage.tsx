@@ -9,75 +9,70 @@ import {
   Lightbulb,
   Rocket,
   Target
-} from 'lucide-react';
-
-const AboutPage: React.FC = () => {
-  const values = [
-    {
+} from 'lucide-react'
+const AboutPage: React.FC = () => {}
+}const values = []
+    {}
       icon: Brain,
       title: 'Innovation First',
       description: 'We stay at the forefront of technology, constantly exploring new ways to solve complex business challenges.'
     },
-    {
+    {}
       icon: Shield,
       title: 'Security & Trust',
       description: 'Your data and systems are protected with enterprise-grade security measures and compliance standards.'
     },
-    {
+    {}
       icon: Users,
       title: 'Client Success',
       description: 'We measure our success by the success of our clients, ensuring every solution delivers real business value.'
     },
-    {
+    {}
       icon: Globe,
       title: 'Global Reach',
       description: 'Serving clients worldwide with 24/7 support and localized solutions for different markets and time zones.'
     }
-  ];
-
-  const team = [
-    {
+  ]
+  const team = []
+    {}
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       description: 'Visionary leader with 15+ years in AI and IT solutions',
       image: '/api/placeholder/300/300'
     },
-    {
+    {}
       name: 'AI Research Team',
       role: 'Machine Learning Engineers',
       description: 'Experts in cutting-edge AI technologies and algorithms',
       image: '/api/placeholder/300/300'
     },
-    {
+    {}
       name: 'DevOps Specialists',
       role: 'Infrastructure Engineers',
       description: 'Cloud and infrastructure experts ensuring 99.9% uptime',
       image: '/api/placeholder/300/300'
     },
-    {
+    {}
       name: 'Customer Success',
       role: 'Support Team',
       description: 'Dedicated professionals ensuring your success 24/7',
       image: '/api/placeholder/300/300'
     }
-  ];
-
-  const milestones = [
+  ]
+  const milestones = []
     { year: '2020', title: 'Company Founded', description: 'Started with a vision to democratize AI and IT solutions' },
     { year: '2021', title: 'First 100 Clients', description: 'Reached our first major milestone in client acquisition' },
     { year: '2022', title: 'AI Platform Launch', description: 'Launched our flagship AI analytics platform' },
     { year: '2023', title: 'Global Expansion', description: 'Expanded services to international markets' },
     { year: '2024', title: '500+ Clients', description: 'Serving over 500 businesses worldwide' }
-  ];
-
-  return (
-    <>
+  ]
+  return ()
+    <div>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission to transform businesses with AI, IT, and Micro SAAS solutions. Meet our team and discover our values." />
         <meta name="keywords" content="about zion tech group, AI company, IT services company, micro SAAS provider, team, mission, values" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -89,14 +84,13 @@ const AboutPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              We are a leading technology company specializing in AI, IT, and Micro SAAS solutions. 
-              Our mission is to empower businesses with cutting-edge technology that drives growth, 
+              We are a leading technology company specializing in AI, IT, and Micro SAAS solutions.
+              Our mission is to empower businesses with cutting-edge technology that drives growth,
               efficiency, and innovation.
             </p>
           </div>
         </div>
       </section>
-
       {/* Mission & Vision */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,12 +104,11 @@ const AboutPage: React.FC = () => {
                   <h2 className="text-2xl font-bold text-white">Our Mission</h2>
                 </div>
                 <p className="text-gray-300 text-lg">
-                  To democratize access to advanced AI and IT solutions, enabling businesses of all sizes 
-                  to leverage cutting-edge technology for growth and innovation. We believe technology 
+                  To democratize access to advanced AI and IT solutions, enabling businesses of all sizes
+                  to leverage cutting-edge technology for growth and innovation. We believe technology
                   should be accessible, reliable, and transformative.
                 </p>
               </div>
-
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
@@ -124,13 +117,12 @@ const AboutPage: React.FC = () => {
                   <h2 className="text-2xl font-bold text-white">Our Vision</h2>
                 </div>
                 <p className="text-gray-300 text-lg">
-                  To be the global leader in AI and IT solutions, creating a world where every business 
-                  can harness the power of technology to achieve unprecedented success and make a positive 
+                  To be the global leader in AI and IT solutions, creating a world where every business
+                  can harness the power of technology to achieve unprecedented success and make a positive
                   impact on society.
                 </p>
               </div>
             </div>
-
             <div className="space-y-8">
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20">
                 <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
@@ -169,7 +161,6 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Values Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -181,9 +172,8 @@ const AboutPage: React.FC = () => {
               These principles guide everything we do and shape how we work with our clients and each other.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+            {values.map((value, index) => ()
               <div key={index} className="group">
                 <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:transform hover:scale-105 text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -197,7 +187,6 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Team Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -209,9 +198,8 @@ const AboutPage: React.FC = () => {
               Our diverse team of experts brings together decades of experience in AI, IT, and business solutions.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
+            {team.map((member, index) => ()
               <div key={index} className="group">
                 <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:transform hover:scale-105 text-center">
                   <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -226,7 +214,6 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Timeline Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -238,12 +225,10 @@ const AboutPage: React.FC = () => {
               From startup to industry leader, here are the key milestones in our growth story.
             </p>
           </div>
-
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 to-cyan-500"></div>
-            
             <div className="space-y-12">
-              {milestones.map((milestone, index) => (
+              {milestones.map((milestone, index) => ()
                 <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                     <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20">
@@ -252,11 +237,9 @@ const AboutPage: React.FC = () => {
                       <p className="text-gray-300">{milestone.description}</p>
                     </div>
                   </div>
-                  
                   <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center relative z-10">
                     <Rocket className="w-4 h-4 text-white" />
                   </div>
-                  
                   <div className="w-1/2"></div>
                 </div>
               ))}
@@ -264,7 +247,6 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-500/20 to-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -272,7 +254,7 @@ const AboutPage: React.FC = () => {
             Ready to Work With Us?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join hundreds of businesses that trust Zion Tech Group for their technology needs. 
+            Join hundreds of businesses that trust Zion Tech Group for their technology needs.
             Let&apos;s build something amazing together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -292,8 +274,7 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
-  );
-};
-
-export default AboutPage;
+</div>
+  )
+}
+export default AboutPage

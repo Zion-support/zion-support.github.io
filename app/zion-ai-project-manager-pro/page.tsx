@@ -128,6 +128,7 @@ export default function ZionAiProjectManagerPro() {
     { number: "70%", label: "Reduced Delays", icon: <Clock className="w-6 h-6" /> }
   ];
 
+const ZionAiProjectManagerProPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -445,4 +446,6 @@ export default function ZionAiProjectManagerPro() {
       </div>
     </>
   );
-}
+};
+
+export default ZionAiProjectManagerProPage;

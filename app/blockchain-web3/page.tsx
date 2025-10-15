@@ -1,70 +1,5 @@
-import { Link } from "react-router-dom";
-import { Shield, Zap, Globe, Lock, ArrowRight } from "lucide-react";
-import Layout from "../layout";
-
-export default function BlockchainWeb3() {
-  const features = [
-    {
-      icon: <Shield className="w-6 h-6 text-cyan-400" />,
-      title: "Decentralized Security",
-      description:
-        "Immutable blockchain technology ensures maximum security and transparency",
-    },
-    {
-      icon: <Zap className="w-6 h-6 text-purple-400" />,
-      title: "Smart Contracts",
-      description:
-        "Automated, self-executing contracts that eliminate intermediaries",
-    },
-    {
-      icon: <Globe className="w-6 h-6 text-yellow-400" />,
-      title: "Web3 Integration",
-      description:
-        "Seamless integration with decentralized applications and protocols",
-    },
-    {
-      icon: <Lock className="w-6 h-6 text-green-400" />,
-      title: "Cryptocurrency Solutions",
-      description:
-        "Custom token development and cryptocurrency integration services",
-    },
-  ];
-
-  const services = [
-    {
-      category: "Development",
-      items: [
-        "Smart Contract Development",
-        "DApp Development",
-        "Token Creation",
-        "DeFi Protocols",
-        "NFT Marketplaces",
-        "Cross-Chain Solutions",
-      ],
-    },
-    {
-      category: "Security & Audit",
-      items: [
-        "Smart Contract Audits",
-        "Security Testing",
-        "Penetration Testing",
-        "Code Review",
-        "Vulnerability Assessment",
-        "Compliance Check",
-      ],
-    },
-    {
-      category: "Consulting",
-      items: [
-        "Blockchain Strategy",
-        "Technology Selection",
-        "Architecture Design",
-        "Implementation Planning",
-        "Training & Support",
-        "Maintenance",
-      ],
-    },
-  ];
+import React from 'react';
+import SEOHead from '../components/SEOHead';
 
   return (<Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -143,6 +78,8 @@ export default function BlockchainWeb3() {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   );
-}
+};
+
+export default BlockchainWeb3Page;

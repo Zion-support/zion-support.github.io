@@ -7,9 +7,6 @@ export const Datavalidator = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Datavalidator;
+  cleanup: () => {}
+} }}
+export default Datavalidator

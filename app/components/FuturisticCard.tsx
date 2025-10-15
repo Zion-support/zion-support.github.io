@@ -1,11 +1,10 @@
-import React from 'react';
-import { cn } from '../lib/utils';
-
-interface FuturisticCardProps {
-  children: React.ReactNode;
-  className?: string;
-  glowColor?: 'cyan' | 'purple' | 'pink' | 'blue' | 'green' | 'orange' | 'red' | 'yellow';
-  hover?: boolean;
+import React from 'react'
+import { cn } from '../lib/utils'
+interface FuturisticCardProps {}
+  children: React.ReactNode
+  className?: string
+  glowColor?: 'cyan' | 'purple' | 'pink' | 'blue' | 'green' | 'orange' | 'red' | 'yellow'
+  hover?: boolean
 }
 
 const FuturisticCard = (_{ 
@@ -19,12 +18,10 @@ const FuturisticCard = (_{
     green: 'hover:shadow-green-500/25',
     orange: 'hover:shadow-orange-500/25',
     red: 'hover:shadow-red-500/25',
-    yellow: 'hover:shadow-yellow-500/25',
-  };
-
-  return (
+    yellow: 'hover:shadow-yellow-500/25'}
+  return ()
     <div
-      className={cn(
+      className={cn()
         'relative bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 transition-all duration-300',
         hover && 'hover:bg-white/20 hover:scale-105 hover:shadow-2xl',
         hover && glowColors[glowColor],
@@ -37,7 +34,6 @@ const FuturisticCard = (_{
         {children}
       </div>
     </div>
-  );
-};
-
-export default FuturisticCard;
+  )
+}
+export default FuturisticCard

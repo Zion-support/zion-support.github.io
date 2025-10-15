@@ -7,9 +7,6 @@ export const Performanceutils = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Performanceutils;
+  cleanup: () => {}
+} }}
+export default Performanceutils

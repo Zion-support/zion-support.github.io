@@ -55,41 +55,39 @@ function fixFile(filePath) {
       console.log(`Fixed: ${filePath}`);
       return true;
     }
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    return false
+  } catch (error) {}
+    console.error(`Error fixing ${filePath}:`, error.message)
+    return false
   }
 }
-
-function main() {
-  const patterns = [
-    'app/**/*.ts',
-    'app/**/*.tsx',
-    'components/**/*.ts',
-    'components/**/*.tsx',
-    'pages/**/*.ts',
-    'pages/**/*.tsx',
-    'utils/**/*.ts',
-    'utils/**/*.tsx'
-  ];
-  
-  let totalFixed = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      if (fixFile(file)) {
-        totalFixed++;
+// Function to recursively find and fix files
+function fixDirectory(dirPath) {}
+}let fixedCount = 0
+  try {}
+} catch (error) {}
+  console.error(error)
+}const items = fs.readdirSync(dirPath)
+    for (const item of items) {}
+      const fullPath = path.join(dirPath, item)
+      const stat = fs.statSync(fullPath)
+      if (stat.isDirectory()) {}
+        // Skip node_modules and other build directories
+        if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {}
+          fixedCount += fixDirectory(fullPath)
+        }
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {}
+        if (fixSyntaxErrors(fullPath)) {}
+          fixedCount++
+        }
       }
     }
+  } catch (error) {}
+    console.error(`Error reading directory ${dirPath}:`, error.message)
   }
-  
-  console.log(`\nFixed ${totalFixed} files`);
+  return fixedCount
 }
-
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
-
-export { fixFile, fixes };
+// Main execution
+console.log('Starting syntax error fixes...')
+const fixedCount = fixDirectory('./')
+console.log(`Syntax fixes complete. Fixed ${fixedCount} files.`)

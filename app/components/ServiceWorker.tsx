@@ -1,8 +1,7 @@
-import React from "react";
-
-interface ServiceWorkerProps {
-  children?: React.ReactNode;
-  className?: string;
+import React from "react"
+interface ServiceWorkerProps {}
+  children?: React.ReactNode
+  className?: string
 }
 
 const ServiceWorker: React.FC<ServiceWorkerProps> = ({

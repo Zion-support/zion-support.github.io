@@ -1,15 +1,14 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, Phone, Mail, CheckCircle, Star } from "lucide-react";
-
-interface GenericServicePageProps {
-  title: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  features: string[];
-  benefits: string[];
-  pricing?: string;
-  category: "AI" | "IT" | "MicroSAAS" | "Emerging";
+import React from "react"
+import { Helmet } from "react-helmet-async"
+import { ArrowRight, Phone, Mail, CheckCircle, Star } from "lucide-react"
+interface GenericServicePageProps {}
+  title: string
+  description: string
+  icon: React.ComponentType<any>
+  features: string[]
+  benefits: string[]
+  pricing?: string
+  category: "AI" | "IT" | "MicroSAAS" | "Emerging"
 }
 
 const GenericServicePage: React.FC<GenericServicePageProps> = ({
@@ -18,14 +17,11 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
     AI: "from-purple-500 to-pink-600",
     IT: "from-blue-500 to-cyan-600",
     MicroSAAS: "from-green-500 to-emerald-600",
-    Emerging: "from-orange-500 to-red-600",
-  };
-
+    Emerging: "from-orange-500 to-red-600"}
   const categoryColor =
-    categoryColors[category] || "from-cyan-500 to-purple-600";
-
-  return (
-    <>
+    categoryColors[category] || "from-cyan-500 to-purple-600"
+  return ()
+    <div>
       <Helmet>
         <title>{title} | Zion Tech Group</title>
         <meta name="description" content={description} />
@@ -49,7 +45,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               {description}
             </p>
-            {pricing && (
+            {pricing && ()
               <div className="text-2xl font-semibold text-cyan-400 mb-8">
                 Starting at {pricing}
               </div>
@@ -71,7 +67,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               </a>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="py-16">
             <div className="text-center mb-12">
@@ -84,7 +79,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => ()
                 <div
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
@@ -99,7 +94,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="py-16">
             <div className="text-center mb-12">
@@ -112,7 +106,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => ()
                 <div key={index} className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <Star className="w-6 h-6 text-yellow-400" />
@@ -130,7 +124,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               ))}
             </div>
           </section>
-
           {/* Stats Section */}
           <section className="py-16">
             <div className="text-center mb-12">
@@ -162,7 +155,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="py-16 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -191,8 +183,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
           </section>
         </main>
       </div>
-    </>
-  );
-};
-
-export default GenericServicePage;
+</div>
+  )
+}
+export default GenericServicePage

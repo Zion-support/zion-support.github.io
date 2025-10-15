@@ -7,9 +7,6 @@ export const Securitymanager = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Securitymanager;
+  cleanup: () => {}
+} }}
+export default Securitymanager

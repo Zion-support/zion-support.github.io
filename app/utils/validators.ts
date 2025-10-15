@@ -7,9 +7,6 @@ export const Validators = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Validators;
+  cleanup: () => {}
+} }}
+export default Validators

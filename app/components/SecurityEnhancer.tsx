@@ -1,10 +1,9 @@
-import React from "react";
-
-interface SecurityEnhancerProps {
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
+import React from "react"
+interface SecurityEnhancerProps {}
+  children?: React.ReactNode
+  className?: string
+  title?: string
+  description?: string
 }
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
@@ -15,7 +14,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       {description && <p className="text-gray-600 mb-4">{description}</p>}
       {children}
     </div>
-  );
-};
-
-export default SecurityEnhancer;
+  )
+}
+export default SecurityEnhancer

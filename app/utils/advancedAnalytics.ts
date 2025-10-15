@@ -7,9 +7,6 @@ export const Advancedanalytics = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Advancedanalytics;
+  cleanup: () => {}
+} }}
+export default Advancedanalytics

@@ -1,14 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Server, 
-  Shield, 
-  Cloud, 
-  Database, 
-  Code, 
-  Network, 
-  Settings, 
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
+import {}
+  Server,
+  Shield,
+  Cloud,
+  Database,
+  Code,
+  Network,
+  Settings,
   Zap,
   CheckCircle,
   Star,
@@ -16,16 +16,15 @@ import {
   Rocket,
   Users,
   Clock
-} from 'lucide-react';
-
-const ITServicesPage: React.FC = () => {
-  const itServices = [
-    {
+} from 'lucide-react'
+const ITServicesPage: React.FC = () => {}
+}const itServices = []
+    {}
       id: 'cloud-infrastructure-management',
       name: 'Cloud Infrastructure Management',
       description: 'Comprehensive cloud solutions with auto-scaling, monitoring, and security compliance',
       price: '$199/month',
-      features: [
+      features: []
         'Auto-scaling Infrastructure',
         '99.9% Uptime Guarantee',
         '24/7 Monitoring',
@@ -33,7 +32,7 @@ const ITServicesPage: React.FC = () => {
         'Backup & Recovery',
         'Cost Optimization'
       ],
-      benefits: [
+      benefits: []
         'Reduce infrastructure costs by 30%',
         'Improve system reliability',
         'Scale automatically with demand'
@@ -44,12 +43,12 @@ const ITServicesPage: React.FC = () => {
       icon: Cloud,
       category: 'Infrastructure'
     },
-    {
+    {}
       id: 'cybersecurity-suite',
       name: 'Advanced Cybersecurity Suite',
       description: 'Enterprise-grade security monitoring and protection with real-time threat detection',
       price: '$499/month',
-      features: [
+      features: []
         'Threat Detection & Response',
         'Real-time Security Monitoring',
         'Compliance Reporting',
@@ -57,7 +56,7 @@ const ITServicesPage: React.FC = () => {
         'Security Training',
         'Penetration Testing'
       ],
-      benefits: [
+      benefits: []
         'Prevent 99.9% of cyber attacks',
         'Meet compliance requirements',
         'Reduce security incidents by 95%'
@@ -68,12 +67,12 @@ const ITServicesPage: React.FC = () => {
       icon: Shield,
       category: 'Security'
     },
-    {
+    {}
       id: 'devops-automation-platform',
       name: 'DevOps Automation Platform',
       description: 'Complete CI/CD pipeline automation with monitoring, testing, and deployment management',
       price: '$349/month',
-      features: [
+      features: []
         'CI/CD Pipeline Automation',
         'Automated Testing',
         'Deployment Management',
@@ -81,7 +80,7 @@ const ITServicesPage: React.FC = () => {
         'Rollback Capabilities',
         'Team Collaboration Tools'
       ],
-      benefits: [
+      benefits: []
         'Deploy 10x faster',
         'Reduce deployment errors by 90%',
         'Improve team productivity by 60%'
@@ -92,12 +91,12 @@ const ITServicesPage: React.FC = () => {
       icon: Code,
       category: 'DevOps'
     },
-    {
+    {}
       id: 'database-solutions',
       name: 'Database Management Solutions',
       description: 'Advanced database administration with optimization, backup, and performance monitoring',
       price: '$279/month',
-      features: [
+      features: []
         'Database Optimization',
         'Automated Backups',
         'Performance Monitoring',
@@ -105,7 +104,7 @@ const ITServicesPage: React.FC = () => {
         'Security Hardening',
         'Disaster Recovery'
       ],
-      benefits: [
+      benefits: []
         'Improve query performance by 80%',
         'Ensure data integrity',
         'Reduce downtime by 95%'
@@ -116,12 +115,12 @@ const ITServicesPage: React.FC = () => {
       icon: Database,
       category: 'Database'
     },
-    {
+    {}
       id: 'network-infrastructure',
       name: 'Network Infrastructure Services',
       description: 'Comprehensive network design, implementation, and management for enterprise environments',
       price: '$229/month',
-      features: [
+      features: []
         'Network Design & Planning',
         'Wireless Solutions',
         'VPN Configuration',
@@ -129,7 +128,7 @@ const ITServicesPage: React.FC = () => {
         'Network Monitoring',
         'Performance Optimization'
       ],
-      benefits: [
+      benefits: []
         'Improve network performance by 50%',
         'Reduce connectivity issues',
         'Enhance security posture'
@@ -140,12 +139,12 @@ const ITServicesPage: React.FC = () => {
       icon: Network,
       category: 'Networking'
     },
-    {
+    {}
       id: 'it-consulting',
       name: 'IT Consulting & Strategy',
       description: 'Strategic IT consulting to align technology with business objectives and digital transformation',
       price: '$150/hour',
-      features: [
+      features: []
         'IT Strategy Development',
         'Technology Assessment',
         'Digital Transformation',
@@ -153,7 +152,7 @@ const ITServicesPage: React.FC = () => {
         'Project Planning',
         'Change Management'
       ],
-      benefits: [
+      benefits: []
         'Align IT with business goals',
         'Reduce technology costs',
         'Accelerate digital transformation'
@@ -173,16 +172,14 @@ const ITServicesPage: React.FC = () => {
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '24/7', label: 'Support Available', icon: Clock },
     { number: '4.8/5', label: 'Client Rating', icon: Star }
-  ];
-
-  return (
-    <>
+  ]
+  return ()
+    <div>
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, DevOps, and database management. Enterprise-grade solutions for modern businesses." />
         <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, DevOps, database management, network services, IT consulting" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -194,7 +191,7 @@ const ITServicesPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Comprehensive IT services designed to optimize your technology infrastructure, enhance security, 
+              Comprehensive IT services designed to optimize your technology infrastructure, enhance security,
               and drive digital transformation. From cloud migration to cybersecurity, we&apos;ve got you covered.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -215,12 +212,11 @@ const ITServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => ()
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center">
@@ -234,7 +230,6 @@ const ITServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* IT Services Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -243,26 +238,24 @@ const ITServicesPage: React.FC = () => {
               Our IT Service Portfolio
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose from our comprehensive range of IT services designed to modernize your infrastructure, 
+              Choose from our comprehensive range of IT services designed to modernize your infrastructure,
               enhance security, and optimize performance across all technology platforms.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {itServices.map((service) => (
-              <div key={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${
-                service.popular 
-                  ? 'border-purple-500/60 ring-2 ring-purple-500/20' 
+            {itServices.map((service) => ()
+              <div key={service.id} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${}
+                service.popular
+                  ? 'border-purple-500/60 ring-2 ring-purple-500/20'
                   : 'border-purple-500/20 hover:border-purple-500/40'
               }`}>
-                {service.popular && (
+                {service.popular && ()
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
-
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
@@ -280,17 +273,15 @@ const ITServicesPage: React.FC = () => {
                     </div>
                   </div>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-white">{service.price}</div>
                     <div className="text-sm text-gray-400">{service.clients} clients</div>
                   </div>
                 </div>
-
                 <div className="space-y-4 mb-8">
                   <h4 className="text-white font-semibold">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, index) => (
+                    {service.features.slice(0, 4).map((feature, index) => ()
                       <li key={index} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -298,22 +289,20 @@ const ITServicesPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className="space-y-4 mb-8">
                   <h4 className="text-white font-semibold">Business Impact:</h4>
                   <ul className="space-y-2">
-                    {service.benefits.map((benefit, index) => (
+                    {service.benefits.map((benefit, index) => ()
                       <li key={index} className="text-gray-300 text-sm">
                         • {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
-
                 <div className="space-y-3">
                   <Link
                     to={`/service/${service.id}`}
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${}
                       service.popular
                         ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600'
                         : 'border border-purple-500 text-purple-300 hover:bg-purple-500/10'
@@ -322,7 +311,6 @@ const ITServicesPage: React.FC = () => {
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
-                  
                   <a
                     href="/contact"
                     className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-700/50 transition-all duration-300"
@@ -335,7 +323,6 @@ const ITServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* IT Capabilities Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -344,11 +331,10 @@ const ITServicesPage: React.FC = () => {
               Why Choose Our IT Services?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IT solutions are built on enterprise-grade technology and designed to deliver reliable, 
+              Our IT solutions are built on enterprise-grade technology and designed to deliver reliable,
               scalable, and secure infrastructure for your business.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -359,7 +345,6 @@ const ITServicesPage: React.FC = () => {
                 Robust, scalable infrastructure solutions designed to handle enterprise workloads and growth.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-8 h-8 text-white" />
@@ -369,7 +354,6 @@ const ITServicesPage: React.FC = () => {
                 Multi-layered security approach with continuous monitoring and threat protection.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Zap className="w-8 h-8 text-white" />
@@ -379,7 +363,6 @@ const ITServicesPage: React.FC = () => {
                 Round-the-clock monitoring and support to ensure maximum uptime and performance.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-8 h-8 text-white" />
@@ -392,7 +375,6 @@ const ITServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-500/20 to-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -400,7 +382,7 @@ const ITServicesPage: React.FC = () => {
             Ready to Modernize Your IT Infrastructure?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your IT infrastructure with our comprehensive services. From cloud migration to 
+            Transform your IT infrastructure with our comprehensive services. From cloud migration to
             cybersecurity, we&apos;ll help you build a robust, scalable, and secure technology foundation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -420,8 +402,7 @@ const ITServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
-  );
-};
-
-export default ITServicesPage;
+</div>
+  )
+}
+export default ITServicesPage

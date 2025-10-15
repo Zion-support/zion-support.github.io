@@ -7,9 +7,6 @@ export const Monitoring = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Monitoring;
+  cleanup: () => {}
+} }}
+export default Monitoring

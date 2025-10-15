@@ -1,32 +1,29 @@
-import { useEffect, useCallback, useRef } from 'react';
-
-interface PerformanceMetrics {
-  fcp?: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
-  tti?: number;
-  fmp?: number;
-  memory?: {
-    used: number;
-    total: number;
-    limit: number;
-  };
+import { useEffect, useCallback, useRef } from 'react'
+interface PerformanceMetrics {}
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  ttfb?: number
+  tti?: number
+  fmp?: number
+  memory?: {}
+    used: number
+    total: number
+    limit: number
+  }
 }
-
-interface PerformanceConfig {
-  enableMemoryMonitoring?: boolean;
-  enableResourceTiming?: boolean;
-  enableLongTaskMonitoring?: boolean;
-  enableLayoutShiftMonitoring?: boolean;
-  reportInterval?: number;
-  memoryThreshold?: number;
-  longTaskThreshold?: number;
+interface PerformanceConfig {}
+  enableMemoryMonitoring?: boolean
+  enableResourceTiming?: boolean
+  enableLongTaskMonitoring?: boolean
+  enableLayoutShiftMonitoring?: boolean
+  reportInterval?: number
+  memoryThreshold?: number
+  longTaskThreshold?: number
 }
-
-export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {}) => {
-  const {
+export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {}) => {}
+}const {}
     enableMemoryMonitoring = true,
     enableResourceTiming = true,
     enableLongTaskMonitoring = true,
@@ -48,29 +45,23 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', name, {
         event_category: category,
         value: Math.round(value),
-        non_interaction: true,
-      });
+        non_interaction: true})
     }
-
     // Report to custom analytics endpoint
-    if (process.env.NODE_ENV === 'production') {
-      fetch('/api/analytics/performance', {
+    if (process.env.NODE_ENV === 'production') {}
+      fetch('/api/analytics/performance', {}
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
+        headers: {}
+          'Content-Type': 'application/json'},
+        body: JSON.stringify({}
           metric: name,
           value,
           category,
           timestamp: Date.now(),
-          url: window.location.href,
-        }),
-      }).catch(() => {
-        // Silently fail if analytics endpoint is not available
-      });
+          url: window.location.href})}).catch(() => {}
+}// Silently fail if analytics endpoint is not available
+      })
     }
-
     // Log in development (commented out for production)
     // if (process.env.NODE_ENV === 'development') {
     //   // }
@@ -87,7 +78,7 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
           if (typeof subValue === 'number' && !isNaN(subValue)) {
             reportMetric(`${key.toUpperCase()}_${subKey.toUpperCase()}`, subValue);
           }
-        });
+        })
       }
     });
   }, [reportMetric]);
@@ -112,15 +103,13 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
             
             switch (entry.entryType) {
               case 'paint':
-                if (entry.name === 'first-contentful-paint') {
-                  metricsRef.current.fcp = metric.startTime;
+                if (entry.name === 'first-contentful-paint') {}
+                  metricsRef.current.fcp = metric.startTime
                 }
-                break;
-              
+                break
               case 'largest-contentful-paint':
-                metricsRef.current.lcp = metric.startTime;
-                break;
-              
+                metricsRef.current.lcp = metric.startTime
+                break
               case 'first-input':
                 metricsRef.current.fid = (metric as any).processingStart - metric.startTime;
                 break;
@@ -141,37 +130,32 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
                 break;
               
               case 'measure':
-                if (entry.name === 'time-to-interactive') {
-                  metricsRef.current.tti = metric.duration;
+                if (entry.name === 'time-to-interactive') {}
+                  metricsRef.current.tti = metric.duration
                 }
-                if (entry.name === 'first-meaningful-paint') {
-                  metricsRef.current.fmp = metric.startTime;
+                if (entry.name === 'first-meaningful-paint') {}
+                  metricsRef.current.fmp = metric.startTime
                 }
-                break;
-              
+                break
               case 'longtask':
-                if (metric.duration > longTaskThreshold) {
-                  reportMetric('LONG_TASK', metric.duration, 'Performance');
+                if (metric.duration > longTaskThreshold) {}
+                  reportMetric('LONG_TASK', metric.duration, 'Performance')
                 }
-                break;
-              
+                break
               case 'resource':
-                if (enableResourceTiming && metric.duration > 1000) {
-                  reportMetric('SLOW_RESOURCE', metric.duration, 'Performance');
+                if (enableResourceTiming && metric.duration > 1000) {}
+                  reportMetric('SLOW_RESOURCE', metric.duration, 'Performance')
                 }
-                break;
+                break
             }
           }
-        });
-
-        const entryTypes = ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'];
-        
-        if (enableLongTaskMonitoring) {
-          entryTypes.push('longtask');
+        })
+        const entryTypes = ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation']
+        if (enableLongTaskMonitoring) {}
+          entryTypes.push('longtask')
         }
-        
-        if (enableResourceTiming) {
-          entryTypes.push('resource');
+        if (enableResourceTiming) {}
+          entryTypes.push('resource')
         }
 
         observer.observe({ entryTypes });
@@ -198,16 +182,14 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
           metricsRef.current.memory = {
             used: usedMB,
             total: totalMB,
-            limit: limitMB,
-          };
+            limit: limitMB}
           // Alert if memory usage is high
-          if (usedMB / limitMB > memoryThreshold) {
-            reportMetric('HIGH_MEMORY_USAGE', (usedMB / limitMB) * 100, 'Performance');
+          if (usedMB / limitMB > memoryThreshold) {}
+            reportMetric('HIGH_MEMORY_USAGE', (usedMB / limitMB) * 100, 'Performance')
           }
         }
-      };
-
-      checkMemory();
+      }
+      checkMemory()
       const interval = setInterval(checkMemory, 10000); // Check every 10 seconds
       
       return () => clearInterval(interval);
@@ -240,36 +222,32 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
     };
 
     // Setup all monitoring
-    setupPerformanceObserver();
-    const memoryCleanup = setupMemoryMonitoring();
-    const clsCleanup = setupLayoutShiftMonitoring();
-
+    setupPerformanceObserver()
+    const memoryCleanup = setupMemoryMonitoring()
+    const clsCleanup = setupLayoutShiftMonitoring()
     // Setup periodic reporting
-    reportIntervalRef.current = setInterval(reportMetrics, reportInterval);
-
+    reportIntervalRef.current = setInterval(reportMetrics, reportInterval)
     // Report on page unload
-    const handleBeforeUnload = () => {
-      reportMetrics();
-    };
-
-    window.addEventListener('beforeunload', handleBeforeUnload);
-
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
+    const handleBeforeUnload = () => {}
+}reportMetrics()
+    }
+    window.addEventListener('beforeunload', handleBeforeUnload)
+    return () => {}
+}if (observerRef.current) {}
+        observerRef.current.disconnect()
       }
-      if (memoryCleanup) {
-        memoryCleanup();
+      if (memoryCleanup) {}
+        memoryCleanup()
       }
-      if (clsCleanup) {
-        clsCleanup();
+      if (clsCleanup) {}
+        clsCleanup()
       }
-      if (reportIntervalRef.current) {
-        clearInterval(reportIntervalRef.current);
+      if (reportIntervalRef.current) {}
+        clearInterval(reportIntervalRef.current)
       }
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-    };
-  }, [
+      window.removeEventListener('beforeunload', handleBeforeUnload)
+    }
+  }, []
     enableMemoryMonitoring,
     enableResourceTiming,
     enableLongTaskMonitoring,
@@ -284,6 +262,5 @@ export const useAdvancedPerformanceMonitoring = (config: PerformanceConfig = {})
   return {
     metrics: metricsRef.current,
     reportMetric,
-    reportMetrics,
-  };
-};
+    reportMetrics}
+}

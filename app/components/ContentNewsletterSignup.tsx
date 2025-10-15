@@ -26,10 +26,9 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       } finally {
       setIsLoading(false);
     }
-  };
-
-  if (isSubscribed) {
-    return (
+  }
+  if (isSubscribed) {}
+    return ()
       <div
         className={`bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg text-center ${className}`}
       >
@@ -39,7 +38,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         </h3>
         <p>You'll receive our latest updates and exclusive content.</p>
       </div>
-    );
+    )
   }
 
   return (<div
@@ -52,7 +51,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           Get the latest AI and tech insights delivered to your inbox.
         </p>
       </div>
-
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <input
@@ -64,7 +62,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
-
         <button
           type="submit"
           disabled={isLoading}
@@ -73,12 +70,10 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           {isLoading ? "Subscribing..." : "Subscribe Now"}
         </button>
       </form>
-
       <p className="text-xs text-gray-400 text-center mt-4">
         We respect your privacy. Unsubscribe at any time.
       </p>
     </div>
-  );
-};
-
-export default ContentNewsletterSignup;
+  )
+}
+export default ContentNewsletterSignup

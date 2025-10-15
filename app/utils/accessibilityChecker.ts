@@ -7,9 +7,6 @@ export const Accessibilitychecker = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Accessibilitychecker;
+  cleanup: () => {}
+} }}
+export default Accessibilitychecker

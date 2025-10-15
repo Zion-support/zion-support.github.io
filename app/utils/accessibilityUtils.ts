@@ -7,9 +7,6 @@ export const Accessibilityutils = {
   process: (data: unknown) => {
     return data;
   },
-
-  cleanup: () => {
-    },
-};
-
-export default Accessibilityutils;
+  cleanup: () => {}
+} }}
+export default Accessibilityutils

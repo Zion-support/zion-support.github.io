@@ -23,8 +23,8 @@ import {
 } from 'lucide-react'
 
 interface SidebarProps {
-  isOpen: boolean
-  onClose: () => void
+  isOpen: boolean;
+  onClose: () => void;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
@@ -285,9 +285,39 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             </Link>
           </div>
         </div>
+        <nav className="p-4">
+          <Link
+            to="/"
+            className="block py-2 text-gray-300 hover:text-white"
+            onClick={onClose}
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className="block py-2 text-gray-300 hover:text-white"
+            onClick={onClose}
+          >
+            About
+          </Link>
+          <Link
+            to="/services"
+            className="block py-2 text-gray-300 hover:text-white"
+            onClick={onClose}
+          >
+            Services
+          </Link>
+          <Link
+            to="/contact"
+            className="block py-2 text-gray-300 hover:text-white"
+            onClick={onClose}
+          >
+            Contact
+          </Link>
+        </nav>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default Sidebar
+export default Sidebar;

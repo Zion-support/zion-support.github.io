@@ -138,23 +138,12 @@ export default function ZionAiInvoiceGenerator() {
     }
   ];
 
+const ZionAiInvoiceGeneratorPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Zion AI Invoice Generator - Automated Invoice Creation | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Create professional invoices instantly with AI. Zion AI Invoice Generator automates data extraction, tax calculations, and payment reminders. Start your free trial today!"
-        />
-        <meta
-          name="keywords"
-          content="AI invoice generator, automated invoicing, invoice creation, billing software, invoice templates, payment reminders, accounting software"
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-invoice-generator" />
-      </Helmet>
-      <SEOOptimizer
-        title="Zion AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
-        description="Create professional invoices instantly with AI. Zion AI Invoice Generator automates data extraction, tax calculations, and payment reminders. Start your free trial today!"
+      <SEOHead 
+        title="zion-ai-invoice-generator - Zion Tech Group"
+        description="Zion Tech Group zion-ai-invoice-generator service page"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -455,4 +444,6 @@ export default function ZionAiInvoiceGenerator() {
       </div>
     </>
   );
-}
+};
+
+export default ZionAiInvoiceGeneratorPage;

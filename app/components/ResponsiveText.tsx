@@ -1,14 +1,13 @@
-import React from 'react';
-import { cn } from '../lib/utils';
-
-interface ResponsiveTextProps {
-  children: React.ReactNode;
-  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
-  size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl';
-  weight?: 'thin' | 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold' | 'black';
-  color?: 'white' | 'gray' | 'cyan' | 'purple' | 'pink' | 'blue' | 'green' | 'orange' | 'red' | 'yellow';
-  align?: 'left' | 'center' | 'right' | 'justify';
-  className?: string;
+import React from 'react'
+import { cn } from '../lib/utils'
+interface ResponsiveTextProps {}
+  children: React.ReactNode
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div'
+  size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl'
+  weight?: 'thin' | 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold' | 'black'
+  color?: 'white' | 'gray' | 'cyan' | 'purple' | 'pink' | 'blue' | 'green' | 'orange' | 'red' | 'yellow'
+  align?: 'left' | 'center' | 'right' | 'justify'
+  className?: string
 }
 
 const ResponsiveText = (_{ 
@@ -26,9 +25,8 @@ const ResponsiveText = (_{
     '5xl': 'text-5xl sm:text-6xl md:text-7xl',
     '6xl': 'text-6xl sm:text-7xl md:text-8xl',
     '7xl': 'text-7xl sm:text-8xl md:text-9xl'
-  };
-
-  const weightClasses = {
+  }
+  const weightClasses = {}
     thin: 'font-thin',
     light: 'font-light',
     normal: 'font-normal',
@@ -37,9 +35,8 @@ const ResponsiveText = (_{
     bold: 'font-bold',
     extrabold: 'font-extrabold',
     black: 'font-black'
-  };
-
-  const colorClasses = {
+  }
+  const colorClasses = {}
     white: 'text-white',
     gray: 'text-gray-300',
     cyan: 'text-cyan-400',
@@ -50,18 +47,16 @@ const ResponsiveText = (_{
     orange: 'text-orange-400',
     red: 'text-red-400',
     yellow: 'text-yellow-400'
-  };
-
-  const alignClasses = {
+  }
+  const alignClasses = {}
     left: 'text-left',
     center: 'text-center',
     right: 'text-right',
     justify: 'text-justify'
-  };
-
-  return (
+  }
+  return ()
     <Component
-      className={cn(
+      className={cn()
         sizeClasses[size],
         weightClasses[weight],
         colorClasses[color],
@@ -71,7 +66,6 @@ const ResponsiveText = (_{
     >
       {children}
     </Component>
-  );
-};
-
-export default ResponsiveText;
+  )
+}
+export default ResponsiveText

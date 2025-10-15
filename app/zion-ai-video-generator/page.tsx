@@ -137,23 +137,12 @@ export default function ZionAiVideoGenerator() {
     }
   ];
 
+const ZionAiVideoGeneratorPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Zion AI Video Generator - AI-Powered Video Creation | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Create professional videos instantly with AI. Zion AI Video Generator transforms text into stunning videos with voice synthesis, templates, and 4K quality. Start your free trial today!"
-        />
-        <meta
-          name="keywords"
-          content="AI video generator, video creation, automated video, AI video maker, video production, content creation, video templates, voice synthesis"
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-video-generator" />
-      </Helmet>
-      <SEOOptimizer
-        title="Zion AI Video Generator - AI-Powered Video Creation | Zion Tech Group"
-        description="Create professional videos instantly with AI. Zion AI Video Generator transforms text into stunning videos with voice synthesis, templates, and 4K quality. Start your free trial today!"
+      <SEOHead 
+        title="zion-ai-video-generator - Zion Tech Group"
+        description="Zion Tech Group zion-ai-video-generator service page"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -455,4 +444,6 @@ export default function ZionAiVideoGenerator() {
       </div>
     </>
   );
-}
+};
+
+export default ZionAiVideoGeneratorPage;
