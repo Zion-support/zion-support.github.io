@@ -20,7 +20,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     const appError = handleError(error);
     logError(appError, 'GlobalErrorBoundary');
     
@@ -31,7 +31,6 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    // Example error reporting - replace with your service
     const errorData = {
       message: error.message,
       stack: error.stack,
@@ -39,12 +38,58 @@ class GlobalErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString(),
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'Unknown',
       url: typeof window !== 'undefined' ? window.location.href : 'Unknown',
+      userId: this.getUserId(),
+      sessionId: this.getSessionId(),
+      buildVersion: process.env.REACT_APP_VERSION || 'unknown',
+      environment: process.env.NODE_ENV,
     };
     
-    // Send to your error monitoring service
-    // Example: fetch('/api/error-report', { method: 'POST', body: JSON.stringify(errorData) });
+    // Send to error monitoring service
+    this.sendToErrorService(errorData);
     
-    // For now, store in localStorage for debugging
+    // Store in localStorage for debugging
+    this.storeErrorLocally(errorData);
+  }
+
+  private getUserId = (): string | null => {
+    try {
+      return localStorage.getItem('userId') || sessionStorage.getItem('userId') || null;
+    } catch {
+      return null;
+    }
+  }
+
+  private getSessionId = (): string => {
+    try {
+      let sessionId = sessionStorage.getItem('sessionId');
+      if (!sessionId) {
+        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        sessionStorage.setItem('sessionId', sessionId);
+      }
+      return sessionId;
+    } catch {
+      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    }
+  }
+
+  private sendToErrorService = async (errorData: any) => {
+    try {
+      // Send to your error monitoring service (Sentry, LogRocket, etc.)
+      if (process.env.NODE_ENV === 'production') {
+        await fetch('/api/error-report', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(errorData),
+        });
+      }
+    } catch (e) {
+      // Silently fail for error reporting
+    }
+  }
+
+  private storeErrorLocally = (errorData: any) => {
     try {
       if (typeof window !== 'undefined' && window.localStorage) {
         const existingErrors = JSON.parse(localStorage.getItem('errorLogs') || '[]');
@@ -56,7 +101,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
     }
   }
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
