@@ -3,9 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   CheckIcon, 
-  StarIcon,
   UserGroupIcon,
-  TrophyIcon,
   LightBulbIcon,
   ShieldCheckIcon,
   CpuChipIcon,
@@ -288,7 +286,7 @@ const About: React.FC = () => {
             Ready to Work With Us?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how we can help transform your business with our AI and IT solutions.
+            Let&apos;s discuss how we can help transform your business with our AI and IT solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
