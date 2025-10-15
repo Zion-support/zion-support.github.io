@@ -5,7 +5,6 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
-import Header from './app/components/Header';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
@@ -42,7 +41,7 @@ import CareersPage from './app/pages/CareersPage';
 import CybersecurityPage from './app/pages/CybersecurityPage';
 import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
-import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
+import FiveGSolutionsPage from './app/pages/FiveGSolutionsPage';
 import TeamPage from './app/pages/TeamPage';
 import DocumentationPage from './app/pages/DocumentationPage';
 

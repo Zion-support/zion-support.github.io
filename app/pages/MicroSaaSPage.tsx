@@ -2,11 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Brain, Users, Zap, Shield, BarChart3, Target, TrendingUp, MessageSquare, Settings, Award } from 'lucide-react';
 
-const CybersecurityPage: React.FC = () => {
+const MicroSaaSPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-900">
       <Helmet>
-        <title>CybersecurityPage - Zion Tech Group</title>
+        <title>MicroSaaSPage - Zion Tech Group</title>
         <meta name="description" content="Advanced solutions by Zion Tech Group" />
       </Helmet>
 
@@ -14,7 +14,7 @@ const CybersecurityPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              CybersecurityPage
+              MicroSaaSPage
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Coming soon...
@@ -31,4 +31,4 @@ const CybersecurityPage: React.FC = () => {
   );
 };
 
-export default CybersecurityPage;
+export default MicroSaaSPage;

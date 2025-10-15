@@ -39,26 +39,18 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Log error to console (commented out for production)
-    // console.error('Error caught by boundary:', error, errorInfo);
-=======
     // Log error to console (only in development)
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
     }
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
 
     // Report error to monitoring service
     this.reportError(error, errorInfo);
 
     // Call custom error handler
     this.props.onError?.(error, errorInfo);
-=======
     // Log error to monitoring service
     this.logErrorToService(error, errorInfo);
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
   }
 
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
@@ -73,32 +65,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       userId: this.getUserId()
     };
 
-<<<<<<< HEAD
-    // Report to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      try {
-        await fetch('/api/errors', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(errorReport),
-        });
-<<<<<<< HEAD
-      } catch {
-        // console.warn('Failed to report error:', reportingError);
-=======
       } catch (reportingError) {
         if (process.env.NODE_ENV !== 'production') {
           console.warn('Failed to report error:', reportingError);
         }
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
       }
     }
-=======
     // Send to error monitoring service (Sentry, LogRocket, etc.)
     console.error('Error caught by boundary:', errorData);
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
 
     // You can integrate with services like Sentry here
     // Sentry.captureException(error, { extra: errorData });
@@ -110,34 +84,18 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   handleRetry = () => {
-<<<<<<< HEAD
-    if (this.state.retryCount < this.maxRetries) {
-      this.setState(prevState => ({
-        hasError: false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-        error: undefined as Error | undefined,
-        errorInfo: undefined as ErrorInfo | undefined,
-        retryCount: prevState.retryCount + 1
-      }));
-=======
         error: undefined,
         errorInfo: undefined,
         retryCount: this.state.retryCount + 1
       });
->>>>>>> cursor/enhance-application-with-new-services-and-improvements-145c
-=======
         error: undefined,
         errorInfo: undefined,
         retryCount: prevState.retryCount + 1
       }));
->>>>>>> cursor/comprehensive-app-audit-and-update-f3ea
     }
   };
 
   handleReset = () => {
-=======
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
     this.setState({
       hasError: false,
       error: null,
@@ -166,15 +124,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <h1 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
-<<<<<<< HEAD
-            
-            <p className="text-gray-300 mb-6 text-lg">
-              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-=======
 
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
->>>>>>> cursor/comprehensive-app-audit-and-update-8a56
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (

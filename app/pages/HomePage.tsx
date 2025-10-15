@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 import { 
@@ -37,7 +34,6 @@ const structuredData = {
     }
   };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 const HomePage: React.FC = () => {
   return (
     <>
