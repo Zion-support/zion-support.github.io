@@ -1,87 +1,24 @@
 // Accessibility components
 import React, { useEffect, useRef, useState } from 'react';
+import { focusManagement, screenReader, keyboardNavigation } from './AccessibilityUtils';
 
-// Type definitions for better type safety
-interface KeyboardEvent extends Event {
-  key: string;
-  shiftKey: boolean;
-  preventDefault(): void;
-}
-
-// Remove unused interface
-
-// Focus management utilities
-export const focusManagement = {
-  // Trap focus within an element
-  trapFocus: (element: HTMLElement) => {
-    const focusableElements = element.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
-    const handleTabKey = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        if (e.shiftKey) {
-          if (document.activeElement === firstElement) {
-            lastElement.focus();
-            e.preventDefault();
-          }
-        } else {
-          if (document.activeElement === lastElement) {
-            firstElement.focus();
-            e.preventDefault();
-          }
-        }
-      }
-    };
-
-    element.addEventListener('keydown', handleTabKey);
-    firstElement?.focus();
-
-    return () => {
-      element.removeEventListener('keydown', handleTabKey);
-    };
-  },
-
-  // Move focus to next focusable element
-  moveToNext: (currentElement: HTMLElement) => {
-    const focusableElements = document.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    const currentIndex = Array.from(focusableElements).indexOf(currentElement);
-    const nextElement = focusableElements[currentIndex + 1] as HTMLElement;
-    nextElement?.focus();
-  },
-
-  // Move focus to previous focusable element
-  moveToPrevious: (currentElement: HTMLElement) => {
-    const focusableElements = document.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    const currentIndex = Array.from(focusableElements).indexOf(currentElement);
-    const previousElement = focusableElements[currentIndex - 1] as HTMLElement;
-    previousElement?.focus();
-  },
-};
-
-// Skip link component
-export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> = ({
-  target,
-  children,
+// Skip to content link component
+export const SkipToContent: React.FC<{ targetId: string; children: React.ReactNode }> = ({ 
+  targetId, 
+  children 
 }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const targetElement = document.querySelector(target);
-    if (targetElement) {
-      (targetElement as HTMLElement).focus();
-      targetElement.scrollIntoView({ behavior: 'smooth' });
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.focus();
+      target.scrollIntoView();
     }
   };
 
   return (
     <a
-      href={target}
+      href={`#${targetId}`}
       onClick={handleClick}
       className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
     >
@@ -91,61 +28,226 @@ export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> =
 };
 
 // Screen reader only text component
-export const ScreenReaderOnly: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <span className="sr-only">{children}</span>;
-};
+export const ScreenReaderText: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <span className="sr-only">{children}</span>
+);
 
 // Focus trap component
-export const FocusTrap: React.FC<{ children: React.ReactNode; active: boolean }> = ({
-  children,
-  active,
-}) => {
+export const FocusTrap: React.FC<{ 
+  children: React.ReactNode; 
+  active: boolean;
+  onEscape?: () => void;
+}> = ({ children, active, onEscape }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const cleanupRef = useRef<(() => void) | null>(null);
 
   useEffect(() => {
     if (active && containerRef.current) {
-      return focusManagement.trapFocus(containerRef.current);
+      cleanupRef.current = focusManagement.trapFocus(containerRef.current);
     }
-    return undefined;
+
+    return () => {
+      if (cleanupRef.current) {
+        cleanupRef.current();
+      }
+    };
   }, [active]);
 
-  return <div ref={containerRef}>{children}</div>;
+  useEffect(() => {
+    if (active && onEscape) {
+      const handleEscape = (e: KeyboardEvent) => {
+        keyboardNavigation.handleEscape(e, onEscape);
+      };
+      document.addEventListener('keydown', handleEscape);
+      return () => document.removeEventListener('keydown', handleEscape);
+    }
+  }, [active, onEscape]);
+
+  return (
+    <div ref={containerRef} className={active ? 'focus-trap' : ''}>
+      {children}
+    </div>
+  );
 };
 
-// Responsive breakpoint hook
-export const useBreakpoint = (breakpoint: string) => {
-  const [matches, setMatches] = useState(false);
+// Accessible button component
+export const AccessibleButton: React.FC<{
+  children: React.ReactNode;
+  onClick: () => void;
+  disabled?: boolean;
+  ariaLabel?: string;
+  ariaDescribedBy?: string;
+  className?: string;
+}> = ({ 
+  children, 
+  onClick, 
+  disabled = false, 
+  ariaLabel, 
+  ariaDescribedBy,
+  className = '' 
+}) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      onClick();
+    }
+  };
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia(breakpoint);
-    setMatches(mediaQuery.matches);
-
-    const handleChange = (e: MediaQueryListEvent) => {
-      setMatches(e.matches);
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, [breakpoint]);
-
-  return matches;
+  return (
+    <button
+      onClick={onClick}
+      onKeyDown={handleKeyDown}
+      disabled={disabled}
+      aria-label={ariaLabel}
+      aria-describedby={ariaDescribedBy}
+      className={`focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${className}`}
+    >
+      {children}
+    </button>
+  );
 };
 
-// High contrast mode hook
-export const useHighContrast = () => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
+// Accessible modal component
+export const AccessibleModal: React.FC<{
+  isOpen: boolean;
+  onClose: () => void;
+  title: string;
+  children: React.ReactNode;
+  className?: string;
+}> = ({ isOpen, onClose, title, children, className = '' }) => {
+  const modalRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-    setIsHighContrast(mediaQuery.matches);
+    if (isOpen) {
+      // Focus the modal when it opens
+      titleRef.current?.focus();
+      
+      // Announce to screen readers
+      screenReader.announce(`Modal opened: ${title}`);
+      
+      // Prevent body scroll
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Restore body scroll
+      document.body.style.overflow = 'unset';
+    }
 
-    const handleChange = (e: MediaQueryListEvent) => {
-      setIsHighContrast(e.matches);
+    return () => {
+      document.body.style.overflow = 'unset';
     };
+  }, [isOpen, title]);
 
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
+  if (!isOpen) return null;
 
-  return isHighContrast;
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center">
+      {/* Backdrop */}
+      <div 
+        className="absolute inset-0 bg-black bg-opacity-50"
+        onClick={onClose}
+        aria-hidden="true"
+      />
+      
+      {/* Modal */}
+      <div
+        ref={modalRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        className={`bg-white rounded-lg shadow-xl max-w-md w-full mx-4 ${className}`}
+      >
+        <div className="p-6">
+          <h2 
+            id="modal-title"
+            ref={titleRef}
+            className="text-xl font-semibold mb-4"
+            tabIndex={-1}
+          >
+            {title}
+          </h2>
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Accessible form field component
+export const AccessibleFormField: React.FC<{
+  label: string;
+  id: string;
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url';
+  required?: boolean;
+  error?: string;
+  helpText?: string;
+  value: string;
+  onChange: (value: string) => void;
+  className?: string;
+}> = ({ 
+  label, 
+  id, 
+  type = 'text', 
+  required = false, 
+  error, 
+  helpText, 
+  value, 
+  onChange, 
+  className = '' 
+}) => {
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [isFocused, setIsFocused] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onChange(e.target.value);
+  };
+
+  const handleFocus = () => setIsFocused(true);
+  const handleBlur = () => setIsFocused(false);
+
+  return (
+    <div className={`form-field ${className}`}>
+      <label 
+        htmlFor={id}
+        className={`block text-sm font-medium mb-1 ${
+          error ? 'text-red-600' : 'text-gray-700'
+        }`}
+      >
+        {label}
+        {required && <span className="text-red-500 ml-1" aria-label="required">*</span>}
+      </label>
+      
+      <input
+        ref={inputRef}
+        id={id}
+        type={type}
+        value={value}
+        onChange={handleChange}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        required={required}
+        aria-invalid={error ? 'true' : 'false'}
+        aria-describedby={`${id}-help ${id}-error`}
+        className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+          error 
+            ? 'border-red-500 focus:border-red-500' 
+            : isFocused 
+              ? 'border-blue-500' 
+              : 'border-gray-300'
+        }`}
+      />
+      
+      {helpText && (
+        <p id={`${id}-help`} className="mt-1 text-sm text-gray-600">
+          {helpText}
+        </p>
+      )}
+      
+      {error && (
+        <p id={`${id}-error`} className="mt-1 text-sm text-red-600" role="alert">
+          {error}
+        </p>
+      )}
+    </div>
+  );
 };

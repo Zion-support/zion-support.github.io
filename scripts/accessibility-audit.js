@@ -13,7 +13,10 @@ function auditAccessibility() {
   const indexPath = path.join(distPath, 'index.html');
   
   if (!fs.existsSync(indexPath)) {
-    console.log('❌ Index.html not found. Please run npm run build first.');
+    if (process.env.NODE_ENV === 'development') {
+       
+      console.log('❌ Index.html not found. Please run npm run build first.');
+    }
     return;
   }
 
@@ -136,47 +139,101 @@ function auditAccessibility() {
 
 // Generate accessibility report
 function generateReport() {
-  console.log('♿ Running accessibility audit...\n');
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('♿ Running accessibility audit...\n');
+  }
   
   const audit = auditAccessibility();
   
   if (!audit) return;
 
-  console.log('📊 Accessibility Audit Results:');
-  console.log('==============================');
-  console.log(`Total Checks: ${audit.issues.length}`);
+  if (process.env.NODE_ENV === 'development') {
+
+     
+
+    console.log('📊 Accessibility Audit Results:');
+
+  }
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('==============================');
+  }
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log(`Total Checks: ${audit.issues.length}`);
+  }
   console.log(`Passed: ${audit.issues.filter(i => i.status === 'pass').length}`);
   console.log(`Failed: ${audit.issues.filter(i => i.status === 'fail').length}`);
   console.log(`Score: ${Math.max(0, audit.score)}/100\n`);
 
-  console.log('🔍 Detailed Results:');
-  console.log('===================');
+  if (process.env.NODE_ENV === 'development') {
+
+     
+
+    console.log('🔍 Detailed Results:');
+
+  }
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('===================');
+  }
   audit.issues.forEach((issue, index) => {
     const status = issue.status === 'pass' ? '✅' : '❌';
     const severity = issue.severity === 'high' ? '🔴' : issue.severity === 'medium' ? '🟡' : '🟢';
-    console.log(`${index + 1}. ${status} ${severity} ${issue.type}: ${issue.message}`);
+    if (process.env.NODE_ENV === 'development') {
+       
+      console.log(`${index + 1}. ${status} ${severity} ${issue.type}: ${issue.message}`);
+    }
   });
 
-  console.log('\n💡 Recommendations:');
-  console.log('==================');
+  if (process.env.NODE_ENV === 'development') {
+
+     
+
+    console.log('\n💡 Recommendations:');
+
+  }
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('==================');
+  }
   audit.recommendations.forEach((rec, index) => {
-    console.log(`${index + 1}. ${rec}`);
+    if (process.env.NODE_ENV === 'development') {
+       
+      console.log(`${index + 1}. ${rec}`);
+    }
   });
 
   // Save detailed report
   const reportPath = path.join(__dirname, '../accessibility-audit-report.json');
   fs.writeFileSync(reportPath, JSON.stringify(audit, null, 2));
-  console.log(`\n📄 Detailed report saved to: ${reportPath}`);
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log(`\n📄 Detailed report saved to: ${reportPath}`);
+  }
 
   // Accessibility score interpretation
   if (audit.score >= 90) {
-    console.log('\n🌟 Excellent accessibility!');
+    if (process.env.NODE_ENV === 'development') {
+       
+      console.log('\n🌟 Excellent accessibility!');
+    }
   } else if (audit.score >= 70) {
-    console.log('\n👍 Good accessibility with room for improvement');
+    if (process.env.NODE_ENV === 'development') {
+       
+      console.log('\n👍 Good accessibility with room for improvement');
+    }
   } else if (audit.score >= 50) {
-    console.log('\n⚠️  Accessibility needs attention');
+    if (process.env.NODE_ENV === 'development') {
+       
+      console.log('\n⚠️  Accessibility needs attention');
+    }
   } else {
-    console.log('\n🚨 Accessibility requires immediate improvement');
+    if (process.env.NODE_ENV === 'development') {
+       
+      console.log('\n🚨 Accessibility requires immediate improvement');
+    }
   }
 }
 

@@ -62,4 +62,7 @@ ${routesCode}
 `;
 
 fs.writeFileSync(outputFile, fullCode);
-console.log(`Generated dynamic imports for ${dynamicImports.length} pages`);
+if (process.env.NODE_ENV === 'development') {
+   
+  console.log(`Generated dynamic imports for ${dynamicImports.length} pages`);
+}

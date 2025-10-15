@@ -12,11 +12,20 @@ import path from 'path';
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 
-console.log('🚀 Starting performance optimization...');
+if (process.env.NODE_ENV === 'development') {
+
+   
+
+  console.log('🚀 Starting performance optimization...');
+
+}
 
 // 1. Remove console statements from production builds
 function removeConsoleStatements() {
-  console.log('📝 Removing console statements...');
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('📝 Removing console statements...');
+  }
   
   const files = [
     'app/components/CoreWebVitals.tsx',
@@ -66,7 +75,10 @@ function removeConsoleStatements() {
 
 // 2. Optimize CSS classes
 function optimizeCSS() {
-  console.log('🎨 Optimizing CSS...');
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('🎨 Optimizing CSS...');
+  }
   
   const cssPath = path.join(process.cwd(), 'app/styles/futuristic.css');
   if (fs.existsSync(cssPath)) {
@@ -140,7 +152,10 @@ function optimizeCSS() {
 
 // 3. Create optimized component loader
 function createOptimizedLoader() {
-  console.log('⚡ Creating optimized component loader...');
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('⚡ Creating optimized component loader...');
+  }
   
   const loaderContent = `import React, { Suspense, ComponentType } from 'react';
 import logger from '../utils/logger';
@@ -220,7 +235,10 @@ export function withErrorBoundary<T = {}>(
 
 // 4. Create performance monitoring utility
 function createPerformanceMonitor() {
-  console.log('📊 Creating performance monitor...');
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('📊 Creating performance monitor...');
+  }
   
   const monitorContent = `import { useEffect, useRef } from 'react';
 import logger from './logger';
@@ -349,7 +367,10 @@ export default performanceMonitor;
 
 // 5. Update package.json scripts
 function updatePackageScripts() {
-  console.log('📦 Updating package scripts...');
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('📦 Updating package scripts...');
+  }
   
   const packagePath = path.join(process.cwd(), 'package.json');
   const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
@@ -372,9 +393,21 @@ try {
   createPerformanceMonitor();
   updatePackageScripts();
   
-  console.log('✅ Performance optimization completed successfully!');
-  console.log('🚀 Run "npm run build:optimized" to build with optimizations');
+  if (process.env.NODE_ENV === 'development') {
+  
+     
+  
+    console.log('✅ Performance optimization completed successfully!');
+  
+  }
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('🚀 Run "npm run build:optimized" to build with optimizations');
+  }
 } catch (error) {
-  console.error('❌ Optimization failed:', error);
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.error('❌ Optimization failed:', error);
+  }
   process.exit(1);
 }

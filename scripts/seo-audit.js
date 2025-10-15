@@ -228,18 +228,27 @@ async function audit() {
     const report = generateSEOReport(htmlAudit, sitemapAudit, robotsAudit, performanceAudit)
     if (report.summary.totalIssues > 0) {
       report.issues.forEach(issue => {
-        console.log(`  - ${issue}`);
+        if (process.env.NODE_ENV === 'development') {
+           
+          console.log(`  - ${issue}`);
+        }
       });
     }
 
     if (report.summary.totalRecommendations > 0) {
       report.recommendations.forEach(rec => {
-        console.log(`  - ${rec}`);
+        if (process.env.NODE_ENV === 'development') {
+           
+          console.log(`  - ${rec}`);
+        }
       });
     }
 
   } catch (_error) {
-    console.error('Audit failed:', _error.message);
+    if (process.env.NODE_ENV === 'development') {
+       
+      console.error('Audit failed:', _error.message);
+    }
     process.exit(1);
   }
 }

@@ -15,13 +15,22 @@ function cleanUnusedImports(filePath) {
     // Run ESLint with --fix to automatically remove unused imports
     try {
       execSync(`npx eslint "${filePath}" --fix --quiet`, { stdio: 'pipe' });
-      console.log(`✓ Cleaned imports in: ${filePath}`);
+      if (process.env.NODE_ENV === 'development') {
+         
+        console.log(`✓ Cleaned imports in: ${filePath}`);
+      }
     } catch {
       // ESLint might fail on some files, that's okay
-      console.log(`⚠ Could not clean: ${filePath}`);
+      if (process.env.NODE_ENV === 'development') {
+         
+        console.log(`⚠ Could not clean: ${filePath}`);
+      }
     }
   } catch (_error) {
-    console.log(`⚠ Error processing ${filePath}: ${_error.message}`);
+    if (process.env.NODE_ENV === 'development') {
+       
+      console.log(`⚠ Error processing ${filePath}: ${_error.message}`);
+    }
   }
 }
 
@@ -47,15 +56,30 @@ function findFiles(dir, fileList = []) {
 }
 
 // Main execution
-console.log('🧹 Cleaning unused imports...\n');
+if (process.env.NODE_ENV === 'development') {
+   
+  console.log('🧹 Cleaning unused imports...\n');
+}
 
 const appDir = path.join(__dirname, '..', 'app');
 const files = findFiles(appDir);
 
-console.log(`Found ${files.length} files to process\n`);
+if (process.env.NODE_ENV === 'development') {
+
+   
+
+  console.log(`Found ${files.length} files to process\n`);
+
+}
 
 files.forEach(file => {
   cleanUnusedImports(file);
 });
 
-console.log('\n✨ Import cleaning completed!');
+if (process.env.NODE_ENV === 'development') {
+
+   
+
+  console.log('\n✨ Import cleaning completed!');
+
+}

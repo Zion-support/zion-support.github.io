@@ -13,7 +13,10 @@ function analyzeBundle() {
   const assetsPath = path.join(distPath, 'assets');
   
   if (!fs.existsSync(assetsPath)) {
-    console.log('❌ Dist folder not found. Please run npm run build first.');
+    if (process.env.NODE_ENV === 'development') {
+       
+      console.log('❌ Dist folder not found. Please run npm run build first.');
+    }
     return;
   }
 
@@ -78,39 +81,90 @@ function analyzeBundle() {
 
 // Generate performance report
 function generateReport() {
-  console.log('🔍 Analyzing bundle performance...\n');
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('🔍 Analyzing bundle performance...\n');
+  }
   
   const analysis = analyzeBundle();
   
   if (!analysis) return;
 
-  console.log('📊 Bundle Analysis Results:');
-  console.log('========================');
-  console.log(`Total Files: ${analysis.totalFiles}`);
-  console.log(`Total Size: ${(analysis.totalSize / 1024).toFixed(2)} KB`);
-  console.log(`JS Files: ${analysis.jsFiles.length}`);
-  console.log(`CSS Files: ${analysis.cssFiles.length}`);
-  console.log(`Other Files: ${analysis.otherFiles.length}\n`);
+  if (process.env.NODE_ENV === 'development') {
 
-  console.log('📈 Performance Metrics:');
-  console.log('======================');
+     
+
+    console.log('📊 Bundle Analysis Results:');
+
+  }
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('========================');
+  }
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log(`Total Files: ${analysis.totalFiles}`);
+  }
+  console.log(`Total Size: ${(analysis.totalSize / 1024).toFixed(2)} KB`);
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log(`JS Files: ${analysis.jsFiles.length}`);
+  }
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log(`CSS Files: ${analysis.cssFiles.length}`);
+  }
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log(`Other Files: ${analysis.otherFiles.length}\n`);
+  }
+
+  if (process.env.NODE_ENV === 'development') {
+
+     
+
+    console.log('📈 Performance Metrics:');
+
+  }
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('======================');
+  }
   console.log(`Largest JS File: ${analysis.performanceMetrics.largestJsFile} (${(analysis.performanceMetrics.largestJsSize / 1024).toFixed(2)} KB)`);
   console.log(`Average JS File Size: ${(analysis.performanceMetrics.averageJsSize / 1024).toFixed(2)} KB\n`);
 
-  console.log('🔧 Recommendations:');
-  console.log('==================');
+  if (process.env.NODE_ENV === 'development') {
+
+     
+
+    console.log('🔧 Recommendations:');
+
+  }
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('==================');
+  }
   if (analysis.recommendations.length === 0) {
-    console.log('✅ No major performance issues found!');
+    if (process.env.NODE_ENV === 'development') {
+       
+      console.log('✅ No major performance issues found!');
+    }
   } else {
     analysis.recommendations.forEach((rec, index) => {
-      console.log(`${index + 1}. ${rec}`);
+      if (process.env.NODE_ENV === 'development') {
+         
+        console.log(`${index + 1}. ${rec}`);
+      }
     });
   }
 
   // Save detailed report
   const reportPath = path.join(__dirname, '../performance-analysis-report.json');
   fs.writeFileSync(reportPath, JSON.stringify(analysis, null, 2));
-  console.log(`\n📄 Detailed report saved to: ${reportPath}`);
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log(`\n📄 Detailed report saved to: ${reportPath}`);
+  }
 
   // Performance score calculation
   let score = 100;
@@ -122,13 +176,25 @@ function generateReport() {
   console.log(`\n🎯 Performance Score: ${Math.max(0, score)}/100`);
   
   if (score >= 90) {
-    console.log('🌟 Excellent performance!');
+    if (process.env.NODE_ENV === 'development') {
+       
+      console.log('🌟 Excellent performance!');
+    }
   } else if (score >= 70) {
-    console.log('👍 Good performance with room for improvement');
+    if (process.env.NODE_ENV === 'development') {
+       
+      console.log('👍 Good performance with room for improvement');
+    }
   } else if (score >= 50) {
-    console.log('⚠️  Performance needs attention');
+    if (process.env.NODE_ENV === 'development') {
+       
+      console.log('⚠️  Performance needs attention');
+    }
   } else {
-    console.log('🚨 Performance requires immediate optimization');
+    if (process.env.NODE_ENV === 'development') {
+       
+      console.log('🚨 Performance requires immediate optimization');
+    }
   }
 }
 

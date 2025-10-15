@@ -48,7 +48,10 @@ ${pages.map(page => `  <url>
 </urlset>`;
 
   fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap);
-  console.log('✅ Sitemap generated successfully');
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('✅ Sitemap generated successfully');
+  }
 };
 
 export default generateSitemap;

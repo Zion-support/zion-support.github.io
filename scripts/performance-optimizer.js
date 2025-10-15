@@ -7,7 +7,10 @@ const __dirname = path.dirname(__filename);
 
 // Performance optimization script
 const optimizePerformance = () => {
-  console.log('🚀 Starting performance optimization...');
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('🚀 Starting performance optimization...');
+  }
   
   // 1. Optimize bundle analysis
   const bundleAnalysis = {
@@ -49,10 +52,22 @@ const optimizePerformance = () => {
     JSON.stringify(performanceReport, null, 2)
   );
   
-  console.log('✅ Performance optimization completed!');
+  if (process.env.NODE_ENV === 'development') {
+  
+     
+  
+    console.log('✅ Performance optimization completed!');
+  
+  }
   console.log('📊 Bundle size: ~820KB (gzipped: ~200KB)');
-  console.log('🎯 Core Web Vitals: All green');
-  console.log('📈 Performance score: 95/100');
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('🎯 Core Web Vitals: All green');
+  }
+  if (process.env.NODE_ENV === 'development') {
+     
+    console.log('📈 Performance score: 95/100');
+  }
 };
 
 // Run optimization
