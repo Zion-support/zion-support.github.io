@@ -23,66 +23,82 @@ const HomePage: React.FC = () => {
     {
       icon: CpuChipIcon,
       title: 'AI Solutions',
-      description: 'Advanced artificial intelligence and machine learning solutions to transform your business.',
+      description: 'Advanced artificial intelligence and machine learning solutions to transform your business with cutting-edge AI technology.',
       href: '/ai-solutions',
       gradient: 'from-purple-500 to-pink-500',
-      glow: 'shadow-purple-500/25'
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
-      href: '/cybersecurity',
-      gradient: 'from-green-500 to-emerald-500',
-      glow: 'shadow-green-500/25'
-    },
-    {
-      icon: CloudIcon,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions and infrastructure management for modern businesses.',
-      href: '/cloud-solutions',
-      gradient: 'from-blue-500 to-cyan-500',
-      glow: 'shadow-blue-500/25'
-    },
-    {
-      icon: RocketLaunchIcon,
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation strategies to modernize your operations.',
-      href: '/digital-transformation',
-      gradient: 'from-orange-500 to-red-500',
-      glow: 'shadow-orange-500/25'
+      glow: 'shadow-purple-500/25',
+      price: 'Starting at $5,000',
+      features: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision']
     },
     {
       icon: GlobeAltIcon,
       title: 'Micro SaaS Solutions',
-      description: 'Innovative micro software solutions designed to solve specific business challenges.',
+      description: 'Innovative micro software solutions designed to solve specific business challenges with real functionality.',
       href: '/micro-saas-solutions',
       gradient: 'from-cyan-500 to-blue-500',
-      glow: 'shadow-cyan-500/25'
+      glow: 'shadow-cyan-500/25',
+      price: 'Starting at $99/month',
+      features: ['AI Content Generator', 'Smart CRM', 'Analytics Dashboard', 'Expense Tracker']
+    },
+    {
+      icon: CloudIcon,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions and infrastructure management for modern businesses with 99.9% uptime.',
+      href: '/cloud-infrastructure',
+      gradient: 'from-blue-500 to-cyan-500',
+      glow: 'shadow-blue-500/25',
+      price: 'Starting at $2,999',
+      features: ['Serverless Architecture', 'Container Orchestration', 'AI Infrastructure', 'Data Lakes']
     },
     {
       icon: CogIcon,
       title: 'IT Solutions',
-      description: 'Comprehensive technology services including development, infrastructure, and support.',
+      description: 'Comprehensive technology services including development, infrastructure, and support for enterprise needs.',
       href: '/it-solutions',
       gradient: 'from-indigo-500 to-purple-500',
-      glow: 'shadow-indigo-500/25'
+      glow: 'shadow-indigo-500/25',
+      price: 'Starting at $1,999',
+      features: ['Web Development', 'Mobile Apps', 'Database Management', 'API Development']
     },
     {
       icon: ChartBarIcon,
       title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics and visualization.',
+      description: 'Transform your data into actionable insights with advanced analytics and AI-powered visualization.',
       href: '/data-analytics',
       gradient: 'from-yellow-500 to-orange-500',
-      glow: 'shadow-yellow-500/25'
+      glow: 'shadow-yellow-500/25',
+      price: 'Starting at $1,499',
+      features: ['Real-time Dashboards', 'Predictive Analytics', 'Data Visualization', 'Business Intelligence']
+    },
+    {
+      icon: ShieldCheckIcon,
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets and infrastructure with enterprise-grade security.',
+      href: '/security-audit',
+      gradient: 'from-green-500 to-emerald-500',
+      glow: 'shadow-green-500/25',
+      price: 'Starting at $3,999',
+      features: ['Security Audits', 'Threat Detection', 'Compliance', 'Risk Assessment']
+    },
+    {
+      icon: RocketLaunchIcon,
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation strategies to modernize your operations with cutting-edge technology.',
+      href: '/digital-transformation',
+      gradient: 'from-orange-500 to-red-500',
+      glow: 'shadow-orange-500/25',
+      price: 'Starting at $9,999',
+      features: ['Process Automation', 'Workflow Optimization', 'Technology Integration', 'Change Management']
     },
     {
       icon: BoltIcon,
-      title: '5G Solutions',
-      description: 'Next-generation 5G technology solutions for ultra-fast connectivity and IoT applications.',
+      title: '5G & IoT Solutions',
+      description: 'Next-generation 5G technology and IoT solutions for ultra-fast connectivity and smart applications.',
       href: '/5g-solutions',
       gradient: 'from-pink-500 to-rose-500',
-      glow: 'shadow-pink-500/25'
+      glow: 'shadow-pink-500/25',
+      price: 'Starting at $4,999',
+      features: ['5G Networks', 'IoT Platforms', 'Edge Computing', 'Smart Devices']
     }
   ];
 
@@ -274,10 +290,10 @@ const HomePage: React.FC = () => {
                   <span className="text-sm text-cyan-400 font-medium neon-text">AI Content</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
-                  AI Content Generator Pro
+                  Zion AI Content Generator Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Generate high-quality content for blogs, social media, and marketing materials using advanced AI with 95% accuracy.
+                  Generate high-quality content for blogs, social media, and marketing materials using advanced AI with 95% accuracy and 50+ languages.
                 </p>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-cyan-400 neon-text">$199/mo</span>
@@ -290,11 +306,11 @@ const HomePage: React.FC = () => {
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>SEO optimization</span>
+                    <span>SEO optimization & 50+ languages</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Multi-language support</span>
+                    <span>Brand voice customization</span>
                   </div>
                 </div>
                 <Link to="/ai-content-generator"
@@ -304,19 +320,19 @@ const HomePage: React.FC = () => {
                 </Link>
               </div>
 
-              {/* AI CRM Optimizer */}
+              {/* Smart CRM Automation */}
               <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
                     <UserGroupIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-purple-400 font-medium neon-text">CRM AI</span>
+                  <span className="text-sm text-purple-400 font-medium neon-text">Smart CRM</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                  AI CRM Optimizer
+                  Zion Smart CRM Automation
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Transform your sales process with AI-powered lead scoring, predictive analytics, and automated workflows.
+                  Transform your sales process with AI-powered lead scoring, automated workflows, and predictive analytics for 40% higher conversion rates.
                 </p>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-purple-400 neon-text">$299/mo</span>
@@ -329,97 +345,185 @@ const HomePage: React.FC = () => {
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>AI lead scoring</span>
+                    <span>AI lead scoring & automation</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
                     <span>Predictive analytics</span>
                   </div>
                 </div>
-                <Link to="/ai-crm-optimizer"
+                <Link to="/zion-smart-crm-automation"
                   className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
                 </Link>
               </div>
 
-              {/* AI Data Visualizer */}
-              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20">
+              {/* Smart Analytics Dashboard */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/20">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
                     <ChartBarIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-cyan-400 font-medium neon-text">Data Viz</span>
+                  <span className="text-sm text-green-400 font-medium neon-text">Analytics</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
-                  AI Data Visualizer
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
+                  Zion Smart Analytics Dashboard
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Transform complex data into stunning visualizations with AI-powered insights and 50+ chart types.
+                  Comprehensive business intelligence platform with real-time analytics, custom dashboards, and AI-powered insights for data-driven decisions.
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-cyan-400 neon-text">$149/mo</span>
+                  <span className="text-2xl font-bold text-green-400 neon-text">$149/mo</span>
                   <span className="text-sm text-gray-400 line-through">$299/mo</span>
                 </div>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>50+ chart types</span>
+                    <span>Real-time dashboards & AI insights</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>AI-powered insights</span>
+                    <span>Custom visualizations</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Real-time dashboards</span>
+                    <span>Mobile accessibility</span>
                   </div>
                 </div>
-                <Link to="/ai-data-visualizer"
+                <Link to="/zion-smart-analytics-dashboard"
                   className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
                 </Link>
               </div>
 
-              {/* Social Media Scheduler */}
-              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/20">
+              {/* Smart Inventory Manager */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/20">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
-                    <ShareIcon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <CogIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-pink-400 font-medium neon-text">Social</span>
+                  <span className="text-sm text-orange-400 font-medium neon-text">Inventory</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-pink-300 transition-colors">
-                  Social Media Scheduler
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-orange-300 transition-colors">
+                  Zion Smart Inventory Manager
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
-                  Streamline your social media with AI-powered scheduling, content optimization, and multi-platform management.
+                  AI-powered inventory management system with demand forecasting, automated reordering, and real-time tracking for optimal stock levels.
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-pink-400 neon-text">$49/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$99/mo</span>
+                  <span className="text-2xl font-bold text-orange-400 neon-text">$199/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$399/mo</span>
                 </div>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>8+ platforms supported</span>
+                    <span>Reduce stockouts by 70%</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>AI content optimization</span>
+                    <span>AI demand forecasting</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-300">
                     <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>40% higher engagement</span>
+                    <span>Automated reordering</span>
                   </div>
                 </div>
-                <Link to="/social-media-scheduler"
+                <Link to="/zion-smart-inventory-manager"
                   className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
                 </Link>
               </div>
+
+              {/* Smart Expense Tracker */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <CurrencyDollarIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-yellow-400 font-medium neon-text">Expense</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors">
+                  Zion Smart Expense Tracker
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Intelligent expense management platform with receipt scanning, automated categorization, and financial insights for better budget control.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-yellow-400 neon-text">$99/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$199/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Save 80% time on processing</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Receipt scanning & automation</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Tax preparation ready</span>
+                  </div>
+                </div>
+                <Link to="/zion-smart-expense-tracker"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Legal Assistant */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <ShieldCheckIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-indigo-400 font-medium neon-text">Legal AI</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">
+                  Zion AI Legal Assistant
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Advanced legal document analysis and contract review platform with AI-powered insights, compliance checking, and risk assessment.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-indigo-400 neon-text">$399/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$799/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Reduce review time by 70%</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Contract analysis & compliance</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Risk assessment</span>
+                  </div>
+                </div>
+                <Link to="/zion-ai-legal-assistant"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+            </div>
+
+            {/* View All Button */}
+            <div className="text-center mt-12">
+              <Link to="/micro-saas-solutions"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25"
+              >
+                View All Micro SaaS Solutions
+                <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
         </section>
