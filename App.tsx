@@ -68,9 +68,6 @@ const AITranslatorProPage = lazy(() => import('./app/ai-translator-pro/page'));
 const AIVideoGeneratorPage = lazy(() => import('./app/ai-video-generator/page'));
 const AIVoiceClonerPage = lazy(() => import('./app/ai-voice-cloner/page'));
 const AIDesignAssistantPage = lazy(() => import('./app/ai-design-assistant/page'));
-const AICRMOptimizerPage = lazy(() => import('./app/ai-crm-optimizer/page'));
-const AIDataVisualizerPage = lazy(() => import('./app/ai-data-visualizer/page'));
-const AIEmailOptimizerPage = lazy(() => import('./app/ai-email-optimizer/page'));
 const AIWebsiteAnalyzerPage = lazy(() => import('./app/ai-website-analyzer/page'));
 const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
 const DataAnalyticsPage = lazy(() => import('./app/data-analytics/page'));
@@ -89,44 +86,23 @@ const DemoPage = lazy(() => import('./app/demo/page'));
 const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
 const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
 
-// Missing pages
-const TutorialsPage = lazy(() => import('./app/tutorials/page'));
-const DocsPage = lazy(() => import('./app/docs/page'));
-const SupportPage = lazy(() => import('./app/support/page'));
-
 // Micro SaaS pages
 const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
 const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
 const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
 const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
-const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
-const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
 
-// Missing pages
+// IT Solutions
 const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
-const SupportPage = lazy(() => import('./app/support/page'));
-const TutorialsPage = lazy(() => import('./app/tutorials/page'));
-const DocsPage = lazy(() => import('./app/docs/page'));
-const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
-const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
-const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
-const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
-const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
-const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
 
 // Additional missing pages
 const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
-const AICRMOptimizerPage = lazy(() => import('./app/ai-crm-optimizer/page'));
-const AIDataVisualizerPage = lazy(() => import('./app/ai-data-visualizer/page'));
-const AIEmailOptimizerPage = lazy(() => import('./app/ai-email-optimizer/page'));
 const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
 const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
 const AILeadScoringProPage = lazy(() => import('./app/ai-lead-scoring-pro/page'));
 const AIPredictiveMaintenanceProPage = lazy(() => import('./app/ai-predictive-maintenance-pro/page'));
 const AIPriceOptimizerProPage = lazy(() => import('./app/ai-price-optimizer-pro/page'));
-const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
 const AIVoiceAssistantProPage = lazy(() => import('./app/ai-voice-assistant-pro/page'));
-const AIWebsiteAnalyzerPage = lazy(() => import('./app/ai-website-analyzer/page'));
 const BlockchainSolutionsProPage = lazy(() => import('./app/blockchain-solutions-pro/page'));
 const DevOpsAutomationProPage = lazy(() => import('./app/devops-automation-pro/page'));
 const IOTSolutionsProPage = lazy(() => import('./app/iot-solutions-pro/page'));
