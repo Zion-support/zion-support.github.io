@@ -12,16 +12,16 @@ const HomePage: React.FC = memo(() => {
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1 302 464 0950",
       "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "Innovation City",
-      "addressRegion": "IC",
-      "postalCode": "12345",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
       "addressCountry": "US"
     },
     "sameAs": [
@@ -47,7 +47,8 @@ const HomePage: React.FC = memo(() => {
               Welcome to Zion Tech Group
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              We provide cutting-edge AI and IT solutions to help your business thrive in the digital age.
+              Leading provider of innovative AI and IT solutions for modern businesses. We help companies transform through cutting-edge technology, 
+              intelligent automation, and comprehensive digital solutions that drive growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
@@ -59,10 +60,37 @@ const HomePage: React.FC = memo(() => {
             </div>
           </div>
           
+          {/* Expertise Section */}
+          <div className="mt-20">
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Why Choose Zion Tech Group?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-4xl mb-4">🚀</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Innovation First</h3>
+                <p className="text-gray-600">We stay at the forefront of technology, implementing the latest AI and IT solutions.</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Fast Delivery</h3>
+                <p className="text-gray-600">Rapid deployment and implementation with agile development methodologies.</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">🛡️</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Secure & Reliable</h3>
+                <p className="text-gray-600">Enterprise-grade security and 99.9% uptime guarantee for all our solutions.</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">💡</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Expert Support</h3>
+                <p className="text-gray-600">24/7 technical support from our team of certified AI and IT professionals.</p>
+              </div>
+            </div>
+          </div>
+          
           {/* Services Preview */}
           <div className="mt-20">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Services</h3>
                 <p className="text-gray-600 mb-4">
@@ -90,7 +118,7 @@ const HomePage: React.FC = memo(() => {
           {/* AI Tools Preview */}
           <div className="mt-20">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI-Powered Tools</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Content Moderator</h3>
                 <p className="text-gray-600 text-sm mb-3">Automated content moderation using AI</p>
@@ -111,9 +139,65 @@ const HomePage: React.FC = memo(() => {
                 <p className="text-gray-600 text-sm mb-3">AI-powered financial predictions</p>
                 <Link to="/zion-ai-financial-forecaster" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
               </div>
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Meeting Transcriber</h3>
+                <p className="text-gray-600 text-sm mb-3">AI-powered meeting transcription</p>
+                <Link to="/ai-meeting-transcriber" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Code Reviewer</h3>
+                <p className="text-gray-600 text-sm mb-3">AI-powered code analysis</p>
+                <Link to="/ai-code-reviewer" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">SEO Optimizer</h3>
+                <p className="text-gray-600 text-sm mb-3">AI-powered SEO optimization</p>
+                <Link to="/ai-seo-optimizer" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              </div>
             </div>
             <div className="text-center mt-8">
               <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium">View All Services →</Link>
+            </div>
+          </div>
+          
+          {/* Statistics Section */}
+          <div className="mt-20 bg-blue-600 text-white py-16 rounded-lg">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold mb-12">Our Impact in Numbers</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl font-bold mb-2">500+</div>
+                  <div className="text-blue-200">Projects Completed</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold mb-2">200+</div>
+                  <div className="text-blue-200">Happy Clients</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold mb-2">99.9%</div>
+                  <div className="text-blue-200">Uptime Guarantee</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold mb-2">24/7</div>
+                  <div className="text-blue-200">Support Available</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Contact CTA Section */}
+          <div className="mt-20 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Get in touch with our experts to discuss how we can help you achieve your digital transformation goals.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="tel:+13024640950" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
+                Call: +1 302 464 0950
+              </a>
+              <a href="mailto:kleber@ziontechgroup.com" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors text-center">
+                Email: kleber@ziontechgroup.com
+              </a>
             </div>
           </div>
         </div>

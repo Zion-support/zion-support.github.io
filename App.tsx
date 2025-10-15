@@ -53,6 +53,19 @@ const ZionAIWorkflowAutomatorProPage = lazy(() => import('./app/zion-ai-workflow
 const ZionCustomerSatisfactionMonitorPage = lazy(() => import('./app/zion-customer-satisfaction-monitor/page'));
 const ZionSmartExpenseTrackerPage = lazy(() => import('./app/zion-smart-expense-tracker/page'));
 
+// New AI Services Pages
+const AIMeetingTranscriberPage = lazy(() => import('./app/ai-meeting-transcriber/page'));
+const AICodeReviewerPage = lazy(() => import('./app/ai-code-reviewer/page'));
+const AISEOOptimizerPage = lazy(() => import('./app/ai-seo-optimizer/page'));
+const AIChatbotBuilderPage = lazy(() => import('./app/ai-chatbot-builder/page'));
+const AIDataVisualizationPage = lazy(() => import('./app/ai-data-visualization/page'));
+
+// New IT Services Pages
+const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
+const IoTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
+const DevOpsAutomationPage = lazy(() => import('./app/devops-automation/page'));
+const APIDevelopmentPage = lazy(() => import('./app/api-development/page'));
+
 // Import components
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
@@ -152,6 +165,19 @@ export default function App() {
                   <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
                   <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
                   <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
+                  
+                  {/* New AI Services Routes */}
+                  <Route path="/ai-meeting-transcriber" element={<AIMeetingTranscriberPage />} />
+                  <Route path="/ai-code-reviewer" element={<AICodeReviewerPage />} />
+                  <Route path="/ai-seo-optimizer" element={<AISEOOptimizerPage />} />
+                  <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                  <Route path="/ai-data-visualization" element={<AIDataVisualizationPage />} />
+                  
+                  {/* New IT Services Routes */}
+                  <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
+                  <Route path="/iot-solutions" element={<IoTSolutionsPage />} />
+                  <Route path="/devops-automation" element={<DevOpsAutomationPage />} />
+                  <Route path="/api-development" element={<APIDevelopmentPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">

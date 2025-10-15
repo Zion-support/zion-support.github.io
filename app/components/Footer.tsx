@@ -86,9 +86,13 @@ const Footer: React.FC = memo(() => {
         
         <div className="mt-8 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-center md:text-left text-gray-300">
-              © 2025 Zion Tech Group. All rights reserved. | <a href="https://ziontechgroup.com" className="hover:text-white">ziontechgroup.com</a>
-            </p>
+            <div className="text-center md:text-left text-gray-300 mb-4 md:mb-0">
+              <p>© 2025 Zion Tech Group. All rights reserved.</p>
+              <p><a href="https://ziontechgroup.com" className="hover:text-white">ziontechgroup.com</a></p>
+              <p>Phone: <a href="tel:+13024640950" className="hover:text-white">+1 302 464 0950</a></p>
+              <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white">kleber@ziontechgroup.com</a></p>
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+            </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-gray-300 hover:text-white text-sm">Privacy Policy</Link>
               <Link to="/terms" className="text-gray-300 hover:text-white text-sm">Terms of Service</Link>
