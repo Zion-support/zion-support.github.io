@@ -74,11 +74,6 @@ const DemoPage = lazy(() => import('./app/demo/page'));
 const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
 const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
 
-// Missing pages
-const TutorialsPage = lazy(() => import('./app/tutorials/page'));
-const DocsPage = lazy(() => import('./app/docs/page'));
-const SupportPage = lazy(() => import('./app/support/page'));
-
 // Micro SaaS pages
 const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
 const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
@@ -231,10 +226,6 @@ function App() {
                     <Route path="/cybersecurity" element={<CybersecurityPage />} />
                     <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
                     
-                    {/* Missing pages */}
-                    <Route path="/tutorials" element={<TutorialsPage />} />
-                    <Route path="/docs" element={<DocsPage />} />
-                    <Route path="/support" element={<SupportPage />} />
                     
                     {/* Micro SaaS pages */}
                     <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
