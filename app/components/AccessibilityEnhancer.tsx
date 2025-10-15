@@ -1,6 +1,16 @@
-import React, { useState } from 'react';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
+
+interface AccessibilitySettings {
+  enableKeyboard: boolean;
+  enableScreenReader: boolean;
+  enableHighContrast: boolean;
+  enableFocusManagement: boolean;
+  enableLargeText: boolean;
+  enableReducedMotion: boolean;
+}
+
 interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
   isHighContrast?: boolean;
   isReducedMotion?: boolean;
   fontSize?: number;
@@ -25,7 +35,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       try {
         setSettings(JSON.parse(savedSettings));
       } catch (error) {
-        }
+        console.error('Error loading accessibility settings:', error);
+      }
     }
   }, []);
 
@@ -116,7 +127,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           outline: 2px solid #3b82f6 !important;
           outline-offset: 2px !important;
         }
-        .focus\:ring-2:focus {
+        .focus\\:ring-2:focus {
           box-shadow: 0 0 0 2px #3b82f6 !important;
         }
       `;
@@ -162,12 +173,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       observer.disconnect();
-      if (skipLink.parentNode) {
-        skipLink.parentNode.removeChild(skipLink);
-      }
     };
-  }, []);
+  }, [settings.enableKeyboard]);
 
+  return (
+    <>
+      {children}
+      
       {/* Accessibility Styles */}
       <style jsx global>{`
         /* High Contrast Mode */

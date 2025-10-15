@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
   Bars3Icon, 
@@ -29,7 +28,10 @@ import {
   CircleStackIcon,
   CodeBracketIcon,
   DevicePhoneMobileIcon,
-  UserPlusIcon
+  UserPlusIcon,
+  CheckCircleIcon,
+  RocketLaunchIcon,
+  ServerIcon
 } from '@heroicons/react/24/outline';
 
 interface NavigationProps {
@@ -139,6 +141,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     setIsServicesOpen(false);
     setIsSolutionsOpen(false);
     setIsCompanyOpen(false);
+  };
+
+  const toggleCompanyMenu = () => {
+    setIsCompanyOpen(!isCompanyOpen);
+    setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+    setIsResourcesOpen(false);
   };
 
   const isActive = (path: string) => location.pathname === path
@@ -299,9 +308,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     <item.icon className="w-5 h-5 mr-3" />
                     {item.name}
                   </Link>
+                )}
               </div>
             ))}
           </div>
+        </div>
       </div>
     </nav>
   )

@@ -1,16 +1,112 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Server, Shield, Cloud, Settings, Users, Zap, Globe, Database, Cpu, Wifi } from 'lucide-react';
 
-  return (<>
+const ItServicesPage: React.FC = () => {
+  const itServices = [
+    {
+      icon: <Server className="w-8 h-8" />,
+      title: 'Infrastructure Management',
+      description: 'Complete management of your IT infrastructure including servers, networks, and hardware.',
+      features: [
+        'Server maintenance and monitoring',
+        'Network configuration and optimization',
+        'Hardware procurement and setup',
+        'Performance monitoring and tuning'
+      ]
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Network Security',
+      description: 'Comprehensive security solutions to protect your network from threats and vulnerabilities.',
+      features: [
+        'Firewall configuration and management',
+        'Intrusion detection and prevention',
+        'VPN setup and maintenance',
+        'Security audits and assessments'
+      ]
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: 'Cloud Solutions',
+      description: 'Migration to cloud platforms and ongoing cloud infrastructure management.',
+      features: [
+        'Cloud migration planning and execution',
+        'Multi-cloud strategy development',
+        'Cloud cost optimization',
+        'Disaster recovery planning'
+      ]
+    },
+    {
+      icon: <Settings className="w-8 h-8" />,
+      title: 'System Administration',
+      description: 'Professional system administration services to keep your systems running smoothly.',
+      features: [
+        'User account management',
+        'System updates and patches',
+        'Backup and recovery solutions',
+        'Performance monitoring and optimization'
+      ]
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'IT Support',
+      description: '24/7 technical support to resolve issues and keep your business running.',
+      features: [
+        'Help desk support',
+        'Remote troubleshooting',
+        'On-site support when needed',
+        'Proactive system monitoring'
+      ]
+    },
+    {
+      icon: <Database className="w-8 h-8" />,
+      title: 'Database Management',
+      description: 'Expert database administration and optimization services.',
+      features: [
+        'Database design and optimization',
+        'Backup and recovery strategies',
+        'Performance tuning',
+        'Security and access control'
+      ]
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Improved Efficiency',
+      description: 'Streamlined IT operations that boost productivity and reduce downtime.'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Enhanced Security',
+      description: 'Robust security measures to protect your data and systems from threats.'
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: 'Scalable Solutions',
+      description: 'IT infrastructure that grows with your business needs and requirements.'
+    },
+    {
+      icon: <Cpu className="w-8 h-8" />,
+      title: 'Cost Optimization',
+      description: 'Reduce IT costs through efficient resource utilization and strategic planning.'
+    }
+  ];
+
+  return (
+    <>
       <Helmet>
         <title>IT Services - Zion Tech Group | Professional IT Solutions</title>
         <meta
           name="description"
-          content="Professional IT services including infrastructure management, network security, _system administration, and cloud solutions from Zion Tech Group."
+          content="Professional IT services including infrastructure management, network security, system administration, and cloud solutions from Zion Tech Group."
         />
         <meta
           name="keywords"
-          content="IT services, _IT support, _network security, _system administration, _cloud solutions, _IT consulting, infrastructure management"
+          content="IT services, IT support, network security, system administration, cloud solutions, IT consulting, infrastructure management"
         />
       </Helmet>
 
@@ -55,7 +151,8 @@ import SEOHead from '../components/SEOHead';
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              {itServices.map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="text-cyan-400 mb-4">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>

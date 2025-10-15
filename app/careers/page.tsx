@@ -1,7 +1,116 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Briefcase, MapPin, Clock, Users, CheckCircle, Heart, DollarSign, Home, GraduationCap, Zap, Shield } from 'lucide-react';
 
-  return (<>
+const CareersPage: React.FC = () => {
+  const benefits = [
+    {
+      icon: <Heart className="w-8 h-8" />,
+      title: 'Health & Wellness',
+      description: 'Comprehensive health insurance, mental health support, and wellness programs.'
+    },
+    {
+      icon: <DollarSign className="w-8 h-8" />,
+      title: 'Competitive Salary',
+      description: 'Above-market compensation with performance bonuses and equity options.'
+    },
+    {
+      icon: <Home className="w-8 h-8" />,
+      title: 'Remote Work',
+      description: 'Flexible remote work options with home office setup assistance.'
+    },
+    {
+      icon: <GraduationCap className="w-8 h-8" />,
+      title: 'Learning & Development',
+      description: 'Professional development budget, conferences, and skill-building opportunities.'
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Innovation Time',
+      description: 'Dedicated time for personal projects and innovation initiatives.'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Work-Life Balance',
+      description: 'Flexible hours, unlimited PTO, and family-friendly policies.'
+    }
+  ];
+
+  const openPositions = [
+    {
+      id: 'senior-ai-engineer',
+      title: 'Senior AI Engineer',
+      department: 'Engineering',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '5+ years',
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models that power our platform.',
+      requirements: [
+        'Master\'s degree in Computer Science or related field',
+        '5+ years of experience in AI/ML development',
+        'Proficiency in Python, TensorFlow, PyTorch',
+        'Experience with cloud platforms (AWS, GCP, Azure)',
+        'Strong problem-solving and communication skills'
+      ],
+      benefits: [
+        'Competitive salary + equity',
+        'Health, dental, vision insurance',
+        '401k with company matching',
+        'Professional development budget',
+        'Flexible work arrangements'
+      ]
+    },
+    {
+      id: 'cloud-architect',
+      title: 'Cloud Solutions Architect',
+      department: 'Engineering',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '7+ years',
+      description: 'Design and implement scalable cloud infrastructure solutions for our enterprise clients.',
+      requirements: [
+        'Bachelor\'s degree in Computer Science or related field',
+        '7+ years of cloud architecture experience',
+        'AWS/Azure/GCP certifications preferred',
+        'Experience with Kubernetes, Docker, Terraform',
+        'Strong understanding of security best practices'
+      ],
+      benefits: [
+        'Competitive salary + equity',
+        'Health, dental, vision insurance',
+        '401k with company matching',
+        'Professional development budget',
+        'Flexible work arrangements'
+      ]
+    },
+    {
+      id: 'cybersecurity-specialist',
+      title: 'Cybersecurity Specialist',
+      department: 'Security',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Protect our systems and clients from cyber threats with advanced security measures.',
+      requirements: [
+        'Bachelor\'s degree in Cybersecurity or related field',
+        '3+ years of cybersecurity experience',
+        'CISSP, CISM, or similar certifications',
+        'Experience with SIEM, IDS/IPS, vulnerability assessment',
+        'Knowledge of compliance frameworks (SOC 2, ISO 27001)'
+      ],
+      benefits: [
+        'Competitive salary + equity',
+        'Health, dental, vision insurance',
+        '401k with company matching',
+        'Professional development budget',
+        'Flexible work arrangements'
+      ]
+    }
+  ];
+
+  return (
+    <>
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join our team of experts in AI, cloud, and cybersecurity. Explore career opportunities at Zion Tech Group." />
@@ -53,7 +162,8 @@ import SEOHead from '../components/SEOHead';
               </p>
             </div>
             <div className="space-y-8">
-              {openPositions.map((position) => (<div key={position.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+              {openPositions.map((position) => (
+                <div key={position.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-2">{position.title}</h3>
