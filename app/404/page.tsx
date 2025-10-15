@@ -21,7 +21,6 @@ const Page404Page: React.FC = () => {
 
   return (
     <>
-      <div>
       <Helmet>
         <title>4 0 4 - Zion Tech Group</title>
         <meta name="description" content="Professional 4 0 4 solutions and services" />
@@ -59,9 +58,11 @@ const Page404Page: React.FC = () => {
                   Round-the-clock support for all your needs.
                 </p>
               </div>
+            </div>
           </div>
+        </div>
       </div>
-</>
+    </>
   );
 };
 

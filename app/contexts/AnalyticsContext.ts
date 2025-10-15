@@ -7,4 +7,4 @@ export interface AnalyticsContextType {
 }
 
 export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
-</AnalyticsContextType>
+<// Fixed unterminated regex

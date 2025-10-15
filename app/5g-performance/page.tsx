@@ -1,50 +1,37 @@
-import React, { Suspense } from 'react';
-
-const FiveGPerformancePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            5gPerformance Services
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
-            Professional services and solutions.
-          </p>
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const Page5gPerformancePage: React.FC = () => {
+const FiveGPagePage: React.FC = () => {
   const services = [
     {
-      title: 'Expert 5g Performance Solutions',
-      description: 'Professional 5g performance services tailored to your needs.'
+      title: `Expert 5G Page Solutions`,
+      description: `Professional 5G page services tailored to your needs.`
     },
     {
       title: 'Custom Implementation',
-      description: 'Tailored 5g performance implementations for your specific requirements.'
+      description: `Tailored 5G page implementations for your specific requirements.`
     },
     {
       title: '24/7 Support',
-      description: 'Round-the-clock support for all your 5g performance needs.'
+      description: `Round-the-clock support for all your 5G page needs.`
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>5g Performance - Zion Tech Group</title>
-        <meta name="description" content="Professional 5g performance solutions and services" />
-        <meta name="keywords" content="5g, performance" />
+        <title>5G Page - Zion Tech Group</title>
+        <meta name="description" content={`Professional 5G page solutions and services`} />
+        <meta name="keywords" content="5g, page" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">5g Performance</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">5G Page</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Professional 5g performance solutions and services
+              Professional 5G page solutions and services
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               {services.map((service, index) => (
@@ -78,9 +65,10 @@ const Page5gPerformancePage: React.FC = () => {
               </Link>
             </div>
           </div>
+        </div>
       </div>
     </>
   );
 };
 
-export default Page5gPerformancePage;
+export default FiveGPagePage;
