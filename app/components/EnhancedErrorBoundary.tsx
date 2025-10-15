@@ -1,6 +1,13 @@
 <<<<<<< HEAD
+'use client';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+
+=======
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react;'
 import { Helmet } from 'react-helmet-async;'
+>>>>>>> main
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -378,6 +385,16 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>
         </div>
+<<<<<<< HEAD
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default EnhancedErrorBoundary;
+=======
       </div>
             <div className="error-icon">⚠️</div>
             <h1 className="error-title">Something went wrong</h1>
@@ -659,4 +676,5 @@ const ComponentsPage: React.FC = () => {
 };
 ;
 export default ComponentsPage;'";'";
+>>>>>>> main
 >>>>>>> main
