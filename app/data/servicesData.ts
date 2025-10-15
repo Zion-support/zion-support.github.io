@@ -45,6 +45,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-development'
       },
+      link: '/ai-services/ai-development'
     },
     {
       id: 'ai-chatbot-pro',
@@ -551,6 +552,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-consulting'
       },
+      link: '/ai-services/ai-consulting'
     },
     {
       id: 'ai-inventory-optimizer-pro',
@@ -1889,6 +1891,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/cloud-infrastructure'
       },
+      link: '/it-services/cloud-infrastructure'
     },
     {
       id: 'devops-automation',
@@ -2487,6 +2490,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/cybersecurity'
       },
+      link: '/it-services/cybersecurity'
     },
     {
       id: 'data-analytics',
@@ -2533,6 +2537,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/data-analytics'
       },
+      link: '/it-services/data-analytics'
     },
     {
       id: 'mobile-development',
@@ -2579,6 +2584,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/mobile-development'
       },
+      link: '/it-services/mobile-development'
     },
     {
       id: 'web-development',
@@ -2625,6 +2631,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/web-development'
       },
+      link: '/it-services/web-development'
     },
     {
       id: 'database-management',
@@ -2671,6 +2678,7 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/database-management'
       },
+      link: '/it-services/database-management'
     }
   ],
   // New AI Services
