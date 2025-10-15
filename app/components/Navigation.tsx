@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import {
   Bars3Icon,
@@ -41,6 +41,21 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   const location = useLocation();
+  const navRef = useRef<HTMLElement>(null);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        closeAllMenus();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
@@ -63,6 +78,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Price Optimizer', href: '/ai-price-optimizer', icon: CurrencyDollarIcon },
         { name: 'AI Scheduling Assistant', href: '/ai-scheduling-assistant', icon: CogIcon },
         { name: 'AI Content Generator', href: '/ai-content-generator', icon: DocumentTextIcon },
+        { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
+        { name: 'AI Translator Pro', href: '/ai-translator-pro', icon: GlobeAltIcon },
+        { name: 'AI Video Generator', href: '/ai-video-generator', icon: EyeIcon },
+        { name: 'AI Voice Cloner', href: '/ai-voice-cloner', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Design Assistant', href: '/ai-design-assistant', icon: CogIcon },
         { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon }
       ]
     },
@@ -72,12 +92,17 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: GlobeAltIcon,
       submenu: [
         { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
+        { name: 'AI CRM Optimizer', href: '/ai-crm-optimizer', icon: CpuChipIcon },
+        { name: 'AI Data Visualizer', href: '/ai-data-visualizer', icon: ChartBarIcon },
+        { name: 'AI Email Optimizer', href: '/ai-email-optimizer', icon: EnvelopeIcon },
+        { name: 'AI Website Analyzer', href: '/ai-website-analyzer', icon: EyeIcon },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
         { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
         { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
-        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
-        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
-        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon }
+        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon },
+        { name: 'Password Manager Pro', href: '/password-manager-pro', icon: ShieldCheckIcon },
+        { name: 'Form Builder Pro', href: '/form-builder-pro', icon: DocumentTextIcon },
+        { name: 'API Manager Pro', href: '/api-manager-pro', icon: CodeBracketIcon }
       ]
     },
     {
@@ -162,13 +187,20 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     setIsResourcesOpen(false);
   };
 
+  const closeAllMenus = () => {
+    setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+    setIsResourcesOpen(false);
+    setIsCompanyOpen(false);
+  };
+
   return (
-    <nav className="bg-slate-900 border-b border-slate-700">
+    <nav ref={navRef} className="bg-slate-900 border-b border-slate-700 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
+            <Link to="/" className="flex-shrink-0 flex items-center" onClick={closeAllMenus}>
               <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
@@ -201,22 +233,23 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 </Link>
                 {/* Dropdown Menu */}
                 {item.submenu && (
-                  <div className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
+                  <div className={`absolute left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-xl py-2 z-50 border border-slate-700 transition-all duration-200 ${
                     (item.name === 'AI Services' && isServicesOpen) ||
                     (item.name === 'Micro SaaS' && isSolutionsOpen) ||
                     (item.name === 'IT Solutions' && isResourcesOpen) ||
                     (item.name === 'Resources' && isResourcesOpen) ||
                     (item.name === 'Company' && isCompanyOpen)
-                      ? 'block' : 'hidden'
+                      ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-2'
                   }`}>
                     {item.submenu.map((subItem) => (
                       <div key={subItem.name}>
                         <Link
                           to={subItem.href}
-                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white"
+                          className="flex items-center px-4 py-3 text-sm text-gray-300 hover:bg-slate-700 hover:text-white transition-colors duration-200"
+                          onClick={closeAllMenus}
                         >
-                          <subItem.icon className="w-4 h-4 mr-3" />
-                          <span>{subItem.name}</span>
+                          <subItem.icon className="w-4 h-4 mr-3 flex-shrink-0" />
+                          <span className="truncate">{subItem.name}</span>
                         </Link>
                       </div>
                     ))}
@@ -230,7 +263,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={onSidebarToggle}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition-colors duration-200"
             >
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6" />

@@ -58,6 +58,16 @@ const APIDevelopmentPage = lazy(() => import('./app/api-development/page'));
 const SecurityAuditPage = lazy(() => import('./app/security-audit/page'));
 const MicroSAASSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
 const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
+const AICodeAssistantPage = lazy(() => import('./app/ai-code-assistant/page'));
+const AITranslatorProPage = lazy(() => import('./app/ai-translator-pro/page'));
+const AIVideoGeneratorPage = lazy(() => import('./app/ai-video-generator/page'));
+const AIVoiceClonerPage = lazy(() => import('./app/ai-voice-cloner/page'));
+const AIDesignAssistantPage = lazy(() => import('./app/ai-design-assistant/page'));
+const AICRMOptimizerPage = lazy(() => import('./app/ai-crm-optimizer/page'));
+const AIDataVisualizerPage = lazy(() => import('./app/ai-data-visualizer/page'));
+const AIEmailOptimizerPage = lazy(() => import('./app/ai-email-optimizer/page'));
+const AIWebsiteAnalyzerPage = lazy(() => import('./app/ai-website-analyzer/page'));
+const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
 const DataAnalyticsPage = lazy(() => import('./app/data-analytics/page'));
 const WebDevelopmentPage = lazy(() => import('./app/web-development/page'));
 const MobileDevelopmentPage = lazy(() => import('./app/mobile-development/page'));
@@ -185,6 +195,16 @@ function App() {
                     {/* Additional Services */}
                     <Route path="/micro-saas-solutions" element={<MicroSAASSolutionsPage />} />
                     <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                    <Route path="/ai-code-assistant" element={<AICodeAssistantPage />} />
+                    <Route path="/ai-translator-pro" element={<AITranslatorProPage />} />
+                    <Route path="/ai-video-generator" element={<AIVideoGeneratorPage />} />
+                    <Route path="/ai-voice-cloner" element={<AIVoiceClonerPage />} />
+                    <Route path="/ai-design-assistant" element={<AIDesignAssistantPage />} />
+                    <Route path="/ai-crm-optimizer" element={<AICRMOptimizerPage />} />
+                    <Route path="/ai-data-visualizer" element={<AIDataVisualizerPage />} />
+                    <Route path="/ai-email-optimizer" element={<AIEmailOptimizerPage />} />
+                    <Route path="/ai-website-analyzer" element={<AIWebsiteAnalyzerPage />} />
+                    <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
                     <Route path="/data-analytics" element={<DataAnalyticsPage />} />
                     <Route path="/web-development" element={<WebDevelopmentPage />} />
                     <Route path="/mobile-development" element={<MobileDevelopmentPage />} />

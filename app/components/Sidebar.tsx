@@ -15,6 +15,19 @@ import {
   Mail,
   MapPin
 } from "lucide-react";
+import {
+  GlobeAltIcon,
+  EyeIcon,
+  ChatBubbleLeftRightIcon,
+  ChartBarIcon,
+  EnvelopeIcon,
+  ShareIcon,
+  DevicePhoneMobileIcon,
+  CircleStackIcon,
+  SignalIcon,
+  ShieldCheckIcon,
+  QuestionMarkCircleIcon
+} from '@heroicons/react/24/outline';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -51,8 +64,22 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       title: 'AI Services',
       items: [
         { name: 'AI Solutions', href: '/ai-solutions', icon: Settings },
-        { name: 'AI Analytics', href: '/ai-analytics', icon: Code },
-        { name: 'AI Automation', href: '/ai-automation', icon: Settings }
+        { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: Code },
+        { name: 'AI Translator Pro', href: '/ai-translator-pro', icon: GlobeAltIcon },
+        { name: 'AI Video Generator', href: '/ai-video-generator', icon: EyeIcon },
+        { name: 'AI Voice Cloner', href: '/ai-voice-cloner', icon: ChatBubbleLeftRightIcon },
+        { name: 'AI Design Assistant', href: '/ai-design-assistant', icon: Settings }
+      ]
+    },
+    {
+      title: 'Micro SaaS',
+      items: [
+        { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
+        { name: 'AI CRM Optimizer', href: '/ai-crm-optimizer', icon: Settings },
+        { name: 'AI Data Visualizer', href: '/ai-data-visualizer', icon: ChartBarIcon },
+        { name: 'AI Email Optimizer', href: '/ai-email-optimizer', icon: EnvelopeIcon },
+        { name: 'AI Website Analyzer', href: '/ai-website-analyzer', icon: EyeIcon },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon }
       ]
     },
     {
@@ -60,7 +87,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud },
         { name: 'Web Development', href: '/web-development', icon: Code },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: Settings }
+        { name: 'Mobile Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
+        { name: 'Database Management', href: '/database-management', icon: CircleStackIcon },
+        { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },
+        { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon }
       ]
     },
     {
@@ -68,7 +98,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Blog', href: '/blog', icon: Code },
         { name: 'Case Studies', href: '/case-studies', icon: Star },
-        { name: 'Documentation', href: '/docs', icon: Code }
+        { name: 'API Documentation', href: '/api-docs', icon: Code },
+        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }
       ]
     }
   ], []);

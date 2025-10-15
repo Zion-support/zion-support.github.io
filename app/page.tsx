@@ -185,18 +185,18 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Services Section */}
-        <section className="py-16 sm:py-20 bg-slate-800/30">
+        <section className="py-16 sm:py-20 lg:py-24 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+            <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 lg:mb-8">
                 Our <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</span>
               </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto px-4 leading-relaxed">
                 Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
               {services.map((service, index) => (
                 <Link key={index}
                   to={service.href}
@@ -233,18 +233,18 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Micro SAAS Showcase Section */}
-        <section className="py-16 sm:py-20 bg-slate-800/30">
+        <section className="py-16 sm:py-20 lg:py-24 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+            <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 lg:mb-8">
                 Featured <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SAAS Solutions</span>
               </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto px-4 leading-relaxed">
                 Discover our innovative micro SAAS applications designed to solve specific business challenges with real functionality.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
               {/* AI Content Generator */}
               <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
                 <div className="flex items-center justify-between mb-4">
@@ -366,18 +366,18 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-16 sm:py-20">
+        <section className="py-16 sm:py-20 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+            <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 lg:mb-8">
                 Why Choose <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Zion Tech Group</span>?
               </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto px-4 leading-relaxed">
                 We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               {features.map((feature, index) => (
                 <div key={index} 
                   className="flex items-center space-x-4 p-4 sm:p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-all duration-300 group hover:scale-105 hover:shadow-lg hover:shadow-green-500/10"
@@ -397,33 +397,37 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="relative py-16 sm:py-20 bg-gradient-to-r from-purple-900/40 via-slate-900 to-cyan-900/40 overflow-hidden">
+        <section className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-purple-900/40 via-slate-900 to-cyan-900/40 overflow-hidden">
           {/* Animated Background Elements */}
           <div className="absolute top-10 left-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-10 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
           
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+          <div className="max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 lg:mb-10 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">
-              Let's discuss how our solutions can accelerate your digital transformation and drive growth.";
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 sm:mb-10 lg:mb-12 max-w-3xl mx-auto leading-relaxed">
+              Let's discuss how our solutions can accelerate your digital transformation and drive growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
               <Link to="/contact"
-                className="relative group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base shadow-lg shadow-purple-500/25"
+                className="relative group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 text-base sm:text-lg shadow-lg shadow-purple-500/25"
               >
-                <span className="relative z-10 flex items-center">
+                <span className="relative z-10 flex items-center justify-center">
                   Get Started Today
-                  <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </Link>
               <Link to="/demo"
-                className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base hover:shadow-lg hover:shadow-white/25"
+                className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 sm:px-10 py-4 sm:py-5 rounded-lg font-semibold transition-all duration-300 text-base sm:text-lg hover:shadow-lg hover:shadow-white/25"
               >
                 Schedule Demo
               </Link>
+            </div>
+            <div className="mt-8 sm:mt-10 text-sm sm:text-base text-gray-400">
+              <p>📞 <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">+1 (302) 464-0950</a></p>
+              <p>✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">kleber@ziontechgroup.com</a></p>
             </div>
           </div>
         </section>
