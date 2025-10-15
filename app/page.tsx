@@ -220,13 +220,79 @@ const HomePage = () => {
       category: "Productivity",
       marketPrice: "$80-150/month",
       benefits: ["Smart categorization", "Auto responses", "Smart scheduling", "60% productivity boost"]
+    },
+    {
+      name: "AI Social Media Manager",
+      description: "Revolutionary AI-powered social media management with automated content creation, multi-platform support, and advanced analytics. Increases engagement by 95%.",
+      price: "From $149/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/ai-social-media-manager",
+      featured: true,
+      category: "Social Media",
+      marketPrice: "$200-400/month",
+      benefits: ["AI Content Generation", "Multi-platform Support", "Analytics Dashboard", "Automated Posting"]
+    },
+    {
+      name: "AI Project Manager",
+      description: "Intelligent project management with AI-powered automation, resource optimization, and analytics. Delivers projects 40% faster with better outcomes.",
+      price: "From $99/month",
+      icon: <Calendar className="w-6 h-6" />,
+      link: "/ai-project-manager",
+      featured: true,
+      category: "Project Management",
+      marketPrice: "$150-300/month",
+      benefits: ["AI Planning", "Resource Optimization", "Progress Tracking", "Team Collaboration"]
+    },
+    {
+      name: "AI Customer Support",
+      description: "24/7 AI-powered customer support with natural language processing and omnichannel capabilities. Resolves 80% of issues automatically.",
+      price: "From $149/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/ai-customer-support",
+      featured: true,
+      category: "Customer Service",
+      marketPrice: "$200-350/month",
+      benefits: ["24/7 Support", "Multi-language", "Omnichannel", "Sentiment Analysis"]
+    },
+    {
+      name: "AI Email Marketing",
+      description: "AI-powered email marketing platform that increases open rates by 35%, clicks by 50%, and ROI by 300% with intelligent optimization.",
+      price: "From $99/month",
+      icon: <Mail className="w-6 h-6" />,
+      link: "/ai-email-marketing",
+      featured: true,
+      category: "Email Marketing",
+      marketPrice: "$150-250/month",
+      benefits: ["AI Content Generation", "Advanced Analytics", "A/B Testing", "Automation Workflows"]
+    },
+    {
+      name: "Cloud Migration Services",
+      description: "Expert cloud migration services with zero-downtime migration and 40% cost reduction guarantee. Supports all major cloud providers.",
+      price: "From $2,999",
+      icon: <Cloud className="w-6 h-6" />,
+      link: "/cloud-migration-services",
+      featured: true,
+      category: "Cloud Services",
+      marketPrice: "$5,000-15,000",
+      benefits: ["Zero Downtime", "Cost Optimization", "Multi-cloud Support", "24/7 Support"]
+    },
+    {
+      name: "Cybersecurity Consulting",
+      description: "Comprehensive cybersecurity services with 99.9% threat detection rate and 24/7 monitoring. Ensures compliance with all major standards.",
+      price: "From $2,999",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/cybersecurity-consulting",
+      featured: true,
+      category: "Cybersecurity",
+      marketPrice: "$5,000-20,000",
+      benefits: ["Security Assessment", "Penetration Testing", "Compliance Management", "24/7 Monitoring"]
     }
   ];
 
   const stats = [
     { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "70+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
@@ -397,7 +463,7 @@ const HomePage = () => {
               <span className="text-cyan-400 font-semibold"> Save up to 60% compared to enterprise solutions.</span>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
@@ -489,7 +555,7 @@ const HomePage = () => {
               See what our clients say about working with Zion Tech Group
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
@@ -523,7 +589,7 @@ const HomePage = () => {
           </p>
           
           {/* Contact Information */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-8">
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Mail className="w-6 h-6 text-white" />
