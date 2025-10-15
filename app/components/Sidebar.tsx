@@ -68,7 +68,17 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Data Visualizer', href: '/ai-data-visualizer', icon: Code },
         { name: 'AI Email Optimizer', href: '/ai-email-optimizer', icon: Mail },
         { name: 'AI Website Analyzer', href: '/ai-website-analyzer', icon: Settings },
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Settings }
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Settings },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro', icon: Code },
+        { name: 'AI Video Analyzer Pro', href: '/ai-video-analyzer-pro', icon: Settings },
+        { name: 'AI Translator Pro', href: '/ai-translator-pro', icon: Cloud },
+        { name: 'AI Personalization Engine Pro', href: '/ai-personalization-engine-pro', icon: Settings },
+        { name: 'AI Voice Synthesizer Pro', href: '/ai-voice-synthesizer-pro', icon: Settings },
+        { name: 'AI Data Scientist Pro', href: '/ai-data-scientist-pro', icon: Settings },
+        { name: 'AI Quality Assurance Pro', href: '/ai-quality-assurance-pro', icon: Settings },
+        { name: 'AI Knowledge Graph Pro', href: '/ai-knowledge-graph-pro', icon: Settings },
+        { name: 'AI Recommendation Engine Pro', href: '/ai-recommendation-engine-pro', icon: Settings },
+        { name: 'AI Anomaly Detector Pro', href: '/ai-anomaly-detector-pro', icon: Settings }
       ]
     },
     {
@@ -90,7 +100,25 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: Users },
         { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: Users },
         { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: Code },
-        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: Settings }
+        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: Settings },
+        { name: 'Smart Invoice Generator Pro', href: '/smart-invoice-generator-pro', icon: Settings },
+        { name: 'AI Customer Feedback Analyzer', href: '/ai-customer-feedback-analyzer', icon: Settings },
+        { name: 'Smart Contract Manager Pro', href: '/smart-contract-manager-pro', icon: Settings },
+        { name: 'AI HR Assistant Pro', href: '/ai-hr-assistant-pro', icon: Users },
+        { name: 'Smart Inventory Optimizer Pro', href: '/smart-inventory-optimizer-pro', icon: Settings },
+        { name: 'AI Social Media Scheduler Pro', href: '/ai-social-media-scheduler-pro', icon: Settings },
+        { name: 'Smart Email Marketing Pro', href: '/smart-email-marketing-pro', icon: Mail },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro', icon: Settings },
+        { name: 'Smart Analytics Dashboard Pro', href: '/smart-analytics-dashboard-pro', icon: Settings },
+        { name: 'AI Workflow Automator Pro', href: '/ai-workflow-automator-pro', icon: Settings },
+        { name: 'Smart Document Manager Pro', href: '/smart-document-manager-pro', icon: Settings },
+        { name: 'AI Expense Tracker Pro', href: '/ai-expense-tracker-pro', icon: Settings },
+        { name: 'Smart Appointment Scheduler Pro', href: '/smart-appointment-scheduler-pro', icon: Settings },
+        { name: 'AI Password Manager Pro', href: '/ai-password-manager-pro', icon: Settings },
+        { name: 'Smart Backup Manager Pro', href: '/smart-backup-manager-pro', icon: Settings },
+        { name: 'AI Monitoring Dashboard Pro', href: '/ai-monitoring-dashboard-pro', icon: Settings },
+        { name: 'Smart API Manager Pro', href: '/smart-api-manager-pro', icon: Code },
+        { name: 'AI Security Scanner Pro', href: '/ai-security-scanner-pro', icon: Settings }
       ]
     },
     {

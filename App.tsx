@@ -155,6 +155,7 @@ const ZionSmartInventoryManagerPage = lazy(() => import('./app/zion-smart-invent
 const AI3DModelGeneratorPage = lazy(() => import('./app/ai-3d-model-generator/page'));
 const AIAudioProcessorPage = lazy(() => import('./app/ai-audio-processor/page'));
 const AICodeAssistantPage = lazy(() => import('./app/ai-code-assistant/page'));
+const AICodeAssistantProPage = lazy(() => import('./app/ai-code-assistant-pro/page'));
 const AIEducationTutorPage = lazy(() => import('./app/ai-education-tutor/page'));
 const AIInfrastructurePage = lazy(() => import('./app/ai-infrastructure/page'));
 const AILegalAssistantPage = lazy(() => import('./app/ai-legal-assistant/page'));
@@ -162,7 +163,18 @@ const AIMedicalAssistantPage = lazy(() => import('./app/ai-medical-assistant/pag
 const AIRealEstateAnalyzerPage = lazy(() => import('./app/ai-real-estate-analyzer/page'));
 const AISupplyChainOptimizerPage = lazy(() => import('./app/ai-supply-chain-optimizer/page'));
 const AITranslatorPage = lazy(() => import('./app/ai-translator/page'));
+const AITranslatorProPage = lazy(() => import('./app/ai-translator-pro/page'));
 const AIVideoGeneratorPage = lazy(() => import('./app/ai-video-generator/page'));
+const AIVideoAnalyzerProPage = lazy(() => import('./app/ai-video-analyzer-pro/page'));
+const AIPersonalizationEngineProPage = lazy(() => import('./app/ai-personalization-engine-pro/page'));
+const AIVoiceSynthesizerProPage = lazy(() => import('./app/ai-voice-synthesizer-pro/page'));
+const AIDataScientistProPage = lazy(() => import('./app/ai-data-scientist-pro/page'));
+const AIQualityAssuranceProPage = lazy(() => import('./app/ai-quality-assurance-pro/page'));
+const AIKnowledgeGraphProPage = lazy(() => import('./app/ai-knowledge-graph-pro/page'));
+const AIRecommendationEngineProPage = lazy(() => import('./app/ai-recommendation-engine-pro/page'));
+const AIAnomalyDetectorProPage = lazy(() => import('./app/ai-anomaly-detector-pro/page'));
+const SmartInvoiceGeneratorProPage = lazy(() => import('./app/smart-invoice-generator-pro/page'));
+const AICustomerFeedbackAnalyzerPage = lazy(() => import('./app/ai-customer-feedback-analyzer/page'));
 
 // Advanced Technology Solutions
 const AugmentedRealitySolutionsPage = lazy(() => import('./app/augmented-reality-solutions/page'));
@@ -419,6 +431,7 @@ function App() {
                     <Route path="/ai-3d-model-generator" element={<AI3DModelGeneratorPage />} />
                     <Route path="/ai-audio-processor" element={<AIAudioProcessorPage />} />
                     <Route path="/ai-code-assistant" element={<AICodeAssistantPage />} />
+                    <Route path="/ai-code-assistant-pro" element={<AICodeAssistantProPage />} />
                     <Route path="/ai-education-tutor" element={<AIEducationTutorPage />} />
                     <Route path="/ai-infrastructure" element={<AIInfrastructurePage />} />
                     <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} />
@@ -426,7 +439,18 @@ function App() {
                     <Route path="/ai-real-estate-analyzer" element={<AIRealEstateAnalyzerPage />} />
                     <Route path="/ai-supply-chain-optimizer" element={<AISupplyChainOptimizerPage />} />
                     <Route path="/ai-translator" element={<AITranslatorPage />} />
+                    <Route path="/ai-translator-pro" element={<AITranslatorProPage />} />
                     <Route path="/ai-video-generator" element={<AIVideoGeneratorPage />} />
+                    <Route path="/ai-video-analyzer-pro" element={<AIVideoAnalyzerProPage />} />
+                    <Route path="/ai-personalization-engine-pro" element={<AIPersonalizationEngineProPage />} />
+                    <Route path="/ai-voice-synthesizer-pro" element={<AIVoiceSynthesizerProPage />} />
+                    <Route path="/ai-data-scientist-pro" element={<AIDataScientistProPage />} />
+                    <Route path="/ai-quality-assurance-pro" element={<AIQualityAssuranceProPage />} />
+                    <Route path="/ai-knowledge-graph-pro" element={<AIKnowledgeGraphProPage />} />
+                    <Route path="/ai-recommendation-engine-pro" element={<AIRecommendationEngineProPage />} />
+                    <Route path="/ai-anomaly-detector-pro" element={<AIAnomalyDetectorProPage />} />
+                    <Route path="/smart-invoice-generator-pro" element={<SmartInvoiceGeneratorProPage />} />
+                    <Route path="/ai-customer-feedback-analyzer" element={<AICustomerFeedbackAnalyzerPage />} />
                     
                     {/* Advanced Technology Solutions */}
                     <Route path="/augmented-reality-solutions" element={<AugmentedRealitySolutionsPage />} />

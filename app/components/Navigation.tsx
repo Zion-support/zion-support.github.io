@@ -74,7 +74,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
         { name: 'AI Knowledge Graph Pro', href: '/ai-knowledge-graph-pro', icon: CpuChipIcon },
         { name: 'AI Recommendation Engine Pro', href: '/ai-recommendation-engine-pro', icon: CpuChipIcon },
         { name: 'AI Anomaly Detector Pro', href: '/ai-anomaly-detector-pro', icon: ShieldCheckIcon },
-        { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon }
+        { name: 'Data Analytics', href: '/data-analytics', icon: ChartBarIcon },
+        { name: 'AI Website Analyzer', href: '/ai-website-analyzer', icon: EyeIcon },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon }
       ]
     },
     {
@@ -86,6 +88,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
         { name: 'AI Project Manager Pro', href: '/ai-project-manager-pro', icon: CheckCircleIcon },
         { name: 'Smart Invoice Generator Pro', href: '/smart-invoice-generator-pro', icon: DocumentTextIcon },
         { name: 'AI Customer Feedback Analyzer', href: '/ai-customer-feedback-analyzer', icon: ChatBubbleLeftRightIcon },
+        { name: 'Smart Invoice Generator Pro', href: '/smart-invoice-generator-pro', icon: DocumentTextIcon },
         { name: 'Smart Contract Manager Pro', href: '/smart-contract-manager-pro', icon: DocumentTextIcon },
         { name: 'AI HR Assistant Pro', href: '/ai-hr-assistant-pro', icon: UserGroupIcon },
         { name: 'Smart Inventory Optimizer Pro', href: '/smart-inventory-optimizer-pro', icon: CircleStackIcon },

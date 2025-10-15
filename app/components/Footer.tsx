@@ -74,6 +74,14 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/ai-scheduling-assistant" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Scheduling Assistant</Link></li>
               <li><Link to="/ai-code-assistant-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Code Assistant Pro</Link></li>
               <li><Link to="/ai-video-analyzer-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Video Analyzer Pro</Link></li>
+              <li><Link to="/ai-translator-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Translator Pro</Link></li>
+              <li><Link to="/ai-personalization-engine-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Personalization Engine Pro</Link></li>
+              <li><Link to="/ai-voice-synthesizer-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Voice Synthesizer Pro</Link></li>
+              <li><Link to="/ai-data-scientist-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Data Scientist Pro</Link></li>
+              <li><Link to="/ai-quality-assurance-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Quality Assurance Pro</Link></li>
+              <li><Link to="/ai-knowledge-graph-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Knowledge Graph Pro</Link></li>
+              <li><Link to="/ai-recommendation-engine-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Recommendation Engine Pro</Link></li>
+              <li><Link to="/ai-anomaly-detector-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Anomaly Detector Pro</Link></li>
             </ul>
           </div>
           
@@ -84,6 +92,10 @@ const Footer: React.FC = memo(() => {
               <li><Link to="/smart-invoice-generator-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Smart Invoice Generator Pro</Link></li>
               <li><Link to="/ai-customer-feedback-analyzer" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Customer Feedback Analyzer</Link></li>
               <li><Link to="/smart-contract-manager-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Smart Contract Manager Pro</Link></li>
+              <li><Link to="/ai-hr-assistant-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI HR Assistant Pro</Link></li>
+              <li><Link to="/smart-inventory-optimizer-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Smart Inventory Optimizer Pro</Link></li>
+              <li><Link to="/ai-social-media-scheduler-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Social Media Scheduler Pro</Link></li>
+              <li><Link to="/smart-email-marketing-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Smart Email Marketing Pro</Link></li>
               <li><Link to="/ai-hr-assistant-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI HR Assistant Pro</Link></li>
               <li><Link to="/smart-inventory-optimizer-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Smart Inventory Optimizer Pro</Link></li>
               <li><Link to="/ai-social-media-scheduler-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Social Media Scheduler Pro</Link></li>
