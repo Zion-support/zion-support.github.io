@@ -24,9 +24,9 @@
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": [
-    "node_modules", 
-    "dist", 
-    ".next", 
+    "node_modules",
+    "dist",
+    ".next",
     "out",
     "app-broken/**",
     "app-disabled/**",
@@ -36,10 +36,6 @@
     "src/**",
     "scripts/**",
     "**/*.cjs",
-    "**/*.js",
-    "app/blog/**",
-    "app/components/About.tsx",
-    "app/components/AccessibilityAudit.tsx",
-    "app/components/AccessibilityManager.tsx"
+    "**/*.js"
   ]
 }

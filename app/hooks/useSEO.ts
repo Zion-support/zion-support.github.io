@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import { useState, useEffect } from 'react';
+
+export function useSEO() {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    /// Comment
+  }, []);
+  
+  return { state, setState };
+}
+=======
 import { useCallback, useEffect, useState } from 'react';
 
 interface SEOData {
@@ -67,3 +80,4 @@ export const useSEO = (initialData: Partial<SEOData> = {}) => {
     updateCanonicalUrl
   };
 };
+>>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624

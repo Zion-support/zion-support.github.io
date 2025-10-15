@@ -12,6 +12,21 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
+<<<<<<< HEAD
+          ui: ['@heroicons/react', 'framer-motion']
+        }
+      }
+    }
+  },
+  server: {
+    port: 3000,
+    open: true
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom']
+  }
+})
+=======
         },
       },
     },
@@ -26,3 +41,4 @@ export default defineConfig({
     },
   },
 })
+>>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624

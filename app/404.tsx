@@ -1,4 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
+
+export default function NotFound404() {
+  return (
+    <div>
+      <h1>404 - Page Not Found</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+}
+=======
 import { Helmet } from 'react-helmet-async';
 
 export default function AppPage() {
@@ -20,3 +31,4 @@ export default function AppPage() {
     </>
   );
 }
+>>>>>>> 82730201b6fc9753a1b36a2b09669d51935f2624
