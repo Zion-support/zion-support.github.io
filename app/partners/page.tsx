@@ -12,8 +12,9 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "Access to Azure AI services",
         "Joint go-to-market initiatives",
-        "Technical support and training"]
-        "Co-marketing opportunities"]]
+        "Technical support and training",
+        "Co-marketing opportunities"
+      ]
     },
     {
       name: "Amazon Web Services",
@@ -23,8 +24,9 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "AWS certified solutions",
         "Cost optimization services",
-        "Migration expertise"]
-        "24/7 cloud support"]]
+        "Migration expertise",
+        "24/7 cloud support"
+      ]
     },
     {
       name: "Google Cloud",

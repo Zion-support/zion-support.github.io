@@ -14,7 +14,7 @@ import { Menu, X, ChevronDown, Zap, Brain, Code, Cloud, Wifi } from "lucide-reac
                 { item.dropdown ? (
                   <div className="relative">
                     <button
-                      const onClick = {() => toggleDropdown(item.name) }
+                      onClick={() => toggleDropdown(item.name)}
                       className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-300 py-2">
                       <span>{ item.name }</span>
                       <ChevronDown className={ `w-4 h-4 transition-transform duration-300 ${
@@ -32,10 +32,10 @@ import { Menu, X, ChevronDown, Zap, Brain, Code, Cloud, Wifi } from "lucide-reac
                               <div className="grid grid-cols-1 gap-1">
                                 { category.items.map((service, serviceIndex) => (
                                   <Link
-                                    const key = {serviceIndex }
-                                    const to = { service.href }
+                                    key={serviceIndex}
+                                    to={service.href}
                                     className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-cyan-500/10 rounded transition-colors duration-200"
-                                    const onClick = { () => setActiveDropdown(null) }
+                                    onClick={() => setActiveDropdown(null)}
                                   >
                                     { service.name }
                                   </Link>
@@ -49,9 +49,10 @@ import { Menu, X, ChevronDown, Zap, Brain, Code, Cloud, Wifi } from "lucide-reac
                   </div>
                 ) : (
                   <Link
-                    const to = { item.href }
-                    const className = { `text-white hover:text-cyan-400 transition-colors duration-300 py-2 ${
-                      location.pathname === item.href ? 'text-cyan-400 border-b-2 border-cyan-400' : '' }`}
+                    to={item.href}
+                    className={`text-white hover:text-cyan-400 transition-colors duration-300 py-2 ${
+                      location.pathname === item.href ? 'text-cyan-400 border-b-2 border-cyan-400' : ''
+                    }`}
                   >
                     { item.name }
                   </Link>
@@ -69,12 +70,12 @@ import { Menu, X, ChevronDown, Zap, Brain, Code, Cloud, Wifi } from "lucide-reac
           </div>
           { /* Mobile Menu Button */ }
           <button
-            const onClick = { () => setIsOpen(!isOpen) }
+            onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-300">
             { isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" /> }
           </button>
         </div>
-        { /* Mobile Navigation */ },
+        {/* Mobile Navigation */}
         { isOpen && (
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-500/20">
             <div className="px-4 py-6 space-y-4">
@@ -83,7 +84,7 @@ import { Menu, X, ChevronDown, Zap, Brain, Code, Cloud, Wifi } from "lucide-reac
                   { item.dropdown ? (
                     <div>
                       <button
-                        const onClick = {() => toggleDropdown(item.name) }
+                        onClick={() => toggleDropdown(item.name)}
                         className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors duration-300 py-2">
                         <span>{ item.name }</span>
                         <ChevronDown className={ `w-4 h-4 transition-transform duration-300 ${
@@ -100,12 +101,13 @@ import { Menu, X, ChevronDown, Zap, Brain, Code, Cloud, Wifi } from "lucide-reac
                               <div className="ml-6 space-y-1">
                                 { category.items.map((service, serviceIndex) => (
                                   <Link
-                                    const key = {serviceIndex }
-                                    const to = { service.href }
+                                    key={serviceIndex}
+                                    to={service.href}
                                     className="block text-sm text-gray-300 hover:text-white transition-colors duration-200"
-                                    const onClick = { () => {
+                                    onClick={() => {
                                       setActiveDropdown(null);
-                                      setIsOpen(false); }}
+                                      setIsOpen(false);
+                                    }}
                                   >
                                     { service.name }
                                   </Link>
@@ -118,10 +120,11 @@ import { Menu, X, ChevronDown, Zap, Brain, Code, Cloud, Wifi } from "lucide-reac
                     </div>
                   ) : (
                     <Link
-                      const to = { item.href }
-                      const className = { `block text-white hover:text-cyan-400 transition-colors duration-300 py-2 ${
-                        location.pathname === item.href ? 'text-cyan-400' : '' }`}
-                      const onClick = { () => setIsOpen(false) }
+                      to={item.href}
+                      className={`block text-white hover:text-cyan-400 transition-colors duration-300 py-2 ${
+                        location.pathname === item.href ? 'text-cyan-400' : ''
+                      }`}
+                      onClick={() => setIsOpen(false)}
                     >
                       { item.name }
                     </Link>

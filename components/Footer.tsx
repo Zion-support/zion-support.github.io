@@ -29,8 +29,8 @@ import { Phone, Mail, MapPin, Zap, Facebook, Twitter, Linkedin, Instagram, Arrow
               <div className="flex space-x-4">
                 { socialLinks.map((social) => (
                   <a
-                    const key = {social.name }
-                    const href = { social.href }
+                    key={social.name}
+                    href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all duration-300">

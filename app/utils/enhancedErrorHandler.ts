@@ -20,11 +20,14 @@ const message = errorWithResponse.response?.data?.message || errorWithResponse.m
       default: return { message: message || 'An error occurred', code: 'UNKNOWN_ERROR' };
     }
   },
-  handleNetworkError: (error: unknown) => { return {,
-    message: 'Network error. Please check your connection.',
-      code: 'NETWORK_ERROR' };
+  handleNetworkError: (error: unknown) => {
+    return {
+      message: 'Network error. Please check your connection.',
+      code: 'NETWORK_ERROR'
+    };
   },
-  handleValidationError: (errors: Record<string string[]>) => { const errorMessages = Object.values(errors).flat();
+  handleValidationError: (errors: Record<string, string[]>) => {
+    const errorMessages = Object.values(errors).flat();
   return {
       message: errorMessages.join(', '),
       code: 'VALIDATION_ERROR',

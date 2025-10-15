@@ -11,8 +11,9 @@ const SitemapPage: React.FC = () => {
         { name: 'About Us', url: '/about', description: 'Company information and team' },
         { name: 'Contact', url: '/contact', description: 'Get in touch with us' },
         { name: 'Portfolio', url: '/portfolio', description: 'Our work and projects' },
-        { name: 'Blog', url: '/blog', description: 'Latest news and insights' }]
-        { name: 'Demo', url: '/demo', description: 'Schedule a product demo' }]]
+        { name: 'Blog', url: '/blog', description: 'Latest news and insights' },
+        { name: 'Demo', url: '/demo', description: 'Schedule a product demo' }
+      ]
     },
     {
       title: 'AI Services',
@@ -23,8 +24,9 @@ const SitemapPage: React.FC = () => {
         { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security solutions' },
         { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data analysis' },
         { name: 'AI Marketing Automation', url: '/ai-marketing-automation', description: 'Automated marketing campaigns' },
-        { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Voice-enabled AI solutions' }]
-        { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Business process automation' }]]
+        { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Voice-enabled AI solutions' },
+        { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Business process automation' }
+      ]
     },
     {
       title: 'IT Services',

@@ -1,14 +1,14 @@
-export interface ServiceData { id: string;
+export interface ServiceData {
+  id: string;
   name: string;
   description: string;
   category: string;
-  features: string[];,
+  features: string[];
   pricing: {
-    },
     starter: number;
-    professional: number;}
-    enterprise: number; };
-  icon: string;
+    professional: number;
+    enterprise: number;
+  };
 }
 export const servicesData: ServiceData[] = [
   { id: 'ai-solutions',
@@ -17,10 +17,10 @@ export const servicesData: ServiceData[] = [
     category: 'AI',
     features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision'],
     pricing: {
-      },
       starter: 1000,
-      professional: 2500,}
-      enterprise: 5000 },
+      professional: 2500,
+      enterprise: 5000
+    },
     icon: 'robot'
   },
   { id: 'cloud-migration',

@@ -7,10 +7,9 @@ export const seoOptimizer = { optimize: (data: { title?: string; description?: s
   },
   validate: (data: { title?: string; description?: string; keywords?: string }) => { const errors: string[] = []
     if (!data.title) errors.push('Title is required')
-    if (!data.description) errors.push('Description is required')
-    if (data.title && data.title.length > 60) errors.push('Title too long')
-    if (data.description && data.description.length > 160) errors.push('Description too long');}
-  return errors; }
+    if (!data.description) errors.push('Description is required');
+    if (data.title && data.title.length > 60) errors.push('Title too long');
+    if (data.description && data.description.length > 160) errors.push('Description too long');
+  }
+  return errors;
 };
-
-export default NotFoundPage;

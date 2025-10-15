@@ -8,10 +8,10 @@ export interface Service { id: string
   category: string,
   features: string[],
   pricing: {
-    },
     starter: number,
     professional: number,
-    enterprise: number }
+    enterprise: number
+  },
   icon: string
 }
 export interface AnalyticsEvent { action: string,

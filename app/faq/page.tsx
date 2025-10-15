@@ -25,8 +25,9 @@ const faqData = [
         },
         {
           question: "How can I get started?",
-          answer: "Getting started is easy! You can contact us through our contact form, schedule a free consultation, or explore our demo to see our solutions in action. Our team will work with you to identify the best solutions for your specific needs."]
-        }]]
+          answer: "Getting started is easy! You can contact us through our contact form, schedule a free consultation, or explore our demo to see our solutions in action. Our team will work with you to identify the best solutions for your specific needs."
+        }
+      ]
     },
     {
       category: "AI Services",

@@ -11,8 +11,9 @@ const CookiesPage: React.FC = () => {
       examples: [
         'Authentication cookies',
         'Security cookies',
-        'Load balancing cookies']
-        'User interface customization']],
+        'Load balancing cookies',
+        'User interface customization'
+      ],
       required: true
     },
     {
@@ -22,8 +23,9 @@ const CookiesPage: React.FC = () => {
       examples: [
         'Language preferences',
         'Region settings',
-        'User preferences']
-        'Accessibility options']],
+        'User preferences',
+        'Accessibility options'
+      ],
       required: false
     },
     {
