@@ -41,6 +41,42 @@ const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));
 const MicroSAASSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
 const AIContentGeneratorPage = lazy(() => import('./app/ai-content-generator/page'));
 
+function App() {
+  return (
+    <Router>
+      <HelmetProvider>
+        <GlobalErrorBoundary>
+          <PerformanceMonitor>
+            <AccessibilityEnhancer>
+              <Navigation />
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/cookies" element={<CookiesPage />} />
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                  <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                  <Route path="/micro-saas-solutions" element={<MicroSAASSolutionsPage />} />
+                  <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                </Routes>
+              </Suspense>
+              <Footer />
+            </AccessibilityEnhancer>
+          </PerformanceMonitor>
+        </GlobalErrorBoundary>
       </HelmetProvider>
     </Router>
   );
