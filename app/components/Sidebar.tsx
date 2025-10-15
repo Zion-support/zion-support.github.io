@@ -57,6 +57,12 @@ const Sidebar: React.FC = () => {
             <Link to="/zion-ai-task-scheduler" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Task Scheduler
             </Link>
+            <Link to="/zion-ai-customer-sentiment-tracker" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Sentiment Tracker
+            </Link>
+            <Link to="/zion-ai-meeting-transcriber" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Meeting Transcriber
+            </Link>
           </div>
           
           <div className="mb-4">
