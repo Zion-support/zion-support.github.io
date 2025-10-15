@@ -377,7 +377,7 @@ export default function ZionSecurityShield() {
               <p>✓ 14-day free trial • ✓ No setup fees • ✓ 24/7 support • ✓ Cancel anytime</p>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </>
   );
