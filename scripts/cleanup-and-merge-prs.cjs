@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
-const fs = require('fs');
 
 console.log('🧹 Starting comprehensive PR cleanup and merge process...\n');
 
 // Function to run git commands safely
+// eslint-disable-next-line no-unused-vars
 function runGitCommand(command, description) {
   try {
     console.log(`📋 ${description}...`);

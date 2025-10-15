@@ -4,7 +4,11 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
+/**
+ * SEO Audit Script
+ * Comprehensive SEO analysis for the Zion Tech Group website
  */
+
 // Check HTML structure
 function auditHTMLStructure() {
   
@@ -106,7 +110,7 @@ function auditSitemap() {
   }
 
   // Count URLs
-  const urlCount = (sitemap.match(/<////url>/g) || []).length
+  const urlCount = (sitemap.match(/<url>/g) || []).length
   if (urlCount === 0) {
     issues.push('Sitemap contains no URLs')
   } else if (urlCount < 5) {
@@ -223,15 +227,20 @@ async function audit() {
     const performanceAudit = auditPerformance()
     const report = generateSEOReport(htmlAudit, sitemapAudit, robotsAudit, performanceAudit)
     if (report.summary.totalIssues > 0) {
-      report.issues.forEach(issue => )
+      report.issues.forEach(issue => {
+        console.log(`  - ${issue}`);
+      });
     }
 
     if (report.summary.totalRecommendations > 0) {
-      report.recommendations.forEach(rec => )
+      report.recommendations.forEach(rec => {
+        console.log(`  - ${rec}`);
+      });
     }
 
   } catch (_error) {
-    process.exit(1)
+    console.error('Audit failed:', _error.message);
+    process.exit(1);
   }
 }
 
