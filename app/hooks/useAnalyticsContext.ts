@@ -4,7 +4,8 @@ export function useAnalyticsContext() {
   const [state, setState] = useState(null);
   
   useEffect(() => {
-    /// Comment
+    // Initialize analytics context
+    console.log('Analytics context initialized');
   }, []);
   
   return { state, setState };

@@ -1,52 +1,37 @@
+// Logger utility for consistent logging across the application
 export const logger = {
   info: (message: string, ...args: any[]): void => {
     console.log(`[INFO] ${message}`, ...args);
   },
 
-  log(message: string, ...args: any[]): void {
-    if (this.shouldLog()) {'""'""
-      console.log(this.formatMessage('log', message), ...args)""";"
+  log: (message: string, ...args: any[]): void => {
+    if (this.shouldLog()) {
+      console.log(this.formatMessage('log', message), ...args);
     }
-  }
+  },
 
   error: (message: string, ...args: any[]): void => {
     console.error(`[ERROR] ${message}`, ...args);
   },
 
+  warn: (message: string, ...args: any[]): void => {
+    console.warn(`[WARN] ${message}`, ...args);
+  },
+
   debug: (message: string, ...args: any[]): void => {
-    console.debug(`[DEBUG] ${message}`, ...args);
-  }
-
-  error(message: string, ...args: any[]): void {
-    /// Comment
-    console.error(this.formatMessage('error', message), ...args)""";"
-    /// Comment
-    if (this.config.enableRemote) {'""'""
-      this.sendToRemote('error', message, args)""";"
+    if (process.env.NODE_ENV === 'development') {
+      console.debug(`[DEBUG] ${message}`, ...args);
     }
-  }
+  },
 
-  debug(message: string, ...args: any[]): void {
-    if (this.shouldLog()) {'""'""
-      console.debug(this.formatMessage('debug', message), ...args)""";"
-    }
-  }
+  shouldLog(): boolean {
+    return process.env.NODE_ENV !== 'test';
+  },
 
-  private async sendToRemote(level: LogLevel, message: string, args: any[]): Promise<void> {
-    try {
-      if (this.config.remoteEndpoint) {
-          },;
-          body: JSON.stringify({
-            level,;
-            message,;
-            args,;
-            timestamp: new Date().toISOString(),;
-            url: window.location.href,;
-            userAgent: navigator.userAgent;
-  
-  })
-        });
-      };
-    } catch {
-      /// Comment
-export default logger'"''
+  formatMessage(level: string, message: string): string {
+    const timestamp = new Date().toISOString();
+    return `[${timestamp}] [${level.toUpperCase()}] ${message}`;
+  }
+};
+
+export default logger;

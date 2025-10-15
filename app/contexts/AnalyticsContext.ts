@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer, ReactNode } from 'react';
+import React, { createContext, useContext, useReducer, ReactNode } from "react";
 
 interface AnalyticsState {
   pageViews: number;
@@ -27,13 +27,13 @@ const initialState: AnalyticsState = {
 };
 
 type AnalyticsAction =
-  | { type: 'TRACK_EVENT'; payload: { name: string; properties?: Record<string, any> } }
-  | { type: 'TRACK_PAGE_VIEW'; payload: { path: string } }
-  | { type: 'SET_USER'; payload: { id?: string; sessionId: string } };
+  | { type: "TRACK_EVENT"; payload: { name: string; properties?: Record<string, any> } }
+  | { type: "TRACK_PAGE_VIEW"; payload: { path: string } }
+  | { type: "SET_USER"; payload: { id?: string; sessionId: string } };
 
 function analyticsReducer(state: AnalyticsState, action: AnalyticsAction): AnalyticsState {
   switch (action.type) {
-    case 'TRACK_EVENT':
+    case "TRACK_EVENT":
       return {
         ...state,
         events: [...state.events, {
@@ -42,17 +42,17 @@ function analyticsReducer(state: AnalyticsState, action: AnalyticsAction): Analy
           properties: action.payload.properties,
         }],
       };
-    case 'TRACK_PAGE_VIEW':
+    case "TRACK_PAGE_VIEW":
       return {
         ...state,
         pageViews: state.pageViews + 1,
         events: [...state.events, {
-          name: 'page_view',
+          name: "page_view",
           timestamp: Date.now(),
           properties: { path: action.payload.path },
         }],
       };
-    case 'SET_USER':
+    case "SET_USER":
       return {
         ...state,
         user: action.payload,
@@ -72,15 +72,15 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   const [state, dispatch] = useReducer(analyticsReducer, initialState);
 
   const trackEvent = (name: string, properties?: Record<string, any>) => {
-    dispatch({ type: 'TRACK_EVENT', payload: { name, properties } });
+    dispatch({ type: "TRACK_EVENT", payload: { name, properties } });
   };
 
   const trackPageView = (path: string) => {
-    dispatch({ type: 'TRACK_PAGE_VIEW', payload: { path } });
+    dispatch({ type: "TRACK_PAGE_VIEW", payload: { path } });
   };
 
   const setUser = (user: { id?: string; sessionId: string }) => {
-    dispatch({ type: 'SET_USER', payload: user });
+    dispatch({ type: "SET_USER", payload: user });
   };
 
   return (
@@ -93,7 +93,7 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
 export function useAnalytics() {
   const context = useContext(AnalyticsContext);
   if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+    throw new Error("useAnalytics must be used within an AnalyticsProvider");
   }
   return context;
 }

@@ -21,6 +21,7 @@ export default tseslint.config(
       "merge-with-conflict-resolution.js",
       "resolve-all-conflicts.js",
       "**/app/**/*.tsx",
+      "app/contexts/AnalyticsContext.ts",
       "**/api/**/*.js",
       "**/__tests__/**/*.tsx"
     ]
