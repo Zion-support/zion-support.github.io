@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { OptimizedImageProps, HTMLImageElement, ImageIcon, Loader2 } from 'lucide-react';
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
+  src: string;,
+    alt: string;
   width?: number;
   height?: number;
   className?: string;
@@ -62,22 +62,22 @@ const handleLoad = () => {
 const handleError = () => {
   return;
 };
-  // Generate optimized src for different formats
-  const getOptimizedSrc = (originalSrc: string) => {
-    // If it's already a data URL or external URL, return as is
+  // Generate optimized src for different formats,
+    const getOptimizedSrc = (originalSrc: string) => {
+    // If it's already a data URL or external URL, return as is,
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('http')) {
       return originalSrc;
     }
     // For local images, you could implement image optimization here
-    // This is a placeholder for actual optimization logic
+    // This is a placeholder for actual optimization logic,
     return originalSrc;
   };
 
 const optimizedSrc = getOptimizedSrc(src);
   if (hasError) {
     return (
-      <div 
-        className={`flex items-center justify-center bg-gray-200 dark:bg-gray-700 ${className}`}
+      <div
+    className={`flex items-center justify-center bg-gray-200 dark: bg-gray-700 ${className}`}
         style={{ width, height }}
         ref={imgRef}
       >
@@ -90,15 +90,15 @@ const optimizedSrc = getOptimizedSrc(src);
     );
   }
   return (
-    <div 
-      className={`relative overflow-hidden ${className}`}
+    <div
+    className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
       ref={imgRef}
     >
       {/* Blur placeholder */}
       {placeholder === 'blur' && blurDataURL && !isLoaded && (
-        <div 
-          className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
+        <div
+    className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
           style={{ backgroundImage: `url(${blurDataURL})` }}
         />
       )}
@@ -112,14 +112,10 @@ const optimizedSrc = getOptimizedSrc(src);
       {/* Actual image */}
       {isInView && (
         <img
-          src={optimizedSrc}
-          alt={alt}
-          width={width}
-          height={height}
-          sizes={sizes}
-          loading={loading}
-          onLoad={handleLoad}
-          onError={handleError}
+    src={optimizedSrc} alt={alt}
+          width={width} height={height}
+          sizes={sizes} loading={loading}
+          onLoad={handleLoad} onError={handleError}
           className={`transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}

@@ -36,8 +36,8 @@ const pricingPlans = [
         "Basic AI features",
         "Email templates",
         "Basic analytics",
-        "Email support",
-        "1 user account"
+        "Email support",]
+        "1 user account"]
       ],
       popular: false
     },
@@ -53,8 +53,8 @@ const pricingPlans = [
         "Advanced analytics",
         "Priority support",
         "5 user accounts",
-        "A/B testing",
-        "Automation workflows"
+        "A/B testing",]
+        "Automation workflows"]
       ],
       popular: true
     },
@@ -71,8 +71,8 @@ const pricingPlans = [
         "24/7 phone support",
         "Unlimited users",
         "Advanced automation",
-        "API access",
-        "Dedicated account manager"
+        "API access",]
+        "Dedicated account manager"]
       ],
       popular: false
     }
@@ -290,8 +290,8 @@ const benefits = [
                 <div key={index} className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
                     ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/10' 
-                    : 'border-cyan-500/20 hover:border-cyan-400/40'
-                } transition-all duration-300 hover:transform hover:scale-105`}>
+                    : 'border-cyan-500/20 hover: border-cyan-400/40'
+                } transition-all duration-300 hover: transform hover:scale-105`}>
                   {plan.popular && (
                     
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -324,7 +324,7 @@ const benefits = [
                   <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                      : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                      : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900'
                   }`}>
                     {plan.popular ? 'Get Started' : 'Choose Plan'}
                     <ArrowRight className="w-4 h-4 ml-2 inline" />

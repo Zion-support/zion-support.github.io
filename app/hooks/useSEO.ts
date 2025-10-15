@@ -5,10 +5,9 @@ export const usePerformanceMonitor = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Performance monitoring logic here
+    // Performance monitoring logic here,
     const observer = new PerformanceObserver((list) => {
-      // Handle performance entries
-    });
+      // Handle performance, entries});
 
     observer.observe({ entryTypes: ['measure', 'navigation'] });
 

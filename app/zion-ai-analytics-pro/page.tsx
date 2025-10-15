@@ -41,8 +41,8 @@ const pricingPlans = [
         "Up to 5 data sources",
         "Basic dashboards",
         "Email support",
-        "Standard reports",
-        "1 user account"
+        "Standard reports",]
+        "1 user account"]
       ],
       popular: false
     },
@@ -57,8 +57,8 @@ const pricingPlans = [
         "Priority support",
         "Custom reports",
         "Up to 10 user accounts",
-        "API access",
-        "Data export"
+        "API access",]
+        "Data export"]
       ],
       popular: true
     },
@@ -74,8 +74,8 @@ const pricingPlans = [
         "White-label reports",
         "Unlimited users",
         "Full API access",
-        "Custom integrations",
-        "Dedicated account manager"
+        "Custom integrations",]
+        "Dedicated account manager"]
       ],
       popular: false
     }
@@ -158,14 +158,14 @@ const integrations = [
             
         <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
               <Link
-                to="/contact"
+    to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group cyber-button"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/demo"
+    to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group"
               >
                 Watch Demo
@@ -215,7 +215,7 @@ const integrations = [
                   <Users className="w-6 h-6 text-cyan-400" />
                 </div>
                 
-        <div className="text-xl md:text-2xl font-bold text-white mb-2 holographic-text">10,000+</div>
+        <div className="text-xl md: text-2xl font-bold text-white mb-2 holographic-text">10,000+</div>
                 
         <div className="text-gray-300 text-sm">Happy Users</div>
               </div>
@@ -240,8 +240,7 @@ const integrations = [
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 neon-border"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 neon-border"
                 >
                   
         <div className="flex items-center mb-6">
@@ -291,11 +290,10 @@ const integrations = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
-                  key={index}
-                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden ${
+    key={index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden ${
                     plan.popular 
                       ? 'border-cyan-500/50 ring-2 ring-cyan-500/20 neon-border' 
-                      : 'border-white/20 hover:border-cyan-500/40'
+                      : 'border-white/20 hover: border-cyan-500/40'
                   }`}
                 >
                   {plan.popular && (
@@ -327,11 +325,11 @@ const integrations = [
                     ))}
                   </ul>
                   <Link
-                    to="/contact"
+    to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 group flex items-center justify-center ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 cyber-button'
-                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                        : 'border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900'
                     }`}
                   >
                     Get Started
@@ -360,8 +358,7 @@ const integrations = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 neon-border"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 neon-border"
                 >
                   
         <div className="flex items-center mb-4">
@@ -409,8 +406,7 @@ const integrations = [
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
               {integrations.map((integration, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/10 text-center"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/10 text-center"
                 >
                   
         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold mx-auto mb-2 group-hover:scale-110 transition-transform">
@@ -441,14 +437,14 @@ const integrations = [
               
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link
-                  to="/contact"
+    to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group cyber-button"
                 >
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
-                  to="/demo"
+    to="/demo"
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group"
                 >
                   Schedule Demo

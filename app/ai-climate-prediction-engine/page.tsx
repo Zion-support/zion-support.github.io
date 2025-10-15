@@ -2,6 +2,27 @@ import { ArrowRight, Target, CheckCircle, Globe, Leaf, Shield, BarChart3, Cloud,
 import { Helmet } from 'react-helmet-async';
 import { Target, Globe, Shield, Leaf, BarChart3, Cloud, Clock, RouterLink, ArrowRight, CheckCircle } from 'lucide-react';
 export default function AIClimatePredictionEngine() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          AIClimatePredictionEngine
+        </h1>
+      </div>
+    </div>
+  );
+}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          AIClimatePredictionEngine
+        </h1>
+      </div>
+    </div>
+  );
+}
+  const features = [
     {
       title: "Predictive Weather Analytics",
       description: "Long-term weather predictions with climate change impact analysis and extreme weather event forecasting",
@@ -34,7 +55,7 @@ export default function AIClimatePredictionEngine() {
     }
   ];
 
-const pricingPlans = [
+  const pricingPlans = [
     {
       name: "Researcher",
       price: 199,
@@ -45,8 +66,8 @@ const pricingPlans = [
         "Basic predictions",
         "Email support",
         "1 user account",
-        "Standard data sources",
-        "Basic analytics"
+        "Standard data sources",]
+        "Basic analytics"]
       ],
       popular: false
     },
@@ -62,8 +83,8 @@ const pricingPlans = [
         "Up to 10 user accounts",
         "All data sources",
         "Advanced analytics",
-        "Risk assessment",
-        "API access"
+        "Risk assessment",]
+        "API access"]
       ],
       popular: true
     },
@@ -79,21 +100,21 @@ const pricingPlans = [
         "Unlimited users",
         "Custom data sources",
         "White-label solution",
-        "Custom integrations",
-        "SSO integration"
+        "Custom integrations",]
+        "SSO integration"]
       ],
       popular: false
     }
   ];
 
-const climateStats = [
+  const climateStats = [
     { number: "95%", label: "Prediction Accuracy", icon: <Cloud className="w-6 h-6" /> },
     { number: "50+", label: "Climate Data Sources", icon: <Globe className="w-6 h-6" /> },
     { number: "30%", label: "Risk Reduction", icon: <Shield className="w-6 h-6" /> },
     { number: "24/7", label: "Climate Monitoring", icon: <Clock className="w-6 h-6" /> }
   ];
 
-const testimonials = [
+  const testimonials = [
     {
       name: "Dr. Sarah Chen",
       company: "Climate Research Institute",
@@ -119,16 +140,17 @@ const testimonials = [
       avatar: "LJ"
     }
   ];
+
   return (
     <>
       <Helmet>
         <title>AI Climate Prediction Engine - AI-Powered Climate Modeling Platform | Zion Tech Group</title>
         <meta
-          name="description"
+    name="description"
           content="Predict climate with AI Climate Prediction Engine - the ultimate AI-powered climate modeling platform. Weather predictions, climate risk assessment, and sustainability analytics. Starting at $199/month."
         />
         <meta
-          name="keywords"
+    name="keywords"
           content="climate prediction, AI climate modeling, weather prediction, climate risk assessment, sustainability analytics, environmental monitoring, AI climate prediction engine"
         />
       </Helmet>
@@ -164,14 +186,14 @@ const testimonials = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <RouterLink
-                to="/contact"
+    to="/contact"
                 className="group bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-teal-500/25 hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </RouterLink>
               <RouterLink
-                to="/demo"
+    to="/demo"
                 className="border border-teal-400 text-teal-400 px-8 py-4 rounded-lg font-semibold hover:bg-teal-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
                 Watch Demo
@@ -215,8 +237,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/10 relative overflow-hidden"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/10 relative overflow-hidden"
                 >
                   
         <div className="absolute inset-0 bg-gradient-to-r from-teal-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -264,11 +285,10 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
-                  key={index}
-                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
+    key={index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
                     plan.popular 
                       ? 'border-teal-500/50 bg-gradient-to-br from-teal-500/10 to-cyan-500/10' 
-                      : 'border-white/20 hover:border-teal-500/30'
+                      : 'border-white/20 hover: border-teal-500/30'
                   }`}
                 >
                   {plan.popular && (
@@ -300,11 +320,11 @@ const testimonials = [
                     ))}
                   </ul>
                   <RouterLink
-                    to="/contact"
+    to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
                       plan.popular
                         ? 'bg-gradient-to-r from-teal-500 to-cyan-600 text-white hover:from-teal-600 hover:to-cyan-700 shadow-lg hover:shadow-teal-500/25'
-                        : 'border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-900'
+                        : 'border border-teal-400 text-teal-400 hover: bg-teal-400 hover:text-slate-900'
                     }`}
                   >
                     Get Started
@@ -332,8 +352,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/10 relative overflow-hidden"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/10 relative overflow-hidden"
                 >
                   
         <div className="flex items-center mb-4">
@@ -376,14 +395,14 @@ const testimonials = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <RouterLink
-                to="/contact"
+    to="/contact"
                 className="group bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-teal-500/25 hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </RouterLink>
               <RouterLink
-                to="/demo"
+    to="/demo"
                 className="border border-teal-400 text-teal-400 px-8 py-4 rounded-lg font-semibold hover:bg-teal-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
                 Watch Demo

@@ -13,8 +13,8 @@ const AutonomousBusinessProcessesImplementationGuide2026Page: React.FC = () => {
             </h1>
             
           <p className="text-xl text-gray-300 mb-8">
-              Professional autonomous business processes implementation guide
-              2026 solutions and services
+              Professional autonomous business processes implementation guide,
+    2026 solutions and services
             </p>
             
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">

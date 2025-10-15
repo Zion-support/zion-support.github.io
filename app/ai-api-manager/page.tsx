@@ -38,8 +38,8 @@ const AIService = () => {
       features: [
         "Basic features",
         "Email support",
-        "1 user account",
-        "Standard templates"
+        "1 user account",]
+        "Standard templates"]
       ],
       popular: false
     },
@@ -52,8 +52,8 @@ const AIService = () => {
         "Advanced features",
         "Priority support",
         "Up to 5 user accounts",
-        "Custom templates",
-        "API access"
+        "Custom templates",]
+        "API access"]
       ],
       popular: true
     },
@@ -66,8 +66,8 @@ const AIService = () => {
         "All features",
         "Dedicated support",
         "Unlimited users",
-        "Custom integrations",
-        "White-label solution"
+        "Custom integrations",]
+        "White-label solution"]
       ],
       popular: false
     }

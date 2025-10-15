@@ -2,6 +2,27 @@ import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import { Mail, TrendingUp, Users, BarChart3, Zap, Target, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionLeadMagnet() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          ZionLeadMagnet
+        </h1>
+      </div>
+    </div>
+  );
+}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          ZionLeadMagnet
+        </h1>
+      </div>
+    </div>
+  );
+}
+  const features = [
     {
       title: "Email Automation",
       description: "Automated email sequences that nurture leads from first contact to conversion",
@@ -34,7 +55,7 @@ export default function ZionLeadMagnet() {
     }
   ];
 
-const pricingPlans = [
+  const pricingPlans = [
     {
       name: "Starter",
       price: 29,
@@ -45,8 +66,8 @@ const pricingPlans = [
         "Basic forms",
         "Email support",
         "1 user account",
-        "Standard templates",
-        "Basic analytics"
+        "Standard templates",]
+        "Basic analytics"]
       ],
       popular: false
     },
@@ -62,8 +83,8 @@ const pricingPlans = [
         "Up to 5 user accounts",
         "Premium templates",
         "Advanced analytics",
-        "CRM integration",
-        "A/B testing"
+        "CRM integration",]
+        "A/B testing"]
       ],
       popular: true
     },
@@ -79,21 +100,21 @@ const pricingPlans = [
         "Unlimited users",
         "Custom templates",
         "Custom analytics",
-        "White-label solution",
-        "API access"
+        "White-label solution",]
+        "API access"]
       ],
       popular: false
     }
   ];
 
-const leadStats = [
+  const leadStats = [
     { number: "300%", label: "Average Lead Increase", icon: <Target className="w-6 h-6" /> },
     { number: "45%", label: "Higher Conversion Rate", icon: <TrendingUp className="w-6 h-6" /> },
     { number: "50+", label: "CRM Integrations", icon: <Users className="w-6 h-6" /> },
     { number: "24/7", label: "Lead Processing", icon: <Clock className="w-6 h-6" /> }
   ];
 
-const testimonials = [
+  const testimonials = [
     {
       name: "Jessica Lee",
       company: "Marketing Agency",
@@ -119,16 +140,17 @@ const testimonials = [
       avatar: "SJ"
     }
   ];
+
   return (
     <>
       <Helmet>
         <title>Zion Lead Magnet - AI-Powered Lead Generation Platform | Zion Tech Group</title>
         <meta
-          name="description"
+    name="description"
           content="Generate more leads with Zion Lead Magnet - the ultimate AI-powered lead generation platform. Advanced forms, email automation, lead scoring, and CRM integration. Starting at $29/month."
         />
         <meta
-          name="keywords"
+    name="keywords"
           content="lead generation, lead capture, email automation, lead scoring, CRM integration, lead magnets, conversion optimization, Zion Lead Magnet"
         />
       </Helmet>
@@ -164,14 +186,14 @@ const testimonials = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
-                to="/contact"
+    to="/contact"
                 className="group bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-green-500/25 hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/demo"
+    to="/demo"
                 className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
                 Watch Demo
@@ -215,8 +237,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10 relative overflow-hidden"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10 relative overflow-hidden"
                 >
                   
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -264,11 +285,10 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
-                  key={index}
-                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
+    key={index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
                     plan.popular 
                       ? 'border-green-500/50 bg-gradient-to-br from-green-500/10 to-emerald-500/10' 
-                      : 'border-white/20 hover:border-green-500/30'
+                      : 'border-white/20 hover: border-green-500/30'
                   }`}
                 >
                   {plan.popular && (
@@ -300,11 +320,11 @@ const testimonials = [
                     ))}
                   </ul>
                   <Link
-                    to="/contact"
+    to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
                       plan.popular
                         ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 shadow-lg hover:shadow-green-500/25'
-                        : 'border border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'
+                        : 'border border-green-400 text-green-400 hover: bg-green-400 hover:text-slate-900'
                     }`}
                   >
                     Get Started
@@ -332,8 +352,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10 relative overflow-hidden"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10 relative overflow-hidden"
                 >
                   
         <div className="flex items-center mb-4">
@@ -376,14 +395,14 @@ const testimonials = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+    to="/contact"
                 className="group bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-green-500/25 hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/demo"
+    to="/demo"
                 className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
                 Watch Demo

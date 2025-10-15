@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Users, FileText, Eye, BarChart3, Zap, ShoppingCart, Camera, Heart, Car, Store, Settings, EnhancedSEO, ArrowRight, Play, Target, Globe, CheckCircle, Star, Mail, Phone, MapPin, Calendar } from 'lucide-react';
 const ZionAIImageRecognitionPro = () => {
-  return;
-},
+  const features = [
     {
       title: "Facial Recognition",
       description: "Advanced facial recognition with emotion detection, age estimation, and identity verification",
@@ -35,7 +34,7 @@ const ZionAIImageRecognitionPro = () => {
     }
   ];
 
-const useCases = [
+  const useCases = [
     {
       title: "E-commerce",
       description: "Product recognition, visual search, and automated cataloging",
@@ -74,7 +73,7 @@ const useCases = [
     }
   ];
 
-const pricing = [
+  const pricing = [
     {
       name: "Starter",
       price: "$149",
@@ -84,8 +83,8 @@ const pricing = [
         "Up to 10,000 images/month",
         "Basic object detection",
         "Standard OCR",
-        "Email support",
-        "Basic analytics"
+        "Email support",]
+        "Basic analytics"]
       ],
       popular: false
     },
@@ -100,8 +99,8 @@ const pricing = [
         "Advanced analytics",
         "Priority support",
         "Custom models",
-        "API access",
-        "Real-time processing"
+        "API access",]
+        "Real-time processing"]
       ],
       popular: true
     },
@@ -116,14 +115,14 @@ const pricing = [
         "Custom model training",
         "24/7 support",
         "White-label options",
-        "On-premise deployment",
-        "SLA guarantee"
+        "On-premise deployment",]
+        "SLA guarantee"]
       ],
       popular: false
     }
   ];
 
-const testimonials = [
+  const testimonials = [
     {
       name: "Jennifer Lee",
       company: "RetailTech Solutions",
@@ -149,11 +148,12 @@ const testimonials = [
       avatar: "SW"
     }
   ];
+
   return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Image Recognition Pro - Advanced Computer Vision | Zion Tech Group"
+    title="Zion AI Image Recognition Pro - Advanced Computer Vision | Zion Tech Group"
         description="Cutting-edge AI image recognition with object detection, facial recognition, OCR, and scene understanding. 99.2% accuracy for business applications."
         keywords="AI image recognition, computer vision, object detection, facial recognition, OCR, image analysis, visual AI, deep learning"
         canonical="/zion-ai-image-recognition-pro"
@@ -183,20 +183,20 @@ const testimonials = [
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Advanced AI image recognition with object detection, facial recognition, OCR, 
-            and scene understanding. 99.2% accuracy for business applications across 
-            industries with real-time processing capabilities.
+            and scene understanding. 99.2% accuracy for business applications across,
+    industries with real-time processing capabilities.
           </p>
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
-              to="/contact"
+    to="/contact"
               className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-blue-500/25 hover:scale-105"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              to="/demo"
+    to="/demo"
               className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Watch Demo
@@ -264,19 +264,18 @@ const testimonials = [
             </h2>
             
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              State-of-the-art deep learning models that can understand, analyze, and extract 
-              meaningful information from images with unprecedented accuracy and speed.
+              State-of-the-art deep learning models that can understand, analyze, and extract,
+    meaningful information from images with unprecedented accuracy and speed.
             </p>
           </div>
           
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
               >
                 <div
-                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}
+    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover: scale-110 transition-transform duration-300`}
                 >
                   {feature.icon}
                 </div>
@@ -310,8 +309,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
               >
                 
         <div className="flex items-center mb-4">
@@ -359,11 +357,10 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div
-                key={index}
-                className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+    key={index} className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
                   plan.popular
                     ? 'border-blue-500/50 shadow-blue-500/25'
-                    : 'border-white/20 hover:border-white/30'
+                    : 'border-white/20 hover: border-white/30'
                 }`}
               >
                 {plan.popular && (
@@ -395,11 +392,11 @@ const testimonials = [
                   ))}
                 </div>
                 <Link
-                  to="/contact"
+    to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-400 hover:to-cyan-400'
-                      : 'border border-white/20 text-white hover:bg-white/10'
+                      : 'border border-white/20 text-white hover: bg-white/10'
                   }`}
                 >
                   Get Started
@@ -428,8 +425,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
               >
                 
         <div className="flex items-center mb-4">
@@ -466,8 +462,8 @@ const testimonials = [
           </h2>
           
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses already using Zion AI Image Recognition Pro to 
-            unlock the power of visual intelligence. Start your free trial today.
+            Join thousands of businesses already using Zion AI Image Recognition Pro to,
+    unlock the power of visual intelligence. Start your free trial today.
           </p>
           {/* Contact Information */}
           
@@ -506,14 +502,14 @@ const testimonials = [
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+    to="/contact"
               className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-blue-500/25 hover:scale-105"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              to="/demo"
+    to="/demo"
               className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Schedule Demo

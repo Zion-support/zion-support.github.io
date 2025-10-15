@@ -18,19 +18,19 @@ const resizeCanvas = () => {
 };
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-    // Particle system
-    const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-      color: string;
+    // Particle system,
+    const particles: Array<{,
+    x: number;,
+    y: number;,
+    vx: number;,
+    vy: number;,
+    size: number;,
+    opacity: number;,
+    color: string;
     }> = [];
 
 const colors = ['#8b5cf6', '#06b6d4', '#10b981', '#f59e0b'];
-    // Create particles
+    // Create particles,
     for (let i = 0; i < 50; i++) {
       particles.push({
         x: Math.random() * canvas.width,
@@ -57,8 +57,7 @@ const colors = ['#8b5cf6', '#06b6d4', '#10b981', '#f59e0b'];
   return (
     <div className={`relative overflow-hidden ${className}`}>
       <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
+    ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: 1 }}
       />
       

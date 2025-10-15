@@ -11,8 +11,8 @@ const SecurityPage: React.FC = () => {
       details: [
         'TLS 1.3 for data in transit',
         'AES-256 for data at rest',
-        'Perfect Forward Secrecy',
-        'Encrypted backups'
+        'Perfect Forward Secrecy',]
+        'Encrypted backups']
       ]
     },
     {
@@ -22,8 +22,8 @@ const SecurityPage: React.FC = () => {
       details: [
         'Role-based access control (RBAC)',
         'Multi-factor authentication (MFA)',
-        'Single Sign-On (SSO) integration',
-        'Regular access reviews'
+        'Single Sign-On (SSO) integration',]
+        'Regular access reviews']
       ]
     },
     {
@@ -33,8 +33,8 @@ const SecurityPage: React.FC = () => {
       details: [
         'Real-time threat detection',
         'Automated incident response',
-        'Security event logging',
-        'Anomaly detection'
+        'Security event logging',]
+        'Anomaly detection']
       ]
     },
     {
@@ -44,8 +44,8 @@ const SecurityPage: React.FC = () => {
       details: [
         'SOC 2 Type II certified',
         'ISO 27001 compliant',
-        'GDPR compliant',
-        'Regular security audits'
+        'GDPR compliant',]
+        'Regular security audits']
       ]
     }
   ];
@@ -97,8 +97,8 @@ const securityMeasures = [
         'Network segmentation and firewalls',
         'DDoS protection and mitigation',
         'Regular security updates and patches',
-        'Intrusion detection systems',
-        'Vulnerability scanning and management'
+        'Intrusion detection systems',]
+        'Vulnerability scanning and management']
       ]
     },
     {
@@ -108,8 +108,8 @@ const securityMeasures = [
         'Automated security testing in CI/CD',
         'Web Application Firewall (WAF)',
         'API security and rate limiting',
-        'Input validation and sanitization',
-        'Regular penetration testing'
+        'Input validation and sanitization',]
+        'Regular penetration testing']
       ]
     },
     {
@@ -119,8 +119,8 @@ const securityMeasures = [
         'Encryption at rest and in transit',
         'Secure data backup and recovery',
         'Data loss prevention (DLP)',
-        'Secure data disposal',
-        'Privacy by design principles'
+        'Secure data disposal',]
+        'Privacy by design principles']
       ]
     },
     {
@@ -130,8 +130,8 @@ const securityMeasures = [
         'Incident response procedures',
         'Regular security assessments',
         'Third-party security reviews',
-        'Security monitoring and alerting',
-        'Business continuity planning'
+        'Security monitoring and alerting',]
+        'Business continuity planning']
       ]
     }
   ];
@@ -334,7 +334,7 @@ const incidentResponse = [
                   
           <p className="text-gray-300 mb-6">Download our comprehensive security whitepaper</p>
                   <a
-                    href="/security-whitepaper.pdf"
+    href="/security-whitepaper.pdf"
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
                     Download PDF
@@ -348,7 +348,7 @@ const incidentResponse = [
                   
           <p className="text-gray-300 mb-6">Security awareness training for your team</p>
                   <a
-                    href="/contact?type=security-training"
+    href="/contact?type=security-training"
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
                     Learn More
@@ -362,7 +362,7 @@ const incidentResponse = [
                   
           <p className="text-gray-300 mb-6">Request a security audit of your systems</p>
                   <a
-                    href="/contact?type=security-audit"
+    href="/contact?type=security-audit"
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
                     Request Audit
@@ -387,13 +387,13 @@ const incidentResponse = [
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="mailto:security@ziontechgroup.com"
+    href="mailto:security@ziontechgroup.com"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Contact Security Team
                 </a>
                 <a
-                  href="/contact"
+    href="/contact"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   General Contact

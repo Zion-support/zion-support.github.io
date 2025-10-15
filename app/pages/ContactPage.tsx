@@ -55,7 +55,7 @@ const ContactPage: React.FC = () => { return (
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Name</label>
                     <input
-                      type="text"
+    type="text"
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-purple-500"
                       placeholder="Your Name"
                     />
@@ -63,7 +63,7 @@ const ContactPage: React.FC = () => { return (
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
                     <input
-                      type="email"
+    type="email"
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-purple-500"
                       placeholder="your@email.com"
                     />
@@ -71,13 +71,12 @@ const ContactPage: React.FC = () => { return (
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
                     <textarea
-                      rows={ 4 }
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-purple-500"
+    rows={ 4 } className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:border-purple-500"
                       placeholder="Your message..."
                     />
                   </div>
                   <button
-                    type="submit"
+    type="submit"
                     className="w-full inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                     Send Message
                     <Send className="ml-2 w-5 h-5" />

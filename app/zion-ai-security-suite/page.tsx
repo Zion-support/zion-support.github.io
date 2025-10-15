@@ -69,8 +69,8 @@ const pricingPlans = [
         "Basic threat detection",
         "Email support",
         "Standard reports",
-        "1 admin account",
-        "Basic compliance monitoring"
+        "1 admin account",]
+        "Basic compliance monitoring"]
       ],
       popular: false
     },
@@ -86,8 +86,8 @@ const pricingPlans = [
         "Custom reports",
         "Up to 10 admin accounts",
         "Full compliance suite",
-        "Security training platform",
-        "API access"
+        "Security training platform",]
+        "API access"]
       ],
       popular: true
     },
@@ -104,8 +104,8 @@ const pricingPlans = [
         "Unlimited admin accounts",
         "Custom compliance frameworks",
         "Advanced training modules",
-        "Full API access",
-        "Dedicated security consultant"
+        "Full API access",]
+        "Dedicated security consultant"]
       ],
       popular: false
     }
@@ -186,14 +186,14 @@ const complianceFrameworks = [
             
         <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
               <Link
-                to="/contact"
+    to="/contact"
                 className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 group cyber-button"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/demo"
+    to="/demo"
                 className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 group"
               >
                 Watch Demo
@@ -210,7 +210,7 @@ const complianceFrameworks = [
                     {metric.icon}
                   </div>
                   
-        <div className="text-xl md:text-2xl font-bold text-white mb-2 holographic-text">{metric.value}</div>
+        <div className="text-xl md: text-2xl font-bold text-white mb-2 holographic-text">{metric.value}</div>
                   
         <div className="text-gray-300 text-sm font-semibold mb-1">{metric.title}</div>
                   
@@ -238,8 +238,7 @@ const complianceFrameworks = [
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 neon-border"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 neon-border"
                 >
                   
         <div className="flex items-center mb-6">
@@ -289,8 +288,7 @@ const complianceFrameworks = [
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {complianceFrameworks.map((framework, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/10 text-center"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/10 text-center"
                 >
                   
         <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center text-white font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -326,11 +324,10 @@ const complianceFrameworks = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
-                  key={index}
-                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 relative overflow-hidden ${
+    key={index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 relative overflow-hidden ${
                     plan.popular 
                       ? 'border-red-500/50 ring-2 ring-red-500/20 neon-border' 
-                      : 'border-white/20 hover:border-red-500/40'
+                      : 'border-white/20 hover: border-red-500/40'
                   }`}
                 >
                   {plan.popular && (
@@ -362,11 +359,11 @@ const complianceFrameworks = [
                     ))}
                   </ul>
                   <Link
-                    to="/contact"
+    to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 group flex items-center justify-center ${
                       plan.popular
                         ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700 cyber-button'
-                        : 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900'
+                        : 'border border-red-400 text-red-400 hover: bg-red-400 hover:text-slate-900'
                     }`}
                   >
                     Get Started
@@ -395,8 +392,7 @@ const complianceFrameworks = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 neon-border"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 neon-border"
                 >
                   
         <div className="flex items-center mb-4">
@@ -442,14 +438,14 @@ const complianceFrameworks = [
               
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link
-                  to="/contact"
+    to="/contact"
                   className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 group cyber-button"
                 >
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
-                  to="/demo"
+    to="/demo"
                   className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 group"
                 >
                   Schedule Demo

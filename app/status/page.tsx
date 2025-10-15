@@ -75,8 +75,8 @@ const incidents = [
         },
         {
           time: '2024-01-20T14:30:00Z',
-          message: 'We are investigating reports of slow file upload performance.'
-        }
+          message: 'We are investigating reports of slow file upload performance.']
+        }]
       ]
     },
     {
@@ -95,8 +95,8 @@ const incidents = [
         },
         {
           time: '2024-01-19T02:00:00Z',
-          message: 'Scheduled maintenance started. Database services may be temporarily unavailable.'
-        }
+          message: 'Scheduled maintenance started. Database services may be temporarily unavailable.']
+        }]
       ]
     }
   ];
@@ -135,7 +135,7 @@ const getSeverityColor = (severity: string) => {
 
 const refreshStatus = async () => {
     setIsRefreshing(true);
-    // Simulate API call
+    // Simulate API call,
     await new Promise(resolve => setTimeout(resolve, 1000));
     setLastUpdated(new Date());
     setIsRefreshing(false);
@@ -143,7 +143,7 @@ const refreshStatus = async () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setLastUpdated(new Date());
-    }, 60000); // Update every minute
+    }, 60000); // Update every minute,
     return () => clearInterval(interval);
   }, []);
   return (
@@ -178,8 +178,7 @@ const refreshStatus = async () => {
                   </span>
                 </div>
                 <button
-                  onClick={refreshStatus}
-                  disabled={isRefreshing}
+    onClick={refreshStatus} disabled={isRefreshing}
                   className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors disabled:opacity-50"
                 >
                   <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
@@ -363,7 +362,7 @@ const refreshStatus = async () => {
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
-                type="email"
+    type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />

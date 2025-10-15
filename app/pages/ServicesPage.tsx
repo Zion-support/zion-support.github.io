@@ -38,9 +38,9 @@ const ServicesPage: React.FC = () => { const services = [ { icon: <Zap className
           <p className="text-gray-300 mb-4">
                     { service.description }
                   </p>
-                  <Link 
-                    to={ service.link }
-                    className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+                    <Link
+    to={service.link} className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                    >
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
@@ -62,9 +62,10 @@ const ServicesPage: React.FC = () => { const services = [ { icon: <Zap className
           <p className="text-xl text-gray-300 mb-8">
                 Contact our experts to discuss your project requirements
               </p>
-              <Link 
-                to="/contact" 
-                className="inline-flex items-center bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              <Link
+    to="/contact" 
+                className="inline-flex items-center bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
+              >
                 Contact Us Today
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>

@@ -15,14 +15,14 @@ const AIContentGenerationPage: React.FC = () => {
         'Research integration',
         'Brand voice consistency',
         'Multi-language support',
-        'Content calendar automation',
-        'Performance analytics'
+        'Content calendar automation',]
+        'Performance analytics']
       ],
       benefits: [
         'Create 10x more content',
         'Improve SEO rankings by 150%',
-        'Save 40+ hours per week',
-        'Increase organic traffic by 200%'
+        'Save 40+ hours per week',]
+        'Increase organic traffic by 200%']
       ],
       marketPrice: '$500-1000/month',
       technologies: ['OpenAI GPT-4', 'Claude', 'Custom Fine-tuned Models', 'React', 'Node.js'],
@@ -38,14 +38,14 @@ const AIContentGenerationPage: React.FC = () => {
         'Hashtag research automation',
         'Engagement prediction',
         'Visual content generation',
-        'Posting schedule optimization',
-        'Viral content analysis'
+        'Posting schedule optimization',]
+        'Viral content analysis']
       ],
       benefits: [
         'Increase engagement by 300%',
         'Grow followers organically',
-        'Save 25+ hours per week',
-        'Improve brand awareness'
+        'Save 25+ hours per week',]
+        'Improve brand awareness']
       ],
       marketPrice: '$300-600/month',
       technologies: ['OpenAI GPT-4', 'DALL-E', 'Instagram API', 'Twitter API', 'LinkedIn API'],
@@ -61,14 +61,14 @@ const AIContentGenerationPage: React.FC = () => {
         'A/B testing automation',
         'Send time optimization',
         'Subject line generation',
-        'Email sequence creation',
-        'Performance tracking'
+        'Email sequence creation',]
+        'Performance tracking']
       ],
       benefits: [
         'Increase open rates by 250%',
         'Boost click-through rates by 180%',
-        'Save 30+ hours per week',
-        'Improve customer engagement'
+        'Save 30+ hours per week',]
+        'Improve customer engagement']
       ],
       marketPrice: '$200-500/month',
       technologies: ['OpenAI GPT-4', 'Mailchimp API', 'SendGrid API', 'Custom ML Models'],
@@ -84,14 +84,14 @@ const AIContentGenerationPage: React.FC = () => {
         'Visual cue suggestions',
         'Timing optimization',
         'Multiple video formats',
-        'Hook and CTA optimization',
-        'Trend analysis integration'
+        'Hook and CTA optimization',]
+        'Trend analysis integration']
       ],
       benefits: [
         'Create engaging video content',
         'Reduce production time by 60%',
-        'Improve viewer retention',
-        'Increase conversion rates'
+        'Improve viewer retention',]
+        'Increase conversion rates']
       ],
       marketPrice: '$150-400/month',
       technologies: ['OpenAI GPT-4', 'Video Analysis AI', 'Trend Detection APIs'],
@@ -135,14 +135,14 @@ const contentTypes = [
               </p>
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact"
+                <Link
+    to="/contact"
                   className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
                 </Link>
-                <Link 
-                  to="/demo"
+                <Link
+    to="/demo"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
                 >
                   Schedule Demo
@@ -257,14 +257,14 @@ const contentTypes = [
               </p>
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact"
+                <Link
+    to="/contact"
                   className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started Today
                 </Link>
-                <Link 
-                  to="/demo"
+                <Link
+    to="/demo"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   Schedule Demo

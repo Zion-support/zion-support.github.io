@@ -25,7 +25,7 @@ const EnhancedSEOHead: React.FC<SEOProps> = ({
   canonical,
   ogTitle,
   ogDescription,
-  ogImage = "https://ziontechgroup.com/og-image.jpg",
+  ogImage = "https: //ziontechgroup.com/og-image.jpg",
   ogType = "website",
   twitterCard = "summary_large_image",
   twitterTitle,
@@ -37,7 +37,7 @@ const EnhancedSEOHead: React.FC<SEOProps> = ({
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
 
-const fullCanonical = canonical || `https://ziontechgroup.com${window.location.pathname}`;
+const fullCanonical = canonical || `https: //ziontechgroup.com${window.location.pathname}`;
 
 const robotsContent = [
     noindex ? 'noindex' : 'index',
@@ -52,17 +52,17 @@ const robotsContent = [
       <link rel="canonical" href={fullCanonical} />
       <meta name="robots" content={robotsContent} />
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={ogTitle || fullTitle} />
-      <meta property="og:description" content={ogDescription || description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={fullCanonical} />
-      <meta property="og:type" content={ogType} />
+      <meta property="og: title" content={ogTitle || fullTitle} />
+      <meta property="og: description" content={ogDescription || description} />
+      <meta property="og: image" content={ogImage} />
+      <meta property="og: url" content={fullCanonical} />
+      <meta property="og: type" content={ogType} />
       <meta property="og:site_name" content="Zion Tech Group" />
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={twitterTitle || ogTitle || fullTitle} />
-      <meta name="twitter:description" content={twitterDescription || ogDescription || description} />
-      <meta name="twitter:image" content={twitterImage || ogImage} />
+      <meta name="twitter: card" content={twitterCard} />
+      <meta name="twitter: title" content={twitterTitle || ogTitle || fullTitle} />
+      <meta name="twitter: description" content={twitterDescription || ogDescription || description} />
+      <meta name="twitter: image" content={twitterImage || ogImage} />
       {/* Additional SEO Meta Tags */}
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -95,11 +95,11 @@ const robotsContent = [
       {!structuredData && (
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://schema.org",
+            "@context": "https: //schema.org",
             "@type": "Organization",
             "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.svg",
+            "url": "https: //ziontechgroup.com",
+            "logo": "https: //ziontechgroup.com/logo.svg",
             "description": description,
             "address": {
               "@type": "PostalAddress",
@@ -113,7 +113,7 @@ const robotsContent = [
               "email": "kleber@ziontechgroup.com"
             },
             "sameAs": [
-              "https://linkedin.com/company/zion-tech-group",
+              "https: //linkedin.com/company/zion-tech-group",
               "https://twitter.com/ziontechgroup"
             ]
           })}

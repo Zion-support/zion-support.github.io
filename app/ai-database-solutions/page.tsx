@@ -2,8 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { Shield, Zap, Users, CheckCircle } from 'lucide-react';
 
 const AiDatabaseSolutionsPage = () => {
-  return;
-},
+  const features = [
     { icon: <Shield className="w-8 h-8" />,
       title: "Advanced Security & Compliance",
       description: "Enterprise-grade security with automated threat detection, encryption, and compliance management for sensitive data." },
@@ -15,22 +14,25 @@ const AiDatabaseSolutionsPage = () => {
       description: "Cloud-native database solutions that automatically scale with your business needs and data growth." }
   ];
 
-const services = [
+  const services = [
     { title: "AI Database Design",
       description: "Intelligent database architecture design using AI to optimize for your specific use cases and performance requirements.",
       features: ["Automated Schema Design", "Performance Optimization", "Scalability Planning", "Cost Analysis"] },
-    { title: "Data Migration & Integration",
+    {
+      title: "Data Migration & Integration",
       description: "Seamless migration of existing databases with AI-powered data transformation and integration services.",
       features: ["Zero-Downtime Migration", "Data Validation", "Automated Testing", "Rollback Capabilities"] },
-    { title: "Performance Monitoring",
+    {
+      title: "Performance Monitoring",
       description: "AI-driven database monitoring with predictive analytics to prevent issues before they impact your business.",
       features: ["Real-time Monitoring", "Predictive Alerts", "Performance Analytics", "Automated Tuning"] },
-    { title: "Backup & Recovery",
+    {
+      title: "Backup & Recovery",
       description: "Intelligent backup strategies with AI-optimized recovery procedures to ensure data protection and business continuity.",
       features: ["Automated Backups", "Point-in-Time Recovery", "Disaster Recovery", "Data Integrity Checks"] }
   ];
 
-const benefits = [
+  const benefits = [
     "99.9% Database Uptime Guarantee",
     "50% Faster Query Performance",
     "Automated Security Monitoring",
@@ -62,8 +64,8 @@ const benefits = [
               </h1>
               
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionize your data management with AI-powered database solutions that deliver 
-                intelligent optimization, security, and analytics for maximum performance and insights.
+                Revolutionize your data management with AI-powered database solutions that deliver,
+    intelligent optimization, security, and analytics for maximum performance and insights.
               </p>
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

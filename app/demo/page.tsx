@@ -26,11 +26,11 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaE
 const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
+    // Simulate form submission,
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitting(false);
     setIsSubmitted(true);
-    // Reset form after 3 seconds
+    // Reset form after 3 seconds,
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({ name: '', email: '', company: '', phone: '', service: '', message: '', preferredDate: '', preferredTime: '' });
@@ -133,24 +133,22 @@ const demoOptions = [
                     <div>
                       <label className="block text-white text-sm font-medium mb-2">Full Name *</label>
                       <input
-                        type="text"
+    type="text"
                         name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
+                        value={formData.name} onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                          className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                         placeholder="Your full name"
                       />
                     </div>
                     <div>
                       <label className="block text-white text-sm font-medium mb-2">Email *</label>
                       <input
-                        type="email"
+    type="email"
                         name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
+                        value={formData.email} onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                          className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                         placeholder="your.email@company.com"
                       />
                     </div>
@@ -160,10 +158,9 @@ const demoOptions = [
                     <div>
                       <label className="block text-white text-sm font-medium mb-2">Company</label>
                       <input
-                        type="text"
+    type="text"
                         name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
+                        value={formData.company} onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                         placeholder="Your company name"
                       />
@@ -171,10 +168,9 @@ const demoOptions = [
                     <div>
                       <label className="block text-white text-sm font-medium mb-2">Phone</label>
                       <input
-                        type="tel"
+    type="tel"
                         name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
+                        value={formData.phone} onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                         placeholder="+1 (555) 123-4567"
                       />
@@ -183,9 +179,8 @@ const demoOptions = [
                   <div>
                     <label className="block text-white text-sm font-medium mb-2">Service Interest</label>
                     <select
-                      name="service"
-                      value={formData.service}
-                      onChange={handleInputChange}
+    name="service"
+                      value={formData.service} onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                     >
                       <option value="">Select a service</option>
@@ -199,20 +194,17 @@ const demoOptions = [
                   <div>
                     <label className="block text-white text-sm font-medium mb-2">Message</label>
                     <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      rows={4}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+    name="message"
+                      value={formData.message} onChange={handleInputChange}
+                      rows={4} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                       placeholder="Tell us about your specific needs and what you'd like to see in the demo..."
                     />
                   </div>
                   
         <div className="text-center">
                     <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center mx-auto"
+    type="submit"
+                      disabled={isSubmitting} className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center mx-auto"
                     >
                       {isSubmitting ? (
                         <>

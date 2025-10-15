@@ -61,9 +61,8 @@ const ItServicesPage: React.FC = () => { const itServices = [ { icon: <Cloud cla
                       </div>
                     ))}
                   </div>
-                  <Link 
-                    to={ service.href }
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all">
+                  <Link
+    to={ service.href } className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all">
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
@@ -84,13 +83,13 @@ const ItServicesPage: React.FC = () => { const itServices = [ { icon: <Cloud cla
               </p>
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact"
+                <Link
+    to="/contact"
                   className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                   Get Started Today
                 </Link>
-                <Link 
-                  to="/demo"
+                <Link
+    to="/demo"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   Schedule Demo
                 </Link>
@@ -112,14 +111,14 @@ const ItServicesPage: React.FC = () => { const itServices = [ { icon: <Cloud cla
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+13024640950"
+    href="tel:+13024640950"
               className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
             >
               <Phone className="w-5 h-5 mr-2" />
               Call (302) 464-0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com"
+    href="mailto:kleber@ziontechgroup.com"
               className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
             >
               <Mail className="w-5 h-5 mr-2" />

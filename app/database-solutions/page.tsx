@@ -63,13 +63,13 @@ const DatabaseSolutionsPage: React.FC = () => {
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:+13024640950"
+    href="tel:+13024640950"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center">
                   <Database className="w-5 h-5 mr-2" />
                   Get Database Consultation
                 </a>
                 <a
-                  href="mailto:kleber@ziontechgroup.com"
+    href="mailto:kleber@ziontechgroup.com"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center">
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Learn More
@@ -89,16 +89,15 @@ const DatabaseSolutionsPage: React.FC = () => {
               </h2>
               
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From design to deployment, we provide end-to-end database solutions 
-                tailored to your business needs.
+                From design to deployment, we provide end-to-end database solutions,
+    tailored to your business needs.
               </p>
             </div>
             
         <div className="grid md:grid-cols-2 gap-8">
               { features.map((feature, index) => (
-                <div 
-                  key={index } 
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
+                <div
+    key={index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
                   
         <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
                     
@@ -136,18 +135,18 @@ const DatabaseSolutionsPage: React.FC = () => {
               </h2>
               
           <p className="text-xl text-gray-300 mb-8">
-                Contact us today to discuss how our database solutions can improve 
-                your data infrastructure and business performance.
+                Contact us today to discuss how our database solutions can improve,
+    your data infrastructure and business performance.
               </p>
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:+13024640950"
+    href="tel:+13024640950"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                   Call +1 302 464 0950
                 </a>
                 <a
-                  href="mailto:kleber@ziontechgroup.com"
+    href="mailto:kleber@ziontechgroup.com"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   Get Quote
                 </a>

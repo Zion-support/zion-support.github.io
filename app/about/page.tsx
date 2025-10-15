@@ -1,16 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Brain, 
-  Shield, 
-  Users, 
-  Award, 
-  Zap, 
-  Globe, 
-  Target 
-} from 'lucide-react';
-// Company values
-const values = [
+import { Brain, Shield, Users, Award, Zap, Globe, Target } from 'lucide-react';
+// Company values,
+    const values = [
   { icon: <Brain className="w-8 h-8" />,
     title: "Innovation First",
     description: "We constantly push the boundaries of what's possible with cutting-edge technology and creative solutions." },
@@ -24,15 +16,15 @@ const values = [
     title: "Excellence",
     description: "We maintain the highest standards of quality in everything we do, from code to customer service." }
 ];
-// Company stats
-const stats = [
+// Company stats,
+    const stats = [
   { number: "500+", label: "Projects Completed" },
   { number: "150+", label: "Happy Clients" },
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "24/7", label: "Support Available" }
 ];
-// Team members
-const team = [
+// Team members,
+    const team = [
   { name: "Sarah Johnson",
     role: "CEO & Founder",
     description: "Visionary leader with 15+ years in tech innovation",
@@ -50,8 +42,8 @@ const team = [
     description: "Full-stack developer with expertise in modern web technologies",
     image: "/api/placeholder/300/300" }
 ];
-// Services we offer
-const services = [
+// Services we offer,
+    const services = [
   { icon: <Zap className="w-6 h-6" />,
     title: "AI Solutions",
     description: "Custom AI implementations for business automation and intelligence" },
@@ -90,8 +82,8 @@ const AboutPage: React.FC = () => { return (
               </h1>
               
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                We are a leading technology company dedicated to transforming businesses 
-                through innovative AI solutions, cutting-edge web development, and comprehensive digital transformation.
+                We are a leading technology company dedicated to transforming businesses,
+    through innovative AI solutions, cutting-edge web development, and comprehensive digital transformation.
               </p>
             </div>
           </div>

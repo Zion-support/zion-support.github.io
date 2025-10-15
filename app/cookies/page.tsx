@@ -11,8 +11,8 @@ const CookiesPage: React.FC = () => {
       examples: [
         'Authentication cookies',
         'Security cookies',
-        'Load balancing cookies',
-        'User interface customization'
+        'Load balancing cookies',]
+        'User interface customization']
       ],
       required: true
     },
@@ -23,8 +23,8 @@ const CookiesPage: React.FC = () => {
       examples: [
         'Language preferences',
         'Region settings',
-        'User preferences',
-        'Accessibility options'
+        'User preferences',]
+        'Accessibility options']
       ],
       required: false
     },
@@ -35,8 +35,8 @@ const CookiesPage: React.FC = () => {
       examples: [
         'Google Analytics',
         'Page view tracking',
-        'User behavior analysis',
-        'Performance monitoring'
+        'User behavior analysis',]
+        'Performance monitoring']
       ],
       required: false
     },
@@ -47,8 +47,8 @@ const CookiesPage: React.FC = () => {
       examples: [
         'Social media tracking',
         'Advertising cookies',
-        'Remarketing pixels',
-        'Conversion tracking'
+        'Remarketing pixels',]
+        'Conversion tracking']
       ],
       required: false
     }
@@ -139,7 +139,7 @@ const cookieDetails = [
                 </p>
                 
           <p className="text-gray-300 leading-relaxed">
-                  We use both session cookies (which expire when you close your browser) and persistent cookies (which remain on your device for a set period of time) to enhance your experience on our website.
+                  We use both session cookies (which expire when you close your, browser) and persistent cookies (which remain on your device for a set period of, time) to enhance your experience on our website.
                 </p>
               </div>
             </div>
@@ -357,13 +357,13 @@ const cookieDetails = [
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="mailto:privacy@ziontechgroup.com"
+    href="mailto:privacy@ziontechgroup.com"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Contact Privacy Team
                 </a>
                 <a
-                  href="/contact"
+    href="/contact"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   General Contact

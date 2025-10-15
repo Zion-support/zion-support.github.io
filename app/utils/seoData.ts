@@ -1,4 +1,4 @@
-export const seoData = { home: {
+export const seoData = { home: {,
     title: 'Home - Zion Tech Group',
     description: 'Leading technology solutions provider',
     keywords: 'technology, solutions, innovation' },

@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Globe, Mic, Zap, Settings, Cloud, Headphones, Target, Users, Heart, EnhancedSEO, Sparkles, ArrowRight, Play, CheckCircle, Star, Mail, Phone, MapPin, Calendar } from 'lucide-react';
 const ZionAIVoiceAssistantPro = () => {
-  return;
-},
+  const features = [
     {
       title: "Multi-Language Support",
       description: "Supports 50+ languages with accurate pronunciation and cultural context understanding",
@@ -35,7 +34,7 @@ const ZionAIVoiceAssistantPro = () => {
     }
   ];
 
-const useCases = [
+  const useCases = [
     {
       title: "Customer Service",
       description: "Handle customer inquiries, complaints, and support requests 24/7",
@@ -62,7 +61,7 @@ const useCases = [
     }
   ];
 
-const pricing = [
+  const pricing = [
     {
       name: "Starter",
       price: "$99",
@@ -72,8 +71,8 @@ const pricing = [
         "Up to 1,000 conversations/month",
         "2 voice channels",
         "Basic integrations",
-        "Email support",
-        "Standard voice quality"
+        "Email support",]
+        "Standard voice quality"]
       ],
       popular: false
     },
@@ -88,8 +87,8 @@ const pricing = [
         "Advanced integrations",
         "Priority support",
         "High-quality voice synthesis",
-        "Custom voice training",
-        "Analytics dashboard"
+        "Custom voice training",]
+        "Analytics dashboard"]
       ],
       popular: true
     },
@@ -105,14 +104,14 @@ const pricing = [
         "24/7 dedicated support",
         "Premium voice quality",
         "Advanced custom training",
-        "White-label options",
-        "SLA guarantee"
+        "White-label options",]
+        "SLA guarantee"]
       ],
       popular: false
     }
   ];
 
-const testimonials = [
+  const testimonials = [
     {
       name: "Sarah Johnson",
       company: "TechStart Inc.",
@@ -138,11 +137,12 @@ const testimonials = [
       avatar: "ER"
     }
   ];
+
   return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Voice Assistant Pro - Advanced Voice AI Solution | Zion Tech Group"
+    title="Zion AI Voice Assistant Pro - Advanced Voice AI Solution | Zion Tech Group"
         description="Revolutionary AI voice assistant with natural language processing, multi-language support, and seamless business integration. Transform customer service and operations."
         keywords="AI voice assistant, voice AI, natural language processing, voice recognition, customer service automation, voice technology, AI chatbot"
         canonical="/zion-ai-voice-assistant-pro"
@@ -172,20 +172,20 @@ const testimonials = [
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Revolutionary AI voice assistant with natural language processing, multi-language support, 
-            and seamless business integration. Transform your customer service and operations with 
-            intelligent voice technology.
+            and seamless business integration. Transform your customer service and operations with,
+    intelligent voice technology.
           </p>
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
-              to="/contact"
+    to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              to="/demo"
+    to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Watch Demo
@@ -235,7 +235,7 @@ const testimonials = [
                 <Users className="w-6 h-6 text-cyan-400" />
               </div>
               
-        <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">10,000+</div>
+        <div className="text-xl md: text-2xl lg:text-3xl font-bold text-white mb-2">10,000+</div>
               
         <div className="text-gray-300 text-xs md:text-sm">Active Users</div>
             </div>
@@ -261,11 +261,10 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div
-                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}
+    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover: scale-110 transition-transform duration-300`}
                 >
                   {feature.icon}
                 </div>
@@ -299,8 +298,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 
         <div className="flex items-center mb-4">
@@ -348,11 +346,10 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div
-                key={index}
-                className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+    key={index} className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
                   plan.popular
                     ? 'border-cyan-500/50 shadow-cyan-500/25'
-                    : 'border-white/20 hover:border-white/30'
+                    : 'border-white/20 hover: border-white/30'
                 }`}
               >
                 {plan.popular && (
@@ -384,11 +381,11 @@ const testimonials = [
                   ))}
                 </div>
                 <Link
-                  to="/contact"
+    to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-400 hover:to-purple-400'
-                      : 'border border-white/20 text-white hover:bg-white/10'
+                      : 'border border-white/20 text-white hover: bg-white/10'
                   }`}
                 >
                   Get Started
@@ -417,8 +414,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 
         <div className="flex items-center mb-4">
@@ -455,8 +451,8 @@ const testimonials = [
           </h2>
           
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses already using Zion AI Voice Assistant Pro to enhance 
-            customer service and streamline operations. Start your free trial today.
+            Join thousands of businesses already using Zion AI Voice Assistant Pro to enhance,
+    customer service and streamline operations. Start your free trial today.
           </p>
           {/* Contact Information */}
           
@@ -495,14 +491,14 @@ const testimonials = [
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+    to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              to="/demo"
+    to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Schedule Demo

@@ -16,8 +16,8 @@ const DefaultFallback = () => (
     </div>
   </div>
 );
-// Higher-order component for lazy loading with custom fallback
-export function withLazyLoading<P extends object>(
+// Higher-order component for lazy loading with custom fallback,
+    export function withLazyLoading<P extends object>(
   importFunc: () => Promise<{ default: ComponentType<P> }>,
   fallback?: React.ReactNode
 ) {
@@ -30,8 +30,8 @@ export function withLazyLoading<P extends object>(
     );
   };
 }
-// Hook for lazy loading with intersection observer
-export function useLazyLoad(ref: React.RefObject<HTMLElement>, options?: IntersectionObserverInit) {
+// Hook for lazy loading with intersection observer,
+    export function useLazyLoad(ref: React.RefObject<HTMLElement>, options?: IntersectionObserverInit) {
   const [isVisible, setIsVisible] = React.useState(false);
   React.useEffect(() => {
     if (!ref.current) return;
@@ -54,8 +54,8 @@ const observer = new IntersectionObserver(
   }, [ref, options]);
   return isVisible;
 }
-// Component for lazy loading with intersection observer
-export const LazyComponent: React.FC<LazyComponentProps & { children: React.ReactNode }> = ({ 
+// Component for lazy loading with intersection observer,
+    export const LazyComponent: React.FC<LazyComponentProps & { children: React.ReactNode }> = ({ 
   children,
   fallback = <DefaultFallback />,
   delay = 0 

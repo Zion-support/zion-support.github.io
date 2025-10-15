@@ -1,8 +1,7 @@
-import EnhancedSEO from '../components/EnhancedSEO';
+
 import { Shield, Bug, FileText, Zap, EnhancedSEO, Sparkles, FuturisticButton, Code, Terminal, Users, Award, FuturisticCard, Brain, CheckCircle, Star, ArrowRight } from 'lucide-react';
 const AICodeAssistantPage = () => {
-  return;
-},
+  const features = [
     {
       title: "Intelligent Code Review",
       description: "Automated code review with security analysis, performance optimization suggestions, and best practice recommendations.",
@@ -23,7 +22,7 @@ const AICodeAssistantPage = () => {
     }
   ];
 
-const pricingPlans = [
+  const pricingPlans = [
     {
       name: "Developer",
       price: "$29",
@@ -34,8 +33,8 @@ const pricingPlans = [
         "Basic code review",
         "5 programming languages",
         "Standard documentation",
-        "Email support",
-        "Git integration"
+        "Email support",]
+        "Git integration"]
       ],
       popular: false
     },
@@ -51,8 +50,8 @@ const pricingPlans = [
         "AI-powered debugging",
         "Team collaboration",
         "Priority support",
-        "API access",
-        "Custom models"
+        "API access",]
+        "Custom models"]
       ],
       popular: true
     },
@@ -70,14 +69,14 @@ const pricingPlans = [
         "24/7 support",
         "On-premise deployment",
         "Custom integrations",
-        "Dedicated support",
-        "SLA guarantee"
+        "Dedicated support",]
+        "SLA guarantee"]
       ],
       popular: false
     }
   ];
 
-const testimonials = [
+  const testimonials = [
     {
       name: "Alex Rodriguez",
       company: "Tech Startup",
@@ -104,7 +103,7 @@ const testimonials = [
     }
   ];
 
-const useCases = [
+  const useCases = [
     {
       title: "Rapid Prototyping",
       description: "Quickly build prototypes and MVPs with AI-generated code",
@@ -131,7 +130,7 @@ const useCases = [
     }
   ];
 
-const languages = [
+  const languages = [
     { name: "Python", logo: "🐍", popularity: "95%" },
     { name: "JavaScript", logo: "🟨", popularity: "98%" },
     { name: "TypeScript", logo: "🔷", popularity: "92%" },
@@ -142,7 +141,7 @@ const languages = [
     { name: "C#", logo: "🔷", popularity: "87%" }
   ];
 
-const capabilities = [
+  const capabilities = [
     {
       title: "Code Generation",
       description: "Generate complete functions, classes, and modules from natural language",
@@ -168,11 +167,12 @@ const capabilities = [
       speed: "Auto-generated"
     }
   ];
+
   return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
-        title="Zion AI Code Assistant - Intelligent Code Generation & Review | Zion Tech Group"
+    title="Zion AI Code Assistant - Intelligent Code Generation & Review | Zion Tech Group"
         description="Boost your development with AI-powered code generation, review, and debugging. Support for 50+ languages, automated testing, and intelligent documentation. Code smarter today!"
         keywords="AI code assistant, code generation, automated code review, AI programming, code debugging, software development, AI coding tools, code quality"
         canonical="https://ziontechgroup.com/ai-code-assistant"
@@ -205,16 +205,14 @@ const capabilities = [
           
         <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <FuturisticButton
-              onClick={() => window.open("https://zion.app/contact", "_blank")}
-              variant="primary"
+    onClick={() => window.open("https: //zion.app/contact", "_blank")} variant="primary"
               size="lg"
               icon={<Code className="w-5 h-5" />}
             >
               Start Coding with AI
             </FuturisticButton>
             <FuturisticButton
-              onClick={() => window.open("https://zion.app/contact", "_blank")}
-              variant="secondary"
+    onClick={() => window.open("https: //zion.app/contact", "_blank")} variant="secondary"
               size="lg"
               icon={<Terminal className="w-5 h-5" />}
             >
@@ -253,7 +251,7 @@ const capabilities = [
                 <Users className="w-6 h-6 text-purple-400" />
               </div>
               
-        <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 holographic-text">25,000+</div>
+        <div className="text-xl md: text-2xl lg:text-3xl font-bold text-white mb-2 holographic-text">25,000+</div>
               
         <div className="text-gray-300 text-xs md:text-sm">Developers Using</div>
             </div>
@@ -481,8 +479,7 @@ const capabilities = [
                   ))}
                 </div>
                 <FuturisticButton
-                  onClick={() => window.open("https://zion.app/contact", "_blank")}
-                  variant={plan.popular ? "primary" : "outline"}
+    onClick={() => window.open("https: //zion.app/contact", "_blank")} variant={plan.popular ? "primary" : "outline"}
                   className="w-full"
                   icon={<ArrowRight className="w-4 h-4" />}
                 >
@@ -552,16 +549,14 @@ const capabilities = [
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
-              onClick={() => window.open("https://zion.app/contact", "_blank")}
-              variant="primary"
+    onClick={() => window.open("https: //zion.app/contact", "_blank")} variant="primary"
               size="lg"
               icon={<Code className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
             <FuturisticButton
-              onClick={() => window.open("https://zion.app/contact", "_blank")}
-              variant="secondary"
+    onClick={() => window.open("https: //zion.app/contact", "_blank")} variant="secondary"
               size="lg"
               icon={<Terminal className="w-5 h-5" />}
             >

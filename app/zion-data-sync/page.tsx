@@ -2,6 +2,27 @@ import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import { Database, Zap, Shield, Users, BarChart3, RefreshCw, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionDataSync() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          ZionDataSync
+        </h1>
+      </div>
+    </div>
+  );
+}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          ZionDataSync
+        </h1>
+      </div>
+    </div>
+  );
+}
+  const features = [
     {
       title: "Multi-platform Integration",
       description: "Connect and sync data between 100+ platforms including CRM, ERP, marketing tools, and databases",
@@ -34,7 +55,7 @@ export default function ZionDataSync() {
     }
   ];
 
-const pricingPlans = [
+  const pricingPlans = [
     {
       name: "Starter",
       price: 39,
@@ -45,8 +66,8 @@ const pricingPlans = [
         "Basic sync rules",
         "Email support",
         "1 user account",
-        "Standard error handling",
-        "Basic analytics"
+        "Standard error handling",]
+        "Basic analytics"]
       ],
       popular: false
     },
@@ -62,8 +83,8 @@ const pricingPlans = [
         "Up to 5 user accounts",
         "Advanced error handling",
         "Advanced analytics",
-        "API access",
-        "Custom transformations"
+        "API access",]
+        "Custom transformations"]
       ],
       popular: true
     },
@@ -79,21 +100,21 @@ const pricingPlans = [
         "Unlimited users",
         "Enterprise error handling",
         "Custom analytics",
-        "White-label solution",
-        "Custom integrations"
+        "White-label solution",]
+        "Custom integrations"]
       ],
       popular: false
     }
   ];
 
-const syncStats = [
+  const syncStats = [
     { number: "99.9%", label: "Sync Success Rate", icon: <RefreshCw className="w-6 h-6" /> },
     { number: "< 1s", label: "Average Sync Time", icon: <Zap className="w-6 h-6" /> },
     { number: "100+", label: "Platform Integrations", icon: <Database className="w-6 h-6" /> },
     { number: "24/7", label: "Monitoring", icon: <Clock className="w-6 h-6" /> }
   ];
 
-const testimonials = [
+  const testimonials = [
     {
       name: "Rachel Green",
       company: "E-commerce Platform",
@@ -119,16 +140,17 @@ const testimonials = [
       avatar: "LP"
     }
   ];
+
   return (
     <>
       <Helmet>
         <title>Zion Data Sync - Real-time Data Synchronization Platform | Zion Tech Group</title>
         <meta
-          name="description"
+    name="description"
           content="Sync your data across all platforms with Zion Data Sync - the ultimate real-time data synchronization platform. Connect 100+ platforms with advanced error handling. Starting at $39/month."
         />
         <meta
-          name="keywords"
+    name="keywords"
           content="data sync, data synchronization, data integration, real-time sync, data transformation, platform integration, Zion Data Sync"
         />
       </Helmet>
@@ -164,14 +186,14 @@ const testimonials = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
-                to="/contact"
+    to="/contact"
                 className="group bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-teal-500/25 hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/demo"
+    to="/demo"
                 className="border border-teal-400 text-teal-400 px-8 py-4 rounded-lg font-semibold hover:bg-teal-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
                 Watch Demo
@@ -215,8 +237,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/10 relative overflow-hidden"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/10 relative overflow-hidden"
                 >
                   
         <div className="absolute inset-0 bg-gradient-to-r from-teal-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -264,11 +285,10 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
-                  key={index}
-                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
+    key={index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
                     plan.popular 
                       ? 'border-teal-500/50 bg-gradient-to-br from-teal-500/10 to-cyan-500/10' 
-                      : 'border-white/20 hover:border-teal-500/30'
+                      : 'border-white/20 hover: border-teal-500/30'
                   }`}
                 >
                   {plan.popular && (
@@ -300,11 +320,11 @@ const testimonials = [
                     ))}
                   </ul>
                   <Link
-                    to="/contact"
+    to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
                       plan.popular
                         ? 'bg-gradient-to-r from-teal-500 to-cyan-600 text-white hover:from-teal-600 hover:to-cyan-700 shadow-lg hover:shadow-teal-500/25'
-                        : 'border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-900'
+                        : 'border border-teal-400 text-teal-400 hover: bg-teal-400 hover:text-slate-900'
                     }`}
                   >
                     Get Started
@@ -332,8 +352,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/10 relative overflow-hidden"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/10 relative overflow-hidden"
                 >
                   
         <div className="flex items-center mb-4">
@@ -376,14 +395,14 @@ const testimonials = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+    to="/contact"
                 className="group bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-teal-500/25 hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/demo"
+    to="/demo"
                 className="border border-teal-400 text-teal-400 px-8 py-4 rounded-lg font-semibold hover:bg-teal-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
                 Watch Demo

@@ -1,18 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Wifi, 
-  Cloud, 
-  Smartphone, 
-  Shield, 
-  BarChart3, 
-  Settings, 
-  Cpu, 
-  Globe, 
-  Activity, 
-  CheckCircle, 
-  Star 
-} from 'lucide-react';
+import { Wifi, Cloud, Smartphone, Shield, BarChart3, Settings, Cpu, Globe, Activity, CheckCircle, Star } from 'lucide-react';
 
 const FiveGImplementationPage: React.FC = () => {
   const features = [
@@ -71,8 +59,8 @@ const pricingPlans = [
         "Up to 100 devices",
         "Standard support",
         "Basic analytics",
-        "Email support",
-        "1 year warranty"
+        "Email support",]
+        "1 year warranty"]
       ],
       popular: false },
     { name: "Enterprise",
@@ -86,8 +74,8 @@ const pricingPlans = [
         "Advanced analytics",
         "Priority support",
         "Custom integrations",
-        "3 years warranty",
-        "24/7 monitoring"
+        "3 years warranty",]
+        "24/7 monitoring"]
       ],
       popular: true },
     { name: "Custom",
@@ -101,8 +89,8 @@ const pricingPlans = [
         "AI-powered analytics",
         "Dedicated support team",
         "Custom development",
-        "Lifetime warranty",
-        "On-site support"
+        "Lifetime warranty",]
+        "On-site support"]
       ],
       popular: false }
   ];
@@ -297,7 +285,7 @@ const testimonials = [
                   <button className={ `w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular 
                       ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300' 
-                      : 'bg-white/20 text-white hover:bg-white/30' }`}>
+                      : 'bg-white/20 text-white hover: bg-white/30' }`}>
                     Get Started
                   </button>
                 </div>

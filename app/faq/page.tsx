@@ -21,12 +21,12 @@ const faqData = [
         },
         {
           question: "What services do you offer?",
-          answer: "We offer comprehensive technology services including AI solutions (analytics, content generation, customer support), IT services (cloud migration, cybersecurity, web development), micro SAAS solutions, and 5G technology implementations."
+          answer: "We offer comprehensive technology services including AI solutions (analytics, content generation, customer, support), IT services (cloud migration, cybersecurity, web, development), micro SAAS solutions, and 5G technology implementations."
         },
         {
           question: "How can I get started?",
-          answer: "Getting started is easy! You can contact us through our contact form, schedule a free consultation, or explore our demo to see our solutions in action. Our team will work with you to identify the best solutions for your specific needs."
-        }
+          answer: "Getting started is easy! You can contact us through our contact form, schedule a free consultation, or explore our demo to see our solutions in action. Our team will work with you to identify the best solutions for your specific needs."]
+        }]
       ]
     },
     {
@@ -42,8 +42,8 @@ const faqData = [
         },
         {
           question: "Do you provide training for AI solutions?",
-          answer: "Yes! We provide comprehensive training for all our AI solutions, including user training, administrator training, and ongoing support. We also offer documentation and video tutorials to help your team get the most out of our solutions."
-        }
+          answer: "Yes! We provide comprehensive training for all our AI solutions, including user training, administrator training, and ongoing support. We also offer documentation and video tutorials to help your team get the most out of our solutions."]
+        }]
       ]
     },
     {
@@ -59,8 +59,8 @@ const faqData = [
         },
         {
           question: "What is your uptime guarantee?",
-          answer: "We provide a 99.9% uptime SLA for all our managed services and cloud solutions. This means your systems will be available 99.9% of the time, with minimal planned maintenance windows."
-        }
+          answer: "We provide a 99.9% uptime SLA for all our managed services and cloud solutions. This means your systems will be available 99.9% of the time, with minimal planned maintenance windows."]
+        }]
       ]
     },
     {
@@ -76,8 +76,8 @@ const faqData = [
         },
         {
           question: "What is the pricing for micro SAAS solutions?",
-          answer: "Pricing varies by solution and features. Most micro SAAS solutions start at $99/month for basic plans, with enterprise plans available. We offer flexible pricing options including monthly, annual, and custom enterprise agreements."
-        }
+          answer: "Pricing varies by solution and features. Most micro SAAS solutions start at $99/month for basic plans, with enterprise plans available. We offer flexible pricing options including monthly, annual, and custom enterprise agreements."]
+        }]
       ]
     },
     {
@@ -93,8 +93,8 @@ const faqData = [
         },
         {
           question: "Do you provide 5G consulting?",
-          answer: "Yes, we offer comprehensive 5G consulting services including strategy development, technology assessment, implementation planning, and ongoing optimization. Our experts help you understand how 5G can transform your business."
-        }
+          answer: "Yes, we offer comprehensive 5G consulting services including strategy development, technology assessment, implementation planning, and ongoing optimization. Our experts help you understand how 5G can transform your business."]
+        }]
       ]
     },
     {
@@ -102,7 +102,7 @@ const faqData = [
       questions: [
         {
           question: "How do I contact support?",
-          answer: "You can contact our support team through multiple channels: email (support@ziontechgroup.com), phone (+1 302 464 0950), our support portal, or by submitting a ticket through our website. We also offer live chat during business hours."
+          answer: "You can contact our support team through multiple channels: email (support@ziontechgroup.com), phone (+1 302 464, 0950), our support portal, or by submitting a ticket through our website. We also offer live chat during business hours."
         },
         {
           question: "What are your payment terms?",
@@ -110,8 +110,8 @@ const faqData = [
         },
         {
           question: "Do you offer refunds?",
-          answer: "We offer a 30-day money-back guarantee for most of our services. If you're not satisfied with our solution within the first 30 days, we'll provide a full refund. Some custom development projects may have different terms."
-        }
+          answer: "We offer a 30-day money-back guarantee for most of our services. If you're not satisfied with our solution within the first 30 days, we'll provide a full refund. Some custom development projects may have different terms."]
+        }]
       ]
     }
   ];
@@ -154,10 +154,9 @@ const filteredData = faqData.map(category => ({
         <div className="relative max-w-2xl mx-auto mb-12">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
-                  type="text"
+    type="text"
                   placeholder="Search FAQ..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
@@ -184,12 +183,10 @@ const filteredData = faqData.map(category => ({
 const isOpen = openItems.includes(globalIndex);
   return (
                         <div
-                          key={questionIndex}
-                          className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden hover:bg-white/15 transition-all duration-300"
+    key={questionIndex} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg overflow-hidden hover:bg-white/15 transition-all duration-300"
                         >
                           <button
-                            onClick={() => toggleItem(globalIndex)}
-                            className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
+    onClick={() => toggleItem(globalIndex)} className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
                           >
                             <span className="text-lg font-semibold text-white pr-4">
                               {item.question}
@@ -244,13 +241,13 @@ const isOpen = openItems.includes(globalIndex);
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/contact"
+    href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Contact Support
                 </a>
                 <a
-                  href="mailto:support@ziontechgroup.com"
+    href="mailto:support@ziontechgroup.com"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   Email Us

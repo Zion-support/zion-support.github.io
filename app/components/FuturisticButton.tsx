@@ -75,10 +75,8 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
 
   return (
     <motion.button
-      type={type}
-      onClick={onClick}
-      disabled={disabled}
-      className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${disabledClasses} ${className} group`}
+                          type={type} onClick={onClick}
+      disabled={disabled} className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${disabledClasses} ${className} group`}
       whileHover={!disabled ? { scale: 1.05 } : {}}
       whileTap={!disabled ? { scale: 0.95 } : {}}
       initial={{ opacity: 0, y: 20 }}

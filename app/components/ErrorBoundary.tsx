@@ -7,11 +7,11 @@ interface Props {
   fallback?: ReactNode;
 }
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
+  hasError: boolean;,
+    error: Error | null;,
+    errorInfo: ErrorInfo | null;
 }
-class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -20,19 +20,18 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('ErrorBoundary caught an error: ', error, errorInfo);
     
     this.setState({
       error,
       errorInfo
     });
-    // Log error to console in development
+    // Log error to console in development,
     if (process.env.NODE_ENV === 'development') {
           }
-    // Log error to external service in production
+    // Log error to external service in production,
     if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send the error to a service like Sentry
-          }
+      // Here you would typically send the error to a service like, Sentry}
   }
 
   handleRetry = () => {
@@ -69,13 +68,13 @@ class ErrorBoundary extends Component<Props, State> {
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
-                  Error Details (Development Only)
+                  Error Details (Development, Only)
                 </summary>
                 
         <div className="mt-2 p-4 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto">
                   
         <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
+                    <strong>Error: </strong> {this.state.error.message}
                   </div>
                   {this.state.errorInfo && (
                     <div>
@@ -91,15 +90,14 @@ class ErrorBoundary extends Component<Props, State> {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+    onClick={this.handleRetry} className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
               >
                 <RefreshCw className="w-4 h-4" />
                 Try Again
               </button>
               
               <Link
-                to="/"
+    to="/"
                 className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
                 <Home className="w-4 h-4" />

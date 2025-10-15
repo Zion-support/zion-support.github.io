@@ -11,8 +11,8 @@ const SitemapPage: React.FC = () => {
         { name: 'About Us', url: '/about', description: 'Company information and team' },
         { name: 'Contact', url: '/contact', description: 'Get in touch with us' },
         { name: 'Portfolio', url: '/portfolio', description: 'Our work and projects' },
-        { name: 'Blog', url: '/blog', description: 'Latest news and insights' },
-        { name: 'Demo', url: '/demo', description: 'Schedule a product demo' }
+        { name: 'Blog', url: '/blog', description: 'Latest news and insights' },]
+        { name: 'Demo', url: '/demo', description: 'Schedule a product demo' }]
       ]
     },
     {
@@ -24,8 +24,8 @@ const SitemapPage: React.FC = () => {
         { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security solutions' },
         { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data analysis' },
         { name: 'AI Marketing Automation', url: '/ai-marketing-automation', description: 'Automated marketing campaigns' },
-        { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Voice-enabled AI solutions' },
-        { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Business process automation' }
+        { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Voice-enabled AI solutions' },]
+        { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Business process automation' }]
       ]
     },
     {
@@ -36,8 +36,8 @@ const SitemapPage: React.FC = () => {
         { name: 'IT Consulting', url: '/it-consulting', description: 'Technology consulting services' },
         { name: 'Network Security', url: '/network-security', description: 'Cybersecurity solutions' },
         { name: 'Software Development', url: '/software-development', description: 'Custom software solutions' },
-        { name: 'System Integration', url: '/system-integration', description: 'System integration services' },
-        { name: 'Web Development', url: '/web-development', description: 'Modern web applications' }
+        { name: 'System Integration', url: '/system-integration', description: 'System integration services' },]
+        { name: 'Web Development', url: '/web-development', description: 'Modern web applications' }]
       ]
     },
     {
@@ -49,8 +49,8 @@ const SitemapPage: React.FC = () => {
         { name: 'Zion AI Marketing Automation', url: '/zion-ai-marketing-automation', description: 'Marketing automation platform' },
         { name: 'Zion AI Content Studio', url: '/zion-ai-content-studio', description: 'Content creation suite' },
         { name: 'Zion AI Financial Analytics', url: '/zion-ai-financial-analytics', description: 'Financial data analysis' },
-        { name: 'Zion AI Inventory Smart', url: '/zion-inventory-smart', description: 'Smart inventory management' },
-        { name: 'Zion AI Data Cleaner', url: '/zion-ai-data-cleaner', description: 'Data cleaning and validation' }
+        { name: 'Zion AI Inventory Smart', url: '/zion-inventory-smart', description: 'Smart inventory management' },]
+        { name: 'Zion AI Data Cleaner', url: '/zion-ai-data-cleaner', description: 'Data cleaning and validation' }]
       ]
     },
     {
@@ -60,8 +60,8 @@ const SitemapPage: React.FC = () => {
         { name: '5G Network Infrastructure', url: '/5g-network-infrastructure', description: '5G infrastructure solutions' },
         { name: '5G IoT Solutions', url: '/5g-iot-solutions', description: 'IoT connectivity solutions' },
         { name: '5G Edge Computing', url: '/5g-edge-computing', description: 'Edge computing services' },
-        { name: '5G Private Networks', url: '/5g-private-networks', description: 'Private 5G networks' },
-        { name: '5G Smart City Solutions', url: '/5g-smart-city-solutions', description: 'Smart city implementations' }
+        { name: '5G Private Networks', url: '/5g-private-networks', description: 'Private 5G networks' },]
+        { name: '5G Smart City Solutions', url: '/5g-smart-city-solutions', description: 'Smart city implementations' }]
       ]
     },
     {
@@ -73,24 +73,24 @@ const SitemapPage: React.FC = () => {
         { name: 'Tutorials', url: '/tutorials', description: 'Learning resources and guides' },
         { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' },
         { name: 'Case Studies', url: '/case-studies', description: 'Success stories and examples' },
-        { name: 'News', url: '/news', description: 'Company news and updates' },
-        { name: 'Status Page', url: '/status', description: 'System status and uptime' }
+        { name: 'News', url: '/news', description: 'Company news and updates' },]
+        { name: 'Status Page', url: '/status', description: 'System status and uptime' }]
       ]
     },
     {
       title: 'Company',
       pages: [
         { name: 'Our Team', url: '/team', description: 'Meet our team members' },
-        { name: 'Careers', url: '/careers', description: 'Job opportunities' },
-        { name: 'Partners', url: '/partners', description: 'Partnership information' }
+        { name: 'Careers', url: '/careers', description: 'Job opportunities' },]
+        { name: 'Partners', url: '/partners', description: 'Partnership information' }]
       ]
     },
     {
       title: 'Legal',
       pages: [
         { name: 'Privacy Policy', url: '/privacy', description: 'Data protection and privacy' },
-        { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' },
-        { name: 'Cookie Policy', url: '/cookies', description: 'Cookie usage information' }
+        { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' },]
+        { name: 'Cookie Policy', url: '/cookies', description: 'Cookie usage information' }]
       ]
     }
   ];
@@ -132,7 +132,7 @@ const quickLinks = [
         <div className="relative max-w-2xl mx-auto mb-8">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
-                  type="text"
+    type="text"
                   placeholder="Search pages..."
                   className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-transparent"
                 />
@@ -148,8 +148,7 @@ const quickLinks = [
         <div className="flex flex-wrap justify-center gap-4">
               {quickLinks.map((link, index) => (
                 <a
-                  key={index}
-                  href={link.url}
+    key={index} href={link.url}
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-cyan-500/20 rounded-lg px-6 py-3 text-cyan-400 hover:bg-cyan-500/20 hover:text-cyan-300 transition-all duration-300"
                 >
                   <span>{link.name}</span>
@@ -179,8 +178,7 @@ const quickLinks = [
         <div className="space-y-3">
                     {section.pages.map((page, pageIndex) => (
                       <a
-                        key={pageIndex}
-                        href={page.url}
+    key={pageIndex} href={page.url}
                         className="block p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group"
                       >
                         
@@ -225,7 +223,7 @@ const quickLinks = [
                 
           <p className="text-gray-300 text-sm mb-4">Machine-readable sitemap for search engines</p>
                 <a
-                  href="/sitemap.xml"
+    href="/sitemap.xml"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
                 >
                   View XML Sitemap
@@ -241,7 +239,7 @@ const quickLinks = [
                 
           <p className="text-gray-300 text-sm mb-4">Search across all pages and content</p>
                 <a
-                  href="/search"
+    href="/search"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
                 >
                   Search Website
@@ -257,7 +255,7 @@ const quickLinks = [
                 
           <p className="text-gray-300 text-sm mb-4">Subscribe to our content updates</p>
                 <a
-                  href="/rss.xml"
+    href="/rss.xml"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
                 >
                   Subscribe to RSS
@@ -273,7 +271,7 @@ const quickLinks = [
                 
           <p className="text-gray-300 text-sm mb-4">Get help and support</p>
                 <a
-                  href="/support"
+    href="/support"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
                 >
                   Visit Help Center
@@ -294,13 +292,13 @@ const quickLinks = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
+    href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Contact Us
               </a>
               <a
-                href="/support"
+    href="/support"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Get Support

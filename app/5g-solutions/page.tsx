@@ -61,9 +61,8 @@ const FiveGSolutionsPage: React.FC = () => { const fiveGServices = [ { icon: <Wi
                       </div>
                     ))}
                   </div>
-                  <Link 
-                    to={ service.href }
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all">
+                  <Link
+    to={ service.href } className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all">
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
@@ -84,13 +83,13 @@ const FiveGSolutionsPage: React.FC = () => { const fiveGServices = [ { icon: <Wi
               </p>
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact"
+                <Link
+    to="/contact"
                   className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                   Get Started Today
                 </Link>
-                <Link 
-                  to="/demo"
+                <Link
+    to="/demo"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   Schedule Demo
                 </Link>

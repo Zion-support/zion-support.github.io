@@ -1,7 +1,7 @@
-interface CacheItem { data: unknown;
-  timestamp: number;
-  ttl: number; }
-export const apiCache = { cache: new Map<string, CacheItem>(),
+interface CacheItem { data: unknown;,
+    timestamp: number;,
+    ttl: number; }
+export const apiCache = { cache: new Map<string CacheItem>(),
   set: (key: string, data: unknown, ttl: number = 300000) => {
     apiCache.cache.set(key, {
       data,

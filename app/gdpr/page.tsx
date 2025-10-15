@@ -301,14 +301,14 @@ const securityMeasures = [
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="mailto:dpo@ziontechgroup.com"
+    href="mailto:dpo@ziontechgroup.com"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Contact DPO
                 </a>
                 <a
-                  href="/contact"
+    href="/contact"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />

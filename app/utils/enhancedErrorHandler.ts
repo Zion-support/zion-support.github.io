@@ -12,25 +12,19 @@ export const enhancedErrorHandler = { handleError: (error: Error, context?: stri
 const status = errorWithResponse.response?.status;
 
 const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
-    switch (status) { case 400:
-        return { message: 'Invalid request', code: 'BAD_REQUEST' };
-      case 401:
-        return { message: 'Unauthorized', code: 'UNAUTHORIZED' };
-      case 403:
-        return { message: 'Forbidden', code: 'FORBIDDEN' };
-      case 404:
-        return { message: 'Not found', code: 'NOT_FOUND' };
-      case 500:
-        return { message: 'Internal server error', code: 'SERVER_ERROR' };
-      default:
-        return { message: message || 'An error occurred', code: 'UNKNOWN_ERROR' };
+    switch (status) { case 400: return { message: 'Invalid request', code: 'BAD_REQUEST' };
+      case 401: return { message: 'Unauthorized', code: 'UNAUTHORIZED' };
+      case 403: return { message: 'Forbidden', code: 'FORBIDDEN' };
+      case 404: return { message: 'Not found', code: 'NOT_FOUND' };
+      case 500: return { message: 'Internal server error', code: 'SERVER_ERROR' };
+      default: return { message: message || 'An error occurred', code: 'UNKNOWN_ERROR' };
     }
   },
-  handleNetworkError: (error: unknown) => { return {
-      message: 'Network error. Please check your connection.',
+  handleNetworkError: (error: unknown) => { return {,
+    message: 'Network error. Please check your connection.',
       code: 'NETWORK_ERROR' };
   },
-  handleValidationError: (errors: Record<string, string[]>) => { const errorMessages = Object.values(errors).flat();
+  handleValidationError: (errors: Record<string string[]>) => { const errorMessages = Object.values(errors).flat();
   return {
       message: errorMessages.join(', '),
       code: 'VALIDATION_ERROR',

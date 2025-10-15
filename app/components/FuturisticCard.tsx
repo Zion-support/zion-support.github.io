@@ -27,7 +27,7 @@ const hoverClasses = hover ? 'hover:bg-slate-700/50 hover:scale-105 hover:shadow
 const glowClasses = glow ? 'hover:shadow-purple-500/25' : '';
   return (
     <motion.div
-      className={`${baseClasses} ${variantClasses[variant]} ${hoverClasses} ${glowClasses} ${className}`}
+                          className={`${baseClasses} ${variantClasses[variant]} ${hoverClasses} ${glowClasses} ${className}`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}

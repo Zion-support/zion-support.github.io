@@ -2,6 +2,27 @@ import { ArrowRight, Target, CheckCircle, Globe, Bot, MessageCircle, BarChart3, 
 import { Helmet } from 'react-helmet-async';
 import { MessageCircle, Globe, BarChart3, Target, Shield, Bot, Clock, RouterLink, ArrowRight, CheckCircle } from 'lucide-react';
 export default function AIChatbotEnterprise() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          AIChatbotEnterprise
+        </h1>
+      </div>
+    </div>
+  );
+}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          AIChatbotEnterprise
+        </h1>
+      </div>
+    </div>
+  );
+}
+  const features = [
     {
       title: "Advanced Natural Language Processing",
       description: "State-of-the-art NLP that understands complex queries, context, and enterprise terminology",
@@ -34,7 +55,7 @@ export default function AIChatbotEnterprise() {
     }
   ];
 
-const pricingPlans = [
+  const pricingPlans = [
     {
       name: "Professional",
       price: 199,
@@ -45,8 +66,8 @@ const pricingPlans = [
         "Advanced templates",
         "Priority support",
         "Up to 25 user accounts",
-        "Standard integrations",
-        "Advanced analytics"
+        "Standard integrations",]
+        "Advanced analytics"]
       ],
       popular: false
     },
@@ -62,8 +83,8 @@ const pricingPlans = [
         "Up to 100 user accounts",
         "All integrations",
         "Custom analytics",
-        "Custom training",
-        "API access"
+        "Custom training",]
+        "API access"]
       ],
       popular: true
     },
@@ -79,21 +100,21 @@ const pricingPlans = [
         "Unlimited users",
         "Custom integrations",
         "Custom reporting",
-        "Custom training",
-        "SSO integration"
+        "Custom training",]
+        "SSO integration"]
       ],
       popular: false
     }
   ];
 
-const enterpriseStats = [
+  const enterpriseStats = [
     { number: "99.9%", label: "Uptime SLA", icon: <Bot className="w-6 h-6" /> },
     { number: "95%", label: "Query Resolution Rate", icon: <Target className="w-6 h-6" /> },
     { number: "200+", label: "Enterprise Integrations", icon: <Globe className="w-6 h-6" /> },
     { number: "24/7", label: "Enterprise Support", icon: <Clock className="w-6 h-6" /> }
   ];
 
-const testimonials = [
+  const testimonials = [
     {
       name: "Dr. Sarah Chen",
       company: "Fortune 500 Healthcare",
@@ -119,16 +140,17 @@ const testimonials = [
       avatar: "LJ"
     }
   ];
+
   return (
     <>
       <Helmet>
         <title>AI Chatbot Enterprise - Enterprise-Grade AI Chatbot Platform | Zion Tech Group</title>
         <meta
-          name="description"
+    name="description"
           content="Build enterprise chatbots with AI Chatbot Enterprise - the ultimate enterprise-grade AI chatbot platform. Advanced NLP, enterprise security, and custom integrations. Starting at $199/month."
         />
         <meta
-          name="keywords"
+    name="keywords"
           content="enterprise chatbot, AI chatbot enterprise, enterprise NLP, chatbot security, enterprise integrations, compliance, AI chatbot enterprise"
         />
       </Helmet>
@@ -164,14 +186,14 @@ const testimonials = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <RouterLink
-                to="/contact"
+    to="/contact"
                 className="group bg-gradient-to-r from-slate-500 to-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-slate-600 hover:to-gray-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-slate-500/25 hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </RouterLink>
               <RouterLink
-                to="/demo"
+    to="/demo"
                 className="border border-slate-400 text-slate-400 px-8 py-4 rounded-lg font-semibold hover:bg-slate-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
                 Watch Demo
@@ -215,8 +237,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden"
                 >
                   
         <div className="absolute inset-0 bg-gradient-to-r from-slate-500/5 to-gray-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -264,11 +285,10 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
-                  key={index}
-                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
+    key={index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
                     plan.popular 
                       ? 'border-slate-500/50 bg-gradient-to-br from-slate-500/10 to-gray-500/10' 
-                      : 'border-white/20 hover:border-slate-500/30'
+                      : 'border-white/20 hover: border-slate-500/30'
                   }`}
                 >
                   {plan.popular && (
@@ -300,11 +320,11 @@ const testimonials = [
                     ))}
                   </ul>
                   <RouterLink
-                    to="/contact"
+    to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
                       plan.popular
                         ? 'bg-gradient-to-r from-slate-500 to-gray-600 text-white hover:from-slate-600 hover:to-gray-700 shadow-lg hover:shadow-slate-500/25'
-                        : 'border border-slate-400 text-slate-400 hover:bg-slate-400 hover:text-slate-900'
+                        : 'border border-slate-400 text-slate-400 hover: bg-slate-400 hover:text-slate-900'
                     }`}
                   >
                     Get Started
@@ -332,8 +352,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/10 relative overflow-hidden"
                 >
                   
         <div className="flex items-center mb-4">
@@ -376,14 +395,14 @@ const testimonials = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <RouterLink
-                to="/contact"
+    to="/contact"
                 className="group bg-gradient-to-r from-slate-500 to-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-slate-600 hover:to-gray-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-slate-500/25 hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </RouterLink>
               <RouterLink
-                to="/demo"
+    to="/demo"
                 className="border border-slate-400 text-slate-400 px-8 py-4 rounded-lg font-semibold hover:bg-slate-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
                 Watch Demo

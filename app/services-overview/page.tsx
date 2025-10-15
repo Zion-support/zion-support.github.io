@@ -9,7 +9,7 @@ const ServicesOverviewPage: React.FC = () => {
       icon: <Brain className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-600",
       description: "Revolutionary AI-powered solutions for modern businesses",
-      services: [
+      services: []
         { name: "AI Analytics Dashboard Pro", price: "$299/month", features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards"] },
         { name: "AI Content Generation Pro", price: "$199/month", features: ["AI Writing", "Content Optimization", "Multi-language Support"] },
         { name: "AI Automation Suite", price: "$399/month", features: ["Workflow Automation", "Process Optimization", "Integration APIs"] },
@@ -27,7 +27,7 @@ const ServicesOverviewPage: React.FC = () => {
       icon: <Code className="w-8 h-8" />,
       color: "from-purple-500 to-pink-600",
       description: "Comprehensive IT solutions and infrastructure services",
-      services: [
+      services: []
         { name: "Cloud Infrastructure", price: "$499/month", features: ["Auto-scaling", "AI Monitoring", "Cost Optimization"] },
         { name: "API Management", price: "$199/month", features: ["API Gateway", "Rate Limiting", "Analytics"] },
         { name: "Database Solutions", price: "$299/month", features: ["Database Design", "Performance Tuning", "Backup & Recovery"] },
@@ -43,7 +43,7 @@ const ServicesOverviewPage: React.FC = () => {
       icon: <Wifi className="w-8 h-8" />,
       color: "from-green-500 to-emerald-600",
       description: "Next-generation 5G technology and IoT solutions",
-      services: [
+      services: []
         { name: "5G Implementation", price: "$999/month", features: ["5G Network Setup", "IoT Integration", "Edge Computing"] },
         { name: "5G Network Infrastructure", price: "$1,499/month", features: ["Network Design", "Hardware Installation", "Optimization"] },
         { name: "5G IoT Solutions", price: "$799/month", features: ["IoT Platform", "Device Management", "Data Analytics"] },
@@ -57,7 +57,7 @@ const ServicesOverviewPage: React.FC = () => {
       icon: <Cloud className="w-8 h-8" />,
       color: "from-orange-500 to-red-600",
       description: "Specialized micro SAAS solutions for specific business needs",
-      services: [
+      services: []
         { name: "AI Accounting Assistant", price: "$79/month", features: ["Automated Bookkeeping", "Tax Preparation", "Financial Reports"] },
         { name: "AI Content Moderation Pro", price: "$199/month", features: ["AI Moderation", "Content Filtering", "Compliance Monitoring"] },
         { name: "AI Climate Solutions Pro", price: "$299/month", features: ["Climate Analytics", "Carbon Tracking", "Sustainability Reports"] },
@@ -104,7 +104,7 @@ const whyChooseUs = [
         <meta name="description" content="Comprehensive overview of all our AI, IT, and 5G services. From micro SAAS solutions to enterprise-grade platforms. View pricing, features, and capabilities." />
         <meta name="keywords" content="AI services, IT services, 5G solutions, micro SAAS, cloud computing, cybersecurity, business automation, pricing" />
         <meta property="og:title" content="Services Overview - Zion Tech Group" />
-        <meta property="og:description" content="Complete overview of our AI, IT, and 5G services with pricing and features." />
+        <meta property="og: description" content="Complete overview of our AI, IT, and 5G services with pricing and features." />
         <meta property="og:type" content="website" />
       </Helmet>
       
@@ -143,14 +143,14 @@ const whyChooseUs = [
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a
-                  href="tel:+13024640950"
+    href="tel:+13024640950"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call +1 302 464 0950
                 </a>
                 <a
-                  href="mailto:kleber@ziontechgroup.com"
+    href="mailto:kleber@ziontechgroup.com"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                 >
                   <Mail className="w-5 h-5 mr-2" />

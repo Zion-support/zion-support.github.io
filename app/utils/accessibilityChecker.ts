@@ -25,7 +25,7 @@ const issues: Array<{ element: HTMLElement; issue: string }> = [];
   return issues;
   },
   checkColorContrast: () => { // This would require a more complex implementation
-    // For now, return empty array
+    // For now, return empty array,
     return []; }
 };
 

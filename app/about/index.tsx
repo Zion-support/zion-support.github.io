@@ -48,8 +48,8 @@ const About: React.FC = () => {
               
           <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 To empower businesses with cutting-edge AI and IT solutions that drive innovation, 
-                efficiency, and growth. We believe technology should solve real problems and deliver 
-                measurable value to our clients.
+                efficiency, and growth. We believe technology should solve real problems and deliver,
+    measurable value to our clients.
               </p>
               
           <p className="text-lg text-gray-300 leading-relaxed">
@@ -343,13 +343,13 @@ const About: React.FC = () => {
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+    to="/contact"
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
             >
               Get In Touch
             </Link>
             <Link
-              to="/services"
+    to="/services"
               className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
             >
               View Our Services

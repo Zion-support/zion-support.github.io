@@ -13,8 +13,8 @@ const AiFinancialCrimeDetectionProPage = () => { return (
             </h1>
             
           <p className="text-xl text-gray-300 mb-8">
-              Professional ai financial crime detection pro solutions and
-              services
+              Professional ai financial crime detection pro solutions and,
+    services
             </p>
             
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">

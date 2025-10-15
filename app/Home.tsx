@@ -35,20 +35,20 @@ const Home: React.FC = () => {
             </h1>
             
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Real micro SAAS services, cutting-edge AI solutions, and enterprise-grade IT infrastructure 
-              to accelerate your digital transformation journey.
+              Real micro SAAS services, cutting-edge AI solutions, and enterprise-grade IT infrastructure,
+    to accelerate your digital transformation journey.
             </p>
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
-                to="/services"
+    to="/services"
                 className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center"
               >
                 Explore Our Services
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/contact"
+    to="/contact"
                 className="group border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center"
               >
                 <Play className="w-5 h-5 mr-2" />
@@ -225,13 +225,13 @@ const Home: React.FC = () => {
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+    to="/contact"
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
             >
               Get Free Consultation
             </Link>
             <Link
-              to="/about"
+    to="/about"
               className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
             >
               Learn About Us

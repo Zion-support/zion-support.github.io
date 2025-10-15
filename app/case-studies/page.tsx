@@ -13,8 +13,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         '40% increase in conversion rates',
         '60% improvement in customer engagement',
-        '35% increase in average order value',
-        '99.9% uptime achieved'
+        '35% increase in average order value',]
+        '99.9% uptime achieved']
       ],
       duration: '6 months',
       team: '8 members',
@@ -31,8 +31,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         '50% reduction in administrative time',
         '90% patient satisfaction rate',
-        '100% HIPAA compliance',
-        'Real-time patient monitoring'
+        '100% HIPAA compliance',]
+        'Real-time patient monitoring']
       ],
       duration: '8 months',
       team: '12 members',
@@ -49,8 +49,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         '30% energy savings',
         '25% traffic reduction',
-        'Real-time insights dashboard',
-        'Improved citizen services'
+        'Real-time insights dashboard',]
+        'Improved citizen services']
       ],
       duration: '12 months',
       team: '15 members',
@@ -67,8 +67,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         '35% better predictions',
         '20% risk reduction',
-        'Automated reporting',
-        'Real-time financial insights'
+        'Automated reporting',]
+        'Real-time financial insights']
       ],
       duration: '4 months',
       team: '6 members',
@@ -85,8 +85,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         '45% improvement in learning outcomes',
         '80% student engagement rate',
-        'Scalable platform for 100k+ students',
-        'Personalized learning paths'
+        'Scalable platform for 100k+ students',]
+        'Personalized learning paths']
       ],
       duration: '7 months',
       team: '10 members',
@@ -103,8 +103,8 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         '25% cost reduction',
         '40% efficiency improvement',
-        'Automated processes',
-        'Real-time tracking'
+        'Automated processes',]
+        'Real-time tracking']
       ],
       duration: '9 months',
       team: '14 members',
@@ -183,8 +183,7 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
                   
         <div className="md:w-1/2">
                     <img
-                      src={featuredCaseStudy.image}
-                      alt={featuredCaseStudy.title}
+    src={featuredCaseStudy.image} alt={featuredCaseStudy.title}
                       className="w-full h-64 md:h-full object-cover"
                     />
                   </div>
@@ -221,7 +220,7 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
                         <div>Team: {featuredCaseStudy.team}</div>
                       </div>
                       <a
-                        href={`/case-studies/${featuredCaseStudy.id}`}
+    href={`/case-studies/${featuredCaseStudy.id}`}
                         className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         <span>Read Full Case Study</span>
@@ -242,11 +241,10 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
         <div className="flex flex-wrap justify-center gap-4">
               {industries.map((industry) => (
                 <button
-                  key={industry}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+    key={industry} className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
                     industry === 'All'
                       ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400'
+                      : 'bg-slate-800/50 text-gray-300 hover: bg-cyan-500/20 hover:text-cyan-400'
                   }`}
                 >
                   {industry}
@@ -265,8 +263,7 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
               {caseStudies.filter(study => !study.featured).map((study) => (
                 <div key={study.id} className="bg-white/10 backdrop-blur-sm border border-cyan-500/20 rounded-xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 group">
                   <img
-                    src={study.image}
-                    alt={study.title}
+    src={study.image} alt={study.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   
@@ -310,7 +307,7 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
                         <div>Team: {study.team}</div>
                       </div>
                       <a
-                        href={`/case-studies/${study.id}`}
+    href={`/case-studies/${study.id}`}
                         className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         <span>Read More</span>
@@ -337,13 +334,13 @@ const featuredCaseStudy = caseStudies.find(study => study.featured);
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/contact"
+    href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Project
                 </a>
                 <a
-                  href="/portfolio"
+    href="/portfolio"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   View Our Portfolio

@@ -80,9 +80,9 @@ const categories = ['All', 'AI & Technology', 'Cybersecurity', '5G & IoT', 'Busi
               
         <div className="relative flex-1 w-full">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search articles..."
+                  <input
+    type="text"
+                    placeholder="Search articles..."
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-transparent"
                 />
               </div>
@@ -111,10 +111,9 @@ const categories = ['All', 'AI & Technology', 'Cybersecurity', '5G & IoT', 'Busi
         <div className="md:flex">
                   
         <div className="md:w-1/2">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-64 md:h-full object-cover"
+                      <img
+    src={post.image} alt={post.title}
+                        className="w-full h-64 md:h-full object-cover"
                     />
                   </div>
                   
@@ -145,7 +144,7 @@ const categories = ['All', 'AI & Technology', 'Cybersecurity', '5G & IoT', 'Busi
                         </div>
                       </div>
                       <Link
-                        to={`/blog/${post.id}`}
+    to={`/blog/${post.id}`}
                         className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         <span>Read More</span>
@@ -168,8 +167,7 @@ const categories = ['All', 'AI & Technology', 'Cybersecurity', '5G & IoT', 'Busi
               {blogPosts.filter(post => !post.featured).map((post) => (
                 <article key={post.id} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 group">
                   <img
-                    src={post.image}
-                    alt={post.title}
+    src={post.image} alt={post.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   
@@ -202,7 +200,7 @@ const categories = ['All', 'AI & Technology', 'Cybersecurity', '5G & IoT', 'Busi
                         </div>
                       </div>
                       <Link
-                        to={`/blog/${post.id}`}
+    to={`/blog/${post.id}`}
                         className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         <span>Read</span>

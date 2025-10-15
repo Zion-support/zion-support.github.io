@@ -3,6 +3,27 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Zap, Target, Coins, Shield, BarChart3, Globe, Clock, RouterLink, ArrowRight, CheckCircle } from 'lucide-react';
 export default function AIBlockchainAnalytics() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          AIBlockchainAnalytics
+        </h1>
+      </div>
+    </div>
+  );
+}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          AIBlockchainAnalytics
+        </h1>
+      </div>
+    </div>
+  );
+}
+  const features = [
     {
       title: "Smart Contract Intelligence",
       description: "Intelligent analysis of smart contracts with vulnerability detection and optimization suggestions",
@@ -35,7 +56,7 @@ export default function AIBlockchainAnalytics() {
     }
   ];
 
-const pricingPlans = [
+  const pricingPlans = [
     {
       name: "Starter",
       price: 79,
@@ -46,8 +67,8 @@ const pricingPlans = [
         "Basic analytics",
         "Email support",
         "1 user account",
-        "Standard data feeds",
-        "Basic risk assessment"
+        "Standard data feeds",]
+        "Basic risk assessment"]
       ],
       popular: false
     },
@@ -63,8 +84,8 @@ const pricingPlans = [
         "Up to 10 user accounts",
         "Premium data feeds",
         "Advanced risk assessment",
-        "Smart contract analysis",
-        "API access"
+        "Smart contract analysis",]
+        "API access"]
       ],
       popular: true
     },
@@ -80,21 +101,21 @@ const pricingPlans = [
         "Unlimited users",
         "Custom data feeds",
         "White-label solution",
-        "Custom integrations",
-        "SSO integration"
+        "Custom integrations",]
+        "SSO integration"]
       ],
       popular: false
     }
   ];
 
-const blockchainStats = [
+  const blockchainStats = [
     { number: "99.9%", label: "Data Accuracy", icon: <Link className="w-6 h-6" /> },
     { number: "50+", label: "Blockchain Networks", icon: <Globe className="w-6 h-6" /> },
     { number: "95%", label: "Risk Prediction Accuracy", icon: <Shield className="w-6 h-6" /> },
     { number: "24/7", label: "Real-time Analysis", icon: <Clock className="w-6 h-6" /> }
   ];
 
-const testimonials = [
+  const testimonials = [
     {
       name: "Alex Chen",
       company: "Crypto Trading Firm",
@@ -120,16 +141,17 @@ const testimonials = [
       avatar: "DK"
     }
   ];
+
   return (
     <>
       <Helmet>
         <title>AI Blockchain Analytics - AI-Powered Blockchain Analysis Platform | Zion Tech Group</title>
         <meta
-          name="description"
+    name="description"
           content="Analyze blockchain data with AI Blockchain Analytics - the ultimate AI-powered blockchain analysis platform. Smart contract intelligence, DeFi analytics, and risk assessment. Starting at $79/month."
         />
         <meta
-          name="keywords"
+    name="keywords"
           content="blockchain analytics, AI blockchain analysis, smart contract analysis, DeFi analytics, cryptocurrency tracking, risk assessment, portfolio management, AI blockchain analytics"
         />
       </Helmet>
@@ -165,14 +187,14 @@ const testimonials = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <RouterLink
-                to="/contact"
+    to="/contact"
                 className="group bg-gradient-to-r from-amber-500 to-yellow-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-yellow-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-amber-500/25 hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </RouterLink>
               <RouterLink
-                to="/demo"
+    to="/demo"
                 className="border border-amber-400 text-amber-400 px-8 py-4 rounded-lg font-semibold hover:bg-amber-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
                 Watch Demo
@@ -216,8 +238,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/10 relative overflow-hidden"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/10 relative overflow-hidden"
                 >
                   
         <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -265,11 +286,10 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
-                  key={index}
-                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
+    key={index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
                     plan.popular 
                       ? 'border-amber-500/50 bg-gradient-to-br from-amber-500/10 to-yellow-500/10' 
-                      : 'border-white/20 hover:border-amber-500/30'
+                      : 'border-white/20 hover: border-amber-500/30'
                   }`}
                 >
                   {plan.popular && (
@@ -301,11 +321,11 @@ const testimonials = [
                     ))}
                   </ul>
                   <RouterLink
-                    to="/contact"
+    to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
                       plan.popular
                         ? 'bg-gradient-to-r from-amber-500 to-yellow-600 text-white hover:from-amber-600 hover:to-yellow-700 shadow-lg hover:shadow-amber-500/25'
-                        : 'border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900'
+                        : 'border border-amber-400 text-amber-400 hover: bg-amber-400 hover:text-slate-900'
                     }`}
                   >
                     Get Started
@@ -333,8 +353,7 @@ const testimonials = [
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/10 relative overflow-hidden"
+    key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/10 relative overflow-hidden"
                 >
                   
         <div className="flex items-center mb-4">
@@ -377,14 +396,14 @@ const testimonials = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <RouterLink
-                to="/contact"
+    to="/contact"
                 className="group bg-gradient-to-r from-amber-500 to-yellow-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-yellow-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-amber-500/25 hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </RouterLink>
               <RouterLink
-                to="/demo"
+    to="/demo"
                 className="border border-amber-400 text-amber-400 px-8 py-4 rounded-lg font-semibold hover:bg-amber-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
                 Watch Demo

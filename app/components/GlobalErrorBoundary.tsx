@@ -23,14 +23,12 @@ import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
                 
         <div className="space-y-3">
                   <button
-                    onClick={ this.handleRetry }
-                    className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-2 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">
+    onClick={ this.handleRetry } className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-2 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">
                     <RefreshCw className="w-4 h-4" />
                     Try Again
                   </button>
                   <button
-                    onClick={ () => window.location.href = '/' }
-                    className="w-full bg-white/10 text-white py-2 px-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">
+    onClick={ () => window.location.href = '/' } className="w-full bg-white/10 text-white py-2 px-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">
                     <Home className="w-4 h-4" />
                     Go Home
                   </button>

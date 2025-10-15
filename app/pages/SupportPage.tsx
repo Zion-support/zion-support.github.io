@@ -4,7 +4,7 @@ const SupportPage: React.FC = () => { return (
     <> <Helmet> <title>Support - Zion Tech Group</title> <meta name="description" content="Gethelp and support from our expert team"
         />
         <meta
-          name="keywords"
+    name="keywords"
           content="support,help, customer service, technical support"
         />
       </Helmet>

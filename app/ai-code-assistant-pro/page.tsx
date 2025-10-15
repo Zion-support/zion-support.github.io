@@ -59,8 +59,8 @@ const pricingPlans = [
         "Basic code generation",
         "Bug detection & fixes",
         "Documentation generation",
-        "Email support",
-        "10 projects max"
+        "Email support",]
+        "10 projects max"]
       ],
       popular: false },
     { name: "Team",
@@ -74,8 +74,8 @@ const pricingPlans = [
         "Performance optimization",
         "Priority support",
         "Unlimited projects",
-        "Team collaboration",
-        "Custom integrations"
+        "Team collaboration",]
+        "Custom integrations"]
       ],
       popular: true },
     { name: "Enterprise",
@@ -89,8 +89,8 @@ const pricingPlans = [
         "Advanced security",
         "24/7 dedicated support",
         "Custom training",
-        "API access",
-        "White-label options"
+        "API access",]
+        "White-label options"]
       ],
       popular: false }
   ];
@@ -331,7 +331,7 @@ const useCases = [
                   <button className={ `w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular 
                       ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300' 
-                      : 'bg-white/20 text-white hover:bg-white/30' }`}>
+                      : 'bg-white/20 text-white hover: bg-white/30' }`}>
                     Get Started
                   </button>
                 </div>

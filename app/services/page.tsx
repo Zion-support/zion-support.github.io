@@ -1,8 +1,8 @@
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { Brain, Globe, Shield, Cloud, Database, Smartphone, Settings, Users, Star, CheckCircle, ArrowRight, Lock, Zap } from 'lucide-react';
-// Service categories
-const serviceCategories = [
+// Service categories,
+    const serviceCategories = [
   { 
     icon: <Brain className="w-8 h-8" />, 
     title: "AI & Machine Learning", 
@@ -14,8 +14,8 @@ const serviceCategories = [
       "Predictive Analytics", 
       "AI Chatbots & Virtual Assistants", 
       "Recommendation Systems",
-      "Deep Learning Implementation",
-      "AI Strategy Consulting"
+      "Deep Learning Implementation",]
+      "AI Strategy Consulting"]
     ], 
     color: "from-blue-600 to-cyan-600",
     price: "Starting at $299/month",
@@ -36,8 +36,8 @@ const serviceCategories = [
       "Smart City Solutions",
       "5G Performance Optimization",
       "Private 5G Networks",
-      "5G Security Implementation",
-      "Network Slicing & Management"
+      "5G Security Implementation",]
+      "Network Slicing & Management"]
     ],
     color: "from-purple-600 to-pink-600",
     price: "Starting at $499/month",
@@ -58,8 +58,8 @@ const serviceCategories = [
       "Compliance Management (GDPR, HIPAA, SOX)",
       "Security Training & Awareness",
       "Incident Response Planning",
-      "Penetration Testing",
-      "Security Architecture Design"
+      "Penetration Testing",]
+      "Security Architecture Design"]
     ],
     color: "from-green-600 to-emerald-600",
     price: "Starting at $399/month",
@@ -80,8 +80,8 @@ const serviceCategories = [
       "Cloud Security & Compliance",
       "Cost Optimization",
       "Disaster Recovery Solutions",
-      "Container Orchestration",
-      "Cloud-Native Development"
+      "Container Orchestration",]
+      "Cloud-Native Development"]
     ],
     color: "from-orange-600 to-red-600",
     price: "Starting at $349/month",
@@ -102,8 +102,8 @@ const serviceCategories = [
       "Data Visualization",
       "Statistical Analysis",
       "Data Quality Management",
-      "ETL/ELT Pipeline Development",
-      "Data Governance & Privacy"
+      "ETL/ELT Pipeline Development",]
+      "Data Governance & Privacy"]
     ],
     color: "from-indigo-600 to-purple-600",
     price: "Starting at $249/month",
@@ -124,8 +124,8 @@ const serviceCategories = [
       "App Store Optimization",
       "Mobile Security",
       "Progressive Web Apps",
-      "API Development & Integration",
-      "Performance Optimization"
+      "API Development & Integration",]
+      "Performance Optimization"]
     ],
     color: "from-teal-600 to-cyan-600",
     price: "Starting at $199/month",
@@ -146,8 +146,8 @@ const serviceCategories = [
       "Monitoring & Logging",
       "Automated Testing",
       "Release Management",
-      "Performance Optimization",
-      "Disaster Recovery"
+      "Performance Optimization",]
+      "Disaster Recovery"]
     ],
     color: "from-yellow-600 to-orange-600",
     price: "Starting at $179/month",
@@ -168,8 +168,8 @@ const serviceCategories = [
       "Process Optimization",
       "Change Management",
       "Vendor Management",
-      "IT Governance",
-      "Technology Roadmapping"
+      "IT Governance",]
+      "Technology Roadmapping"]
     ],
     color: "from-pink-600 to-rose-600",
     price: "Starting at $149/month",
@@ -180,8 +180,8 @@ const serviceCategories = [
     link: "https://ziontechgroup.com/it-consulting"
   }
 ];
-// Process steps
-const processSteps = [
+// Process steps,
+    const processSteps = [
   { step: "01",
     title: "Discovery & Analysis",
     description: "We begin by understanding your business goals, challenges, and requirements through comprehensive analysis and stakeholder interviews." },
@@ -247,7 +247,7 @@ const ServicesPage: React.FC = () => { return (
                 <div key={index } className="bg-gradient-to-br from-slate-800/50 to-purple-900/50 border border-purple-500/30 rounded-xl p-8 hover:border-cyan-400/50 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
                   
         <div className="flex items-center justify-between mb-4">
-                    <div className={ `w-16 h-16 bg-gradient-to-r ${category.color } rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={ `w-16 h-16 bg-gradient-to-r ${category.color } rounded-lg flex items-center justify-center group-hover: scale-110 transition-transform duration-300`}>
                       
         <div className="text-white">
                         { category.icon }
@@ -298,8 +298,7 @@ const ServicesPage: React.FC = () => { return (
                   
         <div className="space-y-2">
                     <a
-                      href={category.link}
-                      target="_blank"
+    href={category.link} target="_blank"
                       rel="noopener noreferrer"
                       className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group hover:scale-105"
                     >

@@ -13,12 +13,12 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI solutions, cybersecurity, and IT services for modern businesses',
   keywords = 'AI solutions, cybersecurity, IT services, digital transformation, automation, 5G technology',
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/images/og-image.jpg',
+  canonicalUrl = 'https: //ziontechgroup.com',
+  ogImage = 'https: //ziontechgroup.com/images/og-image.jpg',
   structuredData
 }) => {
   useEffect(() => {
-    // Add structured data to the page
+    // Add structured data to the page,
     if (structuredData) {
       const script = document.createElement('script');
       script.type = 'application/ld+json';
@@ -31,12 +31,12 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   }, [structuredData]);
 
 const defaultStructuredData = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "description": description,
     "url": canonicalUrl,
-    "logo": "https://ziontechgroup.com/images/logo.png",
+    "logo": "https: //ziontechgroup.com/images/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
@@ -80,17 +80,17 @@ const defaultStructuredData = {
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={canonicalUrl} />
       {/* Open Graph Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      <meta property="og: title" content={title} />
+      <meta property="og: description" content={description} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og: url" content={canonicalUrl} />
+      <meta property="og: image" content={ogImage} />
       <meta property="og:site_name" content="Zion Tech Group" />
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter: title" content={title} />
+      <meta name="twitter: description" content={description} />
+      <meta name="twitter: image" content={ogImage} />
       {/* Additional SEO Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />

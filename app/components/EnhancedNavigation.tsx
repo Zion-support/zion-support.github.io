@@ -35,8 +35,8 @@ const EnhancedNavigation = () => {
         { label: 'AI Data Mining Pro', href: '/ai-data-mining-pro' },
         { label: 'AI Analysis', href: '/ai-video-analysis' },
         { label: 'AI Time Series Forecasting', href: '/ai-time-series-forecasting' },
-        { label: 'AI NLP Text Analysis', href: '/ai-nlp-text-analysis' },
-        { label: 'View All AI Services', href: '/ai-services' }
+        { label: 'AI NLP Text Analysis', href: '/ai-nlp-text-analysis' },]
+        { label: 'View All AI Services', href: '/ai-services' }]
       ]
     },
     {
@@ -73,8 +73,8 @@ const EnhancedNavigation = () => {
         { label: 'IT Consulting & Strategy', href: '/it-consulting' },
         { label: 'Cybersecurity Audit & Compliance', href: '/cybersecurity-audit' },
         { label: 'Data Center Services & Colocation', href: '/data-center-services' },
-        { label: 'IT Asset Management Solutions', href: '/asset-management' },
-        { label: 'View All IT Services', href: '/services' }
+        { label: 'IT Asset Management Solutions', href: '/asset-management' },]
+        { label: 'View All IT Services', href: '/services' }]
       ]
     },
     {
@@ -108,8 +108,8 @@ const EnhancedNavigation = () => {
         { label: 'Zion AI Mobile App Builder', href: '/zion-ai-mobile-app-builder' },
         { label: 'Zion AI API Manager', href: '/zion-ai-api-manager' },
         { label: 'Zion AI Backup Manager', href: '/zion-ai-backup-manager' },
-        { label: 'Zion AI Testing Automation', href: '/zion-ai-testing-automation' },
-        { label: 'View All Micro SAAS', href: '/micro-saas' }
+        { label: 'Zion AI Testing Automation', href: '/zion-ai-testing-automation' },]
+        { label: 'View All Micro SAAS', href: '/micro-saas' }]
       ]
     },
     {
@@ -123,8 +123,8 @@ const EnhancedNavigation = () => {
         { label: '5G Mobile Applications', href: '/5g-mobile-applications' },
         { label: '5G Network Infrastructure', href: '/5g-network-infrastructure' },
         { label: '5G Private Networks', href: '/5g-private-networks' },
-        { label: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
-        { label: 'View All 5G Solutions', href: '/5g-solutions' }
+        { label: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },]
+        { label: 'View All 5G Solutions', href: '/5g-solutions' }]
       ]
     },
     {
@@ -138,8 +138,8 @@ const EnhancedNavigation = () => {
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Blog', href: '/blog' },
         { label: 'News', href: '/news' },
-        { label: 'Press', href: '/press' },
-        { label: 'Partners', href: '/partners' }
+        { label: 'Press', href: '/press' },]
+        { label: 'Partners', href: '/partners' }]
       ]
     }
   ];
@@ -166,14 +166,11 @@ const EnhancedNavigation = () => {
           <nav className="hidden lg:flex space-x-8">
             {navigationItems.map((item) => (
               <div
-                key={item.label}
-                className="relative group"
-                onMouseEnter={() => setActiveDropdown(item.label)}
-                onMouseLeave={() => setActiveDropdown(null)}
+    key={item.label} className="relative group"
+                onMouseEnter={() => setActiveDropdown(item.label)} onMouseLeave={() => setActiveDropdown(null)}
               >
                 <Link
-                  to={item.href}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+    to={item.href} className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
                 >
                   {item.icon}
                   <span>{item.label}</span>
@@ -187,8 +184,7 @@ const EnhancedNavigation = () => {
         <div className="py-2">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
-                          key={dropdownItem.href}
-                          to={dropdownItem.href}
+    key={dropdownItem.href} to={dropdownItem.href}
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors duration-200"
                         >
                           {dropdownItem.label}
@@ -207,8 +203,7 @@ const EnhancedNavigation = () => {
         <div className="hidden lg:flex space-x-4">
               {quickLinks.map((link) => (
                 <Link
-                  key={link.href}
-                  to={link.href}
+    key={link.href} to={link.href}
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
                 >
                   {link.label}
@@ -216,7 +211,7 @@ const EnhancedNavigation = () => {
               ))}
             </div>
             <Link
-              to="/contact"
+    to="/contact"
               className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105 flex"
             >
               Contact Us
@@ -225,8 +220,7 @@ const EnhancedNavigation = () => {
           </div>
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+    onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-300"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -240,8 +234,7 @@ const EnhancedNavigation = () => {
               {navigationItems.map((item) => (
                 <div key={item.label}>
                   <Link
-                    to={item.href}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+    to={item.href} className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.icon}
@@ -251,8 +244,7 @@ const EnhancedNavigation = () => {
         <div className="ml-6 space-y-2">
                     {item.dropdown.slice(0, 4).map((dropdownItem) => (
                       <Link
-                        key={dropdownItem.href}
-                        to={dropdownItem.href}
+    key={dropdownItem.href} to={dropdownItem.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1"
                         onClick={() => setIsOpen(false)}
                       >
@@ -261,8 +253,7 @@ const EnhancedNavigation = () => {
                     ))}
                     {item.dropdown.length > 4 && (
                       <Link
-                        to={item.href}
-                        className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
+    to={item.href} className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
                         onClick={() => setIsOpen(false)}
                       >
                         View All →
@@ -277,8 +268,7 @@ const EnhancedNavigation = () => {
         <div className="space-y-2">
                   {quickLinks.map((link) => (
                     <Link
-                      key={link.href}
-                      to={link.href}
+    key={link.href} to={link.href}
                       className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                       onClick={() => setIsOpen(false)}
                     >

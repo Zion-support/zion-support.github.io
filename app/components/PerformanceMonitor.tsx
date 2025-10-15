@@ -20,7 +20,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
     
     const measurePerformance = () => {
       const loadTime = performance.now() - startTime;
-      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
+        const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
       
       setMetrics({
         loadTime: Math.round(loadTime),

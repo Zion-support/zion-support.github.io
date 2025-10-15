@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Helmet } from 'react-helmet-async';
 
-const ServiceWorkerRegistration: React.FC = () => { useEffect(() => { if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js') .then((registration) => { }) .catch((registrationError) => { }); }); } }, []);
+const ServiceWorkerRegistration: React.FC = () => { useEffect(() => { if ('serviceWorker' in, navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js') .then((registration) => { }) .catch((registrationError) => { }); }); } }, []);
   return (
     <> <Helmet> <title>Service Worker - Zion Tech Group</title> <meta name="description" content="Service worker registration for offline functionality" /> <meta name="keywords" content="service worker, PWA, offline" /> </Helmet> 
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> 

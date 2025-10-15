@@ -12,8 +12,8 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "Access to Azure AI services",
         "Joint go-to-market initiatives",
-        "Technical support and training",
-        "Co-marketing opportunities"
+        "Technical support and training",]
+        "Co-marketing opportunities"]
       ]
     },
     {
@@ -24,8 +24,8 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "AWS certified solutions",
         "Cost optimization services",
-        "Migration expertise",
-        "24/7 cloud support"
+        "Migration expertise",]
+        "24/7 cloud support"]
       ]
     },
     {
@@ -36,8 +36,8 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "Google AI/ML services",
         "Data analytics solutions",
-        "Machine learning expertise",
-        "Scalable infrastructure"
+        "Machine learning expertise",]
+        "Scalable infrastructure"]
       ]
     },
     {
@@ -48,8 +48,8 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "Salesforce certified experts",
         "Custom development",
-        "Integration services",
-        "Training and support"
+        "Integration services",]
+        "Training and support"]
       ]
     },
     {
@@ -60,8 +60,8 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "IBM Watson AI services",
         "Enterprise security solutions",
-        "Legacy system modernization",
-        "Consulting services"
+        "Legacy system modernization",]
+        "Consulting services"]
       ]
     },
     {
@@ -72,8 +72,8 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "Oracle database expertise",
         "Cloud migration services",
-        "Performance optimization",
-        "Security and compliance"
+        "Performance optimization",]
+        "Security and compliance"]
       ]
     }
   ];
@@ -86,8 +86,8 @@ const partnershipTypes = [
       benefits: [
         "Access to cutting-edge technology",
         "Joint product development",
-        "Technical support and training",
-        "Co-marketing opportunities"
+        "Technical support and training",]
+        "Co-marketing opportunities"]
       ]
     },
     {
@@ -97,8 +97,8 @@ const partnershipTypes = [
       benefits: [
         "Competitive pricing and margins",
         "Marketing support and materials",
-        "Sales training and certification",
-        "Dedicated partner support"
+        "Sales training and certification",]
+        "Dedicated partner support"]
       ]
     },
     {
@@ -108,8 +108,8 @@ const partnershipTypes = [
       benefits: [
         "Joint solution development",
         "Technical integration support",
-        "Customer success collaboration",
-        "Revenue sharing opportunities"
+        "Customer success collaboration",]
+        "Revenue sharing opportunities"]
       ]
     },
     {
@@ -119,8 +119,8 @@ const partnershipTypes = [
       benefits: [
         "Joint R&D initiatives",
         "Market expansion support",
-        "Exclusive partnership benefits",
-        "Strategic planning collaboration"
+        "Exclusive partnership benefits",]
+        "Strategic planning collaboration"]
       ]
     }
   ];
@@ -307,14 +307,14 @@ const stats = [
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/contact?type=partnership"
+    href="/contact?type=partnership"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                 >
                   Apply to Become a Partner
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
                 <a
-                  href="mailto:partners@ziontechgroup.com"
+    href="mailto:partners@ziontechgroup.com"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   Contact Partnership Team

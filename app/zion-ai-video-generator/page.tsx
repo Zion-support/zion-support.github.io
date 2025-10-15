@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FileText, Music, Image, Share2, TrendingUp, Award, Users, EnhancedSEO, Sparkles, FuturisticButton, Video, Clock, FuturisticCard, CheckCircle, Star } from 'lucide-react';
 const ZionAIVideoGeneratorPage = () => {
-  return;
-},
+  const features = [
     {
       title: "Multiple Video Formats",
       description: "Support for all major video formats including MP4, MOV, AVI, and WebM. Optimized for social media platforms.",
@@ -23,7 +22,7 @@ const ZionAIVideoGeneratorPage = () => {
     }
   ];
 
-const pricingPlans = [
+  const pricingPlans = [
     {
       name: "Starter",
       price: "$29",
@@ -34,8 +33,8 @@ const pricingPlans = [
         "HD quality (1080p)",
         "Basic templates",
         "5-minute max duration",
-        "Standard voice synthesis",
-        "Email support"
+        "Standard voice synthesis",]
+        "Email support"]
       ],
       popular: false
     },
@@ -51,8 +50,8 @@ const pricingPlans = [
         "15-minute max duration",
         "Advanced voice synthesis",
         "Custom branding",
-        "Priority support",
-        "API access"
+        "Priority support",]
+        "API access"]
       ],
       popular: true
     },
@@ -70,14 +69,14 @@ const pricingPlans = [
         "White-label solution",
         "24/7 support",
         "Advanced API",
-        "Team collaboration",
-        "Analytics dashboard"
+        "Team collaboration",]
+        "Analytics dashboard"]
       ],
       popular: false
     }
   ];
 
-const testimonials = [
+  const testimonials = [
     {
       name: "Sarah Chen",
       company: "Digital Marketing Pro",
@@ -104,7 +103,7 @@ const testimonials = [
     }
   ];
 
-const useCases = [
+  const useCases = [
     {
       title: "Social Media Content",
       description: "Create engaging videos for Instagram, TikTok, YouTube, and other platforms",
@@ -130,11 +129,12 @@ const useCases = [
       examples: ["Company Updates", "Internal Training", "Presentations", "Announcements"]
     }
   ];
+
   return (
     
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
-        title="Zion AI Video Generator - Create Professional Videos with AI | Zion Tech Group"
+    title="Zion AI Video Generator - Create Professional Videos with AI | Zion Tech Group"
         description="Generate stunning videos from text prompts using advanced AI. Professional quality, multiple formats, voice synthesis, and smart templates. Start creating today!"
         keywords="AI video generator, video creation, artificial intelligence, content creation, video marketing, social media videos, automated video production"
         canonical="https://ziontechgroup.com/zion-ai-video-generator"
@@ -167,7 +167,7 @@ const useCases = [
           
         <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <FuturisticButton
-              href="/contact"
+    href="/contact"
               variant="primary"
               size="lg"
               icon={<Play className="w-5 h-5" />}
@@ -175,7 +175,7 @@ const useCases = [
               Start Creating Videos
             </FuturisticButton>
             <FuturisticButton
-              href="#demo"
+    href="#demo"
               variant="outline"
               size="lg"
               icon={<Video className="w-5 h-5" />}
@@ -193,7 +193,7 @@ const useCases = [
                 <Video className="w-6 h-6 text-purple-400" />
               </div>
               
-        <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 holographic-text">10,000+</div>
+        <div className="text-xl md: text-2xl lg:text-3xl font-bold text-white mb-2 holographic-text">10,000+</div>
               
         <div className="text-gray-300 text-xs md:text-sm">Videos Generated</div>
             </div>
@@ -215,7 +215,7 @@ const useCases = [
                 <Users className="w-6 h-6 text-green-400" />
               </div>
               
-        <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 holographic-text">5,000+</div>
+        <div className="text-xl md: text-2xl lg:text-3xl font-bold text-white mb-2 holographic-text">5,000+</div>
               
         <div className="text-gray-300 text-xs md:text-sm">Happy Customers</div>
             </div>
@@ -364,9 +364,8 @@ const useCases = [
                   ))}
                 </div>
                 <FuturisticButton
-                  href="/contact"
-                  variant={plan.popular ? "primary" : "outline"}
-                  className="w-full"
+    href="/contact"
+                  variant={plan.popular ? "primary" : "outline"} className="w-full"
                   icon={<ArrowRight className="w-4 h-4" />}
                 >
                   Get Started
@@ -435,7 +434,7 @@ const useCases = [
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
-              href="/contact"
+    href="/contact"
               variant="primary"
               size="lg"
               icon={<Play className="w-5 h-5" />}
@@ -443,7 +442,7 @@ const useCases = [
               Start Free Trial
             </FuturisticButton>
             <FuturisticButton
-              href="/demo"
+    href="/demo"
               variant="outline"
               size="lg"
               icon={<Video className="w-5 h-5" />}

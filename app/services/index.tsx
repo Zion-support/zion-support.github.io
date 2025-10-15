@@ -134,7 +134,7 @@ const enterpriseServices = [
           
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasServices.map((service, index) => (
-              <div key={index} className={`group bg-slate-700/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-105 relative ${service.popular ? 'ring-2 ring-purple-500' : ''}`}>
+              <div key={index} className={`group bg-slate-700/50 backdrop-blur-sm rounded-xl p-8 hover: bg-slate-600/50 transition-all duration-300 transform hover:scale-105 relative ${service.popular ? 'ring-2 ring-purple-500' : ''}`}>
                 {service.popular && (
                   
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -184,8 +184,7 @@ const enterpriseServices = [
                 
         <div className="space-y-3">
                   <Link
-                    to={service.link}
-                    className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
+    to={service.link} className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
                   >
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -200,7 +199,7 @@ const enterpriseServices = [
           
         <div className="text-center mt-12">
             <Link
-              to="/micro-saas"
+    to="/micro-saas"
               className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold text-lg group"
             >
               View All Micro SAAS Solutions
@@ -245,8 +244,7 @@ const enterpriseServices = [
                     ))}
                   </ul>
                   <Link
-                    to={service.link}
-                    className="text-purple-400 hover:text-purple-300 font-semibold flex items-center group"
+    to={service.link} className="text-purple-400 hover:text-purple-300 font-semibold flex items-center group"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -402,13 +400,13 @@ const enterpriseServices = [
           
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+    to="/contact"
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
             >
               Contact Us
             </Link>
             <Link
-              to="/micro-saas"
+    to="/micro-saas"
               className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
             >
               Browse Micro SAAS

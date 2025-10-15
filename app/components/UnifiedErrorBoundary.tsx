@@ -9,13 +9,13 @@ interface Props {
   showDetails?: boolean;
 }
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  retryCount: number;
-  isRetrying: boolean;
+  hasError: boolean;,
+    error: Error | null;,
+    errorInfo: ErrorInfo | null;,
+    retryCount: number;,
+    isRetrying: boolean;
 }
-class UnifiedErrorBoundary extends Component<Props, State> {
+class UnifiedErrorBoundary extends Component<Props State> {
   private maxRetries: number;
   private retryTimeoutId: number | null = null;
 
@@ -37,7 +37,7 @@ constructor(props: Props) {
     };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    logger.error('Error caught by UnifiedErrorBoundary:', error, errorInfo);
+    logger.error('Error caught by UnifiedErrorBoundary: ', error, errorInfo);
     this.setState({
       error,
       errorInfo,
@@ -45,13 +45,13 @@ constructor(props: Props) {
     if (this.props.onError) {
       this.props.onError( errorInfo);
     }
-    // Send error to analytics
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
+    // Send error to analytics,
+    if (typeof window !== 'undefined' && (window as, any).gtag) {
+      (window as, any).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
-        custom_map: {
-          error_stack: error.stack,
+        custom_map: {,
+    error_stack: error.stack,
           component_stack: errorInfo.componentStack,
         },
       });
@@ -63,11 +63,11 @@ constructor(props: Props) {
   return;
     }
     this.setState({ isRetrying: true });
-    // Clear any existing timeout
+    // Clear any existing timeout,
     if (this.retryTimeoutId) {
       clearTimeout(this.retryTimeoutId);
     }
-    // Retry after a short delay
+    // Retry after a short delay,
     this.retryTimeoutId = window.setTimeout(() => {
       this.setState({
         hasError: false,
@@ -132,7 +132,7 @@ const { showDetails = process.env.NODE_ENV === 'development' } = this.props;
           <p className="text-gray-300 mb-6 leading-relaxed">
                   We're sorry, but something unexpected happened. Our team has been notified and we're working to fix it.
                 </p>
-                {/* Error Details (Development only) */}
+                {/* Error Details (Development, only) */}
                 {showDetails && error && (
                   
         <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left">
@@ -161,8 +161,7 @@ const { showDetails = process.env.NODE_ENV === 'development' } = this.props;
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   {this.canRetry && (
                     <button
-                      onClick={this.handleRetry}
-                      disabled={isRetrying}
+    onClick={this.handleRetry} disabled={isRetrying}
                       className="bg-cyan-500 hover:bg-cyan-600 disabled:bg-cyan-500/50 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center gap-2"
                     >
                       {isRetrying ? (
@@ -177,14 +176,12 @@ const { showDetails = process.env.NODE_ENV === 'development' } = this.props;
                     </button>
                   )}
                   <button
-                    onClick={this.handleReset}
-                    className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200"
+    onClick={this.handleReset} className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200"
                   >
                     Reset
                   </button>
                   <button
-                    onClick={() => window.location.href = '/'}
-                    className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-6 py-3 rounded-lg font-semibold transition-all duration-200"
+    onClick={() => window.location.href = '/'} className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-6 py-3 rounded-lg font-semibold transition-all duration-200"
                   >
                     Go Home
                   </button>
@@ -199,13 +196,13 @@ const { showDetails = process.env.NODE_ENV === 'development' } = this.props;
                   
         <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
                     <a
-                      href="mailto:kleber@ziontechgroup.com"
+    href="mailto:kleber@ziontechgroup.com"
                       className="text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
                       kleber@ziontechgroup.com
                     </a>
                     <a
-                      href="tel:+13024640950"
+    href="tel:+13024640950"
                       className="text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
                       +1 (302) 464-0950

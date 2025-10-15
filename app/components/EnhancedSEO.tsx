@@ -2,8 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { EnhancedSEOProps } from 'lucide-react';
 interface EnhancedSEOProps {
-  title: string;
-  description: string;
+  title: string;,
+    description: string;
   keywords?: string;
   canonical?: string;
   ogImage?: string;
@@ -31,17 +31,17 @@ const fullDescription = description || 'Leading provider of AI-powered solutions
       {keywords && <meta name="keywords" content={keywords} />}
       {canonical && <link rel="canonical" href={canonical} />}
       {/* Open Graph Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={fullDescription} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:type" content={ogType} />
+      <meta property="og: title" content={fullTitle} />
+      <meta property="og: description" content={fullDescription} />
+      <meta property="og: image" content={ogImage} />
+      <meta property="og: type" content={ogType} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      {canonical && <meta property="og:url" content={canonical} />}
+      {canonical && <meta property="og: url" content={canonical} />}
       {/* Twitter Card Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={fullDescription} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter: card" content={twitterCard} />
+      <meta name="twitter: title" content={fullTitle} />
+      <meta name="twitter: description" content={fullDescription} />
+      <meta name="twitter: image" content={ogImage} />
       {/* Additional SEO Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
@@ -57,12 +57,12 @@ const fullDescription = description || 'Leading provider of AI-powered solutions
       {!structuredData && (
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://schema.org",
+            "@context": "https: //schema.org",
             "@type": "Organization",
             "name": "Zion Tech Group",
             "description": "Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation for modern businesses.",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.png",
+            "url": "https: //ziontechgroup.com",
+            "logo": "https: //ziontechgroup.com/logo.png",
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+1-302-464-0950",
@@ -78,7 +78,7 @@ const fullDescription = description || 'Leading provider of AI-powered solutions
               "addressCountry": "US"
             },
             "sameAs": [
-              "https://linkedin.com/company/zion-tech-group",
+              "https: //linkedin.com/company/zion-tech-group",
               "https://twitter.com/ziontechgroup"
             ],
             "foundingDate": "2020",

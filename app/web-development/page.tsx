@@ -119,14 +119,14 @@ const benefits = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+    to="/contact"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors flex items-center justify-center space-x-2"
               >
                 <span>Get Quote</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                to="/demo"
+    to="/demo"
                 className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 font-semibold py-3 px-8 rounded-lg transition-colors"
               >
                 View Portfolio
@@ -194,8 +194,7 @@ const benefits = [
                 const IconComponent = service.icon;
   return (
                   <div
-                    key={service.id}
-                    className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 ${
+    key={service.id} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 ${
                       service.popular 
                         ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
                         : 'border-cyan-500/20'
@@ -235,7 +234,7 @@ const benefits = [
                       </div>
                     </div>
                     <Link
-                      to="/contact"
+    to="/contact"
                       className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
                     >
                       <span>Get Quote</span>
@@ -263,14 +262,14 @@ const benefits = [
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  to="/contact"
+    to="/contact"
                   className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors flex items-center justify-center space-x-2"
                 >
                   <span>Start Your Project</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
-                  to="/demo"
+    to="/demo"
                   className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 font-semibold py-3 px-8 rounded-lg transition-colors"
                 >
                   View Portfolio

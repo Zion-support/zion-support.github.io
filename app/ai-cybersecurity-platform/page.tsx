@@ -8,6 +8,26 @@ const features = [ { icon: <Brain className="w-6 h-6" />, title: "AI Threat Dete
 
 
 export default function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          Page
+        </h1>
+      </div>
+    </div>
+  );
+}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">
+          Page
+        </h1>
+      </div>
+    </div>
+  );
+}
 const threatTypes = [ { title: "Malware Protection", description: "Advanced detection and prevention of malware, ransomware, and other malicious software", icon: <Bug className="w-8 h-8" />, coverage: "99.9%" }, { title: "Phishing Defense", description: "AI-powered email security that identifies and blocks sophisticated phishing attempts", icon: <Mail className="w-8 h-8" />, coverage: "99.7%" }, { title: "DDoS Mitigation", description: "Real-time protection against distributed denial-of-service attacks", icon: <Network className="w-8 h-8" />, coverage: "100%" }, { title: "Insider Threats", description: "Behavioral analysis to detect and prevent insider threats and data exfiltration", icon: <Users className="w-8 h-8" />, coverage: "98.5%" } ];
 
 const pricingPlans = [ { name: "Essential", price: "$299", period: "month", description: "Perfect for small businesses and startups", features: [ "Basic threat detection", "Email security", "Firewall protection", "24/7 monitoring", "Email support", "Up to 50 users", "Basic reporting" ], popular: false }, { name: "Professional", price: "$699", period: "month", description: "Ideal for growing companies with advanced security needs", features: [ "Advanced AI detection", "Full security suite", "Incident response", "Priority support", "Up to 500 users", "Advanced analytics", "Compliance tools", "Custom integrations" ], popular: true }, { name: "Enterprise", price: "$1,499", period: "month", description: "Complete security solution for large organizations", features: [ "Full AI capabilities", "Custom security policies", "Dedicated SOC team", "24/7 phone support", "Unlimited users", "Custom development", "On-premise deployment", "White-label options" ], popular: false } ];
@@ -53,13 +73,13 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
                 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
-                    href="tel:+13024640950"
+    href="tel:+13024640950"
                     className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 flex items-center justify-center">
                     <Phone className="w-5 h-5 mr-2" />
                     Get Security Assessment
                   </a>
                   <a
-                    href="#demo"
+    href="#demo"
                     className="border-2 border-red-400 text-red-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center">
                     <Play className="w-5 h-5 mr-2" />
                     Watch Demo
@@ -87,9 +107,8 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
               
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 { features.map((feature, index) => (
-                  <div 
-                    key={index } 
-                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 hover:border-red-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 neon-card">
+                  <div
+    key={index } className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 hover:border-red-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 neon-card">
                     
         <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       
@@ -135,9 +154,8 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
               
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 { threatTypes.map((threat, index) => (
-                  <div 
-                    key={index } 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 hover:border-red-400/40 transition-all duration-300 hover:transform hover:scale-105">
+                  <div
+    key={index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 hover:border-red-400/40 transition-all duration-300 hover:transform hover:scale-105">
                     
         <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
                       
@@ -175,9 +193,8 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
               
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
                 { complianceStandards.map((standard, index) => (
-                  <div 
-                    key={index } 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-red-500/20 rounded-xl p-6 text-center hover:border-red-400/40 transition-all duration-300 hover:transform hover:scale-105">
+                  <div
+    key={index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-red-500/20 rounded-xl p-6 text-center hover:border-red-400/40 transition-all duration-300 hover:transform hover:scale-105">
                     
         <div className="text-red-400 font-bold text-lg mb-2">{ standard.name }</div>
                     
@@ -206,12 +223,11 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
               
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 { pricingPlans.map((plan, index) => (
-                  <div 
-                    key={index } 
-                    className={ `relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl ${
+                  <div
+    key={index } className={ `relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl ${
                       plan.popular 
                         ? 'border-red-400/40 shadow-red-500/10' 
-                        : 'border-red-500/20 hover:border-red-400/40' }`}
+                        : 'border-red-500/20 hover: border-red-400/40' }`}
                   >
                     { plan.popular && (
                       
@@ -243,11 +259,11 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
                       ))}
                     </div>
                     <a
-                      href="tel:+13024640950"
+    href="tel:+13024640950"
                       className={ `w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
                         plan.popular
                           ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700'
-                          : 'border-2 border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900' }`}
+                          : 'border-2 border-red-400 text-red-400 hover: bg-red-400 hover:text-slate-900' }`}
                     >
                       Get Started
                     </a>
@@ -275,9 +291,8 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
               
         <div className="grid md:grid-cols-3 gap-8">
                 { testimonials.map((testimonial, index) => (
-                  <div 
-                    key={index } 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 hover:border-red-400/40 transition-all duration-300">
+                  <div
+    key={index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 hover:border-red-400/40 transition-all duration-300">
                     
         <div className="flex items-center mb-4">
                       { [...Array(testimonial.rating)].map((_, i) => (
@@ -317,13 +332,13 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
                 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="tel:+13024640950"
+    href="tel:+13024640950"
                     className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 flex items-center justify-center">
                     <Phone className="w-5 h-5 mr-2" />
                     Call +1 302 464 0950
                   </a>
                   <a
-                    href="mailto:kleber@ziontechgroup.com"
+    href="mailto:kleber@ziontechgroup.com"
                     className="border-2 border-red-400 text-red-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center">
                     <Mail className="w-5 h-5 mr-2" />
                     Get Security Assessment

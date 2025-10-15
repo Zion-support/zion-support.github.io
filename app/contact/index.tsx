@@ -28,7 +28,7 @@ const handleInputChange = () => {
 const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
+    // Simulate form submission,
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -61,7 +61,7 @@ const contactInfo = [
     }
   ];
 
-const services = [
+  const services = [
     'AI Solutions',
     'Cybersecurity',
     'Cloud Infrastructure',
@@ -141,13 +141,12 @@ const services = [
             
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => setIsSubmitted(false)}
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+    onClick={() => setIsSubmitted(false)} className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >
                 Send Another Message
               </button>
               <a
-                href="/"
+    href="/"
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
               >
                 Return Home
@@ -237,13 +236,12 @@ const services = [
                       Full Name *
                     </label>
                     <input
-                      type="text"
+    type="text"
                       id="name"
                       name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
+                      value={formData.name} onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       placeholder="Your full name"
                     />
                   </div>
@@ -252,13 +250,12 @@ const services = [
                       Email Address *
                     </label>
                     <input
-                      type="email"
+    type="email"
                       id="email"
                       name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
+                      value={formData.email} onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -270,11 +267,10 @@ const services = [
                       Company
                     </label>
                     <input
-                      type="text"
+    type="text"
                       id="company"
                       name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
+                      value={formData.company} onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       placeholder="Your company name"
                     />
@@ -284,11 +280,10 @@ const services = [
                       Phone Number
                     </label>
                     <input
-                      type="tel"
+    type="tel"
                       id="phone"
                       name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
+                      value={formData.phone} onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       placeholder="+1 (555) 123-4567"
                     />
@@ -299,10 +294,9 @@ const services = [
                     Service Interest
                   </label>
                   <select
-                    id="service"
+    id="service"
                     name="service"
-                    value={formData.service}
-                    onChange={handleInputChange}
+                    value={formData.service} onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
@@ -316,20 +310,17 @@ const services = [
                     Message *
                   </label>
                   <textarea
-                    id="message"
+    id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
+                    value={formData.message} onChange={handleInputChange}
                     required
-                    rows={6}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+                          rows={6} className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
                     placeholder="Tell us about your project and how we can help..."
                   />
                 </div>
                 <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
+    type="submit"
+                  disabled={isSubmitting} className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
                 >
                   {isSubmitting ? (
                     <>
