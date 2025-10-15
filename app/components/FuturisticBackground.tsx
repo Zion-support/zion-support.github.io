@@ -13,7 +13,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
 const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-const resizeCanvas = () => {
+const resizeCanvas = () => {  return (
   return;
 };
     resizeCanvas();

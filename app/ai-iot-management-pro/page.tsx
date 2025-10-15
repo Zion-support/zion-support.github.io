@@ -8,7 +8,7 @@ const AIIoTManagementProPage = () => {
     { name: "Gateways", count: "50+", color: "bg-purple-500", icon: <Brain className="w-6 h-6" /> }
   ];
 
-const features = [
+  const features = [
     {
       icon: <Brain className="w-8 h-8" />,
       title: "AI Analytics",
@@ -410,3 +410,4 @@ const testimonials = [
   );
 };
 export default AIIoTManagementProPage;
+}

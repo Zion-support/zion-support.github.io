@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-const PerformanceOptimizer = () => {
+const PerformanceOptimizer = () => {  return (
   return (
     <>
       <Helmet>

@@ -16,7 +16,7 @@ const [isSubmitting, setIsSubmitting] = useState(false);
 
 const [isSubmitted, setIsSubmitted] = useState(false);
 
-const handleInputChange = () => {
+const handleInputChange = () => {  return (
   return;
 } = e.target;
     setFormData(prev => ({

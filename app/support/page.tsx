@@ -58,7 +58,7 @@ const matchesCategory =
       selectedCategory === "all" || faq.category === selectedCategory;
   return matchesSearch && matchesCategory; });
 
-const toggleFAQ = () => {
+const toggleFAQ = () => {  return (
   return;
 };
   return (

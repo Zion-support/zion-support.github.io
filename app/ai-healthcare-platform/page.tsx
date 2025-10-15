@@ -352,3 +352,4 @@ const testimonials = [
   );
 };
 export default AiHealthcarePlatformPage;
+}

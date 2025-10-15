@@ -356,6 +356,7 @@ const MicroSaasPage: React.FC = () => {
 const categories = ['All', 'Content Creation', 'CRM & Sales', 'Inventory Management', 'Financial Management', 'AI & Automation', 'Development Tools', 'Legal & Compliance', 'Supply Chain', 'Communication', 'Data Management', 'Analytics', 'Marketing', 'Social Media', 'Project Management', 'Customer Experience', 'Document Management', 'Productivity', 'Web Analytics', 'Human Resources', 'Data Protection', 'API Management'];
 
 const benefits = [
+  const features = [
     {
       title: 'Quick Setup',
       description: 'Get started in minutes with our intuitive setup process.',

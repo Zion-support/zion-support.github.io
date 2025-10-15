@@ -2,8 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { Shield, Zap, Users, CheckCircle } from 'lucide-react';
 
 const AiDatabaseSolutionsPage = () => {
-  return;
-},
+  const features = [
     { icon: <Shield className="w-8 h-8" />,
       title: "Advanced Security & Compliance",
       description: "Enterprise-grade security with automated threat detection, encryption, and compliance management for sensitive data." },
@@ -15,7 +14,7 @@ const AiDatabaseSolutionsPage = () => {
       description: "Cloud-native database solutions that automatically scale with your business needs and data growth." }
   ];
 
-const services = [
+  const services = [
     { title: "AI Database Design",
       description: "Intelligent database architecture design using AI to optimize for your specific use cases and performance requirements.",
       features: ["Automated Schema Design", "Performance Optimization", "Scalability Planning", "Cost Analysis"] },

@@ -1,8 +1,7 @@
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Shield, Bug, FileText, Zap, EnhancedSEO, Sparkles, FuturisticButton, Code, Terminal, Users, Award, FuturisticCard, Brain, CheckCircle, Star, ArrowRight } from 'lucide-react';
-const AICodeAssistantPage = () => {
-  return;
-},
+const $1 = () => {
+  const features = [
     {
       title: "Intelligent Code Review",
       description: "Automated code review with security analysis, performance optimization suggestions, and best practice recommendations.",

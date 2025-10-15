@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Zap, Target, Coins, Shield, BarChart3, Globe, Clock, RouterLink, ArrowRight, CheckCircle } from 'lucide-react';
 export default function AIBlockchainAnalytics() {
+  const features = [
     {
       title: "Smart Contract Intelligence",
       description: "Intelligent analysis of smart contracts with vulnerability detection and optimization suggestions",

@@ -1,7 +1,7 @@
 import { ArrowRight, BookOpen, Brain, CheckCircle, Phone, Play, Star, Users, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
-const AIEducationSolutionsProPage = () => {
+const $1 = () => {
   const features = [
     {
       icon: <Brain className="w-8 h-8" />,

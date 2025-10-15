@@ -4,7 +4,7 @@ import { Brain, Heart, Shield, Star, Phone, Play, CheckCircle, ArrowRight, Mail 
 
 const ShieldIcon = Shield;
 
-const AIHealthcareSolutionsProPage = () => {
+const $1 = () => {
   const features = [
     {
       icon: <Brain className="w-8 h-8" />,

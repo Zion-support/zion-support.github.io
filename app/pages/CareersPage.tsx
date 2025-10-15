@@ -27,6 +27,7 @@ const CareersPage: React.FC = () => {
   ];
 
 const openPositions = [
+  const features = [
     {
       title: "Senior AI Engineer",
       type: "Full-time",

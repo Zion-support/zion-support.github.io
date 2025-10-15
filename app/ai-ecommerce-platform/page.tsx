@@ -338,3 +338,4 @@ const integrations = [ { name: "Shopify", logo: "🛍️" }, { name: "WooCommerc
   );
 };
 export default AiEcommercePlatformPage;
+}

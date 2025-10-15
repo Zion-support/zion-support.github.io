@@ -28,7 +28,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     }
 
     // Add focus indicators for keyboard navigation
-    const addFocusStyles = () => {
+    const addFocusStyles = () => {  return (
       const style = document.createElement('style');
       style.textContent = `
         .keyboard-navigation *:focus {
@@ -67,7 +67,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     // Add high contrast mode support
     const addHighContrastSupport = () => {
-      const style = document.createElement('style');
       style.textContent = `
         @media (prefers-contrast: high) {
           * {
@@ -84,7 +83,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     // Add reduced motion support
     const addReducedMotionSupport = () => {
-      const style = document.createElement('style');
       style.textContent = `
         @media (prefers-reduced-motion: reduce) {
           *, *::before, *::after {
@@ -126,7 +124,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   }, []);
 
   const handleFocusOut = useCallback((event: FocusEvent) => {
-    const target = event.target as HTMLElement;
     target.classList.remove('keyboard-focus');
   }, []);
 
@@ -134,7 +131,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     if (!enableFocusIndicators) return;
 
     // Add custom focus styles
-    const style = document.createElement('style');
     style.textContent = `
       .keyboard-navigation *:focus {
         outline: 3px solid #3B82F6 !important;

@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-const EnhancedAnalytics = () => {
+const EnhancedAnalytics = () => {  return (
   return (
     <>
       <Helmet>

@@ -5,6 +5,7 @@ import { Zap, FileText, Code, Database, Shield, BookOpen, Search, ArrowRight, Fo
 
 const DocsPage: React.FC = () => {
   const documentationSections = [
+  const features = [
     {
       title: 'Getting Started',
       icon: <Zap className="w-6 h-6" />,

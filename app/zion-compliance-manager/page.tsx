@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import { FileText, Target, CheckCircle, Users, Shield, Clock, AlertTriangle, ArrowRight } from 'lucide-react';
 export default function ZionComplianceManager() {
+  const features = [
     {
       title: "Regulatory Framework Support",
       description: "Support for GDPR, HIPAA, SOC 2, PCI DSS, and 50+ other regulatory frameworks",

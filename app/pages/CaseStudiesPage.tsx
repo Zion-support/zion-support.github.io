@@ -5,6 +5,7 @@ import { ArrowRight, Clock, TrendingUp } from 'lucide-react';
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
+  const features = [
     {
       title: "E-commerce Platform AI Optimization",
       client: "TechRetail Inc.",
