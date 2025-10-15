@@ -103,40 +103,38 @@ export default function App() {
                   
                   {/* Service Pages */}
                   <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/ai-solutions" element={<AISolutionsPage />} />
                   <Route path="/it-services" element={<ITServicesPage />} />
                   <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-                  <Route path="/ai-solutions" element={<AISolutionsPage />} />
-                  <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-                  <Route path="/data-analytics" element={<DataAnalyticsPage />} />
-                  <Route path="/database-management" element={<DatabaseManagementPage />} />
-                  <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
-                  <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
-                  <Route path="/web-development" element={<WebDevelopmentPage />} />
-                  <Route path="/micro-saas-solutions" element={<MicroSAASSolutionsPage />} />
                   <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                  <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                  <Route path="/micro-saas-solutions" element={<MicroSAASSolutionsPage />} />
+                  <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                  <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                  <Route path="/web-development" element={<WebDevelopmentPage />} />
+                  <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                  <Route path="/database-management" element={<DatabaseManagementPage />} />
+                  <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
                   
                   {/* Company Pages */}
                   <Route path="/team" element={<TeamPage />} />
                   <Route path="/careers" element={<CareersPage />} />
-                  <Route path="/partnerships" element={<PartnershipsPage />} />
-                  
-                  {/* Content Pages */}
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/case-studies" element={<CaseStudiesPage />} />
-                  <Route path="/pricing" element={<PricingPage />} />
-                  <Route path="/api-docs" element={<APIDocsPage />} />
                   
                   {/* Support Pages */}
                   <Route path="/help" element={<HelpPage />} />
                   <Route path="/privacy" element={<PrivacyPage />} />
                   <Route path="/terms" element={<TermsPage />} />
                   <Route path="/cookies" element={<CookiesPage />} />
+                  
+                  {/* Additional Pages */}
+                  <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  <Route path="/partnerships" element={<PartnershipsPage />} />
+                  <Route path="/api-docs" element={<APIDocsPage />} />
                   <Route path="/accessibility" element={<AccessibilityPage />} />
                   
                   {/* AI Tools Pages */}
-                  <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
-                  
-                  {/* Zion AI Tools */}
                   <Route path="/zion-ai-content-moderator" element={<ZionAIContentModeratorPage />} />
                   <Route path="/zion-ai-customer-churn-predictor" element={<ZionAICustomerChurnPredictorPage />} />
                   <Route path="/zion-ai-customer-churn-predictor-pro" element={<ZionAICustomerChurnPredictorProPage />} />

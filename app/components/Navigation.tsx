@@ -37,11 +37,11 @@ const Navigation: React.FC = memo(() => {
             
             {/* Services Dropdown */}
             <div className="relative">
-            <button
-              onMouseEnter={handleServicesMouseEnter}
-              onMouseLeave={handleServicesMouseLeave}
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
-            >
+              <button
+                onMouseEnter={handleServicesMouseEnter}
+                onMouseLeave={handleServicesMouseLeave}
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+              >
                 Services
                 <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
