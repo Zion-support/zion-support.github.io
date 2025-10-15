@@ -28,7 +28,12 @@ const Footer: React.FC = () => {
         { name: 'AI Email Marketing', path: '/ai-email-marketing' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro' },
         { name: 'AI Document Processor', path: '/ai-document-processor' },
-        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' }
+        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
+        { name: 'AI Inventory Manager', path: '/ai-inventory-manager' },
+        { name: 'AI Financial Advisor', path: '/ai-financial-advisor' },
+        { name: 'AI HR Assistant', path: '/ai-hr-assistant' },
+        { name: 'AI Legal Assistant', path: '/ai-legal-assistant' }
       ]
     },
     {
@@ -46,10 +51,10 @@ const Footer: React.FC = () => {
       title: 'IT Services',
       services: [
         { name: 'Cloud Migration', path: '/cloud-migration-services' },
-        { name: 'Cybersecurity', path: '/cybersecurity-consulting' },
+        { name: 'Cybersecurity Consulting', path: '/cybersecurity-consulting' },
         { name: 'DevOps Solutions', path: '/devops-solutions' },
-        { name: 'Mobile Development', path: '/mobile-app-development' },
-        { name: 'Web Development', path: '/web-application-development' },
+        { name: 'Mobile App Development', path: '/mobile-app-development' },
+        { name: 'Web Application Development', path: '/web-application-development' },
         { name: 'Database Solutions', path: '/database-solutions' }
       ]
     },
