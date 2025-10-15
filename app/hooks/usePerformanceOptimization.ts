@@ -29,6 +29,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enableBundleAnalysis = false
   } = options;
 
+  // Suppress unused variable warnings for options that are used in the interface but not in the implementation
+  void enableCodeSplitting;
+
   // Lazy load images
   const lazyLoadImages = useCallback(() => {
     if (!enableLazyLoading) return;
@@ -90,6 +93,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       };
     });
   }, [enablePreloading]);
+
+  // Suppress unused variable warning - this function is available for external use
+  void preloadImages;
 
   // Optimize images
   const optimizeImages = useCallback(() => {

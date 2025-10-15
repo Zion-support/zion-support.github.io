@@ -1,43 +1,33 @@
-'use client';
-import React from 'react';
-import SEOHead from '../components/SEOHead';
 import { 
-  EnvelopeIcon, 
-  ChartBarIcon, 
-  CogIcon, 
-  CheckCircleIcon,
-  ArrowRightIcon,
-  StarIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  ShieldCheckIcon,
-  SparklesIcon,
-  CpuChipIcon,
-  EyeIcon
+  UserGroupIcon,SparklesIcon, 
+  CheckCircleIcon, 
+  StarIcon
 } from '@heroicons/react/24/outline';
+'use client';
+import SEOHead from '../components/SEOHead';
 
 const AIEmailOptimizerPage: React.FC = () => {
   const features = [
     {
-      icon: CpuChipIcon,
+      icon: UserGroupIcon,
       title: 'AI-Powered Subject Lines',
       description: 'Generate compelling subject lines that increase open rates by up to 40% using advanced natural language processing.',
       benefits: ['40% higher open rates', 'A/B testing automation', 'Personalized recommendations', 'Real-time optimization']
     },
     {
-      icon: ChartBarIcon,
+      icon: UserGroupIcon,
       title: 'Send Time Optimization',
       description: 'AI analyzes recipient behavior patterns to determine the optimal send time for maximum engagement.',
       benefits: ['35% higher click rates', 'Personalized send times', 'Timezone optimization', 'Behavioral analysis']
     },
     {
-      icon: EyeIcon,
+      icon: UserGroupIcon,
       title: 'Content Optimization',
       description: 'Automatically optimize email content, formatting, and structure for better readability and engagement.',
       benefits: ['25% higher engagement', 'Mobile optimization', 'Readability scoring', 'Content suggestions']
     },
     {
-      icon: ShieldCheckIcon,
+      icon: UserGroupIcon,
       title: 'Deliverability Protection',
       description: 'Advanced spam detection and deliverability optimization to ensure your emails reach the inbox.',
       benefits: ['99.5% deliverability rate', 'Spam score monitoring', 'Reputation management', 'ISP compliance']

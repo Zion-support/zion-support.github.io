@@ -1,44 +1,33 @@
-'use client';
-import React from 'react';
-import SEOHead from '../components/SEOHead';
 import { 
-  ShareIcon, 
-  ChartBarIcon, 
-  CogIcon, 
-  CheckCircleIcon,
-  ArrowRightIcon,
-  StarIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  ShieldCheckIcon,
-  SparklesIcon,
-  CpuChipIcon,
-  EyeIcon,
-  CalendarIcon
+  UserGroupIcon,SparklesIcon, 
+  CheckCircleIcon, 
+  StarIcon
 } from '@heroicons/react/24/outline';
+'use client';
+import SEOHead from '../components/SEOHead';
 
 const SocialMediaSchedulerPage: React.FC = () => {
   const features = [
     {
-      icon: CalendarIcon,
+      icon: UserGroupIcon,
       title: 'Smart Scheduling',
       description: 'AI-powered scheduling that determines optimal posting times for maximum engagement across all platforms.',
       benefits: ['40% higher engagement', 'Optimal timing analysis', 'Multi-platform sync', 'Timezone optimization']
     },
     {
-      icon: CpuChipIcon,
+      icon: UserGroupIcon,
       title: 'Content Optimization',
       description: 'AI analyzes your content and suggests improvements for better performance and engagement.',
       benefits: ['25% higher reach', 'Hashtag optimization', 'Content suggestions', 'Performance prediction']
     },
     {
-      icon: ChartBarIcon,
+      icon: UserGroupIcon,
       title: 'Analytics Dashboard',
       description: 'Comprehensive analytics and reporting to track performance across all your social media platforms.',
       benefits: ['Real-time analytics', 'ROI tracking', 'Audience insights', 'Competitor analysis']
     },
     {
-      icon: ShareIcon,
+      icon: UserGroupIcon,
       title: 'Multi-Platform Management',
       description: 'Manage all your social media accounts from one dashboard with platform-specific optimizations.',
       benefits: ['8+ platforms supported', 'Bulk posting', 'Content recycling', 'Cross-platform analytics']

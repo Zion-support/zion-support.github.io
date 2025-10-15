@@ -2,9 +2,9 @@
 
 const fs = require('fs');
 
-// Fix all the remaining TypeScript errors
-function fixAllErrors() {
-  // Fix error handler interface
+// Fix all remaining TypeScript errors
+function fixAllRemainingErrors() {
+  // Fix error handler interface to allow undefined values
   const errorHandlerPath = 'app/utils/errorHandler.ts';
   let content = fs.readFileSync(errorHandlerPath, 'utf8');
   
@@ -25,28 +25,8 @@ function fixAllErrors() {
     this.details = details;
   }`);
   
-  content = content.replace(/return \{[\s\S]*?message: error\.message,[\s\S]*?code: error\.code,[\s\S]*?statusCode: error\.statusCode,[\s\S]*?details: error\.details,[\s\S]*?\};/g,
-    `return {
-      message: error.message,
-      code: error.code,
-      statusCode: error.statusCode,
-      details: error.details,
-    };`);
-  
-  content = content.replace(/return \{[\s\S]*?message: error\.message,[\s\S]*?code: 'UNKNOWN_ERROR',[\s\S]*?statusCode: undefined,[\s\S]*?details: undefined,[\s\S]*?\};/g,
-    `return {
-      message: error.message,
-      code: 'UNKNOWN_ERROR',
-    };`);
-  
-  content = content.replace(/return \{[\s\S]*?message: 'An unexpected error occurred',[\s\S]*?code: 'UNKNOWN_ERROR',[\s\S]*?statusCode: undefined,[\s\S]*?details: undefined,[\s\S]*?\};/g,
-    `return {
-      message: 'An unexpected error occurred',
-      code: 'UNKNOWN_ERROR',
-    };`);
-  
   fs.writeFileSync(errorHandlerPath, content);
-  console.log('Fixed error handler');
+  console.log('Fixed error handler interface');
   
   // Fix logger interface
   const loggerPath = 'utils/logger.ts';
@@ -62,16 +42,40 @@ function fixAllErrors() {
 }`);
   
   fs.writeFileSync(loggerPath, content);
-  console.log('Fixed logger');
+  console.log('Fixed logger interface');
   
   // Fix OptimizedImage component
   const optimizedImagePath = 'app/components/OptimizedImage.tsx';
   content = fs.readFileSync(optimizedImagePath, 'utf8');
   
-  // Remove preloadImages reference
-  content = content.replace(/preloadImages\(\[optimizedSrc\]\);/g, '// preloadImages([optimizedSrc]);');
+  // Add missing function definitions
+  const missingFunctions = `
+  const handleLoad = () => {
+    setIsLoaded(true);
+    onLoad?.();
+  };
+
+  const handleError = () => {
+    setHasError(true);
+    onError?.();
+  };
+
+  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !isLoaded && !hasError) {
+        setCurrentSrc(optimizedSrc);
+      }
+    });
+  };
+`;
   
-  // Fix useEffect return
+  // Insert the missing functions before the useEffect
+  const useEffectIndex = content.indexOf('useEffect(() => {');
+  if (useEffectIndex !== -1) {
+    content = content.slice(0, useEffectIndex) + missingFunctions + '\n  ' + content.slice(useEffectIndex);
+  }
+  
+  // Fix the useEffect return
   content = content.replace(
     /useEffect\(\(\) => \{[\s\S]*?if \(loading === 'lazy' && !priority\) \{[\s\S]*?\}[\s\S]*?else if \(priority\) \{[\s\S]*?\}[\s\S]*?\}, \[loading, priority, optimizedSrc, isLoaded, hasError\]\);/g,
     `useEffect(() => {
@@ -93,16 +97,16 @@ function fixAllErrors() {
   );
   
   fs.writeFileSync(optimizedImagePath, content);
-  console.log('Fixed OptimizedImage');
+  console.log('Fixed OptimizedImage component');
   
   // Fix Navigation component
   const navigationPath = 'app/components/Navigation.tsx';
   content = fs.readFileSync(navigationPath, 'utf8');
-  content = content.replace(/const \[isOpen, setIsOpen\] = useState\(false\);/g, 'const [isOpen] = useState(false);');
+  content = content.replace(/const \[isOpen\] = useState\(false\);/g, 'const [isOpen, setIsOpen] = useState(false);');
   fs.writeFileSync(navigationPath, content);
-  console.log('Fixed Navigation');
+  console.log('Fixed Navigation component');
   
-  // Fix ErrorBoundary components
+  // Fix ErrorBoundary component
   const errorBoundaryPath = 'app/components/ErrorBoundary.tsx';
   content = fs.readFileSync(errorBoundaryPath, 'utf8');
   content = content.replace(/window\.gtag\('event', 'error_boundary_triggered', \{[\s\S]*?\}\);/g,
@@ -112,21 +116,9 @@ function fixAllErrors() {
       non_interaction: true
     });`);
   fs.writeFileSync(errorBoundaryPath, content);
-  console.log('Fixed ErrorBoundary');
+  console.log('Fixed ErrorBoundary component');
   
-  // Fix EnhancedErrorBoundary
-  const enhancedErrorBoundaryPath = 'app/components/EnhancedErrorBoundary.tsx';
-  content = fs.readFileSync(enhancedErrorBoundaryPath, 'utf8');
-  content = content.replace(/window\.gtag\('event', 'exception', \{[\s\S]*?\}\);/g,
-    `window.gtag('event', 'exception', {
-      event_category: 'Error',
-      event_label: errorReport.message,
-      non_interaction: true
-    });`);
-  fs.writeFileSync(enhancedErrorBoundaryPath, content);
-  console.log('Fixed EnhancedErrorBoundary');
-  
-  // Remove unused imports from all page files
+  // Remove unused imports from page files
   const pageFiles = [
     'app/ai-crm-optimizer/page.tsx',
     'app/ai-data-visualizer/page.tsx',
@@ -139,15 +131,9 @@ function fixAllErrors() {
   pageFiles.forEach(filePath => {
     content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove all unused icon imports
-    const unusedIcons = [
-      'UserGroupIcon', 'ChartBarIcon', 'CogIcon', 'ShieldCheckIcon', 'SparklesIcon', 
-      'CheckCircleIcon', 'StarIcon', 'CpuChipIcon', 'EyeIcon', 'GlobeAltIcon',
-      'ReceiptRefundIcon', 'BanknotesIcon', 'CloudIcon', 'CodeBracketIcon',
-      'DevicePhoneMobileIcon', 'CircleStackIcon', 'SignalIcon', 'CalendarIcon', 'ShareIcon'
-    ];
+    // Remove unused icon imports
+    const unusedIcons = ['ChartBarIcon', 'CogIcon', 'ShieldCheckIcon'];
     
-    // Remove individual icon imports
     unusedIcons.forEach(icon => {
       const regex = new RegExp(`\\s*${icon},\\s*`, 'g');
       content = content.replace(regex, '');
@@ -156,13 +142,10 @@ function fixAllErrors() {
     // Clean up empty import lines
     content = content.replace(/import\s*{\s*}\s*from\s*'@heroicons\/react\/24\/outline';\n?/g, '');
     
-    // Remove empty lines at the top
-    content = content.replace(/^\s*\n+/, '');
-    
     fs.writeFileSync(filePath, content);
     console.log(`Cleaned up imports in: ${filePath}`);
   });
 }
 
-fixAllErrors();
+fixAllRemainingErrors();
 console.log('All TypeScript errors fixed!');

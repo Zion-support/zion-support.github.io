@@ -16,7 +16,7 @@ export class CustomError extends Error {
     this.name = 'CustomError';
     this.code = code ?? undefined;
     this.statusCode = statusCode ?? undefined;
-    this.details = details;
+    this.details = details ?? undefined;
   }
 }
 
@@ -26,7 +26,7 @@ export const handleError = (error: unknown): AppError => {
       message: error.message,
       code: error.code ?? undefined,
       statusCode: error.statusCode ?? undefined,
-      details: error.details,
+      details: error.details ?? undefined,
     };
   }
 

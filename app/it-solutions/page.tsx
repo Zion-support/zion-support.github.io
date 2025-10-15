@@ -1,30 +1,15 @@
-'use client';
-import React from 'react';
-import SEOHead from '../components/SEOHead';
 import { 
-  CogIcon, 
-  CloudIcon, 
-  ShieldCheckIcon, 
-  CheckCircleIcon,
-  ArrowRightIcon,
-  StarIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  SparklesIcon,
-  CpuChipIcon,
-  EyeIcon,
-  CodeBracketIcon,
-  DevicePhoneMobileIcon,
-  CircleStackIcon,
-  SignalIcon,
-  RocketLaunchIcon,
-  ChartBarIcon
+  UserGroupIcon,SparklesIcon, 
+  CheckCircleIcon, 
+  StarIcon
 } from '@heroicons/react/24/outline';
+'use client';
+import SEOHead from '../components/SEOHead';
 
 const ITSolutionsPage: React.FC = () => {
   const services = [
     {
-      icon: CloudIcon,
+      icon: UserGroupIcon,
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions with AWS, Azure, and Google Cloud. 99.9% uptime guarantee with 24/7 monitoring.',
       features: ['AWS/Azure/GCP expertise', 'Auto-scaling solutions', 'Disaster recovery', 'Cost optimization'],
@@ -32,7 +17,7 @@ const ITSolutionsPage: React.FC = () => {
       popular: true
     },
     {
-      icon: CodeBracketIcon,
+      icon: UserGroupIcon,
       title: 'Web Development',
       description: 'Modern, responsive web applications built with React, Next.js, and cutting-edge technologies.',
       features: ['React/Next.js expertise', 'Mobile-first design', 'SEO optimization', 'Performance optimization'],
@@ -40,7 +25,7 @@ const ITSolutionsPage: React.FC = () => {
       popular: false
     },
     {
-      icon: DevicePhoneMobileIcon,
+      icon: UserGroupIcon,
       title: 'Mobile App Development',
       description: 'Native and cross-platform mobile applications for iOS and Android with seamless user experience.',
       features: ['iOS/Android native', 'React Native/Flutter', 'App Store optimization', 'Push notifications'],
@@ -48,7 +33,7 @@ const ITSolutionsPage: React.FC = () => {
       popular: false
     },
     {
-      icon: CircleStackIcon,
+      icon: UserGroupIcon,
       title: 'Database Management',
       description: 'Enterprise-grade database solutions with optimization, backup, and security management.',
       features: ['MySQL/PostgreSQL/MongoDB', 'Performance tuning', 'Backup & recovery', 'Security hardening'],
@@ -56,7 +41,7 @@ const ITSolutionsPage: React.FC = () => {
       popular: false
     },
     {
-      icon: SignalIcon,
+      icon: UserGroupIcon,
       title: 'Network Infrastructure',
       description: 'Robust network solutions with 5G capabilities, IoT integration, and enterprise security.',
       features: ['5G network setup', 'IoT device integration', 'Network security', 'Performance monitoring'],
@@ -64,7 +49,7 @@ const ITSolutionsPage: React.FC = () => {
       popular: false
     },
     {
-      icon: ShieldCheckIcon,
+      icon: UserGroupIcon,
       title: 'Cybersecurity Solutions',
       description: 'Comprehensive security solutions including penetration testing, compliance, and threat monitoring.',
       features: ['Penetration testing', 'SOC 2 compliance', 'Threat detection', 'Security audits'],

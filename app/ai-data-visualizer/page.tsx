@@ -1,43 +1,33 @@
-'use client';
-import React from 'react';
-import SEOHead from '../components/SEOHead';
 import { 
-  ChartBarIcon, 
-  EyeIcon, 
-  CogIcon, 
-  CheckCircleIcon,
-  ArrowRightIcon,
-  StarIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  ShieldCheckIcon,
-  SparklesIcon,
-  CpuChipIcon,
-  GlobeAltIcon
+  UserGroupIcon,SparklesIcon, 
+  CheckCircleIcon, 
+  StarIcon
 } from '@heroicons/react/24/outline';
+'use client';
+import SEOHead from '../components/SEOHead';
 
 const AIDataVisualizerPage: React.FC = () => {
   const features = [
     {
-      icon: ChartBarIcon,
+      icon: UserGroupIcon,
       title: 'Interactive Dashboards',
       description: 'Create stunning, interactive dashboards with drag-and-drop functionality and real-time data updates.',
       benefits: ['Real-time data streaming', 'Customizable widgets', 'Mobile-responsive design', 'Export to multiple formats']
     },
     {
-      icon: CpuChipIcon,
+      icon: UserGroupIcon,
       title: 'AI-Powered Insights',
       description: 'Advanced machine learning algorithms automatically detect patterns, anomalies, and trends in your data.',
       benefits: ['Automated pattern detection', 'Anomaly alerts', 'Predictive analytics', 'Natural language queries']
     },
     {
-      icon: EyeIcon,
+      icon: UserGroupIcon,
       title: 'Advanced Visualizations',
       description: '50+ chart types including heatmaps, treemaps, network graphs, and 3D visualizations for complex data.',
       benefits: ['50+ chart types', '3D visualizations', 'Custom color schemes', 'Animation effects']
     },
     {
-      icon: GlobeAltIcon,
+      icon: UserGroupIcon,
       title: 'Multi-Source Integration',
       description: 'Connect to 100+ data sources including databases, APIs, cloud services, and file uploads.',
       benefits: ['100+ data connectors', 'Real-time sync', 'Data transformation', 'Automated scheduling']

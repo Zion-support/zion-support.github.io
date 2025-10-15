@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Activity, Zap, Clock, TrendingUp, AlertCircle } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Activity, Zap, TrendingUp, AlertCircle } from 'lucide-react';
 
 interface PerformanceMetrics {
   lcp?: number;
@@ -136,7 +136,7 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
                 {Object.entries(metrics).map(([key, value]) => {
                   if (typeof value !== 'number' || key === 'memory') return null;
                   
-                  const { score, color, label } = getPerformanceScore(key, value);
+                  const { color, label } = getPerformanceScore(key, value);
                   
                   return (
                     <div key={key} className="flex items-center justify-between text-sm">

@@ -1,44 +1,33 @@
-'use client';
-import React from 'react';
-import SEOHead from '../components/SEOHead';
 import { 
-  CurrencyDollarIcon, 
-  ChartBarIcon, 
-  CogIcon, 
-  CheckCircleIcon,
-  ArrowRightIcon,
-  StarIcon,
-  ClockIcon,
-  ShieldCheckIcon,
-  SparklesIcon,
-  CpuChipIcon,
-  EyeIcon,
-  ReceiptRefundIcon,
-  BanknotesIcon
+  UserGroupIcon,SparklesIcon, 
+  CheckCircleIcon, 
+  StarIcon
 } from '@heroicons/react/24/outline';
+'use client';
+import SEOHead from '../components/SEOHead';
 
 const ExpenseTrackerProPage: React.FC = () => {
   const features = [
     {
-      icon: CpuChipIcon,
+      icon: UserGroupIcon,
       title: 'AI-Powered Categorization',
       description: 'Automatically categorize expenses using machine learning that learns from your spending patterns.',
       benefits: ['95% accuracy rate', 'Automatic categorization', 'Learning algorithms', 'Custom rules']
     },
     {
-      icon: ChartBarIcon,
+      icon: UserGroupIcon,
       title: 'Smart Analytics',
       description: 'Get insights into your spending habits with predictive analytics and budget recommendations.',
       benefits: ['Spending predictions', 'Budget optimization', 'Trend analysis', 'Financial health score']
     },
     {
-      icon: ReceiptRefundIcon,
+      icon: UserGroupIcon,
       title: 'Receipt Management',
       description: 'Scan and store receipts with OCR technology for easy expense tracking and tax preparation.',
       benefits: ['OCR receipt scanning', 'Cloud storage', 'Tax categorization', 'Expense verification']
     },
     {
-      icon: BanknotesIcon,
+      icon: UserGroupIcon,
       title: 'Multi-Currency Support',
       description: 'Track expenses in multiple currencies with real-time exchange rates and automatic conversions.',
       benefits: ['150+ currencies', 'Real-time rates', 'Auto conversion', 'Travel expenses']

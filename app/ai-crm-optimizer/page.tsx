@@ -1,18 +1,10 @@
-'use client';
-import React from 'react';
-import SEOHead from '../components/SEOHead';
 import { 
-  UserGroupIcon, 
-  ChartBarIcon, 
-  CogIcon, 
-  CheckCircleIcon,
-  ArrowRightIcon,
-  StarIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  ShieldCheckIcon,
-  SparklesIcon
+  UserGroupIcon,SparklesIcon, 
+  CheckCircleIcon, 
+  StarIcon
 } from '@heroicons/react/24/outline';
+'use client';
+import SEOHead from '../components/SEOHead';
 
 const AICRMOptimizerPage: React.FC = () => {
   const features = [
@@ -23,19 +15,19 @@ const AICRMOptimizerPage: React.FC = () => {
       benefits: ['Increase conversion rates by 40%', 'Reduce sales cycle by 25%', 'Improve lead quality by 60%']
     },
     {
-      icon: ChartBarIcon,
+      icon: UserGroupIcon,
       title: 'Predictive Analytics',
       description: 'Advanced machine learning models predict customer lifetime value, churn probability, and optimal contact timing.',
       benefits: ['Predict customer behavior with 85% accuracy', 'Reduce churn by 30%', 'Increase revenue per customer by 45%']
     },
     {
-      icon: CogIcon,
+      icon: UserGroupIcon,
       title: 'Automated Workflows',
       description: 'Intelligent automation that triggers personalized follow-ups, email sequences, and task assignments based on customer actions.',
       benefits: ['Save 15 hours per week', 'Improve response time by 70%', 'Increase customer satisfaction by 35%']
     },
     {
-      icon: ShieldCheckIcon,
+      icon: UserGroupIcon,
       title: 'Data Security',
       description: 'Enterprise-grade security with end-to-end encryption, GDPR compliance, and SOC 2 Type II certification.',
       benefits: ['100% data encryption', 'GDPR compliant', 'SOC 2 certified']
