@@ -124,26 +124,35 @@ const HomePage: React.FC = () => {
         {/* Hero Section */}
         <section className="relative overflow-hidden min-h-screen flex items-center">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-slate-900 to-cyan-900/30"></div>
-          <div className="absolute inset-0 cyber-grid opacity-20"></div>
+          <div className="absolute inset-0 cyber-grid-enhanced opacity-20"></div>
           
-          {/* Floating Particles */}
-          <div className="floating-particles">
-            {[...Array(30)].map((_, i) => (
-              <div key={i} className="particle" style={{
+          {/* Matrix Rain Effect */}
+          <div className="matrix-rain"></div>
+          
+          {/* Quantum Particles */}
+          <div className="quantum-particles">
+            {[...Array(50)].map((_, i) => (
+              <div key={i} className="quantum-particle" style={{
                 left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 15}s`,
-                animationDuration: `${15 + Math.random() * 10}s`
+                animationDelay: `${Math.random() * 8}s`,
+                animationDuration: `${8 + Math.random() * 4}s`
               }}></div>
             ))}
           </div>
           
+          {/* Data Streams */}
+          <div className="data-stream"></div>
+          
           {/* Animated Background Elements */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse floating"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000 floating"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-2xl animate-pulse delay-500 floating"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse floating holographic-float"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000 floating holographic-float"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-2xl animate-pulse delay-500 floating holographic-float"></div>
           
           {/* Holographic Overlay */}
           <div className="absolute inset-0 holographic-card opacity-10"></div>
+          
+          {/* Scan Lines */}
+          <div className="scan-lines"></div>
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
             <div className="text-center">
               <div className="relative inline-block mb-6">
@@ -249,7 +258,7 @@ const HomePage: React.FC = () => {
           {/* Animated Background */}
           <div className="absolute inset-0 cyber-grid opacity-20"></div>
           <div className="floating-particles">
-            {[...Array(20)].map((_, i) => (
+            {[...Array(30)].map((_, i) => (
               <div key={i} className="particle" style={{
                 left: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 15}s`,
@@ -268,7 +277,167 @@ const HomePage: React.FC = () => {
               </p>
             </div>
             
+<<<<<<< HEAD
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* AI Code Assistant */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <CogIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-blue-400 font-medium neon-text">AI Code</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                  AI Code Assistant
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Generate code from natural language with 95% accuracy. Supports 50+ programming languages with smart refactoring.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-blue-400 neon-text">$29/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$79/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>50+ programming languages</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>95% accuracy rate</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Security analysis</span>
+                  </div>
+                </div>
+                <Link to="/ai-code-assistant"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Translator */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <GlobeAltIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-green-400 font-medium neon-text">Translation</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
+                  AI Translator
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Break language barriers with real-time translation in 100+ languages. Voice, image, and document support.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-green-400 neon-text">$19/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$49/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>100+ languages supported</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>99.5% accuracy</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Voice & image translation</span>
+                  </div>
+                </div>
+                <Link to="/ai-translator"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Video Generator */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <SparklesIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-purple-400 font-medium neon-text">Video AI</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                  AI Video Generator
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Create professional videos from text in minutes. 4K quality, voice synthesis, and 24+ video styles.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-purple-400 neon-text">$39/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$99/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>4K video quality</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>24+ video styles</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Voice synthesis</span>
+                  </div>
+                </div>
+                <Link to="/ai-video-generator"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+              {/* AI Audio Processor */}
+              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
+                    <BoltIcon className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-sm text-orange-400 font-medium neon-text">Audio AI</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-orange-300 transition-colors">
+                  AI Audio Processor
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  Enhance audio quality, transcribe speech, and generate music with AI. Professional tools for creators.
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-orange-400 neon-text">$29/mo</span>
+                  <span className="text-sm text-gray-400 line-through">$79/mo</span>
+                </div>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>99% transcription accuracy</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Voice enhancement</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-300">
+                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
+                    <span>Music generation</span>
+                  </div>
+                </div>
+                <Link to="/ai-audio-processor"
+                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  Try Free Trial
+                </Link>
+              </div>
+
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c09
               {/* AI Content Generator */}
               <div className="group holographic-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20">
                 <div className="flex items-center justify-between mb-4">
@@ -341,84 +510,6 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
                 <Link to="/ai-crm-optimizer"
-                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                >
-                  Try Free Trial
-                </Link>
-              </div>
-
-              {/* AI Data Visualizer */}
-              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
-                    <ChartBarIcon className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="text-sm text-cyan-400 font-medium neon-text">Data Viz</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
-                  AI Data Visualizer
-                </h3>
-                <p className="text-gray-400 mb-4 text-sm">
-                  Transform complex data into stunning visualizations with AI-powered insights and 50+ chart types.
-                </p>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-cyan-400 neon-text">$149/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$299/mo</span>
-                </div>
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>50+ chart types</span>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>AI-powered insights</span>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>Real-time dashboards</span>
-                  </div>
-                </div>
-                <Link to="/ai-data-visualizer"
-                  className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                >
-                  Try Free Trial
-                </Link>
-              </div>
-
-              {/* Social Media Scheduler */}
-              <div className="group holographic-card p-6 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/20">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
-                    <ShareIcon className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="text-sm text-pink-400 font-medium neon-text">Social</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-pink-300 transition-colors">
-                  Social Media Scheduler
-                </h3>
-                <p className="text-gray-400 mb-4 text-sm">
-                  Streamline your social media with AI-powered scheduling, content optimization, and multi-platform management.
-                </p>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-pink-400 neon-text">$49/mo</span>
-                  <span className="text-sm text-gray-400 line-through">$99/mo</span>
-                </div>
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>8+ platforms supported</span>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>AI content optimization</span>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-300">
-                    <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                    <span>40% higher engagement</span>
-                  </div>
-                </div>
-                <Link to="/social-media-scheduler"
                   className="block w-full cyber-button text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial

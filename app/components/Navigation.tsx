@@ -131,7 +131,25 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'DevOps Automation', href: '/devops-automation', icon: CogIcon },
         { name: 'Data Engineering', href: '/data-engineering', icon: CircleStackIcon },
         { name: 'API Development', href: '/api-development', icon: CodeBracketIcon },
+<<<<<<< HEAD
         { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon }
+=======
+        { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon },
+        { name: 'Quantum Computing', href: '/quantum-computing-solutions', icon: CpuChipIcon },
+        { name: 'Edge Computing', href: '/edge-computing-solutions', icon: CloudIcon },
+        { name: 'AR Solutions', href: '/augmented-reality-solutions', icon: EyeIcon },
+        { name: 'VR Solutions', href: '/virtual-reality-solutions', icon: EyeIcon },
+        { name: 'RPA Solutions', href: '/robotic-process-automation', icon: CogIcon },
+        { name: 'Low-Code Platform', href: '/low-code-platform', icon: CodeBracketIcon },
+        { name: 'Serverless Architecture', href: '/serverless-architecture', icon: CloudIcon },
+        { name: 'Container Orchestration', href: '/container-orchestration', icon: CircleStackIcon },
+        { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: CpuChipIcon },
+        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: CircleStackIcon },
+        { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
+        { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
+        { name: 'AI Video Generator', href: '/ai-video-generator', icon: EyeIcon },
+        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: MicrophoneIcon }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c09
       ]
     },
     {
@@ -276,8 +294,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
       <div className="absolute inset-0 opacity-30">
-        <div className="cyber-grid"></div>
+        <div className="cyber-grid-enhanced"></div>
       </div>
+      
+      {/* Scan Lines */}
+      <div className="scan-lines"></div>
+      
+      {/* Data Streams */}
+      <div className="data-stream"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between h-16">
