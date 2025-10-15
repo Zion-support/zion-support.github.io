@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
 import React, { useState, useRef, useEffect } from 'react';
 
-interface ImageOptimizerProps {};
+interface ImageOptimizerProps {
   src: string;
   alt: string;
   className?: string;
@@ -9,77 +8,92 @@ interface ImageOptimizerProps {};
   height?: number;
   priority?: boolean;
   placeholder?: string;
-};
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({};
-  src, alt, className = '', _width, _height, priority = false, _placeholder, effect = 'blur', threshold = 100, _onLoad, _onError
-}) => {};
+}
+
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
+  src, alt, className = '', width, height, priority = false, placeholder
+}) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
-  const handleLoad = () => {};
+  const handleLoad = () => {
     setIsLoaded(true);
   };
 
-  const handleError = () => {};
+  const handleError = () => {
     setHasError(true);
   };
 
   // Generate optimized src with WebP support
-  const getOptimizedSrc = (_originalSrc: string) => {};
-    if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {};
+  const getOptimizedSrc = (originalSrc: string) => {
+    if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {
       return originalSrc;
-    };
+    }
+    
     // Add WebP support if supported
-    if (typeof window !== 'undefined' && 'WebP' in window) {};
+    if (typeof window !== 'undefined' && 'WebP' in window) {
       const webpSrc = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp');
       return webpSrc;
-    };
+    }
+    
     return originalSrc;
   };
 
-  // Generate responsive srcset
-  const generateSrcSet = (_baseSrc: string) => {};
-    if (baseSrc.startsWith('http') || baseSrc.startsWith('/')) {};
-      return baseSrc;
-    };
-    const sizes = [320, 640, 768, 1024, 1280, 1920];
-    const srcSet = sizes
-      .map(size => `${baseSrc}?w=${size} ${size}w`)
-      .join(', ');
-    
-    return srcSet;
-  };
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+    if (priority) return;
 
-  const optimizedSrc = getOptimizedSrc(src);
-  const srcSet = generateSrcSet(src);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
 
-  if (hasError) {};
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [priority]);
+
+  if (hasError) {
     return (
-      <div 
-        className={`bg-gray-200 flex items-center justify-center ${className}`};
-        style={{ width, height }};
-      ></div>
-        <span className="text-gray-500 text-sm">Image failed to load</span>
+      <div className={`flex items-center justify-center bg-gray-200 ${className}`} style={{ width, height }}>
+        <span className="text-gray-500">Failed to load image</span>
       </div>
     );
-  };
-  if (priority) {};
+  }
+
+  if (!isInView && !priority) {
     return (
-      <img
-        ref={imgRef};
-        src={optimizedSrc};
-        srcSet={srcSet};
-        alt={alt};
-        className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`};
-        width={width};
-        height={height};
-        onLoad={handleLoad};
-        onError={handleError};
-        loading="eager"
-        decoding="async"
+      <div 
+        ref={imgRef}
+        className={`bg-gray-200 animate-pulse ${className}`} 
+        style={{ width, height }}
       />
     );
-  };
+  }
+
   return (
+    <img
+      ref={imgRef}
+      src={getOptimizedSrc(src)}
+      alt={alt}
+      width={width}
+      height={height}
+      className={className}
+      loading={priority ? "eager" : "lazy"}
+      decoding="async"
+      onLoad={handleLoad}
+      onError={handleError}
+    />
+  );
+};
+
+export default ImageOptimizer;
