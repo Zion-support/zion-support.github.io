@@ -1,4 +1,4 @@
-import { NextPage } from 'next';
+// Next.js types for compatibility
 
 declare module 'next' {
   interface NextPageContext {
