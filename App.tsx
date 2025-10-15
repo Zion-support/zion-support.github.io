@@ -1,7 +1,6 @@
 import React, { Suspense, lazy, useEffect } from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import './app/styles/futuristic.css'
 
 // Components
 import Navigation from './app/components/Navigation'
@@ -87,13 +86,6 @@ function App() {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
-      // Preload critical CSS
-      const criticalCSS = document.createElement('link')
-      criticalCSS.rel = 'preload'
-      criticalCSS.href = '/app/styles/futuristic.css'
-      criticalCSS.as = 'style'
-      document.head.appendChild(criticalCSS)
-
       // Preload critical fonts
       const fontPreload = document.createElement('link')
       fontPreload.rel = 'preload'

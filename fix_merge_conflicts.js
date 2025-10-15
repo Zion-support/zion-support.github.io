@@ -1,3 +1,0 @@
-#!/usr/bin// Fixed regex
-
-)]
