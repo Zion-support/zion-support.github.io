@@ -8,7 +8,6 @@ import {
   Brain, 
   Server, 
   Rocket,
-  Users,
   Settings
 } from 'lucide-react';
 

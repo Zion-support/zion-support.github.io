@@ -15,7 +15,6 @@ import {
   BarChart3,
   Code,
   Cloud,
-  Database,
   Settings
 } from 'lucide-react';
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import path from 'path';
+// import path from 'path';
 import { glob } from 'glob';
 
 // Patterns to fix malformed object syntax
@@ -52,12 +52,16 @@ function fixFile(filePath) {
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`Fixed: ${filePath}`);
+      }
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    if (process.env.NODE_ENV === 'development') {
+      console.error(`Error fixing ${filePath}:`, error.message);
+    }
     return false;
   }
 }
@@ -85,7 +89,9 @@ function main() {
     }
   }
   
-  console.log(`\nFixed ${totalFixed} files`);
+  if (process.env.NODE_ENV === 'development') {
+    console.log(`\nFixed ${totalFixed} files`);
+  }
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

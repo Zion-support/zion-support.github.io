@@ -195,7 +195,7 @@ const ITServicesPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Comprehensive IT services designed to optimize your technology infrastructure, enhance security, 
-              and drive digital transformation. From cloud migration to cybersecurity, we've got you covered.
+              and drive digital transformation. From cloud migration to cybersecurity, we&apos;ve got you covered.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -401,7 +401,7 @@ const ITServicesPage: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your IT infrastructure with our comprehensive services. From cloud migration to 
-            cybersecurity, we'll help you build a robust, scalable, and secure technology foundation.
+            cybersecurity, we&apos;ll help you build a robust, scalable, and secure technology foundation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
