@@ -2,6 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import './index.css';
+import { logger } from './utils/logger';
 
 // Ensure scheduler is properly initialized
 if (typeof window !== 'undefined') {
@@ -28,10 +29,12 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker
       .register("/sw.js")
       .then((registration) => {
-        console.log("Service Worker registered successfully:", registration.scope);
+        // Service Worker registered successfully
+        logger.info("Service Worker registered successfully:", registration.scope);
       })
       .catch((registrationError) => {
-        console.log("Service Worker registration failed:", registrationError);
+        // Service Worker registration failed
+        logger.error("Service Worker registration failed:", registrationError);
       });
   });
 }

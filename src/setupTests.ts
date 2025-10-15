@@ -24,14 +24,14 @@ Object.defineProperty(window, 'matchMedia', {
 global.IntersectionObserver = class IntersectionObserver {
   root = null;
   rootMargin = '';
-  thresholds = [];
+  thresholds: number[] = [];
   
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
   takeRecords() { return []; }
-} as any;
+} as unknown as typeof IntersectionObserver;
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
