@@ -1,312 +1,148 @@
-'use client';
 import React from 'react';
-import SEOHead from '../components/SEOHead';
-import { 
-  CogIcon, 
-  CloudIcon, 
-  ShieldCheckIcon, 
-  CheckCircleIcon,
-  ArrowRightIcon,
-  StarIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  SparklesIcon,
-  CpuChipIcon,
-  EyeIcon,
-  CodeBracketIcon,
-  DevicePhoneMobileIcon,
-  CircleStackIcon,
-  SignalIcon,
-  RocketLaunchIcon,
-  ChartBarIcon
-} from '@heroicons/react/24/outline';
+import { Helmet } from 'react-helmet-async';
 
 const ITSolutionsPage: React.FC = () => {
-  const services = [
-    {
-      icon: CloudIcon,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions with AWS, Azure, and Google Cloud. 99.9% uptime guarantee with 24/7 monitoring.',
-      features: ['AWS/Azure/GCP expertise', 'Auto-scaling solutions', 'Disaster recovery', 'Cost optimization'],
-      pricing: 'Starting at $2,999/mo',
-      popular: true
-    },
-    {
-      icon: CodeBracketIcon,
-      title: 'Web Development',
-      description: 'Modern, responsive web applications built with React, Next.js, and cutting-edge technologies.',
-      features: ['React/Next.js expertise', 'Mobile-first design', 'SEO optimization', 'Performance optimization'],
-      pricing: 'Starting at $4,999/project',
-      popular: false
-    },
-    {
-      icon: DevicePhoneMobileIcon,
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android with seamless user experience.',
-      features: ['iOS/Android native', 'React Native/Flutter', 'App Store optimization', 'Push notifications'],
-      pricing: 'Starting at $7,999/app',
-      popular: false
-    },
-    {
-      icon: CircleStackIcon,
-      title: 'Database Management',
-      description: 'Enterprise-grade database solutions with optimization, backup, and security management.',
-      features: ['MySQL/PostgreSQL/MongoDB', 'Performance tuning', 'Backup & recovery', 'Security hardening'],
-      pricing: 'Starting at $1,999/mo',
-      popular: false
-    },
-    {
-      icon: SignalIcon,
-      title: 'Network Infrastructure',
-      description: 'Robust network solutions with 5G capabilities, IoT integration, and enterprise security.',
-      features: ['5G network setup', 'IoT device integration', 'Network security', 'Performance monitoring'],
-      pricing: 'Starting at $3,999/mo',
-      popular: false
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Cybersecurity Solutions',
-      description: 'Comprehensive security solutions including penetration testing, compliance, and threat monitoring.',
-      features: ['Penetration testing', 'SOC 2 compliance', 'Threat detection', 'Security audits'],
-      pricing: 'Starting at $2,499/mo',
-      popular: false
-    }
-  ];
-
-  const technologies = [
-    { name: 'React/Next.js', category: 'Frontend', description: 'Modern web applications' },
-    { name: 'Node.js/Python', category: 'Backend', description: 'Scalable server solutions' },
-    { name: 'AWS/Azure/GCP', category: 'Cloud', description: 'Cloud infrastructure' },
-    { name: 'Docker/Kubernetes', category: 'DevOps', description: 'Container orchestration' },
-    { name: 'MongoDB/PostgreSQL', category: 'Database', description: 'Data management' },
-    { name: 'React Native/Flutter', category: 'Mobile', description: 'Cross-platform apps' },
-    { name: 'TensorFlow/PyTorch', category: 'AI/ML', description: 'Machine learning' },
-    { name: 'Blockchain/Solidity', category: 'Blockchain', description: 'Decentralized solutions' }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Solutions',
-      role: 'CTO',
-      content: 'Zion Tech Group transformed our entire IT infrastructure. Their cloud solutions reduced our costs by 40% while improving performance.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      company: 'E-commerce Plus',
-      role: 'VP of Technology',
-      content: 'The web development team delivered an exceptional e-commerce platform that increased our conversion rates by 60%.',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'StartupXYZ',
-      role: 'Founder',
-      content: 'Their mobile app development expertise helped us launch our product successfully. The app has 4.8 stars on both stores.',
-      rating: 5
-    }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '150+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' },
-    { number: '50+', label: 'Technologies Mastered' },
-    { number: '10+', label: 'Years Experience' }
-  ];
-
   return (
     <>
-      <SEOHead 
-        title="IT Solutions - Comprehensive Technology Services | Zion Tech Group"
-        description="Complete IT solutions including cloud infrastructure, web development, mobile apps, cybersecurity, and digital transformation. Expert team with 10+ years experience."
-        keywords="IT solutions, cloud infrastructure, web development, mobile development, cybersecurity, digital transformation, technology consulting"
-      />
+      <Helmet>
+        <title>IT Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, web development, mobile development, and more. Transform your business with our expert IT services." />
+        <meta name="keywords" content="IT solutions, cloud infrastructure, web development, mobile development, database management, network infrastructure" />
+        <link rel="canonical" href="https://ziontechgroup.com/it-solutions" />
+      </Helmet>
       
-      <div className="min-h-screen bg-slate-900 text-white">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 lg:py-32">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-slate-900 to-indigo-900/30"></div>
-          <div className="absolute inset-0 cyber-grid opacity-20"></div>
-          
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
-                <SparklesIcon className="w-5 h-5 text-blue-400 mr-2" />
-                <span className="text-blue-300 text-sm font-medium">Comprehensive IT Solutions</span>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              IT Solutions
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive IT solutions to transform your business with cutting-edge technology, 
+              scalable infrastructure, and expert development services.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+              <div className="w-16 h-16 bg-blue-500 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                </svg>
               </div>
-              
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent holographic">
-                  IT Solutions
-                </span>
-              </h1>
-              
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Complete technology solutions for modern businesses. From cloud infrastructure to mobile apps, we deliver enterprise-grade solutions that drive growth.
+              <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3>
+              <p className="text-gray-300 mb-6">
+                Scalable cloud solutions with AWS, Azure, and Google Cloud. 
+                Optimize performance and reduce costs with our expert cloud architecture.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25">
-                  Get Free Consultation
-                </button>
-                <button className="border-2 border-blue-400 text-blue-300 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
-                  View Our Work
-                </button>
+              <a href="/cloud-infrastructure" className="text-blue-400 hover:text-blue-300 font-semibold">
+                Learn More →
+              </a>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+              <div className="w-16 h-16 bg-green-500 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
               </div>
-              
-              <div className="grid grid-cols-2 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-3xl font-bold text-blue-400 mb-2 neon-text">{stat.number}</div>
-                    <div className="text-gray-300 text-sm">{stat.label}</div>
-                  </div>
-                ))}
+              <h3 className="text-2xl font-bold text-white mb-4">Web Development</h3>
+              <p className="text-gray-300 mb-6">
+                Modern, responsive web applications built with React, Next.js, and the latest technologies. 
+                Fast, secure, and SEO-optimized.
+              </p>
+              <a href="/web-development" className="text-blue-400 hover:text-blue-300 font-semibold">
+                Learn More →
+              </a>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+              <div className="w-16 h-16 bg-purple-500 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-20 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                Our <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">IT Services</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
+              <h3 className="text-2xl font-bold text-white mb-4">Mobile Development</h3>
+              <p className="text-gray-300 mb-6">
+                Native and cross-platform mobile apps for iOS and Android. 
+                Built with React Native, Flutter, and native technologies.
               </p>
+              <a href="/mobile-development" className="text-blue-400 hover:text-blue-300 font-semibold">
+                Learn More →
+              </a>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className={`group holographic-card p-8 hover:scale-105 transition-all duration-300 hover:shadow-xl ${
-                  service.popular ? 'border-blue-500 shadow-blue-500/20' : 'border-slate-700 hover:border-blue-500 hover:shadow-blue-500/20'
-                }`}>
-                  {service.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-border-animated">
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <span className="text-sm text-blue-400 font-medium neon-text">{service.pricing}</span>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-gray-400 mb-6">
-                    {service.description}
-                  </p>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <button className="w-full cyber-button py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
-                    Learn More
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Technologies Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Technologies We Master</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We work with cutting-edge technologies to deliver modern, scalable, and secure solutions.
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+              <div className="w-16 h-16 bg-orange-500 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Database Management</h3>
+              <p className="text-gray-300 mb-6">
+                Expert database design, optimization, and management. 
+                PostgreSQL, MySQL, MongoDB, and cloud database solutions.
               </p>
+              <a href="/database-management" className="text-blue-400 hover:text-blue-300 font-semibold">
+                Learn More →
+              </a>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {technologies.map((tech, index) => (
-                <div key={index} className="group bg-slate-800/50 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20">
-                  <div className="text-center">
-                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors">
-                      {tech.name}
-                    </h3>
-                    <p className="text-sm text-blue-400 font-medium mb-2">{tech.category}</p>
-                    <p className="text-gray-400 text-sm">
-                      {tech.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Testimonials Section */}
-        <section className="py-20 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                What Our <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Clients Say</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join hundreds of businesses that trust us with their technology needs.
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+              <div className="w-16 h-16 bg-red-500 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Network Infrastructure</h3>
+              <p className="text-gray-300 mb-6">
+                Robust network design, security, and monitoring solutions. 
+                Enterprise-grade networking for optimal performance and security.
               </p>
+              <a href="/network-infrastructure" className="text-blue-400 hover:text-blue-300 font-semibold">
+                Learn More →
+              </a>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/20">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <StarIcon key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                  </div>
-                </div>
-              ))}
+
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+              <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">5G Solutions</h3>
+              <p className="text-gray-300 mb-6">
+                Next-generation 5G network solutions and applications. 
+                Ultra-fast connectivity and IoT integration for modern businesses.
+              </p>
+              <a href="/5g-solutions" className="text-blue-400 hover:text-blue-300 font-semibold">
+                Learn More →
+              </a>
             </div>
           </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900/40 via-slate-900 to-indigo-900/40">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-              Ready to Transform Your Technology?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our IT solutions can accelerate your digital transformation and drive growth.
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-12 border border-white/20 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your IT Infrastructure?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let our expert team help you build, optimize, and scale your IT solutions 
+              with cutting-edge technology and best practices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25">
-                Get Free Consultation
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300">
-                View Case Studies
-              </button>
+              <a 
+                href="/contact" 
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-colors"
+              >
+                Get Started Today
+              </a>
+              <a 
+                href="/pricing" 
+                className="bg-transparent border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-colors"
+              >
+                View Pricing
+              </a>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </>
   );
