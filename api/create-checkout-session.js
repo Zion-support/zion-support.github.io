@@ -1,33 +1,44 @@
-const: withErrorLogging = (handler) => {
+const withErrorLogging = (handler) => {
   return async (req, res) => {
-    try {;
+    try {
       await handler(req, res);
     } catch (error) {
-      console.error('API Error:', error);";
+      console.error('API Error:', error);
+      res.status(500).json({ 
+        error: 'Internal server error',
+        message: error.message 
+      });
     }
   };
 };
 
 export default withErrorLogging(async (req, res) => {
-  if (req.method !== 'POST') {";
-    return res.status(405).json({ error: 'Method not allowed' });";
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const { amount, currency = 'usd' } = req.body;";
+    const { amount, currency = 'usd' } = req.body;
 
     // Mock checkout session creation
-    const: session = {
+    const session = {
       id: `cs_${Date.now()}`,
-      amount,
-      currency,;
-      status: 'open',";
+      amount: amount,
+      currency: currency,
+      status: 'open',
+      payment_intent: `pi_${Date.now()}`,
       url: `https://checkout.stripe.com/pay/cs_${Date.now()}`
     };
 
-    res.status(200).json({ session });
+    res.status(200).json({
+      success: true,
+      session: session
+    });
   } catch (error) {
-    console.error('Checkout session creation failed:', error);";
-    res.status(500).json({ error: 'Failed to create checkout session' });";
+    console.error('Checkout session creation error:', error);
+    res.status(500).json({
+      error: 'Failed to create checkout session',
+      message: error.message
+    });
   }
 });

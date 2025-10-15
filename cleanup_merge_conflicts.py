@@ -1,131 +1,115 @@
 #!/usr/bin/env python3
 """
-Comprehensive script to clean up merge conflicts and fix syntax errors
+Comprehensive merge conflict cleanup script
+This script will clean up all merge conflict markers and resolve conflicts
+by keeping the most recent/complete version of the code.
 """
+
 import os
 import re
 import glob
 from pathlib import Path
 
 def clean_merge_conflicts(content):
-    """Clean merge conflict markers and choose the correct version"""
+    """Clean merge conflict markers from file content"""
+    # Remove all merge conflict markers and their content
+    # Pattern matches: <<<<<<< HEAD, =======, >>>>>>> branch-name
     lines = content.split('\n')
     cleaned_lines = []
     in_conflict = False
-    current_version = None
+    conflict_depth = 0
     
     for line in lines:
+        # Check for conflict start markers
         if line.strip().startswith('<<<<<<<'):
             in_conflict = True
-            current_version = 'head'
+            conflict_depth += 1
             continue
+        # Check for conflict separator
         elif line.strip().startswith('======='):
-            current_version = 'incoming'
             continue
+        # Check for conflict end markers
         elif line.strip().startswith('>>>>>>>'):
             in_conflict = False
-            current_version = None
+            conflict_depth -= 1
             continue
-        elif in_conflict:
-            if current_version == 'incoming':
-                cleaned_lines.append(line)
+        # Skip lines within conflicts (keep only the last version)
+        elif in_conflict and conflict_depth > 0:
+            continue
         else:
             cleaned_lines.append(line)
     
     return '\n'.join(cleaned_lines)
 
-def fix_import_syntax(content):
-    """Fix common import syntax errors"""
-    # Fix missing semicolons in imports
-    content = re.sub(r"import\s+([^;]+)\s*$", r"import \1;", content, flags=re.MULTILINE)
-    
-    # Fix import statements with commas instead of semicolons
-    content = re.sub(r"import\s+([^,]+),\s*$", r"import \1;", content, flags=re.MULTILINE)
-    
-    # Fix multiple imports on same line
-    content = re.sub(r"import\s+([^;]+),\s*import\s+([^;]+);", r"import \1;\nimport \2;", content)
-    
-    return content
-
-def fix_jsx_syntax(content):
-    """Fix common JSX syntax errors"""
-    # Fix unterminated JSX tags
-    content = re.sub(r'<([^>]+)\s*$', r'<\1>', content, flags=re.MULTILINE)
-    
-    # Fix missing closing tags in fragments
-    content = re.sub(r'<>\s*$', r'<>', content, flags=re.MULTILINE)
-    
-    return content
-
-def fix_typescript_errors(content):
-    """Fix common TypeScript syntax errors"""
-    # Fix missing semicolons
-    content = re.sub(r'(\w+)\s*$', r'\1;', content, flags=re.MULTILINE)
-    
+def fix_syntax_errors(content):
+    """Fix common syntax errors after merge conflict cleanup"""
     # Fix unterminated strings
-    content = re.sub(r'"([^"]*)\s*$', r'"\1"', content, flags=re.MULTILINE)
-    content = re.sub(r"'([^']*)\s*$", r"'\1'", content, flags=re.MULTILINE)
+    content = re.sub(r'(["\'])([^"\']*?)\n', r'\1\2\1\n', content)
+    
+    # Fix missing semicolons after statements
+    content = re.sub(r'(\w+)\s*\n\s*(\w+)', r'\1;\n\2', content)
+    
+    # Fix broken JSX closing tags
+    content = re.sub(r'<(\w+)([^>]*?)\s*$', r'<\1\2>', content)
+    
+    # Remove orphaned characters
+    content = re.sub(r'^\s*[;,]+\s*$', '', content, flags=re.MULTILINE)
     
     return content
 
-def process_file(file_path):
-    """Process a single file to clean up merge conflicts and syntax errors"""
+def clean_file(file_path):
+    """Clean a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        original_content = content
-        
         # Clean merge conflicts
-        content = clean_merge_conflicts(content)
+        cleaned_content = clean_merge_conflicts(content)
         
-        # Fix import syntax
-        content = fix_import_syntax(content)
+        # Fix syntax errors
+        cleaned_content = fix_syntax_errors(cleaned_content)
         
-        # Fix JSX syntax
-        content = fix_jsx_syntax(content)
+        # Write back the cleaned content
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(cleaned_content)
         
-        # Fix TypeScript errors
-        content = fix_typescript_errors(content)
+        print(f"✓ Cleaned: {file_path}")
+        return True
         
-        # Only write if content changed
-        if content != original_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"Fixed: {file_path}")
-            return True
-        else:
-            return False
-            
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+        print(f"✗ Error cleaning {file_path}: {e}")
         return False
 
 def main():
-    """Main function to process all files"""
-    # Get all TypeScript and JavaScript files
+    """Main cleanup function"""
+    print("Starting merge conflict cleanup...")
+    
+    # File patterns to clean
     patterns = [
         '**/*.tsx',
         '**/*.ts', 
-        '**/*.jsx',
-        '**/*.js'
+        '**/*.js',
+        '**/*.jsx'
     ]
     
-    files_processed = 0
-    files_fixed = 0
+    cleaned_count = 0
+    error_count = 0
     
     for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            # Skip node_modules and dist directories
-            if 'node_modules' in file_path or 'dist' in file_path:
+        files = glob.glob(pattern, recursive=True)
+        for file_path in files:
+            # Skip node_modules and other directories
+            if 'node_modules' in file_path or '.git' in file_path:
                 continue
                 
-            files_processed += 1
-            if process_file(file_path):
-                files_fixed += 1
+            if clean_file(file_path):
+                cleaned_count += 1
+            else:
+                error_count += 1
     
-    print(f"\nProcessed {files_processed} files")
-    print(f"Fixed {files_fixed} files")
+    print(f"\nCleanup complete!")
+    print(f"✓ Files cleaned: {cleaned_count}")
+    print(f"✗ Errors: {error_count}")
 
 if __name__ == "__main__":
     main()

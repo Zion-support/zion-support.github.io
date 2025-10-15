@@ -1,86 +1,70 @@
-<<<<<<< HEAD
-// API endpoint for quote requests
-<<<<<<< HEAD
-export default function handler(req, res) {
-  if (req.method !== 'POST') {'
-    return res.status(405).json({ error: 'Method not allowed' });'
+const withErrorLogging = (handler) => {
+  return async (req, res) => {
+    try {
+      await handler(req, res);
+    } catch (error) {
+      console.error('API Error:', error);
+      res.status(500).json({ 
+        error: 'Internal server error',
+        message: error.message 
+      });
+    }
+  };
+};
+
+export default withErrorLogging(async (req, res) => {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-export default function handler(req, res) {
-  res.status(200).json({ message: 'API endpoint working' });'
-}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
-          <div className="max-w-6xl mx-auto text-center">"
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">"
-              Quotes.js
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
-              Professional quotes.js services by Zion Tech Group.
-            </p>
-          </div>
-        </section>
+
   try {
-    // Process the quote request
+    const { 
+      projectType, 
+      description, 
+      budget, 
+      timeline, 
+      companyName, 
+      contactName, 
+      email, 
+      phone 
+    } = req.body;
+
+    // Validate required fields
+    if (!projectType || !description || !companyName || !contactName || !email) {
+      return res.status(400).json({
+        error: 'Project type, description, company name, contact name, and email are required'
+      });
+    }
+
+    // Mock quote generation
     const quote = {
-      id: Date.now().toString(),
-      name,
+      id: `quote_${Date.now()}`,
+      projectType,
+      description,
+      budget: budget || 'To be determined',
+      timeline: timeline || 'To be determined',
+      companyName,
+      contactName,
       email,
       phone,
-      details,
-      country: country || 'Not specified','
-      service: service || 'General inquiry','
-      status: 'pending','
+      status: 'pending',
+      estimatedCost: 'Contact for pricing',
       createdAt: new Date().toISOString()
-    }
-    // Here you would typically save the quote to a database
-    console.log('Quote request processed:', quote.id)
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ 
-      success: true,
-      message: 'Quote request submitted successfully' 
-    }))
-  } catch (error) {
-    console.error('Quote submission error:', error)
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Internal server error' }))
-=======
-      country: country || 'Not specified',}
-      service: service || 'General inquiry',}
-      status: 'pending',}
-      createdAt: new Date().toISOString()}
     };
-    // Here you would typically save the quote to a database
-    console.log('Quote request processed:', quote.id);'
-    res.setHeader('Content-Type', 'application/json');'
-    res.end(JSON.stringify({
+
+    console.log('Quote request:', quote);
+
+    // In a real application, you would save this to a database and send notifications
+    res.status(200).json({
       success: true,
-      message: 'Quote request submitted successfully' '
-    }));
+      message: 'Quote request received. We will provide a detailed quote within 48 hours.',
+      quote: quote
+    });
   } catch (error) {
-    console.error('Quote submission error:', error);'
-    res.setHeader('Content-Type', 'application/json');'
-    res.end(JSON.stringify({ error: 'Internal server error' }));'
+    console.error('Quote request error:', error);
+    res.status(500).json({
+      error: 'Failed to process quote request',
+      message: error.message
+    });
   }
-}
-=======
-export default async (req, res) => {
-  if (req.method !== 'POST') {";
-    return res.status(405).json({ error: 'Method not allowed' });";
-  }
-
-  try {
-    const { name, email, company, message, service } = req.body;
-
-    if (!name || !email || !message) {
-      return res.status(400).json({ error: 'Name, email, and message are required' });";
-    }
-
-    // Here you would typically save to a database or send an email
-    console.log('Quote request:', { name, email, company, message, service });";
-    
-    res.status(200).json({ success: true, message: 'Quote request submitted successfully!' });";
-  } catch (error) {
-    console.error('Quote request error:', error);";
-    res.status(500).json({ error: 'Failed to submit quote request' });";
-  }
-};
->>>>>>> main
+});

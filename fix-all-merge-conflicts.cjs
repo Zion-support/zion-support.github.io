@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-
 // Files with merge conflicts
 const filesWithConflicts = [
   './app/contact/page.tsx',
@@ -26,27 +25,21 @@ const filesWithConflicts = [
   './scripts/performance-analysis.js',
   './scripts/accessibility-audit.js'
 ];
-
 function fixMergeConflicts(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
       console.log(`File not found: ${filePath}`);
       return;
     }
-
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
-
     // Remove merge conflict markers and keep the HEAD version (first part)
     content = content.replace(/\n([\s\S]*?)\n>>>>>>> [^\n]+\n?/g, '$1');
-    
     // Remove any remaining conflict markers
     content = content.replace(/\n?/g, '');
     content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-
     // Clean up any double newlines that might have been created
     content = content.replace(/\n\n\n+/g, '\n\n');
-
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed merge conflicts in: ${filePath}`);
@@ -57,11 +50,8 @@ function fixMergeConflicts(filePath) {
     console.error(`Error processing ${filePath}:`, error.message);
   }
 }
-
 console.log('Starting merge conflict resolution...');
-
 filesWithConflicts.forEach(file => {
   fixMergeConflicts(file);
 });
-
 console.log('Merge conflict resolution completed!');
