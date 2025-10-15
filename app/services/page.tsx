@@ -92,7 +92,7 @@ const ServicesPage: React.FC = () => {
               {getCurrentServices().map((service, index) => (
                 <div
                   key={service.id}
-                  className="group relative glass-effect rounded-2xl p-8 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10"
+                  className="group relative card-futuristic p-8 hover:scale-105 transition-all duration-300"
                 >
                   {/* Service Icon */}
                   <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
