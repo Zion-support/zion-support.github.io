@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface FormData {
-  name: string;
-  email: string;
-  message: string;
-}
-
 const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
@@ -27,13 +21,19 @@ const ContactPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+    setSubmitStatus('idle');
+
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Here you would typically send the data to your backend
+      console.log('Form submitted:', formData);
+      
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
+      console.error('Error submitting form:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -45,8 +45,6 @@ const ContactPage: React.FC = () => {
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for your AI and IT solution needs. We're here to help." />
-        <meta name="keywords" content="contact, support, AI consulting, IT services, business inquiry" />
-        <link rel="canonical" href="https://ziontechgroup.com/contact" />
       </Helmet>
       
       <div className="min-h-screen bg-white">
@@ -85,14 +83,14 @@ const ContactPage: React.FC = () => {
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2>
               
               {submitStatus === 'success' && (
-                <div className="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
-                  Thank you for your message! We'll get back to you soon.
+                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
+                  <p className="text-green-800">Thank you for your message! We'll get back to you soon.</p>
                 </div>
               )}
               
               {submitStatus === 'error' && (
-                <div className="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
-                  Sorry, there was an error sending your message. Please try again.
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
+                  <p className="text-red-800">Sorry, there was an error sending your message. Please try again.</p>
                 </div>
               )}
               
@@ -139,7 +137,7 @@ const ContactPage: React.FC = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Tell us about your project or how we can help you..."
+                    placeholder="Tell us about your project or how we can help..."
                   ></textarea>
                 </div>
                 <button
