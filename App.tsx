@@ -67,6 +67,10 @@ const HelpPage = lazy(() => import('./app/help/page'));
 const AccessibilityPage = lazy(() => import('./app/accessibility/page'));
 const APIDocsPage = lazy(() => import('./app/api-docs/page'));
 const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
+const DemoPage = lazy(() => import('./app/demo/page'));
+const SupportPage = lazy(() => import('./app/support/page'));
+const TutorialsPage = lazy(() => import('./app/tutorials/page'));
+const DocsPage = lazy(() => import('./app/docs/page'));
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -194,6 +198,10 @@ function App() {
                     <Route path="/accessibility" element={<AccessibilityPage />} />
                     <Route path="/api-docs" element={<APIDocsPage />} />
                     <Route path="/partnerships" element={<PartnershipsPage />} />
+                    <Route path="/demo" element={<DemoPage />} />
+                    <Route path="/support" element={<SupportPage />} />
+                    <Route path="/tutorials" element={<TutorialsPage />} />
+                    <Route path="/docs" element={<DocsPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">

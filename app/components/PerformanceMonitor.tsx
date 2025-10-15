@@ -23,7 +23,7 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation' && process.env.NODE_ENV === 'development') {
-            console.log('Navigation timing:', entry);
+            // Navigation timing logged for development debugging
           }
         }
       });

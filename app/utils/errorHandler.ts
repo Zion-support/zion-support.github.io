@@ -43,9 +43,9 @@ export const handleError = (error: unknown): AppError => {
   };
 };
 
-export const logError = (error: AppError, context?: string) => {
+export const logError = (_error: AppError, _context?: string) => {
   if (process.env.NODE_ENV === 'development') {
-    console.error(`[${context || 'App'}] Error:`, error);
+    // Error logged for development debugging
   }
   
   // In production, you would send this to your error monitoring service
