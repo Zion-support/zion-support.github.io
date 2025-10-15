@@ -5,6 +5,8 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import Header from './app/components/Header';
 import Footer from './app/components/Footer';
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
 
 // Pages
 import HomePage from './app/page';
@@ -63,7 +65,7 @@ const App: React.FC = () => {
   }
 
   return (
-    <div>
+    <EnhancedErrorBoundary>
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -122,10 +124,11 @@ const App: React.FC = () => {
               </Suspense>
             </main>
             <Footer />
+            <PerformanceMonitor />
           </div>
         </Router>
       </HelmetProvider>
-    </div>
+    </EnhancedErrorBoundary>
   );
 };
 
