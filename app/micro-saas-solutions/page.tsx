@@ -1,18 +1,65 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
+const MicroSaasSolutionsPage: React.FC = () => {
+  const solutions = [
+    {
+      name: "AI-Powered Analytics Dashboard",
+      description: "Comprehensive analytics platform with AI-driven insights for data visualization and business intelligence.",
+      price: "Starting at $299/month",
+      icon: "📊",
+      link: "/ai-analytics-dashboard"
+    },
+    {
+      name: "Customer Relationship Management",
+      description: "Streamlined CRM solution with automated workflows and customer lifecycle management.",
+      price: "Starting at $199/month",
+      icon: "👥",
+      link: "/crm-solution"
+    },
+    {
+      name: "Project Management Suite",
+      description: "Complete project management tool with team collaboration, task tracking, and reporting features.",
+      price: "Starting at $149/month",
+      icon: "📋",
+      link: "/project-management"
+    },
+    {
+      name: "E-commerce Platform",
+      description: "Full-featured e-commerce solution with inventory management, payment processing, and analytics.",
+      price: "Starting at $399/month",
+      icon: "🛒",
+      link: "/ecommerce-platform"
+    },
+    {
+      name: "Content Management System",
+      description: "Flexible CMS with multi-site support, SEO optimization, and content scheduling capabilities.",
+      price: "Starting at $179/month",
+      icon: "📝",
+      link: "/cms-solution"
+    },
+    {
+      name: "Financial Management Tool",
+      description: "Comprehensive financial tracking with invoicing, expense management, and reporting features.",
+      price: "Starting at $249/month",
+      icon: "💰",
+      link: "/financial-management"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Micro SAAS Solutions
             </span>
           </h1>
-
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Powerful, scalable software solutions designed to streamline your business operations and drive growth.
+          </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
