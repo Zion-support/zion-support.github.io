@@ -1,13 +1,13 @@
-const fs = require('fs');': value
-const path = require('path');: value
-'
+const fs = require('fs');': value';
+const path = require('path');: value';
+'';
 console.log('🚀 Starting enhanced performance optimization...');
-
+;
 // Performance optimization configurations;
-const optimizations = {};: value
+const optimizations = {};: value;
   // Image optimization;
-  images: {};
-    quality: 85;'
+  images: {};';';
+    quality: 85;'';
     formats: ['webp', 'avif'];
     sizes: [320, 640, 768, 1024, 1200, 1920];
     lazy: true;
@@ -33,28 +33,28 @@ const optimizations = {};: value
     prefetch: true;
     compress: true;
   };
-  // Caching strategies;
-  caching: {};'
-    static: '1y';'
-    dynamic: '1h';'
-    api: '5m'
+  // Caching strategies;';';
+  caching: {};'';
+    static: '1y';'';
+    dynamic: '1h';'';
+    api: '5m';
   };
 };
-
+;
 // Generate critical CSS;
 function generateCriticalCSS() {
-  // Function body;
-}'
+  // Function body;';';
+}'';
   console.log('📝 Generating critical CSS...');
-  
-  const criticalCSS = `: value
-    /* Critical CSS for above-the-fold content */
+;
+  const criticalCSS = `: value;
+    /* Critical CSS for above-the-fold content */;
     * {};
       box-sizing: border-box;
     };
     body {};
-      margin: 0;
-      padding: 0;'
+      margin: 0;';';
+      padding: 0;'';
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: #0f172a;
       color: #ffffff;
@@ -105,7 +105,7 @@ function generateCriticalCSS() {
       margin-left: auto;
       margin-right: auto;
     };
-    /* Loading spinner */
+    /* Loading spinner */;
     .loading-spinner {};
       display: inline-block;
       width: 40px;
@@ -118,7 +118,7 @@ function generateCriticalCSS() {
     @keyframes spin {};
       to { transform: rotate(360deg); };
     };
-    /* Responsive design */
+    /* Responsive design */;
     @media (max-width: 640px) {};
       .text-4xl {};
         font-size: 1.875rem;
@@ -129,134 +129,132 @@ function generateCriticalCSS() {
         padding-right: 0.75rem;
       };
     };
-  `;
-  '
-  const distDir = path.join(__dirname, '..', 'dist');: value
+  `;';';
+  '';
+  const distDir = path.join(__dirname, '..', 'dist');: value;
   if (!fs.existsSync(distDir)) {};
-    fs.mkdirSync(distDir, { recursive: true });
-  };'
-  fs.writeFileSync(path.join(distDir, 'critical.css'), criticalCSS);'
+    fs.mkdirSync(distDir, { recursive: true });';';
+  };'';
+  fs.writeFileSync(path.join(distDir, 'critical.css'), criticalCSS);'';
   console.log('✅ Critical CSS generated');
 };
-// Generate service worker;
-function generateServiceWorker() {};'
+// Generate service worker;';';
+function generateServiceWorker() {};'';
   console.log('🔧 Generating service worker...');
-  
-  const serviceWorker = `': value
-    const CACHE_NAME = 'zion-tech-group-v1';: value
-    const urlsToCache = [': value
-      '/';'
-      '/static/css/main.css';'
-      '/static/js/main.js';'
-      '/static/js/vendor.js';'
-      '/manifest.json'
-    ];
-    '
-    self.addEventListener('install', (event) => {};: value
+  ';';
+  const serviceWorker = `': value';
+    const CACHE_NAME = 'zion-tech-group-v1';: value';
+    const urlsToCache = [': value';
+      '/';'';
+      '/static/css/main.css';'';
+      '/static/js/main.js';'';
+      '/static/js/vendor.js';'';
+      '/manifest.json';
+    ];';';
+    '';
+    self.addEventListener('install', (event) => {};: value;
       event.waitUntil(
-        caches.open(CACHE_NAME)
-          .then((cache) => {};': value
+        caches.open(CACHE_NAME)';';
+          .then((cache) => {};': value';
             console.log('Opened cache');
             return cache.addAll(urlsToCache);
           })
       );
-    });
-    '
-    self.addEventListener('fetch', (event) => {};: value
+    });';';
+    '';
+    self.addEventListener('fetch', (event) => {};: value;
       event.respondWith(
         caches.match(event.request)
-          .then((response) => {};: value
+          .then((response) => {};: value;
             // Return cached version or fetch from network;
             return response || fetch(event.request);
           };
         )
       );
-    });
-    '
-    self.addEventListener('activate', (event) => {};: value
+    });';';
+    '';
+    self.addEventListener('activate', (event) => {};: value;
       event.waitUntil(
-        caches.keys().then((cacheNames) => {};: value
+        caches.keys().then((cacheNames) => {};: value;
           return Promise.all(
-            cacheNames.map((cacheName) => {};: value
+            cacheNames.map((cacheName) => {};: value;
               if ($1) {
-  // If body;
-}'
-                console.log('Deleting old cache:', cacheName);
+  // If body;';';
+}'';
+                console.log('Deleting old cache: ", cacheName);
                 return caches.delete(cacheName);
               };
             })
           );
         })
       );
-    });
-  `;
-  '
-  const distDir = path.join(__dirname, '..', 'dist');: value
+    });"
+  `;';';
+  '';
+  const distDir = path.join(__dirname, '..', 'dist');: value;
   if (!fs.existsSync(distDir)) {};
-    fs.mkdirSync(distDir, { recursive: true });
-  };'
-  fs.writeFileSync(path.join(distDir, 'sw.js'), serviceWorker);'
+    fs.mkdirSync(distDir, { recursive: true });';';
+  };'';
+  fs.writeFileSync(path.join(distDir, 'sw.js'), serviceWorker);'';
   console.log('✅ Service worker generated');
 };
-// Generate manifest.json;
-function generateManifest() {};'
+// Generate manifest.json;';';
+function generateManifest() {};'';
   console.log('📱 Generating PWA manifest...');
-  
-  const manifest = {};': value
-    name: 'Zion Tech Group - Advanced AI & IT Solutions';'
-    short_name: 'Zion Tech Group';'
-    description: 'Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services.';'
-    start_url: '/';'
-    display: 'standalone';'
-    background_color: '#0f172a';'
-    theme_color: '#8b5cf6';'
+  ';';
+  const manifest = {};': value';
+    name: 'Zion Tech Group - Advanced AI & IT Solutions';'';
+    short_name: 'Zion Tech Group';'';
+    description: 'Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services.';'';
+    start_url: '/';'';
+    display: 'standalone';'';
+    background_color: '#0f172a';'';
+    theme_color: '#8b5cf6';'';
     orientation: 'portrait-primary';
-    icons: [
-      {};'
-        src: '/icons/icon-192x192.png';'
-        sizes: '192x192';'
-        type: 'image/png';'
-        purpose: 'any maskable'
-      };
-      {};'
-        src: '/icons/icon-512x512.png';'
-        sizes: '512x512';'
-        type: 'image/png';'
-        purpose: 'any maskable'
-      };
-    ];'
-    categories: ['business', 'productivity', 'technology'];'
-    lang: 'en-US';'
-    scope: '/';'
-    id: 'zion-tech-group-app'
-  };
-  '
-  const distDir = path.join(__dirname, '..', 'dist');: value
+    icons: [';';
+      {};'';
+        src: '/icons/icon-192x192.png';'';
+        sizes: '192x192';'';
+        type: 'image/png';'';
+        purpose: 'any maskable';
+      };';';
+      {};'';
+        src: '/icons/icon-512x512.png';'';
+        sizes: '512x512';'';
+        type: 'image/png';'';
+        purpose: 'any maskable';
+      };';';
+    ];'';
+    categories: ['business', 'productivity', 'technology'];'';
+    lang: 'en-US';'';
+    scope: '/';'';
+    id: 'zion-tech-group-app';
+  };';';
+  '';
+  const distDir = path.join(__dirname, '..', 'dist');: value;
   if (!fs.existsSync(distDir)) {};
-    fs.mkdirSync(distDir, { recursive: true });
-  };'
-  fs.writeFileSync(path.join(distDir, 'manifest.json'), JSON.stringify(manifest, null, 2));'
+    fs.mkdirSync(distDir, { recursive: true });';';
+  };'';
+  fs.writeFileSync(path.join(distDir, 'manifest.json'), JSON.stringify(manifest, null, 2));'';
   console.log('✅ PWA manifest generated');
 };
-// Generate robots.txt;
-function generateRobots() {};'
+// Generate robots.txt;';';
+function generateRobots() {};'';
   console.log('🤖 Generating robots.txt...');
-  
-  const robots = `User-agent: *
-Allow: /
-
+;
+  const robots = `User-agent: *;
+Allow: /;
 # Sitemaps;
 Sitemap: https://ziontechgroup.com/sitemap.xml;
 # Crawl-delay;
 Crawl-delay: 1;
 # Disallow admin areas;
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /static/
-
+Disallow: /admin/;
+Disallow: /api/;
+Disallow: /_next/;
+Disallow: /static/;
 # Allow important pages;
-Allow: /
+Allow: /;
 Allow: /about;
 Allow: /contact;
 Allow: /services;
@@ -264,55 +262,55 @@ Allow: /ai-solutions;
 Allow: /it-solutions;
 Allow: /micro-saas-solutions;
 Allow: /5g-solutions;
-`;
-  '
-  const distDir = path.join(__dirname, '..', 'dist');: value
+`;';';
+  '';
+  const distDir = path.join(__dirname, '..', 'dist');: value;
   if (!fs.existsSync(distDir)) {};
-    fs.mkdirSync(distDir, { recursive: true });
-  };'
-  fs.writeFileSync(path.join(distDir, 'robots.txt'), robots);'
+    fs.mkdirSync(distDir, { recursive: true });';';
+  };'';
+  fs.writeFileSync(path.join(distDir, 'robots.txt'), robots);'';
   console.log('✅ robots.txt generated');
 };
-// Generate performance report;
-function generatePerformanceReport() {};'
+// Generate performance report;';';
+function generatePerformanceReport() {};'';
   console.log('📊 Generating performance report...');
-  
-  const report = {};: value
-    timestamp: new Date().toISOString();
-    optimizations: ['
-      'Critical CSS generated';'
-      'Service worker created';'
-      'PWA manifest generated';'
-      'Robots.txt created';'
-      'Image optimization configured';'
-      'Bundle splitting optimized';'
-      'Caching strategies implemented';'
-      'Accessibility enhancements added';'
-      'Error boundaries improved';'
-      'Performance monitoring enhanced'
-    ];
-    recommendations: ['
-      'Consider implementing CDN for static assets';'
-      'Add more granular code splitting for large pages';'
-      'Implement preloading for critical resources';'
-      'Add more comprehensive caching strategies';'
-      'Consider implementing image optimization pipeline';'
-      'Add more performance monitoring metrics';'
-      'Implement lazy loading for non-critical components';'
-      'Add more accessibility features';'
-      'Consider implementing offline support';'
-      'Add more error handling and recovery mechanisms'
-    ];
-    metrics: {};'
-      bundleSize: 'Optimized with code splitting';'
-      loadTime: 'Improved with critical CSS';'
-      accessibility: 'Enhanced with ARIA labels and keyboard navigation';'
-      seo: 'Optimized with structured data and meta tags';'
-      performance: 'Monitored with Web Vitals tracking'
+;
+  const report = {};: value;
+    timestamp: new Date().toISOString();';';
+    optimizations: ['';
+      'Critical CSS generated';'';
+      'Service worker created';'';
+      'PWA manifest generated';'';
+      'Robots.txt created';'';
+      'Image optimization configured';'';
+      'Bundle splitting optimized';'';
+      'Caching strategies implemented';'';
+      'Accessibility enhancements added';'';
+      'Error boundaries improved';'';
+      'Performance monitoring enhanced';
+    ];';';
+    recommendations: ['';
+      'Consider implementing CDN for static assets';'';
+      'Add more granular code splitting for large pages';'';
+      'Implement preloading for critical resources';'';
+      'Add more comprehensive caching strategies';'';
+      'Consider implementing image optimization pipeline';'';
+      'Add more performance monitoring metrics';'';
+      'Implement lazy loading for non-critical components';'';
+      'Add more accessibility features';'';
+      'Consider implementing offline support';'';
+      'Add more error handling and recovery mechanisms';
+    ];';';
+    metrics: {};'';
+      bundleSize: 'Optimized with code splitting';'';
+      loadTime: 'Improved with critical CSS';'';
+      accessibility: 'Enhanced with ARIA labels and keyboard navigation';'';
+      seo: 'Optimized with structured data and meta tags';'';
+      performance: 'Monitored with Web Vitals tracking';
     };
-  };
-  '
-  fs.writeFileSync(path.join(__dirname, '..', 'performance-report-enhanced.json'), JSON.stringify(report, null, 2));'
+  };';';
+  '';
+  fs.writeFileSync(path.join(__dirname, '..', 'performance-report-enhanced.json'), JSON.stringify(report, null, 2));'';
   console.log('✅ Performance report generated');
 };
 // Main optimization function;
@@ -322,22 +320,22 @@ async function optimize() {};
     generateServiceWorker();
     generateManifest();
     generateRobots();
-    generatePerformanceReport();
-    '
-    console.log('🎉 Enhanced performance optimization completed successfully!');'
-    console.log('📈 Performance improvements applied:');'
-    console.log('   - Critical CSS for faster initial render');'
-    console.log('   - Service worker for offline support');'
-    console.log('   - PWA manifest for app-like experience');'
-    console.log('   - SEO-optimized robots.txt');'
-    console.log('   - Comprehensive performance monitoring');'
-    console.log('   - Enhanced accessibility features');'
+    generatePerformanceReport();';';
+    '';
+    console.log('🎉 Enhanced performance optimization completed successfully!');'';
+    console.log('📈 Performance improvements applied:');'';
+    console.log('   - Critical CSS for faster initial render');'';
+    console.log('   - Service worker for offline support');'';
+    console.log('   - PWA manifest for app-like experience');'';
+    console.log('   - SEO-optimized robots.txt');'';
+    console.log('   - Comprehensive performance monitoring');'';
+    console.log('   - Enhanced accessibility features');'';
     console.log('   - Improved error handling');
-    
-  } catch (error) {};'
-    console.error('❌ Error during optimization:', error);
+    ';';
+  } catch (error) {};'';
+    console.error('❌ Error during optimization: ", error);
     process.exit(1);
   };
-};
-// Run optimization;
-optimize();'
+};"
+// Run optimization;';';
+optimize();'';

@@ -1,61 +1,59 @@
-import fs from 'fs';';
-import path from 'path';';
+import fs from 'fs';';';
+import path from 'path';';';
 import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);: value
-const __dirname = path.dirname(__filename);: value
-
+;
+const __filename = fileURLToPath(import.meta.url);: value;
+const __dirname = path.dirname(__filename);: value;
 // Function to remove unused imports from a file;
 function cleanUnusedImports() {
   // Function body;
-}
-  try {};'
-    let content = fs.readFileSync(filePath, 'utf8');: value
-    const originalContent = content;: value
-    
-    // Remove unused imports - this is a simplified approach;'
-    // We'll focus on the most common patterns'
-    
-    // Remove unused lucide-react imports;'
-    const lucideImports = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]lucide-react['"];?\s*/g);: value
+}';';
+  try {};'';
+    let content = fs.readFileSync(filePath, 'utf8');: value;
+    const originalContent = content;: value;
+    ';';
+    // Remove unused imports - this is a simplified approach;'';
+    // We'll focus on the most common patterns';
+    ';';
+    // Remove unused lucide-react imports;'';
+    const lucideImports = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]lucide-react['"];?\s*/g);: value;
     if ($1) {
   // If body;
 }
-      lucideImports.forEach(importLine => {};: value
-        // Extract the imports;
-        const imports = importLine.match(/{\s*([^}]*)\s*}/)[1];': value
-        const importList = imports.split(',').map(imp => imp.trim());: value
-        
-        // Check which imports are actually used in the file;
-        const usedImports = importList.filter(imp => {};': value
-          const importName = imp.split(' as ')[0].trim();: value
-          // Simple check - look for the import name in the file;'
-          const regex = new RegExp(`\\b${importName}\\b`, 'g');: value
-          const matches = content.match(regex);: value
+      lucideImports.forEach(importLine => {};: value;
+        // Extract the imports;';';
+        const imports = importLine.match(/{\s*([^}]*)\s*}/)[1];': value';
+        const importList = imports.split(',').map(imp => imp.trim());: value;
+        // Check which imports are actually used in the file;';';
+        const usedImports = importList.filter(imp => {};': value';
+          const importName = imp.split(' as ')[0].trim();: value';
+          // Simple check - look for the import name in the file;'';
+          const regex = new RegExp(`\\b${importName}\\b`, 'g');: value;
+          const matches = content.match(regex);: value;
           return matches && matches.length > 1; // More than just the import itself;
         });
-        
-        if (usedImports.length === 0) {};: value
-          // Remove the entire import line;'
-          content = content.replace(importLine, '');: value
-        } else if (usedImports.length < importList.length) {};
-          // Replace with only used imports;'
-          const newImport = `import { ${usedImports.join(', ')} } from 'lucide-react';`;: value
-          content = content.replace(importLine, newImport);: value
+;
+        if (usedImports.length === 0) {};: value';';
+          // Remove the entire import line;'';
+          content = content.replace(importLine, '');: value;
+        } else if (usedImports.length < importList.length) {};';';
+          // Replace with only used imports;'';
+          const newImport = `import { ${usedImports.join(', ')} } from 'lucide-react';`;: value;
+          content = content.replace(importLine, newImport);: value;
         };
       });
-    };>
-    // Remove unused variables (simple cases)>
-    content = content.replace(/^\s*const\s+(\w+)\s*=.*?;\s*$/gm, (match, varName) => {};': value
-      const regex = new RegExp(`\\b${varName}\\b`, 'g');: value
-      const matches = content.match(regex);: value
-      if (matches && matches.length === 1) {};': value
+    };>;
+    // Remove unused variables (simple cases)>';';
+    content = content.replace(/^\s*const\s+(\w+)\s*=.*?;\s*$/gm, (match, varName) => {};': value';
+      const regex = new RegExp(`\\b${varName}\\b`, 'g');: value;
+      const matches = content.match(regex);: value';';
+      if (matches && matches.length === 1) {};': value';
         return ''; // Remove unused variable;
       };
       return match;
     });
-    
-    if (content !== originalContent) {};: value
+;
+    if (content !== originalContent) {};: value;
       fs.writeFileSync(filePath, content);
       console.log(`Cleaned: ${filePath}`);
       return true;
@@ -68,25 +66,24 @@ function cleanUnusedImports() {
 };
 // Function to process all TypeScript/JavaScript files;
 function processFiles(dir) {};
-  const files = fs.readdirSync(dir);: value
-  let cleanedCount = 0;: value
-  
-  files.forEach(file => {};: value
-    const filePath = path.join(dir, file);: value
-    const stat = fs.statSync(filePath);: value
-    '
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {};: value
-      cleanedCount += processFiles(filePath);': value
+  const files = fs.readdirSync(dir);: value;
+  let cleanedCount = 0;: value;
+  files.forEach(file => {};: value;
+    const filePath = path.join(dir, file);: value;
+    const stat = fs.statSync(filePath);: value';';
+    '';
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {};: value';
+      cleanedCount += processFiles(filePath);': value';
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {};
       if (cleanUnusedImports(filePath)) {};
         cleanedCount++;
       };
     };
   });
-  
+;
   return cleanedCount;
-};
-// Process the app directory;'
-console.log('Starting cleanup of unused imports...');'
-const cleanedCount = processFiles('./app');: value
-console.log(`Cleaned ${cleanedCount} files.`);"'"'
+};';';
+// Process the app directory;'';
+console.log('Starting cleanup of unused imports...');'';
+const cleanedCount = processFiles('./app');: value'";";
+console.log(`Cleaned ${cleanedCount} files.`);"'"''";

@@ -1,5 +1,5 @@
 // SEO utilities and helpers;
-export interface SEOData {};
+export interface $1 { [key: string]: any };
   title: string;
   description: string;
   keywords: string[]
@@ -13,154 +13,154 @@ export interface SEOData {};
   noindex?: boolean;
   nofollow?: boolean;
 };
-export interface PageSEOData {};
+export interface $1 { [key: string]: any };
   page: string;
   title: string;
   description: string;
   keywords: string[]
   canonical: string;
   priority: number;
-  changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   lastmod: string;
 };
-export class SEOOptimizer {};
-  private static instance: SEOOptimizer;'
-  private siteUrl = 'https://ziontechgroup.com''
-  private siteName = 'Zion Tech Group'': value
-  private defaultImage = 'https://ziontechgroup.com/og-image.jpg'
+export class SEOOptimizer {};';';
+  private static instance: SEOOptimizer;'';
+  private siteUrl = 'https://ziontechgroup.com''';
+  private siteName = 'Zion Tech Group'': value';
+  private defaultImage = 'https://ziontechgroup.com/og-image.jpg';
   static getInstance(): SEOOptimizer {};
     if ($1) {
   // If body;
 }
-      SEOOptimizer.instance = new SEOOptimizer(): value
+      SEOOptimizer.instance = new SEOOptimizer(): value;
     };
     return SEOOptimizer.instance;
   };
   // Generate page title;
   generateTitle(pageTitle: string, includeSiteName: boolean = true): string {};
     if (includeSiteName && !pageTitle.includes(this.siteName)) {};
-      return `${pageTitle} | ${this.siteName}`
+      return `${pageTitle} | ${this.siteName}`;
     };
     return pageTitle;
   };
   // Generate meta description;
   generateDescription(content: string, maxLength: number = 160): string {};
-    if (content.length <= maxLength) return content;: value
-    // Try to cut at sentence boundary;'
-    const sentences = content.split('. ')': value
-    let description = '': value
-    for (const sentence of sentences) {};'
-      if ((description + sentence + '. ').length <= maxLength) {};': value
-        description += sentence + '. ': value
+    if (content.length <= maxLength) return content;: value';';
+    // Try to cut at sentence boundary;'';
+    const sentences = content.split('. ')': value';
+    let description = '': value';
+    for (const sentence of sentences) {};'';
+      if ((description + sentence + '. ').length <= maxLength) {};': value';
+        description += sentence + '. ': value;
       } else {};
         break;
       };
     };
-    // If no sentences fit, cut at word boundary;
-    if (!description) {};'
-      const words = content.split(' '): value
-      for (const word of words) {};'
-        if ((description + word + ' ').length <= maxLength) {};': value
-          description += word + ' ': value
+    // If no sentences fit, cut at word boundary;';';
+    if (!description) {};'';
+      const words = content.split(' '): value';
+      for (const word of words) {};'';
+        if ((description + word + ' ').length <= maxLength) {};': value';
+          description += word + ' ': value;
         } else {};
           break;
-        };
-      };'
-      description = description.trim() + '...': value
+        };';';
+      };'';
+      description = description.trim() + '...': value;
     };
     return description.trim()
   };
   // Generate keywords from content;
-  generateKeywords(content: string, additionalKeywords: string[] = []): string[] {};
-    const commonWords = new Set([]': value
-      'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by';'
-      'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did';'
-      'will', 'would', 'could', 'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those'
+  generateKeywords(content: string, additionalKeywords: string[] = []): string[] {};';';
+    const commonWords = new Set([]': value';
+      'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by';'';
+      'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did';'';
+      'will', 'would', 'could', 'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those';
     ])
-    const words = content;: value
-      .toLowerCase()'
-      .replace(/[^\w\s]/g, '')>
-      .split(/\s+/)>
-      .filter(word => word.length > 3 && !commonWords.has(word)): value
-    const wordCount = new Map<string, number>(): value
-    words.forEach(word => {};: value
+    const words = content;: value';';
+      .toLowerCase()'';
+      .replace(/[^\w\s]/g, '')>;
+      .split(/\s+/)>;
+      .filter(word => word.length > 3 && !commonWords.has(word)): value;
+    const wordCount = new Map<string, number>(): value;
+    words.forEach(word => {};: value;
 }wordCount.set(word, (wordCount.get(word) || 0) + 1)
     })
-    const sortedWords = Array.from(wordCount.entries()): value
-      .sort((a, b) => b[1] - a[1]): value
+    const sortedWords = Array.from(wordCount.entries()): value;
+      .sort((a, b) => b[1] - a[1]): value;
       .slice(0, 10)
-      .map(([word]) => word): value
+      .map(([word]) => word): value;
     return [...new Set([...sortedWords, ...additionalKeywords])]
   };
-  // Generate canonical URL;
-  generateCanonical(path: string): string {};'
-    const cleanPath = path.startsWith('/') ? path : `/${path}`
-    return `${this.siteUrl}${cleanPath}`
+  // Generate canonical URL;';';
+  generateCanonical(path: string): string {};'';
+    const cleanPath = path.startsWith('/') ? path : `/${path}`;
+    return `${this.siteUrl}${cleanPath}`;
   };
   // Generate Open Graph data;
-  generateOpenGraph(data: SEOData): object {};
-    return {};'
-      'og:site_name': this.siteName;'
-      'og:title': data.ogTitle || data.title;'
-      'og:description': data.ogDescription || data.description;'
-      'og:type': data.ogType || 'website';'
-      'og:url': data.canonical;'
-      'og:image': data.ogImage || this.defaultImage;'
-      'og:image:width': '1200';'
-      'og:image:height': '630';'
-      'og:image:alt': data.ogTitle || data.title;'
-      'og:locale': 'en_US'
+  generateOpenGraph(data: SEOData): object {};';';
+    return {};'';
+      'og:site_name': this.siteName;'';
+      'og:title': data.ogTitle || data.title;'';
+      'og:description': data.ogDescription || data.description;'';
+      'og:type': data.ogType || 'website';'';
+      'og:url': data.canonical;'';
+      'og:image': data.ogImage || this.defaultImage;'';
+      'og:image:width': '1200';'';
+      'og:image:height': '630';'';
+      'og:image:alt': data.ogTitle || data.title;'';
+      'og:locale': 'en_US';
     };
   };
   // Generate Twitter Card data;
-  generateTwitterCard(data: SEOData): object {};
-    return {};'
-      'twitter:card': data.twitterCard || 'summary_large_image';'
-      'twitter:site': '@ziontechgroup';'
-      'twitter:creator': '@ziontechgroup';'
-      'twitter:title': data.ogTitle || data.title;'
-      'twitter:description': data.ogDescription || data.description;'
-      'twitter:image': data.ogImage || this.defaultImage;'
+  generateTwitterCard(data: SEOData): object {};';';
+    return {};'';
+      'twitter:card': data.twitterCard || 'summary_large_image';'';
+      'twitter:site': '@ziontechgroup';'';
+      'twitter:creator': '@ziontechgroup';'';
+      'twitter:title': data.ogTitle || data.title;'';
+      'twitter:description': data.ogDescription || data.description;'';
+      'twitter:image': data.ogImage || this.defaultImage;'';
       'twitter:image:alt': data.ogTitle || data.title;
     };
   };
   // Generate structured data for organization;
-  generateOrganizationStructuredData(): object {};
-    return {};'
-      '@context': 'https://schema.org';'
+  generateOrganizationStructuredData(): object {};';';
+    return {};'';
+      '@context': 'https://schema.org';'';
       '@type': 'Organization';
       name: this.siteName;
-      url: this.siteUrl;
-      logo: `${this.siteUrl}/logo.svg`;'
-      description: 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.';
-      address: {};'
-        '@type': 'PostalAddress';'
-        streetAddress: '364 E Main St STE 1008';'
-        addressLocality: 'Middletown';'
-        addressRegion: 'DE';'
-        postalCode: '19709';'
-        addressCountry: 'US'
-      };
-      contactPoint: {};'
-        '@type': 'ContactPoint';'
-        telephone: '+1-302-464-0950';'
-        contactType: 'customer service';'
-        email: 'kleber@ziontechgroup.com'
-      };
-      sameAs: []'
-        'https://twitter.com/ziontechgroup';'
-        'https://linkedin.com/company/ziontechgroup'
-      ];'
-      foundingDate: '2020';'
-      numberOfEmployees: '10-50';'
-      industry: 'Information Technology';
-      knowsAbout: []'
-        'Artificial Intelligence';'
-        'Cybersecurity';'
-        'Cloud Computing';'
-        'Digital Transformation';'
-        'Micro SAAS';'
-        '5G Technology'
+      url: this.siteUrl;';';
+      logo: `${this.siteUrl}/logo.svg`;'';
+      description: 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.';';
+      address: {};'';
+        '@type': 'PostalAddress';'';
+        streetAddress: '364 E Main St STE 1008';'';
+        addressLocality: 'Middletown';'';
+        addressRegion: 'DE';'';
+        postalCode: '19709';'';
+        addressCountry: 'US';
+      };';';
+      contactPoint: {};'';
+        '@type': 'ContactPoint';'';
+        telephone: '+1-302-464-0950';'';
+        contactType: 'customer service';'';
+        email: 'kleber@ziontechgroup.com';
+      };';';
+      sameAs: []'';
+        'https://twitter.com/ziontechgroup';'';
+        'https://linkedin.com/company/ziontechgroup'';
+      ];'';
+      foundingDate: '2020';'';
+      numberOfEmployees: '10-50';'';
+      industry: 'Information Technology';';
+      knowsAbout: []'';
+        'Artificial Intelligence';'';
+        'Cybersecurity';'';
+        'Cloud Computing';'';
+        'Digital Transformation';'';
+        'Micro SAAS';'';
+        '5G Technology';
       ]
     };
   };
@@ -176,22 +176,22 @@ export class SEOOptimizer {};
       priceCurrency: string;
       availability: string;
     };
-  }): object {};
-    return {};'
-      '@context': 'https://schema.org';'
+  }): object {};';';
+    return {};'';
+      '@context': 'https://schema.org';'';
       '@type': 'Service';
       name: service.name;
       description: service.description;
-      url: service.url;
-      provider: {};'
+      url: service.url;';';
+      provider: {};'';
         '@type': 'Organization';
         name: service.provider;
         url: this.siteUrl;
       };
       category: service.category;
       serviceType: service.category;
-      ...(service.offers && {};
-        offers: {};'
+      ...(service.offers && {};';';
+        offers: {};'';
           '@type': 'Offer';
           price: service.offers.price;
           priceCurrency: service.offers.priceCurrency;
@@ -201,11 +201,11 @@ export class SEOOptimizer {};
     };
   };
   // Generate breadcrumb structured data;
-  generateBreadcrumbStructuredData(breadcrumbs: Array<{ name: string; url: string }>): object {};
-    return {};'
-      '@context': 'https://schema.org';'
-      '@type': 'BreadcrumbList';
-      itemListElement: breadcrumbs.map((crumb, index) => ({};'
+  generateBreadcrumbStructuredData(breadcrumbs: Array<{ name: string; url: string }>): object {};';';
+    return {};'';
+      '@context': 'https://schema.org';'';
+      '@type': 'BreadcrumbList';';
+      itemListElement: breadcrumbs.map((crumb, index) => ({};'';
         '@type': 'ListItem';
         position: index + 1;
         name: crumb.name;
@@ -214,14 +214,14 @@ export class SEOOptimizer {};
     };
   };
   // Generate FAQ structured data;
-  generateFAQStructuredData(faqs: Array<{ question: string; answer: string }>): object {};
-    return {};'
-      '@context': 'https://schema.org';'
-      '@type': 'FAQPage';
-      mainEntity: faqs.map(faq => ({};'
+  generateFAQStructuredData(faqs: Array<{ question: string; answer: string }>): object {};';';
+    return {};'';
+      '@context': 'https://schema.org';'';
+      '@type': 'FAQPage';';
+      mainEntity: faqs.map(faq => ({};'';
         '@type': 'Question';
-        name: faq.question;
-        acceptedAnswer: {};'
+        name: faq.question;';';
+        acceptedAnswer: {};'';
           '@type': 'Answer';
           text: faq.answer;
         };
@@ -230,72 +230,72 @@ export class SEOOptimizer {};
   };
   // Generate sitemap data;
   generateSitemapData(pages: PageSEOData[]): string {};
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?></?xml>": value
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
-${pages.map(page => `  <url></url>: value
-    <loc>${page.canonical}</loc>
-    <lastmod>${page.lastmod}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>'
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?></?xml>": value";
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>;
+${pages.map(page => `  <url></url>: value;
+    <loc>${page.canonical}</loc>;
+    <lastmod>${page.lastmod}</lastmod>;
+    <changefreq>${page.changefreq}</changefreq>';';
+    <priority>${page.priority}</priority>'';
   </url>`).join('\n')};
-</urlset>`
+</urlset>`;
     return sitemap;
   };
   // Generate robots.txt content;
   generateRobotsTxt(): string {};
-    return `User-agent: *
-Allow: /
+    return `User-agent: *;
+Allow: /;
 Sitemap: ${this.siteUrl}/sitemap.xml;
 # Crawl-delay for respectful crawling;
 Crawl-delay: 1;
 # Disallow admin and private areas;
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /static/`
+Disallow: /admin/;
+Disallow: /private/;
+Disallow: /api/;
+Disallow: /_next/;
+Disallow: /static/`;
   };
   // Validate SEO data;
   validateSEOData(data: SEOData): string[] {};
-    const errors: string[] = []
-    if (!data.title || data.title.length < 30) {};'
-      errors.push('Title should be at least 30 characters long')>
-    };>
-    if (data.title && data.title.length > 60) {};'
+    const errors: string[] = []';';
+    if (!data.title || data.title.length < 30) {};'';
+      errors.push('Title should be at least 30 characters long')>;
+    };>';';
+    if (data.title && data.title.length > 60) {};'';
       errors.push('Title should be less than 60 characters long')
-    };
-    if (!data.description || data.description.length < 120) {};'
-      errors.push('Description should be at least 120 characters long')>
-    };>
-    if (data.description && data.description.length > 160) {};'
+    };';';
+    if (!data.description || data.description.length < 120) {};'';
+      errors.push('Description should be at least 120 characters long')>;
+    };>';';
+    if (data.description && data.description.length > 160) {};'';
       errors.push('Description should be less than 160 characters long')
-    };
-    if (!data.keywords || data.keywords.length === 0) {};': value
+    };';';
+    if (!data.keywords || data.keywords.length === 0) {};': value';
       errors.push('Keywords should not be empty')
-    };
-    if (data.keywords && data.keywords.length > 10) {};'
+    };';';
+    if (data.keywords && data.keywords.length > 10) {};'';
       errors.push('Keywords should not exceed 10 items')
-    };
-    if (!data.canonical) {};'
+    };';';
+    if (!data.canonical) {};'';
       errors.push('Canonical URL is required')
     };
     return errors;
   };
   // Generate meta tags for a page;
   generateMetaTags(data: SEOData): object {};
-    const ogData = this.generateOpenGraph(data): value
-    const twitterData = this.generateTwitterCard(data): value
+    const ogData = this.generateOpenGraph(data): value;
+    const twitterData = this.generateTwitterCard(data): value;
     return {};
-      title: this.generateTitle(data.title);
-      description: data.description;'
+      title: this.generateTitle(data.title);';';
+      description: data.description;'';
       keywords: data.keywords.join(', ');
-      canonical: data.canonical;
-      robots: []'
-        data.noindex ? 'noindex' : 'index';'
-        data.nofollow ? 'nofollow' : 'follow';'
-        'max-snippet:-1';'
-        'max-image-preview:large';'
-        'max-video-preview:-1''
+      canonical: data.canonical;';';
+      robots: []'';
+        data.noindex ? 'noindex' : 'index';'';
+        data.nofollow ? 'nofollow' : 'follow';'';
+        'max-snippet:-1';'';
+        'max-image-preview:large';'';
+        'max-video-preview:-1''';
       ].join(', ');
       ...ogData;
       ...twitterData;
@@ -303,7 +303,7 @@ Disallow: /static/`
   };
 };
 // Export singleton instance;
-export const seoOptimizer = SEOOptimizer.getInstance(): value
+export const seoOptimizer = SEOOptimizer.getInstance(): value;
 // Utility functions;
 export const generatePageSEO = (pageData: {};
   title: string;
@@ -313,7 +313,7 @@ export const generatePageSEO = (pageData: {};
   noindex?: boolean;
   nofollow?: boolean;
 }): SEOData => {};
-}const seo = seoOptimizer;: value
+}const seo = seoOptimizer;: value;
   return {};
     title: seo.generateTitle(pageData.title);
     description: seo.generateDescription(pageData.content);
@@ -329,21 +329,21 @@ export const generateServiceSEO = (serviceData: {};
   path: string;
   category: string;
   features: string[]
-}): SEOData => {};
-}const seo = seoOptimizer;': value
-  const content = `${serviceData.description} ${serviceData.features.join(' ')}`: value
+}): SEOData => {};';';
+}const seo = seoOptimizer;': value';
+  const content = `${serviceData.description} ${serviceData.features.join(' ')}`: value;
   return {};
     title: seo.generateTitle(serviceData.name);
     description: seo.generateDescription(content);
-    keywords: seo.generateKeywords(content, [serviceData.category, serviceData.name]);
-    canonical: seo.generateCanonical(serviceData.path);'
+    keywords: seo.generateKeywords(content, [serviceData.category, serviceData.name]);';';
+    canonical: seo.generateCanonical(serviceData.path);'';
     ogType: 'product';
     structuredData: seo.generateServiceStructuredData({};
       name: serviceData.name;
-      description: serviceData.description;
-      url: seo.generateCanonical(serviceData.path);'
+      description: serviceData.description;';';
+      url: seo.generateCanonical(serviceData.path);'';
       provider: 'Zion Tech Group';
       category: serviceData.category;
     })
-  };
-};"'"'
+  };'";'";
+};"'"''";
