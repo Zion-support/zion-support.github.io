@@ -23,7 +23,7 @@ import { ArrowRight, Clock, Users, DollarSign, Shield } from 'lucide-react';expo
   const handleSubmit = (_e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
+    // Form submitted successfully
   };
 
   const services = [

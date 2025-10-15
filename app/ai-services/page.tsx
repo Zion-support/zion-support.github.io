@@ -989,7 +989,7 @@ export default function AIServices() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.filter(service => service.featured).map((service, index) => (
+              {aiServices.filter(service => service.featured).map((service) => (
                 <div
                   key={service.id}
                   className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl"
@@ -1062,7 +1062,7 @@ export default function AIServices() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {aiServices.map((service, index) => (
+              {aiServices.map((service) => (
                 <div
                   key={service.id}
                   className="group relative bg-gradient-to-br from-slate-800/30 to-slate-900/30 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"

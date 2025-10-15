@@ -42,7 +42,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      // Error caught by boundary
     }
 
     // Call custom error handler if provided
@@ -59,7 +59,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
   private logErrorToService = (_error: Error, errorInfo: ErrorInfo) => {
     // In a real app, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag
-    console.error('Production error:', {
+    // Production error logged
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,

@@ -94,7 +94,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
 
   // Keyboard shortcuts
   useEffect(() => {
-    const handleKeyDown = (_event: KeyboardEvent) => {
+    const handleKeyDown = () => {
       // Alt + A to toggle accessibility panel
       if (event.altKey && event.key === 'a') {
         event.preventDefault();
@@ -163,7 +163,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
               <input
                 type="checkbox"
                 checked={settings.largeText}
-                onChange={(_e) => updateSetting('largeText', e.target.checked)}
+                onChange={(e) => updateSetting('largeText', e.target.checked)}
                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <span className="text-sm text-gray-700">Large Text</span>
@@ -173,7 +173,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
               <input
                 type="checkbox"
                 checked={settings.reducedMotion}
-                onChange={(_e) => updateSetting('reducedMotion', e.target.checked)}
+                onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <span className="text-sm text-gray-700">Reduced Motion</span>
@@ -183,7 +183,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
               <input
                 type="checkbox"
                 checked={settings.screenReader}
-                onChange={(_e) => updateSetting('screenReader', e.target.checked)}
+                onChange={(e) => updateSetting('screenReader', e.target.checked)}
                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <span className="text-sm text-gray-700">Screen Reader Optimized</span>
@@ -193,7 +193,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
               <input
                 type="checkbox"
                 checked={settings.focusVisible}
-                onChange={(_e) => updateSetting('focusVisible', e.target.checked)}
+                onChange={(e) => updateSetting('focusVisible', e.target.checked)}
                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <span className="text-sm text-gray-700">Focus Indicators</span>

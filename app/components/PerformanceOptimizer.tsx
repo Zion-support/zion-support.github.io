@@ -69,11 +69,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
       import('web-vitals').then(({ getCLS, getFID, getFCP, _getLCP, _getTTFB }) => {
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
+        getCLS(() => {});
+        getFID(() => {});
+        getFCP(() => {});
+        getLCP(() => {});
+        getTTFB(() => {});
       });
     }
 

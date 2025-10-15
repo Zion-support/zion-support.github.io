@@ -1,34 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Share2, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  Target, 
-  TrendingUp,
-  Clock,
-  Shield,
-  Smartphone,
-  Globe,
-  MessageSquare,
-  FileText,
-  Settings,
-  Star,
-  Award,
-  Phone,
-  MapPin,
-  Envelope,
-  Instagram,
-  Twitter,
-  Facebook,
-  Linkedin,
-  Youtube,
-  Music
-} from 'lucide-react';
+import { CheckCircle, ArrowRight, Users, TrendingUp, Star, Instagram, Twitter, Facebook, Linkedin, Youtube, Music } from 'lucide-react';
 
 const AISocialMediaManagerPage: React.FC = () => {
   const features = [

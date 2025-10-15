@@ -1,31 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  BarChart3, 
-  PieChart, 
-  TrendingUp, 
-  Target, 
-  Clock,
-  Shield,
-  Smartphone,
-  Globe,
-  FileText,
-  Settings,
-  Star,
-  Award,
-  Phone,
-  MapPin,
-  Envelope,
-  Database,
-  Zap,
-  Eye,
-  MessageSquare,
-  Users,
-  RefreshCw
-} from 'lucide-react';
+import { CheckCircle, ArrowRight, BarChart3, TrendingUp, Target, Database } from 'lucide-react';
 
 const AIAnalyticsDashboardProPage: React.FC = () => {
   const features = [
