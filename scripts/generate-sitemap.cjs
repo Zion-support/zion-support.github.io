@@ -32,9 +32,6 @@ ${pages.map(page => `  <url>
   </url>`).join('\n')}
 </urlset>`;
 
-<<<<<<< HEAD
-  fs.writeFileSync(path.join(__dirname, '../dist/sitemap.xml'), sitemap);
-=======
   // Ensure dist directory exists
   const distDir = path.join(__dirname, '../dist');
   if (!fs.existsSync(distDir)) {
@@ -42,7 +39,6 @@ ${pages.map(page => `  <url>
   }
   
   fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
->>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
   console.log('Sitemap generated successfully');
 };
 
