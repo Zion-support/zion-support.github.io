@@ -129,6 +129,217 @@ const MicroSaasPage: React.FC = () => {
       link: "/ai-blockchain-solutions",
       category: "Blockchain",
       color: "from-gray-600 to-gray-800"
+    },
+    // New Real Micro SaaS Services
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI HR Assistant Pro",
+      description: "Intelligent human resources management with AI-powered recruitment, employee analytics, and performance tracking.",
+      price: "$249/month",
+      features: ["Resume Screening", "Candidate Matching", "Performance Analytics", "Employee Engagement"],
+      link: "/ai-hr-assistant-pro",
+      category: "HR",
+      color: "from-blue-500 to-indigo-600"
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "AI Sales Optimizer Pro",
+      description: "Boost sales performance with AI-powered lead scoring, sales forecasting, and automated follow-ups.",
+      price: "$199/month",
+      features: ["Lead Scoring", "Sales Forecasting", "Automated Follow-ups", "Performance Analytics"],
+      link: "/ai-sales-optimizer-pro",
+      category: "Sales",
+      color: "from-green-500 to-teal-600"
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "AI Document Processor Pro",
+      description: "Automated document processing with AI-powered OCR, data extraction, and intelligent categorization.",
+      price: "$129/month",
+      features: ["OCR Processing", "Data Extraction", "Smart Categorization", "Batch Processing"],
+      link: "/ai-document-processor-pro",
+      category: "Productivity",
+      color: "from-purple-500 to-violet-600"
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "AI Fraud Detection Pro",
+      description: "Advanced fraud detection and prevention with machine learning algorithms and real-time monitoring.",
+      price: "$349/month",
+      features: ["Real-time Detection", "ML Algorithms", "Risk Scoring", "Automated Alerts"],
+      link: "/ai-fraud-detection-pro",
+      category: "Security",
+      color: "from-red-500 to-rose-600"
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "AI Customer Support Pro",
+      description: "Intelligent customer support with AI chatbots, sentiment analysis, and automated ticket routing.",
+      price: "$179/month",
+      features: ["AI Chatbots", "Sentiment Analysis", "Auto Routing", "Knowledge Base"],
+      link: "/ai-customer-support-pro",
+      category: "Support",
+      color: "from-cyan-500 to-blue-600"
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: "AI Price Optimization Pro",
+      description: "Dynamic pricing optimization using AI algorithms to maximize revenue and competitive advantage.",
+      price: "$299/month",
+      features: ["Dynamic Pricing", "Competitor Analysis", "Revenue Optimization", "A/B Testing"],
+      link: "/ai-price-optimization-pro",
+      category: "Analytics",
+      color: "from-orange-500 to-amber-600"
+    },
+    {
+      icon: <Target className="w-8 h-8" />,
+      title: "AI Lead Generation Pro",
+      description: "Automated lead generation with AI-powered prospecting, qualification, and nurturing campaigns.",
+      price: "$199/month",
+      features: ["Prospect Discovery", "Lead Qualification", "Nurturing Campaigns", "Conversion Tracking"],
+      link: "/ai-lead-generation-pro",
+      category: "Marketing",
+      color: "from-emerald-500 to-green-600"
+    },
+    {
+      icon: <Award className="w-8 h-8" />,
+      title: "AI Quality Assurance Pro",
+      description: "Automated quality testing and assurance with AI-powered test generation and defect prediction.",
+      price: "$229/month",
+      features: ["Test Generation", "Defect Prediction", "Performance Testing", "Automated Reports"],
+      link: "/ai-quality-assurance-pro",
+      category: "Development",
+      color: "from-violet-500 to-purple-600"
+    },
+    {
+      icon: <Clock className="w-8 h-8" />,
+      title: "AI Time Tracking Pro",
+      description: "Intelligent time tracking with AI-powered productivity analysis and automated timesheet generation.",
+      price: "$79/month",
+      features: ["Auto Time Tracking", "Productivity Analysis", "Timesheet Generation", "Project Billing"],
+      link: "/ai-time-tracking-pro",
+      category: "Productivity",
+      color: "from-slate-500 to-gray-600"
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Legal Assistant Pro",
+      description: "AI-powered legal research, contract analysis, and compliance monitoring for law firms and businesses.",
+      price: "$399/month",
+      features: ["Legal Research", "Contract Analysis", "Compliance Monitoring", "Case Law Search"],
+      link: "/ai-legal-assistant-pro",
+      category: "Legal",
+      color: "from-indigo-500 to-blue-600"
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "AI Data Migration Pro",
+      description: "Intelligent data migration with AI-powered mapping, validation, and automated transformation.",
+      price: "$299/month",
+      features: ["Smart Mapping", "Data Validation", "Automated Transformation", "Migration Monitoring"],
+      link: "/ai-data-migration-pro",
+      category: "Data",
+      color: "from-teal-500 to-cyan-600"
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "AI Compliance Monitor Pro",
+      description: "Automated compliance monitoring with AI-powered risk assessment and regulatory updates.",
+      price: "$249/month",
+      features: ["Risk Assessment", "Regulatory Updates", "Compliance Reports", "Audit Trails"],
+      link: "/ai-compliance-monitor-pro",
+      category: "Compliance",
+      color: "from-amber-500 to-orange-600"
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "AI Workflow Automation Pro",
+      description: "Intelligent workflow automation with AI-powered process optimization and smart routing.",
+      price: "$179/month",
+      features: ["Process Automation", "Smart Routing", "Workflow Optimization", "Integration Hub"],
+      link: "/ai-workflow-automation-pro",
+      category: "Automation",
+      color: "from-pink-500 to-rose-600"
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "AI Team Collaboration Pro",
+      description: "Enhanced team collaboration with AI-powered meeting insights, task management, and communication optimization.",
+      price: "$149/month",
+      features: ["Meeting Insights", "Task Management", "Communication Optimization", "Team Analytics"],
+      link: "/ai-team-collaboration-pro",
+      category: "Collaboration",
+      color: "from-sky-500 to-blue-600"
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: "AI Market Research Pro",
+      description: "Comprehensive market research with AI-powered trend analysis, competitor intelligence, and consumer insights.",
+      price: "$279/month",
+      features: ["Trend Analysis", "Competitor Intelligence", "Consumer Insights", "Market Reports"],
+      link: "/ai-market-research-pro",
+      category: "Research",
+      color: "from-lime-500 to-green-600"
+    },
+    {
+      icon: <Target className="w-8 h-8" />,
+      title: "AI Personalization Engine Pro",
+      description: "Advanced personalization with AI-powered recommendation systems and dynamic content optimization.",
+      price: "$199/month",
+      features: ["Recommendation Engine", "Content Optimization", "User Profiling", "A/B Testing"],
+      link: "/ai-personalization-engine-pro",
+      category: "Personalization",
+      color: "from-fuchsia-500 to-purple-600"
+    },
+    {
+      icon: <Award className="w-8 h-8" />,
+      title: "AI Performance Analytics Pro",
+      description: "Comprehensive performance analytics with AI-powered insights, benchmarking, and optimization recommendations.",
+      price: "$229/month",
+      features: ["Performance Insights", "Benchmarking", "Optimization Recommendations", "Custom Dashboards"],
+      link: "/ai-performance-analytics-pro",
+      category: "Analytics",
+      color: "from-rose-500 to-pink-600"
+    },
+    {
+      icon: <Clock className="w-8 h-8" />,
+      title: "AI Scheduling Assistant Pro",
+      description: "Intelligent scheduling with AI-powered calendar optimization, meeting coordination, and resource allocation.",
+      price: "$99/month",
+      features: ["Calendar Optimization", "Meeting Coordination", "Resource Allocation", "Conflict Resolution"],
+      link: "/ai-scheduling-assistant-pro",
+      category: "Productivity",
+      color: "from-emerald-500 to-teal-600"
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Translation Pro",
+      description: "Advanced translation services with AI-powered language processing, context understanding, and real-time translation.",
+      price: "$149/month",
+      features: ["Real-time Translation", "Context Understanding", "Multi-language Support", "Document Translation"],
+      link: "/ai-translation-pro",
+      category: "Communication",
+      color: "from-cyan-500 to-blue-600"
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "AI Backup & Recovery Pro",
+      description: "Intelligent backup and disaster recovery with AI-powered data protection and automated recovery procedures.",
+      price: "$199/month",
+      features: ["Automated Backups", "Disaster Recovery", "Data Protection", "Recovery Testing"],
+      link: "/ai-backup-recovery-pro",
+      category: "Infrastructure",
+      color: "from-slate-500 to-gray-600"
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "AI Password Manager Pro",
+      description: "Advanced password management with AI-powered security analysis, breach monitoring, and automated updates.",
+      price: "$79/month",
+      features: ["Security Analysis", "Breach Monitoring", "Auto Updates", "Multi-device Sync"],
+      link: "/ai-password-manager-pro",
+      category: "Security",
+      color: "from-indigo-500 to-purple-600"
     }
   ];
 
@@ -143,12 +354,25 @@ const MicroSaasPage: React.FC = () => {
     { name: "Sustainability", count: microSaasServices.filter(s => s.category === "Sustainability").length },
     { name: "Agriculture", count: microSaasServices.filter(s => s.category === "Agriculture").length },
     { name: "Design", count: microSaasServices.filter(s => s.category === "Design").length },
-    { name: "Blockchain", count: microSaasServices.filter(s => s.category === "Blockchain").length }
+    { name: "Blockchain", count: microSaasServices.filter(s => s.category === "Blockchain").length },
+    { name: "HR", count: microSaasServices.filter(s => s.category === "HR").length },
+    { name: "Sales", count: microSaasServices.filter(s => s.category === "Sales").length },
+    { name: "Support", count: microSaasServices.filter(s => s.category === "Support").length },
+    { name: "Development", count: microSaasServices.filter(s => s.category === "Development").length },
+    { name: "Legal", count: microSaasServices.filter(s => s.category === "Legal").length },
+    { name: "Data", count: microSaasServices.filter(s => s.category === "Data").length },
+    { name: "Compliance", count: microSaasServices.filter(s => s.category === "Compliance").length },
+    { name: "Automation", count: microSaasServices.filter(s => s.category === "Automation").length },
+    { name: "Collaboration", count: microSaasServices.filter(s => s.category === "Collaboration").length },
+    { name: "Research", count: microSaasServices.filter(s => s.category === "Research").length },
+    { name: "Personalization", count: microSaasServices.filter(s => s.category === "Personalization").length },
+    { name: "Communication", count: microSaasServices.filter(s => s.category === "Communication").length },
+    { name: "Infrastructure", count: microSaasServices.filter(s => s.category === "Infrastructure").length }
   ];
 
   const stats = [
-    { number: "11+", label: "Micro SAAS Services", icon: <Cloud className="w-6 h-6" /> },
-    { number: "500+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "30+", label: "Micro SAAS Services", icon: <Cloud className="w-6 h-6" /> },
+    { number: "1000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime Guarantee", icon: <Clock className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
@@ -267,11 +491,11 @@ const MicroSaasPage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
               {microSaasServices.map((service, index) => (
                 <div 
                   key={index} 
-                  className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                  className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 h-full flex flex-col"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>

@@ -43,6 +43,8 @@ import AiProjectManagementProPage from './app/ai-project-management-pro/page';
 import AiSocialMediaManagerProPage from './app/ai-social-media-manager-pro/page';
 import AiEmailMarketingProPage from './app/ai-email-marketing-pro/page';
 import AiInventoryManagementProPage from './app/ai-inventory-management-pro/page';
+import AiHrAssistantProPage from './app/ai-hr-assistant-pro/page';
+import AiSalesOptimizerProPage from './app/ai-sales-optimizer-pro/page';
 import MicroSaasPage from './app/micro-saas/page';
 
 const App: React.FC = () => {
@@ -123,6 +125,8 @@ const App: React.FC = () => {
                   <Route path="/ai-social-media-manager-pro" element={<AiSocialMediaManagerProPage />} />
                   <Route path="/ai-email-marketing-pro" element={<AiEmailMarketingProPage />} />
                   <Route path="/ai-inventory-management-pro" element={<AiInventoryManagementProPage />} />
+                  <Route path="/ai-hr-assistant-pro" element={<AiHrAssistantProPage />} />
+                  <Route path="/ai-sales-optimizer-pro" element={<AiSalesOptimizerProPage />} />
                 </Routes>
               </Suspense>
             </main>

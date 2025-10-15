@@ -34,15 +34,17 @@ const Footer: React.FC = () => {
         { name: 'AI Automation Suite', href: '/ai-automation-suite' },
         { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
-        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' }
+        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
+        { name: 'AI Customer Insights Pro', href: '/ai-customer-insights-pro' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' }
       ]
     },
     {
       title: 'IT Services',
       icon: <Code className="w-5 h-5 text-purple-400" />,
       services: [
-        { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
-        { name: 'API Management', href: '/ai-api-management' },
+        { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
+        { name: 'AI API Management', href: '/ai-api-management' },
         { name: 'Database Solutions', href: '/database-solutions' },
         { name: 'Advanced Security Suite', href: '/advanced-security-suite' },
         { name: 'Performance Monitoring', href: '/performance-monitoring' },
@@ -66,16 +68,17 @@ const Footer: React.FC = () => {
       icon: <Cloud className="w-5 h-5 text-orange-400" />,
       services: [
         { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant' },
-        { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro' },
-        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
-        { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
-        { name: 'AI Customer Insights Pro', href: '/ai-customer-insights-pro' },
-        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
-        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager-pro' },
-        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' },
-        { name: 'AI Inventory Management Pro', href: '/ai-inventory-management-pro' }
+        { name: 'AI HR Assistant Pro', href: '/ai-hr-assistant-pro' },
+        { name: 'AI Sales Optimizer Pro', href: '/ai-sales-optimizer-pro' },
+        { name: 'AI Document Processor Pro', href: '/ai-document-processor-pro' },
+        { name: 'AI Fraud Detection Pro', href: '/ai-fraud-detection-pro' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
+        { name: 'AI Price Optimization Pro', href: '/ai-price-optimization-pro' },
+        { name: 'AI Lead Generation Pro', href: '/ai-lead-generation-pro' },
+        { name: 'AI Quality Assurance Pro', href: '/ai-quality-assurance-pro' },
+        { name: 'AI Time Tracking Pro', href: '/ai-time-tracking-pro' },
+        { name: 'AI Legal Assistant Pro', href: '/ai-legal-assistant-pro' },
+        { name: 'AI Data Migration Pro', href: '/ai-data-migration-pro' }
       ]
     }
   ];

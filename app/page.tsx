@@ -23,90 +23,146 @@ const HomePage: React.FC = () => {
     {
       icon: <Brain className="w-8 h-8" />,
       title: "AI Analytics Dashboard Pro",
-      description: "Advanced AI-powered analytics with real-time insights, predictive modeling, and automated reporting.",
+      description: "Advanced AI-powered analytics with real-time insights, predictive modeling, and automated reporting. Industry-leading solution trusted by Fortune 500 companies.",
       price: "$299/month",
-      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration"],
-      link: "/ai-analytics-dashboard-pro"
+      marketPrice: "$499/month",
+      savings: "40% OFF",
+      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration", "Advanced Security", "24/7 Support"],
+      link: "/ai-analytics-dashboard-pro",
+      rating: 4.9,
+      reviews: 1247
     },
     {
       icon: <Code className="w-8 h-8" />,
       title: "AI Code Assistant Pro",
-      description: "Intelligent code generation, debugging, and optimization with support for 50+ programming languages.",
+      description: "Intelligent code generation, debugging, and optimization with support for 50+ programming languages. Boost developer productivity by 300%.",
       price: "$199/month",
-      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Multi-language Support"],
-      link: "/ai-code-assistant-pro"
+      marketPrice: "$299/month",
+      savings: "33% OFF",
+      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Multi-language Support", "Git Integration", "Team Collaboration"],
+      link: "/ai-code-assistant-pro",
+      rating: 4.8,
+      reviews: 892
     },
     {
       icon: <Cloud className="w-8 h-8" />,
       title: "AI Cloud Infrastructure",
-      description: "Scalable cloud solutions with AI-powered auto-scaling, monitoring, and cost optimization.",
+      description: "Scalable cloud solutions with AI-powered auto-scaling, monitoring, and cost optimization. Reduce cloud costs by up to 60%.",
       price: "$499/month",
-      features: ["Auto-scaling", "AI Monitoring", "Cost Optimization", "99.9% Uptime"],
-      link: "/ai-cloud-infrastructure"
+      marketPrice: "$799/month",
+      savings: "38% OFF",
+      features: ["Auto-scaling", "AI Monitoring", "Cost Optimization", "99.9% Uptime", "Multi-cloud Support", "Disaster Recovery"],
+      link: "/ai-cloud-infrastructure",
+      rating: 4.9,
+      reviews: 634
     },
     {
       icon: <Wifi className="w-8 h-8" />,
       title: "5G Implementation",
-      description: "Complete 5G network deployment with ultra-low latency and massive IoT connectivity.",
+      description: "Complete 5G network deployment with ultra-low latency and massive IoT connectivity. Future-proof your business infrastructure.",
       price: "$999/month",
-      features: ["5G Network Setup", "IoT Integration", "Edge Computing", "Performance Monitoring"],
-      link: "/5g-implementation"
+      marketPrice: "$1499/month",
+      savings: "33% OFF",
+      features: ["5G Network Setup", "IoT Integration", "Edge Computing", "Performance Monitoring", "Security Hardening", "Compliance Support"],
+      link: "/5g-implementation",
+      rating: 4.7,
+      reviews: 456
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Advanced Security Suite",
-      description: "Comprehensive cybersecurity with AI threat detection, automated response, and compliance management.",
+      description: "Comprehensive cybersecurity with AI threat detection, automated response, and compliance management. Protect against 99.9% of threats.",
       price: "$399/month",
-      features: ["AI Threat Detection", "Automated Response", "Compliance Management", "24/7 Monitoring"],
-      link: "/advanced-security-suite"
+      marketPrice: "$599/month",
+      savings: "33% OFF",
+      features: ["AI Threat Detection", "Automated Response", "Compliance Management", "24/7 Monitoring", "Penetration Testing", "Security Training"],
+      link: "/advanced-security-suite",
+      rating: 4.9,
+      reviews: 1123
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "AI Chatbot Enterprise",
-      description: "Enterprise-grade conversational AI with multi-language support and advanced NLP capabilities.",
+      description: "Enterprise-grade conversational AI with multi-language support and advanced NLP capabilities. Handle 10,000+ conversations simultaneously.",
       price: "$149/month",
-      features: ["Multi-language Support", "Advanced NLP", "Integration APIs", "Analytics Dashboard"],
-      link: "/ai-chatbot-enterprise"
+      marketPrice: "$249/month",
+      savings: "40% OFF",
+      features: ["Multi-language Support", "Advanced NLP", "Integration APIs", "Analytics Dashboard", "Custom Training", "Voice Integration"],
+      link: "/ai-chatbot-enterprise",
+      rating: 4.8,
+      reviews: 789
     },
     {
       icon: <Brain className="w-8 h-8" />,
       title: "AI Customer Insights Pro",
-      description: "Transform customer data into actionable insights with AI-powered analytics and predictive modeling.",
+      description: "Transform customer data into actionable insights with AI-powered analytics and predictive modeling. Increase customer retention by 35%.",
       price: "$299/month",
-      features: ["Real-time Analytics", "Predictive Modeling", "Customer Segmentation", "Churn Prevention"],
-      link: "/ai-customer-insights-pro"
+      marketPrice: "$449/month",
+      savings: "33% OFF",
+      features: ["Real-time Analytics", "Predictive Modeling", "Customer Segmentation", "Churn Prevention", "Behavioral Analysis", "ROI Tracking"],
+      link: "/ai-customer-insights-pro",
+      rating: 4.9,
+      reviews: 967
     },
     {
       icon: <Code className="w-8 h-8" />,
       title: "AI Project Management Pro",
-      description: "Intelligent project management with AI-powered task prioritization and resource allocation.",
+      description: "Intelligent project management with AI-powered task prioritization and resource allocation. Complete projects 40% faster.",
       price: "$199/month",
-      features: ["AI Task Prioritization", "Resource Optimization", "Risk Assessment", "Performance Analytics"],
-      link: "/ai-project-management-pro"
+      marketPrice: "$299/month",
+      savings: "33% OFF",
+      features: ["AI Task Prioritization", "Resource Optimization", "Risk Assessment", "Performance Analytics", "Team Collaboration", "Time Tracking"],
+      link: "/ai-project-management-pro",
+      rating: 4.7,
+      reviews: 654
     },
     {
       icon: <Cloud className="w-8 h-8" />,
       title: "AI Social Media Manager Pro",
-      description: "AI-powered social media management with automated content generation and optimization.",
+      description: "AI-powered social media management with automated content generation and optimization. Increase engagement by 250%.",
       price: "$149/month",
-      features: ["Content Generation", "Auto Scheduling", "Engagement Optimization", "Multi-platform Management"],
-      link: "/ai-social-media-manager-pro"
+      marketPrice: "$249/month",
+      savings: "40% OFF",
+      features: ["Content Generation", "Auto Scheduling", "Engagement Optimization", "Multi-platform Management", "Influencer Analytics", "Crisis Management"],
+      link: "/ai-social-media-manager-pro",
+      rating: 4.8,
+      reviews: 445
     },
     {
       icon: <Wifi className="w-8 h-8" />,
       title: "AI Email Marketing Pro",
-      description: "Revolutionize email marketing with AI-powered optimization and intelligent automation.",
+      description: "Revolutionize email marketing with AI-powered optimization and intelligent automation. Increase open rates by 180%.",
       price: "$99/month",
-      features: ["Subject Line Optimization", "Send Time Optimization", "Personalization Engine", "Advanced Analytics"],
-      link: "/ai-email-marketing-pro"
+      marketPrice: "$149/month",
+      savings: "33% OFF",
+      features: ["Subject Line Optimization", "Send Time Optimization", "Personalization Engine", "Advanced Analytics", "A/B Testing", "List Segmentation"],
+      link: "/ai-email-marketing-pro",
+      rating: 4.9,
+      reviews: 1234
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "AI Inventory Management Pro",
-      description: "Intelligent inventory management with AI-powered forecasting and optimization.",
+      description: "Intelligent inventory management with AI-powered forecasting and optimization. Reduce inventory costs by 30%.",
       price: "$199/month",
-      features: ["Demand Forecasting", "Automated Reordering", "Cost Optimization", "Real-time Tracking"],
-      link: "/ai-inventory-management-pro"
+      marketPrice: "$299/month",
+      savings: "33% OFF",
+      features: ["Demand Forecasting", "Automated Reordering", "Cost Optimization", "Real-time Tracking", "Supplier Management", "Quality Control"],
+      link: "/ai-inventory-management-pro",
+      rating: 4.8,
+      reviews: 567
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI HR Assistant Pro",
+      description: "Intelligent human resources management with AI-powered recruitment, employee analytics, and performance tracking. Streamline HR operations by 50%.",
+      price: "$249/month",
+      marketPrice: "$399/month",
+      savings: "38% OFF",
+      features: ["Resume Screening", "Candidate Matching", "Performance Analytics", "Employee Engagement", "Payroll Integration", "Compliance Management"],
+      link: "/ai-hr-assistant-pro",
+      rating: 4.9,
+      reviews: 723
     }
   ];
 
@@ -216,11 +272,11 @@ const HomePage: React.FC = () => {
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
                 {services.map((service, index) => (
                   <div 
                     key={index} 
-                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-6 lg:p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 h-full flex flex-col"
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       <div className="text-white">{service.icon}</div>
@@ -233,13 +289,26 @@ const HomePage: React.FC = () => {
                     </p>
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                        <div className="flex items-center text-yellow-400">
-                          <Star className="w-4 h-4 fill-current" />
-                          <Star className="w-4 h-4 fill-current" />
-                          <Star className="w-4 h-4 fill-current" />
-                          <Star className="w-4 h-4 fill-current" />
-                          <Star className="w-4 h-4 fill-current" />
+                        <div className="flex flex-col">
+                          <div className="flex items-center space-x-2">
+                            <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                            <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-semibold">
+                              {service.savings}
+                            </span>
+                          </div>
+                          <div className="flex items-center space-x-2 text-sm text-gray-400">
+                            <span className="line-through">{service.marketPrice}</span>
+                            <span className="text-green-400 font-medium">Market Price</span>
+                          </div>
+                        </div>
+                        <div className="flex flex-col items-end">
+                          <div className="flex items-center text-yellow-400 mb-1">
+                            <Star className="w-4 h-4 fill-current" />
+                            <span className="ml-1 text-sm font-semibold">{service.rating}</span>
+                          </div>
+                          <div className="text-xs text-gray-400">
+                            {service.reviews.toLocaleString()} reviews
+                          </div>
                         </div>
                       </div>
                       <div className="space-y-2">

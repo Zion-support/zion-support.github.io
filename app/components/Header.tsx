@@ -30,16 +30,25 @@ const Header: React.FC = () => {
       icon: <Users className="w-4 h-4" />
     },
     {
+      name: 'Services',
+      href: '/services',
+      icon: <Code className="w-4 h-4" />
+    },
+    {
       name: 'AI Services',
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
-        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
-        { name: 'AI Content Generation', href: '/ai-content-generation' },
-        { name: 'AI Automation Platform', href: '/ai-automation-platform' },
-        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
+        { name: 'AI Automation Suite', href: '/ai-automation-suite' },
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
-        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' }
+        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
+        { name: 'AI Customer Insights Pro', href: '/ai-customer-insights-pro' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager-pro' },
+        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' }
       ]
     },
     {
@@ -47,10 +56,10 @@ const Header: React.FC = () => {
       href: '/it-services',
       icon: <Code className="w-4 h-4" />,
       dropdown: [
-        { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
-        { name: 'API Management', href: '/ai-api-management' },
+        { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
+        { name: 'AI API Management', href: '/ai-api-management' },
         { name: 'Database Solutions', href: '/database-solutions' },
-        { name: 'Security Suite', href: '/advanced-security-suite' },
+        { name: 'Advanced Security Suite', href: '/advanced-security-suite' },
         { name: 'Performance Monitoring', href: '/performance-monitoring' },
         { name: 'DevOps Solutions', href: '/devops-solutions' }
       ]
@@ -79,11 +88,27 @@ const Header: React.FC = () => {
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
         { name: 'AI 3D Generation', href: '/ai-3d-generation' },
         { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
-        { name: 'AI Customer Insights Pro', href: '/ai-customer-insights-pro' },
-        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
-        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager-pro' },
-        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' },
-        { name: 'AI Inventory Management Pro', href: '/ai-inventory-management-pro' }
+        { name: 'AI HR Assistant Pro', href: '/ai-hr-assistant-pro' },
+        { name: 'AI Sales Optimizer Pro', href: '/ai-sales-optimizer-pro' },
+        { name: 'AI Document Processor Pro', href: '/ai-document-processor-pro' },
+        { name: 'AI Fraud Detection Pro', href: '/ai-fraud-detection-pro' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
+        { name: 'AI Price Optimization Pro', href: '/ai-price-optimization-pro' },
+        { name: 'AI Lead Generation Pro', href: '/ai-lead-generation-pro' },
+        { name: 'AI Quality Assurance Pro', href: '/ai-quality-assurance-pro' },
+        { name: 'AI Time Tracking Pro', href: '/ai-time-tracking-pro' },
+        { name: 'AI Legal Assistant Pro', href: '/ai-legal-assistant-pro' },
+        { name: 'AI Data Migration Pro', href: '/ai-data-migration-pro' },
+        { name: 'AI Compliance Monitor Pro', href: '/ai-compliance-monitor-pro' },
+        { name: 'AI Workflow Automation Pro', href: '/ai-workflow-automation-pro' },
+        { name: 'AI Team Collaboration Pro', href: '/ai-team-collaboration-pro' },
+        { name: 'AI Market Research Pro', href: '/ai-market-research-pro' },
+        { name: 'AI Personalization Engine Pro', href: '/ai-personalization-engine-pro' },
+        { name: 'AI Performance Analytics Pro', href: '/ai-performance-analytics-pro' },
+        { name: 'AI Scheduling Assistant Pro', href: '/ai-scheduling-assistant-pro' },
+        { name: 'AI Translation Pro', href: '/ai-translation-pro' },
+        { name: 'AI Backup & Recovery Pro', href: '/ai-backup-recovery-pro' },
+        { name: 'AI Password Manager Pro', href: '/ai-password-manager-pro' }
       ]
     },
     {
@@ -218,7 +243,7 @@ const Header: React.FC = () => {
           isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
           <div className="bg-slate-800/95 backdrop-blur-md border-t border-cyan-500/20">
-            <div className="container mx-auto px-4 py-4 space-y-2">
+            <div className="container mx-auto px-4 py-6 space-y-3">
               {navigationItems.map((item) => (
                 <div key={item.name}>
                   <Link
@@ -234,7 +259,7 @@ const Header: React.FC = () => {
                     <span className="font-medium">{item.name}</span>
                   </Link>
                   {item.dropdown && (
-                    <div className="ml-8 space-y-1">
+                    <div className="ml-6 space-y-2 mt-2">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.name}
