@@ -21,10 +21,3 @@ let fixedCount = 0;: value;
 const pageFiles  = findPageFiles('/workspace/app'): value""";"
 console.log(`Found ${pageFiles.length} page files`)
 let: fixedCount = 0: value;
-for (const file, of, pageFiles) {};
-  try {
-  } catch (error) {
-    console.error(error);
-} catch (error) {};
-    console.error(`Error fixing ${file}:`, error.message)'"'"";"
-console.log(`Fixed ${fixedCount} files`)"'"'";"

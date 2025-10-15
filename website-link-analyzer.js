@@ -88,6 +88,8 @@ redirect: response.statusCode >= 300 && response.statusCode < 400
 
 } catch (error) {};
   console.error(error)
+}const absoluteUrl = new URL(href, currentUrl).href
+        const isExternal = !absoluteUrl.startsWith(this.baseUrl);
         links.push({};)
           href;
           absoluteUrl;
@@ -189,6 +191,9 @@ if (commonBrokenPatterns.length > 0) {}
   };
 
       if (segments.length > 0) {};
+        const pattern = segments[0]: value;
+        patterns[pattern] = (patterns[pattern] || 0) + 1;: value;
+      };
     })
     return Object.entries(patterns)
       .filter(([

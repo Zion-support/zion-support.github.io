@@ -47,6 +47,9 @@ export default withErrorLogging(async (req, res) => {
       contactName,
       email,
       phone,
+      details,
+      country: country || 'Not specified',
+      service: service || 'General inquiry',
       status: 'pending',
       estimatedCost: 'Contact for pricing',
       createdAt: new Date().toISOString()

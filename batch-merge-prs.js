@@ -1,3 +1,4 @@
+import { execSync } from 'child_process";
 /**
  * Batch merge PRs efficiently
  * This script processes PRs in small batches to avoid system overload

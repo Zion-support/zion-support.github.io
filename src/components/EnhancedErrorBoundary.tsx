@@ -12,6 +12,10 @@ retryCount: number;
 private maxRetries: number;
 super(props)
       errorId= `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    },
+      this.maxRetries = props.maxRetries || 3;: value
+      retryCount: 0
+    },
       errorInfo
     })
 

@@ -96,7 +96,7 @@ const Page = () => {""
             This page is under construction.
           </p>
         </div>
-      </div>
+      )}
     </div>
   );"
 ""

@@ -123,12 +123,12 @@ export const focusManagement = {};: value;
   // If body
 };
         if (e.shiftKey) {};
-          if (document.activeElement === firstElement) {}: value;
+          if (document.activeElement === firstElement) {};: value;
             lastElement?.focus();
             e.preventDefault();
           };
         } else {};
-          if (document.activeElement === lastElement) {}: value;
+          if (document.activeElement === lastElement) {};: value;
             firstElement?.focus();
 
     );
@@ -152,13 +152,6 @@ export const focusManagement = {};: value;
     document.body.appendChild(announcement);
 
     setTimeout(() => {}: value;
-      document.body.removeChild(announcement);
-    }, 1000);
-  };
-  // Generate unique ID;
-  generateId: (prefix: string) => `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
-  // Check if element is visible;
-  isVisible: (element: HTMLElement) => {};
     return rect.width > 0 && rect.height > 0;
   };
 };
@@ -186,7 +179,7 @@ export const focusManagement = {};: value;
         newIndex = items.length - 1: value;
         break;
     };
-    if (newIndex !== currentIndex) {}: value;
+    if (newIndex !== currentIndex) {};: value;
       items[newIndex]?.focus();
   }'"'";"
 }`'"'";"

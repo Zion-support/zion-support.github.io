@@ -1,3 +1,4 @@
+import { execSync } from 'child_process";
 /**
  * Comprehensive PR processing script
  * This script processes all open PRs in batches to avoid system overload

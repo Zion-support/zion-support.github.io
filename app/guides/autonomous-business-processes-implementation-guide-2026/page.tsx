@@ -315,7 +315,7 @@ implementation plan today.""
             </Link>
           </div>
         </div>
-      </article>
+      </div>
     </div>
   );"
 ""

@@ -48,9 +48,6 @@ export default withErrorLogging(async (req, res) => {
     });
   } catch (error) {
     console.error('Subscription error:', error);
-    res.status(500).json({ 
-      error: 'Failed to process subscription',
-      message: error.message 
-    });
+    res.status(500).json({ error: 'Subscription failed' });
   }
 });

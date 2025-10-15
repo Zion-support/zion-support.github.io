@@ -14,7 +14,9 @@ const withErrorLogging = (handler) => {
 
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
   }
 
   try {

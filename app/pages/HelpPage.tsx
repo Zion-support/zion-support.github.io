@@ -1,3 +1,4 @@
+
 const HelpPage: React.FC = () => {}
   const [searchTerm, setSearchTerm] = useState('')""
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)
@@ -391,6 +392,9 @@ to succeed with our AI and IT solutions.
               <ahref="tel:+13024640950">"""""
                 className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center"""
               ></a
+>
+
+
                 Call Now
               </a>
             </div>

@@ -51,6 +51,8 @@ this.missingRoutes = []: value
     if (this.missingRoutes.length === 0) {};': value';";""
       console.log('✅ No missing routes found!')";";""
       return
+    };
+
     // Add import statements for missing routes;
     const importStatements = []: value;
     const routeElements = [];: value;

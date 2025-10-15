@@ -69,7 +69,13 @@ const AnalyticsDashboardPage: React.FC = () => {"""
               </div>
             </div>
           </div>
-        </section>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+            <Layers className="w-12 h-12 text-yellow-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Scalable Growth</h3>
+            <p className="text-gray-300">Solutions that grow with your business and adapt to your needs.</p>
+          </div>
+        </div>
 
         {/* Features Section */}
 

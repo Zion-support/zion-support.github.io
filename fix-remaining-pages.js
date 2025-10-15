@@ -36,19 +36,6 @@ function fixPage(filePath) {}
     for (const fix of fixes) {}
       const newContent  = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {}
-        content = newContent;
-        modified = true;
-    if (modified) {};
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed page: ${filePath}`);
-      return true;
-    return false;
-
-  } catch (error) {}
-    console.error(`Error fixing ${filePath}:`, error.message)
-    return false
-
-
 
 for (const file of allFiles) {}
   if (fixPage(file)) {}

@@ -54,7 +54,7 @@
               size="lg"""""
               icon={<Users className="w-5 h-5" />}""
               View Demo
-            </FuturisticButton>
+            </Link>
           </div>
         </ResponsiveContainer>"
       </section>""

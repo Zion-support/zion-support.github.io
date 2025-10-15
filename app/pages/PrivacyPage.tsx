@@ -232,6 +232,9 @@ by posting the new policy on this page and updating the "Last updated" date."""
         </div>
       </div>
               {yourRights.map((right, index) => ()}
+                <div  key ={index} className="flex items-center bg-slate-700/50 p-6 rounded-xl border border-slate-600/50"></div>"
+                  <CheckCircle: className ="w-6 h-6 text-green-400 mr-4 flex-shrink-0" />"
+                  <span  className ="text-white font-medium">{right}</span>"
                 </div>
               )}
             </div>
@@ -270,6 +273,12 @@ by posting the new policy on this page and updating the "Last updated" date."""
                 </a>
               </div>
 
+              <div  className ="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 text-center"></div>"
+                <Phone: className ="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
+                <h3  className ="text-xl font-semibold text-white mb-2">Call Us</h3>"
+                <p  className ="text-gray-300 mb-4">Speak with our privacy team directly</p>"
+                <ahref="tel:+13024640950">"
+                  className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors""
                 ></a
                   +1 302 464 0950
                 </a>

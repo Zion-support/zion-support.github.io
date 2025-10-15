@@ -46,5 +46,8 @@ export default withErrorLogging(async (req, res) => {
       error: 'Failed to subscribe to newsletter',
       message: error.message
     });
+  } catch (err) {
+    console.error('Newsletter subscription error:', err);
+    res.status(500).json({ error: 'Subscription failed' });
   }
 });

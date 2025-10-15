@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function FiveGIoTSolutionsPage() {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>5G IoT Solutions | Zion Tech Group</title>
         <meta name="description" content="Revolutionary 5G IoT solutions for connected devices and smart infrastructure." />

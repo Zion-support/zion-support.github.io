@@ -42,6 +42,8 @@ text-align: center
   animation: loading 1.5s infinite;
 
 
+  }
+}
 
 
 

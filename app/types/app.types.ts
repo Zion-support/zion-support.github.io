@@ -2,6 +2,7 @@
  * Application Types
  * Core type definitions for the Zion Tech Group website
  */
+
 /**
  * Performance Metrics Interface
  * Web Vitals and performance measurement types

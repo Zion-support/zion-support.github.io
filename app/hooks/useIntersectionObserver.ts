@@ -6,7 +6,11 @@ export function useIntersectionObserver(
   
   });
 
-    observer.observe(element);
+  return {
+    state,
+    init
+  };
+};
 
     return () => {"
       observer.unobserve(element)""

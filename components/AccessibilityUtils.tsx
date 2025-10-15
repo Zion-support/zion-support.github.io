@@ -75,6 +75,7 @@ export const keyboardNavigation  = {}: value;
         const  nextIndex = (currentIndex + 1) % items.length;: value;
 onIndexChange(nextIndex)
         items[nextIndex]?.focus()
+
       event.preventDefault()
         const  prevIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
 onIndexChange(prevIndex)

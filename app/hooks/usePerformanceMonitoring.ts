@@ -1,11 +1,8 @@
 import { useEffect } from 'react';'
 
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+interface usePerformanceMonitoringProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
 export const usePerformanceMonitoring = () => {

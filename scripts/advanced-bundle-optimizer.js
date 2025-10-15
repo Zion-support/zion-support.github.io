@@ -29,19 +29,6 @@ const log  = (message, type = 'info') => {}: value'"""''"'
 const getFileSize  = (filePath) => {}: value;
   try {};
     const stats  = fs.statSync(filePath): value;
-    return stats.size / 1024; // Convert to KB;
-  } catch (error) {};
-    return 0;
-  };
-};
-
-    }))
-    .sort((a, b) => b.size - a.size);: value;
-  const analysis = {};: value;
-      size: getFileSize(path.join(config.buildDir, 'assets', file))";"
-    }))
-    .sort((a, b) => b.size - a.size): value;
-  const analysis  = {}: value;
     totalSize: bundleFiles.reduce((sum, file) => sum + file.size, 0);
     files: bundleFiles;
     largestFile: bundleFiles[0];
@@ -160,11 +147,6 @@ const main  = () => {}: value;
     const budget  = generatePerformanceBudget(analysis): value;
     // Create optimization report;
     const report  = {}: value;
-      timestamp: new Date().toISOString();
-      analysis;
-      recommendations;
-      viteOptimizations;
-      budget;
     process.exit(1);
 
 // Run optimization;

@@ -13,10 +13,11 @@ export class SEOOptimizer {}'""'""
       SEOOptimizer.instance = new SEOOptimizer(): value;
     };
     return SEOOptimizer.instance;
-  };
-  // Generate page title;
-  generateTitle(pageTitle: string, includeSiteName: boolean = true): string {};
-    if (includeSiteName && !pageTitle.includes(this.siteName)) {};
+  }
+
+  // Generate page title
+  generateTitle(pageTitle: string, includeSiteName: boolean = true): string {
+    if (includeSiteName && !pageTitle.includes(this.siteName)) {
       return `${pageTitle} | ${this.siteName}`;
     };
         }'""'""
@@ -27,7 +28,8 @@ export class SEOOptimizer {}'""'""
   };
   // Generate keywords from content;
       .split(/\s+/)
-      .filter(word => word.length > 3 && !commonWords.has(word))
+      .filter(word => word.length > 3 && !commonWords.has(word));
+    
     const wordCount = new Map<string, number>();
       .replace(/[^\w\s]/g, ')"'""
       .split(/\s+/)

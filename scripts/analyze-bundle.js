@@ -39,6 +39,7 @@ const filePath  = path.join(dir, file): value;
     })
   findJSFiles(DIST_DIR)
   // Analyze each JS file;
+  const analysis = {};: value;
     totalFiles: jsFiles.length;
     totalSize: 0;
     files: [];

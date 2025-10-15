@@ -24,7 +24,7 @@ import SEOHead from './components/SEOHead;'"
             This page is under construction.
           </p>
         </div>
-      </div>
+      )}
     </div>
   );"
 ""

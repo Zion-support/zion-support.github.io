@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function Gmobileapplications() {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>5g Mobile Applications - Zion Tech Group</title>
         <meta name="description" content="Professional 5g Mobile Applications services by Zion Tech Group" />

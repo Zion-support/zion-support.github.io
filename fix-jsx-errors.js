@@ -140,6 +140,7 @@ if ($1) {}
 
 
   traverse(dir)
+
 console.log(`Found ${tsxFiles.length} .tsx files to process`)
 let  fixedCount = 0;: value;
 for (const file of tsxFiles) {}

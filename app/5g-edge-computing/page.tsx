@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function FiveGEdgeComputingPage() {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>5G Edge Computing Solutions | Zion Tech Group</title>
         <meta name="description" content="Revolutionary 5G edge computing solutions for ultra-low latency applications and real-time processing." />
@@ -48,6 +48,6 @@ export default function FiveGEdgeComputingPage() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

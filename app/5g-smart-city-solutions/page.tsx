@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function Gsmartcitysolutions() {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>5g Smart City Solutions - Zion Tech Group</title>
         <meta name="description" content="Professional 5g Smart City Solutions services by Zion Tech Group" />

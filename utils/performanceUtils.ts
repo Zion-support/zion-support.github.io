@@ -11,6 +11,7 @@ if ($1) {};
   setupPerformanceMonitoring() {}
     // Core Web Vitals
 
+
 }getCLS(console.log)
         getFID(console.log)
         getFCP(console.log)

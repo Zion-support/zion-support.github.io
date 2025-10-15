@@ -10,8 +10,8 @@
             )};
           </div>
         </div>
-      </div>
-    </>
+      )}
+    </div>
   );
       {/* CSS Animations */};
       <style jsx>{`};

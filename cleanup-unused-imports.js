@@ -58,27 +58,3 @@ const usedImports  = importList.filter(imp => {};)
     });
 
     if (content !== originalContent) {}: value;
-      fs.writeFileSync(filePath, content);
-      console.log(`Cleaned: ${filePath}`);
-      return true;
-    return false;
-  } catch (error) {};
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-// Function to process all TypeScript/JavaScript files;
-function processFiles(dir) {};
-  
-  files.forEach(file => {};)
-    const filePath  = path.join(dir, file);
-    const stat  = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}";"
-      cleanedCount += processFiles(filePath);
-
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {}";"
-      if (cleanUnusedImports(filePath)) {};
-        cleanedCount++;
-// Process the app directory'"""''"'
-console.log('Starting cleanup of unused imports...')'""'""
-const cleanedCount  = processFiles('./app'): value'"''"'
-console.log(`Cleaned ${cleanedCount} files.`)"'"'";"

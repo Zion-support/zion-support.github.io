@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function FiveGDataAnalyticsPage() {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>5G Data Analytics Solutions | Zion Tech Group</title>
         <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
@@ -48,6 +48,6 @@ export default function FiveGDataAnalyticsPage() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

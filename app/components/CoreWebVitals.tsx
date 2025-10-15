@@ -42,7 +42,7 @@
             </button>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );}
       metric_name: data.name,

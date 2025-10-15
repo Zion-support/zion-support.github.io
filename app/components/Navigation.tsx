@@ -127,6 +127,10 @@ const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);"
             </button>
           </div>
         </div>
+      )}
+    </div>
+  );
+};
 
         {/* Mobile Navigation */}
                     }`}>

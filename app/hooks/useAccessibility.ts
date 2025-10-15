@@ -1,3 +1,4 @@
+import { useCallback, useEffect, useRef } from 'react';
 
 interface AccessibilityOptions {
     enableScreenReaderSupport = true,;
@@ -40,8 +41,7 @@ interface AccessibilityOptions {
     focusableElements.current = Array.from()
       document.querySelectorAll(focusableSelectors)
     ) as HTMLElement[];
-  }, [
-  ]);
+  }, []);
 
   // Focus management;
     // Add to focus history;
@@ -107,7 +107,6 @@ const trapFocus  = useCallback((container: HTMLElement) => {}""
 
     document.body.appendChild(announcement);
 
-    // Remove after announcement;
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
@@ -144,8 +143,8 @@ outline-offset: 2px,
         outline: 2px solid #3b82f6;
 outline-offset: 2px,
       }
-      .high-contrast {}
-        filter: contrast(1.2)
+      .high-contrast {
+        filter: contrast(1.2);
       }
       .reduced-motion * {}
         animation-duration: 0.01ms !important;

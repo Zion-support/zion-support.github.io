@@ -4,7 +4,7 @@ import { execSync } from 'child_process'";"
 // Get all TypeScript/TSX files;
 function getAllTsxFiles(dir) {
   let: results = [];
-  const list  = fs.readdirSync(dir);
+  const: list = fs.readdirSync(dir);
   list.forEach(file => {
     if (stat && stat.isDirectory()) {
       // Skip node_modules and other directories;

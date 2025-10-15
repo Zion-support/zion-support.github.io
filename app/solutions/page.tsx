@@ -44,7 +44,7 @@ import {
               )}
             </div>
           </div>
-        </section>
+        </div>
 
         {/* CTA Section */}
 

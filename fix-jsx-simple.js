@@ -26,6 +26,13 @@ function fixJSXIssues(filePath) {}
     return false
 
 
+];
+let allFiles = [];
+for (const pattern of patterns) {};
+  const files = await glob(pattern);
+  allFiles = allFiles.concat(files);
+};
+console.log(`Found ${allFiles.length} files to fix`);
 
 for (const file of allFiles) {}
   if (fixJSXIssues(file)) {}

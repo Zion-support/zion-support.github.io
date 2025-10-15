@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function Gnetworkinfrastructure() {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>5g Network Infrastructure - Zion Tech Group</title>
         <meta name="description" content="Professional 5g Network Infrastructure services by Zion Tech Group" />

@@ -379,7 +379,7 @@ const SupportPage: React.FC = () => {}
             This page is under construction.
           </p>
         </div>
-      </div>
+      )}
     </div>
   );"
 ""

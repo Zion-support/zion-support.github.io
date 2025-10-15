@@ -1,3 +1,4 @@
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 interface PerformanceMetrics {
   // Track render performance;
