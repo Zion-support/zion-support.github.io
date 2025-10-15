@@ -1,32 +1,21 @@
-import ResponsiveContainer from '../components/ResponsiveContainer;'
-const FiveGNetworkOptimization = () => {
-  
+import React from 'react';
+import SEOHead from '../components/SEOHead';
+
+const G5gNetworkOptimizationPage: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>5G Network Optimization - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G network optimization solutions." />""
-      </Helmet>"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
-        <section className="py-20">""
-          <ResponsiveContainer>"
-            <div className="text-center">""
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">""
-                5G <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Network Optimization</span>""
-              </h1>"
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
-                Advanced 5G network optimization solutions for maximum performance and efficiency.
-              </p>"
-              <Link to="/contact">""
-                <FuturisticButton size="lg">""
-                  Get Started"
-                  <ArrowRight className="w-5 h-5 ml-2" />""
-                </FuturisticButton>
-              </Link>
-            </div>
-          </ResponsiveContainer>
-        </section>
+      <SEOHead
+        title="5G Network Optimization - Zion Tech Group"
+        description="Advanced 5G Network Optimization for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">5G Network Optimization</h1>
+          <p className="text-gray-300">Advanced 5G Network Optimization coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
 };
-  );}
-};
-export default FiveGNetworkOptimization;"
+
+export default G5gNetworkOptimizationPage;

@@ -1,28 +1,21 @@
+import React from 'react';
 import SEOHead from '../components/SEOHead';
-const AiContentModerationPage: React.FC  =  () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        title="Page - Zion Tech Group"
-        description="Advanced page solutions powered by AI"
-      />"
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold mb-4">Page</h1>"
-          <pclassName="text-gray-300">
+
 const AiContentModerationPage: React.FC = () => {
   return (
-    <>";
-      <SEOHead title ="ai-content-moderation - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group ai-content-moderation service page"";
-      />"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div className ="text-center">";"
-          <h1 className ="text-4xl font-bold mb-4">ai-content-moderation - Zion Tech Group</$1>"
-          <p className ="text-gray-300">Coming soon...</$1>
+    <>
+      <SEOHead
+        title="AI Content Moderation - Zion Tech Group"
+        description="Professional AI content moderation solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">AI Content Moderation</h1>
+          <p className="text-gray-300">Professional AI content moderation solutions coming soon...</p>
         </div>
       </div>
     </>
-  ),
+  );
 };
-"
+
+export default AiContentModerationPage;

@@ -1,28 +1,21 @@
+import React from 'react';
 import SEOHead from '../components/SEOHead';
-const AiCybersecuritySuitePage: React.FC  =  () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        title="Page - Zion Tech Group"
-        description="Advanced page solutions powered by AI"
-      />"
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold mb-4">Page</h1>"
-          <pclassName="text-gray-300">
+
 const AiCybersecuritySuitePage: React.FC = () => {
   return (
-    <>";
-      <SEOHead title ="ai-cybersecurity-suite - Zion Tech Group - Zion Tech Group"";"
-        description="Zion Tech Group ai-cybersecurity-suite service page"";
-      />"
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div className ="text-center">";"
-          <h1 className ="text-4xl font-bold mb-4">ai-cybersecurity-suite - Zion Tech Group</$1>"
-          <p className ="text-gray-300">Coming soon...</$1>
+    <>
+      <SEOHead
+        title="AI Cybersecurity Suite - Zion Tech Group"
+        description="Professional AI cybersecurity suite solutions for modern businesses"
+      />
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">AI Cybersecurity Suite</h1>
+          <p className="text-gray-300">Professional AI cybersecurity suite solutions coming soon...</p>
         </div>
       </div>
     </>
-  ),
+  );
 };
-"
+
+export default AiCybersecuritySuitePage;
