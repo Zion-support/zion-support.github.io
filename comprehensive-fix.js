@@ -5,7 +5,9 @@ import path from 'path';
 import { execSync } from 'child_process';
 
 // Function to find all problematic files
-function findProblematicFiles() {};
+function findProblematicFiles() {
+  // Function body
+}
   try {};
     return result.trim().split('\n').filter(file => file.length > 0);
   } catch (error) {};
@@ -30,7 +32,9 @@ function fixUnterminatedStrings(content) {};
       const quoteCount = (line.match(/"/g) || []).length;"
       const singleQuoteCount = (line.match(/'/g) || []).length;'
       
-      if (quoteCount % 2 !== 0) {};
+      if ($1) {
+  // If body
+}
         line = line + '"';"
       } else if (singleQuoteCount % 2 !== 0) {};
         line = line + "'";'

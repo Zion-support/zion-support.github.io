@@ -1,19 +1,5 @@
 
-  return (<>
-      <Helmet></Helmet>
-        <title>Zion Cloud Vault - Secure Cloud Storage Platform | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Secure your data with Zion Cloud Vault - the ultimate cloud storage platform. End-to-end encryption, unlimited storage, and enterprise-grade security for modern businesses."
-        />
-        <meta
-          name="keywords"
-          content="cloud storage, _secure file sharing, _data encryption, _cloud backup, _file synchronization, _enterprise storage, data security"
-        />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
-        {/* Hero Section */};
+  // return statement
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
           <div className="max-w-7xl mx-auto text-center"></div>
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6"></div>
@@ -241,16 +227,3 @@
               <Link
                 to="/demo"
                 className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
-              ></Link
->
-                Schedule Demo
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
-
-export default ZionCloudVaultPage;

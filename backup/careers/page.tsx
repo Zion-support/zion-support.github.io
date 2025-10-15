@@ -1,5 +1,7 @@
 
-export default function Careers() {};
+export default function Careers() {
+  // Function body
+}
 }const jobOpenings = []
     {};
       title: 'Senior AI Engineer';

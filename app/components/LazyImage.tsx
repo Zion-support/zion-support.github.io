@@ -22,7 +22,9 @@ const LazyImage: React.FC<LazyImageProps> = ({};
 
   useEffect(() => {};
     const observer = new IntersectionObserver(([entry]) => {};
-        if (entry.isIntersecting) {};
+        if ($1) {
+  // If body
+}
           setIsInView(true);
           observer.disconnect();
         };

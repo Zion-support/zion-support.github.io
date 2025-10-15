@@ -18,7 +18,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   const setupLazyLoading = useCallback(() => {};
 }if (!enableLazyLoading || typeof window === 'undefined') return
     const images = document.querySelectorAll('img[data-src]')
-    if (observerRef.current) {};
+    if ($1) {
+  // If body
+}
       observerRef.current.disconnect()
     };
     observerRef.current = new IntersectionObserver()

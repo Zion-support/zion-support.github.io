@@ -8,7 +8,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix import statements in a file
-function fixImports(filePath) {};
+function fixImports() {
+  // Function body
+}
   try {};
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
@@ -64,7 +66,9 @@ function fixImports(filePath) {};
     // Remove trailing whitespace
     content = content.replace(/[ \t]+$/gm, '');
     
-    if (content !== originalContent) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed imports in: ${filePath}`);
       return true;

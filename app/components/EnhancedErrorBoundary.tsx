@@ -49,7 +49,9 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     });
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {};
+    if ($1) {
+  // If body
+}
       console.error('Error caught by boundary:', error);
       console.error('Error info:', errorInfo);
     };

@@ -9,7 +9,7 @@ const CustomerRelationshipManagerPage = () => {};
     {};
       title: "Contact Management";
       description: "Centralized contact database with detailed customer profiles and interaction history";
-      icon: <Users className="w-8 h-8" />;
+      icon: <Users>
       benefits: ["Unified contact view", "Interaction tracking", "Custom fields", "Import/Export"]
     };
     {};

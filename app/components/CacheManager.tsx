@@ -48,7 +48,9 @@ const CacheManager = () => {};
           const cache = await caches.open(CACHE_NAME)
           const response = await fetch(request)
           
-          if (response.ok) {};
+          if ($1) {
+  // If body
+}
             cache.put(request, response.clone())
           };
           return response

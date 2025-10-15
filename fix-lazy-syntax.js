@@ -6,7 +6,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix lazy function syntax errors
-function fixLazySyntax(filePath) {};
+function fixLazySyntax() {
+  // Function body
+}
   try {};
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
@@ -20,7 +22,9 @@ function fixLazySyntax(filePath) {};
     // Fix any remaining underscore prefixes in function calls
     content = content.replace(/\(_\(([^)]*)\)\s*=>/g, '(($1) =>');
     
-    if (content !== originalContent) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(filePath, content);
       console.log(`Fixed lazy syntax: ${filePath}`);
       return true;

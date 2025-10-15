@@ -4,7 +4,9 @@ import { twMerge } from 'tailwind-merge'
  * Utility function to merge Tailwind CSS classes with proper conflict resolution
  * and conditional class application
  */
-export function cn(...inputs: ClassValue[]) {};
+export function cn() {
+  // Function body
+}
 }return twMerge(clsx(inputs))
 };
 /**
@@ -55,7 +57,7 @@ export function stateClass()
  */
 export function variantClass<T extends string>()
   variant: T;
-  variants: Record<T, string>;
+  variants: Record<T>
   defaultVariant?: T
 ): string {};
   return variants[variant] || (defaultVariant ? variants[defaultVariant] : '')

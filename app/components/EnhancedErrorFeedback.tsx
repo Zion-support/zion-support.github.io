@@ -35,7 +35,9 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
       errorInfo
     })
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {};
+    if ($1) {
+  // If body
+}
       };
     // Call custom error handler if provided
     if (this.props.onError) {};

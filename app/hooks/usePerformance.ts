@@ -7,7 +7,9 @@ interface PerformanceMetrics {};
 /**
  * Hook for performance monitoring and optimization
  */
-export function usePerformance(componentName: string) {};
+export function usePerformance() {
+  // Function body
+}
 }const renderStartTime = useRef<number>(0)
   const renderCount = useRef<number>(0)
   // Track render performance
@@ -46,7 +48,9 @@ export function usePerformance(componentName: string) {};
       let lastCall = 0;
       return (_...args: Parameters<T>) => {};
         const now = Date.now();
-        if (now - lastCall >= delay) {};
+        if ($1) {
+  // If body
+}
           lastCall = now;
           func(...args);
         };

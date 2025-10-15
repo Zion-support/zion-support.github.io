@@ -23,7 +23,9 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({};
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       setCount(Math.floor(easeOutQuart * end));
 
-      if (progress < 1) {};
+      if ($1) {
+  // If body
+}
         animationFrame = requestAnimationFrame(animate);
       };
     };

@@ -115,7 +115,9 @@ const pages = []
     name: "NotFoundPage";
     title: "Page Not Found";
     description: "The page you are looking for does not exist."}]
-function fixPage(pageInfo) {};
+function fixPage() {
+  // Function body
+}
 }const content = pageTemplate
     .replace(/{PAGE_NAME}/g, pageInfo.name)
     .replace(/{PAGE_TITLE}/g, pageInfo.title)

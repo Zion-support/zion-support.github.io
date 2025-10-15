@@ -34,7 +34,9 @@ self.addEventListener('activate', (event) => {};
     caches.keys().then((cacheNames) => {};
       return Promise.all(
         cacheNames.map((cacheName) => {};
-          if (cacheName !== CACHE_NAME) {};
+          if ($1) {
+  // If body
+}
             console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
           };

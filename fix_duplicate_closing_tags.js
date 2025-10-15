@@ -2,7 +2,9 @@ import fs from 'fs'
 import path from 'path'
 #!/usr/bin/env node
 // Function to fix duplicate closing tags
-function fixDuplicateClosingTags(content) {};
+function fixDuplicateClosingTags() {
+  // Function body
+}
 }// Fix duplicate Link closing tags
   content = content.replace(/<\/Link>\s*<\/Link>/g, '</Link>')
   // Fix any other duplicate closing tags
@@ -23,7 +25,9 @@ function processFile(filePath) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixedContent = fixDuplicateClosingTags(content)
-    if (content !== fixedContent) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(filePath, fixedContent, 'utf8')
       console.log(`Fixed duplicate closing tags: ${filePath}`)
       return true

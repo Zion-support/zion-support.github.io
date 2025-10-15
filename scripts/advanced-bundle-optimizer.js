@@ -60,7 +60,9 @@ const analyzeBundleComposition = () => {};
   };
 
   // Identify optimization opportunities
-  if (analysis.largestFile.size > config.maxChunkSize) {};
+  if ($1) {
+  // If body
+}
     analysis.recommendations.push(
       `Largest bundle ${analysis.largestFile.name} (${analysis.largestFile.size.toFixed(2)} KB) exceeds recommended size`
     );

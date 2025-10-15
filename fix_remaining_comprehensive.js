@@ -2,7 +2,9 @@ import fs from 'fs'
 import path from 'path'
 #!/usr/bin/env node
 // Function to fix all remaining comprehensive issues
-function fixRemainingComprehensive(content) {};
+function fixRemainingComprehensive() {
+  // Function body
+}
 }// Fix malformed meta tags with spaces
   content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/  \/>/g, '<meta name="$1" content="$2" />')
   content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/>/g, '<meta name="$1" content="$2" />')
@@ -53,7 +55,9 @@ function processFile(filePath) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixedContent = fixRemainingComprehensive(content)
-    if (content !== fixedContent) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(filePath, fixedContent, 'utf8')
       console.log(`Fixed comprehensive issues: ${filePath}`)
       return true

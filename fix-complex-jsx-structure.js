@@ -1,7 +1,9 @@
 import fs from "fs"
 import path from "path"
 import { glob } from "glob"
-async function fixComplexJSXStructure() {};
+async function fixComplexJSXStructure() {
+  // Function body
+}
 }console.log("🔧 Fixing complex JSX structure issues...")
   // Find all problematic files
   const files = await glob("app/**/*.{ts,tsx}", {};
@@ -65,7 +67,9 @@ async function fixComplexJSXStructure() {};
       // Clean up any remaining syntax issues
       content = content.replace(/\s+$/gm, "")
       content = content.replace(/\n{3}/g, "\n\n")
-      if (content !== originalContent) {};
+      if ($1) {
+  // If body
+}
         fs.writeFileSync(file, content, "utf8")
         console.log(`✅ Fixed: ${file}`)
         fixedFiles++

@@ -1,98 +1,71 @@
 #!/usr/bin/env node
-import fs from "fs"
-import path from "path"
-const pages = []
-  "5g-edge-computing";
-  "5g-mobile-applications";
-  "5g-network-infrastructure";
-  "5g-private-networks";
-  "5g-smart-city-solutions";
-  "5g-data-analytics";
-  "5g-implementation";
-  "5g-iot-solutions";
-  "5g-solutions"]
-const template = `import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
-function {FUNCTION_NAME}() {};
-  return ()
-    <div></div>
-      <Helmet></Helmet>
-        <title>{TITLE} - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold text-white mb-6">{TITLE}</h1>
-          <p className="text-lg text-gray-300 mb-8">{DESCRIPTION}</p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          ></Link
->
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-</div>
-  )
-}`
-const pageData = {};
-  "5g-edge-computing": {};
-    functionName: "FiveGEdgeComputingPage";
-    title: "5G Edge Computing";
-    description: "Professional 5G edge computing services coming soon."};
-  "5g-mobile-applications": {};
-    functionName: "FiveGMobileApplicationsPage";
-    title: "5G Mobile Applications";
-    description: "Advanced 5G mobile application development coming soon."};
-  "5g-network-infrastructure": {};
-    functionName: "FiveGNetworkInfrastructurePage";
-    title: "5G Network Infrastructure";
-    description:
-      "Comprehensive 5G network infrastructure solutions coming soon."};
-  "5g-private-networks": {};
-    functionName: "FiveGPrivateNetworksPage";
-    title: "5G Private Networks";
-    description: "Secure 5G private network solutions coming soon."};
-  "5g-smart-city-solutions": {};
-    functionName: "FiveGSmartCitySolutionsPage";
-    title: "5G Smart City Solutions";
-    description: "Innovative 5G smart city solutions coming soon."};
-  "5g-data-analytics": {};
-    functionName: "FiveGDataAnalyticsPage";
-    title: "5G Data Analytics";
-    description: "Advanced 5G data analytics solutions coming soon."};
-  "5g-implementation": {};
-    functionName: "FiveGImplementationPage";
-    title: "5G Implementation";
-    description: "Complete 5G network implementation services coming soon."};
-  "5g-iot-solutions": {};
-    functionName: "FiveGIoTSolutionsPage";
-    title: "5G IoT Solutions";
-    description: "Revolutionary 5G IoT solutions coming soon."};
-  "5g-solutions": {};
-    functionName: "FiveGSolutionsPage";
-    title: "5G Solutions";
-    description: "Comprehensive 5G technology solutions coming soon."}};
-function fixPage(pageName) {};
-}const data = pageData[pageName]
-  if (!data) return
-  const filePath = `./app/${pageName}/page.tsx`
-  const content = template
-    .replace(/{FUNCTION_NAME}/g, data.functionName)
-    .replace(/{TITLE}/g, data.title)
-    .replace(/{DESCRIPTION}/g, data.description)
-  try {};
-} catch (error) {};
-  console.error(error)
-}fs.writeFileSync(filePath, content, "utf8")
-    console.log(`Fixed: ${filePath}`)
-  } catch (error) {};
-    console.error(`Error fixing ${filePath}:`, error.message)
-  };
-};
-console.log("Fixing 5G pages...")
-pages.forEach(fixPage)
-console.log("Done!")
+
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
+
+// Function to fix 5G page syntax
+function fix5GPage(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Extract the page name from the file path
+    const pageName = path.basename(filePath, '.tsx');
+    const displayName = pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    
+    // Fix common patterns
+    const fixes = [
+      // Fix function declaration
+      { pattern: /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\s*\}\s*;/, replacement: 'const $1: React.FC = () => {' },
+      
+      // Fix JSX structure
+      { pattern: /<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"><\/div>\s*<div className="text-center"><\/div>/, replacement: '<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">\n        <div className="text-center">' },
+      
+      // Fix title and description
+      { pattern: /title="[^"]*"/, replacement: `title="${displayName} - Zion Tech Group"` },
+      { pattern: /description="[^"]*"/, replacement: `description="Advanced ${displayName.toLowerCase()} solutions for modern businesses"` },
+      
+      // Fix heading
+      { pattern: /<h1 className="text-4xl font-bold mb-4">[^<]*<\/h1>/, replacement: `<h1 className="text-4xl font-bold mb-4">${displayName}</h1>` },
+      
+      // Fix description
+      { pattern: /<p className="text-gray-300">Coming soon\.\.\.<\/p>/, replacement: '<p className="text-gray-300">Advanced solutions coming soon...</p>' }
+    ];
+    
+    let modified = false;
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed 5G page: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Main execution
+console.log('Starting 5G pages fix...');
+
+const files = await glob('/workspace/app/5g-*/page.tsx');
+console.log(`Found ${files.length} 5G pages to fix`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fix5GPage(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} 5G pages`);
+console.log('5G pages fix completed!');

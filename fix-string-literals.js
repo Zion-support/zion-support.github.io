@@ -6,7 +6,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix string literal syntax errors
-function fixStringLiterals(filePath) {};
+function fixStringLiterals() {
+  // Function body
+}
   try {};
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
@@ -21,7 +23,9 @@ function fixStringLiterals(filePath) {};
     content = content.replace(/\(\s*_\s*,/g, '(');
     content = content.replace(/,\s*_\s*\)/g, ')');
     
-    if (content !== originalContent) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(filePath, content);
       console.log(`Fixed string literals: ${filePath}`);
       return true;

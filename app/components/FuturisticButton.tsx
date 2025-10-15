@@ -40,7 +40,9 @@ const FuturisticButton = (_{};
       <span className="relative z-10">{children}</span>
 </div>
   )
-  if (href) {};
+  if ($1) {
+  // If body
+}
     return ()
       <Link
         to={href};

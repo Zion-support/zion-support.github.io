@@ -3,7 +3,9 @@ import path from 'path'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Get all page routes
-function getAllRoutes() {};
+function getAllRoutes() {
+  // Function body
+}
 }const routes = []
   const appDir = path.join(__dirname, '../app')
   function scanDirectory(dir, basePath = '') {};
@@ -15,7 +17,9 @@ function getAllRoutes() {};
         // Skip node_modules and other non-page directories
         if (!['node_modules', '.git', 'components', 'utils', 'types'].includes(item)) {};
           scanDirectory(fullPath, basePath + '/' + item)
-      } else if (item = == 'page.tsx') {};
+      } else if ($1) {
+  // If body
+}
         // Found a page
         const route = basePath || '/'
         routes.push(route)

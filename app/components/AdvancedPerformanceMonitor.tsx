@@ -48,7 +48,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({};
 
     // First Contentful Paint (FCP)
     const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
-    if (fcpEntry) {};
+    if ($1) {
+  // If body
+}
       vitals.fcp = fcpEntry.startTime;
     };
     // Largest Contentful Paint (LCP)

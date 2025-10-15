@@ -7,12 +7,9 @@ import {
   TrendingUp, 
   Target, 
   Database,
-<<<<<<< HEAD
   Cloud,
   ShoppingCart,
   DollarSign
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9
 } from 'lucide-react';
 
 const AIAnalyticsDashboardProPage: React.FC = () => {
@@ -390,14 +387,3 @@ const AIAnalyticsDashboardProPage: React.FC = () => {
             <Link
               to="/demo"
               className="border-2 border-white text-white hover:bg-white hover:text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-            >
-              Schedule Demo
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-};
-
-export default AIAnalyticsDashboardProPage;

@@ -3,7 +3,9 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-export default function Header() {};
+export default function Header() {
+  // Function body
+}
   return (
     <div></div>
       <Helmet></Helmet>

@@ -1,5 +1,5 @@
 
-const AiMarketingAutomationPage: React.FC = () => {};
+const AiMarketingAutomationPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
@@ -222,17 +222,3 @@ const AiMarketingAutomationPage: React.FC = () => {};
                 <Link
                   to="/demo"
                   className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
-                ></Link
->
-                  Watch Demo
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
-
-export default AiMarketingAutomationPage;

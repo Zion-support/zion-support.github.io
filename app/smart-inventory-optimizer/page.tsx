@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
   const features = [
     {};
-      icon: <Brain className="w-8 h-8 text-cyan-400" />;
+      icon: <Brain>
       title: "AI-Powered Demand Forecasting";
       description: "Advanced machine learning algorithms predict demand patterns with 95% accuracy, reducing stockouts and overstock situations."
     };
@@ -159,16 +159,3 @@ import { motion } from 'framer-motion';
                 whileHover={{ scale: 1.05 }};
                 whileTap={{ scale: 0.95 }};
                 className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              ></motion.button
->
-                View Demo
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default SmartInventoryOptimizerPage;

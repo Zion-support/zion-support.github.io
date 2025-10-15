@@ -58,7 +58,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
   // Add performance monitoring
   const addPerformanceMonitoring = useCallback() => {};
     // Monitor Core Web Vitals
-    if ('web-vitals' in window) {};
+    if ($1) {
+  // If body
+}
       import('web-vitals').then(({ getCLS, getFID, getFCP, _getLCP, _getTTFB }) => {};
         getCLS(console.log);
         getFID(console.log);

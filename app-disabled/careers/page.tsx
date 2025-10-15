@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react'
 import { Helmet } from 'react-helmet-async';'lucide-react'
 interface JobPosition {};
@@ -8,23 +7,6 @@ interface JobPosition {};
 import { Right, Circle} from 'lucide-react'
 const PagePage: React.FC = () => {};
 }title: string
-=======
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Briefcase, MapPin, Clock, Users, CheckCircle, ArrowRight } from 'lucide-react';
-
-interface JobPosition {
-  id: number;
-  title: string;
-  location: string;
-  type: string;
-  description: string;
-  requirements: string[];
-  benefits: string[];
-}
-
-const CareersPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9
   department: string
   location: string
   type: string
@@ -34,7 +16,6 @@ const CareersPage: React.FC = () => {
   requirements: string[]
   benefits: string[]
   featured: boolean
-<<<<<<< HEAD
 };
 const eersPage: React.FC = () => {};
 }const [selectedDepartment, setSelectedDepartment] = useState('all)'
@@ -46,23 +27,6 @@ const eersPage: React.FC = () => {};
       experience: '5+ years,'
       posted: '2 days ago,'
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.,'
-=======
-}
-const CareersPage: React.FC = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
-  const [selectedLocation, setSelectedLocation] = useState('all');
-
-  const jobPositions: JobPosition[] = [
-    {
-      id: 1,
-      title: 'Senior AI Engineer',
-      department: 'Engineering,
-      location: 'Remote,
-      type: 'Full-time,
-      experience: '5+ years,
-      posted: '2 days ago,
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.,
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9
       requirements: []
         'Master\'s degree in Computer Science or related field;
         '5+ years experience in AI/ML development,'

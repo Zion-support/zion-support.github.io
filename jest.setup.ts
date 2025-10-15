@@ -35,7 +35,9 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({};
   unobserve: jest.fn();
   disconnect: jest.fn()}))
 // Polyfill for URL.revokeObjectURL
-if (typeof URL.revokeObjectURL === 'undefined') {};
+if ($1) {
+  // If body
+}
   URL.revokeObjectURL = jest.fn()
 };
 // Polyfill for window.scrollTo

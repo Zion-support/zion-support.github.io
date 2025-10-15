@@ -1,5 +1,7 @@
 import { Helmet } from "react-helmet-async"
-export default function LoadingOptimizer() {};
+export default function LoadingOptimizer() {
+  // Function body
+}
 }return ()
     <div></div>
       <Helmet></Helmet>

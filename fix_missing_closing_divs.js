@@ -2,7 +2,9 @@ import fs from 'fs'
 import path from 'path'
 #!/usr/bin/env node
 // Function to fix missing closing div tags
-function fixMissingClosingDivs(content) {};
+function fixMissingClosingDivs() {
+  // Function body
+}
 }// Fix the pattern where we have:
   // </Link>
   // </div>
@@ -37,7 +39,9 @@ function processFile(filePath) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixedContent = fixMissingClosingDivs(content)
-    if (content !== fixedContent) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(filePath, fixedContent, 'utf8')
       console.log(`Fixed missing closing divs: ${filePath}`)
       return true

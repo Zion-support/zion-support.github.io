@@ -1,7 +1,9 @@
 import fs from 'fs'
 #!/usr/bin/env node
 // Function to fix final parsing issues
-function fixFinalParsing(content) {};
+function fixFinalParsing() {
+  // Function body
+}
 }let fixed = content
   // Fix malformed className attributes
   fixed = fixed.replace(/from-slate-900to-slate-900pt-20/g, 'from-slate-900 to-slate-900 pt-20')
@@ -33,7 +35,9 @@ function processFile(filePath) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixed = fixFinalParsing(content)
-    if (content !== fixed) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(filePath, fixed, 'utf8')
       console.log(`Fixed final parsing: ${filePath}`)
       return true

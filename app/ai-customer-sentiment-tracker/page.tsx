@@ -1,11 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { Heart, ArrowRight } from 'lucide-react';
-=======
-import SEOHead from '../components/SEOHead';
->>>>>>> cursor/fix-errors-and-merge-to-main-13a9
 
 const AiCustomerSentimentTrackerPage: React.FC = () => {
   return (
@@ -52,15 +48,3 @@ const AiCustomerSentimentTrackerPage: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              >
-                View Demo
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default AiCustomerSentimentTrackerPage;

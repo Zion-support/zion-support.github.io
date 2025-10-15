@@ -3,10 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { 
   CheckCircle, 
   ArrowRight, 
-<<<<<<< HEAD
-=======
   Users, 
->>>>>>> cursor/fix-errors-and-merge-to-main-c92c
   TrendingUp,
   Instagram,
   Twitter,
@@ -395,14 +392,3 @@ const AISocialMediaManagerPage: React.FC = () => {
             <Link
               to="/demo"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-            >
-              Schedule Demo
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-};
-
-export default AISocialMediaManagerPage;

@@ -6,7 +6,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix map function syntax errors
-function fixMapSyntax(filePath) {};
+function fixMapSyntax() {
+  // Function body
+}
   try {};
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
@@ -23,7 +25,9 @@ function fixMapSyntax(filePath) {};
     // Fix forEach functions with similar issues
     content = content.replace(/\.forEach\(([^,)]+),\s*([^)]+)\)\s*=>/g, '.forEach(($1, $2) =>');
     
-    if (content !== originalContent) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(filePath, content);
       console.log(`Fixed map syntax: ${filePath}`);
       return true;

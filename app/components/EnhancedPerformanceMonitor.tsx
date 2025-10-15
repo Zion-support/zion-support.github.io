@@ -75,7 +75,9 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({};
         setMetrics(finalMetrics)
         setIsLoading(false)
         // Send metrics to analytics (if available)
-        if (typeof window !== 'undefined' && window.gtag) {};
+        if ($1) {
+  // If body
+}
           window.gtag('event', 'web_vitals', {};
             event_category: 'Performance';
             event_label: 'Core Web Vitals';

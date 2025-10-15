@@ -11,7 +11,9 @@ const WebVitalsTracker: React.FC = () => {};
   useEffect(() => {};
     const sendToAnalytics = (_metric: WebVitalsData) => {};
       // Send to Google Analytics or other analytics service
-      if (typeof window !== 'undefined' && 'gtag' in window) {};
+      if ($1) {
+  // If body
+}
         (window as any).gtag('event', metric.name, {};
           event_category: 'Web Vitals';
           event_label: metric.id;

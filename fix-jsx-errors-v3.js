@@ -5,7 +5,9 @@ import { fileURLToPath } from "url"
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to create a proper page structure
-function createProperPageStructure(pageName, title, description) {};
+function createProperPageStructure() {
+  // Function body
+}
 }return `import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'

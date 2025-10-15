@@ -1,5 +1,7 @@
 import { Helmet } from "react-helmet-async"
-export default function LoadingSkeleton() {};
+export default function LoadingSkeleton() {
+  // Function body
+}
 }return ()
     <div></div>
       <Helmet></Helmet>

@@ -6,7 +6,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix unused index variables
-function fixUnusedIndex(filePath) {};
+function fixUnusedIndex() {
+  // Function body
+}
   try {};
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
@@ -31,7 +33,9 @@ function fixUnusedIndex(filePath) {};
     content = content.replace(/\(([^,]+),\s*_categoryIndex\)\s*=>/g, '($1, categoryIndex) =>');
     content = content.replace(/\(([^,]+),\s*_statIndex\)\s*=>/g, '($1, statIndex) =>');
     
-    if (content !== originalContent) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(filePath, content);
       console.log(`Fixed unused index: ${filePath}`);
       return true;

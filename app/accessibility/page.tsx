@@ -1,17 +1,17 @@
 
 import SEOHead from '../components/SEOHead';
 
-const AccessibilityPage: React.FC = () => {};
+const AccessibilityPage: React.FC = () => {
   return (
     <>
       <SEOHead 
-        title="accessibility - Zion Tech Group"
-        description="Zion Tech Group accessibility service page"
+        title="Page - Zion Tech Group"
+        description="Professional page solutions for modern businesses"
       />
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold mb-4">accessibility</h1>
-          <p className="text-gray-300">Coming soon...</p>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Page</h1>
+          <p className="text-gray-300">Professional solutions coming soon...</p>
         </div>
       </div>
     </>

@@ -53,7 +53,9 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     // Apply accessibility settings to document
     const body = document.body;
     
-    if (settings.highContrast) {};
+    if ($1) {
+  // If body
+}
       body.classList.add('high-contrast');
     } else {};
       body.classList.remove('high-contrast');

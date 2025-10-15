@@ -196,15 +196,3 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
               <Link
                 to="/services"
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-              >
-                View All Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default AiEcommerceOptimizerProPage;

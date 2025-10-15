@@ -55,7 +55,7 @@ const AdvancedErrorBoundary = ({
     );
   }
 
-  return <>{children}</>;
+  return <>{children}</>
 };
 
 const TestComponent = () => <div>Test Component</div>;

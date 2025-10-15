@@ -5,7 +5,9 @@ import { fileURLToPath } from "url"
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to fix common JSX syntax errors
-function fixJSXContent(content) {};
+function fixJSXContent() {
+  // Function body
+}
 }// Remove duplicate function declarations
   content = content.replace()
     /function \w+\(\) \{\s*return \(\s*function \w+\(\) \{\s*return \(/g;
@@ -152,7 +154,9 @@ function processFile(filePath) {};
     } else {};
       // Try to fix the existing content
       const fixedContent = fixJSXContent(content)
-      if (fixedContent !== content) {};
+      if ($1) {
+  // If body
+}
         fs.writeFileSync(filePath, fixedContent)
         console.log(`Fixed: ${filePath}`)
       };

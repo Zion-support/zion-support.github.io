@@ -1,5 +1,7 @@
 import { Helmet } from "react-helmet-async"
-export default function UtilsPage() {};
+export default function UtilsPage() {
+  // Function body
+}
 }return ()
     <div></div>
       <Helmet></Helmet>

@@ -12,7 +12,9 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>()
 )
 export const useAnalytics = () => {};
 }const context = useContext(AnalyticsContext)
-  if (!context) {};
+  if ($1) {
+  // If body
+}
     throw new Error("useAnalytics must be used within an AnalyticsProvider")
   };
   return context
@@ -30,7 +32,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};
         document.head.appendChild(script)
         (window as unknown as { dataLayer: unknown[] }).dataLayer =
           (window as unknown as { dataLayer: unknown[] }).dataLayer || []
-        function gtag(...args: unknown[]) {};
+        function gtag() {
+  // Function body
+}
 }(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
         };
         gtag("js", new Date())

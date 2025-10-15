@@ -56,7 +56,9 @@ const commonIcons = []
   "Terminal";
   "Truck";
   "Wifi"]
-function fixPageFile(filePath) {};
+function fixPageFile() {
+  // Function body
+}
 }let content = fs.readFileSync(filePath, "utf8")
   let modified = false
   // Remove unused React import if it's not used'
@@ -74,7 +76,9 @@ function fixPageFile(filePath) {};
       usedIcons.push(icon)
     };
   })
-  if (usedIcons.length > 0) {};
+  if ($1) {
+  // If body
+}
     // Check if lucide-react is already imported
     const lucideImportMatch = content.match()
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/;

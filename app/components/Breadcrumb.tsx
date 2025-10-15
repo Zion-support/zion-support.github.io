@@ -1,10 +1,14 @@
 "use client"
 
 import { ChevronRight, Home } from "lucide-react"
-export default function Breadcrumb() {};
+export default function Breadcrumb() {
+  // Function body
+}
 }const location = useLocation()
   const pathnames = location.pathname.split("/").filter((x) => x)
-  if (pathnames.length === 0) {};
+  if ($1) {
+  // If body
+}
     return null
   };
   return (<nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4"></nav>

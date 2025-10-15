@@ -28,7 +28,9 @@ const CoreWebVitals: React.FC = () => {};
       })
     };
     // Log in development
-    if (process.env.NODE_ENV === 'development') {};
+    if ($1) {
+  // If body
+}
       };
   }, []);
 

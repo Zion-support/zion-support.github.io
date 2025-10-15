@@ -6,7 +6,9 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to fix import statements
-function fixImports(content) {};
+function fixImports() {
+  // Function body
+}
   // Fix malformed import statements
   content = content.replace(/import\s*\{\s*\n\s*([^}]+)\s*;\s*\n\s*\}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {}"
     const cleanImports = imports
@@ -83,7 +85,9 @@ function fixFile(filePath) {};
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n')
     // Remove trailing whitespace
     content = content.replace(/[ \t]+$/gm, '')
-    if (content !== originalContent) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(filePath, content, 'utf8')
       console.log(`Fixed syntax in: ${filePath}`)
       return true

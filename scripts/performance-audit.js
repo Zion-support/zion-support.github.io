@@ -11,7 +11,9 @@ const __dirname = path.dirname(__filename)
 const performanceIssues = []
 const recommendations = []
 // Check for large bundle files
-function checkBundleSize() {};
+function checkBundleSize() {
+  // Function body
+}
 }const distPath = path.join(__dirname, '..', 'dist')
   if (!fs.existsSync(distPath)) {};
     // console.log('⚠️  No dist folder found. Run build first.')
@@ -23,7 +25,9 @@ function checkBundleSize() {};
 }const filePath = path.join(distPath, file)
     const stats = fs.statSync(filePath)
     const sizeInKB = stats.size / 1024
-    if (sizeInKB > 500) {};
+    if ($1) {
+  // If body
+}
       performanceIssues.push({};
         type: 'Large Bundle';
         file: file;

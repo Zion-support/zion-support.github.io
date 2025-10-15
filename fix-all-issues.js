@@ -54,7 +54,9 @@ const unusedImports = [
   'Eye', 'FileText', 'PerformanceMetrics', 'MobileNavigation'
 ];
 
-function fixMergeConflicts(filePath) {};
+function fixMergeConflicts() {
+  // Function body
+}
   try {};
     const fullPath = path.join(__dirname, filePath);
     if (!fs.existsSync(fullPath)) {};
@@ -72,7 +74,9 @@ function fixMergeConflicts(filePath) {};
     // Remove remaining conflict markers
     content = content.replace(//g, '');
 
-    if (modified) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(fullPath, content, 'utf8');
       console.log(`Fixed merge conflicts: ${filePath}`);
     } else {};

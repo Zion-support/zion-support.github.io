@@ -53,7 +53,9 @@ const ContactForm: React.FC = () => {};
       setIsSubmitting(false);
     };
   };
-  if (isSubmitted) {};
+  if ($1) {
+  // If body
+}
     return ()
       <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center"></div>
         <MessageSquare className="w-8 h-8 mx-auto mb-2" />

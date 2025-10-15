@@ -1,5 +1,7 @@
 import { Helmet } from "react-helmet-async"
-export default function MobileOptimizer() {};
+export default function MobileOptimizer() {
+  // Function body
+}
 }return ()
     <div></div>
       <Helmet></Helmet>

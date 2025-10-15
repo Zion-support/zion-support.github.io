@@ -7,7 +7,9 @@ const CookieConsent: React.FC = () => {};
 
   useEffect(() => {};
     const consent = localStorage.getItem("cookie-consent");
-    if (!consent) {};
+    if ($1) {
+  // If body
+}
       setIsVisible(true);
     };
   }, [])

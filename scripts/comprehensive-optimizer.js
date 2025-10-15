@@ -78,7 +78,9 @@ const analyzeBundles = () => {};
       size: size.toFixed(2) + ' KB'
     });
 
-    if (size > config.maxBundleSize) {};
+    if ($1) {
+  // If body
+}
       bundleAnalysis.recommendations.push(
         `Large bundle detected: ${relativePath} (${size.toFixed(2)} KB)`
       );

@@ -107,7 +107,7 @@ const APIDocsPage: React.FC = () => {};
 
   const features = [
     {};
-      icon: <Zap className="w-8 h-8 text-yellow-400" />;
+      icon: <Zap>
       title: 'Fast & Reliable';
       description: '99.9% uptime with sub-100ms response times'
     };

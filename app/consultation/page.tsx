@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { DollarSign } from "lucide-react";
 
-export default function Consultation() {};
+export default function Consultation() {
+  // Function body
+}
   const [formData, setFormData] = useState({};
     name: '';
     email: '';

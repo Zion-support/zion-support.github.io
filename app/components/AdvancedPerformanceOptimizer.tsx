@@ -47,7 +47,9 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({};
     document.head.appendChild(fontPreload)
     // Preload next likely page based on current route
     const nextPage = getNextLikelyPage(location.pathname)
-    if (nextPage) {};
+    if ($1) {
+  // If body
+}
       const prefetchLink = document.createElement('link')
       prefetchLink.rel = 'prefetch'
       prefetchLink.href = nextPage

@@ -30,7 +30,9 @@ class AdvancedErrorBoundary extends Component<Props, State> {};
     });
 
     // Call the onError callback if provided
-    if (this.props.onError) {};
+    if ($1) {
+  // If body
+}
       this.props.onError(error, errorInfo);
     };
     // Log error to console in development

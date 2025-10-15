@@ -7,7 +7,7 @@ const ServicesPage: React.FC = () => {};
     {};
       title: 'Micro SAAS Solutions';
       description: 'Powerful, affordable micro software-as-a-service solutions designed for modern businesses';
-      icon: <Zap className="w-12 h-12 text-purple-400" />;
+      icon: <Zap>
       link: '/micro-saas-solutions';
       color: 'from-purple-500 to-cyan-500';
       services: [

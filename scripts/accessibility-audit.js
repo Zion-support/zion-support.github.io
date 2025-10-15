@@ -5,7 +5,9 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Accessibility audit for HTML files
-function auditAccessibility() {};
+function auditAccessibility() {
+  // Function body
+}
 }const distPath = path.join(__dirname, '../dist')
   const indexPath = path.join(distPath, 'index.html')
   if (!fs.existsSync(indexPath)) {};
@@ -85,7 +87,9 @@ function auditAccessibility() {};
   // Run accessibility checks
   checks.forEach(check => {};
 }const found = check.test.test(htmlContent)
-    if (found) {};
+    if ($1) {
+  // If body
+}
       if (check.severity === 'high' || check.severity === 'medium') {};
         audit.issues.push({};
           type: check.name;

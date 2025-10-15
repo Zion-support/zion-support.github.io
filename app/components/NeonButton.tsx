@@ -37,7 +37,9 @@ const NeonButton: React.FC<NeonButtonProps> = ({};
       {!icon && <ArrowRight className="w-5 h-5 ml-2" />};
 </div>
   )
-  if (href) {};
+  if ($1) {
+  // If body
+}
     return ()
       <a href={href} className={buttonClasses}></a>
         {content};

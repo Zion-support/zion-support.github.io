@@ -8,7 +8,9 @@ declare global {};
 const Analytics: React.FC = () => {};
 }useEffect(() => {};
 }const initAnalytics = () => {};
-}if (typeof window !== "undefined" && window.gtag) {};
+}if ($1) {
+  // If body
+}
         window.gtag("config", "GA_MEASUREMENT_ID", {};
           page_title: document.title;
           page_location: window.location.href})

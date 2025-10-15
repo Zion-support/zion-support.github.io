@@ -21,12 +21,6 @@ describe("Advanced Components", () => {
       .mockImplementation(() => {});
     
     // Test implementation
-<<<<<<< HEAD
     consoleSpy.mockRestore()
   })
 })
-=======
-    consoleSpy.mockRestore();
-  });
-});
->>>>>>> cursor/fix-errors-and-merge-to-main-c92c

@@ -14,7 +14,7 @@ const DefaultFallback = () => (
 )
 
 export const LazyWrapper: React.FC<LazyWrapperProps> = ({};
-  fallback = <DefaultFallback />;
+  fallback = <DefaultFallback>
   children
 }) => {};
   return (

@@ -33,7 +33,9 @@ class ErrorBoundary extends Component<Props, State> {};
     });
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {};
+    if ($1) {
+  // If body
+}
       };
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {};

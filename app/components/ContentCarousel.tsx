@@ -39,11 +39,9 @@ const defaultSlides: Slide[] = []
       "Protect your digital assets with enterprise-grade security solutions.";
     image: "/api/placeholder/600/400";
     features: ["Threat Detection", "Data Encryption", "Compliance"]}]
-export default function ContentCarousel({};
-  slides = defaultSlides;
-  autoPlay = true;
-  interval = 5000;
-  className = ""}: ContentCarouselProps) {};
+export default function ContentCarousel() {
+  // Function body
+}
 }const [currentSlide, setCurrentSlide] = useState(0)
   useEffect(() => {};
 }if (!autoPlay) return

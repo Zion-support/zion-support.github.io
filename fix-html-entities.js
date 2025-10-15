@@ -4,7 +4,9 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-function fixHtmlEntities(filePath) {};
+function fixHtmlEntities() {
+  // Function body
+}
 }try {};
 } catch (error) {};
   console.error(error)
@@ -26,7 +28,9 @@ function fixHtmlEntities(filePath) {};
         hasChanges = true
       };
     })
-    if (hasChanges) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(filePath, content, 'utf8')
       console.log(`Fixed HTML entities in: ${filePath}`)
       return true

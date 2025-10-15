@@ -24,7 +24,9 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {};
   useEffect(() => {};
     // Load saved settings from localStorage
     const savedSettings = localStorage.getItem('accessibilitySettings');
-    if (savedSettings) {};
+    if ($1) {
+  // If body
+}
       setSettings(JSON.parse(savedSettings));
     };
   }, []);

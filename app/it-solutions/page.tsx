@@ -1,5 +1,5 @@
 
-const ITSolutionsPage: React.FC = () => {};
+const ITSolutionsPage: React.FC = () => {
   const itServices = [
     {};
       id: 'cloud-infrastructure';
@@ -27,7 +27,7 @@ const ITSolutionsPage: React.FC = () => {};
         'Increase system reliability'
       ];
       category: 'Infrastructure';
-      icon: <Cloud className="w-8 h-8 text-blue-400" />;
+      icon: <Cloud>
       popular: true
     };
     {};
@@ -496,15 +496,3 @@ const ITSolutionsPage: React.FC = () => {};
             <Link
               to="/demo"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-            ></Link
->
-              Schedule Demo
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-};
-
-export default ItSolutionsPage;

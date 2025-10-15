@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 import fs from "fs"
 import { glob } from "glob"
-function fixUnusedImports(filePath) {};
+function fixUnusedImports() {
+  // Function body
+}
 }let content = fs.readFileSync(filePath, "utf8")
   let modified = false
   // Find all lucide-react imports
@@ -20,7 +22,9 @@ function fixUnusedImports(filePath) {};
       const importMatches = (importStatement.match(iconRegex) || []).length
       return allMatches.length > importMatches
     })
-    if (usedIcons.length !== importedIcons.length) {};
+    if ($1) {
+  // If body
+}
       if (usedIcons.length > 0) {};
         const newImport = `import { ${usedIcons.join(", ")} } from 'lucide-react';`
         content = content.replace(importStatement, newImport)

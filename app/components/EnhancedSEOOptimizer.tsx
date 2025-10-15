@@ -175,7 +175,9 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({};
     };
     // Add page-specific structured data
     const path = location.pathname
-    if (path === '/') {};
+    if ($1) {
+  // If body
+}
       return {};
         ...baseStructuredData;
         "@type": "WebSite";

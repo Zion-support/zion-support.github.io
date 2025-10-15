@@ -9,7 +9,7 @@ interface SEOHeadProps {};
   canonical?: string;
   ogImage?: string;
   noIndex?: boolean;
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record<string>
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
@@ -114,7 +114,9 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({};
     const baseData = generateBaseStructuredData();
     const path = location.pathname;
 
-    if (path === '/') {};
+    if ($1) {
+  // If body
+}
       return {};
         ...baseData;
         '@type': 'WebSite';

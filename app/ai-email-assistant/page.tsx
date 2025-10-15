@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c92c
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 ;
@@ -194,10 +190,3 @@ export default function AiEmailAssistantPage() {";"
         </div>";"
       </div>";"
     </>";"
-  );
-<<<<<<< HEAD
-};
-;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-c92c

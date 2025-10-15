@@ -1,7 +1,9 @@
 import fs from 'fs'
 #!/usr/bin/env node
 // Function to fix remaining JSX issues
-function fixRemainingJSX(content) {};
+function fixRemainingJSX() {
+  // Function body
+}
 }let fixed = content
   // Fix remaining className spacing issues
   fixed = fixed.replace(/from-slate-900pt-20/g, 'from-slate-900 pt-20')
@@ -46,7 +48,9 @@ function processFile(filePath) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixed = fixRemainingJSX(content)
-    if (content !== fixed) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(filePath, fixed, 'utf8')
       console.log(`Fixed remaining JSX: ${filePath}`)
       return true

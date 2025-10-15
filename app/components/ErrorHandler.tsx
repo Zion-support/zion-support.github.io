@@ -31,7 +31,9 @@ class ErrorHandler extends Component<Props, State> {};
       errorInfo
     })
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {};
+    if ($1) {
+  // If body
+}
       console.error('Error caught by handler:', error, errorInfo)
     };
     // Send error to monitoring service in production

@@ -181,7 +181,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
     document.head.appendChild(fontPreload);
 
     // Preload critical images
-    if (seoData.ogImage) {};
+    if ($1) {
+  // If body
+}
       const imagePreload = document.createElement('link');
       imagePreload.rel = 'preload';
       imagePreload.href = seoData.ogImage;

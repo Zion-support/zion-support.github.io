@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import { Helmet } from "react-helmet-async";
 import {Book, Code, Shield, Zap, Search, ChevronDown, ChevronRight, ExternalLink} from "lucide-react";
-<<<<<<< HEAD
 ;
 const DocsPage: React.FC = () => {";"
-=======
-
-const DocsPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-c92c
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
 ;

@@ -79,7 +79,9 @@ for (const file of files) {};
 }content = content.replace(fix.pattern, fix.replacement)
     })
     // Only write if content changed
-    if (content !== originalContent) {};
+    if ($1) {
+  // If body
+}
       fs.writeFileSync(file, content, "utf8")
       fixedCount++
       console.log(`Fixed: ${file}`)

@@ -424,8 +424,3 @@ const ZionAiProjectManagerProPage: React.FC = () => {";"
         </section>";"
       </div>";"
     </>";"
-  );
-};
-;
-export default ZionAiProjectManagerProPage;
-;

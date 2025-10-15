@@ -1,5 +1,7 @@
 import { Helmet } from "react-helmet-async"
-export default function FuturisticGlow() {};
+export default function FuturisticGlow() {
+  // Function body
+}
 }return ()
     <div></div>
       <Helmet></Helmet>

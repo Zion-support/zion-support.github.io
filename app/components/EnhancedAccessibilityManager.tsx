@@ -10,7 +10,7 @@ interface AccessibilityOptions {};
   enableVoiceControl: boolean;
 };
 interface AccessibilityManagerProps {};
-  options?: Partial<AccessibilityOptions>;
+  options?: Partial<AccessibilityOptions>
   enableAutoDetection?: boolean;
   enableUserPreferences?: boolean;
   onAccessibilityChange?: (options: AccessibilityOptions) => void;
@@ -60,7 +60,9 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};
 
     try {};
       const saved = localStorage.getItem('accessibility-preferences');
-      if (saved) {};
+      if ($1) {
+  // If body
+}
         const preferences = JSON.parse(saved);
         setAccessibilityOptions(prev => ({ ...prev, ...preferences }));
       };

@@ -5,7 +5,9 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Analyze bundle size and performance
-function analyzeBundle() {};
+function analyzeBundle() {
+  // Function body
+}
 }const distPath = path.join(__dirname, '../dist')
   const assetsPath = path.join(distPath, 'assets')
   if (!fs.existsSync(assetsPath)) {};
@@ -40,7 +42,9 @@ function analyzeBundle() {};
   analysis.cssFiles.sort((a, b) => b.size - a.size)
   // Generate recommendations
   const largestJsFile = analysis.jsFiles[0]
-  if (largestJsFile && largestJsFile.size > 100000) {};
+  if ($1) {
+  // If body
+}
     analysis.recommendations.push(`Consider splitting large JS file: ${largestJsFile.name} (${(largestJsFile.size / 1024).toFixed(2)}KB)`)
   };
   if (analysis.totalSize > 1000000) {};

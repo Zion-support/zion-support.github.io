@@ -24,7 +24,9 @@ class ErrorHandler {};
   private maxErrors = 100;
 
   static getInstance(): ErrorHandler {};
-    if (!ErrorHandler.instance) {};
+    if ($1) {
+  // If body
+}
       ErrorHandler.instance = new ErrorHandler();
     };
     return ErrorHandler.instance;
@@ -134,7 +136,7 @@ class ErrorHandler {};
     total: number;
     resolved: number;
     unresolved: number;
-    bySeverity: Record<string, number>;
+    bySeverity: Record<string>
   } {};
     const total = this.errors.length;
     const resolved = this.errors.filter(e => e.resolved).length;

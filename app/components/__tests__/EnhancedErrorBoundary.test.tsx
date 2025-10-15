@@ -5,7 +5,9 @@ import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
 
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {};
-  if (shouldThrow) {};
+  if ($1) {
+  // If body
+}
     throw new Error('Test error');
   };
   return <div>No error</div>;

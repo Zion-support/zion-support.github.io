@@ -41,7 +41,9 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({};
       )};
     </div>
   )
-  if (fullScreen) {};
+  if ($1) {
+  // If body
+}
     return ()
       <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center z-50"></div>
         <div className="text-center"></div>

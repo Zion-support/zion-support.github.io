@@ -43,7 +43,9 @@ const PerformanceMonitor: React.FC = () => {};
     onTTFB(handleMetric);
 
     // Performance observer for additional metrics
-    if ('PerformanceObserver' in window) {};
+    if ($1) {
+  // If body
+}
       const observer = new PerformanceObserver((list) => {};
         for (const entry of list.getEntries()) {};
           if (entry.entryType === 'navigation') {};
