@@ -29,10 +29,19 @@ const Sidebar: React.FC = () => {
             <Link to="/data-analytics" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Data Analytics
             </Link>
+            <Link to="/web-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Web Development
+            </Link>
+            <Link to="/mobile-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Mobile Development
+            </Link>
           </div>
           
           <div className="space-y-1 mt-6">
-            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">AI Products</div>
+            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Micro SaaS Solutions</div>
+            <Link to="/micro-saas-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              All Micro SaaS
+            </Link>
             <Link to="/ai-content-generator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               AI Content Generator
             </Link>
@@ -44,6 +53,25 @@ const Sidebar: React.FC = () => {
             </Link>
             <Link to="/zion-ai-email-marketing-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               AI Email Marketing Pro
+            </Link>
+            <Link to="/zion-smart-expense-tracker" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Smart Expense Tracker
+            </Link>
+          </div>
+          
+          <div className="space-y-1 mt-6">
+            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">AI Tools</div>
+            <Link to="/zion-ai-content-moderator" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Content Moderator
+            </Link>
+            <Link to="/zion-ai-customer-churn-predictor" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Churn Predictor
+            </Link>
+            <Link to="/zion-ai-sales-predictor" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Sales Predictor
+            </Link>
+            <Link to="/zion-ai-financial-forecaster" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Financial Forecaster
             </Link>
           </div>
           
