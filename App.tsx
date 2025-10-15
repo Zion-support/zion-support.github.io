@@ -40,7 +40,7 @@ import CareersPage from './app/pages/CareersPage';
 import CybersecurityPage from './app/pages/CybersecurityPage';
 import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
-import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
+import FiveGSolutionsPage from './app/pages/FiveGSolutionsPage';
 import TeamPage from './app/pages/TeamPage';
 import DocumentationPage from './app/pages/DocumentationPage';
 
