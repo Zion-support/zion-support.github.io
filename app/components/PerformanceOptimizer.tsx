@@ -1,4 +1,5 @@
 import React, { useEffect, useCallback } from 'react';
+import { logger } from '../utils/logger';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
@@ -69,11 +70,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
+        getCLS((metric) => logger.info('CLS metric:', metric));
+        getFID((metric) => logger.info('FID metric:', metric));
+        getFCP((metric) => logger.info('FCP metric:', metric));
+        getLCP((metric) => logger.info('LCP metric:', metric));
+        getTTFB((metric) => logger.info('TTFB metric:', metric));
       });
     }
 
@@ -82,9 +83,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'navigation') {
-            console.log('Navigation timing:', entry);
+            logger.info('Navigation timing:', entry);
           } else if (entry.entryType === 'resource') {
-            console.log('Resource timing:', entry);
+            logger.info('Resource timing:', entry);
           }
         });
       });

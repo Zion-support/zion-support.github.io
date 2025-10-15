@@ -1,13 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { logger } from '../utils/logger';
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
-  className?: string;
   width?: number;
   height?: number;
+  className?: string;
   priority?: boolean;
   placeholder?: string;
+  sizes?: string;
+  quality?: number;
+  loading?: 'lazy' | 'eager';
   onLoad?: () => void;
   onError?: () => void;
 }
@@ -15,38 +19,57 @@ interface OptimizedImageProps {
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
-  className = '',
   width,
   height,
+  className = '',
   priority = false,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
+  placeholder,
+  sizes = '100vw',
+  quality = 75,
+  loading = 'lazy',
   onLoad,
   onError,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
+  const [isInView, setIsInView] = useState(priority);
   const imgRef = useRef<HTMLImageElement>(null);
 
+  // Intersection Observer for lazy loading
   useEffect(() => {
-    if (priority) return;
+    if (priority || !imgRef.current) return;
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+            observer.disconnect();
+          }
+        });
       },
-      { threshold: 0.1 }
+      {
+        rootMargin: '50px 0px',
+        threshold: 0.1,
+      }
     );
 
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
+    observer.observe(imgRef.current);
 
     return () => observer.disconnect();
   }, [priority]);
+
+  // Generate optimized src
+  const getOptimizedSrc = (originalSrc: string) => {
+    // If it's already an optimized URL or external URL, return as is
+    if (originalSrc.startsWith('http') || originalSrc.startsWith('data:')) {
+      return originalSrc;
+    }
+
+    // For local images, you could implement image optimization here
+    // This is a placeholder for actual optimization logic
+    return originalSrc;
+  };
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -55,10 +78,31 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   const handleError = () => {
     setHasError(true);
+    logger.error('Image failed to load', { src, alt });
     onError?.();
   };
 
-  const imageSrc = isInView ? src : placeholder;
+  // Generate responsive srcSet
+  const generateSrcSet = (baseSrc: string) => {
+    const breakpoints = [320, 640, 768, 1024, 1280, 1536];
+    return breakpoints
+      .map((bp) => `${getOptimizedSrc(baseSrc)}?w=${bp}&q=${quality} ${bp}w`)
+      .join(', ');
+  };
+
+  if (hasError) {
+    return (
+      <div
+        ref={imgRef}
+        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        style={{ width, height }}
+        role="img"
+        aria-label={alt}
+      >
+        <span className="text-gray-500 text-sm">Image failed to load</span>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -66,27 +110,40 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
     >
-      {!isLoaded && !hasError && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"></div>
-        </div>
+      {/* Placeholder */}
+      {!isLoaded && placeholder && (
+        <div
+          className="absolute inset-0 bg-gray-200 animate-pulse"
+          style={{ backgroundImage: `url(${placeholder})`, backgroundSize: 'cover' }}
+        />
       )}
-      
-      {hasError ? (
-        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
-          <div className="text-gray-400 text-sm">Failed to load image</div>
-        </div>
-      ) : (
+
+      {/* Loading skeleton */}
+      {!isLoaded && !placeholder && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+      )}
+
+      {/* Actual image */}
+      {isInView && (
         <img
-          src={imageSrc}
+          src={getOptimizedSrc(src)}
+          srcSet={generateSrcSet(src)}
+          sizes={sizes}
           alt={alt}
+          width={width}
+          height={height}
+          loading={priority ? 'eager' : loading}
+          decoding="async"
           className={`transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           onLoad={handleLoad}
           onError={handleError}
-          loading={priority ? 'eager' : 'lazy'}
-          decoding="async"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+          }}
         />
       )}
     </div>

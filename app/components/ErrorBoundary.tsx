@@ -1,7 +1,8 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
-// import { logger } from '../utils/logger';
+import { logger } from '../utils/logger';
+import { errorHandler } from '../utils/errorHandler';
 
 interface Props {
   children: ReactNode;
@@ -30,8 +31,19 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
+    // Report error using error handler
+    const errorId = errorHandler.reportError(error, {
+      component: 'ErrorBoundary',
+      action: 'componentDidCatch',
+      additionalData: {
+        componentStack: errorInfo.componentStack,
+        errorBoundary: true,
+      }
+    });
+
     // Log error to our logging service
     logger.error('Error Boundary caught an error', {
+      errorId,
       error: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack
@@ -39,7 +51,7 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      logger.error('ErrorBoundary caught an error:', { errorId, error, errorInfo });
     }
   }
 

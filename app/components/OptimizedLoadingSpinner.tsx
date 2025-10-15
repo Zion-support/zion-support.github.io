@@ -1,151 +1,59 @@
-import React, { memo, useMemo } from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import React from 'react';
 
 interface OptimizedLoadingSpinnerProps {
-  size?: "xs" | "sm" | "md" | "lg" | "xl";
-  variant?: "dots" | "pulse" | "spinner" | "skeleton" | "bars";
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   text?: string;
   className?: string;
-  color?: "blue" | "gray" | "green" | "red" | "purple";
-  fullScreen?: boolean;
 }
 
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
-  ({
-    size = "md",
-    variant = "spinner",
-    text = "Loading...",
-    className = "",
-    color = "blue",
-    fullScreen = false,
-  }) => {
-    const sizeClasses = useMemo(
-      () => ({
-        xs: "h-3 w-3",
-        sm: "h-4 w-4",
-        md: "h-8 w-8",
-        lg: "h-12 w-12",
-        xl: "h-16 w-16",
-      }),
-      [],
-    );
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
+  size = 'md',
+  text,
+  className = '',
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16',
+  };
 
-    const textSizeClasses = useMemo(
-      () => ({
-        xs: "text-xs",
-        sm: "text-sm",
-        md: "text-base",
-        lg: "text-lg",
-        xl: "text-xl",
-      }),
-      [],
-    );
+  const textSizeClasses = {
+    sm: 'text-xs',
+    md: 'text-sm',
+    lg: 'text-base',
+    xl: 'text-lg',
+  };
 
-    const colorClasses = useMemo(
-      () => ({
-        blue: "text-blue-500",
-        gray: "text-gray-500",
-        green: "text-green-500",
-        red: "text-red-500",
-        purple: "text-purple-500",
-      }),
-      [],
-    );
-
-    const renderSpinner = () => {
-      switch (variant) {
-        case "dots":
-          return (
-            <div className="flex space-x-1">
-              {[0, 1, 2].map((i) => (
-                <div
-                  key={i}
-                  className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`}
-                  style={{
-                    animationDelay: `${i * 0.2}s`,
-                    animationDuration: "1s",
-                  }}
-                />
-              ))}
-            </div>
-          );
-        case "pulse":
-          return (
-            <div
-              className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`}
-            />
-          );
-        case "spinner":
-          return (
-            <div
-              className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`}
-            />
-          );
-        case "skeleton":
-          return (
-            <div className="space-y-2">
-              <div className={`h-4 bg-gray-300 rounded animate-pulse`} />
-              <div className={`h-4 bg-gray-300 rounded animate-pulse w-3/4`} />
-            </div>
-          );
-        case "bars":
-          return (
-            <div className="flex space-x-1">
-              {[0, 1, 2, 3].map((i) => (
-                <div
-                  key={i}
-                  className={`w-1 ${colorClasses[color]} animate-pulse`}
-                  style={{
-                    height: `${8 + i * 4}px`,
-                    animationDelay: `${i * 0.1}s`,
-                    animationDuration: "0.8s",
-                  }}
-                />
-              ))}
-            </div>
-          );
-        default:
-          return (
-            <div
-              className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`}
-            />
-          );
-      }
-    };
-
-    const containerClasses = fullScreen
-      ? "fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
-      : "flex flex-col items-center justify-center space-y-4";
-
-    return (
-      <>
-        <Helmet>
-          <title>Loading - Zion Tech Group</title>
-        </Helmet>
-        <div className={`${containerClasses} ${className}`}>
-          {renderSpinner()}
-          {text && (
-            <p
-              className={`${textSizeClasses[size]} ${colorClasses[color]} mt-2`}
-            >
-              {text}
-            </p>
-          )}
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </>
-    );
-  },
-);
-
-OptimizedLoadingSpinner.displayName = "OptimizedLoadingSpinner";
+  return (
+    <div className={`flex flex-col items-center justify-center p-4 ${className}`}>
+      <div className="relative">
+        {/* Outer ring */}
+        <div
+          className={`${sizeClasses[size]} border-4 border-gray-200 rounded-full animate-spin`}
+          style={{
+            borderTopColor: '#7c3aed',
+            animationDuration: '1s',
+          }}
+        />
+        {/* Inner ring */}
+        <div
+          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'sm' ? 'sm' : 'md']} border-2 border-transparent rounded-full animate-spin`}
+          style={{
+            borderTopColor: '#a855f7',
+            animationDuration: '0.5s',
+            animationDirection: 'reverse',
+          }}
+        />
+      </div>
+      
+      {text && (
+        <p className={`mt-3 text-gray-600 ${textSizeClasses[size]} font-medium`}>
+          {text}
+        </p>
+      )}
+    </div>
+  );
+};
 
 export default OptimizedLoadingSpinner;

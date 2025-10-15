@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { logger } from '../utils/logger';
 
 interface SEOHeadProps {
   title: string;
@@ -9,9 +10,14 @@ interface SEOHeadProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: object;
+  structuredData?: any;
   noindex?: boolean;
   nofollow?: boolean;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
 }
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
@@ -19,48 +25,91 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   description,
   keywords,
   canonical,
-  ogImage = '/images/og-default.jpg',
+  ogImage = '/images/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
   noindex = false,
-  nofollow = false
+  nofollow = false,
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = [],
 }) => {
-  const siteUrl = 'https://ziontechgroup.com';
+  const siteUrl = process.env.REACT_APP_SITE_URL || 'https://ziontechgroup.com';
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 
+  // Generate structured data
   const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": siteUrl,
-    "logo": `${siteUrl}/images/logo.png`,
-    "description": "Leading provider of AI-powered solutions, IT services, and digital transformation",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: siteUrl,
+    logo: `${siteUrl}/images/logo.svg`,
+    description: 'Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
+    sameAs: [
+      'https://linkedin.com/company/ziontechgroup',
+      'https://twitter.com/ziontechgroup',
+      'https://github.com/ziontechgroup'
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-555-0123',
+      contactType: 'customer service',
+      availableLanguage: 'English'
+    }
+  };
+
+  const articleStructuredData = publishedTime ? {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    author: {
+      '@type': 'Organization',
+      name: author
     },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
+    publisher: {
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/images/logo.svg`
+      }
     },
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup",
-      "https://github.com/ziontechgroup"
+    datePublished: publishedTime,
+    dateModified: modifiedTime || publishedTime,
+    image: fullOgImage,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': fullCanonical
+    }
+  } : null;
+
+  const breadcrumbStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: siteUrl
+      }
     ]
   };
 
-  const mergedStructuredData = structuredData 
-    ? { ...defaultStructuredData, ...structuredData }
-    : defaultStructuredData;
+  // Log SEO data for monitoring
+  React.useEffect(() => {
+    logger.info('SEO Head rendered', {
+      title,
+      description: description.substring(0, 100),
+      canonical: fullCanonical,
+      ogImage: fullOgImage,
+    });
+  }, [title, description, fullCanonical, fullOgImage]);
 
   return (
     <Helmet>
@@ -68,20 +117,22 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="author" content={author} />
       <link rel="canonical" href={fullCanonical} />
       
       {/* Robots */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
       
       {/* Open Graph */}
+      <meta property="og:type" content={ogType} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
       <meta property="og:url" content={fullCanonical} />
       <meta property="og:image" content={fullOgImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
@@ -89,40 +140,49 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullOgImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
       
-      {/* Additional SEO Meta Tags */}
-      <meta name="author" content="Zion Tech Group" />
+      {/* Article specific meta tags */}
+      {publishedTime && (
+        <>
+          <meta property="article:published_time" content={publishedTime} />
+          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+          {author && <meta property="article:author" content={author} />}
+          {section && <meta property="article:section" content={section} />}
+          {tags.map((tag, index) => (
+            <meta key={index} property="article:tag" content={tag} />
+          ))}
+        </>
+      )}
+      
+      {/* Additional SEO meta tags */}
+      <meta name="theme-color" content="#7c3aed" />
+      <meta name="msapplication-TileColor" content="#7c3aed" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      
-      {/* Language and Region */}
-      <meta name="language" content="en-US" />
-      <meta name="geo.region" content="US-DE" />
-      <meta name="geo.placename" content="Middletown, Delaware" />
-      
-      {/* Mobile App Meta Tags */}
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
-      {/* Theme Color */}
-      <meta name="theme-color" content="#00ffff" />
-      <meta name="msapplication-TileColor" content="#00ffff" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(mergedStructuredData)}
-      </script>
       
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
       
-      {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      {/* Favicon */}
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="icon" type="image/png" href="/favicon.png" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData || defaultStructuredData)}
+      </script>
+      
+      {articleStructuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(articleStructuredData)}
+        </script>
+      )}
+      
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbStructuredData)}
+      </script>
     </Helmet>
   );
 };

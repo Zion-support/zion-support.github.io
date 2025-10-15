@@ -35,11 +35,15 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 500,
-    assetsInlineLimit: 4096,
+    chunkSizeWarningLimit: 200,
+    assetsInlineLimit: 2048,
     reportCompressedSize: true,
-    // Enable tree shaking
-    treeshake: true,
+    // Enable aggressive tree shaking
+    treeshake: {
+      moduleSideEffects: false,
+      propertyReadSideEffects: false,
+      tryCatchDeoptimization: false,
+    },
     // Optimize for production
     terserOptions: {
       compress: {
@@ -84,20 +88,26 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
+          // Core React libraries - split further
+          if (id.includes('react/') && !id.includes('react-dom')) {
+            return 'react-core'
+          }
+          if (id.includes('react-dom')) {
+            return 'react-dom'
           }
           // Router
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
-          if (id.includes('framer-motion')) {
-            return 'animations'
+          // UI libraries - split by usage
+          if (id.includes('@heroicons/react')) {
+            return 'heroicons'
           }
           if (id.includes('lucide-react')) {
-            return 'icons'
+            return 'lucide-icons'
+          }
+          if (id.includes('framer-motion')) {
+            return 'animations'
           }
           // SEO and meta
           if (id.includes('react-helmet')) {
@@ -118,6 +128,10 @@ export default defineConfig({
           // Error handling
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
+          }
+          // Form handling
+          if (id.includes('form') || id.includes('validation')) {
+            return 'forms'
           }
           // AI service pages - group by category
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
