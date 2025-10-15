@@ -10,8 +10,7 @@ import {
   Star,
   Users,
   Shield,
-  Zap,
-  Clock
+  Zap
 } from 'lucide-react';
 
 const ContactPage: React.FC = () => {

@@ -15,55 +15,60 @@ const DocsPage: React.FC = () => {
     }
   ]; */
   
-  // const features = [
-  //   {
-  //     title: 'Getting Started',
-  //     icon: <Zap className="w-6 h-6" />,
-  //     description: 'Quick start guides and setup instructions',
-  //     articles: [
-  //       { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min' },
-  //       { title: 'Account Setup', description: 'Create and configure your account', readTime: '3 min' },
-  //       { title: 'First Project', description: 'Create your first AI project', readTime: '10 min' },
-  //       { title: 'API Keys', description: 'Generate and manage your API keys', readTime: '2 min' }
-  //     ]
-  //   },
-  //   {
-  //     id: 'ai-services',
-  //     title: 'AI Services',
-  //     icon: <Code className="w-6 h-6" />,
-  //     description: 'Comprehensive guides for our AI services',
-  //     articles: [
-  //       { title: 'Machine Learning API', description: 'Complete ML API reference', readTime: '15 min' },
-  //       { title: 'Computer Vision', description: 'Image and video processing guides', readTime: '12 min' },
-  //       { title: 'Natural Language Processing', description: 'Text analysis and generation', readTime: '8 min' },
-  //       { title: 'Predictive Analytics', description: 'Building predictive models', readTime: '20 min' }
-  //     ]
-  //   },
-  //   {
-  //     id: 'it-services',
-  //     title: 'IT Services',
-  //     icon: <Shield className="w-6 h-6" />,
-  //     description: 'Documentation for our IT solutions',
-  //     articles: [
-  //       { title: 'Cloud Infrastructure', description: 'Setting up cloud environments', readTime: '25 min' },
-  //       { title: 'Cybersecurity Setup', description: 'Security best practices', readTime: '18 min' },
-  //       { title: 'Web Development', description: 'Building modern web applications', readTime: '30 min' },
-  //       { title: 'Mobile Development', description: 'iOS and Android app development', readTime: '35 min' }
-  //     ]
-  //   },
-  //   {
-  //     id: 'api-reference',
-  //     title: 'API Reference',
-  //     icon: <Book className="w-6 h-6" />,
-  //     description: 'Complete API documentation and examples',
-  //     articles: [
-  //       { title: 'Authentication', description: 'API authentication methods', readTime: '5 min' },
-  //       { title: 'Endpoints', description: 'Complete endpoint reference', readTime: '45 min' },
-  //       { title: 'SDKs', description: 'Software development kits', readTime: '10 min' },
-  //       { title: 'Webhooks', description: 'Real-time event notifications', readTime: '8 min' }
-  //     ]
-  //   }
-  // ];
+  const features = [
+    {
+      id: 'getting-started',
+      title: 'Getting Started',
+      icon: <Zap className="w-6 h-6" />,
+      description: 'Quick start guides and setup instructions',
+      content: 'Comprehensive guide to implementing AI in your business',
+      articles: [
+        { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', readTime: '5 min' },
+        { title: 'Account Setup', description: 'Create and configure your account', readTime: '3 min' },
+        { title: 'First Project', description: 'Create your first AI project', readTime: '10 min' },
+        { title: 'API Keys', description: 'Generate and manage your API keys', readTime: '2 min' }
+      ]
+    },
+    {
+      id: 'ai-services',
+      title: 'AI Services',
+      icon: <Code className="w-6 h-6" />,
+      description: 'Comprehensive guides for our AI services',
+      content: 'Learn how to integrate and use our AI services effectively',
+      articles: [
+        { title: 'Machine Learning API', description: 'Complete ML API reference', readTime: '15 min' },
+        { title: 'Computer Vision', description: 'Image and video processing guides', readTime: '12 min' },
+        { title: 'Natural Language Processing', description: 'Text analysis and generation', readTime: '8 min' },
+        { title: 'Predictive Analytics', description: 'Building predictive models', readTime: '20 min' }
+      ]
+    },
+    {
+      id: 'it-services',
+      title: 'IT Services',
+      icon: <Shield className="w-6 h-6" />,
+      description: 'Documentation for our IT solutions',
+      content: 'Complete documentation for our IT infrastructure and services',
+      articles: [
+        { title: 'Cloud Infrastructure', description: 'Setting up cloud environments', readTime: '25 min' },
+        { title: 'Cybersecurity Setup', description: 'Security best practices', readTime: '18 min' },
+        { title: 'Web Development', description: 'Building modern web applications', readTime: '30 min' },
+        { title: 'Mobile Development', description: 'iOS and Android app development', readTime: '35 min' }
+      ]
+    },
+    {
+      id: 'api-reference',
+      title: 'API Reference',
+      icon: <Book className="w-6 h-6" />,
+      description: 'Complete API documentation and examples',
+      content: 'Detailed API reference with examples and best practices',
+      articles: [
+        { title: 'Authentication', description: 'API authentication methods', readTime: '5 min' },
+        { title: 'Endpoints', description: 'Complete endpoint reference', readTime: '45 min' },
+        { title: 'SDKs', description: 'Software development kits', readTime: '10 min' },
+        { title: 'Webhooks', description: 'Real-time event notifications', readTime: '8 min' }
+      ]
+    }
+  ];
 
   const popularArticles = [
     { title: 'Quick Start Guide', category: 'Getting Started', readTime: '5 min', views: '12.5k' },
