@@ -61,6 +61,8 @@ export default defineConfig({
           if (id.includes('/app/utils/')) {
             return 'utils';
           }
+          // Default return for unmatched chunks
+          return undefined;
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',

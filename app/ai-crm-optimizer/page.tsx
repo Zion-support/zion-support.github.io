@@ -6,10 +6,7 @@ import {
   ChartBarIcon, 
   CogIcon, 
   CheckCircleIcon,
-  ArrowRightIcon,
   StarIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
   ShieldCheckIcon,
   SparklesIcon
 } from '@heroicons/react/24/outline';
