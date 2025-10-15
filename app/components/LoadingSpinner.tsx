@@ -1,20 +1,31 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-const LoadingSpinner: React.FC = () => {
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  text = 'Loading...', 
+  className = '' 
+}) => {
+  const sizeClasses = {
+    sm: 'w-6 h-6',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16'
+  };
+
   return (
-    <>
-      <Helmet>
-        <title>LoadingSpinner - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">LoadingSpinner</h1>
-          <p className="text-gray-300 text-center">Coming soon...</p>
-        </div>
-      </div>
-    </>
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <div className={`${sizeClasses[size]} border-4 border-cyan-500/30 border-t-cyan-500 rounded-full animate-spin`}></div>
+      {text && (
+        <p className="mt-4 text-cyan-400 text-sm font-medium animate-pulse">
+          {text}
+        </p>
+      )}
+    </div>
   );
 };
 
