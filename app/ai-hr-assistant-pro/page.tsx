@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Users, CheckCircle, Star, Phone, Mail, MapPin, ArrowRight, Award, Clock, Shield, TrendingUp } from 'lucide-react';
+import { Brain, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';
 
 const AiHrAssistantProPage: React.FC = () => {
   const features = [

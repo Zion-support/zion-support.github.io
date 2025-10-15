@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { TrendingUp, Target, CheckCircle, Star, Phone, Mail, MapPin, ArrowRight, Award, Clock, Shield, Users } from 'lucide-react';
+import { TrendingUp, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';
 
 const AiSalesOptimizerProPage: React.FC = () => {
   const features = [

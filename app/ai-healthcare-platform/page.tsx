@@ -1,53 +1,26 @@
-import { 
-  ArrowRight
-} from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Heart, 
-  Zap, 
   Shield, 
-  Globe, 
   Brain, 
   CheckCircle, 
   ArrowRight, 
   Star,
   Phone,
   Mail,
-  MapPin,
-  Download,
   Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Calendar,
-  Target,
   Users,
-  Award,
-  TrendingUp,
-  Cpu,
-  Database,
-  BarChart3,
-  Activity,
-  Lock,
-  Clock,
-  Smartphone,
-  Search,
   FileText,
   Stethoscope,
   Pill,
   Microscope,
-  Clipboard,
   AlertTriangle,
-  Bell,
   MessageSquare,
   Camera,
-  Scan,
   Thermometer,
   Syringe,
-  Bandage
+  BarChart3
 } from 'lucide-react';
 
 const AiHealthcarePlatformPage: React.FC = () => {
@@ -395,7 +368,7 @@ const AiHealthcarePlatformPage: React.FC = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the plan that fits your healthcare facility's needs and budget.
+                  Choose the plan that fits your healthcare facility&apos;s needs and budget.
                 </p>
               </div>
               
@@ -475,7 +448,7 @@ const AiHealthcarePlatformPage: React.FC = () => {
                       ))}
                     </div>
                     <p className="text-gray-300 mb-6 leading-relaxed">
-                      "{testimonial.content}"
+                      &ldquo;{testimonial.content}&rdquo;
                     </p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>

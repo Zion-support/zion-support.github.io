@@ -1,24 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Brain, 
-  Mail, 
   TrendingUp, 
   Target, 
   CheckCircle, 
   Star,
-  ArrowRight,
   Phone,
   Mail as MailIcon,
   MapPin,
-  Zap,
-  Shield,
-  Clock,
-  Award,
-  BarChart3,
   Users,
   Send,
-  Eye
+  Eye,
+  Shield
 } from 'lucide-react';
 
 const AiEmailMarketingProPage: React.FC = () => {

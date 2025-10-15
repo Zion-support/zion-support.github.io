@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Calendar, Users, Target, BarChart3, Zap, Shield, Globe, Brain, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, Download, Play, Pause, RefreshCw, Settings, Eye, Filter, Clock, PieChart, LineChart, Activity, TrendingUp, AlertTriangle, CheckSquare, FileText, MessageSquare, GitBranch, Timer, Award, DollarSign } from 'lucide-react';
+import { Users, Target, Zap, Shield, Brain, CheckCircle, ArrowRight, Star, Phone, Mail, Play, BarChart3 } from 'lucide-react';
 
 const AiProjectManagerProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

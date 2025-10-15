@@ -1,7 +1,10 @@
 import { 
   ArrowRight,
   CheckCircle,
-  ExternalLink
+  ExternalLink,
+  TrendingUp,
+  Users,
+  Award
 } from 'lucide-react';
 
 import { Helmet } from "react-helmet-async";

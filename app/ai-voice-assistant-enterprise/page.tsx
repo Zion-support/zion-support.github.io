@@ -1,11 +1,7 @@
-import { 
-  ArrowRight
-} from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Mic, 
-  Zap, 
   Shield, 
   Globe, 
   Brain, 
@@ -14,30 +10,12 @@ import {
   Star,
   Phone,
   Mail,
-  MapPin,
-  Download,
   Play,
-  Pause,
-  RefreshCw,
   Settings,
-  Eye,
-  Filter,
-  Calendar,
-  Target,
   Volume2,
   Headphones,
-  Radio,
-  MessageSquare,
-  Languages,
   Users,
-  Award,
-  TrendingUp,
-  Cpu,
-  Database,
-  BarChart3,
   Activity,
-  Lock,
-  Clock,
   Smartphone
 } from 'lucide-react';
 
