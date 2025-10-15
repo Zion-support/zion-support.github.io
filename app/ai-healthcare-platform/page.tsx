@@ -1,53 +1,26 @@
-import { 
-  ArrowRight
-} from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Heart, 
-  Zap, 
   Shield, 
-  Globe, 
   Brain, 
   CheckCircle, 
   ArrowRight, 
   Star,
   Phone,
   Mail,
-  MapPin,
-  Download,
-  Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Calendar,
-  Target,
-  Users,
-  Award,
-  TrendingUp,
-  Cpu,
-  Database,
   BarChart3,
-  Activity,
-  Lock,
-  Clock,
-  Smartphone,
-  Search,
-  FileText,
   Stethoscope,
   Pill,
   Microscope,
-  Clipboard,
   AlertTriangle,
-  Bell,
   MessageSquare,
   Camera,
-  Scan,
   Thermometer,
   Syringe,
-  Bandage
+  FileText,
+  Users,
+  Play
 } from 'lucide-react';
 
 const AiHealthcarePlatformPage: React.FC = () => {

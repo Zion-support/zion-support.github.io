@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Cloud, Server, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Shield, Zap, Target, Globe, Brain, Clock, Users, Database, Lock, Activity } from 'lucide-react';
+import { Cloud, Server, CheckCircle, ArrowRight, Star, Phone, Mail, Shield, Zap, Brain, Database, Play } from 'lucide-react';
 
 const AiCloudInfrastructurePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

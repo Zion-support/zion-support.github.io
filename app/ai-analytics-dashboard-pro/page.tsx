@@ -1,7 +1,7 @@
 
-import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { BarChart3, Globe, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Activity, Shield, Brain, Target, Zap } from 'lucide-react';
+import { BarChart3, CheckCircle, ArrowRight, Star, Phone, Mail, Shield, Brain, Zap, Target, Globe, Play } from 'lucide-react';
 
 const AiAnalyticsDashboardProPage = () => {
   const [isVisible, setIsVisible] = useState(false);

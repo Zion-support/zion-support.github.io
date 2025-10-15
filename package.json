@@ -101,7 +101,7 @@
     "optimize:performance-enhanced": "node scripts/performance-optimizer-enhanced.cjs",
     "optimize:seo-enhanced": "node scripts/seo-optimizer-enhanced.cjs",
     "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
-    "postbuild": "echo \"Build completed successfully\"",
+    "postbuild": "echo \"Build completed successfully\" && node scripts/performance-optimizer.cjs",
     "analyze:full": "npm run build && npm run analyze:bundle",
     "debug:performance": "localStorage.setItem('debug-performance', 'true') && npm run dev",
     "perf:check": "npm run optimize:performance && npm run build:analyze",
