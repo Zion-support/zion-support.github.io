@@ -77,11 +77,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center text-sm text-gray-300">
               <Phone className="w-4 h-4 mr-2" />
-              <span>+1 (555) 123-4567</span>
+              <span>+1 302 464 0950</span>
             </div>
             <div className="flex items-center text-sm text-gray-300">
               <Mail className="w-4 h-4 mr-2" />
-              <span>info@ziontech.com</span>
+              <span>kleber@ziontechgroup.com</span>
             </div>
           </div>
 

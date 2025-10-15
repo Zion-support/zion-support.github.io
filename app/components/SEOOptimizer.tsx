@@ -36,14 +36,16 @@ const SEOOptimizer: React.FC = () => {
         "logo": "https://ziontechgroup.com/logo.png",
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "+1-555-123-4567",
+          "telephone": "+1-302-464-0950",
           "contactType": "customer service",
-          "email": "info@ziontech.com"
+          "email": "kleber@ziontechgroup.com"
         },
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "123 Tech Street",
-          "addressLocality": "Innovation City",
+          "streetAddress": "364 E Main St STE 1008",
+          "addressLocality": "Middletown",
+          "addressRegion": "DE",
+          "postalCode": "19709",
           "addressCountry": "US"
         }
       };

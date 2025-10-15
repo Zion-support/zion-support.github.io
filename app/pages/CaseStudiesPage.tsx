@@ -2,144 +2,156 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react'
 
-
-
-
-const Case Studies Page: React.FC = () => {
-  const case Studies = 
+const CaseStudiesPage: React.FC = () => {
+  const caseStudies = [
     {
-      title: 'E-commerce Platform A I Optimization'
-      client: 'Tech Retail Inc.'
-      industry: 'E-commerce'
-      challenge: 'Low conversion rates and high cart abandonment'
-      solution: 'Implemented A I-powered recommendation engine and personalized shopping experience'
-      results: 
-        { metric: 'Conversion Rate', value: '+45%', icon: Trending Up }
-        { metric: 'Cart Abandonment', value: '-30%', icon: Trending Up }
-        { metric: 'Customer Satisfaction', value: '+60%', icon: Users }
-        { metric: 'Implementation Time', value: '3 months', icon: Clock }]
-      description: 'We helped Tech Retail Inc. transform their e-commerce platform with A I-powered personalization, resulting in significant improvements in conversion rates and customer satisfaction.'
+      title: 'E-commerce Platform AI Optimization',
+      client: 'Tech Retail Inc.',
+      industry: 'E-commerce',
+      challenge: 'Low conversion rates and high cart abandonment',
+      solution: 'Implemented AI-powered recommendation engine and personalized shopping experience',
+      results: [
+        { metric: 'Conversion Rate', value: '+45%', icon: TrendingUp },
+        { metric: 'Cart Abandonment', value: '-30%', icon: TrendingUp },
+        { metric: 'Customer Satisfaction', value: '+60%', icon: Users },
+        { metric: 'Implementation Time', value: '3 months', icon: Clock }
+      ],
+      description: 'We helped Tech Retail Inc. transform their e-commerce platform with AI-powered personalization, resulting in significant improvements in conversion rates and customer satisfaction.'
+    },
+    {
+      title: 'Manufacturing Process Automation',
+      client: 'Auto Parts Manufacturing',
+      industry: 'Manufacturing',
+      challenge: 'Manual quality control processes causing delays and errors',
+      solution: 'Deployed computer vision and machine learning for automated quality inspection',
+      results: [
+        { metric: 'Quality Accuracy', value: '+95%', icon: TrendingUp },
+        { metric: 'Processing Time', value: '-70%', icon: Clock },
+        { metric: 'Cost Savings', value: '$2M annually', icon: DollarSign },
+        { metric: 'Error Reduction', value: '-85%', icon: TrendingUp }
+      ],
+      description: 'Our AI-powered quality control system revolutionized the manufacturing process, dramatically improving accuracy and efficiency while reducing costs.'
+    },
+    {
+      title: 'Healthcare Data Analytics',
+      client: 'Regional Medical Center',
+      industry: 'Healthcare',
+      challenge: 'Inefficient patient data analysis and treatment optimization',
+      solution: 'Developed comprehensive AI analytics platform for patient care optimization',
+      results: [
+        { metric: 'Diagnosis Accuracy', value: '+40%', icon: TrendingUp },
+        { metric: 'Treatment Time', value: '-25%', icon: Clock },
+        { metric: 'Patient Outcomes', value: '+35%', icon: Users },
+        { metric: 'Cost Reduction', value: '$1.5M annually', icon: DollarSign }
+      ],
+      description: 'Our healthcare AI platform enabled data-driven decision making, improving patient outcomes and operational efficiency.'
     }
-    {
-      title: 'Manufacturing Process Automation'
-      client: 'Auto Parts Manufacturing'
-      industry: 'Manufacturing'
-      challenge: 'Manual quality control processes causing delays and errors'
-      solution: 'Deployed computer vision and A I-powered quality control systems'
-      results: 
-        { metric: 'Quality Defects', value: '-80%', icon: Trending Up }
-        { metric: 'Production Speed', value: '+35%', icon: Trending Up }
-        { metric: 'Cost Savings', value: '$2.5 M', icon: Dollar Sign }
-        { metric: 'Implementation Time', value: '6 months', icon: Clock }]
-      description: 'Our A I-powered quality control system reduced defects by 80% while increasing production speed by 35%, saving the client $2.5 M annually.'
-    }
-    {
-      title: 'Healthcare Data Analytics Platform'
-      client: 'Med Center Health System'
-      industry: 'Healthcare'
-      challenge: 'Fragmented patient data and inefficient treatment planning'
-      solution: 'Built comprehensive A I analytics platform for patient data integration and predictive treatment recommendations'
-      results: 
-        { metric: 'Treatment Accuracy', value: '+55%', icon: Trending Up }
-        { metric: 'Patient Outcomes', value: '+40%', icon: Users }
-        { metric: 'Cost Reduction', value: '$1.8 M', icon: Dollar Sign }
-        { metric: 'Implementation Time', value: '8 months', icon: Clock }]
-      description: 'The A I analytics platform improved treatment accuracy by 55% and patient outcomes by 40%, while reducing operational costs by $1.8 M.'
-    }]
+  ]
+
   return (
-    <div className="min-h-screenbg-slate-900text-white">
+    <>
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Explore our successful A I and I T implementation case studies. See how we've helped businesses across industries achieve remarkable results." />
-        <meta name="keywords" content="case studies, A I implementation, I T solutions, success stories, business transformation, Zion Tech Group" />
+        <meta name="description" content="Explore our successful AI and IT implementation case studies across various industries." />
+        <meta name="keywords" content="case studies, AI implementation, success stories, client results, technology solutions" />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="relativ e py-20bg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900">
-        <div className="containermx-autopx-4text-center">
-          <h1 className="text -5xl md:text-6xlfont-boldmb-6bg-gradient-to-rfrom-purple-400to-cyan-400bg-clip-texttext-transparent">
-            Success Stories
-          </h1>
-          <p className="text-xltext-gray-300mb-8max-w-3xlmx-auto">
-            Discover how we&apos;ve helped businesses across industries achieve remarkable results 
-            with our AI and IT solutions.
-          </p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Case Studies
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Discover how we've helped businesses transform their operations with cutting-edge AI and IT solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                View All Studies
+              </button>
+              <button className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                Contact Us
+              </button>
+            </div>
           </div>
-      </section>
-
-      {/* Case Studies Grid */}
-      <section className="py-20">
-        <div className="containermx-autopx-4">
-          <div className="gridgrid-cols-1lg:grid-cols-2xl:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-4">
-                  <div className="text-smtext-purple-400font-semiboldmb-2">{study.industry}</div>
-                  <h3 className="text-2xlfont-bold text-whitemb-2">{study.title}</h3>
-                  <div className="text-gray-400text-smmb-4">Client: {study.client}</div>
-                  </div>
         </div>
 
-                <div className="mb-6">
-                  <h 4 className="text-whitefont-semiboldmb-2">Challenge</h4>
-                  <p className="text-gray-300text-smmb-4">{study.challenge}</p>
-                  
-                  <h 4 className="text-whitefont-semiboldmb-2">Solution</h4>
-                  <p className="text-gray-300text-smmb-4">{study.solution}</p>
-                  </div>
+        {/* Case Studies Grid */}
+        <div className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="space-y-16">
+              {caseStudies.map((study, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300">
+                  <div className="grid lg:grid-cols-2 gap-8">
+                    {/* Study Info */}
+                    <div>
+                      <div className="flex items-center space-x-4 mb-4">
+                        <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">
+                          {study.industry}
+                        </span>
+                        <span className="text-gray-400 text-sm">{study.client}</span>
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
+                      <p className="text-gray-300 mb-6">{study.description}</p>
+                      
+                      <div className="space-y-4">
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
+                          <p className="text-gray-300">{study.challenge}</p>
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
+                          <p className="text-gray-300">{study.solution}</p>
+                        </div>
+                      </div>
+                    </div>
 
-                <div className="mb-6">
-                  <h 4 className="text-whitefont-semiboldmb-3">Results</h4>
-                  <div className="gridgrid-cols-2gap-3">
-                    {study.results.map((result, resultIndex) => (
-                      <div key={resultIndex} className="bg-slate-700rounded-lgp-3">
-              </div>
-              <div className="flexitems-centerjustify-betweenmb-1">
-                          <span className="text-gray-300text-xs">{result.metric}</span>
-                          <result.icon className="w -4h-4 text-purple-400" />
-                          </div>
-                        <div className="text-whitefont-boldtext-lg">{result.value}</div>
-        </div>
-                    ))}
-  )
+                    {/* Results */}
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-6">Results</h4>
+                      <div className="grid grid-cols-2 gap-4">
+                        {study.results.map((result, resultIndex) => {
+                          const Icon = result.icon
+                          return (
+                            <div key={resultIndex} className="bg-slate-700/50 rounded-lg p-4 text-center">
+                              <Icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+                              <div className="text-2xl font-bold text-white mb-1">{result.value}</div>
+                              <div className="text-sm text-gray-400">{result.metric}</div>
+                            </div>
+                          )
+                        })}
+                      </div>
                     </div>
                   </div>
-
-                <p className="text-gray-300text-smmb-6">{study.description}</p>
-
-                <button className="w-ful l bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700transition-allduration-300flexitems-centerjustify-centergap-2">
-                  Read Full Case Study
-                  <ArrowRight className="w-4 h-4" />
-                </button>
                 </div>
-            ))}
-  )
+              ))}
             </div>
           </div>
-      </section>
+        </div>
 
-      {/* CTA Section */}
-      <section className="py-20bg-gradient-to-rfrom-purple-900/3 0to-cyan-900/3 0">
-        <div className="containermx-autopx-4text-center">
-          <h2 className="text-4xlmd:text-5xlfont-bold text-whitemb-6">
-            Ready to Create Your Success Story?
-          </h2>
-          <p className="text-xltext-gray-300mb-8max-w-3xlmx-auto">
-            Let&apos;s discuss how our AI and IT solutions can transform your business 
-            and deliver measurable results.
-          </p>
-          <div className="flexflex-colsm:flex-rowgap-4justify-center">
-            <button className="bg-gradient-to- r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lgfont-semiboldhover:from-purple-700 hover:to-cyan-700 transition-allduration-300transformhover:scale-105">
-              Start Your Project
-            </button>
-            <button className="border -2 border-white text-white px-8py-4rounded-lgfont-semiboldhover:bg-whitehover:text-slate-900transition-allduration-300">
-              Schedule Consultation
-            </button>
+        {/* CTA Section */}
+        <div className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Create Your Success Story?
+            </h2>
+            <p className="text-gray-300 text-lg mb-8">
+              Let us help you achieve similar results with our proven AI and IT solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                Start Your Project
+              </button>
+              <button className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                Schedule Consultation
+              </button>
             </div>
           </div>
-      </section>
-    </div>
+        </div>
+      </div>
+    </>
   )
-  }
-  )
-export default Case;; Studies Page
+}
+
+export default CaseStudiesPage
