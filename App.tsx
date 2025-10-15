@@ -32,25 +32,20 @@ import AISolutionsPage from './app/ai-solutions/page';
 import ITSolutionsPage from './app/it-solutions/page';
 
 // Service Pages
-import AIServicesPage from './app/ai-services/page';
-import ITServicesPage from './app/it-solutions/page';
-import CloudInfrastructurePage from './app/cloud-services/page';
-import DigitalTransformationPage from './app/digital-transformation/page';
-import CaseStudiesPage from './app/case-studies/page';
-import CareersPage from './app/careers/page';
-
-// New AI Service Pages
-import AIAccountingAssistantPage from './app/ai-accounting-assistant/page';
-import AIClimatePredictionEnginePage from './app/ai-climate-prediction-engine/page';
-import AICybersecuritySuiteProPage from './app/ai-cybersecurity-suite-pro/page';
+import AIServicesPage from './app/pages/AIServicesPage';
+import ITServicesPage from './app/pages/ITServicesPage';
+import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
+import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
+import CaseStudiesPage from './app/pages/CaseStudiesPage';
+import CareersPage from './app/pages/CareersPage';
 
 // Additional Pages
-import CybersecurityPage from './app/cybersecurity/page';
-import CloudSolutionsPage from './app/cloud-services/page';
-import MicroSaaSPage from './app/micro-saas-solutions/page';
+import CybersecurityPage from './app/pages/CybersecurityPage';
+import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
+import MicroSaaSPage from './app/pages/MicroSaaSPage';
 import FiveGSolutionsPage from './app/5g-solutions/page';
-import TeamPage from './app/team/page';
-import DocumentationPage from './app/docs/page';
+import TeamPage from './app/pages/TeamPage';
+import DocumentationPage from './app/pages/DocumentationPage';
 import PartnershipsPage from './app/pages/PartnershipsPage';
 import APIDocsPage from './app/pages/APIDocsPage';
 import HelpPage from './app/pages/HelpPage';
@@ -127,11 +122,6 @@ function App() {
                       <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                       <Route path="/case-studies" element={<CaseStudiesPage />} />
                       <Route path="/careers" element={<CareersPage />} />
-                      
-                      {/* New AI Service Pages */}
-                      <Route path="/ai-accounting-assistant" element={<AIAccountingAssistantPage />} />
-                      <Route path="/ai-climate-prediction-engine" element={<AIClimatePredictionEnginePage />} />
-                      <Route path="/ai-cybersecurity-suite-pro" element={<AICybersecuritySuiteProPage />} />
                       
                       {/* Additional Service Pages */}
                       <Route path="/cybersecurity" element={<CybersecurityPage />} />
