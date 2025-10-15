@@ -15,7 +15,7 @@ import React from 'react',
       </div>
     </>
   )
-    },
+    },;
     {
 
 export default BlockchainWeb3Page;

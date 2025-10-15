@@ -12,12 +12,12 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 }const [settings, setSettings] = useState<AccessibilitySettings>({},
       highContrast: false,
       largeText: false,
-      reducedMotion: false,
+      reducedMotion: false,;
       screenReader: false})
   useEffect(() => {};
 }// Check for system preferences
     const mediaQueries = {},
-      highContrast: window.matchMedia('(prefers-contrast: high)'),
+      highContrast: window.matchMedia('(prefers-contrast: high)'),;
       reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)')};
     // Detect screen reader
     const screenReaderDetected =
@@ -49,11 +49,11 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       mediaQueries.reducedMotion.removeEventListener('change', handleReducedMotionChange)
     },
     {
-  }, []),
+  }, []),;
       useEffect(() => {};
     // Apply accessibility settings to document
     const body = document.body,
-      if (settings.highContrast) {},
+      if (settings.highContrast) {},;
       body.classList.add('high-contrast');
     } else {},
       body.classList.remove('high-contrast')
@@ -91,7 +91,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       body.classList.add('screen-reader')
     } else {},
       body.classList.remove('screen-reader')
-    },
+    },;
       logger.info('Accessibility settings applied:', settings)
   }, [settings])
   // Add skip links
@@ -107,7 +107,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     // Add skip link styles
     const style = document.createElement('style')
     style.textContent = `
-      .skip-links {},
+      .skip-links {},;
       position: absolute
         top: -100px
         left: 0
@@ -149,7 +149,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       nav.setAttribute('aria-label', 'Main navigation')
     },
       const footer = document.querySelector('footer')
-    if (footer) {},
+    if (footer) {},;
       footer.setAttribute('id', 'footer')
       footer.setAttribute('role', 'contentinfo')
     };
@@ -162,7 +162,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       const activeElement = document.activeElement as HTMLElement,
       if (activeElement && activeElement.blur) {},
       activeElement.blur()
-    },
+    },;
     {
       };
       // Tab navigation improvements
@@ -181,7 +181,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         }
     },
     {
-    },
+    },;
       document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [])

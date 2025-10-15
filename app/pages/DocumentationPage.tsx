@@ -20,7 +20,7 @@ const DocumentationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 };
 

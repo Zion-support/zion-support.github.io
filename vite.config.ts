@@ -9,8 +9,8 @@ export default defineConfig({
       // Enable React Fast Refresh
       fastRefresh: true,
       // Enable JSX runtime
-      jsxRuntime: "automatic",
-    }),
+      jsxRuntime: "automatic"
+    })
   ],
   resolve: {
     alias: {
@@ -22,8 +22,8 @@ export default defineConfig({
       "@/hooks": resolve(__dirname, "./hooks"),
       "@/config": resolve(__dirname, "./config"),
       "@/data": resolve(__dirname, "./data"),
-      "@/content": resolve(__dirname, "./content"),
-    },
+      "@/content": resolve(__dirname, "./content")
+    }
   },
   build: {
     outDir: "dist",
@@ -32,7 +32,7 @@ export default defineConfig({
     target: "es2020",
     cssCodeSplit: true,
     modulePreload: {
-      polyfill: false,
+      polyfill: false
     },
     // Performance optimizations
     chunkSizeWarningLimit: 1000,
@@ -46,7 +46,7 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 2,
+        passes: 2
       },
       mangle: {
         safari10: true,
@@ -64,7 +64,7 @@ export default defineConfig({
       treeshake: {
         moduleSideEffects: false,
         propertyReadSideEffects: false,
-        tryCatchDeoptimization: false,
+        tryCatchDeoptimization: false
       },
       output: {
         manualChunks: (id) => {
@@ -74,7 +74,7 @@ export default defineConfig({
             if (id.includes('framer-motion') || id.includes('lucide-react')) return 'vendor-ui';
             if (id.includes('web-vitals') || id.includes('analytics')) return 'vendor-analytics';
             if (id.includes('clsx') || id.includes('tailwind-merge')) return 'vendor-utils';
-            return 'vendor-other';
+            return 'vendor-other'
           }
           if (id.includes('/app/components/')) return 'components';
           if (id.includes('/app/hooks/')) return 'hooks';
@@ -89,17 +89,17 @@ export default defineConfig({
           if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) return `assets/images/[name]-[hash].${ext}`;
           if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) return `assets/fonts/[name]-[hash].${ext}`;
           return `assets/[name]-[hash].${ext}`;
-        },
-      },
-    },
+        }
+      }
+    }
   },
   server: {
     port: 3000,
-    open: true,
+    open: true
   },
   preview: {
     port: 4173,
-    open: true,
+    open: true
   },
   optimizeDeps: {
     include: [
@@ -107,11 +107,11 @@ export default defineConfig({
       'react-dom',
       'react-router-dom',
       'lucide-react',
-      'framer-motion',
-    ],
+      'framer-motion'
+    ]
   },
   // CSS optimization
   css: {
-    devSourcemap: true,
-  },
+    devSourcemap: true
+  }
 });

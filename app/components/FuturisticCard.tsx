@@ -51,7 +51,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({},
     transition-all duration-300
     group overflow-hidden
   `,
-      const cardClasses = `${baseClasses} ${getVariantClasses()} ${hoverClasses} ${glowClasses} ${className}`,
+      const cardClasses = `${baseClasses} ${getVariantClasses()} ${hoverClasses} ${glowClasses} ${className}`,;
       return (
     <div className={cardClasses}></div>
       {/* Animated background gradient */};

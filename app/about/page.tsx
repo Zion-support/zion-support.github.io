@@ -1,6 +1,6 @@
-import { Helmet } from "react-helmet-async",
-      import { Link } from "react-router-dom",
-      import { ArrowRight, Brain, Shield, Users, Award } from 'lucide-react',
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight, Brain, Shield, Users, Award } from 'lucide-react';
       export default function AboutPage() {
   const stats = [
     { number: "500+", label: "Projects Completed" },
@@ -29,7 +29,7 @@ import { Helmet } from "react-helmet-async",
       title: "Excellence",
       description: "We strive for excellence in every project, ensuring the highest quality deliverables."
     }
-  ],
+  ],;
       return (
     <>
       <Helmet>
@@ -44,7 +44,7 @@ import { Helmet } from "react-helmet-async",
               About <span className="text-blue-400">Zion Tech Group</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              We are a leading technology company specializing in AI solutions, 
+              We are a leading technology company specializing in AI solutions, ;
               IT services, and innovative digital transformations that drive business success.
             </p>
             <div className="flex flex-wrap justify-center gap-8 mt-12">
@@ -83,7 +83,7 @@ import { Helmet } from "react-helmet-async",
             <p className="text-xl text-gray-300 mb-8">
               Let's discuss how we can help transform your business with our innovative solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
@@ -102,5 +102,5 @@ import { Helmet } from "react-helmet-async",
         </section>
       </div>
     </>
-  );
+  )
 }

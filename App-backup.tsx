@@ -29,7 +29,7 @@ const HomePage = lazy(() => import('./app/page'));
       const PricingPage = lazy(() => import('./app/pages/PricingPage')),
       const SolutionsPage = lazy(() => import('./app/pages/SolutionsPage')),
       const MicroSaaSSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page')),
-      const AISolutionsPage = lazy(() => import('./app/ai-solutions/page')),
+      const AISolutionsPage = lazy(() => import('./app/ai-solutions/page')),;
       const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
 
 // Service Pages - Lazy loaded
@@ -37,7 +37,7 @@ const AIServicesPage = lazy(() => import('./app/pages/AIServicesPage')),
       const ITServicesPage = lazy(() => import('./app/pages/ITServicesPage')),
       const CloudInfrastructurePage = lazy(() => import('./app/pages/CloudInfrastructurePage')),
       const DigitalTransformationPage = lazy(() => import('./app/pages/DigitalTransformationPage')),
-      const CaseStudiesPage = lazy(() => import('./app/pages/CaseStudiesPage')),
+      const CaseStudiesPage = lazy(() => import('./app/pages/CaseStudiesPage')),;
       const CareersPage = lazy(() => import('./app/pages/CareersPage'));
 
 // Additional Pages - Lazy loaded
@@ -53,7 +53,7 @@ const CybersecurityPage = lazy(() => import('./app/pages/CybersecurityPage')),
       const CommunityPage = lazy(() => import('./app/pages/CommunityPage')),
       const ChatPage = lazy(() => import('./app/pages/ChatPage')),
       const StatusPage = lazy(() => import('./app/pages/StatusPage')),
-      const ReportPage = lazy(() => import('./app/pages/ReportPage')),
+      const ReportPage = lazy(() => import('./app/pages/ReportPage')),;
       const SoftwareDevelopmentPage = lazy(() => import('./app/pages/SoftwareDevelopmentPage'));
 
 // Error fallback component
@@ -83,7 +83,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
   </div>
 ),
       function App() {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false),
+  const [sidebarOpen, setSidebarOpen] = React.useState(false),;
       const [showPerformanceDashboard, setShowPerformanceDashboard] = React.useState(false);
   
   // Initialize performance optimizations
@@ -92,14 +92,14 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
     enablePreloading: true,
     enableLazyLoading: true,
     enableImageOptimization: true,
-    enableBundleAnalysis: true,
+    enableBundleAnalysis: true
   });
 
   // Toggle performance dashboard with keyboard shortcut
   React.useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.ctrlKey && event.shiftKey && event.key === 'P') {
-        event.preventDefault(),
+        event.preventDefault(),;
       setShowPerformanceDashboard(prev => !prev);
       }
     },

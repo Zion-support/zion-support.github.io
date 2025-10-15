@@ -3,10 +3,9 @@ import { Calendar, Users, BarChart3, CheckCircle, ArrowRight, Clock, Target, Zap
       import FuturisticButton from '../components/FuturisticButton',
       import ResponsiveContainer from '../components/ResponsiveContainer',
       import EnhancedSEO from '../components/EnhancedSEO';
-,
       const ProjectManagementToolPage = () => {",
         "
-  const features = [",
+  const features = [",;
         "
     {";"
       title: "Task Management",";"
@@ -55,10 +54,9 @@ import { Calendar, Users, BarChart3, CheckCircle, ArrowRight, Clock, Target, Zap
       benefits: ["API integrations", "Webhook support", "Third-party apps", "Custom connectors"]
     };
   ];
-,
       const pricing = [",
         "
-    {",
+    {",;
         "
       name: "Starter",";"
       price: "$29",";"
@@ -120,10 +118,9 @@ import { Calendar, Users, BarChart3, CheckCircle, ArrowRight, Clock, Target, Zap
         "
     };
   ];
-,
       const benefits = [",
         "
-    {",
+    {",;
         "
       title: "Increase Productivity",";"
       description: "Streamline workflows and boost team efficiency by up to 40%",";"
@@ -151,7 +148,6 @@ import { Calendar, Users, BarChart3, CheckCircle, ArrowRight, Clock, Target, Zap
       icon: <Globe className="w-6 h-6" />";"
     };
   ];
-,
       return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">",
         "
       <EnhancedSEO",
@@ -436,6 +432,5 @@ import { Calendar, Users, BarChart3, CheckCircle, ArrowRight, Clock, Target, Zap
   )
     },
     {
-,
       export default ProjectManagementToolPage;
 ;

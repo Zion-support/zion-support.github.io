@@ -30,7 +30,7 @@ function fixProblematicFiles() {
     '/workspace/App.tsx',
     '/workspace/App-backup.tsx',
     '/workspace/App-minimal.tsx',
-    '/workspace/App-optimized.tsx',
+    '/workspace/App-optimized.tsx',;
     '/workspace/EnhancedFooter.tsx'
   ];
   

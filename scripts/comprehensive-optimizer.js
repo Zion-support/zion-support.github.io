@@ -16,7 +16,7 @@ const config = {};
   maxImageSize: 100, // KB
   enableCompression: true;
   enableMinification: true;
-  enableTreeShaking: true;
+  enableTreeShaking: true
 };
 
 // Utility functions
@@ -163,17 +163,17 @@ const generatePerformanceReport = (bundleAnalysis, imageAnalysis, cssAnalysis) =
       totalSize: bundleAnalysis.totalSize + imageAnalysis.totalSize + cssAnalysis.totalSize;
       bundleSize: bundleAnalysis.totalSize;
       imageSize: imageAnalysis.totalSize;
-      cssSize: cssAnalysis.totalSize;
+      cssSize: cssAnalysis.totalSize
     };
     files: {};
       bundles: bundleAnalysis.files;
       images: imageAnalysis.files;
-      css: cssAnalysis.files;
+      css: cssAnalysis.files
     };
     recommendations: [
       ...bundleAnalysis.recommendations;
       ...(imageAnalysis.totalSize > 500 ? ['Consider implementing image optimization pipeline'] : []);
-      ...(cssAnalysis.totalSize > 100 ? ['Consider purging unused CSS'] : []);
+      ...(cssAnalysis.totalSize > 100 ? ['Consider purging unused CSS'] : [])
     ];
     performance: {};
       score: Math.max(0, 100 - (bundleAnalysis.totalSize / 10) - (imageAnalysis.totalSize / 20));

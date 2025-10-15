@@ -1,9 +1,8 @@
 
 import SEOHead from '../components/SEOHead';
-,
       export default function HomePage() {",
         "
-const structuredData = {",
+const structuredData = {",;
         "
     "@context": "https://schema.org",";"
     "@type": "WebSite",";"
@@ -17,7 +16,6 @@ const structuredData = {",
     },
     {
   };
-,
       const HomePage: React.FC = () => {",
         "
   return (",
@@ -26,7 +24,7 @@ const structuredData = {",
         "
       <SEOHead",
         "
-        title="HomePage - Zion Tech Group",
+        title="HomePage - Zion Tech Group",;
       description="Zion Tech Group HomePage page" />";"
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
         <div className="text-center">";"
@@ -42,6 +40,5 @@ const structuredData = {",
   )
     },
     {
-,
       export default HomePage;
 ;

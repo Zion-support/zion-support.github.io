@@ -1,16 +1,15 @@
 
 import {MessageSquare, BookOpen} from "lucide-react";
-,
       const CommunityPage: React.FC = () => {",
         "
-  const communityFeatures = [",
+  const communityFeatures = [",;
         "
     {";"
       icon: <MessageSquare className="w-8 h-8 text-blue-400" />,",
         "
       title: 'Discussion Forums',",
         "
-      description: 'Connect with other developers and share knowledge';
+      description: 'Connect with other developers and share knowledge'
     },",
         "
     {",
@@ -19,7 +18,7 @@ import {MessageSquare, BookOpen} from "lucide-react";
         "
       title: 'Code Sharing',",
         "
-      description: 'Share code snippets and collaborate on projects';
+      description: 'Share code snippets and collaborate on projects'
     },",
         "
     {",
@@ -41,7 +40,6 @@ import {MessageSquare, BookOpen} from "lucide-react";
     },
     {
   ];
-,
       return (",
         "
     <>",
@@ -149,5 +147,4 @@ import {MessageSquare, BookOpen} from "lucide-react";
   )
     },
     {
-,
       export default CommunityPage;

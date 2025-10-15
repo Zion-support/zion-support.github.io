@@ -18,7 +18,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({},
 }) => {},
       const siteUrl = 'https://ziontechgroup.com',
       const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl,
-      const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`,
+      const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`,;
       const defaultStructuredData = {};
     "@context": "https://schema.org";
     "@type": "Organization";

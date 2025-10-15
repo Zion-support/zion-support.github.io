@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react',
       const FuturisticHero: React.FC = () => {},
       const [currentText, setCurrentText] = useState(0),
-      const [isVisible, setIsVisible] = useState(false),
+      const [isVisible, setIsVisible] = useState(false),;
       const animatedTexts = [
     'AI-Powered Solutions';
     'Digital Transformation';
@@ -11,7 +11,7 @@ import React, { useEffect, useState } from 'react',
   ],
       useEffect(() => {},
       setIsVisible(true),
-      const interval = setInterval(() => {},
+      const interval = setInterval(() => {},;
       setCurrentText((prev) => (prev + 1) % animatedTexts.length);
     }, 3000),
       return () => clearInterval(interval);

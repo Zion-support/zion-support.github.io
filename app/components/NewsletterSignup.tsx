@@ -3,7 +3,7 @@ import React, { useState } from 'react',
       import { Helmet } from "react-helmet-async",
       export default function NewsletterSignup() {},
       const [email, setEmail] = useState(""),
-      const handleSubmit = (_e: React.FormEvent) => {},
+      const handleSubmit = (_e: React.FormEvent) => {},;
       e.preventDefault();
     // Handle newsletter signup
     },

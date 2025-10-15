@@ -14,12 +14,11 @@ import React, { useState } from 'react',
         "
     category: '',",
         "
-    description: '';
+    description: ''
   }),
-      const [isSubmitting, setIsSubmitting] = useState(false),
+      const [isSubmitting, setIsSubmitting] = useState(false),;
       const [isSubmitted, setIsSubmitted] = useState(false);
-,
-      const supportChannels = [",
+      const supportChannels = [",;
         "
     {";"
       icon: <MessageSquare className="w-8 h-8" />,",
@@ -34,7 +33,7 @@ import React, { useState } from 'react',
         "
       action: 'Start Chat',",
         "
-      color: 'from-blue-500 to-cyan-500';
+      color: 'from-blue-500 to-cyan-500'
     },",
         "
     {",
@@ -51,7 +50,7 @@ import React, { useState } from 'react',
         "
       action: 'Call Now',",
         "
-      color: 'from-green-500 to-emerald-500';
+      color: 'from-green-500 to-emerald-500'
     },",
         "
     {",
@@ -68,7 +67,7 @@ import React, { useState } from 'react',
         "
       action: 'Send Email',",
         "
-      color: 'from-purple-500 to-pink-500';
+      color: 'from-purple-500 to-pink-500'
     },",
         "
     {",
@@ -85,18 +84,16 @@ import React, { useState } from 'react',
     },
     {
   ];
-,
       const priorityLevels = [",
         "
     { value: 'low', label: 'Low', description: 'General questions, feature requests' },",
         "
     { value: 'medium', label: 'Medium', description: 'Minor issues, configuration help' },",
         "
-    { value: 'high', label: 'High', description: 'Service degradation, performance issues' },",
+    { value: 'high', label: 'High', description: 'Service degradation, performance issues' },",;
         "
     { value: 'critical', label: 'Critical', description: 'Service down, security issues' };
   ];
-,
       const categories = [",
         "
     'Technical Support',",
@@ -109,16 +106,15 @@ import React, { useState } from 'react',
         "
     'Bug Report',",
         "
-    'Security Issue',",
+    'Security Issue',",;
         "
     'General Inquiry';
   ];
-,
       const faqs = [",
         "
     {",
         "
-      question: 'How do I report a technical issue?',",
+      question: 'How do I report a technical issue?',",;
         "
       answer: 'You can report technical issues through our support portal, live chat, or by calling our support line. Please provide as much detail as possible including error messages, steps to reproduce, and your system information.';
     },",
@@ -152,7 +148,6 @@ import React, { useState } from 'react',
     },
     {
   ];
-,
       const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {",
         "
     const { name, value } = e.target,
@@ -165,16 +160,14 @@ import React, { useState } from 'react',
     }))
     },
     {
-,
       const handleSubmit = async (e: React.FormEvent) => {",
         "
-    e.preventDefault(),
+    e.preventDefault(),;
       setIsSubmitting(true);
 ;
     // Simulate form submission",
         "
     await new Promise(resolve => setTimeout(resolve, 2000));
-,
       setIsSubmitting(false),
       setIsSubmitted(true);
 ;
@@ -195,12 +188,11 @@ import React, { useState } from 'react',
         "
         category: '',",
         "
-        description: '';
+        description: ''
       });
     }, 3000)
     },
     {
-,
       export default function Support() {",
         "
   return (",
@@ -225,6 +217,5 @@ import React, { useState } from 'react',
   )
     },
     {
-,
       export default SupportPage;
 ;

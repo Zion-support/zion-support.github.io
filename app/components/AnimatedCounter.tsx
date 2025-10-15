@@ -9,7 +9,7 @@ import React, { useState } from 'react',
     },
     {
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({},
-      end, duration = 2000, className = "", prefix = "", suffix = "", }) => {},
+      end, duration = 2000, className = "", prefix = "", suffix = "" }) => {},
       const [count, setCount] = useState(0),
       useEffect(() => {},
       let startTime: number,
@@ -23,7 +23,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({},
       animationFrame = requestAnimationFrame(animate)
     },
     {
-    },
+    },;
       animationFrame = requestAnimationFrame(animate)
     return () => {};
 }if (animationFrame) {},

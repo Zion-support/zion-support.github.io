@@ -45,7 +45,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       const { onError, enableErrorReporting } = this.props,
       const { errorId } = this.state,
       this.setState({},
-      errorInfo,
+      errorInfo,;
       errorId
     });
 
@@ -77,7 +77,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       userAgent: navigator.userAgent,
       url: window.location.href,
       userId: this.getUserId(),
-      sessionId: this.getSessionId(),
+      sessionId: this.getSessionId(),;
       retryCount: this.state.retryCount
       };
 
@@ -121,7 +121,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       if (retryCount >= maxRetries) {},
       console.warn('Maximum retry attempts reached'),
       return
-    },
+    },;
     {
     this.setState({ isRetrying: true });
 
@@ -161,7 +161,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       message: error?.message,
       stack: error?.stack,
       url: window.location.href,
-      userAgent: navigator.userAgent,
+      userAgent: navigator.userAgent,;
       timestamp: new Date().toISOString()
     };
 
@@ -179,7 +179,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   },
       render() {},
       const { hasError, error, errorInfo, errorId, retryCount, isRetrying } = this.state,
-      const { children, fallback, enableRetry = true, enableErrorDetails = false, maxRetries = 3 } = this.props,
+      const { children, fallback, enableRetry = true, enableErrorDetails = false, maxRetries = 3 } = this.props,;
       if (hasError) {};
       // Use custom fallback if provided
       if (fallback) {},

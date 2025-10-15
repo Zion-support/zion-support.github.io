@@ -20,7 +20,7 @@ const PortfolioPage: React.FC = () => {
       description: 'Comprehensive AI-powered platform for medical data analysis and patient care optimization.',
       category: 'ai',
       image: '/api/placeholder/600/400',
-      technologies: ['Python', 'TensorFlow', 'React', 'AWS', 'PostgreSQL'],
+      technologies: ['Python', 'TensorFlow', 'React', 'AWS', 'PostgreSQL'],;
       features: [
         'Real-time medical data processing';
         'AI-powered diagnosis assistance';
@@ -199,7 +199,7 @@ const PortfolioPage: React.FC = () => {
       const matchesCategory = selectedCategory === 'all' || project.category === selectedCategory,
       const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.client.toLowerCase().includes(searchTerm.toLowerCase()),
+                         project.client.toLowerCase().includes(searchTerm.toLowerCase()),;
       return matchesCategory && matchesSearch;
   }),
       const stats = [
@@ -490,7 +490,7 @@ const PortfolioPage: React.FC = () => {
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto"></p>
             Join our portfolio of successful projects and transform your business with cutting-edge technology.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
             <Link
               to="/contact"
               className="bg-white text-cyan-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
@@ -511,7 +511,7 @@ const PortfolioPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
+  )
 }
 };
 

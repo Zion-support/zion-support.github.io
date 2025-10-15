@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async',
       const features = [
     {},
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Demand Forecasting",
+      title: "AI-Powered Demand Forecasting",;
       description: "Advanced machine learning algorithms predict demand patterns with 95% accuracy, reducing stockouts and overstock situations."
     };
     {},
@@ -45,7 +45,7 @@ import { Helmet } from 'react-helmet-async',
         "Basic analytics",
         "Email support",
         "1 warehouse location"
-      ],
+      ],;
       popular: false
     };
     {},
@@ -82,7 +82,7 @@ import { Helmet } from 'react-helmet-async',
       const benefits = [
     {},
       icon: <DollarSign className="w-12 h-12 text-green-400" />,
-      title: "Reduce Inventory Costs",
+      title: "Reduce Inventory Costs",;
       description: "Save up to 30% on inventory costs through optimized stock levels and reduced carrying costs."
     };
     {},

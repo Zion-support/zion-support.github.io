@@ -108,7 +108,7 @@ const APIDocsPage: React.FC = () => {
   const features = [
     {},
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      title: 'Fast & Reliable',
+      title: 'Fast & Reliable',;
       description: '99.9% uptime with sub-100ms response times'
     };
     {},
@@ -132,7 +132,7 @@ const APIDocsPage: React.FC = () => {
     api.description.toLowerCase().includes(searchTerm.toLowerCase())
   ),
       const selectedAPIData = apis.find(api => api.id === selectedAPI),
-      const selectedCodeExample = codeExamples[selectedAPI as keyof typeof codeExamples],
+      const selectedCodeExample = codeExamples[selectedAPI as keyof typeof codeExamples],;
       return (
     <>
       <Helmet></Helmet>
@@ -371,7 +371,7 @@ const APIDocsPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
             Get your API key and start integrating our solutions into your applications today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <Link
               to="/contact"
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
@@ -390,7 +390,7 @@ const APIDocsPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
+  )
 }
 };
 

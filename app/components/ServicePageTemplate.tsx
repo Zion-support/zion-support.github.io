@@ -2,7 +2,6 @@
 import { Helmet } from 'react-helmet-async',
       import { Link } from 'react-router-dom',
       import {CheckCircle, Star} from 'lucide-react';
-,
       interface ServicePageProps {",
         "
   title: string,
@@ -21,7 +20,6 @@ import { Helmet } from 'react-helmet-async',
       popular?: boolean
     },
     {
-,
       const ServicePageTemplate: React.FC<ServicePageProps> = ({",
         "
   title,",
@@ -48,7 +46,7 @@ import { Helmet } from 'react-helmet-async',
         "
     <>",
         "
-      <Helmet>",
+      <Helmet>",;
         "
         <title>{title} - Zion Tech Group</title>";"
         <meta name="description" content={description} />";"
@@ -276,6 +274,5 @@ import { Helmet } from 'react-helmet-async',
   )
     },
     {
-,
       export default ServicePageTemplate;
 ;

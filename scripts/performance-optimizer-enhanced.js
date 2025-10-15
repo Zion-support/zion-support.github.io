@@ -48,60 +48,60 @@ function generateCriticalCSS() {};
   const criticalCSS = `
     /* Critical CSS for above-the-fold content */
     * {};
-      box-sizing: border-box;
+      box-sizing: border-box
     };
     body {};
       margin: 0;
       padding: 0;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: #0f172a;
-      color: #ffffff;
+      color: #ffffff
     };
     .min-h-screen {};
-      min-height: 100vh;
+      min-height: 100vh
     };
     .bg-slate-900 {};
-      background-color: #0f172a;
+      background-color: #0f172a
     };
     .text-white {};
-      color: #ffffff;
+      color: #ffffff
     };
     .flex {};
-      display: flex;
+      display: flex
     };
     .items-center {};
-      align-items: center;
+      align-items: center
     };
     .justify-center {};
-      justify-content: center;
+      justify-content: center
     };
     .text-center {};
-      text-align: center;
+      text-align: center
     };
     .font-bold {};
-      font-weight: 700;
+      font-weight: 700
     };
     .text-4xl {};
       font-size: 2.25rem;
-      line-height: 2.5rem;
+      line-height: 2.5rem
     };
     .mb-6 {};
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.5rem
     };
     .px-4 {};
       padding-left: 1rem;
-      padding-right: 1rem;
+      padding-right: 1rem
     };
     .py-8 {};
       padding-top: 2rem;
-      padding-bottom: 2rem;
+      padding-bottom: 2rem
     };
     .max-w-7xl {};
-      max-width: 80rem;
+      max-width: 80rem
     };
     .mx-auto {};
       margin-left: auto;
-      margin-right: auto;
+      margin-right: auto
     };
     /* Loading spinner */
     .loading-spinner {};
@@ -111,20 +111,20 @@ function generateCriticalCSS() {};
       border: 3px solid rgba(255, 255, 255, 0.3);
       border-radius: 50%;
       border-top-color: #3b82f6;
-      animation: spin 1s ease-in-out infinite;
+      animation: spin 1s ease-in-out infinite
     };
     @keyframes spin {};
-      to { transform: rotate(360deg); };
+      to { transform: rotate(360deg) };
     };
     /* Responsive design */
     @media (max-width: 640px) {};
       .text-4xl {};
         font-size: 1.875rem;
-        line-height: 2.25rem;
+        line-height: 2.25rem
       };
       .px-4 {};
         padding-left: 0.75rem;
-        padding-right: 0.75rem;
+        padding-right: 0.75rem
       };
     };
   `;
@@ -323,14 +323,14 @@ async function optimize() {};
     generatePerformanceReport();
     
     console.log('🎉 Enhanced performance optimization completed successfully!');
-    console.log('📈 Performance improvements applied:');
+    console.log('📈 Performance improvements applied: ');
     console.log('   - Critical CSS for faster initial render');
     console.log('   - Service worker for offline support');
     console.log('   - PWA manifest for app-like experience');
     console.log('   - SEO-optimized robots.txt');
     console.log('   - Comprehensive performance monitoring');
     console.log('   - Enhanced accessibility features');
-    console.log('   - Improved error handling');
+    console.log('   - Improved error handling')
     
   } catch (error) {};
     console.error('❌ Error during optimization:', error);

@@ -145,7 +145,7 @@ const PartnersPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
                 Join our growing partner ecosystem and unlock new opportunities for growth and innovation.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <Link
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105"
@@ -166,7 +166,7 @@ const PartnersPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 };
 

@@ -15,7 +15,7 @@ interface LoadingSpinnerProps {},
       const colorClasses = {},
       primary: 'text-cyan-500',
       secondary: 'text-purple-500',
-      white: 'text-white'},
+      white: 'text-white'},;
       const spinner = ()
     <div className="flex flex-col items-center justify-center space-y-4"></div>
       <div className="relative"></div>

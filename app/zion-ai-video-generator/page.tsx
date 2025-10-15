@@ -1,10 +1,9 @@
 
 import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award, Globe, Target, MessageSquare, Share, Award as AwardIcon, BookOpen, Phone, Star as StarIcon } from 'lucide-react';import { Link } from "react-router-dom",
       import SEOOptimizer from "../../components/SEOOptimizer";
-,
       export default function ZionAiVideoGenerator() {",
         "
-  const features = [",
+  const features = [",;
         "
     "AI-powered video generation from text prompts",";"
     "Multiple video styles and templates (1000+ options)",";"
@@ -19,17 +18,15 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
     "Cloud storage integration",";"
     "Team collaboration tools";
   ];
-,
       const benefits = [";"
     "Create professional videos 10x faster",";"
     "Reduce video production costs by 80%",";"
     "No technical skills required",";"
     "Scale video content production";
   ];
-,
       const pricingPlans = [",
         "
-    {",
+    {",;
         "
       name: "Starter",";"
       price: "$29",";"
@@ -101,10 +98,9 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
         "
     };
   ];
-,
       const testimonials = [",
         "
-    {",
+    {",;
         "
       name: "Sarah Chen",";"
       company: "Digital Marketing Pro",";"
@@ -113,7 +109,7 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
         "
       rating: 5,",
         "
-      avatar: "SC",
+      avatar: "SC"
       },",
         "
     {",
@@ -125,7 +121,7 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
         "
       rating: 5,",
         "
-      avatar: "MR",
+      avatar: "MR"
       },",
         "
     {",
@@ -141,15 +137,14 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
     },
     {
   ];
-,
       const useCases = [",
         "
-    {",
+    {",;
         "
       title: "Marketing Videos",";"
       description: "Create compelling product demos, promotional videos, and social media content",";"
       icon: <Target className="w-8 h-8" />,";"
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-500 to-cyan-500"
       },",
         "
     {",
@@ -157,7 +152,7 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
       title: "Educational Content",";"
       description: "Generate training videos, tutorials, and educational materials",";"
       icon: <BookOpen className="w-8 h-8" />,";"
-      color: "from-green-500 to-emerald-500",
+      color: "from-green-500 to-emerald-500"
       },",
         "
     {",
@@ -165,7 +160,7 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
       title: "Social Media",";"
       description: "Create engaging content for Instagram, TikTok, YouTube, and other platforms",";"
       icon: <Share className="w-8 h-8" />,";"
-      color: "from-purple-500 to-pink-500",
+      color: "from-purple-500 to-pink-500"
       },",
         "
     {",
@@ -177,7 +172,6 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
     },
     {
   ];
-,
       const ZionAiVideoGeneratorPage: React.FC = () => {",
         "
   return (",
@@ -186,7 +180,7 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
         "
       <SEOHead",
         "
-        title="zion-ai-video-generator - Zion Tech Group",
+        title="zion-ai-video-generator - Zion Tech Group",;
       description="Zion Tech Group zion-ai-video-generator service page" />";"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";"
         {/* Hero Section */};
@@ -416,7 +410,7 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
                   key={index},
       className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${",
         "
-                    plan.popular ? 'ring-2 ring-cyan-400' : '';
+                    plan.popular ? 'ring-2 ring-cyan-400' : ''
                   }`};
                 >",
         "
@@ -463,8 +457,8 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
         "
                       plan.popular",
         "
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700';
-                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900';
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover: from-cyan-600 hover:to-purple-700';
+                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`};
                   >",
         "
@@ -629,6 +623,5 @@ import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Sparkles, Users, Award
   )
     },
     {
-,
       export default ZionAiVideoGeneratorPage;
 ;

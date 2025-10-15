@@ -38,7 +38,7 @@ import {Link} from 'react-router-dom',
 } from 'lucide-react',
       const ServiceDetailPage: React.FC = () => {};
 }const { id } = useParams<{ id: string }>()
-  // Mock service data - in a real app, this would come from an API",
+  // Mock service data - in a real app, this would come from an API",;
         "
   const serviceData = {};
     'ai-analytics-dashboard-pro': {},
@@ -232,7 +232,7 @@ import {Link} from 'react-router-dom',
         "
       category: 'Micro SAAS',",
         "
-      icon: Settings",
+      icon: Settings",;
         "
     };
   ]

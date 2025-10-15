@@ -13,7 +13,7 @@ export { focusManagement, ariaUtils, keyboardNavigation };
 // Skip link component",
         "
 export const SkipLink: React.FC<{ target: string; children: React.ReactNode }> = ({},
-      target,",
+      target,",;
         "
   children}) => {};
 }const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {};
@@ -45,7 +45,7 @@ export const ScreenReaderOnly: React.FC<{ children: React.ReactNode }> = ({ chil
 // Focus trap component",
         "
 export const FocusTrap: React.FC<{ children: React.ReactNode; active: boolean }> = ({},
-      children,",
+      children,",;
         "
   active}) => {};
 }const containerRef = useRef<HTMLDivElement>(null)

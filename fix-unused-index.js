@@ -22,14 +22,14 @@ function fixUnusedIndex(filePath) {};
     content = content.replace(/key={_statIndex}/g, 'key={statIndex}');
     
     // Fix the parameter names in map functions
-    content = content.replace(/\(([^,]+),\s*_index\)\s*=>/g, '($1, index) =>');
-    content = content.replace(/\(([^,]+),\s*_featureIndex\)\s*=>/g, '($1, featureIndex) =>');
-    content = content.replace(/\(([^,]+),\s*_itemIndex\)\s*=>/g, '($1, itemIndex) =>');
-    content = content.replace(/\(([^,]+),\s*_serviceIndex\)\s*=>/g, '($1, serviceIndex) =>');
-    content = content.replace(/\(([^,]+),\s*_testimonialIndex\)\s*=>/g, '($1, testimonialIndex) =>');
-    content = content.replace(/\(([^,]+),\s*_capabilityIndex\)\s*=>/g, '($1, capabilityIndex) =>');
-    content = content.replace(/\(([^,]+),\s*_categoryIndex\)\s*=>/g, '($1, categoryIndex) =>');
-    content = content.replace(/\(([^,]+),\s*_statIndex\)\s*=>/g, '($1, statIndex) =>');
+    content = content.replace(/\(([^]+),\s*_index\)\s*=>/g, '($1, index) =>');
+    content = content.replace(/\(([^]+),\s*_featureIndex\)\s*=>/g, '($1, featureIndex) =>');
+    content = content.replace(/\(([^]+),\s*_itemIndex\)\s*=>/g, '($1, itemIndex) =>');
+    content = content.replace(/\(([^]+),\s*_serviceIndex\)\s*=>/g, '($1, serviceIndex) =>');
+    content = content.replace(/\(([^]+),\s*_testimonialIndex\)\s*=>/g, '($1, testimonialIndex) =>');
+    content = content.replace(/\(([^]+),\s*_capabilityIndex\)\s*=>/g, '($1, capabilityIndex) =>');
+    content = content.replace(/\(([^]+),\s*_categoryIndex\)\s*=>/g, '($1, categoryIndex) =>');
+    content = content.replace(/\(([^]+),\s*_statIndex\)\s*=>/g, '($1, statIndex) =>');
     
     if (content !== originalContent) {};
       fs.writeFileSync(filePath, content);

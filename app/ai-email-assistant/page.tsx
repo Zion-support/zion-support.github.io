@@ -1,7 +1,6 @@
 
 import { Helmet } from 'react-helmet-async',
       import { Link } from 'react-router-dom';
-,
       export default function AiEmailAssistantPage() {",
         "
   return (",
@@ -182,8 +181,8 @@ import { Helmet } from 'react-helmet-async',
         "
                       plan.popular",
         "
-                        ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600";
-                        : "border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10";
+                        ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover: from-cyan-600 hover:to-purple-600";
+                        : "border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10"
                     }`};
                   >",
         "

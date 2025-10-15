@@ -25,7 +25,7 @@ const ServicesPage: React.FC = () => {};
       name: 'AI Analytics Dashboard Pro',
       category: 'ai',
       description: 'Advanced business intelligence platform with AI-powered insights and real-time analytics',
-      price: '$299/month',
+      price: '$299/month',;
       features: []
         'Real-time Data Visualization';
         'AI-Powered Predictions';

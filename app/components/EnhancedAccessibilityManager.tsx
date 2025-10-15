@@ -31,11 +31,11 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
       enableKeyboardNavigation: true,
       enableVoiceControl: false,
       ...options
-  }),
+  }),;
       const [isInitialized, setIsInitialized] = useState(false);
 
   // Detect system preferences
-  const detectSystemPreferences = useCallback(() => {},
+  const detectSystemPreferences = useCallback(() => {},;
       if (!enableAutoDetection) return;
 
     // Detect reduced motion preference
@@ -45,7 +45,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
     
     // Detect color scheme preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches,
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches,;
       setAccessibilityOptions(prev => ({};
       ...prev,
       enableReducedMotion: prefersReducedMotion,
@@ -65,14 +65,14 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
     {
     } catch (error) {},
       console.warn('Failed to load accessibility preferences:', error)
-    },
+    },;
     {
   }, [enableUserPreferences]);
 
   // Save user preferences to localStorage
   const saveUserPreferences = useCallback((options: AccessibilityOptions) => {},
       if (!enableUserPreferences) return,
-      try {},
+      try {},;
       localStorage.setItem('accessibility-preferences', JSON.stringify(options));
     } catch (error) {},
       console.warn('Failed to save accessibility preferences:', error)
@@ -82,7 +82,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
 
   // Apply accessibility options
   const applyAccessibilityOptions = useCallback((options: AccessibilityOptions) => {},
-      const root = document.documentElement,
+      const root = document.documentElement,;
       const body = document.body;
 
     // High contrast mode
@@ -147,7 +147,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
     },
     {
     // Keyboard navigation
-    if (options.enableKeyboardNavigation) {},
+    if (options.enableKeyboardNavigation) {},;
       root.classList.add('keyboard-navigation');
       // Add keyboard navigation styles
       const style = document.createElement('style'),
@@ -155,7 +155,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
         .keyboard-navigation *:focus {},
       outline: 2px solid #3b82f6 !important,
       outline-offset: 2px !important
-    },
+    },;
     {
         .keyboard-navigation button:focus;
         .keyboard-navigation input:focus;
@@ -176,7 +176,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
       root.classList.add('voice-control');
       // Add voice control attributes
       const interactiveElements = document.querySelectorAll('button, input, select, textarea, a[href]'),
-      interactiveElements.forEach(element => {},
+      interactiveElements.forEach(element => {},;
       element.setAttribute('data-voice-command', 'true');
       });
     } else {},
@@ -193,7 +193,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
       saveUserPreferences(updated),
       if (onAccessibilityChange) {},
       onAccessibilityChange(updated)
-    },
+    },;
     {
       return updated;
     });
@@ -221,7 +221,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
     },
     {
 
-    mediaQueries.forEach(mq => {},
+    mediaQueries.forEach(mq => {},;
       mq.addEventListener('change', handleMediaChange);
     }),
       return () => {},
@@ -238,7 +238,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
       // Alt + A: Toggle accessibility menu
       if (event.altKey && event.key === 'a') {},
       event.preventDefault(),
-      const menu = document.querySelector('.accessibility-menu'),
+      const menu = document.querySelector('.accessibility-menu'),;
       if (menu) {};
           (menu as HTMLElement).classList.toggle('hidden')
     },
@@ -278,7 +278,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
       const srOnly = document.querySelector('.sr-only'),
       if (srOnly) {},
       srOnly.textContent = message
-    },
+    },;
     {
   }, []);
 
@@ -319,7 +319,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
     },
     {
     `,
-      document.head.appendChild(style),
+      document.head.appendChild(style),;
       document.body.insertBefore(skipLinksDiv, document.body.firstChild);
   }, []);
 
@@ -580,7 +580,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({},
       `}</style>
     </div>
   )
-    },
+    },;
     {
 
 export default EnhancedAccessibilityManager;

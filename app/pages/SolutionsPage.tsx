@@ -93,7 +93,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
     {},
       title: 'AI & Machine Learning',
       description: 'Cutting-edge AI solutions that transform data into actionable insights.',
-      icon: Brain,
+      icon: Brain,;
       solutions: [
         'Natural Language Processing';
         'Computer Vision';
@@ -147,7 +147,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
     {},
       title: 'AI Project Manager Pro',
       description: 'Intelligent project management with AI-powered insights and automation.',
-      features: ['Smart Task Assignment', 'Progress Prediction', 'Resource Optimization', 'Risk Analysis'],
+      features: ['Smart Task Assignment', 'Progress Prediction', 'Resource Optimization', 'Risk Analysis'],;
       path: '/micro-saas/ai-project-manager-pro'
     };
     {},
@@ -174,7 +174,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
       title: 'Healthcare AI Implementation',
       client: 'MedTech Solutions',
       challenge: 'Reduce diagnostic time and improve accuracy',
-      solution: 'AI-powered medical imaging analysis system',
+      solution: 'AI-powered medical imaging analysis system',;
       results: [
         '40% reduction in diagnostic time';
         '95% accuracy in image analysis';
@@ -460,7 +460,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto"></p>
             Let's discuss your specific industry needs and create a tailored solution that drives real results.'
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
             <Link
               to="/contact"
               className="bg-white text-cyan-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
@@ -481,7 +481,7 @@ import { ArrowRight, CheckCircle, Star, Brain, Cpu, Cloud, Shield, BarChart3, Ta
         </div>
       </section>
     </>
-  );
+  )
 }
 };
 

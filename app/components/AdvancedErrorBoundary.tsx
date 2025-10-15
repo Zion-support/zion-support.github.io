@@ -63,7 +63,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {},
 
   handleReportError = () => {},
       const { error, errorId } = this.state,
-      const subject = `Error Report - ${errorId}`,
+      const subject = `Error Report - ${errorId}`,;
       const body = `
 Error Details:
 - Error ID: ${errorId};
@@ -78,7 +78,7 @@ Error Details:
     },
     {
 
-  render() {},
+  render() {},;
       if (this.state.hasError) {};
       // Use custom fallback if provided
       if (this.props.fallback) {},
@@ -150,7 +150,7 @@ Error Details:
               
               <button
                 onClick={this.handleReportError},
-      className="w-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
+      className="w-full border border-gray-300 dark: border-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
               ></button
 >
                 <Mail className="w-4 h-4 mr-2" />
@@ -159,7 +159,7 @@ Error Details:
             </div>
           </div>
         </div>
-      );
+      )
     };
     return this.props.children;
   };

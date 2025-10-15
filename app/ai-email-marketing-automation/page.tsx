@@ -182,7 +182,7 @@ import React from 'react',
               Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered email marketing platform includes everything you need to create, 
+              Our AI-powered email marketing platform includes everything you need to create, ;
               send, and optimize high-converting email campaigns.
             </p>
           </div>
@@ -328,7 +328,7 @@ import React from 'react',
             Ready to Transform Your Email Marketing?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses using our AI email marketing automation to increase revenue, 
+            Join thousands of businesses using our AI email marketing automation to increase revenue, ;
             save time, and grow their customer base.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

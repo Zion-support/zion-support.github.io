@@ -50,7 +50,7 @@ import { ArrowRight, Shield, Eye, Database, Users, Mail, Phone, Calendar, CheckC
       const dataTypes = [
     {},
       icon: Users,
-      title: 'Personal Information',
+      title: 'Personal Information',;
       description: 'Name, email, phone number, and other identifying information'
     };
     {},

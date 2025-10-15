@@ -9,13 +9,13 @@ import React, { useEffect, useCallback } from 'react',
 const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({},
       enableImageOptimization = true,
       enablePreloading = true,
-      enableCaching = true,
+      enableCaching = true,;
       enableCompression = true
 }) => {};
   // Image optimization
   const optimizeImages = useCallback(() => {},
       if (!enableImageOptimization) return,
-      const images = document.querySelectorAll('img'),
+      const images = document.querySelectorAll('img'),;
       images.forEach((img) => {};
       // Add loading="lazy" if not already present
       if (!img.hasAttribute('loading')) {},
@@ -37,7 +37,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({},
 
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {},
-      if (!enablePreloading) return,
+      if (!enablePreloading) return,;
       const criticalResources = [
       '/fonts/inter.woff2';
       '/css/critical.css';
@@ -47,13 +47,13 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({},
       const link = document.createElement('link'),
       link.rel = 'preload',
       link.href = resource,
-      link.as = resource.endsWith('.css') ? 'style' : 'script',
+      link.as = resource.endsWith('.css') ? 'style' : 'script',;
       document.head.appendChild(link);
     });
   }, [enablePreloading]);
 
   // Enable caching strategies
-  const enableCachingStrategies = useCallback(() => {},
+  const enableCachingStrategies = useCallback(() => {},;
       if (!enableCaching) return;
     
     // Set cache headers for static assets
@@ -70,7 +70,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({},
   }, [enableCaching]);
 
   // Enable compression
-  const enableCompressionStrategies = useCallback(() => {},
+  const enableCompressionStrategies = useCallback(() => {},;
       if (!enableCompression) return;
     
     // Enable gzip compression for text resources
@@ -79,12 +79,12 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({},
       const request = new Request(input, init),
       request.headers.set('Accept-Encoding', 'gzip, deflate, br'),
       return originalFetch(request)
-    },
+    },;
     {
   }, [enableCompression]);
 
   // Performance monitoring
-  const monitorPerformance = useCallback(() => {},
+  const monitorPerformance = useCallback(() => {},;
       if (typeof window !== 'undefined' && 'performance' in window) {};
       // Monitor Core Web Vitals
       const observer = new PerformanceObserver((list) => {},
@@ -99,7 +99,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({},
     {
           if (entry.entryType === 'layout-shift') {},
       console.log('CLS:', entry.value)
-    },
+    },;
     {
         });
       }),

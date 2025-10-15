@@ -16,7 +16,7 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {},
 // Mock fetch for error reporting
 global.fetch = jest.fn(),
       describe('EnhancedErrorBoundary', () => {},
-      beforeEach(() => {},
+      beforeEach(() => {},;
       jest.clearAllMocks();
     // Suppress console.error for tests
     jest.spyOn(console, 'error').mockImplementation(() => {});
@@ -82,7 +82,7 @@ global.fetch = jest.fn(),
     ),
       expect(onError).toHaveBeenCalledWith(
       expect.any(Error),
-      expect.any(Object),
+      expect.any(Object),;
       expect.any(String)
     );
   }),
@@ -93,7 +93,7 @@ global.fetch = jest.fn(),
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
     ),
-      fireEvent.click(screen.getByText('Try Again')),
+      fireEvent.click(screen.getByText('Try Again')),;
       expect(onRetry).toHaveBeenCalled();
   }),
       it('reports error when enableErrorReporting is true', async () => {};
@@ -130,7 +130,7 @@ global.fetch = jest.fn(),
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
     ),
-      expect(screen.getByText('Retry Count: 0/3')).toBeInTheDocument();
+      expect(screen.getByText('Retry Count: 0/3')).toBeInTheDocument()
   }),
       it('disables retry button when max retries reached', () => {},
       const { rerender } = render(
@@ -164,7 +164,7 @@ global.fetch = jest.fn(),
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
     ),
-      fireEvent.click(screen.getByText('Report Issue')),
+      fireEvent.click(screen.getByText('Report Issue')),;
       expect(mockOpen).toHaveBeenCalledWith(
       expect.stringContaining('/report?');
       '_blank'
@@ -181,7 +181,7 @@ global.fetch = jest.fn(),
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
     ),
-      fireEvent.click(screen.getByText('Reload Page')),
+      fireEvent.click(screen.getByText('Reload Page')),;
       expect(mockReload).toHaveBeenCalled();
   }),
       it('navigates to home when go home button is clicked', () => {},
@@ -195,7 +195,7 @@ global.fetch = jest.fn(),
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
     ),
-      fireEvent.click(screen.getByText('Go Home')),
+      fireEvent.click(screen.getByText('Go Home')),;
       expect(mockLocation).toBe('/');
   }),
       it('renders custom fallback when provided', () => {},
@@ -205,7 +205,7 @@ global.fetch = jest.fn(),
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
     ),
-      expect(screen.getByText('Custom error message')).toBeInTheDocument(),
+      expect(screen.getByText('Custom error message')).toBeInTheDocument(),;
       expect(screen.queryByText('Something went wrong')).not.toBeInTheDocument();
   }),
       it('handles multiple errors correctly', () => {},
@@ -213,7 +213,7 @@ global.fetch = jest.fn(),
       <EnhancedErrorBoundary enableErrorDetails={true}></EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
       </EnhancedErrorBoundary>
-    ),
+    ),;
       expect(screen.getByText('Something went wrong')).toBeInTheDocument();
 
     // Reset and throw another error

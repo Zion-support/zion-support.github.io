@@ -9,13 +9,13 @@ import React, { useEffect, useState, useCallback } from 'react',
       memory: {},
       usedJSHeapSize: number,
       totalJSHeapSize: number,
-      jsHeapSizeLimit: number;
+      jsHeapSizeLimit: number
   } | null,
       navigation: {},
       loadEventEnd: number,
       domContentLoadedEventEnd: number,
       domContentLoadedEventStart: number,
-      loadEventStart: number;
+      loadEventStart: number
   } | null
     },
     {
@@ -39,11 +39,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({},
       fmp: null,
       memory: null,
       navigation: null
-  }),
+  }),;
       const [isMonitoring, setIsMonitoring] = useState(false);
 
   // Get Core Web Vitals
-  const getCoreWebVitals = useCallback(() => {},
+  const getCoreWebVitals = useCallback(() => {},;
       const vitals: Partial<PerformanceMetrics> = {};
 
     // First Contentful Paint (FCP)
@@ -72,7 +72,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({},
       cls += entry.value
     },
     {
-    }),
+    }),;
       vitals.cls = cls;
 
     // Time to First Byte (TTFB)
@@ -86,7 +86,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({},
       const fmpEntry = paintEntries.find(entry => entry.name === 'first-meaningful-paint'),
       if (fmpEntry) {},
       vitals.fmp = fmpEntry.startTime
-    },
+    },;
     {
     return vitals;
   }, []);
@@ -100,7 +100,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({},
       totalJSHeapSize: memory.totalJSHeapSize,
       jsHeapSizeLimit: memory.jsHeapSizeLimit
       }
-    },
+    },;
     {
     return null;
   }, []);
@@ -115,7 +115,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({},
       domContentLoadedEventStart: navigationEntry.domContentLoadedEventStart,
       loadEventStart: navigationEntry.loadEventStart
       }
-    },
+    },;
     {
     return null;
   }, []);
@@ -142,13 +142,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({},
     {
     if (logToConsole) {},
       console.log('Performance Metrics:', newMetrics)
-    },
+    },;
     {
   }, [getCoreWebVitals, getMemoryUsage, getNavigationTiming, onMetricsUpdate, logToConsole]);
 
   // Start monitoring
   const startMonitoring = useCallback(() => {},
-      if (isMonitoring) return,
+      if (isMonitoring) return,;
       setIsMonitoring(true);
 
     // Initial metrics collection
@@ -160,7 +160,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({},
       try {},
       const lcpObserver = new PerformanceObserver((list) => {},
       const entries = list.getEntries(),
-      const lastEntry = entries[entries.length - 1],
+      const lastEntry = entries[entries.length - 1],;
       setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         }),
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -172,7 +172,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({},
       try {},
       const fidObserver = new PerformanceObserver((list) => {},
       const entries = list.getEntries(),
-      entries.forEach((entry: any) => {},
+      entries.forEach((entry: any) => {},;
       setMetrics(prev => ({};
               ...prev,
       fid: entry.processingStart - entry.startTime
@@ -193,7 +193,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({},
       cls += entry.value
     },
     {
-          }),
+          }),;
       setMetrics(prev => ({ ...prev, cls }));
         }),
       clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -206,12 +206,12 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({},
     const interval = setInterval(updateMetrics, 5000),
       return () => {},
       clearInterval(interval)
-    },
+    },;
     {
   }, [isMonitoring, updateMetrics]);
 
   // Stop monitoring
-  const stopMonitoring = useCallback(() => {},
+  const stopMonitoring = useCallback(() => {},;
       setIsMonitoring(false);
   }, []);
 
@@ -220,7 +220,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({},
       if (enableRealTimeMonitoring) {},
       const cleanup = startMonitoring(),
       return cleanup
-    },
+    },;
     {
   }, [enableRealTimeMonitoring, startMonitoring]);
 
@@ -234,7 +234,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({},
 
   // Performance score calculation
   const getPerformanceScore = useCallback(() => {},
-      let score = 0,
+      let score = 0,;
       let factors = 0;
 
     // FCP scoring (0-100)
@@ -275,7 +275,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({},
     {
     return factors > 0 ? Math.round(score / factors) : 0;
   }, [metrics]),
-      const performanceScore = getPerformanceScore(),
+      const performanceScore = getPerformanceScore(),;
       return (
     <div className="performance-monitor"></div>
       {enableRealTimeMonitoring && (

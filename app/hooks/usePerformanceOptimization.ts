@@ -5,7 +5,7 @@ interface PerformanceMetrics {};
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
-  memoryUsage?: number;
+  memoryUsage?: number
 };
 interface UsePerformanceOptimizationOptions {};
   enableMonitoring?: boolean;
@@ -93,7 +93,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
                 firstContentfulPaint: 0;
                 largestContentfulPaint: 0;
                 cumulativeLayoutShift: 0;
-                firstInputDelay: 0;
+                firstInputDelay: 0
               };
             } else if (entry.entryType === 'paint') {};
               const paintEntry = entry as PerformancePaintTiming;
@@ -146,7 +146,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       };
       {};
         rootMargin: '50px 0px';
-        threshold: 0.1;
+        threshold: 0.1
       };
     );
 
@@ -167,7 +167,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     const analysis = {};
       scripts: scripts.length;
       stylesheets: stylesheets.length;
-      totalSize: 0;
+      totalSize: 0
     };
 
     // Calculate total size (approximate)

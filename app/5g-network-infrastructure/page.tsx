@@ -17,7 +17,7 @@ const GPagePage: React.FC = () => {
       </div>
     </>
   )
-    },
+    },;
     {
 
 export default GPagePage;

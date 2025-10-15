@@ -8,7 +8,7 @@ const mockImage = {
   addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
   src: '',
-  onload: null,
+  onload: null,;
   onerror: null
 };
 
@@ -32,7 +32,7 @@ Object.defineProperty(window, 'Image', {
       />
     ),
       const img = screen.getByAltText('Test image'),
-      expect(img).toHaveAttribute('width', '300'),
+      expect(img).toHaveAttribute('width', '300'),;
       expect(img).toHaveAttribute('height', '200');
   });
 });

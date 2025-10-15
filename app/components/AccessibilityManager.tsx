@@ -5,11 +5,11 @@ import React, { useEffect, useState, useCallback } from 'react',
       reducedMotion: boolean,
       screenReader: boolean,
       focusVisible: boolean,
-      keyboardNavigation: boolean;
+      keyboardNavigation: boolean
 }
 
 interface AccessibilityManagerProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children }) => {
@@ -20,12 +20,12 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
     screenReader: false,
     focusVisible: true,
     keyboardNavigation: true
-  }),
+  }),;
       const [isVisible, setIsVisible] = useState(false);
 
   // Load settings from localStorage
   useEffect(() => {
-    const savedSettings = localStorage.getItem('accessibility-settings'),
+    const savedSettings = localStorage.getItem('accessibility-settings'),;
       if (savedSettings) {
       try {
         setSettings(JSON.parse(savedSettings));
@@ -41,7 +41,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
     
     // High contrast mode
     if (newSettings.highContrast) {
-      root.classList.add('high-contrast');
+      root.classList.add('high-contrast')
     } else {
       root.classList.remove('high-contrast');
     }
@@ -200,7 +200,7 @@ const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children })
       )}
     </>
   )
-    },
+    },;
     {
 
 export default AccessibilityManager;

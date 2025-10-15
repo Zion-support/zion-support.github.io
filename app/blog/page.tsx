@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-const BlogPage: React.FC = () => {
-=======
-import React from 'react',
-      import { Helmet } from 'react-helmet-async',
-      import SEOHead from '../components/SEOHead',
-      const BlogPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-f3b2
   return (
     <>
       <Helmet>

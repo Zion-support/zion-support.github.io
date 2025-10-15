@@ -180,7 +180,7 @@ import React from 'react',
         'Scale blockchain applications'
       ],
       category: 'Blockchain',
-      icon: <Network className="w-8 h-8 text-yellow-400" />,
+      icon: <Network className="w-8 h-8 text-yellow-400" />,;
       popular: false
     }
   ];
@@ -505,7 +505,7 @@ import React from 'react',
       </section>
     </>
   )
-    },
+    },;
     {
 
 export default AISolutionsPage;

@@ -32,7 +32,7 @@ interface AdvancedSEOOptimizerProps {},
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({},
       seoData,
       enableStructuredData = true,
-      enableSocialMeta = true,
+      enableSocialMeta = true,;
       enableAdvancedFeatures = true
 }) => {};
   // Generate structured data
@@ -172,13 +172,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({},
       criticalCSS.as = 'style',
       criticalCSS.onload = () => {},
       criticalCSS.rel = 'stylesheet'
-    },
+    },;
     {
     document.head.appendChild(criticalCSS);
 
     // Preload critical fonts
     const fontPreload = document.createElement('link'),
-      fontPreload.rel = 'preload',
+      fontPreload.rel = 'preload',;
       fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
       fontPreload.as = 'style',
       fontPreload.crossOrigin = 'anonymous',
@@ -191,7 +191,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({},
       imagePreload.href = seoData.ogImage,
       imagePreload.as = 'image',
       document.head.appendChild(imagePreload)
-    },
+    },;
     {
     // DNS prefetch for external resources
     const dnsPrefetchDomains = [
@@ -203,7 +203,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({},
       dnsPrefetchDomains.forEach(domain => {},
       const dnsPrefetch = document.createElement('link'),
       dnsPrefetch.rel = 'dns-prefetch',
-      dnsPrefetch.href = domain,
+      dnsPrefetch.href = domain,;
       document.head.appendChild(dnsPrefetch);
     });
 
@@ -216,7 +216,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({},
       const preconnect = document.createElement('link'),
       preconnect.rel = 'preconnect',
       preconnect.href = origin,
-      preconnect.crossOrigin = 'anonymous',
+      preconnect.crossOrigin = 'anonymous',;
       document.head.appendChild(preconnect);
     }),
       return () => {};
@@ -239,7 +239,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({},
       const breadcrumbData = generateBreadcrumbStructuredData(),
       const faqData = generateFAQStructuredData(),
       const organizationData = generateOrganizationStructuredData(),
-      const serviceData = generateServiceStructuredData(),
+      const serviceData = generateServiceStructuredData(),;
       return (
     <Helmet></Helmet>
       {/* Basic Meta Tags */};

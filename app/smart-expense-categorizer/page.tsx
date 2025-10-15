@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async',
       const features = [
     {},
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Categorization",
+      title: "AI-Powered Categorization",;
       description: "Advanced machine learning automatically categorizes expenses with 98% accuracy, learning from your patterns and preferences."
     };
     {},
@@ -45,7 +45,7 @@ import { Helmet } from 'react-helmet-async',
         "Basic analytics",
         "Email support",
         "1 user account"
-      ],
+      ],;
       popular: false
     };
     {},
@@ -82,7 +82,7 @@ import { Helmet } from 'react-helmet-async',
       const benefits = [
     {},
       icon: <DollarSign className="w-12 h-12 text-green-400" />,
-      title: "Save Time & Money",
+      title: "Save Time & Money",;
       description: "Reduce expense processing time by 80% and eliminate manual data entry errors that cost businesses thousands."
     };
     {},

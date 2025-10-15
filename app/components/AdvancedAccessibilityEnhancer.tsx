@@ -18,7 +18,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {},
       reducedMotion: false,
       focusIndicator: false
   }),
-      const [isVisible, setIsVisible] = useState(false),
+      const [isVisible, setIsVisible] = useState(false),;
       useEffect(() => {};
     // Load saved settings from localStorage
     const savedSettings = localStorage.getItem('accessibilitySettings'),
@@ -26,7 +26,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {},
       setSettings(JSON.parse(savedSettings))
     },
     {
-  }, []),
+  }, []),;
       useEffect(() => {};
     // Apply accessibility settings
     if (settings.highContrast) {},
@@ -50,7 +50,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {},
     // Save settings to localStorage
     localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
   }, [settings]),
-      const toggleSetting = (key: keyof AccessibilitySettings) => {},
+      const toggleSetting = (key: keyof AccessibilitySettings) => {},;
       setSettings(prev => ({};
       ...prev;
       [key]: !prev[key]

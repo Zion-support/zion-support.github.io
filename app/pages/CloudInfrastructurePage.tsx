@@ -20,7 +20,7 @@ const CloudInfrastructurePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 };
 

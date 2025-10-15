@@ -155,7 +155,7 @@ import React from 'react',
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Transform your customer support with AI-powered chatbots that reduce costs by 60%, 
+              Transform your customer support with AI-powered chatbots that reduce costs by 60%, ;
               improve response time by 90%, and handle 1000+ conversations simultaneously.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -371,7 +371,7 @@ import React from 'react',
             Ready to Transform Your Customer Support?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses using our AI customer support chatbot to reduce costs, 
+            Join thousands of businesses using our AI customer support chatbot to reduce costs, ;
             improve response times, and enhance customer satisfaction.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

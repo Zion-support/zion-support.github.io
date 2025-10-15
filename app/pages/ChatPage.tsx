@@ -37,7 +37,7 @@ const ChatPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
               Get instant help from our expert support team. Available 24/7 to assist you with any questions or issues.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center"
@@ -51,7 +51,7 @@ const ChatPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
+  )
 }
 };
 

@@ -1,7 +1,6 @@
-,
       const pricingPlans = [",
         "
-    {",
+    {",;
         "
       name: "Starter",";"
       price: "$29",";"
@@ -75,5 +74,4 @@
   )
     },
     {
-,
       export default AiPoweredEmailAnalyzerPage;

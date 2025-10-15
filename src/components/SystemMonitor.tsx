@@ -78,7 +78,7 @@ const performanceScore = calculatePerformanceScore()
   // Initialize monitoring
       setIsMonitoring(true)
       updateMetrics()
-    },
+    },;
       initializeMonitoring()
       // Stop monitoring (placeholder - implement, as, needed)
       setIsMonitoring(false)
@@ -106,7 +106,7 @@ const connection = nav.connection
       },
       saveData: false
     }
-    },
+    },;
     {
   // Export data
     if (!metrics) return

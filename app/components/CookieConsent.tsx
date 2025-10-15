@@ -7,7 +7,7 @@ import React, { useState } from 'react',
       const consent = localStorage.getItem("cookie-consent"),
       if (!consent) {},
       setIsVisible(true)
-    },
+    },;
     {
   }, [])
   const handleAccept = () => {};

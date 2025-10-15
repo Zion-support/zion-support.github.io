@@ -14,11 +14,11 @@ export default {
     '^@/data/(.*)$': '<rootDir>/app/data/$1',
     '^@/content/(.*)$': '<rootDir>/app/content/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': 'jest-transform-stub',
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': 'jest-transform-stub'
   },
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', { useESM: true }],
-    '^.+\\.(js|jsx)$': 'babel-jest',
+    '^.+\\.(js|jsx)$': 'babel-jest'
   },
   testMatch: [
     '<rootDir>/app/**/__tests__/**/*.(ts|tsx|js|jsx)',
@@ -26,7 +26,7 @@ export default {
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
     '<rootDir>/**/*.(test|spec).(ts|tsx|js|jsx)',
     '!src/**/*.d.ts',
-    '!src/setupTests.ts',
+    '!src/setupTests.ts'
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   globals: {
@@ -39,6 +39,6 @@ export default {
   },
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   transformIgnorePatterns: [
-    'node_modules/(?!(.*\\.mjs$|@testing-library|@heroicons|framer-motion))',
-  ],
+    'node_modules/(?!(.*\\.mjs$|@testing-library|@heroicons|framer-motion))'
+  ]
 };

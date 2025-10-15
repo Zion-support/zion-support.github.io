@@ -17,7 +17,7 @@ const PerformanceMonitor: React.FC = () => {},
       TTFB: null
   }),
       useEffect(() => {},
-      const handleMetric = (metric: any) => {},
+      const handleMetric = (metric: any) => {},;
       setMetrics(prev => ({};
         ...prev;
         [metric.name]: metric.value
@@ -29,7 +29,7 @@ const PerformanceMonitor: React.FC = () => {},
       event_category: 'Web Vitals',
       value: Math.round(metric.value),
       event_label: metric.id,
-      non_interaction: true,
+      non_interaction: true
       })
     },
     {
@@ -45,7 +45,7 @@ const PerformanceMonitor: React.FC = () => {},
     // Performance observer for additional metrics
     if ('PerformanceObserver' in window) {},
       const observer = new PerformanceObserver((list) => {},
-      for (const entry of list.getEntries()) {},
+      for (const entry of list.getEntries()) {},;
       if (entry.entryType === 'navigation') {};
             // Navigation timing metrics collected
           }

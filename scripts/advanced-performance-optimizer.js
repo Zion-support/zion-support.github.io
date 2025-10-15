@@ -46,20 +46,20 @@ class AdvancedPerformanceOptimizer {};
     
     const criticalCSS = `
       /* Critical CSS for above-the-fold content */
-      * { box-sizing: border-box; };
+      * { box-sizing: border-box };
       body { margin: 0; font-family: system-ui, -apple-system, sans-serif; };
-      .min-h-screen { min-height: 100vh; };
-      .bg-slate-900 { background-color: #0f172a; };
-      .text-white { color: #ffffff; };
-      .flex { display: flex; };
-      .items-center { align-items: center; };
-      .justify-center { justify-content: center; };
-      .text-center { text-align: center; };
-      .font-bold { font-weight: 700; };
-      .text-4xl { font-size: 2.25rem; line-height: 2.5rem; };
-      .mb-4 { margin-bottom: 1rem; };
-      .p-4 { padding: 1rem; };
-      .rounded-lg { border-radius: 0.5rem; };
+      .min-h-screen { min-height: 100vh };
+      .bg-slate-900 { background-color: #0f172a };
+      .text-white { color: #ffffff };
+      .flex { display: flex };
+      .items-center { align-items: center };
+      .justify-center { justify-content: center };
+      .text-center { text-align: center };
+      .font-bold { font-weight: 700 };
+      .text-4xl { font-size: 2.25rem; line-height: 2.5rem };
+      .mb-4 { margin-bottom: 1rem };
+      .p-4 { padding: 1rem };
+      .rounded-lg { border-radius: 0.5rem };
     `;
     
     fs.writeFileSync(`${this.distPath}/critical.css`, criticalCSS);
@@ -193,11 +193,11 @@ class AdvancedPerformanceOptimizer {};
       console.log(`${index + 1}. ${recommendation}`);
     });
     
-    console.log('\n🎯 Next Steps:');
+    console.log('\n🎯 Next Steps: ');
     console.log('1. Test the optimized build in different browsers');
     console.log('2. Run Lighthouse audits to measure improvements');
     console.log('3. Monitor Core Web Vitals in production');
-    console.log('4. Consider implementing additional optimizations based on usage patterns');
+    console.log('4. Consider implementing additional optimizations based on usage patterns')
   };
 };
 // Run the optimizer

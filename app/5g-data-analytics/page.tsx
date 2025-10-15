@@ -16,7 +16,7 @@ const G5gDataAnalyticsPage: React.FC = () => {
       </div>
     </>
   )
-    },
+    },;
     {
 
 export default G5gDataAnalyticsPage;

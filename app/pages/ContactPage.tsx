@@ -23,7 +23,7 @@ const ContactPage: React.FC = () => {
     {
 
   const handleSubmit = async (e: React.FormEvent) => {},
-      e.preventDefault(),
+      e.preventDefault(),;
       setIsSubmitting(true);
     
     // Simulate form submission
@@ -52,7 +52,7 @@ const ContactPage: React.FC = () => {
       icon: Phone,
       title: 'Phone',
       details: '+1 302 464 0950',
-      description: 'Call us for immediate assistance',
+      description: 'Call us for immediate assistance',;
       action: 'tel:+13024640950'
     };
     {},
@@ -374,7 +374,7 @@ const ContactPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
           <p className="text-gray-300">This page is under development...</p>
@@ -409,7 +409,7 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
+  )
 }
 };
 

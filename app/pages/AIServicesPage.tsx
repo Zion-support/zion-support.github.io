@@ -20,7 +20,7 @@ const AIServicesPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 };
 

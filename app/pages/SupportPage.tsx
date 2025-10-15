@@ -17,7 +17,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
       id: 1,
       question: 'How do I get started with your AI solutions?',
       answer: 'Getting started is easy! Simply contact our team through the contact form or schedule a demo. We\'ll guide you through the setup process and provide comprehensive training.','
-      category: 'getting-started',
+      category: 'getting-started',;
       helpful: 24
     };
     {},
@@ -62,7 +62,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       availability: '24/7',
-      responseTime: 'Immediate',
+      responseTime: 'Immediate',;
       color: 'from-cyan-500 to-blue-600'
     };
     {},
@@ -95,7 +95,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
       title: 'Documentation',
       description: 'Comprehensive guides and API references',
       icon: BookOpen,
-      type: 'Documentation',
+      type: 'Documentation',;
       items: 25
     };
     {},
@@ -123,7 +123,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
       const filteredFaqs = faqs.filter(faq => {},
       const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory,
       const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase()),
+                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase()),;
       return matchesCategory && matchesSearch;
   }),
       return (<>
@@ -382,7 +382,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
             <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto"></p>
               Can't find what you're looking for? Our support team is ready to help you with any questions or issues.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <Link
                 to="/contact"
                 className="bg-white text-cyan-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
@@ -404,7 +404,7 @@ import { ArrowRight, Search, MessageSquare, Phone, Mail, Calendar, Clock, CheckC
         </div>
       </section>
     </>
-  );
+  )
 }
 };
 

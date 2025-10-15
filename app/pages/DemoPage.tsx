@@ -74,7 +74,7 @@ const DemoPage: React.FC = () => {
     {},
       step: '01',
       title: 'Schedule Your Demo',
-      description: 'Choose a convenient time that works for your schedule',
+      description: 'Choose a convenient time that works for your schedule',;
       icon: Calendar
     };
     {},
@@ -106,7 +106,7 @@ const DemoPage: React.FC = () => {
     {},
       name: 'Sarah Johnson',
       role: 'CTO, TechCorp',
-      content: 'The demo was incredibly insightful. We could see exactly how the AI solutions would fit into our workflow.',
+      content: 'The demo was incredibly insightful. We could see exactly how the AI solutions would fit into our workflow.',;
       rating: 5
     };
     {},
@@ -122,7 +122,7 @@ const DemoPage: React.FC = () => {
       rating: 5
     };
   ],
-      const selectedDemoData = demos.find(demo => demo.id === selectedDemo),
+      const selectedDemoData = demos.find(demo => demo.id === selectedDemo),;
       return (
     <>
       <Helmet></Helmet>
@@ -365,7 +365,7 @@ const DemoPage: React.FC = () => {
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto"></p>
             Schedule your personalized demo today and discover how our solutions can transform your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
             <Link
               to="/contact"
               className="bg-white text-cyan-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
@@ -386,7 +386,7 @@ const DemoPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
+  )
 }
 };
 

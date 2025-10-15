@@ -48,7 +48,7 @@ export const focusManagement = {};
     const previousElement = focusableElements[currentIndex - 1] as HTMLElement
     if (previousElement) previousElement.focus()
   }
-    },
+    },;
     {
 // Screen reader utilities
 export const screenReaderUtils = {};
@@ -110,5 +110,5 @@ export const keyboardNavigation = {};
     },
     {
   }
-    },
+    },;
     {

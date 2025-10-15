@@ -12,7 +12,7 @@ interface CacheStats {},
       const [stats, setStats] = useState<CacheStats>({},
       hits: 0,
       misses: 0,
-      size: 0,
+      size: 0,;
       maxSize: 50 * 1024 * 1024 // 50MB
   })
 
@@ -26,7 +26,7 @@ interface CacheStats {},
     },
     {
     // Cache API for dynamic caching
-    const setupCacheStrategy = () => {},
+    const setupCacheStrategy = () => {},;
       const CACHE_NAME = 'zion-tech-cache-v1'
       const CACHE_URLS = [
         '/';
@@ -42,7 +42,7 @@ interface CacheStats {},
       try {},
       const cache = await caches.open(CACHE_NAME),
       await cache.addAll(CACHE_URLS)
-    },
+    },;
     {
       };
       // Cache API responses
@@ -56,7 +56,7 @@ interface CacheStats {},
           },
       return response
           return fetch(request)
-    },
+    },;
     {
       };
       // Initialize caching
@@ -73,13 +73,13 @@ interface CacheStats {},
         },
       return originalFetch(input, init)
       }
-    },
+    },;
     {
     // Memory management for large objects
     const setupMemoryManagement = () => {};
       // Clean up unused objects periodically
       const cleanupInterval = setInterval(() => {},
-      if ((performance as any).memory) {},
+      if ((performance as any).memory) {},;
       const memoryInfo = (performance as any).memory
           const usedMemory = memoryInfo.usedJSHeapSize / memoryInfo.totalJSHeapSize
           
@@ -211,5 +211,5 @@ interface CacheStats {},
       </div>
     </div>
   )
-},
+},;
       export default CacheManager

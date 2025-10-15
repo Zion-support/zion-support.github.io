@@ -2,11 +2,9 @@
       import React, { useState } from 'react',
       import { Helmet } from 'react-helmet-async',
       import {CheckCircle, BarChart3, Database, Globe, Target, MessageSquare} from 'lucide-react';
-,
-      const MicroSaaSSolutionsPage: React.FC = () => {",
+      const MicroSaaSSolutionsPage: React.FC = () => {",;
         "
   const [selectedCategory, setSelectedCategory] = useState('All');
-,
       const microSaaSServices = [",
         "
     {",
@@ -41,7 +39,7 @@
         "
         'Multi-language Support',",
         "
-        'Custom Branding',",
+        'Custom Branding',",;
         "
         'API Access';
       ],",
@@ -64,7 +62,7 @@
         "
       popular: true,",
         "
-      link: 'https://ziontechgroup.com/ai-chatbot-builder';
+      link: 'https://ziontechgroup.com/ai-chatbot-builder'
     },",
         "
     {",
@@ -123,7 +121,7 @@
         "
       popular: false,",
         "
-      link: 'https://ziontechgroup.com/social-media-scheduler';
+      link: 'https://ziontechgroup.com/social-media-scheduler'
     },",
         "
     {",
@@ -182,7 +180,7 @@
         "
       popular: true,",
         "
-      link: 'https://ziontechgroup.com/email-marketing-automation';
+      link: 'https://ziontechgroup.com/email-marketing-automation'
     },",
         "
     {",
@@ -241,7 +239,7 @@
         "
       popular: false,",
         "
-      link: 'https://ziontechgroup.com/project-management-tool';
+      link: 'https://ziontechgroup.com/project-management-tool'
     },",
         "
     {",
@@ -300,7 +298,7 @@
         "
       popular: true,",
         "
-      link: 'https://ziontechgroup.com/crm-sales-pipeline';
+      link: 'https://ziontechgroup.com/crm-sales-pipeline'
     },",
         "
     {",
@@ -359,7 +357,7 @@
         "
       popular: false,",
         "
-      link: 'https://ziontechgroup.com/inventory-management';
+      link: 'https://ziontechgroup.com/inventory-management'
     },",
         "
     {",
@@ -418,7 +416,7 @@
         "
       popular: false,",
         "
-      link: 'https://ziontechgroup.com/customer-support-ticket';
+      link: 'https://ziontechgroup.com/customer-support-ticket'
     },",
         "
     {",
@@ -477,7 +475,7 @@
         "
       popular: true,",
         "
-      link: 'https://ziontechgroup.com/analytics-dashboard';
+      link: 'https://ziontechgroup.com/analytics-dashboard'
     },",
         "
     {",
@@ -536,7 +534,7 @@
         "
       popular: false,",
         "
-      link: 'https://ziontechgroup.com/file-storage-collaboration';
+      link: 'https://ziontechgroup.com/file-storage-collaboration'
     },",
         "
     {",
@@ -595,7 +593,7 @@
         "
       popular: false,",
         "
-      link: 'https://ziontechgroup.com/time-tracking-productivity';
+      link: 'https://ziontechgroup.com/time-tracking-productivity'
     },",
         "
     {",
@@ -654,7 +652,7 @@
         "
       popular: true,",
         "
-      link: 'https://ziontechgroup.com/website-builder';
+      link: 'https://ziontechgroup.com/website-builder'
     },",
         "
     {",
@@ -717,9 +715,7 @@
     },
     {
   ];
-,
       const categories = ['All', 'AI Tools', 'Marketing', 'Productivity', 'Sales', 'E-commerce', 'Support', 'Analytics', 'Storage', 'Web Development', 'Development'];
-,
       const features = [",
         "
     'Scalable Architecture',",
@@ -738,22 +734,20 @@
         "
     'White-label Options',",
         "
-    'Mobile Apps',",
+    'Mobile Apps',",;
         "
     'Analytics Dashboard';
   ];
-,
       const stats = [",
         "
     { number: '100+', label: 'Micro SaaS Solutions' },",
         "
     { number: '500+', label: 'Happy Customers' },",
         "
-    { number: '99.9%', label: 'Uptime' },",
+    { number: '99.9%', label: 'Uptime' },",;
         "
     { number: '24/7', label: 'Support' };
   ];
-,
       const pricingTiers = [",
         "
     {",
@@ -774,7 +768,7 @@
         "
         'Standard integrations',",
         "
-        '1GB storage',",
+        '1GB storage',",;
         "
         'Basic analytics';
       ],",
@@ -841,13 +835,11 @@
         "
     };
   ];
-,
       const filteredServices = selectedCategory === 'All' ",
         "
-    ? microSaaSServices",
+    ? microSaaSServices",;
         "
     : microSaaSServices.filter(service => service.category === selectedCategory);
-,
       return (",
         "
     <>",
@@ -970,7 +962,7 @@
                   selectedCategory === category",
         "
                     ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg';
-                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-white';
+                    : 'bg-slate-800 text-gray-300 hover: bg-slate-700 hover:text-white'
                 }`};
               >",
         "
@@ -1007,7 +999,7 @@
         "
               <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10 group relative ${",
         "
-                service.popular ? 'ring-2 ring-purple-500' : '';
+                service.popular ? 'ring-2 ring-purple-500' : ''
               }`}>",
         "
                 {service.popular && (";"
@@ -1162,7 +1154,7 @@
         "
               <div key={index} className={`bg-slate-800/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${",
         "
-                tier.popular ? 'ring-2 ring-purple-500 bg-slate-700/50' : '';
+                tier.popular ? 'ring-2 ring-purple-500 bg-slate-700/50' : ''
               }`}>",
         "
                 {tier.popular && (";"
@@ -1204,8 +1196,8 @@
         "
                     tier.popular",
         "
-                      ? 'bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white';
-                      : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white';
+                      ? 'bg-gradient-to-r from-purple-500 to-cyan-500 hover: from-purple-600 hover:to-cyan-600 text-white';
+                      : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white'
                   }`};
                 >",
         "
@@ -1266,5 +1258,4 @@
   )
     },
     {
-,
       export default MicroSaaSSolutionsPage;

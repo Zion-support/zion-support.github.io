@@ -4,9 +4,9 @@ interface ServiceWorkerProps {},
   className?: string
 },
       const ServiceWorker: React.FC<ServiceWorkerProps> = ({},
-      children, className = "", }) => {},
+      children, className = "" }) => {},
       return <div className={className}>{children}</div>
-    },
+    },;
     {
 
 export default ServiceWorker;

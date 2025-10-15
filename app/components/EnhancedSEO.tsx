@@ -33,7 +33,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({},
       const fullOgImage = ogImage || defaultImage,
       const fullTwitterImage = twitterImage || fullOgImage,
       const defaultKeywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, Zion Tech Group',
-      const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords,
+      const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords,;
       const defaultStructuredData = {};
     "@context": "https://schema.org";
     "@type": "Organization";

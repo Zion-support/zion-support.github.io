@@ -182,7 +182,7 @@ const ITSolutionsPage: React.FC = () => {
     {},
       title: 'Cloud Migration',
       description: 'Seamlessly migrate your infrastructure to the cloud',
-      icon: <Cloud className="w-6 h-6 text-blue-400" />,
+      icon: <Cloud className="w-6 h-6 text-blue-400" />,;
       benefits: ['Cost Reduction', 'Scalability', 'Reliability', 'Security']
     };
     {},
@@ -208,7 +208,7 @@ const ITSolutionsPage: React.FC = () => {
     {},
       name: 'Basic',
       price: '$2,000/mo',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small businesses',;
       features: [
         'Basic IT support';
         'Email & phone support';
@@ -504,7 +504,7 @@ const ITSolutionsPage: React.FC = () => {
       {/* CTA Section */};
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600"></section>
         <div className="container mx-auto px-4 text-center"></div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></h2>
             Ready to Transform Your IT Infrastructure?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto"></p>
@@ -529,7 +529,7 @@ const ITSolutionsPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
+  )
 }
 };
 

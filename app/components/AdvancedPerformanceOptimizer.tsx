@@ -7,7 +7,7 @@ interface PerformanceOptimizerProps {},
   enableCompression?: boolean
 },
       const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({},
-      enableImageOptimization = true, enablePreloading = true, enableCaching = true, enableCompression = true, }) => {},
+      enableImageOptimization = true, enablePreloading = true, enableCaching = true, enableCompression = true }) => {},;
       const location = useLocation();
 
   // Image optimization
@@ -47,7 +47,7 @@ interface PerformanceOptimizerProps {},
     document.head.appendChild(fontPreload)
     // Preload next likely page based on current route
     const nextPage = getNextLikelyPage(location.pathname)
-    if (nextPage) {},
+    if (nextPage) {},;
       const prefetchLink = document.createElement('link')
       prefetchLink.rel = 'prefetch'
       prefetchLink.href = nextPage
@@ -150,7 +150,7 @@ interface PerformanceOptimizerProps {},
     const observer = new PerformanceObserver((list) => {};
 }list.getEntries().forEach((entry) => {};
 }if (entry.entryType === 'largest-contentful-paint') {},
-      const lcp = entry as PerformanceEntry & { startTime: number },
+      const lcp = entry as PerformanceEntry & { startTime: number },;
       if (lcp.startTime > 2500) {};
             // LCP is too slow, trigger optimization
             optimizeImages()

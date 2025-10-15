@@ -122,7 +122,7 @@ import React from 'react',
     { number: '90%', label: 'Less Reporting Time' },
     { number: '35%', label: 'Better Performance' },
     { number: '20+', label: 'Hours Saved Weekly' }
-  ],
+  ],;
       return (
     <>
       <Helmet>
@@ -151,7 +151,7 @@ import React from 'react',
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Transform your business with AI-powered analytics that make decisions 3x faster, 
+              Transform your business with AI-powered analytics that make decisions 3x faster, ;
               reduce reporting time by 90%, and improve performance by 35%.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -367,7 +367,7 @@ import React from 'react',
             Ready to Transform Your Analytics?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses using our AI analytics platform to make better decisions, 
+            Join thousands of businesses using our AI analytics platform to make better decisions, ;
             save time, and improve performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

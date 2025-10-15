@@ -54,7 +54,7 @@ interface Props {},
       stack: error.stack,
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString()
-      },
+      },;
       console.log('Error logged:', errorData)
       // Send to your error reporting service here
 

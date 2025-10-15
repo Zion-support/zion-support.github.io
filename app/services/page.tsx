@@ -23,7 +23,7 @@ const ServicesPage: React.FC = () => {",
         "
         { name: 'Computer Vision', price: '$1,800/month', description: 'Image and video analysis solutions for object detection and recognition', features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'] },",
         "
-        { name: 'AI Automation', price: '$1,400/month', description: 'Intelligent process automation with decision-making capabilities', features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'] },",
+        { name: 'AI Automation', price: '$1,400/month', description: 'Intelligent process automation with decision-making capabilities', features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'] },",;
         "
         { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] };
       ]
@@ -139,12 +139,11 @@ const ServicesPage: React.FC = () => {",
       ]
     };
   ];
-,
       const ServicesPage: React.FC = () => {ursor/analyze-improve-and-merge-code-4a9f",
         "
   return (",
         "
-    <>",
+    <>",;
         "
       <SEOHead";"
         title="services - Zion Tech Group",
@@ -163,6 +162,5 @@ const ServicesPage: React.FC = () => {",
   )
     },
     {
-,
       export default ServicesPage;
 ;

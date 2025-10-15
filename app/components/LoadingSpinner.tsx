@@ -23,7 +23,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {text && <p className="mt-2 text-gray-600">{text}</p>}
     </div>
   )
-    },
+    },;
     {
 
 export default LoadingSpinner;

@@ -6,7 +6,7 @@ const AiQuantumComputingPage: React.FC = () => {",
         "
       <SEOHead",
         "
-        title="AI Quantum Computing - Zion Tech Group",
+        title="AI Quantum Computing - Zion Tech Group",;
       description="Explore the future of computing with our AI quantum computing solutions for complex problem solving and optimization." />";"
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
         <div className="text-center">";"
@@ -22,5 +22,4 @@ const AiQuantumComputingPage: React.FC = () => {",
   )
     },
     {
-,
       export default AiQuantumComputingPage;

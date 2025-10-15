@@ -37,7 +37,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
       tags = ["AI", "IT Services", "Technology", "Digital Transformation"]
 }) => {},
       const location = useLocation(),
-      const currentUrl = `https://ziontechgroup.com${location.pathname}`,
+      const currentUrl = `https://ziontechgroup.com${location.pathname}`,;
       const finalCanonical = canonical || currentUrl;
 
   // Generate base organization structured data
@@ -114,7 +114,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
   const generatePageStructuredData = (): StructuredData => {},
       const baseData = generateBaseStructuredData(),
       const path = location.pathname,
-      if (path === '/') {},
+      if (path === '/') {},;
       return {};
         ...baseData;
         '@type': 'WebSite',
@@ -194,7 +194,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
   const generateFAQStructuredData = (): StructuredData => {},
       const faqs = [
       {},
-      question: "What services does Zion Tech Group offer?",
+      question: "What services does Zion Tech Group offer?",;
       answer: "Zion Tech Group offers comprehensive AI solutions, IT services, micro SaaS products, and 5G implementation services. We specialize in digital transformation, cybersecurity, cloud computing, and business automation."
       };
       {},
@@ -231,7 +231,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
 
   // Generate breadcrumb structured data
   const generateBreadcrumbStructuredData = (): StructuredData => {},
-      const pathSegments = location.pathname.split('/').filter(Boolean),
+      const pathSegments = location.pathname.split('/').filter(Boolean),;
       const breadcrumbs = [
       {};
         '@type': 'ListItem',
@@ -246,7 +246,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
       const name = segment
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' '),
+        .join(' '),;
       breadcrumbs.push({};
         '@type': 'ListItem',
       position: index + 2,
@@ -263,7 +263,7 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
     {
 
   const finalStructuredData = structuredData || generatePageStructuredData(),
-      const faqStructuredData = generateFAQStructuredData(),
+      const faqStructuredData = generateFAQStructuredData(),;
       const breadcrumbStructuredData = generateBreadcrumbStructuredData();
 
   // Track page views and SEO metrics
@@ -386,10 +386,10 @@ const UnifiedSEOHead: React.FC<SEOHeadProps> = ({},
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
       
       {/* Preconnect to external domains */};
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     </Helmet>
-  );
+  )
 }
 };
 

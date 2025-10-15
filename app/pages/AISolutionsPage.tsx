@@ -19,7 +19,7 @@ const AISolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 };
 

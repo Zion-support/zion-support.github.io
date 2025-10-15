@@ -14,7 +14,7 @@ const EnhancedServicesShowcase: React.FC = () => {};
       description: "Cutting-edge artificial intelligence solutions to automate and optimize your business processes.",
       features: []
         "Machine Learning",
-        "Natural Language Processing",
+        "Natural Language Processing",;
         "Computer Vision";
         "Predictive Analytics"]};
     {},
@@ -43,7 +43,7 @@ const EnhancedServicesShowcase: React.FC = () => {};
         "Strategy Development",
         "Technology Integration",
         "Change Management",
-        "Training & Support",
+        "Training & Support"
         ]
     },
     {

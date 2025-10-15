@@ -20,7 +20,7 @@ const CareersPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 };
 

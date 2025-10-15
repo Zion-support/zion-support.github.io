@@ -1,10 +1,9 @@
 
 import { ArrowRight, CheckCircle, Star, Users, Brain, TrendingUp, Target, MessageSquare, Heart, Award, Globe, Monitor, Map, Phone, Star as StarIcon } from 'lucide-react';import { Link } from "react-router-dom",
       import SEOOptimizer from "../../components/SEOOptimizer";
-,
       export default function ZionAiCustomerInsights() {",
         "
-  const features = [",
+  const features = [",;
         "
     "AI-powered customer behavior analysis",";"
     "Real-time sentiment analysis across all channels",";"
@@ -19,17 +18,15 @@ import { ArrowRight, CheckCircle, Star, Users, Brain, TrendingUp, Target, Messag
     "Custom AI model training for your business",";"
     "API integration with 100+ platforms";
   ];
-,
       const benefits = [";"
     "Increase customer retention by 35%",";"
     "Boost revenue per customer by 40%",";"
     "Reduce churn rate by 50%",";"
     "Improve customer satisfaction scores";
   ];
-,
       const pricingPlans = [",
         "
-    {",
+    {",;
         "
       name: "Starter",";"
       price: "$99",";"
@@ -103,10 +100,9 @@ import { ArrowRight, CheckCircle, Star, Users, Brain, TrendingUp, Target, Messag
         "
     };
   ];
-,
       const testimonials = [",
         "
-    {",
+    {",;
         "
       name: "Jennifer Martinez",";"
       company: "E-commerce Solutions",";"
@@ -115,7 +111,7 @@ import { ArrowRight, CheckCircle, Star, Users, Brain, TrendingUp, Target, Messag
         "
       rating: 5,",
         "
-      avatar: "JM",
+      avatar: "JM"
       },",
         "
     {",
@@ -127,7 +123,7 @@ import { ArrowRight, CheckCircle, Star, Users, Brain, TrendingUp, Target, Messag
         "
       rating: 5,",
         "
-      avatar: "DK",
+      avatar: "DK"
       },",
         "
     {",
@@ -143,15 +139,14 @@ import { ArrowRight, CheckCircle, Star, Users, Brain, TrendingUp, Target, Messag
     },
     {
   ];
-,
       const insights = [",
         "
-    {",
+    {",;
         "
       title: "Behavioral Analysis",";"
       description: "Understand customer actions, preferences, and patterns across all touchpoints",";"
       icon: <Brain className="w-8 h-8" />,";"
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-500 to-cyan-500"
       },",
         "
     {",
@@ -159,7 +154,7 @@ import { ArrowRight, CheckCircle, Star, Users, Brain, TrendingUp, Target, Messag
       title: "Sentiment Tracking",";"
       description: "Monitor customer emotions and satisfaction in real-time across all channels",";"
       icon: <Heart className="w-8 h-8" />,";"
-      color: "from-green-500 to-emerald-500",
+      color: "from-green-500 to-emerald-500"
       },",
         "
     {",
@@ -167,7 +162,7 @@ import { ArrowRight, CheckCircle, Star, Users, Brain, TrendingUp, Target, Messag
       title: "Predictive Analytics",";"
       description: "Forecast customer behavior, churn risk, and lifetime value with AI",";"
       icon: <TrendingUp className="w-8 h-8" />,";"
-      color: "from-purple-500 to-pink-500",
+      color: "from-purple-500 to-pink-500"
       },",
         "
     {",
@@ -179,7 +174,6 @@ import { ArrowRight, CheckCircle, Star, Users, Brain, TrendingUp, Target, Messag
     },
     {
   ];
-,
       const ZionAiCustomerInsightsPage: React.FC = () => {",
         "
   return (",
@@ -188,7 +182,7 @@ import { ArrowRight, CheckCircle, Star, Users, Brain, TrendingUp, Target, Messag
         "
       <SEOHead",
         "
-        title="zion-ai-customer-insights - Zion Tech Group",
+        title="zion-ai-customer-insights - Zion Tech Group",;
       description="Zion Tech Group zion-ai-customer-insights service page" />";"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";"
         {/* Hero Section */};
@@ -417,7 +411,7 @@ import { ArrowRight, CheckCircle, Star, Users, Brain, TrendingUp, Target, Messag
                   key={index},
       className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${",
         "
-                    plan.popular ? 'ring-2 ring-cyan-400' : '';
+                    plan.popular ? 'ring-2 ring-cyan-400' : ''
                   }`};
                 >",
         "
@@ -464,8 +458,8 @@ import { ArrowRight, CheckCircle, Star, Users, Brain, TrendingUp, Target, Messag
         "
                       plan.popular",
         "
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700';
-                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900';
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover: from-cyan-600 hover:to-purple-700';
+                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`};
                   >",
         "
@@ -630,6 +624,5 @@ import { ArrowRight, CheckCircle, Star, Users, Brain, TrendingUp, Target, Messag
   )
     },
     {
-,
       export default ZionAiCustomerInsightsPage;
 ;

@@ -54,7 +54,7 @@ const CustomerRelationshipManagerPage = () => {
         "Email integration",
         "Mobile app access",
         "Email support"
-      ],
+      ],;
       popular: false
     };
     {},
@@ -89,7 +89,7 @@ const CustomerRelationshipManagerPage = () => {
       const benefits = [
     {},
       title: "Increase Sales",
-      description: "Boost sales productivity by up to 35% with better lead management",
+      description: "Boost sales productivity by up to 35% with better lead management",;
       icon: <Target className="w-6 h-6" />
     };
     {},

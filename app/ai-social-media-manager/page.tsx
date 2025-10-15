@@ -226,7 +226,7 @@ import React from 'react',
               Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered social media manager includes everything you need to create, 
+              Our AI-powered social media manager includes everything you need to create, ;
               schedule, and optimize high-performing social media content.
             </p>
           </div>
@@ -372,7 +372,7 @@ import React from 'react',
             Ready to Transform Your Social Media?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses using our AI social media manager to increase engagement, 
+            Join thousands of businesses using our AI social media manager to increase engagement, ;
             save time, and grow their social media presence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

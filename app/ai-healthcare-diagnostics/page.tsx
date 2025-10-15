@@ -4,11 +4,10 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {",
         "
     <>",
         "
-      </div>",
+      </div>",;
         "
     </>";"
   )
     },
     {
-,
       export default AiHealthcareDiagnosticsPage;

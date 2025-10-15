@@ -15,7 +15,7 @@ interface FuturisticServiceCardProps {},
       AI: "from-purple-500 to-pink-600",
       IT: "from-blue-500 to-cyan-600",
       MicroSAAS: "from-green-500 to-emerald-600",
-      Emerging: "from-orange-500 to-red-600"},
+      Emerging: "from-orange-500 to-red-600"},;
       const categoryColor =
     categoryColors[category] || "from-cyan-500 to-purple-600"
   return ()

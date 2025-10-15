@@ -22,7 +22,7 @@ const ITServicesPage: React.FC = () => {};
       id: 'cloud-infrastructure-management',
       name: 'Cloud Infrastructure Management',
       description: 'Comprehensive cloud solutions with auto-scaling, monitoring, and security compliance',
-      price: '$199/month',
+      price: '$199/month',;
       features: []
         'Auto-scaling Infrastructure';
         '99.9% Uptime Guarantee';
@@ -164,7 +164,7 @@ const ITServicesPage: React.FC = () => {};
     };
   ];
 
-  // const categories = ['All', 'Infrastructure', 'Security', 'DevOps', 'Database', 'Networking', 'Consulting'],
+  // const categories = ['All', 'Infrastructure', 'Security', 'DevOps', 'Database', 'Networking', 'Consulting'],;
       const stats = [
     { number: '500+', label: 'Infrastructure Projects', icon: Server };
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield };

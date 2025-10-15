@@ -43,7 +43,7 @@ export default function EnhancedPerformanceOptimizer() {};
               img.classList.add("loaded")
               imageObserver.unobserve(img)
             }
-    },
+    },;
     {
         })
       };
@@ -68,7 +68,7 @@ export default function EnhancedPerformanceOptimizer() {};
     // Add font-display: swap to existing font faces
     const style = document.createElement("style")
     style.textContent = `
-      @font-face {},
+      @font-face {},;
       font-family: 'Inter'
         font-display: swap
         src: url('/fonts/inter-var.woff2') format('woff2')
@@ -82,7 +82,7 @@ export default function EnhancedPerformanceOptimizer() {};
       const newScript = document.createElement("script"),
       newScript.src = script.getAttribute("src") || "",
       newScript.async = true,
-      newScript.defer = true,
+      newScript.defer = true,;
       script.parentNode?.replaceChild(newScript, script);
     });
   }, []),
@@ -116,7 +116,7 @@ export default function EnhancedPerformanceOptimizer() {};
       const navEntry = entry as PerformanceNavigationTiming
             logger.info("Navigation timing:", {},
       domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-      loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
+      loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,;
       totalTime: navEntry.loadEventEnd - navEntry.fetchStart})
           };
         })

@@ -1,12 +1,12 @@
 
 export const Icon = ({},
-      name,
+      name,;
       className = "";
   ...props
 }: {},
       name: string,
       className?: string;
-  [key: string]: unknown;
+  [key: string]: unknown
 }) => {},
       return (
     <span className={`icon ${className}`} {...props}></span>

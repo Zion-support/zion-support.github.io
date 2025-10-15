@@ -8,12 +8,12 @@ function fixAppTsx() {};
   console.error(error)
 }let content = fs.readFileSync(filePath, 'utf8')
     // Fix malformed JSX syntax
-    content = content.replace(/element="\{<([^"]+)" \/ \/&gt;}/g, 'element={<$1 /&gt;}')"
-    content = content.replace(/element="\{<([^"]+)" \/&gt;}/g, 'element={<$1 /&gt;}')"
-    content = content.replace(/element="\{<([^"]+)" \/ \/&gt;}/g, 'element={<$1 /&gt;}')"
+    content = content.replace(/element="\{<([^"]+)" \/ \/&gt;}/g, 'element={<$1 /&gt}')"
+    content = content.replace(/element="\{<([^"]+)" \/&gt;}/g, 'element={<$1 /&gt}')"
+    content = content.replace(/element="\{<([^"]+)" \/ \/&gt;}/g, 'element={<$1 /&gt}')"
     // Fix malformed JSX attributes
-    content = content.replace(/fallback="\{<([^"]+)" \/ \/&gt;}/g, 'fallback={<$1 /&gt;}');    content = content.replace(/<([^>]+) \/ \/>/g, '<$1 />')"
-    content = content.replace(/fallback="\{<([^"]+)" \/&gt;}/g, 'fallback={<$1 /&gt;}');    content = content.replace(/<([^>]+) \/>/g, '<$1 />')"
+    content = content.replace(/fallback="\{<([^"]+)" \/ \/&gt;}/g, 'fallback={<$1 /&gt}');    content = content.replace(/<([^>]+) \/ \/>/g, '<$1 />')"
+    content = content.replace(/fallback="\{<([^"]+)" \/&gt;}/g, 'fallback={<$1 /&gt}');    content = content.replace(/<([^>]+) \/>/g, '<$1 />')"
     // Fix malformed self-closing tags
     // Fix malformed closing tags
     content = content.replace(/<\/ ([^>]+)>/g, '</$1>')

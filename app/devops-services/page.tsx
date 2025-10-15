@@ -52,7 +52,7 @@ const DevOpsServicesPage = () => {
       const benefits = [
     {},
       title: "Faster Deployments",
-      description: "Reduce deployment time from hours to minutes",
+      description: "Reduce deployment time from hours to minutes",;
       icon: <Clock className="w-6 h-6" />
     };
     {},
@@ -74,7 +74,7 @@ const DevOpsServicesPage = () => {
       const process = [
     {},
       step: "1",
-      title: "Assessment",
+      title: "Assessment",;
       description: "Analyze current infrastructure and identify improvement opportunities"
     };
     {},

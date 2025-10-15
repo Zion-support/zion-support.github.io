@@ -40,7 +40,7 @@ interface WebVitalsData {},
       onFID(reportWebVitals),
       onFCP(reportWebVitals),
       onLCP(reportWebVitals),
-      onTTFB(reportWebVitals),
+      onTTFB(reportWebVitals),;
       onINP(reportWebVitals);
       } catch (error) {}
     },

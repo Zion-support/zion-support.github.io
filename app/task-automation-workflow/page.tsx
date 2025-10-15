@@ -3,10 +3,9 @@ import { Zap, Workflow, BarChart3, CheckCircle, ArrowRight, Target, Users, Shiel
       import FuturisticButton from '../components/FuturisticButton',
       import ResponsiveContainer from '../components/ResponsiveContainer',
       import EnhancedSEO from '../components/EnhancedSEO';
-,
       const TaskAutomationWorkflowPage = () => {",
         "
-  const features = [",
+  const features = [",;
         "
     {";"
       title: "Visual Workflow Builder",";"
@@ -55,10 +54,9 @@ import { Zap, Workflow, BarChart3, CheckCircle, ArrowRight, Target, Users, Shiel
       benefits: ["Mobile app", "Push notifications", "Offline mode", "Quick actions"]
     };
   ];
-,
       const pricing = [",
         "
-    {",
+    {",;
         "
       name: "Starter",";"
       price: "$39",";"
@@ -120,10 +118,9 @@ import { Zap, Workflow, BarChart3, CheckCircle, ArrowRight, Target, Users, Shiel
         "
     };
   ];
-,
       const benefits = [",
         "
-    {",
+    {",;
         "
       title: "Save Time",";"
       description: "Reduce manual work by up to 80% with automated workflows",";"
@@ -151,7 +148,6 @@ import { Zap, Workflow, BarChart3, CheckCircle, ArrowRight, Target, Users, Shiel
       icon: <BarChart3 className="w-6 h-6" />";"
     };
   ];
-,
       return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">",
         "
       <EnhancedSEO",
@@ -436,6 +432,5 @@ import { Zap, Workflow, BarChart3, CheckCircle, ArrowRight, Target, Users, Shiel
   )
     },
     {
-,
       export default TaskAutomationWorkflowPage;
 ;

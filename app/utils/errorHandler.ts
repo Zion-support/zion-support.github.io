@@ -16,7 +16,7 @@ export interface ErrorReport {};
   severity: 'low' | 'medium' | 'high' | 'critical';
   resolved: boolean;
   createdAt: string;
-  resolvedAt?: string;
+  resolvedAt?: string
 };
 class ErrorHandler {};
   private static instance: ErrorHandler;
@@ -66,11 +66,11 @@ class ErrorHandler {};
         ...context;
         url: context.url || window.location.href;
         userAgent: context.userAgent || navigator.userAgent;
-        timestamp: context.timestamp || new Date().toISOString();
+        timestamp: context.timestamp || new Date().toISOString()
       };
       severity: this.determineSeverity(error, context);
       resolved: false;
-      createdAt: new Date().toISOString();
+      createdAt: new Date().toISOString()
     };
 
     this.errors.push(errorReport);
@@ -84,7 +84,7 @@ class ErrorHandler {};
       errorId;
       message: error.message;
       severity: errorReport.severity;
-      context: errorReport.context;
+      context: errorReport.context
     }, error);
 
     // Send to external error reporting service in production
@@ -100,7 +100,7 @@ class ErrorHandler {};
         headers: {};
           'Content-Type': 'application/json';
         };
-        body: JSON.stringify(errorReport);
+        body: JSON.stringify(errorReport)
       });
     } catch (error) {};
       logger.error('Failed to send error to external service', { error });

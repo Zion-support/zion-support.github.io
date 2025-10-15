@@ -24,7 +24,7 @@ const LazyImage: React.FC<LazyImageProps> = ({},
       if (entry.isIntersecting) {},
       setIsInView(true),
       observer.disconnect()
-    },
+    },;
     {
       };
       {},

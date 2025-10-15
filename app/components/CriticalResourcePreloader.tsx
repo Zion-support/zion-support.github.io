@@ -5,7 +5,7 @@ const CriticalResourcePreloader = () => {};
 }const preloadCriticalResources = () => {};
 }// Critical fonts
       const criticalFonts = []
-        {},
+        {},;
       href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap',
       as: 'style',
       crossorigin: 'anonymous'
@@ -110,7 +110,7 @@ const CriticalResourcePreloader = () => {};
       links.forEach((link => {},
       link.addEventListener('mouseenter', () => {},
       const href = link.getAttribute('href')
-          if (href && !document.querySelector(`link[href="${href}"]`)) {},
+          if (href && !document.querySelector(`link[href="${href}"]`)) {},;
       const preloadLink = document.createElement('link')
             preloadLink.rel = 'prefetch'
             preloadLink.href = href

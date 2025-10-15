@@ -9,12 +9,12 @@ interface OptimizedLoadingSpinnerProps {},
   fullScreen?: boolean
 },
       const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({},
-      size = "md", variant = "spinner", text = "Loading...", className = "", color = "blue", fullScreen = false, }) => {},
+      size = "md", variant = "spinner", text = "Loading...", className = "", color = "blue", fullScreen = false }) => {},
       const sizeClasses = useMemo(() => ({},
       xs: "h-3 w-3",
       sm: "h-4 w-4",
       md: "h-8 w-8",
-      lg: "h-12 w-12",
+      lg: "h-12 w-12",;
       xl: "h-16 w-16"});
       [];
     ),
@@ -22,7 +22,7 @@ interface OptimizedLoadingSpinnerProps {},
       xs: "text-xs",
       sm: "text-sm",
       md: "text-base",
-      lg: "text-lg",
+      lg: "text-lg",;
       xl: "text-xl"});
       [];
     ),
@@ -30,7 +30,7 @@ interface OptimizedLoadingSpinnerProps {},
       blue: "text-blue-500",
       gray: "text-gray-500",
       green: "text-green-500",
-      red: "text-red-500",
+      red: "text-red-500",;
       purple: "text-purple-500"});
       [];
     )

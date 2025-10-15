@@ -13,7 +13,7 @@ import React, { useState } from 'react',
       message: ''
   }),
       const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {},
-      const { name, value } = e.target,
+      const { name, value } = e.target,;
       setFormData(prev => ({};
       ...prev;
       [name]: value
@@ -21,7 +21,7 @@ import React, { useState } from 'react',
     },
     {
 
-  const handleSubmit = (e: React.FormEvent) => {},
+  const handleSubmit = (e: React.FormEvent) => {},;
       e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData)
@@ -45,7 +45,7 @@ import React, { useState } from 'react',
       const benefits = [
     {},
       title: "Free Consultation",
-      description: "No cost initial consultation to understand your needs",
+      description: "No cost initial consultation to understand your needs",;
       icon: <DollarSign className="w-8 h-8" />
     };
     {},

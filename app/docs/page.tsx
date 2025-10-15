@@ -1,12 +1,10 @@
 import React, { useState } from 'react',
       import { Helmet } from "react-helmet-async",
       import {Book, Code, Shield, Zap, Search, ChevronDown, ChevronRight, ExternalLink} from "lucide-react";
-,
       const DocsPage: React.FC = () => {",
         "
-  const [searchQuery, setSearchQuery] = useState(''),
+  const [searchQuery, setSearchQuery] = useState(''),;
       const [expandedSection, setExpandedSection] = useState<string | null>(null);
-,
       const documentationSections = [",
         "
     {",
@@ -15,7 +13,7 @@ import React, { useState } from 'react',
         "
       title: 'Getting Started',",
         "
-      description: 'Learn how to get started with our AI solutions',",
+      description: 'Learn how to get started with our AI solutions',",;
         "
       content: 'Comprehensive guide to implementing AI in your business',";"
       icon: <Zap className="w-6 h-6" />,",
@@ -99,7 +97,6 @@ import React, { useState } from 'react',
       ]
     };
   ];
-,
       const popularArticles = [",
         "
     { title: 'Quick Start Guide', category: 'Getting Started', readTime: '5 min', views: '12.5k' },",
@@ -108,14 +105,13 @@ import React, { useState } from 'react',
         "
     { title: 'Authentication Guide', category: 'API Reference', readTime: '5 min', views: '6.8k' },",
         "
-    { title: 'Cloud Infrastructure Setup', category: 'IT Services', readTime: '25 min', views: '5.1k' },",
+    { title: 'Cloud Infrastructure Setup', category: 'IT Services', readTime: '25 min', views: '5.1k' },",;
         "
     { title: 'Computer Vision Tutorial', category: 'AI Services', readTime: '12 min', views: '4.7k' };
   ];
-,
       const filteredSections = documentationSections.map(section => ({",
         "
-    ...section,",
+    ...section,",;
         "
     articles: section.articles?.filter((article: { title: string; description: string }) =>",
         "
@@ -124,7 +120,6 @@ import React, { useState } from 'react',
       article.description.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
   })).filter(section => section.articles?.length > 0);
-,
       return (",
         "
     <>",
@@ -413,5 +408,4 @@ import React, { useState } from 'react',
   )
     },
     {
-,
       export default DocsPage;

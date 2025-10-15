@@ -7,7 +7,7 @@ interface SkeletonProps {},
   animated?: boolean
 },
       const Skeleton: React.FC<SkeletonProps> = ({},
-      width = "100%", height = "1rem", className = "", rounded = true, animated = true, }) => {},
+      width = "100%", height = "1rem", className = "", rounded = true, animated = true }) => {},
       const style = {},
       width: typeof width === "number" ? `${width}px` : width,
       height: typeof height === "number" ? `${height}px` : height},
@@ -18,9 +18,9 @@ interface SkeletonProps {},
   )
 },
       const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({},
-      type = "card", count = 1, className = "", }) => {},
+      type = "card", count = 1, className = "" }) => {},
       const renderSkeleton = () => {},
-      switch (type) {},
+      switch (type) {},;
       case "card":
         return ()
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>

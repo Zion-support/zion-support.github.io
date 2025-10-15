@@ -5,13 +5,13 @@ import React, { useState } from 'react',
     },
     {
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({},
-      className = "", }) => {},
+      className = "" }) => {},
       const [email, setEmail] = useState(""),
       const [isSubscribed, setIsSubscribed] = useState(false),
       const [isLoading, setIsLoading] = useState(false),
       const handleSubmit = async (_e: React.FormEvent) => {},
       e.preventDefault(),
-      setIsLoading(true),
+      setIsLoading(true),;
       try {};
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000)),

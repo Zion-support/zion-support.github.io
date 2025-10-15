@@ -34,7 +34,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
         "Mobile app access",
         "Progress tracking",
         "Email support"
-      ],
+      ],;
       popular: false
     };
     {},
@@ -70,7 +70,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
       const useCases = [
     {},
       title: "Corporate Training",
-      description: "Upskill employees with personalized training programs and skill assessments",
+      description: "Upskill employees with personalized training programs and skill assessments",;
       icon: <Users className="w-8 h-8" />
     };
     {},
@@ -293,7 +293,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
                 Join millions of learners using our AI personalized learning platform. 
                 Start your personalized learning journey today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300"></button>
                   Start Free Trial
                 </button>
@@ -306,7 +306,7 @@ const AiPersonalizedLearningPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  )
 }
 };
 

@@ -184,7 +184,7 @@ const eersPage: React.FC = () => {};
         'Equity participation,'
         'Flexible remote work,'
         Professional development budget
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',;
       requirements: []
         '5+ years experience in AI/ML development';
         'Expertise in Python, TensorFlow, PyTorch';
@@ -208,7 +208,7 @@ const eersPage: React.FC = () => {};
   const values = []
     {},
       const culture = []
-    {},
+    {},;
       stat: '98%,'
       label: 'Employee Satisfaction,'
       description: 'Our team loves working here});)'

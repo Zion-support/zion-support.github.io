@@ -54,7 +54,7 @@ const EmailMarketingPlatformPage = () => {
         "Basic templates",
         "Email support",
         "Mobile app access"
-      ],
+      ],;
       popular: false
     };
     {},
@@ -89,7 +89,7 @@ const EmailMarketingPlatformPage = () => {
       const benefits = [
     {},
       title: "Increase Engagement",
-      description: "Boost email engagement rates by up to 50% with personalization",
+      description: "Boost email engagement rates by up to 50% with personalization",;
       icon: <Target className="w-6 h-6" />
     };
     {},

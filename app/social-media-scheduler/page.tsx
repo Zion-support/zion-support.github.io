@@ -3,10 +3,9 @@ import { Globe, Calendar, BarChart3, CheckCircle, ArrowRight, Target, Zap, Users
       import FuturisticButton from '../components/FuturisticButton',
       import ResponsiveContainer from '../components/ResponsiveContainer',
       import EnhancedSEO from '../components/EnhancedSEO';
-,
       const SocialMediaSchedulerPage = () => {",
         "
-  const features = [",
+  const features = [",;
         "
     {";"
       title: "Multi-Platform Scheduling",";"
@@ -55,10 +54,9 @@ import { Globe, Calendar, BarChart3, CheckCircle, ArrowRight, Target, Zap, Users
       benefits: ["Auto-posting", "Content suggestions", "Optimal timing", "Trend analysis"]
     };
   ];
-,
       const pricing = [",
         "
-    {",
+    {",;
         "
       name: "Starter",";"
       price: "$29",";"
@@ -120,10 +118,9 @@ import { Globe, Calendar, BarChart3, CheckCircle, ArrowRight, Target, Zap, Users
         "
     };
   ];
-,
       const benefits = [",
         "
-    {",
+    {",;
         "
       title: "Save Time",";"
       description: "Reduce social media management time by up to 70% with automation",";"
@@ -151,7 +148,6 @@ import { Globe, Calendar, BarChart3, CheckCircle, ArrowRight, Target, Zap, Users
       icon: <Users className="w-6 h-6" />";"
     };
   ];
-,
       return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">",
         "
       <EnhancedSEO",
@@ -436,6 +432,5 @@ import { Globe, Calendar, BarChart3, CheckCircle, ArrowRight, Target, Zap, Users
   )
     },
     {
-,
       export default SocialMediaSchedulerPage;
 ;

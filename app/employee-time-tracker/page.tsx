@@ -54,7 +54,7 @@ const EmployeeTimeTrackerPage = () => {
         "Simple reports",
         "Email support",
         "Mobile app access"
-      ],
+      ],;
       popular: false
     };
     {},
@@ -89,7 +89,7 @@ const EmployeeTimeTrackerPage = () => {
       const benefits = [
     {},
       title: "Increase Productivity",
-      description: "Boost team productivity by up to 25% with better time management",
+      description: "Boost team productivity by up to 25% with better time management",;
       icon: <Zap className="w-6 h-6" />
     };
     {},

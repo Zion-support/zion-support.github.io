@@ -1,9 +1,8 @@
 import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, MessageSquare, Phone, Mail, TrendingUp, Globe, Clock, Play, Star, Zap, Star} from 'lucide-react';import { Helmet } from "react-helmet-async",
       import { Link } from "react-router-dom";
-,
       export default function ZionAiCrmPro() {",
         "
-  const features = [",
+  const features = [",;
         "
     {";"
       title: "AI-Powered Lead Scoring",";"
@@ -52,10 +51,9 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
       benefits: ["Custom dashboards", "Real-time insights", "Automated reports", "Data visualization"]
     };
   ];
-,
       const pricingPlans = [",
         "
-    {",
+    {",;
         "
       name: "Starter",";"
       price: "$199",";"
@@ -123,10 +121,9 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
         "
     };
   ];
-,
       const testimonials = [",
         "
-    {",
+    {",;
         "
       name: "Alex Thompson",";"
       company: "SalesForce Solutions",";"
@@ -135,7 +132,7 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
         "
       rating: 5,",
         "
-      avatar: "AT",
+      avatar: "AT"
       },",
         "
     {",
@@ -147,7 +144,7 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
         "
       rating: 5,",
         "
-      avatar: "SW",
+      avatar: "SW"
       },",
         "
     {",
@@ -163,14 +160,12 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
     },
     {
   ];
-,
       const stats = [";"
     { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },";"
     { number: "45%", label: "Average Conversion Increase", icon: <TrendingUp className="w-6 h-6" /> },";"
     { number: "95%", label: "AI Accuracy Rate", icon: <Brain className="w-6 h-6" /> },";"
     { number: "24/7", label: "AI Support Available", icon: <Clock className="w-6 h-6" /> };
   ];
-,
       const ZionAiCrmProPage: React.FC = () => {",
         "
   return (",
@@ -191,7 +186,7 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
           name="keywords",
       content="AI CRM, customer relationship management, lead scoring, sales automation, predictive analytics, sales forecasting, CRM software" />",
         "
-      </Helmet>",
+      </Helmet>",;
         "
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden">";"
         {/* Animated Background */};
@@ -429,7 +424,7 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
         "
                       ? 'border-indigo-500/50 shadow-2xl shadow-indigo-500/25' ",
         "
-                      : 'border-white/20 hover:border-indigo-500/30';
+                      : 'border-white/20 hover: border-indigo-500/30'
                   }`};
                 >",
         "
@@ -476,8 +471,8 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
         "
                       plan.popular",
         "
-                        ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700 shadow-lg hover:shadow-indigo-500/25';
-                        : 'border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-slate-900';
+                        ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover: from-indigo-600 hover:to-purple-700 shadow-lg hover:shadow-indigo-500/25';
+                        : 'border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-slate-900'
                     }`};
                   >",
         "
@@ -640,6 +635,5 @@ import {ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, Mes
   )
     },
     {
-,
       export default ZionAiCrmProPage;
 ;

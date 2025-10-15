@@ -28,7 +28,7 @@ export default function ZionAnalyticsPro() {},
       price: "$29",
       period: "month",
       description: "Perfect for small businesses",
-      features: ["Up to 5 data sources", "Basic dashboards", "Email support", "1 user"],
+      features: ["Up to 5 data sources", "Basic dashboards", "Email support", "1 user"],;
       popular: false
     };
     {},
@@ -54,7 +54,7 @@ export default function ZionAnalyticsPro() {},
       company: "TechStart Inc.",
       role: "CEO",
       content: "Zion Analytics Pro transformed our data insights. We increased revenue by 30% in just 2 months with their predictive analytics.",
-      rating: 5,
+      rating: 5,;
       avatar: "SJ"
     };
     {},

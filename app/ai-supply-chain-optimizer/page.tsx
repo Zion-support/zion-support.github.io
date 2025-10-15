@@ -6,7 +6,7 @@ import { TrendingUp } from "lucide-react",
     {},
       title: "Demand Forecasting",
       description: "AI-powered demand prediction with 95% accuracy using machine learning and market analysis",
-      icon: <BarChart3 className="w-6 h-6" />,
+      icon: <BarChart3 className="w-6 h-6" />,;
       benefits: ["95% Forecast Accuracy", "Seasonal Pattern Recognition", "Market Trend Analysis", "Inventory Optimization"]
     };
     {},
@@ -31,7 +31,7 @@ import { TrendingUp } from "lucide-react",
       const industries = [
     {},
       title: "Manufacturing",
-      description: "Optimize production schedules, raw material procurement, and distribution networks",
+      description: "Optimize production schedules, raw material procurement, and distribution networks",;
       impact: "40% cost reduction, 50% faster delivery"
     };
     {},
@@ -55,7 +55,7 @@ import { TrendingUp } from "lucide-react",
       plan: "Starter",
       price: "$279/month",
       description: "Perfect for small to medium businesses",
-      features: ["Up to 100 SKUs", "Basic forecasting", "Route optimization", "Email support"],
+      features: ["Up to 100 SKUs", "Basic forecasting", "Route optimization", "Email support"],;
       popular: false
     };
     {},
@@ -76,7 +76,7 @@ import { TrendingUp } from "lucide-react",
       const benefits = [
     {},
       metric: "30%",
-      label: "Cost Reduction",
+      label: "Cost Reduction",;
       description: "Average cost savings across all supply chain operations"
     };
     {},

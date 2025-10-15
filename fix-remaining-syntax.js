@@ -46,7 +46,7 @@ function fixSyntaxErrors(content, filePath) {
   fixed = fixed.replace(/success\s*$/gm, 'success: true;');
   fixed = fixed.replace(/error\s*$/gm, 'error: false;');
   
-  return fixed;
+  return fixed
 }
 
 // Function to fix specific files
@@ -65,7 +65,7 @@ function fixSpecificFiles() {
     '/workspace/api/create-checkout-session.js',
     '/workspace/api/create-payment-intent.js',
     '/workspace/api/onsite-request.js',
-    '/workspace/api/subscribe.js',
+    '/workspace/api/subscribe.js',;
     '/workspace/api/wallet.js'
   ];
   

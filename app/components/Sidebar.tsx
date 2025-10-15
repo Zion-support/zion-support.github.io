@@ -36,7 +36,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {},
       newSet.delete(section)
       } else {},
       newSet.add(section)
-      },
+      },;
       return newSet
     })
   }, [])

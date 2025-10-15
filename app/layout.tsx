@@ -7,7 +7,6 @@ import { ErrorBoundary } from "react-error-boundary",
       import ErrorFallback from "./components/ErrorFallback",
       import MobileNavigation from "./components/MobileNavigation",
       import EnhancedNavigation from "./components/EnhancedNavigation";
-,
       interface LayoutProps {",
         "
   children: React.ReactNode

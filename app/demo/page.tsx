@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async',
     {},
       icon: BarChart3,
       title: 'AI-Powered Analytics',
-      description: 'See how our AI analyzes your data in real-time',
+      description: 'See how our AI analyzes your data in real-time',;
       demo: 'Live Demo'
     };
     {},
@@ -29,7 +29,7 @@ import { Helmet } from 'react-helmet-async',
       const testimonials = [{},
       name: "Sarah Johnson",
       company: "TechCorp Inc.",
-      content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.",
+      content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.",;
       rating: 5
     };
     {},

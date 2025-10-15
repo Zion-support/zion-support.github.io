@@ -7,7 +7,7 @@ export default function Careers() {};
       location: 'Remote / Middletown, DE',
       type: 'Full-time',
       experience: '5+ years',
-      description: 'Lead development of AI-powered solutions and machine learning models.',
+      description: 'Lead development of AI-powered solutions and machine learning models.',;
       requirements: []
         'Master\'s degree in Computer Science or related field','
         '5+ years experience with Python, TensorFlow, PyTorch';

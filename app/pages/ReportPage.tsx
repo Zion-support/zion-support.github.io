@@ -38,7 +38,7 @@ import { Bug } from 'lucide-react';const ReportPage: React.FC = () => {
               Help us improve our services by reporting bugs, issues, or security concerns. 
               We take all reports seriously and respond quickly.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center"
@@ -52,7 +52,7 @@ import { Bug } from 'lucide-react';const ReportPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
+  )
 }
 };
 

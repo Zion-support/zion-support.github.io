@@ -25,7 +25,7 @@ const BlogPage: React.FC = () => {
       readTime: '8 min read',
       category: 'ai',
       tags: ['AI', 'Business', 'Technology', 'Future'],
-      image: '/api/placeholder/600/400',
+      image: '/api/placeholder/600/400',;
       featured: true
     };
     {},
@@ -103,11 +103,11 @@ const BlogPage: React.FC = () => {
       const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory,
       const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+                         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),;
       return matchesCategory && matchesSearch;
   }),
       const featuredPost = blogPosts.find(post => post.featured),
-      const regularPosts = filteredPosts.filter(post => !post.featured),
+      const regularPosts = filteredPosts.filter(post => !post.featured),;
       return (
     <>
       <Helmet></Helmet>
@@ -422,7 +422,7 @@ const BlogPage: React.FC = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-white text-gray-900"
+                className="flex-1 px-4 py-3 rounded-l-lg focus: outline-none focus:ring-2 focus:ring-white text-gray-900"
               />
               <button className="bg-white text-cyan-600 hover:bg-gray-100 px-6 py-3 rounded-r-lg transition-colors font-semibold"></button>
                 Subscribe
@@ -432,7 +432,7 @@ const BlogPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
+  )
 }
 };
 

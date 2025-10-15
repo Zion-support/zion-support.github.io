@@ -53,12 +53,12 @@ function fixJSXContent(content) {};
   )
   content = content.replace()
     /<div className="max-w-7xl[^"]*"><div><\/div><\/div><\/div><\/div>/g,"
-    '<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">';
+    '<div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center">';
   )
   // Remove orphaned closing tags
   content = content.replace()
     /<\/div><\/div><\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g;
-    "</div>";
+    "</div>"
   )
   content = content.replace(/<\/div><\/div>\s*<\/div>\s*<\/div>/g, "</div>")
   // Fix missing imports

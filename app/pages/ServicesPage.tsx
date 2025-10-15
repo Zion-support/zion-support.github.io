@@ -69,7 +69,7 @@ const ServicesPage: React.FC = () => {
       const features = [
     {},
       icon: <Shield className="w-8 h-8 text-green-400" />,
-      title: 'Enterprise Security',
+      title: 'Enterprise Security',;
       description: 'Bank-level security with 99.9% uptime guarantee and comprehensive data protection'
     };
     {},
@@ -102,7 +102,7 @@ const ServicesPage: React.FC = () => {
     {},
       step: '01',
       title: 'Discovery & Analysis',
-      description: 'We analyze your business needs and current technology stack to understand your requirements.',
+      description: 'We analyze your business needs and current technology stack to understand your requirements.',;
       icon: <Target className="w-8 h-8 text-cyan-400" />
     };
     {},
@@ -136,7 +136,7 @@ const ServicesPage: React.FC = () => {
       company: 'TechStart Inc.',
       role: 'CEO',
       content: 'Zion Tech Group transformed our business with their AI solutions. Our efficiency increased by 300% in just 6 months.',
-      rating: 5,
+      rating: 5,;
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face'
     };
     {},
@@ -402,7 +402,7 @@ const ServicesPage: React.FC = () => {
       {/* CTA Section */};
       <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600"></section>
         <div className="container mx-auto px-4 text-center"></div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></h2>
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto"></p>
@@ -428,7 +428,7 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
+  )
 }
 };
 

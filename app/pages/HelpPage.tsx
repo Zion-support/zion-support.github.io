@@ -47,7 +47,7 @@ const HelpPage: React.FC = () => {
     {},
       id: 1,
       question: 'How do I get started with your services?',
-      answer: 'Getting started is easy! Simply create an account, choose your plan, and follow our onboarding guide. We provide step-by-step tutorials and 24/7 support to help you get up and running quickly.',
+      answer: 'Getting started is easy! Simply create an account, choose your plan, and follow our onboarding guide. We provide step-by-step tutorials and 24/7 support to help you get up and running quickly.',;
       category: 'Getting Started'
     };
     {},
@@ -87,7 +87,7 @@ const HelpPage: React.FC = () => {
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       availability: '24/7',
-      responseTime: 'Immediate',
+      responseTime: 'Immediate',;
       action: 'Start Chat'
     };
     {},
@@ -120,7 +120,7 @@ const HelpPage: React.FC = () => {
       title: 'Documentation',
       description: 'Comprehensive guides and API references',
       icon: <BookOpen className="w-6 h-6 text-blue-400" />,
-      type: 'Documentation',
+      type: 'Documentation',;
       items: 25
     };
     {},
@@ -152,7 +152,7 @@ const HelpPage: React.FC = () => {
   ),
       const toggleFAQ = (id: number) => {},
       setExpandedFAQ(expandedFAQ === id ? null : id)
-    },
+    },;
     {
 
   return (
@@ -434,7 +434,7 @@ const HelpPage: React.FC = () => {
             <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto"></p>
               Can't find what you're looking for? Our support team is ready to help you with any questions or issues.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <Link
                 to="/contact"
                 className="bg-white text-purple-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
@@ -456,7 +456,7 @@ const HelpPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
+  )
 }
 };
 

@@ -1,11 +1,9 @@
 import React, { useState } from 'react',
       import {Brain, Server, Layers} from "lucide-react";
-,
       const PricingPage: React.FC = () => {",
         "
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),;
       const [selectedCategory, setSelectedCategory] = useState<string>('all');
-,
       const microSaasPricing = [",
         "
     {",
@@ -36,14 +34,14 @@ import React, { useState } from 'react',
         "
         'Mobile app access',",
         "
-        'Email support',",
+        'Email support',",;
         "
         'Basic integrations';
       ],",
         "
       popular: true,",
         "
-      category: 'micro-saas';
+      category: 'micro-saas'
     },",
         "
     {",
@@ -81,7 +79,7 @@ import React, { useState } from 'react',
         "
       popular: false,",
         "
-      category: 'micro-saas';
+      category: 'micro-saas'
     },",
         "
     {",
@@ -119,7 +117,7 @@ import React, { useState } from 'react',
         "
       popular: true,",
         "
-      category: 'micro-saas';
+      category: 'micro-saas'
     },",
         "
     {",
@@ -161,7 +159,6 @@ import React, { useState } from 'react',
     },
     {
   ];
-,
       const aiServicesPricing = [",
         "
     {",
@@ -192,14 +189,14 @@ import React, { useState } from 'react',
         "
         'Multi-language support',",
         "
-        'Sentiment analysis',",
+        'Sentiment analysis',",;
         "
         'Escalation to human agents';
       ],",
         "
       popular: true,",
         "
-      category: 'ai-services';
+      category: 'ai-services'
     },",
         "
     {",
@@ -237,7 +234,7 @@ import React, { useState } from 'react',
         "
       popular: false,",
         "
-      category: 'ai-services';
+      category: 'ai-services'
     },",
         "
     {",
@@ -275,7 +272,7 @@ import React, { useState } from 'react',
         "
       popular: true,",
         "
-      category: 'ai-services';
+      category: 'ai-services'
     },",
         "
     {",
@@ -317,7 +314,6 @@ import React, { useState } from 'react',
     },
     {
   ];
-,
       const itServicesPricing = [",
         "
     {",
@@ -348,14 +344,14 @@ import React, { useState } from 'react',
         "
         'Migration services',",
         "
-        'Performance optimization',",
+        'Performance optimization',",;
         "
         'Backup & recovery solutions';
       ],",
         "
       popular: true,",
         "
-      category: 'it-services';
+      category: 'it-services'
     },",
         "
     {",
@@ -393,7 +389,7 @@ import React, { useState } from 'react',
         "
       popular: true,",
         "
-      category: 'it-services';
+      category: 'it-services'
     },",
         "
     {",
@@ -431,7 +427,7 @@ import React, { useState } from 'react',
         "
       popular: false,",
         "
-      category: 'it-services';
+      category: 'it-services'
     },",
         "
     {",
@@ -473,22 +469,19 @@ import React, { useState } from 'react',
     },
     {
   ];
-,
-      const categories = [",
+      const categories = [",;
         "
     { id: 'all', name: 'All Services', icon: <Layers className="w-5 h-5" /> },";"
     { id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5" /> },";"
     { id: 'ai-services', name: 'AI Services', icon: <Brain className="w-5 h-5" /> },";"
     { id: 'it-services', name: 'IT Services', icon: <Server className="w-5 h-5" /> };
   ];
-,
       const allPricing = [...microSaasPricing, ...aiServicesPricing, ...itServicesPricing],
       const filteredPricing = selectedCategory === 'all' ",
         "
-    ? allPricing",
+    ? allPricing",;
         "
     : allPricing.filter(item => item.category === selectedCategory);
-,
       return (",
         "
     <>",
@@ -551,7 +544,7 @@ import React, { useState } from 'react',
         "
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${",
         "
-                    billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1';
+                    billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'
                   }`} />",
         "
               </button>",
@@ -591,7 +584,7 @@ import React, { useState } from 'react',
                   selectedCategory === category.id",
         "
                     ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg';
-                    : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white';
+                    : 'bg-slate-700 text-gray-300 hover: bg-slate-600 hover:text-white'
                 }`};
               >",
         "
@@ -615,7 +608,7 @@ import React, { useState } from 'react',
         "
               <div key={index} className={`bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10 group relative ${",
         "
-                service.popular ? 'ring-2 ring-purple-500' : '';
+                service.popular ? 'ring-2 ring-purple-500' : ''
               }`}>",
         "
                 {service.popular && (";"
@@ -954,6 +947,5 @@ import React, { useState } from 'react',
   )
     },
     {
-,
       export default PricingPage;
 ;

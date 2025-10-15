@@ -2,14 +2,13 @@
 import { Helmet } from 'react-helmet-async',
       import { Link } from 'react-router-dom',
       import { ArrowRight, Briefcase, MapPin, Clock, Users, CheckCircle, Heart, DollarSign, Home, GraduationCap, Zap, Shield } from 'lucide-react';
-,
       const CareersPage: React.FC = () => {",
         "
   return (",
         "
     <>",
         "
-      <Helmet>",
+      <Helmet>",;
         "
         <title>Careers - Zion Tech Group | Join Our Team</title>";"
         <meta name="description" content="Join our team of experts in AI, cloud, and cybersecurity. Explore career opportunities at Zion Tech Group." />",
@@ -229,5 +228,4 @@ import { Helmet } from 'react-helmet-async',
   )
     },
     {
-,
       export default CareersPage;

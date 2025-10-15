@@ -27,7 +27,7 @@ export const OrganizationStructuredData: React.FC = () => ()
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
       logo: 'https://ziontechgroup.com/logo.png',
-      description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.',
+      description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.',;
       address: {};
         '@type': 'PostalAddress',
       streetAddress: '364 E Main St STE 1008',
@@ -61,7 +61,7 @@ export const WebSiteStructuredData: React.FC = () => ()
     data={{},
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
-      description: 'Advanced AI and IT Solutions for Modern Businesses',
+      description: 'Advanced AI and IT Solutions for Modern Businesses',;
       potentialAction: {};
         '@type': 'SearchAction',
       target: 'https://ziontechgroup.com/search?q={search_term_string}';
@@ -76,13 +76,13 @@ data={{},
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com'},
       areaServed: 'Worldwide',
-      priceCurrency: 'USD',
+      priceCurrency: 'USD',;
       availability: 'https://schema.org/InStock'} : undefined}} />
 )
 export const BreadcrumbStructuredData: React.FC<{ items: Array<{ name: string; url: string }> }> = ({ items }) => ()
   <StructuredData
     type="BreadcrumbList"
-    data={{},
+    data={{},;
       itemListElement: items.map((item, index) => ({};
         '@type': 'ListItem',
       position: index + 1,

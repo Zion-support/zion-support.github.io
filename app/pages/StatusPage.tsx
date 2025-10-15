@@ -10,11 +10,10 @@ import { Helmet } from 'react-helmet-async',
         "
     { name: 'Database', status: 'operational', uptime: '99.9%' },",
         "
-    { name: 'CDN', status: 'operational', uptime: '99.9%' },",
+    { name: 'CDN', status: 'operational', uptime: '99.9%' },",;
         "
     { name: 'Authentication', status: 'operational', uptime: '99.9%' };
   ];
-,
       return (<>",
         "
       <Helmet>",
@@ -107,5 +106,4 @@ import { Helmet } from 'react-helmet-async',
   )
     },
     {
-,
       export default StatusPage;

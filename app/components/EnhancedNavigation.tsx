@@ -7,7 +7,7 @@ import React, { useState } from 'react',
     {},
       label: 'AI Services',
       href: '/ai-services',
-      icon: <Brain className="w-4 h-4" />,
+      icon: <Brain className="w-4 h-4" />,;
       dropdown: []
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' };
         { label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' };

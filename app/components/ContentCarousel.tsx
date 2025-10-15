@@ -23,7 +23,7 @@ interface ContentCarouselProps {},
       image: "/api/placeholder/600/400",
       features: []
       "Machine Learning",
-        "Natural Language Processing",
+        "Natural Language Processing",;
         "Computer Vision"]};
   {},
       id: 2,

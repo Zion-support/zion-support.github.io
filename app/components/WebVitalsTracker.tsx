@@ -8,7 +8,7 @@ interface WebVitalsData {},
   navigationType: string
 },
       const WebVitalsTracker: React.FC = () => {},
-      useEffect(() => {},
+      useEffect(() => {},;
       const sendToAnalytics = (_metric: WebVitalsData) => {};
       // Send to Google Analytics or other analytics service
       if (typeof window !== 'undefined' && 'gtag' in window) {};
@@ -49,7 +49,7 @@ interface WebVitalsData {},
       name: 'LOAD_TIME',
       value: loadTime,
       delta: loadTime,
-      id: 'load-time',
+      id: 'load-time',;
       navigationType: navigation.type})
         };
       })

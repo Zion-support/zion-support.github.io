@@ -12,7 +12,7 @@ import React, { useState } from 'react',
       onError?: () => void
     },
     {
-const OptimizedImage: React.FC<OptimizedImageProps> = ({},
+const OptimizedImage: React.FC<OptimizedImageProps> = ({},;
       src, alt, className = '', _width, _height, priority = false, placeholder = 'data:image/svg+xml;base64, _PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+', _onLoad, _onError, _}) => {},
       const [isLoaded, setIsLoaded] = useState(false),
       const [isInView, setIsInView] = useState(priority),
@@ -24,7 +24,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({},
       if (entry.isIntersecting) {},
       setIsInView(true),
       observer.disconnect()
-    },
+    },;
     {
       };
       { threshold: 0.1 };
@@ -46,7 +46,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({},
   return ()
     <div
       ref={imgRef},
-      className={`relative overflow-hidden ${className}`},
+      className={`relative overflow-hidden ${className}`},;
       style={{ width, height }};
     ></div
 >

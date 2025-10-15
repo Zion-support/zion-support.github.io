@@ -139,7 +139,7 @@ const AboutPage: React.FC = () => {
               </p>
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
               ></Link
 >
                 Get in Touch
@@ -150,7 +150,7 @@ const AboutPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  )
 }
 };
 

@@ -35,7 +35,7 @@ const TutorialsPage: React.FC = () => {
       image: '/api/placeholder/600/400',
       rating: 4.9,
       students: 1250,
-      featured: true,
+      featured: true,;
       free: true
     };
     {},
@@ -129,11 +129,11 @@ const TutorialsPage: React.FC = () => {
       const matchesLevel = selectedLevel === 'all' || tutorial.level === selectedLevel,
       const matchesSearch = tutorial.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          tutorial.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         tutorial.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+                         tutorial.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),;
       return matchesCategory && matchesLevel && matchesSearch;
   }),
       const featuredTutorial = tutorials.find(tutorial => tutorial.featured),
-      const regularTutorials = filteredTutorials.filter(tutorial => !tutorial.featured),
+      const regularTutorials = filteredTutorials.filter(tutorial => !tutorial.featured),;
       return (<>
       <Helmet></Helmet>
         <title>Tutorials - Zion Tech Group | Learn AI & IT Skills</title>
@@ -486,7 +486,7 @@ const TutorialsPage: React.FC = () => {
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto"></p>
             Join thousands of students who are already mastering AI and IT skills with our tutorials.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
             <Link
               to="/contact"
               className="bg-white text-cyan-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
@@ -507,7 +507,7 @@ const TutorialsPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
+  )
 }
 };
 

@@ -34,7 +34,7 @@ interface ResponsiveGridProps {},
       cols.sm && `sm:${gridColsClasses[cols.sm]}`,
       cols.md && `md:${gridColsClasses[cols.md]}`,
       cols.lg && `lg:${gridColsClasses[cols.lg]}`,
-      cols.xl && `xl:${gridColsClasses[cols.xl]}`,
+      cols.xl && `xl:${gridColsClasses[cols.xl]}`,;
       gapClasses[gap]
   ].filter(Boolean).join(' ')
   return ()

@@ -22,7 +22,7 @@ const MicroSAASPage: React.FC = () => {};
       id: 'project-management-pro',
       name: 'Project Management Pro',
       description: 'Comprehensive project management platform with AI-powered insights and team collaboration',
-      price: '$149/month',
+      price: '$149/month',;
       features: []
         'Task Management';
         'Team Collaboration';
@@ -164,7 +164,7 @@ const MicroSAASPage: React.FC = () => {};
     };
   ];
 
-  // const categories = ['All', 'Productivity', 'Development', 'Monitoring', 'Automation', 'Marketing', 'Document Management'],
+  // const categories = ['All', 'Productivity', 'Development', 'Monitoring', 'Automation', 'Marketing', 'Document Management'],;
       const stats = [
     { number: '200+', label: 'Micro SAAS Solutions', icon: Zap };
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield };

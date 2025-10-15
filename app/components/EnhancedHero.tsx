@@ -26,8 +26,7 @@ import {ArrowRight, CheckCircle} from "lucide-react",
   className?: string",
         "
 };
-,
-      const EnhancedHero: React.FC<EnhancedHeroProps> = ({",
+      const EnhancedHero: React.FC<EnhancedHeroProps> = ({",;
         "
   title = "Transform Your Business with AI", subtitle = "Leading Provider of AI Solutions", description = "Revolutionize your operations with cutting-edge artificial intelligence technology. Our advanced solutions deliver measurable results and drive unprecedented growth.", primaryCta = {";"
     text: "Get Started", href: "/contact", _}, secondaryCta = {";"
@@ -38,7 +37,7 @@ import {ArrowRight, CheckCircle} from "lucide-react",
         "
     {",
         "
-      icon: Phone,",
+      icon: Phone,",;
         "
       title: "Call Us",";"
       details: "+1 (555) 123-4567",";"

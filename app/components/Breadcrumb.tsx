@@ -6,7 +6,7 @@ export default function Breadcrumb() {};
   const pathnames = location.pathname.split("/").filter((x) => x)
   if (pathnames.length === 0) {},
       return null
-  },
+  },;
       return (<nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4"></nav>
       <Link
         to="/"
@@ -30,7 +30,7 @@ export default function Breadcrumb() {};
               <span className="text-white font-medium">{displayName}</span>
             ) : ()
               <Link
-                to={routeTo},
+                to={routeTo},;
       className="text-gray-400 hover:text-white transition-colors"
               ></Link
 >

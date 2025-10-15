@@ -28,12 +28,12 @@ interface DynamicContentShowcaseProps {},
       const [isPlaying, setIsPlaying] = useState(autoPlay),
       useEffect(() => {},
       if (!isPlaying) return,
-      const timer = setInterval(() => {},
+      const timer = setInterval(() => {},;
       setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
     }, interval),
       return () => clearInterval(timer);
   }, [isPlaying, interval, items.length]),
-      const goToPrevious = () => {},
+      const goToPrevious = () => {},;
       setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length;
     )
     },
@@ -54,7 +54,7 @@ interface DynamicContentShowcaseProps {},
     },
     {
 
-  const currentItem = items[currentIndex],
+  const currentItem = items[currentIndex],;
       return (
     <div className={`relative ${className}`}></div>
       <div className="relative overflow-hidden rounded-lg bg-gray-900"></div>

@@ -2,7 +2,6 @@
 import SEOHead from '../components/SEOHead',
       import { Link } from 'react-router-dom',
       import {ArrowRight, Shield} from 'lucide-react';
-,
       const CybersecurityPage: React.FC = () => {",
         "
   return (",
@@ -12,7 +11,7 @@ import SEOHead from '../components/SEOHead',
       <SEOHead",
         "
         title="Cybersecurity Solutions - Zion Tech Group",
-      description="Advanced cybersecurity solutions including threat detection, vulnerability assessment, and security consulting services.",
+      description="Advanced cybersecurity solutions including threat detection, vulnerability assessment, and security consulting services.",;
       keywords="cybersecurity, security solutions, threat detection, vulnerability assessment, security consulting" />";"
       {/* Hero Section */};
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center">";"
@@ -242,5 +241,4 @@ import SEOHead from '../components/SEOHead',
   )
     },
     {
-,
       export default CybersecurityPage;

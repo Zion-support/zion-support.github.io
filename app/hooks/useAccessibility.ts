@@ -12,7 +12,7 @@ interface AccessibilityState {};
   isReducedMotion: boolean;
   isKeyboardUser: boolean;
   currentFocus: HTMLElement | null;
-  focusHistory: HTMLElement[];
+  focusHistory: HTMLElement[]
 };
 export const useAccessibility = (options: AccessibilityOptions = {}) => {};
   const {};
@@ -254,23 +254,23 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {};
         overflow: hidden;
         clip: rect(0, 0, 0, 0);
         white-space: nowrap;
-        border: 0;
+        border: 0
       };
       .focus-visible {};
         outline: 2px solid #3b82f6;
-        outline-offset: 2px;
+        outline-offset: 2px
       };
       .keyboard-user *:focus {};
         outline: 2px solid #3b82f6;
-        outline-offset: 2px;
+        outline-offset: 2px
       };
       .high-contrast {};
-        filter: contrast(1.2);
+        filter: contrast(1.2)
       };
       .reduced-motion * {};
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important
       };
       .skip-link {};
         position: absolute;
@@ -281,10 +281,10 @@ export const useAccessibility = (options: AccessibilityOptions = {}) => {};
         padding: 8px;
         text-decoration: none;
         z-index: 1000;
-        border-radius: 4px;
+        border-radius: 4px
       };
       .skip-link:focus {};
-        top: 6px;
+        top: 6px
       };
     `;
     document.head.appendChild(style);

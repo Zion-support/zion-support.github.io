@@ -6,7 +6,7 @@ const AiPoweredDevopsPage: React.FC = () => {",
         "
       <SEOHead",
         "
-        title="AI-Powered DevOps - Zion Tech Group",
+        title="AI-Powered DevOps - Zion Tech Group",;
       description="Revolutionary AI-powered DevOps solutions for automated deployment, monitoring, and infrastructure management." />";"
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
         <div className="text-center">";"
@@ -22,5 +22,4 @@ const AiPoweredDevopsPage: React.FC = () => {",
   )
     },
     {
-,
       export default AiPoweredDevopsPage;

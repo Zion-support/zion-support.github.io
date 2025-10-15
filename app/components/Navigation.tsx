@@ -64,13 +64,11 @@ import React, { useState } from 'react',
   ServerIcon",
         "
 } from '@heroicons/react/24/outline';
-,
       interface NavigationProps {",
         "
   onSidebarToggle?: () => void",
         "
 };
-,
       const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {",
         "
   const [isOpen, setIsOpen] = useState(false)
@@ -110,7 +108,7 @@ import React, { useState } from 'react',
         "
         { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },",
         "
-        { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },",
+        { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },",;
         "
         { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon };
       ]
@@ -239,42 +237,37 @@ import React, { useState } from 'react',
 
   const isActive = (path: string) => {",
         "
-    return location.pathname === path",
+    return location.pathname === path",;
         "
   };
-,
-      const toggleServicesMenu = () => {",
+      const toggleServicesMenu = () => {",;
         "
     setIsServicesOpen(!isServicesOpen)
     setIsSolutionsOpen(false)
     setIsResourcesOpen(false)
     setIsCompanyOpen(false)
   };
-,
-      const toggleSolutionsMenu = () => {",
+      const toggleSolutionsMenu = () => {",;
         "
     setIsSolutionsOpen(!isSolutionsOpen)
     setIsServicesOpen(false)
     setIsResourcesOpen(false)
     setIsCompanyOpen(false)
   };
-,
-      const toggleResourcesMenu = () => {",
+      const toggleResourcesMenu = () => {",;
         "
     setIsResourcesOpen(!isResourcesOpen)
     setIsServicesOpen(false)
     setIsSolutionsOpen(false)
     setIsCompanyOpen(false)
   };
-,
-      const toggleCompanyMenu = () => {",
+      const toggleCompanyMenu = () => {",;
         "
     setIsCompanyOpen(!isCompanyOpen)
     setIsServicesOpen(false)
     setIsSolutionsOpen(false)
     setIsResourcesOpen(false)
   };
-,
       return (";"
     <nav className="bg-slate-900 shadow-lg">";"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"
@@ -306,7 +299,7 @@ import React, { useState } from 'react',
         "
                       isActive(item.href)
                         ? 'border-blue-500 text-white';
-                        : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white';
+                        : 'border-transparent text-gray-300 hover: border-gray-300 hover:text-white'
                     }`};
                   >",
         "
@@ -331,7 +324,7 @@ import React, { useState } from 'react',
                       (item.name === 'Resources' && isResourcesOpen) ||",
         "
                       (item.name === 'Company' && isCompanyOpen)
-                        ? 'block' : 'hidden';
+                        ? 'block' : 'hidden'
                     }`}>",
         "
                       {item.submenu.map((subItem) => (",
@@ -405,7 +398,7 @@ import React, { useState } from 'react',
       else if (item.name === 'Micro SaaS') toggleSolutionsMenu(),
       else if (item.name === 'IT Solutions') toggleResourcesMenu(),
       else if (item.name === 'Resources') toggleResourcesMenu(),
-      else if (item.name === 'Company') toggleCompanyMenu();
+      else if (item.name === 'Company') toggleCompanyMenu()
                       }},
       className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-300 hover:text-white hover:bg-slate-700";
                     >";"
@@ -429,7 +422,7 @@ import React, { useState } from 'react',
                       (item.name === 'Resources' && isResourcesOpen) ||",
         "
                       (item.name === 'Company' && isCompanyOpen)
-                        ? 'block' : 'hidden';
+                        ? 'block' : 'hidden'
                     }`}>",
         "
                       {item.submenu.map((subItem) => (",
@@ -486,5 +479,4 @@ import React, { useState } from 'react',
         "
   )
 };
-,
       export default Navigation";"

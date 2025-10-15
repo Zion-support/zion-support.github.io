@@ -55,7 +55,7 @@ const InventoryManagementSystemPage = () => {
         "Email support",
         "Mobile app access",
         "1 warehouse location"
-      ],
+      ],;
       popular: false
     };
     {},
@@ -90,7 +90,7 @@ const InventoryManagementSystemPage = () => {
       const benefits = [
     {},
       title: "Reduce Stockouts",
-      description: "Minimize stockouts by up to 80% with better demand forecasting",
+      description: "Minimize stockouts by up to 80% with better demand forecasting",;
       icon: <AlertTriangle className="w-6 h-6" />
     };
     {},

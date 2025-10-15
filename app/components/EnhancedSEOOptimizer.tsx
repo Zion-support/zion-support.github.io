@@ -27,7 +27,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
       author = "Zion Tech Group",
       publishedTime,
       modifiedTime = new Date().toISOString(),
-      section = "Technology",
+      section = "Technology",;
       tags = ["AI", "IT Services", "Technology", "Digital Transformation"]
 }) => {};
 }const location = useLocation()
@@ -183,7 +183,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
     {
     // Add page-specific structured data
     const path = location.pathname
-    if (path === '/') {},
+    if (path === '/') {},;
       return {};
         ...baseStructuredData;
         "@type": "WebSite";
@@ -305,7 +305,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({},
   const generateFAQStructuredData = () => {
 }const faqs = []
       {},
-      question: "What services does Zion Tech Group offer?",
+      question: "What services does Zion Tech Group offer?",;
       answer: "Zion Tech Group offers comprehensive AI solutions, IT services, micro SaaS products, and 5G implementation services. We specialize in digital transformation, cybersecurity, cloud computing, and business automation."
       };
       {},

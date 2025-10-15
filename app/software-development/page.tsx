@@ -3,17 +3,16 @@ import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarC
       import FuturisticButton from '../components/FuturisticButton',
       import ResponsiveContainer from '../components/ResponsiveContainer',
       import EnhancedSEO from '../components/EnhancedSEO';
-,
       const SoftwareDevelopmentPage = () => {",
         "
-  const services = [",
+  const services = [",;
         "
     {";"
       title: "Custom Web Applications",";"
       description: "Scalable web applications built with modern technologies and best practices",";"
       icon: <Globe className="w-8 h-8" />,";"
       features: ["React/Next.js", "Node.js/Express", "PostgreSQL/MongoDB", "AWS/Azure deployment"],";"
-      price: "From $15,000",
+      price: "From $15,000"
       },",
         "
     {",
@@ -22,7 +21,7 @@ import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarC
       description: "Native and cross-platform mobile applications for iOS and Android",";"
       icon: <Smartphone className="w-8 h-8" />,";"
       features: ["React Native", "Flutter", "Native iOS/Android", "App Store optimization"],";"
-      price: "From $25,000",
+      price: "From $25,000"
       },",
         "
     {",
@@ -31,7 +30,7 @@ import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarC
       description: "Custom enterprise solutions for complex business requirements",";"
       icon: <Database className="w-8 h-8" />,";"
       features: ["Microservices architecture", "API development", "Database design", "Integration services"],";"
-      price: "From $50,000",
+      price: "From $50,000"
       },",
         "
     {",
@@ -40,7 +39,7 @@ import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarC
       description: "Complete e-commerce platforms with payment integration and inventory management",";"
       icon: <BarChart3 className="w-8 h-8" />,";"
       features: ["Shopify/WooCommerce", "Custom platforms", "Payment gateways", "Analytics integration"],";"
-      price: "From $20,000",
+      price: "From $20,000"
       },",
         "
     {",
@@ -49,7 +48,7 @@ import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarC
       description: "RESTful and GraphQL APIs for seamless data integration",";"
       icon: <Zap className="w-8 h-8" />,";"
       features: ["RESTful APIs", "GraphQL", "Authentication", "Rate limiting"],";"
-      price: "From $8,000",
+      price: "From $8,000"
       },",
         "
     {",
@@ -62,7 +61,6 @@ import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarC
     },
     {
   ];
-,
       const technologies = [";"
     { name: "Frontend", items: ["React", "Vue.js", "Angular", "Next.js", "TypeScript"] },";"
     { name: "Backend", items: ["Node.js", "Python", "Java", "C#", "Go"] },";"
@@ -70,35 +68,34 @@ import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarC
     { name: "Database", items: ["PostgreSQL", "MongoDB", "MySQL", "Redis"] },";"
     { name: "Cloud", items: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes"] };
   ];
-,
       const process = [",
         "
-    {",
+    {",;
         "
       step: "1",";"
       title: "Discovery",";"
-      description: "Understand your requirements and define project scope",
+      description: "Understand your requirements and define project scope"
       },",
         "
     {",
         "
       step: "2",";"
       title: "Planning",";"
-      description: "Create detailed project plan and technical architecture",
+      description: "Create detailed project plan and technical architecture"
       },",
         "
     {",
         "
       step: "3",";"
       title: "Development",";"
-      description: "Agile development with regular updates and testing",
+      description: "Agile development with regular updates and testing"
       },",
         "
     {",
         "
       step: "4",";"
       title: "Testing",";"
-      description: "Comprehensive testing including unit, integration, and user testing",
+      description: "Comprehensive testing including unit, integration, and user testing"
       },",
         "
     {",
@@ -109,10 +106,9 @@ import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarC
     },
     {
   ];
-,
       const benefits = [",
         "
-    {",
+    {",;
         "
       title: "Custom Solutions",";"
       description: "Tailored software that meets your specific business needs",";"
@@ -140,7 +136,6 @@ import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarC
       icon: <Shield className="w-6 h-6" />";"
     };
   ];
-,
       return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">",
         "
       <EnhancedSEO",
@@ -435,6 +430,5 @@ import { Code, Smartphone, Globe, Database, ArrowRight, CheckCircle, Users, BarC
   )
     },
     {
-,
       export default SoftwareDevelopmentPage;
 ;

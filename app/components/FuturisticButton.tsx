@@ -27,7 +27,7 @@ interface FuturisticButtonProps {},
   },
       const buttonClasses = cn()
     baseClasses,
-      sizeClasses[size],
+      sizeClasses[size],;
       variantClasses[variant];
     'before:absolute before:inset-0 before:rounded-inherit before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300';
     'after:absolute after:inset-0 after:rounded-inherit after:bg-gradient-to-r after:from-transparent after:via-white/10 after:to-transparent after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300',

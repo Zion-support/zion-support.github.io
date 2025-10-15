@@ -1,9 +1,8 @@
 import {ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, MessageSquare, Users, TrendingUp, Globe, Play, Star, Zap, Star} from 'lucide-react';import { Helmet } from "react-helmet-async",
       import { Link } from "react-router-dom";
-,
       export default function ZionAiMarketingAutomationPro() {",
         "
-  const features = [",
+  const features = [",;
         "
     {";"
       title: "AI-Powered Campaign Optimization",";"
@@ -52,10 +51,9 @@ import {ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, Mess
       benefits: ["Behavioral triggers", "Personalized sequences", "Lead scoring integration", "Conversion optimization"]
     };
   ];
-,
       const pricingPlans = [",
         "
-    {",
+    {",;
         "
       name: "Starter",";"
       price: "$149",";"
@@ -123,10 +121,9 @@ import {ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, Mess
         "
     };
   ];
-,
       const testimonials = [",
         "
-    {",
+    {",;
         "
       name: "Jessica Chen",";"
       company: "Digital Marketing Agency",";"
@@ -135,7 +132,7 @@ import {ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, Mess
         "
       rating: 5,",
         "
-      avatar: "JC",
+      avatar: "JC"
       },",
         "
     {",
@@ -147,7 +144,7 @@ import {ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, Mess
         "
       rating: 5,",
         "
-      avatar: "DP",
+      avatar: "DP"
       },",
         "
     {",
@@ -163,14 +160,12 @@ import {ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, Mess
     },
     {
   ];
-,
       const stats = [";"
     { number: "25,000+", label: "Active Marketers", icon: <Users className="w-6 h-6" /> },";"
     { number: "67%", label: "Average ROI Increase", icon: <TrendingUp className="w-6 h-6" /> },";"
     { number: "95%", label: "Campaign Success Rate", icon: <Target className="w-6 h-6" /> },";"
     { number: "10x", label: "Content Generation Speed", icon: <Zap className="w-6 h-6" /> };
   ];
-,
       const ZionAiMarketingAutomationProPage: React.FC = () => {",
         "
   return (",
@@ -191,7 +186,7 @@ import {ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, Mess
           name="keywords",
       content="AI marketing automation, marketing automation, campaign optimization, predictive analytics, content generation, multi-channel marketing, marketing platform" />",
         "
-      </Helmet>",
+      </Helmet>",;
         "
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 relative overflow-hidden">";"
         {/* Animated Background */};
@@ -429,7 +424,7 @@ import {ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, Mess
         "
                       ? 'border-pink-500/50 shadow-2xl shadow-pink-500/25' ",
         "
-                      : 'border-white/20 hover:border-pink-500/30';
+                      : 'border-white/20 hover: border-pink-500/30'
                   }`};
                 >",
         "
@@ -476,8 +471,8 @@ import {ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, Mess
         "
                       plan.popular",
         "
-                        ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 shadow-lg hover:shadow-pink-500/25';
-                        : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900';
+                        ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover: from-pink-600 hover:to-purple-700 shadow-lg hover:shadow-pink-500/25';
+                        : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900'
                     }`};
                   >",
         "
@@ -640,6 +635,5 @@ import {ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, Mess
   )
     },
     {
-,
       export default ZionAiMarketingAutomationProPage;
 ;

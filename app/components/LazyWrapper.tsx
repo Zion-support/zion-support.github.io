@@ -16,7 +16,7 @@ interface LazyWrapperProps {},
 export const LazyWrapper: React.FC<LazyWrapperProps> = ({},
       fallback = <DefaultFallback />,
       children
-}) => {},
+}) => {},;
       return (
     <Suspense fallback={fallback}></Suspense>
       {children};
@@ -39,7 +39,7 @@ export const createLazyComponent = <P extends Record<string, unknown>>(
   ),
       WrappedComponent.displayName = 'LazyComponent',
       return WrappedComponent
-    },
+    },;
     {
 // Re-export from utils
 export { createLazyComponent } from '../utils/lazyLoading';

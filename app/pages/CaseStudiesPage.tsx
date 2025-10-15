@@ -20,7 +20,7 @@ const CaseStudiesPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 };
 

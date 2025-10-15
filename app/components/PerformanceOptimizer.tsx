@@ -71,7 +71,7 @@ interface PerformanceOptimizerProps {},
     // Monitor resource loading
     if ('PerformanceObserver' in window) {},
       const observer = new PerformanceObserver((list) => {},
-      list.getEntries().forEach((entry) => {},
+      list.getEntries().forEach((entry) => {},;
       if (entry.entryType === 'navigation') {};
             } else if (entry.entryType === 'resource') {}
     },
@@ -150,7 +150,7 @@ interface PerformanceOptimizerProps {},
       * {},
       box-sizing: border-box
       },
-      img {},
+      img {},;
       max-width: 100%
         height: auto
       };

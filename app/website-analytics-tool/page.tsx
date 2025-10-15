@@ -3,10 +3,9 @@ import { BarChart3, Globe, Users, CheckCircle, ArrowRight, Target, Zap, Database
       import FuturisticButton from '../components/FuturisticButton',
       import ResponsiveContainer from '../components/ResponsiveContainer',
       import EnhancedSEO from '../components/EnhancedSEO';
-,
       const WebsiteAnalyticsToolPage = () => {",
         "
-  const features = [",
+  const features = [",;
         "
     {";"
       title: "Real-time Analytics",";"
@@ -55,10 +54,9 @@ import { BarChart3, Globe, Users, CheckCircle, ArrowRight, Target, Zap, Database
       benefits: ["Scheduled reports", "Custom reports", "PDF export", "Email delivery"]
     };
   ];
-,
       const pricing = [",
         "
-    {",
+    {",;
         "
       name: "Starter",";"
       price: "$29",";"
@@ -120,10 +118,9 @@ import { BarChart3, Globe, Users, CheckCircle, ArrowRight, Target, Zap, Database
         "
     };
   ];
-,
       const benefits = [",
         "
-    {",
+    {",;
         "
       title: "Better Insights",";"
       description: "Gain deeper insights into your website performance and user behavior",";"
@@ -151,7 +148,6 @@ import { BarChart3, Globe, Users, CheckCircle, ArrowRight, Target, Zap, Database
       icon: <TrendingUp className="w-6 h-6" />";"
     };
   ];
-,
       return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">",
         "
       <EnhancedSEO",
@@ -436,6 +432,5 @@ import { BarChart3, Globe, Users, CheckCircle, ArrowRight, Target, Zap, Database
   )
     },
     {
-,
       export default WebsiteAnalyticsToolPage;
 ;

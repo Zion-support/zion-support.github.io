@@ -23,7 +23,7 @@ export const useAnalytics = () => {
 };
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};
-  children, }) => {};
+  children }) => {};
   useEffect(() => {};
     if (typeof window !== "undefined") {};
       // Google Analytics
@@ -61,7 +61,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({};
     {
   const value: AnalyticsContextType = {},
       trackEvent,
-      trackPageView},
+      trackPageView},;
       return ()
     <AnalyticsContext.Provider value={value}></AnalyticsContext.Provider>
       {children};

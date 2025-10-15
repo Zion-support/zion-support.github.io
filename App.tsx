@@ -1,6 +1,6 @@
 import React from 'react';
-    import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',
-    import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
     import './app/styles/futuristic.css';
 
 // Components
@@ -72,7 +72,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
   </div>
 ),
       function App() {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false),
+  const [sidebarOpen, setSidebarOpen] = React.useState(false),;
       return (
     <GlobalErrorBoundary>
       <HelmetProvider>

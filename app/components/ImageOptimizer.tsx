@@ -29,12 +29,12 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   // Generate optimized src with WebP support
   const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {
-      return originalSrc;
+      return originalSrc
     }
     
     // Add WebP support if supported
     if (typeof window !== 'undefined' && 'WebP' in window) {
-      const webpSrc = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp'),
+      const webpSrc = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp'),;
       return webpSrc;
     }
     
@@ -48,7 +48,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true),
+          setIsInView(true),;
       observer.disconnect();
         }
       },

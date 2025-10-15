@@ -33,11 +33,10 @@ const Footer: React.FC = () => {",
         "
     { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },",
         "
-    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },",
+    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },",;
         "
     { name: 'IT Solutions', href: '/it-solutions' };
   ];
-,
       const company = [",
         "
     { name: 'About Us', href: '/about' },",
@@ -50,11 +49,10 @@ const Footer: React.FC = () => {",
         "
     { name: 'News & Updates', href: '/blog' },",
         "
-    { name: 'Partnerships', href: '/partnerships' },",
+    { name: 'Partnerships', href: '/partnerships' },",;
         "
     { name: 'Contact Us', href: '/contact' };
   ];
-,
       const resources = [",
         "
     { name: 'Documentation', href: '/docs' },",
@@ -65,11 +63,10 @@ const Footer: React.FC = () => {",
         "
     { name: 'API Reference', href: '/api-docs' },",
         "
-    { name: 'Help Center', href: '/help' },",
+    { name: 'Help Center', href: '/help' },",;
         "
     { name: 'Community', href: '/community' };
   ];
-,
       const support = [",
         "
     { name: 'Contact Us', href: '/contact' },",
@@ -80,28 +77,25 @@ const Footer: React.FC = () => {",
         "
     { name: 'Schedule Demo', href: '/demo' },",
         "
-    { name: 'System Status', href: '/status' },",
+    { name: 'System Status', href: '/status' },",;
         "
     { name: 'Report Issue', href: '/report' };
   ];
-,
       const legal = [",
         "
-    { name: 'Privacy Policy', href: '/privacy' },",
+    { name: 'Privacy Policy', href: '/privacy' },",;
         "
     { name: 'Terms of Service', href: '/terms' };
   ];
-,
       const socialLinks = [",
         "
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: 'facebook' },",
         "
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },",
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },",;
         "
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },";"
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' };
   ];
-,
       return (<footer className="bg-slate-900 border-t border-slate-700">";"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">";"
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">";"
@@ -339,6 +333,5 @@ const Footer: React.FC = () => {",
         "
   )
 };
-,
       export default Footer",
         "

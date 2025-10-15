@@ -22,7 +22,7 @@ interface PerformanceMonitorProps {},
       const [isLoading, setIsLoading] = useState(true),
       useEffect() => {},
       if (typeof window === 'undefined') return,
-      const measurePerformance = async () => {},
+      const measurePerformance = async () => {},;
       try {};
         // Measure Core Web Vitals
         const vitals: Partial<PerformanceMetrics> = {};
@@ -77,7 +77,7 @@ interface PerformanceMonitorProps {},
       window.gtag('event', 'web_vitals', {},
       event_category: 'Performance',
       event_label: 'Core Web Vitals',
-      value: Math.round(finalMetrics.largestContentfulPaint),
+      value: Math.round(finalMetrics.largestContentfulPaint),;
       custom_map: {};
               'metric_1': finalMetrics.firstContentfulPaint;
               'metric_2': finalMetrics.largestContentfulPaint;

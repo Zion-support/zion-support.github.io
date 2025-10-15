@@ -1,14 +1,12 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react',
       import {RefreshCw, Home, Bug} from 'lucide-react',
       import { Link } from 'react-router-dom';
-,
       interface Props {",
         "
   children: ReactNode,
       fallback?: ReactNode
     },
     {
-,
       interface State {",
         "
   hasError: boolean,
@@ -17,7 +15,6 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
       errorId?: string
     },
     {
-,
       class GlobalErrorBoundary extends Component<Props, State> {",
         "
   constructor(props: Props) {",
@@ -26,7 +23,6 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
       this.state = { hasError: false }
     },
     {
-,
       static getDerivedStateFromError(error: Error): State {",
         "
     return {",
@@ -40,7 +36,6 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
     }
     },
     {
-,
       componentDidCatch(error: Error, errorInfo: ErrorInfo) {",
         "
     // Log error to console in development",
@@ -58,7 +53,6 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
       }
     },
     {
-,
       render() {",
         "
     if (this.state.hasError) {";"
@@ -176,10 +170,8 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
       )
     },
     {
-,
       return this.props.children
     },
     {
 };
-,
       export default GlobalErrorBoundary;

@@ -17,7 +17,7 @@ export const useAnalytics = () => {};
       return context
 },
       export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({},
-      children, }) => {},
+      children }) => {},;
       useEffect(() => {};
     // Initialize analytics
     if (typeof window !== "undefined") {};
@@ -38,7 +38,7 @@ export const useAnalytics = () => {};
     },
     {
   }, []),
-      const track = (_event: string, properties?: Record<string, _unknown>) => {},
+      const track = (_event: string, properties?: Record<string, _unknown>) => {},;
       if (typeof window !== "undefined") {};
       // Google Analytics
       if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {};
@@ -53,7 +53,7 @@ export const useAnalytics = () => {};
     },
     {
 
-  const identify = (_userId: string, traits?: Record<string, _unknown>) => {},
+  const identify = (_userId: string, traits?: Record<string, _unknown>) => {},;
       if (typeof window !== "undefined") {};
       // Google Analytics
       if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {};
@@ -70,7 +70,7 @@ export const useAnalytics = () => {};
     },
     {
 
-  const page = (_name: string, properties?: Record<string, _unknown>) => {},
+  const page = (_name: string, properties?: Record<string, _unknown>) => {},;
       if (typeof window !== "undefined") {};
       // Google Analytics
       if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {};
@@ -90,7 +90,7 @@ export const useAnalytics = () => {};
   const value: AnalyticsContextType = {},
       track,
       identify,
-      page},
+      page},;
       return ()
     <AnalyticsContext.Provider value={value}></AnalyticsContext.Provider>
       {children};

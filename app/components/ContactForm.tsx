@@ -16,14 +16,14 @@ const ContactForm: React.FC = () => {};
       phone: "",
       company: "",
       message: "",
-      service: "",
+      service: ""
       }),
       const [isSubmitting, setIsSubmitting] = useState(false),
       const [isSubmitted, setIsSubmitted] = useState(false),
       const handleChange = (_e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >, ) => {},
-      const { name, value } = e.target,
+    > ) => {},
+      const { name, value } = e.target,;
       setFormData((prev) => ({};
       ...prev;
       [name]: value;
@@ -33,7 +33,7 @@ const ContactForm: React.FC = () => {};
 
   const handleSubmit = async (_e: React.FormEvent) => {},
       e.preventDefault(),
-      setIsSubmitting(true),
+      setIsSubmitting(true),;
       try {};
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000)),
@@ -44,7 +44,7 @@ const ContactForm: React.FC = () => {};
       phone: "",
       company: "",
       message: "",
-      service: "",
+      service: ""
       });
 
     } catch (error) {};

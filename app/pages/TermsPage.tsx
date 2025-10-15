@@ -1,14 +1,13 @@
 
 import { Helmet } from 'react-helmet-async',
-      const TermsPage: React.FC = () => {",
+      const TermsPage: React.FC = () => {",;
         "
   const lastUpdated = 'January 1, 2024';
-,
       const sections = [",
         "
     {",
         "
-      title: 'Acceptance of Terms',",
+      title: 'Acceptance of Terms',",;
         "
       content: 'By accessing and using Zion Tech Group\'s services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.';'
     },",
@@ -52,7 +51,7 @@ import { Helmet } from 'react-helmet-async',
         "
       title: 'Payment Terms',",
         "
-      content: 'Payment for services is due as specified in your service agreement. We reserve the right to change our fees at any time. All fees are non-refundable unless otherwise specified in writing.';
+      content: 'Payment for services is due as specified in your service agreement. We reserve the right to change our fees at any time. All fees are non-refundable unless otherwise specified in writing.'
     },",
         "
     {",
@@ -105,7 +104,6 @@ import { Helmet } from 'react-helmet-async',
     },
     {
   ];
-,
       const keyPoints = [",
         "
     {",
@@ -114,7 +112,7 @@ import { Helmet } from 'react-helmet-async',
         "
       title: 'Service Availability',",
         "
-      description: 'We strive for 99.9% uptime but cannot guarantee uninterrupted service';
+      description: 'We strive for 99.9% uptime but cannot guarantee uninterrupted service'
     },",
         "
     {",
@@ -123,7 +121,7 @@ import { Helmet } from 'react-helmet-async',
         "
       title: 'User Responsibility',",
         "
-      description: 'Users are responsible for maintaining account security and compliance';
+      description: 'Users are responsible for maintaining account security and compliance'
     },",
         "
     {",
@@ -132,7 +130,7 @@ import { Helmet } from 'react-helmet-async',
         "
       title: 'Intellectual Property',",
         "
-      description: 'All service content and features remain our exclusive property';
+      description: 'All service content and features remain our exclusive property'
     },",
         "
     {",
@@ -142,10 +140,9 @@ import { Helmet } from 'react-helmet-async',
       title: 'Payment Terms',",
         "
       description: 'Fees are non-refundable unless otherwise specified in writing'
-    },
+    },;
     {
   ];
-,
       const prohibitedUses = [",
         "
     'Violating any applicable laws or regulations',",
@@ -158,11 +155,10 @@ import { Helmet } from 'react-helmet-async',
         "
     'Using the service for any unlawful or prohibited purpose',",
         "
-    'Impersonating another person or entity',",
+    'Impersonating another person or entity',",;
         "
     'Collecting user information without consent';
   ];
-,
       return (",
         "
     <>",
@@ -195,5 +191,4 @@ import { Helmet } from 'react-helmet-async',
   )
     },
     {
-,
       export default TermsPage;

@@ -1,9 +1,8 @@
 import {ArrowRight, Calendar, BarChart3, CheckCircle, Star, Users, Target, TrendingUp, Shield, Globe, Clock, Play, Star, Star} from 'lucide-react';import { Helmet } from "react-helmet-async",
       import { Link } from "react-router-dom";
-,
       export default function ZionAiProjectManagerPro() {",
         "
-  const features = [",
+  const features = [",;
         "
     {";"
       title: "AI-Powered Task Prioritization",";"
@@ -52,10 +51,9 @@ import {ArrowRight, Calendar, BarChart3, CheckCircle, Star, Users, Target, Trend
       benefits: ["Risk prediction", "Mitigation strategies", "Early warning system", "Contingency planning"]
     };
   ];
-,
       const pricingPlans = [",
         "
-    {",
+    {",;
         "
       name: "Team",";"
       price: "$99",";"
@@ -123,10 +121,9 @@ import {ArrowRight, Calendar, BarChart3, CheckCircle, Star, Users, Target, Trend
         "
     };
   ];
-,
       const testimonials = [",
         "
-    {",
+    {",;
         "
       name: "Rachel Kim",";"
       company: "Software Development Co.",";"
@@ -135,7 +132,7 @@ import {ArrowRight, Calendar, BarChart3, CheckCircle, Star, Users, Target, Trend
         "
       rating: 5,",
         "
-      avatar: "RK",
+      avatar: "RK"
       },",
         "
     {",
@@ -147,7 +144,7 @@ import {ArrowRight, Calendar, BarChart3, CheckCircle, Star, Users, Target, Trend
         "
       rating: 5,",
         "
-      avatar: "JW",
+      avatar: "JW"
       },",
         "
     {",
@@ -163,14 +160,12 @@ import {ArrowRight, Calendar, BarChart3, CheckCircle, Star, Users, Target, Trend
     },
     {
   ];
-,
       const stats = [";"
     { number: "12,000+", label: "Project Teams", icon: <Users className="w-6 h-6" /> },";"
     { number: "55%", label: "Productivity Increase", icon: <TrendingUp className="w-6 h-6" /> },";"
     { number: "92%", label: "Forecast Accuracy", icon: <Target className="w-6 h-6" /> },";"
     { number: "70%", label: "Reduced Delays", icon: <Clock className="w-6 h-6" /> };
   ];
-,
       const ZionAiProjectManagerProPage: React.FC = () => {",
         "
   return (",
@@ -191,7 +186,7 @@ import {ArrowRight, Calendar, BarChart3, CheckCircle, Star, Users, Target, Trend
           name="keywords",
       content="AI project management, project management software, task prioritization, resource allocation, predictive analytics, team collaboration, project planning" />",
         "
-      </Helmet>",
+      </Helmet>",;
         "
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 relative overflow-hidden">";"
         {/* Animated Background */};
@@ -429,7 +424,7 @@ import {ArrowRight, Calendar, BarChart3, CheckCircle, Star, Users, Target, Trend
         "
                       ? 'border-emerald-500/50 shadow-2xl shadow-emerald-500/25' ",
         "
-                      : 'border-white/20 hover:border-emerald-500/30';
+                      : 'border-white/20 hover: border-emerald-500/30'
                   }`};
                 >",
         "
@@ -476,8 +471,8 @@ import {ArrowRight, Calendar, BarChart3, CheckCircle, Star, Users, Target, Trend
         "
                       plan.popular",
         "
-                        ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-600 hover:to-teal-700 shadow-lg hover:shadow-emerald-500/25';
-                        : 'border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900';
+                        ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover: from-emerald-600 hover:to-teal-700 shadow-lg hover:shadow-emerald-500/25';
+                        : 'border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900'
                     }`};
                   >",
         "
@@ -640,6 +635,5 @@ import {ArrowRight, Calendar, BarChart3, CheckCircle, Star, Users, Target, Trend
   )
     },
     {
-,
       export default ZionAiProjectManagerProPage;
 ;

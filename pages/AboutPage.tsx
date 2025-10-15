@@ -14,7 +14,7 @@ const AboutPage: React.FC = () => {};
 }const values = []
     {},
       icon: Brain,
-      title: 'Innovation First',
+      title: 'Innovation First',;
       description: 'We stay at the forefront of technology, constantly exploring new ways to solve complex business challenges.'
     };
     {},
@@ -37,7 +37,7 @@ const AboutPage: React.FC = () => {};
     {},
       name: 'Kleber Santos',
       role: 'CEO & Founder',
-      description: 'Visionary leader with 15+ years in AI and IT solutions',
+      description: 'Visionary leader with 15+ years in AI and IT solutions',;
       image: '/api/placeholder/300/300'
     };
     {},

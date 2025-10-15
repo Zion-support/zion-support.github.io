@@ -54,7 +54,7 @@ const FinancialReportingToolPage = () => {
         "Standard reports",
         "Email support",
         "Monthly data refresh"
-      ],
+      ],;
       popular: false
     };
     {},
@@ -89,7 +89,7 @@ const FinancialReportingToolPage = () => {
       const benefits = [
     {},
       title: "Save Time",
-      description: "Reduce report generation time by up to 80% with automation",
+      description: "Reduce report generation time by up to 80% with automation",;
       icon: <Zap className="w-6 h-6" />
     };
     {},

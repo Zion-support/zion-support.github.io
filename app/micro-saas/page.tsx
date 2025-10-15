@@ -1,7 +1,6 @@
 
 import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Video, Calculator, Package, Receipt, ClipboardList, Workflow} from "lucide-react",
       import SEOOptimizer from "../components/SEOOptimizer";
-,
       const MicroSaasPage: React.FC = () => {",
         "
   const microSaasServices = [",
@@ -30,7 +29,7 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
         "
         'Advanced filtering & segmentation',",
         "
-        'Export to multiple formats',",
+        'Export to multiple formats',",;
         "
         'API access & webhooks';
       ],",
@@ -57,7 +56,7 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
         "
       useCases: ['E-commerce analytics', 'Marketing performance tracking', 'Financial reporting', 'Operations monitoring'],",
         "
-      link: 'https://ziontechgroup.com/zion-analytics-pro';
+      link: 'https://ziontechgroup.com/zion-analytics-pro'
     },",
         "
     {",
@@ -111,7 +110,7 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
         "
       useCases: ['Small business security', 'Enterprise compliance', 'Healthcare data protection', 'Financial services security'],",
         "
-      link: 'https://ziontechgroup.com/zion-security-shield';
+      link: 'https://ziontechgroup.com/zion-security-shield'
     },",
         "
     {",
@@ -165,7 +164,7 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
         "
       useCases: ['Team collaboration', 'Document management', 'Client file sharing', 'Backup & recovery'],",
         "
-      link: 'https://ziontechgroup.com/zion-cloud-vault';
+      link: 'https://ziontechgroup.com/zion-cloud-vault'
     },",
         "
     {",
@@ -219,7 +218,7 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
         "
       useCases: ['Retail inventory', 'Manufacturing', 'E-commerce', 'Warehouse management'],",
         "
-      link: 'https://ziontechgroup.com/zion-ai-inventory-manager';
+      link: 'https://ziontechgroup.com/zion-ai-inventory-manager'
     },",
         "
     {",
@@ -273,7 +272,7 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
         "
       useCases: ['Small business HR', 'Remote team management', 'Employee onboarding', 'Performance reviews'],",
         "
-      link: 'https://ziontechgroup.com/zion-hr-assistant-pro';
+      link: 'https://ziontechgroup.com/zion-hr-assistant-pro'
     },",
         "
     {",
@@ -327,7 +326,7 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
         "
       useCases: ['Small business accounting', 'Freelancer finances', 'E-commerce accounting', 'Multi-entity management'],",
         "
-      link: 'https://ziontechgroup.com/zion-ai-accounting-suite';
+      link: 'https://ziontechgroup.com/zion-ai-accounting-suite'
     },",
         "
     {",
@@ -381,7 +380,7 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
         "
       useCases: ['Online stores', 'Marketplace sellers', 'Dropshipping', 'B2B e-commerce'],",
         "
-      link: 'https://ziontechgroup.com/zion-ecommerce-optimizer';
+      link: 'https://ziontechgroup.com/zion-ecommerce-optimizer'
     },",
         "
     {",
@@ -435,7 +434,7 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
         "
       useCases: ['Customer support', 'Lead generation', 'E-commerce assistance', 'Internal help desk'],",
         "
-      link: 'https://ziontechgroup.com/zion-ai-chatbot-builder';
+      link: 'https://ziontechgroup.com/zion-ai-chatbot-builder'
     },",
         "
     {",
@@ -489,7 +488,7 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
         "
       useCases: ['Marketing automation', 'Sales processes', 'Customer onboarding', 'Data processing'],",
         "
-      link: 'https://ziontechgroup.com/zion-ai-workflow-automation';
+      link: 'https://ziontechgroup.com/zion-ai-workflow-automation'
     },",
         "
     {",
@@ -547,19 +546,17 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
     },
     {
   ];
-,
       const stats = [",
         "
     { number: '10,000+', label: 'Active Users' },",
         "
     { number: '99.9%', label: 'Uptime Guarantee' },",
         "
-    { number: '24/7', label: 'Support Available' },",
+    { number: '24/7', label: 'Support Available' },",;
         "
     { number: '30-day', label: 'Free Trial' };
   ];
-,
-      const testimonials = [",
+      const testimonials = [",;
         "
     {";"
       name: "Sarah Johnson",";"
@@ -569,7 +566,7 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
         "
       rating: 5,",
         "
-      avatar: "SJ",
+      avatar: "SJ"
       },",
         "
     {",
@@ -581,7 +578,7 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
         "
       rating: 5,",
         "
-      avatar: "MC",
+      avatar: "MC"
       },",
         "
     {",
@@ -597,7 +594,6 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
     },
     {
   ];
-,
       return (",
         "
     <>",
@@ -849,5 +845,4 @@ import {DollarSign, Search, Share, Heart, Battery, Camera, Headphones, Mic, Vide
   )
     },
     {
-,
       export default MicroSaaSPage;

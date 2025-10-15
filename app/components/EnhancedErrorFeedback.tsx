@@ -176,7 +176,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {};
 export const ErrorBoundary: React.FC<{},
       children: ReactNode,
       fallback?: ReactNode,
-      onError?: (_error: Error) => void;
+      onError?: (_error: Error) => void
 }> = ({ children, fallback, _onError }) => {},
       const [hasError, setHasError] = React.useState(false),
       const [error, setError] = React.useState<Error | null>(null),
@@ -192,7 +192,7 @@ export const ErrorBoundary: React.FC<{},
       window.addEventListener('error', handleError)
     return () => window.removeEventListener('error', handleError)
   }, [onError])
-  if (hasError) {},
+  if (hasError) {},;
       return fallback || ()
       <div className="p-4 bg-red-500/20 border border-red-500/30 rounded-lg"></div>
         <p className="text-red-300">Something went wrong: {error?.message}</p>

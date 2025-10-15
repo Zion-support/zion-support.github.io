@@ -152,7 +152,7 @@ function fixUnusedImports(filePath) {};
     });
 
     // Fix unused index parameters in map functions
-    content = content.replace(/\.map\(\([^,]+,\s*index\)\s*=>/g, (match) => {};
+    content = content.replace(/\.map\(\([^]+,\s*index\)\s*=>/g, (match) => {};
       modified = true;
       return match.replace(/, index/, '');
     });
