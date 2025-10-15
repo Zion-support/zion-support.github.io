@@ -40,20 +40,20 @@ const HomePage: React.FC = memo(() => {
         structuredData={structuredData}
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="min-h-screen relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 pt-32">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="futuristic-heading gradient-text mb-6">
               Welcome to Zion Tech Group
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="futuristic-text mb-8 max-w-3xl mx-auto">
               We provide cutting-edge AI and IT solutions to help your business thrive in the digital age.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center">
+              <Link to="/contact" className="futuristic-btn">
                 Get Started
               </Link>
-              <Link to="/about" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors text-center">
+              <Link to="/about" className="futuristic-btn glass-morphism border border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-white">
                 Learn More
               </Link>
             </div>
@@ -61,59 +61,59 @@ const HomePage: React.FC = memo(() => {
           
           {/* Services Preview */}
           <div className="mt-20">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Services</h3>
-                <p className="text-gray-600 mb-4">
+            <h2 className="futuristic-heading text-center mb-12">Our Services</h2>
+            <div className="futuristic-grid">
+              <div className="futuristic-card neon-glow">
+                <h3 className="futuristic-subheading text-neon-blue mb-4">AI Services</h3>
+                <p className="futuristic-text mb-4">
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                 </p>
-                <Link to="/ai-services" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+                <Link to="/ai-services" className="text-neon-blue hover:text-neon-cyan font-medium transition-all duration-300">Learn More →</Link>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Infrastructure</h3>
-                <p className="text-gray-600 mb-4">
+              <div className="futuristic-card neon-glow-purple">
+                <h3 className="futuristic-subheading text-neon-purple mb-4">Cloud Infrastructure</h3>
+                <p className="futuristic-text mb-4">
                   Scalable cloud solutions that provide reliability, security, and performance for your business applications.
                 </p>
-                <Link to="/cloud-infrastructure" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+                <Link to="/cloud-infrastructure" className="text-neon-purple hover:text-neon-pink font-medium transition-all duration-300">Learn More →</Link>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Digital Transformation</h3>
-                <p className="text-gray-600 mb-4">
+              <div className="futuristic-card neon-glow-pink">
+                <h3 className="futuristic-subheading text-neon-pink mb-4">Digital Transformation</h3>
+                <p className="futuristic-text mb-4">
                   Complete digital transformation services to modernize your business processes and systems.
                 </p>
-                <Link to="/digital-transformation" className="text-blue-600 hover:text-blue-800 font-medium">Learn More →</Link>
+                <Link to="/digital-transformation" className="text-neon-pink hover:text-neon-blue font-medium transition-all duration-300">Learn More →</Link>
               </div>
             </div>
           </div>
           
           {/* AI Tools Preview */}
           <div className="mt-20">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI-Powered Tools</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Content Moderator</h3>
-                <p className="text-gray-600 text-sm mb-3">Automated content moderation using AI</p>
-                <Link to="/zion-ai-content-moderator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+            <h2 className="futuristic-heading text-center mb-12">AI-Powered Tools</h2>
+            <div className="futuristic-grid-3">
+              <div className="futuristic-card neon-glow">
+                <h3 className="text-lg font-semibold text-neon-blue mb-2">Content Moderator</h3>
+                <p className="futuristic-text text-sm mb-3">Automated content moderation using AI</p>
+                <Link to="/zion-ai-content-moderator" className="text-neon-blue hover:text-neon-cyan text-sm font-medium transition-all duration-300">Try Now →</Link>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Sales Predictor</h3>
-                <p className="text-gray-600 text-sm mb-3">Predict sales trends with AI</p>
-                <Link to="/zion-ai-sales-predictor" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              <div className="futuristic-card neon-glow-purple">
+                <h3 className="text-lg font-semibold text-neon-purple mb-2">Sales Predictor</h3>
+                <p className="futuristic-text text-sm mb-3">Predict sales trends with AI</p>
+                <Link to="/zion-ai-sales-predictor" className="text-neon-purple hover:text-neon-pink text-sm font-medium transition-all duration-300">Try Now →</Link>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Workflow Automator</h3>
-                <p className="text-gray-600 text-sm mb-3">Automate business workflows</p>
-                <Link to="/zion-ai-workflow-automator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              <div className="futuristic-card neon-glow-pink">
+                <h3 className="text-lg font-semibold text-neon-pink mb-2">Workflow Automator</h3>
+                <p className="futuristic-text text-sm mb-3">Automate business workflows</p>
+                <Link to="/zion-ai-workflow-automator" className="text-neon-pink hover:text-neon-blue text-sm font-medium transition-all duration-300">Try Now →</Link>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Financial Forecaster</h3>
-                <p className="text-gray-600 text-sm mb-3">AI-powered financial predictions</p>
-                <Link to="/zion-ai-financial-forecaster" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              <div className="futuristic-card neon-glow">
+                <h3 className="text-lg font-semibold text-neon-green mb-2">Financial Forecaster</h3>
+                <p className="futuristic-text text-sm mb-3">AI-powered financial predictions</p>
+                <Link to="/zion-ai-financial-forecaster" className="text-neon-green hover:text-neon-cyan text-sm font-medium transition-all duration-300">Try Now →</Link>
               </div>
             </div>
             <div className="text-center mt-8">
-              <Link to="/services" className="text-blue-600 hover:text-blue-800 font-medium">View All Services →</Link>
+              <Link to="/services" className="text-neon-blue hover:text-neon-cyan font-medium transition-all duration-300">View All Services →</Link>
             </div>
           </div>
         </div>

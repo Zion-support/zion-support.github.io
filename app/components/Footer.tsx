@@ -3,16 +3,46 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = memo(() => {
   return (
-    <footer className="bg-gray-800 text-white">
+    <footer className="glass-morphism border-t border-neon-blue">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
-            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-4">
+            <h3 className="text-lg font-semibold mb-4 gradient-text">Zion Tech Group</h3>
+            <p className="futuristic-text mb-6">
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center space-x-3">
+                <span className="text-neon-blue">📞</span>
+                <a href="tel:+13024640950" className="futuristic-text hover:text-neon-blue transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <span className="text-neon-purple">✉️</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="futuristic-text hover:text-neon-purple transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <span className="text-neon-pink">📍</span>
+                <span className="futuristic-text">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <span className="text-neon-green">🌐</span>
+                <a href="https://ziontechgroup.com" className="futuristic-text hover:text-neon-green transition-colors">
+                  ziontechgroup.com
+                </a>
+              </div>
+            </div>
+            
             <div className="flex space-x-4">
-              <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
+              <a href="https://ziontechgroup.com" className="text-neon-blue hover:text-neon-cyan transition-colors">
                 <span className="sr-only">Website</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -22,72 +52,69 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Services</h4>
+            <h4 className="text-md font-semibold mb-4 text-neon-blue">AI Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
-              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-white">Cloud Infrastructure</Link></li>
-              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-white">Digital Transformation</Link></li>
-              <li><Link to="/data-analytics" className="text-gray-300 hover:text-white">Data Analytics</Link></li>
-              <li><Link to="/web-development" className="text-gray-300 hover:text-white">Web Development</Link></li>
-              <li><Link to="/mobile-development" className="text-gray-300 hover:text-white">Mobile Development</Link></li>
-              <li><Link to="/database-management" className="text-gray-300 hover:text-white">Database Management</Link></li>
-              <li><Link to="/network-infrastructure" className="text-gray-300 hover:text-white">Network Infrastructure</Link></li>
-              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Solutions</Link></li>
+              <li><Link to="/ai-services" className="futuristic-text hover:text-neon-blue transition-colors">AI Development</Link></li>
+              <li><Link to="/ai-voice-assistant" className="futuristic-text hover:text-neon-blue transition-colors">Voice Assistant</Link></li>
+              <li><Link to="/ai-computer-vision" className="futuristic-text hover:text-neon-blue transition-colors">Computer Vision</Link></li>
+              <li><Link to="/ai-content-generator" className="futuristic-text hover:text-neon-blue transition-colors">Content Generator</Link></li>
+              <li><Link to="/ai-predictive-analytics" className="futuristic-text hover:text-neon-blue transition-colors">Predictive Analytics</Link></li>
+              <li><Link to="/ai-chatbot-platform" className="futuristic-text hover:text-neon-blue transition-colors">Chatbot Platform</Link></li>
+              <li><Link to="/ai-recommendation-engine" className="futuristic-text hover:text-neon-blue transition-colors">Recommendation Engine</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">AI Tools</h4>
+            <h4 className="text-md font-semibold mb-4 text-neon-purple">IT Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/zion-ai-content-moderator" className="text-gray-300 hover:text-white">Content Moderator</Link></li>
-              <li><Link to="/zion-ai-customer-support-pro" className="text-gray-300 hover:text-white">Customer Support Pro</Link></li>
-              <li><Link to="/zion-ai-workflow-automator-pro" className="text-gray-300 hover:text-white">Workflow Automator Pro</Link></li>
-              <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-white">Email Marketing Pro</Link></li>
-              <li><Link to="/zion-ai-customer-churn-predictor" className="text-gray-300 hover:text-white">Customer Churn Predictor</Link></li>
-              <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">Sales Predictor</Link></li>
-              <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
-              <li><Link to="/zion-ai-document-analyzer" className="text-gray-300 hover:text-white">Document Analyzer</Link></li>
-              <li><Link to="/zion-ai-task-scheduler" className="text-gray-300 hover:text-white">Task Scheduler</Link></li>
-              <li><Link to="/pricing" className="text-gray-300 hover:text-white">Pricing</Link></li>
+              <li><Link to="/it-services" className="futuristic-text hover:text-neon-purple transition-colors">IT Services</Link></li>
+              <li><Link to="/web-development" className="futuristic-text hover:text-neon-purple transition-colors">Web Development</Link></li>
+              <li><Link to="/mobile-development" className="futuristic-text hover:text-neon-purple transition-colors">Mobile Development</Link></li>
+              <li><Link to="/cloud-infrastructure" className="futuristic-text hover:text-neon-purple transition-colors">Cloud Infrastructure</Link></li>
+              <li><Link to="/database-management" className="futuristic-text hover:text-neon-purple transition-colors">Database Management</Link></li>
+              <li><Link to="/network-infrastructure" className="futuristic-text hover:text-neon-purple transition-colors">Network Infrastructure</Link></li>
+              <li><Link to="/devops-automation" className="futuristic-text hover:text-neon-purple transition-colors">DevOps & Automation</Link></li>
+              <li><Link to="/blockchain-solutions" className="futuristic-text hover:text-neon-purple transition-colors">Blockchain Solutions</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Company</h4>
+            <h4 className="text-md font-semibold mb-4 text-neon-pink">Micro SaaS Tools</h4>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-300 hover:text-white">About</Link></li>
-              <li><Link to="/team" className="text-gray-300 hover:text-white">Team</Link></li>
-              <li><Link to="/careers" className="text-gray-300 hover:text-white">Careers</Link></li>
-              <li><Link to="/partnerships" className="text-gray-300 hover:text-white">Partnerships</Link></li>
-              <li><Link to="/case-studies" className="text-gray-300 hover:text-white">Case Studies</Link></li>
+              <li><Link to="/ai-document-processor" className="futuristic-text hover:text-neon-pink transition-colors">Document Processor</Link></li>
+              <li><Link to="/zion-ai-time-tracker" className="futuristic-text hover:text-neon-pink transition-colors">Time Tracker</Link></li>
+              <li><Link to="/zion-ai-crm-platform" className="futuristic-text hover:text-neon-pink transition-colors">CRM Platform</Link></li>
+              <li><Link to="/zion-ai-hr-management" className="futuristic-text hover:text-neon-pink transition-colors">HR Management</Link></li>
+              <li><Link to="/zion-ai-project-manager" className="futuristic-text hover:text-neon-pink transition-colors">Project Manager</Link></li>
+              <li><Link to="/zion-ai-analytics-dashboard" className="futuristic-text hover:text-neon-pink transition-colors">Analytics Dashboard</Link></li>
+              <li><Link to="/micro-saas-solutions" className="futuristic-text hover:text-neon-pink transition-colors">All Micro SaaS</Link></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Resources</h4>
+            <h4 className="text-md font-semibold mb-4 text-neon-green">Company & Resources</h4>
             <ul className="space-y-2">
-              <li><Link to="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
-              <li><Link to="/api-docs" className="text-gray-300 hover:text-white">API Docs</Link></li>
-              <li><Link to="/help" className="text-gray-300 hover:text-white">Help Center</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
-              <li><Link to="/accessibility" className="text-gray-300 hover:text-white">Accessibility</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
-              <li><Link to="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
-              <li><Link to="/cookies" className="text-gray-300 hover:text-white">Cookie Policy</Link></li>
+              <li><Link to="/about" className="futuristic-text hover:text-neon-green transition-colors">About</Link></li>
+              <li><Link to="/team" className="futuristic-text hover:text-neon-green transition-colors">Team</Link></li>
+              <li><Link to="/careers" className="futuristic-text hover:text-neon-green transition-colors">Careers</Link></li>
+              <li><Link to="/blog" className="futuristic-text hover:text-neon-green transition-colors">Blog</Link></li>
+              <li><Link to="/api-docs" className="futuristic-text hover:text-neon-green transition-colors">API Docs</Link></li>
+              <li><Link to="/help" className="futuristic-text hover:text-neon-green transition-colors">Help Center</Link></li>
+              <li><Link to="/contact" className="futuristic-text hover:text-neon-green transition-colors">Contact</Link></li>
+              <li><Link to="/pricing" className="futuristic-text hover:text-neon-green transition-colors">Pricing</Link></li>
             </ul>
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-gray-700">
+        <div className="mt-8 pt-8 border-t border-neon-blue">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-center md:text-left text-gray-300">
-              © 2025 Zion Tech Group. All rights reserved. | <a href="https://ziontechgroup.com" className="hover:text-white">ziontechgroup.com</a>
+            <p className="text-center md:text-left futuristic-text">
+              © 2025 Zion Tech Group. All rights reserved. | <a href="https://ziontechgroup.com" className="hover:text-neon-blue transition-colors">ziontechgroup.com</a>
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-gray-300 hover:text-white text-sm">Privacy Policy</Link>
-              <Link to="/terms" className="text-gray-300 hover:text-white text-sm">Terms of Service</Link>
+              <Link to="/privacy" className="futuristic-text hover:text-neon-blue text-sm transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="futuristic-text hover:text-neon-blue text-sm transition-colors">Terms of Service</Link>
+              <Link to="/cookies" className="futuristic-text hover:text-neon-blue text-sm transition-colors">Cookie Policy</Link>
             </div>
           </div>
         </div>

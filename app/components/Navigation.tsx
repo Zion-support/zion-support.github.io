@@ -6,20 +6,20 @@ const Navigation: React.FC = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="glass-morphism fixed w-full top-0 z-50 border-b border-neon-blue">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-blue-600">Zion Tech Group</h1>
+              <h1 className="text-2xl font-bold gradient-text animated-icon">Zion Tech Group</h1>
             </Link>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/" className="text-white hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:neon-glow">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/about" className="text-white hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:neon-glow">
               About
             </Link>
             
@@ -28,7 +28,7 @@ const Navigation: React.FC = () => {
               <button
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+                className="text-white hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium flex items-center transition-all duration-300 hover:neon-glow"
               >
                 Services
                 <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -39,76 +39,76 @@ const Navigation: React.FC = () => {
                 <div
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
-                  className="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg z-50"
+                  className="absolute left-0 mt-2 w-80 glass-morphism rounded-md shadow-lg z-50 neon-glow"
                 >
                   <div className="py-1">
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100">AI & Machine Learning</div>
-                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <div className="px-4 py-2 text-xs font-semibold text-neon-blue uppercase tracking-wider border-b border-neon-blue">AI & Machine Learning</div>
+                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-white hover:bg-neon-blue hover:bg-opacity-20 transition-all duration-300">
                       AI Services
                     </Link>
-                    <Link to="/ai-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/ai-solutions" className="block px-4 py-2 text-sm text-white hover:bg-neon-blue hover:bg-opacity-20 transition-all duration-300">
                       AI Solutions
                     </Link>
-                    <Link to="/ai-content-generator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/ai-content-generator" className="block px-4 py-2 text-sm text-white hover:bg-neon-blue hover:bg-opacity-20 transition-all duration-300">
                       AI Content Generator
                     </Link>
-                    <Link to="/data-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/data-analytics" className="block px-4 py-2 text-sm text-white hover:bg-neon-blue hover:bg-opacity-20 transition-all duration-300">
                       Data Analytics
                     </Link>
                     
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">IT Services</div>
-                    <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <div className="px-4 py-2 text-xs font-semibold text-neon-purple uppercase tracking-wider border-b border-neon-purple mt-2">IT Services</div>
+                    <Link to="/it-services" className="block px-4 py-2 text-sm text-white hover:bg-neon-purple hover:bg-opacity-20 transition-all duration-300">
                       IT Services
                     </Link>
-                    <Link to="/web-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/web-development" className="block px-4 py-2 text-sm text-white hover:bg-neon-purple hover:bg-opacity-20 transition-all duration-300">
                       Web Development
                     </Link>
-                    <Link to="/mobile-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/mobile-development" className="block px-4 py-2 text-sm text-white hover:bg-neon-purple hover:bg-opacity-20 transition-all duration-300">
                       Mobile Development
                     </Link>
-                    <Link to="/database-management" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/database-management" className="block px-4 py-2 text-sm text-white hover:bg-neon-purple hover:bg-opacity-20 transition-all duration-300">
                       Database Management
                     </Link>
-                    <Link to="/network-infrastructure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/network-infrastructure" className="block px-4 py-2 text-sm text-white hover:bg-neon-purple hover:bg-opacity-20 transition-all duration-300">
                       Network Infrastructure
                     </Link>
                     
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Infrastructure</div>
-                    <Link to="/cloud-infrastructure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <div className="px-4 py-2 text-xs font-semibold text-neon-pink uppercase tracking-wider border-b border-neon-pink mt-2">Infrastructure</div>
+                    <Link to="/cloud-infrastructure" className="block px-4 py-2 text-sm text-white hover:bg-neon-pink hover:bg-opacity-20 transition-all duration-300">
                       Cloud Infrastructure
                     </Link>
-                    <Link to="/5g-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/5g-solutions" className="block px-4 py-2 text-sm text-white hover:bg-neon-pink hover:bg-opacity-20 transition-all duration-300">
                       5G Solutions
                     </Link>
                     
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">Business Solutions</div>
-                    <Link to="/digital-transformation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <div className="px-4 py-2 text-xs font-semibold text-neon-green uppercase tracking-wider border-b border-neon-green mt-2">Business Solutions</div>
+                    <Link to="/digital-transformation" className="block px-4 py-2 text-sm text-white hover:bg-neon-green hover:bg-opacity-20 transition-all duration-300">
                       Digital Transformation
                     </Link>
-                    <Link to="/micro-saas-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/micro-saas-solutions" className="block px-4 py-2 text-sm text-white hover:bg-neon-green hover:bg-opacity-20 transition-all duration-300">
                       Micro SaaS Solutions
                     </Link>
                     
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">AI Tools</div>
-                    <Link to="/zion-ai-content-moderator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <div className="px-4 py-2 text-xs font-semibold text-neon-cyan uppercase tracking-wider border-b border-neon-cyan mt-2">AI Tools</div>
+                    <Link to="/zion-ai-content-moderator" className="block px-4 py-2 text-sm text-white hover:bg-neon-cyan hover:bg-opacity-20 transition-all duration-300">
                       AI Content Moderator
                     </Link>
-                    <Link to="/zion-ai-customer-churn-predictor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/zion-ai-customer-churn-predictor" className="block px-4 py-2 text-sm text-white hover:bg-neon-cyan hover:bg-opacity-20 transition-all duration-300">
                       Customer Churn Predictor
                     </Link>
-                    <Link to="/zion-ai-customer-sentiment-tracker" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/zion-ai-customer-sentiment-tracker" className="block px-4 py-2 text-sm text-white hover:bg-neon-cyan hover:bg-opacity-20 transition-all duration-300">
                       Customer Sentiment Tracker
                     </Link>
-                    <Link to="/zion-ai-document-analyzer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/zion-ai-document-analyzer" className="block px-4 py-2 text-sm text-white hover:bg-neon-cyan hover:bg-opacity-20 transition-all duration-300">
                       Document Analyzer
                     </Link>
-                    <Link to="/zion-ai-financial-forecaster" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/zion-ai-financial-forecaster" className="block px-4 py-2 text-sm text-white hover:bg-neon-cyan hover:bg-opacity-20 transition-all duration-300">
                       Financial Forecaster
                     </Link>
-                    <Link to="/zion-ai-sales-predictor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/zion-ai-sales-predictor" className="block px-4 py-2 text-sm text-white hover:bg-neon-cyan hover:bg-opacity-20 transition-all duration-300">
                       Sales Predictor
                     </Link>
-                    <Link to="/zion-ai-workflow-automator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/zion-ai-workflow-automator" className="block px-4 py-2 text-sm text-white hover:bg-neon-cyan hover:bg-opacity-20 transition-all duration-300">
                       Workflow Automator
                     </Link>
                   </div>
@@ -116,19 +116,19 @@ const Navigation: React.FC = () => {
               )}
             </div>
             
-            <Link to="/pricing" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/pricing" className="text-white hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:neon-glow">
               Pricing
             </Link>
-            <Link to="/blog" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/blog" className="text-white hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:neon-glow">
               Blog
             </Link>
-            <Link to="/team" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/team" className="text-white hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:neon-glow">
               Team
             </Link>
-            <Link to="/careers" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/careers" className="text-white hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:neon-glow">
               Careers
             </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/contact" className="text-white hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:neon-glow">
               Contact
             </Link>
           </div>
@@ -136,7 +136,7 @@ const Navigation: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+              className="text-white hover:text-neon-blue focus:outline-none focus:text-neon-blue transition-all duration-300"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -147,12 +147,12 @@ const Navigation: React.FC = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden">
+        <div className="md:hidden glass-morphism border-t border-neon-blue">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+            <Link to="/" className="text-white hover:text-neon-blue block px-3 py-2 rounded-md text-base font-medium transition-all duration-300">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">
+            <Link to="/about" className="text-white hover:text-neon-blue block px-3 py-2 rounded-md text-base font-medium transition-all duration-300">
               About
             </Link>
             <div className="space-y-1">
