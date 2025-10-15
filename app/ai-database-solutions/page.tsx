@@ -7,17 +7,11 @@ import { BarChart3,
   Database,
   Shield,
   Users,
-<<<<<<< HEAD
   Zap
 } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const AiDatabaseSolutionsPage = () => {
   const features = [
-=======
-  Zap } from 'lucide-react';
-const AiDatabaseSolutionsPage = () => { const features = [
 >>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
     {
       icon: <Database className="w-8 h-8" />,

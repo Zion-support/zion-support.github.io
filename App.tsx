@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
@@ -17,9 +17,6 @@ import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-import EnhancedSEO from "./app/components/EnhancedSEO";
-import ImprovedAccessibility from "./app/components/ImprovedAccessibility";
-import ImprovedPerformanceMonitor from "./app/components/ImprovedPerformanceMonitor";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -130,7 +127,24 @@ function App() {
   useEffect(() => {
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
-      console.log('Zion Tech Group App initialized');
+      // Preload critical resources
+      const preloadCriticalResources = () => {
+        // Preload critical CSS
+        const criticalCSS = document.createElement('link');
+        criticalCSS.rel = 'preload';
+        criticalCSS.href = '/app/styles/futuristic.css';
+        criticalCSS.as = 'style';
+        document.head.appendChild(criticalCSS);
+        
+        // Preload critical fonts
+        const fontPreload = document.createElement('link');
+        fontPreload.rel = 'preload';
+        fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+        fontPreload.as = 'style';
+        document.head.appendChild(fontPreload);
+      };
+      
+      preloadCriticalResources();
     }
   }, []);
 
@@ -257,7 +271,7 @@ function App() {
                                   <div className="min-h-screen flex items-center justify-center">
                                     <div className="text-center">
                                       <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                                      <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
+                                      <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
                                       <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                                         Go Home
                                       </a>
