@@ -1,124 +1,124 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wrench, AlertTriangle, BarChart3, Clock, CheckCircle, ArrowRight, Star, DollarSign, Shield, Zap } from 'lucide-react';
+import { Wifi, Cpu, Zap, Shield, CheckCircle, ArrowRight, Star, Clock, Users, Globe } from 'lucide-react';
 
-const AiPredictiveMaintenancePage: React.FC = () => {
+const EdgeComputingSolutionsPage: React.FC = () => {
   const features = [
     {
-      icon: <Wrench className="w-6 h-6" />,
-      title: "AI-Powered Failure Prediction",
-      description: "Machine learning algorithms predict equipment failures before they occur with 95%+ accuracy"
+      icon: <Wifi className="w-6 h-6" />,
+      title: "Ultra-Low Latency Processing",
+      description: "Process data at the edge with sub-millisecond response times for real-time applications"
     },
     {
-      icon: <AlertTriangle className="w-6 h-6" />,
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of equipment health with instant alerts and notifications"
+      icon: <Cpu className="w-6 h-6" />,
+      title: "Distributed Computing",
+      description: "Intelligent workload distribution across edge nodes for optimal performance and resource utilization"
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Analytics",
-      description: "Comprehensive analytics dashboard with predictive insights and maintenance recommendations"
+      icon: <Zap className="w-6 h-6" />,
+      title: "Real-time Analytics",
+      description: "Instant data processing and analysis at the edge for immediate insights and decision making"
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Optimized Scheduling",
-      description: "Intelligent maintenance scheduling to minimize downtime and maximize efficiency"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Edge Security",
+      description: "Comprehensive security framework protecting data and applications at the edge infrastructure"
     }
   ];
 
-  const benefits = [
-    "Reduce unplanned downtime by 70%",
-    "Extend equipment lifespan by 40%",
-    "Lower maintenance costs by 30%",
-    "Improve safety and compliance",
-    "Optimize spare parts inventory",
-    "Increase overall equipment effectiveness",
-    "Real-time performance monitoring",
-    "Predictive maintenance scheduling"
-  ];
-
-  const industries = [
-    "Manufacturing",
-    "Oil & Gas",
-    "Aviation",
-    "Automotive",
-    "Power Generation",
-    "Mining",
-    "Healthcare",
-    "Transportation",
-    "Food & Beverage",
-    "Pharmaceuticals",
-    "Data Centers",
-    "Renewable Energy"
+  const useCases = [
+    "Autonomous Vehicles",
+    "Industrial IoT",
+    "Smart Cities",
+    "AR/VR Applications",
+    "Real-time Video Processing",
+    "Predictive Maintenance",
+    "Traffic Management",
+    "Healthcare Monitoring",
+    "Retail Analytics",
+    "Gaming & Entertainment",
+    "Financial Trading",
+    "Manufacturing Automation"
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$299",
+      name: "Edge Starter",
+      price: "$499",
       period: "/month",
-      description: "Perfect for small facilities",
+      description: "Perfect for small deployments",
       features: [
-        "Up to 50 equipment units",
-        "Basic AI predictions",
-        "Email alerts",
+        "Up to 5 edge nodes",
+        "Basic edge processing",
         "Standard analytics",
         "Email support",
-        "Mobile app access"
+        "Cloud integration",
+        "Basic monitoring"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$799",
+      name: "Edge Professional",
+      price: "$1,999",
       period: "/month", 
-      description: "Ideal for medium facilities",
+      description: "Ideal for medium enterprises",
       features: [
-        "Up to 200 equipment units",
-        "Advanced AI predictions",
-        "Multi-channel alerts",
-        "Advanced analytics & reporting",
+        "Up to 25 edge nodes",
+        "Advanced edge processing",
+        "Real-time analytics",
         "Priority support",
-        "API integration",
-        "Custom dashboards",
-        "Maintenance scheduling"
+        "Multi-cloud integration",
+        "Advanced monitoring",
+        "Custom applications",
+        "API access"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$1,999",
+      name: "Edge Enterprise",
+      price: "$4,999",
       period: "/month",
-      description: "For large industrial facilities",
+      description: "For large-scale deployments",
       features: [
-        "Unlimited equipment units",
-        "Premium AI predictions",
-        "Custom alert systems",
+        "Unlimited edge nodes",
+        "Premium edge processing",
         "Complete analytics suite",
         "24/7 dedicated support",
-        "Full API access",
+        "Full cloud ecosystem",
+        "Enterprise monitoring",
+        "Custom development",
         "White-label solutions",
-        "On-premise deployment",
         "SLA guarantee",
-        "Custom integrations"
+        "On-premise deployment"
       ],
       popular: false
     }
   ];
 
-  const sensors = [
-    "Vibration Sensors", "Temperature Sensors", "Pressure Sensors", "Current Sensors",
-    "Oil Analysis", "Thermal Imaging", "Ultrasonic Testing", "Acoustic Monitoring"
+  const technologies = [
+    "Kubernetes", "Docker", "Apache Kafka", "Redis", "TensorFlow Lite",
+    "OpenVINO", "NVIDIA Jetson", "Intel Edge", "AWS Greengrass", "Azure IoT Edge"
+  ];
+
+  const benefits = [
+    "Reduce latency by 90%",
+    "Lower bandwidth costs by 60%",
+    "Improve data privacy and security",
+    "Enable real-time decision making",
+    "Reduce cloud dependency",
+    "Scale horizontally with ease",
+    "Optimize resource utilization",
+    "Support offline operations"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Zion Tech Group | Smart Equipment Management</title>
-        <meta name="description" content="Revolutionary AI-powered predictive maintenance platform that prevents equipment failures, reduces downtime, and optimizes maintenance costs for industrial facilities." />
-        <meta name="keywords" content="predictive maintenance, ai maintenance, equipment monitoring, iot sensors, machine learning, industrial iot, maintenance optimization" />
-        <meta property="og:title" content="AI Predictive Maintenance - Zion Tech Group" />
-        <meta property="og:description" content="Smart equipment maintenance powered by AI and IoT" />
+        <title>Edge Computing Solutions - Zion Tech Group | Real-time Processing</title>
+        <meta name="description" content="Revolutionary edge computing solutions for ultra-low latency processing, real-time analytics, and distributed computing across industries." />
+        <meta name="keywords" content="edge computing, real-time processing, iot, distributed computing, low latency, edge analytics, fog computing" />
+        <meta property="og:title" content="Edge Computing Solutions - Zion Tech Group" />
+        <meta property="og:description" content="Ultra-low latency edge computing solutions" />
         <meta property="og:type" content="website" />
       </Helmet>
       
@@ -128,18 +128,18 @@ const AiPredictiveMaintenancePage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Predictive Maintenance</span>
+                Edge <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Computing Solutions</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Transform your maintenance operations with AI-powered predictive analytics that prevent failures, 
-                reduce downtime, and optimize costs across your entire facility.
+                Transform your applications with ultra-low latency edge computing that brings processing power 
+                closer to your data sources for real-time performance and instant insights.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                  Start Free Trial
+                  Start Edge Trial
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  Request Demo
+                  View Demo
                 </button>
               </div>
             </div>
@@ -150,9 +150,9 @@ const AiPredictiveMaintenancePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Advanced AI Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Advanced Edge Computing Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage cutting-edge AI technology to predict and prevent equipment failures
+                Cutting-edge edge computing capabilities for real-time processing and analytics
               </p>
             </div>
             
@@ -174,20 +174,42 @@ const AiPredictiveMaintenancePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Use Cases Section */}
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Proven Business Benefits</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Edge Computing Use Cases</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your maintenance operations and achieve measurable results
+                Transform your industry with real-time edge computing solutions
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-slate-800/50 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300 group">
+                  <div className="text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors">
+                    {useCase}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Edge Computing Benefits</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Achieve unprecedented performance and efficiency with edge computing
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300 group">
-                  <div className="text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors">
+                <div key={index} className="bg-white/10 rounded-lg p-4 text-center hover:bg-cyan-500/20 transition-all duration-300 group">
+                  <div className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
                     {benefit}
                   </div>
                 </div>
@@ -196,42 +218,20 @@ const AiPredictiveMaintenancePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Industries Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Industry Applications</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI predictive maintenance solutions work across diverse industries
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {industries.map((industry, index) => (
-                <div key={index} className="bg-white/10 rounded-lg p-4 text-center hover:bg-cyan-500/20 transition-all duration-300 group">
-                  <div className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
-                    {industry}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Sensors Section */}
+        {/* Technologies Section */}
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Compatible Sensors & Technologies</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Edge Technologies</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Integrate with a wide range of industrial sensors and monitoring technologies
+                Built on industry-leading edge computing technologies and platforms
               </p>
             </div>
             
             <div className="flex flex-wrap justify-center gap-4">
-              {sensors.map((sensor, index) => (
+              {technologies.map((tech, index) => (
                 <span key={index} className="px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-cyan-500/20 hover:text-cyan-400 transition-all duration-300">
-                  {sensor}
+                  {tech}
                 </span>
               ))}
             </div>
@@ -242,9 +242,9 @@ const AiPredictiveMaintenancePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Flexible Pricing Plans</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Edge Computing Plans</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your facility size and maintenance needs
+                Choose the perfect edge computing solution for your deployment needs
               </p>
             </div>
             
@@ -292,25 +292,25 @@ const AiPredictiveMaintenancePage: React.FC = () => {
           </div>
         </section>
 
-        {/* ROI Section */}
+        {/* Stats Section */}
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">70%</div>
-                <div className="text-gray-300 text-lg">Reduction in Downtime</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">90%</div>
+                <div className="text-gray-300 text-lg">Latency Reduction</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">30%</div>
-                <div className="text-gray-300 text-lg">Lower Maintenance Costs</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">60%</div>
+                <div className="text-gray-300 text-lg">Bandwidth Savings</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>
-                <div className="text-gray-300 text-lg">Extended Equipment Life</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+                <div className="text-gray-300 text-lg">Uptime Guarantee</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">95%</div>
-                <div className="text-gray-300 text-lg">Prediction Accuracy</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
+                <div className="text-gray-300 text-lg">Edge Monitoring</div>
               </div>
             </div>
           </div>
@@ -320,17 +320,17 @@ const AiPredictiveMaintenancePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Maintenance Operations?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join leading industrial facilities using AI to prevent failures and optimize maintenance. 
-                Start your free trial today and see the difference.
+                Transform your applications with ultra-low latency edge computing. 
+                Start your free trial today and experience real-time performance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
                   Start Free Trial
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
-                  Contact Sales
+                  Contact Edge Experts
                 </button>
               </div>
             </div>
@@ -341,4 +341,4 @@ const AiPredictiveMaintenancePage: React.FC = () => {
   );
 };
 
-export default AiPredictiveMaintenancePage;
+export default EdgeComputingSolutionsPage;

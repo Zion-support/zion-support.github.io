@@ -1,124 +1,125 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wrench, AlertTriangle, BarChart3, Clock, CheckCircle, ArrowRight, Star, DollarSign, Shield, Zap } from 'lucide-react';
+import { BookOpen, Brain, Target, BarChart3, CheckCircle, ArrowRight, Star, Clock, Users, Award } from 'lucide-react';
 
-const AiPredictiveMaintenancePage: React.FC = () => {
+const AiPersonalizedLearningPage: React.FC = () => {
   const features = [
     {
-      icon: <Wrench className="w-6 h-6" />,
-      title: "AI-Powered Failure Prediction",
-      description: "Machine learning algorithms predict equipment failures before they occur with 95%+ accuracy"
+      icon: <Brain className="w-6 h-6" />,
+      title: "Adaptive Learning Paths",
+      description: "AI-powered personalized learning journeys that adapt to each learner's pace, style, and goals"
     },
     {
-      icon: <AlertTriangle className="w-6 h-6" />,
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of equipment health with instant alerts and notifications"
+      icon: <Target className="w-6 h-6" />,
+      title: "Smart Content Curation",
+      description: "Intelligent content selection and sequencing based on learning objectives and performance data"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Analytics",
-      description: "Comprehensive analytics dashboard with predictive insights and maintenance recommendations"
+      title: "Learning Analytics",
+      description: "Comprehensive insights into learning progress, engagement, and knowledge retention"
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Optimized Scheduling",
-      description: "Intelligent maintenance scheduling to minimize downtime and maximize efficiency"
+      icon: <BookOpen className="w-6 h-6" />,
+      title: "Multi-Modal Learning",
+      description: "Support for videos, interactive content, quizzes, and hands-on exercises tailored to learning preferences"
     }
   ];
 
-  const benefits = [
-    "Reduce unplanned downtime by 70%",
-    "Extend equipment lifespan by 40%",
-    "Lower maintenance costs by 30%",
-    "Improve safety and compliance",
-    "Optimize spare parts inventory",
-    "Increase overall equipment effectiveness",
-    "Real-time performance monitoring",
-    "Predictive maintenance scheduling"
-  ];
-
-  const industries = [
-    "Manufacturing",
-    "Oil & Gas",
-    "Aviation",
-    "Automotive",
-    "Power Generation",
-    "Mining",
-    "Healthcare",
-    "Transportation",
-    "Food & Beverage",
-    "Pharmaceuticals",
-    "Data Centers",
-    "Renewable Energy"
+  const learningTypes = [
+    "Corporate Training",
+    "Academic Education",
+    "Professional Development",
+    "Skill Certification",
+    "Language Learning",
+    "Technical Training",
+    "Soft Skills Development",
+    "Compliance Training",
+    "Onboarding Programs",
+    "Leadership Development",
+    "Sales Training",
+    "Customer Service"
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$299",
+      name: "Individual",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small facilities",
+      description: "Perfect for personal learning",
       features: [
-        "Up to 50 equipment units",
-        "Basic AI predictions",
-        "Email alerts",
-        "Standard analytics",
+        "Unlimited courses",
+        "Basic AI personalization",
+        "Progress tracking",
+        "Mobile app access",
         "Email support",
-        "Mobile app access"
+        "Certificate generation"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$799",
+      name: "Team",
+      price: "$99",
       period: "/month", 
-      description: "Ideal for medium facilities",
+      description: "Ideal for small teams",
       features: [
-        "Up to 200 equipment units",
-        "Advanced AI predictions",
-        "Multi-channel alerts",
-        "Advanced analytics & reporting",
+        "Up to 25 learners",
+        "Advanced AI personalization",
+        "Team analytics dashboard",
         "Priority support",
-        "API integration",
-        "Custom dashboards",
-        "Maintenance scheduling"
+        "Custom learning paths",
+        "Integration APIs",
+        "White-label options",
+        "Admin controls"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$399",
       period: "/month",
-      description: "For large industrial facilities",
+      description: "For large organizations",
       features: [
-        "Unlimited equipment units",
-        "Premium AI predictions",
-        "Custom alert systems",
+        "Unlimited learners",
+        "Premium AI features",
         "Complete analytics suite",
         "24/7 dedicated support",
+        "Custom content creation",
         "Full API access",
-        "White-label solutions",
-        "On-premise deployment",
+        "SSO integration",
+        "Advanced reporting",
         "SLA guarantee",
-        "Custom integrations"
+        "On-premise deployment"
       ],
       popular: false
     }
   ];
 
-  const sensors = [
-    "Vibration Sensors", "Temperature Sensors", "Pressure Sensors", "Current Sensors",
-    "Oil Analysis", "Thermal Imaging", "Ultrasonic Testing", "Acoustic Monitoring"
+  const benefits = [
+    "Increase learning retention by 40%",
+    "Reduce training time by 50%",
+    "Improve engagement by 60%",
+    "Personalize learning experiences",
+    "Track progress in real-time",
+    "Adapt to different learning styles",
+    "Generate detailed analytics",
+    "Support multiple languages"
+  ];
+
+  const aiCapabilities = [
+    "Learning Style Detection", "Knowledge Gap Analysis", "Difficulty Adjustment",
+    "Content Recommendation", "Progress Prediction", "Engagement Optimization",
+    "Skill Assessment", "Learning Path Optimization", "Performance Analytics"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Zion Tech Group | Smart Equipment Management</title>
-        <meta name="description" content="Revolutionary AI-powered predictive maintenance platform that prevents equipment failures, reduces downtime, and optimizes maintenance costs for industrial facilities." />
-        <meta name="keywords" content="predictive maintenance, ai maintenance, equipment monitoring, iot sensors, machine learning, industrial iot, maintenance optimization" />
-        <meta property="og:title" content="AI Predictive Maintenance - Zion Tech Group" />
-        <meta property="og:description" content="Smart equipment maintenance powered by AI and IoT" />
+        <title>AI Personalized Learning - Zion Tech Group | Smart Education Platform</title>
+        <meta name="description" content="Revolutionary AI-powered personalized learning platform that adapts to each learner's needs, optimizes content delivery, and maximizes learning outcomes." />
+        <meta name="keywords" content="ai learning, personalized education, adaptive learning, learning analytics, corporate training, online education" />
+        <meta property="og:title" content="AI Personalized Learning - Zion Tech Group" />
+        <meta property="og:description" content="Intelligent personalized learning solutions" />
         <meta property="og:type" content="website" />
       </Helmet>
       
@@ -128,18 +129,18 @@ const AiPredictiveMaintenancePage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Predictive Maintenance</span>
+                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Personalized Learning</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Transform your maintenance operations with AI-powered predictive analytics that prevent failures, 
-                reduce downtime, and optimize costs across your entire facility.
+                Transform education with AI-powered personalized learning that adapts to each learner's unique needs, 
+                learning style, and pace for maximum engagement and knowledge retention.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                   Start Free Trial
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  Request Demo
+                  View Demo
                 </button>
               </div>
             </div>
@@ -150,9 +151,9 @@ const AiPredictiveMaintenancePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Advanced AI Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Advanced AI Learning Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage cutting-edge AI technology to predict and prevent equipment failures
+                Revolutionary AI technology that personalizes every aspect of the learning experience
               </p>
             </div>
             
@@ -174,65 +175,65 @@ const AiPredictiveMaintenancePage: React.FC = () => {
           </div>
         </section>
 
+        {/* Learning Types Section */}
+        <section className="py-20 bg-white/5">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Learning Applications</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Perfect for all types of learning and training programs
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {learningTypes.map((type, index) => (
+                <div key={index} className="bg-slate-800/50 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300 group">
+                  <div className="text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors">
+                    {type}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* AI Capabilities Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">AI Learning Capabilities</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Advanced AI algorithms that power intelligent learning experiences
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              {aiCapabilities.map((capability, index) => (
+                <span key={index} className="px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-cyan-500/20 hover:text-cyan-400 transition-all duration-300">
+                  {capability}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Proven Business Benefits</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Learning Benefits</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your maintenance operations and achieve measurable results
+                Achieve better learning outcomes with AI-powered personalization
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300 group">
-                  <div className="text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors">
+                <div key={index} className="bg-white/10 rounded-lg p-4 text-center hover:bg-cyan-500/20 transition-all duration-300 group">
+                  <div className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
                     {benefit}
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Industries Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Industry Applications</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI predictive maintenance solutions work across diverse industries
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {industries.map((industry, index) => (
-                <div key={index} className="bg-white/10 rounded-lg p-4 text-center hover:bg-cyan-500/20 transition-all duration-300 group">
-                  <div className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
-                    {industry}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Sensors Section */}
-        <section className="py-20 bg-white/5">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Compatible Sensors & Technologies</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Integrate with a wide range of industrial sensors and monitoring technologies
-              </p>
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              {sensors.map((sensor, index) => (
-                <span key={index} className="px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-cyan-500/20 hover:text-cyan-400 transition-all duration-300">
-                  {sensor}
-                </span>
               ))}
             </div>
           </div>
@@ -242,9 +243,9 @@ const AiPredictiveMaintenancePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Flexible Pricing Plans</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Learning Platform Plans</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your facility size and maintenance needs
+                Choose the perfect plan for your learning and training needs
               </p>
             </div>
             
@@ -292,25 +293,25 @@ const AiPredictiveMaintenancePage: React.FC = () => {
           </div>
         </section>
 
-        {/* ROI Section */}
+        {/* Stats Section */}
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">70%</div>
-                <div className="text-gray-300 text-lg">Reduction in Downtime</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">30%</div>
-                <div className="text-gray-300 text-lg">Lower Maintenance Costs</div>
-              </div>
-              <div>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>
-                <div className="text-gray-300 text-lg">Extended Equipment Life</div>
+                <div className="text-gray-300 text-lg">Better Retention</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">50%</div>
+                <div className="text-gray-300 text-lg">Faster Learning</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">60%</div>
+                <div className="text-gray-300 text-lg">Higher Engagement</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">95%</div>
-                <div className="text-gray-300 text-lg">Prediction Accuracy</div>
+                <div className="text-gray-300 text-lg">User Satisfaction</div>
               </div>
             </div>
           </div>
@@ -320,9 +321,9 @@ const AiPredictiveMaintenancePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Maintenance Operations?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Learning?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join leading industrial facilities using AI to prevent failures and optimize maintenance. 
+                Experience the future of personalized learning with AI-powered education. 
                 Start your free trial today and see the difference.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -330,7 +331,7 @@ const AiPredictiveMaintenancePage: React.FC = () => {
                   Start Free Trial
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
-                  Contact Sales
+                  Contact Learning Experts
                 </button>
               </div>
             </div>
@@ -341,4 +342,4 @@ const AiPredictiveMaintenancePage: React.FC = () => {
   );
 };
 
-export default AiPredictiveMaintenancePage;
+export default AiPersonalizedLearningPage;

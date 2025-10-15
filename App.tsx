@@ -31,6 +31,16 @@ const SupportPage = React.lazy(() => import('./app/support/page'));
 const CareersPage = React.lazy(() => import('./app/careers/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
 
+// New AI Services
+const AiSmartContractsPage = React.lazy(() => import('./app/ai-smart-contracts/page'));
+const AiVoiceAssistantPage = React.lazy(() => import('./app/ai-voice-assistant/page'));
+const AiPredictiveMaintenancePage = React.lazy(() => import('./app/ai-predictive-maintenance/page'));
+const AiPersonalizedLearningPage = React.lazy(() => import('./app/ai-personalized-learning/page'));
+
+// New IT Services
+const QuantumComputingSolutionsPage = React.lazy(() => import('./app/quantum-computing-solutions/page'));
+const EdgeComputingSolutionsPage = React.lazy(() => import('./app/edge-computing-solutions/page'));
+
 const App: React.FC = () => {
   // Initialize performance monitoring
   usePerformanceMonitoring();
@@ -79,6 +89,16 @@ const App: React.FC = () => {
                 <Route path="/support" element={<SupportPage />} />
                 <Route path="/careers" element={<CareersPage />} />
                 <Route path="/sitemap" element={<SitemapPage />} />
+                
+                {/* New AI Services */}
+                <Route path="/ai-smart-contracts" element={<AiSmartContractsPage />} />
+                <Route path="/ai-voice-assistant" element={<AiVoiceAssistantPage />} />
+                <Route path="/ai-predictive-maintenance" element={<AiPredictiveMaintenancePage />} />
+                <Route path="/ai-personalized-learning" element={<AiPersonalizedLearningPage />} />
+                
+                {/* New IT Services */}
+                <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
+                <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
                 <Route path="*" element={
                   <div className="container mx-auto px-4 py-16 text-center">
                     <h1 className="text-4xl font-bold text-white mb-8">404 - Page Not Found</h1>

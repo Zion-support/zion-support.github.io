@@ -1,124 +1,100 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wrench, AlertTriangle, BarChart3, Clock, CheckCircle, ArrowRight, Star, DollarSign, Shield, Zap } from 'lucide-react';
+import { FileText, Shield, Zap, CheckCircle, ArrowRight, Star, Clock, Users, DollarSign } from 'lucide-react';
 
-const AiPredictiveMaintenancePage: React.FC = () => {
+const AiSmartContractsPage: React.FC = () => {
   const features = [
     {
-      icon: <Wrench className="w-6 h-6" />,
-      title: "AI-Powered Failure Prediction",
-      description: "Machine learning algorithms predict equipment failures before they occur with 95%+ accuracy"
+      icon: <FileText className="w-6 h-6" />,
+      title: "AI-Powered Contract Generation",
+      description: "Automatically generate smart contracts based on natural language requirements and business logic"
     },
     {
-      icon: <AlertTriangle className="w-6 h-6" />,
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of equipment health with instant alerts and notifications"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Security Audit & Validation",
+      description: "AI-driven security analysis to detect vulnerabilities and ensure contract safety"
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Analytics",
-      description: "Comprehensive analytics dashboard with predictive insights and maintenance recommendations"
+      icon: <Zap className="w-6 h-6" />,
+      title: "Auto-Execution & Monitoring",
+      description: "Intelligent contract execution with real-time monitoring and automatic dispute resolution"
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Optimized Scheduling",
-      description: "Intelligent maintenance scheduling to minimize downtime and maximize efficiency"
+      icon: <Users className="w-6 h-6" />,
+      title: "Multi-Party Management",
+      description: "Seamless coordination between multiple parties with automated workflow management"
     }
   ];
 
-  const benefits = [
-    "Reduce unplanned downtime by 70%",
-    "Extend equipment lifespan by 40%",
-    "Lower maintenance costs by 30%",
-    "Improve safety and compliance",
-    "Optimize spare parts inventory",
-    "Increase overall equipment effectiveness",
-    "Real-time performance monitoring",
-    "Predictive maintenance scheduling"
-  ];
-
-  const industries = [
-    "Manufacturing",
-    "Oil & Gas",
-    "Aviation",
-    "Automotive",
-    "Power Generation",
-    "Mining",
-    "Healthcare",
-    "Transportation",
-    "Food & Beverage",
-    "Pharmaceuticals",
-    "Data Centers",
-    "Renewable Energy"
+  const useCases = [
+    "Supply Chain Management",
+    "Real Estate Transactions", 
+    "Insurance Claims Processing",
+    "Financial Derivatives",
+    "Intellectual Property Licensing",
+    "Voting Systems",
+    "Escrow Services",
+    "Automated Compliance"
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$199",
       period: "/month",
-      description: "Perfect for small facilities",
+      description: "Perfect for small businesses and startups",
       features: [
-        "Up to 50 equipment units",
-        "Basic AI predictions",
-        "Email alerts",
-        "Standard analytics",
+        "Up to 10 contracts/month",
+        "Basic AI generation",
+        "Standard security audit",
         "Email support",
-        "Mobile app access"
+        "Ethereum & Polygon support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$499",
       period: "/month", 
-      description: "Ideal for medium facilities",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 200 equipment units",
-        "Advanced AI predictions",
-        "Multi-channel alerts",
-        "Advanced analytics & reporting",
+        "Up to 50 contracts/month",
+        "Advanced AI generation",
+        "Comprehensive security audit",
         "Priority support",
-        "API integration",
-        "Custom dashboards",
-        "Maintenance scheduling"
+        "Multi-blockchain support",
+        "Custom templates",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$1,299",
       period: "/month",
-      description: "For large industrial facilities",
+      description: "For large organizations",
       features: [
-        "Unlimited equipment units",
-        "Premium AI predictions",
-        "Custom alert systems",
-        "Complete analytics suite",
+        "Unlimited contracts",
+        "Premium AI features",
+        "Full security suite",
         "24/7 dedicated support",
-        "Full API access",
-        "White-label solutions",
-        "On-premise deployment",
-        "SLA guarantee",
-        "Custom integrations"
+        "All blockchain networks",
+        "Custom development",
+        "White-label options",
+        "SLA guarantee"
       ],
       popular: false
     }
   ];
 
-  const sensors = [
-    "Vibration Sensors", "Temperature Sensors", "Pressure Sensors", "Current Sensors",
-    "Oil Analysis", "Thermal Imaging", "Ultrasonic Testing", "Acoustic Monitoring"
-  ];
-
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Zion Tech Group | Smart Equipment Management</title>
-        <meta name="description" content="Revolutionary AI-powered predictive maintenance platform that prevents equipment failures, reduces downtime, and optimizes maintenance costs for industrial facilities." />
-        <meta name="keywords" content="predictive maintenance, ai maintenance, equipment monitoring, iot sensors, machine learning, industrial iot, maintenance optimization" />
-        <meta property="og:title" content="AI Predictive Maintenance - Zion Tech Group" />
-        <meta property="og:description" content="Smart equipment maintenance powered by AI and IoT" />
+        <title>AI Smart Contracts - Zion Tech Group | Intelligent Blockchain Solutions</title>
+        <meta name="description" content="Revolutionary AI-powered smart contract platform that automatically generates, audits, and executes blockchain contracts with advanced security and intelligence." />
+        <meta name="keywords" content="ai smart contracts, blockchain, ethereum, polygon, automated contracts, security audit, defi, web3" />
+        <meta property="og:title" content="AI Smart Contracts - Zion Tech Group" />
+        <meta property="og:description" content="Intelligent blockchain contract solutions powered by AI" />
         <meta property="og:type" content="website" />
       </Helmet>
       
@@ -128,18 +104,18 @@ const AiPredictiveMaintenancePage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Predictive Maintenance</span>
+                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Smart Contracts</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Transform your maintenance operations with AI-powered predictive analytics that prevent failures, 
-                reduce downtime, and optimize costs across your entire facility.
+                Revolutionize your blockchain operations with AI-powered smart contracts that automatically generate, 
+                audit, and execute with unprecedented intelligence and security.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                   Start Free Trial
                 </button>
                 <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  Request Demo
+                  View Demo
                 </button>
               </div>
             </div>
@@ -150,9 +126,9 @@ const AiPredictiveMaintenancePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Advanced AI Features</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Revolutionary AI Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage cutting-edge AI technology to predict and prevent equipment failures
+                Our AI-powered platform transforms how smart contracts are created, managed, and executed
               </p>
             </div>
             
@@ -174,65 +150,23 @@ const AiPredictiveMaintenancePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Use Cases Section */}
         <section className="py-20 bg-white/5">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Proven Business Benefits</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your maintenance operations and achieve measurable results
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300 group">
-                  <div className="text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors">
-                    {benefit}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Industries Section */}
-        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Industry Applications</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI predictive maintenance solutions work across diverse industries
+                Transform your business processes across multiple industries with intelligent smart contracts
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {industries.map((industry, index) => (
-                <div key={index} className="bg-white/10 rounded-lg p-4 text-center hover:bg-cyan-500/20 transition-all duration-300 group">
-                  <div className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
-                    {industry}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-slate-800/50 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300 group">
+                  <div className="text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors">
+                    {useCase}
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Sensors Section */}
-        <section className="py-20 bg-white/5">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Compatible Sensors & Technologies</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Integrate with a wide range of industrial sensors and monitoring technologies
-              </p>
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              {sensors.map((sensor, index) => (
-                <span key={index} className="px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-cyan-500/20 hover:text-cyan-400 transition-all duration-300">
-                  {sensor}
-                </span>
               ))}
             </div>
           </div>
@@ -242,9 +176,9 @@ const AiPredictiveMaintenancePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Flexible Pricing Plans</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Transparent Pricing</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your facility size and maintenance needs
+                Choose the perfect plan for your smart contract needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -292,25 +226,21 @@ const AiPredictiveMaintenancePage: React.FC = () => {
           </div>
         </section>
 
-        {/* ROI Section */}
+        {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">70%</div>
-                <div className="text-gray-300 text-lg">Reduction in Downtime</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+                <div className="text-gray-300 text-lg">Contract Accuracy</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">30%</div>
-                <div className="text-gray-300 text-lg">Lower Maintenance Costs</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">10x</div>
+                <div className="text-gray-300 text-lg">Faster Development</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>
-                <div className="text-gray-300 text-lg">Extended Equipment Life</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">95%</div>
-                <div className="text-gray-300 text-lg">Prediction Accuracy</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">$0</div>
+                <div className="text-gray-300 text-lg">Setup Fees</div>
               </div>
             </div>
           </div>
@@ -320,10 +250,9 @@ const AiPredictiveMaintenancePage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Maintenance Operations?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Blockchain Operations?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join leading industrial facilities using AI to prevent failures and optimize maintenance. 
-                Start your free trial today and see the difference.
+                Join the future of smart contracts with AI-powered intelligence. Start your free trial today and experience the difference.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
@@ -341,4 +270,4 @@ const AiPredictiveMaintenancePage: React.FC = () => {
   );
 };
 
-export default AiPredictiveMaintenancePage;
+export default AiSmartContractsPage;
