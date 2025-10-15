@@ -3,28 +3,28 @@
  * Defines security headers and policies for the application
  */
     'Permissions-Policy': 'camera = (), microphone=(), geolocation=(), interest-cohort=()'
-}
+};
 /**
  * Rate limiting configuration
  */
-}
+};
 /**
  * CORS configuration
  */
-}
+};
 /**
  * Session configuration
  */
-}
+};
 /**
  * Input validation patterns
  */
-}
+};
 /**
  * Sanitize user input
  */
   return input
-    .replace(/[<>]/g, '') // Remove < and >
+    .replace(/[<>]/g, '') // Remove < and ></>
     .replace(/javascript:/gi, '') // Remove javascript: protocol
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
     .trim()
@@ -45,4 +45,4 @@
     for (let i = 0; i
  byte.toString(16).padStart(2, '0')).join('')
   generateSecureToken
-}
+};

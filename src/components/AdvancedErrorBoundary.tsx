@@ -1,7 +1,7 @@
 export default AdvancedErrorBoundary
 // Simple logger implementation
       // console.error(message, context)
-}
+};
   hasError: boolean
   error: Error | null
   errorInfo: ErrorInfo | null
@@ -27,9 +27,9 @@ class AdvancedErrorBoundary extends Component
   private maxRetries = 3
     super(props)
       errorId: null
-    }
+    };
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    }
+    };
       errorInfo
     })
     // Log error to console in development
@@ -40,35 +40,35 @@ class AdvancedErrorBoundary extends Component
     // Report error to external service
       this.reportError(error, errorInfo)
       sessionId: this.getSessionId()
-    }
+    };
     // Send to error reporting service
     this.sendErrorReport(errorReport)
-  }
+  };
     // Try to get user ID from localStorage or other sources
       return localStorage.getItem('userId') || null
       return null
-  }
+  };
     // Generate or retrieve session ID
       let sessionId = sessionStorage.getItem('sessionId')
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
         sessionStorage.setItem('sessionId', sessionId)
       return sessionId
       return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-  }
+  };
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-  }
+  };
       // Send to your error reporting service
           'Content-Type': 'application/json'
         body: JSON.stringify(errorReport)
       })
         error: reportError
       })
-  }
+  };
     if (this.retryCount
     window.location.reload()
-  }
+  };
     window.location.href = '/'
-  }
+  };
       // Custom fallback UI
         return this.props.fallback
       // Default error UI
@@ -76,18 +76,18 @@ class AdvancedErrorBoundary extends Component
                   We&apos;re sorry, but something unexpected happened. Our team
                   has been notified.
                     Error Details:
-                      <strong>Error ID:</strong> {this.state.errorId}
-                      <strong>Message:</strong> {this.state.error?.message}
+                      <strong>Error ID:</strong> {this.state.errorId};
+                      <strong>Message:</strong> {this.state.error?.message};
                         Stack Trace
-                        {this.state.error?.stack}
+                        {this.state.error?.stack};
                         Component Stack
-                        {this.state.errorInfo?.componentStack}
-              )}
+                        {this.state.errorInfo?.componentStack};
+              )};
                 {this.props.enableRetry &&
                   this.retryCount
                       Try Again ({this.maxRetries - this.retryCount} attempts
                       left)
-                  )}
+                  )};
                   Reload Page
                   Go to Homepage
                   If this problem persists, please contact our support team

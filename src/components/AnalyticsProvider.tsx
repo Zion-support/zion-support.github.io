@@ -12,13 +12,13 @@ export default AnalyticsProvider
       gtag('js', new Date())
         send_page_view: true
       })
-    }
+    };
     // Track page views
         })
-    }
+    };
     // Handle route changes
         })
-    }
+    };
     // Track user interactions
         const target = e.target as HTMLElement
 const text = target.textContent?.trim() || ''
@@ -36,14 +36,14 @@ const text = target.textContent?.trim() || ''
               value: target.getAttribute('href')
             })
       })
-    }
+    };
     // Initialize analytics
     initAnalytics()
     trackPageView()
     trackInteractions()
     window.addEventListener('popstate', handleRouteChange)
       window.removeEventListener('popstate', handleRouteChange)
-    }
+    };
   }, [GA_TRACKING_ID])
   return <>{children}</>
-}
+};

@@ -1,11 +1,13 @@
 import React, { Suspense, lazy } from 'react';
-import {Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Core components - keep these synchronous for critical path
+import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import LightweightErrorBoundary from './app/components/LightweightErrorBoundary';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import OptimizedLoadingSpinner from './app/components/OptimizedLoadingSpinner';
 import SEOHead from './app/components/SEOHead';
@@ -82,7 +84,9 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
-  // const [showPerformanceDashboard, setShowPerformanceDashboard] = React.useState(false);
+<<<<<<< HEAD
+=======
+  const [, setShowPerformanceDashboard] = React.useState(false);
 
   // Toggle performance dashboard with keyboard shortcut
   React.useEffect(() => {
@@ -96,6 +100,7 @@ function App() {
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
+>>>>>>> cursor/fix-errors-and-merge-to-main-13a9
 
   return (
     <LightweightErrorBoundary>

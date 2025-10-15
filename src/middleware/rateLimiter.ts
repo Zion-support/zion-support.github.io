@@ -18,7 +18,7 @@ export default RateLimiter
   private requests: Map<string, RequestRecord> = new Map()
   private config: RateLimitConfig
       ...config
-    }
+    };
     // Cleanup old entries every minute
  this.cleanup(), 60000)
   /**
@@ -31,18 +31,18 @@ const record = this.requests.get(identifier)
     // No record or expired
       const resetTime = now + this.config.windowMs
       this.requests.set(identifier, { count: 1, resetTime })
-      return { allowed: true, remaining: this.config.max - 1, resetTime }
+      return { allowed: true, remaining: this.config.max - 1, resetTime };
     // Increment count
     if (record.count
         this.requests.delete(key)
   /**
    * Get current stats
    */
-    return { totalTracked: this.requests.size }
+    return { totalTracked: this.requests.size };
 /**
  * Pre-configured rate limiters for common use cases
  */
-}
+};
 /**
  * Get client identifier from request
  * @param request - Request object
@@ -70,4 +70,4 @@ const cfConnectingIp = headers.get('cf-connecting-ip')
       )
     // Request allowed - headers can be added to response later
     return null
-  }
+  };

@@ -29,22 +29,22 @@ const renderTime = performance.now() - renderStart
             frameCount = 0
             lastTime = currentTime
           requestAnimationFrame(measureFPS)
-        }
+        };
         requestAnimationFrame(measureFPS)
         fps
       })
-    }
+    };
     updateMetrics()
     // Update metrics every 5 seconds
     const interval = setInterval(updateMetrics, 5000)
  clearInterval(interval)
   }, [])
- setIsVisible(true)}
+ setIsVisible(true)};
         className = "fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
         Show Performance
     )
         <h3 className = "text-lg font-semibold text-gray-800">Performance Dashboard</h3>
- setIsVisible(false)}
+ setIsVisible(false)};
           className="text-gray-500 hover:text-gray-700"
           ×
           <span className="text-sm text-gray-600">Load Time:</span>
@@ -55,6 +55,6 @@ const renderTime = performance.now() - renderStart
             {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
           <span className = "text-sm text-gray-600">FPS:</span>
           <span className="text-sm font-mono">{metrics.fps}</span>
-            Last updated: {new Date().toLocaleTimeString()}
+            Last updated: {new Date().toLocaleTimeString()};
   )
-}
+};

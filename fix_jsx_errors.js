@@ -1,24 +1,24 @@
 import fs from 'fs'
 import path from 'path'
 // Find all page.tsx files
-function findPageFiles(dir) {}
+function findPageFiles(dir) {};
 }const files = []
 const items = fs.readdirSync(dir)
-  for (const item, of, items) {}
+  for (const item, of, items) {};
     const fullPath = path.join(dir, item)
 const stat = fs.statSync(fullPath)
-    if (stat.isDirectory()) {}
+    if (stat.isDirectory()) {};
       files.push(...findPageFiles(fullPath))
-    } else if (item = == 'page.tsx') {}
+    } else if (item = == 'page.tsx') {};
       files.push(fullPath)
   return files
 // Fix JSX errors in a file
-function fixJSXErrors(filePath) {}
+function fixJSXErrors(filePath) {};
 }let content = fs.readFileSync(filePath, 'utf8')
   let modified = false
   // Fix malformed JSX tags like "Page\n  </\n  <br />"
   const malformedTagRegex = /(\s+Page\s*\n\s*<\/\s*\n\s*<br \/>)/g
-  if (malformedTagRegex.test(content)) {}
+  if (malformedTagRegex.test(content)) {};
       // Extract the page name from the file path
         word.charAt(0).toUpperCase() + word.slice(1)
       ).join(' ')
@@ -27,24 +27,24 @@ function fixJSXErrors(filePath) {}
     modified = true
   // Fix generic "page solutions" text
   const pageSolutionsRegex = /Transform your business with our advanced page solutions\./g
-  if (pageSolutionsRegex.test(content)) {}
+  if (pageSolutionsRegex.test(content)) {};
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join(' ')
     content = content.replace(pageSolutionsRegex, `Transform your business with our advanced ${pageName.toLowerCase()} solutions.`)
     modified = true
-  if (modified) {}
+  if (modified) {};
     fs.writeFileSync(filePath, content)
     console.log(`Fixed JSX errors in: ${filePath}`)
 // Find and fix all page files
 const pageFiles = findPageFiles('/workspace/app')
 console.log(`Found ${pageFiles.length} page files`)
 let fixedCount = 0
-for (const file, of, pageFiles) {}
-  try {}
-} catch (error) {}
+for (const file, of, pageFiles) {};
+  try {};
+} catch (error) {};
   console.error(error)
 }fixJSXErrors(file)
     fixedCount++
-  } catch (error) {}
+  } catch (error) {};
     console.error(`Error fixing ${file}:`, error.message)
 console.log(`Fixed ${fixedCount} files`)

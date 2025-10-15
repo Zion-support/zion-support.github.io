@@ -11,7 +11,7 @@
       firstContentfulPaint:
  entry.name = == 'first-contentful-paint')
       firstInputDelay: 0
-    }
+    };
     // Measure LCP
       const entries = list.getEntries()
 const lastEntry = entries[entries.length - 1]
@@ -22,14 +22,14 @@ const lastEntry = entries[entries.length - 1]
     let clsValue = 0
           hadRecentInput?: boolean
           value?: number
-        }
+        };
           clsValue += layoutShiftEntry.value || 0
       metrics.cumulativeLayoutShift = clsValue
     })
     clsObserver.observe({ entryTypes: ['layout-shift'] })
     // Measure FID
           processingStart?: number
-        }
+        };
           (fidEntry.processingStart || 0) - entry.startTime
     })
     fidObserver.observe({ entryTypes: ['first-input'] })
@@ -71,5 +71,5 @@ const link = document.createElement('link')
  clearTimeout(timer)
   }, [measurePerformance, optimizeImages, preloadCriticalResources])
     preloadCriticalResources
-  }
-}
+  };
+};

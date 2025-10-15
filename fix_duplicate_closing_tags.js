@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 #!/usr/bin/env node
 // Function to fix duplicate closing tags
-function fixDuplicateClosingTags(content) {}
+function fixDuplicateClosingTags(content) {};
 }// Fix duplicate Link closing tags
   content = content.replace(/<\/Link>\s*<\/Link>/g, '</Link>')
   // Fix any other duplicate closing tags
@@ -17,32 +17,32 @@ function fixDuplicateClosingTags(content) {}
   content = content.replace(/<\/h6>\s*<\/h6>/g, '</h6>')
   return content
 // Function to process a single file
-function processFile(filePath) {}
-}try {}
-} catch (error) {}
+function processFile(filePath) {};
+}try {};
+} catch (error) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
 const fixedContent = fixDuplicateClosingTags(content)
-    if (content !== fixedContent) {}
+    if (content !== fixedContent) {};
       fs.writeFileSync(filePath, fixedContent, 'utf8')
       console.log(`Fixed duplicate closing tags: ${filePath}`)
       return true
     return false
-  } catch (error) {}
+  } catch (error) {};
     console.error(`Error processing ${filePath}:`, error.message)
     return false
 // Function to recursively find and process TSX files
-function processDirectory(dirPath) {}
+function processDirectory(dirPath) {};
 }let processedCount = 0
-  function walkDir(currentPath) {}
+  function walkDir(currentPath) {};
 }const items = fs.readdirSync(currentPath)
-    for (const item, of, items) {}
+    for (const item, of, items) {};
       const fullPath = path.join(currentPath, item)
 const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {}
+      if (stat.isDirectory()) {};
         walkDir(fullPath)
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {}
-        if (processFile(fullPath)) {}
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {};
+        if (processFile(fullPath)) {};
           processedCount++
   walkDir(dirPath)
   return processedCount

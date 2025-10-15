@@ -1,108 +1,108 @@
 // Focus management utilities
-export const focusManagement = {}
+export const focusManagement = {};
   // Trap focus within an element
-  trapFocus: (element: HTMLElement) => {}
+  trapFocus: (element: HTMLElement) => {};
 }const focusableElements = element.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     )
     const firstElement = focusableElements[0] as HTMLElement
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
-    const handleTabKey = (e: KeyboardEvent) => {}
-}if (e.key === 'Tab') {}
-        if (e.shiftKey) {}
-          if (document.activeElement === firstElement) {}
+    const handleTabKey = (e: KeyboardEvent) => {};
+}if (e.key === 'Tab') {};
+        if (e.shiftKey) {};
+          if (document.activeElement === firstElement) {};
             lastElement.focus()
             e.preventDefault()
-          }
-        } else {}
-          if (document.activeElement === lastElement) {}
+          };
+        } else {};
+          if (document.activeElement === lastElement) {};
             firstElement.focus()
             e.preventDefault()
-          }
-        }
-      }
-    }
+          };
+        };
+      };
+    };
     element.addEventListener('keydown', handleTabKey)
-    return () => {}
+    return () => {};
 }element.removeEventListener('keydown', handleTabKey)
-    }
-  },
+    };
+  };
   // Move focus to next focusable element
-  focusNext: (currentElement: HTMLElement) => {}
+  focusNext: (currentElement: HTMLElement) => {};
 }const focusableElements = document.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     )
     const currentIndex = Array.from(focusableElements).indexOf(currentElement)
     const nextElement = focusableElements[currentIndex + 1] as HTMLElement
     if (nextElement) nextElement.focus()
-  },
+  };
   // Move focus to previous focusable element
-  focusPrevious: (currentElement: HTMLElement) => {}
+  focusPrevious: (currentElement: HTMLElement) => {};
 }const focusableElements = document.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     )
     const currentIndex = Array.from(focusableElements).indexOf(currentElement)
     const previousElement = focusableElements[currentIndex - 1] as HTMLElement
     if (previousElement) previousElement.focus()
-  }
-}
+  };
+};
 // Screen reader utilities
-export const screenReaderUtils = {}
+export const screenReaderUtils = {};
   // Announce message to screen readers
-  announce: (message: string, priority: 'polite' | 'assertive' = 'polite') => {}
+  announce: (message: string, priority: 'polite' | 'assertive' = 'polite') => {};
 }const announcement = document.createElement('div')
     announcement.setAttribute('aria-live', priority)
     announcement.setAttribute('aria-atomic', 'true')
     announcement.className = 'sr-only'
     announcement.textContent = message
     document.body.appendChild(announcement)
-    setTimeout(() => {}
+    setTimeout(() => {};
 }document.body.removeChild(announcement)
     }, 1000)
-  },
+  };
   // Create visually hidden text for screen readers
   createScreenReaderText: (text: string) => ()
     <span className="sr-only">{text}</span>
   )
-}
+};
 // Keyboard navigation utilities
-export const keyboardNavigation = {}
+export const keyboardNavigation = {};
   // Handle arrow key navigation
   handleArrowKeys: ()
-    event: React.KeyboardEvent,
-    items: HTMLElement[],
-    currentIndex: number,
+    event: React.KeyboardEvent;
+    items: HTMLElement[];
+    currentIndex: number;
     onIndexChange: (index: number) => void
-  ) => {}
-}switch (event.key) {}
+  ) => {};
+}switch (event.key) {};
       case 'ArrowDown':
-      case 'ArrowRight': {}
+      case 'ArrowRight': {};
         event.preventDefault()
         const nextIndex = (currentIndex + 1) % items.length
         onIndexChange(nextIndex)
         items[nextIndex]?.focus()
         break
-      }
+      };
       case 'ArrowUp':
-      case 'ArrowLeft': {}
+      case 'ArrowLeft': {};
         event.preventDefault()
         const prevIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1
         onIndexChange(prevIndex)
         items[prevIndex]?.focus()
         break
-      }
-      case 'Home': {}
+      };
+      case 'Home': {};
         event.preventDefault()
         onIndexChange(0)
         items[0]?.focus()
         break
-      }
-      case 'End': {}
+      };
+      case 'End': {};
         event.preventDefault()
         onIndexChange(items.length - 1)
         items[items.length - 1]?.focus()
         break
-      }
-    }
-  }
-}
+      };
+    };
+  };
+};

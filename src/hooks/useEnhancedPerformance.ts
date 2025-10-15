@@ -22,7 +22,7 @@ const renderCountRef = useRef<number>(0)
           )
       // Track component unmount
         analytics.trackCustomEvent('Component', 'Unmounted', component)
-    }
+    };
   }, [component, trackAnalytics, trackPerformance])
   // Track render performance
     renderCountRef.current++
@@ -41,8 +41,8 @@ const duration = performance.now() - startTime
  1000 ? 'slow' : 'fast'
             )
           return duration
-      }
+      };
     [component, trackPerformance]
   )
     measureOperation
-  }
+  };

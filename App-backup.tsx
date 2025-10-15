@@ -1,12 +1,14 @@
 import React, { Suspense, lazy } from 'react';
-import {Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
+import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import LightweightErrorBoundary from './app/components/LightweightErrorBoundary';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import PerformanceDashboard from './app/components/PerformanceDashboard';
 import { usePerformanceOptimization } from './app/hooks/usePerformanceOptimization';

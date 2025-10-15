@@ -1,8 +1,8 @@
-import js from "@eslint/js"
-import globals from "globals"
-import reactHooks from "eslint-plugin-react-hooks"
-import reactRefresh from "eslint-plugin-react-refresh"
-import tseslint from "typescript-eslint"
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   {
@@ -11,6 +11,8 @@ export default tseslint.config(
       ".next",
       "backup-problematic/**",
       "corrupted-src-backup/**",
+      "app-broken/**",
+      "app-disabled/**",
       "src/**",
       "*.js",
       "scripts/**",
@@ -38,4 +40,4 @@ export default tseslint.config(
       "@typescript-eslint/no-explicit-any": "off"
     }
   }
-)
+);

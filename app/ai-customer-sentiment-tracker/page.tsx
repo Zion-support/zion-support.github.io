@@ -1,9 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Heart, ArrowRight } from 'lucide-react';
+=======
+import SEOHead from '../components/SEOHead';
+>>>>>>> cursor/fix-errors-and-merge-to-main-13a9
 
-export default function AiCustomerSentimentTrackerPage() {
+const AiCustomerSentimentTrackerPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -57,4 +61,6 @@ export default function AiCustomerSentimentTrackerPage() {
       </section>
     </div>
   );
-}
+};
+
+export default AiCustomerSentimentTrackerPage;
