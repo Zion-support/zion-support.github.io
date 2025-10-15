@@ -74,6 +74,19 @@ const DemoPage = lazy(() => import('./app/demo/page'));
 const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
 const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
 
+// Missing pages
+const TutorialsPage = lazy(() => import('./app/tutorials/page'));
+const DocsPage = lazy(() => import('./app/docs/page'));
+const SupportPage = lazy(() => import('./app/support/page'));
+
+// Micro SaaS pages
+const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
+const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
+const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
+const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
+const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
+const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
+
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -217,6 +230,19 @@ function App() {
                     <Route path="/demo" element={<DemoPage />} />
                     <Route path="/cybersecurity" element={<CybersecurityPage />} />
                     <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
+                    
+                    {/* Missing pages */}
+                    <Route path="/tutorials" element={<TutorialsPage />} />
+                    <Route path="/docs" element={<DocsPage />} />
+                    <Route path="/support" element={<SupportPage />} />
+                    
+                    {/* Micro SaaS pages */}
+                    <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
+                    <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
+                    <Route path="/customer-support-hub" element={<CustomerSupportHubPage />} />
+                    <Route path="/inventory-manager" element={<InventoryManagerPage />} />
+                    <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
+                    <Route path="/expense-tracker-pro" element={<ExpenseTrackerProPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
