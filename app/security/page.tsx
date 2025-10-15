@@ -31,8 +31,8 @@ const SecurityPage: React.FC = () => {
       details: [
         'Real-time threat detection',
         'Automated incident response',
-        'Security event logging']
-        'Anomaly detection']]
+        'Security event logging',
+        'Anomaly detection']
     },
     {
       icon: <Award className="w-8 h-8" />,

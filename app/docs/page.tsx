@@ -52,8 +52,8 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'Security Overview', description: 'Our security measures and protocols', readTime: '15 min' },
         { title: 'Data Protection', description: 'Protecting sensitive data and privacy', readTime: '20 min' },
-        { title: 'Compliance', description: 'SOC 2, GDPR, and other compliance standards', readTime: '30 min' }]
-        { title: 'Access Control', description: 'User permissions and access management', readTime: '12 min' }]]
+        { title: 'Compliance', description: 'SOC 2, GDPR, and other compliance standards', readTime: '30 min' },
+        { title: 'Access Control', description: 'User permissions and access management', readTime: '12 min' }]
     },
     {
       title: 'Tutorials',
@@ -62,8 +62,8 @@ const DocsPage: React.FC = () => {
       articles: [
         { title: 'Building Your First App', description: 'Complete tutorial for beginners', readTime: '60 min' },
         { title: 'Advanced Features', description: 'Exploring advanced platform features', readTime: '45 min' },
-        { title: 'Integration Examples', description: 'Real-world integration examples', readTime: '40 min' }]
-        { title: 'Best Practices', description: 'Industry best practices and tips', readTime: '25 min' }]]
+        { title: 'Integration Examples', description: 'Real-world integration examples', readTime: '40 min' },
+        { title: 'Best Practices', description: 'Industry best practices and tips', readTime: '25 min' }]
     }
   ];
 
@@ -301,7 +301,7 @@ const categories = ['All', 'Getting Started', 'API Documentation', 'AI Services'
               </a>
             </div>
           </div>
-        </div>
+        </section>
         <Footer />
       </div>
     </>

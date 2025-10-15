@@ -44,8 +44,9 @@ export const servicesData: ServiceData[] = [
     pricing: {
       },
       starter: 1500,
-      professional: 4000,}
-      enterprise: 8000 },
+      professional: 4000,
+      enterprise: 8000
+    },
     icon: 'shield'
   }
 ];

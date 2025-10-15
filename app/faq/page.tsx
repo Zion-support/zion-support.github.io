@@ -73,8 +73,8 @@ const faqData = [
         },
         {
           question: "What is the pricing for micro SAAS solutions?",
-          answer: "Pricing varies by solution and features. Most micro SAAS solutions start at $99/month for basic plans, with enterprise plans available. We offer flexible pricing options including monthly, annual, and custom enterprise agreements."]
-        }]]
+          answer: "Pricing varies by solution and features. Most micro SAAS solutions start at $99/month for basic plans, with enterprise plans available. We offer flexible pricing options including monthly, annual, and custom enterprise agreements."
+        }]
     },
     {
       category: "5G Solutions",
@@ -89,8 +89,8 @@ const faqData = [
         },
         {
           question: "Do you provide 5G consulting?",
-          answer: "Yes, we offer comprehensive 5G consulting services including strategy development, technology assessment, implementation planning, and ongoing optimization. Our experts help you understand how 5G can transform your business."]
-        }]]
+          answer: "Yes, we offer comprehensive 5G consulting services including strategy development, technology assessment, implementation planning, and ongoing optimization. Our experts help you understand how 5G can transform your business."
+        }]
     },
     {
       category: "Support & Billing",

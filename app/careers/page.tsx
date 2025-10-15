@@ -62,8 +62,8 @@ const CareersPage: React.FC = () => {
         'Competitive salary and bonus',
         'Health and wellness benefits',
         'Flexible PTO policy',
-        'Professional development opportunities']
-        'Stock options']]
+        'Professional development opportunities',
+        'Stock options']
     },
     {
       title: 'DevOps Engineer',
@@ -76,14 +76,14 @@ const CareersPage: React.FC = () => {
         '3+ years DevOps experience',
         'Expertise in AWS, Docker, Kubernetes',
         'Experience with CI/CD pipelines',
-        'Knowledge of monitoring and logging tools']
-        'Scripting skills (Python, Bash)']],
+        'Knowledge of monitoring and logging tools',
+        'Scripting skills (Python, Bash)'],
       benefits: [
         'Competitive salary',
         'Health insurance',
         'Remote work options',
-        'Certification reimbursement']
-        'Performance bonuses']]
+        'Certification reimbursement',
+        'Performance bonuses']
     }
   ];
 
@@ -152,13 +152,13 @@ const CareersPage: React.FC = () => {
                   View Open Positions
                 </a>
                 <a
-    href="/contact"
+                  href="/contact"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   Contact Us
                 </a>
               </div>
-            ))}
+            </div>
           </div>
         </section>
         {/* Stats Section */}

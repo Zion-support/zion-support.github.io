@@ -12,8 +12,8 @@ const PartnersPage: React.FC = () => {
       benefits: [
         "Access to Azure AI services",
         "Joint go-to-market initiatives",
-        "Technical support and training"]
-        "Co-marketing opportunities"]]
+        "Technical support and training",
+        "Co-marketing opportunities"]
     },
     {
       name: "Amazon Web Services",
