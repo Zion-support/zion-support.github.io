@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 text-white">
+    <footer className="bg-secondary border-t border-neon-cyan/20">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
-            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-4">
+            <h3 className="text-lg font-semibold mb-4 gradient-text">Zion Tech Group</h3>
+            <p className="text-secondary mb-4">
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
             <div className="flex space-x-4">
-              <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
+              <a href="https://ziontechgroup.com" className="text-secondary hover:text-neon-cyan transition-colors">
                 <span className="sr-only">Website</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -22,18 +22,18 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h4 className="text-md font-semibold mb-4">Services</h4>
+            <h4 className="text-md font-semibold mb-4 text-neon-cyan">Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
-              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-white">Cloud Infrastructure</Link></li>
-              <li><Link to="/digital-transformation" className="text-gray-300 hover:text-white">Digital Transformation</Link></li>
-              <li><Link to="/data-analytics" className="text-gray-300 hover:text-white">Data Analytics</Link></li>
-              <li><Link to="/web-development" className="text-gray-300 hover:text-white">Web Development</Link></li>
-              <li><Link to="/mobile-development" className="text-gray-300 hover:text-white">Mobile Development</Link></li>
-              <li><Link to="/database-management" className="text-gray-300 hover:text-white">Database Management</Link></li>
-              <li><Link to="/network-infrastructure" className="text-gray-300 hover:text-white">Network Infrastructure</Link></li>
-              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SaaS Solutions</Link></li>
+              <li><Link to="/ai-services" className="text-secondary hover:text-neon-cyan transition-colors">AI Services</Link></li>
+              <li><Link to="/it-services" className="text-secondary hover:text-neon-cyan transition-colors">IT Services</Link></li>
+              <li><Link to="/cloud-infrastructure" className="text-secondary hover:text-neon-cyan transition-colors">Cloud Infrastructure</Link></li>
+              <li><Link to="/digital-transformation" className="text-secondary hover:text-neon-cyan transition-colors">Digital Transformation</Link></li>
+              <li><Link to="/data-analytics" className="text-secondary hover:text-neon-cyan transition-colors">Data Analytics</Link></li>
+              <li><Link to="/web-development" className="text-secondary hover:text-neon-cyan transition-colors">Web Development</Link></li>
+              <li><Link to="/mobile-development" className="text-secondary hover:text-neon-cyan transition-colors">Mobile Development</Link></li>
+              <li><Link to="/database-management" className="text-secondary hover:text-neon-cyan transition-colors">Database Management</Link></li>
+              <li><Link to="/network-infrastructure" className="text-secondary hover:text-neon-cyan transition-colors">Network Infrastructure</Link></li>
+              <li><Link to="/micro-saas-solutions" className="text-secondary hover:text-neon-cyan transition-colors">Micro SaaS Solutions</Link></li>
             </ul>
           </div>
           

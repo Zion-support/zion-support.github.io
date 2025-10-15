@@ -6,20 +6,20 @@ const Navigation: React.FC = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="glass-effect shadow-lg border-b border-neon-cyan/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-blue-600">Zion Tech Group</h1>
+              <h1 className="text-2xl font-bold gradient-text">Zion Tech Group</h1>
             </Link>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/" className="text-secondary hover:text-neon-cyan px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">
+            <Link to="/about" className="text-secondary hover:text-neon-cyan px-3 py-2 rounded-md text-sm font-medium transition-colors">
               About
             </Link>
             
@@ -28,7 +28,7 @@ const Navigation: React.FC = () => {
               <button
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+                className="text-secondary hover:text-neon-cyan px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors"
               >
                 Services
                 <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -39,37 +39,37 @@ const Navigation: React.FC = () => {
                 <div
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
-                  className="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg z-50"
+                  className="absolute left-0 mt-2 w-80 glass-effect rounded-md shadow-lg z-50 border border-neon-cyan/20"
                 >
                   <div className="py-1">
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100">AI & Machine Learning</div>
-                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <div className="px-4 py-2 text-xs font-semibold text-neon-cyan uppercase tracking-wider border-b border-neon-cyan/20">AI & Machine Learning</div>
+                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-secondary hover:text-neon-cyan hover:bg-neon-cyan/10 transition-colors">
                       AI Services
                     </Link>
-                    <Link to="/ai-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/ai-solutions" className="block px-4 py-2 text-sm text-secondary hover:text-neon-cyan hover:bg-neon-cyan/10 transition-colors">
                       AI Solutions
                     </Link>
-                    <Link to="/ai-content-generator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/ai-content-generator" className="block px-4 py-2 text-sm text-secondary hover:text-neon-cyan hover:bg-neon-cyan/10 transition-colors">
                       AI Content Generator
                     </Link>
-                    <Link to="/data-analytics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/data-analytics" className="block px-4 py-2 text-sm text-secondary hover:text-neon-cyan hover:bg-neon-cyan/10 transition-colors">
                       Data Analytics
                     </Link>
                     
-                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">IT Services</div>
-                    <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <div className="px-4 py-2 text-xs font-semibold text-neon-purple uppercase tracking-wider border-b border-neon-purple/20 mt-2">IT Services</div>
+                    <Link to="/it-services" className="block px-4 py-2 text-sm text-secondary hover:text-neon-purple hover:bg-neon-purple/10 transition-colors">
                       IT Services
                     </Link>
-                    <Link to="/web-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/web-development" className="block px-4 py-2 text-sm text-secondary hover:text-neon-purple hover:bg-neon-purple/10 transition-colors">
                       Web Development
                     </Link>
-                    <Link to="/mobile-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/mobile-development" className="block px-4 py-2 text-sm text-secondary hover:text-neon-purple hover:bg-neon-purple/10 transition-colors">
                       Mobile Development
                     </Link>
-                    <Link to="/database-management" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/database-management" className="block px-4 py-2 text-sm text-secondary hover:text-neon-purple hover:bg-neon-purple/10 transition-colors">
                       Database Management
                     </Link>
-                    <Link to="/network-infrastructure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <Link to="/network-infrastructure" className="block px-4 py-2 text-sm text-secondary hover:text-neon-purple hover:bg-neon-purple/10 transition-colors">
                       Network Infrastructure
                     </Link>
                     
