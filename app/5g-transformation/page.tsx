@@ -54,6 +54,6 @@ const FiveGTransformation: React.FC = () => {
   );
 };
 
-export default FiveGTransformationPage;
+export default FiveGTransformation;
 
 
