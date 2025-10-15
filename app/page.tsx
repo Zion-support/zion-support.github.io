@@ -216,22 +216,22 @@ const HomePage: React.FC = () => {
               {services.map((service, index) => (
                 <Link key={index}
                   to={service.href}
-                  className="group relative bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden"
+                  className="group relative holographic-card-enhanced p-6 sm:p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden"
                   style={{
                     animationDelay: `${index * 100}ms`
                   }}
                 >
-                  {/* Animated Background */}
-                  <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
+                  {/* Enhanced Animated Background */}
+                  <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
                   
-                  {/* Glow Effect */}
-                  <div className={`absolute -inset-1 bg-gradient-to-r ${service.gradient} rounded-xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
+                  {/* Enhanced Glow Effect */}
+                  <div className={`absolute -inset-1 bg-gradient-to-r ${service.gradient} rounded-xl blur opacity-0 group-hover:opacity-30 transition-opacity duration-300`}></div>
                   
                   <div className="relative z-10">
-                    <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${service.gradient} rounded-lg flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${service.gradient} rounded-lg flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg neon-glow-enhanced`}>
                       <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-purple-300 transition-colors">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white group-hover:text-purple-300 transition-colors cyber-text" data-text={service.title}>
                       {service.title}
                     </h3>
                     <p className="text-gray-400 mb-4 group-hover:text-gray-300 transition-colors text-sm sm:text-base">
@@ -262,21 +262,21 @@ const HomePage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* AI Project Manager Pro */}
-              <div className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20">
+              <div className="group holographic-card-enhanced rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20 floating-enhanced">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow-enhanced">
                     <RocketLaunchIcon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm text-cyan-400 font-medium">AI Project Management</span>
+                  <span className="text-sm text-cyan-400 font-medium neon-text">AI Project Management</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors cyber-text" data-text="AI Project Manager Pro">
                   AI Project Manager Pro
                 </h3>
                 <p className="text-gray-400 mb-4 text-sm">
                   Intelligent project management with AI-powered resource allocation, risk prediction, and automated scheduling.
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-cyan-400">$49/mo</span>
+                  <span className="text-2xl font-bold text-cyan-400 neon-glow-enhanced">$49/mo</span>
                   <span className="text-sm text-gray-400 line-through">$99/mo</span>
                 </div>
                 <div className="space-y-2 mb-6">
@@ -294,7 +294,7 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
                 <Link to="/ai-project-manager-pro"
-                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  className="block w-full cyber-button-enhanced text-white text-center py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Try Free Trial
                 </Link>
