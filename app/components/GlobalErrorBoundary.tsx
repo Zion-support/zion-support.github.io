@@ -1,4 +1,5 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
+import { handleError, logError } from '../utils/errorHandler';
 
 interface Props {
   children: ReactNode;
@@ -20,14 +21,11 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Global error caught:', error, errorInfo);
-    }
+    const appError = handleError(error);
+    logError(appError, 'GlobalErrorBoundary');
     
     // Send error to monitoring service in production
     if (process.env.NODE_ENV === 'production') {
-      // Replace with your error monitoring service (e.g., Sentry, LogRocket, etc.)
       this.reportError(error, errorInfo);
     }
   }
@@ -39,8 +37,8 @@ class GlobalErrorBoundary extends Component<Props, State> {
       stack: error.stack,
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'Unknown',
+      url: typeof window !== 'undefined' ? window.location.href : 'Unknown',
     };
     
     // Send to your error monitoring service
@@ -48,9 +46,11 @@ class GlobalErrorBoundary extends Component<Props, State> {
     
     // For now, store in localStorage for debugging
     try {
-      const existingErrors = JSON.parse(localStorage.getItem('errorLogs') || '[]');
-      existingErrors.push(errorData);
-      localStorage.setItem('errorLogs', JSON.stringify(existingErrors.slice(-10))); // Keep last 10 errors
+      if (typeof window !== 'undefined' && window.localStorage) {
+        const existingErrors = JSON.parse(localStorage.getItem('errorLogs') || '[]');
+        existingErrors.push(errorData);
+        localStorage.setItem('errorLogs', JSON.stringify(existingErrors.slice(-10))); // Keep last 10 errors
+      }
     } catch (e) {
       // Ignore localStorage errors
     }
