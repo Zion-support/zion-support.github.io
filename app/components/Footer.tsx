@@ -28,7 +28,11 @@ const Footer: React.FC = () => {
         { name: 'AI Email Marketing', path: '/ai-email-marketing' },
         { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro' },
         { name: 'AI Accounting Assistant', path: '/ai-accounting-assistant' },
-        { name: 'AI Healthcare Assistant', path: '/ai-healthcare-assistant' }
+        { name: 'AI Healthcare Assistant', path: '/ai-healthcare-assistant' },
+        { name: 'AI Smart Contracts', path: '/ai-smart-contracts' },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+        { name: 'AI Predictive Maintenance', path: '/ai-predictive-maintenance' },
+        { name: 'AI Personalized Learning', path: '/ai-personalized-learning' }
       ]
     },
     {
@@ -50,7 +54,9 @@ const Footer: React.FC = () => {
         { name: 'DevOps', path: '/devops-solutions' },
         { name: 'Mobile Development', path: '/mobile-development' },
         { name: 'Web Development', path: '/web-development' },
-        { name: 'Database Solutions', path: '/database-solutions' }
+        { name: 'Database Solutions', path: '/database-solutions' },
+        { name: 'Quantum Computing', path: '/quantum-computing-solutions' },
+        { name: 'Edge Computing', path: '/edge-computing-solutions' }
       ]
     },
     {

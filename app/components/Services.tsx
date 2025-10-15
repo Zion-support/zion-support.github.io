@@ -40,7 +40,9 @@ const Services: React.FC = () => {
         { name: 'API Management', href: '/ai-api-management', price: 'From $999', features: 'API gateway, Rate limiting, Documentation' },
         { name: 'Performance Monitoring', href: '/performance-monitoring', price: 'From $799', features: 'Real-time alerts, Performance metrics, Uptime monitoring' },
         { name: 'Web Development', href: '/web-development', price: 'From $1,299', features: 'React/Next.js, Mobile-first, SEO optimized' },
-        { name: 'Mobile App Development', href: '/mobile-development', price: 'From $1,999', features: 'iOS/Android, Cross-platform, App store ready' }
+        { name: 'Mobile App Development', href: '/mobile-development', price: 'From $1,999', features: 'iOS/Android, Cross-platform, App store ready' },
+        { name: 'Quantum Computing Solutions', href: '/quantum-computing-solutions', price: 'From $2,999', features: 'Quantum algorithms, Hardware integration, Security solutions' },
+        { name: 'Edge Computing Solutions', href: '/edge-computing-solutions', price: 'From $499', features: 'Ultra-low latency, Real-time processing, Distributed computing' }
       ]
     },
     {
@@ -72,7 +74,11 @@ const Services: React.FC = () => {
         { name: 'AI 3D Generation', href: '/ai-3d-generation', price: 'From $149/month', features: '3D modeling, Animation, Rendering' },
         { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', price: 'From $299/month', features: 'Smart contracts, DeFi integration, NFT marketplace' },
         { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant', price: 'From $179/month', features: 'Patient monitoring, Diagnosis support, Treatment recommendations' },
-        { name: 'AI Financial Advisor', href: '/ai-financial-advisor', price: 'From $99/month', features: 'Portfolio management, Risk assessment, Investment advice' }
+        { name: 'AI Financial Advisor', href: '/ai-financial-advisor', price: 'From $99/month', features: 'Portfolio management, Risk assessment, Investment advice' },
+        { name: 'AI Smart Contracts', href: '/ai-smart-contracts', price: 'From $199/month', features: 'Blockchain automation, Security audit, Auto-execution' },
+        { name: 'AI Voice Assistant', href: '/ai-voice-assistant', price: 'From $99/month', features: 'Natural language processing, Voice synthesis, Multi-language' },
+        { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', price: 'From $299/month', features: 'Equipment monitoring, Failure prediction, Cost optimization' },
+        { name: 'AI Personalized Learning', href: '/ai-personalized-learning', price: 'From $29/month', features: 'Adaptive learning, Progress tracking, Multi-modal content' }
       ]
     }
   ];
@@ -100,7 +106,7 @@ const Services: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {serviceCategories.map((category, index) => (
             <div key={index} className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-md border border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-400/60 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden group">
               {/* Neon glow effect */}
