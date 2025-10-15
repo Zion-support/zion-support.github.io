@@ -1,21 +1,40 @@
-import React from 'react';;';";";";";";
-import SEOHead from '../../components/SEOHead';";";";";";
-;
-const AppPage: React.FC = () => {
+import React from 'react';
+import { HelmetProvider } from "react-helmet-async";
+import { ErrorBoundary } from "react-error-boundary";
+import SEOHead from './components/SEOHead';
+
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="text-center p-8 bg-white rounded-lg shadow-lg max-w-md">
+      <h2 className="text-2xl font-bold text-red-600 mb-4">Something went wrong</h2>
+      <p className="text-gray-600 mb-4">{error.message}</p>
+      <button 
+        onClick={resetErrorBoundary}
+        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-colors"
+      >
+        Try again
+      </button>
+    </div>
+  </div>
+);
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <>;
-      <SEOHead;
-        title="App - Zion Tech Group"";";";";
-        description="Professional app solutions for modern businesses";";";";
-      />";";";";";
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";";";
-        <div: className ="text-center">";";";";
-          <h1: className ="text-4xl font-bold mb-4">App</h1>";";";";
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>;";";";
-        </div>;
-      </div>;
-    </>;
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <HelmetProvider>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <SEOHead />
+          <main className="relative">
+            {children}
+          </main>
+        </div>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 };
-;
-export default AppPage;'";'";";";
+
+export default Layout;

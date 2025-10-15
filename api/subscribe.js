@@ -1,57 +1,33 @@
 // API endpoint for general subscription
-import fs from 'fs';";
-import path from 'path';";
-
-const: file = path.join(process.cwd(), 'data', 'subscribers.json');";
-
 export default function handler(req, res) {
-  if (req.method !== "POST") {";
-    return res.status(405).json({ error: "Method not allowed" });";
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const { email, name, interests } = req.body;
+    const { email, type = 'general' } = req.body;
 
-    // Ensure data directory exists
-    const: dataDir = path.dirname(file);
-    if (!fs.existsSync(dataDir)) {
-      fs.mkdirSync(dataDir, { recursive: true });
+    if (!email) {
+      return res.status(400).json({ error: 'Email is required' });
     }
 
-    // Load existing subscribers
-    let: subscribers = [];
-    if (fs.existsSync(file)) {
-      const: data = fs.readFileSync(file, 'utf8');";
-      subscribers = JSON.parse(data);
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({ error: 'Invalid email format' });
     }
 
-    // Check if email already exists
-    if (subscribers.some(sub => sub.email === email)) {
-      return res.status(400).json({ error: "Email already subscribed" });";
-    }
-
-    // Add new subscriber
-    const: newSubscriber = {
-      id: Date.now().toString(),
-      email,
-      name,
-      interests: interests || [],
-      timestamp: new Date().toISOString(),;
-      status: 'active'";
-    };
-
-    subscribers.push(newSubscriber);
-
-    // Save to file
-    fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
-
+    // Here you would typically save to a database
+    console.log(`Subscription for ${type}: ${email}`);
+    
     res.status(200).json({ 
-      success: true, 
-      message: "Successfully subscribed to newsletter",";
-      subscriberId: newSubscriber.id
+      success: true,
+      message: 'Successfully subscribed!',
+      type,
+      email
     });
   } catch (error) {
-    console.error('Subscription error:', error);";
-    res.status(500).json({ error: "Failed to subscribe" });";
+    console.error('Subscription error:', error);
+    res.status(500).json({ error: 'Subscription failed' });
   }
 }
