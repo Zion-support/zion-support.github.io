@@ -1,60 +1,52 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
+
 interface State {
-  hasError: boolean;,
-    error: Error | null;,
-    errorInfo: ErrorInfo | null;
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
 }
-class ErrorBoundary extends Component<Props State> {
+
+class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
+
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error: ', error, errorInfo);
-    
     this.setState({
       error,
       errorInfo
     });
-    // Log error to console in development,
-    if (process.env.NODE_ENV === 'development') {
-          }
-    // Log error to external service in production,
-    if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send the error to a service like, Sentry}
+
+    // Log error to monitoring service
+    console.error('Error caught by boundary:', error, errorInfo);
   }
 
   handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null
-    });
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
 
-  handleGoHome = () => {
-    window.location.href = '/';
-  };
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
+
       return (
-        <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
-          <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
-            <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="max-w-md mx-auto text-center p-8">
+            <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-10 h-10 text-red-400" />
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4">
@@ -62,61 +54,43 @@ class ErrorBoundary extends Component<Props State> {
             </h1>
             
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
+              We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
-                  Error Details (Development, Only)
+                <summary className="cursor-pointer text-sm text-gray-400 mb-2">
+                  Error Details (Development)
                 </summary>
-                
-        <div className="mt-2 p-4 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto">
-                  
-        <div className="mb-2">
-                    <strong>Error: </strong> {this.state.error.message}
-                  </div>
-                  {this.state.errorInfo && (
-                    <div>
-                      <strong>Stack Trace:</strong>
-                      <pre className="mt-1 whitespace-pre-wrap">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
-                  )}
-                </div>
+                <pre className="bg-slate-800 p-4 rounded text-xs text-red-300 overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
               </details>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-    onClick={this.handleRetry} className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+                onClick={this.handleRetry}
+                className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
               >
-                <RefreshCw className="w-4 h-4" />
+                <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
               
-              <Link
-    to="/"
-                className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
+              <a
+                href="/"
+                className="flex items-center justify-center px-6 py-3 border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white rounded-lg transition-colors"
               >
-                <Home className="w-4 h-4" />
+                <Home className="w-4 h-4 mr-2" />
                 Go Home
-              </Link>
-            </div>
-
-            <div className="mt-6 pt-6 border-t border-slate-700">
-              <p className="text-sm text-gray-400">
-                If this problem persists, please{' '}
-                <Link to="/contact" className="text-purple-400 hover:text-purple-300">
-                  contact our support team
-                </Link>
-              </p>
+              </a>
             </div>
           </div>
         </div>
       );
     }
+
     return this.props.children;
   }
 }

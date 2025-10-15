@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Zap, Facebook, Twitter, Linkedin, Instagram, ArrowRight, Shield, Globe, Brain, Code, Cloud, Wifi } from "lucide-react"; const Footer: React.FC = () => { const currentYear = new Date().getFullYear(); const services = [ { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' }, { name: 'AI Content Generation', href: '/ai-content-generation' }, { name: 'AI Automation Platform', href: '/ai-automation-platform' }, { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' }, { name: '5G Implementation', href: '/5g-implementation' }, { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' }, { name: 'Security Suite', href: '/advanced-security-suite' }, { name: 'AI Health Tracker', href: '/ai-health-tracker' } ]; const quickLinks = [ { name: 'Home', href: '/' }, { name: 'About', href: '/about' }, { name: 'Services', href: '/services' }, { name: 'Contact', href: '/contact' }, { name: 'Privacy Policy', href: '/privacy' }, { name: 'Terms of Service', href: '/terms' } ]; const socialLinks = [ { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }, { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }, { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin }, { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram } ]; return ( <footer className="bg-slate-900 border-t border-cyan-500/20 relative overflow-hidden"> { /* Animated Background */ } <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5 animate-pulse"></div>
+import { Phone, Mail, MapPin, Zap, Facebook, Twitter, Linkedin, Instagram, ArrowRight, Shield, Globe, Brain } from "lucide-react"; const Footer: React.FC = () => { const currentYear = new Date().getFullYear(); const services = [ { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' }, { name: 'AI Content Generation', href: '/ai-content-generation' }, { name: 'AI Automation Platform', href: '/ai-automation-platform' }, { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' }, { name: '5G Implementation', href: '/5g-implementation' }, { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' }, { name: 'Security Suite', href: '/advanced-security-suite' }, { name: 'AI Health Tracker', href: '/ai-health-tracker' } ]; const quickLinks = [ { name: 'Home', href: '/' }, { name: 'About', href: '/about' }, { name: 'Services', href: '/services' }, { name: 'Contact', href: '/contact' }, { name: 'Privacy Policy', href: '/privacy' }, { name: 'Terms of Service', href: '/terms' } ]; const socialLinks = [ { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }, { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }, { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin }, { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram } ]; return ( <footer className="bg-slate-900 border-t border-cyan-500/20 relative overflow-hidden"> { /* Animated Background */ } <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5 animate-pulse"></div>
       { /* Grid Pattern Overlay */ }
       <div className="absolute inset-0 opacity-10">
         <div className="h-full w-full" style={ {
@@ -29,8 +29,8 @@ import { Phone, Mail, MapPin, Zap, Facebook, Twitter, Linkedin, Instagram, Arrow
               <div className="flex space-x-4">
                 { socialLinks.map((social) => (
                   <a
-                    key={social.name }
-                    href={ social.href }
+                    key={social.name}
+                    href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all duration-300">
@@ -48,8 +48,8 @@ import { Phone, Mail, MapPin, Zap, Facebook, Twitter, Linkedin, Instagram, Arrow
               <div className="space-y-3">
                 { services.slice(0, 6).map((service) => (
                   <Link
-                    key={service.name }
-                    to={ service.href }
+                    key={service.name}
+                    to={service.href}
                     className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-300 group">
                     <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <span className="text-sm">{ service.name }</span>
@@ -72,8 +72,8 @@ import { Phone, Mail, MapPin, Zap, Facebook, Twitter, Linkedin, Instagram, Arrow
               <div className="space-y-3">
                 { quickLinks.map((link) => (
                   <Link
-                    key={link.name }
-                    to={ link.href }
+                    key={link.name}
+                    to={link.href}
                     className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                     { link.name }
                   </Link>

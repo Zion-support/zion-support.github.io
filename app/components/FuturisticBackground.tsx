@@ -1,70 +1,21 @@
-import React, { useEffect, useRef } from 'react';
-import { FuturisticBackgroundProps, HTMLCanvasElement } from 'lucide-react';
-interface FuturisticBackgroundProps {
-  children: React.ReactNode;
-  className?: string;
-}
-const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, className = '' }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-const resizeCanvas = () => {  return (
-  return;
-};
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-    // Particle system,
-    const particles: Array<{,
-    x: number;,
-    y: number;,
-    vx: number;,
-    vy: number;,
-    size: number;,
-    opacity: number;,
-    color: string;
-    }> = [];
-
-const colors = ['#8b5cf6', '#06b6d4', '#10b981', '#f59e0b'];
-    // Create particles,
-    for (let i = 0; i < 50; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 2 + 1,
-        opacity: Math.random() * 0.5 + 0.1,
-        color: colors[Math.floor(Math.random() * colors.length)]
-      });
-    }
-    const animate = () => {
-  return;
-}
-        });
-      });
-      requestAnimationFrame(animate);
-    };
-    animate();
-  return () => {
-      window.removeEventListener('resize', resizeCanvas);
-    };
-  }, []);
+const FuturisticBackground: React.FC = () => {
   return (
-    <div className={`relative overflow-hidden ${className}`}>
-      <canvas
-    ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: 1 }}
-      />
-      
-        <div className="relative z-10">
-        {children}
+    <>
+      <Helmet>
+        <title>FuturisticBackground - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">FuturisticBackground</h1>
+          <p className="text-gray-300 text-center">Coming soon...</p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
+
 export default FuturisticBackground;

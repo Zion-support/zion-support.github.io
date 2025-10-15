@@ -1,16 +1,18 @@
 import React, { useEffect } from 'react';
-import { CoreWebVitalsProps } from 'lucide-react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+
 interface CoreWebVitalsProps {
   children: React.ReactNode;
 }
+
 export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
   useEffect(() => {
-    // Track Core Web Vitals,
+    // Track Core Web Vitals
     onCLS((metric) => {
       // CLS metric logged for performance monitoring
-      // Send to analytics service,
-    if (typeof window !== 'undefined' && (window as, any).gtag) {
-        (window as, any).gtag('event', 'web_vitals', {
+      // Send to analytics service
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
           event_label: 'CLS',
           value: Math.round(metric.value * 1000),
@@ -18,9 +20,9 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
       }
     });
     onINP((metric) => {
-      // INP metric logged for performance monitoring,
-    if (typeof window !== 'undefined' && (window as, any).gtag) {
-        (window as, any).gtag('event', 'web_vitals', {
+      // INP metric logged for performance monitoring
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
           event_label: 'INP',
           value: Math.round(metric.value),
@@ -28,9 +30,9 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
       }
     });
     onFCP((metric) => {
-      // FCP metric logged for performance monitoring,
-    if (typeof window !== 'undefined' && (window as, any).gtag) {
-        (window as, any).gtag('event', 'web_vitals', {
+      // FCP metric logged for performance monitoring
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
           event_label: 'FCP',
           value: Math.round(metric.value),
@@ -38,9 +40,9 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
       }
     });
     onLCP((metric) => {
-      // LCP metric logged for performance monitoring,
-    if (typeof window !== 'undefined' && (window as, any).gtag) {
-        (window as, any).gtag('event', 'web_vitals', {
+      // LCP metric logged for performance monitoring
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
           event_label: 'LCP',
           value: Math.round(metric.value),
@@ -48,9 +50,9 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
       }
     });
     onTTFB((metric) => {
-      // TTFB metric logged for performance monitoring,
-    if (typeof window !== 'undefined' && (window as, any).gtag) {
-        (window as, any).gtag('event', 'web_vitals', {
+      // TTFB metric logged for performance monitoring
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
           event_label: 'TTFB',
           value: Math.round(metric.value),
@@ -58,6 +60,6 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
       }
     });
   }, []);
-  return <div>{children}</div>;
+  return <>{children}</>;
 };
 export default CoreWebVitals;

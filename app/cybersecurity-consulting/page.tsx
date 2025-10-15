@@ -13,8 +13,7 @@ const CybersecurityConsultingPage: React.FC = () => {
     "Threat intelligence and monitoring",
     "Identity and access management (IAM)",
     "Network security and firewall configuration",
-    "Data protection and encryption solutions"
-  ];
+    "Data protection and encryption solutions"];
 
 const services = [
     { name: "Security Assessment", icon: <Shield className="w-6 h-6" />, color: "text-blue-600" },
@@ -36,9 +35,8 @@ const pricingPlans = [
         "Vulnerability scanning",
         "Risk analysis report",
         "Security recommendations",
-        "Compliance check",]
-        "Executive summary"]
-      ],
+        "Compliance check"]
+        "Executive summary"],
       popular: false
     },
     {
@@ -51,9 +49,8 @@ const pricingPlans = [
         "Incident response support",
         "Security training sessions",
         "Compliance monitoring",
-        "Threat intelligence updates",]
-        "24/7 emergency support"]
-      ],
+        "Threat intelligence updates"]
+        "24/7 emergency support"],
       popular: true
     },
     {
@@ -66,9 +63,8 @@ const pricingPlans = [
         "Dedicated security team",
         "Custom security solutions",
         "Advanced threat protection",
-        "Security operations center",]
-        "Ongoing optimization"]
-      ],
+        "Security operations center"]
+        "Ongoing optimization"],
       popular: false
     }
   ];

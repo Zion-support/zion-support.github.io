@@ -59,9 +59,8 @@ const pricingPlans = [
         "Up to 100 devices",
         "Standard support",
         "Basic analytics",
-        "Email support",]
-        "1 year warranty"]
-      ],
+        "Email support",
+        "1 year warranty"],
       popular: false },
     { name: "Enterprise",
       price: "$2,499",
@@ -74,8 +73,8 @@ const pricingPlans = [
         "Advanced analytics",
         "Priority support",
         "Custom integrations",
-        "3 years warranty",]
-        "24/7 monitoring"]
+        "3 years warranty",
+        "24/7 monitoring"
       ],
       popular: true },
     { name: "Custom",
@@ -89,8 +88,8 @@ const pricingPlans = [
         "AI-powered analytics",
         "Dedicated support team",
         "Custom development",
-        "Lifetime warranty",]
-        "On-site support"]
+        "Lifetime warranty",
+        "On-site support"
       ],
       popular: false }
   ];

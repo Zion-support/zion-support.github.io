@@ -28,16 +28,14 @@ const CareersPage: React.FC = () => {
         'PhD in Computer Science or related field',
         '5+ years experience in AI/ML',
         'Expertise in Python, TensorFlow, PyTorch',
-        'Experience with cloud platforms (AWS, GCP, Azure)',]
-        'Strong problem-solving and communication skills']
-      ],
+        'Experience with cloud platforms (AWS, GCP, Azure)']
+        'Strong problem-solving and communication skills'],
       benefits: [
         'Competitive salary and equity',
         'Health, dental, and vision insurance',
         'Flexible work arrangements',
-        'Professional development budget',]
+        'Professional development budget']
         '401(k) with company matching']
-      ]
     },
     {
       title: 'Full-Stack Developer',
@@ -50,16 +48,14 @@ const CareersPage: React.FC = () => {
         'Bachelor\'s degree in Computer Science',
         '3+ years full-stack development experience',
         'Proficiency in React, Node.js, TypeScript',
-        'Experience with databases (PostgreSQL, MongoDB)',]
-        'Knowledge of cloud services and DevOps']
-      ],
+        'Experience with databases (PostgreSQL, MongoDB)']
+        'Knowledge of cloud services and DevOps'],
       benefits: [
         'Competitive salary',
         'Comprehensive health benefits',
         'Remote work flexibility',
-        'Learning and development opportunities',]
+        'Learning and development opportunities']
         'Team building events']
-      ]
     },
     {
       title: 'AI Product Manager',
@@ -72,16 +68,14 @@ const CareersPage: React.FC = () => {
         'Bachelor\'s degree in Business or Technical field',
         '4+ years product management experience',
         'Experience with AI/ML products',
-        'Strong analytical and communication skills',]
-        'MBA preferred']
-      ],
+        'Strong analytical and communication skills']
+        'MBA preferred'],
       benefits: [
         'Competitive salary and bonus',
         'Health and wellness benefits',
         'Flexible PTO policy',
-        'Professional development opportunities',]
+        'Professional development opportunities']
         'Stock options']
-      ]
     },
     {
       title: 'DevOps Engineer',
@@ -94,16 +88,14 @@ const CareersPage: React.FC = () => {
         '3+ years DevOps experience',
         'Expertise in AWS, Docker, Kubernetes',
         'Experience with CI/CD pipelines',
-        'Knowledge of monitoring and logging tools',]
-        'Scripting skills (Python, Bash)']
-      ],
+        'Knowledge of monitoring and logging tools']
+        'Scripting skills (Python, Bash)'],
       benefits: [
         'Competitive salary',
         'Health insurance',
         'Remote work options',
-        'Certification reimbursement',]
+        'Certification reimbursement']
         'Performance bonuses']
-      ]
     }
   ];
 
@@ -276,7 +268,7 @@ const CareersPage: React.FC = () => {
                     
         <div className="lg:ml-6">
                       <a
-    href={`/contact?position=${encodeURIComponent(position.title)}`}
+    const href = {`/contact?position=${encodeURIComponent(position.title)}`}
                         className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center group"
                       >
                         Apply Now
@@ -323,7 +315,7 @@ const CareersPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-6">Don't See Your Role?</h2>
               
           <p className="text-xl text-gray-300 mb-8">
-                We're always looking for talented individuals. Send us your resume and let us know how you can contribute to our mission.
+                We&apos;re always looking for talented individuals. Send us your resume and let us know how you can contribute to our mission.
               </p>
               
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -352,7 +344,7 @@ const CareersPage: React.FC = () => {
             Don't See the Right Role?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            We're always looking for talented individuals. Send us your resume and let's talk!
+            We&apos;re always looking for talented individuals. Send us your resume and let&apos;s talk!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
