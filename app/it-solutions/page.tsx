@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-merge-code-636f
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -30,15 +33,11 @@ const ITSolutionsPage: React.FC = () => {
         "Cost optimization",
         "24/7 monitoring",
         "Security compliance"
-      ],
-      color: "from-blue-500 to-cyan-500",
-      price: "Starting at $2,500/month",
-      benefits: ["99.9% uptime", "Auto-scaling", "Cost savings"],
-      useCases: ["Web applications", "Data storage", "Backup solutions"],
-      href: "/cloud-infrastructure"
+      ]
     },
     {
       title: "Cybersecurity Solutions",
+<<<<<<< HEAD
       description: "Comprehensive security solutions to protect your business from cyber threats and data breaches.",
 =======
 >>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
@@ -53,13 +52,17 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
     { title: "Cybersecurity Solutions",
       description: "Comprehensive cybersecurity solutions to protect your digital assets and data.",
 >>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
+=======
+      description: "Comprehensive security services to protect your digital assets and ensure compliance.",
+>>>>>>> cursor/analyze-improve-and-merge-code-636f
       icon: ShieldCheckIcon,
       features: [
-        "Security assessment",
+        "Security assessments",
         "Penetration testing",
-        "Firewall configuration",
-        "Intrusion detection",
+        "Incident response",
+        "Compliance management",
         "Security training",
+<<<<<<< HEAD
         "Compliance auditing"
       ],
       color: "from-red-500 to-pink-500",
@@ -173,46 +176,26 @@ import { 'use client'; ServerIcon, ShieldCheckIcon, CloudIcon, CogIcon, ChartBar
     {
       title: "Digital Transformation",
       description: "Complete digital transformation services to modernize your business processes and systems.",
+=======
+        "Threat monitoring"
+      ]
+    },
+    {
+      title: "DevOps & Automation",
+      description: "Streamline your development and deployment processes with modern DevOps practices.",
+>>>>>>> cursor/analyze-improve-and-merge-code-636f
       icon: CogIcon,
       features: [
-        "Process automation",
-        "Legacy system migration",
-        "Digital workflow design",
-        "Integration services",
-        "Change management",
-        "Training & support"
-      ],
-      color: "from-teal-500 to-cyan-500",
-      price: "Starting at $4,000/month",
-      benefits: ["Increased efficiency", "Modern systems", "Future-ready"],
-      useCases: ["Process automation", "System modernization", "Digital workflows"],
-      href: "/digital-transformation"
-    }
-=======
-      color: "from-cyan-500 to-blue-500",
-      price: "Starting at $1,000/month",
-      benefits: ["Reduced downtime", "Expert support", "Cost efficiency"],
-      useCases: ["Help desk", "System maintenance", "User support"],
-      href: "/it-support" }
-  ];
-  const features = [
-    { title: "Expert Solutions",
-      description: "Our team of certified professionals delivers cutting-edge IT solutions.",
-      icon: CpuChipIcon },
-    { title: "Scalable Architecture",
-      description: "Solutions that grow with your business and adapt to changing needs.",
-      icon: CloudIcon },
-    { title: "24/7 Support",
-      description: "Round-the-clock support to ensure your systems are always running.",
-      icon: UserGroupIcon },
-    { title: "Security First",
-      description: "Security is built into every solution we deliver.",
-      icon: ShieldCheckIcon }
-  ];
-  CheckCircleIcon
-} from '@heroicons/react/24/outline';
-const ITSolutionsPage: React.FC = () => { const solutions = [
+        "CI/CD pipeline setup",
+        "Infrastructure as Code",
+        "Container orchestration",
+        "Monitoring & logging",
+        "Performance optimization",
+        "Team training"
+      ]
+    },
     {
+<<<<<<< HEAD
       icon: ServerIcon,
       title: 'Infrastructure Management',
       description: 'Complete IT infrastructure setup, monitoring, and maintenance services.',
@@ -263,10 +246,50 @@ const ITSolutionsPage: React.FC = () => { const solutions = [
 =======
 >>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
 >>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
+=======
+      title: "Database Solutions",
+      description: "Optimize your data management with advanced database design and administration.",
+      icon: DatabaseIcon,
+      features: [
+        "Database design & optimization",
+        "Migration services",
+        "Backup & recovery",
+        "Performance tuning",
+        "Security hardening",
+        "24/7 support"
+      ]
+    }
+  ];
+
+  const benefits = [
+    {
+      title: "Expert Team",
+      description: "Certified professionals with years of experience in enterprise IT solutions.",
+      icon: <UserGroupIcon className="w-6 h-6 text-blue-500" />
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock technical support to keep your systems running smoothly.",
+      icon: <CpuChipIcon className="w-6 h-6 text-green-500" />
+    },
+    {
+      title: "Scalable Solutions",
+      description: "IT infrastructure that grows with your business and adapts to changing needs.",
+      icon: <ServerIcon className="w-6 h-6 text-purple-500" />
+    },
+    {
+      title: "Cost Effective",
+      description: "Optimized solutions that reduce operational costs while improving performance.",
+      icon: <GlobeAltIcon className="w-6 h-6 text-yellow-500" />
+    }
+  ];
+
+>>>>>>> cursor/analyze-improve-and-merge-code-636f
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -780,24 +803,145 @@ export default ITSolutionsPage;
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your IT Infrastructure?
           </h2>
+=======
+        <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, DevOps, and database services. Expert technology consulting for modern businesses." />
+        <meta name="keywords" content="IT solutions, cloud computing, cybersecurity, DevOps, database services, technology consulting, infrastructure" />
+        <link rel="canonical" href="https://ziontechgroup.com/it-solutions" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+              IT Solutions
+            </span>
+          </h1>
+>>>>>>> cursor/analyze-improve-and-merge-code-636f
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let&apos;s discuss how our IT solutions can help your business operate more efficiently and securely.
+            Comprehensive IT solutions designed to accelerate your business growth and digital transformation. 
+            From cloud infrastructure to cybersecurity, we have everything you need.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
+=======
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
             >
-              Start Your IT Journey
-              <ArrowRightIcon className="w-5 h-5 ml-2" />
+              Get Started
+              <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              to="/case-studies"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+              to="/demo"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
+              View Demo
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our IT Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              End-to-end IT solutions designed to meet your business requirements and drive growth.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {itServices.map((service, index) => (
+              <div
+                key={index}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <service.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  {service.description}
+                </p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircleIcon className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our IT Solutions?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of professional IT services with our proven solutions and expert support.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="text-center group"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  {benefit.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your IT Infrastructure?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            Join thousands of businesses already using our IT solutions to drive growth and innovation. 
+            Start your digital transformation journey today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+>>>>>>> cursor/analyze-improve-and-merge-code-636f
+            >
+              Start Your IT Journey
+              <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/services"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+            >
+<<<<<<< HEAD
               View Case Studies
 =======
 >>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
@@ -811,6 +955,9 @@ export default ITSolutionsPage;
               View Pricing
 >>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
               <ArrowRightIcon className="w-5 h-5 ml-2" />
+=======
+              Explore All Services
+>>>>>>> cursor/analyze-improve-and-merge-code-636f
             </Link>
           </div>
         </div>
@@ -818,6 +965,7 @@ export default ITSolutionsPage;
     </div>
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default ITSolutionsPage;
 =======
@@ -828,3 +976,7 @@ export default ITSolutionsPage;
 export default ITSolutionsPage;
 >>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
 >>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
+=======
+
+export default ITSolutionsPage;
+>>>>>>> cursor/analyze-improve-and-merge-code-636f

@@ -8,20 +8,18 @@ import { BarChart3,
   Shield,
   Users,
 <<<<<<< HEAD
+<<<<<<< HEAD
   Zap } from 'lucide-react';
 const AiDatabaseSolutionsPage = () => { const features = [
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-merge-code-636f
   Zap
 } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const AiDatabaseSolutionsPage = () => {
   const features = [
-=======
-  Zap } from 'lucide-react';
-const AiDatabaseSolutionsPage = () => { const features = [
 >>>>>>> 0030dc29551cef3d712867a05efd73f15c1feb05
 >>>>>>> 7c52cf7e22c3997c956e17b376b01941cad4bdd4
     {
