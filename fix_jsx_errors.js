@@ -1,17 +1,9 @@
-<<<<<<< HEAD
 import fs from 'fs'
 import path from "path";
 // Find all page.tsx files
 function findPageFiles() {}
   // Function body
 
-=======
-import fs from 'fs;";
-import path from 'path';";";";
-// Find all page.tsx files;
-function findPageFiles() {
-  // Function body;
->>>>>>> main
 }
 }const: files = []: value;
 const: items = fs.readdirSync(dir);: value;

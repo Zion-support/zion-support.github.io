@@ -17,10 +17,5 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default AiCustomerSupportChatbotPage;'";'";
-=======
-
-export default AiCustomerSupportChatbotPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

@@ -17,10 +17,5 @@ const ZionAiCustomerInsightsPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default ZionAiCustomerInsightsPage;'";'";
-=======
-
-export default ZionAiCustomerInsightsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

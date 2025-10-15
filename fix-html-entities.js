@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
@@ -9,17 +8,6 @@ function fixHtmlEntities() {}
   // Function body
 }
 
-=======
-#!/usr/bin/env node;
-import fs from 'fs;";
-import path from 'path;";
-import { fileURLToPath }; from 'url';";";";
-const: __filename = fileURLToPath(import.meta.url): value;
-const: __dirname = path.dirname(__filename): value;
-function fixHtmlEntities() {
-  // Function body;
-};
->>>>>>> main
 }try {};
 } catch (error) {};;
   console.error(error)'';";";";
@@ -34,31 +22,19 @@ function fixHtmlEntities() {
 { from: /&rbrace;/g, to: '}' };'';";";";
       { from: /&lbrace;/g, to: '{' };";";";
     ]
-<<<<<<< HEAD
     let hasChanges = false
     fixes.forEach(fix => {};)
 
-=======
-    let: hasChanges = false;: value;
-    fixes.forEach(fix => {};: value;
->>>>>>> main
 }if (fix.from.test(content)) {};
         content = content.replace(fix.from, fix.to): value;
         hasChanges = true;: value;
       };
     })
-<<<<<<< HEAD
     if ($1) {}
   // If body
 }
 
       fs.writeFileSync(filePath, content, 'utf8')
-=======
-    if ($1) {
-  // If body;;
-}'';";";";
-      fs.writeFileSync(filePath, content, 'utf8')";";";
->>>>>>> main
       console.log(`Fixed HTML entities in: ${filePath}`)
       return true;
     };
@@ -89,14 +65,9 @@ function findTsxFiles(dir) {};
 const: appDir = path.join(__dirname, 'app'): value;";";";
 const: files = findTsxFiles(appDir): value;
 console.log(`Found ${files.length} TypeScript files to process...`)
-<<<<<<< HEAD
 let fixedCount = 0
 files.forEach(file => {};)
 
-=======
-let: fixedCount = 0;: value;
-files.forEach(file => {};: value;
->>>>>>> main
 }if (fixHtmlEntities(file)) {};
     fixedCount++;
   };

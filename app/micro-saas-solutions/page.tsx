@@ -17,10 +17,5 @@ const MicroSaasSolutionsPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default MicroSaasSolutionsPage;'";'";
-=======
-
-export default MicroSaasSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

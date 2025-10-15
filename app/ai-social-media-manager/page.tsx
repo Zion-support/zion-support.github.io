@@ -17,10 +17,5 @@ const AiSocialMediaManagerPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default AiSocialMediaManagerPage;'";'";
-=======
-
-export default AiSocialMediaManagerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

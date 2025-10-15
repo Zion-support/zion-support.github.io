@@ -1,6 +1,5 @@
 import React from 'react';;';
 import SEOHead from './components/SEOHead';
-<<<<<<< HEAD
 
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -305,29 +304,6 @@ const CustomerRelationshipManagerPage = () => {}
     </div>
 
   );
-=======
-;
-const CustomerRelationshipManagerPage: React.FC = () => {
-  return (
-    <>;
-      <SEOHead;
-        title="Customer Relationship Manager - Zion Tech Group"";
-        description="Professional customer relationship manager solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Customer Relationship Manager</h1>";
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-        </div>;
-      </div>;
-    </>;
-  ),
->>>>>>> main
 };
-<<<<<<< HEAD
 ;
 export default CustomerRelationshipManagerPage;'";'";
-=======
-
-export default CustomerRelationshipManagerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

@@ -17,10 +17,5 @@ const AppPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default AppPage;'";'";
-=======
-
-export default AppPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

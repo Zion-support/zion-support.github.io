@@ -17,10 +17,5 @@ const ZionAiMarketingAutomationProPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default ZionAiMarketingAutomationProPage;'";'";
-=======
-
-export default ZionAiMarketingAutomationProPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

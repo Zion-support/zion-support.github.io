@@ -17,10 +17,5 @@ const SitemapXmlPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default SitemapXmlPage;'";'";
-=======
-
-export default SitemapXmlPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

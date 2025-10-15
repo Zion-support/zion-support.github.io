@@ -10,18 +10,15 @@ function resolveConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD')) {
       return false;
     }
     
     // Replace merge conflict markers with HEAD version (main branch)
     content = content.replace(
-      /<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [a-f0-9]+\n?/gs,
       '$1'
     );
     
     // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [a-f0-9]+\n?/gs, '');
     
     fs.writeFileSync(filePath, content, 'utf8');
     console.log(`✅ Resolved conflicts in: ${filePath}`);

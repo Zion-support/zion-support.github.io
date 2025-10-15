@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async""use client';
 export default function ZionAIInventoryManager() {}
@@ -67,31 +66,6 @@ export default function ZionAIInventoryManager() {}
     </div>;
 
   );
-=======
-import React from 'react';;';
-import SEOHead from './components/SEOHead';
-;
-const ZionAiInventoryManagerPage: React.FC = () => {
-  return (
-    <>;
-      <SEOHead;
-        title="Zion Ai Inventory Manager - Zion Tech Group"";
-        description="Professional zion ai inventory manager solutions for modern businesses";
-      />";
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">Zion Ai Inventory Manager</h1>";
-          <p className ="text-gray-300">Professional solutions coming soon...</p>;";
-        </div>;
-      </div>;
-    </>;
-  ),
->>>>>>> main
 };
-<<<<<<< HEAD
 ;
 export default ZionAiInventoryManagerPage;'";'";
-=======
-
-export default ZionAiInventoryManagerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

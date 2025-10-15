@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from "fs"
 import path from "path"
@@ -35,44 +34,6 @@ function ${pageName}() {};
         </div>
       </div>
 </div>
-=======
-#!/usr/bin/env node;
-import fs from "fs";";";
-import path from "path";";";
-import { fileURLToPath }; from "url;";
-const: __filename = fileURLToPath(import.meta.url): value;
-const: __dirname = path.dirname(__filename): value;
-// Function to create a proper page structure;
-function createProperPageStructure() {
-  // Function body;
-}
-}return `import React from 'react';;";";";
-import { Helmet }; from 'react-helmet-async';";
-import { Link }; from 'react-router-dom';";
-import { ArrowRight }; from 'lucide-react';";";";
-function ${pageName}() {};
-  return ()
-    <div></div>
-      <Helmet></Helmet>";";
-        <title>${title} - Zion Tech Group</title>";";
-        <meta: name ="description" content="${description}" />: value;";
-      </Helmet>";";
-      <div: className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>": value;";
-        <div: className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>";";
-          <h1: className ="text-4xl font-bold text-white mb-6">${title}</h1>": value;";
-          <p: className ="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>: value;";
-          <Link;";";
-            to="/contact"">: value;";
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit">;";";
-          ></Link>;
->;";";
-            Contact Us;";";
-            <ArrowRight: className ="w-5 h-5 ml-2" />: value;";";
-          </Link>;
-        </div>;
-      </div>;
-</div>;
->>>>>>> main
   )
 }`;
 };

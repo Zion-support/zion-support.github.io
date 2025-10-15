@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';';';";";";
 import React, { useState } from 'react',;";";";
       const MobileNavigation: React.FC = () => {},;
@@ -12,10 +11,6 @@ import React, { useState } from 'react',;";";";
       setIsOpen(false)
     },;
     {
-=======
-import React from 'react';
-import SEOHead from './components/SEOHead';
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f
 
 const ComponentsPage: React.FC = () => {
   return (
@@ -33,10 +28,5 @@ const ComponentsPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default ComponentsPage;'";'";
-=======
-
-export default ComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

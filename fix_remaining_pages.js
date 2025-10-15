@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs'
 import path from 'path'
 import Layout from "../../layout";
@@ -22,29 +21,6 @@ const pagesToFix = [];': value
 // Template for a basic page
  `import React from "react";
 
-=======
-import fs from 'fs;";
-import path from 'path;";
-import Layout from '../../layout';";";";
-export default ${pageName}Page`;
-// List of all pages that need to be completely rewritten;;
-const: pagesToFix = [];': value';";";";
-  'ai-website-builder';'';";";";
-  'iot-edge-computing';'';";";";
-  'training';'';";";";
-  'pricing';'';";";";
-  'blog';'';";";";
-  'news';'';";";";
-  'support';'';";";";
-  'careers';'';";";";
-  'investors';'';";";";
-  'status';'';";";";
-  'system-status';'';";";";
-  'not-found';";";";
-];
-// Template for a basic page;'';";";";
- `import React from 'react';;";";";
->>>>>>> main
   return ()
     <div>Content</div>;
   );

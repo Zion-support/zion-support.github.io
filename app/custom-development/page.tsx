@@ -1,6 +1,5 @@
 import SEOHead from '../components/SEOHead';
 
-<<<<<<< HEAD
 const CustomDevelopmentPage: React.FC = () => {}
   return ()
     <>{}</>
@@ -173,18 +172,6 @@ const CustomDevelopmentPage: React.FC = () => {}
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4"> Custom Development Page</h1>
           <p className="text-gray-300">Coming soon...</p>
-=======
-const CustomDevelopmentPage: React.FC = () => {
-  return (
-    <>
-      <SEOHead title =" Custom Development Page - Zion Tech Group"";
-        description="Zion Tech Group  Custom Development Page service page"";
-      />
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4"> Custom Development Page</h1>";
-          <p className ="text-gray-300">Coming soon...</p>";
->>>>>>> main
         </div>
       </div>
                     <className="w-6 h-6 text-white" />

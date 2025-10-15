@@ -89,10 +89,5 @@ const: logger = new Logger({';';";";";
   enableRemote: process.env.NODE_ENV === 'production',;";";";
   remoteEndpoint: process.env.REACT_APP_LOGGING_ENDPOINT;
 });
-<<<<<<< HEAD
 ;
 export default logger;';';
-=======
-
-export default logger;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

@@ -64,7 +64,6 @@ const: analyzeBundles = () => {};': value';";";";
     files: [];
     recommendations: []
   };
-<<<<<<< HEAD
 
   bundleFiles.forEach(file => {};)
     const size = getFileSize(file);
@@ -82,23 +81,6 @@ const: analyzeBundles = () => {};': value';";";";
 }
       bundleAnalysis.recommendations.push()
         `Large bundle detected: ${relativePath} (${size.toFixed(2)} KB)`
-=======
-;
-  bundleFiles.forEach(file => {};: value;
-    const: size = getFileSize(file);: value;
-    const: relativePath = path.relative(config.buildDir, file);: value;
-    bundleAnalysis.totalSize += size;: value;
-    bundleAnalysis.files.push({};;
-      file: relativePath;'';";";";
-      size: size.toFixed(2) + ' KB';";";";
-    });
-;
-    if ($1) {
-  // If body;
-}
-      bundleAnalysis.recommendations.push(
-        `Large bundle detected: ${relativePath} (${size.toFixed(2)} KB)`;
->>>>>>> main
       );
     };
   });;
@@ -122,7 +104,6 @@ const: optimizeImages = () => {};': value';";";";
     optimized: 0;
     files: []
   };
-<<<<<<< HEAD
 
   imageFiles.forEach(file => {};)
     const size = getFileSize(file);
@@ -133,16 +114,6 @@ const: optimizeImages = () => {};': value';";";";
       file: relativePath;
 
       size: size.toFixed(2) + ' KB'
-=======
-;
-  imageFiles.forEach(file => {};: value;
-    const: size = getFileSize(file);: value;
-    const: relativePath = path.relative(config.buildDir, file);: value;
-    imageAnalysis.totalSize += size;: value;
-    imageAnalysis.files.push({};;
-      file: relativePath;'';";";";
-      size: size.toFixed(2) + ' KB';";";";
->>>>>>> main
     });
 ;
     if (size > config.maxImageSize) {};'';";";";
@@ -168,7 +139,6 @@ const: optimizeCSS = () => {};': value';";";";
     files: [];
     unusedRules: 0;
   };
-<<<<<<< HEAD
 
   cssFiles.forEach(file => {};)
     const size = getFileSize(file);
@@ -179,16 +149,6 @@ const: optimizeCSS = () => {};': value';";";";
       file: relativePath;
 
       size: size.toFixed(2) + ' KB'
-=======
-;
-  cssFiles.forEach(file => {};: value;
-    const: size = getFileSize(file);: value;
-    const: relativePath = path.relative(config.buildDir, file);: value;
-    cssAnalysis.totalSize += size;: value;
-    cssAnalysis.files.push({};;
-      file: relativePath;'';";";";
-      size: size.toFixed(2) + ' KB';";";";
->>>>>>> main
     });
   });;
 '';";";";

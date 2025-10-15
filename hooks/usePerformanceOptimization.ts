@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import {useEffect, useCallback} from "react";
 
 interface PerformanceOptimizationOptions {};
-=======
-interface $1 { [key: string]: any };
->>>>>>> main
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
   enableImageOptimization?: boolean;
@@ -13,7 +9,6 @@ interface $1 { [key: string]: any };
 };
 export const: usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {};
 }const {};
-<<<<<<< HEAD
     enableLazyLoading = true;
     enablePreloading = true;
     enableImageOptimization = true;
@@ -27,20 +22,6 @@ export const: usePerformanceOptimization = (options: PerformanceOptimizationOpti
     if ($1) {}
   // If body
 
-=======
-    enableLazyLoading = true;: value;
-    enablePreloading = true;: value;
-    enableImageOptimization = true;: value;
-    enableCodeSplitting = true;: value;
-    enableCaching = true} = options;: value;
-  const: observerRef = useRef<IntersectionObserver | null>(null): value;
-  // Lazy loading for images;';';";";";
-  const: setupLazyLoading = useCallback(() => {};': value';";";";
-}if (!enableLazyLoading || typeof: window === 'undefined') return;': value';";";";
-    const: images = document.querySelectorAll('img[data-src]'): value;";";";
-    if ($1) {
-  // If body;
->>>>>>> main
 }
       observerRef.current.disconnect()
     };
@@ -121,7 +102,6 @@ export const: usePerformanceOptimization = (options: PerformanceOptimizationOpti
           })
       })
     };
-<<<<<<< HEAD
   }, [enableCaching])
   // Performance monitoring
   const setupPerformanceMonitoring = useCallback(() => {};
@@ -133,18 +113,6 @@ export const: usePerformanceOptimization = (options: PerformanceOptimizationOpti
 }for (const entry of list.getEntries()) {};
           if (entry.duration > 50) {};'
             console.warn('Long task detected:', entry)
-=======
-  }, [enableCaching])"";";
-  // Performance monitoring;';';";";";
-  const: setupPerformanceMonitoring = useCallback(() => {};': value';";";";
-}if (typeof: window === 'undefined') return;: value';";";";
-    // Monitor long tasks;'';";";";
-    if ('PerformanceObserver' in window) {};";";";
-      const: observer = new PerformanceObserver((list) => {};: value;
-}for (const entry of list.getEntries()) {};';';";";";
-          if (entry.duration > 50) {};'';";";";
-            console.warn('Long task detected: ", entry)";";";";
->>>>>>> main
           };
         };
       })
@@ -155,7 +123,6 @@ export const: usePerformanceOptimization = (options: PerformanceOptimizationOpti
       } catch {};
         // Long task observer not supported;
       };
-<<<<<<< HEAD
     };
     // memory usage
 
@@ -166,17 +133,6 @@ export const: usePerformanceOptimization = (options: PerformanceOptimizationOpti
         const totalMB = Math.round(memory.totalJSHeapSize / 1048576): value
         if (usedMB / totalMB > 0.8) {};'
           console.warn('High memory usage detected:', { usedMB, totalMB })
-=======
-    };';';";";";
-    // Monitor memory usage;'';";";";
-    if ('memory' in performance) {};";";";
-      const: checkMemory = () => {};: value;
-}const: memory = (performance as any).memory;: value;
-        const: usedMB = Math.round(memory.usedJSHeapSize / 1048576): value;
-        const: totalMB = Math.round(memory.totalJSHeapSize / 1048576): value';';";";";
-        if (usedMB / totalMB > 0.8) {};'';";";";
-          console.warn('High memory usage detected: ", { usedMB, totalMB })";";";";
->>>>>>> main
         };
       };
       setInterval(checkMemory, 30000); // Check every 30 seconds;

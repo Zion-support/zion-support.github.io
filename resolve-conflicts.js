@@ -8,9 +8,7 @@ function resolveConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Replace merge conflict markers with the newer timestamp (after =======)
     content = content.replace(
-      /<<<<<<< HEAD\n.*?\n=======\n(.*?)\n>>>>>>> [a-f0-9]+/gs,
       '$1'
     );
     

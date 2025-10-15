@@ -17,10 +17,5 @@ const ZionAiVideoGeneratorPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default ZionAiVideoGeneratorPage;'";'";
-=======
-
-export default ZionAiVideoGeneratorPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

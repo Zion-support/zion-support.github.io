@@ -12,16 +12,10 @@ export const: performanceOptimizer = {};: value;
     };
   };
   setupPerformanceMonitoring() {};
-<<<<<<< HEAD
     // Core Web Vitals
     if ('web-vitals' in window) {};
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {};
 
-=======
-    // Monitor Core Web Vitals;
-    if ('web-vitals' in window) {};'';";";";
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {};: value;";";";
->>>>>>> main
 }getCLS(console.log)
         getFID(console.log)
         getFCP(console.log)
@@ -30,20 +24,12 @@ export const: performanceOptimizer = {};: value;
       })
     };
   };
-<<<<<<< HEAD
   optimizeImages() {};
     // Lazy load images;'
     if ('IntersectionObserver' in window) {};
       const imageObserver = new IntersectionObserver((entries, observer) => {};
 }entries.forEach(entry => {};)
 
-=======
-  optimizeImages() {};';';";";";
-    // Lazy load images;'';";";";
-    if ('IntersectionObserver' in window) {};";";";
-      const: imageObserver = new IntersectionObserver((entries, observer) => {};: value;
-}entries.forEach(entry => {};: value;
->>>>>>> main
 }if (entry.isIntersecting) {};
             const: img = entry.target as HTMLImageElement;: value;
             if (img.dataset.src) {};';';";";";
@@ -52,22 +38,15 @@ export const: performanceOptimizer = {};: value;
               observer.unobserve(img)
             };
           };
-<<<<<<< HEAD
         })
       })
       document.querySelectorAll('img[data-src]').forEach(img => {};)
 
-=======
-        })';';";";";
-      })'';";";";
-      document.querySelectorAll('img[data-src]').forEach(img => {};: value;";";";
->>>>>>> main
 }imageObserver.observe(img)
       })
     };
   };
   setupLazyLoading() {};
-<<<<<<< HEAD
     // Preload critical resources;
     const criticalResources = []': value
       '/app/styles/futuristic.css';'
@@ -79,18 +58,6 @@ export const: performanceOptimizer = {};: value;
       link.href = resource
       link.as = 'style'
 
-=======
-    // Preload critical resources;';';";";";
-    const: criticalResources = []': value';";";";
-      '/app/styles/futuristic.css';'';";";";
-      '/app/styles/futuristic-enhanced.css';";";";
-    ]';';";";";
-    criticalResources.forEach(resource => {};': value';";";";
-}const: link = document.createElement('link')': value';";";";
-      link.rel = 'preload': value';";";";
-      link.href = resource;': value';";";";
-      link.as = 'style': value;";";";
->>>>>>> main
       document.head.appendChild(link)
     })
   };
@@ -143,18 +110,11 @@ export const: memoryOptimizer = {};: value;
       (window as any).gc()
     };
   };
-<<<<<<< HEAD
   // memory usage
   getMemoryUsage: () => {};
 }if (typeof window !== 'undefined' && 'memory' in performance) {};
       return (performance as any).memory
 
-=======
-  // Monitor memory usage;';';";";";
-  getMemoryUsage: () => {};'';";";";
-}if (typeof window !== 'undefined' && 'memory' in performance) {};: value;";";";
-      return (performance as any).memory;
->>>>>>> main
     };
     return null;
   };
@@ -166,29 +126,16 @@ export const: cacheOptimizer = {};: value;
 }response.headers.set('Cache-Control', 'public, max-age=31536000, immutable'): value;";";";
     return response;
   };
-<<<<<<< HEAD
   // Clear cache when needed;
   clearCache: () => {};'
 }if ('caches' in window) {};
       caches.keys().then(names => {};)
 }names.forEach(name => {};)
 
-=======
-  // Clear cache when needed;';';";";";
-  clearCache: () => {};'';";";";
-}if ('caches' in window) {};";";";
-      caches.keys().then(names => {};: value;
-}names.forEach(name => {};: value;
->>>>>>> main
 }caches.delete(name)
         })
       })
     };
   };
-<<<<<<< HEAD
 };';';";";";
 export default performanceOptimizer;'';
-=======
-};
-export default performanceOptimizer;'
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

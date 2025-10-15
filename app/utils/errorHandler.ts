@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface $1 { [key: string]: any };
   component?: string;
   action?: string;
@@ -154,12 +153,3 @@ interface ErrorHandlerState {
 };
 ;
 export default ErrorHandler;';';
-=======
-// Utility functions
-export const utility = () => {
-  // Add utility functions here
-  return {};
-};
-
-export default utility;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

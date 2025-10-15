@@ -17,10 +17,5 @@ const BlockchainWeb3Page: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default BlockchainWeb3Page;'";'";
-=======
-
-export default BlockchainWeb3Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

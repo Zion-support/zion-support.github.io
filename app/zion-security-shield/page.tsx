@@ -17,10 +17,5 @@ const ZionSecurityShieldPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export default ZionSecurityShieldPage;'";'";
-=======
-
-export default ZionSecurityShieldPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

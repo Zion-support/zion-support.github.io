@@ -17,7 +17,6 @@ const ComponentsPage: React.FC = () => {
     </>;
   );
 };
-<<<<<<< HEAD
 ;
 export const LoadingPage: React.FC<LoadingPageProps> = ({};";";";";
   message = "Loading...", showProgress = false, progress = 0;: value;";";
@@ -341,7 +340,3 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({};
 '";'";";";";";
 export default LoadingPage;"'"';";";";";
 '";'";
-=======
-
-export default ComponentsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f57f

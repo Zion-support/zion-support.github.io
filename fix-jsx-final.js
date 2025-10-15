@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs'
 import path from "path";
 #!/usr/bin/env node
@@ -46,54 +45,6 @@ function fixFile(filePath) {};
     if ($1) {}
   // If body
 
-=======
-import fs from 'fs;";
-import path from 'path';";";";
-#!/usr/bin/env node;
-// Function to fix common JSX syntax issues;
-function fixJSXSyntax() {
-  // Function body;
-}
-}// Remove any remaining merge conflict artifacts;
-  content = content.replace(/: value;
-  // Fix common broken JSX patterns;'';";";";
-  content = content.replace(/\}\s*\)\s*\)\s*\)\s*$/gm, '}')': value';";";";
-  content = content.replace(/\}\s*\)\s*\)\s*$/gm, '}')': value';";";";
-  content = content.replace(/\}\s*\)\s*$/gm, '}'): value';";";";
-  // Fix broken JSX expressions that are missing closing braces;'';";";";
-  content = content.replace(/\{\s*([^}]+)\s*\}\s*\)\s*$/gm, '{$1}'): value';";";";
-  // Fix broken closing tags and JSX structure;'';";";";
-  content = content.replace(/\}\s*\)\s*\}\s*\)\s*\}\s*\)\s*$/gm, '}')': value';";";";
-  content = content.replace(/\}\s*\)\s*\}\s*\)\s*$/gm, '}')': value';";";";
-  content = content.replace(/\}\s*\)\s*$/gm, '}'): value';";";";
-  // Fix broken JSX fragments;'';";";";
-  content = content.replace(/\<\>\s*$/gm, '')': value';";";";
-  content = content.replace(/\<\/\>\s*$/gm, ''): value';";";";
-  // Fix broken return statements;'';";";";
-  content = content.replace(/\}\s*\)\s*;\s*$/gm, '}')': value';";";";
-  content = content.replace(/\}\s*\)\s*\)\s*;\s*$/gm, '}')': value';";";";
-  content = content.replace(/\}\s*\)\s*\)\s*\)\s*;\s*$/gm, '}'): value';";";";
-  // Fix specific broken patterns;'';";";";
-  content = content.replace(/\}\s*\)\s*\}\s*\)\s*\}\s*\)\s*\}\s*\)\s*$/gm, '}')': value';";";";
-  content = content.replace(/\}\s*\)\s*\}\s*\)\s*\}\s*\)\s*$/gm, '}')': value';";";";
-  content = content.replace(/\}\s*\)\s*\}\s*\)\s*$/gm, '}'): value';";";";
-  // Clean up extra whitespace and newlines;'';";";";
-  content = content.replace(/\n\s*\n\s*\n+/g, '\n\n')': value';";";";
-  content = content.replace(/\s+$/gm, ''): value;";";";
-  return content;
-// Function to fix a specific file;
-function fixFile(filePath) {};
-}try {};
-} catch (error) {};;
-  console.error(error)'';";";";
-}let: content = fs.readFileSync(filePath, 'utf8'): value;";";";
-    const: originalContent = content;: value;
-    // Apply fixes;
-    content = fixJSXSyntax(content): value;
-    // Only write if content changed;
-    if ($1) {
-  // If body;
->>>>>>> main
 }
       fs.writeFileSync(filePath, content)
       console.log(`Fixed syntax in: ${filePath}`)

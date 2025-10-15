@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs'
 import path from "path";
 #!/usr/bin/env node
@@ -22,35 +21,11 @@ function fixRemainingJSXIssues() {}
     /(\s*Contact Us\s*\n\s*)
 
     '\n          Contact Us\n'
-=======
-import fs from 'fs;";
-import path from 'path';";";";
-#!/usr/bin/env node;
-// Function to fix remaining JSX issues;
-function fixRemainingJSXIssues() {
-  // Function body;
-}
-}// Fix missing closing div tags - look for the pattern where we have:;
-  // </Link>;
-  // </div>;
-  // );
-  // };
-  // But missing the outer div closing tag;
-  content = content.replace(): value;
-    /(\s*<\/Link>\s*<\/div>\s*\);\s*})/g;'';";";";
-    '\n        </Link>\n      </div>\n    </div>\n  );\n}';";";";
-  )
-  // Fix any remaining issues with extra whitespace in Link elements;
-  content = content.replace(): value;
-    /(\s*Contact Us\s*\n\s*'';";";";
-    '\n          Contact Us\n';";";";
->>>>>>> main
   )
   return content;
 // Function to process a single file;
 function processFile(filePath) {};
 }try {};
-<<<<<<< HEAD
 } catch (error) {};
   console.error(error)
 }const content = fs.readFileSync(filePath, 'utf8')
@@ -60,16 +35,6 @@ const fixedContent = fixRemainingJSXIssues(content)
 }
 
       fs.writeFileSync(filePath, fixedContent, 'utf8')
-=======
-} catch (error) {};;
-  console.error(error)'';";";";
-}const: content = fs.readFileSync(filePath, 'utf8'): value;";";";
-const: fixedContent = fixRemainingJSXIssues(content): value;
-    if ($1) {
-  // If body;;
-}'';";";";
-      fs.writeFileSync(filePath, fixedContent, 'utf8')";";";
->>>>>>> main
       console.log(`Fixed remaining JSX issues: ${filePath}`)
       return true;
     return false;
