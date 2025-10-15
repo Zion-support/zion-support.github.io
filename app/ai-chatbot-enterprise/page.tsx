@@ -8,11 +8,9 @@ import {
   Shield, 
   BarChart3, 
   Settings,
-  ArrowRight,
   CheckCircle,
   Users,
   Globe,
-  Clock
 } from 'lucide-react';
 
 const AiChatbotEnterprisePage: React.FC = () => {

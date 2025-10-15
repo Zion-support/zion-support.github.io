@@ -9,7 +9,6 @@ import {
   Eye, 
   Zap, 
   Shield,
-  ArrowRight,
   CheckCircle
 } from 'lucide-react';
 

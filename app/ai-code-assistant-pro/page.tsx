@@ -1,13 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Code, 
   Globe, 
   CheckCircle, 
-  ArrowRight, 
   Star, 
-  Phone, 
-  Mail, 
-  Play, 
   Terminal, 
   GitBranch, 
   Bug, 

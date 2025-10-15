@@ -8,11 +8,8 @@ import {
   Eye, 
   Zap, 
   Shield,
-  ArrowRight,
   CheckCircle,
   Users,
-  Globe,
-  Clock,
   Target
 } from 'lucide-react';
 
