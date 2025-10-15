@@ -446,7 +446,7 @@ const AiEcommercePlatformPage: React.FC = () => {
                       ))}
                     </div>
                     <p className="text-gray-300 mb-6 leading-relaxed">
-                      "{testimonial.content}"
+                      &ldquo;{testimonial.content}&rdquo;
                     </p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
