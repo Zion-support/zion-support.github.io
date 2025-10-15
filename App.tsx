@@ -87,6 +87,18 @@ const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
 const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
 const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
 
+// Missing pages
+const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
+const SupportPage = lazy(() => import('./app/support/page'));
+const TutorialsPage = lazy(() => import('./app/tutorials/page'));
+const DocsPage = lazy(() => import('./app/docs/page'));
+const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
+const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
+const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
+const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
+const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
+const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
+
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -237,6 +249,18 @@ function App() {
                     <Route path="/support" element={<SupportPage />} />
                     
                     {/* Micro SaaS pages */}
+                    <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
+                    <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
+                    <Route path="/customer-support-hub" element={<CustomerSupportHubPage />} />
+                    <Route path="/inventory-manager" element={<InventoryManagerPage />} />
+                    <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
+                    <Route path="/expense-tracker-pro" element={<ExpenseTrackerProPage />} />
+                    
+                    {/* Missing pages */}
+                    <Route path="/it-solutions" element={<ITSolutionsPage />} />
+                    <Route path="/support" element={<SupportPage />} />
+                    <Route path="/tutorials" element={<TutorialsPage />} />
+                    <Route path="/docs" element={<DocsPage />} />
                     <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
                     <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
                     <Route path="/customer-support-hub" element={<CustomerSupportHubPage />} />
