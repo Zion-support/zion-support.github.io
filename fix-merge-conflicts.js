@@ -1,29 +1,44 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-    }
-    
-      inConflict = false
-      keepContent = false
-      continue
-    }
-    
-    if (inConflict && !keepContent) {}
-      continue
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-    
-    resolvedLines.push(line)
+// Read the file
+const filePath = path.join(__dirname, 'app/data/servicesData.ts');
+let content = fs.readFileSync(filePath, 'utf8');
+
+// Remove all merge conflict markers and keep the HEAD version
+const lines = content.split('\n');
+const cleanedLines = [];
+let inConflict = false;
+
+for (let i = 0; i < lines.length; i++) {
+  const line = lines[i];
+  
+  if (line.startsWith('<<<<<<< HEAD')) {
+    inConflict = true;
+    continue;
   }
   
-
+  if (line.startsWith('=======')) {
+    // Skip until we find the end marker
+    continue;
+  }
+  
+  if (line.startsWith('>>>>>>>')) {
+    inConflict = false;
+    continue;
+  }
+  
+  if (!inConflict) {
+    cleanedLines.push(line);
+  }
 }
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {}
+// Write the cleaned content back
+const cleanedContent = cleanedLines.join('\n');
+fs.writeFileSync(filePath, cleanedContent, 'utf8');
 
-}
-
-
-// Function to process a single file;
-function processFile(filePath) {}
-  try {}
-
-    // Check if file has merge conflicts
+console.log('Merge conflicts cleaned up successfully!');
