@@ -212,6 +212,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     setIsResourcesOpen(false);
   };
 
+  const closeAllMenus = () => {
+    setIsServicesOpen(false);
+    setIsSolutionsOpen(false);
+    setIsResourcesOpen(false);
+    setIsCompanyOpen(false);
+  };
+
   return (
     <nav className="bg-slate-900/95 backdrop-blur-lg border-b border-cyan-500/30 relative overflow-hidden">
       {/* Animated background */}
@@ -244,6 +251,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     else if (item.name === 'IT Solutions') toggleResourcesMenu();
                     else if (item.name === 'Resources') toggleResourcesMenu();
                     else if (item.name === 'Company') toggleCompanyMenu();
+                    else if (item.name === 'Zion AI Tools') toggleSolutionsMenu();
+                    else closeAllMenus();
                   }}
                   className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 border-b-2 group hover:scale-105 ${
                     isActive(item.href)
@@ -258,12 +267,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 {/* Dropdown Menu */}
                 {item.submenu && (
                   <div 
-                    className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
+                    className={`absolute left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
                       (item.name === 'AI Services' && isServicesOpen) ||
                       (item.name === 'Micro SaaS' && isSolutionsOpen) ||
                       (item.name === 'IT Solutions' && isResourcesOpen) ||
                       (item.name === 'Resources' && isResourcesOpen) ||
-                      (item.name === 'Company' && isCompanyOpen)
+                      (item.name === 'Company' && isCompanyOpen) ||
+                      (item.name === 'Zion AI Tools' && isSolutionsOpen)
                         ? 'block' : 'hidden'
                     }`}
                     role="menu"
