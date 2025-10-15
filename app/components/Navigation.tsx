@@ -131,25 +131,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'DevOps Automation', href: '/devops-automation', icon: CogIcon },
         { name: 'Data Engineering', href: '/data-engineering', icon: CircleStackIcon },
         { name: 'API Development', href: '/api-development', icon: CodeBracketIcon },
-<<<<<<< HEAD
         { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon }
-=======
-        { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon },
-        { name: 'Quantum Computing', href: '/quantum-computing-solutions', icon: CpuChipIcon },
-        { name: 'Edge Computing', href: '/edge-computing-solutions', icon: CloudIcon },
-        { name: 'AR Solutions', href: '/augmented-reality-solutions', icon: EyeIcon },
-        { name: 'VR Solutions', href: '/virtual-reality-solutions', icon: EyeIcon },
-        { name: 'RPA Solutions', href: '/robotic-process-automation', icon: CogIcon },
-        { name: 'Low-Code Platform', href: '/low-code-platform', icon: CodeBracketIcon },
-        { name: 'Serverless Architecture', href: '/serverless-architecture', icon: CloudIcon },
-        { name: 'Container Orchestration', href: '/container-orchestration', icon: CircleStackIcon },
-        { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: CpuChipIcon },
-        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: CircleStackIcon },
-        { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: CodeBracketIcon },
-        { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
-        { name: 'AI Video Generator', href: '/ai-video-generator', icon: EyeIcon },
-        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: MicrophoneIcon }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c09
       ]
     },
     {
