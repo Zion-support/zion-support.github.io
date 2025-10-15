@@ -9,6 +9,17 @@ interface WebVitalMetric {
 }
 
 const PerformanceMonitor: React.FC = () => {
+  const logPerformanceMetric = (name: string, value: number) => {
+    // Use a proper logging service instead of console.log
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'performance_metric', {
+        event_category: 'Performance',
+        event_label: name,
+        value: Math.round(value),
+      });
+    }
+  };
+
   useEffect(() => {
     // Monitor Core Web Vitals with proper analytics
     const sendToAnalytics = (metric: WebVitalMetric) => {
@@ -22,9 +33,10 @@ const PerformanceMonitor: React.FC = () => {
         });
       }
       
-      // Also log in development
+      // Log in development for debugging
       if (process.env.NODE_ENV === 'development') {
-        console.log(`[Web Vitals] ${metric.name}:`, metric.value);
+        // Use a proper logging utility instead of console.log
+        logPerformanceMetric(metric.name, metric.value);
       }
     };
 
@@ -37,7 +49,13 @@ const PerformanceMonitor: React.FC = () => {
         onTTFB(sendToAnalytics);
         onINP(sendToAnalytics);
       }).catch((error) => {
-        console.warn('Failed to load web-vitals:', error);
+        // Log error to monitoring service instead of console
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'exception', {
+            description: 'Failed to load web-vitals',
+            fatal: false,
+          });
+        }
       });
     }
 
@@ -45,13 +63,15 @@ const PerformanceMonitor: React.FC = () => {
     const measurePageLoad = () => {
       if (typeof window !== 'undefined' && window.performance) {
         const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
+        if (navigation && navigation.loadEventEnd && navigation.loadEventStart) {
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+          const domContentLoaded = navigation.domContentLoadedEventEnd && navigation.domContentLoadedEventStart 
+            ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart 
+            : 0;
           
           if (process.env.NODE_ENV === 'development') {
-            console.log(`[Performance] Page Load Time: ${loadTime}ms`);
-            console.log(`[Performance] DOM Content Loaded: ${domContentLoaded}ms`);
+            logPerformanceMetric('Page Load Time', loadTime);
+            logPerformanceMetric('DOM Content Loaded', domContentLoaded);
           }
         }
       }
