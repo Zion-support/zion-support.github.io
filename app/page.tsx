@@ -43,7 +43,6 @@ const HomePage: React.FC = () => {
       savings: "Save up to $200/month"
     },
     {
-<<<<<<< HEAD
       icon: <Users className="w-8 h-8" />,
       title: "AI Voice Assistant Enterprise",
       description: "Advanced conversational AI with 99.5% accuracy, 50+ languages, and enterprise-grade security.",
@@ -90,7 +89,8 @@ const HomePage: React.FC = () => {
       price: "$199/month",
       features: ["Personalized Learning", "Virtual Classrooms", "Smart Assessment", "Learning Analytics"],
       link: "/ai-education-platform"
-=======
+    },
+    {
       icon: <Cloud className="w-8 h-8" />,
       title: "AI Cloud Infrastructure",
       description: "Scalable cloud solutions with AI-powered auto-scaling, monitoring, and cost optimization for enterprise workloads.",
@@ -164,10 +164,9 @@ const HomePage: React.FC = () => {
       features: ["Content Generation", "SEO Optimization", "Multi-channel Publishing", "Content Scheduling", "Analytics Dashboard", "Team Collaboration"],
       link: "/ai-content-management",
       category: "Content Solutions",
-      marketPrice: "$179-359",
-      savings: "Save up to $180/month"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c0a
-    }
+        marketPrice: "$179-359",
+        savings: "Save up to $180/month"
+      }
   ];
 
   const stats = [
