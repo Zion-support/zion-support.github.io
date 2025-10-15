@@ -1,5 +1,4 @@
-export const appConfig = {
-  name: 'Zion Tech Group',
+export const appConfig = { name: 'Zion Tech Group',
   version: '1.0.0',
   description: 'Advanced AI and IT Solutions',
   url: 'https://ziontechgroup.com',
@@ -8,6 +7,5 @@ export const appConfig = {
   social: {
     twitter: 'https://twitter.com/ziontechgroup',
     linkedin: 'https://linkedin.com/company/ziontechgroup',
-    github: 'https://github.com/ziontechgroup'
-  }
+    github: 'https://github.com/ziontechgroup' }
 };

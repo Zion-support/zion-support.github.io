@@ -1,18 +1,4 @@
-
-import { Helmet } from "react-helmet-async";
-
-const AiSentimentAnalysisPage = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Ai Sentiment Analysis</title>
-        <meta
-          name="description"
-          content="Professional ai sentiment analysis solutions and services"
-        />
-        <meta name="keywords" content="ai, sentiment, analysis" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import { Helmet } from "react-helmet-async"; const AiSentimentAnalysisPage = () => { return ( <> <Helmet> <title>Ai Sentiment Analysis</title> <meta name="description" content="Professional ai sentiment analysis solutions and services" /> <meta name="keywords" content="ai, sentiment, analysis" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">
@@ -51,8 +37,5 @@ const AiSentimentAnalysisPage = () => {
         </div>
       </div>
     </>
-  );
-};
-
+  ); };
 export default AiSentimentAnalysisPage;
-

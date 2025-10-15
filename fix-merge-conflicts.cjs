@@ -1,59 +1,141 @@
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix merge conflicts in a file
-function fixMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove merge conflict markers and keep only the HEAD version
-    content = content.replace(/<<<<<<< HEAD\n?/g, '');
-    content = content.replace(/=======\n?/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-    
-    // Clean up extra empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    // Remove trailing whitespace
-    content = content.replace(/[ \t]+$/gm, '');
-    
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Fixed merge conflicts in: ${filePath}`);
-    return true;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to recursively find and fix merge conflicts
-function findAndFixMergeConflicts(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
+// Function to resolve merge conflicts by choosing the HEAD version
+function resolveMergeConflicts(content) {
+  const lines = content.split('\n');
+  const resolvedLines = [];
+  let inConflict = false;
+  let conflictType = null;
   
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
     
-    if (stat.isDirectory()) {
-      // Skip node_modules and other directories we don't want to process
-      if (!['node_modules', '.git', 'dist', 'out', '.next'].includes(file)) {
-        fixedCount += findAndFixMergeConflicts(filePath);
+    if (line.startsWith('<<<<<<<')) {
+      inConflict = true;
+      conflictType = 'head';
+      continue;
+    }
+    
+    if (line.startsWith('=======')) {
+      conflictType = 'separator';
+      continue;
+    }
+    
+    if (line.startsWith('>>>>>>>')) {
+      inConflict = false;
+      conflictType = null;
+      continue;
+    }
+    
+    if (inConflict) {
+      if (conflictType === 'head') {
+        resolvedLines.push(line);
       }
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      const content = fs.readFileSync(filePath, 'utf8');
-      if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-        if (fixMergeConflicts(filePath)) {
-          fixedCount++;
-        }
-      }
+      // Skip lines from other branches
+    } else {
+      resolvedLines.push(line);
     }
   }
   
-  return fixedCount;
+  return resolvedLines.join('\n');
 }
 
-// Start fixing merge conflicts
-console.log('Starting to fix merge conflicts...');
-const fixedCount = findAndFixMergeConflicts('./app');
-console.log(`Fixed merge conflicts in ${fixedCount} files.`);
+// Function to fix common syntax issues
+function fixSyntaxIssues(content) {
+  // Fix unescaped quotes in JSX
+  content = content.replace(/([^\\])'([^']*[^\\])'/g, '$1&apos;$2&apos;');
+  content = content.replace(/([^\\])"([^"]*[^\\])"/g, '$1&quot;$2&quot;');
+  
+  // Fix malformed JSX attributes
+  content = content.replace(/className\s*=\s*"([^"]*)"\s*>/g, 'className="$1">');
+  
+  // Fix missing semicolons in imports
+  content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"]\s*$/gm, 'import $1 from "$2";');
+  
+  // Fix missing semicolons in exports
+  content = content.replace(/export\s+default\s+([^;]+)\s*$/gm, 'export default $1;');
+  
+  return content;
+}
+
+// Function to clean up unused imports
+function cleanUnusedImports(content) {
+  const lines = content.split('\n');
+  const cleanedLines = [];
+  const usedImports = new Set();
+  
+  // Find all used imports by scanning the content
+  const importPattern = /import\s*{([^}]+)}\s*from\s*['"]([^'"]+)['"]/g;
+  let match;
+  
+  while ((match = importPattern.exec(content)) !== null) {
+    const importStatement = match[0];
+    const imports = match[1].split(',').map(imp => imp.trim());
+    
+    // Check which imports are actually used
+    const usedImportsInStatement = imports.filter(imp => {
+      const importName = imp.replace(/\s+as\s+\w+/, '').trim();
+      return content.includes(importName) && !importStatement.includes(importName);
+    });
+    
+    if (usedImportsInStatement.length > 0) {
+      cleanedLines.push(`import { ${usedImportsInStatement.join(', ')} } from '${match[2]}';`);
+    }
+  }
+  
+  return content;
+}
+
+// Main function to process files
+function processFiles() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'components/**/*.tsx',
+    'components/**/*.ts'
+  ];
+  
+  let processedFiles = 0;
+  let errorFiles = 0;
+  
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, { cwd: process.cwd() });
+    
+    files.forEach(file => {
+      try {
+        const filePath = path.join(process.cwd(), file);
+        let content = fs.readFileSync(filePath, 'utf8');
+        
+        // Check if file has merge conflicts
+        if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+          console.log(`Fixing merge conflicts in: ${file}`);
+          content = resolveMergeConflicts(content);
+        }
+        
+        // Fix syntax issues
+        content = fixSyntaxIssues(content);
+        
+        // Clean up unused imports
+        content = cleanUnusedImports(content);
+        
+        // Write the cleaned content back
+        fs.writeFileSync(filePath, content, 'utf8');
+        processedFiles++;
+        
+      } catch (error) {
+        console.error(`Error processing ${file}:`, error.message);
+        errorFiles++;
+      }
+    });
+  });
+  
+  console.log(`\nProcessed ${processedFiles} files`);
+  if (errorFiles > 0) {
+    console.log(`Errors in ${errorFiles} files`);
+  }
+}
+
+// Run the script
+processFiles();

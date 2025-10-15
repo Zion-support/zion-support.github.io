@@ -1,18 +1,4 @@
-
-import { Helmet } from "react-helmet-async";
-
-const QuantumDataEncryptionVaultPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Quantum Data Encryption Vault</title>
-        <meta
-          name="description"
-          content="Professional quantum data encryption vault solutions and services"
-        />
-        <meta name="keywords" content="quantum, data, encryption, vault" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import { Helmet } from "react-helmet-async"; const QuantumDataEncryptionVaultPage: React.FC = () => { return ( <> <Helmet> <title>Quantum Data Encryption Vault</title> <meta name="description" content="Professional quantum data encryption vault solutions and services" /> <meta name="keywords" content="quantum, data, encryption, vault" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">
@@ -51,8 +37,5 @@ const QuantumDataEncryptionVaultPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
+  ); };
 export default QuantumDataEncryptionVaultPage;
-

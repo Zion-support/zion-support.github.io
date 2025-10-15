@@ -1,203 +1,169 @@
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix common syntax errors in JSX files
-function fixJSXSyntax(content) {
-  let fixed = content;
-
-  // Fix spacing issues in class names
-  fixed = fixed.replace(/(\w+)-(\d+)(\w+)-(\d+)/g, '$1-$2 $3-$4');
-  fixed = fixed.replace(/(\w+)-(\d+)([A-Z])/g, '$1-$2 $3');
-  fixed = fixed.replace(/([a-z])([A-Z])/g, '$1 $2');
+// Function to fix common TypeScript/JSX syntax errors
+function fixSyntaxErrors(content) {
+  // Fix unescaped entities in JSX
+  content = content.replace(/([^&])'([^']*[^&])'/g, '$1&apos;$2&apos;');
+  content = content.replace(/([^&])"([^"]*[^&])"/g, '$1&quot;$2&quot;');
   
-  // Fix common class name spacing issues
-  const classFixes = [
-    { from: /w-8h-8/g, to: 'w-8 h-8' },
-    { from: /text-4xlmd:/g, to: 'text-4xl md:' },
-    { from: /text-3xlmd:/g, to: 'text-3xl md:' },
-    { from: /text-xltext-/g, to: 'text-xl text-' },
-    { from: /text-centermb-/g, to: 'text-center mb-' },
-    { from: /max-w-7xlmx-auto/g, to: 'max-w-7xl mx-auto' },
-    { from: /max-w-4xlmx-auto/g, to: 'max-w-4xl mx-auto' },
-    { from: /max-w-3xlmx-auto/g, to: 'max-w-3xl mx-auto' },
-    { from: /max-w-2xlmx-auto/g, to: 'max-w-2xl mx-auto' },
-    { from: /py-2 0/g, to: 'py-20' },
-    { from: /px-4sm:/g, to: 'px-4 sm:' },
-    { from: /px-4sm:/g, to: 'px-4 sm:' },
-    { from: /px-6lg:/g, to: 'px-6 lg:' },
-    { from: /px-8/g, to: 'px-8' },
-    { from: /from-slate-9 00/g, to: 'from-slate-900' },
-    { from: /via-purple-9 0 0/g, to: 'via-purple-900' },
-    { from: /to-slate-9 0 0/g, to: 'to-slate-900' },
-    { from: /to-slate-9 0 0/g, to: 'to-slate-900' },
-    { from: /bg-gradient-to-r from-cyan-4 0 0/g, to: 'bg-gradient-to-r from-cyan-400' },
-    { from: /to-purple-4 0 0/g, to: 'to-purple-400' },
-    { from: /text-gray-3 0 0/g, to: 'text-gray-300' },
-    { from: /text-gray-30 0/g, to: 'text-gray-300' },
-    { from: /text-gray-60 0/g, to: 'text-gray-600' },
-    { from: /text-gray-90 0/g, to: 'text-gray-900' },
-    { from: /flexflex-col/g, to: 'flex flex-col' },
-    { from: /sm:flex-row/g, to: 'sm:flex-row' },
-    { from: /gap-4justify-center/g, to: 'gap-4 justify-center' },
-    { from: /inline-flexitems-center/g, to: 'inline-flex items-center' },
-    { from: /px-8py-4/g, to: 'px-8 py-4' },
-    { from: /bg-gradient-to-r from-cyan-5 00/g, to: 'bg-gradient-to-r from-cyan-500' },
-    { from: /to-purple-6 00/g, to: 'to-purple-600' },
-    { from: /text-whitefont-semibold/g, to: 'text-white font-semibold' },
-    { from: /rounded-lghover:/g, to: 'rounded-lg hover:' },
-    { from: /from-cyan-6 00/g, to: 'from-cyan-600' },
-    { from: /to-purple-7 0 0/g, to: 'to-purple-700' },
-    { from: /transition-allduration-3 0 0/g, to: 'transition-all duration-300' },
-    { from: /group-hover:translate-x-1/g, to: 'group-hover:translate-x-1' },
-    { from: /transition-transform/g, to: 'transition-transform' },
-    { from: /border border-cyan-4 00/g, to: 'border border-cyan-400' },
-    { from: /text-cyan-4 00/g, to: 'text-cyan-400' },
-    { from: /hover:bg-cyan-4 0 0\/1 0/g, to: 'hover:bg-cyan-400/10' },
-    { from: /py-20px-4/g, to: 'py-20 px-4' },
-    { from: /sm:px-6lg:px-8/g, to: 'sm:px-6 lg:px-8' },
-    { from: /max-w-7xlmx-auto/g, to: 'max-w-7xl mx-auto' },
-    { from: /text-centermb-1 6/g, to: 'text-center mb-16' },
-    { from: /text-3xlmd:text-4xl/g, to: 'text-3xl md:text-4xl' },
-    { from: /text-xltext-gray-3 0 0/g, to: 'text-xl text-gray-300' },
-    { from: /max-w-2xlmx-auto/g, to: 'max-w-2xl mx-auto' },
-    { from: /gridgrid-cols-1/g, to: 'grid grid-cols-1' },
-    { from: /md:grid-cols-3/g, to: 'md:grid-cols-3' },
-    { from: /gap-8/g, to: 'gap-8' },
-    { from: /text-center/g, to: 'text-center' },
-    { from: /w-16h-1 6/g, to: 'w-16 h-16' },
-    { from: /bg-gradient-to-r from-cyan-5 0 0/g, to: 'bg-gradient-to-r from-cyan-500' },
-    { from: /to-purple-6 0 0/g, to: 'to-purple-600' },
-    { from: /rounded-fullflex/g, to: 'rounded-full flex' },
-    { from: /items-centerjustify-center/g, to: 'items-center justify-center' },
-    { from: /mx-automb-4/g, to: 'mx-auto mb-4' },
-    { from: /text-xlfont-semibold/g, to: 'text-xl font-semibold' },
-    { from: /text-white mb-3/g, to: 'text-white mb-3' },
-    { from: /text-gray-30 0/g, to: 'text-gray-300' },
-    { from: /py-20px-4/g, to: 'py-20 px-4' },
-    { from: /sm:px-6lg:px-8/g, to: 'sm:px-6 lg:px-8' },
-    { from: /bg-slate-8 0 0\/3 0/g, to: 'bg-slate-800/30' },
-    { from: /max-w-4xlmx-auto/g, to: 'max-w-4xl mx-auto' },
-    { from: /text-3xlmd:text-4xl/g, to: 'text-3xl md:text-4xl' },
-    { from: /text-xltext-gray-3 0 0/g, to: 'text-xl text-gray-300' },
-    { from: /flexflex-col/g, to: 'flex flex-col' },
-    { from: /sm:flex-row/g, to: 'sm:flex-row' },
-    { from: /gap-4justify-center/g, to: 'gap-4 justify-center' },
-    { from: /inline-flexitems-center/g, to: 'inline-flex items-center' },
-    { from: /px-8py-4/g, to: 'px-8 py-4' },
-    { from: /bg-gradient-to-r from-cyan-5 00/g, to: 'bg-gradient-to-r from-cyan-500' },
-    { from: /to-purple-6 00/g, to: 'to-purple-600' },
-    { from: /text-whitefont-semibold/g, to: 'text-white font-semibold' },
-    { from: /rounded-lghover:/g, to: 'rounded-lg hover:' },
-    { from: /from-cyan-6 00/g, to: 'from-cyan-600' },
-    { from: /to-purple-7 0 0/g, to: 'to-purple-700' },
-    { from: /transition-allduration-3 0 0/g, to: 'transition-all duration-300' },
-    { from: /group-hover:translate-x-1/g, to: 'group-hover:translate-x-1' },
-    { from: /transition-transform/g, to: 'transition-transform' },
-    { from: /border border-cyan-4 00/g, to: 'border border-cyan-400' },
-    { from: /text-cyan-4 00/g, to: 'text-cyan-400' },
-    { from: /hover:bg-cyan-4 0 0\/1 0/g, to: 'hover:bg-cyan-400/10' },
-    { from: /ml-2w-5/g, to: 'ml-2 w-5' },
-    { from: /h-5group-hover:/g, to: 'h-5 group-hover:' },
-    { from: /translate-x-1transition-transform/g, to: 'translate-x-1 transition-transform' },
-    { from: /ml-2w-5/g, to: 'ml-2 w-5' },
-    { from: /h-5group-hover:/g, to: 'h-5 group-hover:' },
-    { from: /translate-x-1transition-transform/g, to: 'translate-x-1 transition-transform' }
-  ];
-
-  classFixes.forEach(fix => {
-    fixed = fixed.replace(fix.from, fix.to);
-  });
-
-  // Fix array syntax issues
-  fixed = fixed.replace(/const services = \[\s*\]\s*{/g, 'const services = [');
-  fixed = fixed.replace(/}\s*\]/g, '}]');
+  // Fix malformed JSX closing tags
+  content = content.replace(/<\s*\/\s*([^>]+)\s*>/g, '</$1>');
+  
+  // Fix missing semicolons in import statements
+  content = content.replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"]\s*$/gm, 'import $1 from "$2";');
+  
+  // Fix missing semicolons in export statements
+  content = content.replace(/export\s+default\s+([^;]+)\s*$/gm, 'export default $1;');
   
   // Fix malformed JSX attributes
-  fixed = fixed.replace(/className="([^"]*)\[([^"]*)\]/g, 'className="$1$2"');
-  
-  // Fix missing spaces in JSX
-  fixed = fixed.replace(/(\w+)([A-Z])/g, '$1 $2');
-  
-  // Fix specific parsing errors
-  fixed = fixed.replace(/;\s*$/gm, '');
-  fixed = fixed.replace(/,\s*;/g, ',');
-  fixed = fixed.replace(/;\s*{/g, ' {');
-  fixed = fixed.replace(/}\s*]/g, '}]');
-  
-  // Fix malformed JSX structure
-  fixed = fixed.replace(/<div className="([^"]*)"[^>]*>\s*<\/div>/g, '');
-  fixed = fixed.replace(/<h3[^>]*>\s*<\/h3>/g, '');
-  fixed = fixed.replace(/<p[^>]*>\s*<\/p>/g, '');
-  
-  // Fix broken class names with spaces
-  fixed = fixed.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1 $2"');
-  
-  // Fix specific issues found in the files
-  fixed = fixed.replace(/from-slate-9 00via-purple-9 0 0to-slate-9 0 0/g, 'from-slate-900 via-purple-900 to-slate-900');
-  fixed = fixed.replace(/bg-blue-50 border border-blue-200/g, 'bg-blue-50 border border-blue-200');
-  fixed = fixed.replace(/text-blue-900mb-2/g, 'text-blue-900 mb-2');
-  fixed = fixed.replace(/text-blue-700/g, 'text-blue-700');
-  fixed = fixed.replace(/bg-green-50border border-green-20 0rounded-lgp-6/g, 'bg-green-50 border border-green-200 rounded-lg p-6');
-  fixed = fixed.replace(/text-purple-900 mb-2/g, 'text-purple-900 mb-2');
-  fixed = fixed.replace(/\[[^\]]*\]/g, '');
-  fixed = fixed.replace(/bg-purple-50 border border-purple-200 rounded-lg p-6/g, 'bg-purple-50 border border-purple-200 rounded-lg p-6');
-  
-  // Fix array syntax
-  fixed = fixed.replace(/const services = \[\s*\]\s*{/g, 'const services = [');
-  fixed = fixed.replace(/}\s*\]/g, '}]');
-  fixed = fixed.replace(/,\s*;/g, ',');
-  
-  // Fix JSX structure issues
-  fixed = fixed.replace(/<div className="([^"]*)"[^>]*>\s*<\/div>/g, '');
-  fixed = fixed.replace(/<h3[^>]*>\s*<\/h3>/g, '');
-  fixed = fixed.replace(/<p[^>]*>\s*<\/p>/g, '');
+  content = content.replace(/className\s*=\s*"([^"]*)"\s*>/g, 'className="$1">');
+  content = content.replace(/className\s*=\s*'([^']*)'\s*>/g, 'className="$1">');
   
   // Fix missing closing tags
-  fixed = fixed.replace(/<section[^>]*>(?!.*<\/section>)/g, (match) => {
-    if (!fixed.includes('</section>')) {
-      return match + '\n      </section>';
-    }
-    return match;
+  content = content.replace(/<(\w+)([^>]*?)(?<!\/)>/g, (match, tag, attrs) => {
+    if (match.endsWith('/>')) return match;
+    return `<${tag}${attrs}>`;
   });
   
-  // Fix malformed className attributes
-  fixed = fixed.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1 $2"');
+  // Fix duplicate imports
+  const importLines = content.split('\n').filter(line => line.trim().startsWith('import'));
+  const uniqueImports = [...new Set(importLines)];
+  const nonImportLines = content.split('\n').filter(line => !line.trim().startsWith('import'));
   
-  return fixed;
+  // Reconstruct content with unique imports at the top
+  const newContent = [...uniqueImports, ...nonImportLines].join('\n');
+  
+  return newContent;
 }
 
-// Function to process all TSX files
-function processFiles() {
-  const appDir = path.join('/workspace', 'app');
+// Function to remove unused imports
+function removeUnusedImports(content) {
+  const lines = content.split('\n');
+  const cleanedLines = [];
+  const usedSymbols = new Set();
   
-  function processDirectory(dir) {
-    const files = fs.readdirSync(dir);
-    
-    files.forEach(file => {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        processDirectory(filePath);
-      } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
-        try {
-          const content = fs.readFileSync(filePath, 'utf8');
-          const fixed = fixJSXSyntax(content);
-          
-          if (content !== fixed) {
-            fs.writeFileSync(filePath, fixed, 'utf8');
-            console.log(`Fixed: ${filePath}`);
-          }
-        } catch (error) {
-          console.error(`Error processing ${filePath}:`, error.message);
-        }
-      }
-    });
+  // Find all used symbols in the content
+  const symbolPattern = /\b([A-Z][a-zA-Z0-9]*)\b/g;
+  let match;
+  while ((match = symbolPattern.exec(content)) !== null) {
+    usedSymbols.add(match[1]);
   }
   
-  processDirectory(appDir);
-  console.log('All files processed!');
+  // Process each line
+  for (const line of lines) {
+    if (line.trim().startsWith('import')) {
+      const importMatch = line.match(/import\s*{([^}]+)}\s*from\s*['"]([^'"]+)['"]/);
+      if (importMatch) {
+        const imports = importMatch[1].split(',').map(imp => imp.trim());
+        const usedImports = imports.filter(imp => {
+          const importName = imp.replace(/\s+as\s+\w+/, '').trim();
+          return usedSymbols.has(importName);
+        });
+        
+        if (usedImports.length > 0) {
+          cleanedLines.push(`import { ${usedImports.join(', ')} } from '${importMatch[2]}';`);
+        }
+      } else {
+        cleanedLines.push(line);
+      }
+    } else {
+      cleanedLines.push(line);
+    }
+  }
+  
+  return cleanedLines.join('\n');
 }
 
-// Run the fix
+// Function to fix JSX structure issues
+function fixJSXStructure(content) {
+  // Fix malformed JSX fragments
+  content = content.replace(/<>\s*<\s*\/\s*>/g, '<></>');
+  
+  // Fix unclosed JSX tags
+  const openTags = [];
+  const lines = content.split('\n');
+  const fixedLines = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const openTagMatch = line.match(/<(\w+)([^>]*?)(?<!\/)>/g);
+    const closeTagMatch = line.match(/<\/(\w+)>/g);
+    
+    if (openTagMatch) {
+      openTagMatch.forEach(match => {
+        const tagName = match.match(/<(\w+)/)[1];
+        openTags.push(tagName);
+      });
+    }
+    
+    if (closeTagMatch) {
+      closeTagMatch.forEach(match => {
+        const tagName = match.match(/<\/(\w+)>/)[1];
+        const index = openTags.lastIndexOf(tagName);
+        if (index !== -1) {
+          openTags.splice(index, 1);
+        }
+      });
+    }
+    
+    fixedLines.push(line);
+  }
+  
+  return fixedLines.join('\n');
+}
+
+// Main function to process files
+function processFiles() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'components/**/*.tsx',
+    'components/**/*.ts'
+  ];
+  
+  let processedFiles = 0;
+  let errorFiles = 0;
+  
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, { cwd: process.cwd() });
+    
+    files.forEach(file => {
+      try {
+        const filePath = path.join(process.cwd(), file);
+        let content = fs.readFileSync(filePath, 'utf8');
+        
+        // Skip if file is empty or has no content
+        if (!content.trim()) {
+          return;
+        }
+        
+        // Fix syntax errors
+        content = fixSyntaxErrors(content);
+        
+        // Remove unused imports
+        content = removeUnusedImports(content);
+        
+        // Fix JSX structure
+        content = fixJSXStructure(content);
+        
+        // Write the cleaned content back
+        fs.writeFileSync(filePath, content, 'utf8');
+        processedFiles++;
+        
+      } catch (error) {
+        console.error(`Error processing ${file}:`, error.message);
+        errorFiles++;
+      }
+    });
+  });
+  
+  console.log(`\nProcessed ${processedFiles} files`);
+  if (errorFiles > 0) {
+    console.log(`Errors in ${errorFiles} files`);
+  }
+}
+
+// Run the script
 processFiles();

@@ -1,18 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-
-const HrAnalyticsPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Hr Analytics</title>
-        <meta
-          name="description"
-          content="Professional hr analytics solutions and services"
-        />
-        <meta name="keywords" content="hr, analytics" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import { Helmet } from "react-helmet-async"; const HrAnalyticsPage: React.FC = () => { return ( <> <Helmet> <title>Hr Analytics</title> <meta name="description" content="Professional hr analytics solutions and services" /> <meta name="keywords" content="hr, analytics" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">Hr Analytics</h1>
@@ -49,8 +36,5 @@ const HrAnalyticsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
+  ); };
 export default HrAnalyticsPage;
-

@@ -1,18 +1,4 @@
-
-import { Helmet } from "react-helmet-async";
-
-const DataCenterPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Data Center</title>
-        <meta
-          name="description"
-          content="Professional data center solutions and services"
-        />
-        <meta name="keywords" content="data, center" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import { Helmet } from "react-helmet-async"; const DataCenterPage: React.FC = () => { return ( <> <Helmet> <title>Data Center</title> <meta name="description" content="Professional data center solutions and services" /> <meta name="keywords" content="data, center" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">Data Center</h1>
@@ -49,8 +35,5 @@ const DataCenterPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
+  ); };
 export default DataCenterPage;
-
