@@ -31,4 +31,4 @@ const message = errorWithResponse.response?.data?.message || errorWithResponse.m
   }
 };
 
-export default NotFoundPage;
+export default errorHandler;

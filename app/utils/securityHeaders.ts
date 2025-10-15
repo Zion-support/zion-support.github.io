@@ -11,4 +11,4 @@ export const securityHeaders = { csp: {
   }
 };
 
-export default NotFoundPage;
+export default securityHeaders;

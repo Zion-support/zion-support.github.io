@@ -4,16 +4,13 @@ import {
   Mail, 
   Phone, 
   MapPin, 
-  Clock, 
   Send, 
   CheckCircle,
   Star,
   Users,
   Shield,
   Zap,
-  MessageCircle,
-  Calendar,
-  Globe
+  Clock
 } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
