@@ -35,8 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 200, // Increased threshold for better performance
-    assetsInlineLimit: 4096, // Increased for better caching and faster initial load
+    chunkSizeWarningLimit: 500, // Increased threshold for better performance
+    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
