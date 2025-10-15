@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import {
   X,
   ChevronDown,
@@ -61,7 +61,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Image Recognition', href: '/ai-image-recognition', icon: Settings },
         { name: 'AI Lead Scoring', href: '/ai-lead-scoring', icon: Settings },
         { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Settings },
-        { name: 'AI Price Optimizer', href: '/ai-price-optimizer', icon: Settings }
+        { name: 'AI Price Optimizer', href: '/ai-price-optimizer', icon: Settings },
+        { name: 'AI CRM Optimizer', href: '/ai-crm-optimizer', icon: Settings },
+        { name: 'AI Data Visualizer', href: '/ai-data-visualizer', icon: Settings },
+        { name: 'AI Email Optimizer', href: '/ai-email-optimizer', icon: Settings },
+        { name: 'AI Website Analyzer', href: '/ai-website-analyzer', icon: Settings },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Settings }
       ]
     },
     {
@@ -144,9 +149,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               {expandedSections.has(section.title) && (
                 <div className="bg-slate-800">
                   {section.items.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.href}
                       className={`flex items-center px-6 py-3 text-sm transition-colors ${
                         isActive(item.href)
                           ? 'bg-blue-600 text-white'
@@ -158,7 +163,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                       {isActive(item.href) && (
                         <ArrowRight className="h-3 w-3 ml-auto" />
                       )}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}
