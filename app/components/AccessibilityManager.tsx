@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface AccessibilitySettings {
@@ -9,19 +8,21 @@ interface AccessibilitySettings {
   focusVisible: boolean;
   keyboardNavigation: boolean;
 }
-interface AccessibilityManagerProps {}
-  children: React.ReactNode
+
+interface AccessibilityManagerProps {
+  children: React.ReactNode;
 }
-const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children }) => {}
-}const [settings, setSettings] = useState<AccessibilitySettings>({}
+
+const AccessibilityManager: React.FC<AccessibilityManagerProps> = ({ children }) => {
+  const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     largeText: false,
     reducedMotion: false,
     screenReader: false,
     focusVisible: true,
     keyboardNavigation: true
-  })
-  const [isVisible, setIsVisible] = useState(false)
+  });
+  const [isVisible, setIsVisible] = useState(false);
   // Load settings from localStorage
   useEffect(() => {
     const savedSettings = localStorage.getItem('accessibility-settings');

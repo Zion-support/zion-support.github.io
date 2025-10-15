@@ -1,11 +1,15 @@
 import React from 'react';
-import SEOHead from '../components/SEOHead';
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+import { Heart, ArrowRight } from 'lucide-react';
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const AiCustomerSentimentTrackerPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Customer Sentiment Tracker | Zion Tech Group</title>
         <meta name="description" content="Monitor and analyze customer sentiment across all channels with AI-powered insights and real-time alerts." />
-        <meta name="keywords" content="customer sentiment, sentiment analysis, _customer satisfaction, _brand monitoring, AI analytics" />
+        <meta name="keywords" content="customer sentiment, sentiment analysis, customer satisfaction, brand monitoring, AI analytics" />
       </Helmet>
 
       {/* Hero Section */}
@@ -28,7 +32,7 @@ import SEOHead from '../components/SEOHead';
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Monitor customer sentiment across all channels with AI-powered analysis, _real-time alerts, and actionable insights to improve customer satisfaction and loyalty.
+              Monitor customer sentiment across all channels with AI-powered analysis, real-time alerts, and actionable insights to improve customer satisfaction and loyalty.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,8 +54,8 @@ import SEOHead from '../components/SEOHead';
             </div>
           </motion.div>
         </div>
-      </div>
-    </>
+      </section>
+    </div>
   );
 };
 

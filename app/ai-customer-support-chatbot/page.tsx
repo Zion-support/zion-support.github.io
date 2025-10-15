@@ -20,11 +20,15 @@ import {
   Award,
   Phone,
   MapPin,
-  Envelope,
+  Mail,
   Bot,
   Headphones,
   ThumbsUp,
-  RefreshCw
+  RefreshCw,
+  Cloud,
+  ShoppingCart,
+  Heart,
+  DollarSign
 } from 'lucide-react';
 
 const AICustomerSupportChatbotPage: React.FC = () => {
@@ -145,7 +149,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
     { number: '45%', label: 'Higher Satisfaction' }
   ];
 
-const AiCustomerSupportChatbotPage: React.FC = () => {
   return (
     <>
       <Helmet>
