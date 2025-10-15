@@ -1,65 +1,51 @@
 import React from 'react';
-interface FuturisticTextProps {
-  children: React.ReactNode;
-  className?: string;
-  variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'gradient';
-  size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl';
-  weight?: 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold' | 'black';
-  color?: string;
-  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
-}
-const FuturisticText: React.FC<FuturisticTextProps> = ({ 
-  children, 
-  className = '', 
-  variant = 'body',
-  size = 'base',
-  weight = 'normal',
-  color = 'text-gray-300',
-  as: Component = 'p'
-}) => {
-  const variantClasses = {
-    heading: 'text-4xl md:text-5xl lg:text-6xl font-bold text-white',
-    subheading: 'text-2xl md:text-3xl lg:text-4xl font-semibold text-white',
-    body: 'text-base md:text-lg text-gray-300 leading-relaxed',
-    caption: 'text-sm text-gray-400',
-    gradient: 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400'
-  };
+import { Helmet } from 'react-helmet-async';
 
-const sizeClasses = {
-    xs: 'text-xs',
-    sm: 'text-sm',
-    base: 'text-base',
-    lg: 'text-lg',
-    xl: 'text-xl',
-    '2xl': 'text-2xl',
-    '3xl': 'text-3xl',
-    '4xl': 'text-4xl',
-    '5xl': 'text-5xl',
-    '6xl': 'text-6xl',
-    '7xl': 'text-7xl'
-  };
-
-const weightClasses = {
-    light: 'font-light',
-    normal: 'font-normal',
-    medium: 'font-medium',
-    semibold: 'font-semibold',
-    bold: 'font-bold',
-    extrabold: 'font-extrabold',
-    black: 'font-black'
-  };
-
-const textClasses = [
-    variant === 'gradient' ? variantClasses.gradient : variantClasses[variant],
-    variant !== 'heading' && variant !== 'subheading' && variant !== 'gradient' ? sizeClasses[size] : '',
-    variant !== 'heading' && variant !== 'subheading' && variant !== 'gradient' ? weightClasses[weight] : '',
-    variant !== 'gradient' ? color : '',
-    className
-  ].filter(Boolean).join(' ');
+const FuturisticTextPage: React.FC = () => {
   return (
-    <Component className={textClasses}>
-      {children}
-    </Component>
+    <>
+      <Helmet>
+        <title>FuturisticTextPage - AI Solutions</title>
+        <meta name="description" content="Professional FuturisticTextPage services powered by AI" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              FuturisticTextPage
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional FuturisticTextPage services powered by cutting-edge AI technology.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
+                <p className="text-gray-300">Advanced AI-powered solutions for your business needs.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
+                <p className="text-gray-300">Scalable and reliable technology infrastructure.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
+                <p className="text-gray-300">24/7 support and maintenance services.</p>
+              </div>
+            </div>
+            
+            <div className="mt-16">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
-export default FuturisticText;
+
+export default FuturisticTextPage;

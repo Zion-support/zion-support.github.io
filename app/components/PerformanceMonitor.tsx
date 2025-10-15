@@ -1,54 +1,51 @@
-'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMonitorProps {
-  children: React.ReactNode;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
-  const [metrics, setMetrics] = useState({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0
-  });
-
-  useEffect(() => {
-    // Monitor performance metrics
-    const startTime = performance.now();
-    
-    const measurePerformance = () => {
-      const loadTime = performance.now() - startTime;
-      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
-      
-      setMetrics({
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(performance.now() - startTime),
-        memoryUsage: Math.round(memoryUsage / 1024 / 1024) // Convert to MB
-      });
-    };
-
-    // Measure after component mount
-    const timeoutId = setTimeout(measurePerformance, 100);
-
-    // Cleanup
-    return () => clearTimeout(timeoutId);
-  }, []);
-
-  // Only show metrics in development
-  if (process.env.NODE_ENV !== 'development') {
-    return <>{children}</>;
-  }
-
+const PerformanceMonitorPage: React.FC = () => {
   return (
     <>
-      {children}
-      <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-2 rounded-lg text-xs font-mono z-50">
-        <div>Load: {metrics.loadTime}ms</div>
-        <div>Memory: {metrics.memoryUsage}MB</div>
+      <Helmet>
+        <title>PerformanceMonitorPage - AI Solutions</title>
+        <meta name="description" content="Professional PerformanceMonitorPage services powered by AI" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              PerformanceMonitorPage
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional PerformanceMonitorPage services powered by cutting-edge AI technology.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
+                <p className="text-gray-300">Advanced AI-powered solutions for your business needs.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
+                <p className="text-gray-300">Scalable and reliable technology infrastructure.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
+                <p className="text-gray-300">24/7 support and maintenance services.</p>
+              </div>
+            </div>
+            
+            <div className="mt-16">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
 };
 
-export default PerformanceMonitor;
+export default PerformanceMonitorPage;

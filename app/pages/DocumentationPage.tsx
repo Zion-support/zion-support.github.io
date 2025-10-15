@@ -1,28 +1,51 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function DocumentationPage() {
+const DocumentationPagePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Documentation - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive documentation for our services and solutions." />
+        <title>DocumentationPagePage - AI Solutions</title>
+        <meta name="description" content="Professional DocumentationPagePage services powered by AI" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        <main className="relative z-10">
-          <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto text-center">
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Documentation
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Comprehensive documentation for our services and solutions.
-              </p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              DocumentationPagePage
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional DocumentationPagePage services powered by cutting-edge AI technology.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
+                <p className="text-gray-300">Advanced AI-powered solutions for your business needs.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
+                <p className="text-gray-300">Scalable and reliable technology infrastructure.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
+                <p className="text-gray-300">24/7 support and maintenance services.</p>
+              </div>
             </div>
-          </section>
-        </main>
+            
+            <div className="mt-16">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
-}
+};
+
+export default DocumentationPagePage;

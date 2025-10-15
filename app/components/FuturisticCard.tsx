@@ -1,57 +1,51 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-interface FuturisticCardProps {
-  children: React.ReactNode;
-  className?: string;
-  hover?: boolean;
-  glow?: boolean;
-  variant?: 'default' | 'glass' | 'neon';
-}
-const FuturisticCard: React.FC<FuturisticCardProps> = ({
-  children,
-  className = '',
-  hover = true,
-  glow = true,
-  variant = 'default'
-}) => {
-  const baseClasses = 'relative rounded-xl overflow-hidden transition-all duration-300';
+import { Helmet } from 'react-helmet-async';
 
-const variantClasses = {
-    default: 'bg-slate-800/50 backdrop-blur-sm border border-slate-700/50',
-    glass: 'bg-slate-900/20 backdrop-blur-md border border-white/10',
-    neon: 'bg-slate-800/30 backdrop-blur-sm border border-purple-500/30'
-  };
-
-const hoverClasses = hover ? 'hover:bg-slate-700/50 hover:scale-105 hover:shadow-2xl' : '';
-
-const glowClasses = glow ? 'hover:shadow-purple-500/25' : '';
+const FuturisticCardPage: React.FC = () => {
   return (
-    <motion.div
-      className={`${baseClasses} ${variantClasses[variant]} ${hoverClasses} ${glowClasses} ${className}`}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      whileHover={hover ? { scale: 1.05, y: -5 } : {}}
-    >
-      {/* Animated gradient border */}
+    <>
+      <Helmet>
+        <title>FuturisticCardPage - AI Solutions</title>
+        <meta name="description" content="Professional FuturisticCardPage services powered by AI" />
+      </Helmet>
       
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-      {/* Glow effect */}
-      {glow && (
-        
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-300">
-      )}
-      {/* Content */}
-      
-        <div className="relative z-10 p-6">
-        {children}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              FuturisticCardPage
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional FuturisticCardPage services powered by cutting-edge AI technology.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
+                <p className="text-gray-300">Advanced AI-powered solutions for your business needs.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
+                <p className="text-gray-300">Scalable and reliable technology infrastructure.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
+                <p className="text-gray-300">24/7 support and maintenance services.</p>
+              </div>
+            </div>
+            
+            <div className="mt-16">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      {/* Animated corner accents */}
-      
-        <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-purple-500/50 rounded-tl-xl">
-      
-        <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-cyan-500/50 rounded-br-xl">
-    </motion.div>
+    </>
   );
 };
-export default FuturisticCard;
+
+export default FuturisticCardPage;

@@ -1,80 +1,51 @@
-import React, { Suspense, lazy, ComponentType } from "react";
-interface LazyComponentProps {
-  fallback?: React.ReactNode;
-  delay?: number;
-}
-const DefaultFallback = () => (
-  
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-    
-        <div className="text-center">
-      <Loader2 className="w-8 h-8 animate-spin text-cyan-400 mx-auto mb-4" />
-      
-        <div className="text-white text-lg">Loading...</div>
-    </div>
-  </div>
-);
-// Higher-order component for lazy loading with custom fallback
-export function withLazyLoading<P extends object>(
-  importFunc: () => Promise<{ default: ComponentType<P> }>,
-  fallback?: React.ReactNode
-) {
-  const LazyComponent = lazy(importFunc);
-  return function WrappedComponent(props: P) {
-    return (
-      <Suspense fallback={fallback || <DefaultFallback />}>
-        <LazyComponent {...props} />
-      </Suspense>
-    );
-  };
-}
-// Hook for lazy loading with intersection observer
-export function useLazyLoad(ref: React.RefObject<HTMLElement>, options?: IntersectionObserverInit) {
-  const [isVisible, setIsVisible] = React.useState(false);
-  React.useEffect(() => {
-    if (!ref.current) return;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '50px',
-        ...options
-      }
-    );
-    observer.observe(ref.current);
-  return () => observer.disconnect();
-  }, [ref, options]);
-  return isVisible;
-}
-// Component for lazy loading with intersection observer
-export const LazyComponent: React.FC<LazyComponentProps & { children: React.ReactNode }> = ({ 
-  children,
-  fallback = <DefaultFallback />,
-  delay = 0 
-}) => {
-  const [shouldRender, setShouldRender] = React.useState(false);
-
-const ref = React.useRef<HTMLDivElement>(null);
-  React.useEffect(() => {
-    if (isVisible) {
-      if (delay > 0) {
-        const timer = setTimeout(() => setShouldRender(true), delay);
-  return () => clearTimeout(timer);
-      } else {
-        setShouldRender(true);
-      }
-    }
-  }, [isVisible, delay]);
+const LazyComponentPage: React.FC = () => {
   return (
-    <div ref={ref}>
-      {shouldRender ? children : fallback}
-    </div>
+    <>
+      <Helmet>
+        <title>LazyComponentPage - AI Solutions</title>
+        <meta name="description" content="Professional LazyComponentPage services powered by AI" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              LazyComponentPage
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional LazyComponentPage services powered by cutting-edge AI technology.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
+                <p className="text-gray-300">Advanced AI-powered solutions for your business needs.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
+                <p className="text-gray-300">Scalable and reliable technology infrastructure.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
+                <p className="text-gray-300">24/7 support and maintenance services.</p>
+              </div>
+            </div>
+            
+            <div className="mt-16">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
-export default LazyComponent;
+
+export default LazyComponentPage;

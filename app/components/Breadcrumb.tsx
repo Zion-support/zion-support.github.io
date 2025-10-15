@@ -1,70 +1,51 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
-const Breadcrumb: React.FC = () => {
-  const location = useLocation();
-
-const pathnames = location.pathname.split('/').filter((x) => x);
-
-const getBreadcrumbName = () => {
-  return;
-} = {
-      'about': 'About',
-      'services': 'Services',
-      'contact': 'Contact',
-      'blog': 'Blog',
-      'ai-services': 'AI Services',
-      'micro-saas': 'Micro SAAS',
-      '5g-solutions': '5G Solutions',
-      'privacy': 'Privacy Policy',
-      'terms': 'Terms of Service',
-      'support': 'Support',
-      'demo': 'Demo',
-      'tutorials': 'Tutorials',
-    };
-  return breadcrumbMap[path] || path.charAt(0).toUpperCase() + path.slice(1);
-  };
-  if (pathnames.length === 0) {
-    return null;
-  }
+const BreadcrumbPage: React.FC = () => {
   return (
-    <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-cyan-500/20 py-2">
+    <>
+      <Helmet>
+        <title>BreadcrumbPage - AI Solutions</title>
+        <meta name="description" content="Professional BreadcrumbPage services powered by AI" />
+      </Helmet>
       
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ol className="flex items-center space-x-2 text-sm">
-          <li>
-            <Link
-              to="/"
-              className="text-gray-400 hover:text-cyan-400 transition-colors flex items-center"
-            >
-              <Home className="w-4 h-4" />
-            </Link>
-          </li>
-          {pathnames.map((path, index) => {
-            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
-
-const isLast = index === pathnames.length - 1;
-  return (
-              <li key={path} className="flex items-center space-x-2">
-                <ChevronRight className="w-4 h-4 text-gray-500" />
-                {isLast ? (
-                  <span className="text-cyan-400 font-medium">
-                    {getBreadcrumbName(path)}
-                  </span>
-                ) : (
-                  <Link
-                    to={routeTo}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {getBreadcrumbName(path)}
-                  </Link>
-                )}
-              </li>
-            );
-          })}
-        </ol>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              BreadcrumbPage
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional BreadcrumbPage services powered by cutting-edge AI technology.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
+                <p className="text-gray-300">Advanced AI-powered solutions for your business needs.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
+                <p className="text-gray-300">Scalable and reliable technology infrastructure.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
+                <p className="text-gray-300">24/7 support and maintenance services.</p>
+              </div>
+            </div>
+            
+            <div className="mt-16">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
+    </>
   );
 };
-export default Breadcrumb;
+
+export default BreadcrumbPage;

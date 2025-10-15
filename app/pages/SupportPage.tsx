@@ -1,24 +1,45 @@
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const SupportPage: React.FC = () => { return (
-    <> <Helmet> <title>Support - Zion Tech Group</title> <meta name="description" content="Gethelp and support from our expert team"
-        />
-        <meta
-          name="keywords"
-          content="support,help, customer service, technical support"
-        />
+const SupportPagePage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>SupportPagePage - AI Solutions</title>
+        <meta name="description" content="Professional SupportPagePage services powered by AI" />
       </Helmet>
       
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
-          
-        <div className="text-center">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              SupportPagePage
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional SupportPagePage services powered by cutting-edge AI technology.
+            </p>
             
-          <h1 className="text-4xl font-bold text-white mb-8">Support</h1>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
+                <p className="text-gray-300">Advanced AI-powered solutions for your business needs.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
+                <p className="text-gray-300">Scalable and reliable technology infrastructure.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
+                <p className="text-gray-300">24/7 support and maintenance services.</p>
+              </div>
+            </div>
             
-        <div className="text-gray-400">
-              <p>Support information coming soon...</p>
+            <div className="mt-16">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Get Started
+              </button>
             </div>
           </div>
         </div>
@@ -26,4 +47,5 @@ const SupportPage: React.FC = () => { return (
     </>
   );
 };
-export default SupportPage;
+
+export default SupportPagePage;

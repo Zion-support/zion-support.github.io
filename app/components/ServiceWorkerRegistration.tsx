@@ -1,21 +1,51 @@
-import { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const ServiceWorkerRegistration: React.FC = () => { useEffect(() => { if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js') .then((registration) => { }) .catch((registrationError) => { }); }); } }, []);
+const ServiceWorkerRegistrationPage: React.FC = () => {
   return (
-    <> <Helmet> <title>Service Worker - Zion Tech Group</title> <meta name="description" content="Service worker registration for offline functionality" /> <meta name="keywords" content="service worker, PWA, offline" /> </Helmet> 
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> 
-        <div className="container mx-auto px-4 py-16"> 
-        <div className="text-center"> 
-          <h1 className="text-4xl font-bold text-white mb-8">Service Worker</h1> 
-          <p className="text-xl text-gray-300 mb-8"> Service worker registration for offline functionality </p> 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"> 
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"> <h3 className="text-lg font-semibold text-blue-900 mb-2"> Offline Support </h3> 
-          <p className="text-blue-700"> Cache resources for offline functionality. </p> </div> 
-        <div className="bg-green-50 border border-green-200 rounded-lg p-6"> <h3 className="text-lg font-semibold text-green-900 mb-2"> Performance </h3> 
-          <p className="text-green-700"> Improved loading times and caching. </p> </div> 
-        <div className="bg-purple-50 border border-purple-200 rounded-lg p-6"> <h3 className="text-lg font-semibold text-purple-900 mb-2"> PWA Ready </h3> 
-          <p className="text-purple-700"> Progressive Web App capabilities. </p> </div> </div> </div> </div> </div> </>
+    <>
+      <Helmet>
+        <title>ServiceWorkerRegistrationPage - AI Solutions</title>
+        <meta name="description" content="Professional ServiceWorkerRegistrationPage services powered by AI" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              ServiceWorkerRegistrationPage
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional ServiceWorkerRegistrationPage services powered by cutting-edge AI technology.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
+                <p className="text-gray-300">Advanced AI-powered solutions for your business needs.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
+                <p className="text-gray-300">Scalable and reliable technology infrastructure.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
+                <p className="text-gray-300">24/7 support and maintenance services.</p>
+              </div>
+            </div>
+            
+            <div className="mt-16">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
-export default ServiceWorkerRegistration;
+
+export default ServiceWorkerRegistrationPage;

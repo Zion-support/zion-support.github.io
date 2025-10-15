@@ -1,58 +1,51 @@
-// Sitemap generation utility
-export interface SitemapUrl {
-  loc: string;
-  lastmod?: string;
-  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
-}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export const generateSitemap = (urls: SitemapUrl[]): string => {
-  const baseUrl = 'https://ziontechgroup.com';
-  const currentDate = new Date().toISOString().split('T')[0];
-  
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${urls.map(url => `
-  <url>
-    <loc>${baseUrl}${url.loc}</loc>
-    <lastmod>${url.lastmod || currentDate}</lastmod>
-    <changefreq>${url.changefreq || 'weekly'}</changefreq>
-    <priority>${url.priority || 0.8}</priority>
-  </url>`).join('')}
-</urlset>`;
-
-  return sitemap;
+const Sitemap.tsPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Sitemap.tsPage - AI Solutions</title>
+        <meta name="description" content="Professional Sitemap.tsPage services powered by AI" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              Sitemap.tsPage
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional Sitemap.tsPage services powered by cutting-edge AI technology.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
+                <p className="text-gray-300">Advanced AI-powered solutions for your business needs.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
+                <p className="text-gray-300">Scalable and reliable technology infrastructure.</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
+                <p className="text-gray-300">24/7 support and maintenance services.</p>
+              </div>
+            </div>
+            
+            <div className="mt-16">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
-// Default sitemap URLs
-export const defaultSitemapUrls: SitemapUrl[] = [
-  { loc: '/', priority: 1.0, changefreq: 'daily' },
-  { loc: '/about', priority: 0.9, changefreq: 'monthly' },
-  { loc: '/services', priority: 0.9, changefreq: 'weekly' },
-  { loc: '/solutions', priority: 0.9, changefreq: 'weekly' },
-  { loc: '/contact', priority: 0.8, changefreq: 'monthly' },
-  { loc: '/blog', priority: 0.7, changefreq: 'weekly' },
-  { loc: '/tutorials', priority: 0.7, changefreq: 'weekly' },
-  { loc: '/demo', priority: 0.8, changefreq: 'monthly' },
-  { loc: '/support', priority: 0.6, changefreq: 'weekly' },
-  { loc: '/pricing', priority: 0.8, changefreq: 'monthly' },
-  { loc: '/privacy', priority: 0.3, changefreq: 'yearly' },
-  { loc: '/terms', priority: 0.3, changefreq: 'yearly' },
-];
-
-// Generate robots.txt content
-export const generateRobotsTxt = (): string => {
-  return `User-agent: *
-Allow: /
-
-Sitemap: https://ziontechgroup.com/sitemap.xml
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /static/`;
-};
+export default Sitemap.tsPage;
