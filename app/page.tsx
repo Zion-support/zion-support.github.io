@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEOHead from './components/SEOHead';
+import AdvancedSEOHead from './components/AdvancedSEOHead';
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
@@ -110,10 +110,23 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <SEOHead 
+      <AdvancedSEOHead 
         title="Zion Tech Group - Advanced AI & IT Solutions"
         description="Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology."
         keywords="AI solutions, cybersecurity, cloud infrastructure, digital transformation, IT services, machine learning, artificial intelligence"
+        ogImage="/og-image.jpg"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "description": "Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ziontechgroup.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
       />
       
       <div className="min-h-screen bg-slate-900 text-white">

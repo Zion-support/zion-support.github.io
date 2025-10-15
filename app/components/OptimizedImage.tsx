@@ -1,17 +1,17 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { usePerformanceOptimization } from '../hooks/usePerformanceOptimization';
+import React, { useState, useCallback } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
   className?: string;
   priority?: boolean;
   placeholder?: string;
-  sizes?: string;
-  quality?: number;
-  loading?: 'lazy' | 'eager';
+  effect?: 'blur' | 'black-and-white' | 'opacity';
+  threshold?: number;
   onLoad?: () => void;
   onError?: () => void;
 }
@@ -24,124 +24,90 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   className = '',
   priority = false,
   placeholder,
-  sizes = '100vw',
-  quality = 75,
-  loading = 'lazy',
+  effect = 'blur',
+  threshold = 100,
   onLoad,
-  onError,
+  onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const [currentSrc, setCurrentSrc] = useState(placeholder || '');
-  const imgRef = useRef<HTMLImageElement>(null);
-  const { preloadImages } = usePerformanceOptimization();
 
-  // Generate optimized image URL (you can integrate with your image optimization service)
-  const getOptimizedSrc = (originalSrc: string, _w?: number, _h?: number, _q: number = quality) => {
-    // For now, return original src. In production, integrate with services like:
-    // - Cloudinary: `https://res.cloudinary.com/your-cloud/image/fetch/w_${w},h_${h},q_${q},f_auto/${originalSrc}`
-    // - Next.js Image Optimization: `/api/image?url=${encodeURIComponent(originalSrc)}&w=${w}&h=${h}&q=${q}`
-    // - Vercel Image Optimization: `/_next/image?url=${encodeURIComponent(originalSrc)}&w=${w}&h=${h}&q=${q}`
+  const handleLoad = useCallback(() => {
+    setIsLoaded(true);
+    onLoad?.();
+  }, [onLoad]);
+
+  const handleError = useCallback(() => {
+    setHasError(true);
+    onError?.();
+  }, [onError]);
+
+  // Generate optimized src with WebP support
+  const getOptimizedSrc = (originalSrc: string) => {
+    if (originalSrc.startsWith('http') || originalSrc.startsWith('data:')) {
+      return originalSrc;
+    }
+    
+    // Add WebP support for local images
+    const baseUrl = originalSrc.split('.')[0];
+    const extension = originalSrc.split('.').pop();
+    
+    // Check if WebP is supported
+    if (typeof window !== 'undefined' && window.HTMLCanvasElement && window.HTMLCanvasElement.prototype.toBlob) {
+      return `${baseUrl}.webp`;
+    }
+    
     return originalSrc;
   };
 
-  const optimizedSrc = getOptimizedSrc(src, width, height, quality);
-
-  useEffect(() => {
-    if (priority) {
-      preloadImages([optimizedSrc]);
-      setCurrentSrc(optimizedSrc);
-    }
-  }, [optimizedSrc, priority, preloadImages]);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
-  const handleError = () => {
-    setHasError(true);
-    onError?.();
-  };
-
-  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting && !isLoaded && !hasError) {
-        setCurrentSrc(optimizedSrc);
-      }
-    });
-    return undefined;
-  };
-
-  useEffect(() => {
-    if (loading === 'lazy' && !priority) {
-      const observer = new IntersectionObserver(handleIntersection, {
-        rootMargin: '50px',
-        threshold: 0.1,
-      });
-
-      if (imgRef.current) {
-        observer.observe(imgRef.current);
-      }
-
-      return () => observer.disconnect();
-    } else if (priority) {
-      setCurrentSrc(optimizedSrc);
-    }
-  }, [loading, priority, optimizedSrc, isLoaded, hasError]);
-
   if (hasError) {
     return (
-      <div
+      <div 
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height }}
         role="img"
         aria-label={alt}
       >
-        <svg
-          className="w-8 h-8 text-gray-400"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-          />
+        <svg className="w-8 h-8 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
         </svg>
       </div>
     );
   }
 
-  return (
-    <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
-      {placeholder && !isLoaded && (
-        <div
-          className="absolute inset-0 bg-gray-200 animate-pulse"
-          style={{ backgroundImage: `url(${placeholder})`, backgroundSize: 'cover' }}
-        />
-      )}
+  const optimizedSrc = getOptimizedSrc(src);
+
+  if (priority) {
+    return (
       <img
-        ref={imgRef}
-        src={currentSrc}
+        src={optimizedSrc}
         alt={alt}
         width={width}
         height={height}
-        sizes={sizes}
-        loading={priority ? 'eager' : loading}
+        className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
         onLoad={handleLoad}
         onError={handleError}
-        className={`transition-opacity duration-300 ${
-          isLoaded ? 'opacity-100' : 'opacity-0'
-        }`}
-        style={{
-          width: width ? `${width}px` : '100%',
-          height: height ? `${height}px` : 'auto',
-        }}
+        loading="eager"
+        decoding="async"
       />
-    </div>
+    );
+  }
+
+  return (
+    <LazyLoadImage
+      src={optimizedSrc}
+      alt={alt}
+      width={width}
+      height={height}
+      className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
+      effect={effect}
+      placeholder={placeholder}
+      threshold={threshold}
+      onLoad={handleLoad}
+      onError={handleError}
+      loading="lazy"
+      decoding="async"
+    />
   );
 };
 

@@ -8,10 +8,11 @@ import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
+import AdvancedPerformanceMonitor from './app/components/AdvancedPerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import SEOOptimizer from './app/components/SEOOptimizer';
+import SecurityHeaders from './app/components/SecurityHeaders';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -79,36 +80,14 @@ const DemoPage = lazy(() => import('./app/demo/page'));
 const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
 const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
 
-// Missing pages
-const TutorialsPage = lazy(() => import('./app/tutorials/page'));
-const DocsPage = lazy(() => import('./app/docs/page'));
-const SupportPage = lazy(() => import('./app/support/page'));
-
 // Micro SaaS pages
 const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
 const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
 const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
 const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
-const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
-const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
-
-// Missing pages
-const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
-const SupportPage = lazy(() => import('./app/support/page'));
-const TutorialsPage = lazy(() => import('./app/tutorials/page'));
-const DocsPage = lazy(() => import('./app/docs/page'));
-const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
-const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
-const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
-const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
-const SocialMediaSchedulerPage = lazy(() => import('./app/social-media-scheduler/page'));
-const ExpenseTrackerProPage = lazy(() => import('./app/expense-tracker-pro/page'));
 
 // Additional missing pages
 const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
-const AICRMOptimizerPage = lazy(() => import('./app/ai-crm-optimizer/page'));
-const AIDataVisualizerPage = lazy(() => import('./app/ai-data-visualizer/page'));
-const AIEmailOptimizerPage = lazy(() => import('./app/ai-email-optimizer/page'));
 const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
 const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
 const AILeadScoringProPage = lazy(() => import('./app/ai-lead-scoring-pro/page'));
@@ -241,7 +220,8 @@ function App() {
             
             <main className="flex-1">
               <ErrorBoundary>
-                <PerformanceMonitor />
+                <SecurityHeaders />
+                <AdvancedPerformanceMonitor />
                 <AccessibilityEnhancer />
                 <SEOOptimizer />
                 
@@ -318,24 +298,7 @@ function App() {
                     <Route path="/cybersecurity" element={<CybersecurityPage />} />
                     <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
                     
-                    {/* Missing pages */}
-                    <Route path="/tutorials" element={<TutorialsPage />} />
-                    <Route path="/docs" element={<DocsPage />} />
-                    <Route path="/support" element={<SupportPage />} />
-                    
                     {/* Micro SaaS pages */}
-                    <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
-                    <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
-                    <Route path="/customer-support-hub" element={<CustomerSupportHubPage />} />
-                    <Route path="/inventory-manager" element={<InventoryManagerPage />} />
-                    <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
-                    <Route path="/expense-tracker-pro" element={<ExpenseTrackerProPage />} />
-                    
-                    {/* Missing pages */}
-                    <Route path="/it-solutions" element={<ITSolutionsPage />} />
-                    <Route path="/support" element={<SupportPage />} />
-                    <Route path="/tutorials" element={<TutorialsPage />} />
-                    <Route path="/docs" element={<DocsPage />} />
                     <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
                     <Route path="/analytics-dashboard" element={<AnalyticsDashboardPage />} />
                     <Route path="/customer-support-hub" element={<CustomerSupportHubPage />} />
