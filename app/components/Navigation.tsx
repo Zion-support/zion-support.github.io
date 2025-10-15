@@ -194,16 +194,21 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
   };
 
   return (
-    <nav className="bg-slate-900 border-b border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="glass-card border-b border-cyan-500/30 relative overflow-hidden">
+      {/* Cyber Grid Background */}
+      <div className="cyber-grid"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
-              <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <Link to="/" className="flex-shrink-0 flex items-center group">
+              <div className="h-8 w-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center neon-glow group-hover:scale-110 transition-transform">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
-              <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
+              <span className="ml-2 text-white font-bold text-xl text-gradient group-hover:text-cyan-300 transition-colors">
+                Zion Tech Group
+              </span>
             </Link>
           </div>
 
@@ -220,10 +225,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
                     else if (item.name === 'Resources') toggleResourcesMenu();
                     else if (item.name === 'Company') toggleCompanyMenu();
                   }}
-                  className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors border-b-2 ${
+                  className={`flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 border-2 ${
                     isActive(item.href)
-                      ? 'border-blue-500 text-white'
-                      : 'border-transparent text-gray-300 hover:border-gray-300 hover:text-white'
+                      ? 'border-cyan-500 text-cyan-300 bg-cyan-500/10 neon-glow-subtle'
+                      : 'border-transparent text-gray-300 hover:border-cyan-400 hover:text-cyan-300 hover:bg-cyan-500/5'
                   }`}
                   aria-expanded={item.submenu ? (item.name === 'AI Services' && isServicesOpen) ||
                     (item.name === 'Micro SaaS' && isSolutionsOpen) ||
@@ -232,14 +237,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
                     (item.name === 'Company' && isCompanyOpen) : undefined}
                   aria-haspopup={item.submenu ? 'true' : undefined}
                 >
-                  <item.icon className="w-4 h-4" aria-hidden="true" />
+                  <item.icon className="w-4 h-4 mr-2" aria-hidden="true" />
                   <span>{item.name}</span>
-                  {item.submenu && <ChevronDownIcon className="w-4 h-4" aria-hidden="true" />}
+                  {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" aria-hidden="true" />}
                 </Link>
                 {/* Dropdown Menu */}
                 {item.submenu && (
                   <div 
-                    className={`absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700 ${
+                    className={`absolute left-0 mt-2 w-64 glass-card-cyber py-2 z-50 ${
                       (item.name === 'AI Services' && isServicesOpen) ||
                       (item.name === 'Micro SaaS' && isSolutionsOpen) ||
                       (item.name === 'IT Solutions' && isResourcesOpen) ||
@@ -254,11 +259,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
                       <div key={subItem.name} role="none">
                         <Link
                           to={subItem.href}
-                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white"
+                          className="flex items-center px-4 py-3 text-sm text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-300 transition-all duration-300 group"
                           role="menuitem"
                         >
-                          <subItem.icon className="w-4 h-4 mr-3" aria-hidden="true" />
-                          <span>{subItem.name}</span>
+                          <subItem.icon className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" aria-hidden="true" />
+                          <span className="group-hover:text-white transition-colors">{subItem.name}</span>
                         </Link>
                       </div>
                     ))}
@@ -272,7 +277,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, sidebarOpen = 
           <div className="lg:hidden flex items-center">
             <button
               onClick={onSidebarToggle}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-lg text-gray-300 hover:text-cyan-300 hover:bg-cyan-500/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all duration-300 neon-glow-subtle"
               aria-label="Toggle navigation menu"
               aria-expanded={sidebarOpen}
               aria-controls="mobile-menu"

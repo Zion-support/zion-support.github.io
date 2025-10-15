@@ -149,13 +149,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 lg:hidden">
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
-      <div className="fixed top-0 left-0 h-full w-80 bg-slate-900 shadow-xl">
-        <div className="flex items-center justify-between p-4 border-b border-slate-700">
-          <h2 className="text-lg font-semibold text-white">Navigation</h2>
+      <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm" onClick={onClose} />
+      <div className="fixed top-0 left-0 h-full w-80 glass-card-cyber shadow-xl">
+        <div className="flex items-center justify-between p-4 border-b border-cyan-500/30">
+          <h2 className="text-lg font-semibold text-white text-gradient">Navigation</h2>
           <button
             onClick={onClose}
-            className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-slate-700"
+            className="p-2 rounded-lg text-gray-400 hover:text-cyan-300 hover:bg-cyan-500/10 transition-all duration-300 neon-glow-subtle"
           >
             <X className="h-5 w-5" />
           </button>
@@ -163,35 +163,35 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         
         <div className="overflow-y-auto h-full pb-20">
           {navigationSections.map((section) => (
-            <div key={section.title} className="border-b border-slate-700">
+            <div key={section.title} className="border-b border-cyan-500/30">
               <button
                 onClick={() => toggleSection(section.title)}
-                className="w-full flex items-center justify-between p-4 text-left text-white hover:bg-slate-800"
+                className="w-full flex items-center justify-between p-4 text-left text-white hover:bg-cyan-500/10 transition-all duration-300 group"
               >
-                <span className="font-medium">{section.title}</span>
+                <span className="font-medium group-hover:text-cyan-300 transition-colors">{section.title}</span>
                 {expandedSections.has(section.title) ? (
-                  <ChevronDown className="h-4 w-4" />
+                  <ChevronDown className="h-4 w-4 group-hover:text-cyan-300 transition-colors" />
                 ) : (
-                  <ChevronRight className="h-4 w-4" />
+                  <ChevronRight className="h-4 w-4 group-hover:text-cyan-300 transition-colors" />
                 )}
               </button>
               
               {expandedSections.has(section.title) && (
-                <div className="bg-slate-800">
+                <div className="bg-slate-800/50 backdrop-blur-sm">
                   {section.items.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className={`flex items-center px-6 py-3 text-sm transition-colors ${
+                      className={`flex items-center px-6 py-3 text-sm transition-all duration-300 group ${
                         isActive(item.href)
-                          ? 'bg-blue-600 text-white'
-                          : 'text-gray-300 hover:bg-slate-700 hover:text-white'
+                          ? 'bg-cyan-500/20 text-cyan-300 border-l-2 border-cyan-500'
+                          : 'text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-300'
                       }`}
                     >
-                      <item.icon className="h-4 w-4 mr-3" />
-                      {item.name}
+                      <item.icon className="h-4 w-4 mr-3 group-hover:scale-110 transition-transform" />
+                      <span className="group-hover:text-white transition-colors">{item.name}</span>
                       {isActive(item.href) && (
-                        <ArrowRight className="h-3 w-3 ml-auto" />
+                        <ArrowRight className="h-3 w-3 ml-auto text-cyan-300" />
                       )}
                     </a>
                   ))}
@@ -201,15 +201,27 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           ))}
         </div>
         
-        <div className="absolute bottom-0 left-0 right-0 p-4 bg-slate-900 border-t border-slate-700">
-          <div className="flex items-center space-x-4 text-sm text-gray-400">
+        <div className="absolute bottom-0 left-0 right-0 p-4 glass-card border-t border-cyan-500/30">
+          <div className="space-y-3 text-sm text-gray-400">
             <div className="flex items-center">
-              <Mail className="h-4 w-4 mr-2" />
-              <span>kleber@ziontechgroup.com</span>
+              <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-3 neon-glow">
+                <Mail className="h-3 w-3 text-white" />
+              </div>
+              <span className="hover:text-purple-300 transition-colors">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
-              <MapPin className="h-4 w-4 mr-2" />
-              <span>Middletown, DE</span>
+              <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-3 neon-glow">
+                <MapPin className="h-3 w-3 text-white" />
+              </div>
+              <span className="hover:text-green-300 transition-colors">Middletown, DE</span>
+            </div>
+            <div className="flex items-center">
+              <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mr-3 neon-glow">
+                <svg className="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <span className="hover:text-cyan-300 transition-colors">+1 (302) 464-0950</span>
             </div>
           </div>
         </div>

@@ -3,27 +3,62 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = memo(() => {
   return (
-    <footer className="glass-card mt-20">
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+    <footer className="glass-card-cyber mt-20 relative overflow-hidden">
+      {/* Cyber Circuit Pattern */}
+      <div className="cyber-circuit"></div>
+      
+      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-6 text-gradient font-['Orbitron']">ZION TECH GROUP</h3>
+            <h3 className="text-2xl font-bold mb-6 text-gradient-holographic font-['Orbitron'] neon-glow-subtle">ZION TECH GROUP</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
+              Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology and innovative micro SAAS applications.
             </p>
-            <div className="space-y-2 text-sm text-gray-300">
-              <p><strong>Phone:</strong> <a href="tel:+13024640950" className="hover:text-white">+1 302 464 0950</a></p>
-              <p><strong>Email:</strong> <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white">kleber@ziontechgroup.com</a></p>
-              <p><strong>Address:</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
-              <p><strong>Website:</strong> <a href="https://ziontechgroup.com" className="hover:text-white">https://ziontechgroup.com</a></p>
-            </div>
-            <div className="flex space-x-4 mt-4">
-              <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
-                <span className="sr-only">Website</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                </svg>
-              </a>
+            <div className="space-y-3 text-sm text-gray-300">
+              <div className="flex items-center">
+                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mr-3 neon-glow">
+                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-semibold text-cyan-400">Phone</p>
+                  <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors">+1 (302) 464-0950</a>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-3 neon-glow">
+                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-semibold text-purple-400">Email</p>
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">kleber@ziontechgroup.com</a>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-3 neon-glow">
+                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-semibold text-green-400">Address</p>
+                  <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mr-3 neon-glow">
+                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-semibold text-orange-400">Website</p>
+                  <a href="https://ziontechgroup.com" className="hover:text-orange-300 transition-colors">https://ziontechgroup.com</a>
+                </div>
+              </div>
             </div>
           </div>
           
