@@ -179,6 +179,17 @@ const App = memo(() => {
   });
 
   useEffect(() => {
+    // Register service worker
+    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      navigator.serviceWorker.register('/sw.js')
+        .then((_registration) => {
+          // Service worker registered successfully
+        })
+        .catch((_error) => {
+          // Service worker registration failed
+        });
+    }
+
     // Preload critical resources
     const preloadCriticalResources = () => {
       // Preload critical CSS
@@ -206,7 +217,10 @@ const App = memo(() => {
       });
     };
 
-    preloadCriticalResources();
+    // Only preload in production
+    if (process.env.NODE_ENV === 'production') {
+      preloadCriticalResources();
+    }
   }, []);
   return (
     <GlobalErrorBoundary>

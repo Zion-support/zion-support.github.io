@@ -65,7 +65,29 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       if (resource.includes('fonts.googleapis.com')) {
         link.crossOrigin = 'anonymous';
       }
+      
+      // Add error handling
+      link.onerror = () => {
+        // Silently handle preload errors
+      };
+      
       document.head.appendChild(link);
+    });
+  }, [enablePreloading]);
+
+  // Preload critical images
+  const preloadImages = useCallback((imageUrls: string[]) => {
+    if (!enablePreloading) return;
+
+    imageUrls.forEach((url) => {
+      const img = new Image();
+      img.src = url;
+      img.onload = () => {
+        // Image preloaded successfully
+      };
+      img.onerror = () => {
+        // Silently handle image preload errors
+      };
     });
   }, [enablePreloading]);
 
