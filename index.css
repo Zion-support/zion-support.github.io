@@ -12,6 +12,31 @@
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
   --text-muted: #94a3b8;
+  
+  /* Futuristic Color Palette */
+  --neon-purple: #bf00ff;
+  --neon-cyan: #00ffff;
+  --neon-pink: #ff0080;
+  --neon-green: #00ff41;
+  --neon-blue: #0080ff;
+  --neon-yellow: #ffff00;
+  
+  /* Holographic Colors */
+  --holo-primary: #00ffff;
+  --holo-secondary: #ff0080;
+  --holo-accent: #00ff41;
+  
+  /* Cyber Grid */
+  --grid-color: rgba(0, 255, 255, 0.1);
+  --grid-active: rgba(0, 255, 255, 0.3);
+  
+  /* Energy Field */
+  --energy-field: rgba(139, 92, 246, 0.2);
+  --energy-pulse: rgba(139, 92, 246, 0.4);
+  
+  /* Circuit Pattern */
+  --circuit-color: rgba(0, 255, 255, 0.2);
+  --circuit-active: rgba(0, 255, 255, 0.6);
 }
 
 /* Base Styles */
@@ -87,6 +112,181 @@ body {
   }
 }
 
+/* Futuristic Animations */
+@keyframes neon-pulse {
+  0%, 100% { 
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+    filter: brightness(1);
+  }
+  50% { 
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor;
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes matrix-rain {
+  0% { transform: translateY(-100vh); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes cyber-grid {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(20px, 20px); }
+}
+
+@keyframes hologram {
+  0%, 100% { 
+    opacity: 0.8;
+    transform: translateY(0px) scale(1);
+    filter: hue-rotate(0deg);
+  }
+  25% { 
+    opacity: 1;
+    transform: translateY(-5px) scale(1.01);
+    filter: hue-rotate(90deg);
+  }
+  50% { 
+    opacity: 0.9;
+    transform: translateY(-10px) scale(1.02);
+    filter: hue-rotate(180deg);
+  }
+  75% { 
+    opacity: 1;
+    transform: translateY(-5px) scale(1.01);
+    filter: hue-rotate(270deg);
+  }
+}
+
+@keyframes data-stream {
+  0% { transform: translateX(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100vh); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes particle-float {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+    opacity: 0.7;
+  }
+  25% { 
+    transform: translateY(-20px) translateX(10px) rotate(90deg);
+    opacity: 1;
+  }
+  50% { 
+    transform: translateY(-40px) translateX(-5px) rotate(180deg);
+    opacity: 0.8;
+  }
+  75% { 
+    transform: translateY(-20px) translateX(15px) rotate(270deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes energy-pulse {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 0.8;
+    box-shadow: 0 0 20px var(--energy-field);
+  }
+  50% { 
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0 0 40px var(--energy-pulse), 0 0 80px var(--energy-field);
+  }
+}
+
+@keyframes circuit-flow {
+  0% { stroke-dashoffset: 100; opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0.3; }
+}
+
+@keyframes holographic-shift {
+  0%, 100% { 
+    filter: hue-rotate(0deg) saturate(1) brightness(1);
+    background-position: 0% 50%;
+  }
+  25% { 
+    filter: hue-rotate(90deg) saturate(1.2) brightness(1.1);
+    background-position: 25% 50%;
+  }
+  50% { 
+    filter: hue-rotate(180deg) saturate(1.5) brightness(1.2);
+    background-position: 50% 50%;
+  }
+  75% { 
+    filter: hue-rotate(270deg) saturate(1.2) brightness(1.1);
+    background-position: 75% 50%;
+  }
+}
+
+@keyframes cyber-scan {
+  0% { 
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% { 
+    opacity: 1;
+  }
+  100% { 
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes energy-field {
+  0%, 100% { 
+    background: radial-gradient(circle, var(--energy-field) 0%, transparent 70%);
+    transform: scale(1);
+  }
+  50% { 
+    background: radial-gradient(circle, var(--energy-pulse) 0%, transparent 70%);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  2% { opacity: 0.8; }
+  4% { opacity: 1; }
+  6% { opacity: 0.9; }
+  8% { opacity: 1; }
+  10% { opacity: 0.95; }
+  12% { opacity: 1; }
+}
+
+@keyframes data-matrix {
+  0% { 
+    background-position: 0 0;
+    opacity: 0.1;
+  }
+  50% { 
+    opacity: 0.3;
+  }
+  100% { 
+    background-position: 20px 20px;
+    opacity: 0.1;
+  }
+}
+
 /* Utility Classes */
 .floating {
   animation: float 6s ease-in-out infinite;
@@ -134,6 +334,238 @@ body {
 
 .hover-glow:hover {
   box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+/* Futuristic Utility Classes */
+.neon-pulse {
+  animation: neon-pulse 2s ease-in-out infinite;
+}
+
+.matrix-rain {
+  animation: matrix-rain 20s linear infinite;
+}
+
+.cyber-grid {
+  background-image: 
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: cyber-grid 10s linear infinite;
+}
+
+.hologram {
+  animation: hologram 3s ease-in-out infinite;
+}
+
+.data-stream {
+  animation: data-stream 4s linear infinite;
+}
+
+.scan-line {
+  animation: scan-line 2s linear infinite;
+}
+
+.glitch {
+  animation: glitch 0.3s ease-in-out infinite;
+}
+
+.particle-float {
+  animation: particle-float 8s ease-in-out infinite;
+}
+
+.energy-pulse {
+  animation: energy-pulse 1.5s ease-in-out infinite;
+}
+
+.circuit-flow {
+  animation: circuit-flow 3s linear infinite;
+}
+
+.holographic-shift {
+  animation: holographic-shift 4s ease-in-out infinite;
+}
+
+.cyber-scan {
+  animation: cyber-scan 3s ease-in-out infinite;
+}
+
+.energy-field {
+  animation: energy-field 2s ease-in-out infinite;
+}
+
+.neon-flicker {
+  animation: neon-flicker 0.1s ease-in-out infinite;
+}
+
+.data-matrix {
+  background-image: 
+    linear-gradient(var(--circuit-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--circuit-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: data-matrix 15s linear infinite;
+}
+
+/* Neon Text Effects */
+.neon-purple {
+  color: var(--neon-purple);
+  text-shadow: 0 0 5px var(--neon-purple), 0 0 10px var(--neon-purple), 0 0 15px var(--neon-purple);
+}
+
+.neon-cyan {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 5px var(--neon-cyan), 0 0 10px var(--neon-cyan), 0 0 15px var(--neon-cyan);
+}
+
+.neon-pink {
+  color: var(--neon-pink);
+  text-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--neon-pink), 0 0 15px var(--neon-pink);
+}
+
+.neon-green {
+  color: var(--neon-green);
+  text-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green), 0 0 15px var(--neon-green);
+}
+
+.neon-blue {
+  color: var(--neon-blue);
+  text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 15px var(--neon-blue);
+}
+
+.neon-yellow {
+  color: var(--neon-yellow);
+  text-shadow: 0 0 5px var(--neon-yellow), 0 0 10px var(--neon-yellow), 0 0 15px var(--neon-yellow);
+}
+
+/* Holographic Effects */
+.holographic {
+  background: linear-gradient(45deg, 
+    var(--holo-primary) 0%, 
+    var(--holo-secondary) 25%, 
+    var(--holo-accent) 50%, 
+    var(--holo-primary) 75%, 
+    var(--holo-secondary) 100%);
+  background-size: 400% 400%;
+  animation: holographic-shift 4s ease-in-out infinite;
+}
+
+.holographic-text {
+  background: linear-gradient(45deg, 
+    var(--holo-primary), 
+    var(--holo-secondary), 
+    var(--holo-accent), 
+    var(--holo-primary));
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: holographic-shift 4s ease-in-out infinite;
+}
+
+/* Cyber Effects */
+.cyber-border {
+  border: 2px solid var(--neon-cyan);
+  box-shadow: 
+    0 0 10px var(--neon-cyan),
+    inset 0 0 10px var(--neon-cyan);
+}
+
+.cyber-glow {
+  box-shadow: 
+    0 0 20px var(--neon-cyan),
+    0 0 40px var(--neon-cyan),
+    0 0 60px var(--neon-cyan);
+}
+
+/* Energy Effects */
+.energy-border {
+  border: 2px solid var(--primary-color);
+  box-shadow: 
+    0 0 10px var(--energy-field),
+    inset 0 0 10px var(--energy-field);
+}
+
+.energy-glow {
+  box-shadow: 
+    0 0 20px var(--energy-pulse),
+    0 0 40px var(--energy-field),
+    0 0 80px var(--energy-field);
+}
+
+/* Circuit Effects */
+.circuit-pattern {
+  background-image: 
+    linear-gradient(var(--circuit-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--circuit-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.circuit-active {
+  background-image: 
+    linear-gradient(var(--circuit-active) 1px, transparent 1px),
+    linear-gradient(90deg, var(--circuit-active) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: cyber-grid 5s linear infinite;
+}
+
+/* Interactive Effects */
+.interactive-glow {
+  transition: all 0.3s ease;
+}
+
+.interactive-glow:hover {
+  box-shadow: 
+    0 0 20px currentColor,
+    0 0 40px currentColor,
+    0 0 60px currentColor;
+  transform: scale(1.05);
+}
+
+.interactive-neon {
+  transition: all 0.3s ease;
+}
+
+.interactive-neon:hover {
+  text-shadow: 
+    0 0 10px currentColor,
+    0 0 20px currentColor,
+    0 0 30px currentColor,
+    0 0 40px currentColor;
+  filter: brightness(1.2);
+}
+
+/* Data Visualization Effects */
+.data-point {
+  position: relative;
+}
+
+.data-point::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: var(--neon-cyan);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px var(--neon-cyan);
+  animation: energy-pulse 2s ease-in-out infinite;
+}
+
+.data-connection {
+  position: relative;
+}
+
+.data-connection::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+  animation: data-stream 3s linear infinite;
+  opacity: 0.6;
 }
 
 .animated-grid {
