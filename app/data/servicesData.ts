@@ -550,11 +550,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-consulting'
-<<<<<<< HEAD
-      },
-=======
       }
->>>>>>> 363a4f85aae5 (fix: resolve merge conflicts and duplicate key errors)
     },
     {
       id: 'ai-inventory-optimizer-pro',
@@ -830,11 +826,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-content-generator'
-<<<<<<< HEAD
       },
-=======
-      }
->>>>>>> 363a4f85aae5 (fix: resolve merge conflicts and duplicate key errors)
     },
     {
       id: 'ai-customer-support',
@@ -880,11 +872,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-customer-support'
-<<<<<<< HEAD
       },
-=======
-      }
->>>>>>> 363a4f85aae5 (fix: resolve merge conflicts and duplicate key errors)
     }
   ],
   microSaas: [
@@ -932,11 +920,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/task-manager'
-<<<<<<< HEAD
       },
-=======
-      }
->>>>>>> 363a4f85aae5 (fix: resolve merge conflicts and duplicate key errors)
     },
     {
       id: 'smart-expense-tracker',
@@ -1672,11 +1656,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/expense-tracker'
-<<<<<<< HEAD
       },
-=======
-      }
->>>>>>> 363a4f85aae5 (fix: resolve merge conflicts and duplicate key errors)
     },
     {
       id: 'email-marketing',
@@ -1722,11 +1702,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/email-marketing'
-<<<<<<< HEAD
       },
-=======
-      }
->>>>>>> 363a4f85aae5 (fix: resolve merge conflicts and duplicate key errors)
     },
     {
       id: 'social-scheduler',
@@ -1772,11 +1748,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/social-scheduler'
-<<<<<<< HEAD
       },
-=======
-      }
->>>>>>> 363a4f85aae5 (fix: resolve merge conflicts and duplicate key errors)
     },
     {
       id: 'inventory-optimizer',
@@ -1822,11 +1794,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/inventory-optimizer'
-<<<<<<< HEAD
       },
-=======
-      }
->>>>>>> 363a4f85aae5 (fix: resolve merge conflicts and duplicate key errors)
     },
     {
       id: 'workflow-automator',
@@ -1872,11 +1840,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/workflow-automator'
-<<<<<<< HEAD
       },
-=======
-      }
->>>>>>> 363a4f85aae5 (fix: resolve merge conflicts and duplicate key errors)
     }
   ],
   itSolutions: [
@@ -1924,11 +1888,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/cloud-infrastructure'
-<<<<<<< HEAD
       },
-=======
-      }
->>>>>>> 363a4f85aae5 (fix: resolve merge conflicts and duplicate key errors)
     },
     {
       id: 'devops-automation',
@@ -2526,11 +2486,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/cybersecurity'
-<<<<<<< HEAD
       },
-=======
-      }
->>>>>>> 363a4f85aae5 (fix: resolve merge conflicts and duplicate key errors)
     },
     {
       id: 'data-analytics',
@@ -2576,11 +2532,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/data-analytics'
-<<<<<<< HEAD
       },
-=======
-      }
->>>>>>> 363a4f85aae5 (fix: resolve merge conflicts and duplicate key errors)
     },
     {
       id: 'mobile-development',
@@ -2626,11 +2578,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/mobile-development'
-<<<<<<< HEAD
       },
-=======
-      }
->>>>>>> 363a4f85aae5 (fix: resolve merge conflicts and duplicate key errors)
     },
     {
       id: 'web-development',
@@ -2676,11 +2624,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/web-development'
-<<<<<<< HEAD
       },
-=======
-      }
->>>>>>> 363a4f85aae5 (fix: resolve merge conflicts and duplicate key errors)
     },
     {
       id: 'database-management',
@@ -2726,7 +2670,6 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/database-management'
-<<<<<<< HEAD
       },
     }
   ],
@@ -3472,8 +3415,7 @@ export const servicesData = {
         phone: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/security-audit'
-=======
->>>>>>> 363a4f85aae5 (fix: resolve merge conflicts and duplicate key errors)
+
       }
     }
   ]
