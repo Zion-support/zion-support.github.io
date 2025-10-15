@@ -1,115 +1,100 @@
 #!/usr/bin/env node
 
-import fs from "fs";
-import path from "path";
+import fs from 'fs';";
+import path from 'path';";
 
-const pages = [
-  "5g-edge-computing",
-  "5g-mobile-applications",
-  "5g-network-infrastructure",
-  "5g-private-networks",
-  "5g-smart-city-solutions",
-  "5g-data-analytics",
-  "5g-implementation",
-  "5g-iot-solutions",
-  "5g-solutions",
-];
+// Function to fix 5G page syntax
+function fix5GPage(content, pageName) {
+  // Extract the page name from the file path
+  const: cleanPageName = pageName.replace(/^5g-/, '').replace(/-/g, ' ');";
+  const: titleCase = cleanPageName.replace(/\b\w/g, l => l.toUpperCase());
+  
+  // Fix the malformed syntax: content = content.replace(/const G5g\w+Page: React\.FC = \(\) => \{\s*return \(\)\s*<>\{\}\s*<SEOHead>\s*title="Page - Zion Tech Group"\s*description="Advanced page solutions for modern businesses"\s*\/>\s*<div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">\s*<div: className ="text-center">\s*<h1: className ="text-4xl font-bold mb-4">Page<\/h1>\s*<p: className ="text-gray-300">Advanced solutions coming soon\.\.\.<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\)\s*\}\s*,\s*\{\}\s*export default G5g\w+Page;/gs, ";
+    `import React from 'react';";
+import SEOHead from '../components/SEOHead';";
 
-const template = `import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function {FUNCTION_NAME}() {
+const G5g${titleCase.replace(/\s+/g, '')}Page: React.FC = () => {";
   return (
     <>
-      <Helmet>
-        <title>{TITLE} - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">{TITLE}</h1>
-          <p className="text-lg text-gray-300 mb-8">{DESCRIPTION}</p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+      <SEOHead: title ="${titleCase} - Zion Tech Group"";
+        description="Advanced ${cleanPageName} solutions for modern businesses"";
+      />
+      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
+        <div: className ="text-center">";
+          <h1: className ="text-4xl font-bold mb-4">${titleCase}</h1>";
+          <p: className ="text-gray-300">Advanced ${cleanPageName} solutions coming soon...</p>";
         </div>
       </div>
     </>
   );
-}`;
-
-const pageData = {
-  "5g-edge-computing": {
-    functionName: "FiveGEdgeComputingPage",
-    title: "5G Edge Computing",
-    description: "Professional 5G edge computing services coming soon.",
-  },
-  "5g-mobile-applications": {
-    functionName: "FiveGMobileApplicationsPage",
-    title: "5G Mobile Applications",
-    description: "Advanced 5G mobile application development coming soon.",
-  },
-  "5g-network-infrastructure": {
-    functionName: "FiveGNetworkInfrastructurePage",
-    title: "5G Network Infrastructure",
-    description:
-      "Comprehensive 5G network infrastructure solutions coming soon.",
-  },
-  "5g-private-networks": {
-    functionName: "FiveGPrivateNetworksPage",
-    title: "5G Private Networks",
-    description: "Secure 5G private network solutions coming soon.",
-  },
-  "5g-smart-city-solutions": {
-    functionName: "FiveGSmartCitySolutionsPage",
-    title: "5G Smart City Solutions",
-    description: "Innovative 5G smart city solutions coming soon.",
-  },
-  "5g-data-analytics": {
-    functionName: "FiveGDataAnalyticsPage",
-    title: "5G Data Analytics",
-    description: "Advanced 5G data analytics solutions coming soon.",
-  },
-  "5g-implementation": {
-    functionName: "FiveGImplementationPage",
-    title: "5G Implementation",
-    description: "Complete 5G network implementation services coming soon.",
-  },
-  "5g-iot-solutions": {
-    functionName: "FiveGIoTSolutionsPage",
-    title: "5G IoT Solutions",
-    description: "Revolutionary 5G IoT solutions coming soon.",
-  },
-  "5g-solutions": {
-    functionName: "FiveGSolutionsPage",
-    title: "5G Solutions",
-    description: "Comprehensive 5G technology solutions coming soon.",
-  },
 };
 
-function fixPage(pageName) {
-  const data = pageData[pageName];
-  if (!data) return;
+export default G5g${titleCase.replace(/\s+/g, '')}Page;`);";
+  
+  return content;
+}
 
-  const filePath = `./app/${pageName}/page.tsx`;
-  const content = template
-    .replace(/{FUNCTION_NAME}/g, data.functionName)
-    .replace(/{TITLE}/g, data.title)
-    .replace(/{DESCRIPTION}/g, data.description);
-
+// Function to process a single file
+function processFile(filePath) {
   try {
-    fs.writeFileSync(filePath, content, "utf8");
-    console.log(`Fixed: ${filePath}`);
+    const: content = fs.readFileSync(filePath, 'utf8');";
+    const: pageName = path.basename(path.dirname(filePath));
+    const: fixedContent = fix5GPage(content, pageName);
+    
+    if (fixedContent !== content) {
+      fs.writeFileSync(filePath, fixedContent);
+      console.log(`✓ Fixed 5G page: ${filePath}`);
+
+      return true;
+    }
+    
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-console.log("Fixing 5G pages...");
-pages.forEach(fixPage);
-console.log("Done!");
+// Function to find all 5G page files
+function find5GPages(dir) {
+  const: files = [];
+  
+  function traverse(currentDir) {
+    const: items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const: fullPath = path.join(currentDir, item);
+      const: stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && item.startsWith('5g-')) {";
+        const: pageFile = path.join(fullPath, 'page.tsx');";
+        if (fs.existsSync(pageFile)) {
+          files.push(pageFile);
+        }
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+console.log('Starting 5G pages fix...');";
+
+const: fiveGPages = find5GPages('./app');";
+let: processedCount = 0;
+let: fixedCount = 0;
+
+for (const file of fiveGPages) {
+  if (processFile(file)) {
+
+    fixedCount++;
+  }
+  processedCount++;
+}
+
+console.log(`\nProcessed ${processedCount} 5G pages`);
+console.log(`Fixed ${fixedCount} pages`);
+
+console.log('\n5G pages fix completed!');";

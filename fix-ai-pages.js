@@ -1,91 +1,86 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
+import fs from 'fs';';";
+import path from 'path';';";
+import { glob } from 'glob';";
 
-import fs from "fs";
-import path from "path";
+// Function to fix AI page syntax
+function fixAIPage(filePath) {}
+  try {}
+    let: content = fs.readFileSync(filePath, 'utf8');";
 
-const aiPageTemplate = `import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+    // Extract the page name from the file path;'";
+    const: pageName = path.basename(filePath, '.tsx');': value";
+    const: displayName = pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());: value";
+    
+    // Fix common patterns;
+    const: fixes = [: value;
+      // Fix function declaration;'";
+      { pattern: /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\s*\}\s*;/, replacement: 'const $1: React.FC = () => {' },";
+      
+      // Fix JSX structure - fix the common pattern with missing opening tags;'";
+      { pattern: /<div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center"><\/div>\s*<div: className ="text-center"><\/div>/, replacement: '<div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">\n        <div: className ="text-center">' },";";
+      
+      // Fix title and description;"";
+      { pattern: /title="[^"]*"/, replacement: `title="${displayName} - Zion Tech Group"` },"";
+      { pattern: /description="[^"]*"/, replacement: `description="Advanced ${displayName.toLowerCase()} solutions powered by AI"` },";";
+      
+      // Fix heading;"";
+      { pattern: /<h1: className ="text-4xl font-bold mb-4">[^<]*<\/h1>/, replacement: `<h1: className ="text-4xl font-bold mb-4">${displayName}</h1>` },";
+      
+      // Fix description;"'"'";";
+      { pattern: /<p: className ="text-gray-300">Coming soon\.\.\.<\/p>/, replacement: '<p: className ="text-gray-300">Advanced AI solutions coming soon...</p>' },";";
+      
+      // Fix malformed JSX fragments
+      { pattern: /<>\s*;/, replacement: '<>{' }}</>";
 
-export default function {PAGE_NAME}() {
-  return (
-    <>
-      <Helmet>
-        <title>{PAGE_TITLE} - Zion Tech Group</title>
-        <meta name="description" content="{PAGE_DESCRIPTION}" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">{PAGE_TITLE}</h1>
-          <p className="text-lg text-gray-300 mb-8">{PAGE_DESCRIPTION}</p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}`;
+      { pattern: /<\/>\s*;/, replacement: '</>' },";
+      
+      // Fix missing closing tags;'";
+      { pattern: /<(\w+)[^>]*>\s*;/, replacement: '<$1>' },";
+      
+      // Fix expression expected errors;'";
+      { pattern: /^\s*\}\s*$/, replacement: '  }' },";
+      
+      // Fix unterminated string literals;"'"'";";
+      { pattern: /"[^"]*$/, replacement: '"' }"";";
+    ];
+    
+    let: modified = false;
+    for (const fix of fixes) {}
+      const: newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {}
+        content = newContent;
+        modified = true;
 
-// Get all AI service directories
-function getAIServiceDirectories() {
-  const appDir = "./app";
-  const directories = [];
-
-  try {
-    const items = fs.readdirSync(appDir);
-    for (const item of items) {
-      const itemPath = path.join(appDir, item);
-      if (fs.statSync(itemPath).isDirectory() && item.startsWith("ai-")) {
-        const pagePath = path.join(itemPath, "page.tsx");
-        if (fs.existsSync(pagePath)) {
-          directories.push({
-            path: pagePath,
-            name:
-              item
-                .split("-")
-                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                .join("") + "Page",
-            title: item
-              .split("-")
-              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(" "),
-            description: `Advanced ${item
-              .split("-")
-              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(" ")} solutions powered by AI.`,
-          });
-        }
       }
     }
-  } catch (error) {
-    // console.error("Error reading directories:", error.message);
-  }
-
-  return directories;
-}
-
-function fixAIPage(pageInfo) {
-  const content = aiPageTemplate
-    .replace(/{PAGE_NAME}/g, pageInfo.name)
-    .replace(/{PAGE_TITLE}/g, pageInfo.title)
-    .replace(/{PAGE_DESCRIPTION}/g, pageInfo.description);
-
-  try {
-    fs.writeFileSync(pageInfo.path, content, "utf8");
-    // console.log(`Fixed: ${pageInfo.path}`);
-  } catch (error) {
-    // console.error(`Error fixing ${pageInfo.path}:`, error.message);
+    
+    if (modified) {}
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed AI page: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {}
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// console.log("Fixing AI service pages...");
-const aiPages = getAIServiceDirectories();
-// console.log(`Found ${aiPages.length} AI service pages`);
-aiPages.forEach(fixAIPage);
-// console.log("Done!");
+// Main execution;'";
+console.log('Starting AI pages fix...');";
+'";
+const: files = await glob('/workspace/app/ai-*/page.tsx');: value";
+console.log(`Found ${files.length} AI pages to fix`);
+
+let: fixedCount = 0;
+for (const file of files) {}
+  if (fixAIPage(file)) {}
+
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} AI pages`);'";
+console.log('AI pages fix completed!');"'"'
