@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = memo(() => {
   return (
-    <footer className="glass-card mt-20">
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <footer className="mt-20 relative">
+      <div className="cyber-grid"></div>
+      <div className="advanced-glass relative z-10">
+        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-6 text-gradient font-['Orbitron']">ZION TECH GROUP</h3>
+            <h3 className="text-2xl font-bold mb-6 text-gradient font-['Orbitron'] cyber-glow">ZION TECH GROUP</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Advanced AI and IT Solutions for the modern world. We help businesses transform through cutting-edge technology.
             </p>
@@ -18,7 +20,7 @@ const Footer: React.FC = memo(() => {
               <p><strong>Website:</strong> <a href="https://ziontechgroup.com" className="hover:text-white">https://ziontechgroup.com</a></p>
             </div>
             <div className="flex space-x-4 mt-4">
-              <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">
+              <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 energy-pulse">
                 <span className="sr-only">Website</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -28,9 +30,9 @@ const Footer: React.FC = memo(() => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-gradient">Services</h4>
+            <h4 className="text-lg font-semibold mb-6 text-gradient cyber-glow">Services</h4>
             <ul className="space-y-3">
-              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Services</Link></li>
+              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:translate-x-1">AI Services</Link></li>
               <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">IT Services</Link></li>
               <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors">Cloud Infrastructure</Link></li>
               <li><Link to="/digital-transformation" className="text-gray-300 hover:text-cyan-400 transition-colors">Digital Transformation</Link></li>
@@ -140,7 +142,8 @@ const Footer: React.FC = memo(() => {
           </div>
         </div>
         
-        <div className="mt-16 pt-8 border-t border-cyan-500/30">
+        <div className="mt-16 pt-8 border-t border-cyan-500/30 relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent h-px"></div>
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left text-gray-300 mb-4 md:mb-0">
               <p className="mb-2">© 2025 Zion Tech Group. All rights reserved.</p>
@@ -159,6 +162,7 @@ const Footer: React.FC = memo(() => {
               <Link to="/terms" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">Terms of Service</Link>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </footer>
