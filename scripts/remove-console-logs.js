@@ -66,7 +66,7 @@ async function processDistFiles() {
       }
     }
     
-    console.log(`Console log removal completed!`);
+    console.log(`Console log removal completed! Processed ${processedCount} files.`);
     
   } catch (error) {
     console.error('Error processing dist files:', error.message);
