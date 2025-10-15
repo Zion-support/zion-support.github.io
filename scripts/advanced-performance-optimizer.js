@@ -1,383 +1,233 @@
-<<<<<<< HEAD
-import { fileURLToPath } from 'url';
-import path from 'path';
-import fs from 'fs';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-=======
 #!/usr/bin/env node
 
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
->>>>>>> main
 
 console.log('🚀 Starting advanced performance optimization...');
 
-<<<<<<< HEAD
 // 1. Optimize Vite configuration for better chunking
-const viteConfigPath = path.join(__dirname, '..', 'vite.config.ts');
-let viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
+const viteConfigPath = path.join(process.cwd(), 'vite.config.ts');
+if (fs.existsSync(viteConfigPath)) {
+  console.log('📦 Optimizing Vite configuration...');
+  
+  const viteConfig = `import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
-// Enhanced chunking strategy
-const enhancedChunking = `
-        manualChunks: (id) => {
-          // Core React libraries
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
-          }
-          // Router
-          if (id.includes('react-router')) {
-            return 'router'
-          }
-          // UI libraries
-          if (id.includes('lucide-react') || id.includes('@heroicons')) {
-            return 'ui-vendor'
-          }
-          // Large libraries
-          if (id.includes('node_modules')) {
-            return 'vendor'
-          }
-          // App components
-          if (id.includes('/app/')) {
-            return 'app'
-          }
-        }`;
+const resolve = path.resolve;
 
-// Update Vite config with enhanced chunking
-if (!viteConfig.includes('manualChunks')) {
-  viteConfig = viteConfig.replace(
-    /build:\s*{/,
-    `build: {
-      rollupOptions: {
-        output: {
-          ${enhancedChunking}
-        }
-      },`
-  );
+export default defineConfig({
+  plugins: [
+    react({
+      jsxRuntime: "automatic",
+    }),
+  ],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, './'),
+    },
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+        },
+      },
+    },
+  },
+  server: {
+    port: 3000,
+    open: true,
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+  },
+});`;
+
+  fs.writeFileSync(viteConfigPath, viteConfig);
+  console.log('✅ Vite configuration optimized');
 }
 
-fs.writeFileSync(viteConfigPath, viteConfig);
-console.log('✓ Enhanced Vite configuration for better chunking');
+// 2. Generate performance monitoring script
+const performanceScript = `// Performance monitoring script
+(function() {
+  'use strict';
+  
+  // Monitor Core Web Vitals
+  function getCLS(onPerfEntry) {
+    let clsValue = 0;
+    let clsEntries = [];
+    let sessionValue = 0;
+    let sessionEntries = [];
+    
+    new PerformanceObserver((entryList) => {
+      for (const entry of entryList.getEntries()) {
+        if (!entry.hadRecentInput) {
+          const firstSessionEntry = sessionEntries[0];
+          const lastSessionEntry = sessionEntries[sessionEntries.length - 1];
+          
+          if (sessionValue && entry.startTime - lastSessionEntry.startTime < 1000 && entry.startTime - firstSessionEntry.startTime < 5000) {
+            sessionValue += entry.value;
+            sessionEntries.push(entry);
+          } else {
+            sessionValue = entry.value;
+            sessionEntries = [entry];
+          }
+          
+          if (sessionValue > clsValue) {
+            clsValue = sessionValue;
+            clsEntries = [...sessionEntries];
+            onPerfEntry && onPerfEntry(clsValue);
+          }
+        }
+      }
+    }).observe({ type: 'layout-shift', buffered: true });
+  }
+  
+  function getFID(onPerfEntry) {
+    new PerformanceObserver((entryList) => {
+      for (const entry of entryList.getEntries()) {
+        onPerfEntry && onPerfEntry(entry.processingStart - entry.startTime);
+      }
+    }).observe({ type: 'first-input', buffered: true });
+  }
+  
+  function getFCP(onPerfEntry) {
+    new PerformanceObserver((entryList) => {
+      for (const entry of entryList.getEntries()) {
+        if (entry.name === 'first-contentful-paint') {
+          onPerfEntry && onPerfEntry(entry.startTime);
+        }
+      }
+    }).observe({ type: 'paint', buffered: true });
+  }
+  
+  function getLCP(onPerfEntry) {
+    new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      onPerfEntry && onPerfEntry(lastEntry.startTime);
+    }).observe({ type: 'largest-contentful-paint', buffered: true });
+  }
+  
+  function getTTFB(onPerfEntry) {
+    new PerformanceObserver((entryList) => {
+      for (const entry of entryList.getEntries()) {
+        if (entry.responseStart > 0) {
+          onPerfEntry && onPerfEntry(entry.responseStart - entry.requestStart);
+        }
+      }
+    }).observe({ type: 'navigation', buffered: true });
+  }
+  
+  // Report metrics
+  function reportMetric(name, value) {
+    console.log(\`[Performance] \${name}: \${value}ms\`);
+    
+    // Send to analytics if available
+    if (typeof gtag !== 'undefined') {
+      gtag('event', name, {
+        event_category: 'Performance',
+        value: Math.round(value),
+        non_interaction: true
+      });
+    }
+  }
+  
+  // Initialize monitoring
+  getCLS(reportMetric.bind(null, 'CLS'));
+  getFID(reportMetric.bind(null, 'FID'));
+  getFCP(reportMetric.bind(null, 'FCP'));
+  getLCP(reportMetric.bind(null, 'LCP'));
+  getTTFB(reportMetric.bind(null, 'TTFB'));
+  
+  // Monitor resource loading
+  window.addEventListener('load', () => {
+    const navigation = performance.getEntriesByType('navigation')[0];
+    if (navigation) {
+      reportMetric('DOMContentLoaded', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart);
+      reportMetric('LoadComplete', navigation.loadEventEnd - navigation.loadEventStart);
+    }
+  });
+})();`;
 
-// 2. Optimize package.json scripts
-const packageJsonPath = path.join(__dirname, '..', 'package.json');
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+const distDir = path.join(process.cwd(), 'dist');
+if (!fs.existsSync(distDir)) {
+  fs.mkdirSync(distDir, { recursive: true });
+}
 
-// Add performance optimization scripts
-packageJson.scripts = {
-  ...packageJson.scripts,
-  'optimize:images': 'imagemin app/**/*.{jpg,png,svg} --out-dir=app/optimized',
-  'analyze:bundle': 'npx vite-bundle-analyzer',
-  'preload:critical': 'node scripts/preload-critical-resources.js'
-};
+fs.writeFileSync(path.join(distDir, 'performance.js'), performanceScript);
+console.log('✅ Performance monitoring script generated');
 
-fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-console.log('✓ Added performance optimization scripts');
-
-// 3. Create preload script for critical resources
-const preloadScript = `const fs = require('fs');
-const path = require('path');
-
-// Critical resources to preload
-const criticalResources = [
-  '/fonts/inter.woff2',
-  '/images/hero-bg.webp',
-  '/css/critical.css'
+// 3. Generate service worker for caching
+const serviceWorkerScript = `// Service Worker for caching
+const CACHE_NAME = 'zion-tech-group-v1';
+const urlsToCache = [
+  '/',
+  '/static/js/bundle.js',
+  '/static/css/main.css',
+  '/manifest.json'
 ];
 
-const preloadLinks = criticalResources
-  .map(resource => \`<link rel="preload" href="\${resource}" as="font" crossorigin>\`)
-  .join('\\n');
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(urlsToCache))
+  );
+});
 
-console.log('Critical resources preload links:');
-console.log(preloadLinks);
-`;
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});`;
 
-fs.writeFileSync(path.join(__dirname, 'preload-critical-resources.js'), preloadScript);
-console.log('✓ Created preload script for critical resources');
+fs.writeFileSync(path.join(distDir, 'sw.js'), serviceWorkerScript);
+console.log('✅ Service worker generated');
 
-// 4. Optimize Next.js configuration
-const nextConfigPath = path.join(__dirname, '..', 'next.config.js');
-if (fs.existsSync(nextConfigPath)) {
-  let nextConfig = fs.readFileSync(nextConfigPath, 'utf8');
-  
-  // Add performance optimizations
-  const performanceOptimizations = `
-    // Performance optimizations
-    compress: true,
-    poweredByHeader: false,
-    generateEtags: false,
-    httpAgentOptions: {
-      keepAlive: true,
+// 4. Generate manifest.json for PWA
+const manifest = {
+  "name": "Zion Tech Group",
+  "short_name": "Zion Tech",
+  "description": "Advanced AI and IT Solutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
     },
-    experimental: {
-      optimizeCss: true,
-      optimizePackageImports: ['lucide-react', '@heroicons/react'],
-    },`;
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+};
 
-  if (!nextConfig.includes('compress: true')) {
-    nextConfig = nextConfig.replace(
-      /reactStrictMode: true,/,
-      `reactStrictMode: true,${performanceOptimizations}`
-    );
-  }
-
-  fs.writeFileSync(nextConfigPath, nextConfig);
-  console.log('✓ Enhanced Next.js configuration for performance');
-}
+fs.writeFileSync(path.join(distDir, 'manifest.json'), JSON.stringify(manifest, null, 2));
+console.log('✅ PWA manifest generated');
 
 console.log('🎉 Advanced performance optimization completed!');
-console.log('Run "npm run optimize:images" to optimize images');
-console.log('Run "npm run analyze:bundle" to analyze bundle size');
-=======
-// Function to optimize images
-function optimizeImages() {
-  console.log('📸 Optimizing images...');
-  try {
-    // Find and optimize images
-    const imageExtensions = ['.jpg', '.jpeg', '.png', '.webp', '.svg'];
-    const publicDir = path.join(process.cwd(), 'public');
-    
-    if (fs.existsSync(publicDir)) {
-      const files = fs.readdirSync(publicDir, { recursive: true });
-      const imageFiles = files.filter(file => 
-        imageExtensions.some(ext => file.toString().toLowerCase().endsWith(ext))
-      );
-      
-      console.log(`Found ${imageFiles.length} images to optimize`);
-      
-      // Add WebP conversion for better performance
-      imageFiles.forEach(file => {
-        const filePath = path.join(publicDir, file.toString());
-        if (fs.existsSync(filePath)) {
-          // Create WebP version if it doesn't exist
-          const webpPath = filePath.replace(/\.(jpg|jpeg|png)$/i, '.webp');
-          if (!fs.existsSync(webpPath)) {
-            try {
-              execSync(`cwebp -q 80 "${filePath}" -o "${webpPath}"`, { stdio: 'ignore' });
-              console.log(`✅ Created WebP: ${file}`);
-            } catch (error) {
-              // cwebp not available, skip
-            }
-          }
-        }
-      });
-    }
-    
-    console.log('✅ Images optimized');
-  } catch (error) {
-    console.log('⚠️  Image optimization skipped:', error.message);
-  }
-}
-
-// Function to generate critical CSS
-function generateCriticalCSS() {
-  console.log('🎨 Generating critical CSS...');
-  try {
-    const criticalCSS = `
-/* Critical CSS for above-the-fold content */
-* {;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f9fafb;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Navigation critical styles */
-nav {
-  background: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-/* Hero section critical styles */
-.hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 4rem 0;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-}
-
-/* Button critical styles */
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: #3b82f6;
-  color: white;
-  text-decoration: none;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  transition: background-color 0.2s;
-}
-
-.btn:hover {
-  background: #2563eb;
-}
-
-/* Loading spinner */
-.loading-spinner {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  border: 3px solid #f3f3f3;
-  border-top: 3px solid #3498db;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-  
-  .hero p {
-    font-size: 1rem;
-  }
-  
-  .container {
-    padding: 0 0.5rem;
-  }
-}
-`;
-
-    const criticalCSSPath = path.join(process.cwd(), 'public', 'critical.css');
-    fs.writeFileSync(criticalCSSPath, criticalCSS);
-    console.log('✅ Critical CSS generated');
-  } catch (error) {
-    console.log('⚠️  Critical CSS generation failed:', error.message);
-  }
-}
-
-// Function to optimize JavaScript bundles
-function optimizeJavaScriptBundles() {
-  console.log('📦 Optimizing JavaScript bundles...');
-  try {
-    const distDir = path.join(process.cwd(), 'dist');
-    if (fs.existsSync(distDir)) {
-      const jsFiles = fs.readdirSync(distDir, { recursive: true });
-        .filter(file => file.toString().endsWith('.js'));
-      
-      console.log(`Found ${jsFiles.length} JavaScript files to optimize`);
-      
-      // Add source map optimization
-      jsFiles.forEach(file => {
-        const filePath = path.join(distDir, file.toString());
-        if (fs.existsSync(filePath)) {
-          let content = fs.readFileSync(filePath, 'utf8');
-          
-          // Remove console.log statements in production: content = content.replace(/console\.(log|info|debug)\([^)]*\);?\s*/g, '');
-          
-          // Minify whitespace: content = content.replace(/\s+/g, ' ').trim();
-          
-          fs.writeFileSync(filePath, content);
-        }
-      });
-    }
-    
-    console.log('✅ JavaScript bundles optimized');
-  } catch (error) {
-    console.log('⚠️  JavaScript optimization failed:', error.message);
-  }
-}
-
-// Function to generate performance report
-function generatePerformanceReport() {
-  console.log('📊 Generating performance report...');
-  try {
-    const report = {
-      timestamp: new Date().toISOString(),
-      optimizations: [;
-        'Images optimized with WebP conversion',
-        'Critical CSS generated for above-the-fold content',
-        'JavaScript bundles minified and optimized',
-        'Console logs removed from production build',
-        'Source maps optimized',
-        'Lazy loading implemented for routes',
-        'Error boundaries added for better UX',
-        'Performance monitoring enabled'
-      ],
-      recommendations: [
-        'Consider implementing service worker for caching',
-        'Add more granular code splitting for large pages',
-        'Implement preloading for critical resources',
-        'Add more comprehensive caching strategies',
-        'Consider implementing CDN for static assets',
-        'Add performance budgets to prevent regressions',
-        'Implement Core Web Vitals monitoring',
-        'Add accessibility testing automation'
-      ],
-      metrics: {
-        buildTime: Date.now(),
-        bundleSize: 'Optimized',
-        imageOptimization: 'Enabled',
-        criticalCSS: 'Generated',
-        lazyLoading: 'Enabled'
-      }
-    };
-    
-    const reportPath = path.join(process.cwd(), 'performance-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log('✅ Performance report generated');
-  } catch (error) {
-    console.log('⚠️  Performance report generation failed:', error.message);
-  }
-}
-
-// Main execution
-async function main() {
-  try {
-    optimizeImages();
-    generateCriticalCSS();
-    optimizeJavaScriptBundles();
-    generatePerformanceReport();
-    
-    console.log('🎉 Advanced performance optimization completed!');
-    console.log('📈 Performance improvements:');
-    console.log('  - Images optimized with WebP conversion');
-    console.log('  - Critical CSS generated');
-    console.log('  - JavaScript bundles optimized');
-    console.log('  - Performance monitoring enabled');
-    console.log('  - Error boundaries implemented');
-    console.log('  - Lazy loading for better performance');
-  } catch (error) {
-    console.error('❌ Performance optimization failed:', error.message);
-    process.exit(1);
-  }
-}
-
-main();
->>>>>>> main
+console.log('📈 Performance improvements:');
+console.log('  - Vite configuration optimized');
+console.log('  - Performance monitoring enabled');
+console.log('  - Service worker for caching');
+console.log('  - PWA manifest generated');
+console.log('  - Core Web Vitals tracking');
+console.log('  - Resource loading optimization');

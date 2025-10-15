@@ -41,6 +41,16 @@ const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));
 // Micro SaaS Solutions Pages
 const MicroSaasSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
 
+// Service-specific Pages
+const DataAnalyticsPage = lazy(() => import('./app/data-analytics/page'));
+const WebDevelopmentPage = lazy(() => import('./app/web-development/page'));
+const MobileDevelopmentPage = lazy(() => import('./app/mobile-development/page'));
+const DatabaseManagementPage = lazy(() => import('./app/database-management/page'));
+const NetworkInfrastructurePage = lazy(() => import('./app/network-infrastructure/page'));
+const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
+const HelpPage = lazy(() => import('./app/help/page'));
+const APIDocsPage = lazy(() => import('./app/api-docs/page'));
+
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -133,6 +143,16 @@ function App() {
                     
                     {/* Micro SaaS Solutions */}
                     <Route path="/micro-saas-solutions" element={<MicroSaasSolutionsPage />} />
+                    
+                    {/* Service-specific Pages */}
+                    <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                    <Route path="/web-development" element={<WebDevelopmentPage />} />
+                    <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                    <Route path="/database-management" element={<DatabaseManagementPage />} />
+                    <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                    <Route path="/partnerships" element={<PartnershipsPage />} />
+                    <Route path="/help" element={<HelpPage />} />
+                    <Route path="/api-docs" element={<APIDocsPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">

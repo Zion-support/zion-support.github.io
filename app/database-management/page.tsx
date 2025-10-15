@@ -1,220 +1,285 @@
-<<<<<<< HEAD
-'use client';';
-import React from 'react';';';
-import {Helmet}}from 'react-helmet-async';';';
-import Navigation from '../components/Navigation';';';
-import Footer from '../components/Footer';';';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp}}from 'lucide-react';';';
-const PagePage: React.FC = () => {,;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Brain,
-      title: 'AI-Powered Analysis','
-      description: 'Advanced AI algorithms provide intelligent insights and recommendations.','
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},'
-    {icon: BarChart,
-  },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    icon: BarChart,
-      title: 'Advanced Analytics','
-      description: 'Comprehensive analytics dashboard with real-time data visualization.','
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]'
-return(<>)
-      <Helmet />
-<title>Page - Zion Tech Group</title>
-<meta /></Helmet>
-<Navigation />
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        {/* Hero Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h1>"
-<p>Advanced page solutions powered by AI technology.</p></p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
-              <button>Get Started;</button></button>
-<button>Learn More,</button></button>
-</div></div>
-</section>
-        {/* Features Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
-<h2>Key Features;</h2></h2>
-<p>Powerful AI technology that drives results;</p></p>
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,"
-              {features.map((feature, index) => (
-  // TODO: Add parameters
-)
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,"
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,"
-                    <feature />
-<h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>"
-<p className="text-gray-300 mb-4">{feature.description</p>}</p>"
-                  {feature.benefits && (;
-                    <ul>
-                      {feature.benefits.map((benefit, idx) => (} <li>
-<CheckCircle />
-
-                          {benefit} </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-
-            </div></div>
-</section>
-        {/* CTA Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Powerful AI technology that drives results"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
-              {features.map((feature, index) => (
-  // TODO: Add parameters
-)
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">"
-<div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">"
-<feature.icon className="w-8 h-8 text-white" />"
-<h3 className="text-xl font-bold text-white mb-4">{feature.title}"
-                  <p className="text-gray-300 mb-4">{feature.description}"
-                  {feature.benefits && (
-  // TODO: Add parameters
-)
-                    <ul className="space-y-2">"
-                      {feature.benefits.map((benefit, idx) => (
-  // TODO: Add parameters
-)
-                        <li key={idx} className="flex items-center text-sm text-gray-400">"
-<CheckCircle className="w-4 h-4 text-green-400 mr-2" />"
-                          {benefit}
-                      ))}
-                    </ul></div>
-</div>
-              ))}
-        {/* CTA Section */}
-        <section className="py-20 px-4"></section>"
-< className="$2 /></div>"
-<div className="text-center mb-16"></div>"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="max-w-4xl mx-auto text-center"></div>"
-<div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>"
-<h2>Ready to Get Started?</h2></h2>
-<p>Contact our experts to discuss your requirements and get started today.</p></p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
-                <button>Contact Us;</button></button>
-<button>Learn More;</button>
-                Ready to Get Started?
-              </h2>
-<p></p>
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>"
-<button></button>
-                  Contact Us
-                </button>
-<button></button>
-                  Learn More
->>>>>>> origin/main
-                </button></div>
-</div></div>
-</section>
-      ))
-      <Footer />
-
-  );
-};
-;
-export default PagePage;
->>>>>>> cursor/delete-records-a75eursor/fix-errors-and-merge-to-main-234b
-        </div>
-      </div>
-    </div>
-  );
-}
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-234b
-=======
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;""
-              <h3 className="text-lg font-semibold text-green-900 mb-2">;""
-                Custom Implementation;
-              </h3>
-              <p className="text-green-700">;""
-                Tailored page implementations for your specific requirements.;
-              </p>
-            </div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">;""
-              <h3 className="text-lg font-semibold text-purple-900 mb-2">;""
-                24/7 Support;
-              </h3>
-              <p className="text-purple-700">;""
-                Round-the-clock support for all your page needs.;
-              </p>
-            </div>
-          </div>
-          <div className="mt-12">;""
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;""
-              Get Started Today;
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );}
-}''
-=======
+import React from 'react';
 import SEOHead from '../components/SEOHead';
-
-const PagePage: React.FC = () => {}
-  return ()
-    <>{}</>
-      <SEOHead>
-        title="page - Zion Tech Group"
-        description="Zion Tech Group page service page"
+import { 
+  CircleStackIcon, 
+  CpuChipIcon, 
+  ShieldCheckIcon, 
+  BoltIcon,
+  CheckCircleIcon,
+  ArrowRightIcon,
+  CloudIcon,
+  CogIcon,
+  ChartBarIcon,
+  GlobeAltIcon
+} from '@heroicons/react/24/outline';
 
 const DatabaseManagementPage: React.FC = () => {
+  const services = [
+    {
+      icon: CircleStackIcon,
+      title: 'Database Design & Architecture',
+      description: 'Optimized database schemas and architectures for maximum performance and scalability.'
+    },
+    {
+      icon: CpuChipIcon,
+      title: 'AI-Powered Optimization',
+      description: 'Machine learning algorithms to automatically optimize database performance and queries.'
+    },
+    {
+      icon: ShieldCheckIcon,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security with encryption, access controls, and compliance certifications.'
+    },
+    {
+      icon: BoltIcon,
+      title: 'Performance Tuning',
+      description: 'Advanced optimization techniques to ensure lightning-fast query performance.'
+    },
+    {
+      icon: CloudIcon,
+      title: 'Cloud Migration',
+      description: 'Seamless migration to cloud databases with zero downtime and data integrity.'
+    },
+    {
+      icon: CogIcon,
+      title: 'Monitoring & Maintenance',
+      description: '24/7 monitoring and proactive maintenance to ensure optimal database health.'
+    }
+  ];
+
+  const databases = [
+    'PostgreSQL',
+    'MySQL',
+    'MongoDB',
+    'Redis',
+    'Elasticsearch',
+    'Cassandra',
+    'DynamoDB',
+    'SQL Server',
+    'Oracle',
+    'MariaDB'
+  ];
+
+  const features = [
+    'Real-time Monitoring',
+    'Automated Backups',
+    'Query Optimization',
+    'Index Management',
+    'Data Migration',
+    'Performance Analytics',
+    'Security Auditing',
+    'Disaster Recovery',
+    'Scalability Planning',
+    'Cost Optimization'
+  ];
+
+  const benefits = [
+    {
+      title: 'Improved Performance',
+      description: 'Up to 300% faster query performance with our optimization techniques.',
+      icon: BoltIcon
+    },
+    {
+      title: 'Enhanced Security',
+      description: 'Bank-level security with encryption and advanced access controls.',
+      icon: ShieldCheckIcon
+    },
+    {
+      title: 'Cost Reduction',
+      description: 'Reduce database costs by up to 40% through optimization and right-sizing.',
+      icon: ChartBarIcon
+    },
+    {
+      title: 'High Availability',
+      description: '99.99% uptime guarantee with automated failover and disaster recovery.',
+      icon: GlobeAltIcon
+    }
+  ];
+
   return (
     <>
-      <SEOHead title ="database-management - Zion Tech Group - Zion Tech Group"";
-        description="Zion Tech Group database-management service page"";
-
+      <SEOHead 
+        title="Database Management Services - Zion Tech Group"
+        description="Professional database management services including optimization, migration, security, and monitoring. Support for all major database systems."
+        keywords="database management, database optimization, database migration, PostgreSQL, MySQL, MongoDB, database security, performance tuning"
       />
-      <div className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";
-        <div className ="text-center">";
-          <h1 className ="text-4xl font-bold mb-4">database-management - Zion Tech Group</h1>";
-          <p className ="text-gray-300">Coming soon...</p>";
-        </div>
+      
+      <div className="min-h-screen bg-slate-900 text-white">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden py-20 lg:py-32">
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-900/30 via-slate-900 to-red-900/30"></div>
+          <div className="absolute inset-0 opacity-20" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          }}></div>
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 mb-6">
+                <CircleStackIcon className="w-5 h-5 text-orange-400 mr-2" />
+                <span className="text-orange-300 text-sm font-medium">Database Management</span>
+              </div>
+              
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+                Optimize Your
+                <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent block">
+                  Database Performance
+                </span>
+              </h1>
+              
+              <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Expert database management services to optimize performance, ensure security, and maintain high availability for your critical data systems.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105">
+                  Get Database Audit
+                  <ArrowRightIcon className="w-4 h-4 ml-2 inline" />
+                </button>
+                <button className="border-2 border-orange-400 text-orange-300 px-8 py-3 rounded-lg font-semibold hover:bg-orange-400 hover:text-white transition-all duration-300">
+                  Schedule Consultation
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                Our <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Database Services</span>
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive database management solutions for every type of application and workload.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="group bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-orange-500 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-orange-300 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                    {service.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Databases Section */}
+        <section className="py-20 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                Supported <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">Databases</span>
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+                We work with all major database systems and can help you choose the right one for your needs.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              {databases.map((database, index) => (
+                <div key={index} className="bg-slate-800/50 p-4 rounded-lg text-center hover:bg-slate-700/50 transition-colors">
+                  <div className="flex items-center justify-center mb-2">
+                    <CheckCircleIcon className="w-5 h-5 text-orange-400" />
+                  </div>
+                  <span className="text-gray-300 text-sm font-medium">{database}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                Management <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Features</span>
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+                Advanced features and capabilities to keep your databases running at peak performance.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-slate-800/50 p-4 rounded-lg text-center hover:bg-slate-700/50 transition-colors">
+                  <div className="flex items-center justify-center mb-2">
+                    <CheckCircleIcon className="w-5 h-5 text-red-400" />
+                  </div>
+                  <span className="text-gray-300 text-sm font-medium">{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+                Why Choose Our <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Database Services</span>
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+                Proven benefits that help you achieve better performance, security, and cost efficiency.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="group bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-orange-500 transition-all duration-300">
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                      <benefit.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-orange-300 transition-colors">
+                        {benefit.title}
+                      </h3>
+                      <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                        {benefit.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+              Ready to Optimize Your Database?
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-300 mb-8">
+              Let our database experts help you achieve peak performance and reliability.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105">
+                Get Free Database Audit
+                <ArrowRightIcon className="w-4 h-4 ml-2 inline" />
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
+                Contact Our Experts
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </>
-
-  )
-    },
-    {}
-export default PagePage;
-
-  ),
+  );
 };
 
->>>>>>> main
->>>>>>> main
+export default DatabaseManagementPage;
