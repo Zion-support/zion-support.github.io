@@ -1,15 +1,20 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface ResponsiveContainerProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ children, className = '' }) => {
+const ResponsiveContainer: React.FC = () => {
   return (
-    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
-      {children}
-    </div>
+    <>
+      <Helmet>
+        <title>ResponsiveContainer - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">ResponsiveContainer</h1>
+          <p className="text-gray-300 text-center">Coming soon...</p>
+        </div>
+      </div>
+    </>
   );
 };
 

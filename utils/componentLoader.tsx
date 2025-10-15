@@ -37,8 +37,7 @@ const LoadingFallback: React.FC = () => (
 
 export const OptimizedLoader: React.FC<OptimizedLoaderProps> = ({ 
   component, 
-  fallback = <LoadingFallback />,
-  errorFallback: _errorFallback = <ErrorFallback error={new Error('Component failed to load')} resetErrorBoundary={() => {}} />
+  fallback = <LoadingFallback />
 }) => {
   const LazyComponent = React.lazy(component);
 

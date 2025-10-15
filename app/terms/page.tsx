@@ -1,7 +1,64 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight } from "lucide-react"; const TermsPage: React.FC = () => { const termsSections = [ { icon: <FileText className="w-6 h-6" />, title: "Acceptance of Terms", content: "By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service." }, { icon: <Scale className="w-6 h-6" />, title: "Use License", content: "Permission is granted to temporarily download one copy of the materials on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title." }, { icon: <Shield className="w-6 h-6" />, title: "Service Availability", content: "We strive to provide continuous service availability, but we do not guarantee that our services will be uninterrupted or error-free. We reserve the right to modify or discontinue services at any time." }, { icon: <AlertTriangle className="w-6 h-6" />, title: "Limitation of Liability", content: "In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use the materials on our website, even if we or our authorized representative has been notified orally or in writing." } ]; const prohibitedUses = [ "Use our services for any unlawful purpose or to solicit others to perform unlawful acts", "Violate any international, federal, provincial, or state regulations, rules, laws, or local ordinances", "Transmit or procure the sending of any advertising or promotional material without our prior written consent", "Impersonate or attempt to impersonate the company, a company employee, another user, or any other person or entity", "Engage in any other conduct that restricts or inhibits anyone's use or enjoyment of our services" ]; const userObligations = [ "Provide accurate and complete information when using our services", "Maintain the confidentiality of your account credentials", "Notify us immediately of any unauthorized use of your account", "Comply with all applicable laws and regulations", "Respect the intellectual property rights of others" ]; return ( <> <Helmet> <title>Terms of Service - Zion Tech Group | Legal Terms & Conditions</title> <meta name="description" content="Read Zion Tech Group's terms of service, user agreements, and legal conditions for using our AI and IT services." /> <meta name="keywords" content="terms of service, legal terms, user agreement, conditions, AI services, IT services" /> <meta property="og:title" content="Terms of Service - Zion Tech Group" /> <meta property="og:description" content="Legal terms and conditions for using our services." /> <meta property="og:type" content="website" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        { /* Hero Section */ }
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { FileText, Scale, Shield, AlertTriangle, Mail, Phone } from 'lucide-react';
+
+const TermsPage: React.FC = () => {
+  const sections = [
+    {
+      icon: <FileText className="w-6 h-6" />,
+      title: "Acceptance of Terms",
+      content: [
+        "By accessing or using our services, you agree to be bound by these terms",
+        "If you do not agree to these terms, please do not use our services",
+        "We may update these terms from time to time, and continued use constitutes acceptance",
+        "These terms apply to all users of our website and services"
+      ]
+    },
+    {
+      icon: <Scale className="w-6 h-6" />,
+      title: "Service Description",
+      content: [
+        "We provide AI and IT consulting services, software development, and technology solutions",
+        "Services are provided on a project basis with specific terms outlined in individual contracts",
+        "We reserve the right to modify or discontinue services with reasonable notice",
+        "All services are subject to availability and our capacity"
+      ]
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "User Responsibilities",
+      content: [
+        "Provide accurate and complete information for project requirements",
+        "Respect intellectual property rights and confidentiality agreements",
+        "Use our services in compliance with applicable laws and regulations",
+        "Maintain the security of any credentials or access provided"
+      ]
+    },
+    {
+      icon: <AlertTriangle className="w-6 h-6" />,
+      title: "Limitation of Liability",
+      content: [
+        "Our liability is limited to the amount paid for services in the 12 months preceding the claim",
+        "We are not liable for indirect, incidental, or consequential damages",
+        "We provide services 'as is' without warranties beyond those explicitly stated",
+        "Force majeure events may affect our ability to perform services"
+      ]
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Terms of Service - Zion Tech Group | Legal Terms & Conditions</title>
+        <meta name="description" content="Read Zion Tech Group's Terms of Service. Understand the legal terms and conditions governing the use of our AI and IT services." />
+        <meta name="keywords" content="terms of service, legal terms, conditions, user agreement, service terms, legal compliance" />
+        <meta property="og:title" content="Terms of Service - Zion Tech Group" />
+        <meta property="og:description" content="Legal terms and conditions for our services" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
@@ -9,96 +66,98 @@ import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight } from 
                 Terms of <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Service</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Please read these terms and conditions carefully before using our services.
+                Please read these terms carefully before using our services. By using our services, you agree to these terms.
               </p>
-              <div className="text-sm text-gray-400">
-                Last updated: { new Date().toLocaleDateString() }
+              <div className="text-gray-400 text-lg">
+                Last updated: January 15, 2024
               </div>
             </div>
           </div>
         </section>
-        { /* Terms Sections */ }
-        <section className="py-20">
+
+        {/* Main Content */}
+        <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-12">
-              { termsSections.map((section, index) => (
-                <div key={index } className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <div className="text-white">{ section.icon }</div>
+            <div className="max-w-4xl mx-auto">
+              {/* Introduction */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
+                <h2 className="text-3xl font-bold text-white mb-6">Agreement to Terms</h2>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  These Terms of Service ("Terms") govern your use of Zion Tech Group's website and services. 
+                  By accessing or using our services, you agree to be bound by these Terms and our Privacy Policy.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  If you do not agree to these Terms, please do not use our services.
+                </p>
+              </div>
+
+              {/* Terms Sections */}
+              <div className="space-y-8">
+                {sections.map((section, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                    <div className="flex items-center mb-6">
+                      <div className="text-cyan-400 mr-4">
+                        {section.icon}
+                      </div>
+                      <h2 className="text-2xl font-bold text-white">{section.title}</h2>
                     </div>
-                    <div>
-                      <h2 className="text-2xl font-bold text-white mb-4">{ section.title }</h2>
-                      <p className="text-gray-300 leading-relaxed">{ section.content }</p>
-                    </div>
+                    <ul className="space-y-3">
+                      {section.content.map((item, itemIndex) => (
+                        <li key={itemIndex} className="flex items-start text-gray-300">
+                          <span className="text-cyan-400 mr-3 mt-1">•</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
+                ))}
+              </div>
+
+              {/* Additional Terms */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mt-8">
+                <h2 className="text-2xl font-bold text-white mb-6">Additional Terms</h2>
+                <div className="space-y-4 text-gray-300">
+                  <p>
+                    <strong className="text-white">Payment Terms:</strong> Payment terms are specified in individual project agreements. 
+                    Late payments may incur additional charges as outlined in the agreement.
+                  </p>
+                  <p>
+                    <strong className="text-white">Intellectual Property:</strong> All work products and deliverables remain the property of the client 
+                    unless otherwise specified in the project agreement.
+                  </p>
+                  <p>
+                    <strong className="text-white">Confidentiality:</strong> We maintain strict confidentiality regarding all client information 
+                    and project details in accordance with our confidentiality agreements.
+                  </p>
+                  <p>
+                    <strong className="text-white">Termination:</strong> Either party may terminate services with written notice as specified 
+                    in the project agreement.
+                  </p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        { /* Prohibited Uses */ }
-        <section className="py-20 bg-white/5 backdrop-blur-sm">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-6">Prohibited Uses</h2>
-                <p className="text-xl text-gray-300">
-                  You may not use our services for any of the following purposes:
+              </div>
+
+              {/* Contact Information */}
+              <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-xl p-8 mt-12 text-center">
+                <h2 className="text-2xl font-bold text-white mb-4">Questions About These Terms?</h2>
+                <p className="text-white/90 mb-6">
+                  If you have any questions about these Terms of Service, please contact our legal team.
                 </p>
-              </div>
-              <div className="space-y-4">
-                { prohibitedUses.map((use, index) => (
-                  <div key={index } className="flex items-start space-x-3 bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-4 rounded-lg border border-red-500/20">
-                    <AlertTriangle className="w-5 h-5 text-red-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-300">{ use }</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-        { /* User Obligations */ }
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-6">User Obligations</h2>
-                <p className="text-xl text-gray-300">
-                  As a user of our services, you agree to:
-                </p>
-              </div>
-              <div className="grid md:grid-cols-2 gap-6">
-                { userObligations.map((obligation, index) => (
-                  <div key={index } className="flex items-center space-x-3 bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-4 rounded-lg border border-cyan-500/20">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300">{ obligation }</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-        { /* Contact Section */ }
-        <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Questions About Terms?</h2>
-              <p className="text-xl text-gray-300 mb-8">
-                If you have any questions about these terms of service, please contact us.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="mailto:legal@ziontechgroup.com"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-                  <ArrowRight className="w-5 h-5 mr-2" />
-                  Contact Legal Team
-                </a>
-                <a
-                  href="/contact"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center">
-                  General Contact
-                </a>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
+                    href="mailto:legal@ziontechgroup.com" 
+                    className="flex items-center justify-center bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+                  >
+                    <Mail className="w-5 h-5 mr-2" />
+                    legal@ziontechgroup.com
+                  </a>
+                  <a 
+                    href="tel:+13024640950" 
+                    className="flex items-center justify-center border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
+                  >
+                    <Phone className="w-5 h-5 mr-2" />
+                    +1 302 464 0950
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -107,4 +166,5 @@ import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight } from 
     </>
   );
 };
+
 export default TermsPage;

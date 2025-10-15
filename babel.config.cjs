@@ -5,6 +5,7 @@ module.exports = {
     '@babel/preset-typescript',
   ],
   plugins: [
-    ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
+    ['@babel/plugin-proposal-decorators', { version: '2018-09', decoratorsBeforeExport: true }],
+    'babel-plugin-transform-import-meta',
   ],
 };

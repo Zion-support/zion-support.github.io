@@ -31,13 +31,19 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/privacy</loc>
+    <loc>https://ziontechgroup.com/privacy-policy</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/terms</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/sla</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

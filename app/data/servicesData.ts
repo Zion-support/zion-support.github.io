@@ -1,4 +1,5 @@
-export interface ServiceData { id: string;
+export interface ServiceData {
+  id: string;
   name: string;
   description: string;
   category: string;
@@ -6,7 +7,8 @@ export interface ServiceData { id: string;
   pricing: {
     starter: number;
     professional: number;
-    enterprise: number; };
+    enterprise: number;
+  };
   icon: string;
 }
 export const servicesData: ServiceData[] = [
@@ -18,7 +20,8 @@ export const servicesData: ServiceData[] = [
     pricing: {
       starter: 1000,
       professional: 2500,
-      enterprise: 5000 },
+      enterprise: 5000
+    },
     icon: 'robot'
   },
   { id: 'cloud-migration',
@@ -29,7 +32,8 @@ export const servicesData: ServiceData[] = [
     pricing: {
       starter: 2000,
       professional: 5000,
-      enterprise: 10000 },
+      enterprise: 10000
+    },
     icon: 'cloud'
   },
   { id: 'cybersecurity',
@@ -40,7 +44,8 @@ export const servicesData: ServiceData[] = [
     pricing: {
       starter: 1500,
       professional: 4000,
-      enterprise: 8000 },
+      enterprise: 8000
+    },
     icon: 'shield'
   }
 ];

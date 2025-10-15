@@ -1,5 +1,5 @@
-// Global gtag function declaration
-declare global { interface Window {
+// Global gtag function declaration,
+    declare global { interface Window {
     gtag: (command: string, targetId: string, config?: Record<string, unknown>) => void; }
 }
 export const analytics = { track: (event: string, properties: Record<string, unknown> = { }) => { if (typeof window !== 'undefined' && window.gtag) {
@@ -12,3 +12,5 @@ export const analytics = { track: (event: string, properties: Record<string, unk
     }
   }
 };
+
+export default NotFoundPage;
