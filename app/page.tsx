@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Zap, Cloud, Database, Globe, Users, FuturisticButton } from 'lucide-react';
 
-const HomePage = () => {
+const HomePage = () => {  return (
   const services = [
     {
       title: "AI Services",

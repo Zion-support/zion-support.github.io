@@ -18,7 +18,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
     // Monitor performance metrics
     const startTime = performance.now();
     
-    const measurePerformance = () => {
+    const measurePerformance = () => {  return (
       const loadTime = performance.now() - startTime;
       const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
       
@@ -38,7 +38,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => 
 
   // Only show metrics in development
   if (process.env.NODE_ENV !== 'development') {
-    return <>{children}</>;
+    return <div>{children}</div>;
   }
 
   return (

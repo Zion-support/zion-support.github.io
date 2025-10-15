@@ -13,7 +13,7 @@ const AdvancedLoadingStates: React.FC = () => {
   });
   useEffect(() => {
     // Simulate loading states for different scenarios
-    const simulateLoading = () => {
+    const simulateLoading = () => {  return (
   return;
 });
 

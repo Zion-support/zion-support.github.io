@@ -73,6 +73,7 @@ const technologies = [
   ];
 
 const benefits = [
+  const features = [
     {
       title: 'Modern Technologies',
       description: 'We use the latest technologies and best practices for optimal performance.',

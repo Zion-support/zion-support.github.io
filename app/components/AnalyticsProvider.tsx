@@ -29,7 +29,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   }, []);
 
-const trackEvent = () => {
+const trackEvent = () => {  return (
   return;
 }
     // Log to console in development

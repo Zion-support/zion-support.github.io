@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-const SEOOptimizer = () => {
+const SEOOptimizer = () => {  return (
   return (
     <>
       <Helmet>

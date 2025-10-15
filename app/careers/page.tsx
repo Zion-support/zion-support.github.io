@@ -5,6 +5,7 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const openPositions = [
+  const features = [
     {
       title: 'Senior AI Engineer',
       department: 'AI Research',

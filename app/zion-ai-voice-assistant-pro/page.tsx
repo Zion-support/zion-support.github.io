@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Globe, Mic, Zap, Settings, Cloud, Headphones, Target, Users, Heart, EnhancedSEO, Sparkles, ArrowRight, Play, CheckCircle, Star, Mail, Phone, MapPin, Calendar } from 'lucide-react';
-const ZionAIVoiceAssistantPro = () => {
+const ZionAIVoiceAssistantPro = () => {  return (
   return;
 },
+  const features = [
     {
       title: "Multi-Language Support",
       description: "Supports 50+ languages with accurate pronunciation and cultural context understanding",

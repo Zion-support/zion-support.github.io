@@ -58,6 +58,6 @@ export const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
       }
     });
   }, []);
-  return <>{children}</>;
+  return <div>{children}</div>;
 };
 export default CoreWebVitals;

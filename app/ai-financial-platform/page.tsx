@@ -338,3 +338,4 @@ const integrations = [ { name: "QuickBooks", logo: "📊" }, { name: "Xero", log
   );
 };
 export default AiFinancialPlatformPage;
+}

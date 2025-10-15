@@ -12,7 +12,7 @@ interface WebVitalsData {
 }
 const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
   useEffect(() => {
-    const sendToAnalytics = () => {
+    const sendToAnalytics = () => {  return (
   return;
 });
       }
@@ -27,6 +27,6 @@ const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
   }, []);
-  return <>{children}</>;
+  return <div>{children}</div>;
 };
 export default WebVitalsTracker;

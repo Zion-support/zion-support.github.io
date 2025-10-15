@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { MessageSquare, TrendingUp, BarChart3, Target, Eye, EnhancedSEO, Sparkles, FuturisticButton, Users, Award, Clock, FuturisticCard, Brain, CheckCircle, Star } from 'lucide-react';
-const ZionAICustomerInsightsPage = () => {
+const ZionAICustomerInsightsPage = () => {  return (
   return;
 },
+  const features = [
     {
       title: "Real-Time Sentiment Analysis",
       description: "Monitor customer sentiment across all touchpoints with real-time analysis of reviews, social media, and support tickets.",

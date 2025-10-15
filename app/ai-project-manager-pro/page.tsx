@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Brain, Shield, Users, Star, Phone, Play, CheckCircle, ArrowRight, Mail } from 'lucide-react';
 
-const AIProjectManagerProPage = () => {
+const $1 = () => {
   const features = [
     {
       title: "AI-Powered Task Management",

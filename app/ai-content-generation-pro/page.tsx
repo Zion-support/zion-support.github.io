@@ -270,3 +270,4 @@ const testimonials = [ { name: "Jennifer Martinez", company: "Content Marketing 
   );
 };
 export default AiContentGenerationProPage;
+}

@@ -55,7 +55,7 @@ const observer = new IntersectionObserver(
     return () => observer.disconnect();
   }, [priority]);
 
-const handleLoad = () => {
+const handleLoad = () => {  return (
   return;
 };
 

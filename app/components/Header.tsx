@@ -15,7 +15,7 @@ const [showSearch, setShowSearch] = useState(false);
 
 const location = useLocation();
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = () => {  return (
   return;
 };
     window.addEventListener('scroll', handleScroll);

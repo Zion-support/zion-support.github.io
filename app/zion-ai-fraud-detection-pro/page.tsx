@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Brain, Eye, BarChart3, Globe, Shield, CreditCard, Users, Lock, Coins, AlertTriangle, Heart, EnhancedSEO, ArrowRight, Play, Zap, CheckCircle, Star, Mail, Phone, MapPin, Calendar } from 'lucide-react';
-const ZionAIFraudDetectionPro = () => {
+const ZionAIFraudDetectionPro = () => {  return (
   return;
 },
+  const features = [
     {
       title: "Machine Learning Models",
       description: "Self-learning models that continuously improve detection accuracy based on new fraud patterns",

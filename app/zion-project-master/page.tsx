@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import { Users, Target, Clock, Settings, BarChart3, CheckSquare, Calendar, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionProjectMaster() {
+  const features = [
     {
       title: "Team Collaboration",
       description: "Real-time collaboration with team members, comments, and file sharing capabilities",

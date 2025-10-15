@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import { Zap, Users, Target, BarChart3, Settings, Mail, FileText, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 export default function ZionEmailAutomation() {
+  const features = [
     {
       title: "Automated Workflows",
       description: "Set up complex email automation workflows with triggers, conditions, and actions",

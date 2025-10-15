@@ -7,7 +7,7 @@ const Breadcrumb: React.FC = () => {
 
 const pathnames = location.pathname.split('/').filter((x) => x);
 
-const getBreadcrumbName = () => {
+const getBreadcrumbName = () => {  return (
   return;
 } = {
       'about': 'About',

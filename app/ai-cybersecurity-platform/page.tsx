@@ -338,3 +338,4 @@ const complianceStandards = [ { name: "SOC 2", description: "Security controls" 
   );
 };
 export default AiCybersecurityPlatformPage;
+}

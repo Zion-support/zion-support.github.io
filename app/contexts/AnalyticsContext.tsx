@@ -45,7 +45,7 @@ const value: AnalyticsContextType = {
     </AnalyticsContext.Provider>
   );
 };
-export const useAnalytics = () => {
+export const useAnalytics = () => {  return (
   const context = useContext(AnalyticsContext);
   if (context === undefined) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');

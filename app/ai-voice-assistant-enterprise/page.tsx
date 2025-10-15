@@ -436,3 +436,4 @@ const testimonials = [
   );
 };
 export default AiVoiceAssistantEnterprisePage;
+}

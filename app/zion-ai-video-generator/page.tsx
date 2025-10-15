@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { FileText, Music, Image, Share2, TrendingUp, Award, Users, EnhancedSEO, Sparkles, FuturisticButton, Video, Clock, FuturisticCard, CheckCircle, Star } from 'lucide-react';
-const ZionAIVideoGeneratorPage = () => {
+const ZionAIVideoGeneratorPage = () => {  return (
   return;
 },
+  const features = [
     {
       title: "Multiple Video Formats",
       description: "Support for all major video formats including MP4, MOV, AVI, and WebM. Optimized for social media platforms.",

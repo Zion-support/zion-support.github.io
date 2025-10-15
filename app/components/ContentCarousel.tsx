@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Shield, Award, Brain, Cpu, Target, BarChart, MessageSquare, Phone, Mail, Users, Globe, Zap, TrendingUp, Clock, DollarSign } from 'lucide-react';
 
-const ContentCarousel = () => {
+const ContentCarousel = () => {  return (
   const features = [
     {
       title: "Advanced AI Integration",

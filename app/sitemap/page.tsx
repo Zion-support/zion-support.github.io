@@ -4,6 +4,7 @@ import { ArrowRight, ExternalLink, Search, Map } from 'lucide-react';
 
 const SitemapPage: React.FC = () => {
   const sitemapSections = [
+  const features = [
     {
       title: 'Main Pages',
       pages: [
