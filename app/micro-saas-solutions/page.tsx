@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -494,11 +489,8 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       link: 'https://ziontechgroup.com/api-management'
     }
   ];
-<<<<<<< HEAD
 
   const categories = ['All', 'AI Tools', 'Marketing', 'Productivity', 'Sales', 'E-commerce', 'Support', 'Analytics', 'Storage', 'Web Development', 'Development'];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
 
   const features = [
     'Scalable Architecture',
@@ -574,7 +566,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Micro SaaS Solutions - Innovative Software as a Service | Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive suite of micro SaaS solutions including AI tools, marketing automation, project management, CRM, and more. Transform your business with our innovative software solutions." />
         <meta name="keywords" content="micro SaaS, software as a service, AI tools, marketing automation, project management, CRM, business software, productivity tools" />
@@ -582,11 +573,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         <meta property="og:description" content="Discover our comprehensive suite of micro SaaS solutions including AI tools, marketing automation, project management, CRM, and more." />
         <meta property="og:url" content="https://ziontechgroup.com/micro-saas-solutions" />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas-solutions" />
-=======
-        <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive micro SaaS solutions designed to accelerate your business growth with cutting-edge technology." />
-        <meta name="keywords" content="micro SaaS, SaaS solutions, business software, cloud applications, Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
       </Helmet>
 
       {/* Hero Section */}
@@ -624,8 +610,8 @@ const MicroSaaSSolutionsPage: React.FC = () => {
                 <TrendingUp className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
+            </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -852,10 +838,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
-        </section>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ec45
     </>
   );
 };
