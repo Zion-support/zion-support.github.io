@@ -12,16 +12,16 @@ const HomePage: React.FC = memo(() => {
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "Innovation City",
-      "addressRegion": "IC",
-      "postalCode": "12345",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
       "addressCountry": "US"
     },
     "sameAs": [
@@ -87,29 +87,49 @@ const HomePage: React.FC = memo(() => {
             </div>
           </div>
           
-          {/* AI Tools Preview */}
+          {/* AI Micro SAAS Preview */}
           <div className="mt-20">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI-Powered Tools</h2>
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI Micro SAAS Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Content Moderator</h3>
-                <p className="text-gray-600 text-sm mb-3">Automated content moderation using AI</p>
-                <Link to="/zion-ai-content-moderator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Chatbot Builder</h3>
+                <p className="text-gray-600 text-sm mb-3">Build intelligent chatbots without coding</p>
+                <Link to="/ai-chatbot-builder" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Sales Predictor</h3>
-                <p className="text-gray-600 text-sm mb-3">Predict sales trends with AI</p>
-                <Link to="/zion-ai-sales-predictor" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Document Processor</h3>
+                <p className="text-gray-600 text-sm mb-3">Automate document processing with AI</p>
+                <Link to="/ai-document-processor" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Workflow Automator</h3>
-                <p className="text-gray-600 text-sm mb-3">Automate business workflows</p>
-                <Link to="/zion-ai-workflow-automator" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Form Builder</h3>
+                <p className="text-gray-600 text-sm mb-3">Create intelligent, adaptive forms</p>
+                <Link to="/ai-form-builder" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Financial Forecaster</h3>
-                <p className="text-gray-600 text-sm mb-3">AI-powered financial predictions</p>
-                <Link to="/zion-ai-financial-forecaster" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Fraud Detection</h3>
+                <p className="text-gray-600 text-sm mb-3">Protect your business from fraud</p>
+                <Link to="/ai-fraud-detection" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Image Recognition</h3>
+                <p className="text-gray-600 text-sm mb-3">Advanced computer vision solutions</p>
+                <Link to="/ai-image-recognition" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Lead Scoring</h3>
+                <p className="text-gray-600 text-sm mb-3">Score and prioritize leads with AI</p>
+                <Link to="/ai-lead-scoring" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Price Optimizer</h3>
+                <p className="text-gray-600 text-sm mb-3">Optimize pricing with AI insights</p>
+                <Link to="/ai-price-optimizer" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Voice Assistant</h3>
+                <p className="text-gray-600 text-sm mb-3">Build custom voice assistants</p>
+                <Link to="/ai-voice-assistant" className="text-blue-600 hover:text-blue-800 text-sm font-medium">Try Now →</Link>
               </div>
             </div>
             <div className="text-center mt-8">

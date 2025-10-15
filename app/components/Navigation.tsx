@@ -89,6 +89,58 @@ const Navigation: React.FC = () => {
                       Micro SaaS Solutions
                     </Link>
                     
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">AI Micro SAAS</div>
+                    <Link to="/ai-chatbot-builder" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Chatbot Builder
+                    </Link>
+                    <Link to="/ai-document-processor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Document Processor
+                    </Link>
+                    <Link to="/ai-form-builder" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Form Builder
+                    </Link>
+                    <Link to="/ai-fraud-detection" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Fraud Detection
+                    </Link>
+                    <Link to="/ai-image-recognition" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Image Recognition
+                    </Link>
+                    <Link to="/ai-lead-scoring" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Lead Scoring
+                    </Link>
+                    <Link to="/ai-predictive-maintenance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Predictive Maintenance
+                    </Link>
+                    <Link to="/ai-price-optimizer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Price Optimizer
+                    </Link>
+                    <Link to="/ai-scheduling-assistant" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Scheduling Assistant
+                    </Link>
+                    <Link to="/ai-voice-assistant" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      AI Voice Assistant
+                    </Link>
+                    
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">IT Services</div>
+                    <Link to="/api-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      API Development
+                    </Link>
+                    <Link to="/blockchain-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Blockchain Solutions
+                    </Link>
+                    <Link to="/data-engineering" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Data Engineering
+                    </Link>
+                    <Link to="/devops-automation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      DevOps Automation
+                    </Link>
+                    <Link to="/iot-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      IoT Solutions
+                    </Link>
+                    <Link to="/security-audit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Security Audit
+                    </Link>
+                    
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100 mt-2">AI Tools</div>
                     <Link to="/zion-ai-content-moderator" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       AI Content Moderator
@@ -201,6 +253,58 @@ const Navigation: React.FC = () => {
               </Link>
               <Link to="/micro-saas-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
                 Micro SaaS Solutions
+              </Link>
+              
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">AI Micro SAAS</div>
+              <Link to="/ai-chatbot-builder" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Chatbot Builder
+              </Link>
+              <Link to="/ai-document-processor" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Document Processor
+              </Link>
+              <Link to="/ai-form-builder" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Form Builder
+              </Link>
+              <Link to="/ai-fraud-detection" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Fraud Detection
+              </Link>
+              <Link to="/ai-image-recognition" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Image Recognition
+              </Link>
+              <Link to="/ai-lead-scoring" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Lead Scoring
+              </Link>
+              <Link to="/ai-predictive-maintenance" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Predictive Maintenance
+              </Link>
+              <Link to="/ai-price-optimizer" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Price Optimizer
+              </Link>
+              <Link to="/ai-scheduling-assistant" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Scheduling Assistant
+              </Link>
+              <Link to="/ai-voice-assistant" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                AI Voice Assistant
+              </Link>
+              
+              <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">IT Services</div>
+              <Link to="/api-development" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                API Development
+              </Link>
+              <Link to="/blockchain-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Blockchain Solutions
+              </Link>
+              <Link to="/data-engineering" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Data Engineering
+              </Link>
+              <Link to="/devops-automation" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                DevOps Automation
+              </Link>
+              <Link to="/iot-solutions" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                IoT Solutions
+              </Link>
+              <Link to="/security-audit" className="text-gray-600 hover:text-blue-600 block px-6 py-2 rounded-md text-sm">
+                Security Audit
               </Link>
               
               <div className="text-gray-700 px-3 py-2 text-base font-medium mt-4">AI Tools</div>

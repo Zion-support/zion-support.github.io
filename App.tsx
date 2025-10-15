@@ -34,6 +34,24 @@ const DatabaseManagementPage = lazy(() => import('./app/database-management/page
 const NetworkInfrastructurePage = lazy(() => import('./app/network-infrastructure/page'));
 const CookiesPage = lazy(() => import('./app/cookies/page'));
 
+// New Micro SAAS Services
+const AIChatbotBuilderPage = lazy(() => import('./app/ai-chatbot-builder/page'));
+const AIDocumentProcessorPage = lazy(() => import('./app/ai-document-processor/page'));
+const AIFormBuilderPage = lazy(() => import('./app/ai-form-builder/page'));
+const AIFraudDetectionPage = lazy(() => import('./app/ai-fraud-detection/page'));
+const AIImageRecognitionPage = lazy(() => import('./app/ai-image-recognition/page'));
+const AILeadScoringPage = lazy(() => import('./app/ai-lead-scoring/page'));
+const AIPredictiveMaintenancePage = lazy(() => import('./app/ai-predictive-maintenance/page'));
+const AIPriceOptimizerPage = lazy(() => import('./app/ai-price-optimizer/page'));
+const AISchedulingAssistantPage = lazy(() => import('./app/ai-scheduling-assistant/page'));
+const AIVoiceAssistantPage = lazy(() => import('./app/ai-voice-assistant/page'));
+const APIDevelopmentPage = lazy(() => import('./app/api-development/page'));
+const BlockchainSolutionsPage = lazy(() => import('./app/blockchain-solutions/page'));
+const DataEngineeringPage = lazy(() => import('./app/data-engineering/page'));
+const DevOpsAutomationPage = lazy(() => import('./app/devops-automation/page'));
+const IoTSolutionsPage = lazy(() => import('./app/iot-solutions/page'));
+const SecurityAuditPage = lazy(() => import('./app/security-audit/page'));
+
 // AI Tools Pages
 const ZionAIContentModeratorPage = lazy(() => import('./app/zion-ai-content-moderator/page'));
 const ZionAICustomerChurnPredictorPage = lazy(() => import('./app/zion-ai-customer-churn-predictor/page'));
@@ -133,6 +151,24 @@ export default function App() {
                   <Route path="/partnerships" element={<PartnershipsPage />} />
                   <Route path="/api-docs" element={<APIDocsPage />} />
                   <Route path="/accessibility" element={<AccessibilityPage />} />
+                  
+                  {/* New Micro SAAS Services */}
+                  <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                  <Route path="/ai-document-processor" element={<AIDocumentProcessorPage />} />
+                  <Route path="/ai-form-builder" element={<AIFormBuilderPage />} />
+                  <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
+                  <Route path="/ai-image-recognition" element={<AIImageRecognitionPage />} />
+                  <Route path="/ai-lead-scoring" element={<AILeadScoringPage />} />
+                  <Route path="/ai-predictive-maintenance" element={<AIPredictiveMaintenancePage />} />
+                  <Route path="/ai-price-optimizer" element={<AIPriceOptimizerPage />} />
+                  <Route path="/ai-scheduling-assistant" element={<AISchedulingAssistantPage />} />
+                  <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                  <Route path="/api-development" element={<APIDevelopmentPage />} />
+                  <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
+                  <Route path="/data-engineering" element={<DataEngineeringPage />} />
+                  <Route path="/devops-automation" element={<DevOpsAutomationPage />} />
+                  <Route path="/iot-solutions" element={<IoTSolutionsPage />} />
+                  <Route path="/security-audit" element={<SecurityAuditPage />} />
                   
                   {/* AI Tools Pages */}
                   <Route path="/zion-ai-content-moderator" element={<ZionAIContentModeratorPage />} />
