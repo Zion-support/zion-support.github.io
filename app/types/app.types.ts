@@ -19,6 +19,12 @@ export interface Service {
   };
   benefits: string[];
   useCases: string[];
+  link?: string;
+  marketPrice?: string;
+  contactInfo?: {
+    email: string;
+    phone: string;
+  };
 }
 
 export interface ContactFormData {
