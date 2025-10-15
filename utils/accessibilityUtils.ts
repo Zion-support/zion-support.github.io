@@ -74,12 +74,14 @@ export class AccessibilityManager {
     this.announcePageChange();
   }
 
-  private handleTabNavigation(_event: KeyboardEvent) {
+  private handleTabNavigation(event: KeyboardEvent) {
     // Custom tab navigation logic
+    event.preventDefault();
   }
 
-  private handleActivation(_event: KeyboardEvent) {
+  private handleActivation(event: KeyboardEvent) {
     // Handle Enter and Space key activation
+    event.preventDefault();
   }
 
   private addAriaLabels() {
