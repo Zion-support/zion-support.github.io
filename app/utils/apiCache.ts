@@ -1,11 +1,11 @@
-interface CacheItem { data: unknown;
-  timestamp: number;}
-  ttl: number; }
-export const apiCache = { cache: new Map<string, CacheItem></string></string>(),
+interface CacheItem { data: unknown;,
+    timestamp: number;,
+    ttl: number; }
+export const apiCache = { cache: new Map<string CacheItem>(),
   set: (key: string, data: unknown, ttl: number = 300000) => {
     apiCache.cache.set(key, {
       data,
-      timestamp: Date.now(),}
+      timestamp: Date.now(),
       ttl });
   },
   get: (key: string): unknown | null => { const item = apiCache.cache.get(key);
@@ -13,7 +13,7 @@ export const apiCache = { cache: new Map<string, CacheItem></string></string>(),
 
 const now = Date.now();
     if (now - item.timestamp > item.ttl) {
-      apiCache.cache.delete(key);}
+      apiCache.cache.delete(key);
   return null; }
     return item.data;
   },

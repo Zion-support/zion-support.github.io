@@ -10,10 +10,10 @@ export const seoUtils = { generateTitle: (pageTitle: string, siteName: string = 
       title,
       description,}
       site: 'Zion Tech Group' });
-  return `https://og-image.vercel.app/${ encodeURIComponent(title) }?${ params.toString() }`;
+  return `https: //og-image.vercel.app/${ encodeURIComponent(title) }?${ params.toString() }`;
   },
   generateStructuredData: (data: unknown) => { return {
-      '@context': 'https://schema.org',
+      '@context': 'https: //schema.org',
       '@type': 'Organization',
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',

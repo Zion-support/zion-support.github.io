@@ -1,7 +1,7 @@
 export const seoOptimizer = { optimize: (data: { title?: string; description?: string; keywords?: string }) => { const optimized = { ...data };
-    // Optimize title length
+    // Optimize title length,
     if (optimized.title && optimized.title.length > 60) { optimized.title = optimized.title.substring(0, 57) + '...'; }
-    // Optimize description length
+    // Optimize description length,
     if (optimized.description && optimized.description.length > 160) { optimized.description = optimized.description.substring(0, 157) + '...'; }
     return optimized;
   },

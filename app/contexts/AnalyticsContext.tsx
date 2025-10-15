@@ -1,21 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AnalyticsContextPage: React.FC = () => {
+const AnalyticsContext: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AnalyticsContext | Zion Tech Group</title>
-        <meta name="description" content="Professional analyticscontext services and solutions." />
+        <title>AnalyticsContext - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white mb-8">AnalyticsContext</h1>
-          <p className="text-xl text-gray-300">Professional analyticscontext services and solutions.</p>
+          <h1 className="text-4xl font-bold text-white text-center mb-8">AnalyticsContext</h1>
+          <p className="text-gray-300 text-center">Coming soon...</p>
         </div>
       </div>
     </>
   );
 };
 
-export default AnalyticsContextPage;
+export default AnalyticsContext;

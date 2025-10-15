@@ -1,42 +1,21 @@
-import React from "react";
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const FiveGDeploymentPage: React.FC = () => {
+const Page: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>5G Deployment Services - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G network deployment and implementation services." />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI and IT solutions by Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">5G Deployment Services</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Complete 5G network deployment solutions from planning to implementation.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-white mb-4">Site Survey</h3>
-              <p className="text-gray-300">Comprehensive site analysis for optimal 5G deployment.</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-white mb-4">Equipment Installation</h3>
-              <p className="text-gray-300">Professional installation of 5G infrastructure and equipment.</p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold text-white mb-4">Testing & Validation</h3>
-              <p className="text-gray-300">Thorough testing and validation of 5G network performance.</p>
-            </div>
-          </div>
+          <h1 className="text-4xl font-bold text-white text-center mb-8">Page</h1>
+          <p className="text-gray-300 text-center">Coming soon...</p>
         </div>
       </div>
     </>
   );
 };
 
-export default FiveGDeploymentPage;
+export default Page;

@@ -1,27 +1,27 @@
 export const dataTransformers = { transformToTableData: (data: unknown[]) => {
     return data.map((item, index) => {
-      const itemObj = item as Record<string, unknown></string></string>;
+      const itemObj = item as Record<string unknown>;
   return {
-        id: itemObj.id || index,}
+        id: itemObj.id || index,
         ...itemObj };
     });
   },
   transformToChartData: (data: unknown[], xField: string, yField: string) => { return data.map(item => {
-      const itemObj = item as Record<string, unknown></string></string>;
+      const itemObj = item as Record<string unknown>;
   return {
-        x: itemObj[xField],}
+        x: itemObj[xField],
         y: itemObj[yField] };
     });
   },
   transformToSelectOptions: (data: unknown[], valueField: string, labelField: string) => { return data.map(item => {
-      const itemObj = item as Record<string, unknown></string></string>;
+      const itemObj = item as Record<string unknown>;
   return {
-        value: itemObj[valueField],}
+        value: itemObj[valueField],
         label: itemObj[labelField] };
     });
   },
-  transformToKeyValuePairs: (data: Record<string, unknown></string></string>[]) => { return data.map((item, index) => ({
-      id: item.id || index,}
+  transformToKeyValuePairs: (data: Record<string unknown>[]) => { return data.map((item, index) => ({
+      id: item.id || index,
       ...item }));
   }
 };

@@ -7,8 +7,6 @@ const { execSync } = require('child_process');
 // Function to clean unused imports in a file
 function cleanUnusedImports(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
     // Skip if file doesn't exist or is not a TypeScript/JavaScript file
     if (!fs.existsSync(filePath) || (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts') && !filePath.endsWith('.jsx') && !filePath.endsWith('.js'))) {
       return;
@@ -18,12 +16,12 @@ function cleanUnusedImports(filePath) {
     try {
       execSync(`npx eslint "${filePath}" --fix --quiet`, { stdio: 'pipe' });
       console.log(`✓ Cleaned imports in: ${filePath}`);
-    } catch (error) {
+    } catch {
       // ESLint might fail on some files, that's okay
       console.log(`⚠ Could not clean: ${filePath}`);
     }
-  } catch (error) {
-    console.log(`⚠ Error processing ${filePath}: ${error.message}`);
+  } catch (_error) {
+    console.log(`⚠ Error processing ${filePath}: ${_error.message}`);
   }
 }
 
