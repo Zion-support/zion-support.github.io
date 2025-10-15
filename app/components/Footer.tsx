@@ -9,11 +9,21 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-2">
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-4">
-              Advanced AI and IT Solutions for the modern world. Empowering businesses with cutting-edge technology.
+              Advanced AI and IT Solutions for the modern world. Empowering businesses with cutting-edge technology and innovative micro SAAS solutions.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white">Website</a>
-              <a href="mailto:contact@ziontechgroup.com" className="text-gray-300 hover:text-white">Email</a>
+            <div className="space-y-2 text-sm text-gray-300">
+              <div className="flex items-center">
+                <span className="mr-2">📞</span>
+                <a href="tel:+13024640950" className="hover:text-white">+1 302 464 0950</a>
+              </div>
+              <div className="flex items-center">
+                <span className="mr-2">✉️</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white">kleber@ziontechgroup.com</a>
+              </div>
+              <div className="flex items-start">
+                <span className="mr-2 mt-1">📍</span>
+                <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
+              </div>
             </div>
           </div>
           
@@ -26,6 +36,8 @@ const Footer: React.FC = () => {
               <li><Link to="/digital-transformation" className="text-gray-300 hover:text-white">Digital Transformation</Link></li>
               <li><Link to="/data-analytics" className="text-gray-300 hover:text-white">Data Analytics</Link></li>
               <li><Link to="/web-development" className="text-gray-300 hover:text-white">Web Development</Link></li>
+              <li><Link to="/mobile-development" className="text-gray-300 hover:text-white">Mobile Development</Link></li>
+              <li><Link to="/micro-saas-solutions" className="text-gray-300 hover:text-white">Micro SAAS Solutions</Link></li>
             </ul>
           </div>
           
@@ -37,6 +49,9 @@ const Footer: React.FC = () => {
               <li><Link to="/zion-ai-sales-predictor" className="text-gray-300 hover:text-white">Sales Predictor</Link></li>
               <li><Link to="/zion-ai-workflow-automator" className="text-gray-300 hover:text-white">Workflow Automator</Link></li>
               <li><Link to="/zion-ai-financial-forecaster" className="text-gray-300 hover:text-white">Financial Forecaster</Link></li>
+              <li><Link to="/zion-ai-email-marketing-pro" className="text-gray-300 hover:text-white">Email Marketing Pro</Link></li>
+              <li><Link to="/zion-ai-social-scheduler-pro" className="text-gray-300 hover:text-white">Social Scheduler Pro</Link></li>
+              <li><Link to="/zion-smart-expense-tracker" className="text-gray-300 hover:text-white">Smart Expense Tracker</Link></li>
             </ul>
           </div>
           

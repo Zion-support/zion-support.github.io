@@ -26,6 +26,15 @@ const Sidebar: React.FC = () => {
             <Link to="/data-analytics" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Data Analytics
             </Link>
+            <Link to="/micro-saas-solutions" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Micro SAAS Solutions
+            </Link>
+            <Link to="/web-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Web Development
+            </Link>
+            <Link to="/mobile-development" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Mobile Development
+            </Link>
           </div>
           
           <div className="mb-4">
@@ -44,6 +53,15 @@ const Sidebar: React.FC = () => {
             </Link>
             <Link to="/zion-ai-financial-forecaster" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
               Financial Forecaster
+            </Link>
+            <Link to="/zion-ai-email-marketing-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Email Marketing Pro
+            </Link>
+            <Link to="/zion-ai-social-scheduler-pro" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Social Scheduler Pro
+            </Link>
+            <Link to="/zion-smart-expense-tracker" className="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-md">
+              Smart Expense Tracker
             </Link>
           </div>
           
