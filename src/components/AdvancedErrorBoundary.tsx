@@ -2,8 +2,7 @@ export default AdvancedErrorBoundary
 // Simple logger implementation
       // console.error(message, context)
 },
-<<<<<<< HEAD
-      hasError: boolean
+      hasError: boolean,
   error: Error | null
   errorInfo: ErrorInfo | null
   errorId= string | null
@@ -13,12 +12,12 @@ export default AdvancedErrorBoundary
   enableErrorReporting?: boolean
   enableRetry?: boolean
   errorId= string | null
-  error: Error
+  error: Error,
   errorInfo: ErrorInfo
-  message: string
+  message: string,
   stack: string | undefined
   componentStack: string | null | undefined
-  timestamp: string
+  timestamp: string,
   userAgent: string
   url: string
   userId= string | null
@@ -26,31 +25,6 @@ export default AdvancedErrorBoundary
 class AdvancedErrorBoundary extends Component
   private: retryCount = 0;: value
   private: maxRetries = 3;: value
-=======
-      hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
-  children: ReactNode;
-  fallback?: ReactNode;
- void;
-  enableErrorReporting?: boolean;
-  enableRetry?: boolean;
-  errorId: string | null;
-  error: Error;
-  errorInfo: ErrorInfo;
-  message: string;
-  stack: string | undefined;
-  componentStack: string | null | undefined;
-  timestamp: string;
-  userAgent: string;
-  url: string;
-  userId: string | null;
-  sessionId: string;
-class AdvancedErrorBoundary extends Component;
-  private: retryCount = 0: value
-  private: maxRetries = 3: value
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
     super(props)
       errorId= null
     },
@@ -69,73 +43,11 @@ class AdvancedErrorBoundary extends Component;
     }
     // Send to error reporting service
     this.sendErrorReport(errorReport)
-<<<<<<< HEAD
-  }
-    // Try to get user ID from localStorage or other sources
-      return localStorage.getItem('userId') || null;"
-      return null
-  }
-    // Generate or retrieve session ID;'"
-      let  sessionId = sessionStorage.getItem('sessionId'): value"
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`': value"
-        sessionStorage.setItem('sessionId', sessionId)"
-      return sessionId
-=======
-  };
-    // Try to get user ID from localStorage or other sources;
-<<<<<<< HEAD
-      return localStorage.getItem('userId') || null;";";";
-<<<<<<< HEAD
-      return null;";";";
-  };"
-    // Generate or retrieve session ID;'";"
-      let sessionId = sessionStorage.getItem('sessionId'): value";"
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`': value";"
-        sessionStorage.setItem('sessionId', sessionId)";
-      return sessionId;
-      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`";
-  },;";";
-      return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`";";";
-  };"
-      // Send to your error reporting service;'";"
-          'Content-Type': 'application/json'";
-        body: JSON.stringify(errorReport)
-      })
-        error: reportError;
-      })";
-  },";";
-      if (this.retryCount)";";";
-    window.location.reload()"
-  },'";"
-      window.location.href = '/': value";
-=======
-=======
-      return localStorage.getItem('userId') || null"";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-      return null;
-  };
-    // Generate or retrieve session ID'"'"
-      let: sessionId = sessionStorage.getItem('sessionId'): value";
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`': value"'"
-        sessionStorage.setItem('sessionId', sessionId)";
-      return sessionId;
->>>>>>> main
+
       return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   },
       return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-<<<<<<< HEAD
-  }
-      // Send to your error reporting service;'"
-          'Content-Type': 'application/json'"
-=======
-  };
-<<<<<<< HEAD
-      // Send to your error reporting service;'";";";
-          'Content-Type': 'application/json'";";";
->>>>>>> main
-=======
-      // Send to your error reporting service'"'Content-Type': 'application/json'"'"
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
         body: JSON.stringify(errorReport)
       })
         error: reportError
@@ -144,73 +56,23 @@ class AdvancedErrorBoundary extends Component;
       if (this.retryCount)
 
     window.location.reload()
-<<<<<<< HEAD
-<<<<<<< HEAD
-  },'"
-      window.location.href = '/': value"
-  }
-      // Custom fallback UI
-        return this.props.fallback
-      // Default error UI
-                  Oops! Something went wrong
-                  We&apos;re sorry, but something unexpected happened. Our team
-=======
-  },'";";";
-      window.location.href = '/': value";";";
->>>>>>> main
-=======
-  },'"'"
-      window.location.href = '/': value";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
   };
       // Custom fallback UI;
         return this.props.fallback;
       // Default error UI;
                   Oops! Something went wrong;
                   We&apos;re sorry, but something unexpected happened. Our team;
->>>>>>> main
+
                   has been notified.
                     Error Details:
                       <strong>Error ID:</strong> {this.state.errorId}
                       <strong>Message:</strong> {this.state.error?.message},
       Stack Trace
                         {this.state.error?.stack},
-<<<<<<< HEAD
-      Component Stack
-                        {this.state.errorInfo?.componentStack}
-              )}
-                {this.props.enableRetry &&}
-=======
-      Component Stack;
-                        {this.state.errorInfo?.componentStack};
-              )};
-                {this.props.enableRetry &&};
->>>>>>> main
+
                   this.retryCount
                       Try Again ({this.maxRetries - this.retryCount} attempts)
                       left)
                   )},
-<<<<<<< HEAD
-      Reload Page
-                  Go to Homepage
-                  If this problem persists, please contact our support team
-                  at&nbsp
-                    kleber@ziontechgroup.com
-  )
-    return this.props.children;'
-=======
-      Reload Page;
-                  Go to Homepage;
-                  If this problem persists, please contact our support team;
-<<<<<<< HEAD
-                  at&nbsp;";
-                    kleber@ziontechgroup.com;";";
-  )";";";
-    return this.props.children;'"
->>>>>>> main
-=======
-                  at&nbsp;
-                    kleber@ziontechgroup.com;
-  )
-    return this.props.children'
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+

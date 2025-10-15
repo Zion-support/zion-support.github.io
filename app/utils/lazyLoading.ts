@@ -1,49 +1,30 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { lazy, ComponentType }; from 'react';";"
+import { ComponentType, lazy } from 'react';
 
 // Lazy loading helper function
-export const  createLazyComponent = <T extends Record<string, unknown>>(
+export const createLazyComponent = <T extends Record<string, unknown>>(
   importFunc: () => Promise<{ default: ComponentType<T> }>
 ) => {
-  const  LazyComponent = lazy(importFunc)
+  return lazy(importFunc);
+};
 
-  return LazyComponent
-};';'
-=======
-<<<<<<< HEAD
-import { lazy, ComponentType }; from 'react';";";";";";
+// Preload component for better performance
+export const preloadComponent = (importFunc: () => Promise<any>) => {
+  return () => {
+    importFunc();
+    return null;
+  };
+};
 
-=======
-import { lazy, ComponentType }; from 'react';";";";";";";";
-=======
-import { lazy, ComponentType }; from 'react'""";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-;
->>>>>>> main
-// Lazy loading helper function;
-<<<<<<< HEAD
-export const createLazyComponent = <T extends Record<string, unknown>>(;
-=======
-export const createLazyComponent  = <T extends Record<string, unknown>>(
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-  importFunc: () => Promise<{ default: ComponentType<T> }>;
-<<<<<<< HEAD
-) => {";
-  const LazyComponent = lazy(importFunc);";";
-";";";
-  return LazyComponent;"
-};';';";";";";
-"
-=======
+// Intersection Observer hook for lazy loading
+export const useIntersectionObserver = (
+  callback: IntersectionObserverCallback,
+  options?: IntersectionObserverInit
 ) => {
-  const LazyComponent  = lazy(importFunc);
-;
-  return LazyComponent;
-<<<<<<< HEAD
-};';';";";";
->>>>>>> main
->>>>>>> main
-=======
-}'"'"
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+  const observer = new IntersectionObserver(callback, options);
+  
+  return {
+    observe: (element: Element) => observer.observe(element),
+    unobserve: (element: Element) => observer.unobserve(element),
+    disconnect: () => observer.disconnect()
+  };
+};

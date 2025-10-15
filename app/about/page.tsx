@@ -1,410 +1,29 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet }; from "react-helmet-async";"
-import { Brain, Shield, Users, Award }; from 'lucide-react';";"
-const  SEOHead = ({ title, description }: { title: string; description: string }) => (
-  <Helmet>
-    <title>{title}</title>
-    <meta: name ="description" content={description} />";"
-=======
-<<<<<<< HEAD
-import React from 'react";";";";
-import { Helmet } from 'react-helmet-async";";";";
-import { Lightbulb, Shield, Users, Target, Award, Globe } from 'lucide-react";
-const SEOHead  =  ({ title, description }: {
-    title: string,
-    description: string 
 
-  }) => (";
-  <Helmet>";";
-    <title>{title}</title>;";";";
-    <meta name ="description" content={description} />";
-  </Helmet>
-);";
-export default function AboutPage() {;";";
-  ";";";
-  const stats  =  [";";";";
-    { number: "500+", label: "Projects Completed" ";";";
-}"
-    { number: "100+", label: "Happy Clients" },";"
-    { number: "50+", label: "AI Solutions" },";"
-    { number: "24/7", label: "Support" }";";
-  ];";";
-  const values  =  [";";";
-    {"
-      icon: <Lightbulb className="w-8 h-8" />,"
-      title: "Innovation","
-      description: "We constantly push the boundaries of technology to deliver cutting-edge solutions.";";";";
-      icon: <Brain className ="w-8 h-8" />,";"
-      title: "Innovation",";"
-      description: "We constantly push the boundaries of technology to deliver cutting-edge solutions."",";";
-    },";";";
-    {"
-      icon: <Shield className ="w-8 h-8" />,";"
-      title: "Security",";"
-      description: "Your data and systems are protected with enterprise-grade security measures."",";";
-    },";";";
-    {"
-      icon: <Users className ="w-8 h-8" />,";"
-      title: "Collaboration",";"
-      description: "We work closely with our clients to understand their unique needs and challenges."",";";
-    },";";";
-    {"
-      icon: <Target className="w-8 h-8" />,"
-      title: "Excellence","
-      description: "We strive for perfection in every project, ensuring the highest quality standards."
-    },";";";
-    {"
-      icon: <Award className="w-8 h-8" />,"
-      title: "Expertise","
-      description: "Our team consists of industry experts with years of experience in AI and IT solutions."
-    },";";";
-    {"
-      icon: <Globe className="w-8 h-8" />,"
-      title: "Global Reach","
-      description: "We serve clients worldwide with localized support and understanding."
-      icon: <Award className ="w-8 h-8" />,";"
-      title: "Excellence",";"
-      description: "We strive for excellence in every project, ensuring the highest quality deliverables."";
-    };
-  ];
-  return (";
-    <>";";
-      <Helmet>";";";
-        <title>About Us - Zion Tech Group</title>"
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions." />";";";
-      </Helmet>"
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">";";";
-        {/* Hero Section */}"
-        <div className="container mx-auto px-4 py-16">"
-          <div className="text-center mb-16">"
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">";";
-              About Zion Tech Group";";";
-            </h1>"
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-              We are a leading technology company specializing in AI solutions, IT services, ";";
-              and digital transformation. Our mission is to empower businesses with cutting-edge ";";";
-              technology that drives growth and innovation."
-      <SEOHead title ="About - Zion Tech Group"";"
-        description="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions."";";";";
-      />"
-      <div className ="min-h-screen bg-slate-900 text-white">";";";";
-        {/* Hero Section */}"
-        <section className ="relative py-20 px-4">";"
-          <div className ="max-w-7xl mx-auto text-center">";"
-            <h1 className ="text-5xl md: text-6xl font-bold mb-6">";"
-              About <span className ="text-blue-400">Zion Tech Group</$1>";";";
-            </h1>"
-            <p className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">",
-              We are a leading technology company specializing in AI-powered solutions and innovative IT services that transform businesses and drive digital transformation.";
-            </p>";";
-          </div>";";";
-          {/* Stats Section */}"
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">";";";
-            {stats.map((stat, index) => ("
-              <div key={index} className="text-center">"
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">";";
-                  {stat.number}";";";
-        {/* Stats Section */}"
-        <section className ="py-16 px-4 bg-slate-800">";"
-          <div className ="max-w-7xl mx-auto">";"
-            <div className ="grid grid-cols-2 md: grid-cols-4 gap-8">",";";";
-              {stats.map((stat, index) => ("
-                <div key ={index} className="text-center">";"
-                  <div className ="text-4xl font-bold text-blue-400 mb-2">{stat.number}</$1>"
-                  <div className ="text-gray-300">{stat.label}</$1>";";";
-                </div>"
-                <div className="text-gray-600">{stat.label}</div>
-              </div>";
-            ))};";";
-          </div>";";";
-          {/* Values Section */}"
-          <div className="mb-16">"
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">";";
-              Our Core Values";";";
-            </h2>"
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">";";";
-              {values.map((value, index) => ("
-                <div key={index} className="bg-white rounded-lg p-6 shadow-lg">"
-                  <div className="text-blue-600 mb-4">";";
-                    {value.icon}";";";
-                  </div>"
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">";";
-                    {value.title}";";";
-                  </h3>"
-                  <p className="text-gray-600">";
-                    {value.description};";";
-                  </p>";";";
-        {/* Values Section */}"
-        <section className ="py-20 px-4">";"
-          <div className ="max-w-7xl mx-auto">";"
-            <h2 className ="text-4xl font-bold text-center mb-16">Our Values</$1>"
-            <div className ="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",";";";
-              {values.map((value, index) => ("
-                <div key ={index} className="text-center p-6 bg-slate-800 rounded-lg">";"
-                  <div className ="text-blue-400 mb-4 flex justify-center">";";";
-                    {value.icon}";";";
-                  </div>"
-                  <h3 className ="text-xl font-semibold mb-3">{value.title}</$1>"
-                  <p className ="text-gray-300">{value.description}</$1>
-                </div>
-              ))};";
-            </div>";";
-          </div>";";";
-          {/* Mission Section */}"
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">"
-            <div className="text-center">"
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">";";
-                Our Mission";";";
-              </h2>"
-              <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-=======
 <<<<<<< HEAD
-import React from 'react;'";
-import { Helmet } from 'react-helmet-async;'";
-'use client;''";
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-export default function Page() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
 export default function AboutPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-df8b
   return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
-<<<<<<< HEAD
-        <title>About - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>
-          
-          <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-gray-600 mb-8">
-              We are a leading technology company dedicated to delivering innovative solutions 
-              that transform businesses and drive digital transformation.
-            </p>
-            
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h2>
-            <p className="text-gray-600 mb-6">
-              To empower businesses with cutting-edge technology solutions that drive growth, 
-              efficiency, and innovation in the digital age.
-            </p>
-            
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Values</h2>
-            <ul className="list-disc list-inside text-gray-600 mb-6">
-              <li>Innovation and Excellence</li>
-              <li>Customer-Centric Approach</li>
-              <li>Integrity and Transparency</li>
-              <li>Continuous Learning and Growth</li>
-            </ul>
-            
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Team</h2>
-            <p className="text-gray-600 mb-6">
-              Our diverse team of experts brings together decades of experience in technology, 
-              business, and innovation to deliver exceptional results for our clients.
-            </p>
-=======
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group and our mission to provide cutting-edge AI and IT solutions." />
-      </Helmet>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            About Zion Tech Group
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We are a leading technology company specializing in AI and IT solutions for modern businesses.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h2>
-            <p className="text-gray-600">
-              To empower businesses with cutting-edge AI and IT solutions that drive innovation and growth.
-            </p>
-          </div>
-          <div>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Vision</h2>
-            <p className="text-gray-600">
-              To be the global leader in AI and IT solutions, transforming how businesses operate and compete.
-            </p>
-          </div>
-        </div>
-
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Why Choose Us?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Expert Team</h3>
-              <p className="text-gray-600">Our team of experts brings years of experience in AI and IT solutions.</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Innovation</h3>
-              <p className="text-gray-600">We stay at the forefront of technology to deliver cutting-edge solutions.</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Support</h3>
-              <p className="text-gray-600">24/7 support to ensure your success with our solutions.</p>
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-          </div>
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">About Us</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Zion Tech Group is a leading provider of AI and IT solutions.
+          </p>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );}
-}''";
+  );
+}
 =======
-import React from 'react';";
-import { Helmet } from 'react-helmet-async';";
-import { Lightbulb, Shield, Users, Target, Award, Globe } from 'lucide-react';";
-
-const: SEOHead = ({ title, description }: { title: string, description: string }) => (
-  <Helmet>
-    <title>{title}</title>;
-    <meta: name ="description" content={description} />";";
->>>>>>> main
   </Helmet>
 )
 export default function AboutPage() {
-<<<<<<< HEAD
-  const  stats = [
-    { number: "500+", label: "Projects Completed" },";"
-    { number: "100+", label: "Happy Clients" },";"
-    { number: "50+", label: "AI Solutions" },";"
-    { number: "24/7", label: "Support" }";"
-  ]
-  const  values = [
-    {
-      icon: <Brain: className ="w-8 h-8" />,";"
-      title: "Innovation",";"
-      description: "We constantly push the boundaries of technology to deliver cutting-edge solutions."";"
-    },
-    {
-      icon: <Shield= className ="w-8 h-8" />,";"
-      title: "Security",";"
-      description: "Your data and systems are protected with enterprise-grade security measures."";"
-    },
-    {
-      icon: <Users: className ="w-8 h-8" />,";"
-      title: "Collaboration",";"
-      description: "We work closely with our clients to understand their unique needs and challenges."";"
-    },
-    {
-      icon: <Award= className ="w-8 h-8" />,";"
-      title: "Excellence",";"
-      description: "We strive for excellence in every project, ensuring the highest quality deliverables."";"
-=======
-  const: stats = [;
-    { number: "500+", label: "Projects Completed" },";";
-    { number: "100+", label: "Happy Clients" },";";
-    { number: "50+", label: "AI Solutions" },";";
-    { number: "24/7", label: "Support" }";";
-  ];
 
-  const: values = [
-    {;
-      icon: <Lightbulb: className ="w-8 h-8" />,";
-      title: "Innovation",";
-      description: "We constantly push the boundaries of technology to deliver cutting-edge solutions."";
-
-      icon: <Brain: className ="w-8 h-8" />,";";
-      title: "Innovation",";";
-      description: "We constantly push the boundaries of technology to deliver cutting-edge solutions."",";
-
-    },
-    {
-      icon: <Shield: className ="w-8 h-8" />,";";
-      title: "Security",";";
-      description: "Your data and systems are protected with enterprise-grade security measures."",";
-    },
-    {
-      icon: <Users: className ="w-8 h-8" />,";";
-      title: "Collaboration",";";
-      description: "We work closely with our clients to understand their unique needs and challenges."",";
-    },
-    {
-
-      icon: <Target: className ="w-8 h-8" />,";
-      title: "Excellence",";
-      description: "We strive for perfection in every project, ensuring the highest quality standards."";
-    },
-    {
-      icon: <Award: className ="w-8 h-8" />,";
-      title: "Expertise",";
-      description: "Our team consists of industry experts with years of experience in AI and IT solutions."";
-    },
-    {
-      icon: <Globe: className ="w-8 h-8" />,";
-      title: "Global Reach",";
-      description: "We serve clients worldwide with localized support and understanding."";
-
-      icon: <Award: className ="w-8 h-8" />,";";
-      title: "Excellence",";";
-      description: "We strive for excellence in every project, ensuring the highest quality deliverables."";";
-
->>>>>>> main
     }
   ]
   return (
     <>
-<<<<<<< HEAD
-      <SEOHead= title ="About - Zion Tech Group"";"
-        description="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions."";";"
-      />
-      <div  className ="min-h-screen bg-slate-900 text-white">";"
-        {/* Hero Section */}
-        <section: className ="relative py-20 px-4">";"
-          <div  className ="max-w-7xl mx-auto text-center">";"
-            <h1  className ="text-5xl md=text-6xl font-bold mb-6">";"
-              About <span  className ="text-blue-400">Zion Tech Group</span>";"
-            </h1>
-            <p  className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";"
-=======
 
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta: name ="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions." />";";
-      </Helmet>
-      
-      <div: className ="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">";
-
-        {/* Hero Section */}
-        <div: className ="container mx-auto px-4 py-16">";
-          <div: className ="text-center mb-16">";
-            <h1: className ="text-4xl md:text-6xl font-bold text-gray-900 mb-6">";
-              About Zion Tech Group
-            </h1>
-            <p: className ="text-xl text-gray-600 max-w-3xl mx-auto">";
-              We are a leading technology company specializing in AI solutions, IT services, 
-              and digital transformation. Our mission is to empower businesses with cutting-edge 
-              technology that drives growth and innovation.
-
-      <SEOHead: title ="About - Zion Tech Group"";";
-        description="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions."";";";
-      />
-      <div: className ="min-h-screen bg-slate-900 text-white">";";
-        {/* Hero Section */}
-        <section: className ="relative py-20 px-4">";";
-          <div: className ="max-w-7xl mx-auto text-center">";";
-            <h1: className ="text-5xl md: text-6xl font-bold mb-6">";";
-              About <span: className ="text-blue-400">Zion Tech Group</span>";";
-            </h1>
-            <p: className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">",";
->>>>>>> main
               We are a leading technology company specializing in AI-powered solutions and innovative IT services that transform businesses and drive digital transformation.
 
             </p>
@@ -419,80 +38,7 @@ export default function AboutPage() {
                   {stat.number}
 
         {/* Stats Section */}
-<<<<<<< HEAD
-        <section: className ="py-16 px-4 bg-slate-800">";"
-          <div  className ="max-w-7xl mx-auto">";"
-            <div  className ="grid grid-cols-2 md=grid-cols-4 gap-8">";"
-              {stats.map((stat, index) => (
-                <div  key ={index} className="text-center">";"
-                  <div  className ="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>";"
-                  <div  className ="text-gray-300">{stat.label}</div>";"
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Values Section */}
-        <section: className ="py-20 px-4">";"
-          <div  className ="max-w-7xl mx-auto">";"
-            <h2  className ="text-4xl font-bold text-center mb-16">Our Values</h2>";"
-            <div  className ="grid md=grid-cols-2 lg:grid-cols-4 gap-8">";"
-              {values.map((value, index) => (
-                <div  key ={index} className="text-center p-6 bg-slate-800 rounded-lg">";"
-                  <div  className ="text-blue-400 mb-4 flex justify-center">";"
-                    {value.icon}
-                  </div>
-                  <h3  className ="text-xl font-semibold mb-3">{value.title}</h3>";"
-                  <p  className ="text-gray-300">{value.description}</p>";"
-=======
-        <section: className ="py-16 px-4 bg-slate-800">";";
-          <div: className ="max-w-7xl mx-auto">";";
-            <div: className ="grid grid-cols-2 md: grid-cols-4 gap-8">",";
-              {stats.map((stat, index) => (
-                <div: key ={index} className="text-center">";";
-                  <div: className ="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>";";
-                  <div: className ="text-gray-300">{stat.label}</div>";";
-
-                </div>
-                <div: className ="text-gray-600">{stat.label}</div>";
-              </div>
-            ))}
-          </div>
-
-          {/* Values Section */}
-          <div: className ="mb-16">";
-            <h2: className ="text-3xl font-bold text-center text-gray-900 mb-12">";
-              Our Core Values
-            </h2>
-            <div: className ="grid md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {values.map((value, index) => (
-                <div: key ={index} className="bg-white rounded-lg p-6 shadow-lg">";
-                  <div: className ="text-blue-600 mb-4">";
-
-                    {value.icon}
-                  </div>
-                  <h3: className ="text-xl font-semibold text-gray-900 mb-3">";
-                    {value.title}
-                  </h3>
-                  <p: className ="text-gray-600">";
-                    {value.description}
-                  </p>
-
-        {/* Values Section */}
-        <section: className ="py-20 px-4">";";
-          <div: className ="max-w-7xl mx-auto">";";
-            <h2: className ="text-4xl font-bold text-center mb-16">Our Values</h2>";";
-            <div: className ="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",";
-              {values.map((value, index) => (
-                <div: key ={index} className="text-center p-6 bg-slate-800 rounded-lg">";";
-                  <div: className ="text-blue-400 mb-4 flex justify-center">";";
-                    {value.icon}
-                  </div>
-                  <h3: className ="text-xl font-semibold mb-3">{value.title}</h3>";";
-                  <p: className ="text-gray-300">{value.description}</p>";";
-
->>>>>>> main
                 </div>
               ))}
             </div>
@@ -505,7 +51,7 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p: className ="text-lg text-gray-600 max-w-4xl mx-auto">";
->>>>>>> main
+
                 To revolutionize the way businesses operate by providing innovative AI and IT solutions 
                 that are not just cutting-edge, but also practical, scalable, and designed to deliver 
                 real-world value. We believe technology should empower, not complicate, and our solutions 
@@ -515,24 +61,8 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </>";
-  );";";
-}";";";
-"
-=======
-    </>
-  )
-}
->>>>>>> main
+
 
 }))))
->>>>>>> main
-=======
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-df8b
-=======
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

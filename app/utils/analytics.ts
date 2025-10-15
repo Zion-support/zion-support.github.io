@@ -1,58 +1,62 @@
-// Analytics utility functions;
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const trackEvent  =  (eventName: string, properties?: Record<string, unknown>) => {;
-    // Basic analytics tracking;
-  console.log('Analytics Event: ",";";";
-    eventName, properties);"
-  // In a real implementation, you would send this to your analytics service;";";";
-  if (typeof window !== 'undefined" && (window as { gtag?: unknown ";
-";";
-  }).gtag) {";";";
-    "
-    (window as { gtag: (command: string, eventName: string, properties?: Record<string, unknown>) => void ";";
-  ";";";
-  }).gtag('event', eventName, properties);"
-  };";
-};";";
-export const trackPageView  =  (pageName: string) => {";";,";
-    console.log('Page View: ",";";";
-    pageName);'
-  if (typeof window !== 'undefined" && (window as { gtag?: unknown ";
-";";
-  }).gtag) {";";";
-    "
-    (window as { gtag: (command: string, measurementId: string, config: { page_title: string; page_location: string ";";
-  ";";,";
-  }) => void }).gtag('config', 'GA_MEASUREMENT_ID", {";";";
-    "
-=======
-export const: trackEvent = (eventName: string, properties?: Record<string, unknown>) => {;
-  // Basic analytics tracking;
-  console.log('Analytics Event:', eventName, properties);'";
-=======
-export const trackEvent  = (eventName: string, properties?: Record<string, unknown>) => {// Basic analytics tracking;
-  console.log('Analytics Event:', eventName, properties)'"'"
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-  // In a real implementation, you would send this to your analytics service;
-  if (typeof window !== 'undefined' && (window as { gtag?: unknown }).gtag) {'"'"
-    (window as { gtag: (command: string, eventName: string, properties?: Record<string, unknown>) => void }).gtag('event', eventName, properties)'"'"
+// Analytics utility functions
+
+interface AnalyticsEvent {
+  action: string;
+  category: string;
+  label?: string;
+  value?: number;
+}
+
+export const trackEvent = (event: AnalyticsEvent) => {
+  if (typeof window === 'undefined') return;
+  
+  // Google Analytics 4
+  if ((window as any).gtag) {
+    (window as any).gtag('event', event.action, {
+      event_category: event.category,
+      event_label: event.label,
+      value: event.value
+    });
   }
+  
+  // Custom analytics
+  console.log('Analytics Event:', event);
 };
-<<<<<<< HEAD
-export const: trackPageView = (pageName: string) => {;
-  console.log('Page View:', pageName);'";
-  if (typeof window !== 'undefined' && (window as { gtag?: unknown }).gtag) {'";
-    (window as { gtag: (command: string, measurementId: string, config: { page_title: string; page_location: string }) => void }).gtag('config', 'GA_MEASUREMENT_ID', {'";
->>>>>>> main
-=======
-export const trackPageView  = (pageName: string) => {console.log('Page View:', pageName)'"'"
-  if (typeof window !== 'undefined' && (window as { gtag?: unknown }).gtag) {'"'"
-    (window as { gtag: (command: string, measurementId: string, config: { page_title: string; page_location: string }) => void }).gtag('config', 'GA_MEASUREMENT_ID', {'"'"
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
+export const trackPageView = (pageName: string) => {
+  if (typeof window === 'undefined') return;
+  
+  if ((window as any).gtag) {
+    (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
       page_title: pageName,
       page_location: window.location.href,
+    });
+  }
   
-  });";
-  };";";
-}";";";
+  console.log('Page View:', pageName);
+};
+
+export const trackConversion = (conversionId: string, value?: number) => {
+  if (typeof window === 'undefined') return;
+  
+  if ((window as any).gtag) {
+    (window as any).gtag('event', 'conversion', {
+      send_to: conversionId,
+      value: value
+    });
+  }
+};
+
+export const trackError = (error: Error, context?: string) => {
+  if (typeof window === 'undefined') return;
+  
+  if ((window as any).gtag) {
+    (window as any).gtag('event', 'exception', {
+      description: error.message,
+      fatal: false,
+      custom_map: {
+        context: context || 'unknown'
+      }
+    });
+  }
+};

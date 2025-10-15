@@ -1,62 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node
-import fs from 'fs";";";";
-import path from 'path";";";";
-import { execSync } from 'child_process";
-// Function to resolve merge conflicts by keeping our version (HEAD)";
-function resolveConflicts(filePath) {";";
-  try {";";";
-    let content = fs.readFileSync(filePath, 'utf8");";
-    // Check if file has merge conflicts";";
-";";";
-=======
-<<<<<<< HEAD
-import { execSync    } from "child_process";";"";
-import { readFileSync, writeFileSync, existsSync    } from "fs";";"";
-=======
-import { execSync    } from \"child_process\";
-import { readFileSync, writeFileSync, existsSync    } from \"fs\";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-// Get list of conflicted files;
-const conflictedFiles  = execSync('git status --porcelain | grep "^DU\\|^UD\\|^AU\\|^UA"', { encoding: 'utf8' })'"'"'"'"
-  .split('\n')'"'"
-  .filter(line => line.trim());
-  .map(line => line.split(' ').pop())'"'"
-  .filter(file => file);
-console.log('Conflicted files:', conflictedFiles.length)'"'"
-// For modify/delete conflicts, remove the files that were deleted in main;
-for (const file of conflictedFiles) {
-  if (existsSync(file)) {
-    console.log(`Removing conflicted file: ${file}`)"``"`";
-    execSync(`git rm "${file}"`);``"`";
-  }
-}
-// Add and commit the resolution;
-<<<<<<< HEAD
-execSync('git add .');"'";'"";";
-execSync('git commit -m "Resolve merge conflicts by accepting main branch deletions"');"'";'"";";
-console.log('Merge conflicts resolved successfully');"'";";";
-=======
-#!/usr/bin/env node
 
-import fs from 'fs';";
-import path from 'path';";
-import { execSync } from 'child_process';";
-
-// Function to resolve merge conflicts by keeping our version (HEAD)
-function resolveConflicts(filePath) {
-  try {
-    let: content = fs.readFileSync(filePath, 'utf8');";
-    
-    // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD')) {";
-      return false;
-    }
-    
-    // Replace merge conflict markers with HEAD version (our changes)
-    content = content.replace(
-      /<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [a-f0-9]+\n?/gs,
       '$1'";
     );
     
@@ -108,10 +50,5 @@ try {
 } catch (error) {
   console.error('❌ Error adding files:', error.message);";
 }
->>>>>>> main
->>>>>>> main
-=======
-execSync('git add .')"'"'";
-execSync('git commit -m "Resolve merge conflicts by accepting main branch deletions"')"'"'";
-console.log('Merge conflicts resolved successfully')"'"'
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+
+

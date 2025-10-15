@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
+// Analytics hook for tracking events and page views
 
 interface AnalyticsEvent {
   action: string;
@@ -41,13 +40,3 @@ export const useAnalytics = () => {
 };
 
 export default useAnalytics;
-=======
-{ useContext } from 'react'";
-{ AnalyticsContext } from '../contexts/AnalyticsContext'";
-export const useAnalytics  = () => {const context  = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider')}'"'"
-  return context};
-
-export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04

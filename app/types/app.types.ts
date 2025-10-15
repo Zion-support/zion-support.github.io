@@ -2,188 +2,84 @@
  * Application Types
  * Core type definitions for the Zion Tech Group website
  */
+
 /**
  * Performance Metrics Interface
  * Web Vitals and performance measurement types
- */;
-<<<<<<< HEAD
-export interface PerformanceMetrics {;
-  fcp?: number; // First Contentful Paint;
-  lcp?: number; // Largest Contentful Paint;};
-  fid?: number; // First Input Delay;};
-  cls?: number; // Cumulative Layout Shift;};
-  ttfb?: number; // Time to First Byte};
-};
-=======
-export interface PerformanceMetrics {fcp?: number; // First Contentful Paint;
-  lcp?: number; // Largest Contentful Paint;}
-  fid?: number; // First Input Delay;}
-  cls?: number; // Cumulative Layout Shift;}
-  ttfb?: number; // Time to First Byte}
+ */
+export interface PerformanceMetrics {
+  fcp?: number; // First Contentful Paint
+  lcp?: number; // Largest Contentful Paint
+  fid?: number; // First Input Delay
+  cls?: number; // Cumulative Layout Shift
+  ttfb?: number; // Time to First Byte
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-/**;
- * Performance Report Interface;
- */;
-<<<<<<< HEAD
-export interface PerformanceReport {;
-  webVitals: "Partial<PerformanceMetrics>;""
-  resources: ResourceStats;"
-  memor",""
-    y: MemoryStats | null;
-  timestam,
-    p: number;
-};
-/**;";
- * Resource Statistics Interface;";";
- */;";";";
-export interface ResourceStats {";";";
-  total: "number;""
-  scripts: number;";";";
-  styles: number;"
-  image",""
-    s: number;
-  font,
-    s: number;
-};
-/**;";
- * Memory Statistics Interface;";";
- */;";";";
-export interface MemoryStats {";";";
-  usedJSHeapSize: "number;""
-  totalJSHeapSiz",""
-=======
+
+/**
+ * Performance Report Interface
+ */
 export interface PerformanceReport {
-  webVitals: "Partial<PerformanceMetrics>";
-  resources: ResourceStats;
-  memor",";
-    y: MemoryStats | null;
-  timestam,
-    p: number;
-}
-/**;
- * Resource Statistics Interface;
- */;
-export interface ResourceStats {
-  total: "number";
-  scripts: number;
-  styles: number;
-  image",";
-    s: number;
-  font,
-    s: number;
-}
-/**;
- * Memory Statistics Interface;
- */;
-export interface MemoryStats {
-<<<<<<< HEAD
-  usedJSHeapSize: "number;""";
-  totalJSHeapSiz",""";
->>>>>>> main
-=======
-  usedJSHeapSize: "number";
-  totalJSHeapSiz",";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-    e: number;
-  jsHeapSizeLimi,
-    t: number;
-};
-/**;
- * Layout Shift Interface;
- */;
-<<<<<<< HEAD
-export interface LayoutShift extends PerformanceEntry {
-  } catch (error) {;
-    console.error(error);
-  };
-  }};
-  hadRecentInput: boolean;};
-};
-/**;";
- * Performance with Memory Interface;";";
- */;";";";
-export interface PerformanceWithMemory extends Performance {"
-  memory: "{"";";";
-    usedJSHeapSize: number;",";
-    totalJSHeapSiz",""
-=======
-export interface LayoutShift extends PerformanceEntry {}
-  value: number;}
-  hadRecentInput: boolean;}
-}
-/**;
- * Performance with Memory Interface;
- */;
-export interface PerformanceWithMemory extends Performance {
-  memory: "{";
+  metrics: PerformanceMetrics;
+  memory: {
     usedJSHeapSize: number;
-<<<<<<< HEAD
-    totalJSHeapSiz",""";
->>>>>>> main
-=======
-    totalJSHeapSiz",";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-    e: number;
-    jsHeapSizeLimi,
-    t: number;
+    totalJSHeapSize: number;
+    jsHeapSizeLimit: number;
   };
-<<<<<<< HEAD
-};
-/**;";
- * Service Configuration Interface;";";
- */;";";";
-export interface ServiceConfig {";";";
-  id: "string;""
-  name: string;
-  description: string;
-  icon: string;";
-  category: string;";";
-  features: string[];";";";
-  pricing?: {",";
-    startin",""
-=======
-}
-/**;
- * Service Configuration Interface;
- */;
-export interface ServiceConfig {
-  id: "string";
-  name: string;
-  description: string;
-  icon: string;
-  category: string;
-  features: string[];
-  pricing?: {
-<<<<<<< HEAD
-    startin",""";
->>>>>>> main
-=======
-    startin",";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-    g: number;
-    currenc,
-    y: string;
+  navigation: {
+    type: string;
+    redirectCount: number;
   };
-<<<<<<< HEAD
-};
-/**;";
- * Blog Post Interface;";";
- */;";";";
-export interface BlogPost {";";";
-  id: "string;""
-=======
 }
-/**;
- * Blog Post Interface;
- */;
+
+/**
+ * Layout Shift Interface
+ */
+export interface LayoutShift {
+  value: number;
+  hadRecentInput: boolean;
+  sources: Array<{
+    node: Element;
+    previousRect: DOMRectReadOnly;
+    currentRect: DOMRectReadOnly;
+  }>;
+}
+
+/**
+ * Error Report Interface
+ */
+export interface ErrorReport {
+  id: string;
+  message: string;
+  stack?: string;
+  context: ErrorContext;
+  severity: ErrorSeverity;
+  resolved: boolean;
+  createdAt: string;
+}
+
+/**
+ * Error Context Interface
+ */
+export interface ErrorContext {
+  url?: string;
+  userAgent?: string;
+  timestamp?: string;
+  userId?: string;
+  sessionId?: string;
+  componentStack?: string;
+  errorBoundary?: string;
+}
+
+/**
+ * Error Severity Type
+ */
+export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';
+
+/**
+ * Blog Post Interface
+ */
 export interface BlogPost {
-<<<<<<< HEAD
-  id: "string;""";
->>>>>>> main
-=======
-  id: "string";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+  id: string;
   title: string;
   slug: string;
   excerpt: string;
@@ -193,481 +89,222 @@ export interface BlogPost {
   updatedAt: string;
   tags: string[];
   category: string;
-<<<<<<< HEAD
-  featured: boolean;";
-  readingTime: number;";";
-  seo: {";";";
-    title: string;",";
-    descriptio",""
-=======
-  featured: boolean;
-  readingTime: number;
   seo: {
     title: string;
-<<<<<<< HEAD
-    descriptio",""";
->>>>>>> main
-=======
-    descriptio",";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-    n: string;
-    keyword,
-    s: string[];
+    description: string;
+    keywords: string[];
   };
-<<<<<<< HEAD
-};
-/**;";
- * Contact Form Interface;";";
- */;";";";
-export interface ContactForm {";";";
-  name: "string;""
-  email: string;";
-  company?: string;";";
-  phone?: string;";";";
-  service: string;"
-  messag",""
-=======
+  featured: boolean;
+  published: boolean;
 }
-/**;
- * Contact Form Interface;
- */;
-export interface ContactForm {
-  name: "string";
-  email: string;
-  company?: string;
-  phone?: string;
-  service: string;
-<<<<<<< HEAD
-  messag",""";
->>>>>>> main
-=======
-  messag",";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-    e: string;
+
+/**
+ * Service Interface
+ */
+export interface Service {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  features: string[];
+  pricing: {
+    starting: number;
+    currency: string;
+  };
+  category: string;
+  featured: boolean;
+  active: boolean;
+}
+
+/**
+ * Team Member Interface
+ */
+export interface TeamMember {
+  id: string;
+  name: string;
+  position: string;
+  bio: string;
+  avatar?: string;
+  social: {
+    linkedin?: string;
+    twitter?: string;
+    github?: string;
+  };
+  expertise: string[];
+  featured: boolean;
+}
+
+/**
+ * Case Study Interface
+ */
+export interface CaseStudy {
+  id: string;
+  title: string;
+  slug: string;
+  client: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  results: string;
+  technologies: string[];
+  duration: string;
   budget?: string;
   timeline?: string;
-  consen,
-    t: boolean;
-};
-/**
- * API Response Interface
- */;
-export interface ApiResponse<T = any> {;
-  success: boolean;
-<<<<<<< HEAD
-  data?: T;};
-  error?: string;};
-  message?: string;};
-  timestamp: number;};
-};
-/**;";
- * SEO Metadata Interface;";";
- */;";";";
-export interface SEOMetadata {";";";
-  title: "string;""
-  descriptio",""
-=======
-  data?: T;}
-  error?: string;}
-  message?: string;}
-  timestamp: number;}
+  consent: boolean;
+  featured: boolean;
+  published: boolean;
 }
-/**;
- * SEO Metadata Interface;
- */;
+
+/**
+ * SEO Metadata Interface
+ */
 export interface SEOMetadata {
-<<<<<<< HEAD
-  title: "string;""";
-  descriptio",""";
->>>>>>> main
-=======
-  title: "string";
-  descriptio",";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-    n: string;
-  keyword,
-    s: string[];
+  title: string;
+  description: string;
+  keywords: string[];
   canonical?: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
   noindex?: boolean;
   nofollow?: boolean;
-,
-  };
-/**;
- * Navigation Item Interface;
- */;
-export interface NavigationItem {;
+}
+
+/**
+ * API Response Interface
+ */
+export interface ApiResponse<T = any> {
+  success: boolean;
+  data?: T;
+  error?: string;
+  message?: string;
+}
+
+/**
+ * Navigation Item Interface
+ */
+export interface NavigationItem {
   label: string;
-  hre,
-    f: string;
+  href: string;
   external?: boolean;
   children?: NavigationItem[];
-,
-<<<<<<< HEAD
-  };
-/**;";
- * Testimonial Interface;";";
- */;";";";
-export interface Testimonial {";";";
-  id: "string;""
-  name: string;";
-  company: string;";";
-  position: string;";";";
-  content: string;"
-  ratin",""
-=======
-  }
-/**;
- * Testimonial Interface;
- */;
-export interface Testimonial {
-  id: "string";
+}
+
+/**
+ * User Interface
+ */
+export interface User {
+  id: string;
   name: string;
-  company: string;
-  position: string;
-  content: string;
-<<<<<<< HEAD
-  ratin",""";
->>>>>>> main
-=======
-  ratin",";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-    g: number;
+  email: string;
   avatar?: string;
-  feature,
-    d: boolean;
-<<<<<<< HEAD
-};
-/**;";
- * Case Study Interface;";";
- */;";";";
-export interface CaseStudy {";";";
-  id: "string;""
-=======
+  role: string;
+  active: boolean;
 }
-/**;
- * Case Study Interface;
- */;
-export interface CaseStudy {
-<<<<<<< HEAD
-  id: "string;""";
->>>>>>> main
-=======
-  id: "string";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-  title: string;
-  slug: string;
-  client: string;
-  industry: string;
-<<<<<<< HEAD
-  challenge: string;";
-  solution: string;";";
-  results: {";";";
-    metric: string;",";
-    valu",""
-    e: string;";
-    improvemen,";";
-    t: string;";";";
-  }[];"
-  technologies: "string[];""
-  duration: string;";";
-  teamSize: number;";";";
-  featured: boolean;"
-  image",""
-    s: string[];
-  publishedA,
-    t: string;
-};
-/**;";
- * Team Member Interface;";";
- */;";";";
-export interface TeamMember {";";";
-  id: "string;""
-  name: string;";";
-  position: string;";";";
-  bio: string;"
-  avata",""
-=======
-  challenge: string;
-  solution: string;
-  results: {
-    metric: string;
-    valu",";
-    e: string;
-    improvemen,
-    t: string;
-  }[];
-  technologies: "string[]";
-  duration: string;
-  teamSize: number;
-  featured: boolean;
-  image",";
-    s: string[];
-  publishedA,
-    t: string;
-}
-/**;
- * Team Member Interface;
- */;
-export interface TeamMember {
-  id: "string";
+
+/**
+ * Contact Form Interface
+ */
+export interface ContactForm {
   name: string;
-  position: string;
-  bio: string;
-<<<<<<< HEAD
-  avata",""";
->>>>>>> main
-=======
-  avata",";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-    r: string;
-  socia,
-    l: {
-    linkedin?: string;
-    twitter?: string;
-    github?: string;,
-  ,
-  };
-  expertise: string[];
-  featured: boolean;
-<<<<<<< HEAD
-};
-/**;";
- * FAQ Item Interface;";";
- */;";";";
-export interface FAQItem {";";";
-  id: "string;""
-  question: string;";";";
-  answer: string;"
-  categor",""
-    y: string;
-  orde,
-    r: number;
-};
-/**;";
- * Newsletter Subscription Interface;";";
- */;";";";
-export interface NewsletterSubscription {";";";
-  email: "string;""
-  name?: string;";";";
-  interests: string[];"
-  subscribedA",""
-=======
+  email: string;
+  company?: string;
+  phone?: string;
+  subject: string;
+  message: string;
+  consent: boolean;
 }
-/**;
- * FAQ Item Interface;
- */;
-export interface FAQItem {
-  id: "string";
-  question: string;
-  answer: string;
-  categor",";
-    y: string;
-  orde,
-    r: number;
-}
-/**;
- * Newsletter Subscription Interface;
- */;
+
+/**
+ * Newsletter Subscription Interface
+ */
 export interface NewsletterSubscription {
-  email: "string";
-  name?: string;
-  interests: string[];
-<<<<<<< HEAD
-  subscribedA",""";
->>>>>>> main
-=======
-  subscribedA",";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-    t: string;
-  activ,
-    e: boolean;
-};
-/**;
- * Error Boundary Props Interface;
- */;
-export interface ErrorBoundaryProps {};
-  children: React.ReactNode;};
+  email: string;
+  consent: boolean;
+  active: boolean;
+}
+
+/**
+ * Error Boundary Props Interface
+ */
+export interface ErrorBoundaryProps {
+  children: React.ReactNode;
   fallback?: React.ComponentType<{ error: Error; resetError: () => void }>;
   onError?: (error: Error, errorInfo: React.ErrorInfo) => void;
-};
-/**;
- * Error Boundary State Interface;
- */;
-export interface ErrorBoundaryState {;
-    hasError: boolean;
+}
+
+/**
+ * Error Boundary State Interface
+ */
+export interface ErrorBoundaryState {
+  hasError: boolean;
   error?: Error;
-,
-<<<<<<< HEAD
-  };
-/**;";
- * Theme Configuration Interface;";";
- */;";";";
-export interface ThemeConfig {";";";
-  mode: "'light' | 'dark' | 'system;"'"'"'"
-  primaryColor: string;";";
-  secondaryColor: string;";";";
-  accentColor: string;"
-  fontFamil",""
-=======
-  }
-/**;
- * Theme Configuration Interface;
- */;
-export interface ThemeConfig {
-  mode: "'light' | 'dark' | 'system"'"'"'";
-  primaryColor: string;
-  secondaryColor: string;
-  accentColor: string;
-<<<<<<< HEAD
-  fontFamil",""";
->>>>>>> main
-=======
-  fontFamil",";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-    y: string;
-  borderRadiu,
-    s: number;
-};
-/**;
- * Analytics Event Interface;
- */;
-export interface AnalyticsEvent {;
+}
+
+/**
+ * Button Variants Interface
+ */
+export interface ButtonVariants {
+  variant: 'primary' | 'secondary' | 'outline' | 'ghost';
+  size: 'sm' | 'md' | 'lg';
+  disabled: boolean;
+  loading: boolean;
+}
+
+/**
+ * Analytics Event Interface
+ */
+export interface AnalyticsEvent {
   action: string;
-  categor,
-    y: string;
+  category: string;
   label?: string;
   value?: number;
-  custom_parameters?: Record<string, unknown>
-<<<<<<< HEAD
-};
-/**;";
- * User Preferences Interface;";";
- */;";";";
-export interface UserPreferences {";";";
-  theme: "ThemeConfig;""
-  language: string;";";
-  notifications: {";";";
-    email: boolean;",";
-    pus",""
-    h: boolean;";
-    sm,";";
-    s: boolean;";";";
-  };"
-  privacy: "{""
-    analytics: boolean;",";
-    marketin",""
-=======
+  custom_parameters?: Record<string, unknown>;
 }
-/**;
- * User Preferences Interface;
- */;
-export interface UserPreferences {
-  theme: "ThemeConfig";
-  language: string;
-  notifications: {
-    email: boolean;
-    pus",";
-    h: boolean;
-    sm,
-    s: boolean;
-  };
-  privacy: "{";
-    analytics: boolean;
-<<<<<<< HEAD
-    marketin",""";
->>>>>>> main
-=======
-    marketin",";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-    g: boolean;
-    functiona,
-    l: boolean;
-  };
-};
-/**;
- * Utility Types;
- */;
+
+/**
+ * Accessibility Features Interface
+ */
+export interface AccessibilityFeatures {
+  highContrast: boolean;
+  reducedMotion: boolean;
+  largeText: boolean;
+  keyboardNavigation: boolean;
+  screenReader: boolean;
+  functional: boolean;
+}
+
+/**
+ * Utility Types
+ */
 export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 export type DeepPartial<T> = {
-    [
-    P in keyof T,
-  ]?: T[
-    P,
-  ] extends object ? DeepPartial<T[
-    P,
-  ]> : T[
-    P,;
-  ];
-,
-  };
-/**;
-<<<<<<< HEAD
- * API Endpoint Types;";
- */;";";
-export type ApiEndpoint =;";";";
-  | '/api/contact;''
-  | '/api/newsletter;''
-  | '/api/analytics;''
-  | '/api/performance;''
-  | '/api/health;'"
-/**;";
- * HTTP Method Types;";";
- */;";";";
-export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH;'"
-/**;";
- * Environment Types;";";
- */;";";";
-export type Environment = 'development' | 'staging' | 'production;'"
-/**;";
- * Build Configuration Interface;";";
- */;";";";
-export interface BuildConfig {";";";
-  environment: "Environment;""
-  version: string;
-  buildTime: string;";
-  features: {";";
-    analytics: boolean;";";";
-    performanceMonitoring: boolean;",";
-    errorReportin",""
-=======
- * API Endpoint Types;
- */;
-export type: ApiEndpoint =;
-  | '/api/contact'";
-  | '/api/newsletter'";
-  | '/api/analytics'";
-  | '/api/performance'";
-  | '/api/health'";
-/**;
- * HTTP Method Types;
- */;
-export type: HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH'";
-/**;
- * Environment Types;
- */;
-export type: Environment = 'development' | 'staging' | 'production'";
-/**;
- * Build Configuration Interface;
- */;
-export interface BuildConfig {
-  environment: "Environment";
-  version: string;
-  buildTime: string;
-  features: {
-    analytics: boolean;
-    performanceMonitoring: boolean;
-<<<<<<< HEAD
-    errorReportin",""";
->>>>>>> main
-=======
-    errorReportin",";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-    g: boolean;
-    pw,";
-    a: boolean;";";
-  };";";";
-}"
+  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
+};
+
+/**
+ * Theme Interface
+ */
+export interface Theme {
+  mode: 'light' | 'dark';
+  primary: string;
+  secondary: string;
+  accent: string;
+  background: string;
+  surface: string;
+  text: string;
+  border: string;
+  borderRadius: number;
+}
+
+/**
+ * PWA Features Interface
+ */
+export interface PWAFeatures {
+  installable: boolean;
+  offline: boolean;
+  pushNotifications: boolean;
+  backgroundSync: boolean;
+  periodicSync: boolean;
+}

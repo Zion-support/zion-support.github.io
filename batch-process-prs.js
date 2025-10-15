@@ -1,4 +1,4 @@
-import { execSync } from 'child_process'
+import { execSync } from 'child_process';
 /**
  * Batch process multiple PRs efficiently
  * This script processes PRs in batches to avoid overwhelming the system

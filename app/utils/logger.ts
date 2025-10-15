@@ -1,69 +1,75 @@
-
 interface LoggerOptions {
-<<<<<<< HEAD
-  // Add your options here
+  level: 'debug' | 'info' | 'warn' | 'error';
+  context?: string;
+  timestamp?: boolean;
 }
 
-interface LoggerState {
-  // Add your state here
+interface LogEntry {
+  level: string;
+  message: string;
+  context?: string;
+  timestamp: string;
+  data?: any;
 }
 
-export const  Logger = (options: LoggerOptions = {}) => {
-  const  stateRef = useRef<LoggerState>({
-    // Initialize your state here
-  })
+class Logger {
+  private options: LoggerOptions;
 
-  // Add your hooks logic here
-  useEffect(() => {
-    // Add your effect logic here
-  }, [])
+  constructor(options: LoggerOptions = { level: 'info' }) {
+    this.options = {
+      timestamp: true,
+      ...options
+    };
+  }
 
-  return {
-    // Return your hook values here
+  private formatMessage(level: string, message: string, data?: any): LogEntry {
+    return {
+      level,
+      message,
+      context: this.options.context,
+      timestamp: this.options.timestamp ? new Date().toISOString() : '',
+      data
+    };
+  }
+
+  debug(message: string, data?: any): void {
+    if (this.options.level === 'debug') {
+      const entry = this.formatMessage('debug', message, data);
+      console.debug(entry);
+    }
+  }
+
+  info(message: string, data?: any): void {
+    if (['debug', 'info'].includes(this.options.level)) {
+      const entry = this.formatMessage('info', message, data);
+      console.info(entry);
+    }
+  }
+
+  warn(message: string, data?: any): void {
+    if (['debug', 'info', 'warn'].includes(this.options.level)) {
+      const entry = this.formatMessage('warn', message, data);
+      console.warn(entry);
+    }
+  }
+
+  error(message: string, data?: any): void {
+    const entry = this.formatMessage('error', message, data);
+    console.error(entry);
+  }
+
+  setLevel(level: LoggerOptions['level']): void {
+    this.options.level = level;
+  }
+
+  setContext(context: string): void {
+    this.options.context = context;
   }
 }
 
-export default Logger;';'
-=======
-  // Add your options here;
-};
-interface LoggerState {
-  // Add your state here;
-<<<<<<< HEAD
-};
-export const Logger = (options: LoggerOptions = {,
-  }) => {;
-    const stateRef = useRef<LoggerState>({;
-    // Initialize your state here;
-  
-=======
-}
-;
-export const Logger  = (options: LoggerOptions = {}) => {
-  const stateRef  = useRef<LoggerState>({// Initialize your state here;
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
-  });
+// Create default logger instances
+export const logger = new Logger({ level: 'info' });
+export const debugLogger = new Logger({ level: 'debug' });
+export const errorLogger = new Logger({ level: 'error' });
 
-  // Add your hooks logic here;
-  useEffect(() => {
-    // Add your effect logic here;
-  }, [
-  ]);
-
-  return {
-    // Return your hook values here;
-  };
-};
-<<<<<<< HEAD
-
-export default Logger;';';";";";";
-"
-=======
-;
-<<<<<<< HEAD
-export default Logger;';';";";";
->>>>>>> main
->>>>>>> main
-=======
-export default Logger''"";
->>>>>>> cursor/fix-errors-and-merge-to-main-2f04
+export default Logger;
