@@ -1,14 +1,13 @@
-import { useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Camera, CheckCircle, Microscope, Pill, Star, Stethoscope, Syringe, Thermometer, FileText } from 'lucide-react';
+import { AlertTriangle, Brain, Camera, CheckCircle, Heart, Microscope, Pill, Star, Stethoscope, Syringe, Thermometer } from 'lucide-react';
 
 const AiHealthcarePlatformPage: React.FC = () => {
-  // const [isVisible, setIsVisible] = useState(false);
-  
   useEffect(() => {
-    // setIsVisible(true);
+    setIsVisible(true);
   }, []);
-  const features = [
+
+const features = [
     { icon: <Brain className="w-6 h-6" />,
       title: "AI Diagnosis Assistant",
       description: "Advanced machine learning algorithms that assist healthcare professionals in accurate diagnosis and treatment planning.",
@@ -34,7 +33,8 @@ const AiHealthcarePlatformPage: React.FC = () => {
       description: "Comprehensive analytics and reporting for population health, clinical outcomes, and operational efficiency.",
       benefits: ["Population health", "Clinical outcomes", "Operational metrics", "Predictive analytics"] }
   ];
-  const aiCapabilities = [
+
+const aiCapabilities = [
     { title: "Drug Interaction Checker",
       description: "AI-powered system that identifies potential drug interactions and adverse effects",
       icon: <Pill className="w-8 h-8" />,
@@ -52,7 +52,8 @@ const AiHealthcarePlatformPage: React.FC = () => {
       icon: <Syringe className="w-8 h-8" />,
       accuracy: "97.3%" }
   ];
-  const pricingPlans = [
+
+const pricingPlans = [
     { name: "Clinic",
       price: "$399",
       period: "month",
@@ -98,7 +99,8 @@ const AiHealthcarePlatformPage: React.FC = () => {
       ],
       popular: false }
   ];
-  const testimonials = [
+
+const testimonials = [
     { name: "Dr. Sarah Williams",
       company: "Metro General Hospital",
       role: "Chief Medical Officer",
@@ -116,12 +118,12 @@ const AiHealthcarePlatformPage: React.FC = () => {
       rating: 5 }
   ];
   // const specialties = [
-  //   { name: "Cardiology", icon: <Heart className="w-6 h-6" /> },
+  //   { name: "Cardiology", icon: <className="w-6 h-6" /> },
   //   { name: "Radiology", icon: <Camera className="w-6 h-6" /> },
   //   { name: "Oncology", icon: <Microscope className="w-6 h-6" /> },
   //   { name: "Neurology", icon: <Brain className="w-6 h-6" /> },
-  //   { name: "Pediatrics", icon: <Users className="w-6 h-6" /> },
-  //   { name: "Emergency Medicine", icon: <AlertTriangle className="w-6 h-6" /> }
+  //   { name: "Pediatrics", icon: <className="w-6 h-6" /> },
+  //   { name: "Emergency Medicine", icon: <className="w-6 h-6" /> }
   // ];
   return (
     <>
@@ -133,19 +135,25 @@ const AiHealthcarePlatformPage: React.FC = () => {
         <meta property="og:description" content="Transform healthcare with AI-powered solutions for better patient outcomes." />
         <meta property="og:type" content="website" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         { /* Hero Section */ }
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="text-center max-w-4xl mx-auto">
+              
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Healthcare Platform</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+              
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 Revolutionize healthcare with AI-powered solutions that enhance diagnosis accuracy, 
                 improve patient outcomes, and streamline medical workflows.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                   Start Free Trial
                 </button>
@@ -158,21 +166,27 @@ const AiHealthcarePlatformPage: React.FC = () => {
         </section>
         { /* Features Section */ }
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Comprehensive Healthcare Solutions</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our AI-powered platform provides everything you need for modern healthcare delivery
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               { features.map((feature, index) => (
                 <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="text-cyan-400 mb-4">
+                  
+        <div className="text-cyan-400 mb-4">
                     { feature.icon }
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{ feature.title }</h3>
-                  <p className="text-gray-300 mb-4">{ feature.description }</p>
+                  
+          <p className="text-gray-300 mb-4">{ feature.description }</p>
                   <ul className="space-y-2">
                     { feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex } className="flex items-center text-gray-300 text-sm">
@@ -188,23 +202,31 @@ const AiHealthcarePlatformPage: React.FC = () => {
         </section>
         { /* AI Capabilities Section */ }
         <section className="py-20 bg-white/5">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">AI-Powered Capabilities</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Advanced AI technologies that enhance medical decision-making and patient care
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               { aiCapabilities.map((capability, index) => (
                 <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                  <div className="text-cyan-400 mb-4 flex justify-center">
+                  
+        <div className="text-cyan-400 mb-4 flex justify-center">
                     { capability.icon }
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{ capability.title }</h3>
-                  <p className="text-gray-300 mb-4">{ capability.description }</p>
-                  <div className="text-2xl font-bold text-cyan-400">{ capability.accuracy }</div>
-                  <div className="text-sm text-gray-400">Accuracy Rate</div>
+                  
+          <p className="text-gray-300 mb-4">{ capability.description }</p>
+                  
+        <div className="text-2xl font-bold text-cyan-400">{ capability.accuracy }</div>
+                  
+        <div className="text-sm text-gray-400">Accuracy Rate</div>
                 </div>
               ))}
             </div>
@@ -212,29 +234,37 @@ const AiHealthcarePlatformPage: React.FC = () => {
         </section>
         { /* Pricing Section */ }
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Choose Your Plan</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Flexible pricing options for healthcare organizations of all sizes
               </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
+            
+        <div className="grid md:grid-cols-3 gap-8">
               { pricingPlans.map((plan, index) => (
                 <div key={index } className={ `bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-cyan-400' : 'border-white/20' } relative`}>
                   { plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
                   ) }
-                  <div className="text-center mb-6">
+                  
+        <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{ plan.name }</h3>
-                    <div className="text-4xl font-bold text-cyan-400 mb-2">
+                    
+        <div className="text-4xl font-bold text-cyan-400 mb-2">
                       { plan.price }<span className="text-lg text-gray-400">/{ plan.period }</span>
                     </div>
-                    <p className="text-gray-300">{ plan.description }</p>
+                    
+          <p className="text-gray-300">{ plan.description }</p>
                   </div>
                   <ul className="space-y-3 mb-8">
                     { plan.features.map((feature, featureIndex) => (
@@ -257,26 +287,35 @@ const AiHealthcarePlatformPage: React.FC = () => {
         </section>
         { /* Testimonials Section */ }
         <section className="py-20 bg-white/5">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">What Healthcare Professionals Say</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Trusted by healthcare organizations worldwide
               </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
+            
+        <div className="grid md:grid-cols-3 gap-8">
               { testimonials.map((testimonial, index) => (
                 <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <div className="flex items-center mb-4">
+                  
+        <div className="flex items-center mb-4">
                     { [...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i } className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">"{ testimonial.content }"</p>
+                  
+          <p className="text-gray-300 mb-4 italic">"{ testimonial.content }"</p>
                   <div>
-                    <div className="font-semibold text-white">{ testimonial.name }</div>
-                    <div className="text-cyan-400">{ testimonial.role }</div>
-                    <div className="text-gray-400 text-sm">{ testimonial.company }</div>
+                    
+        <div className="font-semibold text-white">{ testimonial.name }</div>
+                    
+        <div className="text-cyan-400">{ testimonial.role }</div>
+                    
+        <div className="text-gray-400 text-sm">{ testimonial.company }</div>
                   </div>
                 </div>
               ))}
@@ -285,13 +324,17 @@ const AiHealthcarePlatformPage: React.FC = () => {
         </section>
         { /* CTA Section */ }
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Healthcare?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Join thousands of healthcare professionals who trust our AI platform for better patient outcomes.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
                   Start Free Trial
                 </button>

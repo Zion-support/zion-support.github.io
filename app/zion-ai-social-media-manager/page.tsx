@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import {Globe, TrendingUp, CheckCircle, ArrowRight, Star, Target, MessageSquare, Image, Video, BarChart3, Zap, Users} from 'lucide-react';
 
 const ZionAiSocialMediaManagerPage: React.FC = () => {
   const features = [
@@ -43,7 +42,7 @@ const ZionAiSocialMediaManagerPage: React.FC = () => {
     }
   ];
 
-  const pricing = [
+const pricing = [
     {
       name: "Starter",
       price: "$39",
@@ -95,7 +94,7 @@ const ZionAiSocialMediaManagerPage: React.FC = () => {
     }
   ];
 
-  const testimonials = [
+const testimonials = [
     {
       name: "Sarah Johnson",
       company: "Digital Marketing Agency",
@@ -118,7 +117,6 @@ const ZionAiSocialMediaManagerPage: React.FC = () => {
       avatar: "/api/placeholder/60/60"
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -127,26 +125,28 @@ const ZionAiSocialMediaManagerPage: React.FC = () => {
         <meta name="keywords" content="social media management, AI social media, content scheduling, hashtag optimization, social media analytics, social media automation" />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-social-media-manager" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-8">
+          
+        <div className="max-w-7xl mx-auto text-center">
+            
+        <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-8">
               <Zap className="w-5 h-5 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">Most Popular Social Media Tool</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Zion AI <span className="text-cyan-400">Social Media Manager</span>
             </h1>
             
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Comprehensive social media management with AI-powered content scheduling, hashtag optimization, 
               and performance tracking across all platforms. <span className="text-cyan-400 font-semibold">Save 10+ hours per week</span> with our intelligent automation.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
@@ -161,42 +161,56 @@ const ZionAiSocialMediaManagerPage: React.FC = () => {
                 Watch Demo
               </Link>
             </div>
-            
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">22,000+</div>
-                <div className="text-gray-300 text-sm">Active Users</div>
+            
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              
+        <div className="text-center">
+                
+        <div className="text-3xl font-bold text-cyan-400 mb-2">22,000+</div>
+                
+        <div className="text-gray-300 text-sm">Active Users</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">150%</div>
-                <div className="text-gray-300 text-sm">Avg. Engagement Increase</div>
+              
+        <div className="text-center">
+                
+        <div className="text-3xl font-bold text-cyan-400 mb-2">150%</div>
+                
+        <div className="text-gray-300 text-sm">Avg. Engagement Increase</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">10+</div>
-                <div className="text-gray-300 text-sm">Platforms Supported</div>
+              
+        <div className="text-center">
+                
+        <div className="text-3xl font-bold text-cyan-400 mb-2">10+</div>
+                
+        <div className="text-gray-300 text-sm">Platforms Supported</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">4.7/5</div>
-                <div className="text-gray-300 text-sm">User Rating</div>
+              
+        <div className="text-center">
+                
+        <div className="text-3xl font-bold text-cyan-400 mb-2">4.7/5</div>
+                
+        <div className="text-gray-300 text-sm">User Rating</div>
               </div>
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Powerful Features for Social Media Success
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Everything you need to manage your social media presence effectively
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index}
@@ -206,26 +220,29 @@ const ZionAiSocialMediaManagerPage: React.FC = () => {
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                  
+          <p className="text-gray-300 leading-relaxed">{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Simple, Transparent Pricing
               </h2>
-              <p className="text-xl text-gray-300">
+              
+          <p className="text-xl text-gray-300">
                 Choose the plan that fits your business needs
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <div
                   key={index}
@@ -236,22 +253,24 @@ const ZionAiSocialMediaManagerPage: React.FC = () => {
                   }`}
                 >
                   {plan.popular && (
-                    <div className="text-center mb-4">
+                    
+        <div className="text-center mb-4">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <div className="text-center mb-6">
+        <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
+                    
+          <p className="text-gray-300 mb-4">{plan.description}</p>
+                    
+        <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
                       <span className="text-gray-300 ml-1">{plan.period}</span>
                     </div>
                   </div>
-                  
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-gray-300">
@@ -260,7 +279,6 @@ const ZionAiSocialMediaManagerPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  
                   <Link
                     to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
@@ -277,40 +295,47 @@ const ZionAiSocialMediaManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          
+        <div className="max-w-7xl mx-auto">
+            
+        <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 What Our Customers Say
               </h2>
-              <p className="text-xl text-gray-300">
+              
+          <p className="text-xl text-gray-300">
                 Join thousands of satisfied customers
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
-                  <div className="flex items-center mb-4">
+                  
+        <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                  <div className="flex items-center">
+                  
+          <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                  
+        <div className="flex items-center">
                     <img
                       src={testimonial.avatar}
                       alt={testimonial.name}
                       className="w-12 h-12 rounded-full mr-4"
                     />
                     <div>
-                      <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{testimonial.company}</div>
+                      
+        <div className="font-semibold text-white">{testimonial.name}</div>
+                      
+        <div className="text-sm text-gray-400">{testimonial.company}</div>
                     </div>
                   </div>
                 </div>
@@ -318,18 +343,21 @@ const ZionAiSocialMediaManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12">
+          
+        <div className="max-w-4xl mx-auto text-center">
+            
+        <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12">
               <h2 className="text-3xl font-bold text-white mb-4">
                 Ready to Transform Your Social Media?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              
+          <p className="text-xl text-gray-300 mb-8">
                 Start your free trial today and see the difference AI-powered social media management can make.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
@@ -351,5 +379,4 @@ const ZionAiSocialMediaManagerPage: React.FC = () => {
     </>
   );
 };
-
 export default ZionAiSocialMediaManagerPage;

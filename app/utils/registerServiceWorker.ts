@@ -1,9 +1,6 @@
-export const registerServiceWorker = () => { if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          if (process.env.NODE_ENV === 'development') {
-            }
+export const registerServiceWorker = () => {
+  return;
+}
         })
         .catch((registrationError) => { if (process.env.NODE_ENV === 'development') {
             }
@@ -11,3 +8,5 @@ export const registerServiceWorker = () => { if (typeof window !== 'undefined' &
     });
   }
 };
+
+export default NotFoundPage;

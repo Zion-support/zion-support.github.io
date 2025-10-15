@@ -2,35 +2,25 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
-
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
 }
-
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
+    this.state = { hasError: false };
   }
-
   static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorInfo: null
-    };
+    return { hasError: true, error };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
@@ -38,17 +28,13 @@ class ErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
-
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-
+          }
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send the error to a service like Sentry
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
+          }
   }
 
   handleRetry = () => {
@@ -59,12 +45,14 @@ class ErrorBoundary extends Component<Props, State> {
     });
   };
 
+  handleGoHome = () => {
+    window.location.href = '/';
+  };
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       return (
         <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
           <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
@@ -77,7 +65,7 @@ class ErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -85,8 +73,10 @@ class ErrorBoundary extends Component<Props, State> {
                 <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
                   Error Details (Development Only)
                 </summary>
-                <div className="mt-2 p-4 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto">
-                  <div className="mb-2">
+                
+        <div className="mt-2 p-4 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto">
+                  
+        <div className="mb-2">
                     <strong>Error:</strong> {this.state.error.message}
                   </div>
                   {this.state.errorInfo && (
@@ -131,7 +121,6 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }

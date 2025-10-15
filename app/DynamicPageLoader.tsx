@@ -1,8 +1,10 @@
 import React, { Suspense, lazy } from 'react';
 // Loading component
 const PageLoader: React.FC = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-    <div className="text-white text-xl">Loading page...</div>
+  
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    
+        <div className="text-white text-xl">Loading page...</div>
   </div>
 );
 // Dynamic page loader that loads pages on demand
@@ -10,7 +12,7 @@ const DynamicPageLoader: React.FC<{ pagePath: string }> = ({ pagePath }) => { //
   const PageComponent = React.useMemo(() => {
     try {
       return lazy(() => import(`./${pagePath }`));
-    } catch { return lazy(() => import('./404')); }
+    } catch () { return lazy(() => import('./404')); }
   }, [pagePath]);
   return (
     <Suspense fallback={ <PageLoader /> }>

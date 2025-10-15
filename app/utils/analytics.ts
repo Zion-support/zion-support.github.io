@@ -12,3 +12,5 @@ export const analytics = { track: (event: string, properties: Record<string, unk
     }
   }
 };
+
+export default NotFoundPage;

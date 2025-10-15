@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 
-// Mock TextEncoder and TextDecoder
+// Polyfill for TextEncoder/TextDecoder
 const { TextEncoder, TextDecoder } = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
@@ -35,3 +35,9 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
+
+// Mock scrollTo
+Object.defineProperty(window, 'scrollTo', {
+  value: jest.fn(),
+  writable: true
+});

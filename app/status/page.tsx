@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+'use client';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {Activity, AlertTriangle, Check, CheckCircle, Database, Globe, RefreshCw, Server, User, XCircle} from 'lucide-react';
-import { Clock } from 'lucide-react';
 
 const StatusPage: React.FC = () => {
   const [lastUpdated, setLastUpdated] = useState(new Date());
-  const [isRefreshing, setIsRefreshing] = useState(false);
 
-  const services = [
+const [isRefreshing, setIsRefreshing] = useState(false);
+
+const services = [
     {
       name: 'API Services',
       status: 'operational',
@@ -58,7 +58,7 @@ const StatusPage: React.FC = () => {
     }
   ];
 
-  const incidents = [
+const incidents = [
     {
       id: 1,
       title: 'File Storage Performance Issues',
@@ -100,9 +100,9 @@ const StatusPage: React.FC = () => {
     }
   ];
 
-  const overallStatus = services.every(service => service.status === 'operational') ? 'operational' : 'degraded';
+const overallStatus = services.every(service => service.status === 'operational') ? 'operational' : 'degraded';
 
-  const getStatusColor = (status: string) => {
+const getStatusColor = (status: string) => {
     switch (status) {
       case 'operational': return 'text-green-400';
       case 'degraded': return 'text-yellow-400';
@@ -112,7 +112,7 @@ const StatusPage: React.FC = () => {
     }
   };
 
-  const getStatusIcon = (status: string) => {
+const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational': return <CheckCircle className="w-5 h-5" />;
       case 'degraded': return <AlertTriangle className="w-5 h-5" />;
@@ -122,7 +122,7 @@ const StatusPage: React.FC = () => {
     }
   };
 
-  const getSeverityColor = (severity: string) => {
+const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'critical': return 'bg-red-500/20 text-red-400 border-red-500/30';
       case 'major': return 'bg-orange-500/20 text-orange-400 border-orange-500/30';
@@ -132,47 +132,45 @@ const StatusPage: React.FC = () => {
     }
   };
 
-  const refreshStatus = async () => {
+const refreshStatus = async () => {
     setIsRefreshing(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     setLastUpdated(new Date());
     setIsRefreshing(false);
   };
-
   useEffect(() => {
     const interval = setInterval(() => {
       setLastUpdated(new Date());
     }, 60000); // Update every minute
-
     return () => clearInterval(interval);
   }, []);
-
   return (
     <>
       <Helmet>
-        <title>System Status - Zion Tech Group | Service Status & Uptime</title>
-        <meta name="description" content="Real-time status of Zion Tech Group services. Check uptime, performance metrics, and incident reports for all our systems." />
-        <meta name="keywords" content="status page, uptime, service status, incidents, system health, monitoring" />
-        <meta property="og:title" content="System Status - Zion Tech Group" />
-        <meta property="og:description" content="Real-time status of our services and systems" />
-        <meta property="og:type" content="website" />
+        <title>Status - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Status page" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="text-center max-w-4xl mx-auto">
+              
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 System <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Status</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+              
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 Real-time status of all Zion Tech Group services and systems.
               </p>
               
-              <div className="flex items-center justify-center space-x-4 mb-8">
-                <div className="flex items-center space-x-2">
+        <div className="flex items-center justify-center space-x-4 mb-8">
+                
+        <div className="flex items-center space-x-2">
                   {getStatusIcon(overallStatus)}
                   <span className={`text-lg font-semibold ${getStatusColor(overallStatus)}`}>
                     {overallStatus === 'operational' ? 'All Systems Operational' : 'Some Services Degraded'}
@@ -188,26 +186,31 @@ const StatusPage: React.FC = () => {
                 </button>
               </div>
               
-              <div className="text-sm text-gray-400">
+        <div className="text-sm text-gray-400">
                 Last updated: {lastUpdated.toLocaleString()}
               </div>
             </div>
           </div>
         </section>
-
         {/* Services Status */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
+          
+        <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Service Status</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((service, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="text-cyan-400">{service.icon}</div>
+                  
+        <div className="flex items-center justify-between mb-4">
+                    
+        <div className="flex items-center space-x-3">
+                      
+        <div className="text-cyan-400">{service.icon}</div>
                       <h3 className="text-lg font-bold text-white">{service.name}</h3>
                     </div>
-                    <div className="flex items-center space-x-2">
+                    
+        <div className="flex items-center space-x-2">
                       {getStatusIcon(service.status)}
                       <span className={`text-sm font-semibold ${getStatusColor(service.status)}`}>
                         {service.status}
@@ -215,16 +218,18 @@ const StatusPage: React.FC = () => {
                     </div>
                   </div>
                   
-                  <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+          <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                   
-                  <div className="grid grid-cols-2 gap-4 text-sm">
+        <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
                       <span className="text-gray-400">Uptime:</span>
-                      <div className="text-cyan-400 font-semibold">{service.uptime}</div>
+                      
+        <div className="text-cyan-400 font-semibold">{service.uptime}</div>
                     </div>
                     <div>
                       <span className="text-gray-400">Response Time:</span>
-                      <div className="text-cyan-400 font-semibold">{service.responseTime}</div>
+                      
+        <div className="text-cyan-400 font-semibold">{service.responseTime}</div>
                     </div>
                   </div>
                 </div>
@@ -232,33 +237,38 @@ const StatusPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Incidents */}
         <section className="py-16 px-4 bg-white/5 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto">
+          
+        <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Recent Incidents</h2>
-            
             {incidents.length === 0 ? (
-              <div className="text-center py-12">
+              
+        <div className="text-center py-12">
                 <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">No Active Incidents</h3>
-                <p className="text-gray-300">All systems are operating normally.</p>
+                
+          <p className="text-gray-300">All systems are operating normally.</p>
               </div>
             ) : (
-              <div className="space-y-6">
+              
+        <div className="space-y-6">
                 {incidents.map((incident) => (
                   <div key={incident.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20">
-                    <div className="flex items-start justify-between mb-4">
+                    
+        <div className="flex items-start justify-between mb-4">
                       <div>
                         <h3 className="text-xl font-bold text-white mb-2">{incident.title}</h3>
-                        <div className="flex items-center space-x-4 text-sm text-gray-400">
+                        
+        <div className="flex items-center space-x-4 text-sm text-gray-400">
                           <span>Started: {new Date(incident.startTime).toLocaleString()}</span>
                           {incident.endTime && (
                             <span>Resolved: {new Date(incident.endTime).toLocaleString()}</span>
                           )}
                         </div>
                       </div>
-                      <div className="flex items-center space-x-2">
+                      
+        <div className="flex items-center space-x-2">
                         <span className={`px-3 py-1 rounded-full text-sm font-semibold border ${getSeverityColor(incident.severity)}`}>
                           {incident.severity}
                         </span>
@@ -268,11 +278,12 @@ const StatusPage: React.FC = () => {
                       </div>
                     </div>
                     
-                    <p className="text-gray-300 mb-4">{incident.description}</p>
+          <p className="text-gray-300 mb-4">{incident.description}</p>
                     
-                    <div className="mb-4">
+        <div className="mb-4">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Affected Services:</h4>
-                      <div className="flex flex-wrap gap-2">
+                      
+        <div className="flex flex-wrap gap-2">
                         {incident.affectedServices.map((service, index) => (
                           <span key={index} className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded">
                             {service}
@@ -280,16 +291,18 @@ const StatusPage: React.FC = () => {
                         ))}
                       </div>
                     </div>
-                    
                     <div>
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3">Updates:</h4>
-                      <div className="space-y-3">
+                      
+        <div className="space-y-3">
                         {incident.updates.map((update, index) => (
                           <div key={index} className="border-l-2 border-cyan-500/30 pl-4">
-                            <div className="text-sm text-gray-400 mb-1">
+                            
+        <div className="text-sm text-gray-400 mb-1">
                               {new Date(update.time).toLocaleString()}
                             </div>
-                            <p className="text-gray-300">{update.message}</p>
+                            
+          <p className="text-gray-300">{update.message}</p>
                           </div>
                         ))}
                       </div>
@@ -300,39 +313,54 @@ const StatusPage: React.FC = () => {
             )}
           </div>
         </section>
-
         {/* Metrics */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
+          
+        <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Performance Metrics</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Overall Uptime</div>
-                <div className="text-sm text-gray-400 mt-1">Last 30 days</div>
+            
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              
+        <div className="text-center">
+                
+        <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+                
+        <div className="text-gray-300">Overall Uptime</div>
+                
+        <div className="text-sm text-gray-400 mt-1">Last 30 days</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">45ms</div>
-                <div className="text-gray-300">Average Response Time</div>
-                <div className="text-sm text-gray-400 mt-1">Last 24 hours</div>
+              
+        <div className="text-center">
+                
+        <div className="text-4xl font-bold text-cyan-400 mb-2">45ms</div>
+                
+        <div className="text-gray-300">Average Response Time</div>
+                
+        <div className="text-sm text-gray-400 mt-1">Last 24 hours</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">0</div>
-                <div className="text-gray-300">Active Incidents</div>
-                <div className="text-sm text-gray-400 mt-1">Current status</div>
+              
+        <div className="text-center">
+                
+        <div className="text-4xl font-bold text-cyan-400 mb-2">0</div>
+                
+        <div className="text-gray-300">Active Incidents</div>
+                
+        <div className="text-sm text-gray-400 mt-1">Current status</div>
               </div>
             </div>
           </div>
         </section>
-
         {/* Subscribe to Updates */}
         <section className="py-16 px-4 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-          <div className="max-w-4xl mx-auto text-center">
+          
+        <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Stay Updated</h2>
-            <p className="text-xl text-gray-300 mb-8">
+            
+          <p className="text-xl text-gray-300 mb-8">
               Subscribe to status updates and get notified about incidents and maintenance windows.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            
+        <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -343,10 +371,10 @@ const StatusPage: React.FC = () => {
               </button>
             </div>
           </div>
-        </section>
+        </div>
+        <Footer />
       </div>
     </>
   );
 };
-
 export default StatusPage;

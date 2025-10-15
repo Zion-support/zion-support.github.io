@@ -1,9 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {Brain, Award, Globe, Target} from 'lucide-react';
-import {Zap, Users} from 'lucide-react';
-import { Shield } from 'lucide-react';
-
 // Company values
 const values = [
   { icon: <Brain className="w-8 h-8" />,
@@ -19,7 +15,6 @@ const values = [
     title: "Excellence",
     description: "We maintain the highest standards of quality in everything we do, from code to customer service." }
 ];
-
 // Company stats
 const stats = [
   { number: "500+", label: "Projects Completed" },
@@ -27,7 +22,6 @@ const stats = [
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "24/7", label: "Support Available" }
 ];
-
 // Team members
 const team = [
   { name: "Sarah Johnson",
@@ -47,7 +41,6 @@ const team = [
     description: "Full-stack developer with expertise in modern web technologies",
     image: "/api/placeholder/300/300" }
 ];
-
 // Services we offer
 const services = [
   { icon: <Zap className="w-6 h-6" />,
@@ -75,32 +68,39 @@ const AboutPage: React.FC = () => { return (
         <meta property="og:type" content="website" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */ }
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="text-center max-w-4xl mx-auto">
+              
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 About <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Zion Tech Group</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+              
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 We are a leading technology company dedicated to transforming businesses 
                 through innovative AI solutions, cutting-edge web development, and comprehensive digital transformation.
               </p>
             </div>
           </div>
         </section>
-
         { /* Stats Section */ }
         <section className="py-20 bg-white/5">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-4 gap-8">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="grid md:grid-cols-4 gap-8">
               { stats.map((stat, index) => (
                 <div key={index } className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
+                  
+        <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">
                     { stat.number }
                   </div>
-                  <div className="text-gray-300 text-lg">
+                  
+        <div className="text-gray-300 text-lg">
                     { stat.label }
                   </div>
                 </div>
@@ -108,88 +108,107 @@ const AboutPage: React.FC = () => { return (
             </div>
           </div>
         </section>
-
         { /* Values Section */ }
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Our Values</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 The principles that guide everything we do
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               { values.map((value, index) => (
                 <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                  <div className="text-cyan-400 mb-4 flex justify-center">
+                  
+        <div className="text-cyan-400 mb-4 flex justify-center">
                     { value.icon }
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{ value.title }</h3>
-                  <p className="text-gray-300">{ value.description }</p>
+                  
+          <p className="text-gray-300">{ value.description }</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         { /* Services Section */ }
         <section className="py-20 bg-white/5">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">What We Do</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive technology solutions for modern businesses
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               { services.map((service, index) => (
                 <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <div className="text-cyan-400 mb-4">
+                  
+        <div className="text-cyan-400 mb-4">
                     { service.icon }
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{ service.title }</h3>
-                  <p className="text-gray-300">{ service.description }</p>
+                  
+          <p className="text-gray-300">{ service.description }</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         { /* Team Section */ }
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Meet Our Team</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 The talented individuals behind our success
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               { team.map((member, index) => (
                 <div key={index } className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                  <div className="w-24 h-24 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  
+        <div className="w-24 h-24 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-2xl font-bold text-white">
                       { member.name.split(' ').map(n => n[0]).join('') }
                     </span>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{ member.name }</h3>
-                  <div className="text-cyan-400 mb-3">{ member.role }</div>
-                  <p className="text-gray-300 text-sm">{ member.description }</p>
+                  
+        <div className="text-cyan-400 mb-3">{ member.role }</div>
+                  
+          <p className="text-gray-300 text-sm">{ member.description }</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         { /* CTA Section */ }
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
+          
+        <div className="container mx-auto px-4">
+            
+        <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Work With Us?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Let&apos;s discuss how we can help transform your business with cutting-edge technology.
+              
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Let's discuss how we can help transform your business with cutting-edge technology.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
                   Get In Touch
                 </button>
@@ -204,5 +223,4 @@ const AboutPage: React.FC = () => { return (
     </>
   );
 };
-
 export default AboutPage;

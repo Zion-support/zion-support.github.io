@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface ResponsiveTextProps {
   children: React.ReactNode;
   className?: string;
@@ -7,7 +6,6 @@ interface ResponsiveTextProps {
   weight?: 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold';
   color?: string;
 }
-
 const ResponsiveText: React.FC<ResponsiveTextProps> = ({ 
   children, 
   className = '', 
@@ -21,12 +19,10 @@ const ResponsiveText: React.FC<ResponsiveTextProps> = ({
     color,
     className
   ].filter(Boolean).join(' ');
-
   return (
     <p className={textClasses}>
       {children}
     </p>
   );
 };
-
 export default ResponsiveText;

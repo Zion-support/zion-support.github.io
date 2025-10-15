@@ -1,35 +1,49 @@
 import { Helmet } from "react-helmet-async";
-const GdprCompliancePage: React.FC = () => { return ( <> <Helmet> <title>Gdpr Compliance</title> <meta name="description" content="Professional gdpr compliance solutions and services" /> <meta name="keywords" content="gdpr, compliance" /> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
+const GdprCompliancePage: React.FC = () => { return (
+    <> <Helmet> <title>Gdpr Compliance</title> <meta name="description" content="Professional gdpr compliance solutions and services" /> <meta name="keywords" content="gdpr, compliance" /> </Helmet> 
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        
         <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">
+          
+        <div className="text-center">
+            
+          <h1 className="text-4xl font-bold text-white mb-8">
               Gdpr Compliance
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
+            
+          <p className="text-xl text-gray-300 mb-8">
               Professional gdpr compliance solutions and services
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+            
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">
                   Expert Solutions
                 </h3>
-                <p className="text-blue-700">
+                
+          <p className="text-blue-700">
                   Our team of experts delivers cutting-edge solutions.
                 </p>
               </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              
+        <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-green-900 mb-2">
                   Custom Implementation
                 </h3>
-                <p className="text-green-700">
+                
+          <p className="text-green-700">
                   Tailored implementations for your specific requirements.
                 </p>
               </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              
+        <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-purple-900 mb-2">
                   24/7 Support
                 </h3>
-                <p className="text-purple-700">
+                
+          <p className="text-purple-700">
                   Round-the-clock support for all your needs.
                 </p>
               </div>
@@ -38,5 +52,6 @@ const GdprCompliancePage: React.FC = () => { return ( <> <Helmet> <title>Gdpr Co
         </div>
       </div>
     </>
-  ); };
+  );
+};
 export default GdprCompliancePage;

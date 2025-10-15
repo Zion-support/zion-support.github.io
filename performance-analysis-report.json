@@ -1,0 +1,105 @@
+{
+  "timestamp": "2025-10-13T22:54:01.877Z",
+  "totalFiles": 21,
+  "totalSize": 285706,
+  "jsFiles": [
+    {
+      "name": "vendor-D3F3s8fL.js",
+      "size": 141723
+    },
+    {
+      "name": "index-GnNLNKtJ.js",
+      "size": 34494
+    },
+    {
+      "name": "router-DZRLHooZ.js",
+      "size": 31883
+    },
+    {
+      "name": "HomePage-CwAEr_UH.js",
+      "size": 17106
+    },
+    {
+      "name": "AboutPage-CCaHRmLr.js",
+      "size": 14454
+    },
+    {
+      "name": "ServicesPage-I-M7Nt2a.js",
+      "size": 12976
+    },
+    {
+      "name": "ui-BWp-5Oej.js",
+      "size": 4603
+    },
+    {
+      "name": "PhoneIcon-CFHOjiSE.js",
+      "size": 4431
+    },
+    {
+      "name": "SolutionsPage-G_NuIH64.js",
+      "size": 3461
+    },
+    {
+      "name": "ShieldCheckIcon-pgRsyFRb.js",
+      "size": 1109
+    },
+    {
+      "name": "RocketLaunchIcon-D8Y2vRYm.js",
+      "size": 887
+    },
+    {
+      "name": "ContactPage-JhdwdYIo.js",
+      "size": 755
+    },
+    {
+      "name": "PrivacyPage-lk0jtJSi.js",
+      "size": 753
+    },
+    {
+      "name": "DemoPage--r7kco5t.js",
+      "size": 749
+    },
+    {
+      "name": "TutorialsPage-B06XR-to.js",
+      "size": 747
+    },
+    {
+      "name": "SupportPage-D2AMj2CX.js",
+      "size": 743
+    },
+    {
+      "name": "PricingPage-CR9V00np.js",
+      "size": 738
+    },
+    {
+      "name": "TermsPage-K7QC-xXo.js",
+      "size": 736
+    },
+    {
+      "name": "BlogPage-D-stUulC.js",
+      "size": 731
+    },
+    {
+      "name": "utils-l0sNRNKZ.js",
+      "size": 1
+    }
+  ],
+  "cssFiles": [
+    {
+      "name": "index-BceEnYLu.css",
+      "size": 12626
+    }
+  ],
+  "otherFiles": [],
+  "recommendations": [
+    "Consider splitting large JS file: vendor-D3F3s8fL.js (138.40KB)"
+  ],
+  "performanceMetrics": {
+    "totalSize": 285706,
+    "jsFiles": 20,
+    "cssFiles": 1,
+    "largestJsFile": "vendor-D3F3s8fL.js",
+    "largestJsSize": 141723,
+    "averageJsSize": 13654
+  }
+}
