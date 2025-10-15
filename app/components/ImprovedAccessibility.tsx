@@ -1,9 +1,11 @@
+
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
   keyboardNavigation: boolean;
+
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;};
   enableHighContrast?: boolean;};
@@ -26,23 +28,27 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps>  =  ({,
     focusVisible: false;})
   });
   const [isVisible, setIsVisible] = useState(false);
-  // Apply accessibility settings;
-useEffect(() => {
+  // Apply accessibility settings
+  useEffect(() => {
+
       announcement.textContent = message;
       document.body.appendChild(announcement);
       setTimeout(() => {
         document.body.removeChild(announcement);
       }, 1000);
+
       return newSettings;
     });
   return (
     <></>
+
               <p>Alt + Shift + Tab: Skip to main content</p>
               <p>Alt + Ctrl + Tab: Toggle this panel</p>
               <p>Tab: Navigate elements</p>
               <p>Enter/Space: Activate elements</p>
             </div>
           </div>
+
         .high-contrast * {
           background-color: var(--tw-bg-opacity) !important;
           color: var(--tw-text-opacity) !important;
@@ -64,6 +70,7 @@ useEffect(() => {
           outline-offset: 2px !important;
         .focus-visible *:focus {
           outline: 2px solid #06b6d4 !important;
+
           position: static;
           width: auto;
           height: auto;
@@ -74,25 +81,7 @@ useEffect(() => {
           white-space: normal;};
       `}</style>
     </>
-  );";"
-};";";"
-";";";"
-
-import React from 'react';'
-
-const Page = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
-            Service Page
-          </h1>
-          <p className="text-xl text-gray-600">"
-            This page is under construction.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-
+  );";
+};";";
+";";";
+export default ImprovedAccessibility;"

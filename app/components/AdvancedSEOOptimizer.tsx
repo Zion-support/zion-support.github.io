@@ -1,3 +1,4 @@
+
   title: string;
   description: string;
   keywords: string[];
@@ -23,86 +24,18 @@ interface AdvancedSEOOptimizerProps {};
   enableSocialMeta?: boolean;
   enableAdvancedFeatures?: boolean;
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps>  =  ({)};
+
   seoData,
   enableStructuredData = true,
   enableSocialMeta = true,
   enableAdvancedFeatures = true
 
-
-      const: script = document.createElement('script');";"
-      script.type = 'application/ld+json';";"
       script.text = JSON.stringify(seoData.structuredData);
       document.head.appendChild(script);
+    };
+
     // Set up meta tags for social media
 
-
-
-      if (seoData.ogDescription) {}
-
-
-
-      if (seoData.ogImage) {}
-
-
-
-      if (seoData.ogUrl) {}
-
-
-
-      // Twitter Card tags;
-if (seoData.twitterCard) {}
-
-
-
-      if (seoData.twitterTitle) {}
-
-
-
-      if (seoData.twitterDescription) {}
-
-
-
-      if (seoData.twitterImage) {}
-
-
-
-
-    // Advanced SEO features;
-if (enableAdvancedFeatures) {}
-      // Set canonical URL
-
-
-      // Set robots meta tag;
-if (seoData.robots) {}
-
-
-
-      // Set author meta tag;
-if (seoData.author) {}
-
-
-
-      // Set published time;
-if (seoData.publishedTime) {}
-
-
-
-      // Set modified time;
-if (seoData.modifiedTime) {}
-
-
-
-      // Set section;
-if (seoData.section) {}
-
-
-
-      // Set tags;
-if (seoData.tags && seoData.tags.length > 0) {}
-        seoData.tags.forEach((tag) => {}
-          const tagMeta  = document.createElement('meta')";"
-          tagMeta.setAttribute('property', 'article:tag')";"
-          tagMeta.setAttribute('content', tag)";"
           document.head.appendChild(tagMeta);
         });
   }, [
@@ -119,28 +52,20 @@ if (seoData.tags && seoData.tags.length > 0) {}
 import React from 'react';";";";";"
 import SEOHead from './components/SEOHead";"'
 
+
   return ()
     <Helmet>
       <title>{seoData.title}</title>
+      <meta: name ="description" content={seoData.description} />"
+      <meta: name ="keywords" content={seoData.keywords.join(', ')} />"
     </Helmet>
 
+
         </div>;
       </div>;
-    </>;,";"
-  ),";";"
-};";";";"
-;""
+    </>;,";
+  ),";";
+};";";";
+;"
 
-        title="Components - Zion Tech Group";"
-        description="Professional components solutions for modern businesses";"
-      />";"
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div: className ="text-center">";"
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";"
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>";"
-        </div>;
-      </div>;
-    </>;
-  ),
-
-
+export default ComponentsPage;'";'";"

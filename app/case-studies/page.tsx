@@ -1,3 +1,21 @@
+
+<<<<<<< HEAD
+
+export default function CaseStudiesPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">Case Studies</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Success stories from our clients.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+=======
 const CaseStudiesPage: React.FC = () => {}
   const  caseStudies = [
 
@@ -155,8 +173,11 @@ const CaseStudiesPage: React.FC = () => {}
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200"""
                 Get Started Today
               </>
-                to="/services"""
-                className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200"""
+              <>
+                to="/services""
+                className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200""
+              >
+
                 View Our Services
               </>
             </div>
@@ -168,18 +189,7 @@ const CaseStudiesPage: React.FC = () => {}
 import React from 'react';";";";";"
 import SEOHead from './components/SEOHead";"'
 
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
-            Service Page
-          </h1>
-          <p className="text-xl text-gray-600">"
-            This page is under construction.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
 
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2dd2

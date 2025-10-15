@@ -39,6 +39,7 @@ progress?: number
         <div  className ="flex justify-center space-x-2"></div>""
           {[...Array(3)].map(( i) => ()}
             <divkey={i},>
+      className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-bounce""
               style={{},
       animationDelay: `${i * 0.1}s`,
       animationDuration: '1s'""
@@ -46,27 +47,18 @@ progress?: number
             ></div>
           ))}
         </div>
+
+
           Preparing your experience with cutting-edge technology...
         </p>
       </div>
     </>
+
         </div>;
       </div>;
-    </>;,";"
-  ),";";"
-};";";";"
-;""
+    </>;,";
+  ),";";
+};";";";
+;"
 
-        title="Components - Zion Tech Group";"
-        description="Professional components solutions for modern businesses";"
-      />";"
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div: className ="text-center">";"
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";"
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>";"
-        </div>;
-      </div>;
-    </>;
-  ),
-
-
+export default ComponentsPage;'";'";"

@@ -1,3 +1,4 @@
+
     <div>Content</div>
   )
     <div>Component content</div>
@@ -16,13 +17,9 @@ Try Demo
       Powerful 3D Generation Features;
 Everything you need to create professional 3D models with AI assistance.
  ()
-            ))};
-      {/* Use Cases Section */},
-      Perfect For;
-                Our AI 3D generation technology excels in various industries and applications;
- ()";"
-                  <span: className = "text-sm">{useCase}</span>: value";"
+
               ))};
+
       {/* CTA Section */},
       Ready to Create Amazing 3D Models?
               Start generating professional 3D models with our AI-powered technology today.
@@ -34,19 +31,16 @@ View All AI Services
       AI 3D Generation;
 Transform your ideas into stunning 3D models with our advanced AI-powered generation technology.
               Create detailed 3D assets from text descriptions or 2D images in seconds.
+
       {/* Features Section */},
-      Powerful 3D Generation Features;
-Everything you need to create professional 3D models with AI assistance.
-            ))};
-      {/* Use Cases Section */},
-      Perfect For;
-                Our AI 3D generation technology excels in various industries and applications;
- ()";"
-                  <span: className = "text-sm">{useCase}</span>: value";"
+      Powerful 3D Generation Features
+              Everything you need to create professional 3D models with AI assistance.
+
               ))};
       {/* CTA Section */},
-      Ready to Create Amazing 3D Models?";"
-              Start generating professional 3D models with our AI-powered technology today.";";"
-                Get Started Today;";";";"
-                View All AI Services;""
+      Ready to Create Amazing 3D Models?";
+              Start generating professional 3D models with our AI-powered technology today.";";
+                Get Started Today;";";";
+                View All AI Services;"
+
   )"

@@ -1,3 +1,4 @@
+
     <div>Content</div>
   )
     <div>Component content</div>
@@ -16,13 +17,9 @@ Request Demo
       Advanced Drug Discovery Features;
 Cutting-edge AI technology to accelerate pharmaceutical research and development.
  ()
-            ))};
-      {/* Applications Section */},
-      Research Applications;
-                Our AI drug discovery platform supports research across multiple therapeutic areas;
- ()";"
-                  <span: className = "text-sm">{application}</span>: value";"
+
               ))};
+
       {/* CTA Section */},
       Ready to Accelerate Drug Discovery?
               Transform your pharmaceutical research with our AI-powered drug discovery platform.
@@ -34,19 +31,16 @@ View All AI Services
       AI Drug Discovery Pro;
 Revolutionize pharmaceutical research with our advanced AI-powered drug discovery platform.
               Accelerate drug development, reduce costs, and improve success rates with cutting-edge technology.
+
       {/* Features Section */},
-      Advanced Drug Discovery Features;
-Cutting-edge AI technology to accelerate pharmaceutical research and development.
-            ))};
-      {/* Applications Section */},
-      Research Applications;
-                Our AI drug discovery platform supports research across multiple therapeutic areas;
- ()";"
-                  <span: className = "text-sm">{application}</span>: value";"
+      Advanced Drug Discovery Features
+              Cutting-edge AI technology to accelerate pharmaceutical research and development.
+
               ))};
       {/* CTA Section */},
-      Ready to Accelerate Drug Discovery?";"
-              Transform your pharmaceutical research with our AI-powered drug discovery platform.";";"
-                Contact Our Experts;";";";"
-                View All AI Services;""
+      Ready to Accelerate Drug Discovery?";
+              Transform your pharmaceutical research with our AI-powered drug discovery platform.";";
+                Contact Our Experts;";";";
+                View All AI Services;"
+
   )"

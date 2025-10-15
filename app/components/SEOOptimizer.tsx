@@ -1,49 +1,5 @@
-      <Helmet>
-        <title>SEOOptimizer - Zion Tech Group</title>
-        <meta: name ="description" content="Professional seooptimizer services by Zion Tech Group." />";"
-      </Helmet>
-      <div: className ="container mx-auto px-4 py-16">";"
-        <div: className ="text-center">";"
-          <h1: className ="text-4xl font-bold text-gray-900 mb-8">";"
-            SEOOptimizer;
-          </h1>
-          <p: className ="text-xl text-gray-600 mb-8">";"
-            Professional seooptimizer solutions tailored to your business needs.</p>
-          <div: className ="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">";"
-            <div: className ="bg-blue-50 border border-blue-200 rounded-lg p-6">";"
-              <h3: className ="text-lg font-semibold text-blue-900 mb-2">";"
-                Expert Solutions;
-              </h3>
-              <p: className ="text-blue-700">";"
-                Our team of experts delivers cutting-edge seooptimizer solutions.;
-              </p>
-            </div>
-            <div: className ="bg-green-50 border border-green-200 rounded-lg p-6">";"
-              <h3: className ="text-lg font-semibold text-green-900 mb-2">";"
-                Custom Implementation;
-              </h3>
-              <p: className ="text-green-700">";"
-                Tailored seooptimizer implementations for your specific requirements.;
-              </p>
-            </div>
-            <div: className ="bg-purple-50 border border-purple-200 rounded-lg p-6">";"
-              <h3: className ="text-lg font-semibold text-purple-900 mb-2">";"
-                24/7 Support;
-              </h3>
-              <p: className ="text-purple-700">";"
-                Round-the-clock support for all your seooptimizer needs.;
-              </p>
-            </div>
-          </div>
-          <div: className ="mt-12">";"
-            <button: className ="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">";"
-              Get Started Today;
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );}
+
+
       interface SEOOptimizerProps {},
       title?: string,
       description?: string,
@@ -52,58 +8,71 @@
       ogImage?: string,
       noIndex?: boolean,
       structuredData?: unknown
+
+      };
     ];
-  // Page-specific structured data;
-if ($1) {}
+  };
+  // Page-specific structured data
+
+    if ($1) {}
   // If body
-
+}
       return {}
         ...defaultStructuredData
-        "@type": "WebSite""
-        "potentialAction": {};""
-          "@type": "SearchAction""
-          "target": "https://ziontechgroup.com/search?q={search_term_string}""
-          "query-input": "required= name =search_term_string"""
-
-
-      if (path === '/about') {},""
+        "@type": "WebSite"
+        "potentialAction": {};"
+          "@type": "SearchAction"
+          "target": "https://ziontechgroup.com/search?q={search_term_string}"
+          "query-input": "required= name =search_term_string""
+        }
+    },
+    {}
+    },
+      if (path === '/about') {},"
       return {}
         ...defaultStructuredData
-        "@type": "AboutPage"""
-
-
-    if (path === '/contact') {},""
+        "@type": "AboutPage""
+      }
+    },
+    {}
+    if (path === '/contact') {},"
       return {}
         ...defaultStructuredData
-        "@type": "ContactPage"""
-
-
-    if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-')) {},""
+        "@type": "ContactPage""
+      }
+    },
+    {}
+    if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-')) {},"
       return {}
         ...defaultStructuredData
-        "@type": "Service""
-        "name": title;""
-        "description": description;""
-        "provider": {};""
-          "@type": "Organization""
-          "name": "Zion Tech Group"""
+        "@type": "Service"
+        "name": title;"
+        "description": description;"
+        "provider": {};"
+          "@type": "Organization"
+          "name": "Zion Tech Group""
+        }
+        "offers": {};"
+          "@type": "Offer"
+          "availability": "https://schema.org/InStock"
+          "priceCurrency": "USD"
+          "category": "Technology Services""
+        }
+        "areaServed": {};"
+          "@type": "Country"
+          "name": "United States""
+        }
+        "serviceType": "AI and IT Solutions""
+      }
 
-        "offers": {};""
-          "@type": "Offer""
-          "availability": "https://schema.org/InStock""
-          "priceCurrency": "USD""
-          "category": "Technology Services"""
-
-        "areaServed": {};""
-          "@type": "Country""
-          "name": "United States"""
-
-        "serviceType": "AI and IT Solutions"""
-
+    },
+    {};
     return defaultStructuredData
-}// Track page view in analytics;
-if (typeof window !== 'undefined' && window.gtag) {},""
-      window.gtag('config', 'GA_MEASUREMENT_ID', {},)""
+  },
+
+}// Track page view in analytics
+    if (typeof window !== 'undefined' && window.gtag) {},"
+      window.gtag('config', 'GA_MEASUREMENT_ID', {},)"
       page_title: title,
       page_location: currentUrl})
 
@@ -192,4 +161,5 @@ if (typeof window !== 'undefined' && window.gtag) {},""
   )
 
 
-}'"'""
+
+

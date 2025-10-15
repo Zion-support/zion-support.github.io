@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// Function to fix a single file comprehensively;
+
+// Function to fix a single file comprehensively
 function fixFileComprehensively() {
   };";"
   };";";"
@@ -41,18 +42,9 @@ function fixFileComprehensively() {}
               content.includes('</>') ||";"
               content.includes('Unterminated string') ||";"
               content.includes('Unexpected token') ||";"
+              content.includes('Identifier \'React\' has already been declared')) {};";";";
+            files.push(fullPath)";";";
+          };"
+        } catch (err) {};'';";";";";";"
+          // Skip files that can't be read';";";";";";
 
-              content.includes('Identifier \'React\' has already been declared')) {}";"
-            files.push(fullPath)
-        } catch (err) {}'""'""
-          // Skip files that can't be read'""";"
-  console.log(`Found ${problematicFiles.length} problematic files`)
-  let fixedCount = 0;: value;
-async function main() {}'""'""
-}console.log('🔍 Finding all problematic files...')'"""''"'
-  const problematicFiles  = findProblematicFiles('.'): value"";"
-  console.log(`Found ${problematicFiles.length} problematic files`)
-  let: fixedCount = 0: value;
-  for (const file of problematicFiles) {};
-    if (fixFileComprehensively(file)) {};
-main().catch(console.error)';'

@@ -1,119 +1,94 @@
+
       interface AccessibilitySettings {}
+
   highContrast: boolean,
       largeText: boolean,
       reducedMotion: boolean,
       screenReader: boolean,
+
     highContrast: false,
     largeText: false,
     reducedMotion: false,
     screenReader: false,
     focusVisible: true,
-  // Load settings from localStorage;
-useEffect(() => {}
+
+  // Load settings from localStorage
+
+  useEffect(() => {}
+    const  savedSettings = localStorage.getItem('accessibility-settings'),"
       if (savedSettings) {}
       try {}
 
         setSettings(JSON.parse(savedSettings))
       } catch (error) {}
 
-  useEffect(() => {
-    const savedSettings  = localStorage.getItem('accessibility-settings')";"
-    if (savedSettings) {
-      try {
-        setSettings(JSON.parse(savedSettings));
-      } catch (error) {
-        console.error('Error loading accessibility settings: ', error)";"
-
-
-
+      }
+    }
   }, [])
   // Apply accessibility settings
+  const  applySettings = useCallback((newSettings: AccessibilitySettings) => {}
+    const  root = document.documentElement
+    // High contrast mode
+    if (newSettings.highContrast) {}
 
-  // Save settings to localStorage;
-useEffect(() => {
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings))";"
-  }, [settings]);
+      root.classList.add('high-contrast');"
+    } else {}
 
-  // Apply accessibility settings to document;
-useEffect(() => {
-    const root  = document.documentElement;
-    
-    if (settings.highContrast) {
-      root.classList.add('high-contrast')";"
-    } else {
-      root.classList.remove('high-contrast')";"
-
-
+    }
     
     // Large text mode;
 if (newSettings.largeText) {}
 
+      root.classList.add('large-text');"
+    } else {}
 
-    if (settings.largeText) {
-      root.classList.add('large-text')";"
-    } else {
-      root.classList.remove('large-text')";"
-
-
+    }
     
     // Reduced motion;
 if (newSettings.reducedMotion) {}
 
+      root.classList.add('reduced-motion');"
+    } else {}
 
-    if (settings.reducedMotion) {
-      root.classList.add('reduced-motion')";"
-    } else {
-      root.classList.remove('reduced-motion')";"
-
-
+    }
     
     // Screen reader optimizations;
 if (newSettings.screenReader) {}
 
+      root.classList.add('screen-reader-optimized');"
+    } else {}
 
-    if (settings.screenReader) {
-      root.classList.add('screen-reader-optimized')";"
-    } else {
-      root.classList.remove('screen-reader-optimized')";"
-
-
+    }
     
     // Focus visible;
 if (newSettings.focusVisible) {}
 
+      root.classList.add('focus-visible');"
+    } else {}
 
-    if (settings.focusVisible) {
-      root.classList.add('focus-visible')";"
-    } else {
-      root.classList.remove('focus-visible')";"
-
-
+    }
     
     // Keyboard navigation;
 if (newSettings.keyboardNavigation) {}
 
+      root.classList.add('keyboard-navigation');"
+    } else {}
 
-    if (settings.keyboardNavigation) {
-      root.classList.add('keyboard-navigation')";"
-    } else {
-      root.classList.remove('keyboard-navigation')";"
-
-
-  }, [settings]);
-
-  // Update settings when they change;
-useEffect(() => {};
+  // Update settings when they change
+  useEffect(() => {};
     applySettings(settings);
   }, [
     settings, applySettings
   
   ]);
-  // Toggle accessibility panel;
-const togglePanel  = () => {}
-    setIsVisible(!isVisible)
+  // Toggle accessibility panel
 
-  // Update individual setting;
-setSettings(prev => ({)}
+    setIsVisible(!isVisible)
+    },
+    {}
+  // Update individual setting
+  const  updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {}
+    setSettings(prev => ({)}
       ...prev,
       [key]: value
     }))
@@ -123,6 +98,10 @@ setSettings(prev => ({)}
       {children}
 
       {/* Accessibility Toggle Button */}
+
+      >
+        <svg  className ="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">","
+          <path= strokeLinecap ="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />"
         </svg>
       </button>
 
@@ -134,36 +113,71 @@ setSettings(prev => ({)}
             Accessibility Settings
           </h3>
           
+
                 checked={settings.highContrast}
+                onChange={(e) => updateSetting('highContrast', e.target.checked)}";"
+                className="rounded""
+              />
+              <span  className ="text-gray-700 dark: text-gray-300">High Contrast</span>"
             </label>
             
+
                 checked={settings.largeText}
+                onChange={(e) => updateSetting('largeText', e.target.checked)}";"
+                className="rounded""
+              />
+              <span  className ="text-gray-700 dark: text-gray-300">Large Text</span>"
             </label>
             
+
                 checked={settings.reducedMotion}
+                onChange={(e) => updateSetting('reducedMotion', e.target.checked)}";"
+                className="rounded""
+              />
+              <span  className ="text-gray-700 dark: text-gray-300">Reduce Motion</span>"
             </label>
             
+
                 checked={settings.screenReader}
+                onChange={(e) => updateSetting('screenReader', e.target.checked)}";"
+                className="rounded""
+              />
+              <span  className ="text-gray-700 dark: text-gray-300">Screen Reader Optimized</span>"
             </label>
             
+
                 checked={settings.focusVisible}
+                onChange={(e) => updateSetting('focusVisible', e.target.checked)}";"
+                className="rounded""
+              />
+              <span  className ="text-gray-700 dark: text-gray-300">Focus Indicators</span>"
             </label>
             
+
                 checked={settings.keyboardNavigation}
+                onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)}";"
+                className="rounded""
+              />
+              <span  className ="text-gray-700 dark: text-gray-300">Keyboard Navigation</span>"
             </label>
           </div>
 
           <buttononClick={togglePanel}>
+            className="mt-4 w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-2 px-4 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors""
+          >
             Close
           </button>
 
-              className="px-4 py-2 text-sm bg-blue-600 text-white rounded hover: bg-blue-700 transition-colors",";"
+
+            >
               Close
             </button>
           </div>
         </div>
       )};
     </>
-  )";"
-    },";";"
-    {}";";";"
+  )";
+    },";";
+    {}";";";
+export default AccessibilityManager;"
+

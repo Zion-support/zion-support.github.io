@@ -1,5 +1,8 @@
+
     if ($1) {}
+
   // If body
+
   }, [])
   const  handleAccept = () => {}
 }localStorage.setItem("cookie-consent", "accepted")""
@@ -68,23 +71,12 @@ disabled= className ="rounded"""
             <buttononClick={handleAccept},>
       className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"""
             ></button
+
+>
               Accept All
             </button>
           </div>
-import React from 'react';'
-
-const Page = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
-            Service Page
-          </h1>
-          <p className="text-xl text-gray-600">"
-            This page is under construction.
-          </p>
         </div>
-    </div>
-  );
+
+
 

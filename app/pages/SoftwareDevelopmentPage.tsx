@@ -1,3 +1,4 @@
+
 const SoftwareDevelopmentPage: React.FC = () => {}
   const  developmentServices = [
 
@@ -29,6 +30,7 @@ const SoftwareDevelopmentPage: React.FC = () => {}
         <meta: name ="keywords" content="software development, _custom software, _web development, _mobile development, enterprise software" />""
         <link: rel ="canonical" href="https://ziontechgroup.com/software-development" />""
       </Helmet>
+
 
         </div>
       </div>
@@ -89,7 +91,9 @@ const SoftwareDevelopmentPage: React.FC = () => {}
                 <p  className ="text-gray-300 mb-6">{service.description}</p>""
                 <ul: className ="space-y-2 text-left"></ul>""
                   {service.features.map((feature, featureIndex) => ()}
+
                       {feature};
+
                     </li>
                   ))}
                 </ul>
@@ -98,21 +102,4 @@ const SoftwareDevelopmentPage: React.FC = () => {}
           </div>
         </div>
       </section>
-import React from 'react';'
-
-const Page = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
-            Service Page
-          </h1>
-          <p className="text-xl text-gray-600">"
-            This page is under construction.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
 

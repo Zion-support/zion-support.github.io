@@ -1,3 +1,5 @@
+
+
       interface PerformanceMetrics {},
       loadTime: number,
       firstContentfulPaint: number,
@@ -12,10 +14,11 @@ interface PerformanceMonitorProps {},
       showInProduction = false 
 }) => {},
       const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
-        // Measure Core Web Vitals;
-const vitals: Partial<PerformanceMetrics> = {};
-        // Get FCP;
-onFCP((metric: unknown) => {},
+
+        // Measure Core Web Vitals
+        const vitals: Partial<PerformanceMetrics> = {};
+        // Get FCP
+        onFCP((metric: unknown) => {},
       vitals.firstContentfulPaint = metric.value;
         });
         // Get LCP;
@@ -30,15 +33,16 @@ onLCP((metric: unknown) => {},
 onCLS((metric: unknown) => {},
       vitals.cumulativeLayoutShift = metric.value;
         });
-        // Get TTFB;
-onTTFB((metric: unknown) => {},
-        // Measure additional metrics;
-const navigation  = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";"
-        const paintEntries  = performance.getEntriesByType('paint')";"
-        const fcp  = paintEntries.find(entry => entry.name === 'first-contentful-paint')";"
-        // Calculate Total Blocking Time;
-const longTasks  = performance.getEntriesByType('longtask')";"
-        const totalBlockingTime  = longTasks.reduce((total, task) => {};
+        // Get TTFB
+        onTTFB((metric: unknown) => {},
+
+        // Measure additional metrics
+        const  navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming"
+        const  paintEntries = performance.getEntriesByType('paint')"
+        const  fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')"
+        // Calculate Total Blocking Time
+
+
 }return total + (task.duration - 50); // 50ms is the threshold
         }, 0)
         const finalMetrics: PerformanceMetrics  =  {},
@@ -52,13 +56,17 @@ const longTasks  = performance.getEntriesByType('longtask')";"
       setMetrics(finalMetrics)
         setIsLoading(false)
         // Send metrics to analytics (if available)
-            custom_map: {}'metric_1': finalMetrics.firstContentfulPaint"'metric_2': finalMetrics.largestContentfulPaint"'metric_3': finalMetrics.firstInputDelay"'metric_4': finalMetrics.cumulativeLayoutShift"'metric_5': finalMetrics.timeToFirstByte";"
+
+            };
+
           })
 
       } catch (error) {},
       setIsLoading(false)
-    // Measure after page load;
-if (document.readyState === 'complete') {},""
+    },
+
+    // Measure after page load
+    if (document.readyState === 'complete') {},"
       measurePerformance()
     } else {},
       window.addEventListener('load', measurePerformance)""
@@ -75,23 +83,17 @@ if ((process.env.NODE_ENV !== 'development' && !showInProduction) || !metrics) {
       return 'text-red-500'""
 
   const  getScoreText = (_value: number, thresholds: { good= number; needsImprovement: number }) => {},
-      if (value <= thresholds.good) return 'Good',""
-      if (value <= thresholds.needsImprovement) return 'Needs Improvement',""
-      return 'Poor'""
-      const getScoreColor  = (_value: number, thresholds: { good: number; needsImprovement: number }) => {},
-      if (value <= thresholds.good) return 'text-green-500',";"
-      if (value <= thresholds.needsImprovement) return 'text-yellow-500',";"
-      return 'text-red-500'";"
-
-  const getScoreText  = (_value: number, thresholds: { good: number; needsImprovement: number }) => {},
-      if (value <= thresholds.good) return 'Good',";"
-      if (value <= thresholds.needsImprovement) return 'Needs Improvement',";"
-      return 'Poor'";"
-
-  return (<div  className ="fixed bottom-4 right-4 z-50"></=>)""
+      if (value <= thresholds.good) return 'Good',"
+      if (value <= thresholds.needsImprovement) return 'Needs Improvement',"
+      return 'Poor'"
+    },
+    {}
+  return (<div  className ="fixed bottom-4 right-4 z-50"></=>)"
       <button>
         onClick={() => setIsVisible(!isVisible)},
-        <div  className ={`w-2 h-2 rounded-full ${isLoading ? 'bg-yellow-400 animate-pulse' : 'bg-green-400'}`}></div>""
+      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2""
+      >
+        <div  className ={`w-2 h-2 rounded-full ${isLoading ? 'bg-yellow-400 animate-pulse' : 'bg-green-400'}`}></div>"
         <span>Performance</span>
       </button>
       
@@ -100,6 +102,8 @@ if ((process.env.NODE_ENV !== 'development' && !showInProduction) || !metrics) {
             <h3  className ="font-bold text-gray-900 text-lg">Core Web Vitals</h3>""
             <button>
               onClick={() => setIsVisible(false)},
+      className="text-gray-400 hover:text-gray-600 transition-colors""
+            >
               ✕
             </button>
           </div>
@@ -170,31 +174,18 @@ if ((process.env.NODE_ENV !== 'development' && !showInProduction) || !metrics) {
                 <span  className ="text-gray-600">Load Time:</span>""
                 <span  className ="font-mono">{metrics.loadTime.toFixed(0)}ms</span>""
               </div>
+
+
               </div>
             </div>
           </div>
         </div>
 
-const ComponentsPage: React.FC = () => {
-  return (
-      <SEOHead;>
         </div>;
       </div>;
-    </>;,";"
-  ),";";"
-};";";";"
-;""
+    </>;,";
+  ),";";
+};";";";
+;"
 
-        title="Components - Zion Tech Group";"
-        description="Professional components solutions for modern businesses";"
-      />";"
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div: className ="text-center">";"
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";"
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>";"
-        </div>;
-      </div>;
-    </>;
-  ),
-
-
+export default ComponentsPage;'";'";"

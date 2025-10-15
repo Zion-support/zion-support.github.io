@@ -1,3 +1,4 @@
+
       // trackPerformance(name, value)
     [
   ])";"
@@ -92,40 +93,8 @@ const resourceEntry = entry as PerformanceResourceTiming;: value";";";"
   }, [
     reportMetric
   
-  ])";"
-    reportMetric;";";"
-  };";";";"
-};'""
-// // PerformanceMetrics interface removed as it's not used in this hook'";";";"
-  // const { trackPerformance } = useAnalytics()': value";";";"
-      console.log('Performance metric:', name, value)";";";"
-// // PerformanceMetrics interface removed as it's not used in this hook'"";"
-  // const { trackPerformance } = useAnalytics()': value"'""
-      console.log('Performance metric:', name, value)";"
-      // trackPerformance(name, value)
-    []
-  )
-        lcpObserver.disconnect()
-        fidObserver.disconnect()
-        clsObserver.disconnect()
-        fcpObserver.disconnect()
-        navigationObserver.disconnect()
-        resourceObserver.disconnect()
-      }'"'""
-      console.error('Performance monitoring setup failed:', error)";"
- {};
-  }, [reportMetric])
-  // page load performance;
-if (typeof: window === 'undefined') return";"
-      )[0] as PerformanceNavigationTiming
+  ])";
+    reportMetric;";";
+  };";";";
+};'"
 
-        }
-          reportMetric(key.toUpperCase(), value)
-        })
-    }'"''
-    window.addEventListener('load', handleLoad)'"'""
- window.removeEventListener('load', handleLoad)";"
-  }, [reportMetric])
-    reportMetric;
-  };
-}''

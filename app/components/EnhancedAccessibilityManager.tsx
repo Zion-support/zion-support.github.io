@@ -1,3 +1,4 @@
+
 interface AccessibilityOptions {};
   enableHighContrast: boolean;
   enableLargeText: boolean;
@@ -28,17 +29,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({};)
     ...options
   });
   const [isInitialized, setIsInitialized] = useState(false);
-  // Detect system preferences;
-if (!enableAutoDetection) return;
+  // Detect system preferences
 
-    // Detect reduced motion preference;
-const prefersReducedMotion  = window.matchMedia('(prefers-reduced-motion: reduce)').matches";"
-    
-    // Detect high contrast preference;
-const prefersHighContrast  = window.matchMedia('(prefers-contrast: high)').matches";"
-    
-    // Detect color scheme preference;
-const prefersDarkScheme  = window.matchMedia('(prefers-color-scheme: dark)').matches,";"
       setAccessibilityOptions(prev => ({};)
       ...prev,
       enableReducedMotion: prefersReducedMotion,
@@ -48,82 +40,32 @@ const prefersDarkScheme  = window.matchMedia('(prefers-color-scheme: dark)').mat
     enableAutoDetection
   
   ]);
-  // Load user preferences from localStorage;
-const loadUserPreferences  = useCallback(() => {};
+  // Load user preferences from localStorage
+  const: loadUserPreferences = useCallback(() => {};
     if (!enableUserPreferences) return;
-      console.warn('Failed to load accessibility preferences:', error)";"
+
+    };
   }, [
     enableUserPreferences
   
   ]);
-  // Save user preferences to localStorage;
-if (!enableUserPreferences) return,
-      try {},;
-      localStorage.setItem('accessibility-preferences', JSON.stringify(options))";"
-    } catch (error) {},
-      console.warn('Failed to save accessibility preferences:', error)";"
+  // Save user preferences to localStorage
+
+    },
+    {};
   }, [
     enableUserPreferences
   
   ]);
   // Apply accessibility options
 
-    // High contrast mode;
-if (options.enableHighContrast) {},
-      root.classList.add('high-contrast'),";"
-      root.style.setProperty('--text-color', '#ffffff'),";"
-      root.style.setProperty('--bg-color', '#000000'),";"
-      root.style.setProperty('--accent-color', '#ffff00')";"
-    } else {},
-      root.classList.remove('high-contrast'),";"
-      root.style.removeProperty('--text-color'),";"
-      root.style.removeProperty('--bg-color'),";"
-      root.style.removeProperty('--accent-color')";"
-
-    // Large text mode;
-if (options.enableLargeText) {},
-      root.classList.add('large-text'),";"
-      root.style.setProperty('--font-size-base', '18px'),";"
-      root.style.setProperty('--font-size-lg', '20px'),";"
-      root.style.setProperty('--font-size-xl', '24px')";"
-    } else {},
-      root.classList.remove('large-text'),";"
-      root.style.removeProperty('--font-size-base'),";"
-      root.style.removeProperty('--font-size-lg'),";"
-      root.style.removeProperty('--font-size-xl')";"
-
-    // Reduced motion;
-if (options.enableReducedMotion) {},
-      root.classList.add('reduced-motion'),";"
-      root.style.setProperty('--animation-duration', '0.01ms'),";"
-      root.style.setProperty('--transition-duration', '0.01ms')";"
-    } else {},
-      root.classList.remove('reduced-motion'),";"
-      root.style.removeProperty('--animation-duration'),";"
-      root.style.removeProperty('--transition-duration')";"
-
-    // Focus indicators;
-if (options.enableFocusIndicators) {},
-      root.classList.add('focus-indicators')";"
-    } else {},
-      root.classList.remove('focus-indicators')";"
-
-    // Screen reader optimizations;
-if (options.enableScreenReader) {},
-      root.classList.add('screen-reader-optimized')";"
-      // Add screen reader only content;
-const srOnly  = document.querySelector('.sr-only'),";"
-      if (!srOnly) {},
-      const srOnlyDiv  = document.createElement('div'),";"
-      srOnlyDiv.className = 'sr-only',";"
-      srOnlyDiv.setAttribute('aria-live', 'polite'),";"
-      srOnlyDiv.setAttribute('aria-atomic', 'true'),";"
       body.appendChild(srOnlyDiv)
-    },";"
-    {};";";"
-    } else {},";";";"
-      root.classList.remove('screen-reader-optimized")"'
-      const style  = document.createElement('style'),";"
+    },";
+    {};";";
+    } else {},";";";
+      root.classList.remove('screen-reader-optimized")
+    },
+
       style.textContent = `
         .keyboard-navigation *:focus {},
       outline: 2px solid #3b82f6 !important,
@@ -134,12 +76,16 @@ const srOnly  = document.querySelector('.sr-only'),";"
         .keyboard-navigation textarea:focus;
         .keyboard-navigation a:focus {},
       box-shadow: 0 0 0 2px #3b82f6 !important
+    },
+
+    },
+    {};
   }, [
   ]);
-  // Update accessibility options;
-const updateAccessibilityOptions  = useCallback((newOptions: Partial<AccessibilityOptions>) => {},
+  // Update accessibility options
+
       setAccessibilityOptions(prev => {},)
-      const updated  = { ...prev, ...newOptions },
+      const: updated = { ...prev, ...newOptions },
       applyAccessibilityOptions(updated),
       saveUserPreferences(updated),
       if (onAccessibilityChange) {},
@@ -161,27 +107,30 @@ useEffect(() => {},
     isInitialized, loadUserPreferences, detectSystemPreferences, applyAccessibilityOptions, accessibilityOptions
   
   ]);
-  // Listen for system preference changes;
-mq.removeEventListener('change', handleMediaChange)";"
+  // Listen for system preference changes
+
       })
   }, [
     enableAutoDetection, detectSystemPreferences
   
   ]);
-  // Keyboard shortcuts;
-event.preventDefault(),
+  // Keyboard shortcuts
+
+      event.preventDefault(),
       updateAccessibilityOptions({},)
       enableHighContrast: !accessibilityOptions.enableHighContrast
         })
+
       event.preventDefault(),
       updateAccessibilityOptions({},)
       enableLargeText: !accessibilityOptions.enableLargeText
         })
+
       event.preventDefault(),
       updateAccessibilityOptions({},)
       enableReducedMotion: !accessibilityOptions.enableReducedMotion
         })
-      const style  = document.createElement('style'),";"
+
       style.textContent = `
       .skip-links {},
       position: absolute,
@@ -208,6 +157,7 @@ event.preventDefault(),
   // Add skip links on mount;
 useEffect(() => {},
       addSkipLinks();
+
           <h4>Keyboard Shortcuts</h4>
           <p>Alt + A: Toggle this menu</p>
           <p>Alt + H: Toggle high contrast</p>
@@ -215,8 +165,8 @@ useEffect(() => {},
           <p>Alt + R: Toggle reduced motion</p>
         </div>
       </div>
-      aria-label="Open accessibility options";"
-        title="Accessibility Options (Alt + A)";"
+
+      >
         ♿
       </button>
       <style jsx>{`};
@@ -248,6 +198,7 @@ useEffect(() => {},
         .accessibility-controls label {},
       display: flex,
       align-items: center,
+
       margin: 0
         .keyboard-shortcuts {},
       border-top: 1px solid #eee,
@@ -313,6 +264,7 @@ useEffect(() => {},
         /* Keyboard navigation */
         .keyboard-navigation *:focus {},
       outline: 2px solid #3b82f6 !important,
+
       position: absolute,
       top: -30px,
       left: 0,
@@ -332,18 +284,5 @@ useEffect(() => {},
 import React from 'react';";";";";"
 import SEOHead from './components/SEOHead";"'
 
-const ComponentsPage: React.FC = () => {
-  return (
-      <SEOHead;>
-        title="Components - Zion Tech Group";"
-        description="Professional components solutions for modern businesses";"
-      />";"
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";"
-        <div: className ="text-center">";"
-          <h1: className ="text-4xl font-bold mb-4">Components</h1>";"
-          <p: className ="text-gray-300">Professional solutions coming soon...</p>";"
-        </div>;
-      </div>;
-    </>;
-  ),
+
 

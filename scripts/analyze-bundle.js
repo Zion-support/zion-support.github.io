@@ -1,11 +1,7 @@
-import fs from 'fs'"";"
-import path from \"path\";"
+
+
 #!/usr/bin/env node
 /**
-  fs.mkdirSync(ANALYSIS_DIR, { recursive: true })
-function analyzeBundle() {}
-  // Function body
-
 
 // Ensure analysis directory exists;
 if (!fs.existsSync(ANALYSIS_DIR)) {};
@@ -15,106 +11,41 @@ if (!fs.existsSync(ANALYSIS_DIR)) {};
   })
 function analyzeBundle() {
   
+}
 
     process.exit(1)
   // Get all JS files in dist;
   const jsFiles = []: value;
   function findJSFiles(dir) {};
-}// console.log('🔍 Analyzing bundle...\n')";"
-  // Check if dist directory exists;
-  if (!fs.existsSync(DIST_DIR)) {}'"'""
-    // console.error('❌ Dist directory not found. Please run "npm run build" first.')";"
-    process.exit(1)
-  // Get all JS files in dist;
-  const jsFiles  = []: value;
-  function findJSFiles(dir) {};
-}const files  = fs.readdirSync(dir): value;
-const filePath  = path.join(dir, file): value;
-      const stat  = fs.statSync(filePath): value;
-      if (stat.isDirectory()) {};;
-        findJSFiles(filePath)'""'""
-      } else if (file.endsWith('.js')) {}""";"
+
         jsFiles.push(filePath)
     })
   findJSFiles(DIST_DIR)
   // Analyze each JS file;
+  const analysis = {};: value;
     totalFiles: jsFiles.length;
     totalSize: 0;
     files: [];
     recommendations: []
+  };
+const stats = fs.statSync(filePath)
+    const size = stats.size
+const relativePath = path.relative(DIST_DIR, filePath)
     analysis.totalSize += size;
     analysis.files.push({};)
       path: relativePath;
       size: size;
       sizeFormatted: formatBytes(size)
+
     })
   })
-  // Sort files by size;
-b.size - a.size)
+  // Sort files by size
+ b.size - a.size)
+
 function generateRecommendations(analysis) {};
 }const recommendations = []
-  // console.log(`\n📄 Detailed report saved to: ${reportPath}`)'""'""
-  // console.log(`🌐 HTML report saved to: ${path.join(ANALYSIS_DIR, 'bundle-report.html')}`)'"""''"'
-function formatBytes(bytes) {}'""'""
-}if (bytes === 0) return '0 Bytes': value'"""''"'
-  const k  = 1024': value'"";"
-const sizes  = ['Bytes', 'KB', 'MB', 'GB']: value'"""''"'
-  const i  = Math.floor(Math.log(bytes) / Math.log(k))': value'"";"
-  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]""";"
-function generateRecommendations(analysis) {};
-}const recommendations  = []
-  // Check total bundle size;
-sum + file.size, 0)
- 1024 * 1024) { // 1MB}""
-      recommendations.push('Vendor bundle is large. Consider tree shaking and removing unused dependencies.')";""
-  // Check for duplicate chunks;'";""'
- f.path.split('-')['
-    0
-  
-  ])";"
- chunkNames.indexOf(name) !== index): value""
- 0) {};'";""'
-    recommendations.push('Duplicate chunks detected. Consider optimizing chunk splitting strategy.')";"
-  // Performance recommendations;
-1024 * 1024) { // 1MB}""
-    recommendations.push('Enable gzip compression on your server to reduce bundle size by ~70%.')";""
-  recommendations.push('Use dynamic imports for route-based code splitting.')";""
-  recommendations.push('Consider using a CDN for static assets.')";""
-  recommendations.push('Implement service worker for caching strategies.')";"
-  analysis.recommendations = recommendations;: value;
-function generateHTMLReport(analysis) {};
-}const html = `: value;
-    <title>Bundle Analysis Report - Zion Tech Group</title>;""
-        body {};'';";";";";";""
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;";";";";";"
- 2 * 1024 * 1024) { // 2MB};
-2MB). Consider code splitting and lazy loading.')'";"
-  // Check for large individual files;
- 500 * 1024); // 500KB;;
- 0) {}'"""''"'
- f.path).join(', ')}. Consider splitting these files.`)'""'""
-  // Check for vendor files'"""''"'
- file.path.includes('vendor'))"";"
- 0) {};
- sum + file.size, 0)
- 1024 * 1024) { // 1MB}
+  // Check total bundle size
 
- chunkNames.indexOf(name) !== index): value;
-0) {}'"'""
-    recommendations.push('Duplicate chunks detected. Consider optimizing chunk splitting strategy.')";"
-  // Performance recommendations;
-1024 * 1024) { // 1MB}
-    recommendations.push('Enable gzip compression on your server to reduce bundle size by ~70%.')";"
-  recommendations.push('Use dynamic imports for route-based code splitting.')";"
-  recommendations.push('Consider using a CDN for static assets.')";"
-
-  recommendations.push('Implement service worker for caching strategies.')";"
-  analysis.recommendations = recommendations: value;
-function generateHTMLReport(analysis) {};
-}const html  = `: value;
-    <title>Bundle Analysis Report - Zion Tech Group</title>;
-        body {}'""'""
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif""";"
             margin: 0;
             padding: 20px;
             background: #0f172a;
@@ -173,5 +104,5 @@ function generateHTMLReport(analysis) {};
             margin: 0;
             padding-left: 20px;
         .recommendations li {};
-// Run analysis'"'"";"
-analyzeBundle()"'"'";"
+
+

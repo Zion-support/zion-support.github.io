@@ -1,21 +1,23 @@
+
 const APIDocsPage: React.FC = () => {}
   const [selectedAPI, setSelectedAPI] = useState('ai-chatbot');""
   const [searchTerm, setSearchTerm] = useState('');""
   const  apis = [
-
-      id= 'ai-chatbot''
-      name: 'AI Chatbot API''
-      description: 'Integrate our AI chatbot into your applications''
-      version: 'v2.1''
-      status: 'Active''
-      endpoints: 12;
-icon: <MessageSquare: className ="w-6 h-6 text-cyan-400" />""
-
-      id= 'ai-analytics',""
-      name: 'AI Analytics API',""
-      description: 'Access advanced analytics and insights',""
-      version: 'v1.8',""
-      status: 'Active',""
+    {}
+      id= 'ai-chatbot'
+      name: 'AI Chatbot API'
+      description: 'Integrate our AI chatbot into your applications'
+      version: 'v2.1'
+      status: 'Active'
+      endpoints: 12,
+  icon: <MessageSquare: className ="w-6 h-6 text-cyan-400" />"
+    }
+    {},
+      id= 'ai-analytics',"
+      name: 'AI Analytics API',"
+      description: 'Access advanced analytics and insights',"
+      version: 'v1.8',"
+      status: 'Active',"
       endpoints: 8,
       icon: <className="w-6 h-6 text-blue-400" />""
 
@@ -128,6 +130,7 @@ icon: <MessageSquare: className ="w-6 h-6 text-cyan-400" />""
         <link: rel ="canonical" href="https://ziontechgroup.com/api-docs" />""
       </Helmet>
 
+
         </div>
       </div>
           <div  className ="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>""
@@ -194,10 +197,12 @@ comprehensive API documentation and developer resources.
                 <h3  className ="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors"></h3>""
                   {feature.title}
                 </h3>
+
                   {feature.description};
                 </p>
               </div>
             ))};
+
           </div>
         </div>
       </section>
@@ -257,10 +262,12 @@ comprehensive API documentation and developer resources.
                         <className="w-3 h-3 mr-1" />""
                         {api.endpoints} endpoints
                       </span>
+
                         {api.status};
                       </span>
                     </div>
                   </button>
+
               </div>
             </div>
 
@@ -321,32 +328,18 @@ comprehensive API documentation and developer resources.
                       <Play: className ="w-4 h-4 mr-2" />""
                       Try It
                     </button>
+
+
                       Download SDK
                     </button>
                   </div>
                 </div>
               )}
             </div>
+
               Contact Developer Support
             </>
           </div>
         </div>
       </section>
-import React from 'react';'
-
-const Page = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
-            Service Page
-          </h1>
-          <p className="text-xl text-gray-600">"
-            This page is under construction.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
 

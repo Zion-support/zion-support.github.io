@@ -1,3 +1,4 @@
+
 const ChatPage: React.FC = () => {}
   return ()
     <>{}</>
@@ -7,6 +8,7 @@ const ChatPage: React.FC = () => {}
         <meta: name ="keywords" content="live chat, instant support, customer service, help desk" />""
         <link: rel ="canonical" href="https://ziontechgroup.com/chat" />""
       </Helmet>
+
 
         </div>
       </div>
@@ -33,26 +35,11 @@ const ChatPage: React.FC = () => {}
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center"""
               ></>
                 Start Chat
+
+
               </>
             </div>
           </div>
         </div>
       </section>
-import React from 'react';'
-
-const Page = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
-            Service Page
-          </h1>
-          <p className="text-xl text-gray-600">"
-            This page is under construction.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
 

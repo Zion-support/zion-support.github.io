@@ -1,3 +1,4 @@
+
 const PortfolioPage: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState('all');""
   const [searchTerm, setSearchTerm] = useState('');""
@@ -201,6 +202,7 @@ const PortfolioPage: React.FC = () => {}
         <link: rel ="canonical" href="https://ziontechgroup.com/portfolio" />""
       </Helmet>
 
+
         </div>
       </div>
           <div  className ="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>""
@@ -287,34 +289,24 @@ const PortfolioPage: React.FC = () => {}
                       ? 'bg-cyan-600 text-white'""
                       : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'""
                   }`}
+                >
+
                   {category.name};
+
                 </button>
               ))}
             </div>
+
+
                       View Code
                     </a>
                   </div>
                 </div>
+
+
               View Our Services
             </>
           </div>
         </div>
       </section>
-import React from 'react';'
-
-const Page = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
-            Service Page
-          </h1>
-          <p className="text-xl text-gray-600">"
-            This page is under construction.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
 

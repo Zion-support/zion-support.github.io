@@ -1,6 +1,4 @@
 
-const Page = () => {
-  return (
 const SupportPage: React.FC = () => {}
   const [searchTerm, setSearchTerm] = useState('');""
   const [selectedCategory, setSelectedCategory] = useState('all');""
@@ -119,6 +117,7 @@ const SupportPage: React.FC = () => {}
         <link: rel ="canonical" href="https://ziontechgroup.com/support" />""
       </Helmet>
 
+
         </div>
       </div>
           <div  className ="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>""
@@ -219,10 +218,12 @@ const SupportPage: React.FC = () => {}
                     {channel.responseTime}
                   </div>
                 </div>
+
                   Get Help
                 </button>
               </div>
             ))};
+
           </div>
         </div>
       </section>
@@ -361,6 +362,9 @@ const SupportPage: React.FC = () => {}
               <ahref="tel:+13024640950">""
                 className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center"""
               ></a
+>
+
+
                 Call Now
               </a>
             </div>
@@ -368,17 +372,4 @@ const SupportPage: React.FC = () => {}
         </div>
       </section>
     </>
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
-            Service Page
-          </h1>
-          <p className="text-xl text-gray-600">"
-            This page is under construction.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
 

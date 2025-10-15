@@ -1,7 +1,8 @@
+
 interface GenericServicePageProps {},
-      title: string;
-description: string;
-icon: React.ComponentType<any></any>
+      title: string,
+  description: string
+  icon: React.ComponentType<any></any>
   features: string[]
   benefits: string[]
   pricing?: string;
@@ -52,22 +53,31 @@ category: "AI" | "IT" | "MicroSAAS" | "Emerging"""
               <aclassName="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group">""
                 href="tel:+13024640950"""
               ></a
+>
+
+
                 Call (302) 464-0950
               </a>
             </div>
           </section>
-                Comprehensive {title.toLowerCase()} solutions designed to drive;
-your business forward
+
+
+                Comprehensive {title.toLowerCase()} solutions designed to drive
+                your business forward
               </p>
             </div>
+
               {features.map((feature, index) => ()}
                 <divkey={index},>
       className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"""
                 ></div
+>
+
                       {feature};
                     </h3>
                   </div>
                 </div>
+
             </div>
           </section>
           {/* Benefits Section */}
@@ -76,10 +86,13 @@ your business forward
               <h2  className ="text-3xl font-bold text-white mb-4"></h2>""
                 Why Choose Our {title}?
               </h2>
-                Experience the difference with our proven expertise and;
-cutting-edge technology
+
+
+                Experience the difference with our proven expertise and
+                cutting-edge technology
               </p>
             </div>
+
               {benefits.map((benefit, index) => ()}
                 <div  key ={index} className="flex items-start space-x-4"></div>""
                   <div  className ="flex-shrink-0"></div>""
@@ -89,11 +102,14 @@ cutting-edge technology
                     <h3  className ="text-lg font-semibold text-white mb-2"></h3>""
                       {benefit}
                     </h3>
-                      Leverage our expertise to maximize your business potential;
-with {title.toLowerCase()}
+
+
+                      Leverage our expertise to maximize your business potential
+                      with {title.toLowerCase()}
                     </p>
                   </div>
                 </div>
+
             </div>
           </section>
           {/* Stats Section */}
@@ -122,19 +138,22 @@ with {title.toLowerCase()}
                   <div  className ="text-4xl font-bold text-cyan-400 mb-2"></div>""
                     10+
                   </div>
+
+
                 </div>
               </div>
             </div>
           </section>
+
               Ready to Get Started?
             </h2>
-            <p  className ="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>""
-              Join hundreds of companies that trust Zion Tech Group for their{" "};""
+            <p  className ="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>"
+              Join hundreds of companies that trust Zion Tech Group for their{" "};"
               {title.toLowerCase()} needs. Get a free consultation today.
             </p>
-            <div  className ="flex flex-col sm:flex-row gap-4 justify-center"></div>""
-              <aclassName="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105">""
-                href="/contact"""
+            <div  className ="flex flex-col sm:flex-row gap-4 justify-center"></div>"
+              <aclassName="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105">"
+                href="/contact""
               ></a
                 Get Free Consultation
                 <ArrowRight: className ="w-5 h-5 ml-2" />""
@@ -142,6 +161,10 @@ with {title.toLowerCase()}
               <aclassName="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group">""
                 href="mailto:kleber@ziontechgroup.com"""
               ></a
+>
+
+
+
                 Email Us
               </a>
             </div>
@@ -149,21 +172,6 @@ with {title.toLowerCase()}
         </main>
       </div>
     </>
-import React from 'react';'
 
-const Page = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
-            Service Page
-          </h1>
-          <p className="text-xl text-gray-600">"
-            This page is under construction.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+
 

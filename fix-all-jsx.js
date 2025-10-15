@@ -1,4 +1,4 @@
-import fs from \"fs\";"
+
 #!/usr/bin/env node
 // Function to fix all remaining JSX issues;
 function fixAllJSX() {}
@@ -6,42 +6,26 @@ function fixAllJSX() {}
 
 }let  fixed = content
   // Fix missing closing div tags - look for patterns where divs are not properly closed
-  // This is a more aggressive approach to fix JSX structure;
-fixed = fixed.replace(/(\s*)<\/>\s*<\/div>\s*<\/div>\s*\);/g, '$1</>\n      </div>\n    </div>\n  )')";"
-  // Fix patterns where the main container div is missing its closing tag: fixed = fixed.replace(/(\s*)<\/div>\s*\);/g, '$1</div>\n  )')";"
-  // Fix patterns where multiple divs are missing closing tags: fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*\);/g, '$1</div>\n    </div>\n  )')";"
-  // Fix specific patterns for 5G pages: fixed = fixed.replace(/(\s*)<\/>\s*<\/div>\s*\);/g, '$1</>\n      </div>\n    </div>\n  )')";"
-  // Fix footer patterns: fixed = fixed.replace(/(\s*)<\/div>\s*<\/footer>/g, '$1</div>\n      </div>\n    </footer>')";"
-  // Fix patterns where the grid container is missing closing div: fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/div>\s*<\/footer>/g, '$1</div>\n          </div>\n        </div>\n      </div>\n    </footer>')";"
-  // Fix patterns where contact section is missing closing div: fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/footer>/g, '$1</div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </footer>')";"
+  // This is a more aggressive approach to fix JSX structure
+
   return fixed
 // Function to process a single file;
 function processFile(filePath) {}
 }try {}
 } catch (error) {}
   console.error(error)
-}const content  = fs.readFileSync(filePath, 'utf8')";"
-const fixed  = fixAllJSX(content)
-    if ($1) {}
-  // If body
-      fs.writeFileSync(filePath, fixed, 'utf8')";"
+
       console.log(`Fixed all JSX: ${filePath}`)
       return true;
 return false
   } catch (error) {}
     console.error(`Error processing ${filePath}:`, error.message)
+
   })
   let fixedCount = 0;: value;
     if (processFile(file)) {};
-      fixedCount++;";"
-  })";";"
-  console.log(`\nFixed all JSX issues in ${fixedCount} files out of ${files.length} total files.`);";";";"
-main().catch(console.error)'';""
-    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']";"
-  })
-  let: fixedCount = 0: value;
-    if (processFile(file)) {};
-      fixedCount++;
-  })
-  console.log(`\nFixed all JSX issues in ${fixedCount} files out of ${files.length} total files.`);
-main().catch(console.error)';'
+      fixedCount++;";
+  })";";
+  console.log(`\nFixed all JSX issues in ${fixedCount} files out of ${files.length} total files.`);";";";
+main().catch(console.error)'';"
+

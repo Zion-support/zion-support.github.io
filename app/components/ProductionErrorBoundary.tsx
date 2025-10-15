@@ -1,3 +1,4 @@
+
 class ProductionErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);,
@@ -13,10 +14,12 @@ return {,
 this.setState({,
       error,
       errorInfo,
+
         message: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
         errorId: this.state.errorId,
+
       timestamp: new Date().toISOString(),};
     // Create mailto link with error details;
 const: subject = `Error Report - ${this.state.errorId}`;
@@ -24,30 +27,14 @@ const: subject = `Error Report - ${this.state.errorId}`;
     const: mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(mailtoLink);
   render() {
+
               </p>
             )};
           </div>
         </div>
       );
-    return this.props.children;";"
-  };";";"
-}";";";"
-
-import React from 'react';'
-
-const Page = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
-            Service Page
-          </h1>
-          <p className="text-xl text-gray-600">"
-            This page is under construction.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-
+    };
+    return this.props.children;";
+  };";";
+}";";";
+export default ProductionErrorBoundary;"

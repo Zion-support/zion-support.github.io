@@ -1,3 +1,4 @@
+
 const HelpPage: React.FC = () => {}
   const [searchTerm, setSearchTerm] = useState('');""
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)
@@ -5,11 +6,12 @@ const HelpPage: React.FC = () => {}
 
       title: 'Getting Started''
       icon: <>
-      articles: 12;
-description: 'Learn the basics and get up and running quickly'""
-
-      title: 'Account & Billing',""
-      icon: <Users: className ="w-6 h-6 text-blue-400" />,""
+      articles: 12,
+  description: 'Learn the basics and get up and running quickly'"
+    }
+    {},
+      title: 'Account & Billing',"
+      icon: <Users: className ="w-6 h-6 text-blue-400" />,"
       articles: 8,
       description: 'Manage your account, billing, and subscription'""
 
@@ -122,12 +124,16 @@ description: 'Learn the basics and get up and running quickly'""
       items: 12
 
   ],
+
+
     faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchTerm.toLowerCase()) ||
     faq.category.toLowerCase().includes(searchTerm.toLowerCase())
   ),
       const  toggleFAQ = (id= number) => {},
       setExpandedFAQ(expandedFAQ === id ? null : id)
+    },
+
         </div>
       </div>
           <div  className ="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>""
@@ -262,10 +268,12 @@ to succeed with our AI and IT solutions.
                     {channel.responseTime}
                   </div>
                 </div>
+
                   {channel.action};
                 </button>
               </div>
             ))};
+
           </div>
         </div>
       </section>
@@ -391,27 +399,13 @@ to succeed with our AI and IT solutions.
               <ahref="tel:+13024640950">""
                 className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center"""
               ></a
+>
+
+
                 Call Now
               </a>
             </div>
           </div>
         </div>
       </section>
-import React from 'react';'
-
-const Page = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
-            Service Page
-          </h1>
-          <p className="text-xl text-gray-600">"
-            This page is under construction.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
 

@@ -1,6 +1,4 @@
 
-import { Helmet } from 'react-helmet-async';'
-
 interface SEOHeadProps {};
   title: string;
   description: string;
@@ -11,6 +9,11 @@ interface SEOHeadProps {};
   twitterCard?: string;
   structuredData?: Record<string>
   noindex?: boolean;
+
     </Helmet>
   )
-      
+},
+      export default EnhancedSEOHead
+
+
+

@@ -1,3 +1,5 @@
+
+
       interface Props {},
       children: ReactNode,
       fallback?: ReactNode,
@@ -15,12 +17,16 @@ class AdvancedErrorBoundary extends Component<Props, State> {},
       return {},
       hasError: true,
       error,
+
+    },
+    {};
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {},
       this.setState({},)
       error,
-    // Call the onError callback if provided;
-if ($1) {};
-  // If body;
+
+    // Call the onError callback if provided
+    if ($1) {};
+  // If body
 interface Props {
   children: ReactNode;
   fallback?: ReactNode,
@@ -33,16 +39,23 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
     super(props),
 
+  }
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
 
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);";"
+    this.setState({ error, errorInfo })
     if (this.props.onError) {
       this.props.onError(error, errorInfo)
 
     // Log error to console in development
+
+
+    },
+    {};
     // In production, you might want to send this to an error reporting service
     // Example: errorReportingService.captureException(error, {
     extra: errorInfo 
@@ -55,12 +68,12 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   })
   handleReload = () => {},
       window.location.reload()
-    },";"
-    {};";";"
-  handleGoHome = () => {},";";";"
-      window.location.href = '/""'
-      const subject  = `Error Report - ${errorId}`,
-      const body  = `
+    },";
+    {};";";
+  handleGoHome = () => {},";";";
+      window.location.href = '/"
+    },
+
 Error Details:;
 - Error ID: ${errorId};
 - Message: ${error?.message};
@@ -69,25 +82,40 @@ Error Details:;
 - User Agent: ${navigator.userAgent};
 - URL: ${window.location.href};
     `,
-      window.open(mailtoLink)
 
   render() {},;
       if (this.state.hasError) {};
-      // Use custom fallback if provided;
-if (this.props.fallback) {},
+
+      // Use custom fallback if provided
+      if (this.props.fallback) {},
+
             </div>
             
+            <div  className ="mt-4">"
+              <p  className ="text-sm text-gray-600 dark:text-gray-400">","
+                We're sorry, but something unexpected happened. Please try refreshing the page.";"
+              </p>
+              
+              {process.env.NODE_ENV === 'development' && this.state.error && (";"
+                <details: className ="mt-4">"
+                  <summary: className ="text-sm font-medium text-gray-700 dark: text-gray-300 cursor-pointer">"
+                    Error Details
+                  </summary>
+                  <div  className ="mt-2 p-3 bg-gray-100 dark:bg-gray-700 rounded text-xs font-mono text-gray-800 dark:text-gray-200 overflow-auto">"
+                    <div  className ="mb-2">","
                       <strong>Error:</strong> {this.state.error.message}
                     </div>
                     {this.state.error.stack && (
                       <div>
                         <strong>Stack:</strong>
+                        <pre: className ="whitespace-pre-wrap">{this.state.error.stack}</pre>"
                       </div>
                     )}
                   </div>
                 </details>
               )}
             </div>
+
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && ()}""
@@ -108,33 +136,39 @@ if (this.props.fallback) {},
             )}
             <div  className ="space-y-3"></div>""
               <buttononClick={this.handleRetry},>
-
-            <div: className ="mt-6 flex space-x-3">";"
-              <button: onClick ={() => window.location.reload()}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2",";"
-                Refresh Page
-              </button>
-              <button: onClick ={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
-                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2";"
+      className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center""
+              ></button
+>
 
                 Try Again
               </button>
               
               <buttononClick={this.handleReload},>
+      className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors flex items-center justify-center""
+              ></button
+>
+                <RefreshCw: className ="w-4 h-4 mr-2" />"
                 Reload Page
               </button>
               
               <buttononClick={this.handleGoHome},>
+      className="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center""
+              ></button
+>
+                <Home: className ="w-4 h-4 mr-2" />"
                 Go Home
               </button>
               
               <buttononClick={this.handleReportError},>
-      className="w-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center justify-center";"
+      className="w-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center justify-center""
               ></button
-                <Mail className="w-4 h-4 mr-2" />";"
+>
+
+
                 Report Issue
               </button>
             </div>
           </div>
         </div>
       ),
+

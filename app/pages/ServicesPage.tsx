@@ -1,89 +1,123 @@
-import {
-  CpuChipIcon,
-  CloudIcon,
-  GlobeAltIcon,
-  SignalIcon,
-  BriefcaseIcon,;
-  ArrowRightIcon,;
-  CheckIcon;
-} from '@heroicons/react/24/outline'";"
+
 const ServicesPage: React.FC = () => {
-  const services  = [
-    {title: 'AI Solutions','"'""
-      description: 'Advanced artificial intelligence services including machine learning, natural language processing, and computer vision.','"'""
+  const: services = [
+    {;
+      title: 'AI Solutions',''";
+      description: 'Advanced artificial intelligence services including machine learning, natural language processing, and computer vision.',''";
       icon: CpuChipIcon,
       features: [
-        'Machine Learning Models','"'Natural Language Processing','"'Computer Vision','"'Predictive Analytics','"'AI Automation','"'Custom AI Development'"''
+        'Machine Learning Models',''";
+        'Natural Language Processing',''";
+        'Computer Vision',''";
+        'Predictive Analytics',''";
+        'AI Automation',''";
+        'Custom AI Development''";
       ],
-      href: '/ai-solutions','"'""
-      color: 'from-purple-500 to-pink-500'";"
-
-      title: 'Cybersecurity','"'""
-      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance with industry standards.','"'""
+      href: '/ai-solutions',''";
+      color: 'from-purple-500 to-pink-500''";
+    },
+    {
+      title: 'Cybersecurity',''";
+      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance with industry standards.',''";
       icon: ShieldCheckIcon,
       features: [
-        'Threat Detection','"'Vulnerability Assessment','"'Security Monitoring','"'Incident Response','"'Compliance Management','"'Security Training'"''
+        'Threat Detection',''";
+        'Vulnerability Assessment',''";
+        'Security Monitoring',''";
+        'Incident Response',''";
+        'Compliance Management',''";
+        'Security Training''";
       ],
-      href: '/cybersecurity','"'""
-      color: 'from-red-500 to-orange-500'";"
-
-      title: 'Cloud Infrastructure','"'""
-      description: 'Scalable cloud solutions for modern businesses with high availability, security, and performance.','"'""
+      href: '/cybersecurity',''";
+      color: 'from-red-500 to-orange-500''";
+    },
+    {
+      title: 'Cloud Infrastructure',''";
+      description: 'Scalable cloud solutions for modern businesses with high availability, security, and performance.',''";
       icon: CloudIcon,
       features: [
-        'Cloud Migration','"'Infrastructure as Code','"'Auto-scaling','"'Disaster Recovery','"'Cost Optimization','"'Multi-cloud Strategy'"''
+        'Cloud Migration',''";
+        'Infrastructure as Code',''";
+        'Auto-scaling',''";
+        'Disaster Recovery',''";
+        'Cost Optimization',''";
+        'Multi-cloud Strategy''";
       ],
-      href: '/cloud-infrastructure','"'""
-      color: 'from-blue-500 to-cyan-500'";"
-
-      title: 'Micro SaaS Solutions','"'""
-      description: 'Custom micro SaaS applications tailored to your specific business needs and requirements.','"'""
+      href: '/cloud-infrastructure',''";
+      color: 'from-blue-500 to-cyan-500''";
+    },
+    {
+      title: 'Micro SaaS Solutions',''";
+      description: 'Custom micro SaaS applications tailored to your specific business needs and requirements.',''";
       icon: GlobeAltIcon,
       features: [
-        'Custom Development','"'API Integration','"'Scalable Architecture','"'User Management','"'Payment Processing','"'Analytics Dashboard'"''
+        'Custom Development',''";
+        'API Integration',''";
+        'Scalable Architecture',''";
+        'User Management',''";
+        'Payment Processing',''";
+        'Analytics Dashboard''";
       ],
-      href: '/micro-saas-solutions','"'""
-      color: 'from-green-500 to-emerald-500'";"
-
-      title: '5G Technology','"'""
-      description: 'Next-generation 5G technology implementation for ultra-fast connectivity and IoT solutions.','"'""
+      href: '/micro-saas-solutions',''";
+      color: 'from-green-500 to-emerald-500''";
+    },
+    {
+      title: '5G Technology',''";
+      description: 'Next-generation 5G technology implementation for ultra-fast connectivity and IoT solutions.',''";
       icon: SignalIcon,
       features: [
-        '5G Network Implementation','"'IoT Device Management','"'Edge Computing','"'Real-time Data Processing','"'Low Latency Applications','"'Network Optimization'"''
+        '5G Network Implementation',''";
+        'IoT Device Management',''";
+        'Edge Computing',''";
+        'Real-time Data Processing',''";
+        'Low Latency Applications',''";
+        'Network Optimization''";
       ],
-      href: '/5g-solutions','"'""
-      color: 'from-indigo-500 to-purple-500'";"
-
-      title: 'IT Services','"'""
-      description: 'Complete IT infrastructure management and support services for your business operations.','"'""
+      href: '/5g-solutions',''";
+      color: 'from-indigo-500 to-purple-500''";
+    },
+    {
+      title: 'IT Services',''";
+      description: 'Complete IT infrastructure management and support services for your business operations.',''";
       icon: BriefcaseIcon,
       features: [
-        'IT Infrastructure Management','"'Help Desk Support','"'System Administration','"'Network Management','"'Software Deployment','"'Technical Consulting'"''
+        'IT Infrastructure Management',''";
+        'Help Desk Support',''";
+        'System Administration',''";
+        'Network Management',''";
+        'Software Deployment',''";
+        'Technical Consulting''";
       ],
-      href: '/it-solutions','"'""
-      color: 'from-gray-500 to-slate-500'";"
-
+      href: '/it-solutions',''";
+      color: 'from-gray-500 to-slate-500''";
+    }
   ];
-  const processSteps  = [
-    {step: '01','"'""
-      title: 'Discovery','"'""
-      description: 'We analyze your business needs and current technology stack to identify opportunities for improvement.'";"
-
-      step: '02','"'""
-      title: 'Strategy','"'""
-      description: 'We develop a comprehensive strategy tailored to your specific requirements and business goals.'";"
-
-      step: '03','"'""
-      title: 'Implementation','"'""
-      description: 'Our expert team implements the solution with minimal disruption to your daily operations.'";"
-
-      step: '04','"'""
-      title: 'Support','"'""
-      description: 'We provide ongoing support and optimization to ensure your solution continues to deliver value.'";"
-
+  const: processSteps = [
+    {;
+      step: '01',''";
+      title: 'Discovery',''";
+      description: 'We analyze your business needs and current technology stack to identify opportunities for improvement.''";
+    },
+    {
+      step: '02',''";
+      title: 'Strategy',''";
+      description: 'We develop a comprehensive strategy tailored to your specific requirements and business goals.''";
+    },
+    {
+      step: '03',''";
+      title: 'Implementation',''";
+      description: 'Our expert team implements the solution with minimal disruption to your daily operations.''";
+    },
+    {
+      step: '04',''";
+      title: 'Support',''";
+      description: 'We provide ongoing support and optimization to ensure your solution continues to deliver value.''";
+    }
   ];
   return (
-import React from 'react''
+
+import React from 'react'
+;
 const ServicesPage: React.FC = () => {}
   const  serviceCategories = [
 
@@ -128,6 +162,8 @@ const ServicesPage: React.FC = () => {}
         'API Development - From $3,000''
         'Management - From $2,000'""
       ]
+    }
+    {},
 
       services: [
         '5G Implementation - Custom''
@@ -226,72 +262,14 @@ const ServicesPage: React.FC = () => {}
         <link: rel ="canonical" href="https://ziontechgroup.com/services" />""
       </Helmet>
 
+
 const ServicesPage: React.FC = () => {
   return (
       <SEOHead= title =" Services Page - Zion Tech Group""">
         description="Zion Tech Group  Services Page service page"""
       />
-      description: 'Next-generation 5G technology solutions for enhanced connectivity and performance.',""
-      features: ['5G Implementation', 'Edge Computing', 'IoT Integration', 'Network Optimization'],""
-      link: '/5g-solutions'""
 
-  ]
-  return (
-      <SEOHead= title ="Our Services - Zion Tech Group""">
-        description="Comprehensive AI solutions, IT services, cybersecurity, cloud infrastructure, and digital transformation services."""
-      />
-      <div  className ="min-h-screen bg-slate-900 text-white">""
-        <div  className ="max-w-7xl mx-auto py-20 px-4">""
-          <div  className ="text-center mb-16">""
-            <h1  className ="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">""
-              Our Services
-            </h1>
-            <p  className ="text-xl text-gray-300 max-w-3xl mx-auto">""
-              Comprehensive technology solutions designed to drive your business forward in the digital age.
-            </p>
-          </div>
 
-          <div  className ="grid grid-cols-1 md=grid-cols-2 lg:grid-cols-3 gap-8 mb-16">""
-            {services.map((service, index) => (
-              <div  key ={index} className="bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition-colors">""
-                <h3  className ="text-2xl font-bold mb-4">{service.title}</h3>""
-                <p  className ="text-gray-300 mb-6">{service.description}</p>""
-                <ul: className ="space-y-2 mb-6">""
-                  {service.features.map((feature, featureIndex) => (
-                    <li: key ={featureIndex} className="flex items-center">""
-                      <span  className ="text-blue-400 mr-3">✓</span>""
-                      <span  className ="text-sm text-gray-300">{feature}</span>""
-                    </li>
-                  ))}
-                </ul>
-                <a  href ={service.link}>
-                  className="text-blue-400 hover:text-blue-300 font-semibold"""
-                  Learn More →
-                </a>
-              </div>
-            ))}
-          </div>
-
-          <div  className ="bg-slate-800 p-8 rounded-lg text-center">""
-            <h2  className ="text-3xl font-bold mb-6">Ready to Get Started?</h2>""
-            <p  className ="text-xl text-gray-300 mb-8">""
-              Let's discuss how our services can help transform your business.""'
-            </p>
-            <div  className ="flex flex-col sm:flex-row gap-4 justify-center">""
-              <a  href ="/contact" "">
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300"""
-                Get a Quote
-              </a>
-              <a  href ="/about" "">
-                className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300"""
-                Learn More About Us
-              </a>
-            </div>
-          </div>
-      <div: className ="min-h-screen bg-slate-900 text-white flex items-center justify-center">";";"
-        <div: className ="text-center">";";"
-          <h1: className ="text-4xl font-bold mb-4"> Services Page</h1>";";"
-          <p: className ="text-gray-300">Coming soon...</p>";";"
 
         </div>
       </div>
@@ -391,6 +369,7 @@ const ServicesPage: React.FC = () => {
           <h1  className ="text-4xl font-bold mb-4">Coming Soon</h1>""
           <p  className ="text-gray-300">This page is under development...</p>""
         </div>
+
       </div>
             <h2  className ="text-4xl md=text-5xl font-bold text-white mb-6"></h2>""
               Why Choose Our Services?
@@ -413,53 +392,12 @@ const ServicesPage: React.FC = () => {
                 <h3  className ="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors"></h3>""
                   {feature.title}
                 </h3>
-                <p  className ="text-gray-300 group-hover:text-gray-200 transition-colors"></p>""
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-                <p: className ="text-gray-300 group-hover:text-gray-200 transition-colors"></p>";"
+
                   {feature.description};
                 </p>
               </div>
             ))};
-          </div>";"
-        </div>";";"
-      </section>";";";"
-      {/* Process Section */};""
-      <section className="py-20 bg-slate-800"></section>""
-        <div className="container mx-auto px-4">""
-        <div className="container mx-auto px-4">""
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
-          <p className="text-gray-300">This page is under development...</p>";";"
-        </div>";";";"
-      </div>""
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>";";"
-              Our Process";";";"
-            </h2>""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>";"
-              We follow a proven methodology to ensure successful project delivery and maximum value.";";"
-            </p>";";";"
-          </div>""
-          <div className="grid md:grid-cols-5 gap-8"></div>";";";"
-            {processSteps.map((step, index) => ()}""
-              <div key={index} className="text-center group">""
-        <div key={index} className="text-center group">""
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
-          <p className="text-gray-300">This page is under development...</p>";";"
-        </div>";";";"
-      </div>""
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform"></div>";";"
-                    {step.icon};";";";"
-                  </div>""
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center text-sm font-bold text-white"></div>";"
-                    {step.step};";";"
-                  </div>";";";"
-                </div>""
-                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors"></h3>";";"
-                  {step.title};";";";"
-                </h3>""
-                <p className="text-gray-300 text-sm group-hover:text-gray-200 transition-colors"></p>"
+
           </div>
         </div>
       </section>
@@ -498,57 +436,12 @@ const ServicesPage: React.FC = () => {
                 <h3  className ="text-lg font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors"></h3>""
                   {step.title}
                 </h3>
-                <p  className ="text-gray-300 text-sm group-hover:text-gray-200 transition-colors"></p>""
-                  {step.description}
-                </p>
-              </div>
-            ))}
-                <p: className ="text-gray-300 text-sm group-hover:text-gray-200 transition-colors"></p>";"
+
                   {step.description};
                 </p>
               </div>
             ))};
-          </div>";"
-        </div>";";"
-      </section>";";";"
-      {/* Testimonials */};""
-      <section className="py-20 bg-slate-900"></section>""
-        <div className="container mx-auto px-4">""
-        <div className="container mx-auto px-4">""
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
-          <p className="text-gray-300">This page is under development...</p>";";"
-        </div>";";";"
-      </div>""
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>";";"
-              What Our Clients Say";";";"
-            </h2>""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>";"
-              Trusted by businesses worldwide for our innovative solutions and exceptional service.";";"
-            </p>";";";"
-          </div>""
-          <div className="grid md:grid-cols-3 gap-8"></div>";";";"
-            {testimonials.map((testimonial, index) => ()}""
-              <div key={index} className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-700/50 transition-all duration-300">""
-        <div key={index} className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-700/50 transition-all duration-300">""
-          <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>""
-          <p className="text-gray-300">This page is under development...</p>";"
-        </div>";";"
-      </div>";";";"
-                  {[...Array(testimonial.rating)].map(( i) => ()}""
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />";";"
-                  ))};";";";"
-                </div>""
-                <p className="text-gray-300 mb-6 italic"></p>""
-                  "{testimonial.content}""
-                </p>""
-                <div className="flex items-center"></div>";";"
-                  <imgsrc={testimonial.image},>";";";"
-      alt={testimonial.name},""
-      className="w-12 h-12 rounded-full mr-4 object-cover""
-                  />";";";"
-                  <div></div>""
-                    <div className="font-semibold text-white">{testimonial.name}</div>""
-                    <div className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</div>"
+
           </div>
         </div>
       </section>
@@ -581,51 +474,21 @@ const ServicesPage: React.FC = () => {
                     <Star: key ={i} className="w-5 h-5 text-yellow-400 fill-current" />""
                   ))}
                 </div>
-                <p  className ="text-gray-300 mb-6 italic"></p>""
-                  "{testimonial.content}"""
-                <p: className ="text-gray-300 mb-6 italic"></p>"{testimonial.content}";"
+                <p  className ="text-gray-300 mb-6 italic"></p>"
+                  "{testimonial.content}""
                 </p>
                 <div  className ="flex items-center"></div>""
                   <imgsrc={testimonial.image},>
       alt={testimonial.name},
-      className="w-12 h-12 rounded-full mr-4 object-cover"""
-      className="w-12 h-12 rounded-full mr-4 object-cover";"
+      className="w-12 h-12 rounded-full mr-4 object-cover""
                   />
                   <div></div>
-                    <div  className ="font-semibold text-white">{testimonial.name}</div>""
-                    <div  className ="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</div>""
-                  </div>
-                </div>
-              </div>
-            ))}
-                    <div: className ="font-semibold text-white">{testimonial.name}</div>";"
-                    <div: className ="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</div>";"
+
                   </div>
                 </div>
               </div>
             ))};
-          </div>";"
-        </div>";";"
-      </section>";";";"
-      {/* CTA Section */};""
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600"></section>""
-        <div className="container mx-auto px-4 text-center"></div>""
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>";";"
-            Ready to Transform Your Business?";";";"
-          </h2>""
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto"></p>";"
-            Let our expert team help you choose the right services for your business needs. ";";"
-            Get started with a free consultation today.";";";"
-          </p>""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>";";";"
-            <>""
-              to="/contact""
-              className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"></>";"
-              Get Free Consultation";";"
-            </>";";";"
-            <>""
-              to="/pricing""
-              className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"></>"
+
           </div>
         </div>
       </section>
@@ -640,29 +503,21 @@ const ServicesPage: React.FC = () => {
             Let our expert team help you choose the right services for your business needs. 
             Get started with a free consultation today.
           </p>
-          <div  className ="flex flex-col sm:flex-row gap-4 justify-center"></div>""
-              to="/contact"""
-              className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"""
-              to="/contact";"
-              className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg";"
+          <div  className ="flex flex-col sm:flex-row gap-4 justify-center"></div>"
+            <>
+              to="/contact""
+              className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg""
             ></>
               Get Free Consultation
             </>
-              to="/pricing"""
-              className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"""
-              to="/pricing";"
-              className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105";"
+            <>
+              to="/pricing""
+              className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105""
             ></>
+
               View Pricing
             </>
           </div>
         </div>
       </section>
 
-    </>
-  ),
-
-
-    </>";"
-  ),";";"
-};";";";"

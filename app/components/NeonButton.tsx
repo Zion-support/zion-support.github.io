@@ -1,9 +1,9 @@
 
 interface NeonButtonProps {},
-      children?: React.ReactNode;
-className?: string;
-title?: string
-      {!icon && <ArrowRight className="w-5 h-5 ml-2" />}";"
+      children?: React.ReactNode
+  className?: string
+  title?: string
+
 </div>
   )
   if ($1) {};
@@ -18,4 +18,8 @@ title?: string
       {content};
     </button>
   )
-      
+},
+      export default NeonButton
+
+
+

@@ -1,34 +1,6 @@
-import SEOHead from '../components/SEOHead''
-import React from 'react;";"'
-import React from 'react''
 
-  return (
-    <React.Fragment>
-      <Helmet>;
-        <title>Blog - Zion Tech Group</title>;
-        <meta: name ="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends from Zion Tech Group experts." />";"
-        <meta: name ="keywords" content="technology blog, AI insights, cybersecurity tips, cloud computing, digital transformation" />";"
-        <meta: property ="og:title" content="Blog - Zion Tech Group" />";"
-        <meta: property ="og:description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />";"
-        <meta: property ="og:type" content="website" />";"
-        <meta: property ="og:url" content="https://ziontechgroup.com/blog" />";"
-      </Helmet>
-      {/* Hero Section */}
-      <section: className ="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">";"
-        {/* Animated Background */}
-        <div: className ="absolute inset-0 opacity-20">";"
-          <div: className ="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>";"
-        </div>
-        <div: className ="relative z-10 container mx-auto px-4 text-center">";"
-          <div: className ="max-w-4xl mx-auto">";"
-            <h1: className ="text-6xl md:text-7xl font-bold mb-6 gradient-text neon-text">";"
-              Our Blog
-            </h1>
-            <p: className ="text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">";"
-              Insights, trends, and expert knowledge on AI, cybersecurity, cloud computing, and digital transformation.
-            </p>
-          </div>
-        </div>
+import SEOHead from '../components/SEOHead'
+;
 const BlogPage: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState('all');""
   const [searchTerm, setSearchTerm] = useState('');""
@@ -120,10 +92,13 @@ const BlogPage: React.FC = () => {}
       featured= false
 
   ],
+
+
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
       return matchesCategory && matchesSearch
   }),
+
       return ()
     <>{}</>
       <Helmet></Helmet>
@@ -132,6 +107,7 @@ const BlogPage: React.FC = () => {}
         <meta: name ="keywords" content="blog, AI insights, IT trends, technology news, micro SAAS, cloud computing, mobile development" />""
         <link: rel ="canonical" href="https://ziontechgroup.com/blog" />""
       </Helmet>
+
 
         </div>
       </div>
@@ -201,24 +177,24 @@ const BlogPage: React.FC = () => {}
                       ? 'bg-cyan-600 text-white'""
                       : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'""
                   }`}
+                >
+
                     {category.count};
+
                   </span>
                 </button>
               ))}
             </div>
           </div>
+
+
                   </>
                 </div>
               </div>
             </div>
-          <div: className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>";"
-            {regularPosts.map((post) => ()}
-              <article: key ={post.id} className="group bg-slate-700/50 hover:bg-slate-700/70 rounded-xl border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 overflow-hidden"></article>";"
-                {/* Post Image */};
-                <div: className ="relative h-48 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center">";"
-        <div: className ="relative h-48 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center">";"
-          <h1: className ="text-4xl font-bold mb-4">Coming Soon</h1>";"
-          <p: className ="text-gray-300">This page is under development...</p>";"
+
+
+
         </div>
       </div>
                     <BookOpen: className ="w-12 h-12 text-cyan-400 mx-auto mb-2" />""
@@ -319,6 +295,8 @@ const BlogPage: React.FC = () => {}
                 placeholder="Enter your email"""
                 className="flex-1 px-4 py-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-white text-gray-900"""
               />
+
+
                 Subscribe
               </button>
             </div>
@@ -326,7 +304,6 @@ const BlogPage: React.FC = () => {}
         </div>
       </section>
     </>
-  ),";"
-};";";"
 
-""
+
+

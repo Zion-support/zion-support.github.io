@@ -1,4 +1,4 @@
-import { execSync } from 'child_process''
+import { execSync } from 'child_process';
 /**
  * Process all open PRs systematically
  * This script will merge all open PRs into main branch
