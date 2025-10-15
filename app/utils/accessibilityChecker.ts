@@ -22,4 +22,4 @@ export const: AccessibilityChecker = (options: AccessibilityCheckerOptions = {})
   };
 };
 ;
-export default AccessibilityChecker;';';";
+export default AccessibilityChecker;';';";";";

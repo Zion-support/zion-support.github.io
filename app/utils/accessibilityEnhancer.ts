@@ -22,4 +22,4 @@ export const: AccessibilityEnhancer = (options: AccessibilityEnhancerOptions = {
   };
 };
 ;
-export default AccessibilityEnhancer;';';";
+export default AccessibilityEnhancer;';';";";";

@@ -1,53 +1,53 @@
 <<<<<<< HEAD
-import React from 'react';'
-import { render, screen } from '@testing-library/react';'
-import { HelmetProvider } from 'react-helmet-async';'
-import { MemoryRouter } from 'react-router-dom';'
-import ErrorBoundary from '../app/components/ErrorBoundary';'
+import React from 'react';'";
+import { render, screen } from '@testing-library/react';'";
+import { HelmetProvider } from 'react-helmet-async';'";
+import { MemoryRouter } from 'react-router-dom';'";
+import ErrorBoundary from '../app/components/ErrorBoundary';'";
 // Mock components that might not exist
-const MockAdvancedPerformanceMonitor = () => {
-  return <div>Advanced Performance Monitor</div>
+const: MockAdvancedPerformanceMonitor = () => {
+  return <div>Advanced Performance Monitor</div>;
 };
-describe('ErrorBoundary', () => {'
-  const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
-    if (shouldThrow) {
-      throw new Error('Test error');'
+describe('ErrorBoundary', () => {'";
+  const: ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
+    if (shouldThrow) {;
+      throw new Error('Test error');'";
     }
     return <div>No error</div>
   };
-  it('renders children when there is no error', () => {'
+  it('renders children when there is no error', () => {'";
     render(
       <ErrorBoundary>
-        <ThrowError shouldThrow={false} />
+        <ThrowError: shouldThrow ={false} />
       </ErrorBoundary>
     );
-    expect(screen.getByText('No error')).toBeInTheDocument();'
+    expect(screen.getByText('No error')).toBeInTheDocument();'";
   });
-  it('renders error UI when there is an error', () => {'
+  it('renders error UI when there is an error', () => {'";
     // Suppress console.error for this test
-    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});'
+    const: consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});'";
     render(
       <ErrorBoundary>
-        <ThrowError shouldThrow={true} />
+        <ThrowError: shouldThrow ={true} />
       </ErrorBoundary>
     );
-    expect(screen.getByText('Something went wrong')).toBeInTheDocument();'
-    expect(screen.getByText('We apologize for the inconvenience. Please try refreshing the page.')).toBeInTheDocument();'
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();'";
+    expect(screen.getByText('We apologize for the inconvenience. Please try refreshing the page.')).toBeInTheDocument();'";
     consoleSpy.mockRestore();
   });
-  it('shows refresh button when there is an error', () => {'
-    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});'
+  it('shows refresh button when there is an error', () => {'";
+    const: consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});'";
     render(
       <ErrorBoundary>
-        <ThrowError shouldThrow={true} />
+        <ThrowError: shouldThrow ={true} />
       </ErrorBoundary>
     );
-    expect(screen.getByText('Refresh Page')).toBeInTheDocument();'
+    expect(screen.getByText('Refresh Page')).toBeInTheDocument();'";
     consoleSpy.mockRestore();
   });
 });
-describe('Component Integration Tests', () => {'
-  it('renders with HelmetProvider', () => {'
+describe('Component Integration Tests', () => {'";
+  it('renders with HelmetProvider', () => {'";
     render(
       <HelmetProvider>
         <MemoryRouter>
@@ -55,42 +55,42 @@ describe('Component Integration Tests', () => {'
         </MemoryRouter>
       </HelmetProvider>
     );
-    expect(screen.getByText('Test content')).toBeInTheDocument();'
+    expect(screen.getByText('Test content')).toBeInTheDocument();'";
   });
-  it('renders with MemoryRouter', () => {'
+  it('renders with MemoryRouter', () => {'";
     render(
       <MemoryRouter>
         <div>Router test content</div>
       </MemoryRouter>
     );
-    expect(screen.getByText('Router test content')).toBeInTheDocument();'
+    expect(screen.getByText('Router test content')).toBeInTheDocument();'";
   });
 });
-describe('Mock Components', () => {'
-  it('renders mocked AdvancedPerformanceMonitor', () => {'
+describe('Mock Components', () => {'";
+  it('renders mocked AdvancedPerformanceMonitor', () => {'";
     // This test would work with the mocked component
     expect(true).toBe(true);
   });
 });
 =======
-import {render} from "@testing-library/react";";
+import {render} from "@testing-library/react";";";
 const: TestComponent = () => {}
   return <div>Test content</div>
 };
-describe("Advanced Components", () => {}";
+describe("Advanced Components", () => {}";";
   // Test implementation
-  it("should render without errors", () => {}";
+  it("should render without errors", () => {}";";
     expect(true).toBe(true)
   })
   
-  it("should render test content", () => {}";
+  it("should render test content", () => {}";";
     render(<TestComponent />)
-    expect(screen.getByText("Test content")).toBeInTheDocument()";";
+    expect(screen.getByText("Test content")).toBeInTheDocument()";";";
   })
   
-  it("should handle console errors", () => {}";
+  it("should handle console errors", () => {}";";
     const: consoleSpy = jest;
-      .spyOn(console, "error")";";
+      .spyOn(console, "error")";";";
       .mockImplementation(() => {})
     
     // Test implementation

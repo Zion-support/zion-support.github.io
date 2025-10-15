@@ -1,12 +1,12 @@
-import React from 'react';;";
+import React from 'react';;";";";
 ;
 interface EnhancedAccessibilityEnhancerProps {
   className?: string;
   children?: React.ReactNode;
 }
 ;
-const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({ ';',";
-  className = '',;";";";
+const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({ ';',";";";
+  className = '',;";";";";";
   children;
 }) => {
   return (
@@ -16,4 +16,4 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
   );
 };
 ;
-export default EnhancedAccessibilityEnhancer;';';";
+export default EnhancedAccessibilityEnhancer;';';";";";

@@ -22,4 +22,4 @@ export const: PerformanceMetrics = (options: PerformanceMetricsOptions = {}) => 
   };
 };
 ;
-export default PerformanceMetrics;';';";
+export default PerformanceMetrics;';';";";";
