@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Heart, Zap, Shield, Globe, Brain, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, Download, Play, Pause, RefreshCw, Settings, Eye, Filter, Target, Users, Award, TrendingUp, Cpu, Database, BarChart3, Activity, Clock, FileText, Send, ThumbsUp, ThumbsDown, AlertCircle, CheckSquare, XCircle, PieChart, LineChart, TrendingDown, Calculator, CreditCard, Banknote, Wallet, Receipt, ChartBar, Percent, Coins, Building2, Briefcase, PiggyBank, HandCoins, Stethoscope, Pill, Microscope, UserCheck, Clipboard, Thermometer, Bandage, Syringe, Hospital, Ambulance, Shield as ShieldIcon, Lock, AlertTriangle } from 'lucide-react';
+import { Brain, Stethoscope, Pill, Shield, BarChart3, Zap, Microscope, Ambulance, Heart, UserCheck, Star, Phone, Play, CheckCircle, ArrowRight, Mail } from 'lucide-react';
 
 const AiHealthcareSolutionsProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -105,7 +105,7 @@ const AiHealthcareSolutionsProPage: React.FC = () => {
       name: "Dr. Sarah Johnson",
       company: "Regional Medical Center",
       role: "Chief Medical Officer",
-      content: "AI Healthcare Solutions Pro has revolutionized our diagnostic accuracy. We've seen a 40% improvement in early disease detection and reduced misdiagnosis by 60%.",
+      content: "AI Healthcare Solutions Pro has revolutionized our diagnostic accuracy. We&apos;ve seen a 40% improvement in early disease detection and reduced misdiagnosis by 60%.",
       rating: 5
     },
     {
@@ -352,7 +352,7 @@ const AiHealthcareSolutionsProPage: React.FC = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the plan that fits your healthcare organization's needs and budget.
+                  Choose the plan that fits your healthcare organization&apos;s needs and budget.
                 </p>
               </div>
               

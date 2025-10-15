@@ -10,7 +10,6 @@ import {
   Globe, 
   Brain, 
   CheckCircle, 
-  ArrowRight, 
   Star,
   Phone,
   Mail,
@@ -181,7 +180,7 @@ const AiHealthcarePlatformPage: React.FC = () => {
       name: "Dr. Sarah Williams",
       company: "Metro General Hospital",
       role: "Chief Medical Officer",
-      content: "The AI diagnosis assistant has improved our diagnostic accuracy by 30%. It's like having a second opinion from the world's best specialists.",
+      content: "The AI diagnosis assistant has improved our diagnostic accuracy by 30%. It&apos;s like having a second opinion from the world&apos;s best specialists.",
       rating: 5
     },
     {
@@ -195,7 +194,7 @@ const AiHealthcarePlatformPage: React.FC = () => {
       name: "Lisa Rodriguez",
       company: "Regional Medical Center",
       role: "IT Director",
-      content: "The platform's analytics have given us insights into patient care patterns that we never had before. Our operational efficiency has improved by 40%.",
+      content: "The platform&apos;s analytics have given us insights into patient care patterns that we never had before. Our operational efficiency has improved by 40%.",
       rating: 5
     }
   ];
@@ -395,7 +394,7 @@ const AiHealthcarePlatformPage: React.FC = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the plan that fits your healthcare facility's needs and budget.
+                  Choose the plan that fits your healthcare facility&apos;s needs and budget.
                 </p>
               </div>
               
@@ -475,7 +474,7 @@ const AiHealthcarePlatformPage: React.FC = () => {
                       ))}
                     </div>
                     <p className="text-gray-300 mb-6 leading-relaxed">
-                      "{testimonial.content}"
+                      &quot;{testimonial.content}&quot;
                     </p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>

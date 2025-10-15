@@ -1,11 +1,7 @@
-import { 
-  ArrowRight
-} from 'lucide-react';
-import { useState, useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Mic, 
-  Zap, 
   Shield, 
   Globe, 
   Brain, 

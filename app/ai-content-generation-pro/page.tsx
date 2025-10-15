@@ -172,7 +172,7 @@ const AiContentGenerationProPage: React.FC = () => {
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Transform your content strategy with AI-powered writing that's faster, smarter, and more effective. 
+                  Transform your content strategy with AI-powered writing that&apos;s faster, smarter, and more effective. 
                   Create high-quality, SEO-optimized content at scale.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
