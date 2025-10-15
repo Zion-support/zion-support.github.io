@@ -57,13 +57,9 @@ async function processDistFiles() {
     
     console.log(`Found ${jsFiles.length} JavaScript files to process`);
     
-    let processedCount = 0;
-    
     for (const file of jsFiles) {
       const filePath = path.join(distPath, file);
-      if (removeConsoleLogs(filePath)) {
-        processedCount++;
-      }
+      removeConsoleLogs(filePath);
     }
     
     console.log(`Console log removal completed!`);
