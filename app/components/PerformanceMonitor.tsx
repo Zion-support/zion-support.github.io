@@ -42,16 +42,16 @@ const PerformanceMonitor: React.FC = () => {
     return 'poor';
   }, [thresholds]);
 
-  const logPerformanceIssue = useCallback((metric: string, value: number, rating: string) => {
+  const logPerformanceIssue = useCallback((_metric: string, _value: number, rating: string) => {
     if (rating !== 'good') {
       // In development, log to console
       if (process.env.NODE_ENV === 'development') {
-        console.warn(`Performance ${rating}: ${metric} = ${value}ms`);
+        // console.warn(`Performance ${rating}: ${_metric} = ${_value}ms`);
       }
       
       // In production, send to monitoring service
       if (process.env.NODE_ENV === 'production') {
-        // analyticsService.track('performance_issue', { metric, value, rating });
+        // analyticsService.track('performance_issue', { metric: _metric, value: _value, rating });
       }
     }
   }, []);
@@ -123,9 +123,10 @@ const PerformanceMonitor: React.FC = () => {
         setMetrics(prev => ({ ...prev, memoryUsage }));
         
         if (memoryUsage > 0.8) {
-          if (process.env.NODE_ENV === 'development') {
-            console.warn('High memory usage detected:', memoryUsage);
-          }
+          // High memory usage detected - could be sent to monitoring service
+          // if (process.env.NODE_ENV === 'development') {
+          //   console.warn('High memory usage detected:', memoryUsage);
+          // }
         }
       }
     };
@@ -179,9 +180,9 @@ const PerformanceMonitor: React.FC = () => {
   // Performance debugging in development
   useEffect(() => {
     if (process.env.NODE_ENV === 'development' && isMonitoring) {
-      console.group('Performance Metrics');
-      console.table(metrics);
-      console.groupEnd();
+      // console.group('Performance Metrics');
+      // console.table(metrics);
+      // console.groupEnd();
     }
   }, [metrics, isMonitoring]);
 

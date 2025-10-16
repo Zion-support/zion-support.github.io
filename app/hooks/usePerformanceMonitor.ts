@@ -68,13 +68,13 @@ export const usePerformanceMonitor = () => {
     const metrics = measurePerformance();
     if (metrics) {
       if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metrics:', {
-          'Load Time': `${metrics.loadTime.toFixed(2)}ms`,
-          'First Contentful Paint': `${metrics.firstContentfulPaint.toFixed(2)}ms`,
-          'Largest Contentful Paint': `${metrics.largestContentfulPaint.toFixed(2)}ms`,
-          'First Input Delay': `${metrics.firstInputDelay.toFixed(2)}ms`,
-          'Cumulative Layout Shift': metrics.cumulativeLayoutShift.toFixed(4)
-        });
+        // console.log('Performance Metrics:', {
+        //   'Load Time': `${metrics.loadTime.toFixed(2)}ms`,
+        //   'First Contentful Paint': `${metrics.firstContentfulPaint.toFixed(2)}ms`,
+        //   'Largest Contentful Paint': `${metrics.largestContentfulPaint.toFixed(2)}ms`,
+        //   'First Input Delay': `${metrics.firstInputDelay.toFixed(2)}ms`,
+        //   'Cumulative Layout Shift': metrics.cumulativeLayoutShift.toFixed(4)
+        // });
       }
     }
   }, [measurePerformance]);
