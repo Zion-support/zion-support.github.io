@@ -1,0 +1,46 @@
+{
+  "name": "zion-website",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --max-warnings 50",
+    "type-check": "tsc --noEmit --skipLibCheck",
+    "clean": "rm -rf .next out dist node_modules/.cache",
+    "prebuild": "npm run clean && npm run type-check && npm run lint",
+    "postbuild": "npm run generate:sitemap && npm run optimize:performance-enhanced && node scripts/remove-console-logs.cjs && echo 'Build completed successfully'",
+    "generate:sitemap": "node scripts/generate-sitemap.cjs",
+    "optimize:performance-enhanced": "node scripts/advanced-performance-optimizer.cjs",
+    "postinstall": "echo 'Dependencies installed successfully'"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "clsx": "^2.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.0",
+    "react-router-dom": "^6.8.0",
+    "tailwind-merge": "^2.0.0",
+    "web-vitals": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/node": "^20.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^7.1.9",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "eslint-plugin-react-refresh": "^0.4.0",
+    "tailwindcss": "^3.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "autoprefixer": "^10.0.0",
+    "postcss": "^8.0.0"
+  }
+}
