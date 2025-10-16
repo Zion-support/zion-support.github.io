@@ -70,6 +70,9 @@ const LoadingFallback = () => (
   </div>
 )
 
+// Admin page for data cleanup management
+const AdminPage = lazy(() => import('./app/pages/AdminPage'));
+
 export default function App() {
   useEffect(() => {
     // Preload critical resources
@@ -88,6 +91,7 @@ export default function App() {
   return (
     <GlobalErrorBoundary>
       <HelmetProvider>
+<<<<<<< HEAD
         <Router>
           <div className="min-h-screen bg-gray-50">
             <Navigation />
@@ -104,6 +108,7 @@ export default function App() {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/admin" element={<AdminPage />} />
                   
                   {/* Service Pages */}
                   <Route path="/ai-services" element={<AIServicesPage />} />
