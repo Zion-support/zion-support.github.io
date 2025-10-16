@@ -125,14 +125,19 @@ const ServicesPage: React.FC = () => {
             <div className="flex flex-col lg:flex-row gap-6">
               {/* Search */}
               <div className="flex-1">
+                <label htmlFor="service-search" className="sr-only">
+                  Search services
+                </label>
                 <div className="relative">
-                  <MagnifyingGlassIcon className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                  <MagnifyingGlassIcon className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" aria-hidden="true" />
                   <input
+                    id="service-search"
                     type="text"
                     placeholder="Search services..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
+                    aria-label="Search services"
                   />
                 </div>
               </div>
