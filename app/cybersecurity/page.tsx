@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
-import { ShieldCheckIcon, LockClosedIcon, EyeIcon, ExclamationTriangleIcon, CheckCircleIcon, ClockIcon, StarIcon, ArrowRightIcon, RocketLaunchIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline';
+import { ShieldCheckIcon, LockClosedIcon, EyeIcon, ExclamationTriangleIcon, CheckCircleIcon, ClockIcon, StarIcon, RocketLaunchIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline';
 
 const CybersecurityPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
