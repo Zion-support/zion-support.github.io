@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
-import { CpuChipIcon, CloudIcon, ShieldCheckIcon, CircleStackIcon, CogIcon, CurrencyDollarIcon, CheckCircleIcon, StarIcon, ClockIcon, RocketLaunchIcon, ArrowRightIcon, SignalIcon, ChartBarIcon } from '@heroicons/react/24/outline';
+import { CpuChipIcon, CloudIcon, ShieldCheckIcon, CircleStackIcon, SignalIcon, CogIcon, ChartBarIcon, CurrencyDollarIcon, CheckCircleIcon, StarIcon, ClockIcon, RocketLaunchIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 
 const SolutionsPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

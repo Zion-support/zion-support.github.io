@@ -4,9 +4,9 @@ import {
   CheckCircleIcon, 
   ClockIcon, 
   UserGroupIcon, 
+  ChartBarIcon,
   CpuChipIcon,
-  CalendarIcon,
-  ChartBarIcon
+  CalendarIcon
 } from '@heroicons/react/24/outline';
 
 const TaskManagerProPage: React.FC = () => {
