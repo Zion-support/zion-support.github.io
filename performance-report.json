@@ -1,23 +1,17 @@
 {
-  "timestamp": "2025-10-15T13:58:08.036Z",
-  "optimizations": {
-    "criticalCSS": true,
-    "imageOptimization": true,
-    "bundleOptimization": true,
-    "codeSplitting": true
+  "timestamp": "2025-10-15T19:00:12.113Z",
+  "bundleAnalysis": {
+    "totalFiles": 136,
+    "totalSizeKB": 1323,
+    "totalSizeMB": 1.29
   },
+  "performanceIssues": [],
   "recommendations": [
-    "Implement lazy loading for images",
-    "Use WebP format for better compression",
-    "Enable gzip compression on server",
+    "Consider implementing code splitting for large components",
+    "Use lazy loading for non-critical components",
+    "Optimize images and use WebP format",
     "Implement service worker for caching",
-    "Use CDN for static assets",
-    "Optimize font loading with font-display: swap"
-  ],
-  "metrics": {
-    "bundleSize": "Optimized",
-    "imageCompression": "Enabled",
-    "criticalCSS": "Generated",
-    "codeSplitting": "Active"
-  }
+    "Use React.memo for expensive components",
+    "Consider using a CDN for static assets"
+  ]
 }

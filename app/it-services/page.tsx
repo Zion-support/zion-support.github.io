@@ -1,30 +1,37 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { servicesData } from '../data/servicesData';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { servicesData } from "../data/servicesData";
 
 const ITServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, and digital transformation solutions." />
-        <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, data analytics, mobile development, web development" />
+        <meta
+          name="description"
+          content="Comprehensive IT services including cloud infrastructure, cybersecurity, and digital transformation solutions."
+        />
+        <meta
+          name="keywords"
+          content="IT services, cloud infrastructure, cybersecurity, data analytics, mobile development, web development"
+        />
       </Helmet>
-      
+
       <div className="min-h-screen relative overflow-hidden">
         {/* Hero Section */}
         <section className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
           <div className="cyber-grid absolute inset-0 opacity-20"></div>
           <div className="particles absolute inset-0"></div>
-          
+
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="holographic">IT Services</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Comprehensive <span className="text-pink-400 font-semibold">IT solutions</span> to power your 
-              digital transformation and business growth
+              Comprehensive{" "}
+              <span className="text-pink-400 font-semibold">IT solutions</span>{" "}
+              to power your digital transformation and business growth
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <button className="cyber-button text-lg px-8 py-4">
@@ -45,7 +52,8 @@ const ITServicesPage: React.FC = () => {
                 Our <span className="gradient-text">IT Solutions</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                End-to-end IT services designed to modernize and secure your business
+                End-to-end IT services designed to modernize and secure your
+                business
               </p>
             </div>
 
@@ -55,14 +63,23 @@ const ITServicesPage: React.FC = () => {
                   <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                  
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-pink-400 mb-3">Key Features</h4>
+                    <h4 className="text-lg font-semibold text-pink-400 mb-3">
+                      Key Features
+                    </h4>
                     <ul className="space-y-2">
                       {service.features.slice(0, 4).map((feature, index) => (
-                        <li key={index} className="text-gray-300 text-sm flex items-center">
+                        <li
+                          key={index}
+                          className="text-gray-300 text-sm flex items-center"
+                        >
                           <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
                           {feature}
                         </li>
@@ -71,10 +88,15 @@ const ITServicesPage: React.FC = () => {
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">Benefits</h4>
+                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">
+                      Benefits
+                    </h4>
                     <ul className="space-y-2">
                       {service.benefits.slice(0, 3).map((benefit, index) => (
-                        <li key={index} className="text-gray-300 text-sm flex items-center">
+                        <li
+                          key={index}
+                          className="text-gray-300 text-sm flex items-center"
+                        >
                           <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                           {benefit}
                         </li>
@@ -84,20 +106,20 @@ const ITServicesPage: React.FC = () => {
 
                   <div className="flex justify-between items-center mb-6">
                     <div>
-                      <span className="text-2xl font-bold text-pink-400">${service.pricing.basic}</span>
+                      <span className="text-2xl font-bold text-pink-400">
+                        ${service.pricing.basic}
+                      </span>
                       <span className="text-gray-400 text-sm ml-1">/month</span>
                     </div>
-                    <a 
-                      href={service.contactInfo.website} 
+                    <a
+                      href={service.contactInfo.website}
                       className="text-pink-400 hover:text-pink-300 text-sm font-semibold"
                     >
                       Learn More →
                     </a>
                   </div>
 
-                  <button className="w-full cyber-button">
-                    Get Started
-                  </button>
+                  <button className="w-full cyber-button">Get Started</button>
                 </div>
               ))}
             </div>
@@ -129,9 +151,12 @@ const ITServicesPage: React.FC = () => {
                 { name: "TypeScript", icon: "📘" },
                 { name: "MongoDB", icon: "🍃" },
                 { name: "PostgreSQL", icon: "🐘" },
-                { name: "Redis", icon: "🔴" }
+                { name: "Redis", icon: "🔴" },
               ].map((tech, index) => (
-                <div key={index} className="glass-dark rounded-lg p-6 text-center hover-lift">
+                <div
+                  key={index}
+                  className="glass-dark rounded-lg p-6 text-center hover-lift"
+                >
                   <div className="text-4xl mb-3">{tech.icon}</div>
                   <h3 className="text-white font-semibold">{tech.name}</h3>
                 </div>
@@ -154,35 +179,46 @@ const ITServicesPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { 
-                  step: "01", 
-                  title: "Discovery & Planning", 
-                  description: "We analyze your requirements and create a detailed project roadmap",
-                  icon: "🔍"
+                {
+                  step: "01",
+                  title: "Discovery & Planning",
+                  description:
+                    "We analyze your requirements and create a detailed project roadmap",
+                  icon: "🔍",
                 },
-                { 
-                  step: "02", 
-                  title: "Design & Architecture", 
-                  description: "Our team designs the solution architecture and user experience",
-                  icon: "🎨"
+                {
+                  step: "02",
+                  title: "Design & Architecture",
+                  description:
+                    "Our team designs the solution architecture and user experience",
+                  icon: "🎨",
                 },
-                { 
-                  step: "03", 
-                  title: "Development & Testing", 
-                  description: "We build and thoroughly test your solution using agile methodologies",
-                  icon: "⚡"
+                {
+                  step: "03",
+                  title: "Development & Testing",
+                  description:
+                    "We build and thoroughly test your solution using agile methodologies",
+                  icon: "⚡",
                 },
-                { 
-                  step: "04", 
-                  title: "Deployment & Support", 
-                  description: "We deploy your solution and provide ongoing maintenance and support",
-                  icon: "🚀"
-                }
+                {
+                  step: "04",
+                  title: "Deployment & Support",
+                  description:
+                    "We deploy your solution and provide ongoing maintenance and support",
+                  icon: "🚀",
+                },
               ].map((process, index) => (
-                <div key={index} className="glass-dark rounded-lg p-8 text-center hover-lift">
+                <div
+                  key={index}
+                  className="glass-dark rounded-lg p-8 text-center hover-lift"
+                >
                   <div className="text-6xl mb-4">{process.icon}</div>
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{process.step}</div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{process.title}</h3>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">
+                    {process.step}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">
+                    {process.title}
+                  </h3>
                   <p className="text-gray-300">{process.description}</p>
                 </div>
               ))}

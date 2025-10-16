@@ -1,32 +1,25 @@
-import React from 'react';
+import React from "react";
 
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-  text?: string;
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  className = '', 
-  text 
-}) => {
-  const sizeClasses = {
-    sm: 'h-4 w-4',
-    md: 'h-8 w-8',
-    lg: 'h-12 w-12',
-  };
-
+const LoadingSpinner: React.FC = () => {
   return (
-    <div className={`flex items-center justify-center ${className}`}>
-      <div className="flex flex-col items-center space-y-2">
+    <div
+      className="flex items-center justify-center min-h-screen"
+      role="status"
+      aria-live="polite"
+    >
+      <div className="relative">
         <div
-          className={`animate-spin rounded-full border-b-2 border-blue-600 ${sizeClasses[size]}`}
-        />
-        {text && (
-          <p className="text-sm text-gray-600 animate-pulse">{text}</p>
-        )}
+          className="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"
+          aria-hidden="true"
+        ></div>
+        <div
+          className="absolute inset-0 flex items-center justify-center"
+          aria-hidden="true"
+        >
+          <div className="w-8 h-8 border-2 border-transparent border-t-purple-600 rounded-full animate-spin"></div>
+        </div>
       </div>
+      <span className="sr-only">Loading content, please wait...</span>
     </div>
   );
 };

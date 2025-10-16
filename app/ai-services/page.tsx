@@ -1,29 +1,38 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { servicesData } from '../data/servicesData';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { servicesData } from "../data/servicesData";
 
 const AIServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, and custom AI solutions." />
-        <meta name="keywords" content="AI services, machine learning, natural language processing, computer vision, AI consulting" />
+        <meta
+          name="description"
+          content="Comprehensive AI services including machine learning, natural language processing, and custom AI solutions."
+        />
+        <meta
+          name="keywords"
+          content="AI services, machine learning, natural language processing, computer vision, AI consulting"
+        />
       </Helmet>
-      
+
       <div className="min-h-screen relative overflow-hidden">
         {/* Hero Section */}
         <section className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
           <div className="cyber-grid absolute inset-0 opacity-20"></div>
           <div className="particles absolute inset-0"></div>
-          
+
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="holographic">AI Services</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your business with cutting-edge <span className="text-cyan-400 font-semibold">artificial intelligence solutions</span> 
+              Transform your business with cutting-edge{" "}
+              <span className="text-cyan-400 font-semibold">
+                artificial intelligence solutions
+              </span>
               designed for the modern digital world
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -55,14 +64,23 @@ const AIServicesPage: React.FC = () => {
                   <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                  
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features</h4>
+                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">
+                      Key Features
+                    </h4>
                     <ul className="space-y-2">
                       {service.features.slice(0, 4).map((feature, index) => (
-                        <li key={index} className="text-gray-300 text-sm flex items-center">
+                        <li
+                          key={index}
+                          className="text-gray-300 text-sm flex items-center"
+                        >
                           <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                           {feature}
                         </li>
@@ -71,10 +89,15 @@ const AIServicesPage: React.FC = () => {
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-purple-400 mb-3">Benefits</h4>
+                    <h4 className="text-lg font-semibold text-purple-400 mb-3">
+                      Benefits
+                    </h4>
                     <ul className="space-y-2">
                       {service.benefits.slice(0, 3).map((benefit, index) => (
-                        <li key={index} className="text-gray-300 text-sm flex items-center">
+                        <li
+                          key={index}
+                          className="text-gray-300 text-sm flex items-center"
+                        >
                           <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                           {benefit}
                         </li>
@@ -84,20 +107,20 @@ const AIServicesPage: React.FC = () => {
 
                   <div className="flex justify-between items-center mb-6">
                     <div>
-                      <span className="text-2xl font-bold text-cyan-400">${service.pricing.basic}</span>
+                      <span className="text-2xl font-bold text-cyan-400">
+                        ${service.pricing.basic}
+                      </span>
                       <span className="text-gray-400 text-sm ml-1">/month</span>
                     </div>
-                    <a 
-                      href={service.contactInfo.website} 
+                    <a
+                      href={service.contactInfo.website}
                       className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold"
                     >
                       Learn More →
                     </a>
                   </div>
 
-                  <button className="w-full cyber-button">
-                    Get Started
-                  </button>
+                  <button className="w-full cyber-button">Get Started</button>
                 </div>
               ))}
             </div>
@@ -118,14 +141,35 @@ const AIServicesPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { title: "Customer Service", description: "AI-powered chatbots and support automation", icon: "🤖" },
-                { title: "Sales Optimization", description: "Predictive analytics and lead scoring", icon: "📈" },
-                { title: "Content Creation", description: "Automated content generation and optimization", icon: "✍️" },
-                { title: "Process Automation", description: "Intelligent workflow automation", icon: "⚡" }
+                {
+                  title: "Customer Service",
+                  description: "AI-powered chatbots and support automation",
+                  icon: "🤖",
+                },
+                {
+                  title: "Sales Optimization",
+                  description: "Predictive analytics and lead scoring",
+                  icon: "📈",
+                },
+                {
+                  title: "Content Creation",
+                  description: "Automated content generation and optimization",
+                  icon: "✍️",
+                },
+                {
+                  title: "Process Automation",
+                  description: "Intelligent workflow automation",
+                  icon: "⚡",
+                },
               ].map((useCase, index) => (
-                <div key={index} className="glass-dark rounded-lg p-6 text-center hover-lift">
+                <div
+                  key={index}
+                  className="glass-dark rounded-lg p-6 text-center hover-lift"
+                >
                   <div className="text-4xl mb-4">{useCase.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {useCase.title}
+                  </h3>
                   <p className="text-gray-300">{useCase.description}</p>
                 </div>
               ))}

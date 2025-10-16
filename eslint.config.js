@@ -9,6 +9,7 @@ export default tseslint.config(
     ignores: [
       "dist",
       ".next",
+      "coverage/**",
       "backup-problematic/**",
       "corrupted-src-backup/**",
       "app-broken/**",
@@ -22,33 +23,35 @@ export default tseslint.config(
       "resolve-all-conflicts.js",
       "**/app/**/*.tsx",
       "**/api/**/*.js",
-      "**/__tests__/**/*.tsx"
-    ]
+      "**/__tests__/**/*.tsx",
+    ],
   },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ['**/*.{ts,tsx}'],
+    files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
     },
     plugins: {
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": [
-        "off",
+      "react-refresh/only-export-components": ["off"],
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        { argsIgnorePattern: "^_" },
       ],
-      "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
-      "@typescript-eslint/no-explicit-any": "off"
+      "@typescript-eslint/no-explicit-any": "off",
     },
   },
   {
     ignores: [
-      "dist", 
-      "node_modules", 
+      "dist",
+      "node_modules",
+      "coverage/**",
       "*.config.js",
       "backup-*/**",
       "backup-problematic/**",
@@ -291,7 +294,7 @@ export default tseslint.config(
       "fix_remaining_pages.cjs",
       "scripts/**",
       "src/**",
-      "backup/**"
-    ]
-  }
+      "backup/**",
+    ],
+  },
 );
