@@ -5,8 +5,6 @@ import {
   ClockIcon, 
   UserGroupIcon, 
   ChartBarIcon,
-  StarIcon,
-  SparklesIcon,
   CpuChipIcon,
   CalendarIcon
 } from '@heroicons/react/24/outline';

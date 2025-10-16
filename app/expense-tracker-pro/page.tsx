@@ -1,15 +1,6 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-import { 
-  ChartBarIcon, 
-  CheckCircleIcon,
-  StarIcon,
-  ShieldCheckIcon,
-  SparklesIcon,
-  CpuChipIcon,
-  ReceiptRefundIcon,
-  BanknotesIcon
-} from '@heroicons/react/24/outline';
+// No icon imports needed for this component
 
 const ExpenseTrackerProPage: React.FC = () => {
   return (
