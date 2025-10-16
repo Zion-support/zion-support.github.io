@@ -1,5 +1,5 @@
-import React from "react"
-import { Helmet } from "react-helmet-async"
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function AdvancedSEOOptimizer() {
   return (
@@ -14,5 +14,5 @@ export default function AdvancedSEOOptimizer() {
       <h1>Advanced SEO Optimizer</h1>
       <p>This component is under development.</p>
     </div>
-  )
+  );
 }

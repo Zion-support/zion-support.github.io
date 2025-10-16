@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 
 interface SidebarNavigationProps {
   isOpen: boolean;
@@ -7,14 +6,17 @@ interface SidebarNavigationProps {
 }
 
 const navigationItems = [
-  { name: 'Home', href: '/', icon: User },
-  { name: 'Profile', href: '/profile', icon: User },
-  { name: 'Settings', href: '/settings', icon: User },
-  { name: 'Help', href: '/help', icon: User },
-  { name: 'About', href: '/about', icon: User }
+  { name: "Home", href: "/", icon: User },
+  { name: "Profile", href: "/profile", icon: User },
+  { name: "Settings", href: "/settings", icon: User },
+  { name: "Help", href: "/help", icon: User },
+  { name: "About", href: "/about", icon: User },
 ];
 
-const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
+const SidebarNavigation: React.FC<SidebarNavigationProps> = ({
+  isOpen,
+  onClose,
+}) => {
   return (
     <>
       {/* Overlay */}
@@ -28,7 +30,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
       {/* Sidebar */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
+          isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="flex items-center justify-between p-4 border-b">

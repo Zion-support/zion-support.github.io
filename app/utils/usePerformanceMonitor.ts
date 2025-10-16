@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -14,11 +14,13 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
 
   useEffect(() => {
     const startTime = performance.now();
-    
+
     const measurePerformance = () => {
       const loadTime = performance.now() - startTime;
-      const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize;
-      
+      const memoryUsage = (
+        performance as Performance & { memory?: { usedJSHeapSize: number } }
+      ).memory?.usedJSHeapSize;
+
       setMetrics({
         loadTime,
         renderTime: performance.now() - startTime,
@@ -28,7 +30,7 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
 
     // Measure after component mount
     const timeoutId = setTimeout(measurePerformance, 100);
-    
+
     return () => clearTimeout(timeoutId);
   }, []);
 

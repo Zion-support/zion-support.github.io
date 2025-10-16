@@ -4,19 +4,18 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: [
-      'images.unsplash.com',
-      'via.placeholder.com',
-      'ziontechgroup.com'
+      "images.unsplash.com",
+      "via.placeholder.com",
+      "ziontechgroup.com",
     ],
-    formats: ['image/webp', 'image/avif']
+    formats: ["image/webp", "image/avif"],
   },
   experimental: {
-    optimizeCss: true
+    optimizeCss: true,
   },
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production'
-  }
+    removeConsole: process.env.NODE_ENV === "production",
+  },
 };
 
 module.exports = nextConfig;
-

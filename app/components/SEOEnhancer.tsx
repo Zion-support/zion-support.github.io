@@ -21,7 +21,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   url = "https://ziontechgroup.com",
   type = "website",
   structuredData,
-  children
+  children,
 }) => {
   useEffect(() => {
     // Add structured data to the page
@@ -30,7 +30,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       script.type = "application/ld+json";
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
-      
+
       return () => {
         if (document.head.contains(script)) {
           document.head.removeChild(script);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const AboutPage: React.FC = () => {
   return (
@@ -6,7 +6,9 @@ const AboutPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">About Us</h1>
-          <p className="text-gray-300 text-xl mb-8">Learn more about Zion Tech Group</p>
+          <p className="text-gray-300 text-xl mb-8">
+            Learn more about Zion Tech Group
+          </p>
         </div>
       </div>
     </div>

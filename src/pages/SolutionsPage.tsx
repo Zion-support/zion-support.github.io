@@ -1,17 +1,22 @@
-import React from "react"
-import { Helmet } from "react-helmet-async"
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const SolutionsPage: React.FC = () => {
   return (
     <div>
       <Helmet>
         <title>Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI and IT solutions by Zion Tech Group." />
+        <meta
+          name="description"
+          content="Comprehensive AI and IT solutions by Zion Tech Group."
+        />
       </Helmet>
       <div className="min-h-screen bg-gray-900 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h1 className="text-4xl font-bold text-center mb-8">Our Solutions</h1>
+            <h1 className="text-4xl font-bold text-center mb-8">
+              Our Solutions
+            </h1>
             <p className="text-xl text-gray-300 text-center mb-12">
               Comprehensive AI and IT solutions tailored to your business needs.
             </p>
@@ -23,7 +28,8 @@ const SolutionsPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold mb-4">AI Solutions</h3>
                   <p className="text-gray-300 mb-4">
-                    Advanced artificial intelligence solutions for automation and optimization.
+                    Advanced artificial intelligence solutions for automation
+                    and optimization.
                   </p>
                   <ul className="text-sm text-gray-400 space-y-1">
                     <li>• Machine Learning</li>
@@ -35,9 +41,12 @@ const SolutionsPage: React.FC = () => {
                   <div className="h-12 w-12 bg-green-600 rounded-lg mb-4 flex items-center justify-center">
                     <span className="text-white font-bold">IT</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-4">IT Infrastructure</h3>
+                  <h3 className="text-xl font-semibold mb-4">
+                    IT Infrastructure
+                  </h3>
                   <p className="text-gray-300 mb-4">
-                    Robust and scalable IT infrastructure solutions for modern businesses.
+                    Robust and scalable IT infrastructure solutions for modern
+                    businesses.
                   </p>
                   <ul className="text-sm text-gray-400 space-y-1">
                     <li>• Cloud Migration</li>
@@ -49,9 +58,12 @@ const SolutionsPage: React.FC = () => {
                   <div className="h-12 w-12 bg-purple-600 rounded-lg mb-4 flex items-center justify-center">
                     <span className="text-white font-bold">Q</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-4">Quantum Computing</h3>
+                  <h3 className="text-xl font-semibold mb-4">
+                    Quantum Computing
+                  </h3>
                   <p className="text-gray-300 mb-4">
-                    Next-generation quantum computing solutions for complex problem solving.
+                    Next-generation quantum computing solutions for complex
+                    problem solving.
                   </p>
                   <ul className="text-sm text-gray-400 space-y-1">
                     <li>• Quantum Algorithms</li>
@@ -65,7 +77,8 @@ const SolutionsPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold mb-4">Cybersecurity</h3>
                   <p className="text-gray-300 mb-4">
-                    Comprehensive security solutions to protect your digital assets.
+                    Comprehensive security solutions to protect your digital
+                    assets.
                   </p>
                   <ul className="text-sm text-gray-400 space-y-1">
                     <li>• Threat Detection</li>
@@ -76,7 +89,9 @@ const SolutionsPage: React.FC = () => {
               </div>
             </section>
             <section>
-              <h2 className="text-2xl font-semibold mb-6">Ready to Get Started?</h2>
+              <h2 className="text-2xl font-semibold mb-6">
+                Ready to Get Started?
+              </h2>
               <p className="text-gray-300 mb-8">
                 Contact us today to discuss your specific requirements.
               </p>
@@ -99,7 +114,7 @@ const SolutionsPage: React.FC = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SolutionsPage
+export default SolutionsPage;

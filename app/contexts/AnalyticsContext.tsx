@@ -1,4 +1,10 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from "react";
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
@@ -7,7 +13,9 @@ interface AnalyticsContextType {
   isEnabled: boolean;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+  undefined,
+);
 
 interface AnalyticsProviderProps {
   children: ReactNode;
@@ -21,7 +29,10 @@ export const AnalyticsProvider = ({ children }: AnalyticsProviderProps) => {
     setIsEnabled(true);
   }, []);
 
-  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
+  const trackEvent = (
+    eventName: string,
+    properties?: Record<string, unknown>,
+  ) => {
     if (!isEnabled) return;
     // Track event logic here
     console.log("Analytics Event:", eventName, properties);
@@ -40,7 +51,7 @@ export const AnalyticsProvider = ({ children }: AnalyticsProviderProps) => {
     trackEvent,
     trackPageView,
     setUser,
-    isEnabled
+    isEnabled,
   };
 
   return (
@@ -52,11 +63,11 @@ export const AnalyticsProvider = ({ children }: AnalyticsProviderProps) => {
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
-  
+
   if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+    throw new Error("useAnalytics must be used within an AnalyticsProvider");
   }
-  
+
   return context;
 };
 

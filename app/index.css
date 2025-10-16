@@ -5,7 +5,7 @@
 /* Custom styles */
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
   color: #ffffff;
   line-height: 1.6;
@@ -34,8 +34,12 @@ body {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Accessibility improvements */

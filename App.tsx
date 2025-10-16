@@ -1,23 +1,23 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
 // Components
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import AnalyticsProvider from './app/components/AnalyticsProvider';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import SEOEnhancer from './app/components/SEOEnhancer';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import LoadingStates from './app/components/LoadingStates';
+import Navigation from "./app/components/Navigation";
+import Footer from "./app/components/Footer";
+import AnalyticsProvider from "./app/components/AnalyticsProvider";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
+import SEOEnhancer from "./app/components/SEOEnhancer";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import ErrorBoundary from "./app/components/ErrorBoundary";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import LoadingStates from "./app/components/LoadingStates";
 
 // Page components
-import HomePage from './app/pages/HomePage';
-import AboutPage from './app/pages/AboutPage';
-import ServicesPage from './app/pages/ServicesPage';
-import ContactPage from './app/pages/ContactPage';
+import HomePage from "./app/pages/HomePage";
+import AboutPage from "./app/pages/AboutPage";
+import ServicesPage from "./app/pages/ServicesPage";
+import ContactPage from "./app/pages/ContactPage";
 
 const App = () => {
   const handlePerformanceMetrics = (metrics: {
@@ -28,17 +28,36 @@ const App = () => {
     ttfb?: number;
   }) => {
     // Log performance metrics in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Performance Metrics:', metrics);
+    if (process.env.NODE_ENV === "development") {
+      console.log("Performance Metrics:", metrics);
     }
-    
+
     // Send to analytics in production
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
-      (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'performance_metrics', {
+    if (
+      typeof window !== "undefined" &&
+      (
+        window as unknown as {
+          gtag?: (
+            command: string,
+            eventName: string,
+            parameters: Record<string, unknown>,
+          ) => void;
+        }
+      ).gtag
+    ) {
+      (
+        window as unknown as {
+          gtag: (
+            command: string,
+            eventName: string,
+            parameters: Record<string, unknown>,
+          ) => void;
+        }
+      ).gtag("event", "performance_metrics", {
         custom_parameter_1: metrics.fcp,
         custom_parameter_2: metrics.lcp,
         custom_parameter_3: metrics.fid,
-        custom_parameter_4: metrics.cls
+        custom_parameter_4: metrics.cls,
       });
     }
   };
@@ -52,20 +71,27 @@ const App = () => {
               <SEOEnhancer
                 title="Zion Tech Group - Advanced AI and IT Solutions"
                 description="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
-                keywords={['AI', 'IT solutions', 'automation', 'digital transformation', 'cybersecurity', 'cloud infrastructure']}
+                keywords={[
+                  "AI",
+                  "IT solutions",
+                  "automation",
+                  "digital transformation",
+                  "cybersecurity",
+                  "cloud infrastructure",
+                ]}
                 type="website"
                 structuredData={{
                   "@context": "https://schema.org",
                   "@type": "Organization",
-                  "name": "Zion Tech Group",
-                  "description": "Leading provider of AI and IT solutions",
-                  "url": "https://ziontechgroup.com",
-                  "logo": "https://ziontechgroup.com/images/logo.png",
-                  "contactPoint": {
+                  name: "Zion Tech Group",
+                  description: "Leading provider of AI and IT solutions",
+                  url: "https://ziontechgroup.com",
+                  logo: "https://ziontechgroup.com/images/logo.png",
+                  contactPoint: {
                     "@type": "ContactPoint",
-                    "telephone": "+1-555-0123",
-                    "contactType": "customer service"
-                  }
+                    telephone: "+1-555-0123",
+                    contactType: "customer service",
+                  },
                 }}
               >
                 <div></div>

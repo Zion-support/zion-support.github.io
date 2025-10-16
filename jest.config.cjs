@@ -13,11 +13,14 @@ module.exports = {
     "^@/content/(.*)$": "<rootDir>/src/content/$1",
   },
   transform: {
-    '^.+\\.(ts|tsx)$': ['ts-jest', {
-      tsconfig: 'tsconfig.jest.json',
-      useESM: true
-    }],
-    '^.+\\.(js|jsx)$': 'babel-jest'
+    "^.+\\.(ts|tsx)$": [
+      "ts-jest",
+      {
+        tsconfig: "tsconfig.jest.json",
+        useESM: true,
+      },
+    ],
+    "^.+\\.(js|jsx)$": "babel-jest",
   },
   testMatch: [
     "<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)",
@@ -43,5 +46,5 @@ module.exports = {
   transformIgnorePatterns: [
     "node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))",
   ],
-  extensionsToTreatAsEsm: ['.ts', '.tsx']
+  extensionsToTreatAsEsm: [".ts", ".tsx"],
 };

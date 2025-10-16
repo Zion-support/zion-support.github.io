@@ -1,5 +1,5 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client";
+import React, { useState, useEffect } from "react";
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -13,32 +13,33 @@ const PerformanceDashboard: React.FC = () => {
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    fps: 0
+    fps: 0,
   });
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType(
-        'navigation'
+        "navigation",
       )[0] as PerformanceNavigationTiming;
       const loadTime = navigation
         ? navigation.loadEventEnd - navigation.fetchStart
         : 0;
-      
+
       // Measure render time
       const renderStart = performance.now();
       const renderTime = performance.now() - renderStart;
       // Measure memory usage
       let memoryUsage = 0;
-      if ('memory' in performance) {
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+      if ("memory" in performance) {
+        const memory = (performance as { memory?: { usedJSHeapSize: number } })
+          .memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
       }
-      
+
       // Measure FPS (simplified)
       let fps = 0;
-      if ('requestAnimationFrame' in window) {
+      if ("requestAnimationFrame" in window) {
         let lastTime = performance.now();
         let frameCount = 0;
         const measureFPS = (currentTime: number) => {
@@ -52,15 +53,15 @@ const PerformanceDashboard: React.FC = () => {
         };
         requestAnimationFrame(measureFPS);
       }
-      
+
       setMetrics({
         loadTime,
         renderTime,
         memoryUsage,
-        fps
+        fps,
       });
     };
-    
+
     updateMetrics();
     // Update metrics every 5 seconds
     const interval = setInterval(updateMetrics, 5000);
@@ -79,7 +80,9 @@ const PerformanceDashboard: React.FC = () => {
   return (
     <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
       <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
+        <h3 className="text-lg font-semibold text-gray-800">
+          Performance Dashboard
+        </h3>
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-500 hover:text-gray-700"
