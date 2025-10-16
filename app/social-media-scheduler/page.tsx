@@ -1,14 +1,6 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-import { 
-  ShareIcon, 
-  ChartBarIcon, 
-  CheckCircleIcon,
-  StarIcon,
-  SparklesIcon,
-  CpuChipIcon,
-  CalendarIcon
-} from '@heroicons/react/24/outline';
+// Icons removed as they were unused
 
 const SocialMediaSchedulerPage: React.FC = () => {
   return (
