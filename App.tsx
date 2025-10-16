@@ -18,6 +18,7 @@ import HomePage from './app/pages/HomePage';
 import AboutPage from './app/pages/AboutPage';
 import ServicesPage from './app/pages/ServicesPage';
 import ContactPage from './app/pages/ContactPage';
+import AdminPage from './app/pages/AdminPage';
 
 const App = () => {
   const handlePerformanceMetrics = (metrics: {
@@ -81,6 +82,7 @@ const App = () => {
                         <Route path="/about" element={<AboutPage />} />
                         <Route path="/services" element={<ServicesPage />} />
                         <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/admin" element={<AdminPage />} />
                       </Routes>
                     </Suspense>
                   </main>
