@@ -8,17 +8,24 @@ interface SecurityEnhancerProps {
   enableClickjackingProtection?: boolean;
 }
 
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children, enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection }) => {
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
+  children,
+  enableCSP,
+  enableHSTS,
+  enableXSSProtection,
+  enableClickjackingProtection,
+}) => {
   // Use parameters to avoid ESLint warnings
-  if (enableCSP || enableHSTS || enableXSSProtection || enableClickjackingProtection) {
+  if (
+    enableCSP ||
+    enableHSTS ||
+    enableXSSProtection ||
+    enableClickjackingProtection
+  ) {
     // Security enhancement logic would go here
   }
-  
-  return (
-    <>
-      {children}
-    </>
-  );
+
+  return <>{children}</>;
 };
 
 export default SecurityEnhancer;

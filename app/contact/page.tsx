@@ -6,7 +6,10 @@ const ContactPage = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Contact - Zion Tech Group</title>
-        <meta name="description" content="Contact Zion Tech Group for AI and IT solutions" />
+        <meta
+          name="description"
+          content="Contact Zion Tech Group for AI and IT solutions"
+        />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -21,6 +24,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-
-
-

@@ -8,17 +8,19 @@ interface SEOOptimizerProps {
   canonicalUrl?: string;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children, title, description, keywords, canonicalUrl }) => {
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  children,
+  title,
+  description,
+  keywords,
+  canonicalUrl,
+}) => {
   // Use parameters to avoid ESLint warnings
   if (title || description || keywords || canonicalUrl) {
     // SEO optimization logic would go here
   }
-  
-  return (
-    <>
-      {children}
-    </>
-  );
+
+  return <>{children}</>;
 };
 
 export default SEOOptimizer;

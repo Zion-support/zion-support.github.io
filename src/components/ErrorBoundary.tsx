@@ -1,25 +1,25 @@
-import React, { Component, ReactNode } from "react"
+import React, { Component, ReactNode } from "react";
 
 interface Props {
-  children: ReactNode
+  children: ReactNode;
 }
 
 interface State {
-  hasError: boolean
-  error?: Error
+  hasError: boolean;
+  error?: Error;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false,
-  }
+  };
 
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return { hasError: true, error };
   }
 
   public componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error("Uncaught error:", error, errorInfo)
+    console.error("Uncaught error:", error, errorInfo);
   }
 
   public render() {
@@ -29,7 +29,8 @@ class ErrorBoundary extends Component<Props, State> {
           <div className="text-center">
             <h1 className="text-4xl font-bold mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+              We're sorry, but something unexpected happened. Please try
+              refreshing the page.
             </p>
             <button
               onClick={() => window.location.reload()}
@@ -39,11 +40,11 @@ class ErrorBoundary extends Component<Props, State> {
             </button>
           </div>
         </div>
-      )
+      );
     }
 
-    return this.props.children
+    return this.props.children;
   }
 }
 
-export default ErrorBoundary
+export default ErrorBoundary;

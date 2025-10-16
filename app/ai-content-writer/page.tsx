@@ -7,16 +7,21 @@ const AIContentWriterPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Content Writer - Zion Tech Group</title>
-        <meta name="description" content="AI Content Writer - Zion Tech Group" />
+        <meta
+          name="description"
+          content="AI Content Writer - Zion Tech Group"
+        />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">AI Content Writer</h1>
+          <h1 className="text-4xl font-bold text-white mb-8">
+            AI Content Writer
+          </h1>
           <p className="text-gray-300 text-lg mb-8">
             This page is under construction. Please check back later.
           </p>
-          
+
           {/* CTA Section */}
           <section className="text-center">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto border border-white/20">
@@ -24,8 +29,9 @@ const AIContentWriterPage = () => {
                 Ready to Transform Your Content Marketing?
               </h2>
               <p className="text-gray-300 mb-6 text-lg">
-                Let our AI content writer help you create compelling, SEO-optimized content 
-                that engages your audience and drives business growth.
+                Let our AI content writer help you create compelling,
+                SEO-optimized content that engages your audience and drives
+                business growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

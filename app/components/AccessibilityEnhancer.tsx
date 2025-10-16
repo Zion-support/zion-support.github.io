@@ -8,7 +8,9 @@ interface AccessibilityEnhancerProps {
   enableFocusManagement?: boolean;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  children,
+}) => {
   return <>{children}</>;
 };
 

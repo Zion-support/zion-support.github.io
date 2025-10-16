@@ -1,4 +1,4 @@
-'use client';
+"use client";
 /**
  * Rate Limiting Middleware
  * Prevents abuse by limiting the number of requests from a single IP
@@ -24,10 +24,10 @@ export class RateLimiter {
   private config: RateLimitConfig;
   constructor(config: RateLimitConfig) {
     this.config = {
-      message: 'Too many requests, please try again later.',
+      message: "Too many requests, please try again later.",
       skipSuccessfulRequests: false,
       skipFailedRequests: false,
-      ...config
+      ...config,
     };
     // Cleanup old entries every minute
     setInterval(() => this.cleanup(), 60000);
@@ -37,7 +37,11 @@ export class RateLimiter {
    * @param identifier - Unique identifier (e.g., IP address)
    * @returns Whether the request is allowed
    */
-  check(identifier: string): { allowed: boolean; remaining: number; resetTime: number } {
+  check(identifier: string): {
+    allowed: boolean;
+    remaining: number;
+    resetTime: number;
+  } {
     const _now = Date.now();
     const _record = this.requests.get(identifier);
     // No record or expired
@@ -53,7 +57,7 @@ export class RateLimiter {
       return {
         allowed: true,
         remaining: this.config.max - _record.count,
-        resetTime: _record.resetTime
+        resetTime: _record.resetTime,
       };
     }
     // Limit exceeded
@@ -92,31 +96,31 @@ export const rateLimiters = {
   strict: new RateLimiter({
     windowMs: 60 * 1000,
     max: 10,
-    message: 'Too many requests. Please try again in a minute.'
+    message: "Too many requests. Please try again in a minute.",
   }),
   // Standard: 100 requests per 15 minutes
   standard: new RateLimiter({
     windowMs: 15 * 60 * 1000,
-    max: 100
+    max: 100,
   }),
   // Lenient: 1000 requests per hour
   lenient: new RateLimiter({
     windowMs: 60 * 60 * 1000,
-    max: 1000
+    max: 1000,
   }),
   // API: 60 requests per minute
   api: new RateLimiter({
     windowMs: 60 * 1000,
     max: 60,
-    message: 'API rate limit exceeded. Please try again later.'
+    message: "API rate limit exceeded. Please try again later.",
   }),
   // Authentication: 5 login attempts per 15 minutes
   auth: new RateLimiter({
     windowMs: 15 * 60 * 1000,
     max: 5,
-    message: 'Too many login attempts. Please try again later.',
-    skipSuccessfulRequests: true
-  })
+    message: "Too many login attempts. Please try again later.",
+    skipSuccessfulRequests: true,
+  }),
 };
 /**
  * Get client identifier from request
@@ -126,14 +130,14 @@ export const rateLimiters = {
 export function getClientIdentifier(request: Request): string {
   // Try to get real IP from headers (for proxied requests)
   const _headers = request.headers;
-  const _forwardedFor = _headers.get('x-forwarded-for');
-  const _realIp = _headers.get('x-real-ip');
-  const _cfConnectingIp = _headers.get('cf-connecting-ip');
+  const _forwardedFor = _headers.get("x-forwarded-for");
+  const _realIp = _headers.get("x-real-ip");
+  const _cfConnectingIp = _headers.get("cf-connecting-ip");
   if (_cfConnectingIp) return _cfConnectingIp;
   if (_realIp) return _realIp;
-  if (_forwardedFor) return _forwardedFor.split(',')[0].trim();
+  if (_forwardedFor) return _forwardedFor.split(",")[0].trim();
   // Fallback to a default identifier
-  return 'unknown';
+  return "unknown";
 }
 /**
  * Create rate limit middleware
@@ -147,19 +151,19 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
     if (!allowed) {
       return new Response(
         JSON.stringify({
-          error: 'Rate limit exceeded',
-          retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
+          error: "Rate limit exceeded",
+          retryAfter: Math.ceil((resetTime - Date.now()) / 1000),
         }),
         {
           status: 429,
           headers: {
-            'Content-Type': 'application/json',
-            'Retry-After': String(Math.ceil((resetTime - Date.now()) / 1000)),
-            'X-RateLimit-Limit': String(limiter['config'].max),
-            'X-RateLimit-Remaining': String(remaining),
-            'X-RateLimit-Reset': String(resetTime)
-          }
-        }
+            "Content-Type": "application/json",
+            "Retry-After": String(Math.ceil((resetTime - Date.now()) / 1000)),
+            "X-RateLimit-Limit": String(limiter["config"].max),
+            "X-RateLimit-Remaining": String(remaining),
+            "X-RateLimit-Reset": String(resetTime),
+          },
+        },
       );
     }
     // Request allowed - headers can be added to response later

@@ -1,35 +1,43 @@
-import { memo } from "react"
-import { Link } from "react-router-dom"
-import { Right, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from "lucide-react"
+import { memo } from "react";
+import { Link } from "react-router-dom";
+import {
+  Right,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,
+} from "lucide-react";
 
 const Footer = memo(() => {
   const services = [
     { name: "AI Services", url: "/ai-services" },
     { name: "IT Solutions", url: "/it-services" },
     { name: "Cloud Services", url: "/cloud-services" },
-    { name: "Cybersecurity", url: "/cybersecurity" }
-  ]
+    { name: "Cybersecurity", url: "/cybersecurity" },
+  ];
 
   const solutions = [
     { name: "Quantum Computing", url: "/quantum-computing" },
     { name: "Autonomous Systems", url: "/autonomous-systems" },
     { name: "Blockchain Web3", url: "/blockchain-web3" },
-    { name: "IoT Edge Computing", url: "/iot-edge-computing" }
-  ]
+    { name: "IoT Edge Computing", url: "/iot-edge-computing" },
+  ];
 
   const company = [
     { name: "About Us", url: "/about" },
     { name: "Team", url: "/team" },
     { name: "Careers", url: "/careers" },
-    { name: "News", url: "/news" }
-  ]
+    { name: "News", url: "/news" },
+  ];
 
   const support = [
     { name: "Documentation", url: "/documentation" },
     { name: "Support", url: "/support" },
     { name: "FAQ", url: "/faq" },
-    { name: "Contact", url: "/contact" }
-  ]
+    { name: "Contact", url: "/contact" },
+  ];
 
   const socialLinks = [
     { name: "Facebook", icon: Facebook, url: "#" },
@@ -37,8 +45,8 @@ const Footer = memo(() => {
     { name: "LinkedIn", icon: Linkedin, url: "#" },
     { name: "Instagram", icon: Instagram, url: "#" },
     { name: "YouTube", icon: Youtube, url: "#" },
-    { name: "GitHub", icon: Github, url: "#" }
-  ]
+    { name: "GitHub", icon: Github, url: "#" },
+  ];
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -49,8 +57,9 @@ const Footer = memo(() => {
             <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
             <p className="text-sm text-cyan-400">AI & IT Solutions</p>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems,
-              and digital transformation services. Transform your business with cutting-edge technology.
+              Leading provider of AI-powered enterprise solutions, quantum
+              computing, autonomous systems, and digital transformation
+              services. Transform your business with cutting-edge technology.
             </p>
           </div>
 
@@ -153,13 +162,22 @@ const Footer = memo(() => {
               ))}
             </div>
             <div className="flex space-x-6 text-sm">
-              <Link to="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link
+                to="/privacy"
+                className="text-gray-400 hover:text-cyan-400 transition-colors"
+              >
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link
+                to="/terms"
+                className="text-gray-400 hover:text-cyan-400 transition-colors"
+              >
                 Terms of Service
               </Link>
-              <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link
+                to="/cookies"
+                className="text-gray-400 hover:text-cyan-400 transition-colors"
+              >
                 Cookie Policy
               </Link>
             </div>
@@ -170,9 +188,9 @@ const Footer = memo(() => {
         </div>
       </div>
     </footer>
-  )
-})
+  );
+});
 
-Footer.displayName = "Footer"
+Footer.displayName = "Footer";
 
-export default Footer
+export default Footer;

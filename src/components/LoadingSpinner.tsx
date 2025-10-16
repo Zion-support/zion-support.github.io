@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const LoadingSpinner: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const LoadingSpinner: React.FC = () => {
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LoadingSpinner
+export default LoadingSpinner;
