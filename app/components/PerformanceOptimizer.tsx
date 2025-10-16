@@ -107,11 +107,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
+            // TODO: Send LCP metric to analytics service
           }
           if (entry.entryType === 'first-input') {
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             const fidEntry = entry as PerformanceEventTiming;
-            console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
+            // TODO: Send FID metric to analytics service
           }
         });
       });

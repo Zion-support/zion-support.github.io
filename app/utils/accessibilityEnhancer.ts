@@ -1,7 +1,7 @@
 // AccessibilityEnhancer utility
 export const accessibilityenhancer = () => {
   // Implementation here
-  console.log('AccessibilityEnhancer utility called');
+  // TODO: Implement accessibility enhancement functionality
 };
 
 export default accessibilityenhancer;

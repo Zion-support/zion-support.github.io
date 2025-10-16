@@ -1,7 +1,7 @@
 // StructuredData utility
 export const structureddata = () => {
   // Implementation here
-  console.log('StructuredData utility called');
+  // TODO: Implement structured data functionality
 };
 
 export default structureddata;

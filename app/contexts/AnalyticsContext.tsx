@@ -21,19 +21,22 @@ export const AnalyticsProvider = ({ children }: AnalyticsProviderProps) => {
     setIsEnabled(true);
   }, []);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
     if (!isEnabled) return;
     // Track event logic here
-    console.log("Analytics Event:", eventName, properties);
+    // TODO: Implement proper analytics tracking
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const trackPageView = (pageName: string) => {
     // Track page view logic here
-    console.log("Page View:", pageName);
+    // TODO: Implement proper page view tracking
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const setUser = (newUserId: string, properties?: Record<string, unknown>) => {
-    console.log("User Set:", newUserId, properties);
+    // TODO: Implement user tracking
   };
 
   const value = {
