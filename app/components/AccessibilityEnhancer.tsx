@@ -86,10 +86,14 @@ const AccessibilityEnhancer: React.FC = () => {
     headings.forEach((heading, index) => {
       const level = parseInt(heading.tagName.charAt(1));
       if (index === 0 && level !== 1) {
-        console.warn('First heading should be h1');
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('First heading should be h1');
+        }
       }
       if (level > previousLevel + 1) {
-        console.warn(`Heading level skipped: ${heading.tagName} after h${previousLevel}`);
+        if (process.env.NODE_ENV === 'development') {
+          console.warn(`Heading level skipped: ${heading.tagName} after h${previousLevel}`);
+        }
       }
       previousLevel = level;
     });

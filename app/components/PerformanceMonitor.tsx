@@ -44,7 +44,10 @@ const PerformanceMonitor: React.FC = () => {
 
   const logPerformanceIssue = useCallback((metric: string, value: number, rating: string) => {
     if (rating !== 'good') {
-      console.warn(`Performance ${rating}: ${metric} = ${value}ms`);
+      // In development, log to console
+      if (process.env.NODE_ENV === 'development') {
+        console.warn(`Performance ${rating}: ${metric} = ${value}ms`);
+      }
       
       // In production, send to monitoring service
       if (process.env.NODE_ENV === 'production') {
@@ -120,7 +123,9 @@ const PerformanceMonitor: React.FC = () => {
         setMetrics(prev => ({ ...prev, memoryUsage }));
         
         if (memoryUsage > 0.8) {
-          console.warn('High memory usage detected:', memoryUsage);
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('High memory usage detected:', memoryUsage);
+          }
         }
       }
     };
