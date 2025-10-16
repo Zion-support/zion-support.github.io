@@ -98,6 +98,15 @@ const AugmentedRealitySolutionsPage = lazy(() => import('./app/augmented-reality
 const VirtualRealitySolutionsPage = lazy(() => import('./app/virtual-reality-solutions/page'));
 const RoboticProcessAutomationPage = lazy(() => import('./app/robotic-process-automation/page'));
 const LowCodePlatformPage = lazy(() => import('./app/low-code-platform/page'));
+
+// Additional missing pages
+const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
+const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
+const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
+const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
+const AIWebsiteAnalyzerPage = lazy(() => import('./app/ai-website-analyzer/page'));
+const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
+const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
 const ServerlessArchitecturePage = lazy(() => import('./app/serverless-architecture/page'));
 const ContainerOrchestrationPage = lazy(() => import('./app/container-orchestration/page'));
 const DataLakeSolutionsPage = lazy(() => import('./app/data-lake-solutions/page'));
@@ -194,7 +203,6 @@ const LoadingFallback = () => (
 function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
-export default function App() {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
@@ -228,107 +236,20 @@ export default function App() {
   return (
     <GlobalErrorBoundary>
       <HelmetProvider>
-<<<<<<< HEAD
         <Router>
           <div className="min-h-screen bg-gray-50">
-            <Navigation onSidebarToggle={() => setSidebarOpen(!sidebarOpen)} />
+            <Navigation />
             <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
             
             <main className="flex-1">
               <ErrorBoundary>
                 <PerformanceMonitor />
                 <AccessibilityEnhancer />
-              
-              <Suspense fallback={<LoadingFallback />}>
-                <Routes>
-                  {/* Main Pages */}
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/admin" element={<AdminPage />} />
-                  
-                  {/* Service Pages */}
-                  <Route path="/ai-services" element={<AIServicesPage />} />
-                  <Route path="/ai-solutions" element={<AISolutionsPage />} />
-                  <Route path="/it-services" element={<ITServicesPage />} />
-                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                  <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-                  <Route path="/micro-saas-solutions" element={<MicroSAASSolutionsPage />} />
-                  <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
-                  <Route path="/data-analytics" element={<DataAnalyticsPage />} />
-                  <Route path="/web-development" element={<WebDevelopmentPage />} />
-                  <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
-                  <Route path="/database-management" element={<DatabaseManagementPage />} />
-                  <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
-                  
-                  {/* Company Pages */}
-                  <Route path="/team" element={<TeamPage />} />
-                  <Route path="/careers" element={<CareersPage />} />
-                  
-                  {/* Support Pages */}
-                  <Route path="/help" element={<HelpPage />} />
-                  <Route path="/privacy" element={<PrivacyPage />} />
-                  <Route path="/terms" element={<TermsPage />} />
-                  <Route path="/cookies" element={<CookiesPage />} />
-                  
-                  {/* Additional Pages */}
-                  <Route path="/pricing" element={<PricingPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/case-studies" element={<CaseStudiesPage />} />
-                  <Route path="/partnerships" element={<PartnershipsPage />} />
-                  <Route path="/api-docs" element={<APIDocsPage />} />
-                  <Route path="/accessibility" element={<AccessibilityPage />} />
-                  
-                  {/* AI Tools Pages */}
-                  <Route path="/zion-ai-content-moderator" element={<ZionAIContentModeratorPage />} />
-                  <Route path="/zion-ai-customer-churn-predictor" element={<ZionAICustomerChurnPredictorPage />} />
-                  <Route path="/zion-ai-customer-churn-predictor-pro" element={<ZionAICustomerChurnPredictorProPage />} />
-                  <Route path="/zion-ai-customer-sentiment-tracker" element={<ZionAICustomerSentimentTrackerPage />} />
-                  <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
-                  <Route path="/zion-ai-document-analyzer" element={<ZionAIDocumentAnalyzerPage />} />
-                  <Route path="/zion-ai-email-marketing-pro" element={<ZionAIEmailMarketingProPage />} />
-                  <Route path="/zion-ai-financial-forecaster" element={<ZionAIFinancialForecasterPage />} />
-                  <Route path="/zion-ai-inventory-optimizer-pro" element={<ZionAIInventoryOptimizerProPage />} />
-                  <Route path="/zion-ai-meeting-transcriber" element={<ZionAIMeetingTranscriberPage />} />
-                  <Route path="/zion-ai-sales-predictor" element={<ZionAISalesPredictorPage />} />
-                  <Route path="/zion-ai-social-scheduler-pro" element={<ZionAISocialSchedulerProPage />} />
-                  <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
-                  <Route path="/zion-ai-workflow-automator" element={<ZionAIWorkflowAutomatorPage />} />
-                  <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
-                  <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
-                  <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
-                  
-                  {/* Catch all route */}
-                  <Route path="*" element={
-                    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-                      <div className="text-center max-w-md mx-auto px-4">
-                        <div className="mb-8">
-                          <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
-                          <h2 className="text-2xl font-semibold text-gray-700 mb-4">Page Not Found</h2>
-                          <p className="text-gray-600 mb-8">
-                            Sorry, we couldn't find the page you're looking for. 
-                            It might have been moved, deleted, or doesn't exist.
-                          </p>
-                        </div>
-                        <div className="space-y-4">
-                          <a 
-                            href="/" 
-                            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-                          >
-                            Go Back Home
-                          </a>
-                          <div className="text-sm text-gray-500">
-                            <a href="/contact" className="text-blue-600 hover:text-blue-800">
-                              Contact Support
-                            </a>
-                            {' • '}
-                            <a href="/services" className="text-blue-600 hover:text-blue-800">
-                              Browse Services
-                            </a>
-                          </div>
-                        </div>
+                <SEOOptimizer />
+                
+                <Suspense fallback={<LoadingFallback />}>
+                  <ErrorBoundary>
+                    <Routes>
                     {/* Main Pages */}
                     <Route path="/" element={<HomePage />} />
                     <Route path="/about" element={<AboutPage />} />
