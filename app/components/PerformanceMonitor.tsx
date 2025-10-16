@@ -1,203 +1,128 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  cls?: number;
-  fcp?: number;
-  lcp?: number;
-  ttfb?: number;
-  inp?: number;
-  memoryUsage?: number;
-  networkType?: string;
-  connectionSpeed?: number;
-  renderTime?: number;
-  bundleSize?: number;
+  fcp: number; // First Contentful Paint
+  lcp: number; // Largest Contentful Paint
+  fid: number; // First Input Delay
+  cls: number; // Cumulative Layout Shift
+  ttfb: number; // Time to First Byte
+  loadTime: number; // Page load time
 }
 
-interface PerformanceThresholds {
-  cls: { good: number; needsImprovement: number };
-  fcp: { good: number; needsImprovement: number };
-  lcp: { good: number; needsImprovement: number };
-  ttfb: { good: number; needsImprovement: number };
-  inp: { good: number; needsImprovement: number };
-}
+export const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [isMonitoring, setIsMonitoring] = useState(false);
+  useEffect(() => {
+    // Only show in development or when debug flag is set
+    const shouldShow = process.env.NODE_ENV === 'development' || 
+                      localStorage.getItem('debug-performance') === 'true';
+    
+    if (!shouldShow) return;
 
-  const thresholds: PerformanceThresholds = {
-    cls: { good: 0.1, needsImprovement: 0.25 },
-    fcp: { good: 1800, needsImprovement: 3000 },
-    lcp: { good: 2500, needsImprovement: 4000 },
-    ttfb: { good: 800, needsImprovement: 1800 },
-    inp: { good: 200, needsImprovement: 500 },
+    setIsVisible(true);
+
+    // Measure performance metrics
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime || 0;
+      
+      const metrics: PerformanceMetrics = {
+        fcp: Math.round(fcp),
+        lcp: Math.round(lcp),
+        fid: 0, // Would need to measure this with a different approach
+        cls: 0, // Would need to measure this with a different approach
+        ttfb: Math.round(navigation.responseStart - navigation.requestStart),
+        loadTime: Math.round(navigation.loadEventEnd - navigation.fetchStart),
+      };
+
+      setMetrics(metrics);
+    };
+
+    // Wait for page to load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
+
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, []);
+
+  if (!isVisible || !metrics) return null;
+
+  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
+    if (value <= thresholds.good) return 'text-green-600';
+    if (value <= thresholds.poor) return 'text-yellow-600';
+    return 'text-red-600';
   };
 
-  const getPerformanceRating = useCallback(
-    (metric: string, value: number): "good" | "needs-improvement" | "poor" => {
-      const threshold = thresholds[metric as keyof PerformanceThresholds];
-      if (!threshold) return "good";
+  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
+    if (value <= thresholds.good) return 'Good';
+    if (value <= thresholds.poor) return 'Needs Improvement';
+    return 'Poor';
+  };
 
-      if (value <= threshold.good) return "good";
-      if (value <= threshold.needsImprovement) return "needs-improvement";
-      return "poor";
-    },
-    [thresholds],
+  return (
+    <div className="fixed bottom-4 right-4 bg-white border border-gray-200 rounded-lg shadow-lg p-4 max-w-sm z-50">
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="text-sm font-semibold text-gray-800">Performance Metrics</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-gray-600"
+        >
+          ×
+        </button>
+      </div>
+      
+      <div className="space-y-2 text-xs">
+        <div className="flex justify-between">
+          <span className="text-gray-600">FCP:</span>
+          <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
+            {metrics.fcp}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span className="text-gray-600">LCP:</span>
+          <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
+            {metrics.lcp}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span className="text-gray-600">TTFB:</span>
+          <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
+            {metrics.ttfb}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span className="text-gray-600">Load Time:</span>
+          <span className={getScoreColor(metrics.loadTime, { good: 2000, poor: 4000 })}>
+            {metrics.loadTime}ms ({getScoreText(metrics.loadTime, { good: 2000, poor: 4000 })})
+          </span>
+        </div>
+      </div>
+      
+      <div className="mt-3 pt-2 border-t border-gray-200">
+        <button
+          onClick={() => {
+            localStorage.setItem('debug-performance', 'false');
+            setIsVisible(false);
+          }}
+          className="text-xs text-blue-600 hover:text-blue-800"
+        >
+          Hide Performance Monitor
+        </button>
+      </div>
+    </div>
   );
-
-  const logPerformanceIssue = useCallback(
-    (_metric: string, _value: number, rating: string) => {
-      if (rating !== "good") {
-        // In development, log to console
-        if (process.env.NODE_ENV === "development") {
-          // console.warn(`Performance ${rating}: ${_metric} = ${_value}ms`);
-        }
-
-        // In production, send to monitoring service
-        if (process.env.NODE_ENV === "production") {
-          // analyticsService.track('performance_issue', { metric: _metric, value: _value, rating });
-        }
-      }
-    },
-    [],
-  );
-
-  useEffect(() => {
-    let performanceObserver: PerformanceObserver | null = null;
-    let memoryInterval: NodeJS.Timeout | null = null;
-
-    // Monitor Core Web Vitals
-    if (typeof window !== "undefined") {
-      import("web-vitals")
-        .then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
-          const currentMetrics: PerformanceMetrics = {};
-
-          const handleMetric = (metric: { name: string; value: number }) => {
-            const metricName =
-              metric.name.toLowerCase() as keyof PerformanceMetrics;
-            (currentMetrics as any)[metricName] = metric.value;
-
-            const rating = getPerformanceRating(metricName, metric.value);
-            logPerformanceIssue(metricName, metric.value, rating);
-
-            setMetrics((prev) => ({ ...prev, [metricName]: metric.value }));
-
-            // Store metrics for analytics
-            if (process.env.NODE_ENV === "production") {
-              // Send to analytics service
-              // analyticsService.track('performance_metric', { metric: metric.name, value: metric.value, rating });
-            }
-          };
-
-          onCLS(handleMetric);
-          onFCP(handleMetric);
-          onLCP(handleMetric);
-          onTTFB(handleMetric);
-          onINP(handleMetric);
-        })
-        .catch(() => {
-          // Silently fail if web-vitals is not available
-        });
-    }
-
-    // Monitor performance metrics
-    if ("performance" in window && "PerformanceObserver" in window) {
-      performanceObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === "navigation") {
-            const navEntry = entry as PerformanceNavigationTiming;
-            const renderTime =
-              navEntry.domContentLoadedEventEnd -
-              navEntry.domContentLoadedEventStart;
-
-            setMetrics((prev) => ({ ...prev, renderTime }));
-
-            // Store navigation timing for analytics
-            if (process.env.NODE_ENV === "production") {
-              // analyticsService.track('navigation_timing', {
-              //   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-              //   loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-              //   renderTime
-              // });
-            }
-          }
-        }
-      });
-      performanceObserver.observe({ entryTypes: ["navigation"] });
-    }
-
-    // Monitor memory usage
-    const checkMemoryUsage = () => {
-      if ("memory" in performance) {
-        const memory = (performance as any).memory;
-        const memoryUsage = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
-        setMetrics((prev) => ({ ...prev, memoryUsage }));
-
-        if (memoryUsage > 0.8) {
-          // High memory usage detected - could be sent to monitoring service
-          // if (process.env.NODE_ENV === 'development') {
-          //   console.warn('High memory usage detected:', memoryUsage);
-          // }
-        }
-      }
-    };
-
-    // Monitor network information
-    const checkNetworkInfo = () => {
-      if ("connection" in navigator) {
-        const connection = (navigator as any).connection;
-        setMetrics((prev) => ({
-          ...prev,
-          networkType: connection.effectiveType,
-          connectionSpeed: connection.downlink,
-        }));
-      }
-    };
-
-    // Set up monitoring intervals
-    memoryInterval = setInterval(checkMemoryUsage, 30000); // Every 30 seconds
-    checkMemoryUsage();
-    checkNetworkInfo();
-
-    // Monitor bundle size
-    const checkBundleSize = () => {
-      const scripts = document.querySelectorAll("script[src]");
-      let totalSize = 0;
-      scripts.forEach((script) => {
-        const src = script.getAttribute("src");
-        if (src && src.includes("assets/")) {
-          // This is a rough estimate - in production you'd want more accurate measurement
-          totalSize += 1; // Placeholder
-        }
-      });
-      setMetrics((prev) => ({ ...prev, bundleSize: totalSize }));
-    };
-
-    checkBundleSize();
-    setIsMonitoring(true);
-
-    // Cleanup function
-    return () => {
-      if (performanceObserver) {
-        performanceObserver.disconnect();
-      }
-      if (memoryInterval) {
-        clearInterval(memoryInterval);
-      }
-      setIsMonitoring(false);
-    };
-  }, [getPerformanceRating, logPerformanceIssue]);
-
-  // Performance debugging in development
-  useEffect(() => {
-    if (process.env.NODE_ENV === "development" && isMonitoring) {
-      // console.group('Performance Metrics');
-      // console.table(metrics);
-      // console.groupEnd();
-    }
-  }, [metrics, isMonitoring]);
-
-  return null;
 };
 
 export default PerformanceMonitor;
