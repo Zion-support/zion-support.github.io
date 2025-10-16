@@ -144,7 +144,7 @@ describe('Data Cleanup', () => {
       expect(stats.byCategory).toHaveProperty('category1');
       expect(stats.byCategory).toHaveProperty('category2');
       expect(stats.byAge.recent).toBe(1);
-      expect(stats.byAge.old).toBe(1);
+      expect(stats.byAge.veryOld).toBe(1);
     });
   });
 

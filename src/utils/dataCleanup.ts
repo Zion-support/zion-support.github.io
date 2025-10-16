@@ -4,7 +4,6 @@
  * Provides comprehensive cleanup of old data records from various storage mechanisms
  */
 import { logger } from './logger';
-import { performanceMonitoring } from './performanceMonitoring';
 
 export interface DataRecord {
   id: string;
@@ -115,8 +114,7 @@ class DataCleanupManager implements DataCleanupService {
       stats.executionTime = performance.now() - startTime;
       
       logger.info('Data cleanup completed', { stats });
-      performanceMonitoring.recordCustomMetric('data_cleanup_completed', stats.executionTime, 'ms');
-      performanceMonitoring.recordCustomMetric('data_cleanup_deleted', stats.deletedRecords, 'count');
+      // Performance metrics would be recorded here if performance monitoring was available
       
       return stats;
     } catch (error) {

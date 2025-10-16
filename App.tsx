@@ -91,7 +91,6 @@ export default function App() {
   return (
     <GlobalErrorBoundary>
       <HelmetProvider>
-<<<<<<< HEAD
         <Router>
           <div className="min-h-screen bg-gray-50">
             <Navigation />

@@ -4,7 +4,6 @@
  * Provides automatic cleanup of old data records on a schedule
  */
 import { logger } from './logger';
-import { performanceMonitoring } from './performanceMonitoring';
 import { dataCleanup, CleanupConfig, CleanupStats } from './dataCleanup';
 
 export interface ScheduleConfig {
@@ -203,15 +202,14 @@ class ScheduledCleanupService {
         stats: cleanupStats
       });
 
-      performanceMonitoring.recordCustomMetric('scheduled_cleanup_success', 1, 'count');
-      performanceMonitoring.recordCustomMetric('scheduled_cleanup_duration', executionTime, 'ms');
+      // Performance metrics would be recorded here if performance monitoring was available
 
     } catch (error) {
       const executionTime = performance.now() - startTime;
       this.updateStats(false, executionTime, null, error as Error);
 
       logger.error('Scheduled cleanup failed', error as Error);
-      performanceMonitoring.recordCustomMetric('scheduled_cleanup_failure', 1, 'count');
+      // Performance metrics would be recorded here if performance monitoring was available
 
       // Retry if configured
       if (this.config.retryAttempts > 0) {
