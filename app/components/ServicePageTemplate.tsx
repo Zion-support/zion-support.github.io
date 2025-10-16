@@ -1,6 +1,6 @@
-import React from 'react';
-import SEOHead from './SEOHead';
-import { CheckCircleIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import React from "react";
+import SEOHead from "./SEOHead";
+import { CheckCircleIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 
 interface ServicePageTemplateProps {
   title: string;
@@ -41,16 +41,16 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   useCases,
   technicalSpecs,
   ctaText = "Get Started Today",
-  ctaLink = "/contact"
+  ctaLink = "/contact",
 }) => {
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title={`${title} - Zion Tech Group`}
         description={description}
         keywords={keywords}
       />
-      
+
       <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 bg-gradient-to-br from-purple-900/30 via-slate-900 to-cyan-900/30">
@@ -82,25 +82,30 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                Key <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Features</span>
+                Key{" "}
+                <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                  Features
+                </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful capabilities designed to transform your business operations
+                Powerful capabilities designed to transform your business
+                operations
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
+                <div
+                  key={index}
+                  className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105"
+                >
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-white">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-400">
-                    {feature.description}
-                  </p>
+                  <p className="text-gray-400">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -112,24 +117,31 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                Simple <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Pricing</span>
+                Simple{" "}
+                <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                  Pricing
+                </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Transparent pricing with no hidden fees
               </p>
             </div>
-            
+
             <div className="max-w-md mx-auto bg-slate-800/50 p-8 rounded-xl border border-slate-700">
               <div className="text-center mb-8">
                 <div className="flex items-center justify-center mb-4">
-                  <span className="text-4xl font-bold text-purple-400">{pricing.monthly}</span>
+                  <span className="text-4xl font-bold text-purple-400">
+                    {pricing.monthly}
+                  </span>
                   {pricing.original && (
-                    <span className="text-lg text-gray-400 line-through ml-2">{pricing.original}</span>
+                    <span className="text-lg text-gray-400 line-through ml-2">
+                      {pricing.original}
+                    </span>
                   )}
                 </div>
                 <p className="text-gray-300">per month</p>
               </div>
-              
+
               <div className="space-y-4 mb-8">
                 {pricing.features.map((feature, index) => (
                   <div key={index} className="flex items-center">
@@ -138,7 +150,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
                   </div>
                 ))}
               </div>
-              
+
               <a
                 href={ctaLink}
                 className="block w-full text-center py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
@@ -154,13 +166,20 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                Why Choose Our <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Solution</span>?
+                Why Choose Our{" "}
+                <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                  Solution
+                </span>
+                ?
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-4 p-4 bg-slate-800/30 rounded-lg">
+                <div
+                  key={index}
+                  className="flex items-center space-x-4 p-4 bg-slate-800/30 rounded-lg"
+                >
                   <CheckCircleIcon className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
                 </div>
@@ -174,19 +193,23 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                Use <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Cases</span>
+                Use{" "}
+                <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                  Cases
+                </span>
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
+                <div
+                  key={index}
+                  className="bg-slate-800/50 p-8 rounded-xl border border-slate-700"
+                >
                   <h3 className="text-xl font-semibold mb-4 text-white">
                     {useCase.title}
                   </h3>
-                  <p className="text-gray-400">
-                    {useCase.description}
-                  </p>
+                  <p className="text-gray-400">{useCase.description}</p>
                 </div>
               ))}
             </div>
@@ -198,13 +221,19 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                Technical <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Specifications</span>
+                Technical{" "}
+                <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                  Specifications
+                </span>
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {technicalSpecs.map((spec, index) => (
-                <div key={index} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                <div
+                  key={index}
+                  className="bg-slate-800/50 p-6 rounded-xl border border-slate-700"
+                >
                   <h3 className="text-lg font-semibold mb-4 text-purple-400">
                     {spec.category}
                   </h3>

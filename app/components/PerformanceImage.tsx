@@ -1,6 +1,6 @@
-import React, { useState, useCallback } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import React, { useState, useCallback } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 interface PerformanceImageProps {
   src: string;
@@ -9,7 +9,7 @@ interface PerformanceImageProps {
   width?: number | string;
   height?: number | string;
   placeholder?: string;
-  effect?: 'blur' | 'black-and-white' | 'opacity';
+  effect?: "blur" | "black-and-white" | "opacity";
   threshold?: number;
   onLoad?: () => void;
   onError?: () => void;
@@ -18,14 +18,14 @@ interface PerformanceImageProps {
 const PerformanceImage: React.FC<PerformanceImageProps> = ({
   src,
   alt,
-  className = '',
+  className = "",
   width,
   height,
   placeholder,
-  effect = 'blur',
+  effect = "blur",
   threshold = 100,
   onLoad,
-  onError
+  onError,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -42,7 +42,7 @@ const PerformanceImage: React.FC<PerformanceImageProps> = ({
 
   if (hasError) {
     return (
-      <div 
+      <div
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height }}
       >
@@ -55,7 +55,7 @@ const PerformanceImage: React.FC<PerformanceImageProps> = ({
     <LazyLoadImage
       src={src}
       alt={alt}
-      className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
+      className={`transition-opacity duration-300 ${isLoaded ? "opacity-100" : "opacity-0"} ${className}`}
       width={width}
       height={height}
       placeholderSrc={placeholder}

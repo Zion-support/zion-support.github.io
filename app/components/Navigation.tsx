@@ -1,6 +1,42 @@
-import React, { useState } from 'react';
-import { useLocation, Link } from 'react-router-dom';
-import { Bars3Icon, HomeIcon, InformationCircleIcon, PhoneIcon, DocumentTextIcon, AcademicCapIcon, QuestionMarkCircleIcon, ShieldCheckIcon, CurrencyDollarIcon, CogIcon, ChevronDownIcon, GlobeAltIcon, CloudIcon, CpuChipIcon, SignalIcon, UserGroupIcon, EnvelopeIcon, ShareIcon, ChatBubbleLeftRightIcon, ChartBarIcon, EyeIcon, CircleStackIcon, CodeBracketIcon, DevicePhoneMobileIcon, UserPlusIcon, XMarkIcon, SparklesIcon, RocketLaunchIcon, MicrophoneIcon, ClockIcon, VideoCameraIcon, ScaleIcon, HeartIcon, CubeIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
+import React, { useState } from "react";
+import { useLocation, Link } from "react-router-dom";
+import {
+  Bars3Icon,
+  HomeIcon,
+  InformationCircleIcon,
+  PhoneIcon,
+  DocumentTextIcon,
+  AcademicCapIcon,
+  QuestionMarkCircleIcon,
+  ShieldCheckIcon,
+  CurrencyDollarIcon,
+  CogIcon,
+  ChevronDownIcon,
+  GlobeAltIcon,
+  CloudIcon,
+  CpuChipIcon,
+  SignalIcon,
+  UserGroupIcon,
+  EnvelopeIcon,
+  ShareIcon,
+  ChatBubbleLeftRightIcon,
+  ChartBarIcon,
+  EyeIcon,
+  CircleStackIcon,
+  CodeBracketIcon,
+  DevicePhoneMobileIcon,
+  UserPlusIcon,
+  XMarkIcon,
+  SparklesIcon,
+  RocketLaunchIcon,
+  MicrophoneIcon,
+  ClockIcon,
+  VideoCameraIcon,
+  ScaleIcon,
+  HeartIcon,
+  CubeIcon,
+  CheckCircleIcon,
+} from "@heroicons/react/24/outline";
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
@@ -12,162 +48,449 @@ const Navigation: React.FC<NavigationProps> = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon },
-    { name: 'About', href: '/about', icon: InformationCircleIcon },
+    { name: "Home", href: "/", icon: HomeIcon },
+    { name: "About", href: "/about", icon: InformationCircleIcon },
     {
-      name: 'AI Services',
-      href: '/ai-services',
+      name: "AI Services",
+      href: "/ai-services",
       icon: CpuChipIcon,
       submenu: [
-        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon, badge: 'Overview' },
-        { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: ChatBubbleLeftRightIcon, badge: 'Popular' },
-        { name: 'AI Document Processor', href: '/ai-document-processor', icon: DocumentTextIcon, badge: 'New' },
-        { name: 'AI Form Builder', href: '/ai-form-builder', icon: DocumentTextIcon },
-        { name: 'AI Voice Assistant', href: '/ai-voice-assistant', icon: MicrophoneIcon },
-        { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: ShieldCheckIcon },
-        { name: 'AI Image Recognition', href: '/ai-image-recognition', icon: EyeIcon },
-        { name: 'AI Lead Scoring', href: '/ai-lead-scoring', icon: ChartBarIcon },
-        { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: CogIcon },
-        { name: 'AI Price Optimizer', href: '/ai-price-optimizer', icon: CurrencyDollarIcon },
-        { name: 'AI Scheduling Assistant', href: '/ai-scheduling-assistant', icon: ClockIcon },
-        { name: 'AI CRM Optimizer', href: '/ai-crm-optimizer', icon: UserGroupIcon },
-        { name: 'AI Data Visualizer', href: '/ai-data-visualizer', icon: ChartBarIcon },
-        { name: 'AI Email Optimizer', href: '/ai-email-optimizer', icon: EnvelopeIcon },
-        { name: 'AI Content Generator', href: '/ai-content-generator', icon: DocumentTextIcon },
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },
-        { name: 'AI Video Generator', href: '/ai-video-generator', icon: VideoCameraIcon },
-        { name: 'AI Translation Service', href: '/ai-translator', icon: GlobeAltIcon },
-        { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: ScaleIcon },
-        { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: HeartIcon },
-        { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: AcademicCapIcon },
-        { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: HomeIcon },
-        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: CogIcon },
-        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: CubeIcon },
-        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: MicrophoneIcon }
-      ]
+        {
+          name: "AI Solutions Overview",
+          href: "/ai-solutions",
+          icon: CpuChipIcon,
+          badge: "Overview",
+        },
+        {
+          name: "AI Chatbot Builder",
+          href: "/ai-chatbot-builder",
+          icon: ChatBubbleLeftRightIcon,
+          badge: "Popular",
+        },
+        {
+          name: "AI Document Processor",
+          href: "/ai-document-processor",
+          icon: DocumentTextIcon,
+          badge: "New",
+        },
+        {
+          name: "AI Form Builder",
+          href: "/ai-form-builder",
+          icon: DocumentTextIcon,
+        },
+        {
+          name: "AI Voice Assistant",
+          href: "/ai-voice-assistant",
+          icon: MicrophoneIcon,
+        },
+        {
+          name: "AI Fraud Detection",
+          href: "/ai-fraud-detection",
+          icon: ShieldCheckIcon,
+        },
+        {
+          name: "AI Image Recognition",
+          href: "/ai-image-recognition",
+          icon: EyeIcon,
+        },
+        {
+          name: "AI Lead Scoring",
+          href: "/ai-lead-scoring",
+          icon: ChartBarIcon,
+        },
+        {
+          name: "AI Predictive Maintenance",
+          href: "/ai-predictive-maintenance",
+          icon: CogIcon,
+        },
+        {
+          name: "AI Price Optimizer",
+          href: "/ai-price-optimizer",
+          icon: CurrencyDollarIcon,
+        },
+        {
+          name: "AI Scheduling Assistant",
+          href: "/ai-scheduling-assistant",
+          icon: ClockIcon,
+        },
+        {
+          name: "AI CRM Optimizer",
+          href: "/ai-crm-optimizer",
+          icon: UserGroupIcon,
+        },
+        {
+          name: "AI Data Visualizer",
+          href: "/ai-data-visualizer",
+          icon: ChartBarIcon,
+        },
+        {
+          name: "AI Email Optimizer",
+          href: "/ai-email-optimizer",
+          icon: EnvelopeIcon,
+        },
+        {
+          name: "AI Content Generator",
+          href: "/ai-content-generator",
+          icon: DocumentTextIcon,
+        },
+        {
+          name: "AI Social Media Manager",
+          href: "/ai-social-media-manager",
+          icon: ShareIcon,
+        },
+        {
+          name: "AI Video Generator",
+          href: "/ai-video-generator",
+          icon: VideoCameraIcon,
+        },
+        {
+          name: "AI Translation Service",
+          href: "/ai-translator",
+          icon: GlobeAltIcon,
+        },
+        {
+          name: "AI Legal Assistant",
+          href: "/ai-legal-assistant",
+          icon: ScaleIcon,
+        },
+        {
+          name: "AI Medical Assistant",
+          href: "/ai-medical-assistant",
+          icon: HeartIcon,
+        },
+        {
+          name: "AI Education Tutor",
+          href: "/ai-education-tutor",
+          icon: AcademicCapIcon,
+        },
+        {
+          name: "AI Real Estate Analyzer",
+          href: "/ai-real-estate-analyzer",
+          icon: HomeIcon,
+        },
+        {
+          name: "AI Supply Chain Optimizer",
+          href: "/ai-supply-chain-optimizer",
+          icon: CogIcon,
+        },
+        {
+          name: "AI 3D Model Generator",
+          href: "/ai-3d-model-generator",
+          icon: CubeIcon,
+        },
+        {
+          name: "AI Audio Processor",
+          href: "/ai-audio-processor",
+          icon: MicrophoneIcon,
+        },
+      ],
     },
     {
-      name: 'Micro SaaS',
-      href: '/micro-saas-solutions',
+      name: "Micro SaaS",
+      href: "/micro-saas-solutions",
       icon: CloudIcon,
       submenu: [
-        { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: CloudIcon, badge: 'Overview' },
-        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon, badge: 'Popular' },
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon },
-        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
-        { name: 'AI Content Generator', href: '/ai-content-generator', icon: DocumentTextIcon },
-        { name: 'AI Translator', href: '/ai-translator', icon: GlobeAltIcon },
-        { name: 'AI Video Generator', href: '/ai-video-generator', icon: VideoCameraIcon },
-        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: MicrophoneIcon },
-        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
-        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: UserGroupIcon }
-      ]
+        {
+          name: "Micro SaaS Overview",
+          href: "/micro-saas-solutions",
+          icon: CloudIcon,
+          badge: "Overview",
+        },
+        {
+          name: "Social Media Scheduler",
+          href: "/social-media-scheduler",
+          icon: ShareIcon,
+          badge: "Popular",
+        },
+        {
+          name: "Expense Tracker Pro",
+          href: "/expense-tracker-pro",
+          icon: CurrencyDollarIcon,
+        },
+        {
+          name: "Task Manager Pro",
+          href: "/task-manager-pro",
+          icon: CheckCircleIcon,
+        },
+        {
+          name: "AI Content Generator",
+          href: "/ai-content-generator",
+          icon: DocumentTextIcon,
+        },
+        { name: "AI Translator", href: "/ai-translator", icon: GlobeAltIcon },
+        {
+          name: "AI Video Generator",
+          href: "/ai-video-generator",
+          icon: VideoCameraIcon,
+        },
+        {
+          name: "AI Audio Processor",
+          href: "/ai-audio-processor",
+          icon: MicrophoneIcon,
+        },
+        {
+          name: "Analytics Dashboard",
+          href: "/analytics-dashboard",
+          icon: ChartBarIcon,
+        },
+        {
+          name: "Customer Support Hub",
+          href: "/customer-support-hub",
+          icon: UserGroupIcon,
+        },
+      ],
     },
     {
-      name: 'IT Solutions',
-      href: '/it-services',
+      name: "IT Solutions",
+      href: "/it-services",
       icon: CodeBracketIcon,
       submenu: [
-        { name: 'IT Services Overview', href: '/it-services', icon: CodeBracketIcon, badge: 'Overview' },
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon, badge: 'Popular' },
-        { name: 'Web Development', href: '/web-development', icon: GlobeAltIcon },
-        { name: 'Mobile Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
-        { name: 'API Development', href: '/api-development', icon: CodeBracketIcon },
-        { name: 'Database Management', href: '/database-management', icon: CircleStackIcon },
-        { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },
-        { name: 'DevOps Automation', href: '/devops-automation', icon: CogIcon },
-        { name: 'Data Engineering', href: '/data-engineering', icon: ChartBarIcon },
-        { name: 'Security Audit', href: '/security-audit', icon: ShieldCheckIcon },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: RocketLaunchIcon }
-      ]
+        {
+          name: "IT Services Overview",
+          href: "/it-services",
+          icon: CodeBracketIcon,
+          badge: "Overview",
+        },
+        {
+          name: "Cloud Infrastructure",
+          href: "/cloud-infrastructure",
+          icon: CloudIcon,
+          badge: "Popular",
+        },
+        {
+          name: "Web Development",
+          href: "/web-development",
+          icon: GlobeAltIcon,
+        },
+        {
+          name: "Mobile Development",
+          href: "/mobile-development",
+          icon: DevicePhoneMobileIcon,
+        },
+        {
+          name: "API Development",
+          href: "/api-development",
+          icon: CodeBracketIcon,
+        },
+        {
+          name: "Database Management",
+          href: "/database-management",
+          icon: CircleStackIcon,
+        },
+        {
+          name: "Network Infrastructure",
+          href: "/network-infrastructure",
+          icon: SignalIcon,
+        },
+        {
+          name: "DevOps Automation",
+          href: "/devops-automation",
+          icon: CogIcon,
+        },
+        {
+          name: "Data Engineering",
+          href: "/data-engineering",
+          icon: ChartBarIcon,
+        },
+        {
+          name: "Security Audit",
+          href: "/security-audit",
+          icon: ShieldCheckIcon,
+        },
+        {
+          name: "Digital Transformation",
+          href: "/digital-transformation",
+          icon: RocketLaunchIcon,
+        },
+      ],
     },
     {
-      name: 'Zion AI Services',
-      href: '/zion-ai-services',
+      name: "Zion AI Services",
+      href: "/zion-ai-services",
       icon: SparklesIcon,
       submenu: [
-        { name: 'Zion AI Chatbot Builder', href: '/zion-ai-chatbot-builder', icon: ChatBubbleLeftRightIcon, badge: 'Pro' },
-        { name: 'Zion AI Code Assistant', href: '/zion-ai-code-assistant', icon: CodeBracketIcon },
-        { name: 'Zion AI Content Moderator', href: '/zion-ai-content-moderator', icon: ShieldCheckIcon },
-        { name: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro', icon: UserGroupIcon, badge: 'Pro' },
-        { name: 'Zion AI Workflow Automator Pro', href: '/zion-ai-workflow-automator-pro', icon: CogIcon, badge: 'Pro' },
-        { name: 'Zion AI Email Marketing Pro', href: '/zion-ai-email-marketing-pro', icon: EnvelopeIcon, badge: 'Pro' },
-        { name: 'Zion AI Financial Forecaster', href: '/zion-ai-financial-forecaster', icon: CurrencyDollarIcon },
-        { name: 'Zion AI Sales Predictor', href: '/zion-ai-sales-predictor', icon: ChartBarIcon },
-        { name: 'Zion AI Translation Service', href: '/zion-ai-translation-service', icon: GlobeAltIcon },
-        { name: 'Zion AI Voice Synthesis', href: '/zion-ai-voice-synthesis', icon: MicrophoneIcon }
-      ]
+        {
+          name: "Zion AI Chatbot Builder",
+          href: "/zion-ai-chatbot-builder",
+          icon: ChatBubbleLeftRightIcon,
+          badge: "Pro",
+        },
+        {
+          name: "Zion AI Code Assistant",
+          href: "/zion-ai-code-assistant",
+          icon: CodeBracketIcon,
+        },
+        {
+          name: "Zion AI Content Moderator",
+          href: "/zion-ai-content-moderator",
+          icon: ShieldCheckIcon,
+        },
+        {
+          name: "Zion AI Customer Support Pro",
+          href: "/zion-ai-customer-support-pro",
+          icon: UserGroupIcon,
+          badge: "Pro",
+        },
+        {
+          name: "Zion AI Workflow Automator Pro",
+          href: "/zion-ai-workflow-automator-pro",
+          icon: CogIcon,
+          badge: "Pro",
+        },
+        {
+          name: "Zion AI Email Marketing Pro",
+          href: "/zion-ai-email-marketing-pro",
+          icon: EnvelopeIcon,
+          badge: "Pro",
+        },
+        {
+          name: "Zion AI Financial Forecaster",
+          href: "/zion-ai-financial-forecaster",
+          icon: CurrencyDollarIcon,
+        },
+        {
+          name: "Zion AI Sales Predictor",
+          href: "/zion-ai-sales-predictor",
+          icon: ChartBarIcon,
+        },
+        {
+          name: "Zion AI Translation Service",
+          href: "/zion-ai-translation-service",
+          icon: GlobeAltIcon,
+        },
+        {
+          name: "Zion AI Voice Synthesis",
+          href: "/zion-ai-voice-synthesis",
+          icon: MicrophoneIcon,
+        },
+      ],
     },
     {
-      name: 'Advanced Solutions',
-      href: '/solutions',
+      name: "Advanced Solutions",
+      href: "/solutions",
       icon: RocketLaunchIcon,
       submenu: [
-        { name: 'All Solutions', href: '/solutions', icon: SparklesIcon, badge: 'Overview' },
-        { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: CircleStackIcon, badge: 'Hot' },
-        { name: 'IoT Solutions', href: '/iot-solutions', icon: SignalIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon },
-        { name: 'Edge Computing', href: '/edge-computing-solutions', icon: CloudIcon },
-        { name: 'Augmented Reality', href: '/augmented-reality-solutions', icon: EyeIcon },
-        { name: 'Virtual Reality', href: '/virtual-reality-solutions', icon: EyeIcon },
-        { name: 'Quantum Computing', href: '/quantum-computing-solutions', icon: CpuChipIcon },
-        { name: 'Robotic Process Automation', href: '/robotic-process-automation', icon: CogIcon },
-        { name: 'Low-Code Platform', href: '/low-code-platform', icon: CodeBracketIcon },
-        { name: 'Serverless Architecture', href: '/serverless-architecture', icon: CloudIcon },
-        { name: 'Container Orchestration', href: '/container-orchestration', icon: CogIcon },
-        { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: CpuChipIcon },
-        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: CircleStackIcon }
-      ]
+        {
+          name: "All Solutions",
+          href: "/solutions",
+          icon: SparklesIcon,
+          badge: "Overview",
+        },
+        {
+          name: "Blockchain Solutions",
+          href: "/blockchain-solutions",
+          icon: CircleStackIcon,
+          badge: "Hot",
+        },
+        { name: "IoT Solutions", href: "/iot-solutions", icon: SignalIcon },
+        { name: "5G Solutions", href: "/5g-solutions", icon: SignalIcon },
+        {
+          name: "Edge Computing",
+          href: "/edge-computing-solutions",
+          icon: CloudIcon,
+        },
+        {
+          name: "Augmented Reality",
+          href: "/augmented-reality-solutions",
+          icon: EyeIcon,
+        },
+        {
+          name: "Virtual Reality",
+          href: "/virtual-reality-solutions",
+          icon: EyeIcon,
+        },
+        {
+          name: "Quantum Computing",
+          href: "/quantum-computing-solutions",
+          icon: CpuChipIcon,
+        },
+        {
+          name: "Robotic Process Automation",
+          href: "/robotic-process-automation",
+          icon: CogIcon,
+        },
+        {
+          name: "Low-Code Platform",
+          href: "/low-code-platform",
+          icon: CodeBracketIcon,
+        },
+        {
+          name: "Serverless Architecture",
+          href: "/serverless-architecture",
+          icon: CloudIcon,
+        },
+        {
+          name: "Container Orchestration",
+          href: "/container-orchestration",
+          icon: CogIcon,
+        },
+        {
+          name: "AI Infrastructure",
+          href: "/ai-infrastructure",
+          icon: CpuChipIcon,
+        },
+        {
+          name: "Data Lake Solutions",
+          href: "/data-lake-solutions",
+          icon: CircleStackIcon,
+        },
+      ],
     },
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
-    { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
+    { name: "Pricing", href: "/pricing", icon: CurrencyDollarIcon },
+    { name: "Case Studies", href: "/case-studies", icon: DocumentTextIcon },
+    { name: "Blog", href: "/blog", icon: DocumentTextIcon },
     {
-      name: 'Company',
-      href: '#',
+      name: "Company",
+      href: "#",
       icon: UserGroupIcon,
       submenu: [
-        { name: 'About Us', href: '/about', icon: InformationCircleIcon },
-        { name: 'Our Team', href: '/team', icon: UserGroupIcon },
-        { name: 'Careers', href: '/careers', icon: UserPlusIcon },
-        { name: 'Partnerships', href: '/partnerships', icon: ShareIcon },
-        { name: 'Contact', href: '/contact', icon: PhoneIcon }
-      ]
+        { name: "About Us", href: "/about", icon: InformationCircleIcon },
+        { name: "Our Team", href: "/team", icon: UserGroupIcon },
+        { name: "Careers", href: "/careers", icon: UserPlusIcon },
+        { name: "Partnerships", href: "/partnerships", icon: ShareIcon },
+        { name: "Contact", href: "/contact", icon: PhoneIcon },
+      ],
     },
     {
-      name: 'Resources',
-      href: '#',
+      name: "Resources",
+      href: "#",
       icon: DocumentTextIcon,
       submenu: [
-        { name: 'API Documentation', href: '/api-docs', icon: CodeBracketIcon },
-        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon },
-        { name: 'Accessibility', href: '/accessibility', icon: EyeIcon },
-        { name: 'Privacy Policy', href: '/privacy', icon: ShieldCheckIcon },
-        { name: 'Terms of Service', href: '/terms', icon: DocumentTextIcon },
-        { name: 'Cookie Policy', href: '/cookies', icon: DocumentTextIcon }
-      ]
-    }
+        { name: "API Documentation", href: "/api-docs", icon: CodeBracketIcon },
+        { name: "Help Center", href: "/help", icon: QuestionMarkCircleIcon },
+        { name: "Accessibility", href: "/accessibility", icon: EyeIcon },
+        { name: "Privacy Policy", href: "/privacy", icon: ShieldCheckIcon },
+        { name: "Terms of Service", href: "/terms", icon: DocumentTextIcon },
+        { name: "Cookie Policy", href: "/cookies", icon: DocumentTextIcon },
+      ],
+    },
   ];
 
   const isActive = (href: string) => {
-    if (href === '/') {
-      return location.pathname === '/';
+    if (href === "/") {
+      return location.pathname === "/";
     }
     return location.pathname.startsWith(href);
   };
 
-  const NavItem = ({ item, isMobile = false }: { item: any; isMobile?: boolean }) => {
+  const NavItem = ({
+    item,
+    isMobile = false,
+  }: {
+    item: any;
+    isMobile?: boolean;
+  }) => {
     const hasSubmenu = item.submenu && item.submenu.length > 0;
-    
+
     if (hasSubmenu) {
       return (
         <div className="relative group">
           <button
             className={`flex items-center px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
               isActive(item.href)
-                ? 'text-cyan-400 bg-cyan-500/10 border border-cyan-400/30'
-                : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
-            } ${isMobile ? 'w-full justify-between' : ''}`}
+                ? "text-cyan-400 bg-cyan-500/10 border border-cyan-400/30"
+                : "text-gray-300 hover:text-white hover:bg-gray-800/50"
+            } ${isMobile ? "w-full justify-between" : ""}`}
             onMouseEnter={() => !isMobile && setIsServicesOpen(true)}
             onMouseLeave={() => !isMobile && setIsServicesOpen(false)}
             onClick={() => isMobile && setIsServicesOpen(!isServicesOpen)}
@@ -176,14 +499,16 @@ const Navigation: React.FC<NavigationProps> = () => {
               <item.icon className="h-5 w-5 mr-2" />
               {item.name}
             </div>
-            <ChevronDownIcon className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+            <ChevronDownIcon
+              className={`h-4 w-4 transition-transform ${isServicesOpen ? "rotate-180" : ""}`}
+            />
           </button>
-          
+
           {/* Desktop Dropdown */}
           {!isMobile && (
             <div
               className={`absolute top-full left-0 mt-2 w-80 glass-card p-6 z-50 transition-all duration-200 ${
-                isServicesOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+                isServicesOpen ? "opacity-100 visible" : "opacity-0 invisible"
               }`}
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
@@ -200,12 +525,17 @@ const Navigation: React.FC<NavigationProps> = () => {
                       {subItem.name}
                     </div>
                     {subItem.badge && (
-                      <span className={`px-2 py-1 text-xs rounded-full ${
-                        subItem.badge === 'Popular' ? 'bg-green-500/20 text-green-400' :
-                        subItem.badge === 'New' ? 'bg-blue-500/20 text-blue-400' :
-                        subItem.badge === 'Hot' ? 'bg-red-500/20 text-red-400' :
-                        'bg-gray-500/20 text-gray-400'
-                      }`}>
+                      <span
+                        className={`px-2 py-1 text-xs rounded-full ${
+                          subItem.badge === "Popular"
+                            ? "bg-green-500/20 text-green-400"
+                            : subItem.badge === "New"
+                              ? "bg-blue-500/20 text-blue-400"
+                              : subItem.badge === "Hot"
+                                ? "bg-red-500/20 text-red-400"
+                                : "bg-gray-500/20 text-gray-400"
+                        }`}
+                      >
                         {subItem.badge}
                       </span>
                     )}
@@ -214,7 +544,7 @@ const Navigation: React.FC<NavigationProps> = () => {
               </div>
             </div>
           )}
-          
+
           {/* Mobile Dropdown */}
           {isMobile && isServicesOpen && (
             <div className="ml-4 mt-2 space-y-1">
@@ -230,12 +560,17 @@ const Navigation: React.FC<NavigationProps> = () => {
                     {subItem.name}
                   </div>
                   {subItem.badge && (
-                    <span className={`px-2 py-1 text-xs rounded-full ${
-                      subItem.badge === 'Popular' ? 'bg-green-500/20 text-green-400' :
-                      subItem.badge === 'New' ? 'bg-blue-500/20 text-blue-400' :
-                      subItem.badge === 'Hot' ? 'bg-red-500/20 text-red-400' :
-                      'bg-gray-500/20 text-gray-400'
-                    }`}>
+                    <span
+                      className={`px-2 py-1 text-xs rounded-full ${
+                        subItem.badge === "Popular"
+                          ? "bg-green-500/20 text-green-400"
+                          : subItem.badge === "New"
+                            ? "bg-blue-500/20 text-blue-400"
+                            : subItem.badge === "Hot"
+                              ? "bg-red-500/20 text-red-400"
+                              : "bg-gray-500/20 text-gray-400"
+                      }`}
+                    >
                       {subItem.badge}
                     </span>
                   )}
@@ -252,9 +587,9 @@ const Navigation: React.FC<NavigationProps> = () => {
         to={item.href}
         className={`flex items-center px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
           isActive(item.href)
-            ? 'text-cyan-400 bg-cyan-500/10 border border-cyan-400/30'
-            : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
-        } ${isMobile ? 'w-full' : ''}`}
+            ? "text-cyan-400 bg-cyan-500/10 border border-cyan-400/30"
+            : "text-gray-300 hover:text-white hover:bg-gray-800/50"
+        } ${isMobile ? "w-full" : ""}`}
         onClick={() => isMobile && setIsMobileMenuOpen(false)}
       >
         <item.icon className="h-5 w-5 mr-2" />
@@ -276,7 +611,9 @@ const Navigation: React.FC<NavigationProps> = () => {
                   <CpuChipIcon className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-xl font-bold holographic-text">ZION TECH GROUP</div>
+                  <div className="text-xl font-bold holographic-text">
+                    ZION TECH GROUP
+                  </div>
                   <div className="text-xs text-gray-400">AI & IT Solutions</div>
                 </div>
               </Link>
@@ -319,7 +656,9 @@ const Navigation: React.FC<NavigationProps> = () => {
                   <CpuChipIcon className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <div className="text-lg font-bold holographic-text">ZION TECH</div>
+                  <div className="text-lg font-bold holographic-text">
+                    ZION TECH
+                  </div>
                   <div className="text-xs text-gray-400">AI & IT Solutions</div>
                 </div>
               </Link>
@@ -346,7 +685,7 @@ const Navigation: React.FC<NavigationProps> = () => {
               {navigation.map((item, index) => (
                 <NavItem key={index} item={item} isMobile={true} />
               ))}
-              
+
               {/* Mobile CTA Buttons */}
               <div className="pt-4 border-t border-gray-700 space-y-2">
                 <Link

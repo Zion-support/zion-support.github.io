@@ -1,5 +1,5 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
-import { RefreshCw, Home, AlertTriangle } from 'lucide-react';
+import { Component, ErrorInfo, ReactNode } from "react";
+import { RefreshCw, Home, AlertTriangle } from "lucide-react";
 
 interface Props {
   children: ReactNode;
@@ -21,7 +21,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null
+      errorId: null,
     };
   }
 
@@ -29,14 +29,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
   }
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo,
     });
 
     // Enhanced error reporting
@@ -49,17 +49,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       url: window.location.href,
       errorId: this.state.errorId,
       userId: this.getUserId(),
-      sessionId: this.getSessionId()
+      sessionId: this.getSessionId(),
     };
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === "development") {
       // console.error('EnhancedErrorBoundary caught an error:', error, errorInfo);
       // console.error('Error Report:', errorReport);
     }
 
     // Send error to monitoring service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === "production") {
       this.reportError(errorReport);
     }
 
@@ -72,7 +72,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   private getUserId(): string | null {
     // Try to get user ID from localStorage or other sources
     try {
-      return localStorage.getItem('userId') || null;
+      return localStorage.getItem("userId") || null;
     } catch {
       return null;
     }
@@ -81,10 +81,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   private getSessionId(): string {
     // Generate or retrieve session ID
     try {
-      let sessionId = sessionStorage.getItem('sessionId');
+      let sessionId = sessionStorage.getItem("sessionId");
       if (!sessionId) {
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-        sessionStorage.setItem('sessionId', sessionId);
+        sessionStorage.setItem("sessionId", sessionId);
       }
       return sessionId;
     } catch {
@@ -94,22 +94,22 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   private reportError = (errorReport: any) => {
     // Send to error monitoring service
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
-        event_category: 'error',
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "exception", {
+        event_category: "error",
         event_label: errorReport.message,
         value: 1,
-        non_interaction: true
+        non_interaction: true,
       });
     }
 
     // Send to custom error endpoint
-    fetch('/api/errors', {
-      method: 'POST',
+    fetch("/api/errors", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(errorReport)
+      body: JSON.stringify(errorReport),
     }).catch(() => {
       // Silently fail if error reporting fails
     });
@@ -120,7 +120,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null
+      errorId: null,
     });
   };
 
@@ -129,7 +129,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   private handleGoHome = () => {
-    window.location.href = '/';
+    window.location.href = "/";
   };
 
   override render() {
@@ -147,7 +147,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 <AlertTriangle className="w-8 h-8 text-white" />
                 <div>
                   <h1 className="text-xl font-bold">Something went wrong</h1>
-                  <p className="text-red-100 text-sm">We're sorry for the inconvenience</p>
+                  <p className="text-red-100 text-sm">
+                    We're sorry for the inconvenience
+                  </p>
                 </div>
               </div>
             </div>
@@ -155,10 +157,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             {/* Content */}
             <div className="p-6">
               <div className="mb-6">
-                <h2 className="text-lg font-semibold mb-2 text-red-400">Error Details</h2>
+                <h2 className="text-lg font-semibold mb-2 text-red-400">
+                  Error Details
+                </h2>
                 <div className="bg-slate-900 rounded-lg p-4 border border-slate-700">
                   <p className="text-gray-300 mb-2">
-                    <strong>Message:</strong> {this.state.error?.message || 'An unexpected error occurred'}
+                    <strong>Message:</strong>{" "}
+                    {this.state.error?.message ||
+                      "An unexpected error occurred"}
                   </p>
                   {this.state.errorId && (
                     <p className="text-gray-400 text-sm">
@@ -198,7 +204,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </div>
 
               {/* Debug info in development */}
-              {process.env.NODE_ENV === 'development' && this.state.error && (
+              {process.env.NODE_ENV === "development" && this.state.error && (
                 <details className="mt-6">
                   <summary className="cursor-pointer text-sm text-gray-400 hover:text-gray-300 mb-2">
                     Debug Information
@@ -206,7 +212,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   <div className="bg-slate-900 rounded-lg p-4 border border-slate-700 text-xs font-mono text-gray-300 overflow-auto max-h-40">
                     <pre>{this.state.error.stack}</pre>
                     {this.state.errorInfo && (
-                      <pre className="mt-2 text-yellow-400">{this.state.errorInfo.componentStack}</pre>
+                      <pre className="mt-2 text-yellow-400">
+                        {this.state.errorInfo.componentStack}
+                      </pre>
                     )}
                   </div>
                 </details>
@@ -218,8 +226,24 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   If this problem persists, please contact our support team:
                 </p>
                 <div className="text-sm text-gray-400">
-                  <p>📞 <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 (302) 464-0950</a></p>
-                  <p>✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a></p>
+                  <p>
+                    📞{" "}
+                    <a
+                      href="tel:+13024640950"
+                      className="text-cyan-400 hover:text-cyan-300"
+                    >
+                      +1 (302) 464-0950
+                    </a>
+                  </p>
+                  <p>
+                    ✉️{" "}
+                    <a
+                      href="mailto:kleber@ziontechgroup.com"
+                      className="text-cyan-400 hover:text-cyan-300"
+                    >
+                      kleber@ziontechgroup.com
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>

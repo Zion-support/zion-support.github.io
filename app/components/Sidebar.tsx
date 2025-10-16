@@ -1,5 +1,5 @@
-import React, { useState, useCallback, useMemo } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useState, useCallback, useMemo } from "react";
+import { useLocation } from "react-router-dom";
 import {
   X,
   ChevronDown,
@@ -13,7 +13,7 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
+  MapPin,
 } from "lucide-react";
 
 interface SidebarProps {
@@ -23,10 +23,12 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(
+    new Set(),
+  );
 
   const toggleSection = useCallback((section: string) => {
-    setExpandedSections(prev => {
+    setExpandedSections((prev) => {
       const newSet = new Set(prev);
       if (newSet.has(section)) {
         newSet.delete(section);
@@ -37,133 +39,368 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     });
   }, []);
 
-  const navigationSections = useMemo(() => [
-    {
-      title: 'Main',
-      items: [
-        { name: 'Home', href: '/', icon: Home },
-        { name: 'About', href: '/about', icon: Users },
-        { name: 'Contact', href: '/contact', icon: Phone },
-        { name: 'Pricing', href: '/pricing', icon: Star }
-      ]
-    },
-    {
-      title: 'AI Services',
-      items: [
-        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: Settings },
-        { name: 'AI Services', href: '/ai-services', icon: Code },
-        { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Code },
-        { name: 'AI Document Processor', href: '/ai-document-processor', icon: Code },
-        { name: 'AI Form Builder', href: '/ai-form-builder', icon: Code },
-        { name: 'AI Voice Assistant', href: '/ai-voice-assistant', icon: Settings },
-        { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Settings },
-        { name: 'AI Image Recognition', href: '/ai-image-recognition', icon: Settings },
-        { name: 'AI Lead Scoring', href: '/ai-lead-scoring', icon: Settings },
-        { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Settings },
-        { name: 'AI Price Optimizer', href: '/ai-price-optimizer', icon: Settings },
-        { name: 'AI Scheduling Assistant', href: '/ai-scheduling-assistant', icon: Settings },
-        { name: 'AI CRM Optimizer', href: '/ai-crm-optimizer', icon: Settings },
-        { name: 'AI Data Visualizer', href: '/ai-data-visualizer', icon: Code },
-        { name: 'AI Email Optimizer', href: '/ai-email-optimizer', icon: Mail },
-        { name: 'AI Content Generator', href: '/ai-content-generator', icon: Code },
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Settings },
-        { name: 'AI Video Generator', href: '/ai-video-generator', icon: Settings },
-        { name: 'AI Translator', href: '/ai-translator', icon: Settings },
-        { name: 'AI Legal Assistant', href: '/ai-legal-assistant', icon: Settings },
-        { name: 'AI Medical Assistant', href: '/ai-medical-assistant', icon: Settings },
-        { name: 'AI Education Tutor', href: '/ai-education-tutor', icon: Settings },
-        { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: Settings },
-        { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: Settings },
-        { name: 'AI 3D Model Generator', href: '/ai-3d-model-generator', icon: Settings },
-        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: Settings }
-      ]
-    },
-    {
-      title: 'Micro SaaS',
-      items: [
-        { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: Cloud },
-        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: Settings },
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: Settings },
-        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: Settings },
-        { name: 'AI Content Generator', href: '/ai-content-generator', icon: Code },
-        { name: 'AI Translator', href: '/ai-translator', icon: Cloud },
-        { name: 'AI Video Generator', href: '/ai-video-generator', icon: Settings },
-        { name: 'AI Audio Processor', href: '/ai-audio-processor', icon: Settings },
-        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: Code },
-        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: Users }
-      ]
-    },
-    {
-      title: 'Zion AI Services',
-      items: [
-        { name: 'Zion AI Chatbot Builder', href: '/zion-ai-chatbot-builder', icon: Code },
-        { name: 'Zion AI Code Assistant', href: '/zion-ai-code-assistant', icon: Code },
-        { name: 'Zion AI Content Moderator', href: '/zion-ai-content-moderator', icon: Settings },
-        { name: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro', icon: Users },
-        { name: 'Zion AI Workflow Automator Pro', href: '/zion-ai-workflow-automator-pro', icon: Settings },
-        { name: 'Zion AI Email Marketing Pro', href: '/zion-ai-email-marketing-pro', icon: Mail },
-        { name: 'Zion AI Financial Forecaster', href: '/zion-ai-financial-forecaster', icon: Settings },
-        { name: 'Zion AI Sales Predictor', href: '/zion-ai-sales-predictor', icon: Code },
-        { name: 'Zion AI Translation Service', href: '/zion-ai-translation-service', icon: Cloud },
-        { name: 'Zion AI Voice Synthesis', href: '/zion-ai-voice-synthesis', icon: Settings }
-      ]
-    },
-    {
-      title: 'IT Solutions',
-      items: [
-        { name: 'IT Solutions Overview', href: '/it-services', icon: Settings },
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud },
-        { name: 'Web Development', href: '/web-development', icon: Code },
-        { name: 'Mobile Development', href: '/mobile-development', icon: Settings },
-        { name: 'API Development', href: '/api-development', icon: Code },
-        { name: 'Database Management', href: '/database-management', icon: Settings },
-        { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Cloud },
-        { name: 'DevOps Automation', href: '/devops-automation', icon: Settings },
-        { name: 'Data Engineering', href: '/data-engineering', icon: Code },
-        { name: 'Security Audit', href: '/security-audit', icon: Settings },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: Settings }
-      ]
-    },
-    {
-      title: 'Advanced Solutions',
-      items: [
-        { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: Settings },
-        { name: 'IoT Solutions', href: '/iot-solutions', icon: Settings },
-        { name: '5G Solutions', href: '/5g-solutions', icon: Cloud },
-        { name: 'Quantum Computing', href: '/quantum-computing-solutions', icon: Settings },
-        { name: 'Edge Computing', href: '/edge-computing-solutions', icon: Cloud },
-        { name: 'Augmented Reality', href: '/augmented-reality-solutions', icon: Settings },
-        { name: 'Virtual Reality', href: '/virtual-reality-solutions', icon: Settings },
-        { name: 'Robotic Process Automation', href: '/robotic-process-automation', icon: Settings },
-        { name: 'Low-Code Platform', href: '/low-code-platform', icon: Code },
-        { name: 'Serverless Architecture', href: '/serverless-architecture', icon: Cloud },
-        { name: 'Container Orchestration', href: '/container-orchestration', icon: Settings },
-        { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: Settings },
-        { name: 'Data Lake Solutions', href: '/data-lake-solutions', icon: Settings }
-      ]
-    },
-    {
-      title: 'Resources',
-      items: [
-        { name: 'Blog', href: '/blog', icon: Code },
-        { name: 'Case Studies', href: '/case-studies', icon: Star },
-        { name: 'Documentation', href: '/docs', icon: Code },
-        { name: 'API Documentation', href: '/api-docs', icon: Code },
-        { name: 'Help Center', href: '/help', icon: Settings },
-        { name: 'Tutorials', href: '/tutorials', icon: Code }
-      ]
-    },
-    {
-      title: 'Company',
-      items: [
-        { name: 'About Us', href: '/about', icon: Users },
-        { name: 'Our Team', href: '/team', icon: Users },
-        { name: 'Careers', href: '/careers', icon: Users },
-        { name: 'Partnerships', href: '/partnerships', icon: Users },
-        { name: 'Contact', href: '/contact', icon: Phone }
-      ]
-    }
-  ], []);
+  const navigationSections = useMemo(
+    () => [
+      {
+        title: "Main",
+        items: [
+          { name: "Home", href: "/", icon: Home },
+          { name: "About", href: "/about", icon: Users },
+          { name: "Contact", href: "/contact", icon: Phone },
+          { name: "Pricing", href: "/pricing", icon: Star },
+        ],
+      },
+      {
+        title: "AI Services",
+        items: [
+          {
+            name: "AI Solutions Overview",
+            href: "/ai-solutions",
+            icon: Settings,
+          },
+          { name: "AI Services", href: "/ai-services", icon: Code },
+          {
+            name: "AI Chatbot Builder",
+            href: "/ai-chatbot-builder",
+            icon: Code,
+          },
+          {
+            name: "AI Document Processor",
+            href: "/ai-document-processor",
+            icon: Code,
+          },
+          { name: "AI Form Builder", href: "/ai-form-builder", icon: Code },
+          {
+            name: "AI Voice Assistant",
+            href: "/ai-voice-assistant",
+            icon: Settings,
+          },
+          {
+            name: "AI Fraud Detection",
+            href: "/ai-fraud-detection",
+            icon: Settings,
+          },
+          {
+            name: "AI Image Recognition",
+            href: "/ai-image-recognition",
+            icon: Settings,
+          },
+          { name: "AI Lead Scoring", href: "/ai-lead-scoring", icon: Settings },
+          {
+            name: "AI Predictive Maintenance",
+            href: "/ai-predictive-maintenance",
+            icon: Settings,
+          },
+          {
+            name: "AI Price Optimizer",
+            href: "/ai-price-optimizer",
+            icon: Settings,
+          },
+          {
+            name: "AI Scheduling Assistant",
+            href: "/ai-scheduling-assistant",
+            icon: Settings,
+          },
+          {
+            name: "AI CRM Optimizer",
+            href: "/ai-crm-optimizer",
+            icon: Settings,
+          },
+          {
+            name: "AI Data Visualizer",
+            href: "/ai-data-visualizer",
+            icon: Code,
+          },
+          {
+            name: "AI Email Optimizer",
+            href: "/ai-email-optimizer",
+            icon: Mail,
+          },
+          {
+            name: "AI Content Generator",
+            href: "/ai-content-generator",
+            icon: Code,
+          },
+          {
+            name: "AI Social Media Manager",
+            href: "/ai-social-media-manager",
+            icon: Settings,
+          },
+          {
+            name: "AI Video Generator",
+            href: "/ai-video-generator",
+            icon: Settings,
+          },
+          { name: "AI Translator", href: "/ai-translator", icon: Settings },
+          {
+            name: "AI Legal Assistant",
+            href: "/ai-legal-assistant",
+            icon: Settings,
+          },
+          {
+            name: "AI Medical Assistant",
+            href: "/ai-medical-assistant",
+            icon: Settings,
+          },
+          {
+            name: "AI Education Tutor",
+            href: "/ai-education-tutor",
+            icon: Settings,
+          },
+          {
+            name: "AI Real Estate Analyzer",
+            href: "/ai-real-estate-analyzer",
+            icon: Settings,
+          },
+          {
+            name: "AI Supply Chain Optimizer",
+            href: "/ai-supply-chain-optimizer",
+            icon: Settings,
+          },
+          {
+            name: "AI 3D Model Generator",
+            href: "/ai-3d-model-generator",
+            icon: Settings,
+          },
+          {
+            name: "AI Audio Processor",
+            href: "/ai-audio-processor",
+            icon: Settings,
+          },
+        ],
+      },
+      {
+        title: "Micro SaaS",
+        items: [
+          {
+            name: "Micro SaaS Overview",
+            href: "/micro-saas-solutions",
+            icon: Cloud,
+          },
+          {
+            name: "Social Media Scheduler",
+            href: "/social-media-scheduler",
+            icon: Settings,
+          },
+          {
+            name: "Expense Tracker Pro",
+            href: "/expense-tracker-pro",
+            icon: Settings,
+          },
+          {
+            name: "Task Manager Pro",
+            href: "/task-manager-pro",
+            icon: Settings,
+          },
+          {
+            name: "AI Content Generator",
+            href: "/ai-content-generator",
+            icon: Code,
+          },
+          { name: "AI Translator", href: "/ai-translator", icon: Cloud },
+          {
+            name: "AI Video Generator",
+            href: "/ai-video-generator",
+            icon: Settings,
+          },
+          {
+            name: "AI Audio Processor",
+            href: "/ai-audio-processor",
+            icon: Settings,
+          },
+          {
+            name: "Analytics Dashboard",
+            href: "/analytics-dashboard",
+            icon: Code,
+          },
+          {
+            name: "Customer Support Hub",
+            href: "/customer-support-hub",
+            icon: Users,
+          },
+        ],
+      },
+      {
+        title: "Zion AI Services",
+        items: [
+          {
+            name: "Zion AI Chatbot Builder",
+            href: "/zion-ai-chatbot-builder",
+            icon: Code,
+          },
+          {
+            name: "Zion AI Code Assistant",
+            href: "/zion-ai-code-assistant",
+            icon: Code,
+          },
+          {
+            name: "Zion AI Content Moderator",
+            href: "/zion-ai-content-moderator",
+            icon: Settings,
+          },
+          {
+            name: "Zion AI Customer Support Pro",
+            href: "/zion-ai-customer-support-pro",
+            icon: Users,
+          },
+          {
+            name: "Zion AI Workflow Automator Pro",
+            href: "/zion-ai-workflow-automator-pro",
+            icon: Settings,
+          },
+          {
+            name: "Zion AI Email Marketing Pro",
+            href: "/zion-ai-email-marketing-pro",
+            icon: Mail,
+          },
+          {
+            name: "Zion AI Financial Forecaster",
+            href: "/zion-ai-financial-forecaster",
+            icon: Settings,
+          },
+          {
+            name: "Zion AI Sales Predictor",
+            href: "/zion-ai-sales-predictor",
+            icon: Code,
+          },
+          {
+            name: "Zion AI Translation Service",
+            href: "/zion-ai-translation-service",
+            icon: Cloud,
+          },
+          {
+            name: "Zion AI Voice Synthesis",
+            href: "/zion-ai-voice-synthesis",
+            icon: Settings,
+          },
+        ],
+      },
+      {
+        title: "IT Solutions",
+        items: [
+          {
+            name: "IT Solutions Overview",
+            href: "/it-services",
+            icon: Settings,
+          },
+          {
+            name: "Cloud Infrastructure",
+            href: "/cloud-infrastructure",
+            icon: Cloud,
+          },
+          { name: "Web Development", href: "/web-development", icon: Code },
+          {
+            name: "Mobile Development",
+            href: "/mobile-development",
+            icon: Settings,
+          },
+          { name: "API Development", href: "/api-development", icon: Code },
+          {
+            name: "Database Management",
+            href: "/database-management",
+            icon: Settings,
+          },
+          {
+            name: "Network Infrastructure",
+            href: "/network-infrastructure",
+            icon: Cloud,
+          },
+          {
+            name: "DevOps Automation",
+            href: "/devops-automation",
+            icon: Settings,
+          },
+          { name: "Data Engineering", href: "/data-engineering", icon: Code },
+          { name: "Security Audit", href: "/security-audit", icon: Settings },
+          {
+            name: "Digital Transformation",
+            href: "/digital-transformation",
+            icon: Settings,
+          },
+        ],
+      },
+      {
+        title: "Advanced Solutions",
+        items: [
+          {
+            name: "Blockchain Solutions",
+            href: "/blockchain-solutions",
+            icon: Settings,
+          },
+          { name: "IoT Solutions", href: "/iot-solutions", icon: Settings },
+          { name: "5G Solutions", href: "/5g-solutions", icon: Cloud },
+          {
+            name: "Quantum Computing",
+            href: "/quantum-computing-solutions",
+            icon: Settings,
+          },
+          {
+            name: "Edge Computing",
+            href: "/edge-computing-solutions",
+            icon: Cloud,
+          },
+          {
+            name: "Augmented Reality",
+            href: "/augmented-reality-solutions",
+            icon: Settings,
+          },
+          {
+            name: "Virtual Reality",
+            href: "/virtual-reality-solutions",
+            icon: Settings,
+          },
+          {
+            name: "Robotic Process Automation",
+            href: "/robotic-process-automation",
+            icon: Settings,
+          },
+          { name: "Low-Code Platform", href: "/low-code-platform", icon: Code },
+          {
+            name: "Serverless Architecture",
+            href: "/serverless-architecture",
+            icon: Cloud,
+          },
+          {
+            name: "Container Orchestration",
+            href: "/container-orchestration",
+            icon: Settings,
+          },
+          {
+            name: "AI Infrastructure",
+            href: "/ai-infrastructure",
+            icon: Settings,
+          },
+          {
+            name: "Data Lake Solutions",
+            href: "/data-lake-solutions",
+            icon: Settings,
+          },
+        ],
+      },
+      {
+        title: "Resources",
+        items: [
+          { name: "Blog", href: "/blog", icon: Code },
+          { name: "Case Studies", href: "/case-studies", icon: Star },
+          { name: "Documentation", href: "/docs", icon: Code },
+          { name: "API Documentation", href: "/api-docs", icon: Code },
+          { name: "Help Center", href: "/help", icon: Settings },
+          { name: "Tutorials", href: "/tutorials", icon: Code },
+        ],
+      },
+      {
+        title: "Company",
+        items: [
+          { name: "About Us", href: "/about", icon: Users },
+          { name: "Our Team", href: "/team", icon: Users },
+          { name: "Careers", href: "/careers", icon: Users },
+          { name: "Partnerships", href: "/partnerships", icon: Users },
+          { name: "Contact", href: "/contact", icon: Phone },
+        ],
+      },
+    ],
+    [],
+  );
 
   const isActive = (href: string) => location.pathname === href;
 
@@ -182,7 +419,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <X className="h-5 w-5" />
           </button>
         </div>
-        
+
         <div className="overflow-y-auto h-full pb-20">
           {navigationSections.map((section) => (
             <div key={section.title} className="border-b border-slate-700">
@@ -197,7 +434,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <ChevronRight className="h-4 w-4" />
                 )}
               </button>
-              
+
               {expandedSections.has(section.title) && (
                 <div className="bg-slate-800">
                   {section.items.map((item) => (
@@ -206,8 +443,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                       href={item.href}
                       className={`flex items-center px-6 py-3 text-sm transition-colors ${
                         isActive(item.href)
-                          ? 'bg-blue-600 text-white'
-                          : 'text-gray-300 hover:bg-slate-700 hover:text-white'
+                          ? "bg-blue-600 text-white"
+                          : "text-gray-300 hover:bg-slate-700 hover:text-white"
                       }`}
                     >
                       <item.icon className="h-4 w-4 mr-3" />
@@ -222,7 +459,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             </div>
           ))}
         </div>
-        
+
         <div className="absolute bottom-0 left-0 right-0 p-4 bg-slate-900 border-t border-slate-700">
           <div className="flex items-center space-x-4 text-sm text-gray-400">
             <div className="flex items-center">

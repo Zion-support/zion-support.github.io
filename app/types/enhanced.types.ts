@@ -1,4 +1,3 @@
-
 // Enhanced type definitions for better type safety
 
 export interface PerformanceMetrics {
@@ -33,7 +32,7 @@ export interface ErrorReport {
   updatedAt?: string;
 }
 
-export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';
+export type ErrorSeverity = "low" | "medium" | "high" | "critical";
 
 export interface Service {
   id: string;
@@ -56,7 +55,7 @@ export interface Service {
     website: string;
   };
   link: string;
-  category: 'ai' | 'it' | '5g' | 'blockchain' | 'iot';
+  category: "ai" | "it" | "5g" | "blockchain" | "iot";
   tags: string[];
 }
 
@@ -64,14 +63,14 @@ export interface User {
   id: string;
   email: string;
   name: string;
-  role: 'admin' | 'user' | 'guest';
+  role: "admin" | "user" | "guest";
   preferences?: UserPreferences;
   createdAt: string;
   lastLogin?: string;
 }
 
 export interface UserPreferences {
-  theme: 'light' | 'dark' | 'auto';
+  theme: "light" | "dark" | "auto";
   language: string;
   notifications: boolean;
   analytics: boolean;
@@ -104,7 +103,7 @@ export interface SEOData {
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
-  twitterCard?: 'summary' | 'summary_large_image';
+  twitterCard?: "summary" | "summary_large_image";
   structuredData?: Record<string, unknown>;
 }
 
@@ -178,26 +177,26 @@ export interface BaseComponentProps {
   className?: string;
   children?: React.ReactNode;
   id?: string;
-  'data-testid'?: string;
+  "data-testid"?: string;
 }
 
 export interface LoadingProps extends BaseComponentProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'white';
+  size?: "sm" | "md" | "lg" | "xl";
+  color?: "primary" | "secondary" | "white";
   text?: string;
 }
 
 export interface ButtonProps extends BaseComponentProps {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
-  size?: 'sm' | 'md' | 'lg';
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "danger";
+  size?: "sm" | "md" | "lg";
   disabled?: boolean;
   loading?: boolean;
   onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
+  type?: "button" | "submit" | "reset";
 }
 
 export interface InputProps extends BaseComponentProps {
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search';
+  type?: "text" | "email" | "password" | "tel" | "url" | "search";
   placeholder?: string;
   value?: string;
   onChange?: (value: string) => void;

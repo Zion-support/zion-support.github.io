@@ -1,22 +1,22 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Get all corrupted files
 const corruptedFiles = [
-  'components/AccessibilityComponents.tsx',
-  'components/AccessibilityUtils.tsx',
-  'components/utils/accessibilityUtils.ts',
-  'hooks/usePerformanceMetrics.ts',
-  'hooks/usePerformanceMonitor.ts',
-  'hooks/usePerformanceOptimization.ts',
-  'pages/AboutPage.tsx',
-  'pages/ITServicesPage.tsx',
-  'pages/MicroSAASPage.tsx',
-  'pages/NotFoundPage.tsx'
+  "components/AccessibilityComponents.tsx",
+  "components/AccessibilityUtils.tsx",
+  "components/utils/accessibilityUtils.ts",
+  "hooks/usePerformanceMetrics.ts",
+  "hooks/usePerformanceMonitor.ts",
+  "hooks/usePerformanceOptimization.ts",
+  "pages/AboutPage.tsx",
+  "pages/ITServicesPage.tsx",
+  "pages/MicroSAASPage.tsx",
+  "pages/NotFoundPage.tsx",
 ];
 
 // Template for components
@@ -35,7 +35,9 @@ export default ${componentName};
 `;
 
 // Template for hooks
-const createHookTemplate = (hookName) => `import { useState, useEffect } from 'react';
+const createHookTemplate = (
+  hookName,
+) => `import { useState, useEffect } from 'react';
 
 export const ${hookName} = () => {
   const [state, setState] = useState(null);
@@ -74,21 +76,27 @@ export default function ${pageName}() {
 `;
 
 // Fix all corrupted files
-corruptedFiles.forEach(filePath => {
+corruptedFiles.forEach((filePath) => {
   const fullPath = path.join(__dirname, filePath);
-  
+
   try {
     const basename = path.basename(filePath, path.extname(filePath));
-    let content = '';
+    let content = "";
 
-    if (filePath.includes('components/')) {
-      const componentName = basename.replace(/([A-Z])/g, '$1').replace(/^./, str => str.toUpperCase());
+    if (filePath.includes("components/")) {
+      const componentName = basename
+        .replace(/([A-Z])/g, "$1")
+        .replace(/^./, (str) => str.toUpperCase());
       content = createComponentTemplate(componentName);
-    } else if (filePath.includes('hooks/')) {
-      const hookName = basename.replace(/([A-Z])/g, '$1').replace(/^./, str => str.toUpperCase());
+    } else if (filePath.includes("hooks/")) {
+      const hookName = basename
+        .replace(/([A-Z])/g, "$1")
+        .replace(/^./, (str) => str.toUpperCase());
       content = createHookTemplate(hookName);
-    } else if (filePath.includes('pages/')) {
-      const pageName = basename.replace(/([A-Z])/g, '$1').replace(/^./, str => str.toUpperCase());
+    } else if (filePath.includes("pages/")) {
+      const pageName = basename
+        .replace(/([A-Z])/g, "$1")
+        .replace(/^./, (str) => str.toUpperCase());
       content = createPageTemplate(pageName);
     }
 
@@ -106,4 +114,4 @@ corruptedFiles.forEach(filePath => {
   }
 });
 
-console.log('All remaining corrupted files have been fixed!');
+console.log("All remaining corrupted files have been fixed!");

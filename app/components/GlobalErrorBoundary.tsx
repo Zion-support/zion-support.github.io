@@ -1,6 +1,6 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
-import { RefreshCw, Home, Bug } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Component, ErrorInfo, ReactNode } from "react";
+import { RefreshCw, Home, Bug } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface Props {
   children: ReactNode;
@@ -24,13 +24,13 @@ class GlobalErrorBoundary extends Component<Props, State> {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
   }
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === "production") {
       // Here you would typically send the error to a logging service
       // errorReportingService.captureException(error, { extra: errorInfo });
     }
@@ -49,18 +49,21 @@ class GlobalErrorBoundary extends Component<Props, State> {
             <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
               <Bug className="w-8 h-8 text-red-400" />
             </div>
-            
+
             <h1 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
-            
+
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
+              We're sorry, but something unexpected happened. Our team has been
+              notified and is working to fix the issue.
             </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === "development" && this.state.error && (
               <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">
-                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
+                <h3 className="text-red-400 font-semibold mb-2">
+                  Error Details:
+                </h3>
                 <p className="text-red-200 text-sm font-mono break-all">
                   {this.state.error.message}
                 </p>
@@ -80,7 +83,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-4 h-4" />
                 Try Again
               </button>
-              
+
               <Link
                 to="/"
                 className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-white/20"
