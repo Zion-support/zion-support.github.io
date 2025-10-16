@@ -1,11 +1,34 @@
+<<<<<<< HEAD
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { SEOData } from "../types/enhanced.types";
+=======
+'use client';
+
+import React from 'react';
+
+import { Helmet } from 'react-helmet-async';
+>>>>>>> 79e154b6d026b9fc6b6271031f5928bd87a51d0b
 
 interface EnhancedSEOHeadProps {
   seoData: SEOData;
   structuredData?: Record<string, unknown>;
+<<<<<<< HEAD
   canonicalUrl?: string;
+=======
+
+  noIndex?: boolean;
+
+  author?: string;
+
+  publishedTime?: string;
+
+  modifiedTime?: string;
+
+  section?: string;
+  tags?: string[];
+
+>>>>>>> 79e154b6d026b9fc6b6271031f5928bd87a51d0b
 }
 
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
@@ -13,6 +36,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
   structuredData,
   canonicalUrl,
 }) => {
+<<<<<<< HEAD
   const {
     title,
     description,
@@ -56,6 +80,11 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
     ...seoStructuredData,
     ...structuredData,
   };
+=======
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
+  const fullKeywords = [...keywords, 'Zion Tech Group', 'technology solutions', 'AI consulting', 'IT services'];
+>>>>>>> 79e154b6d026b9fc6b6271031f5928bd87a51d0b
 
   return (
     <Helmet>
@@ -129,7 +158,41 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
 
       {/* Structured Data */}
       <script type="application/ld+json">
+<<<<<<< HEAD
         {JSON.stringify(mergedStructuredData)}
+=======
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          name: 'Zion Tech Group',
+          url: 'https://ziontechgroup.com',
+          logo: 'https://ziontechgroup.com/logo.png',
+          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+          foundingDate: '2020',
+          numberOfEmployees: '50-100',
+          industry: 'Technology',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '364 E Main St STE 1008',
+            addressLocality: 'Middletown',
+            addressRegion: 'DE',
+            postalCode: '19709',
+            addressCountry: US
+          },
+          contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+1-302-464-0950',
+            contactType: 'Customer Service',
+            areaServed: 'US',
+            availableLanguage: 'en'
+          },
+          sameAs: [
+            'https://linkedin.com/company/ziontechgroup',
+            'https://twitter.com/ziontechgroup'
+          ]
+        })}
+
+>>>>>>> 79e154b6d026b9fc6b6271031f5928bd87a51d0b
       </script>
 
       {/* Additional Performance Hints */}

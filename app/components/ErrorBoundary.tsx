@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 import { Component, ErrorInfo, ReactNode } from "react";
 import { handleError, logError, AppError } from "../utils/errorHandler";
+=======
+'use client';
+
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+>>>>>>> 79e154b6d026b9fc6b6271031f5928bd87a51d0b
 
 interface Props {
   children: ReactNode;
@@ -15,7 +23,12 @@ interface State {
 }
 
 class ErrorBoundary extends Component<Props, State> {
+<<<<<<< HEAD
   constructor(props: Props) {
+=======
+
+constructor(props: Props) {
+>>>>>>> 79e154b6d026b9fc6b6271031f5928bd87a51d0b
     super(props);
     this.state = {
       hasError: false,
@@ -29,16 +42,31 @@ class ErrorBoundary extends Component<Props, State> {
     return {
       hasError: true,
       error,
+<<<<<<< HEAD
       errorInfo: null,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
+=======
+      errorInfo: null
+    });
+
+>>>>>>> 79e154b6d026b9fc6b6271031f5928bd87a51d0b
   }
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
+<<<<<<< HEAD
       errorInfo,
     });
+=======
+      errorInfo
+    });
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      // console.error removed for production
+}
+>>>>>>> 79e154b6d026b9fc6b6271031f5928bd87a51d0b
 
     // Handle error using our error handler
     const appError = handleError(error);

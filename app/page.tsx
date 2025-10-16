@@ -17,7 +17,6 @@ import {
   ClockIcon,
   GlobeAltIcon,
 } from "@heroicons/react/24/outline";
-
 const HomePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [, setCurrentService] = useState(0);
@@ -374,6 +373,7 @@ const HomePage: React.FC = () => {
                 expense tracking, task management, content generation, and
                 business automation.
               </p>
+<<<<<<< HEAD
               <div className="flex flex-wrap gap-2 mb-6">
                 <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
                   Social Media
@@ -567,6 +567,10 @@ const HomePage: React.FC = () => {
                 <CurrencyDollarIcon className="ml-2 h-5 w-5 inline" />
               </Link>
             </div>
+=======
+              
+              {/* CTA Buttons */}
+>>>>>>> 79e154b6d026b9fc6b6271031f5928bd87a51d0b
 
             <div className="mt-8 text-sm text-gray-400">
               <p>
@@ -589,11 +593,79 @@ const HomePage: React.FC = () => {
               </p>
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
       </section>
     </div>
   );
+=======
+          </section>
+          
+          {/* Services Section */}
+
+          <section className="mb-16" aria-labelledby="services-heading">
+            <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+              Our Services
+            </h2>
+            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+              Comprehensive AI and IT solutions designed to transform your business operations
+            </p>
+            
+            {/* Services Grid */}
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">AI Services</h3>
+                  <p className="text-gray-600 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
+                  </p>
+                </article>
+              </Suspense>
+              
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚡</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">IT Solutions</h3>
+                  <p className="text-gray-600 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Complete IT infrastructure, cloud migration, cybersecurity, and digital transformation services.
+                  </p>
+                </article>
+              </Suspense>
+              
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔒</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">Cybersecurity</h3>
+                  <p className="text-gray-600 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Enterprise-grade security solutions to protect your data and infrastructure from threats.
+                  </p>
+                </article>
+              </Suspense>
+              
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🌐</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">Cloud Services</h3>
+                  <p className="text-gray-600 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Scalable cloud infrastructure and migration services for modern business needs.
+                  </p>
+                </article>
+              </Suspense>
+            </div>
+          </section>
+        </main>
+        
+        {/* Footer */}
+
+        <Footer />
+      </div>
+    </>
+  );
+
+>>>>>>> 79e154b6d026b9fc6b6271031f5928bd87a51d0b
 };
 
 export default HomePage;
