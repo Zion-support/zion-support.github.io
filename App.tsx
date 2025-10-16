@@ -1023,7 +1023,7 @@ const App = memo(() => {
                 </Suspense>
               </ErrorBoundary>
             </main>
-            <Footer />{" "}
+            <Footer />
           </div>
         </Router>
       </HelmetProvider>
