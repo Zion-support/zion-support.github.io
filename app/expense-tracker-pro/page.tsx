@@ -1,6 +1,5 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-// Removed unused imports
 
 const ExpenseTrackerProPage: React.FC = () => {
   return (

@@ -1,6 +1,5 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-// Removed unused imports
 
 const SocialMediaSchedulerPage: React.FC = () => {
   return (
