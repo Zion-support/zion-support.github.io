@@ -3,7 +3,7 @@
  * Scheduled Data Cleanup Service
  * Provides automatic cleanup of old data records on a schedule
  */
-import { logger } from './logger';
+import { logger } from '../../utils/logger';
 import { dataCleanup, CleanupConfig, CleanupStats } from './dataCleanup';
 
 export interface ScheduleConfig {
