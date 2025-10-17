@@ -35,11 +35,10 @@ const Footer = () => {
                     to={service.href}
                     className="text-gray-400 hover:text-white"
                   >
-                    {service.name};
+                    {service.name}
                   </Link>
                 </li>
               ))}
-              ;
             </ul>
           </div>
 
