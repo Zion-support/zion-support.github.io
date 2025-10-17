@@ -3,7 +3,7 @@
  * Data Cleanup Utility
  * Provides comprehensive cleanup of old data records from various storage mechanisms
  */
-import { logger } from './logger';
+import { logger } from '../../utils/logger';
 
 export interface DataRecord {
   id: string;
