@@ -64,7 +64,7 @@ const PerformanceMonitor: React.FC = () => {
         
         const handleMetric = (metric: { name: string; value: number }) => {
           const metricName = metric.name.toLowerCase() as keyof PerformanceMetrics;
-          currentMetrics[metricName] = metric.value;
+          (currentMetrics as any)[metricName] = metric.value;
           
           const rating = getPerformanceRating(metricName, metric.value);
           logPerformanceIssue(metricName, metric.value, rating);

@@ -5,7 +5,7 @@
  */
 import React, { useState, useEffect } from 'react';
 import { dataCleanup, CleanupConfig, CleanupStats } from '../utils/dataCleanup';
-import { scheduledCleanup, ScheduleConfig, ScheduleStats } from '../utils/scheduledCleanup';
+import { scheduledCleanup, ScheduleStats } from '../utils/scheduledCleanup';
 
 interface DataCleanupManagerProps {
   className?: string;
@@ -13,7 +13,7 @@ interface DataCleanupManagerProps {
 }
 
 const DataCleanupManager: React.FC<DataCleanupManagerProps> = ({ 
-  className = '' 
+  className = ''
 }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [cleanupStats, setCleanupStats] = useState<CleanupStats | null>(null);
