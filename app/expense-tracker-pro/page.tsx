@@ -3,9 +3,7 @@ import SEOHead from '../components/SEOHead';
 import { 
   ChartBarIcon, 
   CheckCircleIcon,
-  StarIcon,
   ShieldCheckIcon,
-  SparklesIcon,
   CpuChipIcon,
   ReceiptRefundIcon,
   BanknotesIcon

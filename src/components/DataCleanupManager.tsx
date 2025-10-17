@@ -13,8 +13,7 @@ interface DataCleanupManagerProps {
 }
 
 const DataCleanupManager: React.FC<DataCleanupManagerProps> = ({ 
-  className = '', 
-  showAdvanced = false 
+  className = '' 
 }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [cleanupStats, setCleanupStats] = useState<CleanupStats | null>(null);
@@ -25,10 +24,6 @@ const DataCleanupManager: React.FC<DataCleanupManagerProps> = ({
     storageTypes: ['localStorage', 'sessionStorage'],
     dryRun: false,
     batchSize: 100
-  });
-  const [scheduleConfig, setScheduleConfig] = useState<ScheduleConfig>({
-    interval: 24 * 60 * 60 * 1000, // 24 hours
-    enabled: true
   });
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);

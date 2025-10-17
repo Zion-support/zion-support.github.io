@@ -4,8 +4,6 @@ import {
   ShareIcon, 
   ChartBarIcon, 
   CheckCircleIcon,
-  StarIcon,
-  SparklesIcon,
   CpuChipIcon,
   CalendarIcon
 } from '@heroicons/react/24/outline';

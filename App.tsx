@@ -78,11 +78,6 @@ const HelpPage = lazy(() => import('./app/help/page'));
 const AccessibilityPage = lazy(() => import('./app/accessibility/page'));
 const APIDocsPage = lazy(() => import('./app/api-docs/page'));
 const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
-const TutorialsPage = lazy(() => import('./app/tutorials/page'));
-const DocsPage = lazy(() => import('./app/docs/page'));
-const SupportPage = lazy(() => import('./app/support/page'));
-const DemoPage = lazy(() => import('./app/demo/page'));
-const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
 
 // Additional AI Services
 const AICodeAssistantPage = lazy(() => import('./app/ai-code-assistant/page'));
@@ -106,17 +101,12 @@ const LowCodePlatformPage = lazy(() => import('./app/low-code-platform/page'));
 
 // Additional missing pages
 const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
-const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page'));
-const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
-const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
 const AIWebsiteAnalyzerPage = lazy(() => import('./app/ai-website-analyzer/page'));
 const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
 const ServerlessArchitecturePage = lazy(() => import('./app/serverless-architecture/page'));
 const ContainerOrchestrationPage = lazy(() => import('./app/container-orchestration/page'));
 const DataLakeSolutionsPage = lazy(() => import('./app/data-lake-solutions/page'));
 
-// Additional missing pages
-const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
 const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
 const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
 const AILeadScoringProPage = lazy(() => import('./app/ai-lead-scoring-pro/page'));

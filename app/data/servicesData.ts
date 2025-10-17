@@ -4627,6 +4627,288 @@ export const servicesData = {
         email: 'kleber@ziontechgroup.com',
         website: 'https://ziontechgroup.com/ai-price-optimizer'
       }
+    },
+    {
+      id: 'zion-ai-quantum-computing',
+      title: 'Zion AI Quantum Computing Solutions',
+      description: 'Revolutionary quantum computing services for complex optimization problems, cryptography, and advanced AI model training with exponential speed improvements.',
+      shortDescription: 'Harness quantum computing power for breakthrough solutions',
+      icon: '⚛️',
+      features: [
+        'Quantum algorithm development',
+        'Quantum machine learning',
+        'Cryptographic solutions',
+        'Optimization problems',
+        'Quantum simulation',
+        'Quantum annealing',
+        'Quantum error correction',
+        'Hybrid classical-quantum systems',
+        'Quantum cloud access',
+        'Custom quantum applications'
+      ],
+      pricing: {
+        basic: 10000,
+        pro: 50000,
+        enterprise: 200000
+      },
+      benefits: [
+        'Exponential speed improvements',
+        'Solve previously impossible problems',
+        'Breakthrough optimization results',
+        'Advanced cryptographic security',
+        'Future-proof technology',
+        'Competitive advantage'
+      ],
+      useCases: [
+        'Financial portfolio optimization',
+        'Drug discovery and molecular simulation',
+        'Cryptographic security',
+        'Supply chain optimization',
+        'Machine learning acceleration',
+        'Climate modeling'
+      ],
+      marketPrice: '$10,000 - $200,000',
+      link: '/quantum-computing-solutions',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/quantum-computing-solutions'
+      }
+    },
+    {
+      id: 'zion-ai-edge-computing',
+      title: 'Zion AI Edge Computing Platform',
+      description: 'Intelligent edge computing solutions for real-time AI processing, IoT device management, and low-latency applications with 99.9% uptime guarantee.',
+      shortDescription: 'Deploy AI at the edge for real-time processing',
+      icon: '🌐',
+      features: [
+        'Real-time AI processing',
+        'IoT device management',
+        'Low-latency applications',
+        'Edge analytics',
+        'Distributed computing',
+        'Auto-scaling edge nodes',
+        'Edge security protocols',
+        'Data synchronization',
+        'Offline capability',
+        'Custom edge applications'
+      ],
+      pricing: {
+        basic: 2999,
+        pro: 9999,
+        enterprise: 29999
+      },
+      benefits: [
+        'Ultra-low latency',
+        'Reduced bandwidth usage',
+        'Enhanced security',
+        'Offline operation',
+        'Cost optimization',
+        'Scalable infrastructure'
+      ],
+      useCases: [
+        'Industrial IoT monitoring',
+        'Autonomous vehicles',
+        'Smart city applications',
+        'Real-time video analytics',
+        'Predictive maintenance',
+        'Edge AI inference'
+      ],
+      marketPrice: '$2,999 - $29,999',
+      link: '/edge-computing-solutions',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/edge-computing-solutions'
+      }
+    },
+    {
+      id: 'zion-ai-augmented-reality',
+      title: 'Zion AI Augmented Reality Solutions',
+      description: 'Immersive AR experiences powered by AI for training, visualization, and interactive applications with advanced computer vision and spatial computing.',
+      shortDescription: 'Create immersive AR experiences with AI',
+      icon: '🥽',
+      features: [
+        'AI-powered object recognition',
+        'Spatial mapping and tracking',
+        'Real-time rendering',
+        'Hand and gesture recognition',
+        'Voice commands',
+        'Multi-platform support',
+        'Cloud AR processing',
+        'Custom AR applications',
+        'Analytics and insights',
+        'Enterprise integration'
+      ],
+      pricing: {
+        basic: 1999,
+        pro: 7999,
+        enterprise: 19999
+      },
+      benefits: [
+        'Enhanced user engagement',
+        'Immersive experiences',
+        'Real-time interaction',
+        'Training efficiency',
+        'Visualization capabilities',
+        'Competitive advantage'
+      ],
+      useCases: [
+        'Employee training',
+        'Product visualization',
+        'Remote assistance',
+        'Maintenance guidance',
+        'Retail experiences',
+        'Educational content'
+      ],
+      marketPrice: '$1,999 - $19,999',
+      link: '/augmented-reality-solutions',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/augmented-reality-solutions'
+      }
+    },
+    {
+      id: 'zion-ai-virtual-reality',
+      title: 'Zion AI Virtual Reality Platform',
+      description: 'Advanced VR solutions with AI integration for virtual meetings, training simulations, and immersive experiences with haptic feedback and spatial audio.',
+      shortDescription: 'Build immersive VR experiences with AI',
+      icon: '🥽',
+      features: [
+        'AI-driven virtual environments',
+        'Haptic feedback integration',
+        'Spatial audio processing',
+        'Multi-user collaboration',
+        'Real-time physics simulation',
+        'Gesture and eye tracking',
+        'Cloud VR rendering',
+        'Custom VR applications',
+        'Performance analytics',
+        'Enterprise security'
+      ],
+      pricing: {
+        basic: 2999,
+        pro: 9999,
+        enterprise: 24999
+      },
+      benefits: [
+        'Immersive collaboration',
+        'Realistic simulations',
+        'Enhanced training',
+        'Remote presence',
+        'Cost-effective meetings',
+        'Innovative experiences'
+      ],
+      useCases: [
+        'Virtual meetings and conferences',
+        'Training simulations',
+        'Virtual showrooms',
+        'Therapeutic applications',
+        'Gaming and entertainment',
+        'Architectural visualization'
+      ],
+      marketPrice: '$2,999 - $24,999',
+      link: '/virtual-reality-solutions',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/virtual-reality-solutions'
+      }
+    },
+    {
+      id: 'zion-ai-robotic-process-automation',
+      title: 'Zion AI Robotic Process Automation',
+      description: 'Intelligent RPA solutions that combine traditional automation with AI capabilities for complex business process automation and decision-making.',
+      shortDescription: 'Automate complex processes with AI-powered RPA',
+      icon: '🤖',
+      features: [
+        'AI decision making',
+        'Process mining and discovery',
+        'Intelligent document processing',
+        'Exception handling',
+        'Workflow optimization',
+        'Integration capabilities',
+        'Monitoring and analytics',
+        'Scalable deployment',
+        'Custom automation rules',
+        'Compliance reporting'
+      ],
+      pricing: {
+        basic: 1999,
+        pro: 6999,
+        enterprise: 19999
+      },
+      benefits: [
+        'Process efficiency',
+        'Cost reduction',
+        'Error elimination',
+        'Scalable automation',
+        'Compliance assurance',
+        'ROI optimization'
+      ],
+      useCases: [
+        'Invoice processing',
+        'Customer onboarding',
+        'Data entry automation',
+        'Report generation',
+        'Compliance monitoring',
+        'Order processing'
+      ],
+      marketPrice: '$1,999 - $19,999',
+      link: '/robotic-process-automation',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/robotic-process-automation'
+      }
+    },
+    {
+      id: 'zion-ai-low-code-platform',
+      title: 'Zion AI Low-Code Development Platform',
+      description: 'Visual development platform with AI assistance for rapid application development, workflow automation, and citizen development with drag-and-drop interface.',
+      shortDescription: 'Build applications faster with AI-assisted low-code',
+      icon: '🔧',
+      features: [
+        'Visual drag-and-drop interface',
+        'AI code generation',
+        'Pre-built components',
+        'Workflow automation',
+        'Database integration',
+        'API management',
+        'Mobile app generation',
+        'Deployment automation',
+        'Version control',
+        'Collaboration tools'
+      ],
+      pricing: {
+        basic: 99,
+        pro: 299,
+        enterprise: 999
+      },
+      benefits: [
+        'Faster development',
+        'Reduced technical debt',
+        'Citizen development',
+        'Cost efficiency',
+        'Rapid prototyping',
+        'Easy maintenance'
+      ],
+      useCases: [
+        'Internal tools development',
+        'Workflow automation',
+        'Data collection forms',
+        'Customer portals',
+        'Mobile applications',
+        'Process management'
+      ],
+      marketPrice: '$99 - $999/month',
+      link: '/low-code-platform',
+      contactInfo: {
+        phone: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com/low-code-platform'
+      }
     }
   ],
   // New IT Services
@@ -4908,26 +5190,26 @@ export const servicesData = {
       }
     }
   ],
-  
-  // New Comprehensive AI Services
-  newAIServices: [
+
+  // New IT Infrastructure Services
+  newITServices: [
     {
-      id: 'zion-ai-quantum-computing',
-      title: 'Zion AI Quantum Computing Solutions',
-      description: 'Revolutionary quantum computing services for complex optimization problems, cryptography, and advanced AI model training with exponential speed improvements.',
-      shortDescription: 'Harness quantum computing power for breakthrough solutions',
-      icon: '⚛️',
+      id: 'zion-serverless-architecture',
+      title: 'Zion Serverless Architecture Solutions',
+      description: 'Scalable serverless solutions with auto-scaling, pay-per-use pricing, and zero server management for modern cloud-native applications.',
+      shortDescription: 'Build scalable applications with serverless architecture',
+      icon: '☁️',
       features: [
-        'Quantum algorithm development',
-        'Quantum machine learning',
-        'Cryptographic solutions',
-        'Optimization problems',
-        'Quantum simulation',
-        'Quantum annealing',
-        'Quantum error correction',
-        'Hybrid classical-quantum systems',
-        'Quantum cloud access',
-        'Custom quantum applications'
+        'Auto-scaling capabilities',
+        'Pay-per-use pricing',
+        'Zero server management',
+        'Event-driven architecture',
+        'Microservices support',
+        'API gateway integration',
+        'Database as a service',
+        'Monitoring and logging',
+        'Security best practices',
+        'Multi-cloud deployment'
       ],
       pricing: {
         basic: 10000,
@@ -5194,9 +5476,6 @@ export const servicesData = {
       }
     }
   ],
-
-  // New IT Infrastructure Services
-  newITServices: [
     {
       id: 'zion-serverless-architecture',
       title: 'Zion Serverless Architecture Solutions',
