@@ -5,7 +5,7 @@
  */
 import React, { useState, useEffect } from 'react';
 import { dataCleanup, CleanupConfig, CleanupStats } from '../utils/dataCleanup';
-import { scheduledCleanup, ScheduleConfig, ScheduleStats } from '../utils/scheduledCleanup';
+import { scheduledCleanup, ScheduleStats } from '../utils/scheduledCleanup';
 
 interface DataCleanupManagerProps {
   className?: string;
