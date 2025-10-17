@@ -78,34 +78,10 @@ const HelpPage = lazy(() => import('./app/help/page'));
 const AccessibilityPage = lazy(() => import('./app/accessibility/page'));
 const APIDocsPage = lazy(() => import('./app/api-docs/page'));
 const PartnershipsPage = lazy(() => import('./app/partnerships/page'));
-<<<<<<< HEAD
-
-// Additional missing pages
-const AILegalAssistantPage = lazy(() => import('./app/ai-legal-assistant/page'));
-const AIMedicalAssistantPage = lazy(() => import('./app/ai-medical-assistant/page'));
-const AIEducationTutorPage = lazy(() => import('./app/ai-education-tutor/page'));
-const AIRealEstateAnalyzerPage = lazy(() => import('./app/ai-real-estate-analyzer/page'));
-const AISupplyChainOptimizerPage = lazy(() => import('./app/ai-supply-chain-optimizer/page'));
-const AI3DModelGeneratorPage = lazy(() => import('./app/ai-3d-model-generator/page'));
-const EdgeComputingSolutionsPage = lazy(() => import('./app/edge-computing-solutions/page'));
-const AugmentedRealitySolutionsPage = lazy(() => import('./app/augmented-reality-solutions/page'));
-const VirtualRealitySolutionsPage = lazy(() => import('./app/virtual-reality-solutions/page'));
-const RoboticProcessAutomationPage = lazy(() => import('./app/robotic-process-automation/page'));
-const LowCodePlatformPage = lazy(() => import('./app/low-code-platform/page'));
-const ServerlessArchitecturePage = lazy(() => import('./app/serverless-architecture/page'));
-const ContainerOrchestrationPage = lazy(() => import('./app/container-orchestration/page'));
-const AIInfrastructurePage = lazy(() => import('./app/ai-infrastructure/page'));
-const DataLakeSolutionsPage = lazy(() => import('./app/data-lake-solutions/page'));
-const TaskManagerProPage = lazy(() => import('./app/task-manager-pro/page'));
-
-// Additional missing pages
-// const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
-=======
 const TutorialsPage = lazy(() => import('./app/tutorials/page'));
 const DocsPage = lazy(() => import('./app/docs/page'));
 const SupportPage = lazy(() => import('./app/support/page'));
 const DemoPage = lazy(() => import('./app/demo/page'));
-const CybersecurityPage = lazy(() => import('./app/cybersecurity/page'));
 const CloudSolutionsPage = lazy(() => import('./app/cloud-solutions/page'));
 
 // Additional AI Services
@@ -134,7 +110,6 @@ const AnalyticsDashboardPage = lazy(() => import('./app/analytics-dashboard/page
 const CustomerSupportHubPage = lazy(() => import('./app/customer-support-hub/page'));
 const InventoryManagerPage = lazy(() => import('./app/inventory-manager/page'));
 const AIWebsiteAnalyzerPage = lazy(() => import('./app/ai-website-analyzer/page'));
-const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
 const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
 const ServerlessArchitecturePage = lazy(() => import('./app/serverless-architecture/page'));
 const ContainerOrchestrationPage = lazy(() => import('./app/container-orchestration/page'));
@@ -142,7 +117,6 @@ const DataLakeSolutionsPage = lazy(() => import('./app/data-lake-solutions/page'
 
 // Additional missing pages
 const AccessibilityPagePage = lazy(() => import('./app/accessibility-page/page'));
->>>>>>> 3e7075f2d303b69bada60593f443b930d055071c
 const AIFraudDetectionProPage = lazy(() => import('./app/ai-fraud-detection-pro/page'));
 const AIImageRecognitionProPage = lazy(() => import('./app/ai-image-recognition-pro/page'));
 const AILeadScoringProPage = lazy(() => import('./app/ai-lead-scoring-pro/page'));
@@ -208,7 +182,6 @@ const AIInventoryOptimizerProPage = lazy(() => import('./app/ai-inventory-optimi
 const AILegalDocumentAnalyzerPage = lazy(() => import('./app/ai-legal-document-analyzer/page'));
 
   // New IT Solutions
-  const QuantumComputingSolutionsPage = lazy(() => import('./app/quantum-computing-solutions/page'));
 
 // New AI Medical Services
 const AIMedicalDiagnosisAssistantPage = lazy(() => import('./app/ai-medical-diagnosis-assistant/page'));
@@ -464,20 +437,6 @@ const App = memo(() => {
                     <Route path="/zion-smart-expense-tracker" element={<ZionSmartExpenseTrackerPage />} />
                     <Route path="/zion-smart-inventory-manager" element={<ZionSmartInventoryManagerPage />} />
                     
-<<<<<<< HEAD
-                    {/* New AI Services */}
-                    <Route path="/ai-project-manager-pro" element={<AIProjectManagerProPage />} />
-                    <Route path="/ai-customer-feedback-analyzer" element={<AICustomerFeedbackAnalyzerPage />} />
-                    <Route path="/ai-inventory-optimizer-pro" element={<AIInventoryOptimizerProPage />} />
-                    <Route path="/ai-legal-document-analyzer" element={<AILegalDocumentAnalyzerPage />} />
-                    
-                    {/* New IT Solutions */}
-                    <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
-                    <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
-                    
-                    {/* New AI Medical Services */}
-                    <Route path="/ai-medical-diagnosis-assistant" element={<AIMedicalDiagnosisAssistantPage />} />
-=======
                     {/* Additional AI Services */}
                     <Route path="/ai-code-assistant" element={<AICodeAssistantPage />} />
                     <Route path="/ai-translator" element={<AITranslatorPage />} />
@@ -488,6 +447,12 @@ const App = memo(() => {
                     <Route path="/ai-education-tutor" element={<AIEducationTutorPage />} />
                     <Route path="/ai-real-estate-analyzer" element={<AIRealEstateAnalyzerPage />} />
                     <Route path="/ai-supply-chain-optimizer" element={<AISupplyChainOptimizerPage />} />
+                    
+                    {/* New AI Services */}
+                    <Route path="/ai-project-manager-pro" element={<AIProjectManagerProPage />} />
+                    <Route path="/ai-customer-feedback-analyzer" element={<AICustomerFeedbackAnalyzerPage />} />
+                    <Route path="/ai-inventory-optimizer-pro" element={<AIInventoryOptimizerProPage />} />
+                    <Route path="/ai-legal-document-analyzer" element={<AILegalDocumentAnalyzerPage />} />
                     
                     {/* Enterprise Solutions */}
                     <Route path="/ai-infrastructure" element={<AIInfrastructurePage />} />
@@ -500,7 +465,9 @@ const App = memo(() => {
                     <Route path="/serverless-architecture" element={<ServerlessArchitecturePage />} />
                     <Route path="/container-orchestration" element={<ContainerOrchestrationPage />} />
                     <Route path="/data-lake-solutions" element={<DataLakeSolutionsPage />} />
->>>>>>> 3e7075f2d303b69bada60593f443b930d055071c
+                    
+                    {/* New AI Medical Services */}
+                    <Route path="/ai-medical-diagnosis-assistant" element={<AIMedicalDiagnosisAssistantPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
