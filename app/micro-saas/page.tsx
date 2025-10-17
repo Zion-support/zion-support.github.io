@@ -241,8 +241,7 @@
       description: 'Enterprise-grade security and compliance built-in from day one.',
       icon: Shield
     }
-  ]
-    },
+  ];
     {
       id: '2',
       icon: MessageSquare,
