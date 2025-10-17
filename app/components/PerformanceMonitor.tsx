@@ -60,7 +60,7 @@ const PerformanceMonitor: React.FC = () => {
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined') {
       import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
-        const currentMetrics: PerformanceMetrics = {};
+        const currentMetrics: Partial<PerformanceMetrics> = {};
         
         const handleMetric = (metric: { name: string; value: number }) => {
           const metricName = metric.name.toLowerCase() as keyof PerformanceMetrics;

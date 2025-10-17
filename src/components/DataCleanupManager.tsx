@@ -25,10 +25,6 @@ const DataCleanupManager: React.FC<DataCleanupManagerProps> = ({
     dryRun: false,
     batchSize: 100
   });
-  // const [scheduleConfig] = useState<ScheduleConfig>({
-  //   interval: 24 * 60 * 60 * 1000, // 24 hours
-  //   enabled: true
-  // });
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
 

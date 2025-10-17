@@ -1,5 +1,12 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
+import { 
+  ShareIcon, 
+  ChartBarIcon, 
+  CheckCircleIcon,
+  CpuChipIcon,
+  CalendarIcon
+} from '@heroicons/react/24/outline';
 
 const SocialMediaSchedulerPage: React.FC = () => {
   return (
