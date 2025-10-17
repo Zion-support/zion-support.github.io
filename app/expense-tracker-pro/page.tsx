@@ -1,13 +1,5 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-import { 
-  ChartBarIcon, 
-  CheckCircleIcon,
-  ShieldCheckIcon,
-  CpuChipIcon,
-  ReceiptRefundIcon,
-  BanknotesIcon
-} from '@heroicons/react/24/outline';
 
 const ExpenseTrackerProPage: React.FC = () => {
   return (
