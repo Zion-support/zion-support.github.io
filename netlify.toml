@@ -28,7 +28,6 @@
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     # Performance optimizations
     X-DNS-Prefetch-Control = "on"
-    X-Content-Type-Options = "nosniff"
     # Cache HTML for shorter time
     Cache-Control = "public, max-age=3600, s-maxage=86400"
 
