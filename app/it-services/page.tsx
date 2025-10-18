@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { servicesData } from '../data/servicesData';
+import { servicesDataOptimized as servicesData } from '../data/servicesDataOptimized';
 
 const ITServicesPage: React.FC = () => {
   return (
@@ -50,7 +50,7 @@ const ITServicesPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {servicesData.itSolutions.map((service) => (
+              {servicesData.itServices.map((service: any) => (
                 <div key={service.id} className="card-cyber hover-lift group">
                   <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
@@ -61,7 +61,7 @@ const ITServicesPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-pink-400 mb-3">Key Features</h4>
                     <ul className="space-y-2">
-                      {service.features.slice(0, 4).map((feature, index) => (
+                      {service.features.slice(0, 4).map((feature: any, index: number) => (
                         <li key={index} className="text-gray-300 text-sm flex items-center">
                           <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
                           {feature}
@@ -73,7 +73,7 @@ const ITServicesPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-cyan-400 mb-3">Benefits</h4>
                     <ul className="space-y-2">
-                      {service.benefits.slice(0, 3).map((benefit, index) => (
+                      {service.benefits.slice(0, 3).map((benefit: any, index: number) => (
                         <li key={index} className="text-gray-300 text-sm flex items-center">
                           <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                           {benefit}
