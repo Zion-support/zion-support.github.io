@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { servicesData } from './data/servicesData';
+import { servicesDataOptimized as servicesData } from './data/servicesDataOptimized';
 
 const HomePage: React.FC = () => {
   const structuredData = {
@@ -30,7 +30,7 @@ const HomePage: React.FC = () => {
     ]
   };
 
-  const featuredMicroSaas = servicesData.microSaas.slice(0, 6);
+  const featuredMicroSaas = servicesData.microSaaS.slice(0, 6);
 
   return (
     <>
@@ -145,7 +145,7 @@ const HomePage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {featuredMicroSaas.map((service) => (
+              {featuredMicroSaas.map((service: any) => (
                 <div key={service.id} className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">
                   <div className="text-3xl mb-3">{service.icon}</div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>

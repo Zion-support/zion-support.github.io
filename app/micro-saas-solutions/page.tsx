@@ -2,10 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircleIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
-import { servicesData } from '../data/servicesData';
+import { servicesDataOptimized as servicesData } from '../data/servicesDataOptimized';
 
 const MicroSAASSolutionsPage: React.FC = () => {
-  const microSaasServices = servicesData.microSaas;
+  const microSaasServices = servicesData.microSaaS;
 
   return (
     <>
@@ -53,7 +53,7 @@ const MicroSAASSolutionsPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaasServices.map((service) => (
+            {microSaasServices.map((service: any) => (
               <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                 <div className="p-6">
                   <div className="text-4xl mb-4">{service.icon}</div>
@@ -63,7 +63,7 @@ const MicroSAASSolutionsPage: React.FC = () => {
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      {service.features.slice(0, 5).map((feature, index) => (
+                      {service.features.slice(0, 5).map((feature: any, index: number) => (
                         <li key={index} className="flex items-center">
                           <span className="text-green-500 mr-2">✓</span>
                           {feature}
@@ -185,7 +185,7 @@ const MicroSAASSolutionsPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-              {microSaasServices.map((service, index) => (
+              {microSaasServices.map((service: any, index: number) => (
                 <div key={service.id} 
                   className="group relative bg-slate-800/50 p-6 sm:p-8 rounded-xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden"
                   style={{
@@ -216,7 +216,7 @@ const MicroSAASSolutionsPage: React.FC = () => {
                     <div className="mb-4 sm:mb-6">
                       <h4 className="font-semibold text-gray-900 mb-2 text-white">Key Features:</h4>
                       <div className="grid grid-cols-1 gap-2">
-                        {service.features.slice(0, 4).map((feature, index) => (
+                        {service.features.slice(0, 4).map((feature: any, index: number) => (
                           <div key={index} className="flex items-center text-sm text-gray-300">
                             <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             <span>{feature}</span>

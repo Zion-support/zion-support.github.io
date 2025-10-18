@@ -25,11 +25,18 @@ export default defineConfig({
     target: 'es2020',
     cssCodeSplit: true,
     rollupOptions: {
+      treeshake: {
+        moduleSideEffects: false,
+      },
       output: {
         manualChunks: (id) => {
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'react';
+            // Split React into smaller chunks
+            if (id.includes('react-dom')) {
+              return 'react-dom';
+            }
+            if (id.includes('react/') && !id.includes('react-dom')) {
+              return 'react-core';
             }
             if (id.includes('react-router')) {
               return 'router';
@@ -49,6 +56,12 @@ export default defineConfig({
             if (id.includes('react-helmet-async')) {
               return 'seo';
             }
+            if (id.includes('recharts')) {
+              return 'charts';
+            }
+            if (id.includes('axios')) {
+              return 'http';
+            }
             return 'vendor';
           }
           // Split app code by feature
@@ -61,6 +74,12 @@ export default defineConfig({
           if (id.includes('/app/utils/')) {
             return 'utils';
           }
+          if (id.includes('/app/data/')) {
+            return 'data';
+          }
+          if (id.includes('/app/pages/')) {
+            return 'pages';
+          }
           return undefined;
         },
         chunkFileNames: 'assets/[name]-[hash].js',
@@ -69,8 +88,11 @@ export default defineConfig({
       },
     },
     // Optimize chunk size
-    chunkSizeWarningLimit: 1000,
-    reportCompressedSize: false,
+    chunkSizeWarningLimit: 500,
+    reportCompressedSize: true,
+    // Additional optimizations
+    assetsInlineLimit: 4096,
+    cssMinify: true,
   },
   server: {
     port: 3000,

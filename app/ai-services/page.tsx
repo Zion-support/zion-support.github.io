@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { servicesData } from '../data/servicesData';
+import { servicesDataOptimized as servicesData } from '../data/servicesDataOptimized';
 
 const AIServicesPage: React.FC = () => {
   return (
@@ -88,7 +88,7 @@ const AIServicesPage: React.FC = () => {
                       <span className="text-gray-400 text-sm ml-1">/month</span>
                     </div>
                     <a 
-                      href={service.contactInfo.website} 
+                      href={service.link || '#'} 
                       className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold"
                     >
                       Learn More →
