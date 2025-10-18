@@ -28,7 +28,7 @@
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#00f5ff" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
     
@@ -91,6 +91,23 @@
             });
         });
       }
+
+      // Handle async response listener errors from extensions
+      window.addEventListener('unhandledrejection', (event) => {
+        if (event.reason && event.reason.message && 
+            event.reason.message.includes('A listener indicated an asynchronous response by returning true')) {
+          console.warn('Extension async response error caught and handled:', event.reason);
+          event.preventDefault();
+        }
+      });
+
+      // Handle message channel errors
+      window.addEventListener('error', (event) => {
+        if (event.message && event.message.includes('message channel closed')) {
+          console.warn('Message channel error caught and handled:', event.message);
+          event.preventDefault();
+        }
+      });
     </script>
   </body>
 </html>
