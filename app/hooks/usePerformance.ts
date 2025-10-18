@@ -1,11 +1,28 @@
 import { useState, useEffect } from 'react';
 
 export function usePerformance() {
-  const [state, setState] = useState(null);
-  
+  const [performanceData, setPerformanceData] = useState<any>(null);
+
   useEffect(() => {
-    /// Comment
+    const getPerformanceData = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      return {
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+        totalTime: navigation.loadEventEnd - navigation.fetchStart
+      };
+    };
+
+    setPerformanceData(getPerformanceData());
   }, []);
-  
-  return { state, setState };
+
+  const measureRender = (componentName: string) => {
+    const start = performance.now();
+    return () => {
+      const end = performance.now();
+      console.log(`${componentName} render time: ${end - start}ms`);
+    };
+  };
+
+  return { performanceData, measureRender };
 }

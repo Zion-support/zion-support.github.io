@@ -1,6 +1,27 @@
-/// Comment
+// Accessibility checker utilities
 
 export function accessibilityChecker() {
-  /// Comment
-  return null;
+  return {
+    checkAltText: (images: NodeListOf<HTMLImageElement>) => {
+      const issues: string[] = [];
+      images.forEach((img, index) => {
+        if (!img.alt) {
+          issues.push(`Image ${index + 1} missing alt text`);
+        }
+      });
+      return issues;
+    },
+    checkHeadings: (headings: NodeListOf<HTMLHeadingElement>) => {
+      const issues: string[] = [];
+      let lastLevel = 0;
+      headings.forEach((heading, index) => {
+        const level = parseInt(heading.tagName[1]);
+        if (level > lastLevel + 1) {
+          issues.push(`Heading level skipped at position ${index + 1}`);
+        }
+        lastLevel = level;
+      });
+      return issues;
+    }
+  };
 }
