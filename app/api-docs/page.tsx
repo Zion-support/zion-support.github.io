@@ -3,7 +3,6 @@ import React from 'react';
 import { Brain, Zap, Shield, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
-
 const ApiDocsPage: React.FC = () => {
   const features = [
     {
@@ -27,8 +26,6 @@ const ApiDocsPage: React.FC = () => {
       description: 'Scale effortlessly across multiple regions with automatic load balancing.'
     }
   ];
-
-  
 
   return (
     <React.Fragment>
