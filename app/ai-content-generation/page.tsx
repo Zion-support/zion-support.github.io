@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, FileText, Clock, Users, Shield } from 'lucide-react';
 
 const AIContentGenerationPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: <FileText className="w-6 h-6" />,
       title: 'AI-Powered Content Creation',
@@ -31,7 +31,7 @@ const AIContentGenerationPage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
+  const _pricingPlans = [
     {
       name: 'Starter',
       price: '$99',
@@ -118,7 +118,7 @@ const AIContentGenerationPage: React.FC = () => {
 
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {features.map((feature, index) => (
+          {_features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="text-blue-400 mb-4">
                 {feature.icon}
@@ -147,7 +147,7 @@ const AIContentGenerationPage: React.FC = () => {
             Choose Your Plan
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {_pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
                 plan.popular ? 'border-blue-400 ring-2 ring-blue-400' : 'border-white/20'
               } relative`}>

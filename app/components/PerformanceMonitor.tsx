@@ -35,7 +35,7 @@ const PerformanceMonitor: React.FC = () => {
       lastTime = currentTime;
     };
 
-    const interval = setInterval(updateMetrics, 1000);
+    const interval: NodeJS.Timeout = setInterval(updateMetrics, 1000);
 
     return () => {
       if (interval) {
