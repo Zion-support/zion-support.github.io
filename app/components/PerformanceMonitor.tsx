@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react';
 
@@ -21,3 +22,23 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '',
 
 export default PerformanceMonitor;
 
+=======
+'use client'
+import React, {useEffect, useState} from 'react'
+;
+  const [isVisible, setIsVisible] = useState(false);
+;
+  useEffect(() => {if (typeof window === 'undefined') return;
+;
+        >;
+          ×;
+        </button>
+      </div>
+      </div>
+    </div>
+  );
+}
+;
+export default PerformanceMonitor;
+;
+>>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb

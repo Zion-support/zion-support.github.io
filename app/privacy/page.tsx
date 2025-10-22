@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -66,3 +67,28 @@ export default function PrivacyPage() {
   );
 }
 
+=======
+'use client'
+import React from 'react'
+;
+  const rights = [
+    {title: 'Access',
+      description: 'Request access to your personal data',
+      icon: Database
+    },
+    {;
+      title: 'Restriction'
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+      description: 'Limit how we process your data',
+      icon: Lock,},
+    {title: 'Objection',
+      description: 'Object to certain types of processing',
+    }
+  ]
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c;
+  return (;
+    <>;
+      <Helmet></Helmet>
+        <title></titl>Privacy Policy - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2;
+>>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb

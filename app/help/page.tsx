@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -38,6 +39,25 @@ export default function HelpPage() {
             <Layers className="w-12 h-12 text-yellow-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Scalable Growth</h3>
             <p className="text-gray-300">Solutions that grow with your business and adapt to your needs.</p>
+=======
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react'
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>);
+      <Helmet />
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      </Helmet>
+      {/* Hero Section */} <h2>Why Choose Our Page?</h2>
+            </h2>
+            <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
+            </p>
+              </div>
+            ))}
+;
+>>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
           </div>
         </div>
 
@@ -65,4 +85,10 @@ export default function HelpPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 
+=======
+;
+export default PagePage;
+;
+>>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb

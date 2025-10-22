@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -26,6 +27,51 @@ export default function NetworkInfrastructurePage() {
             <Layers className="w-12 h-12 text-cyan-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Advanced Solutions</h3>
             <p className="text-gray-300">Cutting-edge technology solutions tailored to your business needs.</p>
+=======
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react'
+const PagePage: React.FC = () => {
+    const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',},
+    {icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results',},
+    {icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards',},
+    {icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses',}}
+  ]
+const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ]
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>);
+      <Helmet />
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      </Helmet>
+            </h1>
+            <p>Transform your business with our advanced page solutions.;</p>
+              Powered by cutting-edge AI technology and industry expertise.;
+            </p>
+            </h2>
+            <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
+            </p>
+>>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
           </div>
           
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
@@ -61,8 +107,35 @@ export default function NetworkInfrastructurePage() {
             </Link>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
     </div>
   );
 }
 
+=======
+      </section>
+              Ready to Get Started?;
+            </h2>
+            <p>Contact our experts to discuss your page needs and get a customized solution.</p>
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <button>
+                <Phone>
+                Call Now
+              </button>
+              <button>
+                <Mail>
+                Email Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  ),
+}
+;
+export default PagePage;
+;
+>>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb

@@ -1,14 +1,22 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
   title: string;
   description: string;
+=======
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+interface SEOHeadProps {title?: string;}
+  description?: string;
+>>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
   keywords?: string;
   canonicalUrl?: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
+<<<<<<< HEAD
   structuredData?: object;
   noIndex?: boolean;
   author?: string;
@@ -242,3 +250,69 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   );
 };
 export default SEOHead;
+=======
+  structuredData?: object;}}
+const SEOHead: React.FC<SEOHeadProps> = ({,
+    title = 'Zion Tech Group - Advanced AI & IT Solutions',
+  description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
+  keywords = 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
+  canonical,;
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData;}}) => {}const fullTitle = title.includes('Zion Tech Group') ? title : `${title}| Zion Tech Group`
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+const defaultStructuredData = {"@context": "https: //schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https: //ziontechgroup.com",
+    "logo": "https: //ziontechgroup.com/logo.png",
+    "description": "Advanced AI and IT Solutions company providing cutting-edge technology services",
+    "address": {;
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"},
+    "contactPoint": {"@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"},
+    "sameAs": [;
+      "https: //www.linkedin.com/company/zion-tech-group",
+      "https: //twitter.com/ziontechgroup",
+    ],
+  }
+return(<Helmet />);
+      {/* Basic Meta Tags */} <title>{fullTitle}</title>
+      <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta />
+      {/* Canonical URL */}{canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
+{/* Open Graph Meta Tags */} <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta />
+      {/* Twitter Card Meta Tags */} <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      {/* Additional SEO Meta Tags */} <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      {/* Structured Data */} <script>
+        {JSON.stringify(structuredData || defaultStructuredData)} </script>
+    </Helmet>
+  );
+}
+;
+export default SEOHead;
+;
+>>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb

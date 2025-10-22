@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -19,6 +20,27 @@ export default function DigitalTransformationPage() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Professional digital transformation solutions for modern businesses.
           </p>
+=======
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react'
+const PagePage: React.FC = () => {
+  const features = [
+    {}}
+  ]
+const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ]
+return(</div>);
+>>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -61,8 +83,15 @@ export default function DigitalTransformationPage() {
             </Link>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
     </div>
   );
 }
 
+=======
+      </section>
+}
+;
+export default PagePage;
+>>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb

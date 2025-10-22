@@ -1,6 +1,11 @@
 import { defineConfig } from 'vite';
+<<<<<<< HEAD
 import react from '@vitejs/plugin-react';
 import path from 'path';
+=======
+import react  from '@vitejs/plugin-react';
+import { resolve } from 'path';
+>>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
 
 export default defineConfig({
   plugins: [
@@ -23,7 +28,15 @@ export default defineConfig({
     sourcemap: false,
     minify: 'esbuild',
     target: 'es2020',
+<<<<<<< HEAD
     cssCodeSplit: true,
+=======
+    cssTarget: 'chrome80',
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 500,
+    emptyOutDir: true,
+    copyPublicDir: true,
+>>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
     rollupOptions: {
       treeshake: {
         moduleSideEffects: false,

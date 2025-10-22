@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Analytics utilities
 
 export function analytics() {
@@ -13,3 +14,6 @@ export function analytics() {
     }
   };
 }
+=======
+'use client'
+>>>>>>> 483f75ef6f90550321090516b2130e42775ac7eb
