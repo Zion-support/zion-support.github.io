@@ -28,6 +28,4 @@ export default function PagePage() {
       </div>
     </div>
   );
-};
-
-export default PagePage;
+}
